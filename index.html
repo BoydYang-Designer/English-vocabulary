@@ -3,179 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>English Vocabulary</title>
+  <title>Vocabulary Player</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-
-    #alphabet {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    #alphabet button {
-      font-size: 18px;
-      margin: 5px;
-      padding: 10px;
+    button {
+      font-size: 20px;
+      padding: 15px 30px;
+      margin: 10px;
       cursor: pointer;
-      background-color: #333;
+      background-color: #333333;
       color: white;
       border: none;
       border-radius: 5px;
+      transition: background-color 0.3s;
     }
 
-    #wordList {
-      margin-top: 20px;
-      max-height: 400px;
+    button:hover {
+      background-color: #555555;
+    }
+
+    .word-list {
+      display: flex;
+      flex-direction: column;
+      max-height: 300px;
       overflow-y: auto;
     }
 
-    .word {
-      padding: 5px;
+    .word-item {
+      margin: 5px 0;
       cursor: pointer;
-      margin: 5px;
     }
 
-    #wordDetails {
+    .audio-player {
+      display: flex;
+      flex-direction: column;
       margin-top: 20px;
     }
 
-    #audioControls button {
-      margin-top: 10px;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-      border: none;
-      border-radius: 5px;
+    .audio-player audio {
+      margin-bottom: 10px;
     }
 
-    #audioControls button:hover {
-      background-color: #555;
+    .meaning-container {
+      margin-top: 20px;
+    }
+
+    .meaning-container button {
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
+  <h1>Click a Letter to See Words</h1>
 
-  <h1>English Vocabulary</h1>
-  
-  <!-- Alphabet Buttons -->
-  <div id="alphabet"></div>
-
-  <!-- Word List -->
-  <div id="wordList"></div>
-
-  <!-- Word Details -->
-  <div id="wordDetails"></div>
-
-  <!-- Audio Controls -->
-  <div id="audioControls">
-    <button id="playAudioBtn">Play Audio</button>
-    <button id="playSentenceBtn">Play Sentence Audio</button>
-    <button id="showMeaningBtn">Show English Meaning</button>
+  <!-- A to Z Buttons -->
+  <div id="alphabet-buttons">
+    <button onclick="showWords('A')">A</button>
+    <button onclick="showWords('B')">B</button>
+    <button onclick="showWords('C')">C</button>
+    <!-- Add more buttons for other letters -->
   </div>
 
-  <!-- Audio Elements -->
-  <audio id="wordAudio" src="" preload="auto"></audio>
-  <audio id="sentenceAudio" src="" preload="auto"></audio>
+  <!-- Word List -->
+  <div id="word-list" class="word-list"></div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+  <div id="word-details" class="audio-player"></div>
+
   <script>
-    // Excel file URL on GitHub
-    const excelUrl = 'https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/Z_total_words.xlsx';
-
+    // Fetch and parse the Excel file via the URL
+    const excelFileURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/Z_total_words.xlsx";
     let wordsData = [];
 
-    // Fetch and parse Excel data
-    fetch(excelUrl)
+    // Load the Excel file and parse it (This part would normally use a library like SheetJS or a server-side solution)
+    // For simplicity, we assume the data is available as a JSON array with the following structure
+    fetch(excelFileURL)
       .then(response => response.arrayBuffer())
       .then(data => {
-        const workbook = XLSX.read(data, { type: 'array' });
-        const sheet = workbook.Sheets['NewWords']; // Assuming your sheet is named 'NewWords'
-        const json = XLSX.utils.sheet_to_json(sheet);
-        wordsData = json;
-        generateAlphabet();
-      });
+        // Use a library like SheetJS to read the Excel data into wordsData
+        // Here we assume wordsData is an array of objects with relevant columns like:
+        // wordsData = [{ "Words": "abusive", "pronunciation_1": "abusive.mp3", "pronunciation_2": "abusive_sentence.mp3", "traditional_Chinese": "虐待的，辱罵的", "English_meaning": "As an Adjective..." }, ...];
+      })
+      .catch(error => console.error("Error loading the Excel file:", error));
 
-    // Generate the A-Z alphabet buttons
-    function generateAlphabet() {
-      const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-      const alphabetContainer = document.getElementById('alphabet');
-      
-      alphabet.forEach(letter => {
-        const button = document.createElement('button');
-        button.innerText = letter;
-        button.onclick = () => showWordsByLetter(letter);
-        alphabetContainer.appendChild(button);
-      });
-    }
-
-    // Show words by the selected letter
-    function showWordsByLetter(letter) {
-      const wordList = document.getElementById('wordList');
-      wordList.innerHTML = '';
-      
-      const filteredWords = wordsData.filter(word => word.Words && word.Words.toUpperCase().startsWith(letter));
-      
+    // Function to show words starting with a given letter
+    function showWords(letter) {
+      const filteredWords = wordsData.filter(word => word.Words.charAt(0).toUpperCase() === letter);
+      const wordListElement = document.getElementById('word-list');
+      wordListElement.innerHTML = ''; // Clear the current list
       filteredWords.forEach(word => {
-        const div = document.createElement('div');
-        div.classList.add('word');
-        div.innerText = word.Words;
-        div.onclick = () => showWordDetails(word);
-        wordList.appendChild(div);
+        const wordItem = document.createElement('div');
+        wordItem.classList.add('word-item');
+        wordItem.textContent = word.Words;
+        wordItem.onclick = () => showWordDetails(word);
+        wordListElement.appendChild(wordItem);
       });
     }
 
-    // Show word details
+    // Function to show word details when clicked
     function showWordDetails(word) {
-      const wordDetails = document.getElementById('wordDetails');
-      const wordAudio = document.getElementById('wordAudio');
-      const sentenceAudio = document.getElementById('sentenceAudio');
-      const playAudioBtn = document.getElementById('playAudioBtn');
-      const playSentenceBtn = document.getElementById('playSentenceBtn');
-      const showMeaningBtn = document.getElementById('showMeaningBtn');
+      const detailsElement = document.getElementById('word-details');
+      detailsElement.innerHTML = ''; // Clear previous details
 
-      // Set word audio file path
-      wordAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/audio_files/${word.pronunciation_1}.mp3`;
+      // Play pronunciation audio
+      const audioElement = document.createElement('audio');
+      audioElement.controls = true;
+      audioElement.src = `audio_files/${word.pronunciation_1}`;
+      detailsElement.appendChild(audioElement);
 
-      // Set sentence audio file path
-      sentenceAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/audio_files/${word.pronunciation_2}.mp3`;
+      // Show traditional Chinese translation
+      const chineseText = document.createElement('p');
+      chineseText.textContent = `Traditional Chinese: ${word.traditional_Chinese}`;
+      detailsElement.appendChild(chineseText);
 
-      // Set word details content
-      wordDetails.innerHTML = `
-        <h3>${word.Words}</h3>
-        <p><strong>Traditional Chinese:</strong> ${word["traditional Chinese"]}</p>
-      `;
+      // English meaning button
+      const meaningButton = document.createElement('button');
+      meaningButton.textContent = "English Meaning";
+      meaningButton.onclick = () => showEnglishMeaning(word);
+      detailsElement.appendChild(meaningButton);
+    }
 
-      // Show the meaning button functionality
-      showMeaningBtn.onclick = () => {
-        wordDetails.innerHTML += `
-          <p><strong>English Meaning:</strong><br>${word["English meaning"]}</p>
-        `;
-      };
-
-      // Play word audio
-      playAudioBtn.onclick = () => {
-        if (wordAudio.paused) {
-          wordAudio.play();
-          playAudioBtn.innerText = 'Pause Audio';
-        } else {
-          wordAudio.pause();
-          playAudioBtn.innerText = 'Play Audio';
-        }
-      };
+    // Function to show the English meaning of the word
+    function showEnglishMeaning(word) {
+      const detailsElement = document.getElementById('word-details');
+      
+      const meaningText = document.createElement('p');
+      meaningText.textContent = word.English_meaning;
+      detailsElement.appendChild(meaningText);
 
       // Play sentence audio
-      playSentenceBtn.onclick = () => {
-        if (sentenceAudio.paused) {
-          sentenceAudio.play();
-          playSentenceBtn.innerText = 'Pause Sentence Audio';
-        } else {
-          sentenceAudio.pause();
-          playSentenceBtn.innerText = 'Play Sentence Audio';
-        }
-      };
+      const sentenceAudio = document.createElement('audio');
+      sentenceAudio.controls = true;
+      sentenceAudio.src = `audio_files/${word.pronunciation_2}`;
+      detailsElement.appendChild(sentenceAudio);
     }
   </script>
 </body>
