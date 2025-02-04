@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Play Abusive Audio</title>
+  <title>Play Audio</title>
   <style>
     button {
       font-size: 20px;
@@ -21,7 +21,7 @@
       background-color: #555555;
     }
 
-    #sentenceText {
+    .text-content {
       font-size: 18px;
       margin-top: 20px;
       display: none;
@@ -31,16 +31,47 @@
 <body>
   <h1>Click the Button to Play Audio</h1>
   
-  <button onclick="playAudio('audio')">abusive</button>
-  <audio id="audio" src="audio_files/abusive.mp3"></audio>
+  <!-- Abusive 音檔 -->
+  <button onclick="playAudio('abusiveAudio')">abusive</button>
+  <audio id="abusiveAudio" src="audio_files/abusive.mp3"></audio>
 
-  <button id="sentenceBtn">abusive sentence</button>
-  <audio id="sentenceAudio" src="audio_files/abusive - sentence.mp3"></audio>
+  <button id="abusiveSentenceBtn">abusive sentence</button>
+  <audio id="abusiveSentenceAudio" src="audio_files/abusive - sentence.mp3"></audio>
 
-  <div id="sentenceText">
+  <div id="abusiveText" class="text-content">
     <p>E.g. She escaped an abusive relationship and found safety at a shelter.</p>
     <p>E.g. His abusive language during the argument shocked everyone present.</p>
     <p><strong>Summary:</strong></p>
+  </div>
+
+  <!-- Academic 音檔 -->
+  <button onclick="playAudio('academicAudio')">academic</button>
+  <audio id="academicAudio" src="audio_files/academic.mp3"></audio>
+
+  <button id="academicSentenceBtn">academic sentence</button>
+  <audio id="academicSentenceAudio" src="audio_files/academic - sentence.mp3"></audio>
+
+  <div id="academicText" class="text-content">
+    <p><strong>As an Adjective:</strong></p>
+    <p>1. Related to education, schools, or scholarly activities.</p>
+    <p>E.g. She has an academic background in literature and philosophy.</p>
+    <p>E.g. He was offered a teaching job and decided to return to academic life.</p>
+
+    <p>2. Pertaining to scholarly or intellectual pursuits, often involving rigorous study or research.</p>
+    <p>E.g. The university is known for its academic excellence in the field of engineering.</p>
+
+    <p>3. Theoretical or abstract, rather than practical or applied.</p>
+    <p>E.g. The debate became more of an academic exercise rather than offering practical solutions.</p>
+    <p>E.g. His interest in sailing is purely academic. He's not a sailor himself.</p>
+
+    <p><strong>As a Noun:</strong></p>
+    <p>1. A person who is a scholar or teacher at an institute of higher education.</p>
+    <p>E.g. The academic published several papers on modernist literature.</p>
+
+    <p>2. The field of study or research pursued in higher education or scholarly activities.</p>
+    <p>E.g. Her achievements in the field of academics are well-recognized.</p>
+
+    <p><strong>Summary:</strong> As an adjective, "academic" relates to education, scholarly activities, or theoretical study. As a noun, it refers to a scholar or the field of study in higher education.</p>
   </div>
 
   <script>
@@ -49,28 +80,33 @@
       audio.play();
     }
 
-    const sentenceBtn = document.getElementById('sentenceBtn');
-    const sentenceAudio = document.getElementById('sentenceAudio');
-    const sentenceText = document.getElementById('sentenceText');
+    function setupAudioToggle(buttonId, audioId, textId) {
+      const button = document.getElementById(buttonId);
+      const audio = document.getElementById(audioId);
+      const text = document.getElementById(textId);
+      let isPlaying = false;
 
-    let isPlaying = false;
-    let clickTimeout;
+      button.addEventListener('click', () => {
+        if (audio.paused) {
+          audio.play();
+          isPlaying = true;
+        } else {
+          audio.pause();
+          isPlaying = false;
+        }
+        text.style.display = "block"; // 顯示文字內容
+      });
 
-    sentenceBtn.addEventListener('click', () => {
-      if (sentenceAudio.paused) {
-        sentenceAudio.play();
-        isPlaying = true;
-      } else {
-        sentenceAudio.pause();
-        isPlaying = false;
-      }
-      sentenceText.style.display = "block"; // 顯示句子
-    });
+      button.addEventListener('dblclick', () => {
+        audio.currentTime = Math.max(0, audio.currentTime - 5);
+      });
+    }
 
-    sentenceBtn.addEventListener('dblclick', () => {
-      clearTimeout(clickTimeout);
-      sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime - 5);
-    });
+    // 設定 "abusive sentence" 按鈕
+    setupAudioToggle('abusiveSentenceBtn', 'abusiveSentenceAudio', 'abusiveText');
+    
+    // 設定 "academic sentence" 按鈕
+    setupAudioToggle('academicSentenceBtn', 'academicSentenceAudio', 'academicText');
   </script>
 </body>
 </html>
