@@ -5,103 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A-Z Words Display</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .letter-btn {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px;
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            cursor: pointer;
-        }
-        #word-list {
-            margin-top: 20px;
-        }
-        #word-list ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .word-item {
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
-        }
-        .word-item span {
-            font-weight: bold;
-        }
+        body { font-family: Arial, sans-serif; }
+        .letter-btn { display: inline-block; margin: 5px; padding: 10px; background-color: #f4f4f4; border: 1px solid #ddd; cursor: pointer; }
+        #word-list { margin-top: 20px; }
+        #word-list ul { list-style-type: none; padding: 0; }
+        .word-item { padding: 8px; border-bottom: 1px solid #ddd; }
+        .word-item span { font-weight: bold; }
     </style>
 </head>
 <body>
     <h1>Choose a Letter to See Words</h1>
-
-    <div id="letters">
-        <div class="letter-btn" onclick="filterWords('A')">A</div>
-        <div class="letter-btn" onclick="filterWords('B')">B</div>
-        <div class="letter-btn" onclick="filterWords('C')">C</div>
-        <div class="letter-btn" onclick="filterWords('D')">D</div>
-        <div class="letter-btn" onclick="filterWords('E')">E</div>
-        <div class="letter-btn" onclick="filterWords('F')">F</div>
-        <div class="letter-btn" onclick="filterWords('G')">G</div>
-        <div class="letter-btn" onclick="filterWords('H')">H</div>
-        <div class="letter-btn" onclick="filterWords('I')">I</div>
-        <div class="letter-btn" onclick="filterWords('J')">J</div>
-        <div class="letter-btn" onclick="filterWords('K')">K</div>
-        <div class="letter-btn" onclick="filterWords('L')">L</div>
-        <div class="letter-btn" onclick="filterWords('M')">M</div>
-        <div class="letter-btn" onclick="filterWords('N')">N</div>
-        <div class="letter-btn" onclick="filterWords('O')">O</div>
-        <div class="letter-btn" onclick="filterWords('P')">P</div>
-        <div class="letter-btn" onclick="filterWords('Q')">Q</div>
-        <div class="letter-btn" onclick="filterWords('R')">R</div>
-        <div class="letter-btn" onclick="filterWords('S')">S</div>
-        <div class="letter-btn" onclick="filterWords('T')">T</div>
-        <div class="letter-btn" onclick="filterWords('U')">U</div>
-        <div class="letter-btn" onclick="filterWords('V')">V</div>
-        <div class="letter-btn" onclick="filterWords('W')">W</div>
-        <div class="letter-btn" onclick="filterWords('X')">X</div>
-        <div class="letter-btn" onclick="filterWords('Y')">Y</div>
-        <div class="letter-btn" onclick="filterWords('Z')">Z</div>
-    </div>
-
+    <div id="letters"></div>
     <div id="word-list"></div>
 
     <script>
-        const data = {
-            "NewWords": [
-                {
-                    "等級": "B2",
-                    "Words": "abusive",
-                    "pronunciation-1": "[əˋbjusɪv]",
-                    "pronunciation-2": "decelerate",
-                    "traditional_Chinese": "adj.辱罵的；濫用的",
-                    "English_meaning": "Abusive is an adjective that refers to behavior or actions that are cruel, harmful, or insulting, often directed toward others.",
-                    "audio": "audio/abusive.mp3"
-                },
-                {
-                    "等級": "B2",
-                    "Words": "academic",
-                    "pronunciation-1": "[͵ækəˋdɛmɪk]",
-                    "pronunciation-2": "",
-                    "traditional_Chinese": "adj.學術的",
-                    "English_meaning": "Academic refers to education, schools, or scholarly activities.",
-                    "audio": "audio/academic.mp3"
-                },
-                {
-                    "等級": "C1",
-                    "Words": "accelerate",
-                    "pronunciation-1": "[ækˋsɛlə͵ret]",
-                    "pronunciation-2": "decelerate",
-                    "traditional_Chinese": "v.加速",
-                    "English_meaning": "Accelerate means to increase the speed or rate of something.",
-                    "audio": "audio/accelerate.mp3"
-                },
-                // 這裡應該放更多的單字資料
-            ]
-        };
+        const jsonUrl = "https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/Z_total_words.json";
+        let wordData = [];
+
+        async function fetchWords() {
+            try {
+                const response = await fetch(jsonUrl);
+                wordData = await response.json();
+            } catch (error) {
+                console.error("Failed to load JSON:", error);
+            }
+        }
+
+        function createLetterButtons() {
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+            const letterDiv = document.getElementById("letters");
+            letters.forEach(letter => {
+                const btn = document.createElement("div");
+                btn.className = "letter-btn";
+                btn.textContent = letter;
+                btn.onclick = () => filterWords(letter);
+                letterDiv.appendChild(btn);
+            });
+        }
 
         function filterWords(letter) {
-            const filteredWords = data.NewWords.filter(word => word.Words[0].toUpperCase() === letter);
+            const filteredWords = wordData.filter(word => word.Words[0].toUpperCase() === letter);
             displayWords(filteredWords);
         }
 
@@ -111,8 +54,8 @@
             words.forEach(word => {
                 html += `<li class="word-item">
                             <span>${word.Words}</span><br>
-                            Pronunciation: ${word["pronunciation-1"]}<br>
-                            Meaning: ${word["English_meaning"]}<br>
+                            Pronunciation: ${word["pronunciation-1"] || "N/A"}<br>
+                            Meaning: ${word["English_meaning"] || "N/A"}<br>
                             <audio controls>
                                 <source src="${word.audio}" type="audio/mp3">
                                 Your browser does not support the audio element.
@@ -122,6 +65,9 @@
             html += "</ul>";
             wordListDiv.innerHTML = html;
         }
+
+        createLetterButtons();
+        fetchWords();
     </script>
 </body>
 </html>
