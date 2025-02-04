@@ -3,110 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Play Audio</title>
+  <title>English Vocabulary</title>
   <style>
-    button {
-      font-size: 20px;
-      padding: 15px 30px;
-      margin: 10px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    #alphabet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #alphabet button {
+      font-size: 18px;
+      margin: 5px;
+      padding: 10px;
       cursor: pointer;
-      background-color: #333333;
+      background-color: #333;
       color: white;
       border: none;
       border-radius: 5px;
-      transition: background-color 0.3s;
     }
 
-    button:hover {
-      background-color: #555555;
-    }
-
-    .text-content {
-      font-size: 18px;
+    #wordList {
       margin-top: 20px;
-      display: none;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .word {
+      padding: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    #wordDetails {
+      margin-top: 20px;
+    }
+
+    #audioControls button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #audioControls button:hover {
+      background-color: #555;
     }
   </style>
 </head>
 <body>
-  <h1>Click the Button to Play Audio</h1>
+
+  <h1>English Vocabulary</h1>
   
-  <!-- Abusive 音檔 -->
-  <button onclick="playAudio('abusiveAudio')">abusive</button>
-  <audio id="abusiveAudio" src="audio_files/abusive.mp3"></audio>
+  <!-- Alphabet Buttons -->
+  <div id="alphabet"></div>
 
-  <button id="abusiveSentenceBtn">abusive sentence</button>
-  <audio id="abusiveSentenceAudio" src="audio_files/abusive - sentence.mp3"></audio>
+  <!-- Word List -->
+  <div id="wordList"></div>
 
-  <div id="abusiveText" class="text-content">
-    <p>E.g. She escaped an abusive relationship and found safety at a shelter.</p>
-    <p>E.g. His abusive language during the argument shocked everyone present.</p>
-    <p><strong>Summary:</strong></p>
+  <!-- Word Details -->
+  <div id="wordDetails"></div>
+
+  <!-- Audio Controls -->
+  <div id="audioControls">
+    <button id="playAudioBtn">Play Audio</button>
+    <button id="playSentenceBtn">Play Sentence Audio</button>
+    <button id="showMeaningBtn">Show English Meaning</button>
   </div>
 
-  <!-- Academic 音檔 -->
-  <button onclick="playAudio('academicAudio')">academic</button>
-  <audio id="academicAudio" src="audio_files/academic.mp3"></audio>
+  <!-- Audio Elements -->
+  <audio id="wordAudio" src="" preload="auto"></audio>
+  <audio id="sentenceAudio" src="" preload="auto"></audio>
 
-  <button id="academicSentenceBtn">academic sentence</button>
-  <audio id="academicSentenceAudio" src="audio_files/academic - sentence.mp3"></audio>
-
-  <div id="academicText" class="text-content">
-    <p><strong>As an Adjective:</strong></p>
-    <p>1. Related to education, schools, or scholarly activities.</p>
-    <p>E.g. She has an academic background in literature and philosophy.</p>
-    <p>E.g. He was offered a teaching job and decided to return to academic life.</p>
-
-    <p>2. Pertaining to scholarly or intellectual pursuits, often involving rigorous study or research.</p>
-    <p>E.g. The university is known for its academic excellence in the field of engineering.</p>
-
-    <p>3. Theoretical or abstract, rather than practical or applied.</p>
-    <p>E.g. The debate became more of an academic exercise rather than offering practical solutions.</p>
-    <p>E.g. His interest in sailing is purely academic. He's not a sailor himself.</p>
-
-    <p><strong>As a Noun:</strong></p>
-    <p>1. A person who is a scholar or teacher at an institute of higher education.</p>
-    <p>E.g. The academic published several papers on modernist literature.</p>
-
-    <p>2. The field of study or research pursued in higher education or scholarly activities.</p>
-    <p>E.g. Her achievements in the field of academics are well-recognized.</p>
-
-    <p><strong>Summary:</strong> As an adjective, "academic" relates to education, scholarly activities, or theoretical study. As a noun, it refers to a scholar or the field of study in higher education.</p>
-  </div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
   <script>
-    function playAudio(audioId) {
-      const audio = document.getElementById(audioId);
-      audio.play();
+    // Excel file URL on GitHub
+    const excelUrl = 'https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/Z_total_words.xlsx';
+
+    let wordsData = [];
+
+    // Fetch and parse Excel data
+    fetch(excelUrl)
+      .then(response => response.arrayBuffer())
+      .then(data => {
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheet = workbook.Sheets['NewWords']; // Assuming your sheet is named 'NewWords'
+        const json = XLSX.utils.sheet_to_json(sheet);
+        wordsData = json;
+        generateAlphabet();
+      });
+
+    // Generate the A-Z alphabet buttons
+    function generateAlphabet() {
+      const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+      const alphabetContainer = document.getElementById('alphabet');
+      
+      alphabet.forEach(letter => {
+        const button = document.createElement('button');
+        button.innerText = letter;
+        button.onclick = () => showWordsByLetter(letter);
+        alphabetContainer.appendChild(button);
+      });
     }
 
-    function setupAudioToggle(buttonId, audioId, textId) {
-      const button = document.getElementById(buttonId);
-      const audio = document.getElementById(audioId);
-      const text = document.getElementById(textId);
-      let isPlaying = false;
+    // Show words by the selected letter
+    function showWordsByLetter(letter) {
+      const wordList = document.getElementById('wordList');
+      wordList.innerHTML = '';
+      
+      const filteredWords = wordsData.filter(word => word.Words && word.Words.toUpperCase().startsWith(letter));
+      
+      filteredWords.forEach(word => {
+        const div = document.createElement('div');
+        div.classList.add('word');
+        div.innerText = word.Words;
+        div.onclick = () => showWordDetails(word);
+        wordList.appendChild(div);
+      });
+    }
 
-      button.addEventListener('click', () => {
-        if (audio.paused) {
-          audio.play();
-          isPlaying = true;
+    // Show word details
+    function showWordDetails(word) {
+      const wordDetails = document.getElementById('wordDetails');
+      const wordAudio = document.getElementById('wordAudio');
+      const sentenceAudio = document.getElementById('sentenceAudio');
+      const playAudioBtn = document.getElementById('playAudioBtn');
+      const playSentenceBtn = document.getElementById('playSentenceBtn');
+      const showMeaningBtn = document.getElementById('showMeaningBtn');
+
+      // Set word audio file path
+      wordAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/audio_files/${word.pronunciation_1}.mp3`;
+
+      // Set sentence audio file path
+      sentenceAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/audio_files/${word.pronunciation_2}.mp3`;
+
+      // Set word details content
+      wordDetails.innerHTML = `
+        <h3>${word.Words}</h3>
+        <p><strong>Traditional Chinese:</strong> ${word["traditional Chinese"]}</p>
+      `;
+
+      // Show the meaning button functionality
+      showMeaningBtn.onclick = () => {
+        wordDetails.innerHTML += `
+          <p><strong>English Meaning:</strong><br>${word["English meaning"]}</p>
+        `;
+      };
+
+      // Play word audio
+      playAudioBtn.onclick = () => {
+        if (wordAudio.paused) {
+          wordAudio.play();
+          playAudioBtn.innerText = 'Pause Audio';
         } else {
-          audio.pause();
-          isPlaying = false;
+          wordAudio.pause();
+          playAudioBtn.innerText = 'Play Audio';
         }
-        text.style.display = "block"; // 顯示文字內容
-      });
+      };
 
-      button.addEventListener('dblclick', () => {
-        audio.currentTime = Math.max(0, audio.currentTime - 5);
-      });
+      // Play sentence audio
+      playSentenceBtn.onclick = () => {
+        if (sentenceAudio.paused) {
+          sentenceAudio.play();
+          playSentenceBtn.innerText = 'Pause Sentence Audio';
+        } else {
+          sentenceAudio.pause();
+          playSentenceBtn.innerText = 'Play Sentence Audio';
+        }
+      };
     }
-
-    // 設定 "abusive sentence" 按鈕
-    setupAudioToggle('abusiveSentenceBtn', 'abusiveSentenceAudio', 'abusiveText');
-    
-    // 設定 "academic sentence" 按鈕
-    setupAudioToggle('academicSentenceBtn', 'academicSentenceAudio', 'academicText');
   </script>
 </body>
 </html>
