@@ -3,137 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vocabulary Player</title>
+  <title>A-Z Vocabulary List</title>
   <style>
-    button {
-      font-size: 20px;
-      padding: 15px 30px;
-      margin: 10px;
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .alphabet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .alphabet button {
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
       cursor: pointer;
-      background-color: #333333;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
     }
-
-    button:hover {
-      background-color: #555555;
-    }
-
     .word-list {
-      display: flex;
-      flex-direction: column;
-      max-height: 300px;
-      overflow-y: auto;
-    }
-
-    .word-item {
-      margin: 5px 0;
-      cursor: pointer;
-    }
-
-    .audio-player {
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-    }
-
-    .audio-player audio {
-      margin-bottom: 10px;
-    }
-
-    .meaning-container {
-      margin-top: 20px;
-    }
-
-    .meaning-container button {
+      margin-left: 20px;
       margin-top: 10px;
+    }
+    .word-list li {
+      margin: 5px 0;
+    }
+    .hidden {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <h1>Click a Letter to See Words</h1>
-
-  <!-- A to Z Buttons -->
-  <div id="alphabet-buttons">
-    <button onclick="showWords('A')">A</button>
-    <button onclick="showWords('B')">B</button>
-    <button onclick="showWords('C')">C</button>
-    <!-- Add more buttons for other letters -->
+  <h1>A-Z Vocabulary List</h1>
+  
+  <div class="alphabet">
+    <button onclick="toggleWords('A')">A</button>
+    <button onclick="toggleWords('B')">B</button>
+    <button onclick="toggleWords('C')">C</button>
+    <button onclick="toggleWords('D')">D</button>
+    <button onclick="toggleWords('E')">E</button>
+    <button onclick="toggleWords('F')">F</button>
+    <button onclick="toggleWords('G')">G</button>
+    <button onclick="toggleWords('H')">H</button>
+    <button onclick="toggleWords('I')">I</button>
+    <button onclick="toggleWords('J')">J</button>
+    <button onclick="toggleWords('K')">K</button>
+    <button onclick="toggleWords('L')">L</button>
+    <button onclick="toggleWords('M')">M</button>
+    <button onclick="toggleWords('N')">N</button>
+    <button onclick="toggleWords('O')">O</button>
+    <button onclick="toggleWords('P')">P</button>
+    <button onclick="toggleWords('Q')">Q</button>
+    <button onclick="toggleWords('R')">R</button>
+    <button onclick="toggleWords('S')">S</button>
+    <button onclick="toggleWords('T')">T</button>
+    <button onclick="toggleWords('U')">U</button>
+    <button onclick="toggleWords('V')">V</button>
+    <button onclick="toggleWords('W')">W</button>
+    <button onclick="toggleWords('X')">X</button>
+    <button onclick="toggleWords('Y')">Y</button>
+    <button onclick="toggleWords('Z')">Z</button>
   </div>
 
-  <!-- Word List -->
-  <div id="word-list" class="word-list"></div>
-
-  <div id="word-details" class="audio-player"></div>
+  <!-- Word lists for each letter -->
+  <div class="word-list" id="A-words" class="hidden"></div>
+  <div class="word-list" id="B-words" class="hidden"></div>
+  <div class="word-list" id="C-words" class="hidden"></div>
+  <div class="word-list" id="D-words" class="hidden"></div>
+  <div class="word-list" id="E-words" class="hidden"></div>
+  <div class="word-list" id="F-words" class="hidden"></div>
+  <div class="word-list" id="G-words" class="hidden"></div>
+  <div class="word-list" id="H-words" class="hidden"></div>
+  <div class="word-list" id="I-words" class="hidden"></div>
+  <div class="word-list" id="J-words" class="hidden"></div>
+  <div class="word-list" id="K-words" class="hidden"></div>
+  <div class="word-list" id="L-words" class="hidden"></div>
+  <div class="word-list" id="M-words" class="hidden"></div>
+  <div class="word-list" id="N-words" class="hidden"></div>
+  <div class="word-list" id="O-words" class="hidden"></div>
+  <div class="word-list" id="P-words" class="hidden"></div>
+  <div class="word-list" id="Q-words" class="hidden"></div>
+  <div class="word-list" id="R-words" class="hidden"></div>
+  <div class="word-list" id="S-words" class="hidden"></div>
+  <div class="word-list" id="T-words" class="hidden"></div>
+  <div class="word-list" id="U-words" class="hidden"></div>
+  <div class="word-list" id="V-words" class="hidden"></div>
+  <div class="word-list" id="W-words" class="hidden"></div>
+  <div class="word-list" id="X-words" class="hidden"></div>
+  <div class="word-list" id="Y-words" class="hidden"></div>
+  <div class="word-list" id="Z-words" class="hidden"></div>
 
   <script>
-    // Fetch and parse the Excel file via the URL
-    const excelFileURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/Z_total_words.xlsx";
-    let wordsData = [];
+    function toggleWords(letter) {
+      // Hide all word lists
+      const allWordLists = document.querySelectorAll('.word-list');
+      allWordLists.forEach(list => list.classList.add('hidden'));
 
-    // Load the Excel file and parse it (This part would normally use a library like SheetJS or a server-side solution)
-    // For simplicity, we assume the data is available as a JSON array with the following structure
-    fetch(excelFileURL)
-      .then(response => response.arrayBuffer())
-      .then(data => {
-        // Use a library like SheetJS to read the Excel data into wordsData
-        // Here we assume wordsData is an array of objects with relevant columns like:
-        // wordsData = [{ "Words": "abusive", "pronunciation_1": "abusive.mp3", "pronunciation_2": "abusive_sentence.mp3", "traditional_Chinese": "虐待的，辱罵的", "English_meaning": "As an Adjective..." }, ...];
-      })
-      .catch(error => console.error("Error loading the Excel file:", error));
+      // Show the selected letter's word list
+      const wordList = document.getElementById(`${letter}-words`);
+      wordList.classList.remove('hidden');
 
-    // Function to show words starting with a given letter
-    function showWords(letter) {
-      const filteredWords = wordsData.filter(word => word.Words.charAt(0).toUpperCase() === letter);
-      const wordListElement = document.getElementById('word-list');
-      wordListElement.innerHTML = ''; // Clear the current list
-      filteredWords.forEach(word => {
-        const wordItem = document.createElement('div');
-        wordItem.classList.add('word-item');
-        wordItem.textContent = word.Words;
-        wordItem.onclick = () => showWordDetails(word);
-        wordListElement.appendChild(wordItem);
+      // Get words from the Excel sheet (this is just a placeholder, you will need actual data fetching code here)
+      const words = getWordsForLetter(letter); // Replace with actual data fetching code from the Excel
+
+      // Create and append the word list
+      wordList.innerHTML = '';
+      words.forEach(word => {
+        const listItem = document.createElement('li');
+        listItem.textContent = word;
+        wordList.appendChild(listItem);
       });
     }
 
-    // Function to show word details when clicked
-    function showWordDetails(word) {
-      const detailsElement = document.getElementById('word-details');
-      detailsElement.innerHTML = ''; // Clear previous details
-
-      // Play pronunciation audio
-      const audioElement = document.createElement('audio');
-      audioElement.controls = true;
-      audioElement.src = `audio_files/${word.pronunciation_1}`;
-      detailsElement.appendChild(audioElement);
-
-      // Show traditional Chinese translation
-      const chineseText = document.createElement('p');
-      chineseText.textContent = `Traditional Chinese: ${word.traditional_Chinese}`;
-      detailsElement.appendChild(chineseText);
-
-      // English meaning button
-      const meaningButton = document.createElement('button');
-      meaningButton.textContent = "English Meaning";
-      meaningButton.onclick = () => showEnglishMeaning(word);
-      detailsElement.appendChild(meaningButton);
-    }
-
-    // Function to show the English meaning of the word
-    function showEnglishMeaning(word) {
-      const detailsElement = document.getElementById('word-details');
-      
-      const meaningText = document.createElement('p');
-      meaningText.textContent = word.English_meaning;
-      detailsElement.appendChild(meaningText);
-
-      // Play sentence audio
-      const sentenceAudio = document.createElement('audio');
-      sentenceAudio.controls = true;
-      sentenceAudio.src = `audio_files/${word.pronunciation_2}`;
-      detailsElement.appendChild(sentenceAudio);
+    // Placeholder function to get words from a specific letter
+    function getWordsForLetter(letter) {
+      const words = {
+        A: ['abusive', 'apple', 'advance'],
+        B: ['banana', 'brave', 'bake'],
+        C: ['cat', 'city', 'courage'],
+        // Add more words as needed
+      };
+      return words[letter] || [];
     }
   </script>
 </body>
