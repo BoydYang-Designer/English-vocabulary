@@ -45,7 +45,9 @@
         function showDetails(word) {
             document.getElementById('wordDetails').style.display = 'block';
             document.getElementById('wordTitle').textContent = word.Words;
+            document.getElementById('wordPhonetic').textContent = word['pronunciation-1'];
             document.getElementById('wordDefinition').textContent = word['traditional Chinese'];
+            document.getElementById('wordMeaning').textContent = word['English meaning'];
             
             let audioBase = "https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/audio_files/";
             audioPron.src = audioBase + word.Words + ".mp3";
@@ -81,9 +83,11 @@
     <div id="wordList" class="word-list"></div>
     <div id="wordDetails" class="detail-container">
         <h2 id="wordTitle"></h2>
-        <button class="play-btn" id="playPron">🔊 音標</button>
-        <p id="wordDefinition"></p>
-        <button class="play-btn" id="playSentence">🔊 English Meaning</button>
+        <p><strong>Phonetic:</strong> <span id="wordPhonetic"></span></p>
+        <button class="play-btn" id="playPron">🔊 Play Pronunciation</button>
+        <p><strong>Definition:</strong> <span id="wordDefinition"></span></p>
+        <p><strong>English Meaning:</strong> <span id="wordMeaning"></span></p>
+        <button class="play-btn" id="playSentence">🔊 Play Sentence</button>
     </div>
 </body>
 </html>
