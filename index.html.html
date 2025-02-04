@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Example</title>
+  <style>
+    /* 讓按鈕變大並設置為深灰色 */
+    button {
+      font-size: 20px;  /* 調整字型大小 */
+      padding: 15px 30px;  /* 調整按鈕的內邊距，讓按鈕更大 */
+      margin: 10px;  /* 讓按鈕之間有間距 */
+      cursor: pointer;  /* 當滑鼠移到按鈕上時顯示手型 */
+      background-color: #333333;  /* 深灰色背景 */
+      color: white;  /* 按鈕字體顏色 */
+      border: none;  /* 取消按鈕邊框 */
+      border-radius: 5px;  /* 讓按鈕邊角變圓 */
+      transition: background-color 0.3s;  /* 加入過渡效果 */
+    }
+
+    /* 當滑鼠懸停時改變按鈕顏色 */
+    button:hover {
+      background-color: #555555;  /* 深灰色稍微淺一點的顏色 */
+    }
+  </style>
+</head>
+<body>
+  <h1>Click a Button!</h1>
+
+  <!-- 按鈕B -->
+  <button onclick="showMessage('B')">B</button>
+
+  <!-- 按鈕G -->
+  <button onclick="showMessage('G')">G</button>
+
+  <!-- 顯示訊息的區域 -->
+  <p id="message"></p>
+
+  <script>
+    // JavaScript 函數，用來顯示不同的訊息
+    function showMessage(button) {
+      const messageElement = document.getElementById('message');
+      
+      if (button === 'B') {
+        messageElement.innerHTML = 'Hello Boyd';
+      } else if (button === 'G') {
+        messageElement.innerHTML = 'Hello Grace';
+      }
+    }
+  </script>
+</body>
+</html>
