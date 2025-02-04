@@ -3,71 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-Z Words Display</title>
+    <title>Vocabulary Browser</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        .letter-btn { display: inline-block; margin: 5px; padding: 10px; background-color: #f4f4f4; border: 1px solid #ddd; cursor: pointer; }
-        #word-list { margin-top: 20px; }
-        #word-list ul { list-style-type: none; padding: 0; }
-        .word-item { padding: 8px; border-bottom: 1px solid #ddd; }
-        .word-item span { font-weight: bold; }
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .letter-btn { margin: 5px; padding: 10px; cursor: pointer; }
+        .word-list { margin-top: 20px; }
+        .word-item { cursor: pointer; color: blue; text-decoration: underline; }
+        .detail-container { margin-top: 20px; display: none; }
+        .play-btn { margin: 10px; padding: 10px; cursor: pointer; }
     </style>
 </head>
 <body>
-    <h1>Choose a Letter to See Words</h1>
+    <h1>Vocabulary Browser</h1>
     <div id="letters"></div>
-    <div id="word-list"></div>
+    <div class="word-list" id="wordList"></div>
+    <div class="detail-container" id="wordDetails">
+        <h2 id="wordTitle"></h2>
+        <button class="play-btn" id="playPron">Play Pronunciation</button>
+        <p id="wordDefinition"></p>
+        <button class="play-btn" id="playSentence">Play Sentence</button>
+    </div>
 
     <script>
-        const jsonUrl = "https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/Z_total_words.json";
-        let wordData = [];
-
-        async function fetchWords() {
-            try {
-                const response = await fetch(jsonUrl);
-                wordData = await response.json();
-            } catch (error) {
-                console.error("Failed to load JSON:", error);
+        let wordsData = {};
+        let audioPron = new Audio();
+        let audioSentence = new Audio();
+        
+        fetch('Z_total_words.json')
+            .then(response => response.json())
+            .then(data => { wordsData = data; initLetters(); });
+        
+        function initLetters() {
+            let container = document.getElementById('letters');
+            for (let i = 65; i <= 90; i++) {
+                let letter = String.fromCharCode(i);
+                let btn = document.createElement('button');
+                btn.textContent = letter;
+                btn.className = 'letter-btn';
+                btn.onclick = () => showWords(letter);
+                container.appendChild(btn);
             }
         }
-
-        function createLetterButtons() {
-            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-            const letterDiv = document.getElementById("letters");
-            letters.forEach(letter => {
-                const btn = document.createElement("div");
-                btn.className = "letter-btn";
-                btn.textContent = letter;
-                btn.onclick = () => filterWords(letter);
-                letterDiv.appendChild(btn);
-            });
-        }
-
-        function filterWords(letter) {
-            const filteredWords = wordData.filter(word => word.Words[0].toUpperCase() === letter);
-            displayWords(filteredWords);
-        }
-
-        function displayWords(words) {
-            const wordListDiv = document.getElementById("word-list");
-            let html = "<ul>";
+        
+        function showWords(letter) {
+            let listContainer = document.getElementById('wordList');
+            listContainer.innerHTML = '';
+            document.getElementById('wordDetails').style.display = 'none';
+            
+            let words = wordsData.filter(word => word.word.startsWith(letter.toLowerCase()) && word.pronunciation);
             words.forEach(word => {
-                html += `<li class="word-item">
-                            <span>${word.Words}</span><br>
-                            Pronunciation: ${word["pronunciation-1"] || "N/A"}<br>
-                            Meaning: ${word["English_meaning"] || "N/A"}<br>
-                            <audio controls>
-                                <source src="${word.audio}" type="audio/mp3">
-                                Your browser does not support the audio element.
-                            </audio>
-                          </li>`;
+                let item = document.createElement('p');
+                item.textContent = word.word;
+                item.className = 'word-item';
+                item.onclick = () => showDetails(word);
+                listContainer.appendChild(item);
             });
-            html += "</ul>";
-            wordListDiv.innerHTML = html;
         }
-
-        createLetterButtons();
-        fetchWords();
+        
+        function showDetails(word) {
+            document.getElementById('wordDetails').style.display = 'block';
+            document.getElementById('wordTitle').textContent = word.word;
+            document.getElementById('wordDefinition').textContent = word.definition;
+            
+            audioPron.src = word.audio;
+            audioSentence.src = word.sentence_audio;
+            
+            document.getElementById('playPron').onclick = () => toggleAudio(audioPron);
+            document.getElementById('playSentence').onclick = (e) => handleSentenceAudio(e, audioSentence);
+        }
+        
+        function toggleAudio(audio) {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+        
+        function handleSentenceAudio(event, audio) {
+            if (event.detail === 2) {
+                audio.currentTime = 5;
+            }
+            toggleAudio(audio);
+        }
     </script>
 </body>
 </html>
