@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocabulary Audio</title>
+    <title>Audio Files</title>
 </head>
 <body>
-    <h1>Vocabulary</h1>
-    <p>Click on the word to hear its pronunciation:</p>
-
-    <button onclick="playAudio()">abusive</button>
-
-    <!-- The audio player is now visible (removed display:none) -->
-    <audio id="audioPlayer" controls>
-        <source src="Audio%20files/abusive.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-
-    <script>
-        function playAudio() {
-            var audioPlayer = document.getElementById('audioPlayer');
-            audioPlayer.play();
-        }
-    </script>
+    <h1>Audio Files</h1>
+    <ul>
+        <li>
+            <p>Abusive</p>
+            <audio controls>
+                <source src="audio_files/abusive.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </li>
+        <li>
+            <p>Absorb</p>
+            <audio controls>
+                <source src="audio_files/absorb.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </li>
+        <li>
+            <p>Absorption</p>
+            <audio controls>
+                <source src="audio_files/absorption.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </li>
+    </ul>
 </body>
 </html>
