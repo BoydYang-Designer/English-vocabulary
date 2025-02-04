@@ -4,55 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vocabulary Explorer</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .letter-btn { margin: 5px; padding: 10px; cursor: pointer; }
+        .word-list { margin-top: 20px; }
+        .word-item { cursor: pointer; color: blue; text-decoration: underline; }
+        .detail-container { margin-top: 20px; display: none; }
+        .play-btn { margin: 10px; padding: 10px; cursor: pointer; }
+    </style>
     <script>
+        let wordsData = {};
+        let audioPron = new Audio();
+        let audioSentence = new Audio();
+        
         document.addEventListener("DOMContentLoaded", function () {
-            let jsonUrl = "https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/Z_total_words.json";
-            let wordsData = {};
-            
-            fetch(jsonUrl)
+            fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
                 .then(response => response.json())
                 .then(data => {
                     wordsData = data;
-                });
-            
-            function showWords(letter) {
-                let container = document.getElementById("word-list");
-                container.innerHTML = "";
-                let filteredWords = Object.keys(wordsData).filter(word => word.startsWith(letter) && wordsData[word].phonetic);
-                filteredWords.forEach(word => {
-                    let btn = document.createElement("button");
-                    btn.innerText = word;
-                    btn.onclick = function () { showWordDetails(word); };
-                    container.appendChild(btn);
-                });
-            }
-
-            function showWordDetails(word) {
-                let details = wordsData[word];
-                document.getElementById("word-details").innerHTML = `
-                    <h2>${word}</h2>
-                    <button onclick="playAudio('${details.audio}')">🔊 音標 ${details.phonetic}</button>
-                    <button onclick="playAudio('${details.meaning_audio}')">🔊 English Meaning</button>
-                    <p><strong>中文意思:</strong> ${details.chinese}</p>
-                    <p>${details.english_meaning}</p>
-                `;
-            }
-
-            function playAudio(url) {
-                let audio = new Audio(url);
-                audio.play();
-            }
+                    console.log("JSON 讀取成功", data);
+                })
+                .catch(error => console.error("讀取 JSON 時發生錯誤:", error));
         });
+        
+        function showWords(letter) {
+            let listContainer = document.getElementById('wordList');
+            listContainer.innerHTML = '';
+            document.getElementById('wordDetails').style.display = 'none';
+            
+            let words = Object.values(wordsData).filter(word => word.Words.startsWith(letter.toLowerCase()) && word['pronunciation-1']);
+            words.forEach(word => {
+                let item = document.createElement('p');
+                item.textContent = word.Words;
+                item.className = 'word-item';
+                item.onclick = () => showDetails(word);
+                listContainer.appendChild(item);
+            });
+        }
+        
+        function showDetails(word) {
+            document.getElementById('wordDetails').style.display = 'block';
+            document.getElementById('wordTitle').textContent = word.Words;
+            document.getElementById('wordDefinition').textContent = word['traditional Chinese'];
+            
+            let audioBase = "https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/audio_files/";
+            audioPron.src = audioBase + word.Words + ".mp3";
+            audioSentence.src = audioBase + word.Words + " - sentence.mp3";
+            
+            document.getElementById('playPron').onclick = () => toggleAudio(audioPron);
+            document.getElementById('playSentence').onclick = (e) => handleSentenceAudio(e, audioSentence);
+        }
+        
+        function toggleAudio(audio) {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+        
+        function handleSentenceAudio(event, audio) {
+            if (event.detail === 2) {
+                audio.currentTime = 5;
+            }
+            toggleAudio(audio);
+        }
     </script>
 </head>
 <body>
     <h1>Vocabulary Explorer</h1>
     <div id="letters">
         <script>
-            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter => `<button onclick='showWords("${letter.toLowerCase()}")'>${letter}</button>`).join(" "));
+            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter => `<button class='letter-btn' onclick='showWords("${letter.toLowerCase()}")'>${letter}</button>`).join(" "));
         </script>
     </div>
-    <div id="word-list"></div>
-    <div id="word-details"></div>
+    <div id="wordList" class="word-list"></div>
+    <div id="wordDetails" class="detail-container">
+        <h2 id="wordTitle"></h2>
+        <button class="play-btn" id="playPron">🔊 音標</button>
+        <p id="wordDefinition"></p>
+        <button class="play-btn" id="playSentence">🔊 English Meaning</button>
+    </div>
 </body>
 </html>
