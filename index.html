@@ -1,187 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alphabetical Words Display</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    #alphabet {
-      width: 100px;
-      padding: 20px;
-      border-right: 2px solid #ddd;
-      background-color: #f4f4f4;
-    }
-
-    #alphabet button {
-      display: block;
-      margin: 5px 0;
-      font-size: 18px;
-      cursor: pointer;
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 10px;
-      width: 100%;
-    }
-
-    #alphabet button:hover {
-      background-color: #555;
-    }
-
-    #words-container {
-      flex-grow: 1;
-      padding: 20px;
-      overflow-y: auto;
-    }
-
-    .word-list {
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-    }
-
-    .word-list button {
-      font-size: 18px;
-      padding: 8px 16px;
-      margin: 5px 0;
-      cursor: pointer;
-      background-color: #ddd;
-      color: #333;
-      border: none;
-    }
-
-    .word-list button:hover {
-      background-color: #bbb;
-    }
-
-    .hidden {
-      display: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Z Words Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .letter-btn {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        #word-list {
+            margin-top: 20px;
+        }
+        #word-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .word-item {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .word-item span {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    <h1>Choose a Letter to See Words</h1>
 
-  <div id="alphabet">
-    <button onclick="showWords('A')">A</button>
-    <button onclick="showWords('B')">B</button>
-    <button onclick="showWords('C')">C</button>
-    <button onclick="showWords('D')">D</button>
-    <button onclick="showWords('E')">E</button>
-    <button onclick="showWords('F')">F</button>
-    <button onclick="showWords('G')">G</button>
-    <button onclick="showWords('H')">H</button>
-    <button onclick="showWords('I')">I</button>
-    <button onclick="showWords('J')">J</button>
-    <button onclick="showWords('K')">K</button>
-    <button onclick="showWords('L')">L</button>
-    <button onclick="showWords('M')">M</button>
-    <button onclick="showWords('N')">N</button>
-    <button onclick="showWords('O')">O</button>
-    <button onclick="showWords('P')">P</button>
-    <button onclick="showWords('Q')">Q</button>
-    <button onclick="showWords('R')">R</button>
-    <button onclick="showWords('S')">S</button>
-    <button onclick="showWords('T')">T</button>
-    <button onclick="showWords('U')">U</button>
-    <button onclick="showWords('V')">V</button>
-    <button onclick="showWords('W')">W</button>
-    <button onclick="showWords('X')">X</button>
-    <button onclick="showWords('Y')">Y</button>
-    <button onclick="showWords('Z')">Z</button>
-  </div>
+    <div id="letters">
+        <div class="letter-btn" onclick="filterWords('A')">A</div>
+        <div class="letter-btn" onclick="filterWords('B')">B</div>
+        <div class="letter-btn" onclick="filterWords('C')">C</div>
+        <div class="letter-btn" onclick="filterWords('D')">D</div>
+        <div class="letter-btn" onclick="filterWords('E')">E</div>
+        <div class="letter-btn" onclick="filterWords('F')">F</div>
+        <div class="letter-btn" onclick="filterWords('G')">G</div>
+        <div class="letter-btn" onclick="filterWords('H')">H</div>
+        <div class="letter-btn" onclick="filterWords('I')">I</div>
+        <div class="letter-btn" onclick="filterWords('J')">J</div>
+        <div class="letter-btn" onclick="filterWords('K')">K</div>
+        <div class="letter-btn" onclick="filterWords('L')">L</div>
+        <div class="letter-btn" onclick="filterWords('M')">M</div>
+        <div class="letter-btn" onclick="filterWords('N')">N</div>
+        <div class="letter-btn" onclick="filterWords('O')">O</div>
+        <div class="letter-btn" onclick="filterWords('P')">P</div>
+        <div class="letter-btn" onclick="filterWords('Q')">Q</div>
+        <div class="letter-btn" onclick="filterWords('R')">R</div>
+        <div class="letter-btn" onclick="filterWords('S')">S</div>
+        <div class="letter-btn" onclick="filterWords('T')">T</div>
+        <div class="letter-btn" onclick="filterWords('U')">U</div>
+        <div class="letter-btn" onclick="filterWords('V')">V</div>
+        <div class="letter-btn" onclick="filterWords('W')">W</div>
+        <div class="letter-btn" onclick="filterWords('X')">X</div>
+        <div class="letter-btn" onclick="filterWords('Y')">Y</div>
+        <div class="letter-btn" onclick="filterWords('Z')">Z</div>
+    </div>
 
-  <div id="words-container">
-    <div id="words-list"></div>
-  </div>
+    <div id="word-list"></div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
-  <script>
-    let wordsData = [];  // Store the words data
-
-    // Load Excel file and process it
-    fetch('https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/Z_total_words.xlsx')
-      .then(response => response.arrayBuffer())
-      .then(data => {
-        const workbook = XLSX.read(data, { type: 'array' });
-        const worksheet = workbook.Sheets['NewWords'];
-        wordsData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-      });
-
-    // Function to display words for a selected letter
-    function showWords(letter) {
-      const wordsList = document.getElementById('words-list');
-      wordsList.innerHTML = '';  // Clear previous list
-
-      // Create a new list to show words for the selected letter
-      const wordListDiv = document.createElement('div');
-      wordListDiv.classList.add('word-list');
-
-      // Filter words that start with the selected letter
-      const wordsForLetter = wordsData.filter(row => row[2] && row[2].startsWith(letter));
-      
-      // Create a list of words for the selected letter
-      wordsForLetter.forEach(row => {
-        const wordButton = document.createElement('button');
-        wordButton.textContent = row[2];  // C列的單字
-        wordButton.onclick = () => {
-          playAudio(row[2].toLowerCase());
-          showTraditionalChinese(row[5]);
-          showEnglishMeaning(row[6]);
+    <script>
+        const data = {
+            "NewWords": [
+                {
+                    "等級": "B2",
+                    "Words": "abusive",
+                    "pronunciation-1": "[əˋbjusɪv]",
+                    "pronunciation-2": "decelerate",
+                    "traditional_Chinese": "adj.辱罵的；濫用的",
+                    "English_meaning": "Abusive is an adjective that refers to behavior or actions that are cruel, harmful, or insulting, often directed toward others.",
+                    "audio": "audio/abusive.mp3"
+                },
+                {
+                    "等級": "B2",
+                    "Words": "academic",
+                    "pronunciation-1": "[͵ækəˋdɛmɪk]",
+                    "pronunciation-2": "",
+                    "traditional_Chinese": "adj.學術的",
+                    "English_meaning": "Academic refers to education, schools, or scholarly activities.",
+                    "audio": "audio/academic.mp3"
+                },
+                {
+                    "等級": "C1",
+                    "Words": "accelerate",
+                    "pronunciation-1": "[ækˋsɛlə͵ret]",
+                    "pronunciation-2": "decelerate",
+                    "traditional_Chinese": "v.加速",
+                    "English_meaning": "Accelerate means to increase the speed or rate of something.",
+                    "audio": "audio/accelerate.mp3"
+                },
+                // 這裡應該放更多的單字資料
+            ]
         };
-        wordListDiv.appendChild(wordButton);
-      });
 
-      // Append the word list to the words container
-      wordsList.appendChild(wordListDiv);
-
-      // Hide all other word lists
-      const allButtons = document.querySelectorAll('#alphabet button');
-      allButtons.forEach(button => {
-        if (button.textContent !== letter) {
-          const wordList = document.getElementById(`${button.textContent}-list`);
-          if (wordList) {
-            wordList.classList.add('hidden');
-          }
+        function filterWords(letter) {
+            const filteredWords = data.NewWords.filter(word => word.Words[0].toUpperCase() === letter);
+            displayWords(filteredWords);
         }
-      });
-    }
 
-    // Play audio for the selected word
-    function playAudio(word) {
-      const audio = new Audio(`audio_files/${word}.mp3`);
-      audio.play();
-    }
-
-    // Show Traditional Chinese translation
-    function showTraditionalChinese(translation) {
-      const container = document.getElementById('words-list');
-      let chineseDiv = document.getElementById('traditional-chinese');
-      if (!chineseDiv) {
-        chineseDiv = document.createElement('div');
-        chineseDiv.id = 'traditional-chinese';
-        container.appendChild(chineseDiv);
-      }
-      chineseDiv.textContent = `Traditional Chinese: ${translation}`;
-    }
-
-    // Show English meaning
-    function showEnglishMeaning(meaning) {
-      const container = document.getElementById('words-list');
-      let meaningDiv = document.getElementById('english-meaning');
-      if (!meaningDiv) {
-        meaningDiv = document.createElement('div');
-        meaningDiv.id = 'english-meaning';
-        container.appendChild(meaningDiv);
-      }
-      meaningDiv.textContent = `English Meaning: ${meaning}`;
-    }
-  </script>
+        function displayWords(words) {
+            const wordListDiv = document.getElementById("word-list");
+            let html = "<ul>";
+            words.forEach(word => {
+                html += `<li class="word-item">
+                            <span>${word.Words}</span><br>
+                            Pronunciation: ${word["pronunciation-1"]}<br>
+                            Meaning: ${word["English_meaning"]}<br>
+                            <audio controls>
+                                <source src="${word.audio}" type="audio/mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                          </li>`;
+            });
+            html += "</ul>";
+            wordListDiv.innerHTML = html;
+        }
+    </script>
 </body>
 </html>
