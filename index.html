@@ -20,20 +20,57 @@
     button:hover {
       background-color: #555555;
     }
+
+    #sentenceText {
+      font-size: 18px;
+      margin-top: 20px;
+      display: none;
+    }
   </style>
 </head>
 <body>
   <h1>Click the Button to Play Audio</h1>
   
-  <button onclick="playAudio()">abusive</button>
-  
+  <button onclick="playAudio('audio')">abusive</button>
   <audio id="audio" src="audio_files/abusive.mp3"></audio>
-  
+
+  <button id="sentenceBtn">abusive sentence</button>
+  <audio id="sentenceAudio" src="audio_files/abusive - sentence.mp3"></audio>
+
+  <div id="sentenceText">
+    <p>E.g. She escaped an abusive relationship and found safety at a shelter.</p>
+    <p>E.g. His abusive language during the argument shocked everyone present.</p>
+    <p><strong>Summary:</strong></p>
+  </div>
+
   <script>
-    function playAudio() {
-      const audio = document.getElementById('audio');
+    function playAudio(audioId) {
+      const audio = document.getElementById(audioId);
       audio.play();
     }
+
+    const sentenceBtn = document.getElementById('sentenceBtn');
+    const sentenceAudio = document.getElementById('sentenceAudio');
+    const sentenceText = document.getElementById('sentenceText');
+
+    let isPlaying = false;
+    let clickTimeout;
+
+    sentenceBtn.addEventListener('click', () => {
+      if (sentenceAudio.paused) {
+        sentenceAudio.play();
+        isPlaying = true;
+      } else {
+        sentenceAudio.pause();
+        isPlaying = false;
+      }
+      sentenceText.style.display = "block"; // 顯示句子
+    });
+
+    sentenceBtn.addEventListener('dblclick', () => {
+      clearTimeout(clickTimeout);
+      sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime - 5);
+    });
   </script>
 </body>
 </html>
