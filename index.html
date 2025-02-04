@@ -60,6 +60,10 @@
     .word-list button:hover {
       background-color: #bbb;
     }
+
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -115,13 +119,14 @@
       const wordsList = document.getElementById('words-list');
       wordsList.innerHTML = '';  // Clear previous list
 
+      // Create a new list to show words for the selected letter
+      const wordListDiv = document.createElement('div');
+      wordListDiv.classList.add('word-list');
+
       // Filter words that start with the selected letter
       const wordsForLetter = wordsData.filter(row => row[2] && row[2].startsWith(letter));
       
       // Create a list of words for the selected letter
-      const wordListDiv = document.createElement('div');
-      wordListDiv.classList.add('word-list');
-
       wordsForLetter.forEach(row => {
         const wordButton = document.createElement('button');
         wordButton.textContent = row[2];  // C列的單字
@@ -133,7 +138,19 @@
         wordListDiv.appendChild(wordButton);
       });
 
+      // Append the word list to the words container
       wordsList.appendChild(wordListDiv);
+
+      // Hide all other word lists
+      const allButtons = document.querySelectorAll('#alphabet button');
+      allButtons.forEach(button => {
+        if (button.textContent !== letter) {
+          const wordList = document.getElementById(`${button.textContent}-list`);
+          if (wordList) {
+            wordList.classList.add('hidden');
+          }
+        }
+      });
     }
 
     // Play audio for the selected word
