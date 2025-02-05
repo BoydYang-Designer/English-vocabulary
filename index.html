@@ -10,13 +10,10 @@
         .word-list { margin-top: 20px; }
         .word-item { cursor: pointer; color: blue; text-decoration: underline; }
         .detail-container { margin-top: 20px; display: none; }
-        .play-btn { margin: 10px; padding: 10px; cursor: pointer; }
+        .play-btn, .info-btn { margin: 10px; padding: 10px; cursor: pointer; }
     </style>
     <script>
         let wordsData = {};
-        let audioPron = new Audio();
-        let audioSentence = new Audio();
-        
         document.addEventListener("DOMContentLoaded", function () {
             fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
                 .then(response => response.json())
@@ -32,7 +29,7 @@
             listContainer.innerHTML = '';
             document.getElementById('wordDetails').style.display = 'none';
             
-            let words = Object.values(wordsData).filter(word => word.Words.startsWith(letter.toLowerCase()) && word['pronunciation-1']);
+            let words = wordsData.filter(word => word.Words.startsWith(letter.toLowerCase()) && word['pronunciation-1']);
             words.forEach(word => {
                 let item = document.createElement('p');
                 item.textContent = word.Words;
@@ -43,40 +40,22 @@
         }
         
         function showDetails(word) {
-    document.getElementById('wordDetails').style.display = 'block';
-    
-    // 確保 JavaScript 抓到正確的資料
-    document.getElementById('wordTitle').textContent = word.Words || "N/A";
-    document.getElementById('wordPhonetic').textContent = word['pronunciation-1'] || "N/A";
-    document.getElementById('wordDefinition').textContent = word['traditional Chinese'] || "N/A";
-    document.getElementById('wordMeaning').textContent = word['English meaning'] || "N/A";
-
-    let audioBase = "https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/audio_files/";
-    let wordAudio = audioBase + encodeURIComponent(word.Words) + ".mp3";
-    let sentenceAudio = audioBase + encodeURIComponent(word.Words) + " - sentence.mp3";
-
-    // 設定音檔連結
-    audioPron.src = wordAudio;
-    audioSentence.src = sentenceAudio;
-
-    // 播放按鈕事件
-    document.getElementById('playPron').onclick = () => toggleAudio(audioPron);
-    document.getElementById('playSentence').onclick = (e) => handleSentenceAudio(e, audioSentence);
-}
-        
-        function toggleAudio(audio) {
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
+            document.getElementById('wordDetails').style.display = 'block';
+            document.getElementById('wordTitle').textContent = word.Words;
+            
+            let phoneticButton = `<button class="play-btn" onclick="playAudio('${encodeURIComponent(word.Words)}.mp3')">${word['pronunciation-1']}</button>`;
+            let chineseButton = `<button class="info-btn">${word['traditional Chinese']}</button>`;
+            let meaningButton = `<button class="play-btn" onclick="playAudio('${encodeURIComponent(word.Words)} - sentence.mp3')">English Meaning</button>`;
+            
+            document.getElementById('phoneticContainer').innerHTML = phoneticButton;
+            document.getElementById('chineseContainer').innerHTML = chineseButton;
+            document.getElementById('meaningContainer').innerHTML = meaningButton;
         }
         
-        function handleSentenceAudio(event, audio) {
-            if (event.detail === 2) {
-                audio.currentTime = 5;
-            }
-            toggleAudio(audio);
+        function playAudio(filename) {
+            let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+            let audio = new Audio(baseURL + filename);
+            audio.play();
         }
     </script>
 </head>
@@ -90,11 +69,9 @@
     <div id="wordList" class="word-list"></div>
     <div id="wordDetails" class="detail-container">
         <h2 id="wordTitle"></h2>
-        <p><strong>Phonetic:</strong> <span id="wordPhonetic"></span></p>
-        <button class="play-btn" id="playPron">🔊 Play Pronunciation</button>
-        <p><strong>Definition:</strong> <span id="wordDefinition"></span></p>
-        <p><strong>English Meaning:</strong> <span id="wordMeaning"></span></p>
-        <button class="play-btn" id="playSentence">🔊 Play Sentence</button>
+        <div id="phoneticContainer"></div>
+        <div id="chineseContainer"></div>
+        <div id="meaningContainer"></div>
     </div>
 </body>
 </html>
