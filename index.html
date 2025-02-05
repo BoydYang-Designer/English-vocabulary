@@ -13,7 +13,7 @@
         .word-item { cursor: pointer; color: blue; text-decoration: underline; margin: 5px 0; }
         .play-btn, .info-btn { margin: 10px; padding: 10px; cursor: pointer; display: block; width: 80%; margin: 10px auto; }
         .button-group { display: flex; justify-content: center; gap: 10px; }
-        .small-btn { padding: 10px; width: 30%; }
+        .small-btn { padding: 10px; width: 25%; }
         #meaningText { margin-top: 20px; white-space: pre-line; }
     </style>
     <script>
@@ -58,7 +58,8 @@
             let meaningButtons = `
                 <div class="button-group">
                     <button class="small-btn" onclick="adjustAudioTime(-5)">⏪ -5s</button>
-                    <button class="small-btn" onclick="toggleSentenceAudio('${encodeURIComponent(word.Words)} - sentence.mp3')">▶️⏸️ Play/Pause</button>
+                    <button class="small-btn" onclick="playSentenceAudio('${encodeURIComponent(word.Words)} - sentence.mp3')">▶️ Play</button>
+                    <button class="small-btn" onclick="pauseSentenceAudio()">⏸️ Pause</button>
                     <button class="small-btn" onclick="adjustAudioTime(5)">⏩ +5s</button>
                 </div>
                 <p id="meaningText">${word['English meaning']}</p>
@@ -75,18 +76,17 @@
             audio.play();
         }
         
-        function toggleSentenceAudio(filename) {
+        function playSentenceAudio(filename) {
             let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
             if (sentenceAudio.src !== baseURL + filename) {
                 sentenceAudio.src = baseURL + filename;
                 sentenceAudio.load();
             }
-            
-            if (sentenceAudio.paused) {
-                sentenceAudio.play();
-            } else {
-                sentenceAudio.pause();
-            }
+            sentenceAudio.play();
+        }
+        
+        function pauseSentenceAudio() {
+            sentenceAudio.pause();
         }
         
         function adjustAudioTime(seconds) {
