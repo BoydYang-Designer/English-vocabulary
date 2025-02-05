@@ -25,23 +25,11 @@
             z-index: 1;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .container {
+        .alphabet-container {
             display: flex;
-            flex-direction: column;
-            max-width: 900px;
-            margin: 100px auto 0;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .letters {
-            display: flex;
-            flex-direction: column;
-            overflow-y: auto;
-            height: 80vh;
-            width: 60px;
-            margin-right: 20px;
+            justify-content: center;
+            padding-top: 80px;
+            margin-bottom: 20px;
         }
         .letter-btn {
             padding: 8px 12px;
@@ -56,6 +44,16 @@
         }
         .letter-btn:hover, .letter-btn.active {
             background: #555555;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            margin: 120px auto 0;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .content {
             display: flex;
@@ -126,12 +124,12 @@
 </head>
 <body>
     <h1>Boyd Vocabulary</h1>
+    <div class="alphabet-container">
+        <script>
+            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("${l.toLowerCase()}", this)'>${l}</button>`).join(" "));
+        </script>
+    </div>
     <div class="container">
-        <div class="letters">
-            <script>
-                document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("${l.toLowerCase()}", this)'>${l}</button>`).join(" "));
-            </script>
-        </div>
         <div class="content">
             <div id="wordList" class="word-list"></div>
             <div id="wordDetails" class="details">
