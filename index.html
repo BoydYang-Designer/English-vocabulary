@@ -79,6 +79,7 @@
             let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
             if (sentenceAudio.src !== baseURL + filename) {
                 sentenceAudio.src = baseURL + filename;
+                sentenceAudio.load();
             }
             
             if (sentenceAudio.paused) {
@@ -89,7 +90,9 @@
         }
         
         function adjustAudioTime(seconds) {
-            sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
+            if (!sentenceAudio.paused || sentenceAudio.currentTime > 0) {
+                sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
+            }
         }
     </script>
 </head>
