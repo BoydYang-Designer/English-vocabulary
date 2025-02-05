@@ -190,8 +190,8 @@
             let chinese = `<button class='button'>${word['traditional Chinese']}</button>`;
             let meaning = ` 
                 <div class='audio-controls'>
-                    <button class='audio-btn' onclick='adjustAudioTime(-5)'>⏪ -5s</button>
                     <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>▶️ 播放</button>
+                    <button class='audio-btn' onclick='adjustAudioTime(-5)'>⏪ -5s</button>
                     <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>⏸️ 暫停</button>
                     <button class='audio-btn' onclick='adjustAudioTime(5)'>⏩ +5s</button>
                 </div>
