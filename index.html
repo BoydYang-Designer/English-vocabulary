@@ -14,6 +14,8 @@
     </style>
     <script>
         let wordsData = {};
+        let sentenceAudio = new Audio();
+        
         document.addEventListener("DOMContentLoaded", function () {
             fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
                 .then(response => response.json())
@@ -45,7 +47,7 @@
             
             let phoneticButton = `<button class="play-btn" onclick="playAudio('${encodeURIComponent(word.Words)}.mp3')">${word['pronunciation-1']}</button>`;
             let chineseButton = `<button class="info-btn">${word['traditional Chinese']}</button>`;
-            let meaningButton = `<button class="play-btn" onclick="playAudio('${encodeURIComponent(word.Words)} - sentence.mp3')">English Meaning</button>`;
+            let meaningButton = `<button class="play-btn" onclick="toggleSentenceAudio(event, '${encodeURIComponent(word.Words)} - sentence.mp3')">English Meaning</button>`;
             
             document.getElementById('phoneticContainer').innerHTML = phoneticButton;
             document.getElementById('chineseContainer').innerHTML = chineseButton;
@@ -56,6 +58,23 @@
             let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
             let audio = new Audio(baseURL + filename);
             audio.play();
+        }
+        
+        function toggleSentenceAudio(event, filename) {
+            let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+            if (sentenceAudio.src !== baseURL + filename) {
+                sentenceAudio.src = baseURL + filename;
+            }
+            
+            if (event.detail === 2) {
+                sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime - 5);
+            } else {
+                if (sentenceAudio.paused) {
+                    sentenceAudio.play();
+                } else {
+                    sentenceAudio.pause();
+                }
+            }
         }
     </script>
 </head>
