@@ -85,27 +85,22 @@
             audio.play();
         }
         
-        function toggleSentenceAudio(filename) {
-            let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
-            if (sentenceAudio.src !== baseURL + filename) {
-                sentenceAudio.src = baseURL + filename;
-                sentenceAudio.load();
-            }
-            
-            if (sentenceAudio.paused || isPaused) {
-                sentenceAudio.play();
-                isPaused = false;
-            } else {
-                sentenceAudio.pause();
-                isPaused = true;
-            }
+function toggleSentenceAudio(filename) {
+    let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+
+    if (sentenceAudio.src !== baseURL + filename) {
+        sentenceAudio.src = baseURL + filename;
+        sentenceAudio.load();
+        sentenceAudio.play();
+    } else {
+        if (sentenceAudio.paused) {
+            sentenceAudio.play();
+        } else {
+            sentenceAudio.pause();
         }
-        
-        function adjustAudioTime(seconds) {
-            if (!sentenceAudio.paused || sentenceAudio.currentTime > 0) {
-                sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
-            }
-        }
+    }
+}
+
     </script>
 </head>
 <body>
