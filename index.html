@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boyd Vocabulary</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { display: flex; justify-content: space-between; margin: 20px; }
+        .word-list { width: 40%; text-align: left; padding: 10px; }
+        .detail-container { width: 55%; text-align: center; padding: 10px; display: none; border-left: 2px solid #ccc; }
+        .letter-btn { margin: 5px; padding: 10px; cursor: pointer; background-color: #555; color: white; border: none; }
+        .letter-btn.active { background-color: #333; }
+        .word-item { cursor: pointer; color: blue; text-decoration: underline; margin: 5px 0; }
+        .word-item.active { color: darkblue; font-weight: bold; }
+        .play-btn, .info-btn { margin: 10px; padding: 10px; cursor: pointer; display: block; width: 80%; margin: 10px auto; }
+        .button-group { display: flex; justify-content: center; gap: 10px; }
+        .small-btn { padding: 10px; width: 25%; }
+        #meaningText { margin-top: 20px; white-space: pre-line; }
+    </style>
+    <script>
+        let wordsData = {};
+        let sentenceAudio = new Audio();
+        let isPlaying = false;
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
+                .then(response => response.json())
+                .then(data => {
+                    wordsData = data["New Words"];
+                    console.log("JSON 讀取成功", wordsData);
+                })
+                .catch(error => console.error("讀取 JSON 時發生錯誤:", error));
+        });
+        
+        function showWords(letter, btn) {
+            let listContainer = document.getElementById('wordList');
+            listContainer.innerHTML = '';
+            document.getElementById('wordDetails').style.display = 'none';
+            
+            document.querySelectorAll('.letter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            let words = wordsData.filter(word => word.Words.startsWith(letter.toLowerCase()) && word['pronunciation-1']);
+            words.forEach(word => {
+                let item = document.createElement('p');
+                item.textContent = word.Words;
+                item.className = 'word-item';
+                item.onclick = function() {
+                    document.querySelectorAll('.word-item').forEach(w => w.classList.remove('active'));
+                    item.classList.add('active');
+                    showDetails(word);
+                };
+                listContainer.appendChild(item);
+            });
+        }
+        
+        function showDetails(word) {
+            document.getElementById('wordDetails').style.display = 'block';
+            document.getElementById('wordTitle').textContent = word.Words;
+            
+            let phoneticButtons = `<button class="play-btn" onclick="playAudio('${encodeURIComponent(word.Words)}.mp3')">${word['pronunciation-1']}</button>`;
+            if (word['pronunciation-2']) {
+                phoneticButtons += `<button class="play-btn" onclick="playAudio('${encodeURIComponent(word.Words)} 2.mp3')">${word['pronunciation-2']}</button>`;
+            }
+            
+            let chineseButton = `<button class="info-btn">${word['traditional Chinese']}</button>`;
+            let meaningButtons = `
+                <div class="button-group">
+                    <button class="small-btn" onclick="adjustAudioTime(-5)">⏪ -5s</button>
+                    <button class="small-btn" onclick="toggleSentenceAudio('${encodeURIComponent(word.Words)} - sentence.mp3')">▶️⏸️ Play/Pause</button>
+                    <button class="small-btn" onclick="adjustAudioTime(5)">⏩ +5s</button>
+                </div>
+                <p id="meaningText">${word['English meaning']}</p>
+            `;
+            
+            document.getElementById('phoneticContainer').innerHTML = phoneticButtons;
+            document.getElementById('chineseContainer').innerHTML = chineseButton;
+            document.getElementById('meaningContainer').innerHTML = meaningButtons;
+        }
+        
+        function playAudio(filename) {
+            let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+            let audio = new Audio(baseURL + filename);
+            audio.play();
+        }
+        
+        function toggleSentenceAudio(filename) {
+            let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+            let fullURL = baseURL + filename;
+            
+            if (!sentenceAudio.src.endsWith(filename)) {
+                sentenceAudio.src = fullURL;
+                sentenceAudio.load();
+                sentenceAudio.play();
+                isPlaying = true;
+            } else {
+                if (sentenceAudio.paused || sentenceAudio.ended) {
+                    sentenceAudio.play();
+                    isPlaying = true;
+                } else {
+                    sentenceAudio.pause();
+                    isPlaying = false;
+                }
+            }
+            
+            sentenceAudio.onended = function () {
+                isPlaying = false;
+            };
+        }
+        
+        function adjustAudioTime(seconds) {
+            if (!sentenceAudio.paused || sentenceAudio.currentTime > 0) {
+                sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Boyd Vocabulary</h1>
+    <div id="letters">
+        <script>
+            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter => `<button class='letter-btn' onclick='showWords("${letter.toLowerCase()}", this)'>${letter}</button>`).join(" "));
+        </script>
+    </div>
+    <div class="container">
+        <div id="wordList" class="word-list"></div>
+        <div id="wordDetails" class="detail-container">
+            <h2 id="wordTitle"></h2>
+            <div id="phoneticContainer"></div>
+            <div id="chineseContainer"></div>
+            <div id="meaningContainer"></div>
+        </div>
+    </div>
+</body>
+</html>
