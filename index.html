@@ -27,9 +27,12 @@
         }
         .alphabet-container {
             display: flex;
-            justify-content: center;
+            justify-content: start;
             padding-top: 80px;
             margin-bottom: 20px;
+            overflow-x: auto;
+            padding-left: 20px;
+            white-space: nowrap;
         }
         .letter-btn {
             padding: 8px 12px;
@@ -78,11 +81,14 @@
         }
         .details {
             flex: 2;
-            display: none;
-            border-left: 2px solid #ddd;
+            display: block;
             padding: 20px;
+            border-left: 2px solid #ddd;
             max-height: 80vh;
+        }
+        .detail-section {
             overflow-y: auto;
+            max-height: 200px; /* 限制解釋區域的高度 */
         }
         .button {
             display: block;
@@ -136,7 +142,7 @@
                 <h2 id="wordTitle"></h2>
                 <div id="phoneticContainer"></div>
                 <div id="chineseContainer"></div>
-                <div id="meaningContainer"></div>
+                <div id="meaningContainer" class="detail-section"></div>
             </div>
         </div>
     </div>
@@ -183,15 +189,7 @@
             }
             
             let chinese = `<button class='button'>${word['traditional Chinese']}</button>`;
-            let meaning = `
-                <div class='audio-controls'>
-                    <button class='audio-btn' onclick='adjustAudioTime(-5)'>⏪ -5s</button>
-                    <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>▶️ 播放</button>
-                    <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>⏸️ 暫停</button>
-                    <button class='audio-btn' onclick='adjustAudioTime(5)'>⏩ +5s</button>
-                </div>
-                <p id='meaningText'>${word['English meaning']}</p>
-            `;
+            let meaning = ` <p id='meaningText'>${word['English meaning']}</p>`;
             
             document.getElementById('phoneticContainer').innerHTML = phonetics;
             document.getElementById('chineseContainer').innerHTML = chinese;
