@@ -86,30 +86,32 @@
         }
         
         function toggleSentenceAudio(filename) {
-            let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
-            let fullURL = baseURL + filename;
-            
-            if (sentenceAudio.src !== fullURL) {
-                sentenceAudio.src = fullURL;
-                sentenceAudio.load();
-                sentenceAudio.play();
-                isPlaying = true;
-            } else {
-                if (sentenceAudio.paused) {
-                    sentenceAudio.play();
-                    isPlaying = true;
-                } else {
-                    sentenceAudio.pause();
-                    isPlaying = false;
-                }
-            }
+    let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+    let fullURL = baseURL + filename;
+
+    // 如果目前音檔不同，則載入新的
+    if (sentenceAudio.src !== fullURL) {
+        sentenceAudio.src = fullURL;
+        sentenceAudio.load();
+        sentenceAudio.play();
+        isPlaying = true;
+    } else {
+        // 如果已經載入該音檔，則切換播放/暫停
+        if (sentenceAudio.paused) {
+            sentenceAudio.play();
+            isPlaying = true;
+        } else {
+            sentenceAudio.pause();
+            isPlaying = false;
         }
-        
-        function adjustAudioTime(seconds) {
-            if (!sentenceAudio.paused || sentenceAudio.currentTime > 0) {
-                sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
-            }
-        }
+    }
+
+    // 當音檔播放完畢時，重設 isPlaying
+    sentenceAudio.onended = function () {
+        isPlaying = false;
+    };
+}
+
     </script>
 </head>
 <body>
