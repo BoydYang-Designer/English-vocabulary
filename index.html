@@ -5,18 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boyd Vocabulary</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .container { display: flex; justify-content: space-between; margin: 20px; }
-        .word-list { width: 40%; text-align: left; padding: 10px; }
-        .detail-container { width: 55%; text-align: center; padding: 10px; display: none; border-left: 2px solid #ccc; }
-        .letter-btn { margin: 5px; padding: 10px; cursor: pointer; background-color: #555; color: white; border: none; }
-        .letter-btn.active { background-color: #333; }
+        body { font-family: 'Arial', sans-serif; text-align: center; background-color: #f4f4f4; }
+        .container { display: flex; justify-content: space-between; margin: 20px auto; width: 80%; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .word-list { width: 35%; text-align: left; padding: 10px; }
+        .detail-container { width: 60%; text-align: center; padding: 20px; display: none; border-left: 2px solid #ccc; }
+        .letter-btn { 
+            margin: 5px; padding: 10px 15px; cursor: pointer; 
+            background-color: #444; color: white; border: none; 
+            border-radius: 5px; transition: background 0.3s;
+        }
+        .letter-btn.active { background-color: #222; }
         .word-item { cursor: pointer; color: blue; text-decoration: underline; margin: 5px 0; }
         .word-item.active { color: darkblue; font-weight: bold; }
-        .play-btn, .info-btn { margin: 10px; padding: 10px; cursor: pointer; display: block; width: 80%; margin: 10px auto; }
-        .button-group { display: flex; justify-content: center; gap: 10px; }
-        .small-btn { padding: 10px; width: 25%; }
-        #meaningText { margin-top: 20px; white-space: pre-line; }
+        .play-btn, .info-btn {
+            background-color: #444; color: white; border: none;
+            padding: 10px; border-radius: 5px; width: 100%;
+            margin-top: 10px; cursor: pointer; transition: background 0.3s;
+        }
+        .play-btn:hover, .info-btn:hover { background-color: #222; }
+        .button-group { display: flex; justify-content: space-between; margin-top: 10px; }
+        .small-btn { padding: 10px; flex: 1; margin: 0 5px; border-radius: 5px; background-color: #666; color: white; border: none; cursor: pointer; transition: background 0.3s; }
+        .small-btn:hover { background-color: #444; }
+        #meaningText { margin-top: 20px; white-space: pre-line; font-size: 16px; }
     </style>
     <script>
         let wordsData = {};
@@ -25,9 +35,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
                 .then(response => response.json())
-                .then(data => {
-                    wordsData = data["New Words"];
-                })
+                .then(data => { wordsData = data["New Words"]; })
                 .catch(error => console.error("讀取 JSON 時發生錯誤:", error));
         });
         
@@ -85,9 +93,7 @@
         
         function playSentenceAudio(filename) {
             let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
-            let fullURL = baseURL + filename;
-            sentenceAudio.src = fullURL;
-            sentenceAudio.load();
+            sentenceAudio.src = baseURL + filename;
             sentenceAudio.play();
         }
         
@@ -99,10 +105,6 @@
                 sentenceAudio.pause();
                 button.innerHTML = "▶️ 繼續";
             }
-            
-            sentenceAudio.onended = function () {
-                button.innerHTML = "▶️ 繼續";
-            };
         }
         
         function adjustAudioTime(seconds) {
