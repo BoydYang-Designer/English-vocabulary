@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boyd Vocabulary</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #f8f8f8; }
+        body { font-family: Arial, sans-serif; text-align: center; }
         .container { display: flex; justify-content: space-between; margin: 20px; }
-        .word-list { width: 40%; text-align: left; padding: 10px; background: #ddd; border-radius: 5px; }
-        .detail-container { width: 55%; text-align: center; padding: 10px; display: none; border-left: 2px solid #ccc; background: #fff; border-radius: 5px; }
-        .letter-btn { margin: 5px; padding: 10px; cursor: pointer; background: #555; color: white; border: none; border-radius: 5px; }
-        .word-item { cursor: pointer; background: #777; color: white; padding: 10px; border-radius: 5px; margin: 5px 0; text-align: center; }
-        .play-btn, .info-btn { margin: 10px; padding: 10px; cursor: pointer; display: block; width: 80%; margin: 10px auto; background: #666; color: white; border: none; border-radius: 5px; }
+        .word-list { width: 40%; text-align: left; padding: 10px; }
+        .detail-container { width: 55%; text-align: center; padding: 10px; display: none; border-left: 2px solid #ccc; }
+        .letter-btn { margin: 5px; padding: 10px; cursor: pointer; background-color: #555; color: white; border: none; }
+        .letter-btn.active { background-color: #333; }
+        .word-item { cursor: pointer; color: blue; text-decoration: underline; margin: 5px 0; }
+        .word-item.active { color: darkblue; font-weight: bold; }
+        .play-btn, .info-btn { margin: 10px; padding: 10px; cursor: pointer; display: block; width: 80%; margin: 10px auto; }
         .button-group { display: flex; justify-content: center; gap: 10px; }
-        .small-btn { padding: 10px; width: 25%; background: #444; color: white; border: none; border-radius: 5px; }
+        .small-btn { padding: 10px; width: 25%; }
         #meaningText { margin-top: 20px; white-space: pre-line; }
     </style>
     <script>
@@ -31,17 +33,24 @@
                 .catch(error => console.error("讀取 JSON 時發生錯誤:", error));
         });
         
-        function showWords(letter) {
+        function showWords(letter, btn) {
             let listContainer = document.getElementById('wordList');
             listContainer.innerHTML = '';
             document.getElementById('wordDetails').style.display = 'none';
+            
+            document.querySelectorAll('.letter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
             
             let words = wordsData.filter(word => word.Words.startsWith(letter.toLowerCase()) && word['pronunciation-1']);
             words.forEach(word => {
                 let item = document.createElement('p');
                 item.textContent = word.Words;
                 item.className = 'word-item';
-                item.onclick = () => showDetails(word);
+                item.onclick = function() {
+                    document.querySelectorAll('.word-item').forEach(w => w.classList.remove('active'));
+                    item.classList.add('active');
+                    showDetails(word);
+                };
                 listContainer.appendChild(item);
             });
         }
@@ -103,7 +112,7 @@
     <h1>Boyd Vocabulary</h1>
     <div id="letters">
         <script>
-            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter => `<button class='letter-btn' onclick='showWords("${letter.toLowerCase()}")'>${letter}</button>`).join(" "));
+            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter => `<button class='letter-btn' onclick='showWords("${letter.toLowerCase()}", this)'>${letter}</button>`).join(" "));
         </script>
     </div>
     <div class="container">
