@@ -87,12 +87,15 @@
         
 function toggleSentenceAudio(filename) {
     let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+    let fullURL = baseURL + filename;
 
-    if (sentenceAudio.src !== baseURL + filename) {
-        sentenceAudio.src = baseURL + filename;
+    // 如果播放的是不同的音檔，則載入並播放
+    if (sentenceAudio.src !== fullURL) {
+        sentenceAudio.src = fullURL;
         sentenceAudio.load();
         sentenceAudio.play();
     } else {
+        // 如果是同一個音檔，則切換播放/暫停
         if (sentenceAudio.paused) {
             sentenceAudio.play();
         } else {
@@ -100,6 +103,7 @@ function toggleSentenceAudio(filename) {
         }
     }
 }
+
 
     </script>
 </head>
