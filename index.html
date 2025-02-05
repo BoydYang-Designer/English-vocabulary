@@ -6,11 +6,12 @@
     <title>Boyd Vocabulary</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; }
+        .container { display: flex; justify-content: space-between; margin: 20px; }
+        .word-list { width: 40%; text-align: left; padding: 10px; }
+        .detail-container { width: 55%; text-align: center; padding: 10px; display: none; border-left: 2px solid #ccc; }
         .letter-btn { margin: 5px; padding: 10px; cursor: pointer; }
-        .word-list { margin-top: 20px; }
-        .word-item { cursor: pointer; color: blue; text-decoration: underline; }
-        .detail-container { margin-top: 20px; display: none; }
-        .play-btn, .info-btn { margin: 10px; padding: 10px; cursor: pointer; }
+        .word-item { cursor: pointer; color: blue; text-decoration: underline; margin: 5px 0; }
+        .play-btn, .info-btn { margin: 10px; padding: 10px; cursor: pointer; display: block; width: 80%; margin: 10px auto; }
     </style>
     <script>
         let wordsData = {};
@@ -85,12 +86,14 @@
             document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter => `<button class='letter-btn' onclick='showWords("${letter.toLowerCase()}")'>${letter}</button>`).join(" "));
         </script>
     </div>
-    <div id="wordList" class="word-list"></div>
-    <div id="wordDetails" class="detail-container">
-        <h2 id="wordTitle"></h2>
-        <div id="phoneticContainer"></div>
-        <div id="chineseContainer"></div>
-        <div id="meaningContainer"></div>
+    <div class="container">
+        <div id="wordList" class="word-list"></div>
+        <div id="wordDetails" class="detail-container">
+            <h2 id="wordTitle"></h2>
+            <div id="phoneticContainer"></div>
+            <div id="chineseContainer"></div>
+            <div id="meaningContainer"></div>
+        </div>
     </div>
 </body>
 </html>
