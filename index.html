@@ -5,114 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boyd Vocabulary</title>
     <style>
-        body { 
-            font-family: 'Helvetica Neue', sans-serif; 
-            background-color: #ecf0f1; 
-            color: #333; 
-            padding: 40px;
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
             margin: 0;
+            padding: 20px;
         }
-        .container { 
-            display: flex; 
-            max-width: 1000px; 
-            margin: auto; 
-            background: white; 
-            padding: 30px; 
-            border-radius: 12px; 
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        .container {
+            display: flex;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        h1 { 
-            text-align: center; 
-            color: #444; 
+        h1 {
+            text-align: center;
+            color: #444;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
-        .letters { 
-            text-align: center; 
-            margin-bottom: 15px; 
-        }
-        .letter-btn { 
-            padding: 10px 16px; 
-            margin: 4px; 
-            border: none; 
-            cursor: pointer;
-            background: #909090; 
-            color: white; 
-            border-radius: 8px; 
-            font-size: 16px;
-            transition: background 0.3s, transform 0.2s;
-        }
-        .letter-btn:hover, .letter-btn.active { 
-            background: #555555; 
-            transform: scale(1.1);
-        }
-        .content { 
-            display: flex; 
-            gap: 20px; 
-            width: 100%;
-        }
-        .word-list { 
-            flex: 1; 
-            padding: 12px; 
-            overflow-y: auto; 
-            height: 500px; 
-            background-color: #f2f2f2; 
-            border-radius: 8px; 
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .word-item { 
-            cursor: pointer; 
-            padding: 5px; 
-            border-bottom: 1px solid #ddd; 
-            color: #909090; 
-        }
-        .word-item:hover, .word-item.active { 
-            font-weight: bold; 
-            color: #555555; 
-        }
-        .details { 
-            flex: 2; 
-            padding: 20px; 
-            background-color: #fafafa; 
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            max-height: 500px;
+        .letters {
+            display: flex;
+            flex-direction: column;
             overflow-y: auto;
+            height: 80vh;
+            width: 60px;
+            margin-right: 20px;
         }
-        #phoneticContainer, #chineseContainer, #meaningContainer {
-            margin-bottom: 20px;
-            background-color: #e9ecef;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        #meaningText {
-            margin-top: 15px;
-            font-size: 18px;
-            line-height: 1.6;
-            color: #555;
-        }
-        .button, .audio-btn {
-            padding: 12px 18px; 
-            margin: 8px 0; 
+        .letter-btn {
+            padding: 8px 12px;
+            margin: 3px;
             border: none;
-            background: #909090; 
-            color: white; 
-            border-radius: 6px; 
+            cursor: pointer;
+            background: #909090;
+            color: white;
+            border-radius: 5px;
             font-size: 14px;
             transition: background 0.3s;
         }
-        .button:hover, .audio-btn:hover {
+        .letter-btn:hover, .letter-btn.active {
             background: #555555;
         }
-        #pauseResumeBtn {
-            background: #f39c12;
+        .content {
+            display: flex;
+            gap: 20px;
+            width: 100%;
         }
-        #pauseResumeBtn:hover {
-            background: #e67e22;
+        .word-list {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            max-height: 80vh;
         }
-        #meaningText { 
-            margin-top: 15px; 
-            font-size: 16px; 
+        .word-item {
+            cursor: pointer;
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+            color: #007bff;
+        }
+        .word-item:hover, .word-item.active {
+            font-weight: bold;
+            color: #0056b3;
+        }
+        .details {
+            flex: 2;
+            display: none;
+            border-left: 2px solid #ddd;
+            padding: 20px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px;
+            border: none;
+            background: #444;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background: #222;
+        }
+        .audio-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .audio-btn {
+            padding: 10px;
+            flex: 1;
+            margin: 0 5px;
+            border-radius: 5px;
+            background: #666;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .audio-btn:hover {
+            background: #444;
+        }
+        #meaningText {
+            margin-top: 15px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -134,6 +136,7 @@
             </div>
         </div>
     </div>
+
     <script>
         let wordsData = {};
         let sentenceAudio = new Audio();
