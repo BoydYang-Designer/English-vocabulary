@@ -27,12 +27,10 @@
         }
         .alphabet-container {
             display: flex;
-            justify-content: start;
+            justify-content: center;
             padding-top: 80px;
             margin-bottom: 20px;
-            overflow-x: auto;
-            padding-left: 20px;
-            white-space: nowrap;
+            overflow-x: auto; /* Enable horizontal scrolling */
         }
         .letter-btn {
             padding: 8px 12px;
@@ -44,6 +42,7 @@
             border-radius: 5px;
             font-size: 14px;
             transition: background 0.3s;
+            white-space: nowrap; /* Ensure letters don't break into multiple lines */
         }
         .letter-btn:hover, .letter-btn.active {
             background: #555555;
@@ -81,28 +80,28 @@
         }
         .details {
             flex: 2;
-            display: block;
-            padding: 20px;
+            display: none;
             border-left: 2px solid #ddd;
+            padding: 20px;
             max-height: 80vh;
-        }
-        .detail-section {
             overflow-y: auto;
-            max-height: 200px; /* 限制解釋區域的高度 */
         }
         .button {
-            display: block;
-            width: 100%;
-            margin: 5px 0;
-            padding: 10px;
-            border: none;
-            background: #444;
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 16px;
+            background-color: #444;
             color: white;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
+            text-align: center;
+            box-sizing: border-box;
+            transition: background 0.3s ease;
         }
         .button:hover {
-            background: #222;
+            background-color: #222;
         }
         .audio-controls {
             display: flex;
@@ -110,17 +109,17 @@
             margin-top: 10px;
         }
         .audio-btn {
-            padding: 10px;
-            flex: 1;
-            margin: 0 5px;
-            border-radius: 5px;
-            background: #666;
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #666;
             color: white;
-            border: none;
+            border-radius: 5px;
+            text-align: center;
             cursor: pointer;
+            margin: 5px;
         }
         .audio-btn:hover {
-            background: #444;
+            background-color: #444;
         }
         #meaningText {
             margin-top: 15px;
@@ -142,7 +141,7 @@
                 <h2 id="wordTitle"></h2>
                 <div id="phoneticContainer"></div>
                 <div id="chineseContainer"></div>
-                <div id="meaningContainer" class="detail-section"></div>
+                <div id="meaningContainer"></div>
             </div>
         </div>
     </div>
@@ -189,7 +188,15 @@
             }
             
             let chinese = `<button class='button'>${word['traditional Chinese']}</button>`;
-            let meaning = ` <p id='meaningText'>${word['English meaning']}</p>`;
+            let meaning = ` 
+                <div class='audio-controls'>
+                    <button class='audio-btn' onclick='adjustAudioTime(-5)'>⏪ -5s</button>
+                    <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>▶️ 播放</button>
+                    <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>⏸️ 暫停</button>
+                    <button class='audio-btn' onclick='adjustAudioTime(5)'>⏩ +5s</button>
+                </div>
+                <p id='meaningText'>${word['English meaning']}</p>
+            `;
             
             document.getElementById('phoneticContainer').innerHTML = phonetics;
             document.getElementById('chineseContainer').innerHTML = chinese;
