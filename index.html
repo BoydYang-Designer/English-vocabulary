@@ -12,6 +12,9 @@
         .letter-btn { margin: 5px; padding: 10px; cursor: pointer; }
         .word-item { cursor: pointer; color: blue; text-decoration: underline; margin: 5px 0; }
         .play-btn, .info-btn { margin: 10px; padding: 10px; cursor: pointer; display: block; width: 80%; margin: 10px auto; }
+        .button-group { display: flex; justify-content: center; gap: 10px; }
+        .small-btn { padding: 10px; width: 30%; }
+        #meaningText { margin-top: 20px; white-space: pre-line; }
     </style>
     <script>
         let wordsData = {};
@@ -21,8 +24,8 @@
             fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
                 .then(response => response.json())
                 .then(data => {
-                    wordsData = data;
-                    console.log("JSON 讀取成功", data);
+                    wordsData = data["New Words"];
+                    console.log("JSON 讀取成功", wordsData);
                 })
                 .catch(error => console.error("讀取 JSON 時發生錯誤:", error));
         });
@@ -46,13 +49,24 @@
             document.getElementById('wordDetails').style.display = 'block';
             document.getElementById('wordTitle').textContent = word.Words;
             
-            let phoneticButton = `<button class="play-btn" onclick="playAudio('${encodeURIComponent(word.Words)}.mp3')">${word['pronunciation-1']}</button>`;
-            let chineseButton = `<button class="info-btn">${word['traditional Chinese']}</button>`;
-            let meaningButton = `<button class="play-btn" onclick="toggleSentenceAudio(event, '${encodeURIComponent(word.Words)} - sentence.mp3')">English Meaning</button>`;
+            let phoneticButtons = `<button class="play-btn" onclick="playAudio('${encodeURIComponent(word.Words)}.mp3')">${word['pronunciation-1']}</button>`;
+            if (word['pronunciation-2']) {
+                phoneticButtons += `<button class="play-btn" onclick="playAudio('${encodeURIComponent(word.Words)} 2.mp3')">${word['pronunciation-2']}</button>`;
+            }
             
-            document.getElementById('phoneticContainer').innerHTML = phoneticButton;
+            let chineseButton = `<button class="info-btn">${word['traditional Chinese']}</button>`;
+            let meaningButtons = `
+                <div class="button-group">
+                    <button class="small-btn" onclick="adjustAudioTime(-5)">⏪ -5s</button>
+                    <button class="small-btn" onclick="toggleSentenceAudio('${encodeURIComponent(word.Words)} - sentence.mp3')">▶️⏸️ Play/Pause</button>
+                    <button class="small-btn" onclick="adjustAudioTime(5)">⏩ +5s</button>
+                </div>
+                <p id="meaningText">${word['English meaning']}</p>
+            `;
+            
+            document.getElementById('phoneticContainer').innerHTML = phoneticButtons;
             document.getElementById('chineseContainer').innerHTML = chineseButton;
-            document.getElementById('meaningContainer').innerHTML = meaningButton;
+            document.getElementById('meaningContainer').innerHTML = meaningButtons;
         }
         
         function playAudio(filename) {
@@ -61,21 +75,21 @@
             audio.play();
         }
         
-        function toggleSentenceAudio(event, filename) {
+        function toggleSentenceAudio(filename) {
             let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
             if (sentenceAudio.src !== baseURL + filename) {
                 sentenceAudio.src = baseURL + filename;
             }
             
-            if (event.detail === 2) {
-                sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime - 5);
+            if (sentenceAudio.paused) {
+                sentenceAudio.play();
             } else {
-                if (sentenceAudio.paused) {
-                    sentenceAudio.play();
-                } else {
-                    sentenceAudio.pause();
-                }
+                sentenceAudio.pause();
             }
+        }
+        
+        function adjustAudioTime(seconds) {
+            sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
         }
     </script>
 </head>
