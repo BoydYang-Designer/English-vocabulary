@@ -95,12 +95,13 @@
                 sentenceAudio.play();
                 isPlaying = true;
             } else {
-                if (isPlaying) {
-                    sentenceAudio.pause();
-                } else {
+                if (sentenceAudio.paused) {
                     sentenceAudio.play();
+                    isPlaying = true;
+                } else {
+                    sentenceAudio.pause();
+                    isPlaying = false;
                 }
-                isPlaying = !isPlaying;
             }
         }
         
