@@ -21,6 +21,7 @@
     <script>
         let wordsData = {};
         let sentenceAudio = new Audio();
+        let isPlaying = false;
         
         document.addEventListener("DOMContentLoaded", function () {
             fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
@@ -92,22 +93,21 @@
                 sentenceAudio.src = fullURL;
                 sentenceAudio.load();
                 sentenceAudio.play();
+                isPlaying = true;
             } else {
-                if (sentenceAudio.paused) {
-                    sentenceAudio.play();
-                } else {
+                if (isPlaying) {
                     sentenceAudio.pause();
+                } else {
+                    sentenceAudio.play();
                 }
+                isPlaying = !isPlaying;
             }
         }
         
         function adjustAudioTime(seconds) {
-            if (!sentenceAudio.src || sentenceAudio.src === "") {
-                console.warn("No audio loaded.");
-                return;
+            if (!sentenceAudio.paused || sentenceAudio.currentTime > 0) {
+                sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
             }
-            
-            sentenceAudio.currentTime += seconds;
         }
     </script>
 </head>
