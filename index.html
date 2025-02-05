@@ -5,38 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boyd Vocabulary</title>
     <style>
-        body { font-family: 'Arial', sans-serif; text-align: center; background-color: #f4f4f4; }
-        .container { display: flex; justify-content: space-between; margin: 20px auto; width: 80%; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        .word-list { width: 35%; text-align: left; padding: 10px; }
-        .detail-container { width: 60%; text-align: center; padding: 20px; display: none; border-left: 2px solid #ccc; }
+        body { font-family: 'Arial', sans-serif; background-color: #f9f9f9; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+        h1 { text-align: center; color: #444; }
+        .letters { text-align: center; margin-bottom: 15px; }
         .letter-btn { 
-            margin: 5px; padding: 10px 15px; cursor: pointer; 
-            background-color: #444; color: white; border: none; 
-            border-radius: 5px; transition: background 0.3s;
+            padding: 8px 12px; margin: 3px; border: none; cursor: pointer;
+            background: #007bff; color: white; border-radius: 5px; font-size: 14px;
+            transition: background 0.3s;
         }
-        .letter-btn.active { background-color: #222; }
-        .word-item { cursor: pointer; color: blue; text-decoration: underline; margin: 5px 0; }
-        .word-item.active { color: darkblue; font-weight: bold; }
-        .play-btn, .info-btn {
-            background-color: #444; color: white; border: none;
-            padding: 10px; border-radius: 5px; width: 100%;
-            margin-top: 10px; cursor: pointer; transition: background 0.3s;
-        }
-        .play-btn:hover, .info-btn:hover { background-color: #222; }
-        .button-group { display: flex; justify-content: space-between; margin-top: 10px; }
-        .small-btn { padding: 10px; flex: 1; margin: 0 5px; border-radius: 5px; background-color: #666; color: white; border: none; cursor: pointer; transition: background 0.3s; }
-        .small-btn:hover { background-color: #444; }
-        #meaningText { margin-top: 20px; white-space: pre-line; font-size: 16px; }
+        .letter-btn:hover, .letter-btn.active { background: #0056b3; }
+        .content { display: flex; gap: 20px; }
+        .word-list { flex: 1; padding: 10px; overflow-y: auto; }
+        .word-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #ddd; color: #007bff; }
+        .word-item:hover, .word-item.active { font-weight: bold; color: #0056b3; }
+        .details { flex: 2; display: none; border-left: 2px solid #ddd; padding: 20px; }
+        .button { display: block; width: 100%; margin: 5px 0; padding: 10px; border: none;
+                  background: #444; color: white; border-radius: 5px; cursor: pointer; }
+        .button:hover { background: #222; }
+        .audio-controls { display: flex; justify-content: space-between; margin-top: 10px; }
+        .audio-btn { padding: 10px; flex: 1; margin: 0 5px; border-radius: 5px; background: #666; color: white; border: none; cursor: pointer; }
+        .audio-btn:hover { background: #444; }
+        #meaningText { margin-top: 15px; font-size: 16px; }
     </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Boyd Vocabulary</h1>
+        <div class="letters">
+            <script>
+                document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("${l.toLowerCase()}", this)'>${l}</button>`).join(" "));
+            </script>
+        </div>
+        <div class="content">
+            <div id="wordList" class="word-list"></div>
+            <div id="wordDetails" class="details">
+                <h2 id="wordTitle"></h2>
+                <div id="phoneticContainer"></div>
+                <div id="chineseContainer"></div>
+                <div id="meaningContainer"></div>
+            </div>
+        </div>
+    </div>
     <script>
         let wordsData = {};
         let sentenceAudio = new Audio();
         
         document.addEventListener("DOMContentLoaded", function () {
             fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
-                .then(response => response.json())
+                .then(res => res.json())
                 .then(data => { wordsData = data["New Words"]; })
-                .catch(error => console.error("讀取 JSON 時發生錯誤:", error));
+                .catch(err => console.error("讀取 JSON 失敗:", err));
         });
         
         function showWords(letter, btn) {
@@ -46,7 +65,7 @@
             document.querySelectorAll('.letter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             
-            let words = wordsData.filter(word => word.Words.startsWith(letter.toLowerCase()) && word['pronunciation-1']);
+            let words = wordsData.filter(w => w.Words.startsWith(letter.toLowerCase()) && w['pronunciation-1']);
             words.forEach(word => {
                 let item = document.createElement('p');
                 item.textContent = word.Words;
@@ -64,31 +83,30 @@
             document.getElementById('wordDetails').style.display = 'block';
             document.getElementById('wordTitle').textContent = word.Words;
             
-            let phoneticButtons = `<button class="play-btn" onclick="playAudio('${encodeURIComponent(word.Words)}.mp3')">${word['pronunciation-1']}</button>`;
+            let phonetics = `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word['pronunciation-1']}</button>`;
             if (word['pronunciation-2']) {
-                phoneticButtons += `<button class="play-btn" onclick="playAudio('${encodeURIComponent(word.Words)} 2.mp3')">${word['pronunciation-2']}</button>`;
+                phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)} 2.mp3")'>${word['pronunciation-2']}</button>`;
             }
             
-            let chineseButton = `<button class="info-btn">${word['traditional Chinese']}</button>`;
-            let meaningButtons = `
-                <div class="button-group">
-                    <button class="small-btn" onclick="adjustAudioTime(-5)">⏪ -5s</button>
-                    <button class="small-btn" onclick="playSentenceAudio('${encodeURIComponent(word.Words)} - sentence.mp3')">▶️ 播放</button>
-                    <button class="small-btn" id="pauseResumeBtn" onclick="togglePauseAudio(this)">⏸️ 暫停</button>
-                    <button class="small-btn" onclick="adjustAudioTime(5)">⏩ +5s</button>
+            let chinese = `<button class='button'>${word['traditional Chinese']}</button>`;
+            let meaning = `
+                <div class='audio-controls'>
+                    <button class='audio-btn' onclick='adjustAudioTime(-5)'>⏪ -5s</button>
+                    <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>▶️ 播放</button>
+                    <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>⏸️ 暫停</button>
+                    <button class='audio-btn' onclick='adjustAudioTime(5)'>⏩ +5s</button>
                 </div>
-                <p id="meaningText">${word['English meaning']}</p>
+                <p id='meaningText'>${word['English meaning']}</p>
             `;
             
-            document.getElementById('phoneticContainer').innerHTML = phoneticButtons;
-            document.getElementById('chineseContainer').innerHTML = chineseButton;
-            document.getElementById('meaningContainer').innerHTML = meaningButtons;
+            document.getElementById('phoneticContainer').innerHTML = phonetics;
+            document.getElementById('chineseContainer').innerHTML = chinese;
+            document.getElementById('meaningContainer').innerHTML = meaning;
         }
         
         function playAudio(filename) {
             let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
-            let audio = new Audio(baseURL + filename);
-            audio.play();
+            new Audio(baseURL + filename).play();
         }
         
         function playSentenceAudio(filename) {
@@ -108,27 +126,8 @@
         }
         
         function adjustAudioTime(seconds) {
-            if (!sentenceAudio.paused || sentenceAudio.currentTime > 0) {
-                sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
-            }
+            sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
         }
     </script>
-</head>
-<body>
-    <h1>Boyd Vocabulary</h1>
-    <div id="letters">
-        <script>
-            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter => `<button class='letter-btn' onclick='showWords("${letter.toLowerCase()}", this)'>${letter}</button>`).join(" "));
-        </script>
-    </div>
-    <div class="container">
-        <div id="wordList" class="word-list"></div>
-        <div id="wordDetails" class="detail-container">
-            <h2 id="wordTitle"></h2>
-            <div id="phoneticContainer"></div>
-            <div id="chineseContainer"></div>
-            <div id="meaningContainer"></div>
-        </div>
-    </div>
 </body>
 </html>
