@@ -43,19 +43,26 @@
         }
         
         function showDetails(word) {
-            document.getElementById('wordDetails').style.display = 'block';
-            document.getElementById('wordTitle').textContent = word.Words;
-            document.getElementById('wordPhonetic').textContent = word['pronunciation-1'];
-            document.getElementById('wordDefinition').textContent = word['traditional Chinese'];
-            document.getElementById('wordMeaning').textContent = word['English meaning'];
-            
-            let audioBase = "https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/audio_files/";
-            audioPron.src = audioBase + word.Words + ".mp3";
-            audioSentence.src = audioBase + word.Words + " - sentence.mp3";
-            
-            document.getElementById('playPron').onclick = () => toggleAudio(audioPron);
-            document.getElementById('playSentence').onclick = (e) => handleSentenceAudio(e, audioSentence);
-        }
+    document.getElementById('wordDetails').style.display = 'block';
+    
+    // 確保 JavaScript 抓到正確的資料
+    document.getElementById('wordTitle').textContent = word.Words || "N/A";
+    document.getElementById('wordPhonetic').textContent = word['pronunciation-1'] || "N/A";
+    document.getElementById('wordDefinition').textContent = word['traditional Chinese'] || "N/A";
+    document.getElementById('wordMeaning').textContent = word['English meaning'] || "N/A";
+
+    let audioBase = "https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/audio_files/";
+    let wordAudio = audioBase + encodeURIComponent(word.Words) + ".mp3";
+    let sentenceAudio = audioBase + encodeURIComponent(word.Words) + " - sentence.mp3";
+
+    // 設定音檔連結
+    audioPron.src = wordAudio;
+    audioSentence.src = sentenceAudio;
+
+    // 播放按鈕事件
+    document.getElementById('playPron').onclick = () => toggleAudio(audioPron);
+    document.getElementById('playSentence').onclick = (e) => handleSentenceAudio(e, audioSentence);
+}
         
         function toggleAudio(audio) {
             if (audio.paused) {
