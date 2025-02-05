@@ -21,7 +21,6 @@
     <script>
         let wordsData = {};
         let sentenceAudio = new Audio();
-        let isPaused = false;
         
         document.addEventListener("DOMContentLoaded", function () {
             fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
@@ -85,26 +84,31 @@
             audio.play();
         }
         
-function toggleSentenceAudio(filename) {
-    let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
-    let fullURL = baseURL + filename;
-
-    // 如果播放的是不同的音檔，則載入並播放
-    if (sentenceAudio.src !== fullURL) {
-        sentenceAudio.src = fullURL;
-        sentenceAudio.load();
-        sentenceAudio.play();
-    } else {
-        // 如果是同一個音檔，則切換播放/暫停
-        if (sentenceAudio.paused) {
-            sentenceAudio.play();
-        } else {
-            sentenceAudio.pause();
+        function toggleSentenceAudio(filename) {
+            let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+            let fullURL = baseURL + filename;
+            
+            if (sentenceAudio.src !== fullURL) {
+                sentenceAudio.src = fullURL;
+                sentenceAudio.load();
+                sentenceAudio.play();
+            } else {
+                if (sentenceAudio.paused) {
+                    sentenceAudio.play();
+                } else {
+                    sentenceAudio.pause();
+                }
+            }
         }
-    }
-}
-
-
+        
+        function adjustAudioTime(seconds) {
+            if (!sentenceAudio.src || sentenceAudio.src === "") {
+                console.warn("No audio loaded.");
+                return;
+            }
+            
+            sentenceAudio.currentTime += seconds;
+        }
     </script>
 </head>
 <body>
