@@ -10,8 +10,10 @@
             background-color: #ecf0f1; 
             color: #333; 
             padding: 40px;
+            margin: 0;
         }
         .container { 
+            display: flex; 
             max-width: 1000px; 
             margin: auto; 
             background: white; 
@@ -45,11 +47,13 @@
         .content { 
             display: flex; 
             gap: 20px; 
+            width: 100%;
         }
         .word-list { 
             flex: 1; 
             padding: 12px; 
             overflow-y: auto; 
+            height: 500px; 
             background-color: #f2f2f2; 
             border-radius: 8px; 
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -66,11 +70,14 @@
         }
         .details { 
             flex: 2; 
-            display: none; 
-            border-left: 2px solid #ddd; 
             padding: 20px; 
             background-color: #fafafa; 
             border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            max-height: 500px;
+            overflow-y: auto;
         }
         #phoneticContainer, #chineseContainer, #meaningContainer {
             margin-bottom: 20px;
