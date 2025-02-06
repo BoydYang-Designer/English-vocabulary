@@ -130,29 +130,32 @@
         function backToAlphabet() {
             document.getElementById('wordList').style.display = 'none';
             document.getElementById('wordDetails').style.display = 'none';
-        }
+            document.querySelector('.alphabet-container').style.display = 'block'; // 顯示字母按鈕
+}
+
         
         function showWords(letter, btn) {
             let listContainer = document.getElementById('wordList');
-            listContainer.innerHTML = '';
+            listContainer.innerHTML = '<button class="button" onclick="backToAlphabet()">⬅ 返回字母列表</button>'; // 確保按鈕存在
             document.getElementById('wordDetails').style.display = 'none';
+    
             listContainer.style.display = 'block'; // 顯示單字列表
-            document.querySelectorAll('.letter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
+            document.querySelector('.alphabet-container').style.display = 'none'; // 隱藏字母按鈕
+
             let words = wordsData.filter(w => w.Words.startsWith(letter.toLowerCase()) && w['pronunciation-1']);
-            words.forEach(word => {
-                let item = document.createElement('p');
-                item.textContent = word.Words;
-                item.className = 'word-item';
-                item.onclick = function() {
-                    document.querySelectorAll('.word-item').forEach(w => w.classList.remove('active'));
-                    item.classList.add('active');
-                    showDetails(word);
-                };
-                listContainer.appendChild(item);
-            });
-        }
+    words.forEach(word => {
+            let item = document.createElement('p');
+           item.textContent = word.Words;
+            item.className = 'word-item';
+           item.onclick = function() {
+            document.querySelectorAll('.word-item').forEach(w => w.classList.remove('active'));
+            item.classList.add('active');
+            showDetails(word);
+        };
+        listContainer.appendChild(item);
+    });
+}
+
         
         function showDetails(word) {
             document.getElementById('wordList').style.display = 'none'; // 隱藏單字列表
@@ -180,10 +183,11 @@
             document.getElementById('meaningContainer').innerHTML = meaning;
         }
 
-        function backToWords() {
+           function backToWords() {
             document.getElementById('wordList').style.display = 'block';
             document.getElementById('wordDetails').style.display = 'none';
-        }
+}
+
         
         function playAudio(filename) {
             let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
