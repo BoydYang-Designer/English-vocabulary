@@ -126,6 +126,11 @@
                 .then(data => { wordsData = data["New Words"]; })
                 .catch(err => console.error("讀取 JSON 失敗:", err));
         });
+
+        function backToAlphabet() {
+            document.getElementById('wordList').style.display = 'none';
+            document.getElementById('wordDetails').style.display = 'none';
+        }
         
         function showWords(letter, btn) {
             let listContainer = document.getElementById('wordList');
