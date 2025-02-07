@@ -103,6 +103,7 @@
             document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("${l.toLowerCase()}", this)'>${l}</button>`).join(" "));
         </script>
     </div>
+    <div class="category-container" id="categoryButtons"></div>
     <div class="container">
         <div id="wordList" class="word-list">
             <button class="button" onclick="backToAlphabet()">⬅ 返回字母列表</button>
@@ -127,11 +128,38 @@
                 .catch(err => console.error("讀取 JSON 失敗:", err));
         });
 
+                function createCategoryButtons() {
+            if (!wordsData || !Array.isArray(wordsData)) return;
+            let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
+            document.getElementById("categoryButtons").innerHTML = categories
+                .map(c => `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`)
+                .join(" ");
+        }
+
+        function showWords(type, value) {
+            if (!wordsData || !Array.isArray(wordsData)) return;
+            let filteredWords = wordsData.filter(w => 
+                type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) : (w["分類"] || "未分類") === value
+            );
+
+            let listContainer = document.getElementById("wordList");
+            listContainer.innerHTML = '<button class="button" onclick="backToAlphabet()">⬅ 返回字母列表</button>';
+
+            filteredWords.forEach(word => {
+                let item = document.createElement('p');
+                item.textContent = word.Words;
+                item.className = 'word-item';
+                item.onclick = function() { showDetails(word); };
+                listContainer.appendChild(item);
+            });
+        }
+        
         function backToAlphabet() {
             document.getElementById('wordList').style.display = 'none';
             document.getElementById('wordDetails').style.display = 'none';
             document.querySelector('.alphabet-container').style.display = 'block'; // 顯示字母按鈕
-}
+            document.querySelector('.category-container').style.display = 'block';
+        }
 
         
         function showWords(letter, btn) {
