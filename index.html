@@ -67,6 +67,17 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
+        /* ✅ 這裡是新加入的 CSS，讓 meaningContainer 可滾動 */
+        #meaningContainer {
+            max-height: 300px; /* 限制內容的最大高度 */
+            overflow-y: auto; /* 啟用垂直滾動 */
+            padding-right: 10px; /* 讓滾動條不會擋住文字 */
+            border: 1px solid #ddd; /* 加上邊框讓區域更明顯（可選） */
+            background: #f9f9f9; /* 淺色背景讓可滾動區域更易辨識 */
+            padding: 10px;
+            border-radius: 5px; /* 圓角邊框讓畫面更美觀 */
+        }
         .button {
             display: inline-block;
             padding: 10px 15px;
