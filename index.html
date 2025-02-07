@@ -183,13 +183,25 @@ function showDetails(word) {
     document.getElementById('wordList').style.display = 'none';
     document.getElementById('wordDetails').style.display = 'block';
     document.getElementById('wordTitle').textContent = word.Words;
-    
+
     let phonetics = `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word['pronunciation-1']}</button>`;
     if (word['pronunciation-2']) {
         phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)} 2.mp3")'>${word['pronunciation-2']}</button>`;
     }
-    
+
     let chinese = `<button class='button'>${word['traditional Chinese']}</button>`;
+
+    // **改善 English meaning 的排版**
+    let formattedMeaning = word['English meaning']
+        .replace(/Summary:/g, "<h3>Summary:</h3>")  // 標題加大
+        .replace(/Related Words:/g, "<h3>Related Words:</h3>") 
+        .replace(/Antonyms:/g, "<h3>Antonyms:</h3>")
+        .replace(/\n1\./g, "<h3>1.</h3>")  // 處理編號
+        .replace(/\n2\./g, "<h3>2.</h3>")
+        .replace(/\n3\./g, "<h3>3.</h3>")
+        .replace(/\nE\.g\./g, "<strong>Example:</strong>")  // 讓 "Example:" 更明顯
+        .replace(/\n/g, "<br>");  // 讓換行在 HTML 正確顯示
+
     let meaning = ` 
         <div class='audio-controls'>
             <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>▶️ 播放</button>
@@ -197,10 +209,10 @@ function showDetails(word) {
             <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>⏸️ 暫停</button>
             <button class='audio-btn' onclick='adjustAudioTime(5)'>⏩ +5s</button>
         </div>
-        <p>${word['English meaning']}</p>
+        <p>${formattedMeaning}</p>
         <button class='button' onclick='backToWordList()'>⬅ 返回</button>
     `;
-    
+
     document.getElementById('phoneticContainer').innerHTML = phonetics;
     document.getElementById('chineseContainer').innerHTML = chinese;
     document.getElementById('meaningContainer').innerHTML = meaning;
