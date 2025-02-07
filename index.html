@@ -120,8 +120,7 @@
     <script>
 let wordsData = [];
 let sentenceAudio = new Audio();
-let lastWordListType = ""; // 記錄進入單字列表的方式
-let lastWordListValue = ""; // 記錄字母或分類值
+let previousLayer = ""; // Track where the user came from
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
@@ -143,17 +142,23 @@ function createCategoryButtons() {
 
 function showWords(type, value) {
     if (!wordsData || !Array.isArray(wordsData)) return;
-    
-    lastWordListType = type; // 記錄進入類型（letter 或 category）
-    lastWordListValue = value; // 記錄字母或分類值
 
     let listContainer = document.getElementById("wordList");
-    listContainer.innerHTML = '<button class="button" onclick="backToFirstLayer()">⬅ 返回</button>';
+    listContainer.innerHTML = '';
+    
+    // Save the previous layer
+    previousLayer = type;
+
+    let backButton = document.createElement("button");
+    backButton.className = "button";
+    backButton.textContent = "⬅ 返回";
+    backButton.onclick = function() { backToPreviousLayer(); };
+    listContainer.appendChild(backButton);
     
     let filteredWords = wordsData.filter(w => 
         type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) : (w["分類"] || "未分類") === value
     );
-    
+
     if (filteredWords.length === 0) {
         listContainer.innerHTML += "<p>⚠️ 沒有符合的單字</p>";
     }
@@ -162,7 +167,7 @@ function showWords(type, value) {
         let item = document.createElement('p');
         item.textContent = word.Words;
         item.className = 'word-item';
-        item.onclick = function() { showDetails(word); };
+        item.onclick = function() { showDetails(word, type, value); };
         listContainer.appendChild(item);
     });
 
@@ -172,17 +177,36 @@ function showWords(type, value) {
     document.querySelector('.category-container').style.display = 'none';
 }
 
-function backToFirstLayer() {
-    document.getElementById('wordList').style.display = 'none';
-    document.getElementById('wordDetails').style.display = 'none';
-    document.querySelector('.alphabet-container').style.display = 'block'; 
-    document.querySelector('.category-container').style.display = 'block'; 
+function backToPreviousLayer() {
+    if (previousLayer === "letter") {
+        document.getElementById('wordList').style.display = 'none';
+        document.getElementById('wordDetails').style.display = 'none';
+        document.querySelector('.alphabet-container').style.display = 'block';
+        document.querySelector('.category-container').style.display = 'none';
+    } else if (previousLayer === "category") {
+        document.getElementById('wordList').style.display = 'none';
+        document.getElementById('wordDetails').style.display = 'none';
+        document.querySelector('.alphabet-container').style.display = 'none';
+        document.querySelector('.category-container').style.display = 'block';
+    }
 }
 
-function showDetails(word) {
+function showDetails(word, type, value) {
     document.getElementById('wordList').style.display = 'none';
     document.getElementById('wordDetails').style.display = 'block';
     document.getElementById('wordTitle').textContent = word.Words;
+
+    // Save the previous layer
+    previousLayer = type;
+
+    let backButton = document.createElement("button");
+    backButton.className = "button";
+    backButton.textContent = "⬅ 返回";
+    backButton.onclick = function() { backToPreviousLayer(); };
+
+    let detailsContainer = document.getElementById("wordDetails");
+    detailsContainer.innerHTML = '';
+    detailsContainer.appendChild(backButton);
     
     let phonetics = `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word['pronunciation-1']}</button>`;
     if (word['pronunciation-2']) {
@@ -198,16 +222,9 @@ function showDetails(word) {
             <button class='audio-btn' onclick='adjustAudioTime(5)'>⏩ +5s</button>
         </div>
         <p>${word['English meaning']}</p>
-        <button class='button' onclick='backToWordList()'>⬅ 返回</button>
     `;
     
-    document.getElementById('phoneticContainer').innerHTML = phonetics;
-    document.getElementById('chineseContainer').innerHTML = chinese;
-    document.getElementById('meaningContainer').innerHTML = meaning;
-}
-
-function backToWordList() {
-    showWords(lastWordListType, lastWordListValue);
+    detailsContainer.innerHTML += `<div id='phoneticContainer'>${phonetics}</div><div id='chineseContainer'>${chinese}</div><div id='meaningContainer'>${meaning}</div>`;
 }
 
 function playAudio(filename) {
