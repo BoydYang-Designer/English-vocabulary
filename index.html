@@ -118,7 +118,7 @@
     </div>
 
     <script>
-       let wordsData = {};
+        let wordsData = {};
         let sentenceAudio = new Audio();
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -126,7 +126,7 @@
                 .then(res => res.json())
                 .then(data => {
                     wordsData = data;
-                    createCategoryButtons(); // 確保分類按鈕載入
+                    createCategoryButtons(); 
                 })
                 .catch(err => console.error("讀取 JSON 失敗:", err));
         });
@@ -141,6 +141,7 @@
 
         function showWords(type, value) {
             if (!wordsData || !Array.isArray(wordsData["New Words"])) return;
+
             let filteredWords = wordsData["New Words"].filter(w => 
                 type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) : (w["分類"] || "未分類") === value
             );
@@ -155,6 +156,11 @@
                 item.onclick = function() { showDetails(word); };
                 listContainer.appendChild(item);
             });
+
+            document.getElementById('wordList').style.display = 'block';
+            document.getElementById('wordDetails').style.display = 'none';
+            document.querySelector('.alphabet-container').style.display = 'none';
+            document.querySelector('.category-container').style.display = 'none';
         }
 
         function backToAlphabet() {
