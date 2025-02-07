@@ -175,13 +175,28 @@ function showWords(type, value) {
 
 function goBack() {
     if (navigationStack.length > 1) {
-        navigationStack.pop();
+        navigationStack.pop();  // 移除當前層
         let previousView = navigationStack[navigationStack.length - 1];
-        showWords(previousView.type, previousView.value);
+
+        if (previousView.type === "word") {
+            showDetails(previousView.value, false);  // 不重複 push
+        } else {
+            showWords(previousView.type, previousView.value, false);  // 不重複 push
+        }
+    } else {
+        // 如果沒有上一層了，就回到主畫面
+        document.getElementById('wordList').style.display = 'none';
+        document.getElementById('wordDetails').style.display = 'none';
+        document.querySelector('.alphabet-container').style.display = 'block';
+        document.querySelector('.category-container').style.display = 'block';
     }
 }
 
-function showDetails(word) {
+function showDetails(word, pushToStack = true) {
+    if (pushToStack) {
+        navigationStack.push({ type: "word", value: word });
+    }
+
     document.getElementById('wordList').style.display = 'none';
     document.getElementById('wordDetails').style.display = 'block';
     document.getElementById('wordTitle').textContent = word.Words;
@@ -206,7 +221,6 @@ function showDetails(word) {
     document.getElementById('chineseContainer').innerHTML = chinese;
     document.getElementById('meaningContainer').innerHTML = meaning;
 }
-
 function playAudio(filename) {
     let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
     new Audio(baseURL + filename).play();
