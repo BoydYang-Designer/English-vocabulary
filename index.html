@@ -120,8 +120,7 @@
     <script>
 let wordsData = [];
 let sentenceAudio = new Audio();
-let lastFilterType = ""; // 記錄上一次篩選類型 ("letter" 或 "category")
-let lastFilterValue = ""; // 記錄上一次篩選的值
+let lastView = "";
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
@@ -143,12 +142,17 @@ function createCategoryButtons() {
 
 function showWords(type, value) {
     if (!wordsData || !Array.isArray(wordsData)) return;
-    
-    lastFilterType = type; // 記錄進入單字列表的方式
-    lastFilterValue = value;
 
     let listContainer = document.getElementById("wordList");
-    listContainer.innerHTML = '<button class="button" onclick="backToMain()">⬅ 返回</button>';
+    listContainer.innerHTML = '';
+    
+    // 記錄進入方式
+    lastView = type;
+
+    let backButtonHTML = type === "letter" 
+        ? `<button class="button" onclick="backToAlphabet()">⬅ 返回字母列表</button>`
+        : `<button class="button" onclick="backToCategory()">⬅ 返回分類列表</button>`;
+    listContainer.innerHTML = backButtonHTML;
 
     let filteredWords = wordsData.filter(w => 
         type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) : (w["分類"] || "未分類") === value
@@ -172,10 +176,17 @@ function showWords(type, value) {
     document.querySelector('.category-container').style.display = 'none';
 }
 
-function backToMain() {
+function backToAlphabet() {
     document.getElementById('wordList').style.display = 'none';
     document.getElementById('wordDetails').style.display = 'none';
     document.querySelector('.alphabet-container').style.display = 'block'; 
+    document.querySelector('.category-container').style.display = 'block'; 
+}
+
+function backToCategory() {
+    document.getElementById('wordList').style.display = 'none';
+    document.getElementById('wordDetails').style.display = 'none';
+    document.querySelector('.alphabet-container').style.display = 'none'; 
     document.querySelector('.category-container').style.display = 'block'; 
 }
 
@@ -203,17 +214,6 @@ function showDetails(word) {
     document.getElementById('phoneticContainer').innerHTML = phonetics;
     document.getElementById('chineseContainer').innerHTML = chinese;
     document.getElementById('meaningContainer').innerHTML = meaning;
-    
-    // 新增兩個返回鍵
-    document.getElementById('wordDetails').innerHTML += `
-        <button class="button" onclick="backToWordList()">⬅ 返回單字列表</button>
-    `;
-}
-
-function backToWordList() {
-    if (lastFilterType === "letter" || lastFilterType === "category") {
-        showWords(lastFilterType, lastFilterValue); // 返回先前的單字列表
-    }
 }
 
 function playAudio(filename) {
@@ -240,7 +240,6 @@ function togglePauseAudio(button) {
 function adjustAudioTime(seconds) {
     sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
 }
-
     </script>
 </body>
 </html>
