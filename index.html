@@ -120,8 +120,7 @@
     <script>
 let wordsData = [];
 let sentenceAudio = new Audio();
-let lastView = "";
-let previousView = "";
+let navigationStack = [];
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
@@ -147,8 +146,7 @@ function showWords(type, value) {
     let listContainer = document.getElementById("wordList");
     listContainer.innerHTML = '';
     
-    previousView = lastView;
-    lastView = { type, value };
+    navigationStack.push({ type, value });
 
     let backButtonHTML = `<button class="button" onclick="goBack()">⬅ 返回</button>`;
     listContainer.innerHTML = backButtonHTML;
@@ -176,8 +174,11 @@ function showWords(type, value) {
 }
 
 function goBack() {
-    if (!previousView) return;
-    showWords(previousView.type, previousView.value);
+    if (navigationStack.length > 1) {
+        navigationStack.pop();
+        let previousView = navigationStack[navigationStack.length - 1];
+        showWords(previousView.type, previousView.value);
+    }
 }
 
 function showDetails(word) {
