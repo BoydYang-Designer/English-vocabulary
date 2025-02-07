@@ -121,6 +121,7 @@
 let wordsData = [];
 let sentenceAudio = new Audio();
 let previousLayer = ""; // Track where the user came from
+let previousValue = ""; // Track the value (letter or category) to return to
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
@@ -146,8 +147,9 @@ function showWords(type, value) {
     let listContainer = document.getElementById("wordList");
     listContainer.innerHTML = '';
     
-    // Save the previous layer
-    previousLayer = "category";
+    // 保存上一層
+    previousLayer = type;
+    previousValue = value;
 
     let backButton = document.createElement("button");
     backButton.className = "button";
@@ -171,7 +173,7 @@ function showWords(type, value) {
         listContainer.appendChild(item);
     });
 
-    // Show the word list and hide the other layers
+    // 顯示單字列表，並隱藏其他區域
     document.getElementById('wordList').style.display = 'block';
     document.getElementById('wordDetails').style.display = 'none';
     document.querySelector('.alphabet-container').style.display = 'none';
@@ -179,11 +181,13 @@ function showWords(type, value) {
 }
 
 function backToPreviousLayer() {
+    // 根據上一層來顯示正確的內容
     if (previousLayer === "letter") {
         document.getElementById('wordList').style.display = 'none';
         document.getElementById('wordDetails').style.display = 'none';
         document.querySelector('.alphabet-container').style.display = 'block';
         document.querySelector('.category-container').style.display = 'none';
+        createCategoryButtons(); // 顯示字母按鈕
     } else if (previousLayer === "category") {
         document.getElementById('wordList').style.display = 'none';
         document.getElementById('wordDetails').style.display = 'none';
@@ -197,8 +201,9 @@ function showDetails(word, type, value) {
     document.getElementById('wordDetails').style.display = 'block';
     document.getElementById('wordTitle').textContent = word.Words;
 
-    // Save the previous layer
+    // 保存上一層
     previousLayer = type;
+    previousValue = value;
 
     let backButton = document.createElement("button");
     backButton.className = "button";
