@@ -69,15 +69,34 @@
         }
 
         /* ✅ 這裡是新加入的 CSS，讓 meaningContainer 可滾動 */
+
         #meaningContainer {
-            max-height: 300px; /* 限制內容的最大高度 */
+             max-height: 300px; /* 限制內容區域的最大高度 */
             overflow-y: auto; /* 啟用垂直滾動 */
-            padding-right: 10px; /* 讓滾動條不會擋住文字 */
-            border: 1px solid #ddd; /* 加上邊框讓區域更明顯（可選） */
-            background: #f9f9f9; /* 淺色背景讓可滾動區域更易辨識 */
+            padding-right: 10px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
             padding: 10px;
-            border-radius: 5px; /* 圓角邊框讓畫面更美觀 */
-        }
+            border-radius: 5px;
+    /* 讓內部的內容與按鈕區域排成垂直方向 */
+            display: flex;
+            flex-direction: column;
+            /* 讓內容可以滾動，但不影響按鈕 */
+.meaning-content {
+    flex-grow: 1; /* 讓內容區域撐滿可用空間 */
+    overflow-y: auto; /* 讓內容區域滾動 */
+}
+
+/* ✅ 確保音頻按鈕區域固定在 #meaningContainer 的底部 */
+.audio-controls {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    flex-shrink: 0; /* 確保按鈕不會被擠壓縮小 */
+}
         .button {
             display: inline-block;
             padding: 10px 15px;
@@ -90,11 +109,7 @@
         .button:hover {
             background-color: #222;
         }
-        .audio-controls {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
+        
         .audio-btn {
             padding: 10px 15px;
             background-color: #666;
