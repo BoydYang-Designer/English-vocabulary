@@ -120,13 +120,14 @@
     <script>
 let wordsData = [];
 let sentenceAudio = new Audio();
+let lastView = ""; // 記錄最後一次進入的方式 ('letter' 或 'category')
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
         .then(res => res.json())
         .then(data => {
-            wordsData = data["New Words"] || []; // ✅ 確保讀取成功
-            setTimeout(createCategoryButtons, 500); // ✅ 確保分類按鈕載入
+            wordsData = data["New Words"] || [];
+            setTimeout(createCategoryButtons, 500);
         })
         .catch(err => console.error("讀取 JSON 失敗:", err));
 });
@@ -142,9 +143,16 @@ function createCategoryButtons() {
 function showWords(type, value) {
     if (!wordsData || !Array.isArray(wordsData)) return;
 
+    lastView = type; // 記錄使用者是從字母或分類進入
     let listContainer = document.getElementById("wordList");
-    listContainer.innerHTML = '<button class="button" onclick="backToAlphabet()">⬅ 返回字母列表</button>';
-
+    listContainer.innerHTML = '';
+    
+    if (type === "letter") {
+        listContainer.innerHTML += '<button class="button" onclick="backToAlphabet()">⬅ 返回字母列表</button>';
+    } else if (type === "category") {
+        listContainer.innerHTML += '<button class="button" onclick="backToCategory()">⬅ 返回分類列表</button>';
+    }
+    
     let filteredWords = wordsData.filter(w => 
         type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) : (w["分類"] || "未分類") === value
     );
@@ -171,6 +179,13 @@ function backToAlphabet() {
     document.getElementById('wordList').style.display = 'none';
     document.getElementById('wordDetails').style.display = 'none';
     document.querySelector('.alphabet-container').style.display = 'block'; 
+    document.querySelector('.category-container').style.display = 'block'; 
+}
+
+function backToCategory() {
+    document.getElementById('wordList').style.display = 'none';
+    document.getElementById('wordDetails').style.display = 'none';
+    document.querySelector('.alphabet-container').style.display = 'none'; 
     document.querySelector('.category-container').style.display = 'block'; 
 }
 
