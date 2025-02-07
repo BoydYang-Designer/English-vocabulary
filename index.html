@@ -181,16 +181,23 @@ function showWords(type, value) {
 }
 
 function backToPreviousLayer() {
-    // 根據上一層來顯示正確的內容
-    if (previousLayer === "letter") {
-        document.getElementById('wordList').style.display = 'none';
-        document.getElementById('wordDetails').style.display = 'none';
+    let listContainer = document.getElementById('wordList');
+    let detailsContainer = document.getElementById('wordDetails');
+
+    if (detailsContainer.style.display === 'block') {
+        // 當前顯示的是單字詳情，返回單字列表
+        detailsContainer.style.display = 'none';
+        listContainer.style.display = 'block';
+    } else if (previousLayer === "letter") {
+        // 從單字列表返回到字母選擇
+        listContainer.style.display = 'none';
+        detailsContainer.style.display = 'none';
         document.querySelector('.alphabet-container').style.display = 'block';
         document.querySelector('.category-container').style.display = 'none';
-        createCategoryButtons(); // 顯示字母按鈕
     } else if (previousLayer === "category") {
-        document.getElementById('wordList').style.display = 'none';
-        document.getElementById('wordDetails').style.display = 'none';
+        // 從單字列表返回到分類選擇
+        listContainer.style.display = 'none';
+        detailsContainer.style.display = 'none';
         document.querySelector('.alphabet-container').style.display = 'none';
         document.querySelector('.category-container').style.display = 'block';
     }
