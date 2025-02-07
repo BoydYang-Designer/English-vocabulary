@@ -22,7 +22,7 @@
             text-align: center;
             margin: 15px 0;
         }
-        .letter-btn {
+        .btn {
             padding: 10px;
             margin: 5px;
             cursor: pointer;
@@ -31,7 +31,7 @@
             color: white;
             border-radius: 5px;
         }
-        .letter-btn:hover {
+        .btn:hover {
             background: #777;
         }
         .container {
@@ -40,7 +40,7 @@
             gap: 20px;
             margin: 20px;
         }
-        .word-list, .details {
+        .word-list {
             width: 300px;
             max-height: 400px;
             overflow-y: auto;
@@ -58,105 +58,99 @@
         .word-item:hover {
             font-weight: bold;
         }
-        .button {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #444;
-            color: white;
-            border: none;
+        .details {
+            display: none;
+            flex: 1;
+            max-width: 400px;
+            background: white;
+            padding: 15px;
             border-radius: 5px;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #222;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
     <h1>Boyd Vocabulary</h1>
-    <div class="alphabet-container" id="alphabetButtons"></div>
-    <div class="category-container" id="categoryButtons"></div>
+    <div class="category-container">
+        <button class="btn" onclick="showCategory('common')">常見單字</button>
+        <button class="btn" onclick="showCategory('advanced')">進階單字</button>
+        <button class="btn" onclick="showCategory('idioms')">片語</button>
+    </div>
+    <div class="alphabet-container"></div>
     <div class="container">
         <div id="wordList" class="word-list"></div>
-        <div id="wordDetails" class="details" style="display: none;">
-            <button class="button" onclick="backToWords()">⬅ 返回</button>
+        <div id="wordDetails" class="details">
+            <button class="btn" onclick="backToWords()">⬅ 返回</button>
             <h2 id="wordTitle"></h2>
             <div id="phoneticContainer"></div>
             <div id="chineseContainer"></div>
             <div id="meaningContainer"></div>
-            <audio id="audioPlayer" controls></audio>
         </div>
     </div>
+
     <script>
         let wordsData = {};
+        let currentCategory = 'common';
+        
         document.addEventListener("DOMContentLoaded", function () {
             fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
                 .then(res => res.json())
-                .then(data => {
-                    wordsData = data["New Words"];
-                    createAlphabetButtons();
-                    createCategoryButtons();
-                })
+                .then(data => { wordsData = data["New Words"]; renderAlphabet(); })
                 .catch(err => console.error("讀取 JSON 失敗:", err));
         });
 
-        function createAlphabetButtons() {
-            document.getElementById("alphabetButtons").innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                .split("").map(l => `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`).join(" ");
+        function renderAlphabet() {
+            document.querySelector('.alphabet-container').innerHTML =
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='btn' onclick='showWords("${l.toLowerCase()}")'>${l}</button>`).join(" ");
         }
 
-        function createCategoryButtons() {
-            if (!wordsData || !Array.isArray(wordsData)) return;
-            let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
-            document.getElementById("categoryButtons").innerHTML = categories
-                .map(c => `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`).join(" ");
+        function showCategory(category) {
+            currentCategory = category;
+            document.querySelector('.alphabet-container').style.display = 'block';
+            document.getElementById('wordList').style.display = 'none';
+            document.getElementById('wordDetails').style.display = 'none';
         }
 
-        function showWords(type, value) {
-            if (!wordsData || !Array.isArray(wordsData)) return;
-            let filteredWords = wordsData.filter(w =>
-                type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) : (w["分類"] || "未分類") === value
-            );
+        function showWords(letter) {
             let listContainer = document.getElementById('wordList');
-            listContainer.innerHTML = '<button class="button" onclick="backToAlphabet()">⬅ 返回</button>';
+            listContainer.innerHTML = '<button class="btn" onclick="backToAlphabet()">⬅ 返回字母列表</button>';
             document.getElementById('wordDetails').style.display = 'none';
             listContainer.style.display = 'block';
             document.querySelector('.alphabet-container').style.display = 'none';
-            document.querySelector('.category-container').style.display = 'none';
-            filteredWords.forEach(word => {
+
+            let words = wordsData.filter(w => w.Words.startsWith(letter.toLowerCase()) && w.Category === currentCategory);
+            words.forEach(word => {
                 let item = document.createElement('p');
                 item.textContent = word.Words;
                 item.className = 'word-item';
-                item.onclick = function() { showDetails(word); };
+                item.onclick = () => showDetails(word);
                 listContainer.appendChild(item);
             });
-        }
-
-        function backToAlphabet() {
-            document.getElementById('wordList').style.display = 'none';
-            document.getElementById('wordDetails').style.display = 'none';
-            document.querySelector('.alphabet-container').style.display = 'block';
-            document.querySelector('.category-container').style.display = 'block';
         }
 
         function showDetails(word) {
             document.getElementById('wordList').style.display = 'none';
             document.getElementById('wordDetails').style.display = 'block';
             document.getElementById('wordTitle').textContent = word.Words;
-            document.getElementById('phoneticContainer').innerHTML = `<button class='button' onclick='playAudio("${word.Words}")'>${word['pronunciation-1']}</button>`;
+            document.getElementById('phoneticContainer').innerHTML = `<button class='btn' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word['pronunciation-1']}</button>`;
             document.getElementById('chineseContainer').innerHTML = `<p>${word['traditional Chinese']}</p>`;
             document.getElementById('meaningContainer').innerHTML = `<p>${word['English meaning']}</p>`;
         }
 
-        function backToWords() {
+        function backToAlphabet() {
+            document.querySelector('.alphabet-container').style.display = 'block';
+            document.getElementById('wordList').style.display = 'none';
             document.getElementById('wordDetails').style.display = 'none';
-            document.getElementById('wordList').style.display = 'block';
         }
 
-        function playAudio(word) {
-            let audio = document.getElementById("audioPlayer");
-            audio.src = `https://boydyang-designer.github.io/audio/${word}.mp3`;
-            audio.play();
+        function backToWords() {
+            document.getElementById('wordList').style.display = 'block';
+            document.getElementById('wordDetails').style.display = 'none';
+        }
+
+        function playAudio(filename) {
+            let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+            new Audio(baseURL + filename).play();
         }
     </script>
 </body>
