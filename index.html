@@ -125,8 +125,8 @@
             fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
                 .then(res => res.json())
                 .then(data => {
-                    wordsData = data; // 保持完整 JSON 結構
-                    createCategoryButtons();
+                    wordsData = data;
+                    createCategoryButtons(); // 確保分類按鈕載入
                 })
                 .catch(err => console.error("讀取 JSON 失敗:", err));
         });
