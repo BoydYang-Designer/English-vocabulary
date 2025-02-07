@@ -121,6 +121,7 @@
 let wordsData = [];
 let sentenceAudio = new Audio();
 let lastView = "";
+let previousView = "";
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
@@ -146,12 +147,10 @@ function showWords(type, value) {
     let listContainer = document.getElementById("wordList");
     listContainer.innerHTML = '';
     
-    // 記錄進入方式
-    lastView = type;
+    previousView = lastView;
+    lastView = { type, value };
 
-    let backButtonHTML = type === "letter" 
-        ? `<button class="button" onclick="backToAlphabet()">⬅ 返回字母列表</button>`
-        : `<button class="button" onclick="backToCategory()">⬅ 返回分類列表</button>`;
+    let backButtonHTML = `<button class="button" onclick="goBack()">⬅ 返回</button>`;
     listContainer.innerHTML = backButtonHTML;
 
     let filteredWords = wordsData.filter(w => 
@@ -176,18 +175,9 @@ function showWords(type, value) {
     document.querySelector('.category-container').style.display = 'none';
 }
 
-function backToAlphabet() {
-    document.getElementById('wordList').style.display = 'none';
-    document.getElementById('wordDetails').style.display = 'none';
-    document.querySelector('.alphabet-container').style.display = 'block'; 
-    document.querySelector('.category-container').style.display = 'block'; 
-}
-
-function backToCategory() {
-    document.getElementById('wordList').style.display = 'none';
-    document.getElementById('wordDetails').style.display = 'none';
-    document.querySelector('.alphabet-container').style.display = 'none'; 
-    document.querySelector('.category-container').style.display = 'block'; 
+function goBack() {
+    if (!previousView) return;
+    showWords(previousView.type, previousView.value);
 }
 
 function showDetails(word) {
