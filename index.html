@@ -228,12 +228,6 @@ function showDetails(word) {
         .replace(/\n/g, "<br>");  // 讓換行在 HTML 正確顯示
 
     let meaning = ` 
-        <div class='audio-controls'>
-            <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>▶️ 播放</button>
-            <button class='audio-btn' onclick='adjustAudioTime(-5)'>⏪ -5s</button>
-            <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>⏸️ 暫停</button>
-            <button class='audio-btn' onclick='adjustAudioTime(5)'>⏩ +5s</button>
-        </div>
         <p>${formattedMeaning}</p>
         <button class='button' onclick='backToWordList()'>⬅ 返回</button>
     `;
@@ -241,6 +235,24 @@ function showDetails(word) {
     document.getElementById('phoneticContainer').innerHTML = phonetics;
     document.getElementById('chineseContainer').innerHTML = chinese;
     document.getElementById('meaningContainer').innerHTML = meaning;
+
+    // ✅ 先刪除舊的 `.audio-controls`，避免按鈕重複增加
+    let existingAudioControls = document.querySelector('.audio-controls');
+    if (existingAudioControls) {
+        existingAudioControls.remove();
+    }
+
+    // ✅ 把 .audio-controls 加入 #wordDetails，確保按鈕不會重複
+    let audioControls = `
+        <div class='audio-controls'>
+            <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>▶️ 播放</button>
+            <button class='audio-btn' onclick='adjustAudioTime(-5)'>⏪ -5s</button>
+            <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>⏸️ 暫停</button>
+            <button class='audio-btn' onclick='adjustAudioTime(5)'>⏩ +5s</button>
+        </div>
+    `;
+
+    document.getElementById('wordDetails').insertAdjacentHTML("beforeend", audioControls);
 }
 
 function backToWordList() {
@@ -271,6 +283,6 @@ function togglePauseAudio(button) {
 function adjustAudioTime(seconds) {
     sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
 }
-    </script>
+</script>
 </body>
 </html>
