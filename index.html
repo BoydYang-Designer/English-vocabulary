@@ -190,15 +190,15 @@ function showDetails(word) {
 
     let chinese = `<button class='button'>${word['traditional Chinese']}</button>`;
 
-    // **改善 English meaning 的排版**
+    // **格式化 English meaning，讓 Example 部分從新行開始**
     let formattedMeaning = word['English meaning']
-        .replace(/Summary:/g, "<h3>Summary:</h3>")  // 標題加大
+        .replace(/Summary:/g, "<h3>Summary:</h3>")  
         .replace(/Related Words:/g, "<h3>Related Words:</h3>") 
         .replace(/Antonyms:/g, "<h3>Antonyms:</h3>")
-        .replace(/\n1\./g, "<h3>1.</h3>")  // 處理編號
-        .replace(/\n2\./g, "<h3>2.</h3>")
-        .replace(/\n3\./g, "<h3>3.</h3>")
-        .replace(/\nE\.g\./g, "<strong>Example:</strong>")  // 讓 "Example:" 更明顯
+        .replace(/\n1\./g, "<h3>1.</h3><p>")  // 讓數字後的新段落開始
+        .replace(/\n2\./g, "<h3>2.</h3><p>")
+        .replace(/\n3\./g, "<h3>3.</h3><p>")
+        .replace(/\nE\.g\./g, "</p><p><strong>Example:</strong>")  // 確保 Example 在新段落
         .replace(/\n/g, "<br>");  // 讓換行在 HTML 正確顯示
 
     let meaning = ` 
