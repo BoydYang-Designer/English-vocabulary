@@ -147,7 +147,7 @@ function showWords(type, value) {
     listContainer.innerHTML = '';
     
     // Save the previous layer
-    previousLayer = type;
+    previousLayer = "category";
 
     let backButton = document.createElement("button");
     backButton.className = "button";
@@ -171,6 +171,7 @@ function showWords(type, value) {
         listContainer.appendChild(item);
     });
 
+    // Show the word list and hide the other layers
     document.getElementById('wordList').style.display = 'block';
     document.getElementById('wordDetails').style.display = 'none';
     document.querySelector('.alphabet-container').style.display = 'none';
