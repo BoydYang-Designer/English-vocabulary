@@ -120,7 +120,8 @@
     <script>
 let wordsData = [];
 let sentenceAudio = new Audio();
-let navigationStack = [];
+let lastWordListType = ""; // 記錄進入單字列表的方式
+let lastWordListValue = ""; // 記錄字母或分類值
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
@@ -142,19 +143,17 @@ function createCategoryButtons() {
 
 function showWords(type, value) {
     if (!wordsData || !Array.isArray(wordsData)) return;
+    
+    lastWordListType = type; // 記錄進入類型（letter 或 category）
+    lastWordListValue = value; // 記錄字母或分類值
 
     let listContainer = document.getElementById("wordList");
-    listContainer.innerHTML = '';
+    listContainer.innerHTML = '<button class="button" onclick="backToFirstLayer()">⬅ 返回</button>';
     
-    navigationStack.push({ type, value });
-
-    let backButtonHTML = `<button class="button" onclick="goBack()">⬅ 返回</button>`;
-    listContainer.innerHTML = backButtonHTML;
-
     let filteredWords = wordsData.filter(w => 
         type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) : (w["分類"] || "未分類") === value
     );
-
+    
     if (filteredWords.length === 0) {
         listContainer.innerHTML += "<p>⚠️ 沒有符合的單字</p>";
     }
@@ -173,30 +172,14 @@ function showWords(type, value) {
     document.querySelector('.category-container').style.display = 'none';
 }
 
-function goBack() {
-    if (navigationStack.length > 1) {
-        navigationStack.pop();  // 移除當前層
-        let previousView = navigationStack[navigationStack.length - 1];
-
-        if (previousView.type === "word") {
-            showDetails(previousView.value, false);  // 不重複 push
-        } else {
-            showWords(previousView.type, previousView.value, false);  // 不重複 push
-        }
-    } else {
-        // 如果沒有上一層了，就回到主畫面
-        document.getElementById('wordList').style.display = 'none';
-        document.getElementById('wordDetails').style.display = 'none';
-        document.querySelector('.alphabet-container').style.display = 'block';
-        document.querySelector('.category-container').style.display = 'block';
-    }
+function backToFirstLayer() {
+    document.getElementById('wordList').style.display = 'none';
+    document.getElementById('wordDetails').style.display = 'none';
+    document.querySelector('.alphabet-container').style.display = 'block'; 
+    document.querySelector('.category-container').style.display = 'block'; 
 }
 
-function showDetails(word, pushToStack = true) {
-    if (pushToStack) {
-        navigationStack.push({ type: "word", value: word });
-    }
-
+function showDetails(word) {
     document.getElementById('wordList').style.display = 'none';
     document.getElementById('wordDetails').style.display = 'block';
     document.getElementById('wordTitle').textContent = word.Words;
@@ -215,12 +198,18 @@ function showDetails(word, pushToStack = true) {
             <button class='audio-btn' onclick='adjustAudioTime(5)'>⏩ +5s</button>
         </div>
         <p>${word['English meaning']}</p>
+        <button class='button' onclick='backToWordList()'>⬅ 返回</button>
     `;
     
     document.getElementById('phoneticContainer').innerHTML = phonetics;
     document.getElementById('chineseContainer').innerHTML = chinese;
     document.getElementById('meaningContainer').innerHTML = meaning;
 }
+
+function backToWordList() {
+    showWords(lastWordListType, lastWordListValue);
+}
+
 function playAudio(filename) {
     let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
     new Audio(baseURL + filename).play();
