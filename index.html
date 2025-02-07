@@ -118,49 +118,51 @@
     </div>
 
     <script>
-        let wordsData = {};
-        let sentenceAudio = new Audio();
-        
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
-                .then(res => res.json())
-                .then(data => { wordsData = data["New Words"]; })
-                .catch(err => console.error("讀取 JSON 失敗:", err));
-        });
+       let wordsData = {};
+let sentenceAudio = new Audio();
 
-                function createCategoryButtons() {
-            if (!wordsData || !Array.isArray(wordsData)) return;
-            let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
-            document.getElementById("categoryButtons").innerHTML = categories
-                .map(c => `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`)
-                .join(" ");
-        }
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
+        .then(res => res.json())
+        .then(data => {
+            wordsData = data["New Words"];
+            createCategoryButtons(); // 確保分類按鈕載入
+        })
+        .catch(err => console.error("讀取 JSON 失敗:", err));
+});
 
-        function showWords(type, value) {
-            if (!wordsData || !Array.isArray(wordsData)) return;
-            let filteredWords = wordsData.filter(w => 
-                type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) : (w["分類"] || "未分類") === value
-            );
+function createCategoryButtons() {
+    if (!wordsData || !Array.isArray(wordsData)) return;
+    let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
+    document.getElementById("categoryButtons").innerHTML = categories
+        .map(c => `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`)
+        .join(" ");
+}
 
-            let listContainer = document.getElementById("wordList");
-            listContainer.innerHTML = '<button class="button" onclick="backToAlphabet()">⬅ 返回字母列表</button>';
+function showWords(type, value) {
+    if (!wordsData || !Array.isArray(wordsData)) return;
+    let filteredWords = wordsData.filter(w => 
+        type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) : (w["分類"] || "未分類") === value
+    );
 
-            filteredWords.forEach(word => {
-                let item = document.createElement('p');
-                item.textContent = word.Words;
-                item.className = 'word-item';
-                item.onclick = function() { showDetails(word); };
-                listContainer.appendChild(item);
-            });
-        }
-        
-        function backToAlphabet() {
-            document.getElementById('wordList').style.display = 'none';
-            document.getElementById('wordDetails').style.display = 'none';
-            document.querySelector('.alphabet-container').style.display = 'block'; // 顯示字母按鈕
-            document.querySelector('.category-container').style.display = 'block';
-        }
+    let listContainer = document.getElementById("wordList");
+    listContainer.innerHTML = '<button class="button" onclick="backToAlphabet()">⬅ 返回字母列表</button>';
 
+    filteredWords.forEach(word => {
+        let item = document.createElement('p');
+        item.textContent = word.Words;
+        item.className = 'word-item';
+        item.onclick = function() { showDetails(word); };
+        listContainer.appendChild(item);
+    });
+}
+
+function backToAlphabet() {
+    document.getElementById('wordList').style.display = 'none';
+    document.getElementById('wordDetails').style.display = 'none';
+    document.querySelector('.alphabet-container').style.display = 'block'; 
+    document.querySelector('.category-container').style.display = 'block'; 
+}
         
         function showWords(letter, btn) {
             let listContainer = document.getElementById('wordList');
