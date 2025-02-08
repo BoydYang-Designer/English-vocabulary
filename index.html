@@ -41,14 +41,28 @@
             margin: 20px;
         }
         .word-list {
-            width: 300px;
-            max-height: 400px;
-            overflow-y: auto;
-            background: white;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* 讓內部元素可以相對定位 */
+}
+
+/* 讓返回鍵固定在單字列表的頂部 */
+.word-list .button {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
         .word-item {
             cursor: pointer;
             padding: 8px;
