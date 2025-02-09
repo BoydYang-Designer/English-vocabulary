@@ -227,12 +227,16 @@ function showDetails(word) {
     document.getElementById('wordTitle').textContent = word.Words;
 
     // **✅ 修改音標按鈕結構**
-    let phonetics = `<div class="phonetics-container">
-        <button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word['pronunciation-1']}</button>`;
-    
+    let phonetics = `<div class="phonetics-container" style="display: flex; gap: 10px;">
+    <button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>
+        ${word['pronunciation-1']}
+    </button>`;
+
     if (word['pronunciation-2']) {
-        phonetics += `<button class='button' style="margin-left: 10px;" onclick='playAudio("${encodeURIComponent(word.Words)} 2.mp3")'>${word['pronunciation-2']}</button>`;
-    }
+    phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)} 2.mp3")'>
+        ${word['pronunciation-2']}
+    </button>`;
+}
     
     phonetics += `</div>`; // 結束 phonetics-container
 
