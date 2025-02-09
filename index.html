@@ -52,16 +52,28 @@
 }
 
 /* 讓返回鍵固定在單字列表的頂部 */
-.word-list .button {
+/* ✅ 調整第二層（單字列表）的 "⬅ 返回" 按鍵 */
+#wordList .button {
     position: sticky;
     top: 0;
-    background: white;
+    background: #007bff; /* 藍色背景 */
+    color: white; /* 文字顏色 */
     z-index: 10;
     display: block;
-    width: 100%;
+    width: 120px; /* 增加按鈕寬度 */
+    height: 45px; /* 增加按鈕高度 */
     text-align: center;
+    font-size: 16px; /* 增加文字大小 */
     padding: 10px;
-    font-size: 14px;
+    border-radius: 10px; /* 增加圓角 */
+    border: none;
+    cursor: pointer;
+    margin: 10px auto; /* 讓按鈕居中 */
+}
+
+/* ✅ 滑鼠懸停效果 */
+#wordList .button:hover {
+    background: #0056b3; /* 深藍色 */
 }
         .word-item {
             cursor: pointer;
