@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boyd Vocabulary</title>
-    <style>
+    <!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boyd Vocabulary</title>
+<style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -17,6 +23,7 @@
             color: white;
             padding: 15px 0;
             margin: 0;
+            font-size: 24px;
         }
         .alphabet-container {
             text-align: center;
@@ -41,40 +48,14 @@
             margin: 20px;
         }
         .word-list {
-    width: 300px;
-    max-height: 400px;
-    overflow-y: auto;
-    background: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative; /* 讓內部元素可以相對定位 */
-}
-
-/* 讓返回鍵固定在單字列表的頂部 */
-/* ✅ 調整第二層（單字列表）的 "⬅ 返回" 按鍵 */
-#wordList .button {
-    position: sticky;
-    top: 0;
-    background: #007bff; /* 藍色背景 */
-    color: white; /* 文字顏色 */
-    z-index: 10;
-    display: block;
-    width: 120px; /* 增加按鈕寬度 */
-    height: 45px; /* 增加按鈕高度 */
-    text-align: center;
-    font-size: 16px; /* 增加文字大小 */
-    padding: 10px;
-    border-radius: 10px; /* 增加圓角 */
-    border: none;
-    cursor: pointer;
-    margin: 10px auto; /* 讓按鈕居中 */
-}
-
-/* ✅ 滑鼠懸停效果 */
-#wordList .button:hover {
-    background: #0056b3; /* 深藍色 */
-}
+            width: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
         .word-item {
             cursor: pointer;
             padding: 8px;
@@ -82,69 +63,67 @@
             color: #007bff;
         }
         .word-item:hover {
+            background: #f0f0f0;
             font-weight: bold;
         }
         .details {
-            display: none;
-            flex: 1;
-            max-width: 400px;
+            width: 400px;
             background: white;
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            position: relative;
         }
-
-        /* ✅ 這裡是新加入的 CSS，讓 meaningContainer 可滾動 */
-
         #meaningContainer {
-             max-height: 300px; /* 限制內容區域的最大高度 */
-            overflow-y: auto; /* 啟用垂直滾動 */
+            max-height: 300px;
+            overflow-y: auto;
             padding-right: 10px;
             border: 1px solid #ddd;
             background: #f9f9f9;
             padding: 10px;
-            border-radius: 5px;
-    /* 讓內部的內容與按鈕區域排成垂直方向 */
-            display: flex;
-            flex-direction: column;
-            /* 讓內容可以滾動，但不影響按鈕 */
-.meaning-content {
-    flex-grow: 1; /* 讓內容區域撐滿可用空間 */
-    overflow-y: auto; /* 讓內容區域滾動 */
-}
-
-/* ✅ 確保音頻按鈕區域固定在 #meaningContainer 的底部 */
-.audio-controls {
-    position: sticky;
-    bottom: 0;
-    background: white;
-    padding: 10px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    flex-shrink: 0; /* 確保按鈕不會被擠壓縮小 */
-}
+            border-radius: 10px;
+        }
         .button {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #444;
+            display: block;
+            width: 150px;
+            height: 50px;
+            background-color: #007bff;
             color: white;
+            font-size: 18px;
+            border-radius: 25px;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
+            text-align: center;
+            margin: 10px auto;
+            font-weight: bold;
         }
         .button:hover {
-            background-color: #222;
+            background-color: #0056b3;
         }
-        
+        .audio-controls {
+            display: flex;
+            justify-content: space-around;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
         .audio-btn {
-            padding: 10px 15px;
-            background-color: #666;
+            padding: 12px 18px;
+            background-color: #444;
             color: white;
-            border-radius: 5px;
+            border-radius: 20px;
+            font-size: 16px;
             cursor: pointer;
+            font-weight: bold;
         }
         .audio-btn:hover {
-            background-color: #444;
+            background-color: #222;
         }
     </style>
 </head>
