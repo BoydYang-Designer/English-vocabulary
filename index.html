@@ -139,7 +139,7 @@
         <div id="wordList" class="word-list">
         </div>
         <div id="wordDetails" class="details">
-            <button class="button" onclick="backToWordList()">⬅⬅ 返回</button>
+            <button class="button" onclick="backToWordList()">Back</button>
             <h2 id="wordTitle"></h2>
             <div id="phoneticContainer"></div>
             <div id="chineseContainer"></div>
@@ -178,7 +178,7 @@ function showWords(type, value) {
     lastWordListValue = value; // 記錄字母或分類值
 
     let listContainer = document.getElementById("wordList");
-    listContainer.innerHTML = '<button class="button" onclick="backToFirstLayer()">⬅ 返回</button>';
+    listContainer.innerHTML = '<button class="button" onclick="backToFirstLayer()">Back</button>';
     
     let filteredWords = wordsData.filter(w => 
         type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) : (w["分類"] || "未分類") === value
@@ -234,7 +234,7 @@ function showDetails(word) {
 
     let meaning = ` 
         <p>${formattedMeaning}</p>
-        <button class='button' onclick='backToWordList()'>⬅ 返回</button>
+        <button class='button' onclick='backToWordList()'>Back</button>
     `;
 
     document.getElementById('phoneticContainer').innerHTML = phonetics;
