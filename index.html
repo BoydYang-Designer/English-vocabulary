@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boyd Vocabulary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 15px 0;
+            margin: 0;
+        }
+        .alphabet-container {
+            text-align: center;
+            margin: 15px 0;
+        }
+        .letter-btn {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background: #555;
+            color: white;
+            border-radius: 5px;
+        }
+        .letter-btn:hover {
+            background: #777;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+        .word-list {
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* 讓內部元素可以相對定位 */
+}
+
+/* 讓返回鍵固定在單字列表的頂部 */
+.word-list .button {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+        .word-item {
+            cursor: pointer;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            color: #007bff;
+        }
+        .word-item:hover {
+            font-weight: bold;
+        }
+        .details {
+            display: none;
+            flex: 1;
+            max-width: 400px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ✅ 這裡是新加入的 CSS，讓 meaningContainer 可滾動 */
+
+        #meaningContainer {
+             max-height: 300px; /* 限制內容區域的最大高度 */
+            overflow-y: auto; /* 啟用垂直滾動 */
+            padding-right: 10px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+    /* 讓內部的內容與按鈕區域排成垂直方向 */
+            display: flex;
+            flex-direction: column;
+            /* 讓內容可以滾動，但不影響按鈕 */
+.meaning-content {
+    flex-grow: 1; /* 讓內容區域撐滿可用空間 */
+    overflow-y: auto; /* 讓內容區域滾動 */
+}
+
+/* ✅ 確保音頻按鈕區域固定在 #meaningContainer 的底部 */
+.audio-controls {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    flex-shrink: 0; /* 確保按鈕不會被擠壓縮小 */
+}
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #222;
+        }
+        
+        .audio-btn {
+            padding: 10px 15px;
+            background-color: #666;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .audio-btn:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boyd Vocabulary</h1>
+    <div class="alphabet-container">
+        <script>
+            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`).join(" "));
+        </script>
+    </div>
+    <div class="category-container" id="categoryButtons"></div>
+    <div class="container">
+        <div id="wordList" class="word-list">
+        </div>
+        <div id="wordDetails" class="details">
+            <button class="button" onclick="backToWordList()">⬅⬅ 返回</button>
+            <h2 id="wordTitle"></h2>
+            <div id="phoneticContainer"></div>
+            <div id="chineseContainer"></div>
+            <div id="meaningContainer"></div>
+        </div>
+    </div>
+
+    <script>
+let wordsData = [];
+let sentenceAudio = new Audio();
+let lastWordListType = ""; // 記錄進入單字列表的方式
+let lastWordListValue = ""; // 記錄字母或分類值
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
+        .then(res => res.json())
+        .then(data => {
+            wordsData = data["New Words"] || [];
+            setTimeout(createCategoryButtons, 500);
+        })
+        .catch(err => console.error("讀取 JSON 失敗:", err));
+});
+
+function createCategoryButtons() {
+    if (!wordsData || !Array.isArray(wordsData)) return;
+    let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
+    document.getElementById("categoryButtons").innerHTML = categories
+        .map(c => `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`)
+        .join(" ");
+}
+
+function showWords(type, value) {
+    if (!wordsData || !Array.isArray(wordsData)) return;
+    
+    lastWordListType = type; // 記錄進入類型（letter 或 category）
+    lastWordListValue = value; // 記錄字母或分類值
+
+    let listContainer = document.getElementById("wordList");
+    listContainer.innerHTML = '<button class="button" onclick="backToFirstLayer()">⬅ 返回</button>';
+    
+    let filteredWords = wordsData.filter(w => 
+        type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) : (w["分類"] || "未分類") === value
+    );
+    
+    if (filteredWords.length === 0) {
+        listContainer.innerHTML += "<p>⚠️ 沒有符合的單字</p>";
+    }
+
+    filteredWords.forEach(word => {
+        let item = document.createElement('p');
+        item.textContent = word.Words;
+        item.className = 'word-item';
+        item.onclick = function() { showDetails(word); };
+        listContainer.appendChild(item);
+    });
+
+    document.getElementById('wordList').style.display = 'block';
+    document.getElementById('wordDetails').style.display = 'none';
+    document.querySelector('.alphabet-container').style.display = 'none';
+    document.querySelector('.category-container').style.display = 'none';
+}
+
+function backToFirstLayer() {
+    document.getElementById('wordList').style.display = 'none';
+    document.getElementById('wordDetails').style.display = 'none';
+    document.querySelector('.alphabet-container').style.display = 'block'; 
+    document.querySelector('.category-container').style.display = 'block'; 
+}
+
+function showDetails(word) {
+    document.getElementById('wordList').style.display = 'none';
+    document.getElementById('wordDetails').style.display = 'block';
+    document.getElementById('wordTitle').textContent = word.Words;
+
+    let phonetics = `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word['pronunciation-1']}</button>`;
+    if (word['pronunciation-2']) {
+        phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)} 2.mp3")'>${word['pronunciation-2']}</button>`;
+    }
+
+    let chinese = `<button class='button'>${word['traditional Chinese']}</button>`;
+
+    // **格式化 English meaning，讓 Example 部分從新行開始**
+    let formattedMeaning = word['English meaning']
+        .replace(/Summary:/g, "<h3>Summary:</h3>")  
+        .replace(/Related Words:/g, "<h3>Related Words:</h3>") 
+        .replace(/Antonyms:/g, "<h3>Antonyms:</h3>")
+        .replace(/\n1\./g, "<h3>1.</h3><p>")  // 讓數字後的新段落開始
+        .replace(/\n2\./g, "<h3>2.</h3><p>")
+        .replace(/\n3\./g, "<h3>3.</h3><p>")
+        .replace(/\nE\.g\./g, "</p><p><strong>Example:</strong>")  // 確保 Example 在新段落
+        .replace(/\n/g, "<br>");  // 讓換行在 HTML 正確顯示
+
+    let meaning = ` 
+        <p>${formattedMeaning}</p>
+        <button class='button' onclick='backToWordList()'>⬅ 返回</button>
+    `;
+
+    document.getElementById('phoneticContainer').innerHTML = phonetics;
+    document.getElementById('chineseContainer').innerHTML = chinese;
+    document.getElementById('meaningContainer').innerHTML = meaning;
+
+    // ✅ 先刪除舊的 `.audio-controls`，避免按鈕重複增加
+    let existingAudioControls = document.querySelector('.audio-controls');
+    if (existingAudioControls) {
+        existingAudioControls.remove();
+    }
+
+    // ✅ 把 .audio-controls 加入 #wordDetails，確保按鈕不會重複
+    let audioControls = `
+        <div class='audio-controls'>
+            <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>▶️ 播放</button>
+            <button class='audio-btn' onclick='adjustAudioTime(-5)'>⏪ -5s</button>
+            <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>⏸️ 暫停</button>
+            <button class='audio-btn' onclick='adjustAudioTime(5)'>⏩ +5s</button>
+        </div>
+    `;
+
+    document.getElementById('wordDetails').insertAdjacentHTML("beforeend", audioControls);
+}
+
+function backToWordList() {
+    showWords(lastWordListType, lastWordListValue);
+}
+
+function playAudio(filename) {
+    let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+    new Audio(baseURL + filename).play();
+}
+
+function playSentenceAudio(filename) {
+    let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+    sentenceAudio.src = baseURL + filename;
+    sentenceAudio.play();
+}
+
+function togglePauseAudio(button) {
+    if (sentenceAudio.paused || sentenceAudio.ended) {
+        sentenceAudio.play();
+        button.innerHTML = "⏸️ 暫停";
+    } else {
+        sentenceAudio.pause();
+        button.innerHTML = "▶️ 繼續";
+    }
+}
+
+function adjustAudioTime(seconds) {
+    sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
+}
+</script>
+</body>
+</html>
