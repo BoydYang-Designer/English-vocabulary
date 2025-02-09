@@ -226,43 +226,46 @@ function showDetails(word) {
     document.getElementById('wordDetails').style.display = 'block';
     document.getElementById('wordTitle').textContent = word.Words;
 
-    let phonetics = `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word['pronunciation-1']}</button>`;
+    // **✅ 修改音標按鈕結構**
+    let phonetics = `<div class="phonetics-container">
+        <button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word['pronunciation-1']}</button>`;
+    
     if (word['pronunciation-2']) {
-        phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)} 2.mp3")'>${word['pronunciation-2']}</button>`;
+        phonetics += `<button class='button' style="margin-left: 10px;" onclick='playAudio("${encodeURIComponent(word.Words)} 2.mp3")'>${word['pronunciation-2']}</button>`;
     }
+    
+    phonetics += `</div>`; // 結束 phonetics-container
 
     let formattedChinese = word['traditional Chinese']
-    .replace(/(\d+)\./g, "<br><strong>$1.</strong> "); // 在數字條列前面加上換行並加粗數字
+        .replace(/(\d+)\./g, "<br><strong>$1.</strong> "); 
 
     let chinese = `<div>${formattedChinese}</div>`;
 
-    // **格式化 English meaning，讓 Example 部分從新行開始**
     let formattedMeaning = word['English meaning']
         .replace(/Summary:/g, "<h3>Summary:</h3>")  
         .replace(/Related Words:/g, "<h3>Related Words:</h3>") 
         .replace(/Antonyms:/g, "<h3>Antonyms:</h3>")
-        .replace(/\n1\./g, "<h3>1.</h3><p>")  // 讓數字後的新段落開始
+        .replace(/\n1\./g, "<h3>1.</h3><p>")  
         .replace(/\n2\./g, "<h3>2.</h3><p>")
         .replace(/\n3\./g, "<h3>3.</h3><p>")
-        .replace(/\nE\.g\./g, "</p><p><strong>Example:</strong>")  // 確保 Example 在新段落
-        .replace(/\n/g, "<br>");  // 讓換行在 HTML 正確顯示
+        .replace(/\nE\.g\./g, "</p><p><strong>Example:</strong>")  
+        .replace(/\n/g, "<br>");
 
     let meaning = ` 
         <p>${formattedMeaning}</p>
         <button class='button' onclick='backToWordList()'>Back</button>
     `;
 
+    // **✅ 調整音標按鈕的位置：放在單字標題下方**
     document.getElementById('phoneticContainer').innerHTML = phonetics;
     document.getElementById('chineseContainer').innerHTML = chinese;
     document.getElementById('meaningContainer').innerHTML = meaning;
 
-    // ✅ 先刪除舊的 `.audio-controls`，避免按鈕重複增加
     let existingAudioControls = document.querySelector('.audio-controls');
     if (existingAudioControls) {
         existingAudioControls.remove();
     }
 
-    // ✅ 把 .audio-controls 加入 #wordDetails，確保按鈕不會重複
     let audioControls = `
         <div class='audio-controls'>
             <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>▶️ 播放</button>
