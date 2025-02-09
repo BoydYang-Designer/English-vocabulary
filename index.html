@@ -231,7 +231,7 @@ function showDetails(word) {
         phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)} 2.mp3")'>${word['pronunciation-2']}</button>`;
     }
 
-    let chinese = `<button class='button'>${word['traditional Chinese']}</button>`;
+    let chinese = `<p>${word['traditional Chinese']}</p>`;
 
     // **格式化 English meaning，讓 Example 部分從新行開始**
     let formattedMeaning = word['English meaning']
