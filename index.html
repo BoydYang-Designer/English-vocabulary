@@ -231,7 +231,10 @@ function showDetails(word) {
         phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)} 2.mp3")'>${word['pronunciation-2']}</button>`;
     }
 
-    let chinese = `<p>${word['traditional Chinese']}</p>`;
+    let formattedChinese = word['traditional Chinese']
+    .replace(/(\d+)\./g, "<br><strong>$1.</strong> "); // 在數字條列前面加上換行並加粗數字
+
+    let chinese = `<div>${formattedChinese}</div>`;
 
     // **格式化 English meaning，讓 Example 部分從新行開始**
     let formattedMeaning = word['English meaning']
