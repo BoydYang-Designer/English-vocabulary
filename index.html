@@ -143,24 +143,31 @@
     <h1>Boyd Vocabulary</h1>
     <div class="alphabet-container">
         <script>
-            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`).join(" "));
+            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => 
+                `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`).join(" ")
+            );
         </script>
     </div>
     <div class="category-container" id="categoryButtons"></div>
     <div class="level-container" id="levelButtons"></div>
     
     <div class="container">
+    <div class="word-list-container">
+        <button class="button back-button" onclick="backToFirstLayer()">Back</button>
         <div id="wordList" class="word-list"></div>
-        <div id="wordDetails" class="details">
-            <button class="button" onclick="backToWordList()">Back</button>
-            <h2 id="wordTitle"></h2>
-            <div id="phoneticContainer"></div>
-            <div id="chineseContainer"></div>
-            <div id="meaningContainer"></div>
-        </div>
     </div>
+    <div id="wordDetails" class="details">
+        <button class="button" onclick="backToWordList()">Back</button>
+        <h2 id="wordTitle"></h2>
+        <div id="phoneticContainer"></div>
+        <div id="chineseContainer"></div>
+        <div id="meaningContainer"></div>
+    </div>
+</div>
 
     <script>
+        // JavaScript 內容
+    
 let wordsData = [];
 let sentenceAudio = new Audio();
 let lastWordListType = ""; // 記錄進入單字列表的方式
@@ -210,7 +217,7 @@ function showWords(type, value) {
     lastWordListValue = value; // 記錄字母或分類值
 
     let listContainer = document.getElementById("wordList");
-    listContainer.innerHTML = '<button class="button" onclick="backToFirstLayer()">Back</button>';
+    listContainer.innerHTML = ""; // 不再插入 "Back" 按鈕
     
     let filteredWords = wordsData.filter(w => 
         type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) :
