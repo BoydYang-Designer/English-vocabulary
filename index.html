@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boyd Vocabulary</title>
-    <!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boyd Vocabulary</title>
-    <!DOCTYPE html>
-<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,6 +70,8 @@
             font-size: 12px; /* 調整這裡的字型大小 */
         }
         .phonetics-container button {
+            background-color: #d3d3d3; /* 懸停時按鈕背景顏色 */
+            color: #000; /* 懸停時按鈕文字顏色 */
             font-size: 16px; /* 字型大小 */
             padding: 10px 20px; /* 內邊距 */
             min-width: 50px; /* 按鈕最小寬度 */
@@ -143,6 +132,7 @@
         .audio-controls { /* 設定音頻控制按鈕的樣式與固定底部位置 */
             display: flex;
             justify-content: space-around;
+            align-items: center;
             background: white;
             padding: 10px;
             border-radius: 10px;
@@ -154,16 +144,23 @@
         }
         .audio-btn { /* 設定音頻按鈕的樣式 */
             padding: 12px 18px;
-            background-color: #444;
+            background-color: #647f91;
             color: white;
             border-radius: 20px;
             font-size: 16px;
             cursor: pointer;
             font-weight: bold;
+            border: none; /* 去掉邊框線 */
         }
         .audio-btn:hover { /* 設定音頻按鈕懸停時的顏色變化 */
             background-color: #222;
         }
+        .audio-btn img {
+            transition: transform 0.3s ease;
+        }
+        .audio-btn:hover img {
+             transform: scale(1.2);  /* 按鈕滑鼠懸停時稍微放大 */
+         }
     </style>
 </head>
 <body>
@@ -324,13 +321,21 @@ function showDetails(word) {
     }
 
     let audioControls = `
-        <div class='audio-controls'>
-            <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>▶️ 播放</button>
-            <button class='audio-btn' onclick='adjustAudioTime(-5)'>⏪ -5s</button>
-            <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>⏸️ 暫停</button>
-            <button class='audio-btn' onclick='adjustAudioTime(5)'>⏩ +5s</button>
-        </div>
-    `;
+    <div class='audio-controls'>
+        <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" /> Play
+        </button>
+        <button class='audio-btn' onclick='adjustAudioTime(-5)'>
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg" alt="Rewind" width="24" height="24" /> -5s
+        </button>
+        <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" /> pause
+        </button>
+        <button class='audio-btn' onclick='adjustAudioTime(5)'>
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/fast-forward.svg" alt="Fast Forward" width="24" height="24" /> +5s
+        </button>
+    </div>
+`;
 
     document.getElementById('wordDetails').insertAdjacentHTML("beforeend", audioControls);
 }
@@ -353,10 +358,10 @@ function playSentenceAudio(filename) {
 function togglePauseAudio(button) {
     if (sentenceAudio.paused || sentenceAudio.ended) {
         sentenceAudio.play();
-        button.innerHTML = "⏸️ 暫停";
+        button.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" /> 暫停`;
     } else {
         sentenceAudio.pause();
-        button.innerHTML = "▶️ 繼續";
+        button.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" /> ▶️ 繼續`;
     }
 }
 
