@@ -147,9 +147,10 @@
         </script>
     </div>
     <div class="category-container" id="categoryButtons"></div>
+    <div class="level-container" id="levelButtons"></div>
+    
     <div class="container">
-        <div id="wordList" class="word-list">
-        </div>
+        <div id="wordList" class="word-list"></div>
         <div id="wordDetails" class="details">
             <button class="button" onclick="backToWordList()">Back</button>
             <h2 id="wordTitle"></h2>
@@ -170,9 +171,15 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(res => res.json())
         .then(data => {
             wordsData = data["New Words"] || [];
-            setTimeout(createCategoryButtons, 500);
+            console.log("✅ JSON 載入成功:", wordsData);
+            
+            // 這裡確保分類和等級按鈕都會顯示
+            setTimeout(() => {
+                createCategoryButtons();
+                createLevelButtons();
+            }, 500);
         })
-        .catch(err => console.error("讀取 JSON 失敗:", err));
+        .catch(err => console.error("❌ 讀取 JSON 失敗:", err));
 });
 
 function createCategoryButtons() {
@@ -183,6 +190,19 @@ function createCategoryButtons() {
         .join(" ");
 }
 
+function createLevelButtons() {
+    if (!wordsData || !Array.isArray(wordsData)) {
+        console.error("❌ 等級按鈕生成失敗，wordsData 為空");
+        return;
+    }
+    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
+    console.log("📌 生成等級按鈕:", levels);
+
+    document.getElementById("levelButtons").innerHTML = levels
+        .map(l => `<button class='letter-btn' onclick='showWords("level", "${l}")'>${l}</button>`)
+        .join(" ");
+}
+        
 function showWords(type, value) {
     if (!wordsData || !Array.isArray(wordsData)) return;
     
@@ -193,7 +213,9 @@ function showWords(type, value) {
     listContainer.innerHTML = '<button class="button" onclick="backToFirstLayer()">Back</button>';
     
     let filteredWords = wordsData.filter(w => 
-        type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) : (w["分類"] || "未分類") === value
+        type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) :
+        type === "category" ? (w["分類"] || "未分類") === value :
+        (w["等級"] || "未分類") === value
     );
     
     if (filteredWords.length === 0) {
@@ -212,6 +234,7 @@ function showWords(type, value) {
     document.getElementById('wordDetails').style.display = 'none';
     document.querySelector('.alphabet-container').style.display = 'none';
     document.querySelector('.category-container').style.display = 'none';
+    document.querySelector('.level-container').style.display = 'none';
 }
 
 function backToFirstLayer() {
@@ -219,6 +242,7 @@ function backToFirstLayer() {
     document.getElementById('wordDetails').style.display = 'none';
     document.querySelector('.alphabet-container').style.display = 'block'; 
     document.querySelector('.category-container').style.display = 'block'; 
+    document.querySelector('.level-container').style.display = 'block';
 }
 
 function showDetails(word) {
