@@ -150,7 +150,10 @@
             width: 100%;
         }
         .audio-btn { /* 設定音頻按鈕的樣式 */
-            padding: 12px 18px;
+            display: flex; /* 讓按鈕內的內容可以使用 Flexbox 對齊 */
+            align-items: center; /* 垂直置中 */
+            justify-content: center; /* 水平置中 */
+            padding: 0; /* 移除內邊距 */
             background-color: #647f91;
             color: white;
             border-radius: 20px;
@@ -158,6 +161,8 @@
             cursor: pointer;
             font-weight: bold;
             border: none; /* 去掉邊框線 */
+            width: 50px; /* 設定按鈕大小 */
+            height: 50px;
         }
         .audio-btn:hover {
            background-color: #4a6375; /* 懸停時的背景顏色 (比原本深一點) */
@@ -165,6 +170,8 @@
 }
         .audio-btn img {
             transition: transform 0.3s ease;
+            width: 24px;
+            height: 24px;
         }
         .audio-btn:hover img {
              transform: scale(1.2);  /* 按鈕滑鼠懸停時稍微放大 */
