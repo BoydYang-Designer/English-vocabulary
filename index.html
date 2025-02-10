@@ -187,6 +187,10 @@
 </head>
 <body>
     <h1>Boyd Vocabulary</h1>
+<div style="text-align: center; margin: 10px;">
+    <input type="text" id="searchInput" placeholder="搜尋單字..." oninput="searchWord()"
+        style="padding: 8px; width: 80%; max-width: 300px; border-radius: 5px; border: 1px solid #ccc;">
+</div>
 <div class="alphabet-container">
     <script>
         document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`).join(" "));
@@ -394,6 +398,31 @@ function togglePauseAudio(button) {
 function adjustAudioTime(seconds) {
     sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
 }
+  function searchWord() {
+        let query = document.getElementById("searchInput").value.toLowerCase();
+        let wordItemsContainer = document.getElementById("wordItems");
+        wordItemsContainer.innerHTML = ""; // 清空當前列表
+
+        if (!query) return; // 若沒有輸入則不顯示結果
+
+        let filteredWords = wordsData.filter(word => word.Words.toLowerCase().includes(query));
+
+        if (filteredWords.length === 0) {
+            wordItemsContainer.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
+            return;
+        }
+
+        filteredWords.forEach(word => {
+            let item = document.createElement('p');
+            item.textContent = word.Words;
+            item.className = 'word-item';
+            item.onclick = function() { showDetails(word); };
+            wordItemsContainer.appendChild(item);
+        });
+
+        document.getElementById('wordList').style.display = 'block';
+        document.getElementById('wordDetails').style.display = 'none';
+    }
 </script>
 </body>
 </html>
