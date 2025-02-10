@@ -107,12 +107,24 @@
         .button:hover { /* 設定按鈕懸停時的顏色變化 */
             background-color: #6e8191;
         }
-        .back-button { /* 設定返回按鈕的樣式為灰色 */
-            background-color: #424d57; /* 灰色背景 */
-        }
-        .back-button:hover {
-            background-color: #6e8191; /* 懸停時變深灰色 */
-        }
+        .back-button {
+    position: sticky;  /* 讓按鈕固定 */
+    top: 0;            /* 固定在 .word-list 的頂部 */
+    width: 100%;       /* 讓按鈕的寬度跟 .word-list 一樣 */
+    background-color: #424d57;
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 12px 0;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;       /* 確保不被其他內容擋住 */
+}
+
+.back-button:hover {
+    background-color: #6e8191;
+}
         .audio-controls { /* 設定音頻控制按鈕的樣式與固定底部位置 */
             display: flex;
             justify-content: space-around;
@@ -141,24 +153,27 @@
 </head>
 <body>
     <h1>Boyd Vocabulary</h1>
-    <div class="alphabet-container">
-        <script>
-            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`).join(" "));
-        </script>
+<div class="alphabet-container">
+    <script>
+        document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`).join(" "));
+    </script>
+</div>
+<div class="category-container" id="categoryButtons"></div>
+<div class="level-container" id="levelButtons"></div>
+
+<div class="container">
+    <div id="wordList" class="word-list">
+        <button class="button back-button" onclick="backToFirstLayer()">Back</button>
+        <div id="wordItems"></div> <!-- 單字列表內容 -->
     </div>
-    <div class="category-container" id="categoryButtons"></div>
-    <div class="level-container" id="levelButtons"></div>
-    
-    <div class="container">
-        <div id="wordList" class="word-list"></div>
-        <div id="wordDetails" class="details">
-            <button class="button" onclick="backToWordList()">Back</button>
-            <h2 id="wordTitle"></h2>
-            <div id="phoneticContainer"></div>
-            <div id="chineseContainer"></div>
-            <div id="meaningContainer"></div>
-        </div>
+    <div id="wordDetails" class="details">
+        <button class="button" onclick="backToWordList()">Back</button>
+        <h2 id="wordTitle"></h2>
+        <div id="phoneticContainer"></div>
+        <div id="chineseContainer"></div>
+        <div id="meaningContainer"></div>
     </div>
+</div>
 
     <script>
 let wordsData = [];
@@ -210,7 +225,6 @@ function showWords(type, value) {
     lastWordListValue = value; // 記錄字母或分類值
 
     let listContainer = document.getElementById("wordList");
-    listContainer.innerHTML = '<button class="button" onclick="backToFirstLayer()">Back</button>';
     
     let filteredWords = wordsData.filter(w => 
         type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) :
