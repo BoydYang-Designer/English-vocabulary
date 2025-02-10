@@ -70,8 +70,8 @@
             font-size: 12px; /* 調整這裡的字型大小 */
         }
         .phonetics-container button {
-            background-color: #d3d3d3; /* 懸停時按鈕背景顏色 */
-            color: #000; /* 懸停時按鈕文字顏色 */
+            background-color: #647f91; /* 懸停時按鈕背景顏色 */
+            color: #fff; /* 文字顏色 (改為白色) */
             font-size: 16px; /* 字型大小 */
             padding: 10px 20px; /* 內邊距 */
             min-width: 50px; /* 按鈕最小寬度 */
@@ -80,7 +80,14 @@
             height: auto; /* 讓高度根據內容自動調整 */
             white-space: nowrap; /* 防止文字換行 */
             display: inline-block; /* 使按鈕根據內容自動調整 */
-}
+            border: none; /* 移除邊框 */
+            border-radius: 5px; /* 圓角 */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* 過渡效果 */
+           }
+        .phonetics-container button:hover {
+            background-color: #4a6375; /* 懸停時的背景顏色 (比原本深一點) */
+            transform: scale(1.05); /* 懸停時稍微放大 */
+           }
         #meaningContainer { /* 設定英文解釋區域的滾動效果 */
             max-height: 300px;
             overflow-y: auto;
