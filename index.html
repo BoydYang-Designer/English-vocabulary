@@ -358,10 +358,14 @@ function playSentenceAudio(filename) {
 function togglePauseAudio(button) {
     if (sentenceAudio.paused || sentenceAudio.ended) {
         sentenceAudio.play();
-        button.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" /> 暫停`;
+        button.innerHTML = `
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />
+            Pause`;
     } else {
         sentenceAudio.pause();
-        button.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" /> ▶️ 繼續`;
+        button.innerHTML = `
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />
+            Play`;
     }
 }
 
