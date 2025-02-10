@@ -159,9 +159,10 @@
             font-weight: bold;
             border: none; /* 去掉邊框線 */
         }
-        .audio-btn:hover { /* 設定音頻按鈕懸停時的顏色變化 */
-            background-color: #222;
-        }
+        .audio-btn:hover {
+           background-color: #4a6375; /* 懸停時的背景顏色 (比原本深一點) */
+           transform: scale(1.05); /* 懸停時稍微放大 */
+}
         .audio-btn img {
             transition: transform 0.3s ease;
         }
@@ -330,16 +331,16 @@ function showDetails(word) {
     let audioControls = `
     <div class='audio-controls'>
         <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>
-            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" /> Play
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
         </button>
         <button class='audio-btn' onclick='adjustAudioTime(-5)'>
-            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg" alt="Rewind" width="24" height="24" /> -5s
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg" alt="Rewind" width="24" height="24" />
         </button>
         <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>
-            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" /> Stop
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />
         </button>
         <button class='audio-btn' onclick='adjustAudioTime(5)'>
-            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/fast-forward.svg" alt="Fast Forward" width="24" height="24" /> +5s
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/fast-forward.svg" alt="Fast Forward" width="24" height="24" />
         </button>
     </div>
 `;
@@ -367,12 +368,12 @@ function togglePauseAudio(button) {
         sentenceAudio.play();
         button.innerHTML = `
             <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />
-            Pause`;
+        `;
     } else {
         sentenceAudio.pause();
         button.innerHTML = `
             <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />
-            Play`;
+        `;
     }
 }
 
