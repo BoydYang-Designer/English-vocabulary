@@ -40,16 +40,17 @@
             gap: 20px; /* 設定區塊之間的間距 */
             margin: 20px;
         }
-        .word-list { /* 設定單字列表區域的大小、邊框與背景 */
-            margin: 10px 0;  /* 減少列表的上下外邊距 */
+        .word-list {
+            display: none; /* 預設隱藏 */
+            margin: 10px 0;
             width: 300px;
             max-height: 400px;
-            overflow-y: auto; /* 允許垂直滾動 */
+            overflow-y: auto;
             background: white;
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+               }
         .word-item { /* 設定單字列表內的單字樣式 */
             cursor: pointer; /* 讓滑鼠變成可點擊的指標，表示此元素可互動 */
             padding: 8px; /* 設定內邊距，增加內容與邊框的距離，提高可讀性 */
@@ -254,43 +255,47 @@ function createLevelButtons() {
         
 function showWords(type, value) {
     if (!wordsData || !Array.isArray(wordsData)) return;
-    
-    lastWordListType = type; // 記錄進入類型（letter 或 category）
-    lastWordListValue = value; // 記錄字母或分類值
+
+    lastWordListType = type; 
+    lastWordListValue = value;
 
     let listContainer = document.getElementById("wordList");
+    let wordItems = document.getElementById("wordItems");
     
+    // **清空舊的單字列表，避免重複顯示**
+    wordItems.innerHTML = "";
+
     let filteredWords = wordsData.filter(w => 
         type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) :
         type === "category" ? (w["分類"] || "未分類") === value :
         (w["等級"] || "未分類") === value
     );
-    
+
     if (filteredWords.length === 0) {
-        listContainer.innerHTML += "<p>⚠️ 沒有符合的單字</p>";
+        wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
+    } else {
+        filteredWords.forEach(word => {
+            let item = document.createElement('p');
+            item.textContent = word.Words;
+            item.className = 'word-item';
+            item.onclick = function() { showDetails(word); };
+            wordItems.appendChild(item);
+        });
     }
 
-    filteredWords.forEach(word => {
-        let item = document.createElement('p');
-        item.textContent = word.Words;
-        item.className = 'word-item';
-        item.onclick = function() { showDetails(word); };
-        listContainer.appendChild(item);
-    });
-
-    document.getElementById('wordList').style.display = 'block';
-    document.getElementById('wordDetails').style.display = 'none';
-    document.querySelector('.alphabet-container').style.display = 'none';
-    document.querySelector('.category-container').style.display = 'none';
-    document.querySelector('.level-container').style.display = 'none';
+    // **顯示單字列表，隱藏首頁內容**
+    listContainer.style.display = "block";
+    document.getElementById("wordDetails").style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
 }
-
 function backToFirstLayer() {
-    document.getElementById('wordList').style.display = 'none';
-    document.getElementById('wordDetails').style.display = 'none';
-    document.querySelector('.alphabet-container').style.display = 'block'; 
-    document.querySelector('.category-container').style.display = 'block'; 
-    document.querySelector('.level-container').style.display = 'block';
+    document.getElementById("wordList").style.display = "none"; // 隱藏單字列表
+    document.getElementById("wordDetails").style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "block"; 
+    document.querySelector('.category-container').style.display = "block"; 
+    document.querySelector('.level-container').style.display = "block";
 }
 
 function showDetails(word) {
