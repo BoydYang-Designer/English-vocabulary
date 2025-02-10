@@ -41,6 +41,7 @@
             margin: 20px;
         }
         .word-list { /* 設定單字列表區域的大小、邊框與背景 */
+            margin: 10px 0;  /* 減少列表的上下外邊距 */
             width: 300px;
             max-height: 400px;
             overflow-y: auto; /* 允許垂直滾動 */
@@ -73,7 +74,7 @@
             background-color: #647f91; /* 懸停時按鈕背景顏色 */
             color: #fff; /* 文字顏色 (改為白色) */
             font-size: 16px; /* 字型大小 */
-            padding: 10px 20px; /* 內邊距 */
+            padding: 5px 10px; /* 內邊距 */
             min-width: 50px; /* 按鈕最小寬度 */
             min-height: 40px; /* 按鈕最小高度 */
             width: auto; /* 讓寬度根據內容自動調整 */
@@ -119,18 +120,19 @@
             background-color: #6e8191;
         }
         .back-button {
-    position: sticky;  /* 讓按鈕固定 */
-    top: 0;            /* 固定在 .word-list 的頂部 */
-    width: 100%;       /* 讓按鈕的寬度跟 .word-list 一樣 */
-    background-color: #424d57;
-    color: white;
-    font-size: 18px;
-    border: none;
-    padding: 12px 0;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 10;       /* 確保不被其他內容擋住 */
+           position: sticky;  /* 讓按鈕固定 */
+           top: 0;            /* 固定在 .word-list 的頂部 */
+           width: 100%;       /* 讓按鈕的寬度跟 .word-list 一樣 */
+           background-color: #424d57;
+           color: white;
+           font-size: 18px;
+           border: none;
+           padding: 8px 0;  /* 減少上下的內邊距 */
+           margin: 0;  /* 減少外邊距 */
+           text-align: center;
+           font-weight: bold;
+           cursor: pointer;
+           z-index: 10;       /* 確保不被其他內容擋住 */
 }
 
 .back-button:hover {
