@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boyd Vocabulary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Boyd Vocabulary</h1>
+<div class="alphabet-container">
+    <script>
+        document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`).join(" "));
+    </script>
+</div>
+<div class="category-container" id="categoryButtons"></div>
+<div class="level-container" id="levelButtons"></div>
+
+<div class="container">
+    <div id="wordList" class="word-list">
+        <button class="button back-button" onclick="backToFirstLayer()">Back</button>
+        <div id="wordItems"></div> <!-- 單字列表內容 -->
+    </div>
+    <div id="wordDetails" class="details">
+        <button class="button" onclick="backToWordList()">Back</button>
+        <h2 id="wordTitle"></h2>
+        <div id="phoneticContainer"></div>
+        <div id="chineseContainer"></div>
+        <div id="meaningContainer"></div>
+    </div>
+</div>
+
+    <script>
+let wordsData = [];
+let sentenceAudio = new Audio();
+let lastWordListType = ""; // 記錄進入單字列表的方式
+let lastWordListValue = ""; // 記錄字母或分類值
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
+        .then(res => res.json())
+        .then(data => {
+            wordsData = data["New Words"] || [];
+            console.log("✅ JSON 載入成功:", wordsData);
+            
+            // 這裡確保分類和等級按鈕都會顯示
+            setTimeout(() => {
+                createCategoryButtons();
+                createLevelButtons();
+            }, 500);
+        })
+        .catch(err => console.error("❌ 讀取 JSON 失敗:", err));
+});
+
+function createCategoryButtons() {
+    if (!wordsData || !Array.isArray(wordsData)) return;
+    let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
+    document.getElementById("categoryButtons").innerHTML = categories
+        .map(c => `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`)
+        .join(" ");
+}
+
+function createLevelButtons() {
+    if (!wordsData || !Array.isArray(wordsData)) {
+        console.error("❌ 等級按鈕生成失敗，wordsData 為空");
+        return;
+    }
+    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
+    console.log("📌 生成等級按鈕:", levels);
+
+    document.getElementById("levelButtons").innerHTML = levels
+        .map(l => `<button class='letter-btn' onclick='showWords("level", "${l}")'>${l}</button>`)
+        .join(" ");
+}
+        
+function showWords(type, value) {
+    if (!wordsData || !Array.isArray(wordsData)) return;
+
+    lastWordListType = type; 
+    lastWordListValue = value;
+
+    let listContainer = document.getElementById("wordList");
+    let wordItems = document.getElementById("wordItems");
+    
+    // **清空舊的單字列表，避免重複顯示**
+    wordItems.innerHTML = "";
+
+    let filteredWords = wordsData.filter(w => 
+        type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) :
+        type === "category" ? (w["分類"] || "未分類") === value :
+        (w["等級"] || "未分類") === value
+    );
+
+    if (filteredWords.length === 0) {
+        wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
+    } else {
+        filteredWords.forEach(word => {
+            let item = document.createElement('p');
+            item.textContent = word.Words;
+            item.className = 'word-item';
+            item.onclick = function() { showDetails(word); };
+            wordItems.appendChild(item);
+        });
+    }
+
+    // **顯示單字列表，隱藏首頁內容**
+    listContainer.style.display = "block";
+    document.getElementById("wordDetails").style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+}
+function backToFirstLayer() {
+    document.getElementById("wordList").style.display = "none"; // 隱藏單字列表
+    document.getElementById("wordDetails").style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "block"; 
+    document.querySelector('.category-container').style.display = "block"; 
+    document.querySelector('.level-container').style.display = "block";
+}
+
+function showDetails(word) {
+    document.getElementById('wordList').style.display = 'none';
+    document.getElementById('wordDetails').style.display = 'block';
+    document.getElementById('wordTitle').textContent = word.Words;
+
+    // **✅ 修改音標按鈕結構**
+    let phonetics = `<div class="phonetics-container" style="display: flex; gap: 10px;">
+    <button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>
+        ${word['pronunciation-1']}
+    </button>`;
+
+    if (word['pronunciation-2']) {
+    phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)} 2.mp3")'>
+        ${word['pronunciation-2']}
+    </button>`;
+}
+    
+    phonetics += `</div>`; // 結束 phonetics-container
+
+    let formattedChinese = word['traditional Chinese']
+        .replace(/(\d+)\./g, "<br><strong>$1.</strong> "); 
+
+    let chinese = `<div>${formattedChinese}</div>`;
+
+    let formattedMeaning = word['English meaning']
+        .replace(/Summary:/g, "<h3>Summary:</h3>")  
+        .replace(/Related Words:/g, "<h3>Related Words:</h3>") 
+        .replace(/Antonyms:/g, "<h3>Antonyms:</h3>")
+        .replace(/\n1\./g, "<h3>1.</h3><p>")  
+        .replace(/\n2\./g, "<h3>2.</h3><p>")
+        .replace(/\n3\./g, "<h3>3.</h3><p>")
+        .replace(/\nE\.g\./g, "</p><p><strong>Example:</strong>")  
+        .replace(/\n/g, "<br>");
+
+    let meaning = ` 
+        <p>${formattedMeaning}</p>
+        <button class='button' onclick='backToWordList()'>Back</button>
+    `;
+
+    // **✅ 調整音標按鈕的位置：放在單字標題下方**
+    document.getElementById('phoneticContainer').innerHTML = phonetics;
+    document.getElementById('chineseContainer').innerHTML = chinese;
+    document.getElementById('meaningContainer').innerHTML = meaning;
+
+    let existingAudioControls = document.querySelector('.audio-controls');
+    if (existingAudioControls) {
+        existingAudioControls.remove();
+    }
+
+    let audioControls = `
+    <div class='audio-controls'>
+        <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
+        </button>
+        <button class='audio-btn' onclick='adjustAudioTime(-5)'>
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg" alt="Rewind" width="24" height="24" />
+        </button>
+        <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />
+        </button>
+        <button class='audio-btn' onclick='adjustAudioTime(5)'>
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/fast-forward.svg" alt="Fast Forward" width="24" height="24" />
+        </button>
+    </div>
+`;
+
+    document.getElementById('wordDetails').insertAdjacentHTML("beforeend", audioControls);
+}
+
+function backToWordList() {
+    showWords(lastWordListType, lastWordListValue);
+}
+
+function playAudio(filename) {
+    let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+    new Audio(baseURL + filename).play();
+}
+
+function playSentenceAudio(filename) {
+    let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+    sentenceAudio.src = baseURL + filename;
+    sentenceAudio.play();
+}
+
+function togglePauseAudio(button) {
+    if (sentenceAudio.paused || sentenceAudio.ended) {
+        sentenceAudio.play();
+        button.innerHTML = `
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />
+        `;
+    } else {
+        sentenceAudio.pause();
+        button.innerHTML = `
+            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />
+        `;
+    }
+}
+
+function adjustAudioTime(seconds) {
+    sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
+}
+</script>
+</body>
+</html>

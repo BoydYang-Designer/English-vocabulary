@@ -1,0 +1,181 @@
+
+        body { /* 設定整體頁面的字型、邊距與背景顏色 */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+        h1 { /* 設定標題的樣式，置中並使用深色背景 */
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 15px 0;
+            margin: 0;
+            font-size: 24px;
+        }
+        .alphabet-container { /* 設定字母按鈕區域的間距與對齊方式 */
+            text-align: center;
+            margin: 15px 0;
+        }
+        .letter-btn { /* 設定字母按鈕的大小、顏色與圓角 */
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background: #555;
+            color: white;
+            border-radius: 15px;
+        }
+        .letter-btn:hover { /* 設定字母按鈕的懸停效果 */
+            background: #777;
+        }
+        .container { /* 設定主要內容的排列方式與間距，使其水平排列 */
+            display: flex; /* 讓內容以彈性盒子方式排列，達到橫向並排效果 */
+            justify-content: center; /* 讓內容置中對齊 */
+            gap: 20px; /* 設定區塊之間的間距 */
+            margin: 20px;
+        }
+        .word-list {
+            display: none; /* 預設隱藏 */
+            margin: 10px 0;
+            width: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+               }
+        .word-item { /* 設定單字列表內的單字樣式 */
+            cursor: pointer; /* 讓滑鼠變成可點擊的指標，表示此元素可互動 */
+            padding: 8px; /* 設定內邊距，增加內容與邊框的距離，提高可讀性 */
+            border-bottom: 1px solid #ddd; /* 添加底部邊框，讓單字列表更清晰可分辨 */
+            color: #007bff; /* 設定單字的顏色，使用藍色強調可點擊性 */
+        }
+        .word-item:hover { /* 設定單字懸停時的背景顏色與字體加粗效果 */
+            background: #f0f0f0; /* 滑鼠懸停時變為淺灰色，提升互動體驗 */
+            font-weight: bold; /* 懸停時加粗字體，使其更加明顯 */
+        }
+        .details { /* 設定第三層詳情區塊的樣式 */
+            width: 400px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            position: relative;
+            font-size: 12px; /* 調整這裡的字型大小 */
+        }
+        .phonetics-container button {
+            background-color: #647f91; /* 懸停時按鈕背景顏色 */
+            color: #fff; /* 文字顏色 (改為白色) */
+            font-size: 16px; /* 字型大小 */
+            padding: 5px 10px; /* 內邊距 */
+            min-width: 50px; /* 按鈕最小寬度 */
+            min-height: 40px; /* 按鈕最小高度 */
+            width: auto; /* 讓寬度根據內容自動調整 */
+            height: auto; /* 讓高度根據內容自動調整 */
+            white-space: nowrap; /* 防止文字換行 */
+            display: inline-block; /* 使按鈕根據內容自動調整 */
+            border: none; /* 移除邊框 */
+            border-radius: 20px; /* 圓角 */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* 過渡效果 */
+           }
+        .phonetics-container button:hover {
+            background-color: #4a6375; /* 懸停時的背景顏色 (比原本深一點) */
+            transform: scale(1.05); /* 懸停時稍微放大 */
+           }
+        #meaningContainer { /* 設定英文解釋區域的滾動效果 */
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 10px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 18px; /* 調整這裡的字型大小 */
+        }
+        #chineseContainer {
+           font-size: 15px; /* 調整這裡的字型大小 */
+           }
+        .button { /* 設定所有按鈕的基本樣式 */
+            display: block;
+            width: 150px;
+            height: 50px;
+            background-color: #424d57;
+            color: white;
+            font-size: 18px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            margin: 10px auto;
+            font-weight: bold;
+        }
+        .button:hover { /* 設定按鈕懸停時的顏色變化 */
+            background-color: #6e8191;
+        }
+        .back-button {
+           position: sticky;  /* 讓按鈕固定 */
+           top: 0;            /* 固定在 .word-list 的頂部 */
+           width: 100%;       /* 讓按鈕的寬度跟 .word-list 一樣 */
+           background-color: #424d57;
+           color: white;
+           font-size: 18px;
+           border: none;
+           padding: 8px 0;  /* 減少上下的內邊距 */
+           margin: 0;  /* 減少外邊距 */
+           text-align: center;
+           font-weight: bold;
+           cursor: pointer;
+           z-index: 10;       /* 確保不被其他內容擋住 */
+          }
+
+         .back-button:hover {
+             background-color: #6e8191;
+             }
+        .audio-controls { /* 設定音頻控制按鈕的樣式與固定底部位置 */
+            width: 100%; /* 或者設定為具體的數值，如 300px */
+            max-width: 100%; /* 確保不會超過父容器 */
+            height: auto; /* 根據內容自動調整高度 */
+            padding: 10px; /* 增加內邊距，避免按鈕緊貼邊框 */
+            display: flex;
+            justify-content: space-around;/* 按鈕水平均勻分佈 */
+            align-items: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed; /* 固定在頁面底部 */
+            bottom: 0;
+            left: 0;
+            z-index: 10; /* 確保它在頁面最上層 */
+        }
+        .audio-btn { /* 設定音頻按鈕的樣式 */
+            display: flex; /* 讓按鈕內的內容可以使用 Flexbox 對齊 */
+            align-items: center; /* 垂直置中 */
+            justify-content: center; /* 水平置中 */
+            padding: 0; /* 移除內邊距 */
+            background-color: #647f91;
+            color: white;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            border: none; /* 去掉邊框線 */
+            width: 50px; /* 設定按鈕大小 */
+            height: 50px;
+        }
+        .audio-btn:hover {
+           background-color: #4a6375; /* 懸停時的背景顏色 (比原本深一點) */
+           transform: scale(1.05); /* 懸停時稍微放大 */
+}
+        .audio-btn img {
+            transition: transform 0.3s ease;
+            width: 24px;
+            height: 24px;
+            max-width: 100%;   /* 保證圖標不會超出容器 */
+            max-height: 100%;  /* 保證圖標不會超出容器 */
+        }
+        .audio-btn:hover img {
+             transform: scale(1.2);  /* 按鈕滑鼠懸停時稍微放大 */
+         }
