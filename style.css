@@ -13,6 +13,12 @@
             margin: 0;
             font-size: 24px;
         }
+
+         #searchInput {
+            font-size: 16px !important; /* 確保不被其他樣式覆蓋 */
+            padding: 10px;
+        }
+         
         .alphabet-container { /* 設定字母按鈕區域的間距與對齊方式 */
             text-align: center;
             margin: 15px 0;
