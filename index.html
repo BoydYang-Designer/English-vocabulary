@@ -25,6 +25,10 @@
         <div id="wordItems"></div> <!-- 單字列表內容 -->
     </div>
     <div id="wordDetails" class="details">
+     <div id="searchInDetails" style="text-align: center; margin-bottom: 10px;">
+    <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." oninput="filterWordsInDetails()" style="padding: 8px; width: 200px;">
+    <div id="searchResultsDetails" style="max-height: 200px; overflow-y: auto; text-align: left;"></div>
+</div>
         <button class="button" onclick="backToWordList()">Back</button>
         <h2 id="wordTitle"></h2>
         <div id="phoneticContainer"></div>
@@ -34,6 +38,7 @@
 </div>
 
     <script>
+let historyStack = []; // 記錄所有歷史狀態
 let wordsData = [];
 let sentenceAudio = new Audio();
 let lastWordListType = ""; // 記錄進入單字列表的方式
@@ -54,6 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(err => console.error("❌ 讀取 JSON 失敗:", err));
 });
+
+function navigateTo(state) {
+    historyStack.push(state); // 每次進入新頁面時，把當前狀態存入 historyStack
+}
 
 function filterWords() {
     let input = document.getElementById("searchInput").value.toLowerCase();
@@ -86,20 +95,61 @@ function filterWords() {
     }
 
     searchResults.innerHTML = filtered.length > 0 
-        ? filtered.map((w, index) => {
-            let word = w.Words || w.word || w["單字"] || ""; // 確保顯示正確單字
-            return `<p class='word-item' data-index='${index}'>${word}</p>`;
-        }).join("")
-        : "<p>⚠️ 沒有符合的單字</p>";
+    ? filtered.map((w, index) => {
+        let word = w.Words || w.word || w["單字"] || ""; 
+        return `<p class='word-item' data-index='${index}'>${word}</p>`;
+    }).join("")
+    : "<p>⚠️ 沒有符合的單字</p>";
 
-    // 確保點擊事件可以正確觸發
-    document.querySelectorAll('.word-item').forEach((item, index) => {
-        item.addEventListener("click", function() {
-            showDetails(filtered[index]); 
-        });
+// 重新綁定點擊事件，確保 showDetails 正常運作
+document.querySelectorAll('.word-item').forEach((item, index) => {
+    item.addEventListener("click", function() {
+        showDetails(filtered[index]); // ✅ 這樣才能正確傳入 word 物件
     });
+});
+
+
 }
 
+function filterWordsInDetails() {
+    let input = document.getElementById("searchInputDetails").value.toLowerCase();
+    let searchResults = document.getElementById("searchResultsDetails");
+
+    if (!wordsData || wordsData.length === 0) {
+        console.error("❌ wordsData 未加載");
+        return;
+    }
+
+    if (!searchResults) return;
+
+    if (input === "") {
+        searchResults.innerHTML = "";
+        return;
+    }
+
+    let filtered = wordsData.filter(w => {
+        let word = w.Words || w.word || w["單字"] || "";  
+        return word.toLowerCase().startsWith(input);
+    });
+
+    searchResults.innerHTML = "";
+    
+    if (filtered.length === 0) {
+        searchResults.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
+        return;
+    }
+
+    filtered.forEach((wordObj, index) => {
+        let word = wordObj.Words || wordObj.word || wordObj["單字"] || "";  
+        let item = document.createElement("p");
+        item.className = "word-item";
+        item.textContent = word;
+        item.addEventListener("click", function() {
+            showDetails(wordObj); // ✅ 確保正確傳遞 word 物件
+        });
+        searchResults.appendChild(item);
+    });
+}
 
 function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
@@ -123,6 +173,8 @@ function createLevelButtons() {
 }
         
 function showWords(type, value) {
+    navigateTo({ page: "wordList", type: type, value: value }); // 記錄當前頁面
+    
     lastWordListType = type;  // 記錄類型（A-Z、分類、等級）
     lastWordListValue = value; // 記錄選擇的值
 
@@ -159,24 +211,56 @@ function showWords(type, value) {
 
 function backToFirstLayer() {
     document.getElementById("searchContainer").style.display = "block"; // 顯示搜尋框
-    document.getElementById("wordList").style.display = "none";
-    document.getElementById("wordDetails").style.display = "none";
+    document.getElementById("wordList").style.display = "none"; // 隱藏單字列表
+    document.getElementById("wordDetails").style.display = "none"; // 隱藏詳細內容
     document.querySelector('.alphabet-container').style.display = "block"; 
     document.querySelector('.category-container').style.display = "block"; 
-    document.querySelector('.level-container').style.display = "block";
+    document.querySelector('.level-container').style.display = "block"; 
+
+    // **顯示搜尋結果（但不清空）**
+    let searchResults = document.getElementById("searchResults");
+    if (searchResults) {
+        searchResults.style.display = "block"; // **恢復顯示搜尋結果**
+    }
+
+    // **清空單字列表**
+    document.getElementById("wordItems").innerHTML = ""; 
+
+    // **清空歷史紀錄**
+    historyStack = [];
+    lastWordListType = "";
+    lastWordListValue = "";
 }
 
 
 function showDetails(word) {
-    // ✅ 隱藏不相關的 UI
-    document.getElementById("searchContainer").style.display = "none"; // 隱藏搜尋框
-    document.getElementById("wordList").style.display = "none"; // 隱藏單字列表層
-    document.getElementById("wordDetails").style.display = "block"; // 顯示單字詳情層
-    document.querySelector(".alphabet-container").style.display = "none"; 
-    document.querySelector(".category-container").style.display = "none"; 
-    document.querySelector(".level-container").style.display = "none"; 
+    let isFromSearch = document.getElementById("searchResults") && document.getElementById("searchResults").contains(event.target);
+
+    if (isFromSearch) {
+        historyStack = []; // **清空歷史紀錄，確保 "Back" 直接回到第一層**
+        lastWordListType = "search"; // 記錄來源
+    } else {
+        navigateTo({ page: "wordDetails", word: word });
+    }
+
+    // **隱藏搜尋結果，但不清空搜尋框**
+    let searchResults = document.getElementById("searchResults");
+    if (searchResults) {
+        searchResults.style.display = "none"; // **改用隱藏而不是清空**
+    }
+
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("wordList").style.display = "none";
+    document.getElementById("wordDetails").style.display = "block";
+    document.querySelector(".alphabet-container").style.display = "none";
+    document.querySelector(".category-container").style.display = "none";
+    document.querySelector(".level-container").style.display = "none";
+
+    document.getElementById("searchInputDetails").value = "";
+    document.getElementById("searchResultsDetails").innerHTML = "";
 
     document.getElementById("wordTitle").textContent = word.Words || word.word || word["單字"] || "Unknown";
+
 
     // ✅ 記錄來源（A-Z、分類、等級 或 搜尋）
     if (document.getElementById("searchResults") && document.getElementById("searchResults").contains(event.target)) {
@@ -299,6 +383,31 @@ function togglePauseAudio(button) {
 function adjustAudioTime(seconds) {
     sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
 }
+
+function backToPrevious() {
+    if (lastWordListType === "search") {
+        backToFirstLayer(); // **如果來自搜尋結果，直接回到第一層**
+    } else if (historyStack.length > 1) {
+        historyStack.pop(); // 移除當前狀態
+        let previousState = historyStack[historyStack.length - 1];
+
+        if (previousState.page === "wordList") {
+            showWords(previousState.type, previousState.value); // 返回單字列表
+        } else if (previousState.page === "wordDetails") {
+            showDetails(previousState.word); // 返回上一個單字詳情
+        }
+    } else {
+        backToFirstLayer(); // **如果沒有歷史紀錄，回到首頁**
+    }
+}
+
+
+document.querySelectorAll('.back-button').forEach(button => {
+    button.addEventListener("click", backToPrevious);
+});
+
+
+
 </script>
 </body>
 </html>
