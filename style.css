@@ -185,6 +185,12 @@
              transform: scale(1.2);  /* 按鈕滑鼠懸停時稍微放大 */
          }
 
+#searchResultsDetails .word-item {
+    font-size: 16px; /* 調整字體大小 */
+    padding: 8px; /* 增加間距，讓單字區隔更明顯 */
+}
+
+
 #bButton {
     background-color: #6c757d; /* 灰色 */
     color: white;
