@@ -6,36 +6,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Boyd Vocabulary</h1>
-<div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
-    <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterWords()" style="padding: 8px; width: 200px;">
-
-</div>
-<div class="alphabet-container">
-    <script>
-        document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`).join(" "));
-    </script>
-</div>
-<div class="category-container" id="categoryButtons"></div>
-<div class="level-container" id="levelButtons"></div>
-
-<div class="container">
-    <div id="wordList" class="word-list">
-        <button class="button back-button" onclick="backToFirstLayer()">Back</button>
-        <div id="wordItems"></div> <!-- 單字列表內容 -->
+     <h1>Boyd Vocabulary</h1>
+    <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
+        <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterWords()" style="padding: 8px; width: 200px;">
     </div>
-    <div id="wordDetails" class="details">
-     <div id="searchInDetails" style="text-align: center; margin-bottom: 10px;">
-    <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." oninput="filterWordsInDetails()" style="padding: 16px; width: 200px;">
-    <div id="searchResultsDetails" style="max-height: 200px; overflow-y: auto; text-align: left;"></div>
-</div>
-        <button class="button" onclick="backToWordList()">Back</button>
-        <h2 id="wordTitle"></h2>
-        <div id="phoneticContainer"></div>
-        <div id="chineseContainer"></div>
-        <div id="meaningContainer"></div>
+    <div class="alphabet-container">
+        <script>
+            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`).join(" "));
+        </script>
     </div>
-</div>
+    <div class="category-container" id="categoryButtons"></div>
+    <div class="level-container" id="levelButtons"></div>
+    <div class="container">
+        <div id="wordList" class="word-list">
+            <button class="button back-button" onclick="backToFirstLayer()">Back</button>
+            <div id="wordItems"></div>
+        </div>
+        <div id="wordDetails" class="details">
+            <div id="searchInDetails" style="text-align: center; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." oninput="filterWordsInDetails()" style="font-size: 16px; padding: 5px; width: 200px;">
+                <button id="bButton" class="button">B</button>
+            </div>
+            <div id="searchResultsDetails" style="max-height: 200px; overflow-y: auto; text-align: left;"></div>
+            <button class="button" onclick="backToWordList()">Back</button>
+            <h2 id="wordTitle"></h2>
+            <div id="phoneticContainer"></div>
+            <div id="chineseContainer"></div>
+            <div id="meaningContainer"></div>
+        </div>
+    </div>
 
     <script>
 let historyStack = []; // 記錄所有歷史狀態
@@ -51,18 +50,47 @@ document.addEventListener("DOMContentLoaded", function () {
             wordsData = data["New Words"] || [];
             console.log("✅ JSON 載入成功:", wordsData);
             
-            // 這裡確保分類和等級按鈕都會顯示
+            // 確保分類和等級按鈕顯示
             setTimeout(() => {
                 createCategoryButtons();
                 createLevelButtons();
             }, 500);
         })
-        .catch(err => console.error("❌ 讀取 JSON 失敗:", err));
+        .catch(err => {
+            console.error("❌ 讀取 JSON 失敗:", err);
+        })
+        .finally(() => {
+            // **確保 "B" 按鈕在 DOM 加載後才初始化**
+            setTimeout(() => {
+                let bButton = document.getElementById("bButton");
+                if (bButton) {
+                    bButton.disabled = true; // 禁用按鍵
+                    bButton.style.backgroundColor = "#ccc"; // 設定未啟動顏色
+                    bButton.addEventListener("click", backToPrevious); // 綁定 "B" 按鍵點擊事件
+                    console.log("🔵 'B' 按鈕已初始化");
+                } else {
+                    console.error("❌ 無法找到 'B' 按鈕，請確認 HTML 是否正確");
+                }
+            }, 300); // **延遲 300ms 確保 DOM 加載完成**
+        });
 });
 
+
 function navigateTo(state) {
-    historyStack.push(state); // 每次進入新頁面時，把當前狀態存入 historyStack
+    // **避免重複存入相同的單字**
+    if (historyStack.length === 0 || historyStack[historyStack.length - 1].word !== state.word) {
+        historyStack.push(state);
+    }
+
+    // **限制最大記憶數量，避免無限增長**
+    if (historyStack.length > 10) { 
+        historyStack.shift(); // 只保留最近 10 個記錄
+    }
+
+    console.log("📌 新增到歷史紀錄：", historyStack);
 }
+
+
 
 function filterWords() {
     let input = document.getElementById("searchInput").value.toLowerCase();
@@ -234,21 +262,19 @@ function backToFirstLayer() {
 
 
 function showDetails(word) {
-    let isFromSearch = document.getElementById("searchResults") && document.getElementById("searchResults").contains(event.target);
+    let searchInput = document.getElementById("searchInputDetails").value.trim();
+    let bButton = document.getElementById("bButton");
 
-    if (isFromSearch) {
-        historyStack = []; // **清空歷史紀錄，確保 "Back" 直接回到第一層**
-        lastWordListType = "search"; // 記錄來源
-    } else {
-        navigateTo({ page: "wordDetails", word: word });
+    // **只有當使用了第三層搜尋框時，才啟動 "B" 按鍵**
+    if (searchInput !== "") {
+        bButton.disabled = false; // 啟動按鍵
+        bButton.style.backgroundColor = "#6c757d"; // 變色
     }
 
-    // **隱藏搜尋結果，但不清空搜尋框**
-    let searchResults = document.getElementById("searchResults");
-    if (searchResults) {
-        searchResults.style.display = "none"; // **改用隱藏而不是清空**
-    }
+    // **確保每次進入新單字都記錄到歷史**
+    navigateTo({ page: "wordDetails", word: word });
 
+    // **顯示單字詳情**
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("wordList").style.display = "none";
     document.getElementById("wordDetails").style.display = "block";
@@ -260,6 +286,8 @@ function showDetails(word) {
     document.getElementById("searchResultsDetails").innerHTML = "";
 
     document.getElementById("wordTitle").textContent = word.Words || word.word || word["單字"] || "Unknown";
+
+    console.log("📌 進入單字詳情，歷史紀錄：", historyStack);
 
 
     // ✅ 記錄來源（A-Z、分類、等級 或 搜尋）
@@ -385,21 +413,26 @@ function adjustAudioTime(seconds) {
 }
 
 function backToPrevious() {
-    if (lastWordListType === "search") {
-        backToFirstLayer(); // **如果來自搜尋結果，直接回到第一層**
-    } else if (historyStack.length > 1) {
+    if (historyStack.length > 1) {
         historyStack.pop(); // 移除當前狀態
-        let previousState = historyStack[historyStack.length - 1];
+        let previousState = historyStack[historyStack.length - 1]; // 取得上一個狀態
 
-        if (previousState.page === "wordList") {
-            showWords(previousState.type, previousState.value); // 返回單字列表
-        } else if (previousState.page === "wordDetails") {
-            showDetails(previousState.word); // 返回上一個單字詳情
+        if (previousState.page === "wordDetails") {
+            showDetails(previousState.word); // 返回上一個單字
         }
-    } else {
-        backToFirstLayer(); // **如果沒有歷史紀錄，回到首頁**
     }
+
+    // **當歷史紀錄只剩 1 個時，停用 "B" 按鍵**
+    if (historyStack.length <= 1) {
+        let bButton = document.getElementById("bButton");
+        bButton.disabled = true;
+        bButton.style.backgroundColor = "#ccc"; // 回到未啟動顏色
+    }
+
+    console.log("🔙 點擊 B 按鈕後的歷史紀錄：", historyStack);
 }
+
+
 
 
 document.querySelectorAll('.back-button').forEach(button => {

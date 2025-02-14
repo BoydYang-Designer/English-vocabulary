@@ -13,12 +13,6 @@
             margin: 0;
             font-size: 24px;
         }
-
-         #searchInput {
-            font-size: 16px !important; /* 確保不被其他樣式覆蓋 */
-            padding: 10px;
-        }
-         
         .alphabet-container { /* 設定字母按鈕區域的間距與對齊方式 */
             text-align: center;
             margin: 15px 0;
@@ -104,6 +98,11 @@
         #chineseContainer {
            font-size: 15px; /* 調整這裡的字型大小 */
            }
+
+        #searchInput {
+           font-size: 16px; /* 設定字體大小為 16px 以上 */
+           padding: 10px;   /* 增加內距，讓輸入框更容易點擊 */
+          }
         .button { /* 設定所有按鈕的基本樣式 */
             display: block;
             width: 150px;
@@ -185,3 +184,22 @@
         .audio-btn:hover img {
              transform: scale(1.2);  /* 按鈕滑鼠懸停時稍微放大 */
          }
+
+#bButton {
+    background-color: #6c757d; /* 灰色 */
+    color: white;
+    border: none;
+    height: auto;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#bButton:hover {
+    background-color: #5a6268; /* 深灰色 */
+    transform: scale(1.1);
+}
+
