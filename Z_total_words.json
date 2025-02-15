@@ -2,6 +2,7 @@
     "New Words": [
         {
             "等級": "B2",
+            "分類": "daily",
             "Words": "abusive",
             "pronunciation-1": "[əˋbjusɪv]",
             "traditional Chinese": "adj.辱罵的；濫用的",
@@ -58,6 +59,7 @@
         },
         {
             "等級": "B2",
+            "分類": "技術",
             "Words": "actuate",
             "pronunciation-1": "[ˋæktʃʊ͵et]",
             "traditional Chinese": "v.1. 開動（機器等）\n   2. 激勵",
@@ -65,6 +67,7 @@
         },
         {
             "等級": "C1",
+            "分類": "daily",
             "Words": "actuation",
             "pronunciation-1": "[͵æktʃʊˋeʃən]",
             "traditional Chinese": "n.1.驅使；行動；\n  2.激勵",
@@ -72,6 +75,7 @@
         },
         {
             "等級": "B1",
+            "分類": "daily",
             "Words": "acute",
             "pronunciation-1": "[əˋkjut]",
             "traditional Chinese": "adj.1.尖銳的；劇烈的；急性的\n    2.【數】銳角的\n    3. 敏銳的",
@@ -216,6 +220,7 @@
         },
         {
             "等級": "C2",
+            "分類": "daily",
             "Words": "agriculture",
             "pronunciation-1": "[ˋægrɪ͵kʌltʃɚ]",
             "traditional Chinese": "n.農業，農耕；農藝，農學",
@@ -223,6 +228,7 @@
         },
         {
             "等級": "B1",
+            "分類": "daily",
             "Words": "album",
             "pronunciation-1": "ˋælbəm",
             "traditional Chinese": "n.1.唱片集，唱片套冊\n   2.相簿；集郵簿",
@@ -230,6 +236,7 @@
         },
         {
             "等級": "B1",
+            "分類": "生物",
             "Words": "alga",
             "pronunciation-1": "[ˋældʒi]",
             "traditional Chinese": "n.（常用複）水藻，海藻",
@@ -253,6 +260,7 @@
         },
         {
             "等級": "B1",
+            "分類": "daily",
             "Words": "alley",
             "pronunciation-1": "[ˋælɪ]",
             "traditional Chinese": "n.小巷，胡同",
@@ -268,6 +276,7 @@
         },
         {
             "等級": "B1",
+            "分類": "食物",
             "Words": "almond",
             "pronunciation-1": "[ˋɑmənd]",
             "traditional Chinese": "n.杏仁",
@@ -275,6 +284,7 @@
         },
         {
             "等級": "B1",
+            "分類": "daily",
             "Words": "amber",
             "pronunciation-1": "[ˋæmbɚ]",
             "traditional Chinese": "n.1.琥珀\nadj. 1.琥珀似的",
@@ -282,6 +292,7 @@
         },
         {
             "等級": "B2",
+            "分類": "daily",
             "Words": "ambiance",
             "pronunciation-1": "[ˋæmbɪəns]",
             "traditional Chinese": "n.（地、人、物特有的）格調；氣氛；",
@@ -289,6 +300,7 @@
         },
         {
             "等級": "C1",
+            "分類": "daily",
             "Words": "ambiguity",
             "pronunciation-1": "[͵æmbɪˋgjuətɪ]",
             "traditional Chinese": "n.模稜兩可的話；含糊話[C]",
@@ -296,6 +308,7 @@
         },
         {
             "等級": "C1",
+            "分類": "daily",
             "Words": "ambiguous",
             "pronunciation-1": "[æmˋbɪgjʊəs]",
             "traditional Chinese": "adj.模稜兩可的，模糊不清的",
@@ -303,6 +316,7 @@
         },
         {
             "等級": "B1",
+            "分類": "daily",
             "Words": "ambush",
             "pronunciation-1": "[ˋæmbʊʃ]",
             "traditional Chinese": "n.1.埋伏；伏擊\nv.2.埋伏；伏擊",
@@ -318,7 +332,10 @@
         },
         {
             "等級": "C2",
-            "Words": "amendments "
+            "Words": "amendment",
+            "pronunciation-1": "[əˋmɛndmənt]",
+            "traditional Chinese": "n.改正，修正；改善[U][C]",
+            "English meaning": "Amendment As a Noun:\nAn amendment refers to a formal change, revision, or addition made to a law, document, policy, or agreement to improve or clarify its meaning. It can also refer to modifications in general to correct or enhance something.\nE.g. The senator proposed an amendment to the existing law.\nE.g. The first amendment of the U.S. Constitution guarantees freedom of speech.\nE.g. He made several amendments to his research paper before submitting it.\nE.g. The contract underwent multiple amendments to meet both parties' requirements.\nSummary:\nAn amendment is a formal change or improvement made to a document, law, or agreement to enhance its clarity, accuracy, or effectiveness.\nRelated Words: revision, modification, correction, adjustment, alteration, improvement, update, edit.\nAntonyms: original, preservation, retention, stagnation, repeal."
         },
         {
             "等級": "B1",
@@ -1892,10 +1909,10 @@
         },
         {
             "等級": "B1",
-            "Words": "crafte",
+            "Words": "craft",
             "pronunciation-1": "[kræft]",
-            "traditional Chinese": "v.1.熟練地製作\nn.2.手藝[C][U]\n  3.工藝[C][U]",
-            "English meaning": "1.craft as a verb : craft crafted crafting means to create or produce something skillfully, typically by hand or to form or shape something carefully and skillfully.\nE.g. He is crafting a new sculpture.\nE.g. The furniture is crafted from bamboo.\nE.g. She crafted a strategy to boost the company's earnings.\nE.g. They carefully crafted a plan to improve their company's efficiency.\n2.An activity involving skill in making things by hand.\nE.g. He learned his craft from an old master.\n3.An object or item that has been skillfully made by hand.\nE.g. The store sells crafts [=handicrafts] from around the world.\nE.g. There's a crafts fair [=an event at which crafts are sold] at the school this Saturday."
+            "traditional Chinese": "v.1.熟練地製作\nn.1.手藝[C][U]\n   2.工藝[C][U]",
+            "English meaning": "Craft As a Verb: craft / crafted / crafting\nMeans to create or produce something skillfully, typically by hand, or to form or shape something carefully and skillfully.\nE.g. He is crafting a new sculpture.\nE.g. The furniture is crafted from bamboo.\nE.g. She crafted a strategy to boost the company's earnings.\nE.g. They carefully crafted a plan to improve their company's efficiency.\nAs a Noun:\n1. An activity involving skill in making things by hand.\nExample: He learned his craft from an old master.\n2. An object or item that has been skillfully made by hand.\nE.g. The store sells crafts [=handicrafts] from around the world.\nE.g. There's a crafts fair [=an event at which crafts are sold] at the school this Saturday.\nSummary:\n\"Craft\" can be used as a verb to mean creating or shaping something skillfully, often by hand or with careful planning. As a noun, it refers to both the skill of making things by hand and the handcrafted objects themselves.\nRelated Words: create, build, design, construct, make, fabricate, form, shape, manufacture, skill, trade, workmanship, artistry, handcraft.\nAntonyms: destroy, ruin, neglect, dismantle, demolish, break, damage."
         },
         {
             "等級": "C2",
@@ -2817,12 +2834,15 @@
             "English meaning": "Archetype is a noun and has the following meaning:\nA typical example of something or the original model from which others are copied or based.\nE.g. The hero’s journey is an archetype commonly found in literature and mythology.\nE.g. She is considered the archetype of a strong and independent leader.\nE.g. The classic Eames chair is the archetype of timeless furniture design—elegant, comfortable, and innovative.\nE.g. This sleek smartphone is the archetype of modern technology—minimalist, user-friendly, and highly functional.\nSummary:\nAn archetype is a universal, original model or pattern that serves as an ideal example for others.\nRelated Words : Prototype, model, paradigm, stereotype\nAntonyms : Anomaly, deviation, atypical example"
         },
         {
+            "等級": "B1",
             "Words": "as of"
         },
         {
+            "等級": "B1",
             "Words": "portal"
         },
         {
+            "等級": "B1",
             "Words": "peacock"
         },
         {
@@ -3892,14 +3912,14 @@
             "Words": "hinder",
             "pronunciation-1": "[ˋhɪndɚ]",
             "traditional Chinese": "v.妨礙；阻礙(+from)",
-            "English meaning": "Hinder\" implies the action of making it more difficult for someone or something to achieve a goal or make progress. It often conveys the idea of slowing down or delaying progress.\nE.g.The heavy rain hindered the construction workers from completing the project on time."
+            "English meaning": "Hinder : As a Verb: hinder / hindered / hindering\nMeans to make it more difficult for someone or something to achieve a goal or make progress, often by slowing down, delaying, or obstructing progress.\nE.g. The heavy rain hindered the construction workers from completing the project on time.\nE.g. His lack of experience hindered his chances of getting the job.\nE.g. Traffic congestion hindered their ability to arrive on schedule.\nE.g. The new regulations may hinder business growth in the region.\nSummary:\n\"Hinder\" means to slow down, delay, or obstruct progress, making it harder for someone or something to succeed.\nRelated Words: obstruct, impede, block, delay, restrain, hamper, prevent.\nAntonyms: assist, help, facilitate, support, advance, encourage."
         },
         {
             "等級": "C1",
             "Words": "hindrance",
             "pronunciation-1": "[ˋhɪndrəns]",
             "traditional Chinese": "n.妨礙，障礙",
-            "English meaning": "A hindrance refers to anything that slows down or makes it more difficult to accomplish a task, reach a goal, or make progress. It often implies a broader sense of interference or obstruction.\nE.g.The lack of funding proved to be a significant hindrance to the completion of the project."
+            "English meaning": "hindrance As a Noun:\nA hindrance refers to anything that slows down or makes it more difficult to accomplish a task, reach a goal, or make progress. It often implies a broader sense of interference or obstruction.\nE.g. The lack of funding proved to be a significant hindrance to the completion of the project.\nE.g. His poor communication skills were a hindrance to his career advancement.\nE.g. The road construction was a major hindrance to traffic flow.\nE.g. Fear of failure can be a psychological hindrance to success.\nSummary:\nA hindrance is an obstacle or difficulty that prevents or delays progress, making it harder to achieve a goal.\nRelated Words: obstacle, barrier, obstruction, impediment, drawback, difficulty, limitation.\nAntonyms: aid, assistance, advantage, benefit, help, support, facilitation."
         },
         {
             "等級": "B1",
@@ -3910,7 +3930,10 @@
         },
         {
             "等級": "B1",
-            "Words": "hoist"
+            "Words": "hoist",
+            "pronunciation-1": "[hɔɪst]",
+            "traditional Chinese": "v.（用繩索，起重機等）吊起；提起；舉起；升起\nn.升起；吊起；提起；舉起",
+            "English meaning": "1. As a Verb: hoist / hoisted / hoisting\nMeans to lift or raise something, especially with the help of ropes, pulleys, or machinery.\nE.g. They hoisted the flag up the pole during the ceremony.\nE.g. The workers hoisted the heavy crates onto the truck.\nE.g. He hoisted his backpack onto his shoulders before leaving.\nE.g. The sailors hoisted the sails to catch the wind.\n2. As a Noun:\nA device or mechanism used to lift or raise heavy objects.\nE.g. The construction site used a hoist to lift materials to the upper floors.\nE.g. The mechanic used a hoist to raise the car for repairs.\nSummary:\n\"Hoist\" can be used as a verb to mean lifting or raising something, often with equipment, or as a noun to refer to a device used for lifting.\nRelated Words: lift, raise, elevate, heave, boost, crane.\nAntonyms: lower, drop, sink, descend, bring down."
         },
         {
             "等級": "B2",
@@ -3921,7 +3944,11 @@
         },
         {
             "等級": "C1",
-            "Words": "hospitable"
+            "Words": "hospitable",
+            "pronunciation-1": "[ˋhɑspɪtəb!]",
+            "pronunciation-2": " ",
+            "traditional Chinese": "adj.1.好客的，招待周到的\n    2.（氣候、環境等）宜人的；適宜的",
+            "English meaning": "hospitable As an Adjective:\n1. Welcoming and Friendly: Showing kindness, generosity, and warmth toward guests or visitors.\nE.g. The host was very hospitable, offering us food and drinks as soon as we arrived.\nE.g. They were hospitable to travelers, always providing a place to rest.\n2. Favorable or Suitable for Living or Growth: Providing a pleasant or suitable environment for people, animals, or plants.\nE.g. The island’s warm climate makes it hospitable for a variety of plants and animals.\nE.g.  Scientists are searching for hospitable planets that could support life.\nSummary:\n\"Hospitable\" describes a person, place, or environment that is welcoming, friendly, or suitable for living and growth.\nRelated Words: welcoming, friendly, kind, generous, accommodating, cordial, inviting.\nAntonyms: unwelcoming, unfriendly, inhospitable, cold, hostile."
         },
         {
             "等級": "B2",
@@ -3956,7 +3983,7 @@
             "等級": "B1",
             "Words": "hustle",
             "pronunciation-1": "[ˋhʌs!]",
-            "traditional Chinese": "Verb\n  1.催促 趕緊做(某事) \n  2.拼命掙錢\n   3.售；(靠不正當手段)賺取(+into)\nNoun\n    1.忙碌；奔忙；趕緊[U]",
+            "traditional Chinese": "v.1.催促 趕緊做(某事) \n   2.拼命掙錢\n   3.售；(靠不正當手段)賺取(+into)\nn.1.忙碌；奔忙；趕緊[U]",
             "English meaning": "As a verb : hustle hustled hustling\nOverall, \"hustle\" can refer to moving quickly, engaging in business activities, deceiving others, or making promotional efforts, depending on the context.\n1.Move or Act Quickly: In this sense, \"hustle\" means to move or act energetically and quickly, often with determination or urgency.\nE.g.: She had to hustle to catch the last bus home.\nE.g. He hustled all day to finish the project before the deadline\nE.g. He tried to hustle along through the crowd, but in vain. \n3.to work vigorously and with determination to earn money or achieve a goal, often through extra effort or by taking on additional tasks.\nE.g. John had to hustle to make enough money to support his large family. \nE.g.After losing his job, he had to hustle to find freelance work to pay his bills.\n4.Con or Scam: In a negative context, \"hustle\" can mean to deceive or swindle someone, often in a clever or deceitful manner.\nE.g.Watch out for street vendors trying to hustle tourists with fake merchandise.\nAs a noun :  \"hustle\" typically refers to busy, energetic activity or to a scheme or job that earns money. Here are the main noun meanings of \"hustle\":\n1.E.g. I like the hustle and bustle of market. \n(\"hustle\" emphasizes individual action or work, while \"bustle\" describes the liveliness and activity of a place or situation.)\n(\"hustle\" 更加強調個人的行動或工作，而 \"bustle\" 則更多地描述場所或情景的熱鬧和活躍。)"
         },
         {
@@ -3975,10 +4002,11 @@
         },
         {
             "等級": "C1",
+            "分類": "職業",
             "Words": "hypnotist",
             "pronunciation-1": "[ˋhɪpnətɪst]",
             "traditional Chinese": "n.施催眠術的人",
-            "English meaning": "E.g. \"Under the dim lights of the stage, the hypnotist captivated the audience as they watched volunteers from the crowd fall into a trance-like state with just the sound of his voice.\""
+            "English meaning": "hypnotist As a Noun:\nA hypnotist is a person trained in the practice of hypnosis, using techniques to put others into a trance-like state to influence their thoughts, behaviors, or memories, often for therapeutic or entertainment purposes.\nE.g. The hypnotist helped her overcome her fear of flying through hypnosis.\nE.g. At the show, the hypnotist amazed the audience by making volunteers follow his suggestions.\nE.g. Some people visit a hypnotist to quit smoking or manage stress.\nE.g. The hypnotist guided him into a deep state of relaxation during the session.\nSummary:\nA hypnotist is someone skilled in hypnosis, using it for therapy, entertainment, or behavioral change.\nRelated Words: hypnotherapist, mesmerist, therapist, illusionist, mentalist.\nAntonyms: skeptic, realist, non-believer, disbeliever."
         },
         {
             "等級": "C1",
@@ -8104,51 +8132,67 @@
             "English meaning": "Strategic is an adjective with the following meanings:\n1. Relating to the identification of long-term or overall goals and the means of achieving them, often in a military, business, or political context.\nE.g. The company made a strategic decision to expand into international markets.\nE.g. His strategic thinking helped the team win the championship.\nE.g. The general outlined a strategic plan for the upcoming battle.\nE.g. The new policy is part of a broader strategic initiative to improve healthcare.\n2. Having a specific or important purpose in a larger context or plan.\nE.g. The placement of the city near the river was strategic for trade.\nE.g. Choosing the right time to launch the product was a strategic move.\nE.g. They took strategic steps to ensure the success of the project.\nSummary:\n\"Strategic\" refers to actions, decisions, or plans made with long-term goals in mind, particularly in contexts like business, politics, or military operations. It also highlights the importance of purpose in achieving broader objectives.\nRelated Words: tactical, planned, calculated, intentional, purposeful\nAntonyms: unplanned, haphazard, spontaneous"
         },
         {
+            "等級": "B1",
             "Words": "outmaneuver"
         },
         {
+            "等級": "B1",
             "Words": "verbatim"
         },
         {
+            "等級": "B1",
             "Words": "lowball "
         },
         {
+            "等級": "B1",
             "Words": "Interviewee"
         },
         {
+            "等級": "B1",
             "Words": "tacitly"
         },
         {
+            "等級": "B1",
             "Words": "sabotage"
         },
         {
+            "等級": "B1",
             "Words": "self-sabotage"
         },
         {
+            "等級": "B1",
             "Words": "funnel"
         },
         {
+            "等級": "B1",
             "Words": "specificity"
         },
         {
+            "等級": "B1",
             "Words": "stagnant"
         },
         {
+            "等級": "B1",
             "Words": "attrition"
         },
         {
+            "等級": "B1",
             "Words": "equity"
         },
         {
+            "等級": "B1",
             "Words": "cringe"
         },
         {
+            "等級": "B1",
             "Words": "contempt "
         },
         {
+            "等級": "B1",
             "Words": "amplify"
         },
         {
+            "等級": "B1",
             "Words": "wokeness"
         },
         {
@@ -10358,7 +10402,9 @@
         {
             "分類": "職業",
             "Words": "magician",
-            "pronunciation-1": "[məˋdʒɪʃən]"
+            "pronunciation-1": "[məˋdʒɪʃən]",
+            "traditional Chinese": "n.魔術師，變戲法的人；術士，巫師",
+            "English meaning": "Magician As a Noun:\nA magician is a person who performs magic tricks or illusions to entertain an audience. It can also refer to someone who is highly skilled in a particular field, as if they have magical abilities.\n1. A Performer of Magic Tricks or Illusions: Someone who entertains people by making things appear, disappear, or change in seemingly impossible ways.\nE.g. The magician pulled a rabbit out of his hat, amazing the audience.\nE.g. She hired a magician to perform at her son's birthday party.\n2. A Person with Extraordinary Skill or Talent in a Field: Someone who excels in a certain area, often described as having a \"magical touch.\"\nE.g. He is a magician in the kitchen, creating incredible dishes from simple ingredients.\nE.g. The software developer was a magician when it came to solving complex coding problems.\nSummary:\nA magician is either an entertainer who performs magic tricks or a highly skilled person in a specific field.\nRelated Words: illusionist, conjurer, sorcerer, wizard, enchanter, prestidigitator.\nAntonyms: realist, amateur, novice, skeptic, non-believer."
         },
         {
             "分類": "職業",
@@ -10518,12 +10564,9 @@
             "分類": "人物特性",
             "Words": "agile",
             "pronunciation-1": "[ˋædʒaɪl]",
+            "pronunciation-2": "[ˋædʒail]",
             "traditional Chinese": "adj.輕快的，敏捷的\n    機敏的，靈敏的",
             "English meaning": " \"agile\" describe the ability to move quickly and easily, both physically and metaphorically. It implies nimbleness, flexibility, and the capability to respond effectively to changes or challenges. \nE.g. The startup's agile development process allowed them to quickly adapt to changing market conditions and deliver high-quality products ahead of competitors.\nE.g. David's agile thinking propelled him swiftly through challenges, making him the go-to problem solver on the team."
-        },
-        {
-            "分類": "人物特性",
-            "pronunciation-1": "[ˋædʒail]"
         },
         {
             "分類": "人物特性",
