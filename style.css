@@ -139,22 +139,27 @@
          .back-button:hover {
              background-color: #6e8191;
              }
-        .audio-controls { /* 設定音頻控制按鈕的樣式與固定底部位置 */
-            width: 100%; /* 或者設定為具體的數值，如 300px */
-            max-width: 100%; /* 確保不會超過父容器 */
-            height: auto; /* 根據內容自動調整高度 */
-            padding: 10px; /* 增加內邊距，避免按鈕緊貼邊框 */
+       .audio-controls {
+            position: fixed;
+            bottom: 0;
+            left: 50%; /* 讓它以視窗為基準 */
+            transform: translateX(-50%); /* 讓整個區塊向左移動一半寬度，使其置中 */
+            width: auto; /* 讓 JavaScript 設定寬度 */
+            max-width: none;
+            height: auto;
+            padding: 10px;
             display: flex;
-            justify-content: space-around;/* 按鈕水平均勻分佈 */
+            justify-content: space-between; /* 讓內部按鈕均勻分布 */
             align-items: center;
             background: white;
             border-radius: 10px;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-            position: fixed; /* 固定在頁面底部 */
-            bottom: 0;
-            left: 0;
-            z-index: 10; /* 確保它在頁面最上層 */
-        }
+            z-index: 10;
+            gap: 10px; /* 讓按鈕之間有間距 */
+           }
+
+
+
         .audio-btn { /* 設定音頻按鈕的樣式 */
             display: flex; /* 讓按鈕內的內容可以使用 Flexbox 對齊 */
             align-items: center; /* 垂直置中 */

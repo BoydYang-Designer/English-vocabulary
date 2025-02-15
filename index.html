@@ -127,7 +127,7 @@ function filterWords() {
         let word = w.Words || w.word || w["單字"] || ""; 
         return `<p class='word-item' data-index='${index}'>${word}</p>`;
     }).join("")
-    : "<p>⚠️ 沒有符合的單字</p>";
+    : "<p⚠️ 沒有符合的單字</p>";
 
 // 重新綁定點擊事件，確保 showDetails 正常運作
 document.querySelectorAll('.word-item').forEach((item, index) => {
@@ -377,7 +377,11 @@ function showDetails(word) {
             </button>
         </div>
     `;
+
     document.getElementById("wordDetails").insertAdjacentHTML("beforeend", audioControls);
+
+    // ✅ 確保 .audio-controls 插入後才執行調整
+    adjustAudioControlsWidth();
 }
 
 function backToWordList() {
@@ -453,6 +457,21 @@ function backToPrevious() {
 document.querySelectorAll('.back-button').forEach(button => {
     button.addEventListener("click", backToPrevious);
 });
+
+window.addEventListener("load", adjustAudioControlsWidth);
+window.addEventListener("resize", adjustAudioControlsWidth);
+
+function adjustAudioControlsWidth() {
+    let details = document.querySelector(".details");
+    let audioControls = document.querySelector(".audio-controls");
+
+    if (details && audioControls) {
+        let detailsWidth = details.offsetWidth; // 取得 .details 的實際寬度
+        audioControls.style.width = detailsWidth + "px"; // 設定相同的寬度
+        audioControls.style.maxWidth = detailsWidth + "px"; // 防止超過
+    }
+}
+
 
 
 
