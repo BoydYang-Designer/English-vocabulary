@@ -201,41 +201,56 @@ function createLevelButtons() {
 }
         
 function showWords(type, value) {
-    navigateTo({ page: "wordList", type: type, value: value }); // 記錄當前頁面
-    
-    lastWordListType = type;  // 記錄類型（A-Z、分類、等級）
-    lastWordListValue = value; // 記錄選擇的值
+    console.log("📌 點擊分類/等級/A-Z 按鈕:", type, value);
 
-    document.getElementById("searchContainer").style.display = "none"; // 隱藏搜尋框
+    navigateTo({ page: "wordList", type: type, value: value });
+    lastWordListType = type;
+    lastWordListValue = value;
+
+    document.getElementById("searchContainer").style.display = "none";
     let listContainer = document.getElementById("wordList");
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
-    let filteredWords = wordsData.filter(w => 
-        type === "letter" ? w.Words.toLowerCase().startsWith(value.toLowerCase()) :
-        type === "category" ? (w["分類"] || "未分類") === value :
-        (w["等級"] || "未分類") === value
-    );
+    if (!wordsData || wordsData.length === 0) {
+        console.error("❌ wordsData 未加載或為空");
+        return;
+    }
+
+    let filteredWords = wordsData.filter(w => {
+        let word = w.Words || w.word || w["單字"];
+        let category = w["分類"] || "未分類";
+        let level = w["等級"] || "未分類";
+
+        if (type === "letter") {
+            return word ? word.toLowerCase().startsWith(value.toLowerCase()) : false;
+        } else if (type === "category") {
+            return category === value;
+        } else if (type === "level") {
+            return level === value;
+        }
+        return false;
+    });
 
     if (filteredWords.length === 0) {
         wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
     } else {
         filteredWords.forEach(word => {
             let item = document.createElement('p');
-            item.textContent = word.Words;
+            item.textContent = word.Words || word.word || word["單字"];
             item.className = 'word-item';
-            item.onclick = function() { showDetails(word); };
+            item.onclick = function () { showDetails(word); };
             wordItems.appendChild(item);
         });
     }
 
-    // 顯示單字列表層（第二層），隱藏其他層級
     listContainer.style.display = "block";
     document.getElementById("wordDetails").style.display = "none";
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
 }
+
 
 function backToFirstLayer() {
     document.getElementById("searchContainer").style.display = "block"; // 顯示搜尋框
