@@ -12,7 +12,9 @@
 </div>
 <div class="alphabet-container">
     <script>
-        document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`).join(" "));
+        document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => 
+            `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`
+        ).join(" "));
     </script>
 </div>
 <div class="category-container" id="categoryButtons"></div>
@@ -30,17 +32,51 @@
         <div id="searchResultsDetails" style="max-height: 200px; overflow-y: auto; text-align: left;"></div>
         <button class="button" onclick="backToWordList()">Back</button>
         <h2 id="wordTitle"></h2>
+
+        <!-- 4️⃣ 英文解釋區塊 -->
         <div id="phoneticContainer"></div>
         <div id="chineseContainer"></div>
         <div id="meaningContainer"></div>
 
-        <!-- 筆記區塊 -->
-<div style="display: flex; align-items: center; justify-content: space-between;">
-    <h3>筆記</h3>
-    <button onclick="saveNote()" style="padding: 5px 10px; font-size: 14px; border: none; background: #007bff; color: white; border-radius: 5px; cursor: pointer;">保存筆記</button>
-</div>
-<textarea id="wordNote" placeholder="輸入筆記..." style="width: 100%; height: 100px;"></textarea>
-<p id="savedNote"></p>
+        <!-- 3️⃣ 播放控制按鈕（放在英文解釋下方） -->
+        <div class="audio-controls-wrapper">
+            <div class="audio-controls">
+            <button class="audio-btn" id="playAudioBtn">
+                <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" 
+                     alt="Play" width="24" height="24" />
+            </button>
+            <button class="audio-btn" onclick="adjustAudioTime(-5)">
+                <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg" 
+                     alt="Rewind" width="24" height="24" />
+            </button>
+            <button class="audio-btn" id="pauseResumeBtn" onclick="togglePauseAudio(this)">
+                <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" 
+                     alt="Pause" width="24" height="24" />
+            </button>
+            <button class="audio-btn" onclick="adjustAudioTime(5)">
+                <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/fast-forward.svg" 
+                     alt="Fast Forward" width="24" height="24" />
+            </button>
+        </div>
+
+        <!-- 2️⃣ 筆記按鈕 -->
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <h3>筆記</h3>
+            <div>
+                <button onclick="clearAllNotes()" style="padding: 5px 10px; font-size: 14px; border: none; background: #dc3545; color: white; border-radius: 5px; cursor: pointer;">
+                    清除所有筆記 🗑
+                </button>
+                <button onclick="saveNote()" id="saveNoteButton" style="padding: 5px 10px; font-size: 14px; border: none; background: #007bff; color: white; border-radius: 5px; cursor: pointer;">
+                    保存筆記
+                </button>
+            </div>
+        </div>
+
+        <!-- 1️⃣ 筆記內容（放在最下方） -->
+        <div id="noteContainer">
+            <textarea id="wordNote" placeholder="輸入筆記..." style="width: 100%; height: 100px;"></textarea>
+            <p id="savedNote"></p>
+        </div>
     </div>
 </div>
 
@@ -310,23 +346,25 @@ function showDetails(word) {
 
     document.getElementById("wordTitle").textContent = word.Words || word.word || word["單字"] || "Unknown";
 
-    console.log("📌 進入單字詳情，歷史紀錄：", historyStack);
-
-
-    // ✅ 記錄來源（A-Z、分類、等級 或 搜尋）
-    if (document.getElementById("searchResults") && document.getElementById("searchResults").contains(event.target)) {
-        lastWordListType = "search"; // 來自搜尋
-        lastWordListValue = document.getElementById("searchInput").value;
+    // ✅ **確保 `.audio-controls` 顯示**
+    let audioControls = document.querySelector(".audio-controls");
+    if (audioControls) {
+        audioControls.style.display = "flex"; // 顯示播放按鈕
     } else {
-        // 確保從單字列表（A-Z、分類、等級）進入時 `lastWordListType` 正確設定
-        if (!lastWordListType || !lastWordListValue) {
-            console.warn("⚠️ lastWordListType 未設定，預設為 'letter'");
-            lastWordListType = "letter"; // 預設為字母篩選
-            lastWordListValue = ""; // 預設值
-        }
+        console.warn("⚠️ 找不到 `.audio-controls`，請確認 HTML 是否包含此元素！");
     }
 
-    // ✅ 音標處理（考慮無音標的情況）
+    // ✅ **確保 `playAudioBtn` 更新音檔**
+    let playButton = document.getElementById("playAudioBtn");
+    if (playButton) {
+        let audioFile = `${encodeURIComponent(word.Words)} - sentence.mp3`;
+        playButton.setAttribute("onclick", `playSentenceAudio("${audioFile}")`);
+        console.log(`🔊 播放按鈕更新：${audioFile}`);
+    } else {
+        console.warn("⚠️ 找不到 `#playAudioBtn` 按鈕！");
+    }
+
+    // ✅ **音標處理（考慮無音標的情況）**
     let phonetics = `<div class="phonetics-container" style="display: flex; gap: 10px;">`;
     if (word["pronunciation-1"] || word["pronunciation-2"]) {
         if (word["pronunciation-1"]) {
@@ -340,12 +378,12 @@ function showDetails(word) {
     }
     phonetics += `</div>`;
 
-    // ✅ 中文解釋格式化
+    // ✅ **中文解釋格式化**
     let formattedChinese = word["traditional Chinese"]
         .replace(/(\d+)\./g, "<br><strong>$1.</strong> ");
     let chinese = `<div>${formattedChinese}</div>`;
 
-    // ✅ 英文解釋格式化
+    // ✅ **英文解釋格式化**
     let formattedMeaning = word["English meaning"]
         .replace(/Summary:/g, "<h3>Summary:</h3>")  
         .replace(/Related Words:/g, "<h3>Related Words:</h3>") 
@@ -358,42 +396,15 @@ function showDetails(word) {
 
     let meaning = `<p>${formattedMeaning}</p>`;
 
-    // ✅ 設定內容到對應的區塊
+    // ✅ **設定內容到對應的區塊**
     document.getElementById("phoneticContainer").innerHTML = phonetics;
     document.getElementById("chineseContainer").innerHTML = chinese;
     document.getElementById("meaningContainer").innerHTML = meaning;
 
-    // ✅ 確保音訊控制按鈕不會重複
-    let existingAudioControls = document.querySelector(".audio-controls");
-    if (existingAudioControls) {
-        existingAudioControls.remove();
-    }
-
-    let audioControls = `
-        <div class='audio-controls'>
-            <button class='audio-btn' onclick='playSentenceAudio("${encodeURIComponent(word.Words)} - sentence.mp3")'>
-                <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
-            </button>
-            <button class='audio-btn' onclick='adjustAudioTime(-5)'>
-                <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg" alt="Rewind" width="24" height="24" />
-            </button>
-            <button class='audio-btn' id='pauseResumeBtn' onclick='togglePauseAudio(this)'>
-                <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />
-            </button>
-            <button class='audio-btn' onclick='adjustAudioTime(5)'>
-                <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/fast-forward.svg" alt="Fast Forward" width="24" height="24" />
-            </button>
-        </div>
-    `;
-
-    document.getElementById("wordDetails").insertAdjacentHTML("beforeend", audioControls);
-
-    // ✅ 確保 .audio-controls 插入後才執行調整
-    adjustAudioControlsWidth();
-   
-   // **✅ 確保每次進入新單字時，載入對應筆記**
+    // ✅ **確保筆記內容顯示**
     displayNote();
 }
+
 
 function backToWordList() {
     if (lastWordListType === "search") {
@@ -423,6 +434,7 @@ function playSentenceAudio(filename) {
     sentenceAudio.src = baseURL + filename;
     sentenceAudio.play();
 }
+
 
 function togglePauseAudio(button) {
     if (sentenceAudio.paused || sentenceAudio.ended) {
@@ -507,6 +519,15 @@ function saveNote() {
         setTimeout(() => document.getElementById("savedNote").textContent = "", 3000);
     } else {
         console.warn("⚠️ 無法保存筆記，wordTitle 未加載");
+    }
+}
+
+function clearAllNotes() {
+    if (confirm("⚠️ 你確定要刪除所有筆記嗎？這個動作無法復原！")) {
+        localStorage.clear();
+        console.log("✅ 所有筆記已清除");
+        alert("✅ 所有筆記已清除！");
+        document.getElementById("wordNote").value = ""; // 清空筆記區
     }
 }
 
