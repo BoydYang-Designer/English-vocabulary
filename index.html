@@ -479,7 +479,28 @@ function adjustAudioControlsWidth() {
         audioControls.style.maxWidth = detailsWidth + "px"; // 防止超過
     }
 }
+function saveNote() {
+    let word = document.getElementById("wordTitle").textContent;
+    let note = document.getElementById("wordNote").value;
+    
+    if (word.trim() !== "") { 
+        localStorage.setItem(`note_${word}`, note); // 存入 localStorage
+        displayNote(); // 立即更新顯示
+    }
+}
 
+function displayNote() {
+    let word = document.getElementById("wordTitle").textContent;
+    let savedNote = localStorage.getItem(`note_${word}`) || ""; // 讀取筆記
+    document.getElementById("wordNote").value = savedNote; // 設定回 textarea
+}
+
+// **確保在頁面載入時，自動載入筆記**
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.getElementById("wordTitle")) {
+        displayNote();
+    }
+});
 
 
 
