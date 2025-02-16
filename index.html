@@ -479,29 +479,54 @@ function adjustAudioControlsWidth() {
         audioControls.style.maxWidth = detailsWidth + "px"; // 防止超過
     }
 }
+
 function saveNote() {
-    let word = document.getElementById("wordTitle").textContent;
-    let note = document.getElementById("wordNote").value;
-    
-    if (word.trim() !== "") { 
+    let word = document.getElementById("wordTitle")?.textContent.trim();
+    let note = document.getElementById("wordNote").value.trim();
+    let saveButton = document.querySelector("button[onclick='saveNote()']"); // 取得按鈕
+
+    if (word && word !== "") { 
         localStorage.setItem(`note_${word}`, note); // 存入 localStorage
-        displayNote(); // 立即更新顯示
+        console.log("✅ 筆記已保存:", word, note);
+
+        // ✅ 按鈕顯示「已保存」
+        saveButton.textContent = "已保存 ✅";
+        saveButton.style.backgroundColor = "#28a745"; // 綠色表示成功
+
+        // ✅ 2 秒後恢復原本樣式
+        setTimeout(() => {
+            saveButton.textContent = "保存筆記";
+            saveButton.style.backgroundColor = "#007bff";
+        }, 2000);
+        
+        // ✅ 在筆記區下方顯示「筆記已保存！」
+        document.getElementById("savedNote").textContent = "✅ 筆記已保存！";
+        setTimeout(() => document.getElementById("savedNote").textContent = "", 3000);
+    } else {
+        console.warn("⚠️ 無法保存筆記，wordTitle 未加載");
     }
 }
 
 function displayNote() {
-    let word = document.getElementById("wordTitle").textContent;
-    let savedNote = localStorage.getItem(`note_${word}`) || ""; // 讀取筆記
-    document.getElementById("wordNote").value = savedNote; // 設定回 textarea
+    let word = document.getElementById("wordTitle")?.textContent.trim();
+    
+    if (word && word !== "") {
+        let savedNote = localStorage.getItem(`note_${word}`) || ""; // 讀取筆記
+        document.getElementById("wordNote").value = savedNote; // 設定回 textarea
+        console.log("📌 載入筆記:", word, savedNote);
+    } else {
+        console.warn("⚠️ 無法載入筆記，wordTitle 未加載");
+    }
 }
 
 // **確保在頁面載入時，自動載入筆記**
 document.addEventListener("DOMContentLoaded", () => {
-    if (document.getElementById("wordTitle")) {
-        displayNote();
-    }
+    setTimeout(() => {
+        if (document.getElementById("wordTitle")) {
+            displayNote();
+        }
+    }, 500); // 延遲 500ms，確保 `wordTitle` 已載入
 });
-
 
 
 </script>
