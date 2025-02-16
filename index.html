@@ -390,6 +390,9 @@ function showDetails(word) {
 
     // ✅ 確保 .audio-controls 插入後才執行調整
     adjustAudioControlsWidth();
+   
+   // **✅ 確保每次進入新單字時，載入對應筆記**
+    displayNote();
 }
 
 function backToWordList() {
