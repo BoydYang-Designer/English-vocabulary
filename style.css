@@ -168,7 +168,7 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     background-color: #647f91;
     color: #fff;
     font-size: 16px;
-    padding: 10px;
+    padding: 15px;
     min-width: 50px;
     min-height: 50px;
     width: auto;
@@ -181,6 +181,7 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 80px; /* 增加寬度 */
 }
 
 .audio-btn:hover {
@@ -196,6 +197,35 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 .audio-btn:hover img {
     transform: scale(1.2);
 }
+
+.note-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#saveNoteButton {
+    background: #6e93ba;
+}
+
+#saveNoteButton:hover {
+    background: #475f78;
+    transform: scale(1.05);
+}
+
+#clearNoteButton {
+    background: #a8454f;
+}
+
+#clearNoteButton:hover {
+    background: #7a3a40;
+    transform: scale(1.05);
+}
+
 
 #searchResultsDetails .word-item {
     font-size: 16px;
@@ -221,7 +251,7 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 }
 
 #noteContainer {
-    background: #f8f9fa;
+    background: #f2f2f2;
     padding: 10px;
     border-radius: 8px;
     margin-top: 15px;
@@ -230,12 +260,18 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 }
 
 #wordNote {
+    background: #f2f2f2; /* 改成淺灰色 */
     width: 100%;
     height: calc(1.2em * 4 + 10px);
     font-size: 16px;
     line-height: 1.2em;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: none; /* 移除外框線 */
     resize: none;
+}
+
+#wordNote:focus {
+    border: 1px solid #007bff; /* 聚焦時變成藍色 */
+    outline: none;
 }
