@@ -63,7 +63,7 @@
             "Words": "actuate",
             "pronunciation-1": "[ˋæktʃʊ͵et]",
             "traditional Chinese": "v.1. 開動（機器等）\n   2. 激勵",
-            "English meaning": "\"Actuate\" is a verb (actuate / actuated / actuating) with the following meanings:\n1. To cause a machine or device to operate: Refers to the act of starting or setting a mechanism in motion.\nExample: The engineer actuated the system by flipping the switch.\nExample: The alarm is actuated by any motion detected in the room.\nExample: A stroller with a multi-step fold mechanism requires pressing a button and pulling a lever to actuate the folding process.\n2. To motivate or drive someone to take action: Describes prompting or encouraging someone to act.\nExample: His desire for success actuated him to work harder.\nExample: Fear of failure actuated her to double-check her work.\nSummary: \"Actuate\" means to trigger or set in motion a machine or device, or to motivate someone to take action.\nRelated Words: Trigger, activate, motivate, drive.\nAntonyms: Deactivate, halt, discourage, suppress."
+            "English meaning": "\"Actuate\" is a verb (actuate / actuated / actuating) with the following meanings:\n1. To cause a machine or device to operate: Refers to the act of starting or setting a mechanism in motion.\nE.g. The engineer actuated the system by flipping the switch.\nE.g. The alarm is actuated by any motion detected in the room.\nE.g. A stroller with a multi-step fold mechanism requires pressing a button and pulling a lever to actuate the folding process.\n2. To motivate or drive someone to take action: Describes prompting or encouraging someone to act.\nE.g. His desire for success actuated him to work harder.\nE.g. Fear of failure actuated her to double-check her work.\nSummary: \"Actuate\" means to trigger or set in motion a machine or device, or to motivate someone to take action.\nRelated Words: Trigger, activate, motivate, drive.\nAntonyms: Deactivate, halt, discourage, suppress."
         },
         {
             "等級": "C1",
@@ -224,7 +224,7 @@
             "Words": "agriculture",
             "pronunciation-1": "[ˋægrɪ͵kʌltʃɚ]",
             "traditional Chinese": "n.農業，農耕；農藝，農學",
-            "English meaning": "Agriculture is a noun that refers to the practice of cultivating land, growing crops, and raising livestock for food, fiber, and other products. It includes various farming techniques and activities essential for sustaining human and animal life.\nExample:\nModern agriculture relies on advanced machinery and technology.\nSustainable agriculture helps protect the environment while maintaining food production.\nThe country's economy is heavily dependent on agriculture and exports of agricultural products.\nAdvances in agriculture have significantly increased food production over the past century.\nSummary: Agriculture is the practice of farming, including growing crops and raising animals for food and other products.\nRelated Words: farming, cultivation, horticulture, agronomy.\nAntonyms: urbanization, industrialization."
+            "English meaning": "Agriculture is a noun that refers to the practice of cultivating land, growing crops, and raising livestock for food, fiber, and other products. It includes various farming techniques and activities essential for sustaining human and animal life.\nE.g.\nModern agriculture relies on advanced machinery and technology.\nSustainable agriculture helps protect the environment while maintaining food production.\nThe country's economy is heavily dependent on agriculture and exports of agricultural products.\nAdvances in agriculture have significantly increased food production over the past century.\nSummary: Agriculture is the practice of farming, including growing crops and raising animals for food and other products.\nRelated Words: farming, cultivation, horticulture, agronomy.\nAntonyms: urbanization, industrialization."
         },
         {
             "等級": "B1",
@@ -562,7 +562,7 @@
             "Words": "archaeologist",
             "pronunciation-1": "[͵ɑ:kiˋɔlədʒist]",
             "traditional Chinese": "n.考古學家",
-            "English meaning": "\"Archaeologist\" is a noun referring to a person who studies human history and prehistory through the excavation and analysis of artifacts, structures, and other physical remains.\nExample: The archaeologist discovered ancient pottery while digging at the historical site.\nExample: She became an archaeologist to learn more about ancient civilizations.\nSummary: An archaeologist investigates past human life by examining physical evidence from archaeological sites.\nRelated Words: anthropologist, historian, excavator, researcher\nAntonyms: uneducated person, layman, non-specialist"
+            "English meaning": "\"Archaeologist\" is a noun referring to a person who studies human history and prehistory through the excavation and analysis of artifacts, structures, and other physical remains.\nE.g. The archaeologist discovered ancient pottery while digging at the historical site.\nE.g. She became an archaeologist to learn more about ancient civilizations.\nSummary: An archaeologist investigates past human life by examining physical evidence from archaeological sites.\nRelated Words: anthropologist, historian, excavator, researcher\nAntonyms: uneducated person, layman, non-specialist"
         },
         {
             "等級": "B1",
@@ -634,7 +634,7 @@
             "Words": "associated",
             "pronunciation-1": " ə-ˈsō-shē-ˌā-təd ",
             "traditional Chinese": "adj.關聯的",
-            "English meaning": "meaning connected or linked with something else, or having a relationship with something in some way. For example:\nE.g 1. Anyone associated with the terrorists will be apprehended and interrogated. \nE.g 2. The disease is often associated with poor hygiene\nE.g 3.The company offers a range of services associated with healthcare."
+            "English meaning": "meaning connected or linked with something else, or having a relationship with something in some way. For E.g.\nE.g 1. Anyone associated with the terrorists will be apprehended and interrogated. \nE.g 2. The disease is often associated with poor hygiene\nE.g 3.The company offers a range of services associated with healthcare."
         },
         {
             "等級": "C1",
@@ -645,10 +645,11 @@
         },
         {
             "等級": "B2",
+            "分類": "星宇",
             "Words": "asteroid",
             "pronunciation-1": "[ˋæstə͵rɔɪd]",
             "traditional Chinese": "n.1.【天】小行星",
-            "English meaning": "any one of thousands of small planets that circle around the sun\nMost asteroids are found between Mars and Jupiter."
+            "English meaning": "Asteroid : As a Noun:\nA small rocky or metallic celestial body that orbits the Sun, mostly found in the asteroid belt between Mars and Jupiter. Some asteroids pass close to Earth and can pose a potential impact risk.\nE.g. Scientists monitor large asteroids to ensure they do not collide with Earth.\nE.g. The asteroid belt contains thousands of rocky bodies of different sizes.\nE.g. A massive asteroid impact is believed to have contributed to the extinction of the dinosaurs.\nE.g. Space agencies are developing technology to deflect hazardous asteroids.\nSummary:\nAn asteroid is a small rocky or metallic object orbiting the Sun, mainly found in the asteroid belt, though some travel near Earth.\nRelated Words: space rock, celestial body, minor planet, meteoroid, planetoid.\nAntonyms: planet, star, comet, satellite."
         },
         {
             "Words": "assimilate",
@@ -1060,7 +1061,10 @@
         },
         {
             "等級": "C2",
-            "Words": "carbon dioxide"
+            "Words": "carbon dioxide",
+            "pronunciation-1": "[ˋkɑrbən ; daɪˋɑksaɪd]",
+            "traditional Chinese": "n.【化】二氧化碳",
+            "English meaning": "Carbon Dioxide : As a Noun:\nA colorless, odorless gas (CO₂) produced by respiration, combustion, and decomposition. It is essential for plant photosynthesis and contributes to the greenhouse effect.\nE.g. Human activities, such as burning fossil fuels, release large amounts of carbon dioxide into the atmosphere.\nE.g. Plants absorb carbon dioxide during photosynthesis to produce oxygen.\nE.g. Excess carbon dioxide in the atmosphere contributes to global warming.\nE.g. Carbonated drinks contain dissolved carbon dioxide, giving them their fizz.\nSummary:\nCarbon dioxide (CO₂) is a naturally occurring gas produced by respiration and combustion, playing a key role in the Earth's atmosphere and plant life.\nRelated Words: CO₂, greenhouse gas, emission, respiration, combustion.\nAntonyms: oxygen, fresh air, ozone."
         },
         {
             "等級": "C2",
@@ -1556,14 +1560,14 @@
             "Words": "compound",
             "pronunciation-1": "[kɑmˋpaʊnd]",
             "traditional Chinese": "n.1.化合物；混合物\n  2.複合物\n   3.住宅群，大院\nv.1.增加，加重，使惡化\n   2.使混合；使化合；使合成\nadj.合成的，複合的，混合的",
-            "English meaning": "Compound is a noun and an adjective with the following meanings:\nAs a Noun:\n1. A substance made of two or more elements: Refers to a chemical substance consisting of two or more different elements that are chemically bonded together.\nExample: Water is a compound made of hydrogen and oxygen.\n2. A mixture of different elements or substances: Can refer to a physical mixture where various elements or substances are combined, not necessarily through chemical bonds.\nExample: The garden compound includes various plants and flowers.\n3. An enclosed area that contains a group of buildings: Refers to a physical area surrounded by a boundary or wall that houses multiple structures or facilities.\nExample: The military compound was heavily guarded and included barracks, offices, and training facilities.\nAs a Verb: compound / compounded / compounding\n1. To make something worse by adding to it: Refers to the act of increasing or exacerbating a problem or situation.\nExample: His lack of experience compounded the difficulties of the project.\n2. To combine elements or substances to form a compound: Involves the process of chemically or physically combining different substances to create a new compound.\nExample: The chemist compounded several ingredients to create the new drug.\nAs an Adjective : \n1.Made up of multiple parts or elements: Refers to something that consists of more than one component or element.\nExample: \"Bookshelf\" is a compound word made from \"book\" and \"shelf\". It refers to a piece of furniture used to hold books.\nSummary: \"Compound\" as a noun can refer to a chemical substance made of different elements, a mixture, or an enclosed area with multiple buildings. As a verb, it means to worsen a situation by adding to it or to combine substances. As an adjective, it describes something made up of multiple parts or elements.\nRelated Words: mixture, blend, combination, complex, facility.\nAntonyms: element (for chemical compounds), simplify (for worsening a situation)."
+            "English meaning": "Compound is a noun and an adjective with the following meanings:\nAs a Noun:\n1. A substance made of two or more elements: Refers to a chemical substance consisting of two or more different elements that are chemically bonded together.\nE.g. Water is a compound made of hydrogen and oxygen.\n2. A mixture of different elements or substances: Can refer to a physical mixture where various elements or substances are combined, not necessarily through chemical bonds.\nE.g. The garden compound includes various plants and flowers.\n3. An enclosed area that contains a group of buildings: Refers to a physical area surrounded by a boundary or wall that houses multiple structures or facilities.\nE.g. The military compound was heavily guarded and included barracks, offices, and training facilities.\nAs a Verb: compound / compounded / compounding\n1. To make something worse by adding to it: Refers to the act of increasing or exacerbating a problem or situation.\nE.g. His lack of experience compounded the difficulties of the project.\n2. To combine elements or substances to form a compound: Involves the process of chemically or physically combining different substances to create a new compound.\nE.g. The chemist compounded several ingredients to create the new drug.\nAs an Adjective : \n1.Made up of multiple parts or elements: Refers to something that consists of more than one component or element.\nE.g. \"Bookshelf\" is a compound word made from \"book\" and \"shelf\". It refers to a piece of furniture used to hold books.\nSummary: \"Compound\" as a noun can refer to a chemical substance made of different elements, a mixture, or an enclosed area with multiple buildings. As a verb, it means to worsen a situation by adding to it or to combine substances. As an adjective, it describes something made up of multiple parts or elements.\nRelated Words: mixture, blend, combination, complex, facility.\nAntonyms: element (for chemical compounds), simplify (for worsening a situation)."
         },
         {
             "等級": "C1",
             "Words": "compulsion",
             "pronunciation-1": "[kəmˋpʌlʃən]",
             "traditional Chinese": "被）強迫，（被）強制[U][+to-v]；強制力，強迫力",
-            "English meaning": "compulsion\nAs a Noun:\nCompulsion refers to a strong, often irresistible urge to do something, especially when it is against one's will or better judgment. It can also refer to the act of being forced or pressured into doing something.\nExample: He felt a deep compulsion to check his phone every few minutes.\nExample: The new law imposed a legal compulsion to wear seat belts while driving.\nExample: She struggled to resist the compulsion to eat sweets late at night.\nExample: The threat of punishment created a strong compulsion for employees to follow the rules.\nSummary:\nCompulsion is an uncontrollable urge to act in a certain way or the state of being forced to do something.\nRelated Words: urge, obsession, impulse, drive, coercion, force, pressure.\nAntonyms: choice, freedom, voluntariness, discretion, restraint."
+            "English meaning": "compulsion\nAs a Noun:\nCompulsion refers to a strong, often irresistible urge to do something, especially when it is against one's will or better judgment. It can also refer to the act of being forced or pressured into doing something.\nE.g. He felt a deep compulsion to check his phone every few minutes.\nE.g. The new law imposed a legal compulsion to wear seat belts while driving.\nE.g. She struggled to resist the compulsion to eat sweets late at night.\nE.g. The threat of punishment created a strong compulsion for employees to follow the rules.\nSummary:\nCompulsion is an uncontrollable urge to act in a certain way or the state of being forced to do something.\nRelated Words: urge, obsession, impulse, drive, coercion, force, pressure.\nAntonyms: choice, freedom, voluntariness, discretion, restraint."
         },
         {
             "等級": "B1",
@@ -1930,7 +1934,7 @@
             "Words": "craft",
             "pronunciation-1": "[kræft]",
             "traditional Chinese": "v.1.熟練地製作\nn.1.手藝[C][U]\n   2.工藝[C][U]",
-            "English meaning": "Craft As a Verb: craft / crafted / crafting\nMeans to create or produce something skillfully, typically by hand, or to form or shape something carefully and skillfully.\nE.g. He is crafting a new sculpture.\nE.g. The furniture is crafted from bamboo.\nE.g. She crafted a strategy to boost the company's earnings.\nE.g. They carefully crafted a plan to improve their company's efficiency.\nAs a Noun:\n1. An activity involving skill in making things by hand.\nExample: He learned his craft from an old master.\n2. An object or item that has been skillfully made by hand.\nE.g. The store sells crafts [=handicrafts] from around the world.\nE.g. There's a crafts fair [=an event at which crafts are sold] at the school this Saturday.\nSummary:\n\"Craft\" can be used as a verb to mean creating or shaping something skillfully, often by hand or with careful planning. As a noun, it refers to both the skill of making things by hand and the handcrafted objects themselves.\nRelated Words: create, build, design, construct, make, fabricate, form, shape, manufacture, skill, trade, workmanship, artistry, handcraft.\nAntonyms: destroy, ruin, neglect, dismantle, demolish, break, damage."
+            "English meaning": "Craft As a Verb: craft / crafted / crafting\nMeans to create or produce something skillfully, typically by hand, or to form or shape something carefully and skillfully.\nE.g. He is crafting a new sculpture.\nE.g. The furniture is crafted from bamboo.\nE.g. She crafted a strategy to boost the company's earnings.\nE.g. They carefully crafted a plan to improve their company's efficiency.\nAs a Noun:\n1. An activity involving skill in making things by hand.\nE.g. He learned his craft from an old master.\n2. An object or item that has been skillfully made by hand.\nE.g. The store sells crafts [=handicrafts] from around the world.\nE.g. There's a crafts fair [=an event at which crafts are sold] at the school this Saturday.\nSummary:\n\"Craft\" can be used as a verb to mean creating or shaping something skillfully, often by hand or with careful planning. As a noun, it refers to both the skill of making things by hand and the handcrafted objects themselves.\nRelated Words: create, build, design, construct, make, fabricate, form, shape, manufacture, skill, trade, workmanship, artistry, handcraft.\nAntonyms: destroy, ruin, neglect, dismantle, demolish, break, damage."
         },
         {
             "等級": "C2",
@@ -1971,14 +1975,18 @@
         },
         {
             "等級": "C2",
-            "Words": "creative outlet"
+            "分類": "Design",
+            "Words": "creative outlet",
+            "pronunciation-1": "[krɪˋetɪv -ˋaʊt͵lɛt] ",
+            "traditional Chinese": "n.創意出口、創意呈現方式、創意途徑",
+            "English meaning": "Creative Outlet : As a Noun\nA means of expressing creativity, emotions, or ideas through artistic or imaginative activities. It allows individuals to channel their thoughts and feelings into something productive and fulfilling.\nE.g. Painting became her creative outlet, helping her cope with stress.\nE.g. Many people use writing as a creative outlet to express their emotions.\nE.g. Music provided him with a creative outlet to share his thoughts and experiences.\nE.g. Gardening can be a great creative outlet for those who enjoy designing landscapes.\nSummary:\nA creative outlet is a way to express creativity and emotions through activities like art, music, writing, or other imaginative pursuits.\nRelated Words: artistic expression, self-expression, hobby, passion, creative escape.\nAntonyms: suppression, restraint, restriction, inhibition."
         },
         {
             "等級": "B1",
             "Words": "creed",
             "pronunciation-1": "[krid]",
             "traditional Chinese": "n.教義，信條",
-            "English meaning": "The word \"creed\" refers to a set of beliefs or principles that guide someone's actions or a formal statement of religious beliefs.\nE.g. \"The company's creed emphasizes honesty, integrity, and customer satisfaction above all else.\"\nE.g. \"Fans eagerly awaited the release of the latest installment in the Assassin's Creed series, set during the Viking Age, for its immersive gameplay and historically inspired storyline.\""
+            "English meaning": "Creed : As a Noun:\nA set of beliefs, principles, or values that guide a person, group, or organization, often related to religion or philosophy.\nE.g. The organization follows a strict creed of honesty and integrity.\nE.g. His personal creed is to treat everyone with kindness and respect.\nE.g. The religious creed emphasizes compassion and faith in a higher power.\nE.g. Many people live by a moral creed that shapes their decisions and actions.\nSummary:\nCreed refers to a system of beliefs or principles that guide a person or group, often in a religious or philosophical context.\nRelated Words: doctrine, faith, belief, ideology, philosophy.\nAntonyms: disbelief, doubt, skepticism, uncertainty."
         },
         {
             "等級": "B1",
@@ -3665,7 +3673,7 @@
             "Words": "gossip",
             "pronunciation-1": "[ˋgɑsəp]",
             "traditional Chinese": "n.1.閒話，聊天，小道傳聞[U]\n  2.愛傳流言蜚語的人\nv.閒聊；傳播流言蜚語(+about)",
-            "English meaning": "Gossip can be a noun and a verb.\nAs a Noun:\n1. Gossip refers to informal conversation or reports about other people's private lives, often involving unverified or sensational details.\nE.g. The office was filled with gossip about who was dating whom.\nE.g.  She didn’t want to engage in gossip during lunch but couldn’t help overhearing the conversation.\nE.g. Gossip travels fast in small towns, making it hard to keep secrets.\n2. Gossip can also mean a person who often talks about the private details of other people's lives.\nExample: Don't tell her anything. She is a gossip.\nAs a Verb: gossip / gossiped / gossiping\nTo gossip means to engage in informal conversation or spread rumors about someone's private life.\nE.g. They often gossip about their neighbors during their coffee breaks.\nE.g. She loves to gossip with her friends about the latest celebrity news.\nE.g. After the meeting, they gossiped about the new project manager's unusual style.\nE.g. They spent the afternoon gossiping on the phone.\nSummary: Gossip involves informal talk or rumors about others, often spreading unverified information, and can refer to the act of discussing such topics or to a person who frequently shares private details about others.\nRelated Words: hearsay, rumor, scuttlebutt, speculation\nAntonyms: truth, fact, confirmation, privacy"
+            "English meaning": "Gossip can be a noun and a verb.\nAs a Noun:\n1. Gossip refers to informal conversation or reports about other people's private lives, often involving unverified or sensational details.\nE.g. The office was filled with gossip about who was dating whom.\nE.g.  She didn’t want to engage in gossip during lunch but couldn’t help overhearing the conversation.\nE.g. Gossip travels fast in small towns, making it hard to keep secrets.\n2. Gossip can also mean a person who often talks about the private details of other people's lives.\nE.g. Don't tell her anything. She is a gossip.\nAs a Verb: gossip / gossiped / gossiping\nTo gossip means to engage in informal conversation or spread rumors about someone's private life.\nE.g. They often gossip about their neighbors during their coffee breaks.\nE.g. She loves to gossip with her friends about the latest celebrity news.\nE.g. After the meeting, they gossiped about the new project manager's unusual style.\nE.g. They spent the afternoon gossiping on the phone.\nSummary: Gossip involves informal talk or rumors about others, often spreading unverified information, and can refer to the act of discussing such topics or to a person who frequently shares private details about others.\nRelated Words: hearsay, rumor, scuttlebutt, speculation\nAntonyms: truth, fact, confirmation, privacy"
         },
         {
             "等級": "B2",
@@ -4408,7 +4416,7 @@
             "Words": "initiative",
             "pronunciation-1": "[ɪˋnɪʃətɪv]",
             "traditional Chinese": "n.1.主動的行動；進取心；首創精神\n    2.新作法\n    3.先機",
-            "English meaning": "\"Initiative\" is a noun that refers to the ability to take action or make decisions independently, especially in the absence of direction or supervision. It can also refer to a specific plan or proposal designed to address a particular issue or achieve a goal. Additionally, \"initiative\" can refer to the power or opportunity to act before others.\n1. The ability to take action independently:\nInitiative refers to a person’s readiness and willingness to take the first step in doing something, often proactively and without needing others to prompt them.\nE.g. She showed great initiative by organizing the event without being asked.\nE.g. Taking the initiative to start new projects is a valuable trait in any workplace.\nE.g. I'm doing this on my own initiative. [=because I want to]\nE.g. She has ability but lacks initiative.[=drive]\nE.g. You should use your own initiative to come up with a solution.\n2. A plan or proposal aimed at solving a problem or achieving a goal:\nInitiative can also refer to a formal plan or approach aimed at improving a situation or addressing an issue.\nE.g. The company launched a new initiative to reduce its environmental impact.\nE.g. The government introduced an initiative to improve public health education.\n3. The power or opportunity to do something before others do:\nThis refers to having the chance to act first, especially in a competitive or time-sensitive context.\nE.g. The company has the opportunity to seize the initiative by getting its new products to the market before its competitors.\nE.g. By introducing new technology ahead of competitors, the startup seized the initiative in the market.\nExample: If you want to meet her, you're going to have to take the initiative and introduce yourself.\nSummary : \"Initiative\" refers to both the ability to take action independently, a formal plan designed to achieve a goal, and the power or opportunity to act before others.\nRelated Words : enterprise, drive, innovation, plan, proposal, action\nAntonyms : complacency, inaction, passivity, hesitation"
+            "English meaning": "\"Initiative\" is a noun that refers to the ability to take action or make decisions independently, especially in the absence of direction or supervision. It can also refer to a specific plan or proposal designed to address a particular issue or achieve a goal. Additionally, \"initiative\" can refer to the power or opportunity to act before others.\n1. The ability to take action independently:\nInitiative refers to a person’s readiness and willingness to take the first step in doing something, often proactively and without needing others to prompt them.\nE.g. She showed great initiative by organizing the event without being asked.\nE.g. Taking the initiative to start new projects is a valuable trait in any workplace.\nE.g. I'm doing this on my own initiative. [=because I want to]\nE.g. She has ability but lacks initiative.[=drive]\nE.g. You should use your own initiative to come up with a solution.\n2. A plan or proposal aimed at solving a problem or achieving a goal:\nInitiative can also refer to a formal plan or approach aimed at improving a situation or addressing an issue.\nE.g. The company launched a new initiative to reduce its environmental impact.\nE.g. The government introduced an initiative to improve public health education.\n3. The power or opportunity to do something before others do:\nThis refers to having the chance to act first, especially in a competitive or time-sensitive context.\nE.g. The company has the opportunity to seize the initiative by getting its new products to the market before its competitors.\nE.g. By introducing new technology ahead of competitors, the startup seized the initiative in the market.\nE.g. If you want to meet her, you're going to have to take the initiative and introduce yourself.\nSummary : \"Initiative\" refers to both the ability to take action independently, a formal plan designed to achieve a goal, and the power or opportunity to act before others.\nRelated Words : enterprise, drive, innovation, plan, proposal, action\nAntonyms : complacency, inaction, passivity, hesitation"
         },
         {
             "等級": "B1",
@@ -5040,7 +5048,7 @@
             "Words": "marijuana",
             "pronunciation-1": "[͵mɑrɪˋhwɑnə]",
             "traditional Chinese": "n.大麻",
-            "English meaning": "\"Marijuana\" is a noun referring to the dried leaves, flowers, stems, and seeds from the Cannabis plant, often used for its psychoactive effects or medicinal properties.\nExample: Many states have legalized the use of marijuana for medical purposes.\nExample: The doctor discussed the potential benefits and risks of using marijuana for chronic pain relief.\nExample: Some people use marijuana to help them relax after a stressful day.\nSummary: Marijuana is a substance derived from the Cannabis plant, used for both recreational and medical purposes due to its effects on mood, pain relief, and other symptoms.\nRelated Words: cannabis, weed, hemp, THC (Tetrahydrocannabinol )\nAntonyms: medicine (in non-psychoactive contexts), prescription drug"
+            "English meaning": "\"Marijuana\" is a noun referring to the dried leaves, flowers, stems, and seeds from the Cannabis plant, often used for its psychoactive effects or medicinal properties.\nE.g. Many states have legalized the use of marijuana for medical purposes.\nE.g. The doctor discussed the potential benefits and risks of using marijuana for chronic pain relief.\nE.g. Some people use marijuana to help them relax after a stressful day.\nSummary: Marijuana is a substance derived from the Cannabis plant, used for both recreational and medical purposes due to its effects on mood, pain relief, and other symptoms.\nRelated Words: cannabis, weed, hemp, THC (Tetrahydrocannabinol )\nAntonyms: medicine (in non-psychoactive contexts), prescription drug"
         },
         {
             "等級": "B1",
@@ -5052,7 +5060,7 @@
             "Words": "marrow",
             "pronunciation-1": "[ˋmæro]",
             "traditional Chinese": "n.1.髓，骨髓\n   2.精華，精髓",
-            "English meaning": "Marrow can be used as both a noun and a metaphor.\nAs a Noun:\n1. A soft, fatty substance inside bones that produces blood cells: \nE.g. Bone marrow transplants are often used to treat certain cancers.\nE.g. The doctors examined his bone marrow for signs of disease.\n2. The essential or most important part of something (metaphorical): \nExample: The story’s message goes straight to the marrow of the human experience.\nExample: The look in his eyes chilled me to the marrow.\nExample: We were frozen to the marrow after standing in the cold for hours.\nSummary:\n\"Marrow\" refers to the soft, blood-producing tissue inside bones and can also symbolize the core or essence of something in a metaphorical sense.\nRelated Words: Core, essence, pith, substance.\nAntonyms: Surface, exterior, shell."
+            "English meaning": "Marrow can be used as both a noun and a metaphor.\nAs a Noun:\n1. A soft, fatty substance inside bones that produces blood cells: \nE.g. Bone marrow transplants are often used to treat certain cancers.\nE.g. The doctors examined his bone marrow for signs of disease.\n2. The essential or most important part of something (metaphorical): \nE.g. The story’s message goes straight to the marrow of the human experience.\nE.g. The look in his eyes chilled me to the marrow.\nE.g. We were frozen to the marrow after standing in the cold for hours.\nSummary:\n\"Marrow\" refers to the soft, blood-producing tissue inside bones and can also symbolize the core or essence of something in a metaphorical sense.\nRelated Words: Core, essence, pith, substance.\nAntonyms: Surface, exterior, shell."
         },
         {
             "等級": "C1",
@@ -5070,7 +5078,7 @@
             "Words": "masses",
             "pronunciation-1": "[ˋmæsɪz]",
             "traditional Chinese": "n.1.平民；群眾\n   2.",
-            "English meaning": "\"Masses\" is a noun with the following meanings:\n\n1. A large group of people, especially the general public or ordinary people, often as distinguished from those in power or a privileged few.\nExample: The politician aimed to appeal to the masses by focusing on economic reform.\nExample: The movie was created to entertain the masses rather than critics.\nExample: The new law was met with approval by the masses, who felt it addressed their concerns.\n\n2. A large quantity or amount of something; a substantial or dense accumulation.\nExample: There was a mass of paperwork on her desk that needed to be sorted.\nExample: The masses of snow blocked roads and disrupted travel across the region.\nExample: A mass of people gathered at the square to witness the concert.\n\nSummary:\n\"Masses\" refers to either a large group of common people or a substantial accumulation of things or materials.\n\nRelated Words: Crowd, Multitude, Aggregate, Heap, Bulk\nAntonyms: Minority, Elite, Few, Scatter"
+            "English meaning": "\"Masses\" is a noun with the following meanings:\n\n1. A large group of people, especially the general public or ordinary people, often as distinguished from those in power or a privileged few.\nE.g. The politician aimed to appeal to the masses by focusing on economic reform.\nE.g. The movie was created to entertain the masses rather than critics.\nE.g. The new law was met with approval by the masses, who felt it addressed their concerns.\n\n2. A large quantity or amount of something; a substantial or dense accumulation.\nE.g. There was a mass of paperwork on her desk that needed to be sorted.\nE.g. The masses of snow blocked roads and disrupted travel across the region.\nE.g. A mass of people gathered at the square to witness the concert.\n\nSummary:\n\"Masses\" refers to either a large group of common people or a substantial accumulation of things or materials.\n\nRelated Words: Crowd, Multitude, Aggregate, Heap, Bulk\nAntonyms: Minority, Elite, Few, Scatter"
         },
         {
             "等級": "B2",
@@ -5190,31 +5198,35 @@
         },
         {
             "等級": "B2",
+            "分類": "字詞",
             "Words": "metaphor",
             "pronunciation-1": "[ˋmɛtəfɚ]",
             "traditional Chinese": "n.隱喻(一種修辭法)；象徵",
-            "English meaning": "saying \"Time is a thief\" is a metaphor because time isn't literally stealing anything, but the phrase helps convey the idea that time takes things away from us. "
+            "English meaning": "Metaphor : As a Noun:\nA figure of speech in which a word or phrase is applied to something to suggest a resemblance, without using \"like\" or \"as.\"\nE.g. \"Time is a thief\" is a metaphor suggesting that time takes away moments of life.\nE.g. Her voice was music to his ears.\nE.g. The classroom was a zoo during lunchtime.\nSomething used to represent or symbolize another idea, often in literature, art, or everyday speech.\nE.g. The melting pot is a common metaphor for cultural diversity.\nE.g. The journey of life is a metaphor frequently used in poetry.\nSummary:\nA metaphor is a way of describing something by saying it is something else, creating an imaginative comparison. It is commonly used in language, literature, and symbolism.\nRelated Words: analogy, symbol, comparison, imagery, allegory.\nAntonyms: literal expression, direct statement."
         },
         {
             "等級": "C2",
-            "Words": "metaphoric ",
+            "分類": "字詞",
+            "Words": "metaphoric",
             "pronunciation-1": "[ˌmetəˈfɒrɪk]",
             "traditional Chinese": "adj.隱喻的; 含比喻的",
-            "English meaning": "metaphoric language/expressions\nE.g.His speech was filled with metaphoric language, using imagery to convey complex ideas."
+            "English meaning": "Metaphoric : As an Adjective:\nRelating to or characteristic of a metaphor; expressing one thing in terms of another.\nE.g. His metaphoric language made the speech more vivid and engaging.\nE.g. The novel is filled with metaphoric descriptions of human emotions.\nE.g. The storm was used in a metaphoric sense to represent chaos in the story.\nSummary:\nMetaphoric describes something that uses or relates to metaphors, often in language, literature, or symbolic expression.\nRelated Words: figurative, symbolic, allegorical, imaginative, descriptive.\nAntonyms: literal, direct, explicit, straightforward."
         },
         {
             "等級": "C2",
+            "分類": "字詞",
             "Words": "metaphorical",
             "pronunciation-1": "[͵mɛtəˋfɔrɪk!]",
             "traditional Chinese": "adj.用隱喻的；比喻的",
-            "English meaning": "E.g.His speech was filled with metaphoric language, using imagery to convey complex ideas.\""
+            "English meaning": "Metaphorical : As an Adjective:\nRelating to or characteristic of a metaphor; not literal but symbolic.\nE.g. She spoke in a metaphorical way, comparing life to a roller coaster.\nE.g. The poem is rich with metaphorical imagery.\nE.g. His apology was metaphorical rather than direct.\nSummary:\nMetaphorical describes something expressed through metaphors, using symbolic or figurative language instead of literal meanings.\nRelated Words: figurative, symbolic, allegorical, imaginative, descriptive.\nAntonyms: literal, direct, explicit, straightforward."
         },
         {
             "等級": "C2",
+            "分類": "字詞",
             "Words": "metaphorically",
             "pronunciation-1": "[͵mɛtəˋfɑrɪkəlɪ]",
             "traditional Chinese": "adv.比喻地",
-            "English meaning": "speaking metaphorically\nE.g.Speaking metaphorically, her smile was a ray of sunshine on a cloudy day, bringing warmth and brightness to everyone around her."
+            "English meaning": "Metaphorically : As an Adverb:\nIn a way that uses or relates to metaphors; figuratively rather than literally.\nE.g. He was, metaphorically speaking, drowning in work.\nE.g. She described her struggles metaphorically as climbing a steep mountain.\nE.g. The coach told the team to \"go to battle,\" speaking metaphorically.\nSummary:\nMetaphorically means expressing something in a figurative or symbolic way, rather than in a literal sense.\nRelated Words: figuratively, symbolically, allegorically, imaginatively.\nAntonyms: literally, directly, explicitly, straightforwardly."
         },
         {
             "等級": "C1",
@@ -5225,18 +5237,18 @@
         },
         {
             "等級": "B1",
-            "Words": "metric"
-        },
-        {
-            "等級": "B1",
-            "Words": "metric"
+            "分類": "技術",
+            "Words": "metric",
+            "pronunciation-1": "[ˋmɛtrɪk]",
+            "traditional Chinese": "n.1.度量標準，衡量指標\n   2.公制系统\nadj.公制的",
+            "English meaning": "Metric : \n1. As a Noun:\nA standard of measurement used to evaluate, compare, or quantify something.\nE.g. Customer satisfaction is an important metric for businesses.\nE.g. The company tracks key performance metrics to measure success.\nE.g. Scientists use different metrics to assess climate change.\n2. A system of measurement based on meters, liters, and grams, commonly used worldwide.\nE.g. The metric system is widely used in science and engineering.\nE.g. The length was measured in metric units rather than inches.\nAs an Adjective : Related to the metric system of measurement.\nE.g. Many countries use metric measurements instead of imperial units.\nE.g. The recipe provides both metric and imperial conversions.\nSummary:\n\"Metric\" can refer to a standard of measurement used for evaluation or the metric system, which is a unit of measurement based on meters, liters, and grams.\nRelated Words: measurement, standard, scale, benchmark, gauge, system.\nAntonyms: (For measurement) guess, estimate; (For metric system) imperial system."
         },
         {
             "等級": "C1",
             "Words": "metropolis",
             "pronunciation-1": "[məˋtrɑp!ɪs]",
             "traditional Chinese": "n.1.（工商業等的）中心都市，中心[C]\n   2.大都市",
-            "English meaning": "Metropolis can be used as a noun to refer to a large and important city, often considered the central hub of a region or country due to its significant economic, political, and cultural influence.\nAs a Noun:\nMetropolis (singular) / Metropolises (plural)\n1. A large, important city that serves as a central hub of economic, political, or cultural activity:\nExample: New York City is often referred to as a global metropolis due to its influence in finance, culture, and media.\nExample: The city's transformation from a small town into a bustling metropolis was remarkable.\n2. A city characterized by its significant size, diversity, and advanced infrastructure:\nExample: Many people are drawn to the metropolis for its diverse job opportunities and vibrant lifestyle.\nExample: The metropolis was known for its towering skyscrapers and busy streets, reflecting its status as a major urban center.\nSummary: \"Metropolis\" refers to a large and significant city that plays a central role in a region or country, often noted for its economic, political, and cultural influence, and characterized by its advanced infrastructure and vibrant urban environment.\nSynonyms: City / Urban center / Megacity / Capital\nAntonyms: Small town / Village / Rural area"
+            "English meaning": "Metropolis can be used as a noun to refer to a large and important city, often considered the central hub of a region or country due to its significant economic, political, and cultural influence.\nAs a Noun:\nMetropolis (singular) / Metropolises (plural)\n1. A large, important city that serves as a central hub of economic, political, or cultural activity:\nE.g. New York City is often referred to as a global metropolis due to its influence in finance, culture, and media.\nE.g. The city's transformation from a small town into a bustling metropolis was remarkable.\n2. A city characterized by its significant size, diversity, and advanced infrastructure:\nE.g. Many people are drawn to the metropolis for its diverse job opportunities and vibrant lifestyle.\nE.g. The metropolis was known for its towering skyscrapers and busy streets, reflecting its status as a major urban center.\nSummary: \"Metropolis\" refers to a large and significant city that plays a central role in a region or country, often noted for its economic, political, and cultural influence, and characterized by its advanced infrastructure and vibrant urban environment.\nSynonyms: City / Urban center / Megacity / Capital\nAntonyms: Small town / Village / Rural area"
         },
         {
             "等級": "C2",
@@ -5254,7 +5266,10 @@
         },
         {
             "等級": "C2",
-            "Words": "Mid-Autumn Festival"
+            "Words": "Mid-Autumn Festival",
+            "pronunciation-1": "Mid-Autumn Festival",
+            "traditional Chinese": "ph.中秋節",
+            "English meaning": "Mid-Autumn Festival : As a Noun:\nThe Mid-Autumn Festival is a traditional Chinese festival celebrated on the 15th day of the 8th lunar month, usually in September or early October. It is a time for family reunions, moon-gazing, and enjoying mooncakes. The festival is associated with legends such as Chang’e, the moon goddess, and is widely celebrated in China and other East Asian countries.\nE.g. Families gather to celebrate the Mid-Autumn Festival by eating mooncakes.\nE.g. The streets were decorated with lanterns for the Mid-Autumn Festival.\nE.g. Children enjoy playing with lanterns during the Mid-Autumn Festival.\nE.g. The Mid-Autumn Festival symbolizes unity and gratitude.\nSummary:\nThe Mid-Autumn Festival is a traditional Chinese holiday centered around family reunions, moon appreciation, and the sharing of mooncakes.\nRelated Words: Moon Festival, Lantern Festival, harvest festival, reunion, celebration."
         },
         {
             "等級": "B1",
@@ -5275,15 +5290,15 @@
             "等級": "B2",
             "Words": "mischief",
             "pronunciation-1": "[ˋmɪstʃɪf]",
-            "traditional Chinese": "n.1.頑皮，淘氣；胡鬧，惡作劇\n    2.損害，傷害，危害[U]",
-            "English meaning": "1.Behavior or actions that involve playful teasing, minor troublemaking, or pranks, typically done in a lighthearted or amusing manner.\nE.g.Maybe a new bike would keep him out of mischief.\n2.do someone/yourself a mischief : To cause harm or injury to someone or oneself, often accidentally or unintentionally.\nE.g.You'll do yourself a mischief if you're not careful with that knife."
+            "traditional Chinese": "n. 頑皮，淘氣；胡鬧，惡作劇[U]；損害，傷害，危害[U]",
+            "English meaning": "As a Noun:\nMischief refers to playful or mildly troublesome behavior that may cause annoyance or minor harm but is not meant to be seriously harmful. It can also refer to actions that cause damage or trouble.\nE.g. The boys got into mischief by sneaking into the neighbor’s yard.\nE.g.  Her eyes sparkled with mischief as she planned a harmless prank.\nE.g. Too much mischief in the classroom disrupted the lesson.\nE.g. The puppy’s mischief included chewing on shoes and knocking over plants.\nSummary:\nMischief is playful or troublesome behavior that may cause minor trouble or annoyance but is usually not harmful.\nRelated Words: trouble, prank, naughtiness, misbehavior, trickery, misdeed.\nAntonyms: obedience, discipline, good behavior, responsibility."
         },
         {
             "等級": "C2",
             "Words": "mischievous",
             "pronunciation-1": "[ˋmɪstʃɪvəs]",
             "traditional Chinese": "adj.調皮的，淘氣的",
-            "English meaning": "Behavior or actions characterized by playfulness, teasing, or causing minor trouble in a lighthearted or amusing way, often without malicious intent.\nE.g.The mischievous child hid behind the door, waiting to surprise his sister with a playful prank."
+            "English meaning": "Mischievous : As an Adjective:\nMischievous describes someone or something that causes playful trouble or minor harm, often in a teasing or slightly naughty way. It can also refer to behavior intended to cause annoyance or mischief.\nE..g. The mischievous child hid his sister’s shoes as a prank.\nE..g.  She gave him a mischievous smile before running away.\nE..g. The cat had a mischievous look before knocking over the vase.\nE..g. His mischievous remarks often got him into trouble with his teachers.\nSummary:\nMischievous means playful and slightly naughty, often causing harmless trouble or mischief.\nRelated Words: naughty, playful, prankish, troublesome, impish, teasing.\nAntonyms: well-behaved, obedient, serious, disciplined, responsible."
         },
         {
             "等級": "C2",
@@ -5299,6 +5314,13 @@
             "pronunciation-1": "[ˋmɪs͵hæp]",
             "traditional Chinese": "n.不幸事故；災難[C][U]",
             "English meaning": "Mishap is a noun that refers to an unfortunate accident, mistake, or minor incident, usually causing inconvenience or harm.\nE.g. The dinner party went well, despite a small mishap with the dessert burning in the oven.\nE.g. She tripped on the stairs, but luckily it was just a minor mishap and she wasn’t hurt.\nE.g. Despite the challenging conditions, the team completed the mission without mishap.\nE.g. With a little care you could have avoided the mishap. "
+        },
+        {
+            "等級": "B2",
+            "Words": "moisture",
+            "pronunciation-1": "[ˋmɔɪstʃɚ]",
+            "traditional Chinese": "n. 濕氣，潮氣；水分[U]",
+            "English meaning": "Moisture : As a Noun:\nMoisture refers to the presence of small amounts of water or liquid in the air, on a surface, or within a substance. It is often associated with humidity, dampness, or wetness.\nE.g. The moisture in the air made the weather feel humid.\nE.g. Wipe off any excess moisture to prevent mold growth.\nE.g. The lotion helps retain moisture in the skin.\nE.g. Moisture collected on the window due to the cold temperature outside.\nSummary:\nMoisture is the presence of water or dampness in the air, on surfaces, or within substances.\nRelated Words: dampness, humidity, wetness, condensation, vapor.\nAntonyms: dryness, aridity, dehydration, parchedness."
         },
         {
             "等級": "B2",
@@ -5344,14 +5366,17 @@
         },
         {
             "等級": "B2",
-            "Words": "motives"
+            "Words": "motive",
+            "pronunciation-1": "[ˋmotɪv]",
+            "traditional Chinese": "n. (C)動機；主旨；目的(+of/for)\nadj. 成為原動力的，起動的，推動的",
+            "English meaning": "Motive:\nAs a Noun:\nA reason or driving force behind an action, thought, or behavior.\nE.g. The police investigated the suspect’s motive for the crime.\nE.g. Her main motive for studying abroad was to gain international experience.\nE.g. Greed is often seen as a motive for corruption.\nAs an Adjective:\nCausing or producing motion or action.\nE.g. The motive power of the engine drives the entire machine.\nE.g. His speech had a strong motive force, inspiring change.\nSummary:\nMotive refers to the reason behind an action or decision. As an adjective, it describes something that causes movement or action.\nRelated Words: reason, purpose, intent, incentive, drive.\nAntonyms: deterrent, disincentive, discouragement."
         },
         {
             "等級": "B1",
             "Words": "mourn",
             "pronunciation-1": "[morn",
             "traditional Chinese": "vt.vi.哀悼(+for/over)",
-            "English meaning": "Mourn as a verb : mourn mourned mourning\n\"To mourn\" means to feel or express deep sorrow or grief, especially over someone's death or a significant loss. It involves experiencing and expressing sadness, grief, or regret, often through rituals or expressions of sorrow such as attending funerals, wearing black clothing, or observing periods of mourning.\nE.g. After the passing of her beloved grandmother, she took time to mourn, reflecting on their cherished memories together and finding solace in the support of family and friends.\nE.g. He retreated to his room to mourn in solitude, finding comfort in the quiet moments to process his feelings of loss and sadness.\nE.g. The entire community came together to mourn the tragic loss of the young lives in the accident, showing solidarity and support for the grieving families."
+            "English meaning": "Mourn : As a Verb: (mourn / mourned / mourning)\nTo feel or express deep sorrow or grief, especially over someone's death or a significant loss. It involves experiencing and expressing sadness, grief, or regret, often through rituals or personal reflection.\nE.g. After the passing of her beloved grandmother, she took time to mourn, reflecting on their cherished memories together and finding solace in the support of family and friends.\nE.g. He retreated to his room to mourn in solitude, finding comfort in the quiet moments to process his feelings of loss and sadness.\nE.g. The entire community came together to mourn the tragic loss of the young lives in the accident, showing solidarity and support for the grieving families.\nSummary:\nMourn means to grieve or express sorrow over a loss, especially due to death, often through rituals, reflection, or shared mourning.\nRelated Words: grieve, lament, sorrow, weep, bewail.\nAntonyms: rejoice, celebrate, cheer, be joyful."
         },
         {
             "等級": "C2",
@@ -5369,7 +5394,10 @@
         },
         {
             "等級": "B2",
-            "Words": "mundane"
+            "Words": "mundane",
+            "pronunciation-1": "[ˋmʌnden]",
+            "traditional Chinese": "adj. 1.平凡的; 乏味的\n      2. 世俗的",
+            "English meaning": "Mundane : As an Adjective:\n1. Lacking excitement or interest; dull and ordinary.\nE.g. She found her daily routine mundane and longed for adventure.\nE.g. His job involved mundane tasks like filing paperwork and answering emails.\nE.g. The conversation was mundane, revolving around the weather and daily chores.\n2. Relating to the physical world rather than anything spiritual or extraordinary.\nE.g. He focused on mundane concerns like paying bills and grocery shopping.\nE.g. The book contrasts mundane reality with mystical experiences.\nSummary:\nMundane describes something ordinary, dull, or lacking excitement. It can also refer to things related to everyday life rather than anything spiritual or extraordinary.\nRelated Words: ordinary, routine, dull, unremarkable, commonplace.\nAntonyms: extraordinary, exciting, remarkable, unusual, unique."
         },
         {
             "等級": "B1",
@@ -5422,7 +5450,10 @@
         },
         {
             "等級": "B1",
-            "Words": "nausea"
+            "Words": "nausea",
+            "pronunciation-1": "[ˋnɔʃɪə]",
+            "traditional Chinese": "n.[U]噁心，作嘔；暈船；極端的憎惡",
+            "English meaning": "Nausea : As a Noun:\nA feeling of sickness with an urge to vomit, often caused by motion, illness, or unpleasant experiences. It can also refer to a strong sense of disgust.\nE.g. The boat's constant rocking caused her to feel nausea during the trip.\nE.g. He experienced nausea after eating spoiled food.\nE.g. The gruesome scene in the movie filled him with nausea and discomfort.\nE.g. The strong smell of chemicals gave her a sudden wave of nausea.\nSummary:\nNausea refers to the sensation of feeling sick and wanting to vomit. It can also describe a feeling of deep disgust.\nRelated Words: queasiness, sickness, dizziness, disgust, revulsion.\nAntonyms: comfort, well-being, pleasure, satisfaction."
         },
         {
             "等級": "B1",
@@ -5457,7 +5488,7 @@
             "Words": "nestle",
             "pronunciation-1": "[ˋnɛs!]",
             "traditional Chinese": "v.1.舒適地安頓下來\n    依偎，貼靠(+to/against)\n   3.半隱半現地處於",
-            "English meaning": "Verb : nestle nestled nestling\n1.to settle snugly or comfortably\nE.g. The children nestled in their beds. \nE.g.The kitten nestled up to its mother. \n2.If something such as a building nestles somewhere or if it is nestled somewhere, it is in that place and seems safe or sheltered.\nE.g.Nearby, nestling in the hills, was the children's home."
+            "English meaning": "Verb : nestle nestled nestling\n1. to settle snugly or comfortably\nE.g. The children nestled in their beds. \nE.g. The kitten nestled up to its mother. \n2. If something such as a building nestles somewhere or if it is nestled somewhere, it is in that place and seems safe or sheltered.\nE.g. Nearby, nestling in the hills, was the children's home."
         },
         {
             "等級": "C1",
@@ -5581,7 +5612,7 @@
             "Words": "obesity",
             "pronunciation-1": "[oˋbisətɪ]",
             "traditional Chinese": "n.肥胖；過胖\n(體內脂肪過多)",
-            "English meaning": "Obesity is a noun that refers to a medical condition characterized by an excessive amount of body fat, which increases the risk of health problems. It is often measured using the Body Mass Index (BMI), where a BMI of 30 or higher typically indicates obesity.\nMeaning:\n1. Excessive Body Fat:\nExample: Obesity is a significant risk factor for heart disease, diabetes, and certain cancers.\nExample: Many public health campaigns aim to raise awareness about the dangers of obesity and promote healthier lifestyles.\n2. Health Implications:\nExample: The rise in childhood obesity has prompted schools to implement healthier meal programs.\nExample: His obesity made it difficult for him to participate in physical activities.\nSummary: \"Obesity\" refers to a condition of having an unhealthy level of body fat, which can lead to various serious health issues, necessitating lifestyle changes or medical intervention.\nRelated Words: overweight, adiposity, excess weight, corpulence\nAntonyms: underweight, lean, slender, fit"
+            "English meaning": "Obesity is a noun that refers to a medical condition characterized by an excessive amount of body fat, which increases the risk of health problems. It is often measured using the Body Mass Index (BMI), where a BMI of 30 or higher typically indicates obesity.\nMeaning:\n1. Excessive Body Fat:\nE.g. Obesity is a significant risk factor for heart disease, diabetes, and certain cancers.\nE.g. Many public health campaigns aim to raise awareness about the dangers of obesity and promote healthier lifestyles.\n2. Health Implications:\nE.g. The rise in childhood obesity has prompted schools to implement healthier meal programs.\nE.g. His obesity made it difficult for him to participate in physical activities.\nSummary: \"Obesity\" refers to a condition of having an unhealthy level of body fat, which can lead to various serious health issues, necessitating lifestyle changes or medical intervention.\nRelated Words: overweight, adiposity, excess weight, corpulence\nAntonyms: underweight, lean, slender, fit"
         },
         {
             "等級": "B1",
@@ -6085,14 +6116,14 @@
             "Words": "pertain",
             "pronunciation-1": "[pɚˋten]",
             "traditional Chinese": "v. 1. 與某事相關或有聯繫。\n2與特定事項或情況相關或適用。",
-            "English meaning": "\"Pertain\" is a verb: pertain, pertained, pertaining. It means to relate, apply, or have a connection to something. It often describes how a specific subject, rule, or situation is relevant or applicable.\n1. To relate to or be connected with something.\nExample: The rules pertain to all employees, regardless of their position within the company.\nExample: These documents pertain to the history of the ancient civilization.\n2. To be relevant or applicable to a particular matter or situation.\nExample: The questions pertain specifically to the topic of environmental science.\nExample: The policies do not pertain to temporary workers.\nSummary:\n\"Pertain\" is used to indicate that something is relevant, related, or connected to a particular topic, situation, or context."
+            "English meaning": "\"Pertain\" is a verb: pertain, pertained, pertaining. It means to relate, apply, or have a connection to something. It often describes how a specific subject, rule, or situation is relevant or applicable.\n1. To relate to or be connected with something.\nE.g. The rules pertain to all employees, regardless of their position within the company.\nE.g. These documents pertain to the history of the ancient civilization.\n2. To be relevant or applicable to a particular matter or situation.\nE.g. The questions pertain specifically to the topic of environmental science.\nE.g. The policies do not pertain to temporary workers.\nSummary:\n\"Pertain\" is used to indicate that something is relevant, related, or connected to a particular topic, situation, or context."
         },
         {
             "等級": "C1",
             "Words": "pertinent",
             "pronunciation-1": "[ˋpɝtnənt]",
             "traditional Chinese": "adj.1.與當前的事情直接相關的或相關的。\n     2.在特定背景下具有意義的或價值的。",
-            "English meaning": "\"Pertinent\" is an adjective that describes something that is directly related to or relevant to a particular matter, situation, or topic. It indicates that something is significant and applicable to the issue at hand.\n1. Directly related or relevant to the matter at hand.\nExample: The documents presented were pertinent to the investigation.\nExample: Her comments were pertinent to the discussion about improving the company's marketing strategy.\n2. Having significance or value in a specific context.\nExample: The historical data is pertinent to understanding current economic trends.\nExample: His background in environmental science is pertinent to the new research project.\nSummary:\n\"Pertinent\" describes information, details, or factors that are relevant and directly related to a specific subject or situation."
+            "English meaning": "\"Pertinent\" is an adjective that describes something that is directly related to or relevant to a particular matter, situation, or topic. It indicates that something is significant and applicable to the issue at hand.\n1. Directly related or relevant to the matter at hand.\nE.g. The documents presented were pertinent to the investigation.\nE.g. Her comments were pertinent to the discussion about improving the company's marketing strategy.\n2. Having significance or value in a specific context.\nE.g. The historical data is pertinent to understanding current economic trends.\nE.g. His background in environmental science is pertinent to the new research project.\nSummary:\n\"Pertinent\" describes information, details, or factors that are relevant and directly related to a specific subject or situation."
         },
         {
             "等級": "B1",
@@ -6706,7 +6737,7 @@
             "Words": "recognition",
             "pronunciation-1": "[͵rɛkəgˋnɪʃən]",
             "traditional Chinese": "n.認可 / 承認",
-            "English meaning": "\nRecognition is a noun that refers to the acknowledgment or appreciation of someone’s achievements, status, or qualities. It can also mean the identification of something as familiar or known.\n\n1.Acknowledgment of Achievement:\n Example: She received recognition for her outstanding contributions to the project. \nExample: The actor's performance earned him international recognition.\n\n2.Identification or Awareness: \nExample: Facial recognition technology is used for security purposes. \nExample: His sudden recognition of the song brought back memories from his childhood.\n\nSummary: Recognition refers to acknowledging or appreciating someone's accomplishments, as well as identifying or becoming aware of something known or familiar.\n\nRelated Words: acknowledgment, appreciation, identification, awareness. Antonyms: disregard, ignorance, neglect, oblivion."
+            "English meaning": "\nRecognition is a noun that refers to the acknowledgment or appreciation of someone’s achievements, status, or qualities. It can also mean the identification of something as familiar or known.\n\n1.Acknowledgment of Achievement:\n E.g. She received recognition for her outstanding contributions to the project. \nE.g. The actor's performance earned him international recognition.\n\n2.Identification or Awareness: \nE.g. Facial recognition technology is used for security purposes. \nE.g. His sudden recognition of the song brought back memories from his childhood.\n\nSummary: Recognition refers to acknowledging or appreciating someone's accomplishments, as well as identifying or becoming aware of something known or familiar.\n\nRelated Words: acknowledgment, appreciation, identification, awareness. Antonyms: disregard, ignorance, neglect, oblivion."
         },
         {
             "等級": "C1",
@@ -6795,7 +6826,7 @@
             "Words": "reign",
             "pronunciation-1": "[ren]",
             "traditional Chinese": "1.n.在位期間，統治時期[C].\n2.v.君臨；統治(+over)\n      支配；盛行",
-            "English meaning": "Reign is a noun and verb with the following meanings:\n1. As a Noun: The period during which a sovereign (king, queen, etc.) rules, or the act of ruling over a country or territory.\nExample: The queen's reign lasted for over fifty years.\nExample: The reign of the emperor was marked by peace and prosperity.\nExample: The reign of the monarchy ended with the revolution.\n2. As a Verb: To rule or have control over a country, territory, or group of people.\nExample: The king reigned over the kingdom with wisdom and strength.\nExample: The general's influence reigned supreme in the military.\nExample: For many years, fear and superstition reigned in the village.\nSummary:\nReign refers to the act of ruling or the period of time when someone rules, especially a monarch. It can also describe the dominance or control of something.\nRelated Words: Rule, Reign over, Sovereignty, Authority, Dominance\nAntonyms: Rebellion, Overthrow, Surrender, Defeat"
+            "English meaning": "Reign is a noun and verb with the following meanings:\n1. As a Noun: The period during which a sovereign (king, queen, etc.) rules, or the act of ruling over a country or territory.\nE.g. The queen's reign lasted for over fifty years.\nE.g. The reign of the emperor was marked by peace and prosperity.\nE.g. The reign of the monarchy ended with the revolution.\n2. As a Verb: To rule or have control over a country, territory, or group of people.\nE.g. The king reigned over the kingdom with wisdom and strength.\nE.g. The general's influence reigned supreme in the military.\nE.g. For many years, fear and superstition reigned in the village.\nSummary:\nReign refers to the act of ruling or the period of time when someone rules, especially a monarch. It can also describe the dominance or control of something.\nRelated Words: Rule, Reign over, Sovereignty, Authority, Dominance\nAntonyms: Rebellion, Overthrow, Surrender, Defeat"
         },
         {
             "等級": "C1",
@@ -6963,7 +6994,7 @@
             "pronunciation-1": "[rɪˋzjum]-V",
             "pronunciation-2": "résumé-N",
             "traditional Chinese": "v.1.重新開始，繼續[+v-ing]\nn.2.簡歷",
-            "English meaning": "Resume is a verb and a noun with the following meanings:\n1. As a Verb: resume / resumed / resuming\nTo begin again or continue after a pause or interruption.\nExample: After a short break, the meeting will resume at 2 PM.\nExample: The concert will resume after the intermission.\nExample: He decided to resume his studies after taking a year off.\n2. As a Noun : A summary of a person's education, work experience, and skills, typically used for job applications.\nExample: She submitted her resume along with her job application.\nExample: His resume highlighted his extensive experience in marketing.\nSummary: \"Resume\" as a verb means to restart or continue an activity after an interruption, while as a noun, it refers to a document that outlines a person's qualifications for employment.\nRelated Words: continue, restart, summary, CV (curriculum vitae)\nAntonyms: interrupt, cease, stop"
+            "English meaning": "Resume is a verb and a noun with the following meanings:\n1. As a Verb: resume / resumed / resuming\nTo begin again or continue after a pause or interruption.\nE.g. After a short break, the meeting will resume at 2 PM.\nE.g. The concert will resume after the intermission.\nE.g. He decided to resume his studies after taking a year off.\n2. As a Noun : A summary of a person's education, work experience, and skills, typically used for job applications.\nE.g. She submitted her resume along with her job application.\nE.g. His resume highlighted his extensive experience in marketing.\nSummary: \"Resume\" as a verb means to restart or continue an activity after an interruption, while as a noun, it refers to a document that outlines a person's qualifications for employment.\nRelated Words: continue, restart, summary, CV (curriculum vitae)\nAntonyms: interrupt, cease, stop"
         },
         {
             "等級": "C1",
@@ -8099,7 +8130,7 @@
             "Words": "swollen",
             "pronunciation-1": "[ˋswolən]",
             "traditional Chinese": "adj.膨脹的；浮腫的；腫脹的\n",
-            "English meaning": "Swollen is an adjective that means enlarged or puffed up, typically due to fluid buildup or inflammation.\nExample: Her ankle was swollen after she twisted it.\nExample: The bee sting made his arm swollen and red.\nSummary: \"Swollen\" describes something that has become larger than normal because of fluid or injury.\nRelated Words: enlarged, puffed, bloated\nAntonyms: normal, reduced, shrunken"
+            "English meaning": "Swollen is an adjective that means enlarged or puffed up, typically due to fluid buildup or inflammation.\nE.g. Her ankle was swollen after she twisted it.\nE.g. The bee sting made his arm swollen and red.\nSummary: \"Swollen\" describes something that has become larger than normal because of fluid or injury.\nRelated Words: enlarged, puffed, bloated\nAntonyms: normal, reduced, shrunken"
         },
         {
             "等級": "B2",
@@ -8306,7 +8337,7 @@
             "Words": "tariff",
             "pronunciation-1": "[ˋtærɪf]",
             "traditional Chinese": "n.關稅；稅率",
-            "English meaning": "\"Tariff\" refers to a tax or duty imposed by a government on imported or exported goods. It is a form of trade barrier that increases the price of imported goods, thereby making them less competitive compared to domestically produced goods. Tariffs can serve various purposes, including protecting domestic industries from foreign competition, generating revenue for the government, and addressing trade imbalances.\n1.Import Tariff: A tax imposed on goods imported into a country from abroad.\nExample: The government announced a 25% tariff on steel imports to protect the domestic steel industry from foreign competition.\n2.Export Tariff: A tax imposed on goods exported from a country to foreign markets.\nExample: The country imposed an export tariff on raw materials to encourage domestic processing and value-added production."
+            "English meaning": "\"Tariff\" refers to a tax or duty imposed by a government on imported or exported goods. It is a form of trade barrier that increases the price of imported goods, thereby making them less competitive compared to domestically produced goods. Tariffs can serve various purposes, including protecting domestic industries from foreign competition, generating revenue for the government, and addressing trade imbalances.\n1.Import Tariff: A tax imposed on goods imported into a country from abroad.\nE.g. The government announced a 25% tariff on steel imports to protect the domestic steel industry from foreign competition.\n2.Export Tariff: A tax imposed on goods exported from a country to foreign markets.\nE.g. The country imposed an export tariff on raw materials to encourage domestic processing and value-added production."
         },
         {
             "等級": "B2",
@@ -9025,7 +9056,7 @@
             "Words": "vessel",
             "pronunciation-1": "[ˋvɛs!]",
             "traditional Chinese": "n.1.容器，器皿\n  2. 船，艦\n  3. 血管，脈管",
-            "English meaning": "\"Vessel\" is a noun with the following meanings:\n1. A container for holding liquids or other substances: Refers to any type of receptacle that can carry or store materials.\nExample: She poured the water into a large vessel for cooking.\nExample: The ancient vase is considered a beautiful vessel for storing oils.\n2. A ship or large boat: Used to describe any watercraft that can transport people or goods across water.\nExample: The vessel set sail at dawn for its long journey across the ocean.\nExample: The fishing vessel returned to shore with a full catch.\n3. A tube or duct in the body that carries blood or other fluids: Refers to structures like arteries and veins in biological contexts.\nExample: The doctor explained how blood vessels transport oxygen throughout the body.\nExample: Blocked vessels can lead to serious health issues.\nSummary: \"Vessel\" can refer to a container for liquids, a ship or boat, or a biological tube for carrying fluids in the body.\nRelated Words: Container, ship, conduit."
+            "English meaning": "\"Vessel\" is a noun with the following meanings:\n1. A container for holding liquids or other substances: Refers to any type of receptacle that can carry or store materials.\nE.g. She poured the water into a large vessel for cooking.\nE.g. The ancient vase is considered a beautiful vessel for storing oils.\n2. A ship or large boat: Used to describe any watercraft that can transport people or goods across water.\nE.g. The vessel set sail at dawn for its long journey across the ocean.\nE.g. The fishing vessel returned to shore with a full catch.\n3. A tube or duct in the body that carries blood or other fluids: Refers to structures like arteries and veins in biological contexts.\nE.g. The doctor explained how blood vessels transport oxygen throughout the body.\nE.g. Blocked vessels can lead to serious health issues.\nSummary: \"Vessel\" can refer to a container for liquids, a ship or boat, or a biological tube for carrying fluids in the body.\nRelated Words: Container, ship, conduit."
         },
         {
             "等級": "B2",
@@ -9734,7 +9765,7 @@
             "Words": "embody",
             "pronunciation-1": "[ɪmˋbɑdɪ]",
             "traditional Chinese": "v.1.體現，使具體化(+in)\n  2.包含，收錄",
-            "English meaning": "\"Embody\" as a verb: embody / embodied / embodying: means to give tangible or visible form to an idea, quality, or feeling. It can also mean to represent or personify something in a concrete form.\n1. To represent (something) in a clear and obvious way; to be a symbol or example of (something):\nExample: The Statue of Liberty embodies the spirit of freedom and democracy.\nExample: The sculpture embodies the artist's vision of peace.\nExample: The CEO embodies the company's values of innovation and excellence.\n2. To include (something) as an essential or defining part of something; to integrate particular qualities or elements into a whole:\nExample: The treaty embodies the principles of mutual respect and cooperation between the two nations.\nExample: The architectural design embodies elements of both modern and traditional styles.\nExample: The new software update embodies several user-requested features and improvements.\nSummary:\nEmbody means to give physical form or expression to abstract concepts or qualities, to represent an ideal or concept in a tangible way, or to incorporate certain elements as defining parts of something.\nRelated Words : represent, symbolize, personify, exemplify, manifest\nAntonyms : conceal, hide, suppress, disguise"
+            "English meaning": "\"Embody\" as a verb: embody / embodied / embodying: means to give tangible or visible form to an idea, quality, or feeling. It can also mean to represent or personify something in a concrete form.\n1. To represent (something) in a clear and obvious way; to be a symbol or example of (something):\nE.g. The Statue of Liberty embodies the spirit of freedom and democracy.\nE.g. The sculpture embodies the artist's vision of peace.\nE.g. The CEO embodies the company's values of innovation and excellence.\n2. To include (something) as an essential or defining part of something; to integrate particular qualities or elements into a whole:\nE.g. The treaty embodies the principles of mutual respect and cooperation between the two nations.\nE.g. The architectural design embodies elements of both modern and traditional styles.\nE.g. The new software update embodies several user-requested features and improvements.\nSummary:\nEmbody means to give physical form or expression to abstract concepts or qualities, to represent an ideal or concept in a tangible way, or to incorporate certain elements as defining parts of something.\nRelated Words : represent, symbolize, personify, exemplify, manifest\nAntonyms : conceal, hide, suppress, disguise"
         },
         {
             "分類": "Design",
@@ -10179,14 +10210,14 @@
             "Words": "square",
             "pronunciation-1": "[skwɛr]",
             "traditional Chinese": "n.1.[C]正方形;方形物(方形)\n   2.廣場\nadj.1.正方形的[Z]\n     2.正直的，公正的\n     3.拉平的；兩訖的[F](+with)",
-            "English meaning": "Square is a noun and an adjective with the following meanings:\nAs a Noun:\n1. A flat, closed geometric figure with four equal straight sides and four right angles: A square is a special type of quadrilateral where all sides are of equal length, and all internal angles are 90 degrees.\nE.g. The square is the most basic and symmetrical shape in geometry.\nE.g. The carpenter cut the wood into perfect squares for the project.\nE.g. The students were asked to calculate the area of a square with a side length of 5 cm.\n2. An open area in a village, city, etc., where two or more streets meet: A square can also refer to a public space, often located at the intersection of roads, used for gatherings or public events.\nE.g. The town square was filled with people celebrating the festival.\nE.g. They met at the central square before heading to the restaurant.\nE.g. Many European cities are known for their historic town squares.\nAs an Adjective:\n1. Shaped like a square: Describes something that has the form or dimensions of a square. \nE.g. The room had a square layout with equal-length walls.\n2. Fair, honest, or straightforward: Used to describe actions or behaviors that are just, honest, or in good order. \nE.g. They made a square deal when they agreed on the price.\n3.Complete or resolved: Used to indicate that something is settled or in balance. Example: We're square now that you've paid back the money you borrowed.\nSummary:\nAs a noun, a square refers to a four-sided figure with equal sides and right angles, as well as an open public area where streets meet. As an adjective, it can describe something shaped like a square, or refer to fairness and completeness.\nRelated Words: rectangle, quadrilateral, plaza (for open space), town square.\nAntonyms: circle, oval (shapes without straight sides), irregular (asymmetrical shapes)."
+            "English meaning": "Square is a noun and an adjective with the following meanings:\nAs a Noun:\n1. A flat, closed geometric figure with four equal straight sides and four right angles: A square is a special type of quadrilateral where all sides are of equal length, and all internal angles are 90 degrees.\nE.g. The square is the most basic and symmetrical shape in geometry.\nE.g. The carpenter cut the wood into perfect squares for the project.\nE.g. The students were asked to calculate the area of a square with a side length of 5 cm.\n2. An open area in a village, city, etc., where two or more streets meet: A square can also refer to a public space, often located at the intersection of roads, used for gatherings or public events.\nE.g. The town square was filled with people celebrating the festival.\nE.g. They met at the central square before heading to the restaurant.\nE.g. Many European cities are known for their historic town squares.\nAs an Adjective:\n1. Shaped like a square: Describes something that has the form or dimensions of a square. \nE.g. The room had a square layout with equal-length walls.\n2. Fair, honest, or straightforward: Used to describe actions or behaviors that are just, honest, or in good order. \nE.g. They made a square deal when they agreed on the price.\n3.Complete or resolved: Used to indicate that something is settled or in balance. E.g. We're square now that you've paid back the money you borrowed.\nSummary:\nAs a noun, a square refers to a four-sided figure with equal sides and right angles, as well as an open public area where streets meet. As an adjective, it can describe something shaped like a square, or refer to fairness and completeness.\nRelated Words: rectangle, quadrilateral, plaza (for open space), town square.\nAntonyms: circle, oval (shapes without straight sides), irregular (asymmetrical shapes)."
         },
         {
             "分類": "形狀",
             "Words": "square",
             "pronunciation-1": "[skwɛr]",
             "traditional Chinese": "v.1.成正方形；成直角\n  2.拉平；結清（帳目）\n  3.【數】使成平方;求…的面積\n   4.使挺直；擺正自己\nadv.1.面對面地 (處於直接或直線位置)",
-            "English meaning": "square can be used as a verb and an adverb, as well as a noun and adjective. Here's how it's used in those contexts:\nAs a Verb: square / squared / squaring\n1. To make something square in shape or position: To adjust or align something so it has right angles or is symmetrical.\nE.g. He squared the table with the wall.\nE.g. The carpenter squared the frame before nailing it together.\n2. To settle or balance an account or situation: To resolve a debt, dispute, or make things even.\nE.g. We squared the bill before leaving the restaurant.\nE.g. The two friends squared things after their argument.\n3. To multiply a number by itself: In mathematics, squaring means multiplying a number by itself (e.g., 4² = 16).\nExample: She squared the number 5 and got 25.\nExample: The student was asked to square all the numbers in the table.\n4. To prepare or brace oneself for something: Often used in the phrase \"square oneself\" meaning to get ready mentally or physically for a challenge.\nExample: He squared himself before entering the meeting.\nExample: The team squared themselves for the final match.\nAs an Adverb: \"square\" (informal use)\n1. In a direct or straight position; directly or straightforwardly: Describes actions done directly, precisely, or with exactness.\nExample: The ball hit him square in the chest.\nExample: She looked him square in the eyes and told him the truth.\nSummary:\nAs a verb, \"square\" refers to actions like aligning, resolving, multiplying, or preparing. As an adverb, it describes something done directly, precisely, or straightforwardly.\nRelated Words: align (verb), directly (adverb), resolve (verb), exactly (adverb).\nAntonyms: misalign, indirectly, avoid, unbalance."
+            "English meaning": "square can be used as a verb and an adverb, as well as a noun and adjective. Here's how it's used in those contexts:\nAs a Verb: square / squared / squaring\n1. To make something square in shape or position: To adjust or align something so it has right angles or is symmetrical.\nE.g. He squared the table with the wall.\nE.g. The carpenter squared the frame before nailing it together.\n2. To settle or balance an account or situation: To resolve a debt, dispute, or make things even.\nE.g. We squared the bill before leaving the restaurant.\nE.g. The two friends squared things after their argument.\n3. To multiply a number by itself: In mathematics, squaring means multiplying a number by itself (e.g., 4² = 16).\nE.g. She squared the number 5 and got 25.\nE.g. The student was asked to square all the numbers in the table.\n4. To prepare or brace oneself for something: Often used in the phrase \"square oneself\" meaning to get ready mentally or physically for a challenge.\nE.g. He squared himself before entering the meeting.\nE.g. The team squared themselves for the final match.\nAs an Adverb: \"square\" (informal use)\n1. In a direct or straight position; directly or straightforwardly: Describes actions done directly, precisely, or with exactness.\nE.g. The ball hit him square in the chest.\nE.g. She looked him square in the eyes and told him the truth.\nSummary:\nAs a verb, \"square\" refers to actions like aligning, resolving, multiplying, or preparing. As an adverb, it describes something done directly, precisely, or straightforwardly.\nRelated Words: align (verb), directly (adverb), resolve (verb), exactly (adverb).\nAntonyms: misalign, indirectly, avoid, unbalance."
         },
         {
             "分類": "Design",
@@ -10207,7 +10238,7 @@
             "Words": "streamline",
             "pronunciation-1": "[ˋstrim͵laɪn]",
             "traditional Chinese": "1.v. a. 使流線型；使簡化\n      b.使流線型以減少阻力\n2. adj.流線型的\n3. n.流線型",
-            "English meaning": "Streamline is a verb, adjective, and noun with the following meanings:\n1. As a Verb:\na. To design or make something more efficient by simplifying or eliminating unnecessary components or steps.\nE.g. The company streamlined its production process to reduce costs and improve efficiency.\nE.g. The design team streamlined the interface to make the app more user-friendly.\nE.g. The bicycle trailer was streamlined to reduce wind resistance.\nb. To design or make (something, such as a boat or car) with a smooth shape that makes motion through water or air easier.\nE.g. The engineers streamlined the boat's hull(船體) to reduce drag and improve speed.\nE.g. The car’s streamlined design minimized air resistance, making it more fuel-efficient.\n2. As an Adjective : Describing something designed to be more efficient, sleek, or simple, often in appearance or function.\nE.g. The car’s streamlined shape reduced air resistance and improved fuel efficiency.\nE.g. The office was designed with a minimalist, streamlined look to create a modern atmosphere.\n3. As a Noun : A smooth, efficient design or shape, often for reducing air or water resistance.\nExample: The airplane’s streamline is key to its ability to cut through the air effortlessly.\nSummary: \"Streamline\" as a verb means to simplify or design something with a smooth shape for easier movement through air or water. As an adjective, it describes something efficient or sleek. As a noun, it refers to a smooth or efficient design aimed at reducing resistance.\nRelated Words: Simplify, Optimize, Enhance, Modernize\nAntonyms: Complicate, Overload, Cluttered, Inefficient"
+            "English meaning": "Streamline is a verb, adjective, and noun with the following meanings:\n1. As a Verb:\na. To design or make something more efficient by simplifying or eliminating unnecessary components or steps.\nE.g. The company streamlined its production process to reduce costs and improve efficiency.\nE.g. The design team streamlined the interface to make the app more user-friendly.\nE.g. The bicycle trailer was streamlined to reduce wind resistance.\nb. To design or make (something, such as a boat or car) with a smooth shape that makes motion through water or air easier.\nE.g. The engineers streamlined the boat's hull(船體) to reduce drag and improve speed.\nE.g. The car’s streamlined design minimized air resistance, making it more fuel-efficient.\n2. As an Adjective : Describing something designed to be more efficient, sleek, or simple, often in appearance or function.\nE.g. The car’s streamlined shape reduced air resistance and improved fuel efficiency.\nE.g. The office was designed with a minimalist, streamlined look to create a modern atmosphere.\n3. As a Noun : A smooth, efficient design or shape, often for reducing air or water resistance.\nE.g. The airplane’s streamline is key to its ability to cut through the air effortlessly.\nSummary: \"Streamline\" as a verb means to simplify or design something with a smooth shape for easier movement through air or water. As an adjective, it describes something efficient or sleek. As a noun, it refers to a smooth or efficient design aimed at reducing resistance.\nRelated Words: Simplify, Optimize, Enhance, Modernize\nAntonyms: Complicate, Overload, Cluttered, Inefficient"
         },
         {
             "分類": "Design",
@@ -10583,7 +10614,7 @@
             "Words": "characteristic",
             "pronunciation-1": "ker-ik-tə-ˈri-stik ",
             "traditional Chinese": "n.特點/特徵",
-            "English meaning": "\n\"Characteristic meaning\" refers to the distinguishing features, qualities, or traits that define or describe something. These attributes help to identify or differentiate one thing from another and contribute to its overall nature or essence.\nIn a person, characteristics might include physical attributes (such as height, hair color, or facial features) as well as personality traits (such as kindness, intelligence, or assertiveness).\nIn a product, characteristics might include its size, shape, color, functionality, and performance.\nIn a place or environment, characteristics might include its climate, geography, culture, and infrastructure.\nUnderstanding the characteristics of something provides insight into what it is like and helps to categorize or analyze it within its context.\nE.g. Her optimism and resilience are two of her most admirable characteristics, enabling her to face challenges with a positive attitude and bounce back from setbacks.\nE.g. The lightweight design is a notable characteristic of this stroller, allowing for easy maneuverability and convenient transportation, especially for busy parents navigating crowded spaces.\nE.g. The rugged landscape and geothermal activity are characteristic of Iceland, offering visitors a unique experience of natural beauty and volcanic terrain."
+            "English meaning": "\"Characteristic meaning\" refers to the distinguishing features, qualities, or traits that define or describe something. These attributes help to identify or differentiate one thing from another and contribute to its overall nature or essence.\nIn a person, characteristics might include physical attributes (such as height, hair color, or facial features) as well as personality traits (such as kindness, intelligence, or assertiveness).\nIn a product, characteristics might include its size, shape, color, functionality, and performance.\nIn a place or environment, characteristics might include its climate, geography, culture, and infrastructure.\nUnderstanding the characteristics of something provides insight into what it is like and helps to categorize or analyze it within its context.\nE.g. Her optimism and resilience are two of her most admirable characteristics, enabling her to face challenges with a positive attitude and bounce back from setbacks.\nE.g. The lightweight design is a notable characteristic of this stroller, allowing for easy maneuverability and convenient transportation, especially for busy parents navigating crowded spaces.\nE.g. The rugged landscape and geothermal activity are characteristic of Iceland, offering visitors a unique experience of natural beauty and volcanic terrain."
         },
         {
             "分類": "人物特性",
@@ -10597,16 +10628,18 @@
             "Words": "antagonist",
             "pronunciation-1": "[ænˋtægənɪst]",
             "traditional Chinese": "n.敵手，對手",
-            "English meaning": "\nThe term \"antagonist\" typically refers to a character, force, or entity in a story, play, or narrative that opposes or acts in conflict with the protagonist, who is usually the main character or hero. The antagonist's primary role is to create obstacles, challenges, or conflicts that the protagonist must overcome in order to achieve their goals or fulfill their journey. Antagonists can take various forms, including villains, rivals, enemies, or even internal struggles within the protagonist's own psyche. They serve to drive the plot forward and often represent opposing values, desires, or motivations compared to the protagonist.\nE.g. In her journey of self-discovery, the protagonist grapples with her own fears and insecurities, serving as her own antagonist as she confronts the internal barriers holding her back from realizing her true potential.\nE.g. The knight defeated each antagonist. (also Adversary/opponent)"
+            "English meaning": "The term \"antagonist\" typically refers to a character, force, or entity in a story, play, or narrative that opposes or acts in conflict with the protagonist, who is usually the main character or hero. The antagonist's primary role is to create obstacles, challenges, or conflicts that the protagonist must overcome in order to achieve their goals or fulfill their journey. Antagonists can take various forms, including villains, rivals, enemies, or even internal struggles within the protagonist's own psyche. They serve to drive the plot forward and often represent opposing values, desires, or motivations compared to the protagonist.\nE.g. In her journey of self-discovery, the protagonist grapples with her own fears and insecurities, serving as her own antagonist as she confronts the internal barriers holding her back from realizing her true potential.\nE.g. The knight defeated each antagonist. (also Adversary/opponent)"
         },
         {
+            "等級": "C2",
             "分類": "人物特性",
             "Words": "antagonism",
             "pronunciation-1": "[ænˋtægə͵nɪzəm]",
             "traditional Chinese": "n.對抗；敵對，對立；敵意",
-            "English meaning": "\"Antagonism\" refers to the active opposition or hostility between individuals, groups, forces, or ideas. It can manifest in various forms, such as conflict, rivalry, opposition, or contention. Antagonism often arises from differing interests, beliefs, values, or goals, leading to tension, disagreement, or animosity. This term is commonly used in contexts such as interpersonal relationships, politics, economics, and literature to describe situations where there is a clear sense of opposition or conflict between parties.\nE.g. When I tried to make this crucial decision, the inner angel and demon engaged in a fierce antagonism, their opposition leaving me in a state of indecision."
+            "English meaning": "Antagonism : As a Noun\nA strong feeling of hostility, opposition, or conflict between individuals, groups, or ideas. It can also refer to the opposing force in a situation.\nE.g. There was clear antagonism between the two political rivals during the debate.\nE.g. His constant criticism created an atmosphere of antagonism in the workplace.\nE.g. The antagonism between the two nations led to years of tension and conflict.\nE.g. The new policy faced strong antagonism from the local community.\nSummary:\nAntagonism refers to strong opposition, hostility, or conflict between people, ideas, or forces.\nRelated Words: hostility, opposition, conflict, resentment, rivalry.\nAntonyms: harmony, agreement, friendship, cooperation."
         },
         {
+            "等級": "B1",
             "分類": "人物特性",
             "Words": "figure",
             "pronunciation-1": "[ˋfɪgjɚ]",
@@ -10614,6 +10647,7 @@
             "English meaning": "Figure As a Verb:\nFigure / figured / figuring\n1. To conclude, understand, or estimate, especially using reasoning or intuition.\nE.g. After reviewing the data, she tried to figure out the best course of action.\nE.g. I can't figure out why my computer isn't working.\nE.g. He figured that leaving early would help him avoid traffic.\nAs a Noun:\n1. A numerical value, especially one that represents a quantity or measurement.\nE.g. The budget includes several financial figures, such as revenue projections and expense estimates.\nE.g. She earns a six-figure salary at her new job.\n2. A person of prominence or importance, often in a particular field or context.\nE.g. As a leading figure in the tech industry, she is often sought after for her insights and expertise.\nE.g. The historical figure played a crucial role in shaping modern policies.\n3. A shape or form, especially one that is visually distinctive or recognizable.\nE.g. From a distance, the figure of the mountain stood majestic against the sunset sky.\nE.g. The shadowy figure disappeared into the night.\nSummary:\nFigure can be a verb meaning to understand or estimate something, or a noun referring to a number, an important person, or a visible shape.\nRelated Words: calculate, determine, estimate, person, character, shape, silhouette, numeral.\nAntonyms: misunderstand, ignore, exclude, nobody, insignificance, formlessness."
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "go-to",
             "pronunciation-1": "go-to",
@@ -10621,11 +10655,27 @@
             "English meaning": "go-to As an Adjective:\nDescribes something or someone relied upon or frequently used for a specific purpose.\nE.g. Sarah is the go-to person for event planning in our office.\nE.g. This restaurant is my go-to choice for quick and delicious meals.\nE.g. Whenever parents need to travel with their little ones, this compact stroller is the go-to item; its lightweight design and convenient features make navigating airports, parks, and crowded streets a breeze.\nAs a Noun:\nRefers to the thing or person itself that is relied upon or frequently used.\nE.g. Jane has become the team's go-to for graphic design work.\nE.g. My sister is always my go-to for fashion advice before meeting someone special.\nE.g. She styled four ultra-chic looks for the new season, combining both winter go-to’s and some on-trend pieces for spring.\nE.g. Whenever I need English consultancy, ChatGPT is my go-to tool; its insightful responses and language expertise consistently help me refine my communication skills.\nSummary:\nGo-to describes something or someone dependable and frequently chosen for a particular need or purpose.\nRelated Words: reliable, dependable, preferred, trusted, favorite.\nAntonyms: untrustworthy, secondary, unreliable, unpreferred."
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "mediocre",
             "pronunciation-1": "[ˋmidɪ͵okɚ]",
             "traditional Chinese": "adj.中等的；平凡的；二流的",
             "English meaning": "mediocre  As an Adjective:\nmediocre describes something that is of average or below-average quality, lacking excellence or distinction. It often implies something is unimpressive, ordinary, or just acceptable but not particularly good.\nE.g. The movie was mediocre—neither great nor terrible.\nE.g. His performance in the competition was mediocre compared to the other contestants.\nE.g. The restaurant's food was mediocre, so I wouldn't go back.\nE.g. She was disappointed with her mediocre exam results.\nSummary:\nMediocre means average or unimpressive, lacking high quality or excellence.\nRelated Words: ordinary, average, uninspiring, unremarkable, passable, so-so.\nAntonyms: excellent, outstanding, exceptional, superior, remarkable."
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "ingest",
+            "pronunciation-1": "[ɪnˋdʒɛst]",
+            "traditional Chinese": "vt.嚥下；攝取；吸收；吸納",
+            "English meaning": "Ingest As a Verb: (ingest / ingested / ingesting)\nTo take in food, drink, or substances into the body, usually through swallowing. It can also refer to absorbing or taking in information or ideas.\nE.g. He accidentally ingested a small amount of spoiled food and felt sick.\nE.g. Some animals ingest plants that are toxic to humans but safe for them.\nE.g. The doctor advised her not to ingest caffeine before bedtime.\nE.g. Students must ingest large amounts of information before exams.\nSummary:\nIngest means to take in food, drink, or substances into the body, or metaphorically, to absorb information or ideas.\nRelated Words: consume, swallow, absorb, take in, devour.\nAntonyms: expel, vomit, reject, eliminate."
+        },
+        {
+            "等級": "B2",
+            "Words": "expel",
+            "pronunciation-2": "[ɪkˋspɛl]",
+            "traditional Chinese": "vt.[驅逐，趕走；排出；噴出（空氣等）",
+            "English meaning": "Expel : As a Verb: (expel / expelled / expelling)\n1. To force someone to leave a place, organization, or institution.\nE.g. The student was expelled from school for violating the rules.\nE.g. The country decided to expel the foreign diplomat for espionage.\n2. To force out or eject something from the body or a space.\nE.g. The lungs expel carbon dioxide when we exhale.\nE.g. The volcano expelled a massive cloud of ash and smoke.\nSummary:\nExpel means to force someone to leave a place or organization or to eject something from the body or a space.\nRelated Words: eject, remove, banish, discharge, oust.\nAntonyms: admit, welcome, retain, accept."
         }
     ]
 }
