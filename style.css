@@ -79,8 +79,9 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     background-color: #647f91;
     color: #fff;
     font-size: 16px;
+    text-align: left;
     padding: 5px 10px;
-    min-width: 50px;
+    min-width: 100px; /* 根據實際單字長度調整 */
     min-height: 40px;
     width: auto;
     height: auto;

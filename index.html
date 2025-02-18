@@ -363,7 +363,9 @@ function showDetails(word) {
     }
 
     // ✅ **音標處理（考慮無音標的情況）**
-    let phonetics = `<div class="phonetics-container" style="display: flex; gap: 10px;">`;
+    let phonetics = `<div class="phonetics-container" style="display: flex; align-items: center; gap: 10px;">
+    <div id="wordTitle" style="font-size: 20px; font-weight: bold;">${word.Words}</div>`;
+
     if (word["pronunciation-1"] || word["pronunciation-2"]) {
         if (word["pronunciation-1"]) {
             phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word["pronunciation-1"]}</button>`;
