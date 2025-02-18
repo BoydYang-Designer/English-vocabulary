@@ -75,6 +75,18 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     font-size: 12px;
 }
 
+.phonetics-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* 原本是 10px，改成 5px 讓距離縮短 */
+}
+
+.phonetics-container button:first-of-type {
+    margin-left: 0px; /* 確保第一個音標按鈕不會有多餘間距 */
+}
+
+
+
 .phonetics-container button {
     background-color: #647f91;
     color: #fff;
@@ -82,7 +94,7 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     text-align: left;
     padding: 5px 10px;
     min-width: 100px; /* 根據實際單字長度調整 */
-    min-height: 40px;
+    min-height: 30px;
     width: auto;
     height: auto;
     white-space: nowrap;
