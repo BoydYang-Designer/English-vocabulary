@@ -31,7 +31,6 @@
         </div>
         <div id="searchResultsDetails" style="max-height: 200px; overflow-y: auto; text-align: left;"></div>
         <button class="button" onclick="backToWordList()">Back</button>
-        <h2 id="wordTitle"></h2>
 
         <!-- 4️⃣ 英文解釋區塊 -->
         <div id="phoneticContainer"></div>
@@ -344,7 +343,6 @@ function showDetails(word) {
     document.getElementById("searchInputDetails").value = "";
     document.getElementById("searchResultsDetails").innerHTML = "";
 
-    document.getElementById("wordTitle").textContent = word.Words || word.word || word["單字"] || "Unknown";
 
     // ✅ **確保 `.audio-controls` 顯示**
     let audioControls = document.querySelector(".audio-controls");
