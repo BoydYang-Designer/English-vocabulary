@@ -62,7 +62,7 @@
          <div style="display: flex; align-items: center; justify-content: space-between;">
                 <h3>Note</h3>
                 <div>
-                    <button onclick="clearAllNotes()" id="clearNoteButton" class="note-button">Deletenote</button>
+                    <button onclick="clearAllNotes()" id="clearNoteButton" class="note-button">Delete</button>
                     <button onclick="saveNote()" id="saveNoteButton" class="note-button">Savenote</button>
                 </div>
             </div>
@@ -510,20 +510,20 @@ function saveNote() {
 
     if (word && word !== "") { 
         localStorage.setItem(`note_${word}`, note); // 存入 localStorage
-        console.log("✅ 筆記已保存:", word, note);
+        console.log("✅ Note saved:", word, note);
 
-        // ✅ 按鈕顯示「已保存」
-        saveButton.textContent = "已保存 ✅";
+        // ✅ 按鈕顯示「Saved」
+        saveButton.textContent = "Saved ✅";
         saveButton.style.backgroundColor = "#28a745"; // 綠色表示成功
 
         // ✅ 2 秒後恢復原本樣式
         setTimeout(() => {
-            saveButton.textContent = "保存筆記";
-            saveButton.style.backgroundColor = "#007bff";
+            saveButton.textContent = "Save";
+            saveButton.style.backgroundColor = "#6e93ba";
         }, 2000);
         
         // ✅ 在筆記區下方顯示「筆記已保存！」
-        document.getElementById("savedNote").textContent = "✅ 筆記已保存！";
+        document.getElementById("savedNote").textContent = "✅ Note saved！";
         setTimeout(() => document.getElementById("savedNote").textContent = "", 3000);
     } else {
         console.warn("⚠️ 無法保存筆記，wordTitle 未加載");

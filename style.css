@@ -228,7 +228,6 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     border: none;
     border-radius: 5px;
     color: white;
-    background-color: #007bff;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
