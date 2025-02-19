@@ -53,6 +53,9 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 }
 
 .word-item {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: none !important;
     cursor: pointer;
     padding: 8px;
     border-bottom: 1px solid #ddd;
@@ -63,6 +66,7 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     background: #f0f0f0;
     font-weight: bold;
 }
+
 
 .details {
     width: 400px;
@@ -339,17 +343,23 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 }
 
 .check-button {
-    padding: 5px 10px;
-    font-size: 14px;
+    background: none;
     border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
     cursor: pointer;
+    padding: 10px; /* 增加 padding 讓按鈕更大 */
+    width: 45px; /* 手動設定按鈕寬度 */
+    height: 45px; /* 手動設定按鈕高度 */
+}
+
+
+.check-icon {
+    width: 45px;
+    height: 45px;
     transition: 0.2s;
 }
 
 .check-button:hover {
-    background-color: #0056b3;
+    transform: scale(1.1);
 }
+
 
