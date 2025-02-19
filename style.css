@@ -115,8 +115,8 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 }
 
 #meaningContainer {
-    max-height: none; /* ✅ 取消高度限制 */
-    overflow-y: visible; /* ✅ 確保內容不會被裁剪 */
+    max-height: 300px; /* 設定最大高度，內容超出時會滾動 */
+    overflow-y: auto; /* 啟用垂直滾動條 */
     padding: 10px;
     border: 1px solid #ddd;
     background: #f9f9f9;
