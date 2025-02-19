@@ -382,9 +382,11 @@ function toggleCheck(word, button) {
     if (isChecked) {
         localStorage.removeItem(`checked_${word}`); // 取消記錄
         icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg"; // 回復未選狀態
+        button.classList.remove("checked"); // 移除已選類別
     } else {
         localStorage.setItem(`checked_${word}`, "true"); // 記錄為已學會
         icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg"; // 變成已選
+        button.classList.add("checked"); // 添加已選類別
     }
 
     console.log(`📌 單字 ${word} 的狀態已更新：`, localStorage.getItem(`checked_${word}`));

@@ -352,10 +352,15 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 }
 
 
-.check-icon {
+.check-button img {
     width: 45px;
     height: 45px;
-    transition: 0.2s;
+    transition: 0.2s; /* 圖片大小過渡效果 */
+}
+
+.check-button.checked img {
+    width: 55px; /* 選中後圖片的大小 */
+    height: 55px;
 }
 
 .check-button:hover {
