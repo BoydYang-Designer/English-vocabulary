@@ -329,3 +329,27 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     background: #475f78;
     transform: scale(1.05);
 }
+
+.word-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.check-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.check-button:hover {
+    background-color: #0056b3;
+}
+

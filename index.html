@@ -287,10 +287,18 @@ function showWords(type, value) {
         wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
     } else {
         filteredWords.forEach(word => {
-            let item = document.createElement('p');
-            item.textContent = word.Words || word.word || word["單字"];
-            item.className = 'word-item';
-            item.onclick = function () { showDetails(word); };
+            let wordText = word.Words || word.word || word["單字"];
+            let isChecked = localStorage.getItem(`checked_${wordText}`) === "true"; // 檢查是否已 Check
+            
+            let item = document.createElement('div');
+            item.className = 'word-item-container';
+            item.innerHTML = `
+                <p class='word-item' onclick='showDetails(${JSON.stringify(word)})'>${wordText}</p>
+                <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
+                    ${isChecked ? "✔️ Checked" : "✅ Check"}
+                </button>
+            `;
+
             wordItems.appendChild(item);
         });
     }
@@ -300,6 +308,81 @@ function showWords(type, value) {
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
+}
+
+// 1️⃣ 負責顯示單字列表，包含「Check」按鈕
+function showWords(type, value) {
+    console.log("📌 點擊分類/等級/A-Z 按鈕:", type, value);
+
+    navigateTo({ page: "wordList", type: type, value: value });
+    lastWordListType = type;
+    lastWordListValue = value;
+
+    document.getElementById("searchContainer").style.display = "none";
+    let listContainer = document.getElementById("wordList");
+    let wordItems = document.getElementById("wordItems");
+    wordItems.innerHTML = "";
+
+    if (!wordsData || wordsData.length === 0) {
+        console.error("❌ wordsData 未加載或為空");
+        return;
+    }
+
+    let filteredWords = wordsData.filter(w => {
+        let word = w.Words || w.word || w["單字"];
+        let category = w["分類"] || "未分類";
+        let level = w["等級"] || "未分類";
+
+        if (type === "letter") {
+            return word ? word.toLowerCase().startsWith(value.toLowerCase()) : false;
+        } else if (type === "category") {
+            return category === value;
+        } else if (type === "level") {
+            return level === value;
+        }
+        return false;
+    });
+
+    if (filteredWords.length === 0) {
+        wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
+    } else {
+        filteredWords.forEach(word => {
+            let wordText = word.Words || word.word || word["單字"];
+            let isChecked = localStorage.getItem(`checked_${wordText}`) === "true"; // 檢查是否已 Check
+            
+            let item = document.createElement('div');
+            item.className = 'word-item-container';
+            item.innerHTML = `
+                <p class='word-item' onclick='showDetails(${JSON.stringify(word)})'>${wordText}</p>
+                <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
+                    ${isChecked ? "✔️ Checked" : "✅ Check"}
+                </button>
+            `;
+
+            wordItems.appendChild(item);
+        });
+    }
+
+    listContainer.style.display = "block";
+    document.getElementById("wordDetails").style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+}
+
+// 2️⃣ 放在 `showWords()` 之後，處理按鈕點擊事件
+function toggleCheck(word, button) {
+    let isChecked = localStorage.getItem(`checked_${word}`) === "true";
+
+    if (isChecked) {
+        localStorage.removeItem(`checked_${word}`); // 取消記錄
+        button.textContent = "✅ Check"; // 按鈕回到未選狀態
+    } else {
+        localStorage.setItem(`checked_${word}`, "true"); // 記錄為已學會
+        button.textContent = "✔️ Checked"; // 按鈕顯示「已選」
+    }
+
+    console.log(`📌 單字 ${word} 的狀態已更新：`, localStorage.getItem(`checked_${word}`));
 }
 
 
