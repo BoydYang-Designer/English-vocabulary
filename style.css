@@ -223,13 +223,19 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 }
 
 .note-button {
-    padding: 5px 10px;
+    padding: 8px 16px;
     font-size: 14px;
     border: none;
+    border-radius: 5px;
     color: white;
+    background-color: #007bff;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.note-button:hover {
+    background-color: #0056b3;
 }
 
 #saveNoteButton {
@@ -313,12 +319,13 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     font-size: 14px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background: #6e93ba;
     color: white;
     cursor: pointer;
     transition: 0.2s;
 }
 
 #storageButtons button:hover {
-    background-color: #0056b3;
+    background: #475f78;
+    transform: scale(1.05);
 }

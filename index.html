@@ -60,7 +60,7 @@
 
         <!-- 2️⃣ 筆記按鈕 -->
          <div style="display: flex; align-items: center; justify-content: space-between;">
-                <h3>筆記</h3>
+                <h3>Note</h3>
                 <div>
                     <button onclick="clearAllNotes()" id="clearNoteButton" class="note-button">Deletenote</button>
                     <button onclick="saveNote()" id="saveNoteButton" class="note-button">Savenote</button>
@@ -73,12 +73,18 @@
             </div>
 
             <!-- 添加匯出與匯入按鈕 -->
-            <div id="storageButtons">
-                <button onclick="exportAllData()">📅 匯出學習資料</button>
-                <input type="file" id="importFile" accept=".json" style="display: none;">
-                <button onclick="importAllData()">📄 匯入學習資料</button>
-            </div>
-        </div>
+            <div id="storageButtons" style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
+    <h3>Share Note</h3>
+    <div>
+        <button onclick="exportAllData()" id="exportButton" class="note-button">
+            Export
+        </button>
+        <button onclick="importAllData()" id="importButton" class="note-button">
+            Import
+        </button>
+    </div>
+</div>
+
     </div>
 
     <script>
