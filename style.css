@@ -53,6 +53,7 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 }
 
 .word-item {
+    flex-grow: 1; /* 讓單字自動填滿剩餘空間 */
     font-size: 20px;
     font-weight: bold;
     border-bottom: none !important;
@@ -335,16 +336,23 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 }
 
 .word-item-container {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* 讓單字和按鈕在同一行 */
+    width: 100%; /* 確保單字不會並排 */
+    margin: 5px; /* 避免太擠 */
+    justify-content: space-between; /* 單字在左，按鈕在右 */
     align-items: center;
     padding: 5px;
     border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease; /* 平滑動畫 */
 }
 
 .word-item-container.checked {
-    transform: scale(0.67);
-    transition: transform 0.3s ease;
+    font-size: 66.7%; /* 將 check 的單字縮小到原來的 2/3 */
+    padding: 2px 5px; /* 調整內距，避免縮小後影響點擊範圍 */
+    color: #888; /* 讓單字變成灰色 */
+    opacity: 0.7; /* 降低透明度，讓它看起來像「完成的單字」 */
+    height: 28px; /* 讓高度再縮小一點 */
+    line-height: 28px; /* 讓文字保持垂直置中 */
 }
 
 
@@ -355,6 +363,7 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     padding: 10px; /* 增加 padding 讓按鈕更大 */
     width: 45px; /* 手動設定按鈕寬度 */
     height: 45px; /* 手動設定按鈕高度 */
+    margin-left: 10px; /* 確保按鈕與單字之間有間距 */
 }
 
 

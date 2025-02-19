@@ -384,17 +384,16 @@ function toggleCheck(word, button) {
         localStorage.removeItem(`checked_${word}`);
         icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
         button.classList.remove("checked");
-        wordItemContainer.classList.remove("checked"); // 取消縮小效果
+        wordItemContainer.classList.remove("checked"); // 取消縮小+灰色效果
     } else {
         localStorage.setItem(`checked_${word}`, "true");
         icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg";
         button.classList.add("checked");
-        wordItemContainer.classList.add("checked"); // 加上縮小效果
+        wordItemContainer.classList.add("checked"); // 加上縮小+灰色效果
     }
 
     console.log(`📌 單字 ${word} 的狀態已更新：`, localStorage.getItem(`checked_${word}`));
 }
-
 
 
 
