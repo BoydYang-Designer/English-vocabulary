@@ -342,6 +342,12 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     border-bottom: 1px solid #ddd;
 }
 
+.word-item-container.checked {
+    transform: scale(0.67);
+    transition: transform 0.3s ease;
+}
+
+
 .check-button {
     background: none;
     border: none;
