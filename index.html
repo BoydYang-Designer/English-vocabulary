@@ -251,64 +251,6 @@ function createLevelButtons() {
         .join(" ");
 }
         
-function showWords(type, value) {
-    console.log("📌 點擊分類/等級/A-Z 按鈕:", type, value);
-
-    navigateTo({ page: "wordList", type: type, value: value });
-    lastWordListType = type;
-    lastWordListValue = value;
-
-    document.getElementById("searchContainer").style.display = "none";
-    let listContainer = document.getElementById("wordList");
-    let wordItems = document.getElementById("wordItems");
-    wordItems.innerHTML = "";
-
-    if (!wordsData || wordsData.length === 0) {
-        console.error("❌ wordsData 未加載或為空");
-        return;
-    }
-
-    let filteredWords = wordsData.filter(w => {
-        let word = w.Words || w.word || w["單字"];
-        let category = w["分類"] || "未分類";
-        let level = w["等級"] || "未分類";
-
-        if (type === "letter") {
-            return word ? word.toLowerCase().startsWith(value.toLowerCase()) : false;
-        } else if (type === "category") {
-            return category === value;
-        } else if (type === "level") {
-            return level === value;
-        }
-        return false;
-    });
-
-    if (filteredWords.length === 0) {
-        wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
-    } else {
-        filteredWords.forEach(word => {
-            let wordText = word.Words || word.word || word["單字"];
-            let isChecked = localStorage.getItem(`checked_${wordText}`) === "true"; // 檢查是否已 Check
-            
-            let item = document.createElement('div');
-            item.className = 'word-item-container';
-            item.innerHTML = `
-                <p class='word-item' onclick='showDetails(${JSON.stringify(word)})'>${wordText}</p>
-                <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
-                    ${isChecked ? "✔️ Checked" : "✅ Check"}
-                </button>
-            `;
-
-            wordItems.appendChild(item);
-        });
-    }
-
-    listContainer.style.display = "block";
-    document.getElementById("wordDetails").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
-}
 
 // 1️⃣ 負責顯示單字列表，包含「Check」按鈕
 function showWords(type, value) {
@@ -354,10 +296,11 @@ function showWords(type, value) {
                 ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg"
                 : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
 
+            let safeWord = encodeURIComponent(JSON.stringify(word)); // ✅ 避免 JSON 破壞 HTML
             let item = document.createElement('div');
             item.className = 'word-item-container';
             item.innerHTML = `
-                <p class='word-item' onclick='showDetails(${JSON.stringify(word)})'>${wordText}</p>
+                <p class='word-item' data-word="${wordText}">${wordText}</p>
                 <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
                     <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
                 </button>
@@ -372,28 +315,56 @@ function showWords(type, value) {
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
+
+    // ✅ **確保所有 `word-item` 綁定 `click` 事件**
+    setTimeout(() => {
+        document.querySelectorAll(".word-item").forEach(button => {
+            button.addEventListener("click", function() {
+                let wordText = this.dataset.word.trim(); // ✅ 取得 `data-word` 確保匹配
+                let wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]).trim().toLowerCase() === wordText.toLowerCase());
+
+                if (!wordObj) {
+                    console.error("❌ 找不到單字:", wordText);
+                    return;
+                }
+                console.log("✅ 點擊成功:", wordObj);
+                showDetails(wordObj);
+            });
+        });
+    }, 300); // 延遲 300ms 確保 DOM 生成後綁定
 }
+
 
 // 2️⃣ 放在 `showWords()` 之後，處理按鈕點擊事件
 function toggleCheck(word, button) {
     let isChecked = localStorage.getItem(`checked_${word}`) === "true";
     let icon = button.querySelector("img");
-    let wordItemContainer = button.closest(".word-item-container"); // 找到對應的單字容器
+    let wordItemContainer = button.closest(".word-item-container"); // 找到單字的容器
 
     if (isChecked) {
         localStorage.removeItem(`checked_${word}`);
         icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
         button.classList.remove("checked");
-        wordItemContainer.classList.remove("checked"); // 取消縮小+灰色效果
+        wordItemContainer.classList.remove("checked");
+
+        // ✅ 確保單字仍可見且可點擊
+        wordItemContainer.style.opacity = "1";
+        wordItemContainer.style.pointerEvents = "auto"; 
+
     } else {
         localStorage.setItem(`checked_${word}`, "true");
         icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg";
         button.classList.add("checked");
-        wordItemContainer.classList.add("checked"); // 加上縮小+灰色效果
+        wordItemContainer.classList.add("checked");
+
+        // ✅ 讓單字變淡但仍可點擊
+        wordItemContainer.style.opacity = "0.3";
+        wordItemContainer.style.pointerEvents = "auto"; 
     }
 
     console.log(`📌 單字 ${word} 的狀態已更新：`, localStorage.getItem(`checked_${word}`));
 }
+
 
 
 
