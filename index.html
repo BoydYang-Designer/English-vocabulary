@@ -296,9 +296,12 @@ function showWords(type, value) {
                 ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg"
                 : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
 
-            let safeWord = encodeURIComponent(JSON.stringify(word)); // ✅ 避免 JSON 破壞 HTML
             let item = document.createElement('div');
             item.className = 'word-item-container';
+            if (isChecked) {
+                item.classList.add("checked"); // 確保 checked 單字縮小
+            }
+            
             item.innerHTML = `
                 <p class='word-item' data-word="${wordText}">${wordText}</p>
                 <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
@@ -617,12 +620,20 @@ function displayNote() {
 }
 
 // **確保在頁面載入時，自動載入筆記**
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+    // 確保單字列表載入後應用 checked 狀態
     setTimeout(() => {
-        if (document.getElementById("wordTitle")) {
-            displayNote();
-        }
-    }, 500); // 延遲 500ms，確保 `wordTitle` 已載入
+        document.querySelectorAll(".word-item-container").forEach(item => {
+            let word = item.querySelector(".word-item").dataset.word;
+            if (localStorage.getItem(`checked_${word}`) === "true") {
+                item.classList.add("checked"); // 添加縮小樣式
+                let icon = item.querySelector(".check-button img");
+                if (icon) {
+                    icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg";
+                }
+            }
+        });
+    }, 500); // 避免 DOM 還未完全渲染
 });
 
 function exportAllData() {
