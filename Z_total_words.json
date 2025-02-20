@@ -2637,8 +2637,8 @@
             "等級": "B1",
             "Words": "decay",
             "pronunciation-1": "[dɪˋke]",
-            "traditional Chinese": "1.v.腐朽，腐爛；蛀蝕；衰敗；衰退 \n2.n 腐朽，腐爛；衰敗；衰退",
-            "English meaning": "1.decay as a verb : decay decayed  decayed decaying\n\"decay\" means to undergo the process of gradual deterioration or decomposition. It refers to the breaking down or rotting of organic matter over time.\nE.g. The fallen leaves decayed into rich compost over time.\nE.g. The Turkish Empire decayed in the nineteenth century. \nE.g. Sweets can decay the teeth. \n2.decay as a noun : refers to the process of gradual deterioration or decomposition, particularly of organic matter. It signifies the state of being in a process of decay, where something is breaking down or decomposing over time.\nE.g. The abandoned house showed signs of decay, with crumbling walls and overgrown vegetation.\nE.g. They are figuring out a way to stop the decay of the ancient building. "
+            "traditional Chinese": "\nn 腐朽，腐爛；衰敗；衰退\nv.腐朽，腐爛；蛀蝕；衰敗；衰退 ",
+            "English meaning": "Decay as a Noun:\n1. The process of rotting or breaking down over time.\nE.g. The dentist warned him about tooth decay caused by too much sugar.\nE.g. The old house showed signs of decay, with crumbling walls and broken windows.\n2. A gradual decline in strength, quality, or effectiveness.\nE.g. The decay of moral values in society was a concern for many.\nE.g. The once-great empire fell into decay over the centuries.\nDecay as a Verb: (decay / decayed / decaying)\n1.To rot or decompose over time.\nE.g. The fallen leaves began to decay on the forest floor.\nE.g. If food is left out for too long, it will start to decay.\n2.To decline in strength, quality, or effectiveness.\nE.g.His memory started to decay with age.\nE.g.Without proper maintenance, the building will quickly decay.\nSummary:\nDecay refers to the process of breaking down, whether it be physical decomposition or a gradual decline in quality or strength.\nRelated Words: rot, decompose, deteriorate, spoil, erode.\nAntonyms: preserve, strengthen, restore, improve, renew."
         },
         {
             "等級": "B1",
@@ -4902,17 +4902,22 @@
         },
         {
             "等級": "C2",
-            "Words": "inconsistencies"
+            "Words": "inconsistency",
+            "pronunciation-1": "[͵ɪnkənˋsɪstənsɪ]",
+            "English meaning": "Inconsistency as a Noun:\n\nA lack of uniformity or stability; something that changes or does not stay the same.\nE.g. The team's inconsistency in performance made it difficult to predict their success.\nE.g. His story had several inconsistencies, making it hard to believe.\n\nA contradiction or conflict between two or more things.\nE.g. There was an inconsistency between his words and actions.\nE.g. The report contained inconsistencies that needed clarification.\n\nSummary:\nInconsistency refers to a lack of stability, uniformity, or logical agreement, often leading to confusion or unpredictability.\n\nRelated Words: contradiction, irregularity, discrepancy, instability, variation.\nAntonyms: consistency, uniformity, reliability, stability, coherence."
         },
         {
-            "Words": "incorporated",
-            "pronunciation-1": "[ɪnˋkɔrpə͵retɪd]",
-            "traditional Chinese": "1. adj.合併的；結合的\n     法人（公司）組織的\n2. v.合併；混合\n       組成公司",
-            "English meaning": "\"Incorporated\" is an adjective and a verb with the following meanings:\n1. As an Adjective: Refers to something that is included or combined as part of a whole; also used to describe a legally formed corporation.\nE.g. The architect’s design included incorporated green spaces for a more sustainable environment.\nE.g. ABC Incorporated is one of the leading firms in the industry.\nAs a Verb: incorporate / incorporated / incorporating\n2. To combine or integrate one thing into another to make a unified whole, or to legally form a corporation.\nE.g. The designer incorporated ergonomic elements into the chair to improve comfort.\nE.g. The company incorporated in 1999 and has grown significantly since then.\nSummary: \"Incorporated\" describes something that has been combined into a larger whole or refers to a legally established corporation.\nRelated Words: Combined, Integrated, Merged, Formed\nAntonyms: Separate, Excluded, Independent\nIdeally, wood would be incorporated somehow to the bouncer floor module so that it connects with the high chair visually."
+            "Words": "sponge",
+            "pronunciation-1": "[spʌndʒ]",
+            "traditional Chinese": "n.1.海綿\n  2.(海中動物)海綿\n  3.海綿蛋糕\n  4.寄生他人生活的人\n    （俗稱「吃白食的人」）\nv.1.用海綿擦拭或清潔\n  2.揩油，依賴他人過活\n  （非正式用法）",
+            "English meaning": "Sponge as a Noun:\n1. A soft, porous material that absorbs liquid, used for cleaning or bathing.\nE.g. She used a sponge to wipe the kitchen counter.\nE.g. The bath sponge soaked up the soapy water easily.\n2. A simple sea creature with a porous body that lives underwater.\nE.g. The diver found a brightly colored sponge attached to the coral reef.\nE.g. Some marine sponges produce chemicals used in medicine.\n3. A light, soft cake with a fluffy texture.\nE.g. She baked a delicious sponge cake for the party.\nE.g. The dessert had layers of sponge soaked in coffee and cream.\n4. A person who takes advantage of others, often financially. (Informal)\nE.g. He’s a sponge, always borrowing money but never paying it back.\nE.g. She didn’t want to be a sponge, so she insisted on paying for her meal.\nSponge as a Verb: (sponge / sponged / sponging)\n1. To clean or absorb liquid using a sponge.\nE.g. He sponged the stain off his shirt.\nE.g. She gently sponged her face with warm water.\n2. To obtain something from someone else without giving anything in return. (Informal)\nE.g. He sponged off his friends instead of getting a job.\nE.g. She sponged a free meal from her coworkers.\nSummary:\nA sponge can refer to an absorbent cleaning tool, a marine animal, a type of cake, or a person who takes advantage of others. As a verb, it means to clean or absorb with a sponge or to take from others without giving back.\nRelated Words: absorb, wipe, soak, leech, parasite.\nAntonyms: repel, expel, give, contribute."
         },
         {
             "等級": "C1",
-            "Words": "incumbent"
+            "Words": "incorporated",
+            "pronunciation-1": "[ɪnˋkɔrpə͵retɪd]",
+            "traditional Chinese": "adj.1. 合併的；結合的\n     法人（公司）組織的\n  2. 包含的，合并到某物中的",
+            "English meaning": "1. Incorporated as an Adjective:\nFormed into a legal corporation (used in business contexts).\nE.g. The company was officially incorporated in 1995.\nE.g. Smith & Co. is an incorporated business operating worldwide.\n2. Included as part of something larger.\nE.g. The new design incorporated several customer suggestions.\nE.g. Traditional elements were incorporated into the modern architecture.\nE.g. Ideally, wood would be incorporated into the bouncer floor module in a way that visually connects it with the high chair.\nSummary:\n\"Incorporated\" can mean legally registered as a corporation or included as a part of something larger.\nRelated Words: included, merged, combined, registered, established.\nAntonyms: excluded, separated, unregistered, independent."
         },
         {
             "等級": "C1",
@@ -9774,6 +9779,7 @@
         },
         {
             "等級": "B2",
+            "分類": "daily",
             "Words": "torment",
             "pronunciation-1": "[tɔrˋmɛnt]-v",
             "pronunciation-2": "[ˋtɔr͵mɛnt]-n",
@@ -9782,6 +9788,7 @@
         },
         {
             "等級": "B2",
+            "分類": "daily",
             "Words": "torture",
             "pronunciation-1": "[ˋtɔrtʃɚ]",
             "traditional Chinese": "n.折磨，酷刑；拷問\nv.1.拷打，酷刑；拷問[U]\n   2.折磨；使為難(+with/by)\n",
@@ -9789,6 +9796,7 @@
         },
         {
             "等級": "B1",
+            "分類": "動作",
             "Words": "toss",
             "pronunciation-1": "[tɔs]",
             "traditional Chinese": "v.1.拋，扔，投\n   2.搖動；顛簸\n   3.拋幣決定(+for)(+to-v)\n    4.拌(+in/with)\n   5.翻來覆去(+about)\n   6.一甩頭離去",
@@ -9796,15 +9804,22 @@
         },
         {
             "等級": "B1",
-            "Words": "towel"
+            "分類": "daily",
+            "Words": "towel",
+            "pronunciation-1": "[ˋtaʊəl]",
+            "traditional Chinese": "n.毛巾，手巾；紙巾\nv.用毛巾擦(+down)",
+            "English meaning": "Towel can be a noun and verb\nAs a Noun:\nA towel is a piece of absorbent fabric used for drying the body, hands, or objects after they get wet. Towels are commonly made of cotton or microfiber and come in various sizes for different uses.\nE.g. She grabbed a towel to dry her hair after the shower.\nE.g. The hotel provided fresh towels every day.\nE.g. He wiped the table with a kitchen towel.\nE.g. The beach towel was covered in sand after a day at the shore.\nAs a Verb: (towel / toweled / toweling)\nTo towel means to dry something using a towel.\nE.g. She toweled her face after washing it.\nE.g. He toweled off quickly before getting dressed.\nE.g. The dog was toweled dry after its bath.\nSummary:\nA towel is an absorbent cloth used for drying, and to towel means to dry something using a towel.\nRelated Words: cloth, napkin, wipe, rag, absorbent fabric.\nAntonyms: (For noun) bare surface; (For verb) air-dry, drip-dry."
         },
         {
             "等級": "B1",
-            "Words": "toxin"
+            "分類": "醫學",
+            "Words": "toxin",
+            "pronunciation-1": "[ˋtɑksɪn]",
+            "traditional Chinese": "n. 毒素",
+            "English meaning": "Toxin as a Noun:\nA toxin is a poisonous substance produced by living organisms, such as bacteria, plants, or animals, that can cause harm to other organisms. Toxins can affect the body by damaging cells, disrupting biological processes, or causing illness.\nE.g. The venom of some snakes contains powerful toxins.\nE.g. Certain bacteria release toxins that can cause food poisoning.\nE.g. Scientists are studying ways to neutralize harmful toxins in the environment.\nE.g. Some toxins in polluted water can be dangerous to marine life.\nSummary:\nA toxin is a poisonous substance produced by living organisms that can cause harm to other organisms or the environment.\nRelated Words: poison, venom, contaminant, pollutant, harmful substance.\nAntonyms: antidote, remedy, cure, medicine."
         },
         {
             "等級": "C2",
-            "分類": "法政",
             "Words": "trade accord",
             "pronunciation-1": "trade accord",
             "traditional Chinese": "n.貿易協定",
@@ -9812,7 +9827,10 @@
         },
         {
             "分類": "職業",
-            "Words": "traditionalists"
+            "Words": "traditionalists",
+            "pronunciation-1": "[trəˋdɪʃənlɪst]",
+            "traditional Chinese": "n.傳統主義者；遵循傳統者",
+            "English meaning": "Traditionalists as a Noun:\nTraditionalists are people who uphold, support, or adhere to long-established customs, beliefs, or practices, often resisting change or modernization. They value tradition and prefer maintaining established ways of thinking or behaving.\nE.g. Traditionalists argue that classic teaching methods are more effective than modern approaches.\nE.g. Many traditionalists prefer handwritten letters over digital communication.\nE.g. The traditionalists in the community opposed the construction of a new shopping mall.\nE.g. Some traditionalists believe in preserving ancient rituals and ceremonies.\nSummary:\nTraditionalists are individuals who strongly believe in and support established customs, values, or ways of life, often opposing change or modernization.\nRelated Words: conservative, preservationist, classicist, conventionalist, old-fashioned thinker.\nAntonyms: modernist, progressive, innovator, reformist."
         },
         {
             "等級": "B1",
@@ -9823,7 +9841,10 @@
         },
         {
             "等級": "B1",
-            "Words": "trait"
+            "Words": "trait",
+            "pronunciation-1": "[tret]",
+            "traditional Chinese": "n.特徵，特點，特性(C)；\n 一點，少許，微量(+of)",
+            "English meaning": "Trait as a Noun:\nA trait is a distinguishing characteristic, quality, or feature of a person, animal, or thing. Traits can be physical, behavioral, or personality-related and are often inherited or developed over time.\nE.g. Honesty is an important trait in a good leader.\nE.g. Her most noticeable trait is her kindness toward others.\nE.g. Eye color is a genetic trait passed down from parents to children.\nE.g. The scientist studied the traits of different animal species.\nSummary:\nA trait is a specific characteristic or quality that defines a person, animal, or thing, which can be inherited, learned, or developed.\nRelated Words: characteristic, feature, quality, attribute, tendency.\nAntonyms: anomaly, abnormality, deviation."
         },
         {
             "等級": "C1",
@@ -9837,7 +9858,7 @@
             "Words": "trance",
             "pronunciation-1": "[træns]",
             "traditional Chinese": "n.1.催眠狀態；昏睡狀態\n   2.恍惚；出神，發呆",
-            "English meaning": "1.Trance\" means a state that is like being asleep except that you can move and respond to questions and commands like a person who is awake\nE.g. Under hypnosis, she entered a trance and recalled details of her childhood.\n2.Trance\" also refers to a state in which you are not aware of what is happening around you because you are thinking of something else\nE.g. Sorry, I didn't hear you calling my name. I was in a trance, thinking about the presentation I have to give tomorrow.\nE.g. He didn't answer when I spoke -- he seemed to be in a trance. \nE.g. He was staring out the window in a trance."
+            "English meaning": "Trance as a Noun:\n1. A state that is like being asleep except that you can move and respond to questions and commands like a person who is awake.\nE.g. Under hypnosis, she entered a trance and recalled details of her childhood.\nE.g. The shaman went into a deep trance during the ritual, communicating with the spirits.\n2. A state in which you are not aware of what is happening around you because you are deeply focused or lost in thought.\nE.g. Sorry, I didn't hear you calling my name. I was in a trance, thinking about the presentation I have to give tomorrow.\nE.g. He didn't answer when I spoke—he seemed to be in a trance.\nE.g. He was staring out the window in a trance.\nSummary:\nA trance is a state of altered awareness, either due to hypnosis or deep thought, where a person may seem disconnected from their surroundings.\nRelated Words: daze, stupor, hypnosis, dreamlike state, absorption.\nAntonyms: alertness, awareness, consciousness, attentiveness."
         },
         {
             "等級": "C1",
@@ -9859,14 +9880,14 @@
             "Words": "treacherous",
             "pronunciation-1": "[ˋtrɛtʃərəs]",
             "traditional Chinese": "adj.1.危險的；變化莫測的\n      2.背叛的；不忠的；",
-            "English meaning": "1.Dangerous, hazardous, or deceitful, often involving hidden risks or traps.\nE.g.The hikers faced treacherous conditions as they navigated the steep and icy mountain trail.\n2.likely to betray trust : unreliable\nE.g.He learned to be cautious around his colleague, who had a reputation for being a treacherous person."
+            "English meaning": "Treacherous as an Adjective:\n1. Dangerous or hazardous, often in a way that is not immediately obvious.\nE.g. The mountain roads were treacherous due to the icy conditions.\nE.g. The hikers were warned about the treacherous terrain ahead.\n2. Deceitful or untrustworthy, betraying trust or loyalty.\nE.g. He was sentenced for his treacherous actions against his own country.\nE.g. She realized too late that her so-called friend was treacherous.\nSummary:\nTreacherous describes something that is either physically dangerous or someone who is deceitful and untrustworthy.\nRelated Words: dangerous, perilous, deceitful, unfaithful, disloyal.\nAntonyms: safe, reliable, loyal, trustworthy, faithful."
         },
         {
             "等級": "B1",
             "Words": "treat",
             "pronunciation-1": "[trit]",
-            "traditional Chinese": "v.1.對待；看待\n  2.處理\n  3.探討；論述\n  4.醫療，治療(+for)\n   5.請客，宴請，款待(+to)\nn.6.難得的樂事",
-            "English meaning": "1.E.g.Do not treat this serious matter as a joke. \n2.E.g.The fabric is treated with a special chemical coating to make it resistant to water.\n3.E.g.The documentary treats the cultural history of the region with great depth and nuance.\n4.E.g.The doctors were not able to treat this disease. \n5.E.g.We'll treat you to dinner. \n6.E.g.Taking a vacation to the beach is always a wonderful treat for our family."
+            "traditional Chinese": "v.1.對待；看待\n  2.醫療，治療(+for)\n  3.處理\n  4.請客，宴請，款待(+to)\nn.1.款待，招待\n   2.難得的樂事",
+            "English meaning": "Treat as a Verb: (treat / treated / treating)\n1. To behave toward someone in a particular way.\nE.g. She always treats others with kindness and respect.\nE.g. He felt unfairly treated by his boss.\n2. To give medical care or attention to someone or something.\nE.g. The doctor treated the patient for an infection.\nE.g. This cream is used to treat dry skin.\n3. To deal with or handle something in a specific way.\nE.g. The article treats the subject with great sensitivity.\nE.g. The water is treated to remove impurities before use.\n4. To pay for someone's enjoyment, such as food, drinks, or entertainment.\nE.g. Let me treat you to dinner tonight.\nE.g. He treated his friends to a movie after work.\nTreat as a Noun:\n1. Something enjoyable or special, often given as a gift or reward.\nE.g. Ice cream is always a nice treat on a hot day.\nE.g. The surprise party was a special treat for her birthday.\n2. An enjoyable or entertaining experience.\nE.g. Watching the fireworks was a real treat.\nE.g. The concert was a treat for all music lovers.\nSummary:\nAs a verb, \"treat\" means to act toward someone in a certain way, provide medical care, handle something, or pay for someone’s enjoyment. As a noun, it refers to something enjoyable or special.\nRelated Words: handle, care for, reward, indulge, delight.\nAntonyms: neglect, mistreat, ignore, deprive, punish."
         },
         {
             "等級": "B1",
