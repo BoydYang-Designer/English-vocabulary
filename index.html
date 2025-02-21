@@ -273,6 +273,7 @@ function showWords(type, value) {
     lastWordListValue = value;
 
     document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none"; // 隱藏開始測驗按鈕
     let listContainer = document.getElementById("wordList");
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
@@ -384,12 +385,14 @@ function toggleCheck(word, button) {
 
 
 function backToFirstLayer() {
-    document.getElementById("searchContainer").style.display = "block"; // 顯示搜尋框
-    document.getElementById("wordList").style.display = "none"; // 隱藏單字列表
-    document.getElementById("wordDetails").style.display = "none"; // 隱藏詳細內容
-    document.querySelector('.alphabet-container').style.display = "block"; 
-    document.querySelector('.category-container').style.display = "block"; 
-    document.querySelector('.level-container').style.display = "block"; 
+    document.getElementById("searchContainer").style.display = "block";
+    document.getElementById("startQuizBtn").style.display = "block"; // 顯示開始測驗按鈕
+    document.getElementById("wordList").style.display = "none";
+    document.getElementById("wordDetails").style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "block";
+    document.querySelector('.category-container').style.display = "block";
+    document.querySelector('.level-container').style.display = "block";
+    document.getElementById("wordItems").innerHTML = "";
 
     // **顯示搜尋結果（但不清空）**
     let searchResults = document.getElementById("searchResults");

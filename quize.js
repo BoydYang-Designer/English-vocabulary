@@ -1,15 +1,18 @@
-// quize.js - 修正版：統一播放發音功能並解決重複定義問題
-
-let wordsData = []; // 儲存從 JSON 取得的單字資料
-let selectedCategory = null; // 儲存目前選擇的測驗分類
-let quizWords = []; // 儲存當前測驗單字
-let currentWord = null; // 當前測驗的單字
-let currentAudio = null; // 當前單字的音檔
-let isDataLoaded = false; // 確認資料是否成功載入
-const baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/"; // 音檔路徑
-let quizResults = []; // 儲存測驗結果
-
 // 初始化頁面並載入 JSON
+let selectedCategory = null; // 儲存目前選擇的測驗分類
+let selectedFilters = {
+    letters: new Set(),
+    categories: new Set(),
+    levels: new Set(),
+    checked: false
+};
+let wordsData = [];
+let quizWords = [];
+let currentWord = null;
+let isDataLoaded = false;
+let quizResults = [];
+const baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
+
 document.addEventListener("DOMContentLoaded", function () {
     fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
         .then(res => res.json())
@@ -19,9 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("✅ 單字資料已載入");
         })
         .catch(err => console.error("❌ 讀取 JSON 失敗:", err));
+    initializeStartQuizButton();
+    highlightCheckedWords();
 });
 
-// 統一撥放指定單字音檔
+
+// 播放音檔
 function playAudioForWord(word) {
     let audioLink = `${baseURL}${word}.mp3`;
     let audio = new Audio(audioLink);
@@ -41,7 +47,83 @@ function returnToMainMenu() {
     document.getElementById("quizCategories").style.display = "none";
 }
 
-// 顯示測驗分類選擇頁面
+
+
+// 篩選與多選功能
+function toggleSelection(type, value) {
+    if (selectedFilters[type].has(value)) {
+        selectedFilters[type].delete(value);
+    } else {
+        selectedFilters[type].add(value);
+    }
+    updateButtonSelectionState(type, value); // 更新按鈕顏色狀態
+}
+
+function toggleCheckedSelection() {
+    selectedFilters.checked = !selectedFilters.checked;
+    let checkedButton = document.querySelector("#checkedCategory button");
+    if (selectedFilters.checked) {
+        checkedButton.classList.add("selected"); // 加入選擇樣式
+    } else {
+        checkedButton.classList.remove("selected");
+    }
+}
+
+// 更新按鈕選擇狀態（加上或移除背景色）
+function updateButtonSelectionState(type, value) {
+    let buttonSelector = `.category-button[onclick*="${value}"]`;
+    let button = document.querySelector(buttonSelector);
+
+    if (button) {
+        if (selectedFilters[type].has(value)) {
+            button.classList.add("selected"); // 高亮顯示已選按鈕
+        } else {
+            button.classList.remove("selected"); // 移除高亮
+        }
+    }
+}
+
+
+function filterQuizWords() {
+    let filteredWords = wordsData.filter(word => {
+        let letterMatch = selectedFilters.letters.size === 0 || selectedFilters.letters.has(word.Words[0].toUpperCase());
+        let categoryMatch = selectedFilters.categories.size === 0 || selectedFilters.categories.has(word["分類"]);
+        let levelMatch = selectedFilters.levels.size === 0 || selectedFilters.levels.has(word["等級"]);
+        let checkedMatch = !selectedFilters.checked || localStorage.getItem(`checked_${word.Words}`) === "true";
+        return letterMatch && categoryMatch && levelMatch && checkedMatch;
+    });
+
+    if (filteredWords.length === 0) {
+        alert("⚠️ 沒有符合條件的單字！");
+        return;
+    }
+
+    quizWords = filteredWords;
+    startQuiz();
+}
+
+function generateMultiSelectButtons() {
+    let alphabetContainer = document.getElementById("alphabetButtons");
+    alphabetContainer.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter =>
+        `<button class='category-button' onclick='toggleSelection("letters", "${letter}")'>${letter}</button>`
+    ).join("");
+
+    let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
+    let categoryContainer = document.getElementById("categoryButtons");
+    categoryContainer.innerHTML = categories.map(category =>
+        `<button class='category-button' onclick='toggleSelection("categories", "${category}")'>${category}</button>`
+    ).join(" ");
+
+    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
+    let levelContainer = document.getElementById("levelButtons");
+    levelContainer.innerHTML = levels.map(level =>
+        `<button class='category-button' onclick='toggleSelection("levels", "${level}")'>${level}</button>`
+    ).join(" ");
+
+    let checkedContainer = document.getElementById("checkedCategory");
+    checkedContainer.innerHTML = `<button class='category-button' onclick='toggleCheckedSelection()'>Checked 單字</button>`;
+}
+
 function showQuizCategories() {
     if (!isDataLoaded) {
         alert("⚠️ 單字資料尚未載入完成，請稍後再試。");
@@ -49,81 +131,27 @@ function showQuizCategories() {
     }
     document.getElementById("mainMenu").style.display = "none";
     document.getElementById("quizCategories").style.display = "block";
-    generateCategoryButtons();
+    generateMultiSelectButtons();
+    document.getElementById("startFilteredQuizBtn").style.display = "block";
 }
 
-// 生成分類按鈕（字母、類別、等級、Checked）
-function generateCategoryButtons() {
-    createAlphabetButtons();
-    createCategoryButtons();
-    createLevelButtons();
-    createCheckedWordsButton();
+function highlightCheckedWords() {
+    document.querySelectorAll(".category-button").forEach(button => {
+        let word = button.innerText;
+        if (localStorage.getItem(`checked_${word}`) === "true") {
+            button.style.backgroundColor = "#90EE90"; // 淺綠色顯示已選
+        }
+    });
 }
 
-// 生成字母分類按鈕
-function createAlphabetButtons() {
-    let alphabetContainer = document.getElementById("alphabetButtons");
-    alphabetContainer.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter =>
-        `<button class='category-button' onclick='selectCategory("letter", "${letter}")'>${letter}</button>`
-    ).join("");
-}
-
-// 生成類別分類按鈕
-function createCategoryButtons() {
-    let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
-    let categoryContainer = document.getElementById("categoryButtons");
-    categoryContainer.innerHTML = categories.map(category =>
-        `<button class='category-button' onclick='selectCategory("category", "${category}")'>${category}</button>`
-    ).join(" ");
-}
-
-// 生成等級分類按鈕
-function createLevelButtons() {
-    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
-    let levelContainer = document.getElementById("levelButtons");
-    levelContainer.innerHTML = levels.map(level =>
-        `<button class='category-button' onclick='selectCategory("level", "${level}")'>${level}</button>`
-    ).join(" ");
-}
-
-// 生成 Checked 分類按鈕
-function createCheckedWordsButton() {
-    let checkedWords = Object.keys(localStorage).filter(key => key.startsWith("checked_"));
-    if (checkedWords.length > 0) {
-        document.getElementById("checkedCategory").innerHTML = 
-            `<button class='category-button' onclick='selectCategory("checked")'>Checked 單字 (${checkedWords.length})</button>`;
+function initializeStartQuizButton() {
+    let startQuizBtn = document.getElementById("startFilteredQuizBtn");
+    if (startQuizBtn) {
+        startQuizBtn.addEventListener("click", filterQuizWords);
     }
 }
 
-// 選擇分類後開始測驗
-function selectCategory(type, value) {
-    selectedCategory = { type, value };
-    filterWordsForQuiz();
-}
-
-// 根據分類篩選單字開始測驗
-function filterWordsForQuiz() {
-    let filteredWords = [];
-    if (selectedCategory.type === "letter") {
-        filteredWords = wordsData.filter(w => w.Words.toLowerCase().startsWith(selectedCategory.value.toLowerCase()));
-    } else if (selectedCategory.type === "category") {
-        filteredWords = wordsData.filter(w => w["分類"] === selectedCategory.value);
-    } else if (selectedCategory.type === "level") {
-        filteredWords = wordsData.filter(w => w["等級"] === selectedCategory.value);
-    } else if (selectedCategory.type === "checked") {
-        let checkedWords = Object.keys(localStorage).filter(key => key.startsWith("checked_"));
-        filteredWords = wordsData.filter(w => checkedWords.includes(w.Words));
-    }
-
-    if (filteredWords.length === 0) {
-        alert("⚠️ 沒有符合條件的單字！");
-        return;
-    }
-    quizWords = filteredWords;
-    startQuiz();
-}
-
-// 開始測驗流程
+// 開始測驗
 function startQuiz() {
     document.getElementById("quizCategories").style.display = "none";
     document.getElementById("quizArea").style.display = "block";
@@ -131,29 +159,19 @@ function startQuiz() {
 }
 
 
-// 提交答案並顯示正確答案與答題結果
+// 提交答案並檢查正確性
 function submitAnswer() {
     let userAnswer = document.getElementById("wordInput").value.trim().toLowerCase();
     let correctAnswer = currentWord.toLowerCase();
     let isCorrect = userAnswer === correctAnswer;
 
-    // 顯示正確答案與結果標記
-    let resultDisplay = document.getElementById("resultDisplay");
-    if (!resultDisplay) {
-        resultDisplay = document.createElement("div");
-        resultDisplay.id = "resultDisplay";
-        document.getElementById("quizArea").appendChild(resultDisplay);
-    }
-    resultDisplay.innerHTML = `正確答案: <strong>${currentWord}</strong> ${isCorrect ? '✅' : '❌'}`;
-
-    // 記錄測驗結果（不立即儲存）
     quizResults.push({
         word: currentWord,
         result: isCorrect ? "正確" : "錯誤",
         timestamp: new Date().toLocaleString()
     });
 
-    setTimeout(loadNextWord, 1500); // 1.5 秒後自動顯示下一題
+    setTimeout(loadNextWord, 1500);
 }
 
 

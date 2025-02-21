@@ -171,3 +171,11 @@ h1, h2 {
 #saveResultBtn:hover {
     background-color: #6e8191;
 }
+
+/* 在 quize.css 中新增這段 */
+.category-button.selected {
+    background-color: #90EE90;  /* 淺綠色背景 */
+    color: #000;                /* 黑色文字 */
+    border: 2px solid #4CAF50;  /* 深綠色邊框 */
+}
+
