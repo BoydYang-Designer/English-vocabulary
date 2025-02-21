@@ -10,11 +10,23 @@
 <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
     <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterWords()" style="padding: 8px; width: 200px;">
 </div>
+<div style="text-align: center; margin-top: 20px;">
+    <button id="startQuizBtn" class="button">開始測驗</button>
+</div>
 <div class="alphabet-container">
     <script>
         document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => 
             `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`
         ).join(" "));
+         
+        document.addEventListener("DOMContentLoaded", function () {
+    const quizButton = document.getElementById("startQuizBtn");
+    if (quizButton) {
+        quizButton.addEventListener("click", function () {
+            window.location.href = "quize.html"; // 跳轉到測驗頁面
+        });
+    }
+});
     </script>
 </div>
 <div class="category-container" id="categoryButtons"></div>

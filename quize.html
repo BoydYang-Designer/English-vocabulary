@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>單字測驗</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quize.css">
 </head>
 <body>
     <h1>單字測驗</h1>
-    <button class="back-button" onclick="goBack()">Back</button>
-    
+
+    <!-- 導覽按鈕區 -->
+    <div id="mainMenu">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <button class="button" onclick="showQuizCategories()">Start words</button>
+        <button class="button" disabled>Start sentence</button>
+        <button class="button" onclick="showReviewSection()">Reveiw</button>
+    </div>
+
     <div class="container">
         <!-- 測驗分類區 -->
-        <div id="quizCategories">
+        <div id="quizCategories" style="display: none;">
             <h2>選擇測驗分類</h2>
+            <button class="back-button" onclick="returnToMainMenu()">Back</button>
             <div class="alphabet-container" id="alphabetButtons"></div>
             <div class="category-container" id="categoryButtons"></div>
             <div class="level-container" id="levelButtons"></div>
             <div id="checkedCategory"></div>
         </div>
-        
+
         <!-- 測驗區 -->
         <div id="quizArea" style="display: none;">
             <h2>填寫單字</h2>
@@ -29,7 +37,7 @@
             <button class="button" onclick="submitAnswer()">提交</button>
             <button class="button" onclick="finishQuiz()">完成測驗</button>
         </div>
-        
+
         <!-- 測驗結果 -->
         <div id="quizResult" style="display: none;">
             <h2>測驗結果</h2>
@@ -38,8 +46,15 @@
             <p>答錯數: <span id="wrongWords"></span></p>
             <button class="button" onclick="saveResult()">儲存測驗結果</button>
         </div>
+
+        <!-- 複習區塊 -->
+        <div id="reviewSection" style="display: none;">
+            <h2>複習區塊</h2>
+            <button class="button" onclick="showErrorWords()">錯誤單字區</button>
+            <div id="reviewWordsList"></div>
+        </div>
     </div>
-    
+
     <script src="quize.js"></script>
 </body>
 </html>

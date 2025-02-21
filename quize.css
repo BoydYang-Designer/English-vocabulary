@@ -1,0 +1,173 @@
+/* quize.css - 更新版（與 style.css 保持一致風格） */
+
+/* 主體樣式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    margin: 0;
+    font-size: 24px;
+}
+
+/* 導覽與按鈕區樣式 */
+#mainMenu, #quizCategories, #quizArea, #quizResult, #reviewSection {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 一般按鈕樣式 */
+.button, .back-button {
+    display: block;
+    width: 150px;
+    height: 50px;
+    background-color: #424d57;
+    color: white;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px auto;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .back-button:hover {
+    background-color: #6e8191;
+}
+
+/* 分類按鈕樣式 */
+.category-button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #555;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+    background-color: #777;
+}
+
+/* 測驗單字顯示區 */
+#wordHint {
+    font-size: 24px;
+    margin: 20px 0;
+    text-align: center;
+    letter-spacing: 8px;
+}
+
+#wordInput {
+    display: block;
+    width: 80%;
+    margin: 0 auto 20px auto;
+    padding: 12px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* 測驗結果區塊樣式 */
+#quizResult {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f5f8;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.word-link {
+    background-color: #424d57;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.word-link:hover {
+    background-color: #6e8191;
+}
+
+.audio-btn {
+    background-color: #647f91;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.audio-btn:hover {
+    background-color: #4a6375;
+    transform: scale(1.05);
+}
+
+.result-status {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.result-status:before {
+    content: attr(data-status);
+}
+
+.result-status[data-status='✅'] {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.result-status[data-status='❌'] {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* 儲存按鈕樣式 */
+#saveResultBtn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 12px;
+    background-color: #424d57;
+    color: white;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#saveResultBtn:hover {
+    background-color: #6e8191;
+}
