@@ -31,13 +31,18 @@
 
         <!-- 測驗區 -->
         <div id="quizArea" style="display: none;">
-            <h2>填寫單字</h2>
-            <button id="playAudioBtn" class="audio-btn">播放發音</button>
-            <div id="wordHint"></div>
-            <input type="text" id="wordInput" placeholder="輸入完整單字">
-            <button class="button" onclick="submitAnswer()">提交</button>
-            <button class="button" onclick="finishQuiz()">完成測驗</button>
-        </div>
+             <h2>填寫單字</h2>
+             <button id="cancelBtn" class="back-button" onclick="returnToCategorySelection()">取消</button> <!-- 改為取消按鈕 -->
+             <div id="wordHint"></div>
+             <input type="text" id="wordInput" placeholder="輸入完整單字">
+
+             <!-- 將按鈕置中排列 -->
+             <div class="button-group">
+                   <button id="playAudioCenterBtn" class="button">播放發音</button> <!-- 移到按鈕群組並重新命名 -->
+                    <button class="button" onclick="submitAnswer()">提交</button>
+                    <button class="button" onclick="finishQuiz()">完成測驗</button>
+              </div>
+           </div>
 
         <!-- 測驗結果 -->
         <div id="quizResult" style="display: none;">

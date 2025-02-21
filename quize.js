@@ -47,7 +47,11 @@ function returnToMainMenu() {
     document.getElementById("quizCategories").style.display = "none";
 }
 
-
+// 返回分類選擇頁面
+function returnToCategorySelection() {
+    document.getElementById("quizArea").style.display = "none";
+    document.getElementById("quizCategories").style.display = "block";
+}
 
 // 篩選與多選功能
 function toggleSelection(type, value) {
@@ -260,5 +264,13 @@ function returnToMainMenu() {
 
 
 // 將播放音檔按鈕與提交按鈕綁定功能
-document.getElementById("playAudioBtn").addEventListener("click", playAudio);
-document.querySelector("button[onclick='submitAnswer()']").addEventListener("click", submitAnswer);
+// 綁定中央播放按鈕功能
+document.getElementById("playAudioCenterBtn").addEventListener("click", function() {
+    if (currentWord) {
+        playAudioForWord(currentWord);
+    }
+});
+
+// 取消按鈕返回上一頁
+document.getElementById("cancelBtn").addEventListener("click", returnToCategorySelection);
+

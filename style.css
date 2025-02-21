@@ -382,4 +382,19 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     transform: scale(1.1);
 }
 
+#cancelBtn {
+    background-color: #f44336; /* 紅色背景 */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block;
+}
+
+#cancelBtn:hover {
+    background-color: #d32f2f;
+}
 
