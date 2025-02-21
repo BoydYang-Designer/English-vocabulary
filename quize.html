@@ -70,35 +70,47 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     let params = new URLSearchParams(window.location.search);
+
     if (params.get('returning') === 'true') {
-        // 從 localStorage 讀取滾動位置
-        let scrollPosition = localStorage.getItem('quizScrollPosition');
-        
-        // 顯示測驗結果區塊並隱藏其他部分
-        document.getElementById("quizResult").style.display = "block";
-        document.getElementById("mainMenu").style.display = "none";
-        document.getElementById("quizCategories").style.display = "none";
-        document.getElementById("quizArea").style.display = "none";
-        document.getElementById("reviewSection").style.display = "none";
+        // 等待 JSON 資料載入
+        let checkDataLoaded = setInterval(() => {
+            if (wordsData && wordsData.length > 0) {
+                clearInterval(checkDataLoaded); // 停止檢查
+                console.log("✅ wordsData 已成功載入，準備恢復測驗結果");
 
-        // 恢復滾動位置
-        if (scrollPosition) {
-            let resultContainer = document.getElementById("quizResult");
-            if (resultContainer) {
-                resultContainer.scrollTop = parseInt(scrollPosition);
-                console.log("🔄 測驗結果已恢復到上次位置");
+                // 從 localStorage 讀取滾動位置
+                let scrollPosition = localStorage.getItem('quizScrollPosition');
+
+                // 顯示測驗結果區塊並隱藏其他部分
+                document.getElementById("quizResult").style.display = "block";
+                document.getElementById("mainMenu").style.display = "none";
+                document.getElementById("quizCategories").style.display = "none";
+                document.getElementById("quizArea").style.display = "none";
+                document.getElementById("reviewSection").style.display = "none";
+
+                // 恢復滾動位置
+                if (scrollPosition) {
+                    let resultContainer = document.getElementById("quizResult");
+                    if (resultContainer) {
+                        resultContainer.scrollTop = parseInt(scrollPosition);
+                        console.log("🔄 測驗結果已恢復到上次位置");
+                    }
+                }
+
+                // ✅ 恢復測驗結果
+                let savedResults = localStorage.getItem('currentQuizResults');
+                if (savedResults) {
+                    quizResults = JSON.parse(savedResults);
+                    console.log("✅ 測驗結果已恢復", quizResults);
+                    restoreQuizResults();
+                }
+            } else {
+                console.log("⏳ 等待 wordsData 載入中...");
             }
-        }
-
-        // ✅ 恢復測驗結果
-        let savedResults = localStorage.getItem('currentQuizResults');
-        if (savedResults) {
-            quizResults = JSON.parse(savedResults);
-            console.log("✅ 測驗結果已恢復", quizResults);
-            restoreQuizResults(); // 呼叫函數重新顯示測驗結果
-        }
+        }, 100); // 每 100 毫秒檢查一次
     }
 });
+
 </script>
 
 

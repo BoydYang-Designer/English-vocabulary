@@ -327,6 +327,7 @@ document.getElementById("playAudioCenterBtn").addEventListener("click", function
 });
 
 // ✅ 恢復測驗結果並重新顯示
+// ✅ 恢復測驗結果並重新顯示（修正音標顯示問題）
 function restoreQuizResults() {
     let resultContainer = document.getElementById("quizResult");
     resultContainer.innerHTML = `<h2>測驗結果</h2>`; // 重新顯示標題
@@ -336,10 +337,7 @@ function restoreQuizResults() {
         let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
         let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
 
-        let phonetics = pronunciation1;
-        if (pronunciation2) {
-            phonetics += ` / ${pronunciation2}`;
-        }
+        let phonetics = pronunciation1 || pronunciation2 ? `${pronunciation1} ${pronunciation2}` : "No Pronunciation";
 
         return `
             <div class='result-item'>
