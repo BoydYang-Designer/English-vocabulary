@@ -41,11 +41,6 @@ function goBack() {
     window.location.href = "index.html";
 }
 
-// 返回主選單
-function returnToMainMenu() {
-    document.getElementById("mainMenu").style.display = "block";
-    document.getElementById("quizCategories").style.display = "none";
-}
 
 // 返回分類選擇頁面
 function returnToCategorySelection() {
@@ -255,12 +250,39 @@ function saveQuizResults() {
 }
 
 
-// 返回測驗首頁
+// 返回首頁並重置所有狀態
 function returnToMainMenu() {
+    // 隱藏所有其他區塊
+    document.getElementById("quizCategories").style.display = "none";
+    document.getElementById("quizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "none";
-    document.getElementById("mainMenu").style.display = "block";
-}
+    document.getElementById("reviewSection").style.display = "none";
 
+    // 顯示主選單
+    document.getElementById("mainMenu").style.display = "block";
+
+    // 清除篩選條件
+    selectedFilters.letters.clear();
+    selectedFilters.categories.clear();
+    selectedFilters.levels.clear();
+    selectedFilters.checked = false;
+
+    // 清空測驗狀態
+    quizWords = [];
+    quizResults = [];
+    currentWord = null;
+
+    // 移除已選按鈕的高亮效果
+    document.querySelectorAll(".category-button").forEach(button => {
+        button.classList.remove("selected");
+    });
+
+    // 清空輸入欄與提示
+    document.getElementById("wordInput").value = "";
+    document.getElementById("wordHint").innerText = "";
+
+    console.log("✅ 返回首頁並重置狀態");
+}
 
 
 // 將播放音檔按鈕與提交按鈕綁定功能
