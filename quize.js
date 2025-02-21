@@ -273,21 +273,43 @@ function goToWordDetail(word) {
 
 
 
-// 儲存測驗結果與重要單字至 localStorage
+// ✅ 儲存測驗結果與更新錯誤單字、重要單字
 function saveQuizResults() {
     let timestamp = new Date().toLocaleString();
     localStorage.setItem(`quiz_session_${timestamp}`, JSON.stringify(quizResults));
 
-    // 儲存重要單字
+    // 讀取已存的錯誤單字
+    let storedWrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
+
+    // 1️⃣ 更新錯誤單字列表
+    quizResults.forEach(result => {
+        if (result.result === "錯誤") {
+            // 如果單字不在錯誤列表中，加入列表
+            if (!storedWrongWords.includes(result.word)) {
+                storedWrongWords.push(result.word);
+            }
+        } else {
+            // 如果答對了，從錯誤單字列表中移除
+            storedWrongWords = storedWrongWords.filter(word => word !== result.word);
+        }
+    });
+
+    // 儲存更新後的錯誤單字列表
+    localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
+
+    // 2️⃣ 儲存重要單字，避免重複
     document.querySelectorAll('.important-checkbox').forEach(checkbox => {
         if (checkbox.checked) {
             let word = checkbox.dataset.word;
-            localStorage.setItem(`important_${word}`, true);
+            localStorage.setItem(`important_${word}`, true); // 儲存為 true，避免重複
         }
     });
 
     alert("✅ 測驗結果與重要單字已成功儲存！");
 }
+
+
+
 
 
 // 返回首頁並重置所有狀態
@@ -360,6 +382,207 @@ function restoreQuizResults() {
         </div>
     `;
 }
+
+function showErrorWords() {
+    let reviewList = document.getElementById("reviewWordsList");
+    reviewList.innerHTML = "<h3>錯誤單字區</h3>"; // 清空現有內容
+
+    let wrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
+
+    if (wrongWords.length === 0) {
+        reviewList.innerHTML += "<p>沒有錯誤單字。</p>";
+        return;
+    }
+
+    let wordList = wrongWords.map(word => {
+        let wordData = wordsData.find(w => w.Words.toLowerCase() === word.toLowerCase());
+        let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
+        let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
+        let phonetics = pronunciation1 || pronunciation2 ? `${pronunciation1} ${pronunciation2}` : "No Pronunciation";
+
+        return `
+            <!-- 單字、音標、刪除框、標記框 -->
+            <div class='review-item'>
+                <button class='word-link' onclick="goToWordDetail('${word}')">${word}</button>
+                <button class='phonetic-btn' onclick="playAudioForWord('${word}')">${phonetics}</button>
+                <button class="delete-btn" data-word="${word}" onclick="toggleDeleteSelection(this)"></button>
+                <input type="checkbox" class="important-checkbox" data-word="${word}" title="標記為重要">
+            </div>
+            <!-- 按鈕區與對齊調整 -->
+            <div class='button-row'>
+                <div></div> <!-- 占位對齊單字 -->
+                <div></div> <!-- 占位對齊音標 -->
+                <button class="action-btn" onclick="deleteSelectedWords()">Delete</button> <!-- 刪除按鈕 -->
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button class="action-btn mark-btn" onclick="markSelectedWordsAsImportant()">Mark</button> <!-- 標記按鈕 -->
+                    <button class="back-btn" onclick="returnToReviewSection()">Back</button> <!-- 返回按鈕 -->
+                </div>
+            </div>
+        `;
+    }).join("");
+
+    reviewList.innerHTML += `<div>${wordList}</div>`;
+}
+
+
+
+// ✅ 切換刪除選擇狀態（空白 ↔ 叉叉）
+function toggleDeleteSelection(button) {
+    button.classList.toggle('selected'); // 切換選擇狀態
+    button.innerText = button.classList.contains('selected') ? '❌' : ''; // 選擇後顯示叉叉
+}
+
+
+// ✅ 將勾選的單字存入 LocalStorage，標記為重要單字
+function markSelectedWordsAsImportant() {
+    let checkedBoxes = document.querySelectorAll('.important-checkbox:checked');
+    if (checkedBoxes.length === 0) {
+        alert("⚠️ 請先選擇要標記為重要的單字！");
+        return;
+    }
+
+    // 儲存勾選的單字到 LocalStorage
+    checkedBoxes.forEach(box => {
+        let wordToMark = box.dataset.word;
+        localStorage.setItem(`important_${wordToMark}`, true); // 標記為重要
+    });
+
+    // 提示標記成功
+    alert("✅ 選中的單字已成功標記為重要！");
+
+    // 重新顯示更新後的錯誤單字列表
+    showErrorWords();
+}
+
+
+
+// ✅ 刪除已選擇的錯誤單字
+function deleteSelectedWords() {
+    let selectedButtons = document.querySelectorAll('.delete-btn.selected');
+    if (selectedButtons.length === 0) {
+        alert("⚠️ 請先選擇要刪除的單字！");
+        return;
+    }
+
+    let wrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
+
+    selectedButtons.forEach(button => {
+        let wordToDelete = button.dataset.word;
+        wrongWords = wrongWords.filter(word => word !== wordToDelete);
+    });
+
+    // 更新 LocalStorage
+    localStorage.setItem('wrongWords', JSON.stringify(wrongWords));
+
+    // 刪除成功提示
+    alert("✅ 選中的錯誤單字已成功刪除！");
+
+    // 刷新錯誤單字列表
+    showErrorWords();
+}
+
+// ✅ 返回主選單並顯示首頁內容
+function returnToReviewSection() {
+    // 隱藏所有內容
+    document.getElementById("reviewWordsList").innerHTML = ""; // 清空錯誤單字列表
+    document.getElementById("reviewSection").style.display = "none";
+    document.getElementById("quizCategories").style.display = "none";
+    document.getElementById("quizArea").style.display = "none";
+    document.getElementById("quizResult").style.display = "none";
+
+    // 顯示主選單
+    document.getElementById("mainMenu").style.display = "block";
+    console.log("✅ 返回首頁，顯示主選單");
+}
+
+
+// ✅ 顯示累積重要單字，附帶音標與勾選刪除功能
+function showImportantWords() {
+    let reviewList = document.getElementById("reviewWordsList");
+    reviewList.innerHTML = "<h3>重要單字區</h3>"; // 清空現有內容
+
+    let importantWords = [];
+
+    // 從 LocalStorage 讀取所有重要單字
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        if (key.startsWith("important_")) {
+            let word = key.replace("important_", "");
+            importantWords.push(word);
+        }
+    }
+
+    if (importantWords.length === 0) {
+        reviewList.innerHTML += "<p>沒有標記為重要的單字。</p>";
+        return;
+    }
+
+    // 生成單字列表，包含音標按鈕與勾選框
+    let wordList = importantWords.map(word => {
+        let wordData = wordsData.find(w => w.Words.toLowerCase() === word.toLowerCase());
+        let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
+        let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
+        let phonetics = pronunciation1 || pronunciation2 ? `${pronunciation1} ${pronunciation2}` : "No Pronunciation";
+
+        return `
+            <div class='review-item' style="display: flex; align-items: center; gap: 10px;">
+                <!-- 單字按鈕 -->
+                <button class='word-link' onclick="goToWordDetail('${word}')">${word}</button>
+                <!-- 音標按鈕 -->
+                <button class='phonetic-btn' onclick="playAudioForWord('${word}')">${phonetics}</button>
+                <!-- 勾選刪除按鈕 -->
+                <input type="checkbox" class="delete-important-checkbox" data-word="${word}">
+            </div>
+        `;
+    }).join("");
+
+    // 新增確定刪除按鈕
+    reviewList.innerHTML += `
+        <div>${wordList}</div>
+        <div style="margin-top: 20px; text-align: center;">
+            <button class="button" onclick="deleteSelectedImportantWords()">確定刪除選中的重要單字</button>
+        </div>
+    `;
+}
+
+// ✅ 刪除已勾選的重要單字
+function deleteSelectedImportantWords() {
+    let checkedBoxes = document.querySelectorAll('.delete-important-checkbox:checked');
+    if (checkedBoxes.length === 0) {
+        alert("⚠️ 請先選擇要刪除的單字！");
+        return;
+    }
+
+    // 刪除 LocalStorage 中標記為重要的單字
+    checkedBoxes.forEach(box => {
+        let wordToDelete = box.dataset.word;
+        localStorage.removeItem(`important_${wordToDelete}`);
+    });
+
+    // 提示刪除成功
+    alert("✅ 選中的重要單字已成功刪除！");
+
+    // 重新顯示更新後的列表
+    showImportantWords();
+}
+
+
+
+
+// ✅ 顯示複習區選項
+function showReviewSection() {
+    document.getElementById("mainMenu").style.display = "none";
+    document.getElementById("reviewSection").style.display = "block";
+
+    // ✅ 每次顯示前清空複習列表並顯示標題
+    document.getElementById("reviewWordsList").innerHTML = `
+        <h2>選擇複習類型</h2>
+        <button class="button" onclick="showErrorWords()">錯誤單字區</button>
+        <button class="button" onclick="showImportantWords()">重要單字區</button>
+    `;
+}
+
+
 
 
 // 取消按鈕返回上一頁

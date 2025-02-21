@@ -228,4 +228,96 @@ h1, h2 {
     background-color: #4a6375;
 }
 
+/* ✅ 單字、音標、框和按鈕用 Grid 平均排列 */
+.review-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 四等分 */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ✅ 框框與按鈕尺寸一致 */
+.delete-btn, .important-checkbox, .action-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ✅ 刪除選擇狀態（顯示叉叉） */
+.delete-btn.selected {
+    background-color: #ffcccc;
+    color: red;
+}
+
+/* ✅ 勾選框樣式 */
+.important-checkbox {
+    border: 1px solid #007bff;
+}
+
+.important-checkbox:checked {
+    background-color: #007bff;
+    color: white;
+}
+
+.important-checkbox:checked::before {
+    content: "✔️";
+    color: white;
+    font-size: 24px;
+}
+
+/* ✅ Delete 和 Mark 按鈕保持與框對齊 */
+.button-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.action-btn {
+    width: 50px;
+    height: 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.action-btn:hover {
+    background-color: #0056b3;
+}
+
+/* ✅ 調整勾選框與 Mark 按鈕稍微左移 */
+.important-checkbox, .mark-btn {
+    margin-left: -10px;  /* 向左移動10px，讓對齊更美觀 */
+}
+
+/* ✅ Back 按鈕樣式與其他按鈕一致 */
+.back-btn {
+    width: 50px;
+    height: 30px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-btn:hover {
+    background-color: #5a6268;
+}
 

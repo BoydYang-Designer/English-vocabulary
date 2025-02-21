@@ -14,105 +14,89 @@
         <button class="back-button" onclick="goBack()">Back</button>
         <button class="button" onclick="showQuizCategories()">Start words</button>
         <button class="button" disabled>Start sentence</button>
-        <button class="button" onclick="showReviewSection()">Reveiw</button>
+        <button class="button" onclick="showReviewSection()">Review</button>
     </div>
 
     <div class="container">
-    <!-- 測驗分類區 -->
-    <div id="quizCategories" style="display: none;">
-        <h2>選擇測驗分類</h2>
-        <button class="back-button" onclick="returnToMainMenu()">Back</button>
-        <div class="alphabet-container" id="alphabetButtons"></div>
-        <div class="category-container" id="categoryButtons"></div>
-        <div class="level-container" id="levelButtons"></div>
-        <div id="checkedCategory"></div>
-        <button id="startFilteredQuizBtn" class="button">開始測驗</button> <!-- 新增的開始測驗按鈕 -->
-    </div>
+        <!-- 測驗分類區 -->
+        <div id="quizCategories" style="display: none;">
+            <h2>選擇測驗分類</h2>
+            <button class="back-button" onclick="returnToMainMenu()">Back</button>
+            <div class="alphabet-container" id="alphabetButtons"></div>
+            <div class="category-container" id="categoryButtons"></div>
+            <div class="level-container" id="levelButtons"></div>
+            <div id="checkedCategory"></div>
+            <button id="startFilteredQuizBtn" class="button">開始測驗</button>
+        </div>
 
-    <!-- 測驗區 -->
-    <div id="quizArea" style="display: none;">
-        <h2>填寫單字</h2>
-        <button id="cancelBtn" class="back-button" onclick="returnToCategorySelection()">取消</button> <!-- 改為取消按鈕 -->
-        <div id="wordHint"></div>
-        <input type="text" id="wordInput" placeholder="輸入完整單字">
+        <!-- 測驗區 -->
+        <div id="quizArea" style="display: none;">
+            <h2>填寫單字</h2>
+            <button id="cancelBtn" class="back-button" onclick="returnToCategorySelection()">取消</button>
+            <div id="wordHint"></div>
+            <input type="text" id="wordInput" placeholder="輸入完整單字">
+            <div class="button-group">
+                <button id="playAudioCenterBtn" class="button">播放發音</button>
+                <button class="button" onclick="submitAnswer()">提交</button>
+                <button class="button" onclick="finishQuiz()">完成測驗</button>
+            </div>
+        </div>
 
-        <!-- 將按鈕置中排列 -->
-        <div class="button-group">
-            <button id="playAudioCenterBtn" class="button">播放發音</button> <!-- 移到按鈕群組並重新命名 -->
-            <button class="button" onclick="submitAnswer()">提交</button>
-            <button class="button" onclick="finishQuiz()">完成測驗</button>
+        <!-- 測驗結果 -->
+        <div id="quizResult" style="display: none;">
+            <h2>測驗結果統計</h2>
+            <div class="button-group">
+                <button class="button" onclick="saveQuizResults()">儲存此次測驗結果</button>
+                <button class="button" onclick="returnToMainMenu()">返回主頁</button>
+            </div>
+        </div>
+
+        <!-- 複習區塊 -->
+        <div id="reviewSection" style="display: none;">
+            <div id="reviewWordsList"></div> <!-- 留空給 JavaScript 動態生成內容 -->
         </div>
     </div>
 
-    <!-- 測驗結果 -->
-<div id="quizResult" style="display: none;">
-    <h2>測驗結果統計</h2>
-    
-    <!-- 按鈕群組排列 -->
-    <div class="button-group">
-        <button class="button" onclick="saveQuizResults()">儲存此次測驗結果</button>
-        <button class="button" onclick="returnToMainMenu()">返回主頁</button>
-    </div>
-</div>
-
-
-    <!-- 複習區塊 -->
-    <div id="reviewSection" style="display: none;">
-        <h2>複習區塊</h2>
-        <button class="button" onclick="showErrorWords()">錯誤單字區</button>
-        <div id="reviewWordsList"></div>
-    </div>
-</div>
-
-
     <script src="quize.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    let params = new URLSearchParams(window.location.search);
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let params = new URLSearchParams(window.location.search);
 
-    if (params.get('returning') === 'true') {
-        // 等待 JSON 資料載入
-        let checkDataLoaded = setInterval(() => {
-            if (wordsData && wordsData.length > 0) {
-                clearInterval(checkDataLoaded); // 停止檢查
-                console.log("✅ wordsData 已成功載入，準備恢復測驗結果");
+            if (params.get('returning') === 'true') {
+                let checkDataLoaded = setInterval(() => {
+                    if (wordsData && wordsData.length > 0) {
+                        clearInterval(checkDataLoaded);
+                        console.log("✅ wordsData 已成功載入，準備恢復測驗結果");
 
-                // 從 localStorage 讀取滾動位置
-                let scrollPosition = localStorage.getItem('quizScrollPosition');
+                        // 從 localStorage 讀取滾動位置
+                        let scrollPosition = localStorage.getItem('quizScrollPosition');
+                        document.getElementById("quizResult").style.display = "block";
+                        document.getElementById("mainMenu").style.display = "none";
+                        document.getElementById("quizCategories").style.display = "none";
+                        document.getElementById("quizArea").style.display = "none";
+                        document.getElementById("reviewSection").style.display = "none";
 
-                // 顯示測驗結果區塊並隱藏其他部分
-                document.getElementById("quizResult").style.display = "block";
-                document.getElementById("mainMenu").style.display = "none";
-                document.getElementById("quizCategories").style.display = "none";
-                document.getElementById("quizArea").style.display = "none";
-                document.getElementById("reviewSection").style.display = "none";
+                        if (scrollPosition) {
+                            let resultContainer = document.getElementById("quizResult");
+                            if (resultContainer) {
+                                resultContainer.scrollTop = parseInt(scrollPosition);
+                                console.log("🔄 測驗結果已恢復到上次位置");
+                            }
+                        }
 
-                // 恢復滾動位置
-                if (scrollPosition) {
-                    let resultContainer = document.getElementById("quizResult");
-                    if (resultContainer) {
-                        resultContainer.scrollTop = parseInt(scrollPosition);
-                        console.log("🔄 測驗結果已恢復到上次位置");
+                        let savedResults = localStorage.getItem('currentQuizResults');
+                        if (savedResults) {
+                            quizResults = JSON.parse(savedResults);
+                            console.log("✅ 測驗結果已恢復", quizResults);
+                            restoreQuizResults();
+                        }
+                    } else {
+                        console.log("⏳ 等待 wordsData 載入中...");
                     }
-                }
-
-                // ✅ 恢復測驗結果
-                let savedResults = localStorage.getItem('currentQuizResults');
-                if (savedResults) {
-                    quizResults = JSON.parse(savedResults);
-                    console.log("✅ 測驗結果已恢復", quizResults);
-                    restoreQuizResults();
-                }
-            } else {
-                console.log("⏳ 等待 wordsData 載入中...");
+                }, 100);
             }
-        }, 100); // 每 100 毫秒檢查一次
-    }
-});
-
-</script>
-
-
+        });
+    </script>
 </body>
 </html>
