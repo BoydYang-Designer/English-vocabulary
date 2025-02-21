@@ -224,12 +224,10 @@ function finishQuiz() {
     resultContainer.innerHTML = `<h2>測驗結果統計</h2>`;
 
     let resultList = quizResults.map(result => {
-        // 找到對應單字的音標
         let wordData = wordsData.find(w => w.Words === result.word);
         let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
         let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
 
-        // 合併音標顯示
         let phonetics = pronunciation1;
         if (pronunciation2) {
             phonetics += ` / ${pronunciation2}`;
@@ -237,7 +235,7 @@ function finishQuiz() {
 
         return `
             <div class='result-item'>
-                <button class='word-link' onclick="playAudioForWord('${result.word}')">${result.word}</button>
+                <button class='word-link' onclick="goToWordDetail('${result.word}')">${result.word}</button>
                 <button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button>
                 <span class='result-status'>${result.result === '正確' ? '✅' : '❌'}</span>
                 <label class='important-word'>
@@ -255,6 +253,14 @@ function finishQuiz() {
         </div>
     `;
 }
+
+// 跳轉到單字詳情頁面並傳遞單字名稱
+function goToWordDetail(word) {
+    // 使用 URL 參數將單字名稱傳遞到 index.html
+    window.location.href = `index.html?word=${encodeURIComponent(word)}`;
+}
+
+
 
 
 
