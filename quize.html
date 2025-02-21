@@ -18,48 +18,55 @@
     </div>
 
     <div class="container">
-        <!-- 測驗分類區 -->
-        <div id="quizCategories" style="display: none;">
-           <h2>選擇測驗分類</h2>
-           <button class="back-button" onclick="returnToMainMenu()">Back</button>
-           <div class="alphabet-container" id="alphabetButtons"></div>
-           <div class="category-container" id="categoryButtons"></div>
-           <div class="level-container" id="levelButtons"></div>
-           <div id="checkedCategory"></div>
-           <button id="startFilteredQuizBtn" class="button">開始測驗</button> <!-- 新增的開始測驗按鈕 -->
-         </div>
+    <!-- 測驗分類區 -->
+    <div id="quizCategories" style="display: none;">
+        <h2>選擇測驗分類</h2>
+        <button class="back-button" onclick="returnToMainMenu()">Back</button>
+        <div class="alphabet-container" id="alphabetButtons"></div>
+        <div class="category-container" id="categoryButtons"></div>
+        <div class="level-container" id="levelButtons"></div>
+        <div id="checkedCategory"></div>
+        <button id="startFilteredQuizBtn" class="button">開始測驗</button> <!-- 新增的開始測驗按鈕 -->
+    </div>
 
-        <!-- 測驗區 -->
-        <div id="quizArea" style="display: none;">
-             <h2>填寫單字</h2>
-             <button id="cancelBtn" class="back-button" onclick="returnToCategorySelection()">取消</button> <!-- 改為取消按鈕 -->
-             <div id="wordHint"></div>
-             <input type="text" id="wordInput" placeholder="輸入完整單字">
+    <!-- 測驗區 -->
+    <div id="quizArea" style="display: none;">
+        <h2>填寫單字</h2>
+        <button id="cancelBtn" class="back-button" onclick="returnToCategorySelection()">取消</button> <!-- 改為取消按鈕 -->
+        <div id="wordHint"></div>
+        <input type="text" id="wordInput" placeholder="輸入完整單字">
 
-             <!-- 將按鈕置中排列 -->
-             <div class="button-group">
-                   <button id="playAudioCenterBtn" class="button">播放發音</button> <!-- 移到按鈕群組並重新命名 -->
-                    <button class="button" onclick="submitAnswer()">提交</button>
-                    <button class="button" onclick="finishQuiz()">完成測驗</button>
-              </div>
-           </div>
-
-        <!-- 測驗結果 -->
-        <div id="quizResult" style="display: none;">
-            <h2>測驗結果</h2>
-            <p>總測驗數: <span id="totalWords"></span></p>
-            <p>答對數: <span id="correctWords"></span></p>
-            <p>答錯數: <span id="wrongWords"></span></p>
-            <button class="button" onclick="saveResult()">儲存測驗結果</button>
-        </div>
-
-        <!-- 複習區塊 -->
-        <div id="reviewSection" style="display: none;">
-            <h2>複習區塊</h2>
-            <button class="button" onclick="showErrorWords()">錯誤單字區</button>
-            <div id="reviewWordsList"></div>
+        <!-- 將按鈕置中排列 -->
+        <div class="button-group">
+            <button id="playAudioCenterBtn" class="button">播放發音</button> <!-- 移到按鈕群組並重新命名 -->
+            <button class="button" onclick="submitAnswer()">提交</button>
+            <button class="button" onclick="finishQuiz()">完成測驗</button>
         </div>
     </div>
+
+    <!-- 測驗結果 -->
+<div id="quizResult" style="display: none;">
+    <h2>測驗結果統計</h2>
+    <p>總測驗數: <span id="totalWords"></span></p>
+    <p>答對數: <span id="correctWords"></span></p>
+    <p>答錯數: <span id="wrongWords"></span></p>
+    
+    <!-- 按鈕群組排列 -->
+    <div class="button-group">
+        <button class="button" onclick="saveQuizResults()">儲存此次測驗結果</button>
+        <button class="button" onclick="returnToMainMenu()">返回主頁</button>
+    </div>
+</div>
+
+
+    <!-- 複習區塊 -->
+    <div id="reviewSection" style="display: none;">
+        <h2>複習區塊</h2>
+        <button class="button" onclick="showErrorWords()">錯誤單字區</button>
+        <div id="reviewWordsList"></div>
+    </div>
+</div>
+
 
     <script src="quize.js"></script>
 </body>

@@ -170,9 +170,19 @@ function submitAnswer() {
         timestamp: new Date().toLocaleString()
     });
 
+    // 顯示完整單字，並根據答對或答錯設定顏色
+    let revealedWord = currentWord[0]; // 保留第一個字母
+    for (let i = 1; i < currentWord.length - 1; i++) {
+        let letterStyle = isCorrect ? "color: black;" : "color: red;";
+        revealedWord += ` <span style="${letterStyle}">${currentWord[i]}</span>`;
+    }
+    revealedWord += ` ${currentWord[currentWord.length - 1]}`; // 保留最後一個字母
+
+    document.getElementById("wordHint").innerHTML = revealedWord;
+
+    // 延遲 1.5 秒後自動顯示下一題
     setTimeout(loadNextWord, 1500);
 }
-
 
 // 顯示下一個單字並生成提示
 function loadNextWord() {
@@ -214,9 +224,21 @@ function finishQuiz() {
     resultContainer.innerHTML = `<h2>測驗結果統計</h2>`;
 
     let resultList = quizResults.map(result => {
+        // 找到對應單字的音標
+        let wordData = wordsData.find(w => w.Words === result.word);
+        let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
+        let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
+
+        // 合併音標顯示
+        let phonetics = pronunciation1;
+        if (pronunciation2) {
+            phonetics += ` / ${pronunciation2}`;
+        }
+
         return `
             <div class='result-item'>
                 <button class='word-link' onclick="playAudioForWord('${result.word}')">${result.word}</button>
+                <button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button>
                 <span class='result-status'>${result.result === '正確' ? '✅' : '❌'}</span>
                 <label class='important-word'>
                     <input type='checkbox' class='important-checkbox' data-word='${result.word}'> 重要單字
@@ -227,7 +249,10 @@ function finishQuiz() {
 
     resultContainer.innerHTML += `
         <div>${resultList}</div>
-        <button class='button' onclick='saveQuizResults()'>儲存此次測驗結果</button>
+        <div class="button-group">
+            <button class="button" onclick="saveQuizResults()">儲存此次測驗結果</button>
+            <button class="button" onclick="returnToMainMenu()">返回主頁</button>
+        </div>
     `;
 }
 
@@ -295,4 +320,6 @@ document.getElementById("playAudioCenterBtn").addEventListener("click", function
 
 // 取消按鈕返回上一頁
 document.getElementById("cancelBtn").addEventListener("click", returnToCategorySelection);
+
+
 
