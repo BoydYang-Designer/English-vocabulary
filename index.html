@@ -434,7 +434,6 @@ function showDetails(word) {
     document.getElementById("searchInputDetails").value = "";
     document.getElementById("searchResultsDetails").innerHTML = "";
 
-
     // ✅ **確保 `.audio-controls` 顯示**
     let audioControls = document.querySelector(".audio-controls");
     if (audioControls) {
@@ -494,7 +493,50 @@ function showDetails(word) {
 
     // ✅ **確保筆記內容顯示**
     displayNote();
+
+    // ✅ **更新 Back 按鈕功能（根據來源動態更新）**
+    updateBackButton();
 }
+
+// ✅ **讀取 URL 來源參數**
+function getFromPage() {
+    let params = new URLSearchParams(window.location.search);
+    return params.get('from');
+}
+
+// ✅ **根據來源設定 Back 按鈕功能**
+// ✅ 強制更新 Back 按鈕功能，並加入除錯訊息
+function updateBackButton() {
+    let fromPage = getFromPage();
+    let backButtons = document.querySelectorAll('#wordDetails .button');
+
+    // 找到文字為 "Back" 的按鈕並更新其功能
+    backButtons.forEach(button => {
+        if (button.textContent.trim() === 'Back') {
+            if (fromPage === 'quiz') {
+                button.onclick = function() {
+                    console.log("🔙 從 quize.html 返回測驗結果");
+                    returnToQuiz();
+                };
+            } else {
+                button.onclick = function() {
+                    console.log("↩️ 返回上一層");
+                    backToWordList();
+                };
+            }
+        }
+    });
+}
+
+// ✅ **返回 quize.html 測驗頁面的功能**
+function returnToQuiz() {
+    console.log("✅ 返回 quize.html 測驗頁面");
+
+    // 先跳轉回 quize.html
+    window.location.href = 'quize.html?returning=true';
+}
+
+
 
 
 function backToWordList() {
@@ -699,6 +741,12 @@ function importAllData() {
 function getWordFromURL() {
     let params = new URLSearchParams(window.location.search);
     return params.get('word');
+}
+
+// 從 URL 取得來源參數
+function getFromPage() {
+    let params = new URLSearchParams(window.location.search);
+    return params.get('from');
 }
 
 // 在 JSON 載入完成後顯示詳情

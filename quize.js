@@ -221,7 +221,115 @@ function finishQuiz() {
     document.getElementById("quizResult").style.display = "block";
 
     let resultContainer = document.getElementById("quizResult");
-    resultContainer.innerHTML = `<h2>測驗結果統計</h2>`;
+    resultContainer.innerHTML = `<h2>測驗結果</h2>`; // 修改標題，移除統計數字
+
+    // 顯示單字測驗結果列表
+    let resultList = quizResults.map(result => {
+        let wordData = wordsData.find(w => w.Words === result.word);
+        let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
+        let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
+
+        let phonetics = pronunciation1;
+        if (pronunciation2) {
+            phonetics += ` / ${pronunciation2}`;
+        }
+
+        return `
+            <div class='result-item'>
+                <button class='word-link' onclick="goToWordDetail('${result.word}')">${result.word}</button>
+                <button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button>
+                <span class='result-status'>${result.result === '正確' ? '✅' : '❌'}</span>
+                <label class='important-word'>
+                    <input type='checkbox' class='important-checkbox' data-word='${result.word}'> 重要單字
+                </label>
+            </div>
+        `;
+    }).join("");
+
+    // 顯示單字結果與按鈕
+    resultContainer.innerHTML += `
+        <div>${resultList}</div>
+        <div class="button-group">
+            <button class="button" onclick="saveQuizResults()">儲存此次測驗結果</button>
+            <button class="button" onclick="returnToMainMenu()">返回主頁</button>
+        </div>
+    `;
+}
+
+
+// 跳轉到單字詳情頁面並保存當前狀態與測驗結果
+function goToWordDetail(word) {
+    // 儲存測驗結果區塊的滾動位置
+    let resultContainer = document.getElementById("quizResult");
+    let scrollPosition = resultContainer ? resultContainer.scrollTop : 0;
+    
+    // 儲存當前狀態與測驗結果到 localStorage
+    localStorage.setItem('quizScrollPosition', scrollPosition);
+    localStorage.setItem('currentQuizResults', JSON.stringify(quizResults));
+
+    // 加上來源參數，並傳遞來自 quize 的資訊
+    window.location.href = `index.html?word=${encodeURIComponent(word)}&from=quiz`;
+}
+
+
+
+// 儲存測驗結果與重要單字至 localStorage
+function saveQuizResults() {
+    let timestamp = new Date().toLocaleString();
+    localStorage.setItem(`quiz_session_${timestamp}`, JSON.stringify(quizResults));
+
+    // 儲存重要單字
+    document.querySelectorAll('.important-checkbox').forEach(checkbox => {
+        if (checkbox.checked) {
+            let word = checkbox.dataset.word;
+            localStorage.setItem(`important_${word}`, true);
+        }
+    });
+
+    alert("✅ 測驗結果與重要單字已成功儲存！");
+}
+
+
+// 返回首頁並重置所有狀態
+// ✅ 確保在回到主頁時才清空 quizResults
+function returnToMainMenu() {
+    document.getElementById("quizCategories").style.display = "none";
+    document.getElementById("quizArea").style.display = "none";
+    document.getElementById("quizResult").style.display = "none";
+    document.getElementById("reviewSection").style.display = "none";
+    document.getElementById("mainMenu").style.display = "block";
+
+    selectedFilters.letters.clear();
+    selectedFilters.categories.clear();
+    selectedFilters.levels.clear();
+    selectedFilters.checked = false;
+
+    quizWords = [];
+    quizResults = []; // 只在返回主頁時清空
+    currentWord = null;
+
+    document.querySelectorAll(".category-button").forEach(button => {
+        button.classList.remove("selected");
+    });
+
+    document.getElementById("wordInput").value = "";
+    document.getElementById("wordHint").innerText = "";
+
+    console.log("✅ 返回首頁並重置狀態");
+}
+
+// 將播放音檔按鈕與提交按鈕綁定功能
+// 綁定中央播放按鈕功能
+document.getElementById("playAudioCenterBtn").addEventListener("click", function() {
+    if (currentWord) {
+        playAudioForWord(currentWord);
+    }
+});
+
+// ✅ 恢復測驗結果並重新顯示
+function restoreQuizResults() {
+    let resultContainer = document.getElementById("quizResult");
+    resultContainer.innerHTML = `<h2>測驗結果</h2>`; // 重新顯示標題
 
     let resultList = quizResults.map(result => {
         let wordData = wordsData.find(w => w.Words === result.word);
@@ -245,6 +353,7 @@ function finishQuiz() {
         `;
     }).join("");
 
+    // 加上按鈕與結果內容
     resultContainer.innerHTML += `
         <div>${resultList}</div>
         <div class="button-group">
@@ -254,75 +363,6 @@ function finishQuiz() {
     `;
 }
 
-// 跳轉到單字詳情頁面並傳遞單字名稱
-function goToWordDetail(word) {
-    // 使用 URL 參數將單字名稱傳遞到 index.html
-    window.location.href = `index.html?word=${encodeURIComponent(word)}`;
-}
-
-
-
-
-
-// 儲存測驗結果與重要單字至 localStorage
-function saveQuizResults() {
-    let timestamp = new Date().toLocaleString();
-    localStorage.setItem(`quiz_session_${timestamp}`, JSON.stringify(quizResults));
-
-    // 儲存重要單字
-    document.querySelectorAll('.important-checkbox').forEach(checkbox => {
-        if (checkbox.checked) {
-            let word = checkbox.dataset.word;
-            localStorage.setItem(`important_${word}`, true);
-        }
-    });
-
-    alert("✅ 測驗結果與重要單字已成功儲存！");
-}
-
-
-// 返回首頁並重置所有狀態
-function returnToMainMenu() {
-    // 隱藏所有其他區塊
-    document.getElementById("quizCategories").style.display = "none";
-    document.getElementById("quizArea").style.display = "none";
-    document.getElementById("quizResult").style.display = "none";
-    document.getElementById("reviewSection").style.display = "none";
-
-    // 顯示主選單
-    document.getElementById("mainMenu").style.display = "block";
-
-    // 清除篩選條件
-    selectedFilters.letters.clear();
-    selectedFilters.categories.clear();
-    selectedFilters.levels.clear();
-    selectedFilters.checked = false;
-
-    // 清空測驗狀態
-    quizWords = [];
-    quizResults = [];
-    currentWord = null;
-
-    // 移除已選按鈕的高亮效果
-    document.querySelectorAll(".category-button").forEach(button => {
-        button.classList.remove("selected");
-    });
-
-    // 清空輸入欄與提示
-    document.getElementById("wordInput").value = "";
-    document.getElementById("wordHint").innerText = "";
-
-    console.log("✅ 返回首頁並重置狀態");
-}
-
-
-// 將播放音檔按鈕與提交按鈕綁定功能
-// 綁定中央播放按鈕功能
-document.getElementById("playAudioCenterBtn").addEventListener("click", function() {
-    if (currentWord) {
-        playAudioForWord(currentWord);
-    }
-});
 
 // 取消按鈕返回上一頁
 document.getElementById("cancelBtn").addEventListener("click", returnToCategorySelection);
