@@ -1,5 +1,4 @@
-// 初始化頁面並載入 JSON
-let selectedCategory = null; // 儲存目前選擇的測驗分類
+let selectedCategory = null;
 let selectedFilters = {
     letters: new Set(),
     categories: new Set(),
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(err => console.error("❌ 讀取 JSON 失敗:", err));
     initializeStartQuizButton();
-    highlightCheckedWords();
 });
 
 
