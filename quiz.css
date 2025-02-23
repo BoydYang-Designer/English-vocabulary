@@ -332,3 +332,64 @@ h1, h2 {
     font-size: 16px;
     z-index: 1000;
 }
+
+
+@media (max-width: 768px) {
+    /* ✅ 主要內容改為垂直排列 */
+    .container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* ✅ 確保測驗結果區塊在小螢幕上置中 */
+    #quizResult {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* ✅ 讓單字測驗結果的每一行內容可以適應小螢幕 */
+    .result-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* ✅ 按鈕區塊讓其填滿畫面且間距一致 */
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    /* ✅ 確保按鈕與輸入框在手機上不會太寬或太窄 */
+    .button, .back-button, #wordInput {
+        width: 100%;
+        max-width: 280px;
+        margin: 5px auto;
+    }
+
+    /* ✅ 測驗單字提示字體適應手機 */
+    #wordHint {
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+
+    /* ✅ 調整音標按鈕大小，避免太擠 */
+    .phonetic-btn {
+        font-size: 14px;
+        padding: 8px;
+        min-width: 120px;
+    }
+
+    /* ✅ 儲存按鈕區塊置中 */
+    #saveResultBtn {
+        width: 90%;
+        max-width: 250px;
+    }
+}
+
