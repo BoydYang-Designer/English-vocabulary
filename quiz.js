@@ -310,9 +310,13 @@ function goToWordDetail(word) {
     localStorage.setItem('quizScrollPosition', scrollPosition);
     localStorage.setItem('currentQuizResults', JSON.stringify(quizResults));
 
+    // 記錄測驗結果是否顯示
+    localStorage.setItem('returnToQuizResult', "true");
+
     // 跳轉到 index.html 單字詳情
     window.location.href = `index.html?word=${encodeURIComponent(word)}&from=quiz`;
 }
+
 
 
 // ✅ 勾選或取消勾選時同步更新 localStorage

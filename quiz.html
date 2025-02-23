@@ -55,40 +55,49 @@
 
     <script src="quiz.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let params = new URLSearchParams(window.location.search);
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let params = new URLSearchParams(window.location.search);
 
-            if (params.get('returning') === 'true') {
-                let checkDataLoaded = setInterval(() => {
-                    if (wordsData && wordsData.length > 0) {
-                        clearInterval(checkDataLoaded);
-                        console.log("✅ wordsData 已成功載入，準備恢復測驗結果");
+        if (params.get('returning') === 'true') {
+            let checkDataLoaded = setInterval(() => {
+                if (typeof wordsData !== 'undefined' && wordsData.length > 0) {
+                    clearInterval(checkDataLoaded);
+                    console.log("✅ wordsData 已成功載入，準備恢復測驗結果");
 
-                        // 從 localStorage 讀取滾動位置
-                        let scrollPosition = localStorage.getItem('quizScrollPosition');
-                        document.getElementById("quizResult").style.display = "block";
-                        document.getElementById("mainMenu").style.display = "none";
-                        document.getElementById("quizCategories").style.display = "none";
-                        document.getElementById("quizArea").style.display = "none";
-                        if (scrollPosition) {
-                            let resultContainer = document.getElementById("quizResult");
-                            if (resultContainer) {
-                                resultContainer.scrollTop = parseInt(scrollPosition);
-                                console.log("🔄 測驗結果已恢復到上次位置");
-                            }
+                    // 顯示測驗結果區塊，隱藏其他區塊
+                    document.getElementById("quizResult").style.display = "block";
+                    document.getElementById("mainMenu").style.display = "none";
+                    document.getElementById("quizCategories").style.display = "none";
+                    document.getElementById("quizArea").style.display = "none";
+
+                    // 恢復滾動位置
+                    let scrollPosition = localStorage.getItem('quizScrollPosition');
+                    if (scrollPosition) {
+                        let resultContainer = document.getElementById("quizResult");
+                        if (resultContainer) {
+                            resultContainer.scrollTop = parseInt(scrollPosition, 10);
+                            console.log("🔄 測驗結果已恢復到上次位置");
                         }
+                    }
 
-                        let savedResults = localStorage.getItem('currentQuizResults');
-                        if (savedResults) {
-                             quizResults = JSON.parse(savedResults);
-                             console.log("✅ 測驗結果已恢復", quizResults);
-                             restoreQuizResults();
-                         } else {
-                              console.log("⚠️ 沒有找到儲存的測驗結果");
-                }, 100);
-            }
-        });
-    </script>
+                    // 恢復測驗結果
+                    let savedResults = localStorage.getItem('currentQuizResults');
+                    if (savedResults) {
+                        quizResults = JSON.parse(savedResults);
+                        console.log("✅ 測驗結果已恢復", quizResults);
+                        restoreQuizResults();
+                    } else {
+                        console.log("⚠️ 沒有找到儲存的測驗結果");
+                    }
+
+                    // 清除 LocalStorage 中的 returnToQuizResult，防止重複觸發
+                    localStorage.removeItem('returnToQuizResult');
+                }
+            }, 100);
+        }
+    });
+</script>
+
 </body>
 </html>

@@ -553,7 +553,6 @@ function updateBackButton() {
     let fromPage = getFromPage();
     let backButtons = document.querySelectorAll('#wordDetails .button');
 
-    // 找到文字為 "Back" 的按鈕並更新其功能
     backButtons.forEach(button => {
         if (button.textContent.trim() === 'Back') {
             if (fromPage === 'quiz') {
