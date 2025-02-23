@@ -1,7 +1,6 @@
-/* quize.css - 更新版（與 style.css 保持一致風格） */
-
-/* 主體樣式 */
-
+/* ==========================================
+   🌍 全域設定 (Global Styles)
+========================================== */
 html, body {
     touch-action: manipulation;
 }
@@ -13,6 +12,9 @@ body {
     padding: 0;
 }
 
+/* ==========================================
+   🏷️ 標題樣式 (Headings)
+========================================== */
 h1, h2 {
     text-align: center;
     background: #333;
@@ -22,8 +24,10 @@ h1, h2 {
     font-size: 24px;
 }
 
-/* 導覽與按鈕區樣式 */
-#mainMenu, #quizCategories, #quizArea, #quizResult, {
+/* ==========================================
+   📦 主要區塊樣式 (Main Sections)
+========================================== */
+#mainMenu, #quizCategories, #quizArea, #quizResult {
     max-width: 800px;
     margin: 20px auto;
     background-color: #fff;
@@ -32,7 +36,9 @@ h1, h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 一般按鈕樣式 */
+/* ==========================================
+   🔘 按鈕樣式 (Buttons)
+========================================== */
 .button, .back-button {
     display: block;
     width: 150px;
@@ -53,7 +59,7 @@ h1, h2 {
     background-color: #6e8191;
 }
 
-/* 分類按鈕樣式 */
+/* ✅ 分類按鈕 */
 .category-button {
     padding: 10px 15px;
     margin: 5px;
@@ -69,97 +75,30 @@ h1, h2 {
     background-color: #777;
 }
 
-/* 測驗單字顯示區 */
-#wordHint {
-    font-size: 24px;
-    margin: 20px 0;
-    text-align: center;
-    letter-spacing: 8px;
+/* ✅ 選中的分類按鈕 */
+.category-button.selected {
+    background-color: #90EE90;
+    color: #000;
+    border: 2px solid #4CAF50;
 }
 
-#wordInput {
-    display: block;
-    width: 80%;
-    margin: 0 auto 20px auto;
-    padding: 12px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-/* 測驗結果區塊樣式 */
-#quizResult {
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.result-item {
+/* ✅ 置中按鈕區塊 */
+.button-group {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f1f5f8;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.word-link {
-    background-color: #424d57;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 24px; /* 調整字體大小 */
-    transition: background-color 0.3s ease;
+/* ✅ 特殊按鈕（返回/儲存） */
+.back-button {
+    background-color: #f44336;
 }
 
-.word-link:hover {
-    background-color: #6e8191;
+.back-button:hover {
+    background-color: #d32f2f;
 }
 
-.audio-btn {
-    background-color: #647f91;
-    color: #fff;
-    font-size: 16px;
-    padding: 12px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.audio-btn:hover {
-    background-color: #4a6375;
-    transform: scale(1.05);
-}
-
-.result-status {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 10px;
-}
-
-.result-status:before {
-    content: attr(data-status);
-}
-
-.result-status[data-status='✅'] {
-    background-color: #d4edda;
-    color: #155724;
-}
-
-.result-status[data-status='❌'] {
-    background-color: #f8d7da;
-    color: #721c24;
-}
-
-/* 儲存按鈕樣式 */
 #saveResultBtn {
     display: block;
     width: 200px;
@@ -178,154 +117,149 @@ h1, h2 {
     background-color: #6e8191;
 }
 
-/* 在 quize.css 中新增這段 */
-.category-button.selected {
-    background-color: #90EE90;  /* 淺綠色背景 */
-    color: #000;                /* 黑色文字 */
-    border: 2px solid #4CAF50;  /* 深綠色邊框 */
+/* ==========================================
+   📝 測驗區塊樣式 (Quiz Area)
+========================================== */
+#wordHint {
+    font-size: 24px;
+    margin: 20px 0;
+    text-align: center;
+    letter-spacing: 8px;
 }
 
-/* 置中按鈕區塊 */
-.button-group {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* 按鈕之間的間距 */
-    margin-top: 20px;
-}
-
-.back-button {
+#wordInput {
     display: block;
-    margin: 10px auto;
-    background-color: #f44336;
+    width: 80%;
+    margin: 0 auto 20px auto;
+    padding: 12px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* ==========================================
+   📊 測驗結果樣式 (Quiz Results)
+========================================== */
+#quizResult {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ 每一個測驗結果 */
+.result-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f5f8;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ 單字按鈕 */
+.word-link {
+    background-color: #424d57;
     color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    min-width: 100px;
+    text-align: center;
 }
 
-#quizResult .button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #4CAF50;  /* 綠色背景 */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.word-link:hover {
+    background-color: #6e8191;
 }
 
-#quizResult .button:hover {
-    background-color: #45a049;  /* Hover 效果 */
-}
-
+/* ✅ 音標按鈕 */
 .phonetic-btn {
     background-color: #6e8191;
     color: white;
     padding: 8px 12px;
-    margin-left: 10px;
     border-radius: 15px;
     border: none;
     cursor: pointer;
-    font-size: 20px; /* 提高清晰度 */
+    font-size: 20px;
     transition: background-color 0.3s ease;
+    min-width: 120px;
 }
 
 .phonetic-btn:hover {
     background-color: #4a6375;
 }
 
-
-/* ✅ 框框與按鈕尺寸一致 */
-.delete-btn, .important-checkbox, .action-btn {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    background: transparent;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* ✅ 刪除選擇狀態（顯示叉叉） */
-.delete-btn.selected {
-    background-color: #ffcccc;
-    color: red;
-}
-
-/* ✅ 勾選框樣式 */
-.important-checkbox {
-    border: 1px solid #007bff;
-}
-
-.important-checkbox:checked {
-    background-color: #007bff;
-    color: white;
-}
-
-.important-checkbox:checked::before {
-    content: "✔️";
-    color: white;
-    font-size: 24px;
-}
-
-/* ✅ Delete 和 Mark 按鈕保持與框對齊 */
-.button-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+/* ✅ 正確/錯誤標記 */
+.result-status {
+    font-size: 18px;
+    padding: 5px 10px;
+    min-width: 60px;
     text-align: center;
 }
 
-.action-btn {
-    width: 50px;
-    height: 30px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+.result-status[data-status='✅'] {
+    background-color: #d4edda;
+    color: #155724;
 }
 
-.action-btn:hover {
-    background-color: #0056b3;
+.result-status[data-status='❌'] {
+    background-color: #f8d7da;
+    color: #721c24;
 }
 
-/* ✅ 調整勾選框與 Mark 按鈕稍微左移 */
-.important-checkbox, .mark-btn {
-    margin-left: -10px;  /* 向左移動10px，讓對齊更美觀 */
-}
+/* ==========================================
+   📱 手機適應 (Responsive Design)
+========================================== */
+@media (max-width: 768px) {
+    #quizResult {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 15px;
+    }
 
-/* ✅ Back 按鈕樣式與其他按鈕一致 */
-.back-btn {
-    width: 50px;
-    height: 30px;
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
+    .result-item {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 600px;
+        padding: 10px;
+        overflow-x: auto;
+    }
 
-.back-btn:hover {
-    background-color: #5a6268;
-}
+    .button, .back-button, #wordInput {
+        width: 100%;
+        max-width: 280px;
+        margin: 5px auto;
+    }
 
-.important-checkbox {
-    margin-right: 10px; /* 與單字保持距離 */
-    transform: scale(1.2); /* 放大 checkbox */
-    cursor: pointer;
-}
+    #wordHint {
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
 
-/* ✅ 儲存成功提示樣式 */
-.notification {
-    display: none;
+    .phonetic-btn {
+        font-size: 14px;
+        padding: 8px;
+        min-width: 120px;
+    }
+
+    #saveResultBtn {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    /* ✅ 測驗結果儲存成功提示 */
+    #saveNotification {
+    display: none;  /* 預設隱藏 */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -336,65 +270,7 @@ h1, h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-size: 16px;
     z-index: 1000;
+    text-align: center;
+    }
+
 }
-
-
-@media (max-width: 768px) {
-    /* ✅ 主要內容改為垂直排列 */
-    .container {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    /* ✅ 確保測驗結果區塊在小螢幕上置中 */
-    #quizResult {
-        width: 90%;
-        max-width: 500px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 15px;
-    }
-
-    /* ✅ 讓單字測驗結果的每一行內容可以適應小螢幕 */
-    .result-item {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    /* ✅ 按鈕區塊讓其填滿畫面且間距一致 */
-    .button-group {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-
-    /* ✅ 確保按鈕與輸入框在手機上不會太寬或太窄 */
-    .button, .back-button, #wordInput {
-        width: 100%;
-        max-width: 280px;
-        margin: 5px auto;
-    }
-
-    /* ✅ 測驗單字提示字體適應手機 */
-    #wordHint {
-        font-size: 20px;
-        letter-spacing: 5px;
-    }
-
-    /* ✅ 調整音標按鈕大小，避免太擠 */
-    .phonetic-btn {
-        font-size: 14px;
-        padding: 8px;
-        min-width: 120px;
-    }
-
-    /* ✅ 儲存按鈕區塊置中 */
-    #saveResultBtn {
-        width: 90%;
-        max-width: 250px;
-    }
-}
-

@@ -243,7 +243,7 @@ function loadNextWord() {
 
 
   // 完成測驗後顯示結果統計，包含單字、音標、對錯標記與重要單字勾選功能
- function finishQuiz() {
+function finishQuiz() {
     document.getElementById("quizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "block";
 
@@ -254,7 +254,16 @@ function loadNextWord() {
     resultContainer.innerHTML = `<h2>測驗結果</h2>`; // 重新顯示標題
 
     if (existingNotification) {
-        resultContainer.appendChild(existingNotification); // ✅ 重新附加提示框
+        // 確保提示框預設為隱藏
+        existingNotification.style.display = "none";  
+
+        // 顯示儲存成功提示框
+        setTimeout(function() {
+            existingNotification.style.display = "block";  // 顯示提示框
+        }, 500);  // 延遲顯示可以讓結果先顯示再顯示提示框
+
+        // 重新附加提示框
+        resultContainer.appendChild(existingNotification); 
     }
 
     // ✅ 顯示單字測驗結果列表
@@ -380,9 +389,10 @@ function saveQuizResults() {
     // 顯示儲存成功提示
     let notification = document.getElementById("saveNotification");
     if (notification) {
-        notification.style.display = "block";
+        notification.style.display = "none";  // 顯示通知
+
         setTimeout(() => {
-            notification.style.display = "none";
+            notification.style.display = "none";  // 3秒後隱藏
         }, 3000);
     }
 }
