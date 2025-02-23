@@ -259,7 +259,6 @@ h1, h2 {
 
     /* ✅ 測驗結果儲存成功提示 */
     #saveNotification {
-    display: none;  /* 預設隱藏 */
     position: fixed;
     bottom: 20px;
     right: 20px;

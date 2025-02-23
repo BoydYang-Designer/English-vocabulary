@@ -249,21 +249,15 @@ function finishQuiz() {
 
     let resultContainer = document.getElementById("quizResult");
 
-    // ✅ 保留提示框，避免覆蓋提示元素
+    // 清空結果容器內容
+    resultContainer.innerHTML = `<h2>測驗結果</h2>`; 
+
+    // 取得儲存成功提示框
     let existingNotification = document.getElementById("saveNotification");
-    resultContainer.innerHTML = `<h2>測驗結果</h2>`; // 重新顯示標題
 
+    // 確保提示框預設隱藏，若已經顯示則隱藏
     if (existingNotification) {
-        // 確保提示框預設為隱藏
-        existingNotification.style.display = "none";  
-
-        // 顯示儲存成功提示框
-        setTimeout(function() {
-            existingNotification.style.display = "block";  // 顯示提示框
-        }, 500);  // 延遲顯示可以讓結果先顯示再顯示提示框
-
-        // 重新附加提示框
-        resultContainer.appendChild(existingNotification); 
+        existingNotification.style.display = "none";  // 預設隱藏
     }
 
     // ✅ 顯示單字測驗結果列表
@@ -289,7 +283,7 @@ function finishQuiz() {
         `;
     }).join("");
 
-    // ✅ 顯示單字結果與按鈕
+    // 顯示單字結果與按鈕
     resultContainer.innerHTML += `
         <div>${resultList}</div>
         <div class="button-group">
@@ -297,8 +291,14 @@ function finishQuiz() {
             <button class="button" onclick="returnToMainMenu()">返回主頁</button>
         </div>
     `;
-}
 
+    // ✅ 顯示測驗結果儲存成功的提示框
+    if (existingNotification) {
+        setTimeout(function() {
+            existingNotification.style.display = "block";  // 顯示提示框
+        }, 500);  // 延遲顯示，可以讓結果先顯示
+    }
+}
 
 
 function goToWordDetail(word) {

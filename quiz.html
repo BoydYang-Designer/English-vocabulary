@@ -50,8 +50,6 @@
             </div>
 
         </div>
-        
-            <div id="saveNotification" class="notification">✅ 測驗結果已成功儲存！</div>
 
     </div>
 
@@ -73,8 +71,6 @@
                         document.getElementById("mainMenu").style.display = "none";
                         document.getElementById("quizCategories").style.display = "none";
                         document.getElementById("quizArea").style.display = "none";
-                        document.getElementById("reviewSection").style.display = "none";
-
                         if (scrollPosition) {
                             let resultContainer = document.getElementById("quizResult");
                             if (resultContainer) {
@@ -85,13 +81,11 @@
 
                         let savedResults = localStorage.getItem('currentQuizResults');
                         if (savedResults) {
-                            quizResults = JSON.parse(savedResults);
-                            console.log("✅ 測驗結果已恢復", quizResults);
-                            restoreQuizResults();
-                        }
-                    } else {
-                        console.log("⏳ 等待 wordsData 載入中...");
-                    }
+                             quizResults = JSON.parse(savedResults);
+                             console.log("✅ 測驗結果已恢復", quizResults);
+                             restoreQuizResults();
+                         } else {
+                              console.log("⚠️ 沒有找到儲存的測驗結果");
                 }, 100);
             }
         });
