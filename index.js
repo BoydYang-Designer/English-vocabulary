@@ -286,7 +286,8 @@ function toggleCheck(word, button) {
         wordItemContainer.style.pointerEvents = "auto"; 
     }
 
-    console.log(`📌 單字 ${word} 的狀態已更新：`, localStorage.getItem(`checked_${word}`));
+    console.log(`📌 ${word} 的狀態更新為: ${isChecked ? "未勾選" : "已勾選"}`);
+
 }
 
 
@@ -340,6 +341,9 @@ function showImportantWords() {
 
             let item = document.createElement("div");
             item.className = "word-item-container";
+            if (isChecked) {
+            item.classList.add("checked"); // ✅ 確保縮小效果
+            }
 
             item.innerHTML = `
                 <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${wordText}", this)' checked>
@@ -406,6 +410,9 @@ function showWrongWords() {
 
             let item = document.createElement("div");
             item.className = "word-item-container";
+            if (isChecked) {
+            item.classList.add("checked"); // ✅ 確保縮小效果
+            }
 
             item.innerHTML = `
                 <p class='word-item' data-word="${wordText}">${wordText}</p>

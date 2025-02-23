@@ -397,4 +397,22 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 #cancelBtn:hover {
     background-color: #d32f2f;
 }
+/* ✅ 勾選按鈕樣式 */
+.check-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* ✅ 勾選圖示大小 */
+.check-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* ✅ 已勾選單字的淡化效果 */
+.word-item-container.checked {
+    opacity: 0.3;
+}
 
