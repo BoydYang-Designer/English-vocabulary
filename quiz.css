@@ -18,7 +18,7 @@ h1, h2 {
 }
 
 /* 導覽與按鈕區樣式 */
-#mainMenu, #quizCategories, #quizArea, #quizResult, #reviewSection {
+#mainMenu, #quizCategories, #quizArea, #quizResult, {
     max-width: 800px;
     margin: 20px auto;
     background-color: #fff;
@@ -228,15 +228,6 @@ h1, h2 {
     background-color: #4a6375;
 }
 
-/* ✅ 單字、音標、框和按鈕用 Grid 平均排列 */
-.review-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* 四等分 */
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-}
 
 /* ✅ 框框與按鈕尺寸一致 */
 .delete-btn, .important-checkbox, .action-btn {
