@@ -315,7 +315,7 @@ function backToFirstLayer() {
     lastWordListValue = "";
 }
 
-// ✅ 顯示所有已標記為重要的單字
+// 重要的單字
 function showImportantWords() {
     console.log("📌 顯示重要單字");
 
@@ -347,6 +347,17 @@ function showImportantWords() {
                 </button>
             `;
 
+            // ✅ 為每個重要單字新增點擊事件，進入第三層詳情
+            item.querySelector('.word-item').addEventListener("click", function () {
+                let wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]).trim().toLowerCase() === wordText.toLowerCase());
+                if (wordObj) {
+                    console.log("✅ 進入詳情頁面:", wordObj);
+                    showDetails(wordObj);
+                } else {
+                    console.error("❌ 找不到單字資料:", wordText);
+                }
+            });
+
             wordItems.appendChild(item);
         });
     }
@@ -357,8 +368,6 @@ function showImportantWords() {
     document.querySelector(".category-container").style.display = "none";
     document.querySelector(".level-container").style.display = "none";
 }
-
-
 
 
 
