@@ -143,10 +143,20 @@ function filterWordsInDetails() {
 function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
     let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
+    
+    // ✅ 新增「重要單字」分類按鈕
+    categories.unshift("重要單字");
+
     document.getElementById("categoryButtons").innerHTML = categories
-        .map(c => `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`)
+        .map(c => {
+            if (c === "重要單字") {
+                return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
+            }
+            return `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`;
+        })
         .join(" ");
 }
+
 
 function createLevelButtons() {
     if (!wordsData || !Array.isArray(wordsData)) {
@@ -248,8 +258,6 @@ function showWords(type, value) {
     }, 300); // 延遲 300ms 確保 DOM 生成後綁定
 }
 
-
-// 2️⃣ 放在 `showWords()` 之後，處理按鈕點擊事件
 function toggleCheck(word, button) {
     let isChecked = localStorage.getItem(`checked_${word}`) === "true";
     let icon = button.querySelector("img");
@@ -306,6 +314,52 @@ function backToFirstLayer() {
     lastWordListType = "";
     lastWordListValue = "";
 }
+
+// ✅ 顯示所有已標記為重要的單字
+function showImportantWords() {
+    console.log("📌 顯示重要單字");
+
+    let listContainer = document.getElementById("wordList");
+    let wordItems = document.getElementById("wordItems");
+    wordItems.innerHTML = "";
+
+    let importantWords = Object.keys(localStorage).filter(key => key.startsWith("important_"));
+
+    if (importantWords.length === 0) {
+        wordItems.innerHTML = "<p>⚠️ 目前沒有標記為重要的單字</p>";
+    } else {
+        importantWords.forEach(key => {
+            let wordText = key.replace("important_", "");
+            let isChecked = localStorage.getItem(`checked_${wordText}`) === "true"; // 檢查是否已 Check
+
+            let iconSrc = isChecked
+                ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg"
+                : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
+
+            let item = document.createElement("div");
+            item.className = "word-item-container";
+
+            item.innerHTML = `
+                <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${wordText}", this)' checked>
+                <p class='word-item' data-word="${wordText}">${wordText}</p>
+                <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
+                    <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
+                </button>
+            `;
+
+            wordItems.appendChild(item);
+        });
+    }
+
+    listContainer.style.display = "block";
+    document.getElementById("wordDetails").style.display = "none";
+    document.querySelector(".alphabet-container").style.display = "none";
+    document.querySelector(".category-container").style.display = "none";
+    document.querySelector(".level-container").style.display = "none";
+}
+
+
+
 
 
 function showDetails(word) {
