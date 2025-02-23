@@ -175,19 +175,36 @@ function submitAnswer() {
         timestamp: new Date().toLocaleString()
     });
 
-    // 顯示完整單字，並根據答對或答錯設定顏色
-    let revealedWord = currentWord[0]; // 保留第一個字母
-    for (let i = 1; i < currentWord.length - 1; i++) {
-        let letterStyle = isCorrect ? "color: black;" : "color: red;";
-        revealedWord += ` <span style="${letterStyle}">${currentWord[i]}</span>`;
+    // ✅ 即時更新錯誤單字
+    let storedWrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
+
+    if (!isCorrect) {
+        if (!storedWrongWords.includes(currentWord)) {
+            storedWrongWords.push(currentWord);
+        }
+    } else {
+        storedWrongWords = storedWrongWords.filter(word => word !== currentWord);
     }
-    revealedWord += ` ${currentWord[currentWord.length - 1]}`; // 保留最後一個字母
+
+    // ✅ 立即儲存到 localStorage
+    localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
+
+    // 顯示提示用於除錯
+    console.log(`❌ 錯誤單字已更新: ${storedWrongWords}`);
+
+    // 顯示完整單字
+    let revealedWord = currentWord[0];
+    for (let i = 1; i < currentWord.length - 1; i++) {
+        revealedWord += ` <span style="color: ${isCorrect ? 'black' : 'red'};">${currentWord[i]}</span>`;
+    }
+    revealedWord += ` ${currentWord[currentWord.length - 1]}`;
 
     document.getElementById("wordHint").innerHTML = revealedWord;
 
     // 延遲 1.5 秒後自動顯示下一題
     setTimeout(loadNextWord, 1500);
 }
+
 
 // 顯示下一個單字並生成提示
 function loadNextWord() {
@@ -220,15 +237,22 @@ function loadNextWord() {
 }
 
 
-// 完成測驗後顯示結果統計，包含單字、音標、對錯標記與重要單字勾選功能
-function finishQuiz() {
+  // 完成測驗後顯示結果統計，包含單字、音標、對錯標記與重要單字勾選功能
+ function finishQuiz() {
     document.getElementById("quizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "block";
 
     let resultContainer = document.getElementById("quizResult");
-    resultContainer.innerHTML = `<h2>測驗結果</h2>`; // 修改標題，移除統計數字
 
-    // 顯示單字測驗結果列表
+    // ✅ 保留提示框，避免覆蓋提示元素
+    let existingNotification = document.getElementById("saveNotification");
+    resultContainer.innerHTML = `<h2>測驗結果</h2>`; // 重新顯示標題
+
+    if (existingNotification) {
+        resultContainer.appendChild(existingNotification); // ✅ 重新附加提示框
+    }
+
+    // ✅ 顯示單字測驗結果列表
     let resultList = quizResults.map(result => {
         let wordData = wordsData.find(w => w.Words === result.word);
         let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
@@ -251,7 +275,7 @@ function finishQuiz() {
         `;
     }).join("");
 
-    // 顯示單字結果與按鈕
+    // ✅ 顯示單字結果與按鈕
     resultContainer.innerHTML += `
         <div>${resultList}</div>
         <div class="button-group">
@@ -260,6 +284,7 @@ function finishQuiz() {
         </div>
     `;
 }
+
 
 
 function goToWordDetail(word) {
@@ -293,24 +318,36 @@ function saveQuizResults() {
     let timestamp = new Date().toLocaleString();
     localStorage.setItem(`quiz_session_${timestamp}`, JSON.stringify(quizResults));
 
-    // 1️⃣ 更新錯誤單字列表
+    // ✅ 儲存錯誤單字
+    let storedWrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
+
     quizResults.forEach(result => {
         if (result.result === "錯誤") {
-            // 如果單字不在錯誤列表中，加入列表
             if (!storedWrongWords.includes(result.word)) {
                 storedWrongWords.push(result.word);
             }
         } else {
-            // 如果答對了，從錯誤單字列表中移除
             storedWrongWords = storedWrongWords.filter(word => word !== result.word);
         }
     });
 
-    // 儲存更新後的錯誤單字列表
+    // ✅ 更新 localStorage 錯誤單字清單
     localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
 
-    alert("✅ 測驗結果與重要單字已成功儲存！");
+    // ✅ 顯示確認儲存成功提示
+    console.log(`✅ 錯誤單字已成功儲存: ${storedWrongWords}`);
+
+    // 顯示儲存成功提示
+    let notification = document.getElementById("saveNotification");
+    if (notification) {
+        notification.style.display = "block";
+        setTimeout(() => {
+            notification.style.display = "none";
+        }, 3000);
+    }
 }
+
+
 
 
 
