@@ -124,8 +124,13 @@ function generateMultiSelectButtons() {
         `<button class='category-button' onclick='toggleSelection("levels", "${level}")'>${level}</button>`
     ).join(" ");
 
+    // ✅ 新增 Checked, 重要單字, 錯誤單字按鈕
     let checkedContainer = document.getElementById("checkedCategory");
-    checkedContainer.innerHTML = `<button class='category-button' onclick='toggleCheckedSelection()'>Checked 單字</button>`;
+    checkedContainer.innerHTML = `
+        <button class='category-button' onclick='toggleCheckedSelection()'>Checked 單字</button>
+        <button class='category-button' onclick='toggleImportantSelection()'>重要單字</button>
+        <button class='category-button' onclick='toggleWrongSelection()'>錯誤單字</button>
+    `;
 }
 
 function showQuizCategories() {
@@ -135,7 +140,7 @@ function showQuizCategories() {
     }
     document.getElementById("mainMenu").style.display = "none";
     document.getElementById("quizCategories").style.display = "block";
-    generateMultiSelectButtons();
+    generateMultiSelectButtons(); // 產生篩選按鈕
     document.getElementById("startFilteredQuizBtn").style.display = "block";
 }
 
@@ -311,6 +316,41 @@ function toggleImportant(word, checkbox) {
         console.log(`❌ 單字 ${word} 取消重要標記 (quiz)`);
     }
 }
+
+//篩選「重要單字」測驗
+function toggleImportantSelection() {
+    let importantWords = wordsData.filter(word => {
+        let wordText = word.Words || word.word || word["單字"];
+        return localStorage.getItem(`important_${wordText}`) === "true";
+    });
+
+    if (importantWords.length === 0) {
+        alert("⚠️ 沒有標記為重要的單字！");
+        return;
+    }
+
+    quizWords = importantWords;
+    startQuiz(); // ✅ 直接開始測驗
+}
+
+// 篩選「錯誤單字」測驗
+function toggleWrongSelection() {
+    let wrongWords = JSON.parse(localStorage.getItem("wrongWords")) || [];
+
+    let filteredWrongWords = wordsData.filter(word => {
+        let wordText = word.Words || word.word || word["單字"];
+        return wrongWords.includes(wordText);
+    });
+
+    if (filteredWrongWords.length === 0) {
+        alert("⚠️ 沒有錯誤單字！");
+        return;
+    }
+
+    quizWords = filteredWrongWords;
+    startQuiz(); // ✅ 直接開始測驗
+}
+
 
 
 // ✅ 儲存測驗結果與更新錯誤單字、重要單字
