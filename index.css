@@ -421,3 +421,26 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     opacity: 0.3;
 }
 
+.important-checkbox {
+    width: 22px;  /* 增加寬度 */
+    height: 22px; /* 增加高度 */
+    transform: scale(1.3); /* 放大 1.3 倍 */
+    cursor: pointer;
+    border-radius: 6px; /* 圓角 */
+    border: 2px solid #555; /* 加上邊框，讓框框更明顯 */
+    appearance: none; /* 隱藏預設樣式 */
+    background-color: white; /* 預設背景 */
+    transition: all 0.2s ease-in-out;
+}
+
+/* ✅ 勾選時的變化 */
+.important-checkbox:checked {
+    background-color: #b8671c; /* 橘色背景 */
+    border-color: #ed8600;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.8);
+}
+
+/* ✅ 滑鼠懸停時，增加放大效果 */
+.important-checkbox:hover {
+    transform: scale(1.4);
+}

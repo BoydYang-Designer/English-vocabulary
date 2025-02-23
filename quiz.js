@@ -272,13 +272,15 @@ function finishQuiz() {
         }
 
         return `
-            <div class='result-item'>
+           <div class='result-item'>
+                <label class='important-word'>
+                    <input type='checkbox' class='important-checkbox' data-word='${result.word}' 
+                    ${localStorage.getItem(`important_${result.word}`) === "true" ? "checked" : ""} 
+                    onchange='toggleImportant("${result.word}", this)'>
+                </label>
                 <button class='word-link' onclick="goToWordDetail('${result.word}')">${result.word}</button>
                 <button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button>
                 <span class='result-status'>${result.result === '正確' ? '✅' : '❌'}</span>
-                <label class='important-word'>
-                     <input type='checkbox' class='important-checkbox' data-word='${result.word}' ${localStorage.getItem(`important_${result.word}`) === "true" ? "checked" : ""} onchange='toggleImportant("${result.word}", this)'> 重要單字
-                </label>
             </div>
         `;
     }).join("");
