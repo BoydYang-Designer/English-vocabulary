@@ -19,8 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
             wordsData = data["New Words"] || [];
             isDataLoaded = true;
             console.log("✅ 單字資料已載入");
+
+            // ✅ 如果 LocalStorage 中有儲存的測驗結果，則自動恢復
+            if (localStorage.getItem("currentQuizResults")) {
+                quizResults = JSON.parse(localStorage.getItem("currentQuizResults"));
+                restoreQuizResults(); // 呼叫自動恢復測驗結果
+            }
         })
         .catch(err => console.error("❌ 讀取 JSON 失敗:", err));
+
     initializeStartQuizButton();
 });
 
@@ -238,7 +245,7 @@ function finishQuiz() {
                 <button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button>
                 <span class='result-status'>${result.result === '正確' ? '✅' : '❌'}</span>
                 <label class='important-word'>
-                    <input type='checkbox' class='important-checkbox' data-word='${result.word}'> 重要單字
+                     <input type='checkbox' class='important-checkbox' data-word='${result.word}' ${localStorage.getItem(`important_${result.word}`) === "true" ? "checked" : ""} onchange='toggleImportant("${result.word}", this)'> 重要單字
                 </label>
             </div>
         `;
@@ -255,20 +262,30 @@ function finishQuiz() {
 }
 
 
-// 跳轉到單字詳情頁面並保存當前狀態與測驗結果
 function goToWordDetail(word) {
     // 儲存測驗結果區塊的滾動位置
     let resultContainer = document.getElementById("quizResult");
     let scrollPosition = resultContainer ? resultContainer.scrollTop : 0;
-    
+
     // 儲存當前狀態與測驗結果到 localStorage
     localStorage.setItem('quizScrollPosition', scrollPosition);
     localStorage.setItem('currentQuizResults', JSON.stringify(quizResults));
 
-    // 加上來源參數，並傳遞來自 quize 的資訊
+    // 跳轉到 index.html 單字詳情
     window.location.href = `index.html?word=${encodeURIComponent(word)}&from=quiz`;
 }
 
+
+// ✅ 勾選或取消勾選時同步更新 localStorage
+function toggleImportant(word, checkbox) {
+    if (checkbox.checked) {
+        localStorage.setItem(`important_${word}`, "true");
+        console.log(`⭐ 單字 ${word} 標記為重要 (quiz)`);
+    } else {
+        localStorage.removeItem(`important_${word}`);
+        console.log(`❌ 單字 ${word} 取消重要標記 (quiz)`);
+    }
+}
 
 
 // ✅ 儲存測驗結果與更新錯誤單字、重要單字
@@ -292,23 +309,12 @@ function saveQuizResults() {
     // 儲存更新後的錯誤單字列表
     localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
 
-    // 2️⃣ 儲存重要單字，避免重複
-    document.querySelectorAll('.important-checkbox').forEach(checkbox => {
-        if (checkbox.checked) {
-            let word = checkbox.dataset.word;
-            localStorage.setItem(`important_${word}`, true); // 儲存為 true，避免重複
-        }
-    });
-
     alert("✅ 測驗結果與重要單字已成功儲存！");
 }
 
 
 
 
-
-// 返回首頁並重置所有狀態
-// ✅ 確保在回到主頁時才清空 quizResults
 function returnToMainMenu() {
     document.getElementById("quizCategories").style.display = "none";
     document.getElementById("quizArea").style.display = "none";
@@ -321,7 +327,7 @@ function returnToMainMenu() {
     selectedFilters.checked = false;
 
     quizWords = [];
-    quizResults = []; // 只在返回主頁時清空
+    quizResults = []; // 清空測驗結果
     currentWord = null;
 
     document.querySelectorAll(".category-button").forEach(button => {
@@ -331,18 +337,21 @@ function returnToMainMenu() {
     document.getElementById("wordInput").value = "";
     document.getElementById("wordHint").innerText = "";
 
-    console.log("✅ 返回首頁並重置狀態");
+    // ✅ 清除 LocalStorage 中的測驗結果與滾動位置
+    localStorage.removeItem("currentQuizResults");
+    localStorage.removeItem("quizScrollPosition");
+
+    console.log("✅ 返回首頁並重置狀態與清空 LocalStorage");
 }
 
-// 將播放音檔按鈕與提交按鈕綁定功能
-// 綁定中央播放按鈕功能
+// ✅ 綁定中央播放按鈕功能
 document.getElementById("playAudioCenterBtn").addEventListener("click", function() {
     if (currentWord) {
         playAudioForWord(currentWord);
     }
 });
 
-// ✅ 恢復測驗結果並重新顯示
+
 // ✅ 恢復測驗結果並重新顯示（修正音標顯示問題）
 function restoreQuizResults() {
     let resultContainer = document.getElementById("quizResult");
@@ -361,7 +370,9 @@ function restoreQuizResults() {
                 <button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button>
                 <span class='result-status'>${result.result === '正確' ? '✅' : '❌'}</span>
                 <label class='important-word'>
-                    <input type='checkbox' class='important-checkbox' data-word='${result.word}'> 重要單字
+                    <input type='checkbox' class='important-checkbox' data-word='${result.word}' 
+                    ${localStorage.getItem(`important_${result.word}`) === "true" ? "checked" : ""} 
+                    onchange='toggleImportant("${result.word}", this)'> 重要單字
                 </label>
             </div>
         `;
@@ -375,8 +386,40 @@ function restoreQuizResults() {
             <button class="button" onclick="returnToMainMenu()">返回主頁</button>
         </div>
     `;
+
+    // ✅ 恢復滾動位置
+    let savedScrollPosition = localStorage.getItem("quizScrollPosition");
+    if (savedScrollPosition) {
+        resultContainer.scrollTop = parseInt(savedScrollPosition);
+    }
 }
 
+
+function displayRestoredResults() {
+    let resultContainer = document.getElementById("quizResult");
+    resultContainer.innerHTML = `<h2>測驗結果</h2>`;
+
+    let resultList = quizResults.map(result => {
+        let wordData = wordsData.find(w => w.Words === result.word);
+        let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
+        let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
+
+        let phonetics = pronunciation1 || pronunciation2 ? `${pronunciation1} ${pronunciation2}` : "No Pronunciation";
+
+        return `
+            <div class='result-item'>
+                <button class='word-link' onclick="goToWordDetail('${result.word}')">${result.word}</button>
+                <button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button>
+                <span class='result-status'>${result.result === '正確' ? '✅' : '❌'}</span>
+                <label class='important-word'>
+                    <input type='checkbox' class='important-checkbox' data-word='${result.word}' ${localStorage.getItem(`important_${result.word}`) === "true" ? "checked" : ""} onchange='toggleImportant("${result.word}", this)'> 重要單字
+                </label>
+            </div>
+        `;
+    }).join("");
+
+    resultContainer.innerHTML += `<div>${resultList}</div>`;
+}
 
 
 // ✅ 切換刪除選擇狀態（空白 ↔ 叉叉）
