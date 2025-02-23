@@ -143,19 +143,22 @@ function filterWordsInDetails() {
 function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
     let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
-    
-    // ✅ 新增「重要單字」分類按鈕
-    categories.unshift("重要單字");
+
+    // ✅ 新增「重要單字」與「錯誤單字」分類按鈕
+    categories.unshift("錯誤單字", "重要單字");
 
     document.getElementById("categoryButtons").innerHTML = categories
         .map(c => {
             if (c === "重要單字") {
                 return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
+            } else if (c === "錯誤單字") {
+                return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
             }
             return `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`;
         })
         .join(" ");
 }
+
 
 
 function createLevelButtons() {
@@ -172,7 +175,6 @@ function createLevelButtons() {
 }
         
 
-// 1️⃣ 負責顯示單字列表，包含「Check」按鈕
 function showWords(type, value) {
     console.log("📌 點擊分類/等級/A-Z 按鈕:", type, value);
 
@@ -382,6 +384,60 @@ function showImportantWords() {
     document.querySelector(".level-container").style.display = "none";
 }
 
+// ✅ 顯示所有測驗中答錯的單字
+function showWrongWords() {
+    console.log("📌 顯示錯誤單字");
+
+    let listContainer = document.getElementById("wordList");
+    let wordItems = document.getElementById("wordItems");
+    wordItems.innerHTML = "";
+
+    let wrongWords = JSON.parse(localStorage.getItem("wrongWords")) || [];
+
+    if (wrongWords.length === 0) {
+        wordItems.innerHTML = "<p>⚠️ 目前沒有錯誤單字</p>";
+    } else {
+        wrongWords.forEach(wordText => {
+            let isChecked = localStorage.getItem(`checked_${wordText}`) === "true";
+
+            let iconSrc = isChecked
+                ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg"
+                : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
+
+            let item = document.createElement("div");
+            item.className = "word-item-container";
+
+            item.innerHTML = `
+                <p class='word-item' data-word="${wordText}">${wordText}</p>
+                <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
+                    <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
+                </button>
+            `;
+
+            // ✅ 點擊進入該單字的第三層詳情
+            item.querySelector('.word-item').addEventListener("click", function () {
+                let wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]).trim().toLowerCase() === wordText.toLowerCase());
+                if (wordObj) {
+                    lastWordListType = "wrongWords"; // ✅ 記錄來源為錯誤單字列表
+                    lastWordListValue = null;
+                    console.log("✅ 進入詳情頁面:", wordObj);
+                    showDetails(wordObj);
+                } else {
+                    console.error("❌ 找不到單字資料:", wordText);
+                }
+            });
+
+            wordItems.appendChild(item);
+        });
+    }
+
+    listContainer.style.display = "block";
+    document.getElementById("wordDetails").style.display = "none";
+    document.querySelector(".alphabet-container").style.display = "none";
+    document.querySelector(".category-container").style.display = "none";
+    document.querySelector(".level-container").style.display = "none";
+}
+
 
 
 function showDetails(word) {
@@ -529,17 +585,22 @@ function backToWordList() {
         document.querySelector('.category-container').style.display = "block";
         document.querySelector('.level-container').style.display = "block";
     } else if (lastWordListType === "importantWords") {
-        // ✅ 如果來自重要單字列表，返回重要單字列表
+        // ✅ 如果來自重要單字列表
         console.log("🔙 返回重要單字列表");
         showImportantWords();
+    } else if (lastWordListType === "wrongWords") {
+        // ✅ 如果來自錯誤單字列表
+        console.log("🔙 返回錯誤單字列表");
+        showWrongWords();
     } else if (lastWordListType && lastWordListValue) {
-        // 如果來自其他單字列表，回到第二層
+        // 回到第二層
         showWords(lastWordListType, lastWordListValue);
     } else {
         console.error("❌ 無法返回，lastWordListType 為空，回到第一層");
-        backToFirstLayer(); // 如果 `lastWordListType` 無效，回到首頁
+        backToFirstLayer();
     }
 }
+
 
 function playAudio(filename) {
     let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
