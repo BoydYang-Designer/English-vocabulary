@@ -351,8 +351,11 @@ function showDetails(word) {
     }
 
     // ✅ **音標處理（考慮無音標的情況）**
-    let phonetics = `<div class="phonetics-container" style="display: flex; align-items: center; gap: 10px;">
+    // ✅ 在第三層單字詳情左邊加入勾選框
+let phonetics = `<div class="phonetics-container" style="display: flex; align-items: center; gap: 10px;">
+    <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${word.Words}", this)' ${localStorage.getItem(`important_${word.Words}`) === "true" ? "checked" : ""}>
     <div id="wordTitle" style="font-size: 20px; font-weight: bold;">${word.Words}</div>`;
+
 
     if (word["pronunciation-1"] || word["pronunciation-2"]) {
         if (word["pronunciation-1"]) {
@@ -395,6 +398,9 @@ function showDetails(word) {
     // ✅ **更新 Back 按鈕功能（根據來源動態更新）**
     updateBackButton();
 }
+
+
+
 
 // ✅ **讀取 URL 來源參數**
 function getFromPage() {
@@ -525,6 +531,18 @@ function adjustAudioControlsWidth() {
         audioControls.style.maxWidth = detailsWidth + "px"; // 防止超過
     }
 }
+
+// ✅ 勾選或取消勾選時儲存狀態到 localStorage
+function toggleImportant(word, checkbox) {
+    if (checkbox.checked) {
+        localStorage.setItem(`important_${word}`, "true"); // 儲存為重要單字
+        console.log(`⭐ 單字 ${word} 標記為重要`);
+    } else {
+        localStorage.removeItem(`important_${word}`); // 移除重要標記
+        console.log(`❌ 單字 ${word} 取消重要標記`);
+    }
+}
+
 
 function saveNote() {
     let word = document.getElementById("wordTitle")?.textContent.trim();

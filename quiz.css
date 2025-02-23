@@ -321,3 +321,8 @@ h1, h2 {
     background-color: #5a6268;
 }
 
+.important-checkbox {
+    margin-right: 10px; /* 與單字保持距離 */
+    transform: scale(1.2); /* 放大 checkbox */
+    cursor: pointer;
+}
