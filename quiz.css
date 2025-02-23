@@ -1,6 +1,11 @@
 /* quize.css - 更新版（與 style.css 保持一致風格） */
 
 /* 主體樣式 */
+
+html, body {
+    touch-action: manipulation;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;

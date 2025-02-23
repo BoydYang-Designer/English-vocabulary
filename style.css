@@ -1,3 +1,8 @@
+html, body {
+    touch-action: manipulation;
+}
+
+
 body { /* 設定整體頁面的字型、邊距與背景顏色 */
     font-family: Arial, sans-serif;
     margin: 0;
