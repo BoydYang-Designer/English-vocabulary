@@ -36,9 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
-function isMobileDevice() {
-    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-}
 
 function navigateTo(state) {
     // **避免重複存入相同的單字**
@@ -449,76 +446,6 @@ function showWrongWords() {
 }
 
 
-// ✅ 定義全域變數來儲存滑動起始與結束位置
-let startX = 0;
-let endX = 0;
-
-
-
-  
-
-// ✅ 更新 handleSwipe 函數以加入滑動距離除錯資訊與動畫效果
-// ✅ 更新 handleSwipe 函數以符合常見滑動習慣
-function handleSwipe() {
-    console.log("🛠️ handleSwipe 函數觸發");
-    console.log(`➡️ 滑動起始位置: ${startX}, 結束位置: ${endX}`);
-
-    const swipeThreshold = 30;
-    const distance = endX - startX;
-    console.log(`📏 滑動距離為: ${distance}px`);
-
-    if (distance > swipeThreshold) {
-        console.log(`➡️ 右滑觸發 - 顯示上一個單字`);
-        triggerSwipeAnimation('left'); // ✅ 由左進入上一個單字
-        showPreviousWord();
-    } else if (distance < -swipeThreshold) {
-        console.log(`⬅️ 左滑觸發 - 顯示下一個單字`);
-        triggerSwipeAnimation('right'); // ✅ 由右進入下一個單字
-        showNextWord();
-    } else {
-        console.log("ℹ️ 滑動距離不足，未觸發切換");
-    }
-}
-
-  
-  
-  
-// ✅ 新增滑動與頁面進入動畫效果
-// ✅ 修改動畫與滑動方向一致
-// ✅ 新增同步滑動與進入動畫效果
-function triggerSwipeAnimation(direction) {
-    const detailsContainer = document.querySelector('.details');
-    if (!detailsContainer) return;
-  
-    // 移除舊動畫效果
-    detailsContainer.classList.remove('swipe-left', 'swipe-right', 'enter-from-left', 'enter-from-right', 'active');
-  
-    // 執行滑出動畫
-    if (direction === 'left') {
-      detailsContainer.classList.add('swipe-left'); // 舊頁面向左滑出
-    } else if (direction === 'right') {
-      detailsContainer.classList.add('swipe-right'); // 舊頁面向右滑出
-    }
-  
-    // 滑出後，從相同方向進入新單字
-    setTimeout(() => {
-      detailsContainer.classList.remove('swipe-left', 'swipe-right');
-  
-      if (direction === 'left') {
-        detailsContainer.classList.add('enter-from-right'); // 新頁面從右進入
-      } else if (direction === 'right') {
-        detailsContainer.classList.add('enter-from-left'); // 新頁面從左進入
-      }
-  
-      // 啟用進入動畫
-      setTimeout(() => {
-        detailsContainer.classList.add('active'); // 回到原位
-      }, 50);
-    }, 300); // 與滑出動畫時長一致
-  }
-  
-
-  
 
 function showDetails(word) {
     let searchInput = document.getElementById("searchInputDetails").value.trim();
@@ -532,11 +459,6 @@ function showDetails(word) {
 
     // **確保每次進入新單字都記錄到歷史**
     navigateTo({ page: "wordDetails", word: word });
-     
-     if (!word) {
-        console.error("❌ `showDetails` 接收到無效的單字對象:", word);
-        return;
-    }
 
     // **顯示單字詳情**
     document.getElementById("searchContainer").style.display = "none";
@@ -545,6 +467,7 @@ function showDetails(word) {
     document.querySelector(".alphabet-container").style.display = "none";
     document.querySelector(".category-container").style.display = "none";
     document.querySelector(".level-container").style.display = "none";
+
     document.getElementById("searchInputDetails").value = "";
     document.getElementById("searchResultsDetails").innerHTML = "";
 
@@ -615,104 +538,8 @@ let phonetics = `<div class="phonetics-container" style="display: flex; align-it
     updateBackButton();
 }
 
-const detailsContainer = document.querySelector('.details');
 
-// ✅ 確認只在手機上啟用滑動偵測
-if (isMobileDevice()) {
-    const detailsContainer = document.querySelector('.details');
-  
-    if (detailsContainer) {
-      // 📱 手機觸控事件
-      detailsContainer.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-        detailsContainer.classList.add('dragging'); // 啟用半透明效果
-      });
-  
-      detailsContainer.addEventListener('touchmove', (e) => {
-        let currentX = e.touches[0].clientX;
-        let dragDistance = currentX - startX;
-        detailsContainer.style.setProperty('--drag-distance', `${dragDistance}px`);
-      });
-  
-      detailsContainer.addEventListener('touchend', (e) => {
-        detailsContainer.classList.remove('dragging'); // 移除半透明效果
-        detailsContainer.style.removeProperty('--drag-distance');
-        endX = e.changedTouches[0].clientX;
-        handleSwipe(); // 觸發滑動邏輯
-      });
-    }
-  }
-  
-  
 
-let quizWordList = JSON.parse(localStorage.getItem('quizWordList')) || [];
-let fromQuiz = window.location.search.includes('from=quiz');
-
-// ✅ <span style="color: orange;">根據來源的單字列表取得當前單字索引</span>
-function getCurrentWordList() {
-    if (fromQuiz && quizWordList.length > 0) {
-      return quizWordList.map(wordText => {
-        return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
-      }).filter(Boolean);
-    }
-    // 其他列表邏輯保持不變
-    if (lastWordListType === 'letter' || lastWordListType === 'category' || lastWordListType === 'level') {
-      return wordsData.filter(w => {
-        let word = w.Words || w.word || w["單字"];
-        let category = w["分類"] || "未分類";
-        let level = w["等級"] || "未分類";
-        if (lastWordListType === 'letter') return word.toLowerCase().startsWith(lastWordListValue.toLowerCase());
-        if (lastWordListType === 'category') return category === lastWordListValue;
-        if (lastWordListType === 'level') return level === lastWordListValue;
-      });
-    } else if (lastWordListType === 'importantWords') {
-      return Object.keys(localStorage).filter(key => key.startsWith("important_")).map(key => {
-        let wordText = key.replace("important_", "");
-        return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
-      });
-    } else if (lastWordListType === 'wrongWords') {
-      let wrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
-      return wrongWords.map(wordText => {
-        return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
-      });
-    }
-    return [];
-  }
-  
-  // ✅ <span style="color: green;">顯示下一個單字</span>
-  function showNextWord() {
-    let currentList = getCurrentWordList();
-    if (!currentList || currentList.length === 0) return;
-  
-    let currentWord = document.getElementById('wordTitle').textContent.trim();
-    let currentIndex = currentList.findIndex(w => (w.Words || w.word || w["單字"]).toLowerCase() === currentWord.toLowerCase());
-  
-    if (currentIndex >= 0 && currentIndex < currentList.length - 1) {
-      showDetails(currentList[currentIndex + 1]);
-    }
-  }
-  
-  // ✅ <span style="color: green;">顯示上一個單字</span>
-  function showPreviousWord() {
-    let currentList = getCurrentWordList();
-    if (!currentList || currentList.length === 0) return;
-  
-    let currentWord = document.getElementById('wordTitle').textContent.trim();
-    let currentIndex = currentList.findIndex(w => (w.Words || w.word || w["單字"]).toLowerCase() === currentWord.toLowerCase());
-  
-    if (currentIndex > 0) {
-      showDetails(currentList[currentIndex - 1]);
-    }
-  }
-  
-  // ✅ <span style="color: purple;">修改 CSS 以支援滑動動畫</span>
-  const style = document.createElement('style');
-  style.innerHTML = `
-    .details {
-      transition: transform 0.3s ease-in-out;
-    }
-  `;
-  document.head.appendChild(style);
 
 // ✅ **讀取 URL 來源參數**
 function getFromPage() {
@@ -721,32 +548,27 @@ function getFromPage() {
 }
 
 // ✅ **根據來源設定 Back 按鈕功能**
+// ✅ 強制更新 Back 按鈕功能，並加入除錯訊息
 function updateBackButton() {
     let fromPage = getFromPage();
     let backButtons = document.querySelectorAll('#wordDetails .button');
-  
+
     backButtons.forEach(button => {
-      if (button.textContent.trim() === 'Back') {
-        if (fromPage === 'quiz') {
-          button.onclick = function() {
-            console.log("🔙 從 quiz.html 返回測驗結果");
-            returnToQuiz();
-          };
-        } else {
-          button.onclick = function() {
-            console.log("↩️ 返回上一層");
-            backToWordList();
-          };
+        if (button.textContent.trim() === 'Back') {
+            if (fromPage === 'quiz') {
+                button.onclick = function() {
+                    console.log("🔙 從 quiz.html 返回測驗結果");
+                    returnToQuiz();
+                };
+            } else {
+                button.onclick = function() {
+                    console.log("↩️ 返回上一層");
+                    backToWordList();
+                };
+            }
         }
-      }
     });
-  }
-  
-// ✅ 新增 4️⃣ - 在頁面載入時自動設定 Back 按鈕
-window.addEventListener('load', () => {
-    updateBackButton();
-  });
-  
+}
 
 // ✅ **返回 quiz.html 測驗頁面的功能**
 function returnToQuiz() {
@@ -993,20 +815,16 @@ function getFromPage() {
 // 在 JSON 載入完成後顯示詳情
 function displayWordDetailsFromURL() {
     let wordName = getWordFromURL();
-    console.log("🔍 從 URL 取得的單字:", wordName); // 確保 URL 參數讀取正確
     if (!wordName) return; // 如果沒有傳遞單字參數，則不執行任何動作
 
     // 查找對應單字資料
     let wordData = wordsData.find(w => w.Words.toLowerCase() === wordName.toLowerCase());
-    console.log("🔍 查找到的單字資料:", wordData); // 確保 `wordsData` 正確載入
-
     if (wordData) {
         showDetails(wordData); // 呼叫原有函數顯示詳情
     } else {
         console.warn("❌ 找不到對應單字資料！");
     }
 }
-
 
 // 修改 JSON 載入成功後的程式碼，確保自動顯示詳情
 document.addEventListener("DOMContentLoaded", function () {
@@ -1016,11 +834,9 @@ document.addEventListener("DOMContentLoaded", function () {
             wordsData = data["New Words"] || [];
             console.log("✅ JSON 資料已成功載入");
 
-            // 🔥 **確保資料載入後再執行 `displayWordDetailsFromURL()`**
+            // 資料載入完成後，檢查 URL 是否有單字參數並顯示詳情
             displayWordDetailsFromURL();
         })
         .catch(err => console.error("❌ 讀取 JSON 失敗:", err));
 });
-
-
 

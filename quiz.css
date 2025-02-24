@@ -176,9 +176,8 @@ h1, h2 {
 }
 
 .important-checkbox:checked {
-    background-color: #b8671c; /* 橘色背景 */
-    border-color: #ed8600;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.8);
+    background-color: #6c757d; /* 重要單字框 */
+    border-color: #6c757d;
 }
 
 
