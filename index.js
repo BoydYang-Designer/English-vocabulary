@@ -590,14 +590,22 @@ if (detailsContainer) {
   });
 }
 
+let quizWordList = JSON.parse(localStorage.getItem('quizWordList')) || [];
+let fromQuiz = window.location.search.includes('from=quiz');
+
 // ✅ <span style="color: orange;">根據來源的單字列表取得當前單字索引</span>
 function getCurrentWordList() {
+    if (fromQuiz && quizWordList.length > 0) {
+      return quizWordList.map(wordText => {
+        return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
+      }).filter(Boolean);
+    }
+    // 其他列表邏輯保持不變
     if (lastWordListType === 'letter' || lastWordListType === 'category' || lastWordListType === 'level') {
       return wordsData.filter(w => {
         let word = w.Words || w.word || w["單字"];
         let category = w["分類"] || "未分類";
         let level = w["等級"] || "未分類";
-  
         if (lastWordListType === 'letter') return word.toLowerCase().startsWith(lastWordListValue.toLowerCase());
         if (lastWordListType === 'category') return category === lastWordListValue;
         if (lastWordListType === 'level') return level === lastWordListValue;
@@ -613,7 +621,6 @@ function getCurrentWordList() {
         return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
       });
     }
-    // <span style="color: red;">搜尋結果不支援滑動</span>
     return [];
   }
   
@@ -663,23 +670,29 @@ function getFromPage() {
 function updateBackButton() {
     let fromPage = getFromPage();
     let backButtons = document.querySelectorAll('#wordDetails .button');
-
+  
     backButtons.forEach(button => {
-        if (button.textContent.trim() === 'Back') {
-            if (fromPage === 'quiz') {
-                button.onclick = function() {
-                    console.log("🔙 從 quiz.html 返回測驗結果");
-                    returnToQuiz();
-                };
-            } else {
-                button.onclick = function() {
-                    console.log("↩️ 返回上一層");
-                    backToWordList();
-                };
-            }
+      if (button.textContent.trim() === 'Back') {
+        if (fromPage === 'quiz') {
+          button.onclick = function() {
+            console.log("🔙 從 quiz.html 返回測驗結果");
+            returnToQuiz();
+          };
+        } else {
+          button.onclick = function() {
+            console.log("↩️ 返回上一層");
+            backToWordList();
+          };
         }
+      }
     });
-}
+  }
+  
+// ✅ 新增 4️⃣ - 在頁面載入時自動設定 Back 按鈕
+window.addEventListener('load', () => {
+    updateBackButton();
+  });
+  
 
 // ✅ **返回 quiz.html 測驗頁面的功能**
 function returnToQuiz() {
@@ -936,6 +949,7 @@ function displayWordDetailsFromURL() {
         console.warn("❌ 找不到對應單字資料！");
     }
 }
+
 
 // 修改 JSON 載入成功後的程式碼，確保自動顯示詳情
 document.addEventListener("DOMContentLoaded", function () {

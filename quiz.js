@@ -241,6 +241,15 @@ function loadNextWord() {
     }
 }
 
+function returnFromDetailsToQuiz() {
+    let shouldReturnToQuiz = localStorage.getItem('returnToQuizResult');
+    if (shouldReturnToQuiz === 'true') {
+        // 清除狀態標記，避免下一次誤觸發
+        localStorage.removeItem('returnToQuizResult');
+        // 返回測驗結果頁面
+        window.location.href = 'quiz.html#quizResult';
+    }
+}
 
   // 完成測驗後顯示結果統計，包含單字、音標、對錯標記與重要單字勾選功能
 function finishQuiz() {
@@ -265,14 +274,13 @@ function finishQuiz() {
         let wordData = wordsData.find(w => w.Words === result.word);
         let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
         let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
-
         let phonetics = pronunciation1;
         if (pronunciation2) {
             phonetics += ` / ${pronunciation2}`;
         }
 
         return `
-           <div class='result-item'>
+            <div class='result-item'>
                 <label class='important-word'>
                     <input type='checkbox' class='important-checkbox' data-word='${result.word}' 
                     ${localStorage.getItem(`important_${result.word}`) === "true" ? "checked" : ""} 
@@ -303,6 +311,7 @@ function finishQuiz() {
 }
 
 
+// 在 localStorage 儲存完整測驗結果單字列表與滾動位置
 function goToWordDetail(word) {
     // 儲存測驗結果區塊的滾動位置
     let resultContainer = document.getElementById("quizResult");
@@ -310,10 +319,9 @@ function goToWordDetail(word) {
 
     // 儲存當前狀態與測驗結果到 localStorage
     localStorage.setItem('quizScrollPosition', scrollPosition);
-    localStorage.setItem('currentQuizResults', JSON.stringify(quizResults));
-
-    // 記錄測驗結果是否顯示
-    localStorage.setItem('returnToQuizResult', "true");
+    let quizWordsList = quizResults.map(result => result.word);
+    localStorage.setItem('quizWordList', JSON.stringify(quizWordsList));
+    localStorage.setItem('returnToQuizResult', 'true'); // 標記為從測驗結果進入
 
     // 跳轉到 index.html 單字詳情
     window.location.href = `index.html?word=${encodeURIComponent(word)}&from=quiz`;
@@ -597,6 +605,15 @@ function deleteSelectedImportantWords() {
 
 
 
+window.addEventListener('load', () => {
+    let scrollPosition = localStorage.getItem('quizScrollPosition');
+    if (scrollPosition !== null) {
+        let resultContainer = document.getElementById("quizResult");
+        if (resultContainer) {
+            resultContainer.scrollTop = parseInt(scrollPosition, 10);
+        }
+    }
+});
 
 // 取消按鈕返回上一頁
 document.getElementById("cancelBtn").addEventListener("click", returnToCategorySelection);
