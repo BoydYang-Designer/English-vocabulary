@@ -440,7 +440,21 @@ body {
     touch-action: pan-y; /* 允許垂直滑動（上下滾動） */
   }
 
+.details {
+  width: 400px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  position: relative;
+  font-size: 12px;
   
+  /* ✅ 滑動動畫效果設定 */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
   .details.swipe-left {
     transform: translateX(-100%);
     opacity: 0; /* 完全淡出 */
@@ -458,17 +472,23 @@ body {
     transform: translateX(var(--drag-distance, 0px)); /* 根據拖曳距離移動 */
   }
   
-  .details {
-    transition: transform 0.2s ease-in-out, opacity 0.s ease-in-out;
-    opacity: 1; /* 預設完全不透明 */
-    width: 400px;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    position: relative;
-    font-size: 12px;
-    transition: transform 0.3s ease-in-out; /* 新增滑動過渡效果 */
-}
+
+
+/* ✅ 新增單字進入動畫效果 */
+.details.enter-from-right {
+    transform: translateX(-100%); /* 從右邊滑入 */
+    opacity: 0;
+  }
+  
+  .details.enter-from-left {
+    transform: translateX(100%); /* 從左邊滑入 */
+    opacity: 0;
+  }
+  
+  .details.active {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
   

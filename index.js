@@ -455,49 +455,66 @@ let endX = 0;
   
 
 // ✅ 更新 handleSwipe 函數以加入滑動距離除錯資訊與動畫效果
+// ✅ 更新 handleSwipe 函數以符合常見滑動習慣
 function handleSwipe() {
-    console.log("🛠️ handleSwipe 函數觸發"); // 確認函數有被觸發
-    console.log(`➡️ 滑動起始位置: ${startX}, 結束位置: ${endX}`); // 新增：輸出滑動起始與結束位置
-  
-    const swipeThreshold = 30; // 最小滑動距離
-    const distance = endX - startX; // 計算滑動距離
-    console.log(`📏 滑動距離為: ${distance}px`); // 新增：輸出滑動距離
-  
+    console.log("🛠️ handleSwipe 函數觸發");
+    console.log(`➡️ 滑動起始位置: ${startX}, 結束位置: ${endX}`);
+
+    const swipeThreshold = 30;
+    const distance = endX - startX;
+    console.log(`📏 滑動距離為: ${distance}px`);
+
     if (distance > swipeThreshold) {
-      console.log(`⬅️ 左滑觸發 - 距離: ${distance}px`);
-      triggerSwipeAnimation('left'); // 執行左滑動畫
-      showNextWord(); // 切換到下一個單字
+        console.log(`➡️ 右滑觸發 - 顯示上一個單字`);
+        triggerSwipeAnimation('left'); // ✅ 由左進入上一個單字
+        showPreviousWord();
     } else if (distance < -swipeThreshold) {
-      console.log(`➡️ 右滑觸發 - 距離: ${distance}px`);
-      triggerSwipeAnimation('right'); // 執行右滑動畫
-      showPreviousWord(); // 切換到上一個單字
+        console.log(`⬅️ 左滑觸發 - 顯示下一個單字`);
+        triggerSwipeAnimation('right'); // ✅ 由右進入下一個單字
+        showNextWord();
     } else {
-      console.log("ℹ️ 滑動距離不足，未觸發切換");
+        console.log("ℹ️ 滑動距離不足，未觸發切換");
     }
-  }
+}
+
   
-// ✅ 新增滑動與半透明動畫效果
+  
+  
+// ✅ 新增滑動與頁面進入動畫效果
+// ✅ 修改動畫與滑動方向一致
+// ✅ 新增同步滑動與進入動畫效果
 function triggerSwipeAnimation(direction) {
     const detailsContainer = document.querySelector('.details');
     if (!detailsContainer) return;
   
-    // 移除之前的動畫效果
-    detailsContainer.classList.remove('swipe-left', 'swipe-right');
+    // 移除舊動畫效果
+    detailsContainer.classList.remove('swipe-left', 'swipe-right', 'enter-from-left', 'enter-from-right', 'active');
   
-    // 加入新的滑動動畫
+    // 執行滑出動畫
     if (direction === 'left') {
-      detailsContainer.classList.add('swipe-left'); // 完全淡出
+      detailsContainer.classList.add('swipe-left'); // 舊頁面向左滑出
     } else if (direction === 'right') {
-      detailsContainer.classList.add('swipe-right'); // 完全淡出
+      detailsContainer.classList.add('swipe-right'); // 舊頁面向右滑出
     }
   
-    // 動畫結束後重置狀態
+    // 滑出後，從相同方向進入新單字
     setTimeout(() => {
       detailsContainer.classList.remove('swipe-left', 'swipe-right');
-    }, 200); // 與 CSS 動畫時間保持一致
+  
+      if (direction === 'left') {
+        detailsContainer.classList.add('enter-from-right'); // 新頁面從右進入
+      } else if (direction === 'right') {
+        detailsContainer.classList.add('enter-from-left'); // 新頁面從左進入
+      }
+  
+      // 啟用進入動畫
+      setTimeout(() => {
+        detailsContainer.classList.add('active'); // 回到原位
+      }, 50);
+    }, 300); // 與滑出動畫時長一致
   }
   
-  
+
   
 
 function showDetails(word) {
