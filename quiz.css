@@ -255,12 +255,13 @@ h1, h2 {
 
     .result-item {
         display: flex;
-        flex-direction: column; /* 讓內容垂直排列 */
+        flex-direction: row; /* 保持橫向排列 */
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         padding: 10px;
-        overflow-x: auto;
-        min-width: auto; /* 取消最小寬度限制 */
+        overflow-x: auto; /* 啟用橫向滾動 */
+        min-width: 600px; /* 設定最小寬度以保證橫向排列 */
+        gap: 10px; /* 元素之間間距 */
     }
 
     .button, .back-button, #wordInput {
@@ -283,9 +284,23 @@ h1, h2 {
    .word-link {
         font-size: 18px; /* 調整單字按鈕字體大小 */
         padding: 8px 10px;
-        min-width: auto; /* 取消最小寬度限制 */
+        min-width: 100px; /* 設定最小寬度保持排列 */
     }
-  
+     
+    /* 🎯 專為寬度 414px 手機設計 */
+    @media (max-width: 414px) {
+    #quizResult {
+        width: 100%;
+        max-width: 414px; /* 限制最大寬度為 414px */
+        margin: 0 auto;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .result-item {
+        min-width: 414px; /* 設定最小寬度剛好符合螢幕 */
+    }
+     
     #saveResultBtn {
         width: 90%;
         max-width: 250px;
