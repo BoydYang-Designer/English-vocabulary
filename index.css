@@ -424,9 +424,8 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 
 /* ✅ 勾選時的變化 */
 .important-checkbox:checked {
-    background-color: #b8671c; /* 橘色背景 */
-    border-color: #ed8600;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.8);
+    background-color: #6c757d; /* 重要單字框 */
+    border-color: #6c757d;
 }
 
 /* ✅ 滑鼠懸停時，增加放大效果 */
