@@ -36,6 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
+function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
 
 function navigateTo(state) {
     // **避免重複存入相同的單字**
@@ -529,6 +532,11 @@ function showDetails(word) {
 
     // **確保每次進入新單字都記錄到歷史**
     navigateTo({ page: "wordDetails", word: word });
+     
+     if (!word) {
+        console.error("❌ `showDetails` 接收到無效的單字對象:", word);
+        return;
+    }
 
     // **顯示單字詳情**
     document.getElementById("searchContainer").style.display = "none";
@@ -537,7 +545,6 @@ function showDetails(word) {
     document.querySelector(".alphabet-container").style.display = "none";
     document.querySelector(".category-container").style.display = "none";
     document.querySelector(".level-container").style.display = "none";
-
     document.getElementById("searchInputDetails").value = "";
     document.getElementById("searchResultsDetails").innerHTML = "";
 
@@ -986,10 +993,13 @@ function getFromPage() {
 // 在 JSON 載入完成後顯示詳情
 function displayWordDetailsFromURL() {
     let wordName = getWordFromURL();
+    console.log("🔍 從 URL 取得的單字:", wordName); // 確保 URL 參數讀取正確
     if (!wordName) return; // 如果沒有傳遞單字參數，則不執行任何動作
 
     // 查找對應單字資料
     let wordData = wordsData.find(w => w.Words.toLowerCase() === wordName.toLowerCase());
+    console.log("🔍 查找到的單字資料:", wordData); // 確保 `wordsData` 正確載入
+
     if (wordData) {
         showDetails(wordData); // 呼叫原有函數顯示詳情
     } else {
@@ -1006,9 +1016,11 @@ document.addEventListener("DOMContentLoaded", function () {
             wordsData = data["New Words"] || [];
             console.log("✅ JSON 資料已成功載入");
 
-            // 資料載入完成後，檢查 URL 是否有單字參數並顯示詳情
+            // 🔥 **確保資料載入後再執行 `displayWordDetailsFromURL()`**
             displayWordDetailsFromURL();
         })
         .catch(err => console.error("❌ 讀取 JSON 失敗:", err));
 });
+
+
 
