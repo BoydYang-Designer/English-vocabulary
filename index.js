@@ -451,28 +451,51 @@ let startX = 0;
 let endX = 0;
 
 
-// ✅ 定義 handleSwipe 函數
-// ✅ 更新 handleSwipe 函數以加入滑動距離除錯資訊
+
+  
+
+// ✅ 更新 handleSwipe 函數以加入滑動距離除錯資訊與動畫效果
 function handleSwipe() {
     console.log("🛠️ handleSwipe 函數觸發"); // 確認函數有被觸發
     console.log(`➡️ 滑動起始位置: ${startX}, 結束位置: ${endX}`); // 新增：輸出滑動起始與結束位置
   
-    const threshold = 30; // 最小滑動距離
-    const swipeDistance = endX - startX; // 計算實際滑動距離
-    console.log(`📏 滑動距離為: ${swipeDistance}px`); // 新增：輸出滑動距離
+    const swipeThreshold = 30; // 最小滑動距離
+    const distance = endX - startX; // 計算滑動距離
+    console.log(`📏 滑動距離為: ${distance}px`); // 新增：輸出滑動距離
   
-    if (swipeDistance > threshold) {
-      console.log("⬅️ 左滑觸發 - 顯示上一個單字");
-      showPreviousWord(); // 左滑動，顯示上一個單字
-    } else if (swipeDistance < -threshold) {
-      console.log("➡️ 右滑觸發 - 顯示下一個單字");
-      showNextWord(); // 右滑動，顯示下一個單字
+    if (distance > swipeThreshold) {
+      console.log(`⬅️ 左滑觸發 - 距離: ${distance}px`);
+      triggerSwipeAnimation('left'); // 執行左滑動畫
+      showNextWord(); // 切換到下一個單字
+    } else if (distance < -swipeThreshold) {
+      console.log(`➡️ 右滑觸發 - 距離: ${distance}px`);
+      triggerSwipeAnimation('right'); // 執行右滑動畫
+      showPreviousWord(); // 切換到上一個單字
     } else {
       console.log("ℹ️ 滑動距離不足，未觸發切換");
     }
   }
   
+  // ✅ 新增動畫效果函數
+  function triggerSwipeAnimation(direction) {
+    const detailsContainer = document.querySelector('.details');
+    if (!detailsContainer) return;
   
+    // 移除先前的滑動效果
+    detailsContainer.classList.remove('swipe-left', 'swipe-right');
+  
+    // 加入新的滑動動畫
+    if (direction === 'left') {
+      detailsContainer.classList.add('swipe-left');
+    } else if (direction === 'right') {
+      detailsContainer.classList.add('swipe-right');
+    }
+  
+    // 動畫結束後清除動畫效果
+    setTimeout(() => {
+      detailsContainer.classList.remove('swipe-left', 'swipe-right');
+    }, 200); // 與 CSS 動畫時長一致
+  }
   
   
 
@@ -666,7 +689,6 @@ function getFromPage() {
 }
 
 // ✅ **根據來源設定 Back 按鈕功能**
-// ✅ 強制更新 Back 按鈕功能，並加入除錯訊息
 function updateBackButton() {
     let fromPage = getFromPage();
     let backButtons = document.querySelectorAll('#wordDetails .button');

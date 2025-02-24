@@ -445,3 +445,25 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 .important-checkbox:hover {
     transform: scale(1.4);
 }
+
+/* ✅ 禁止橫向滾動，但保留垂直滾動 */
+body {
+    overflow-x: hidden;  /* 禁止水平滾動 */
+    touch-action: pan-y; /* 允許垂直滑動（上下滾動） */
+  }
+
+  /* ✅ 滑動動畫效果 */
+.details {
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  
+  .details.swipe-left {
+    transform: translateX(-100%); /* 向左滑出 */
+    opacity: 0; /* 同時淡出 */
+  }
+  
+  .details.swipe-right {
+    transform: translateX(100%); /* 向右滑出 */
+    opacity: 0; /* 同時淡出 */
+  }
+  
