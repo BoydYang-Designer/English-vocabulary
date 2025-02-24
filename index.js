@@ -476,26 +476,27 @@ function handleSwipe() {
     }
   }
   
-  // ✅ 新增動畫效果函數
-  function triggerSwipeAnimation(direction) {
+// ✅ 新增滑動與半透明動畫效果
+function triggerSwipeAnimation(direction) {
     const detailsContainer = document.querySelector('.details');
     if (!detailsContainer) return;
   
-    // 移除先前的滑動效果
+    // 移除之前的動畫效果
     detailsContainer.classList.remove('swipe-left', 'swipe-right');
   
     // 加入新的滑動動畫
     if (direction === 'left') {
-      detailsContainer.classList.add('swipe-left');
+      detailsContainer.classList.add('swipe-left'); // 完全淡出
     } else if (direction === 'right') {
-      detailsContainer.classList.add('swipe-right');
+      detailsContainer.classList.add('swipe-right'); // 完全淡出
     }
   
-    // 動畫結束後清除動畫效果
+    // 動畫結束後重置狀態
     setTimeout(() => {
       detailsContainer.classList.remove('swipe-left', 'swipe-right');
-    }, 200); // 與 CSS 動畫時長一致
+    }, 200); // 與 CSS 動畫時間保持一致
   }
+  
   
   
 
@@ -593,25 +594,52 @@ let phonetics = `<div class="phonetics-container" style="display: flex; align-it
 const detailsContainer = document.querySelector('.details');
 
 if (detailsContainer) {
-  detailsContainer.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-  });
-
-  detailsContainer.addEventListener('touchend', (e) => {
-    endX = e.changedTouches[0].clientX;
-    handleSwipe();
-  });
-
-  // ✅ 新增滑鼠支援（放在滑動偵測功能後面）
-  detailsContainer.addEventListener('mousedown', (e) => {
-    startX = e.clientX;
-  });
-
-  detailsContainer.addEventListener('mouseup', (e) => {
-    endX = e.clientX;
-    handleSwipe();
-  });
-}
+    // 📱 手機觸控事件
+    detailsContainer.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      detailsContainer.classList.add('dragging'); // 啟用半透明效果
+    });
+  
+    detailsContainer.addEventListener('touchmove', (e) => {
+      let currentX = e.touches[0].clientX;
+      let dragDistance = currentX - startX;
+      detailsContainer.style.setProperty('--drag-distance', `${dragDistance}px`);
+    });
+  
+    detailsContainer.addEventListener('touchend', (e) => {
+      detailsContainer.classList.remove('dragging');
+      detailsContainer.style.removeProperty('--drag-distance');
+      endX = e.changedTouches[0].clientX;
+      handleSwipe();
+    });
+  
+    // 🖱️ 滑鼠拖曳事件
+    detailsContainer.addEventListener('mousedown', (e) => {
+      startX = e.clientX;
+      detailsContainer.classList.add('dragging'); // 啟用半透明效果
+    });
+  
+    detailsContainer.addEventListener('mousemove', (e) => {
+      if (e.buttons !== 1) return; // 檢查是否按下滑鼠左鍵
+      let currentX = e.clientX;
+      let dragDistance = currentX - startX;
+      detailsContainer.style.setProperty('--drag-distance', `${dragDistance}px`);
+    });
+  
+    detailsContainer.addEventListener('mouseup', (e) => {
+      detailsContainer.classList.remove('dragging'); // 移除半透明效果
+      detailsContainer.style.removeProperty('--drag-distance');
+      endX = e.clientX;
+      handleSwipe();
+    });
+  
+    // 釋放滑鼠時也要清除拖曳狀態（避免滑鼠離開後仍保留半透明）
+    detailsContainer.addEventListener('mouseleave', () => {
+      detailsContainer.classList.remove('dragging');
+      detailsContainer.style.removeProperty('--drag-distance');
+    });
+  }
+  
 
 let quizWordList = JSON.parse(localStorage.getItem('quizWordList')) || [];
 let fromQuiz = window.location.search.includes('from=quiz');
