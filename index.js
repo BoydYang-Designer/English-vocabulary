@@ -610,52 +610,32 @@ let phonetics = `<div class="phonetics-container" style="display: flex; align-it
 
 const detailsContainer = document.querySelector('.details');
 
-if (detailsContainer) {
-    // 📱 手機觸控事件
-    detailsContainer.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-      detailsContainer.classList.add('dragging'); // 啟用半透明效果
-    });
+// ✅ 確認只在手機上啟用滑動偵測
+if (isMobileDevice()) {
+    const detailsContainer = document.querySelector('.details');
   
-    detailsContainer.addEventListener('touchmove', (e) => {
-      let currentX = e.touches[0].clientX;
-      let dragDistance = currentX - startX;
-      detailsContainer.style.setProperty('--drag-distance', `${dragDistance}px`);
-    });
+    if (detailsContainer) {
+      // 📱 手機觸控事件
+      detailsContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        detailsContainer.classList.add('dragging'); // 啟用半透明效果
+      });
   
-    detailsContainer.addEventListener('touchend', (e) => {
-      detailsContainer.classList.remove('dragging');
-      detailsContainer.style.removeProperty('--drag-distance');
-      endX = e.changedTouches[0].clientX;
-      handleSwipe();
-    });
+      detailsContainer.addEventListener('touchmove', (e) => {
+        let currentX = e.touches[0].clientX;
+        let dragDistance = currentX - startX;
+        detailsContainer.style.setProperty('--drag-distance', `${dragDistance}px`);
+      });
   
-    // 🖱️ 滑鼠拖曳事件
-    detailsContainer.addEventListener('mousedown', (e) => {
-      startX = e.clientX;
-      detailsContainer.classList.add('dragging'); // 啟用半透明效果
-    });
-  
-    detailsContainer.addEventListener('mousemove', (e) => {
-      if (e.buttons !== 1) return; // 檢查是否按下滑鼠左鍵
-      let currentX = e.clientX;
-      let dragDistance = currentX - startX;
-      detailsContainer.style.setProperty('--drag-distance', `${dragDistance}px`);
-    });
-  
-    detailsContainer.addEventListener('mouseup', (e) => {
-      detailsContainer.classList.remove('dragging'); // 移除半透明效果
-      detailsContainer.style.removeProperty('--drag-distance');
-      endX = e.clientX;
-      handleSwipe();
-    });
-  
-    // 釋放滑鼠時也要清除拖曳狀態（避免滑鼠離開後仍保留半透明）
-    detailsContainer.addEventListener('mouseleave', () => {
-      detailsContainer.classList.remove('dragging');
-      detailsContainer.style.removeProperty('--drag-distance');
-    });
+      detailsContainer.addEventListener('touchend', (e) => {
+        detailsContainer.classList.remove('dragging'); // 移除半透明效果
+        detailsContainer.style.removeProperty('--drag-distance');
+        endX = e.changedTouches[0].clientX;
+        handleSwipe(); // 觸發滑動邏輯
+      });
+    }
   }
+  
   
 
 let quizWordList = JSON.parse(localStorage.getItem('quizWordList')) || [];
