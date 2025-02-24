@@ -446,6 +446,35 @@ function showWrongWords() {
 }
 
 
+// ✅ 定義全域變數來儲存滑動起始與結束位置
+let startX = 0;
+let endX = 0;
+
+
+// ✅ 定義 handleSwipe 函數
+// ✅ 更新 handleSwipe 函數以加入滑動距離除錯資訊
+function handleSwipe() {
+    console.log("🛠️ handleSwipe 函數觸發"); // 確認函數有被觸發
+    console.log(`➡️ 滑動起始位置: ${startX}, 結束位置: ${endX}`); // 新增：輸出滑動起始與結束位置
+  
+    const threshold = 30; // 最小滑動距離
+    const swipeDistance = endX - startX; // 計算實際滑動距離
+    console.log(`📏 滑動距離為: ${swipeDistance}px`); // 新增：輸出滑動距離
+  
+    if (swipeDistance > threshold) {
+      console.log("⬅️ 左滑觸發 - 顯示上一個單字");
+      showPreviousWord(); // 左滑動，顯示上一個單字
+    } else if (swipeDistance < -threshold) {
+      console.log("➡️ 右滑觸發 - 顯示下一個單字");
+      showNextWord(); // 右滑動，顯示下一個單字
+    } else {
+      console.log("ℹ️ 滑動距離不足，未觸發切換");
+    }
+  }
+  
+  
+  
+  
 
 function showDetails(word) {
     let searchInput = document.getElementById("searchInputDetails").value.trim();
@@ -538,8 +567,90 @@ let phonetics = `<div class="phonetics-container" style="display: flex; align-it
     updateBackButton();
 }
 
+const detailsContainer = document.querySelector('.details');
 
+if (detailsContainer) {
+  detailsContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
 
+  detailsContainer.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
+
+  // ✅ 新增滑鼠支援（放在滑動偵測功能後面）
+  detailsContainer.addEventListener('mousedown', (e) => {
+    startX = e.clientX;
+  });
+
+  detailsContainer.addEventListener('mouseup', (e) => {
+    endX = e.clientX;
+    handleSwipe();
+  });
+}
+
+// ✅ <span style="color: orange;">根據來源的單字列表取得當前單字索引</span>
+function getCurrentWordList() {
+    if (lastWordListType === 'letter' || lastWordListType === 'category' || lastWordListType === 'level') {
+      return wordsData.filter(w => {
+        let word = w.Words || w.word || w["單字"];
+        let category = w["分類"] || "未分類";
+        let level = w["等級"] || "未分類";
+  
+        if (lastWordListType === 'letter') return word.toLowerCase().startsWith(lastWordListValue.toLowerCase());
+        if (lastWordListType === 'category') return category === lastWordListValue;
+        if (lastWordListType === 'level') return level === lastWordListValue;
+      });
+    } else if (lastWordListType === 'importantWords') {
+      return Object.keys(localStorage).filter(key => key.startsWith("important_")).map(key => {
+        let wordText = key.replace("important_", "");
+        return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
+      });
+    } else if (lastWordListType === 'wrongWords') {
+      let wrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
+      return wrongWords.map(wordText => {
+        return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
+      });
+    }
+    // <span style="color: red;">搜尋結果不支援滑動</span>
+    return [];
+  }
+  
+  // ✅ <span style="color: green;">顯示下一個單字</span>
+  function showNextWord() {
+    let currentList = getCurrentWordList();
+    if (!currentList || currentList.length === 0) return;
+  
+    let currentWord = document.getElementById('wordTitle').textContent.trim();
+    let currentIndex = currentList.findIndex(w => (w.Words || w.word || w["單字"]).toLowerCase() === currentWord.toLowerCase());
+  
+    if (currentIndex >= 0 && currentIndex < currentList.length - 1) {
+      showDetails(currentList[currentIndex + 1]);
+    }
+  }
+  
+  // ✅ <span style="color: green;">顯示上一個單字</span>
+  function showPreviousWord() {
+    let currentList = getCurrentWordList();
+    if (!currentList || currentList.length === 0) return;
+  
+    let currentWord = document.getElementById('wordTitle').textContent.trim();
+    let currentIndex = currentList.findIndex(w => (w.Words || w.word || w["單字"]).toLowerCase() === currentWord.toLowerCase());
+  
+    if (currentIndex > 0) {
+      showDetails(currentList[currentIndex - 1]);
+    }
+  }
+  
+  // ✅ <span style="color: purple;">修改 CSS 以支援滑動動畫</span>
+  const style = document.createElement('style');
+  style.innerHTML = `
+    .details {
+      transition: transform 0.3s ease-in-out;
+    }
+  `;
+  document.head.appendChild(style);
 
 // ✅ **讀取 URL 來源參數**
 function getFromPage() {
