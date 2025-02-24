@@ -127,15 +127,53 @@ h1, h2 {
     letter-spacing: 8px;
 }
 
+/* #wordInput: 設定網格佈局並自動調整字母格寬度 */
 #wordInput {
-    display: block;
-    width: 80%;
-    margin: 0 auto 20px auto;
-    padding: 12px;
-    font-size: 18px;
-    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* 字母格最小寬度設定為 50px */
+    gap: 8px; /* 設定字母格間隔 */
+    width: 100%; /* 確保容器寬度足夠 */
+    max-width: 500px; /* 限制容器最大寬度 */
+    margin: 0 auto; /* 中央對齊 */
+    padding: 10px;
+    font-size: 24px; /* 字體大小 */
+    text-align: center;
+    border: 1px solid #ccc; /* 外邊框顏色 */
     border-radius: 8px;
+    background-color: #fff;
 }
+
+/* 每個字母格的樣式 */
+#wordInput input {
+    border: 1px solid #ccc; /* 外邊框顏色 */
+    outline: none; /* 移除點擊時的輪廓 */
+    text-align: center; /* 文字居中 */
+    font-size: 24px; /* 字體大小 */
+    background-color: transparent; /* 背景透明 */
+    width: 100%; /* 填滿父容器 */
+    height: 40px; /* 高度 */
+}
+
+/* 新增字母格的樣式 */
+.letter-box {
+    width: 100%; /* 保證每個字母格填滿父容器 */
+    height: 40px; /* 設定字母格高度 */
+    font-size: 24px; /* 字體大小 */
+    border: 1px solid #ccc; /* 外邊框 */
+    margin: 0; /* 沒有額外間距 */
+    text-align: center; /* 文字居中 */
+}
+
+.non-input-box {
+    display: inline-block;
+    width: 20px;  /* 控制寬度，使其對齊 */
+    text-align: center;
+    font-size: 24px;
+    color: gray; /* 讓空格與 `-` 顯示為灰色 */
+    font-weight: bold;
+}
+
+
 
 /* ==========================================
    📊 測驗結果樣式 (Quiz Results)
@@ -240,6 +278,30 @@ h1, h2 {
     color: #721c24;
 }
 
+/* 新增字母格的樣式 */
+.letter-box {
+    width: 40px; /* 每個字母格的寬度 */
+    height: 40px; /* 每個字母格的高度 */
+    text-align: center; /* 文字置中 */
+    font-size: 24px; /* 字體大小 */
+    border: 1px solid #ccc; /* 外邊框顏色 */
+    margin: 5px; /* 每個字母格的間距 */
+    outline: none; /* 移除點擊時的輪廓 */
+    background-color: transparent; /* 背景透明 */
+    position: relative;
+}
+
+/* 底部的淺灰色線條 */
+.letter-box::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* 線條高度 */
+    background-color: #ccc; /* 線條顏色 */
+}
+
 /* ==========================================
    📱 手機適應 (Responsive Design)
 ========================================== */
@@ -263,7 +325,7 @@ h1, h2 {
         gap: 10px; /* 元素之間間距 */
     }
 
-    .button, .back-button, #wordInput {
+    .button, .back-button, {
         width: 100%;
         max-width: 280px;
         margin: 5px auto;

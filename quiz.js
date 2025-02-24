@@ -168,11 +168,19 @@ function startQuiz() {
 }
 
 
+/// 提交答案並檢查正確性
 // 提交答案並檢查正確性
 function submitAnswer() {
-    let userAnswer = document.getElementById("wordInput").value.trim().toLowerCase();
+    let userAnswer = Array.from(document.querySelectorAll("#wordInput input"))
+                          .map(input => input.value.trim().toLowerCase())
+                          .join(""); // 取得使用者輸入的單字（合併成字串）
     let correctAnswer = currentWord.toLowerCase();
-    let isCorrect = userAnswer === correctAnswer;
+
+    // ✅ 標準化比較（移除空格和 `-`）
+    let normalizedUserAnswer = userAnswer.replace(/[\s-]/g, ""); 
+    let normalizedCorrectAnswer = correctAnswer.replace(/[\s-]/g, "");
+
+    let isCorrect = normalizedUserAnswer === normalizedCorrectAnswer;
 
     quizResults.push({
         word: currentWord,
@@ -180,9 +188,8 @@ function submitAnswer() {
         timestamp: new Date().toLocaleString()
     });
 
-    // ✅ 即時更新錯誤單字
+    // ✅ 立即儲存錯誤單字到 localStorage
     let storedWrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
-
     if (!isCorrect) {
         if (!storedWrongWords.includes(currentWord)) {
             storedWrongWords.push(currentWord);
@@ -190,25 +197,70 @@ function submitAnswer() {
     } else {
         storedWrongWords = storedWrongWords.filter(word => word !== currentWord);
     }
-
-    // ✅ 立即儲存到 localStorage
     localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
 
-    // 顯示提示用於除錯
-    console.log(`❌ 錯誤單字已更新: ${storedWrongWords}`);
-
-    // 顯示完整單字
+    // ✅ 顯示提示
+    let wordHint = document.getElementById("wordHint");
     let revealedWord = currentWord[0];
     for (let i = 1; i < currentWord.length - 1; i++) {
         revealedWord += ` <span style="color: ${isCorrect ? 'black' : 'red'};">${currentWord[i]}</span>`;
     }
     revealedWord += ` ${currentWord[currentWord.length - 1]}`;
+    wordHint.innerHTML = revealedWord;
 
-    document.getElementById("wordHint").innerHTML = revealedWord;
-
-    // 延遲 1.5 秒後自動顯示下一題
-    setTimeout(loadNextWord, 1500);
+    if (isCorrect) {
+        setTimeout(goToNextWord, 1500); // ✅ 答對後 1.5 秒自動進入下一題
+    } else {
+        // ✅ 答錯時才顯示「下一題」按鈕
+        document.getElementById("submitBtn").style.display = "none"; 
+        document.getElementById("nextBtn").style.display = "inline-block"; 
+    }
 }
+
+// ✅ 手動進入下一題
+function goToNextWord() {
+    loadNextWord(); // 載入新單字
+    
+    // 恢復按鈕狀態
+    document.getElementById("submitBtn").style.display = "inline-block"; // 顯示提交按鈕
+    document.getElementById("nextBtn").style.display = "none"; // 隱藏下一題按鈕
+}
+
+
+// 這是新增的部分：字母格的動態生成和自動跳格功能
+document.addEventListener("DOMContentLoaded", function () {
+    let currentWord = "example"; // 假設這是你的單字，這裡可以根據實際情況更改
+    let wordLength = currentWord.length; // 根據單字的長度設置格子數量
+    let wordInputContainer = document.getElementById("wordInput");
+
+    // 清空容器，確保只顯示新的字母格
+    wordInputContainer.innerHTML = ''; 
+
+    // 根據單字長度動態生成字母格
+    for (let i = 0; i < wordLength; i++) {
+        let inputElement = document.createElement("input");
+        inputElement.type = "text";
+        inputElement.maxLength = "1"; // 每個格子只能輸入一個字母
+        inputElement.classList.add("letter-box");
+        inputElement.addEventListener("input", function() {
+            moveNext(inputElement);  // 當用戶輸入字母後，跳到下一格
+        });
+        wordInputContainer.appendChild(inputElement);
+    }
+
+    // 自動跳格功能
+    function moveNext(input) {
+        if (input.value.length === input.maxLength) {
+            let nextInput = input.nextElementSibling;
+            if (nextInput) {
+                nextInput.focus();
+            }
+        }
+    }
+});
+
+
+
 
 
 // 顯示下一個單字並生成提示
@@ -217,29 +269,62 @@ function loadNextWord() {
         finishQuiz();
         return;
     }
+
     let randomIndex = Math.floor(Math.random() * quizWords.length);
     let wordData = quizWords.splice(randomIndex, 1)[0];
     currentWord = wordData.Words;
     currentAudio = `${baseURL}${currentWord}.mp3`;
 
-    let hint = currentWord[0];
-    for (let i = 1; i < currentWord.length - 1; i++) {
-        hint += " _";
+    let wordHintContainer = document.getElementById("wordHint");
+    let wordInputContainer = document.getElementById("wordInput");
+
+    wordInputContainer.innerHTML = ""; // 清空舊輸入框
+    wordHintContainer.innerHTML = ""; // 清空舊提示
+
+    for (let i = 0; i < currentWord.length; i++) {
+        let char = currentWord[i];
+
+        if (char === " " || char === "-") {
+            // ✅ 保留空格與 `-` 的位置
+            let spanElement = document.createElement("span");
+            spanElement.innerText = char;
+            spanElement.classList.add("non-input-box");
+            wordInputContainer.appendChild(spanElement);
+            wordHintContainer.innerHTML += char; // 保留空格與 `-`
+        } else {
+            let inputElement = document.createElement("input");
+            inputElement.type = "text";
+            inputElement.maxLength = "1";
+            inputElement.classList.add("letter-box");
+
+            inputElement.addEventListener("input", function () {
+                if (inputElement.value.length === 1) {
+                    let nextInput = inputElement.nextElementSibling;
+                    while (nextInput && nextInput.tagName === "SPAN") {
+                        nextInput = nextInput.nextElementSibling;
+                    }
+                    if (nextInput) {
+                        nextInput.focus();
+                    }
+                }
+            });
+
+            wordInputContainer.appendChild(inputElement);
+
+            // ✅ 顯示提示：只顯示第一個與最後一個字母，其餘用 `_`
+            if (i === 0 || i === currentWord.length - 1) {
+                wordHintContainer.innerHTML += char; // 顯示首尾字母
+            } else {
+                wordHintContainer.innerHTML += "_ "; // 其他地方用 `_` 代替
+            }
+        }
     }
-    hint += " " + currentWord[currentWord.length - 1];
 
-    document.getElementById("wordHint").innerText = hint;
-    document.getElementById("wordInput").value = "";
-
-    let resultDisplay = document.getElementById("resultDisplay");
-    if (resultDisplay) resultDisplay.innerHTML = "";
-
-    // 綁定播放按鈕到當前單字
-    const playButton = document.getElementById("playAudioBtn");
-    if (playButton) {
-        playButton.onclick = () => playAudioForWord(currentWord);
-    }
+    // ✅ 讓第一個輸入框自動對焦
+    let firstInput = wordInputContainer.querySelector("input");
+    if (firstInput) firstInput.focus();
 }
+
 
 
   // 完成測驗後顯示結果統計，包含單字、音標、對錯標記與重要單字勾選功能
