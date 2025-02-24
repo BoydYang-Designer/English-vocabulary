@@ -38,12 +38,14 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     background: #777;
 }
 
-.container { /* 設定主要內容的排列方式與間距，使其水平排列 */
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px;
+.container {
+    max-width: 414px; /* 讓 container 最多 414px */
+    width: 100%; /* 讓它適應小螢幕 */
+    margin: 0 auto; /* 讓它置中 */
+    overflow-x: hidden; /* 避免內容超出 */
+    box-sizing: border-box; /* 確保 padding 不會影響最大寬度 */
 }
+
 
 .word-list {
     display: none;
