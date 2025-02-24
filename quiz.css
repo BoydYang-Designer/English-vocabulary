@@ -246,7 +246,7 @@ h1, h2 {
 ========================================== */
 @media (max-width: 768px) {
     #quizResult {
-        width: 90%;
+        width: 100%;
         max-width: 500px;
         margin: 0 auto;
         text-align: center;
@@ -255,12 +255,12 @@ h1, h2 {
 
     .result-item {
         display: flex;
-        flex-wrap: nowrap;
+        flex-direction: column; /* 讓內容垂直排列 */
         align-items: center;
-        justify-content: space-between;
-        min-width: 600px;
+        justify-content: center;
         padding: 10px;
         overflow-x: auto;
+        min-width: auto; /* 取消最小寬度限制 */
     }
 
     .button, .back-button, #wordInput {
@@ -270,34 +270,25 @@ h1, h2 {
     }
 
     #wordHint {
-        font-size: 20px;
-        letter-spacing: 5px;
+        font-size: 18px; /* 調整字體大小避免溢出 */
+        letter-spacing: 3px;
     }
 
     .phonetic-btn {
-        font-size: 14px;
-        padding: 8px;
-        min-width: 120px;
+        font-size: 12px; /* 調整音標按鈕字體 */
+        padding: 6px;
+        min-width: 100px; /* 減少按鈕寬度 */
     }
 
+   .word-link {
+        font-size: 18px; /* 調整單字按鈕字體大小 */
+        padding: 8px 10px;
+        min-width: auto; /* 取消最小寬度限制 */
+    }
+  
     #saveResultBtn {
         width: 90%;
         max-width: 250px;
-    }
-
-    /* ✅ 測驗結果儲存成功提示 */
-    #saveNotification {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #4caf50;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    z-index: 1000;
-    text-align: center;
     }
 
 }
