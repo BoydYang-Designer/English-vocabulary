@@ -470,7 +470,8 @@ body {
     }
 
     .word-item {
-        font-size: 16px; /* 減小字體大小 */
+        font-size: 24px; /* 減小字體大小 */
+        text-align: left;
     }
 
     .button {
