@@ -724,14 +724,6 @@ function saveNote() {
     }
 }
 
-function clearAllNotes() {
-    if (confirm("⚠️ 你確定要刪除所有筆記嗎？這個動作無法復原！")) {
-        localStorage.clear();
-        console.log("✅ 所有筆記已清除");
-        alert("✅ 所有筆記已清除！");
-        document.getElementById("wordNote").value = ""; // 清空筆記區
-    }
-}
 
 function displayNote() {
     let word = document.getElementById("wordTitle")?.textContent.trim();
