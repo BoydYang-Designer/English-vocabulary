@@ -149,6 +149,9 @@ h1, h2 {
     outline: none;
     background-color: transparent;
     position: relative;
+    text-transform: lowercase; /* 強制顯示小寫 */
+    autocapitalize: off; /* 禁用輸入法自動大寫 */
+    -webkit-text-security: none; /* 防止部分瀏覽器自動修正 */
 }
 
 .letter-box::after {
