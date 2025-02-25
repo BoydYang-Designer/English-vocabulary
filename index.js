@@ -321,6 +321,9 @@ function backToFirstLayer() {
 // 重要的單字
 function showImportantWords() {
     console.log("📌 顯示重要單字");
+    
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none"; // 顯示開始測驗按鈕
 
     let listContainer = document.getElementById("wordList");
     let wordItems = document.getElementById("wordItems");
@@ -391,6 +394,9 @@ function showImportantWords() {
 // ✅ 顯示所有測驗中答錯的單字
 function showWrongWords() {
     console.log("📌 顯示錯誤單字");
+
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none"; // 顯示開始測驗按鈕
 
     let listContainer = document.getElementById("wordList");
     let wordItems = document.getElementById("wordItems");

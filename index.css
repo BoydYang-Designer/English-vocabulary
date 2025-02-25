@@ -49,8 +49,8 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 
 .word-list {
     display: none;
+    max-width: 414px; /* 這是根據你手機寬度設置的最大寬度 */
     margin: 10px 0;
-    width: 300px;
     max-height: 400px;
     overflow-y: auto;
     background: white;
@@ -442,12 +442,46 @@ body {
   
   
   @media (max-width: 414px) {
-    .word-list  {
-        width: 100%;
-        max-width: 414px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 10px;
+    h1 {
+        font-size: 20px; /* 調整標題字型大小 */
     }
 
+    .letter-btn {
+        padding: 12px 18px;
+        font-size: 14px; /* 增大按鈕尺寸 */
+    }
+
+    .container {
+        padding: 10px; /* 給容器增加內邊距 */
+    }
+
+    .word-list {
+        width: 100%;
+        max-width: 414px; /* 這是根據你手機寬度設置的最大寬度 */
+        margin: 0 auto;
+        padding: 10px;
+        box-sizing: border-box; /* 確保內部的 padding 不會超出設定寬度 */
+        overflow-y: auto; /* 如果內容過多，可以滾動顯示 */
+        text-align: center;
+    }
+
+    .word-item {
+        font-size: 16px; /* 減小字體大小 */
+    }
+
+    .button {
+        width: 200px;
+        height: 55px;
+        font-size: 16px; /* 調整按鈕尺寸 */
+    }
+
+    .back-button {
+        position: absolute;
+        top: 10px; /* 距離容器頂部的距離 */
+        left: 50%; /* 使按鈕水平居中 */
+        transform: translateX(-50%); /* 完全居中 */
+        padding: 10px;
+        background-color: #424d57;; /* 按鈕顏色 */
+        border: none;
+        cursor: pointer;
 }

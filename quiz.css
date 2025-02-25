@@ -2,6 +2,8 @@
    🌍 全域設定 (Global Styles)
 ========================================== */
 html, body {
+    overflow-x: hidden; /* 禁止左右滾動 */
+    overflow-y: auto;   /* 啟用上下滾動 */
     touch-action: manipulation;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -25,12 +27,13 @@ h1, h2 {
    📦 主要區塊樣式 (Main Sections)
 ========================================== */
 #mainMenu, #quizCategories, #quizArea, #quizResult {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 100%;
+    width: 100%; /* 保證元素不會超過螢幕寬度 */
+    margin: 10px auto; /* 顯示時加上自動居中 */
     background-color: #fff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 微調陰影，使其更適合手機顯示 */
 }
 
 /* ==========================================
@@ -235,23 +238,23 @@ h1, h2 {
 /* ==========================================
    📱 手機適應 (Responsive Design)
 ========================================== */
-@media (max-width: 768px) {
-    #quizResult {
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 15px;
+@media (max-width: 414px) {
+    #mainMenu, #quizCategories, #quizArea, #quizResult {
+        padding: 10px; /* 在小螢幕上稍微減少內邊距 */
     }
 
-    .result-item {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 10px;
-        overflow-x: auto;
-        min-width: 600px;
+    h1 {
+        font-size: 24px; /* 讓標題字體稍微縮小 */
+    }
+
+    .button {
+        padding: 10px; /* 調整按鈕內邊距，讓它們在小螢幕上也能清晰可點 */
+        font-size: 14px; /* 調整按鈕字體大小 */
+    }
+
+    .letter-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 每行最多顯示 3 個字母格 */
         gap: 10px;
     }
 
@@ -274,22 +277,4 @@ h1, h2 {
     }
 }
 
-@media (max-width: 414px) {
-    #quizResult {
-        width: 100%;
-        max-width: 414px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 10px;
-    }
 
-    .letter-box {
-        width: 36px;
-        height: 36px;
-        font-size: 18px;
-    }
-
-    .result-item {
-        min-width: 414px;
-    }
-}
