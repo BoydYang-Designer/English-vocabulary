@@ -168,7 +168,6 @@ function startQuiz() {
 }
 
 
-/// 提交答案並檢查正確性
 // 提交答案並檢查正確性
 function submitAnswer() {
     let userAnswer = Array.from(document.querySelectorAll("#wordInput input"))

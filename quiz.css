@@ -42,8 +42,11 @@ h1, h2 {
 
 .button-container {
     display: flex;
-    justify-content: flex-start; /* 左對齊，讓按鈕並排顯示 */
-    gap: 10px; /* 按鈕之間的間距 */
+    justify-content: center; /* 讓按鈕水平置中 */
+    gap: 10px; /* 按鈕間距 */
+    flex-wrap: wrap; /* 避免過多按鈕時擠在一行 */
+    width: 100%; /* 確保不超出容器 */
+    margin-top: 10px;
 }
 
 .back-button, #startFilteredQuizBtn {
@@ -193,28 +196,31 @@ h1, h2 {
 }
 
 #wordInput {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-    gap: 8px;
+    transform: translateX(-8px); /* 向左移 10px，可自行調整 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 10px;
-    font-size: 24px;
+    max-width: 410px; /* 確保最大寬度不超過 414px */
+    margin: 0 auto; /* 讓區塊置中 */
+    padding: 8px;
+    font-size: 18px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
+    box-sizing: border-box; /* 防止 padding 影響寬度 */
 }
 
 /* ✅ 字母格樣式 */
 .letter-box {
-    width: 40px;
-    height: 40px;
+    width: 21px;
+    height: 25px;
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
     border: 1px solid #ccc;
-    margin: 5px;
+    margin: 2px;
     outline: none;
     background-color: transparent;
     position: relative;
@@ -308,18 +314,17 @@ h1, h2 {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 6px;
+        gap: 2px;
         width: 100%;
-        max-width: 414px;
         margin: 0 auto;
         padding: 10px;
     }
 
     .letter-box {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        margin: 4px;
+        width: 21px;
+        height: 25px;
+        font-size: 26px;
+        margin: 2px;
     }
 }
 
