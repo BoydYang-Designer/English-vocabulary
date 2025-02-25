@@ -60,7 +60,7 @@ h1, h2 {
 .category-button {
     padding: 10px 15px;
     margin: 5px;
-    background-color: #555;
+    background-color: #617194;
     color: white;
     border-radius: 15px;
     border: none;
@@ -88,11 +88,11 @@ h1, h2 {
 
 /* ✅ 特殊按鈕（返回/儲存） */
 .back-button {
-    background-color: #f44336;
+    background-color: #424d57;
 }
 
 .back-button:hover {
-    background-color: #d32f2f;
+    background-color: #6e8191;
 }
 
 #saveResultBtn {
@@ -108,6 +108,26 @@ h1, h2 {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+/* ✅ 單字按鈕 - 深藍色 */
+.word-link, .phonetic-btn {
+    cursor: pointer;
+    padding: 30px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto;
+    border-radius: 25px;
+    border: none;
+    background-color: #576572;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+.word-link, .phonetic-btn {
+    background-color: #59758f;
+}
+
+
 
 #saveResultBtn:hover {
     background-color: #6e8191;
