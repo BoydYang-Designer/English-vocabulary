@@ -112,7 +112,7 @@ h1, h2 {
 /* ✅ 單字按鈕 - 深藍色 */
 .word-link, .phonetic-btn {
     cursor: pointer;
-    padding: 30px 15px;
+    padding: 15px 15px;
     font-size: 20px;
     font-weight: bold;
     margin: 20px auto;
