@@ -39,6 +39,26 @@ h1, h2 {
 /* ==========================================
    🔘 按鈕樣式 (Buttons)
 ========================================== */
+
+.button-container {
+    display: flex;
+    justify-content: flex-start; /* 左對齊，讓按鈕並排顯示 */
+    gap: 10px; /* 按鈕之間的間距 */
+}
+
+.back-button, #startFilteredQuizBtn {
+    padding: 10px 15px;
+    background-color: #617194;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px; /* 確保兩個按鈕的寬度一致 */
+    text-align: center;
+    font-weight: bold;
+}
+
 .button, .back-button {
     display: block;
     width: 150px;
@@ -59,16 +79,42 @@ h1, h2 {
     background-color: #6e8191;
 }
 
+#cancelBtn {
+    background-color: #f44336; /* 你可以設定任何顏色 */
+    color: white; /* 文字顏色 */
+}
+
+#cancelBtn:hover {
+    background-color: #d32f2f; /* 滑鼠懸停時的顏色 */
+}
+
+#startFilteredQuizBtn {
+    background-color: #4CAF50; /* 設置背景顏色，這裡選擇綠色 */
+    color: white; /* 設置文字顏色為白色 */
+    border-radius: 25px; /* 邊角圓滑 */
+    padding: 10px 20px; /* 內邊距 */
+    border: none; /* 去掉邊框 */
+    font-size: 18px; /* 文字大小 */
+    cursor: pointer; /* 鼠標懸停時顯示指針 */
+    transition: background-color 0.3s ease; /* 背景顏色過渡效果 */
+}
+
+#startFilteredQuizBtn:hover {
+    background-color: #45a049; /* 滑鼠懸停時的顏色 */
+}
+
+
 /* ✅ 分類按鈕 */
 .category-button {
     padding: 10px 15px;
     margin: 5px;
     background-color: #617194;
     color: white;
-    border-radius: 15px;
+    border-radius: 20px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 18px; /* 增大字體大小 */
 }
 
 .category-button:hover {
@@ -249,7 +295,7 @@ h1, h2 {
 
     .button {
         padding: 10px; /* 調整按鈕內邊距，讓它們在小螢幕上也能清晰可點 */
-        font-size: 14px; /* 調整按鈕字體大小 */
+        font-size: 18px; /* 調整按鈕字體大小 */
     }
 
     .letter-grid {

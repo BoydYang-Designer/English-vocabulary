@@ -11,21 +11,23 @@
 
     <!-- 導覽按鈕區 -->
     <div id="mainMenu">
-        <button class="back-button" onclick="goBack()">Back</button>
-        <button class="button" onclick="showQuizCategories()">Start words</button>
-        <button class="button" disabled>Start sentence</button>
+        <button class="back-button" onclick="goBack()">Home</button>
+        <button class="button" onclick="showQuizCategories()">Q vocabulary</button>
+        <button class="button" disabled>Q Sentence</button>
     </div>
 
     <div class="container">
         <!-- 測驗分類區 -->
         <div id="quizCategories" style="display: none;">
             <h2>選擇測驗分類</h2>
-            <button class="back-button" onclick="returnToMainMenu()">Back</button>
+            <div class="button-container">
+                <button class="back-button" onclick="returnToMainMenu()">Back</button>
+                <button id="startFilteredQuizBtn" class="button">Quiz</button>
+            </div>
             <div class="alphabet-container" id="alphabetButtons"></div>
             <div class="category-container" id="categoryButtons"></div>
             <div class="level-container" id="levelButtons"></div>
             <div id="checkedCategory"></div>
-            <button id="startFilteredQuizBtn" class="button">開始測驗</button>
         </div>
 
         <div id="quizArea" style="display: none;">

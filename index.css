@@ -31,7 +31,8 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     border: none;
     background: #555;
     color: white;
-    border-radius: 15px;
+    font-size: 18px;
+    border-radius: 25px;
 }
 
 .letter-btn:hover { /* 設定字母按鈕的懸停效果 */
@@ -39,6 +40,7 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 }
 
 .container {
+    height: 800px; /* Adjust this value to your desired height */
     max-width: 414px; /* 讓 container 最多 414px */
     width: 100%; /* 讓它適應小螢幕 */
     margin: 0 auto; /* 讓它置中 */
@@ -51,7 +53,7 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     display: none;
     max-width: 414px; /* 這是根據你手機寬度設置的最大寬度 */
     margin: 10px 0;
-    max-height: 400px;
+    max-height: 80vh; /* 設定最大高度為螢幕高度的80% */
     overflow-y: auto;
     background: white;
     padding: 15px;
@@ -116,13 +118,15 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 }
 
 #meaningContainer {
-    max-height: 300px; /* 設定最大高度，內容超出時會滾動 */
+    max-height: 420px; /* 設定最大高度，內容超出時會滾動 */
     overflow-y: auto; /* 啟用垂直滾動條 */
     padding: 10px;
     border: 1px solid #ddd;
     background: #f9f9f9;
     border-radius: 10px;
     font-size: 18px;
+    margin-left: 0px;
+    margin-right: 25px;
 }
 
 #chineseContainer {
@@ -142,13 +146,13 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 
 
 .button {
+    font-size: 18px;
+    border-radius: 25px;
     display: block;
     width: 150px;
     height: 50px;
     background-color: #424d57;
     color: white;
-    font-size: 18px;
-    border-radius: 25px;
     border: none;
     cursor: pointer;
     text-align: center;
