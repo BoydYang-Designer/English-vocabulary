@@ -378,21 +378,6 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     transform: scale(1.1);
 }
 
-#cancelBtn {
-    background-color: #f44336; /* 紅色背景 */
-    color: white;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    margin: 10px auto;
-    display: block;
-}
-
-#cancelBtn:hover {
-    background-color: #d32f2f;
-}
 /* ✅ 勾選按鈕樣式 */
 .check-button {
     background: none;
@@ -435,11 +420,6 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     transform: scale(1.4);
 }
 
-/* ✅ 禁止橫向滾動，但保留垂直滾動 */
-body {
-    overflow-x: auto;  /* 禁止水平滾動 */
-    touch-action: pan-x pan-y; 
-  }
 
 .details {
   width: 400px;
@@ -450,46 +430,24 @@ body {
   display: none;
   position: relative;
   font-size: 12px;
-  
-  /* ✅ 滑動動畫效果設定 */
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 1;
 }
 
-  .details.swipe-left {
-    transform: translateX(-100%);
-    opacity: 0; /* 完全淡出 */
-  }
-  
-  .details.swipe-right {
-    transform: translateX(-100%);
-    opacity: 0; /* 完全淡出 */
-  }
-
-/* ✅ 拖曳過程中的半透明效果 */
-  .details.dragging {
-    transition: none; /* 拖曳時無需過渡 */
-    opacity: 0.3; /* 拖曳時半透明 */
-    transform: translateX(var(--drag-distance, 0px)); /* 根據拖曳距離移動 */
-  }
-  
 
 
-/* ✅ 新增單字進入動畫效果 */
-.details.enter-from-right {
-    transform: translateX(-100%); /* 從右邊滑入 */
-    opacity: 0;
-  }
-  
-  .details.enter-from-left {
-    transform: translateX(100%); /* 從左邊滑入 */
-    opacity: 0;
-  }
-  
-  .details.active {
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    transform: translateX(0);
-    opacity: 1;
+/* ✅ 禁止橫向滾動，但保留垂直滾動 */
+body {
+    overflow-x: auto;  /* 禁止水平滾動 */
+    touch-action: pan-x pan-y; 
   }
   
   
+  @media (max-width: 414px) {
+    .word-list  {
+        width: 100%;
+        max-width: 414px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 10px;
+    }
+
+}
