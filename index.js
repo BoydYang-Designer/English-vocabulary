@@ -144,12 +144,14 @@ function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
     let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
 
-    // ✅ 新增「重要單字」與「錯誤單字」分類按鈕
-    categories.unshift("錯誤單字", "重要單字");
+    // ✅ 新增 "Checked 單字"、"重要單字"、"錯誤單字" 分類按鈕
+    categories.unshift("Checked 單字", "重要單字", "錯誤單字");
 
     document.getElementById("categoryButtons").innerHTML = categories
         .map(c => {
-            if (c === "重要單字") {
+            if (c === "Checked 單字") {
+                return `<button class='letter-btn' onclick='showCheckedWords()'>${c}</button>`;
+            } else if (c === "重要單字") {
                 return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
             } else if (c === "錯誤單字") {
                 return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
@@ -451,6 +453,56 @@ function showWrongWords() {
     document.querySelector(".level-container").style.display = "none";
 }
 
+// ✅ 顯示所有已標記 Checked 的單字
+function showCheckedWords() {
+    console.log("📌 顯示 Checked 單字");
+
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";
+
+    let listContainer = document.getElementById("wordList");
+    let wordItems = document.getElementById("wordItems");
+    wordItems.innerHTML = "";
+
+    let checkedWords = Object.keys(localStorage).filter(key => key.startsWith("checked_"));
+
+    if (checkedWords.length === 0) {
+        wordItems.innerHTML = "<p>⚠️ 目前沒有 Checked 單字</p>";
+    } else {
+        checkedWords.forEach(key => {
+            let wordText = key.replace("checked_", "");
+            let isImportant = localStorage.getItem(`important_${wordText}`) === "true";
+            let item = document.createElement("div");
+            item.className = "word-item-container checked";
+            item.innerHTML = `
+                <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${wordText}", this)' ${isImportant ? "checked" : ""}>
+                <p class='word-item' data-word="${wordText}">${wordText}</p>
+                <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
+                    <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" class="check-icon" alt="Check" width="24" height="24">
+                </button>
+            `;
+
+            // ✅ 點擊進入該單字的第三層詳情
+            item.querySelector('.word-item').addEventListener("click", function () {
+                let wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]).trim().toLowerCase() === wordText.toLowerCase());
+                if (wordObj) {
+                    console.log("✅ 進入詳情頁面:", wordObj);
+                    showDetails(wordObj);
+                } else {
+                    console.error("❌ 找不到單字資料:", wordText);
+                }
+            });
+
+            wordItems.appendChild(item);
+        });
+    }
+
+    listContainer.style.display = "block";
+    document.getElementById("wordDetails").style.display = "none";
+    document.querySelector(".alphabet-container").style.display = "none";
+    document.querySelector(".category-container").style.display = "none";
+    document.querySelector(".level-container").style.display = "none";
+}
 
 
 function showDetails(word) {
