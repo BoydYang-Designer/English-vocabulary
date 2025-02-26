@@ -183,10 +183,6 @@ h2 {
     color: white;
 }
 
-.word-link, .phonetic-btn {
-    background-color: #95a0aa;
-}
-
 
 #saveResultBtn:hover {
     background-color: #6e8191;
@@ -262,14 +258,19 @@ h2 {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+.word-link, .phonetic-btn {
+    background-color: transparent;
+}
+
 .result-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f1f5f8;
+    background-color: #495f70;
     margin-bottom: 2px;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 8px; /* 避免太擠 */
 }
 
 /* ✅ 重要單字標記 */
