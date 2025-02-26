@@ -207,14 +207,11 @@ h2 {
 
 /* ✅ 字母格樣式 */
 .letter-box {
-    width: 20px !important;/* 避免 iOS 縮放 */
+    width: 22px !important;/* 避免 iOS 縮放 */
     height: 24px !important;/* 避免 iOS 縮放 */
     box-sizing: border-box !important;/* 避免 iOS 縮放 */
-    font-size: 20px !important;  /* 避免 iOS 縮放 */
+    font-size: 24px !important;  /* 避免 iOS 縮放 */
     line-height: 1 !important;/* 避免 iOS 縮放 */
-    appearance: none; /* 避免 iOS 縮放 */
-    -webkit-appearance: none;/* 避免 iOS 縮放 */
-    -moz-appearance: none;/* 避免 iOS 縮放 */
     text-align: center;
     border: 1px solid #ccc;
     margin: 2px;
