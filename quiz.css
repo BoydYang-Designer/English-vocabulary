@@ -320,8 +320,8 @@ h1, h2 {
     }
 
     .letter-box {
-        width: 21px;
-        height: 24px;
+        width: 24px;
+        height: 21px;
         font-size: 26px;
         margin: 2px;
     }
