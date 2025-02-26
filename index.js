@@ -216,6 +216,7 @@ function showWords(type, value) {
         filteredWords.forEach(word => {
             let wordText = word.Words || word.word || word["單字"];
             let isChecked = localStorage.getItem(`checked_${wordText}`) === "true"; // 檢查是否已 Check
+            let isImportant = localStorage.getItem(`important_${wordText}`) === "true"; // 檢查是否為重要單字
 
             let iconSrc = isChecked 
                 ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg"
@@ -228,6 +229,7 @@ function showWords(type, value) {
             }
             
             item.innerHTML = `
+                <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${wordText}", this)' ${isImportant ? "checked" : ""}>
                 <p class='word-item' data-word="${wordText}">${wordText}</p>
                 <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
                     <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
@@ -261,6 +263,7 @@ function showWords(type, value) {
         });
     }, 300); // 延遲 300ms 確保 DOM 生成後綁定
 }
+
 
 function toggleCheck(word, button) {
     let isChecked = localStorage.getItem(`checked_${word}`) === "true";
@@ -411,6 +414,7 @@ function showWrongWords() {
     } else {
         wrongWords.forEach(wordText => {
             let isChecked = localStorage.getItem(`checked_${wordText}`) === "true";
+            let isImportant = localStorage.getItem(`important_${wordText}`) === "true";
 
             let iconSrc = isChecked
                 ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg"
@@ -423,11 +427,13 @@ function showWrongWords() {
             }
 
             item.innerHTML = `
-                <p class='word-item' data-word="${wordText}">${wordText}</p>
-                <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
-                    <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
-                </button>
-            `;
+    <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${wordText}", this)' ${isImportant ? "checked" : ""}>
+    <p class='word-item' data-word="${wordText}">${wordText}</p>
+    <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
+        <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
+    </button>
+`;
+
 
             // ✅ 點擊進入該單字的第三層詳情
             item.querySelector('.word-item').addEventListener("click", function () {
@@ -486,6 +492,8 @@ function showCheckedWords() {
             item.querySelector('.word-item').addEventListener("click", function () {
                 let wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]).trim().toLowerCase() === wordText.toLowerCase());
                 if (wordObj) {
+                    lastWordListType = "checkedWords"; // ✅ 記錄來源為 Checked 單字列表
+                    lastWordListValue = checkedWords; // ✅ 確保返回時可以回到 Checked 單字列表
                     console.log("✅ 進入詳情頁面:", wordObj);
                     showDetails(wordObj);
                 } else {
@@ -503,6 +511,7 @@ function showCheckedWords() {
     document.querySelector(".category-container").style.display = "none";
     document.querySelector(".level-container").style.display = "none";
 }
+
 
 
 function showDetails(word) {
@@ -649,16 +658,17 @@ function backToWordList() {
         document.querySelector('.category-container').style.display = "block";
         document.querySelector('.level-container').style.display = "block";
     } else if (lastWordListType === "importantWords") {
-        // ✅ 如果來自重要單字列表
         console.log("🔙 返回重要單字列表");
-        showImportantWords();
+        showImportantWords(); // ✅ 回到重要單字列表
     } else if (lastWordListType === "wrongWords") {
-        // ✅ 如果來自錯誤單字列表
         console.log("🔙 返回錯誤單字列表");
-        showWrongWords();
+        showWrongWords(); // ✅ 回到錯誤單字列表
+    } else if (lastWordListType === "checkedWords") {
+        console.log("🔙 返回 Checked 單字列表");
+        showCheckedWords(); // ✅ 回到 Checked 單字列表
     } else if (lastWordListType && lastWordListValue) {
-        // 回到第二層
-        showWords(lastWordListType, lastWordListValue);
+        console.log(`🔙 返回 ${lastWordListType} 類別: ${lastWordListValue}`);
+        showWords(lastWordListType, lastWordListValue); // ✅ 回到分類單字列表
     } else {
         console.error("❌ 無法返回，lastWordListType 為空，回到第一層");
         backToFirstLayer();
