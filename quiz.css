@@ -196,14 +196,14 @@ h1, h2 {
 }
 
 #wordInput {
-    transform: translateX(-8px); /* 向左移 10px，可自行調整 */
+    transform: translateX(-16px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2px;
     width: 100%;
-    max-width: 410px; /* 確保最大寬度不超過 414px */
-    margin: 0 auto; /* 讓區塊置中 */
+    max-width: 395px;
+    margin: auto;
     padding: 8px;
     font-size: 18px;
     text-align: center;
@@ -224,8 +224,6 @@ h1, h2 {
     background-color: transparent;
     position: relative;
     text-transform: lowercase; /* 強制顯示小寫 */
-    autocapitalize: off; /* 禁用輸入法自動大寫 */
-    -webkit-text-security: none; /* 防止部分瀏覽器自動修正 */
 }
 
 .letter-box::after {
@@ -240,9 +238,9 @@ h1, h2 {
 
 .non-input-box {
     display: inline-block;
-    width: 20px;
+    width: 15px;
     text-align: center;
-    font-size: 24px;
+    font-size: 15px;
     color: gray;
     font-weight: bold;
 }
@@ -286,45 +284,5 @@ h1, h2 {
     border-color: #6c757d;
 }
 
-/* ==========================================
-   📱 手機適應 (Responsive Design)
-========================================== */
-@media (max-width: 414px) {
-    #mainMenu, #quizCategories, #quizArea, #quizResult {
-        padding: 10px; /* 在小螢幕上稍微減少內邊距 */
-    }
-
-    h1 {
-        font-size: 24px; /* 讓標題字體稍微縮小 */
-    }
-
-    .button {
-        padding: 10px; /* 調整按鈕內邊距，讓它們在小螢幕上也能清晰可點 */
-        font-size: 18px; /* 調整按鈕字體大小 */
-    }
-
-    .letter-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 每行最多顯示 3 個字母格 */
-        gap: 10px;
-    }
-
-    #wordInput {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 10px;
-    }
-
-    .letter-box {
-        width: 24px;
-        height: 21px;
-        font-size: 26px;
-        margin: 2px;
-    }
-}
 
 
