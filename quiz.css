@@ -210,13 +210,12 @@ h1, h2 {
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
-    box-sizing: border-box; /* 防止 padding 影響寬度 */
 }
 
 /* ✅ 字母格樣式 */
 .letter-box {
     width: 21px;
-    height: 25px;
+    height: 24px;
     text-align: center;
     font-size: 26px;
     border: 1px solid #ccc;
@@ -322,7 +321,7 @@ h1, h2 {
 
     .letter-box {
         width: 21px;
-        height: 25px;
+        height: 24px;
         font-size: 26px;
         margin: 2px;
     }
