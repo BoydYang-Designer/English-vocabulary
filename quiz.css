@@ -199,19 +199,21 @@ h2 {
     max-width: 395px;
     margin: auto;
     padding: 8px;
-    font-size: 18px;
     text-align: center;
-    border-radius: 8px;
-    background-color: #fff;
+
 }
 
 /* ✅ 字母格樣式 */
+
+
+
 .letter-box {
+    border-radius: 5px;
     width: 24px !important;/* 避免 iOS 縮放 */
-    height: 24px !important;/* 避免 iOS 縮放 */
-    font-size: 24px 
+    height: 26x !important;/* 避免 iOS 縮放 */
+    font-size: 26px !important;
     text-align: center;
-    border: 1px solid #ccc;
+    border-color:#dfdfdf;
     margin: 2px;
     outline: none;
     background-color: transparent;
