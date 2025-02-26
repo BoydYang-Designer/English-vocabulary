@@ -171,17 +171,7 @@ h2 {
 }
 
 /* ✅ 單字按鈕 - 深藍色 */
-.word-link, .phonetic-btn {
-    cursor: pointer;
-    padding: 5px 10px;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 20px auto;
-    border-radius: 15px;
-    border: none;
-    transition: all 0.3s ease-in-out;
-    color: white;
-}
+
 
 
 #saveResultBtn:hover {
@@ -252,7 +242,7 @@ h2 {
    📊 測驗結果樣式 (Quiz Results)
 ========================================== */
 #quizResult {
-    padding: 20px;
+    padding: 0px;
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -260,6 +250,18 @@ h2 {
 
 .word-link, .phonetic-btn {
     background-color: transparent;
+}
+
+.word-link, .phonetic-btn {
+    cursor: pointer;
+    padding: 5px 3px;
+    font-size: 18px;
+    font-weight: bold;
+    /* margin: 2px auto; */
+    border-radius: 15px;
+    border: none;
+    transition: all 0.3sease-in-out;
+    color: white;
 }
 
 .result-item {
