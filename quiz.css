@@ -133,7 +133,7 @@ h1, h2 {
 /* ✅ 置中按鈕區塊 */
 .button-group {
     display: flex;
-    justify-content: center;
+    margin-right: 25px;
     gap: 20px;
     margin-top: 20px;
 }
