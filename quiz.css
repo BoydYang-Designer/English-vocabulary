@@ -182,11 +182,11 @@ h2 {
    📝 測驗區塊樣式 (Quiz Area)
 ========================================== */
 #wordHint {
-    font-size: 24px;
-    margin: 20px 10px;
+    font-size: 26px;
+    margin: 20px 5px;
     text-align: center;
-    letter-spacing: 5px;
-    margin-right: 30px;
+    letter-spacing: 4px;
+    margin-right: 10px;
 }
 
 #wordInput {
@@ -194,27 +194,28 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2px;
+    gap: 1px;
     width: 100%;
     max-width: 395px;
     margin: auto;
-    padding: 8px;
-    font-size: 18px;
+    padding: 5px;
     text-align: center;
-    border-radius: 8px;
-    background-color: #fff;
+
 }
 
 /* ✅ 字母格樣式 */
+
+
+
 .letter-box {
+    border-radius: 5px;
     width: 24px !important;/* 避免 iOS 縮放 */
-    height: 24px !important;/* 避免 iOS 縮放 */
-    box-sizing: border-box !important;/* 避免 iOS 縮放 */
-    font-size: 24px !important;  /* 避免 iOS 縮放 */
-    line-height: 1 !important;/* 避免 iOS 縮放 */
+    height: 24x !important;/* 避免 iOS 縮放 */
+    font-size: 24px !important;
     text-align: center;
-    border: 1px solid #ccc;
-    margin: 2px;
+    max-width: 400px;
+    border-color:#dfdfdf;
+    margin: 0px;
     outline: none;
     background-color: transparent;
     position: relative;
