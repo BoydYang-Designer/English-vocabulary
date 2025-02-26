@@ -32,7 +32,7 @@
 
         <div id="quizArea" style="display: none;">
             <h2>填寫單字</h2>
-            <button id="cancelBtn" class="back-button" onclick="returnToCategorySelection()">取消</button>
+            <button id="cancelBtn" class="back-button" onclick="returnToCategorySelection()">Cancel</button>
             <div id="wordHint"></div>
             
             <!-- 字母格輸入框 -->
@@ -41,22 +41,21 @@
             </div>
 
             <div class="button-group">
-                <button id="playAudioCenterBtn" class="button">播放發音</button>
-                <button id="submitBtn" class="button" onclick="submitAnswer()">提交</button>
-                <button id="nextBtn" class="button" onclick="goToNextWord()" style="display: none;">下一題</button>
-                <button class="button" onclick="finishQuiz()">完成測驗</button>
+                <button id="playAudioCenterBtn" class="button">Voice</button>
+                <button id="submitBtn" class="button" onclick="submitAnswer()">Subbitmit</button>
+                <button id="nextBtn" class="button" onclick="goToNextWord()" style="display: none;">Next</button>
+                <button class="button" onclick="finishQuiz()">Finish</button>
             </div>
         </div>
 
         <!-- 測驗結果 -->
-        <div id="quizResult" style="display: none;">
-            <h2>測驗結果統計</h2>
-            <div class="button-group">
-                <button class="button" onclick="saveQuizResults()">儲存此次測驗結果</button>
-                <button class="button" onclick="returnToMainMenu()">返回主頁</button>
+         <div id="quizResult" style="display: none;">
+           <h2>測驗結果統計</h2>
+           <div class="button-group">
+             <button class="button" onclick="returnToMainMenu()">返回主頁</button>
             </div>
-        </div>
-    </div>
+         </div>
+
 
     <script src="quiz.js"></script>
 

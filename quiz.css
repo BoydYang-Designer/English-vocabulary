@@ -14,7 +14,16 @@ html, body {
 /* ==========================================
    🏷️ 標題樣式 (Headings)
 ========================================== */
-h1, h2 {
+h1 {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    margin: 0;
+    font-size: 24px;
+}
+
+h2 {
     text-align: center;
     background: #333;
     color: white;
@@ -164,21 +173,19 @@ h1, h2 {
 /* ✅ 單字按鈕 - 深藍色 */
 .word-link, .phonetic-btn {
     cursor: pointer;
-    padding: 15px 15px;
-    font-size: 20px;
+    padding: 5px 10px;
+    font-size: 18px;
     font-weight: bold;
     margin: 20px auto;
-    border-radius: 25px;
+    border-radius: 15px;
     border: none;
-    background-color: #576572;
     transition: all 0.3s ease-in-out;
     color: white;
 }
 
 .word-link, .phonetic-btn {
-    background-color: #59758f;
+    background-color: #95a0aa;
 }
-
 
 
 #saveResultBtn:hover {
@@ -190,9 +197,10 @@ h1, h2 {
 ========================================== */
 #wordHint {
     font-size: 24px;
-    margin: 20px 0;
+    margin: 20px 10px;
     text-align: center;
-    letter-spacing: 8px;
+    letter-spacing: 5px;
+    margin-right: 30px;
 }
 
 #wordInput {
@@ -260,8 +268,7 @@ h1, h2 {
     align-items: center;
     justify-content: space-between;
     background-color: #f1f5f8;
-    padding: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -273,15 +280,15 @@ h1, h2 {
     transform: scale(1.3);
     cursor: pointer;
     border-radius: 6px;
-    border: 2px solid #555;
+    border: 2px solid #5c5c5c;
     appearance: none;
     background-color: white;
     transition: all 0.2s ease-in-out;
 }
 
 .important-checkbox:checked {
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: #bd1438;
+    border-color: #ff002b;
 }
 
 

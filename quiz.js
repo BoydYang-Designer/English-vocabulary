@@ -371,12 +371,11 @@ function finishQuiz() {
 
     // 顯示單字結果與按鈕
     resultContainer.innerHTML += `
-        <div>${resultList}</div>
-        <div class="button-group">
-            <button class="button" onclick="saveQuizResults()">儲存此次測驗結果</button>
-            <button class="button" onclick="returnToMainMenu()">返回主頁</button>
-        </div>
-    `;
+    <div>${resultList}</div>
+    <div class="button-group">
+        <button class="button" onclick="returnToMainMenu()">返回主頁</button>
+    </div>
+`;
 
     // ✅ 顯示測驗結果儲存成功的提示框
     if (existingNotification) {
@@ -562,7 +561,6 @@ function restoreQuizResults() {
     resultContainer.innerHTML += `
         <div>${resultList}</div>
         <div class="button-group">
-            <button class="button" onclick="saveQuizResults()">儲存此次測驗結果</button>
             <button class="button" onclick="returnToMainMenu()">返回主頁</button>
         </div>
     `;
