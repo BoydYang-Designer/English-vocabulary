@@ -259,9 +259,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-
 // 顯示下一個單字並生成提示
 function loadNextWord() {
     if (quizWords.length === 0) {
