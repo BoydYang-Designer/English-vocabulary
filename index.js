@@ -556,6 +556,8 @@ function showDetails(word) {
     // **顯示單字詳情**
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("wordList").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none"; // ✅ 隱藏 "進入測驗單字" 按鈕
+    document.getElementById("wordListTitle").style.display = "none";
     document.getElementById("wordDetails").style.display = "block";
     document.querySelector(".alphabet-container").style.display = "none";
     document.querySelector(".category-container").style.display = "none";
