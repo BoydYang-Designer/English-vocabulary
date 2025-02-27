@@ -28,18 +28,56 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(err => console.error("❌ 讀取 JSON 失敗:", err));
 
-    initializeStartQuizButton();
-});
+        initializeStartQuizButton();
 
-
-// 播放音檔
-function playAudioForWord(word) {
-    let audioLink = `${baseURL}${word}.mp3`;
-    let audio = new Audio(audioLink);
-    audio.play().catch((error) => {
-        console.error("❌ 播放音檔失敗:", error);
+        // 監聽鍵盤事件，按下空白鍵播放音檔
+        document.addEventListener("keydown", function(event) {
+            if (event.key === " " || event.key === "Spacebar") { // 兼容不同瀏覽器的空白鍵鍵值
+                event.preventDefault();  // 防止空白鍵觸發其他瀏覽器行為（如滾動頁面）
+                if (currentWord) {
+                    playAudioForWord(currentWord); // 播放當前單字的音檔
+                }
+            }
+    
+            // 當在輸入框中時，按下箭頭鍵控制焦點跳轉
+            let activeInput = document.querySelector("#wordInput input:focus");
+    
+            // 左箭頭鍵：移動焦點到前一個格子（如果不是已經是第一個格子）
+            if (activeInput && event.key === "ArrowLeft") {
+                let previousInput = activeInput.previousElementSibling;
+                if (previousInput) {
+                    previousInput.focus(); // 移動焦點到前一個輸入框
+                }
+            }
+    
+            // 右箭頭鍵：移動焦點到下一個格子（如果不是已經是最後一個格子）
+            if (activeInput && event.key === "ArrowRight") {
+                let nextInput = activeInput.nextElementSibling;
+                if (nextInput) {
+                    nextInput.focus(); // 移動焦點到下一個輸入框
+                }
+            }
+    
+            // 監聽刪除鍵（Backspace）處理
+            if (event.key === "Backspace") {
+                if (activeInput && activeInput.value === "") {
+                    // 如果當前格子是空的，跳回上一格
+                    let previousInput = activeInput.previousElementSibling;
+                    if (previousInput) {
+                        previousInput.focus(); // 移動焦點到前一個輸入框
+                    }
+                }
+            }
+        });
     });
-}
+    
+    function playAudioForWord(word) {
+        let audioLink = `${baseURL}${word}.mp3`;
+        let audio = new Audio(audioLink);
+        audio.play().catch((error) => {
+            console.error("❌ 播放音檔失敗:", error);
+        });
+    }
 
 // 返回首頁
 function goBack() {
@@ -236,11 +274,10 @@ function goToNextWord() {
     document.getElementById("nextBtn").style.display = "none"; // 隱藏下一題按鈕
 }
 
-
 // 這是新增的部分：字母格的動態生成和自動跳格功能
 document.addEventListener("DOMContentLoaded", function () {
     let currentWord = "example"; // 假設這是你的單字，這裡可以根據實際情況更改
-    let wordLength = currentWord.length; // 根據單字的長度設置格子數量
+    let wordLength = currentWord.length; // 根據單字長度設置格子數量
     let wordInputContainer = document.getElementById("wordInput");
 
     // 清空容器，確保只顯示新的字母格
@@ -267,6 +304,20 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+
+    // 監聽鍵盤事件，按下 Enter 鍵時觸發提交或進入下一題
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();  // 防止 Enter 鍵觸發其他瀏覽器行為（如換行）
+
+            // 如果「下一題」按鈕可見，表示使用者答錯，則進入下一題
+            if (document.getElementById("nextBtn").style.display === "inline-block") {
+                goToNextWord(); // 呼叫進入下一題的函數
+            } else {
+                submitAnswer(); // 否則，提交答案
+            }
+        }
+    });
 });
 
 
