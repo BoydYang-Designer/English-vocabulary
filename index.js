@@ -183,11 +183,11 @@ function showWords(type, value) {
     // ✅ 設定標題
     let titleText = "";
     if (type === "letter") {
-        titleText = `${value.toUpperCase()} world list`; // 例如：A 單字列表
+        titleText = `${value.toUpperCase()}`; // 只顯示 A, B, C...
     } else if (type === "category") {
-        titleText = `${value} World list`; // 例如：醫學單字列表
+        titleText = `${value}`; // 例如：醫學
     } else if (type === "level") {
-        titleText = `${value} Level list`; // 例如：TOEIC 等級單字列表
+        titleText = `${value} Level`; // 例如：TOEIC Level
     }
     document.getElementById("wordListTitle").innerText = titleText;
     document.getElementById("wordListTitle").style.display = "block"; // ✅ 顯示標題
@@ -341,7 +341,7 @@ function backToFirstLayer() {
 // 重要的單字
 function showImportantWords() {
     console.log("📌 顯示重要單字");
-    document.getElementById("wordListTitle").innerText = "重要 List";
+    document.getElementById("wordListTitle").innerText = "重要";
     document.getElementById("wordListTitle").style.display = "block"; // ✅ 顯示標題 
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none"; // 顯示開始測驗按鈕
@@ -417,7 +417,7 @@ function showWrongWords() {
     console.log("📌 顯示錯誤單字");
 
         // ✅ 設定標題
-    document.getElementById("wordListTitle").innerText = "錯誤單字 list";
+    document.getElementById("wordListTitle").innerText = "錯誤";
     document.getElementById("wordListTitle").style.display = "block"; // ✅ 顯示標題
 
 
@@ -485,7 +485,7 @@ function showCheckedWords() {
     console.log("📌 顯示 Checked 單字");
 
 // ✅ 設定標題
-    document.getElementById("wordListTitle").innerText = "Checked list";
+    document.getElementById("wordListTitle").innerText = "Checked";
     document.getElementById("wordListTitle").style.display = "block"; // ✅ 顯示標題
 
 
