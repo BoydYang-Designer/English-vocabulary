@@ -180,6 +180,19 @@ function createLevelButtons() {
 function showWords(type, value) {
     console.log("📌 點擊分類/等級/A-Z 按鈕:", type, value);
 
+    // ✅ 設定標題
+    let titleText = "";
+    if (type === "letter") {
+        titleText = `${value.toUpperCase()} world list`; // 例如：A 單字列表
+    } else if (type === "category") {
+        titleText = `${value} World list`; // 例如：醫學單字列表
+    } else if (type === "level") {
+        titleText = `${value} Level list`; // 例如：TOEIC 等級單字列表
+    }
+    document.getElementById("wordListTitle").innerText = titleText;
+    document.getElementById("wordListTitle").style.display = "block"; // ✅ 顯示標題
+
+
     navigateTo({ page: "wordList", type: type, value: value });
     lastWordListType = type;
     lastWordListValue = value;
@@ -307,6 +320,8 @@ function backToFirstLayer() {
     document.querySelector('.category-container').style.display = "block";
     document.querySelector('.level-container').style.display = "block";
     document.getElementById("wordItems").innerHTML = "";
+    document.getElementById("wordListTitle").style.display = "none"; // ✅ 隱藏標題
+
 
     // **顯示搜尋結果（但不清空）**
     let searchResults = document.getElementById("searchResults");
@@ -326,7 +341,8 @@ function backToFirstLayer() {
 // 重要的單字
 function showImportantWords() {
     console.log("📌 顯示重要單字");
-    
+    document.getElementById("wordListTitle").innerText = "重要 List";
+    document.getElementById("wordListTitle").style.display = "block"; // ✅ 顯示標題 
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none"; // 顯示開始測驗按鈕
 
@@ -400,6 +416,11 @@ function showImportantWords() {
 function showWrongWords() {
     console.log("📌 顯示錯誤單字");
 
+        // ✅ 設定標題
+    document.getElementById("wordListTitle").innerText = "錯誤單字 list";
+    document.getElementById("wordListTitle").style.display = "block"; // ✅ 顯示標題
+
+
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none"; // 顯示開始測驗按鈕
 
@@ -462,6 +483,11 @@ function showWrongWords() {
 // ✅ 顯示所有已標記 Checked 的單字
 function showCheckedWords() {
     console.log("📌 顯示 Checked 單字");
+
+// ✅ 設定標題
+    document.getElementById("wordListTitle").innerText = "Checked list";
+    document.getElementById("wordListTitle").style.display = "block"; // ✅ 顯示標題
+
 
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";

@@ -48,6 +48,14 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
     box-sizing: border-box; /* 確保 padding 不會影響最大寬度 */
 }
 
+#wordListTitle {
+    text-align: center;     /* 文字置中 */
+    font-size: 24px;        /* 字體大小 */
+    font-weight: bold;      /* 文字加粗 */
+    color: #375c85;        /* 設定標題顏色 (藍色，可自行更改) */
+    margin-bottom: 15px;    /* 與下方內容的距離 */
+}
+
 
 .word-list {
     display: none;
