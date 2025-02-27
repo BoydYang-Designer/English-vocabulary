@@ -194,6 +194,7 @@ h1 { /* 設定標題的樣式，置中並使用深色背景 */
 
 .audio-controls {
     padding-top: 10px; /* 设置间距 */
+    justify-content: center;  /* 水平置中 */
     gap: 12px;
     margin: 0 auto;
     align-items: center;

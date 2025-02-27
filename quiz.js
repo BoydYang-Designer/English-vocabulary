@@ -256,14 +256,11 @@ function submitAnswer() {
     revealedWord += ` ${currentWord[currentWord.length - 1]}`;
     wordHint.innerHTML = revealedWord;
 
-    if (isCorrect) {
-        setTimeout(goToNextWord, 1500); // ✅ 答對後 1.5 秒自動進入下一題
-    } else {
-        // ✅ 答錯時才顯示「下一題」按鈕
-        document.getElementById("submitBtn").style.display = "none"; 
-        document.getElementById("nextBtn").style.display = "inline-block"; 
-    }
+    // ✅ 無論答對或答錯，都顯示「下一題」按鈕
+    document.getElementById("submitBtn").style.display = "none"; 
+    document.getElementById("nextBtn").style.display = "inline-block"; 
 }
+
 
 // ✅ 手動進入下一題
 function goToNextWord() {
