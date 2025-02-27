@@ -91,9 +91,17 @@ function updateButtonSelectionState(type, value) {
 function filterQuizWords() {
     let filteredWords = wordsData.filter(word => {
         let letterMatch = selectedFilters.letters.size === 0 || selectedFilters.letters.has(word.Words[0].toUpperCase());
-        let categoryMatch = selectedFilters.categories.size === 0 || selectedFilters.categories.has(word["分類"]);
-        let levelMatch = selectedFilters.levels.size === 0 || selectedFilters.levels.has(word["等級"]);
+
+        // ✅ 確保「未分類」的種類被識別
+        let wordCategory = word["分類"] || "未分類(種類)";
+        let categoryMatch = selectedFilters.categories.size === 0 || selectedFilters.categories.has(wordCategory);
+
+        // ✅ 確保「未分類」的等級被識別
+        let wordLevel = word["等級"] || "未分類(等級)";
+        let levelMatch = selectedFilters.levels.size === 0 || selectedFilters.levels.has(wordLevel);
+
         let checkedMatch = !selectedFilters.checked || localStorage.getItem(`checked_${word.Words}`) === "true";
+
         return letterMatch && categoryMatch && levelMatch && checkedMatch;
     });
 
@@ -106,23 +114,26 @@ function filterQuizWords() {
     startQuiz();
 }
 
+
+
 function generateMultiSelectButtons() {
     let alphabetContainer = document.getElementById("alphabetButtons");
     alphabetContainer.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter =>
         `<button class='category-button' onclick='toggleSelection("letters", "${letter}")'>${letter}</button>`
     ).join("");
 
-    let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
+    let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類(種類)"))]; // ✅ UI 改名稱
     let categoryContainer = document.getElementById("categoryButtons");
     categoryContainer.innerHTML = categories.map(category =>
         `<button class='category-button' onclick='toggleSelection("categories", "${category}")'>${category}</button>`
     ).join(" ");
-
-    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
+    
+    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類(等級)"))]; // ✅ UI 改名稱
     let levelContainer = document.getElementById("levelButtons");
     levelContainer.innerHTML = levels.map(level =>
         `<button class='category-button' onclick='toggleSelection("levels", "${level}")'>${level}</button>`
     ).join(" ");
+    
 
     // ✅ 新增 Checked, 重要單字, 錯誤單字按鈕
     let checkedContainer = document.getElementById("checkedCategory");
