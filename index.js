@@ -321,12 +321,13 @@ function backToFirstLayer() {
     document.querySelector('.level-container').style.display = "block";
     document.getElementById("wordItems").innerHTML = "";
     document.getElementById("wordListTitle").style.display = "none"; // ✅ 隱藏標題
+    document.getElementById("searchInput").value = "";
 
 
-    // **顯示搜尋結果（但不清空）**
     let searchResults = document.getElementById("searchResults");
     if (searchResults) {
-        searchResults.style.display = "block"; // **恢復顯示搜尋結果**
+        searchResults.style.display = "block"; // 恢復顯示搜尋結果
+        searchResults.innerHTML = ""; // 清空搜尋結果內容
     }
 
     // **清空單字列表**
