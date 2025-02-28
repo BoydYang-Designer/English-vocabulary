@@ -336,6 +336,10 @@ function loadNextWord() {
     wordInputContainer.innerHTML = ""; // 清空舊輸入框
     wordHintContainer.innerHTML = ""; // 清空舊提示
 
+    // 播放單字音訊
+    let audio = new Audio(currentAudio);
+    audio.play();
+
     for (let i = 0; i < currentWord.length; i++) {
         let char = currentWord[i];
 
