@@ -144,8 +144,8 @@ function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
     let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
 
-    // ✅ 新增 "Checked 單字"、"重要單字"、"錯誤單字" 分類按鈕
-    categories.unshift("Checked 單字", "重要單字", "錯誤單字");
+    // ✅ 新增 "Checked 單字"、"重要單字"、"錯誤單字"、"Note" 分類按鈕
+    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Note");
 
     document.getElementById("categoryButtons").innerHTML = categories
         .map(c => {
@@ -155,11 +155,14 @@ function createCategoryButtons() {
                 return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
             } else if (c === "錯誤單字") {
                 return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
+            } else if (c === "Note") {
+                return `<button class='letter-btn' onclick='showNoteWords()'>${c}</button>`;
             }
             return `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`;
         })
         .join(" ");
 }
+
 
 
 
@@ -338,6 +341,73 @@ function backToFirstLayer() {
     lastWordListType = "";
     lastWordListValue = "";
 }
+
+// 顯示已勾選筆記的單字
+function showNoteWords() {
+    console.log("📌 顯示筆記單字");
+
+    document.getElementById("wordListTitle").innerText = "Note 單字";
+    document.getElementById("wordListTitle").style.display = "block"; // 顯示標題
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";
+
+    let listContainer = document.getElementById("wordList");
+    let wordItems = document.getElementById("wordItems");
+    wordItems.innerHTML = "";
+
+    // 讀取所有筆記單字
+    let noteWords = Object.keys(localStorage).filter(key => key.startsWith("note_"));
+
+    if (noteWords.length === 0) {
+        wordItems.innerHTML = "<p>⚠️ 目前沒有筆記單字</p>";
+    } else {
+        noteWords.forEach(key => {
+            let wordText = key.replace("note_", "");
+            let savedNote = localStorage.getItem(key);
+            let isChecked = savedNote && savedNote.trim() !== "";
+
+            let iconSrc = isChecked
+                ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg"
+                : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
+
+            let item = document.createElement("div");
+            item.className = "word-item-container";
+            if (isChecked) {
+                item.classList.add("checked"); // 標示已勾選
+            }
+
+            item.innerHTML = `
+                <p class='word-item' data-word="${wordText}">${wordText}</p>
+                <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
+                    <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
+                </button>
+            `;
+
+            // 點擊單字進入詳情頁面
+            item.querySelector('.word-item').addEventListener("click", function () {
+                let wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]).trim().toLowerCase() === wordText.toLowerCase());
+                if (wordObj) {
+                    lastWordListType = "noteWords"; // 記錄來源為 Note 單字列表
+                    lastWordListValue = null;
+                    console.log("✅ 進入詳情頁面:", wordObj);
+                    showDetails(wordObj);
+                } else {
+                    console.error("❌ 找不到單字資料:", wordText);
+                }
+            });
+
+            wordItems.appendChild(item);
+        });
+    }
+
+    listContainer.style.display = "block";
+    document.getElementById("wordDetails").style.display = "none";
+    document.querySelector(".alphabet-container").style.display = "none";
+    document.querySelector(".category-container").style.display = "none";
+    document.querySelector(".level-container").style.display = "none";
+}
+
+
 
 // 重要的單字
 function showImportantWords() {
@@ -679,7 +749,6 @@ function returnToQuiz() {
 
 function backToWordList() {
     if (lastWordListType === "search") {
-        // 如果來自搜尋結果，回到第一層並顯示搜尋框
         document.getElementById("searchContainer").style.display = "block";
         document.getElementById("wordList").style.display = "none";
         document.getElementById("wordDetails").style.display = "none";
@@ -688,21 +757,25 @@ function backToWordList() {
         document.querySelector('.level-container').style.display = "block";
     } else if (lastWordListType === "importantWords") {
         console.log("🔙 返回重要單字列表");
-        showImportantWords(); // ✅ 回到重要單字列表
+        showImportantWords();
     } else if (lastWordListType === "wrongWords") {
         console.log("🔙 返回錯誤單字列表");
-        showWrongWords(); // ✅ 回到錯誤單字列表
+        showWrongWords();
     } else if (lastWordListType === "checkedWords") {
         console.log("🔙 返回 Checked 單字列表");
-        showCheckedWords(); // ✅ 回到 Checked 單字列表
+        showCheckedWords();
+    } else if (lastWordListType === "noteWords") {
+        console.log("🔙 返回 Note 單字列表");
+        showNoteWords(); // ✅ 回到 Note 單字列表
     } else if (lastWordListType && lastWordListValue) {
         console.log(`🔙 返回 ${lastWordListType} 類別: ${lastWordListValue}`);
-        showWords(lastWordListType, lastWordListValue); // ✅ 回到分類單字列表
+        showWords(lastWordListType, lastWordListValue);
     } else {
         console.error("❌ 無法返回，lastWordListType 為空，回到第一層");
         backToFirstLayer();
     }
 }
+
 
 
 function playAudio(filename) {
@@ -787,33 +860,146 @@ function toggleImportant(word, checkbox) {
     }
 }
 
+let isCleared = false; // 標記是否需要清除內容
+let isSaved = false; // 標記是否已按下 Save 按鈕
 
+// ✅ 初始化筆記與 checkbox 狀態
+function initializeNote() {
+    let wordTitle = document.getElementById("wordTitle");
+    let noteTextArea = document.getElementById("wordNote");
+    let checkbox = document.getElementById("noteCheckbox");
+
+    // ⏳ 如果 `wordTitle` 還沒載入，延遲執行
+    if (!wordTitle || !noteTextArea || !checkbox) {
+        setTimeout(initializeNote, 100); // 100ms 後重試
+        return;
+    }
+
+    let word = wordTitle.textContent.trim();
+    let savedNote = localStorage.getItem(`note_${word}`);
+
+    // 先清空 textarea 和 checkbox 狀態
+    noteTextArea.value = ""; 
+    checkbox.checked = false; // 預設為未勾選
+    checkbox.style.opacity = "0.5"; // 半透明（未儲存）
+
+    if (savedNote) {
+        noteTextArea.value = savedNote; // ✅ 填入筆記
+        checkbox.checked = true; // ✅ 勾選 checkbox
+        checkbox.style.opacity = "1"; // **完全不透明**
+        isSaved = true;
+    } else {
+        isSaved = false;
+    }
+
+    // **強制更新 checkbox 狀態**
+    updateCheckbox();
+
+    // ✅ 檢查第一層分類是否需要「Note」類別
+    updateNoteCategory(word);
+}
+
+// ✅ 當 `wordNote` 內容變更時，更新 checkbox 狀態
+function updateCheckbox() {
+    const noteText = document.getElementById("wordNote").value.trim();
+    const checkbox = document.getElementById("noteCheckbox");
+
+    // 根據筆記內容更新 checkbox 狀態
+    if (noteText.length > 0) {
+        checkbox.checked = true; // 勾選
+        checkbox.style.opacity = "1"; // 完全不透明
+    } else {
+        checkbox.checked = false; // 取消勾選
+        checkbox.style.opacity = "0.5"; // 半透明
+    }
+}
+
+// ✅ 當 `wordNote` 內容變更時，立即更新 checkbox 狀態
+document.getElementById("wordNote").addEventListener("input", updateCheckbox);
+
+
+// ✅ 當 checkbox 被手動取消勾選，不會立即清除，等按 "SaveNote" 才刪除
+function handleCheckboxClick() {
+    const checkbox = document.getElementById("noteCheckbox");
+
+    if (!checkbox.checked) {
+        isCleared = true;  // 取消勾選時標記需要清除
+    } else {
+        isCleared = false; // 重新勾選時取消清除標記
+    }
+}
+
+
+// ✅ 儲存筆記
 function saveNote() {
     let word = document.getElementById("wordTitle")?.textContent.trim();
-    let note = document.getElementById("wordNote").value.trim();
-    let saveButton = document.querySelector("button[onclick='saveNote()']"); // 取得按鈕
+    let noteTextArea = document.getElementById("wordNote");
+    let note = noteTextArea.value.trim();
+    let saveButton = document.querySelector("button[onclick='saveNote()']");
+    let checkbox = document.getElementById("noteCheckbox");
+    let savedNote = document.getElementById("savedNote");
 
     if (word && word !== "") { 
-        localStorage.setItem(`note_${word}`, note); // 存入 localStorage
-        console.log("✅ Note saved:", word, note);
+        if (checkbox.checked || note.length > 0) {
+            // ✅ 勾選時，正常保存筆記
+            localStorage.setItem(`note_${word}`, note);
+            console.log("✅ Note saved:", word, note);
+            savedNote.textContent = "✅ Note saved！";
+            isSaved = true;
 
-        // ✅ 按鈕顯示「Saved」
+            checkbox.checked = true;
+            checkbox.style.opacity = "1"; // **完全不透明，表示已保存**
+            isCleared = false;
+
+        } else if (isCleared) {
+            // ⭕️ 如果 checkbox 被取消勾選，且標記為需要清除，則刪除筆記
+            localStorage.removeItem(`note_${word}`);
+            noteTextArea.value = ""; // 清空 textarea
+            console.log("🗑️ Note deleted:", word);
+            savedNote.textContent = "🗑️ Note deleted!";
+            isSaved = false;
+
+            checkbox.checked = false;
+            checkbox.style.opacity = "0.5"; // **變半透明**
+            isCleared = false;
+        }
+
+        // ✅ 更新第一層分類
+        updateNoteCategory(word);
+
+        // ✅ 按鈕顯示「Saved」並變綠色
         saveButton.textContent = "Saved ✅";
-        saveButton.style.backgroundColor = "#28a745"; // 綠色表示成功
+        saveButton.style.backgroundColor = "#28a745"; 
 
-        // ✅ 2 秒後恢復原本樣式
+        // ⏳ 2 秒後恢復原本樣式
         setTimeout(() => {
             saveButton.textContent = "Save";
             saveButton.style.backgroundColor = "#6e93ba";
         }, 2000);
-        
-        // ✅ 在筆記區下方顯示「筆記已保存！」
-        document.getElementById("savedNote").textContent = "✅ Note saved！";
-        setTimeout(() => document.getElementById("savedNote").textContent = "", 3000);
+
+        // ⏳ 3 秒後清除「Note saved!」提示
+        setTimeout(() => savedNote.textContent = "", 3000);
     } else {
         console.warn("⚠️ 無法保存筆記，wordTitle 未加載");
     }
 }
+
+
+// ✅ 檢查是否需要顯示 "Note" 分類
+function updateNoteCategory(word) {
+    let noteCategory = document.getElementById("noteCategory"); // 假設這是第一層分類的 Note 分類
+    let hasNote = localStorage.getItem(`note_${word}`) !== null;
+
+    if (hasNote) {
+        noteCategory.style.display = "block"; // 顯示 "Note" 分類
+    } else {
+        noteCategory.style.display = "none"; // 隱藏 "Note" 分類
+    }
+}
+
+// 📌 頁面載入時執行初始化
+document.addEventListener("DOMContentLoaded", initializeNote);
+
 
 
 function displayNote() {
