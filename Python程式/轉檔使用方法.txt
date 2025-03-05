@@ -1,0 +1,12 @@
+1. win + R
+2. cmd
+3. cd "C:\conver file"
+4. python excel_to_json.py
+
+
+python define_word_web.py
+
+
+找座標
+python find_xy.py
+
