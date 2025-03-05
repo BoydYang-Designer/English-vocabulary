@@ -1031,6 +1031,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500); // 避免 DOM 還未完全渲染
 });
 
+document.addEventListener("keydown", function (event) {
+    if (!sentenceAudio || isNaN(sentenceAudio.duration)) return; // 確保音檔有效
+
+    switch (event.code) {
+        case "Space": // 播放 / 暫停
+            event.preventDefault(); // 避免滾動頁面
+            if (sentenceAudio.paused || sentenceAudio.ended) {
+                sentenceAudio.play();
+            } else {
+                sentenceAudio.pause();
+            }
+            break;
+        case "ArrowRight": // 快轉 5 秒
+            if (!isNaN(sentenceAudio.currentTime)) {
+                sentenceAudio.currentTime = Math.min(sentenceAudio.duration, sentenceAudio.currentTime + 5);
+            }
+            break;
+        case "ArrowLeft": // 倒轉 5 秒
+            if (!isNaN(sentenceAudio.currentTime)) {
+                sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime - 5);
+            }
+            break;
+    }
+});
+
+
 function exportAllData() {
     let allData = { ...localStorage }; // 取得所有 `localStorage` 資料
     let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(allData, null, 2));
