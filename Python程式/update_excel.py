@@ -1,77 +1,74 @@
 import pandas as pd
-import os
+from openpyxl import load_workbook
 
 def update_excel_b(excel_a_path, excel_b_path, max_suffix=3):
-    # 讀取 Excel A 和 Excel B，去除欄位名稱的前後空格
+    # 讀取 Excel A 和 Excel B
     df_a = pd.read_excel(excel_a_path, dtype=str).rename(columns=lambda x: x.strip())
-    df_b = pd.read_excel(excel_b_path, dtype=str).rename(columns=lambda x: x.strip())
+    wb = load_workbook(excel_b_path)
+    ws = wb.active  # 取得 Excel B 的主要工作表
 
-    # 確保 Excel A 和 Excel B 都包含必要欄位
+    # 讀取 Excel B 內容（確保標題行對應欄位）
+    df_b = pd.DataFrame(ws.values)
+    df_b.columns = df_b.iloc[0]  # 設定標題
+    df_b = df_b[1:].reset_index(drop=True)  # 移除標題行
+
+    # 確保必要欄位
     required_columns = ['Words', '等級', '分類']
     for col in required_columns:
-        if col not in df_a.columns:
-            raise ValueError(f"Excel A 缺少必要欄位: {col}")
-        if col not in df_b.columns:
-            raise ValueError(f"Excel B 缺少必要欄位: {col}")
+        if col not in df_a.columns or col not in df_b.columns:
+            raise ValueError(f"Excel A 或 Excel B 缺少必要欄位: {col}")
 
-    # 取得 Excel B 所有原始欄位（避免影響「音檔」等欄位）
-    all_columns = df_b.columns.tolist()
+    # **解決重複值問題**
+    word_info = df_a.drop_duplicates(subset=['Words'], keep='last').set_index('Words')[['等級', '分類']].to_dict(orient='index')
 
-    # 去除 Words 欄位中的重複值，避免索引錯誤
-    word_info = df_a[['Words', '等級', '分類']].drop_duplicates(subset=['Words']).set_index('Words').to_dict(orient='index')
+    # **找出 Words 欄位在 Excel B 的正確位置**
+    words_col_index = list(df_b.columns).index('Words')
+    等級_col_index = list(df_b.columns).index('等級')
+    分類_col_index = list(df_b.columns).index('分類')
 
-    # 生成 Excel B 中的單字後綴數量
+    # **統計 Excel B 內已有的單字後綴**
     word_suffix_count = {}
     for word in df_b['Words']:
-        base_word = word.rstrip('-1234567890')  # 獲取基礎單字
+        base_word = word.rstrip('-1234567890')  # 去掉後綴，只取基礎單字
         if base_word in word_info:
-            word_suffix_count[base_word] = word_suffix_count.get(base_word, 0) + 1
+            word_suffix_count[base_word] = max(word_suffix_count.get(base_word, 0), int(word.split('-')[-1]) if '-' in word else 1)
 
-    # **步驟 1：更新 Excel B 已有的單字**
-    for index, row in df_b.iterrows():
-        base_word = row['Words'].rstrip('-1234567890')  # 獲取基礎單字
-        if base_word in word_info:
-            # 只更新「等級」與「分類」，不影響其他欄位
-            df_b.at[index, '等級'] = word_info[base_word]['等級']
-            df_b.at[index, '分類'] = word_info[base_word]['分類']
+    # **步驟 1：更新 Excel B 內已存在的單字**
+    for row in ws.iter_rows(min_row=2, max_row=ws.max_row):
+        word_cell = row[words_col_index]  # `Words` 欄位
+        if word_cell.value in word_info:
+            等級_cell = row[等級_col_index]  # `等級` 欄位
+            分類_cell = row[分類_col_index]  # `分類` 欄位
 
-    # **步驟 2：新增 Excel B 中尚未存在的單字**
-    new_rows = []
+            # 只更新 `等級` 和 `分類`，不影響 `音檔`
+            等級_cell.value = word_info[word_cell.value]['等級']
+            分類_cell.value = word_info[word_cell.value]['分類']
+
+    # **步驟 2：新增 `Excel A` 中 `Excel B` 沒有的單字**
+    new_words = []
     for word, info in word_info.items():
         existing_count = word_suffix_count.get(word, 0)
         for i in range(existing_count + 1, max_suffix + 1):
-            # 檢查是否已有相同單字，並保留其他欄位資料
-            matching_row = df_b[df_b['Words'] == f"{word}-{i-1}"]
-            new_row = {col: matching_row[col].values[0] if not matching_row.empty else "" for col in all_columns}  # 保留原來的資料
-            new_row['Words'] = f"{word}-{i}"
-            new_row['等級'] = info['等級']
-            new_row['分類'] = info['分類']
+            new_word = f"{word}-{i}"
+            if new_word in df_b['Words'].values:
+                continue  # 如果已經有這個單字，就跳過
 
-            # 如果存在音檔欄位，確保保留音檔資料（不覆蓋公式）
-            if '音檔' in df_b.columns:
-                if not matching_row.empty:
-                    # 檢查音檔欄位是否為公式
-                    audio_formula = matching_row['音檔'].values[0]
-                    if isinstance(audio_formula, str) and audio_formula.startswith('='):
-                        new_row['音檔'] = audio_formula  # 保留原來的公式
-                    else:
-                        new_row['音檔'] = ""  # 如果是空值或非公式，設置為空
-                else:
-                    new_row['音檔'] = ""  # 若無對應的行，設置為空
+            # 產生新行，確保 `Words` 欄位對應正確
+            new_row = [""] * len(df_b.columns)  # 先填充所有欄位為空
+            new_row[words_col_index] = new_word
+            new_row[等級_col_index] = info['等級']
+            new_row[分類_col_index] = info['分類']
 
-            new_rows.append(new_row)
+            ws.append(new_row)
+
+            # 更新統計，確保不會新增超過 `-3`
+            word_suffix_count[word] = i
             if i == max_suffix:
                 break
 
-    # 轉換新增的資料為 DataFrame
-    df_new = pd.DataFrame(new_rows)
-
-    # 合併新舊資料
-    df_b = pd.concat([df_b, df_new], ignore_index=True)
-
-    # **步驟 3：直接覆蓋 Excel B**
-    df_b.to_excel(excel_b_path, index=False)
-    print(f"更新完成，已覆蓋原檔案: {excel_b_path}")
+    # **步驟 3：儲存 Excel B（保留格式與公式）**
+    wb.save(excel_b_path)
+    print(f"更新完成，已保留公式並覆蓋原檔案: {excel_b_path}")
 
 # 設定檔案路徑
 excel_a_path = "C:\\conver file\\Z_total_words.xlsx"
