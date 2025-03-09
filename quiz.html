@@ -12,16 +12,16 @@
     <!-- 導覽按鈕區 -->
     <div id="mainMenu">
         <button class="back-button" onclick="goBack()">Home</button>
-        <button class="button" onclick="showQuizCategories()">Q vocabulary</button>
-        <button class="button" disabled>Q Sentence</button>
+        <button class="button" onclick="showQuizCategories()">Q Vocabulary</button>
+        <button class="button" onclick="showSentenceQuizCategories()">Q Sentence</button>
     </div>
 
     <div class="container">
-        <!-- 測驗分類區 -->
+        <!-- 單字測驗分類區 -->
         <div id="quizCategories" style="display: none;">
             <div class="button-container">
                 <button class="back-button" onclick="returnToMainMenu()">Back</button>
-                <button id="startFilteredQuizBtn" class="button">Quiz</button>
+                <button id="startFilteredQuizBtn" class="button">Start Quiz</button>
             </div>
             <div class="alphabet-container" id="alphabetButtons"></div>
             <div class="category-container" id="categoryButtons"></div>
@@ -29,20 +29,51 @@
             <div id="checkedCategory"></div>
         </div>
 
+        <!-- Q Sentence 測驗分類 -->
+        <div id="sentenceQuizCategories" style="display: none;">
+            <div class="button-container">
+                <button class="back-button" onclick="returnToMainMenu()">Back</button>
+                <button id="startSentenceQuizBtn" class="button">Start Quiz</button>
+            </div>
+            <div class="level-container" id="sentenceLevelButtons"></div>
+            <div class="category-container" id="sentenceCategoryButtons"></div>
+            <div id="selectedSentenceCategory"></div>
+        </div>
+
+        <!-- 單字測驗區 -->
         <div id="quizArea" style="display: none;">
             <button id="cancelBtn" class="back-button" onclick="returnToCategorySelection()">Cancel</button>
             <div id="wordHint"></div>
-            
+
             <!-- 字母格輸入框 -->
             <div id="wordInput" class="letter-grid">
-               <!-- 這裡由 JavaScript 動態生成字母格 -->
+               <!-- JavaScript 會動態生成字母格 -->
             </div>
 
             <div class="button-group">
-                <button id="playAudioCenterBtn" class="button">Voice</button>
-                <button id="submitBtn" class="button" onclick="submitAnswer()">Subbitmit</button>
+                <button id="playAudioCenterBtn" class="button">🔊 Voice</button>
+                <button id="submitBtn" class="button" onclick="submitAnswer()">Submit</button>
                 <button id="nextBtn" class="button" onclick="goToNextWord()" style="display: none;">Next</button>
                 <button class="button" onclick="finishQuiz()">Finish</button>
+            </div>
+        </div>
+
+        <!-- Q Sentence 測驗區 -->
+        <div id="sentenceQuizArea" style="display: none;">
+            <button id="cancelSentenceQuizBtn" class="back-button" onclick="returnToSentenceCategorySelection()">Cancel</button>
+            <div id="sentenceHint"></div>
+
+            <!-- 句子填空輸入框 -->
+            <div id="sentenceInput" class="letter-grid">
+                <input type="text" id="userSentenceAnswer" placeholder="輸入你的答案">
+            </div>
+
+            <div class="button-group">
+                <button id="playSentenceAudioBtn" class="button">🔊 播放</button>
+                <button id="submitSentenceBtn" class="button" onclick="submitSentenceAnswer()">提交</button>
+                <button id="nextSentenceBtn" class="button" onclick="goToNextSentence()" style="display: none;">下一題</button>
+                <button class="button" onclick="finishSentenceQuiz()">完成測驗</button>
+                <button class="button" onclick="markAsImportant()">⭐ 標記為重要單字</button>
             </div>
         </div>
 
@@ -53,10 +84,11 @@
             </div>
          </div>
 
-
+    <!-- JavaScript 檔案 -->
     <script src="quiz.js"></script>
+    <script src="q_sentence.js"></script>
 
-   <script>
+    <script>
     document.addEventListener("DOMContentLoaded", function () {
         let params = new URLSearchParams(window.location.search);
 
@@ -71,6 +103,8 @@
                     document.getElementById("mainMenu").style.display = "none";
                     document.getElementById("quizCategories").style.display = "none";
                     document.getElementById("quizArea").style.display = "none";
+                    document.getElementById("sentenceQuizCategories").style.display = "none";
+                    document.getElementById("sentenceQuizArea").style.display = "none";
 
                     // 恢復滾動位置
                     let scrollPosition = localStorage.getItem('quizScrollPosition');
@@ -98,7 +132,7 @@
             }, 100);
         }
     });
-</script>
+    </script>
 
 </body>
 </html>

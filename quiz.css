@@ -303,5 +303,30 @@ h2 {
     border-color: #ff002b;
 }
 
+/* 讓每個單詞區塊有適當間隔 */
+.word-container {
+    display: inline-flex;
+    gap: 5px;
+    margin: 0 10px;
+    align-items: center;
+}
+
+/* 底線樣式的輸入框 */
+.letter-input {
+    width: 20px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+
+/* 已顯示的單字樣式 */
+.filled-letter {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 
