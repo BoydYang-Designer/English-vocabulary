@@ -61,14 +61,24 @@ function startSentenceQuiz(filter) {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("sentenceQuizArea").style.display = "block";
 
-    let filteredSentences = sentenceData.filter(item => item.分類 === filter);
+    let filteredSentences = sentenceData.filter(item => 
+        item.分類 === filter || item.等級 === filter
+    );
 
-    if (filteredSentences.length === 0) return alert("❌ 沒有符合條件的測驗句子");
+    if (filteredSentences.length === 0) {
+        alert("❌ 沒有符合條件的測驗句子");
+        return;
+    }
 
     sentenceData = filteredSentences;
     currentSentenceIndex = 0;
-    loadSentenceQuestion();
+
+    // 延遲執行，確保 DOM 元素已載入
+    setTimeout(() => {
+        loadSentenceQuestion();
+    }, 100);
 }
+
 
 
 let currentAudio = null; // 儲存當前音檔，避免重複創建
@@ -93,17 +103,16 @@ function loadSentenceQuestion() {
 
     let maskedSentence = words.join(" ");
     document.getElementById("sentenceHint").innerText = maskedSentence;
-    document.getElementById("userSentenceAnswer").value = "";
-    document.getElementById("nextSentenceBtn").style.display = "none";
 
- // 檢查 #userSentenceAnswer 是否存在，並確保它加載
+    // 確保 #userSentenceAnswer 存在
     let userAnswerInput = document.getElementById("userSentenceAnswer");
-    if (userAnswerInput) {
-        userAnswerInput.value = ""; // 清空舊的答案
-        document.getElementById("nextSentenceBtn").style.display = "none";
-    } else {
-        console.warn("⚠️ #userSentenceAnswer 尚未載入，無法清空答案欄位");
+    if (!userAnswerInput) {
+        console.error("❌ 錯誤: 找不到 #userSentenceAnswer，請檢查 HTML 結構！");
+        return; // 避免繼續執行導致錯誤
     }
+
+    userAnswerInput.value = ""; // 清空舊答案
+    document.getElementById("nextSentenceBtn").style.display = "none";
 
     // ✅ **設置 MP3 檔案**
     if (sentenceObj.Words) {  
@@ -327,13 +336,13 @@ function submitSentenceAnswer() {
         console.log("📌 正確答案：", correctSentence);
 
         // 比對答案
-        if (userAnswer.toLowerCase() === correctSentence.toLowerCase()) {
-            alert("✅ 正確！");
-        } else {
-            alert(`❌ 錯誤！正確答案是：${correctSentence}`);
-            incorrectSentences.push(sentenceObj);
-            localStorage.setItem("incorrectSentences", JSON.stringify(incorrectSentences));
-        }
+if (userAnswer.toLowerCase() === correctSentence.toLowerCase()) {
+    setTimeout(() => alert("✅ 正確！"), 300);
+} else {
+    setTimeout(() => alert(`❌ 錯誤！正確答案是：${correctSentence}`), 300);
+    incorrectSentences.push(sentenceObj);
+    localStorage.setItem("incorrectSentences", JSON.stringify(incorrectSentences));
+}
 
         document.getElementById("nextSentenceBtn").style.display = "block"; // 顯示下一題按鈕
     }
