@@ -248,13 +248,17 @@ function submitAnswer() {
     localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
 
     // ✅ 顯示提示
-    let wordHint = document.getElementById("wordHint");
-    let revealedWord = currentWord[0];
-    for (let i = 1; i < currentWord.length - 1; i++) {
-        revealedWord += ` <span style="color: ${isCorrect ? 'black' : 'red'};">${currentWord[i]}</span>`;
+let revealedWord = "";
+for (let i = 0; i < currentWord.length; i++) {
+    if (userAnswer[i] === currentWord[i]) {
+        // ✅ 正確的字母顯示黑色
+        revealedWord += `<span style="color: black;">${currentWord[i]}</span>`;
+    } else {
+        // ❌ 錯誤的字母顯示紅色
+        revealedWord += `<span style="color: red;">${currentWord[i]}</span>`;
     }
-    revealedWord += ` ${currentWord[currentWord.length - 1]}`;
-    wordHint.innerHTML = revealedWord;
+}
+wordHint.innerHTML = revealedWord;
 
     // ✅ 無論答對或答錯，都顯示「下一題」按鈕
     document.getElementById("submitBtn").style.display = "none"; 
