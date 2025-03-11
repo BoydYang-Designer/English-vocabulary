@@ -124,7 +124,7 @@ function loadSentenceQuestion() {
     document.getElementById("nextSentenceBtn").style.display = "none";
 
     // 📌 **播放新的 MP3**
-    if (sentenceObj.Words) {
+   if (sentenceObj.Words) {
         let audioUrl = GITHUB_MP3_BASE_URL + encodeURIComponent(sentenceObj.Words) + ".mp3";
         console.log("🎵 準備播放音檔:", audioUrl);
 
@@ -137,7 +137,7 @@ function loadSentenceQuestion() {
 
         let playButton = document.getElementById("playSentenceAudioBtn");
         if (playButton) {
-            playButton.onclick = () => playAudio(audioUrl);
+            playButton.onclick = () => playAudio();
         }
 
         currentAudio.play()
@@ -201,20 +201,7 @@ function loadSentenceQuestion() {
 }
 
 
-// 📌 **播放音檔函數**
-function playAudio(audioUrl) {
-    if (!audioUrl) return;
 
-    if (currentAudio) {
-        currentAudio.pause();
-        currentAudio = null;
-    }
-
-    currentAudio = new Audio(audioUrl);
-    currentAudio.play()
-        .then(() => console.log("✅ 手動播放成功"))
-        .catch(error => console.error("🔊 播放失敗:", error));
-}
 
 // 📌 **監聽 Enter 鍵**
 function handleEnterKeyPress(event) {
@@ -236,25 +223,6 @@ function handleEnterKeyPress(event) {
 }
 
 
-// 📌 播放音檔
-function playAudio() {
-    if (currentAudio) {
-        currentAudio.currentTime = 0; // 從頭播放
-        currentAudio.play()
-            .then(() => console.log("✅ 手動播放成功"))
-            .catch(error => console.error("🔊 手動播放失敗:", error));
-    } else {
-        console.warn("⚠️ 尚未加載音檔，請確認檔案是否正確");
-    }
-}
-
-// 📌 監聽空白鍵來播放音檔
-function handleSpacebar(event) {
-    if (event.code === "Space") { 
-        event.preventDefault(); // 阻止頁面滾動
-        playAudio();
-    }
-}
 
 // 📌 **輸入監聽函數**
 function handleLetterInput(event) {
@@ -310,13 +278,13 @@ function handleArrowNavigation(event) {
 }
 
 
-// 📌 播放音檔
+// 📌 播放音檔函數（統一版本）
 function playAudio() {
     if (currentAudio) {
-        currentAudio.currentTime = 0;
+        currentAudio.currentTime = 0; // 從頭播放
         currentAudio.play()
-            .then(() => console.log("✅ 手動播放成功"))
-            .catch(error => console.error("🔊 手動播放失敗:", error));
+            .then(() => console.log("✅ 播放成功"))
+            .catch(error => console.error("🔊 播放失敗:", error));
     } else {
         console.warn("⚠️ 尚未加載音檔，請確認檔案是否正確");
     }
@@ -324,19 +292,20 @@ function playAudio() {
 
 // 📌 監聽空白鍵來播放音檔
 function handleSpacebar(event) {
-    if (event.code === "Space") { 
-        event.preventDefault();
+    if (event.code === "Space" && document.getElementById("sentenceQuizArea").style.display === "block") {
+        event.preventDefault(); // 阻止頁面滾動
         playAudio();
     }
 }
 
 
+// 📌 全域鍵盤事件監聽
 document.addEventListener("keydown", function (event) {
+    // 處理 Enter 鍵
     if (event.key === "Enter") {
-        event.preventDefault(); // 🚫 避免滾動
-
+        event.preventDefault(); // 避免滾動
         let submitBtn = document.getElementById("submitSentenceBtn");
-        if (!submitBtn) return; 
+        if (!submitBtn) return;
 
         if (submitBtn.dataset.next === "true") {
             console.log("📌 進入下一題");
@@ -346,6 +315,9 @@ document.addEventListener("keydown", function (event) {
             submitSentenceAnswer();
         }
     }
+
+    // 處理空白鍵
+    handleSpacebar(event);
 });
 
 
