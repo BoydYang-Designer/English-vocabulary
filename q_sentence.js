@@ -363,7 +363,6 @@ function submitSentenceAnswer() {
     let userAnswers = [];
     let inputIndex = 0;
 
-    // Build userAnswers with only actual words
     correctWords.forEach((word, wordIndex) => {
         if (/\w+/.test(word)) { // Only process words
             let inputWord = "";
@@ -371,7 +370,7 @@ function submitSentenceAnswer() {
                 inputWord += allInputs[inputIndex].value;
                 inputIndex++;
             }
-            userAnswers.push(inputWord); // Only push words, not spaces/punctuation
+            userAnswers.push(inputWord); // Only push words
         }
     });
 
@@ -387,7 +386,6 @@ function submitSentenceAnswer() {
     submitBtn.dataset.next = "true";
 }
 
-
 function updateSentenceHint(correctSentence, userAnswers) {
     console.log("🔍 使用者答案:", userAnswers);
     console.log("🔍 正確句子:", correctSentence);
@@ -396,15 +394,15 @@ function updateSentenceHint(correctSentence, userAnswers) {
     let userIndex = 0;
 
     let formattedSentence = words.map((word) => {
-        if (/\w+/.test(word)) { // Only process words
+        if (/\w+/.test(word)) { // Only process actual words
             let userAnswer = userIndex < userAnswers.length ? userAnswers[userIndex] : "";
             userIndex++; // Increment only for words
-            if (userAnswer === "") {
-                return `<span style="color: red;">${word}</span>`; // Unfilled → red
-            } else if (userAnswer.toLowerCase() === word.toLowerCase()) {
+            if (userAnswer.toLowerCase() === word.toLowerCase() && userAnswer !== "") {
                 return `<span style="color: blue;">${word}</span>`; // Correct → blue
-            } else {
+            } else if (userAnswer !== "") {
                 return `<span style="color: red;">${word}</span>`; // Incorrect → red
+            } else {
+                return `<span style="color: black;">${word}</span>`; // Unfilled → black
             }
         }
         return `<span style="color: black;">${word}</span>`; // Spaces/punctuation → black
