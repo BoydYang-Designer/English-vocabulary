@@ -713,6 +713,7 @@ function getFromPage() {
     return params.get('from');
 }
 
+// ✅ 根據來源設定 Back 按鈕功能
 function updateBackButton() {
     let fromPage = getFromPage();
     let backButtons = document.querySelectorAll('#wordDetails .button');
@@ -722,7 +723,7 @@ function updateBackButton() {
             if (fromPage === 'quiz') {
                 button.onclick = function() {
                     console.log("🔙 從 quiz 返回測驗結果");
-                    window.location.href = 'quiz.html?returning=true';
+                    returnToQuiz();
                 };
             } else {
                 button.onclick = function() {
@@ -736,9 +737,7 @@ function updateBackButton() {
 
 // ✅ **返回 quiz.html 測驗頁面的功能**
 function returnToQuiz() {
-    console.log("✅ 返回 quiz.html 測驗頁面");
-
-    // 先跳轉回 quiz.html
+    console.log("✅ 返回 quiz.html 測驗結果頁面");
     window.location.href = 'quiz.html?returning=true';
 }
 
