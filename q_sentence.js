@@ -86,39 +86,42 @@ let currentAudio = null; // 儲存當前音檔，避免重複創建
 
 function loadSentenceQuestion() {
     let sentenceObj = sentenceData[currentSentenceIndex];
-    let sentenceText = sentenceObj.句子;
-    let words = sentenceText.split(" ");
+    if (!sentenceObj) {
+        console.error("❌ 錯誤: 找不到 sentenceObj！");
+        return;
+    }
 
-    let totalWords = words.length;
+    let sentenceText = sentenceObj.句子;
+    let words = sentenceText.split(/\b/); // 使用 `\b` 來正確區分標點與單詞
+
+    let totalWords = words.filter(word => /\w+/.test(word)).length; // 只計算單詞數量
     let numToHide = Math.floor(totalWords * 4 / 5);
     let numToShow = totalWords - numToHide;
 
     let visibleIndexes = new Set();
+    let wordOnlyIndexes = words.map((word, index) => /\w+/.test(word) ? index : null).filter(index => index !== null);
+
     while (visibleIndexes.size < numToShow) {
-        let randIndex = Math.floor(Math.random() * totalWords);
+        let randIndex = wordOnlyIndexes[Math.floor(Math.random() * wordOnlyIndexes.length)];
         visibleIndexes.add(randIndex);
     }
 
-    words = words.map((word, index) => visibleIndexes.has(index) ? word : "_".repeat(word.length));
+    let maskedSentence = words.map((word, index) => {
+        if (/\w+/.test(word)) {
+            return visibleIndexes.has(index) ? word : "_".repeat(word.length);
+        }
+        return word; // 保留標點符號
+    }).join("");
 
-    let maskedSentence = words.join(" ");
     document.getElementById("sentenceHint").innerText = maskedSentence;
 
-    // 確保 #userSentenceAnswer 存在
-    let userAnswerInput = document.getElementById("userSentenceAnswer");
-    if (!userAnswerInput) {
-        console.error("❌ 錯誤: 找不到 #userSentenceAnswer，請檢查 HTML 結構！");
-        return; // 避免繼續執行導致錯誤
-    }
-
-    userAnswerInput.value = ""; // 清空舊答案
+    // 📌 **確保「下一題」按鈕隱藏**
     document.getElementById("nextSentenceBtn").style.display = "none";
 
-    // ✅ **設置 MP3 檔案**
-    if (sentenceObj.Words) {  
+    // 📌 **播放新的 MP3**
+    if (sentenceObj.Words) {
         let audioUrl = GITHUB_MP3_BASE_URL + encodeURIComponent(sentenceObj.Words) + ".mp3";
-
-        console.log("🎵 準備音檔:", audioUrl);
+        console.log("🎵 準備播放音檔:", audioUrl);
 
         if (currentAudio) {
             currentAudio.pause();
@@ -129,64 +132,102 @@ function loadSentenceQuestion() {
 
         let playButton = document.getElementById("playSentenceAudioBtn");
         if (playButton) {
-            playButton.onclick = playAudio;
+            playButton.onclick = () => playAudio(audioUrl);
         }
 
         currentAudio.play()
             .then(() => console.log("✅ 自動播放成功"))
             .catch(error => console.warn("🔊 自動播放被禁止，請手動播放", error));
-
-        document.addEventListener("keydown", handleSpacebar);
     }
 
-    // ✅ **生成填空區域**
+    // 📌 **重置填空區並重新生成輸入框**
     let sentenceInputContainer = document.getElementById("sentenceInput");
-    sentenceInputContainer.innerHTML = ""; // 清空舊的輸入框
+    sentenceInputContainer.innerHTML = "";
 
     let firstInput = null; // 記錄第一個輸入框
-    let allInputs = []; // 儲存所有填空的輸入框，方便管理
+    let allInputs = []; // 儲存所有填空輸入框，方便管理
 
     words.forEach((word, index) => {
         let wordContainer = document.createElement("div");
         wordContainer.classList.add("word-container");
 
-        if (visibleIndexes.has(index)) {
-            word.split("").forEach(letter => {
-                let span = document.createElement("span");
-                span.classList.add("filled-letter");
-                span.innerText = letter;
-                wordContainer.appendChild(span);
-            });
-        } else {
-            word.split("").forEach((_, letterIndex) => {
-                let input = document.createElement("input");
-                input.type = "text";
-                input.maxLength = 1;
-                input.classList.add("letter-input");
-                input.dataset.wordIndex = index; // 記錄單字索引
-                input.dataset.letterIndex = letterIndex; // 記錄字母索引
-                input.addEventListener("input", handleLetterInput);
-                input.addEventListener("keydown", handleArrowNavigation);
-                wordContainer.appendChild(input);
-                allInputs.push(input); // 存入全局輸入框列表
+        if (/\w+/.test(word)) {
+            if (visibleIndexes.has(index)) {
+                word.split("").forEach(letter => {
+                    let span = document.createElement("span");
+                    span.classList.add("filled-letter");
+                    span.innerText = letter;
+                    wordContainer.appendChild(span);
+                });
+            } else {
+                word.split("").forEach((_, letterIndex) => {
+                    let input = document.createElement("input");
+                    input.type = "text";
+                    input.maxLength = 1;
+                    input.classList.add("letter-input");
+                    input.dataset.wordIndex = index;
+                    input.dataset.letterIndex = letterIndex;
+                    input.addEventListener("input", handleLetterInput);
+                    input.addEventListener("keydown", handleArrowNavigation);
+                    wordContainer.appendChild(input);
+                    allInputs.push(input);
 
-                if (!firstInput) {
-                    firstInput = input; // 記錄第一個輸入框
-                }
-            });
+                    if (!firstInput) {
+                        firstInput = input; // 記錄第一個輸入框
+                    }
+                });
+            }
+        } else {
+            // 📌 **標點符號保持顯示**
+            let span = document.createElement("span");
+            span.classList.add("punctuation");
+            span.innerText = word;
+            wordContainer.appendChild(span);
         }
 
         sentenceInputContainer.appendChild(wordContainer);
     });
 
-    document.getElementById("userSentenceAnswer").value = "";
-    document.getElementById("nextSentenceBtn").style.display = "none";
-
-    // ✅ **自動聚焦第一個輸入框**
+    // 📌 **自動聚焦第一個輸入框**
     if (firstInput) {
         firstInput.focus();
     }
+
+    // 📌 **確保 Enter 鍵可以提交**
+    document.removeEventListener("keydown", handleEnterKeyPress);
+    document.addEventListener("keydown", handleEnterKeyPress);
 }
+
+
+// 📌 **播放音檔函數**
+function playAudio(audioUrl) {
+    if (!audioUrl) return;
+
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio = null;
+    }
+
+    currentAudio = new Audio(audioUrl);
+    currentAudio.play()
+        .then(() => console.log("✅ 手動播放成功"))
+        .catch(error => console.error("🔊 播放失敗:", error));
+}
+
+// 📌 **監聽 Enter 鍵**
+function handleEnterKeyPress(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // 避免頁面滾動
+
+        let submitBtn = document.getElementById("submitSentenceBtn");
+        if (submitBtn.dataset.next === "true") {
+            goToNextSentence();
+        } else {
+            submitSentenceAnswer();
+        }
+    }
+}
+
 
 // 📌 播放音檔
 function playAudio() {
@@ -303,49 +344,73 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
-// 提交答案處理
 function submitSentenceAnswer() {
-        let sentenceObj = sentenceData[currentSentenceIndex];
+    let sentenceObj = sentenceData[currentSentenceIndex];
+    if (!sentenceObj) {
+        console.error("❌ 無效的 sentenceObj");
+        return;
+    }
 
-        // 確保 sentenceObj 存在
-        if (!sentenceObj) {
-            console.error("❌ 無效的 sentenceObj");
-            return;
+    let correctSentence = sentenceObj.句子; // 取得正確的句子
+    let originalMaskedSentence = document.getElementById("sentenceHint").innerText; // 取得題目底線
+    let allInputs = document.querySelectorAll("#sentenceInput .letter-input"); // 取得使用者輸入的答案
+    let userAnswers = Array.from(allInputs).map(input => input.value.trim()); // 取得每個字母的答案
+
+    if (!userAnswers.length) {
+        console.error("❌ 用戶答案為空");
+        return;
+    }
+
+    console.log("📌 使用者輸入：", userAnswers.join(""));
+    console.log("📌 正確答案：", correctSentence);
+
+    let resultHTML = "";
+    let inputIndex = 0; // 追蹤填空部分的索引
+    let maskedWords = originalMaskedSentence.split(""); // 取得題目中的底線部分 (逐字分開)
+
+    // 遍歷每個字符來比對填空部分
+    for (let i = 0; i < maskedWords.length; i++) {
+        if (maskedWords[i] === "_") { // 這是填空的部分
+            let correctLetter = correctSentence[inputIndex]; // 取得正確答案的字母
+            let userLetter = userAnswers[inputIndex] || ""; // 取得使用者輸入的字母
+            inputIndex++; // 只在填空區域增加索引
+
+            // 比對使用者的字母與正確字母
+            if (userLetter.toLowerCase() === correctLetter.toLowerCase()) {
+                resultHTML += `<span class="correct-letter">${userLetter}</span>`; // 正確字母顯示為黑色
+            } else {
+                resultHTML += `<span class="wrong-letter">${userLetter}</span>`; // 錯誤字母顯示為紅色
+            }
+        } else {
+            resultHTML += maskedWords[i]; // 非填空部分保持不變
         }
+    }
 
-        let correctSentence = sentenceObj.句子;
-        let userAnswerInput = document.getElementById("userSentenceAnswer");
+    // 更新題目區域，將填空部分的答案顯示回來
+    document.getElementById("sentenceHint").innerHTML = resultHTML;
 
-        // 確保用戶輸入框存在
-        if (!userAnswerInput) {
-            console.error("❌ 找不到 #userSentenceAnswer");
-            return;
-        }
+    // 📌 **讓「提交」按鈕變成「下一題」**
+    let submitBtn = document.getElementById("submitSentenceBtn");
+    submitBtn.innerText = "下一題";
+    submitBtn.onclick = goToNextSentence;
+    submitBtn.dataset.next = "true";
 
-        let userAnswer = userAnswerInput.value.trim();
+    // 📌 **確保畫面上只有一個「下一題」按鈕**
+    let existingNextBtn = document.getElementById("nextSentenceBtn");
+    if (existingNextBtn) {
+        existingNextBtn.remove();
+    }
 
-        // 確保答案有效
-        if (!userAnswer) {
-            console.error("❌ 用戶答案為空");
-            return;
-        }
-
-        console.log("📌 使用者輸入：", userAnswer);
-        console.log("📌 正確答案：", correctSentence);
-
-        // 比對答案
-if (userAnswer.toLowerCase() === correctSentence.toLowerCase()) {
-    setTimeout(() => alert("✅ 正確！"), 300);
-} else {
-    setTimeout(() => alert(`❌ 錯誤！正確答案是：${correctSentence}`), 300);
-    incorrectSentences.push(sentenceObj);
-    localStorage.setItem("incorrectSentences", JSON.stringify(incorrectSentences));
+    // 📌 **重新創建「下一題」按鈕**
+    let nextBtn = document.createElement("button");
+    nextBtn.id = "nextSentenceBtn";
+    nextBtn.classList.add("button");
+    nextBtn.innerText = "下一題";
+    nextBtn.onclick = goToNextSentence;
+    document.getElementById("sentenceQuizArea").appendChild(nextBtn);
 }
 
-        document.getElementById("nextSentenceBtn").style.display = "block"; // 顯示下一題按鈕
-    }
+
 
 
 // 📌 切換到下一題
@@ -356,8 +421,32 @@ function goToNextSentence() {
         finishSentenceQuiz();
         return;
     }
-    loadSentenceQuestion();
+
+    loadSentenceQuestion(); // 加載新題目
+
+    // 📌 **重置「提交」按鈕**
+    let submitBtn = document.getElementById("submitSentenceBtn");
+    submitBtn.innerText = "提交";
+    submitBtn.onclick = submitSentenceAnswer;
+    submitBtn.dataset.next = "false";
+
+    // 📌 **隱藏「下一題」按鈕**
+    document.getElementById("nextSentenceBtn").style.display = "none";
 }
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // 避免頁面刷新
+
+        let submitBtn = document.getElementById("submitSentenceBtn");
+        if (submitBtn.dataset.next === "true") {
+            goToNextSentence();
+        } else {
+            submitSentenceAnswer();
+        }
+    }
+});
+
 
 // 📌 標記為重要單字
 function markAsImportant() {
