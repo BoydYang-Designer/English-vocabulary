@@ -371,4 +371,21 @@ h2 {
     font-weight: bold;
 }
 
+.result-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
+.word-button {
+    background-color: #6e93ba;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.word-button:hover {
+    background-color: #5a7fa6;
+}

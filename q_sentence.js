@@ -320,6 +320,8 @@ document.addEventListener("keydown", function (event) {
     handleSpacebar(event);
 });
 
+// 儲存每題的使用者回答
+let userAnswers = []; // 在檔案頂部新增全局變數
 
 function submitSentenceAnswer() {
     let sentenceObj = sentenceData[currentSentenceIndex];
@@ -331,25 +333,31 @@ function submitSentenceAnswer() {
     let correctSentence = sentenceObj.句子;
     let allInputs = document.querySelectorAll("#sentenceInput .letter-input");
 
-    let correctWords = correctSentence.split(/\b/); // Split on word boundaries
-    let userAnswers = [];
+    let correctWords = correctSentence.split(/\b/);
+    let userAnswer = [];
     let inputIndex = 0;
 
     correctWords.forEach((word, wordIndex) => {
-        if (/\w+/.test(word)) { // Only process words
+        if (/\w+/.test(word)) {
             let inputWord = "";
             while (inputIndex < allInputs.length && allInputs[inputIndex].dataset.wordIndex == wordIndex) {
                 inputWord += allInputs[inputIndex].value;
                 inputIndex++;
             }
-            userAnswers.push(inputWord); // Only push words
+            userAnswer.push(inputWord);
+        } else {
+            userAnswer.push(word); // 保留標點符號
         }
     });
 
-    console.log("📌 修正後的使用者單字陣列:", userAnswers);
+    // 將使用者回答存入 userAnswers
+    userAnswers[currentSentenceIndex] = userAnswer.join(" ");
+
+    // 原有的邏輯
+    console.log("📌 修正後的使用者單字陣列:", userAnswer);
     console.log("📌 正確答案:", correctSentence);
 
-    updateSentenceHint(correctSentence, userAnswers);
+    updateSentenceHint(correctSentence, userAnswer);
     highlightUserAnswers(allInputs, correctSentence);
 
     let submitBtn = document.getElementById("submitSentenceBtn");
@@ -357,6 +365,12 @@ function submitSentenceAnswer() {
     submitBtn.onclick = goToNextSentence;
     submitBtn.dataset.next = "true";
 }
+
+// 獲取使用者回答的輔助函數
+function getUserAnswer(index) {
+    return userAnswers[index] || "";
+}
+
 
 function updateSentenceHint(correctSentence, userAnswers) {
     console.log("🔍 使用者答案:", userAnswers);
@@ -465,29 +479,127 @@ function goToNextSentence() {
 }
 
 
-
-
-// 📌 標記為重要單字
-function markAsImportant() {
-    let sentenceObj = sentenceData[currentSentenceIndex];
-    if (!importantSentences.some(item => item.Words === sentenceObj.Words)) {
-        importantSentences.push(sentenceObj);
-        localStorage.setItem("importantSentences", JSON.stringify(importantSentences));
-        alert("⭐ 已標記為重要單字！");
-    } else {
-        alert("⚠️ 這個句子已經被標記過了！");
-    }
-}
-
-// 📌 測驗結束，返回主畫面
+// 📌 測驗完成後顯示結果
 function finishSentenceQuiz() {
     document.getElementById("sentenceQuizArea").style.display = "none";
-    document.getElementById("mainMenu").style.display = "block";
- sessionStorage.removeItem("loadedQSentence"); // 清除狀態
+    document.getElementById("quizResult").style.display = "block";
+
+    let resultContainer = document.getElementById("quizResult");
+    resultContainer.innerHTML = "<h2>測驗結果</h2>";
+
+    // 動態生成每題的結果
+    sentenceData.forEach((sentenceObj, index) => {
+        let userAnswer = getUserAnswer(index); // 獲取使用者的回答
+        let correctSentence = sentenceObj.句子;
+        let isCorrect = userAnswer.toLowerCase() === correctSentence.toLowerCase();
+
+        // 如果回答錯誤，記錄到 incorrectSentences
+        if (!isCorrect) {
+            incorrectSentences.push({
+                Words: sentenceObj.Words,
+                句子: correctSentence,
+                userAnswer: userAnswer
+            });
+        }
+
+        // 生成單字按鈕（例如 absorb-1）
+        let wordButton = `<button class='word-button' onclick='goToWordDetail("${sentenceObj.Words}")'>${sentenceObj.Words}</button>`;
+        
+        // 高亮錯誤的字（紅色）
+        let highlightedSentence = highlightErrors(correctSentence, userAnswer);
+
+        // 檢查是否為重要句子
+        let isImportant = importantSentences.some(item => item.Words === sentenceObj.Words);
+
+        // 動態生成結果項目
+        let sentenceHTML = `
+            <div class='result-item'>
+                ${wordButton}
+                <p>正確句子: ${highlightedSentence}</p>
+                <p>你的回答: ${userAnswer || "<未填寫>"}</p>
+                <label>
+                    <input type='checkbox' onchange='toggleImportantSentence("${sentenceObj.Words}", this)' ${isImportant ? "checked" : ""}> 標記為重要句子
+                </label>
+            </div>`;
+        resultContainer.innerHTML += sentenceHTML;
+    });
+
+    // 添加按鈕
+resultContainer.innerHTML += `
+    <button onclick='returnToSentenceCategorySelection()'>返回分類頁面</button>
+    <button onclick='saveQuizResults()'>儲存測驗結果</button>
+`;
+
+    // 保存 incorrectSentences 到 localStorage
+    localStorage.setItem("incorrectSentences", JSON.stringify(incorrectSentences));
+}
+
+// 📌 標記錯誤的字為紅色
+function highlightErrors(correctSentence, userAnswer) {
+    let correctWords = correctSentence.split(/\b/);
+    let userWords = userAnswer.split(/\b/);
+
+    return correctWords.map((word, i) => {
+        let userWord = userWords[i] || "";
+        return (/\w+/.test(word) && userWord.toLowerCase() !== word.toLowerCase()) 
+            ? `<span style='color: red;'>${word}</span>` 
+            : word;
+    }).join("");
+}
+
+// 📌 連結到單字詳情頁面
+function goToWordDetail(word) {
+    // 移除後綴（如 -1, -2 等）
+    let baseWord = word.replace(/-\d+$/, '');
+    window.location.href = `index.html?word=${encodeURIComponent(baseWord)}&from=quiz`;
+}
+
+function returnToQuizResult() {
+    document.getElementById("sentenceQuizArea").style.display = "none";
+    document.getElementById("quizResult").style.display = "block";
+    finishSentenceQuiz();
 }
 
 // 📌 返回 Q Sentence 分類頁面
 function returnToSentenceCategorySelection() {
     document.getElementById("sentenceQuizCategories").style.display = "block";
     document.getElementById("sentenceQuizArea").style.display = "none";
+    document.getElementById("quizResult").style.display = "none"; // 隱藏結果頁面
+}
+
+// 📌 切換重要句子的狀態
+function toggleImportantSentence(word, checkbox) {
+    let sentenceObj = sentenceData.find(item => item.Words === word);
+    if (!sentenceObj) return;
+
+    if (checkbox.checked) {
+        if (!importantSentences.some(item => item.Words === word)) {
+            importantSentences.push(sentenceObj);
+            localStorage.setItem("importantSentences", JSON.stringify(importantSentences));
+            console.log(`⭐ 句子 ${word} 標記為重要`);
+        }
+    } else {
+        importantSentences = importantSentences.filter(item => item.Words !== word);
+        localStorage.setItem("importantSentences", JSON.stringify(importantSentences));
+        console.log(`❌ 句子 ${word} 取消重要標記`);
+    }
+}
+
+// 📌 儲存測驗結果
+function saveQuizResults() {
+    let incorrectWords = incorrectSentences.map(sentence => sentence.Words);
+    let existingWrongWords = JSON.parse(localStorage.getItem("wrongWords")) || [];
+    let updatedWrongWords = [...new Set([...existingWrongWords, ...incorrectWords])]; // 去重
+
+    localStorage.setItem("wrongWords", JSON.stringify(updatedWrongWords));
+    localStorage.setItem("incorrectSentences", JSON.stringify(incorrectSentences)); // 保存完整錯誤句子資訊
+    alert("✅ 測驗結果已儲存！");
+    console.log("📌 已儲存錯誤單字:", updatedWrongWords);
+}
+
+// 📌 儲存錯誤的單字到 localStorage
+function saveQuizResults() {
+    let incorrectWords = incorrectSentences.map(sentence => sentence.Words);
+    localStorage.setItem("incorrectWords", JSON.stringify(incorrectWords));
+    alert("測驗結果已儲存！");
 }

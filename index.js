@@ -713,8 +713,6 @@ function getFromPage() {
     return params.get('from');
 }
 
-// ✅ **根據來源設定 Back 按鈕功能**
-// ✅ 強制更新 Back 按鈕功能，並加入除錯訊息
 function updateBackButton() {
     let fromPage = getFromPage();
     let backButtons = document.querySelectorAll('#wordDetails .button');
@@ -723,8 +721,8 @@ function updateBackButton() {
         if (button.textContent.trim() === 'Back') {
             if (fromPage === 'quiz') {
                 button.onclick = function() {
-                    console.log("🔙 從 quiz.html 返回測驗結果");
-                    returnToQuiz();
+                    console.log("🔙 從 quiz 返回測驗結果");
+                    window.location.href = 'quiz.html?returning=true';
                 };
             } else {
                 button.onclick = function() {
@@ -1116,28 +1114,60 @@ function getFromPage() {
 // 在 JSON 載入完成後顯示詳情
 function displayWordDetailsFromURL() {
     let wordName = getWordFromURL();
-    if (!wordName) return; // 如果沒有傳遞單字參數，則不執行任何動作
+    if (!wordName) {
+        console.log("ℹ️ 無單字參數，顯示第一層");
+        return; // 如果沒有單字參數，停留在第一層
+    }
 
-    // 查找對應單字資料
-    let wordData = wordsData.find(w => w.Words.toLowerCase() === wordName.toLowerCase());
+    // 等待 wordsData 載入完成
+    if (!wordsData || wordsData.length === 0) {
+        console.warn("⚠️ wordsData 未載入，無法顯示詳情");
+        return;
+    }
+
+    // 查找對應單字資料（忽略後綴的情況已由 q_sentence.js 處理）
+    let wordData = wordsData.find(w => 
+        (w.Words || w.word || w["單字"]).toLowerCase() === wordName.toLowerCase()
+    );
     if (wordData) {
-        showDetails(wordData); // 呼叫原有函數顯示詳情
+        console.log("✅ 找到單字資料:", wordData);
+        showDetails(wordData); // 直接調用 showDetails 進入第三層
     } else {
-        console.warn("❌ 找不到對應單字資料！");
+        console.warn("❌ 找不到對應單字資料:", wordName);
+        // 可選：顯示錯誤訊息或回到第一層
+        backToFirstLayer();
     }
 }
 
-// 修改 JSON 載入成功後的程式碼，確保自動顯示詳情
+// 修改 DOMContentLoaded 事件，確保進入第三層
 document.addEventListener("DOMContentLoaded", function () {
     fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
         .then(res => res.json())
         .then(data => {
             wordsData = data["New Words"] || [];
-            console.log("✅ JSON 資料已成功載入");
+            console.log("✅ JSON 資料已成功載入，單字數量:", wordsData.length);
 
-            // 資料載入完成後，檢查 URL 是否有單字參數並顯示詳情
+            // 確保分類和等級按鈕顯示（第一層）
+            setTimeout(() => {
+                createCategoryButtons();
+                createLevelButtons();
+            }, 500);
+
+            // 檢查 URL 並顯示單字詳情（第三層）
             displayWordDetailsFromURL();
         })
-        .catch(err => console.error("❌ 讀取 JSON 失敗:", err));
+        .catch(err => console.error("❌ 讀取 JSON 失敗:", err))
+        .finally(() => {
+            setTimeout(() => {
+                let bButton = document.getElementById("bButton");
+                if (bButton) {
+                    bButton.disabled = true;
+                    bButton.style.backgroundColor = "#ccc";
+                    bButton.addEventListener("click", backToPrevious);
+                    console.log("🔵 'B' 按鈕已初始化");
+                } else {
+                    console.error("❌ 無法找到 'B' 按鈕，請確認 HTML 是否正確");
+                }
+            }, 300);
+        });
 });
-
