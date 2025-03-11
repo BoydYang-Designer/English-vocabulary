@@ -331,15 +331,11 @@ h2 {
 }
 
 .correct-letter {
-    color: black;
-    font-weight: bold;
-    text-decoration: underline;
+    color: black; /* 正確字母顯示為黑色 */
 }
 
 .wrong-letter {
-    color: red;
-    font-weight: bold;
-    text-decoration: underline;
+    color: red; /* 錯誤字母顯示為紅色 */
 }
 
 
@@ -348,3 +344,4 @@ h2 {
     font-weight: bold;
     margin: 0 5px;
 }
+
