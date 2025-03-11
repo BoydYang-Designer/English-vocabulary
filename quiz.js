@@ -554,7 +554,7 @@ function saveQuizResults() {
 
 
 
-
+// Back按鍵 // 
 function returnToMainMenu() {
     document.getElementById("quizCategories").style.display = "none";
     document.getElementById("quizArea").style.display = "none";
@@ -567,7 +567,7 @@ function returnToMainMenu() {
     selectedFilters.checked = false;
 
     quizWords = [];
-    quizResults = []; // 清空測驗結果
+    quizResults = [];
     currentWord = null;
 
     document.querySelectorAll(".category-button").forEach(button => {
@@ -577,12 +577,17 @@ function returnToMainMenu() {
     document.getElementById("wordInput").value = "";
     document.getElementById("wordHint").innerText = "";
 
+    // ✅ 清除 Q Sentence 內的分類資訊
+    sessionStorage.removeItem("loadedQSentence");
+    document.getElementById("sentenceQuizCategories").style.display = "none";
+
     // ✅ 清除 LocalStorage 中的測驗結果與滾動位置
     localStorage.removeItem("currentQuizResults");
     localStorage.removeItem("quizScrollPosition");
 
     console.log("✅ 返回首頁並重置狀態與清空 LocalStorage");
 }
+
 
 // ✅ 綁定中央播放按鈕功能
 document.getElementById("playAudioCenterBtn").addEventListener("click", function() {

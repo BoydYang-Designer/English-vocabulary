@@ -14,6 +14,8 @@ function showSentenceQuizCategories() {
     document.getElementById("mainMenu").style.display = "none";
     document.getElementById("sentenceQuizCategories").style.display = "block";
 
+    sessionStorage.setItem("loadedQSentence", "true");
+
     fetch(GITHUB_JSON_URL)
     .then(response => response.json())
     .then(data => {
@@ -193,9 +195,6 @@ function loadSentenceQuestion() {
         firstInput.focus();
     }
 
-    // 📌 **確保 Enter 鍵可以提交**
-    document.removeEventListener("keydown", handleEnterKeyPress);
-    document.addEventListener("keydown", handleEnterKeyPress);
 }
 
 
@@ -324,25 +323,23 @@ function handleSpacebar(event) {
 }
 
 
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // 🚫 避免滾動
 
-// 移除多餘的監聽器，確保只有一個 'Enter' 提交事件
-document.addEventListener("DOMContentLoaded", function () {
-    document.addEventListener("keydown", function (event) {
-        let userAnswerInput = document.getElementById("userSentenceAnswer");
+        let submitBtn = document.getElementById("submitSentenceBtn");
+        if (!submitBtn) return; 
 
-        // 確保 #userSentenceAnswer 存在
-        if (!userAnswerInput) {
-            console.warn("⚠️ #userSentenceAnswer 尚未載入");
-            return;
-        }
-
-        // Enter 提交答案
-        if (event.key === "Enter") {
-            event.preventDefault(); // 避免頁面刷新
+        if (submitBtn.dataset.next === "true") {
+            console.log("📌 進入下一題");
+            goToNextSentence();
+        } else {
+            console.log("📌 提交答案");
             submitSentenceAnswer();
         }
-    });
+    }
 });
+
 
 function submitSentenceAnswer() {
     let sentenceObj = sentenceData[currentSentenceIndex];
@@ -351,10 +348,9 @@ function submitSentenceAnswer() {
         return;
     }
 
-    let correctSentence = sentenceObj.句子; // 取得正確的句子
-    let originalMaskedSentence = document.getElementById("sentenceHint").innerText; // 取得題目底線
-    let allInputs = document.querySelectorAll("#sentenceInput .letter-input"); // 取得使用者輸入的答案
-    let userAnswers = Array.from(allInputs).map(input => input.value.trim()); // 取得每個字母的答案
+    let correctSentence = sentenceObj.句子; 
+    let allInputs = document.querySelectorAll("#sentenceInput .letter-input"); 
+    let userAnswers = Array.from(allInputs).map(input => input.value.trim());
 
     if (!userAnswers.length) {
         console.error("❌ 用戶答案為空");
@@ -364,36 +360,12 @@ function submitSentenceAnswer() {
     console.log("📌 使用者輸入：", userAnswers.join(""));
     console.log("📌 正確答案：", correctSentence);
 
-    let resultHTML = "";
-    let inputIndex = 0; // 追蹤填空部分的索引
-    let maskedWords = originalMaskedSentence.split(""); // 取得題目中的底線部分 (逐字分開)
-
-    // 遍歷每個字符來比對填空部分
-    for (let i = 0; i < maskedWords.length; i++) {
-        if (maskedWords[i] === "_") { // 這是填空的部分
-            let correctLetter = correctSentence[inputIndex]; // 取得正確答案的字母
-            let userLetter = userAnswers[inputIndex] || ""; // 取得使用者輸入的字母
-            inputIndex++; // 只在填空區域增加索引
-
-            // 比對使用者的字母與正確字母
-            if (userLetter.toLowerCase() === correctLetter.toLowerCase()) {
-                resultHTML += `<span class="correct-letter">${userLetter}</span>`; // 正確字母顯示為黑色
-            } else {
-                resultHTML += `<span class="wrong-letter">${userLetter}</span>`; // 錯誤字母顯示為紅色
-            }
-        } else {
-            resultHTML += maskedWords[i]; // 非填空部分保持不變
-        }
-    }
-
-    // 更新題目區域，將填空部分的答案顯示回來
-    document.getElementById("sentenceHint").innerHTML = resultHTML;
-
-    // 📌 **讓「提交」按鈕變成「下一題」**
     let submitBtn = document.getElementById("submitSentenceBtn");
     submitBtn.innerText = "下一題";
     submitBtn.onclick = goToNextSentence;
-    submitBtn.dataset.next = "true";
+    submitBtn.dataset.next = "true";  // ✅ 這行很重要！
+    
+    console.log("✅ `dataset.next` 設為 `true`，按鈕變成下一題");
 
     // 📌 **確保畫面上只有一個「下一題」按鈕**
     let existingNextBtn = document.getElementById("nextSentenceBtn");
@@ -409,6 +381,7 @@ function submitSentenceAnswer() {
     nextBtn.onclick = goToNextSentence;
     document.getElementById("sentenceQuizArea").appendChild(nextBtn);
 }
+
 
 
 
@@ -434,18 +407,23 @@ function goToNextSentence() {
     document.getElementById("nextSentenceBtn").style.display = "none";
 }
 
-document.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-        event.preventDefault(); // 避免頁面刷新
-
-        let submitBtn = document.getElementById("submitSentenceBtn");
-        if (submitBtn.dataset.next === "true") {
-            goToNextSentence();
-        } else {
-            submitSentenceAnswer();
-        }
+function goToNextSentence() {
+    currentSentenceIndex++;
+    if (currentSentenceIndex >= sentenceData.length) {
+        alert("🎉 測驗結束！");
+        finishSentenceQuiz();
+        return;
     }
-});
+
+    loadSentenceQuestion(); 
+
+    let submitBtn = document.getElementById("submitSentenceBtn");
+    submitBtn.innerText = "提交";
+    submitBtn.onclick = submitSentenceAnswer;
+    submitBtn.dataset.next = "false";  // ✅ 重要！確保新題目時 `Enter` 先執行提交
+}
+
+
 
 
 // 📌 標記為重要單字
@@ -464,6 +442,7 @@ function markAsImportant() {
 function finishSentenceQuiz() {
     document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("mainMenu").style.display = "block";
+ sessionStorage.removeItem("loadedQSentence"); // 清除狀態
 }
 
 // 📌 返回 Q Sentence 分類頁面
