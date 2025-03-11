@@ -330,13 +330,25 @@ h2 {
     text-decoration: underline;
 }
 
-.correct-letter {
-    color: black; /* 正確字母顯示為黑色 */
+.correct-word {
+    color: blue; /* ✅ 正確答案 → 藍色 */
+    font-weight: bold;
 }
 
-.wrong-letter {
-    color: red; /* 錯誤字母顯示為紅色 */
+.wrong-word {
+    color: red; /* ❌ 錯誤答案 → 紅色 */
+    font-weight: bold;
 }
+
+.unfilled-word {
+    color: red; /* ⬜ 沒填寫的答案 → 紅色 */
+    font-weight: bold;
+}
+
+.default-word {
+    color: black; /* 🆗 原本就顯示的字 → 黑色 */
+}
+
 
 
 .punctuation {
@@ -344,4 +356,19 @@ h2 {
     font-weight: bold;
     margin: 0 5px;
 }
+
+.hidden-word {
+    display: inline-block;
+    border-bottom: 2px solid black;
+    width: auto;
+    letter-spacing: 4px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.visible-word {
+    font-size: 18px;
+    font-weight: bold;
+}
+
 
