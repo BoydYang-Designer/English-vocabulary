@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單字學習系統</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 主選單 -->
+    <div id="mainMenu" class="container">
+        <h1>選擇字母</h1>
+        <div class="button-group">
+            <button onclick="showWordsStartingWith('A')">A</button>
+            <!-- 可手動新增其他字母，或用 JS 動態生成 -->
+        </div>
+    </div>
+
+    <!-- 單字列表 -->
+    <div id="wordList" class="container hidden">
+        <h2>單字列表</h2>
+        <div id="wordItems"></div>
+        <button class="back-btn" onclick="returnToMainMenu()">返回主選單</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

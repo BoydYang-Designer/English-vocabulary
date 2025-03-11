@@ -1,0 +1,54 @@
+/* 通用樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.button-group button, .back-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-group button:hover, .back-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 單字項目 */
+#wordItems div {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#wordItems div:hover {
+    background-color: #e9ecef;
+}
+
+/* 隱藏樣式 */
+.hidden {
+    display: none;
+    opacity: 0;
+}
