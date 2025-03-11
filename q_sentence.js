@@ -37,7 +37,6 @@ function showSentenceQuizCategories() {
 }
 
 
-// 📌 生成分類（等級與主題）
 function generateSentenceCategories(data) {
     let levelContainer = document.getElementById("sentenceLevelButtons");
     let categoryContainer = document.getElementById("sentenceCategoryButtons");
@@ -48,7 +47,6 @@ function generateSentenceCategories(data) {
     data.forEach(item => {
         let level = item.等級 || "未分類(等級)";
         let category = item.分類 || "未分類";
-        
         levels.add(level);
         categories.add(category);
     });
@@ -56,18 +54,35 @@ function generateSentenceCategories(data) {
     console.log("📌 等級分類:", [...levels]);
     console.log("📌 主題分類:", [...categories]);
 
+    // 生成等級按鈕
     levelContainer.innerHTML = [...levels].map(level => `<button class="button" onclick="startSentenceQuiz('${level}')">${level}</button>`).join("");
+
+    // 生成主題按鈕
     categoryContainer.innerHTML = [...categories].map(category => `<button class="button" onclick="startSentenceQuiz('${category}')">${category}</button>`).join("");
+
+    // 添加「重要句子」和「錯誤句子」按鈕
+    categoryContainer.innerHTML += `<button class="button" onclick="startSentenceQuiz('important')">重要句子</button>`;
+    categoryContainer.innerHTML += `<button class="button" onclick="startSentenceQuiz('incorrect')">錯誤句子</button>`;
 }
+
 
 // 📌 開始測驗
 function startSentenceQuiz(filter) {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("sentenceQuizArea").style.display = "block";
 
-    let filteredSentences = sentenceData.filter(item => 
-        item.分類 === filter || item.等級 === filter
-    );
+    let filteredSentences;
+
+    if (filter === "important") {
+        // 過濾重要句子
+        filteredSentences = sentenceData.filter(item => importantSentences.some(imp => imp.Words === item.Words));
+    } else if (filter === "incorrect") {
+        // 過濾錯誤句子
+        filteredSentences = sentenceData.filter(item => incorrectSentences.some(inc => inc.Words === item.Words));
+    } else {
+        // 過濾等級或主題（原有邏輯）
+        filteredSentences = sentenceData.filter(item => item.分類 === filter || item.等級 === filter);
+    }
 
     if (filteredSentences.length === 0) {
         alert("❌ 沒有符合條件的測驗句子");
@@ -76,7 +91,7 @@ function startSentenceQuiz(filter) {
 
     sentenceData = filteredSentences;
     currentSentenceIndex = 0;
-    userAnswers = []; // ✅ 清空 userAnswers 以匹配新的 sentenceData
+    userAnswers = []; // 清空 userAnswers 以匹配新的 sentenceData
 
     setTimeout(() => {
         loadSentenceQuestion();
@@ -434,13 +449,11 @@ function finishSentenceQuiz() {
     let resultContainer = document.getElementById("quizResult");
     resultContainer.innerHTML = "<h2>測驗結果</h2>";
 
-    // 動態生成每題的結果
     sentenceData.forEach((sentenceObj, index) => {
-        let userAnswer = getUserAnswer(index); // 獲取使用者的回答
+        let userAnswer = getUserAnswer(index);
         let correctSentence = sentenceObj.句子;
         let isCorrect = userAnswer.toLowerCase() === correctSentence.toLowerCase();
 
-        // 如果回答錯誤，記錄到 incorrectSentences
         if (!isCorrect) {
             incorrectSentences.push({
                 Words: sentenceObj.Words,
@@ -449,16 +462,10 @@ function finishSentenceQuiz() {
             });
         }
 
-        // 生成單字按鈕（例如 absorb-1）
         let wordButton = `<button class='word-button' onclick='goToWordDetail("${sentenceObj.Words}")'>${sentenceObj.Words}</button>`;
-        
-        // 高亮錯誤的字（紅色）
         let highlightedSentence = highlightErrors(correctSentence, userAnswer);
-
-        // 檢查是否為重要句子
         let isImportant = importantSentences.some(item => item.Words === sentenceObj.Words);
 
-        // 動態生成結果項目
         let sentenceHTML = `
             <div class='result-item'>
                 ${wordButton}
@@ -471,19 +478,17 @@ function finishSentenceQuiz() {
         resultContainer.innerHTML += sentenceHTML;
     });
 
-    // 添加按鈕
-resultContainer.innerHTML += `
-    <button onclick='returnToSentenceCategorySelection()'>返回分類頁面</button>
-    <button onclick='saveQuizResults()'>儲存測驗結果</button>
-`;
+    resultContainer.innerHTML += `
+        <button onclick='returnToSentenceCategorySelection()'>返回分類頁面</button>
+        <button onclick='saveQuizResults()'>儲存測驗結果</button>
+    `;
 
-    // 儲存測驗資料到 localStorage
+    // 保存到 LocalStorage
     localStorage.setItem("sentenceData", JSON.stringify(sentenceData));
     localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
     localStorage.setItem("incorrectSentences", JSON.stringify(incorrectSentences));
     localStorage.setItem("importantSentences", JSON.stringify(importantSentences));
 }
-
 // 📌 標記錯誤的字為紅色
 function highlightErrors(correctSentence, userAnswer) {
     let correctWords = correctSentence.split(/\b/);
