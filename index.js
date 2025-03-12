@@ -3,6 +3,7 @@ let wordsData = [];
 let sentenceAudio = new Audio();
 let lastWordListType = ""; // 記錄進入單字列表的方式
 let lastWordListValue = ""; // 記錄字母或分類值
+let lastSentenceListWord = "";
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
@@ -614,6 +615,7 @@ function showCheckedWords() {
 function showDetails(word) {
     let searchInput = document.getElementById("searchInputDetails").value.trim();
     let bButton = document.getElementById("bButton");
+    lastSentenceListWord = word.Words;
 
     // **只有當使用了第三層搜尋框時，才啟動 "B" 按鍵**
     if (searchInput !== "") {
@@ -1113,29 +1115,34 @@ function getFromPage() {
 // 在 JSON 載入完成後顯示詳情
 function displayWordDetailsFromURL() {
     let wordName = getWordFromURL();
-    if (!wordName) {
-        console.log("ℹ️ 無單字參數，顯示第一層");
-        return; // 如果沒有單字參數，停留在第一層
-    }
+    let fromPage = getFromPage();
+    if (!wordName) return;
 
-    // 等待 wordsData 載入完成
-    if (!wordsData || wordsData.length === 0) {
-        console.warn("⚠️ wordsData 未載入，無法顯示詳情");
-        return;
-    }
+    if (!wordsData || wordsData.length === 0) return;
 
-    // 查找對應單字資料（忽略後綴的情況已由 q_sentence.js 處理）
-    let wordData = wordsData.find(w => 
-        (w.Words || w.word || w["單字"]).toLowerCase() === wordName.toLowerCase()
-    );
+    let wordData = wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordName.toLowerCase());
     if (wordData) {
         console.log("✅ 找到單字資料:", wordData);
-        showDetails(wordData); // 直接調用 showDetails 進入第三層
+        showDetails(wordData);
+        if (fromPage === "sentence") {
+            // 可選：根據需要調整返回邏輯
+            updateBackButtonToSentence();
+        }
     } else {
-        console.warn("❌ 找不到對應單字資料:", wordName);
-        // 可選：顯示錯誤訊息或回到第一層
         backToFirstLayer();
     }
+}
+
+function updateBackButtonToSentence() {
+    let backButtons = document.querySelectorAll('#wordDetails .button');
+    backButtons.forEach(button => {
+        if (button.textContent.trim() === 'Back') {
+            button.onclick = function() {
+                console.log("🔙 返回 sentence.html");
+                window.location.href = 'sentence.html?word=' + encodeURIComponent(lastSentenceListWord);
+            };
+        }
+    });
 }
 
 // 修改 DOMContentLoaded 事件，確保進入第三層

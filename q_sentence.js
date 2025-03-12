@@ -74,13 +74,10 @@ function startSentenceQuiz(filter) {
     let filteredSentences;
 
     if (filter === "important") {
-        // 過濾重要句子
-        filteredSentences = sentenceData.filter(item => importantSentences.some(imp => imp.Words === item.Words));
+        filteredSentences = sentenceData.filter(item => localStorage.getItem(`important_sentence_${item.Words}`) === "true");
     } else if (filter === "incorrect") {
-        // 過濾錯誤句子
-        filteredSentences = sentenceData.filter(item => incorrectSentences.some(inc => inc.Words === item.Words));
+        filteredSentences = sentenceData.filter(item => localStorage.getItem(`wrong_sentence_${item.Words}`) === "true");
     } else {
-        // 過濾等級或主題（原有邏輯）
         filteredSentences = sentenceData.filter(item => item.分類 === filter || item.等級 === filter);
     }
 
@@ -91,11 +88,8 @@ function startSentenceQuiz(filter) {
 
     sentenceData = filteredSentences;
     currentSentenceIndex = 0;
-    userAnswers = []; // 清空 userAnswers 以匹配新的 sentenceData
-
-    setTimeout(() => {
-        loadSentenceQuestion();
-    }, 100);
+    userAnswers = [];
+    setTimeout(() => loadSentenceQuestion(), 100);
 }
 
 
@@ -464,7 +458,7 @@ function finishSentenceQuiz() {
 
         let wordButton = `<button class='word-button' onclick='goToWordDetail("${sentenceObj.Words}")'>${sentenceObj.Words}</button>`;
         let highlightedSentence = highlightErrors(correctSentence, userAnswer);
-        let isImportant = importantSentences.some(item => item.Words === sentenceObj.Words);
+        let isImportant = localStorage.getItem(`important_sentence_${sentenceObj.Words}`) === "true";
 
         let sentenceHTML = `
             <div class='result-item'>
@@ -482,13 +476,8 @@ function finishSentenceQuiz() {
         <button onclick='returnToSentenceCategorySelection()'>返回分類頁面</button>
         <button onclick='saveQuizResults()'>儲存測驗結果</button>
     `;
-
-    // 保存到 LocalStorage
-    localStorage.setItem("sentenceData", JSON.stringify(sentenceData));
-    localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
-    localStorage.setItem("incorrectSentences", JSON.stringify(incorrectSentences));
-    localStorage.setItem("importantSentences", JSON.stringify(importantSentences));
 }
+
 // 📌 標記錯誤的字為紅色
 function highlightErrors(correctSentence, userAnswer) {
     let correctWords = correctSentence.split(/\b/);
@@ -560,18 +549,11 @@ function returnToSentenceCategorySelection() {
 
 // 📌 切換重要句子的狀態
 function toggleImportantSentence(word, checkbox) {
-    let sentenceObj = sentenceData.find(item => item.Words === word);
-    if (!sentenceObj) return;
-
     if (checkbox.checked) {
-        if (!importantSentences.some(item => item.Words === word)) {
-            importantSentences.push(sentenceObj);
-            localStorage.setItem("importantSentences", JSON.stringify(importantSentences));
-            console.log(`⭐ 句子 ${word} 標記為重要`);
-        }
+        localStorage.setItem(`important_sentence_${word}`, "true");
+        console.log(`⭐ 句子 ${word} 標記為重要`);
     } else {
-        importantSentences = importantSentences.filter(item => item.Words !== word);
-        localStorage.setItem("importantSentences", JSON.stringify(importantSentences));
+        localStorage.removeItem(`important_sentence_${word}`);
         console.log(`❌ 句子 ${word} 取消重要標記`);
     }
 }
@@ -579,11 +561,10 @@ function toggleImportantSentence(word, checkbox) {
 // 📌 儲存測驗結果
 function saveQuizResults() {
     let incorrectWords = incorrectSentences.map(sentence => sentence.Words);
+    incorrectWords.forEach(word => localStorage.setItem(`wrong_sentence_${word}`, "true"));
     let existingWrongWords = JSON.parse(localStorage.getItem("wrongWords")) || [];
-    let updatedWrongWords = [...new Set([...existingWrongWords, ...incorrectWords])]; // 去重
-
+    let updatedWrongWords = [...new Set([...existingWrongWords, ...incorrectWords.map(w => w.split("-")[0])])];
     localStorage.setItem("wrongWords", JSON.stringify(updatedWrongWords));
-    localStorage.setItem("incorrectSentences", JSON.stringify(incorrectSentences)); // 保存完整錯誤句子資訊
     alert("✅ 測驗結果已儲存！");
     console.log("📌 已儲存錯誤單字:", updatedWrongWords);
 }
