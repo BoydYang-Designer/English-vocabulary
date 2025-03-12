@@ -13,6 +13,14 @@ let quizResults = [];
 const baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
 
 document.addEventListener("DOMContentLoaded", function () {
+    // 新增「進入句子頁面」按鈕的事件監聽器
+    const sentenceButton = document.getElementById("sentencePageBtn");
+    if (sentenceButton) {
+        sentenceButton.addEventListener("click", function () {
+            window.location.href = "sentence.html";
+        });
+    }
+
     fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
         .then(res => res.json())
         .then(data => {
@@ -20,10 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
             isDataLoaded = true;
             console.log("✅ 單字資料已載入");
 
-            // ✅ 如果 LocalStorage 中有儲存的測驗結果，則自動恢復
+            // 如果 LocalStorage 中有儲存的測驗結果，則自動恢復
             if (localStorage.getItem("currentQuizResults")) {
                 quizResults = JSON.parse(localStorage.getItem("currentQuizResults"));
-                restoreQuizResults(); // 呼叫自動恢復測驗結果
+                restoreQuizResults();
             }
         })
         .catch(err => console.error("❌ 讀取 JSON 失敗:", err));

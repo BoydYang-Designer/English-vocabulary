@@ -6,6 +6,14 @@ let lastWordListValue = ""; // 記錄字母或分類值
 let lastSentenceListWord = "";
 
 document.addEventListener("DOMContentLoaded", function () {
+    // 新增「進入句子頁面」按鈕的事件監聽器
+    const sentenceButton = document.getElementById("sentencePageBtn");
+    if (sentenceButton) {
+        sentenceButton.addEventListener("click", function () {
+            window.location.href = "sentence.html";
+        });
+    }
+
     fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
         .then(res => res.json())
         .then(data => {
@@ -26,14 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 let bButton = document.getElementById("bButton");
                 if (bButton) {
-                    bButton.disabled = true; // 禁用按鍵
-                    bButton.style.backgroundColor = "#ccc"; // 設定未啟動顏色
-                    bButton.addEventListener("click", backToPrevious); // 綁定 "B" 按鍵點擊事件
+                    bButton.disabled = true;
+                    bButton.style.backgroundColor = "#ccc";
+                    bButton.addEventListener("click", backToPrevious);
                     console.log("🔵 'B' 按鈕已初始化");
                 } else {
                     console.error("❌ 無法找到 'B' 按鈕，請確認 HTML 是否正確");
                 }
-            }, 300); // **延遲 300ms 確保 DOM 加載完成**
+            }, 300);
         });
 });
 

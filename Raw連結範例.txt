@@ -1,0 +1,5 @@
+
+錯誤:fetch("https://github.com/BoydYang-Designer/English-vocabulary/raw/refs/heads/main/Z_total_words.json")
+
+正確:fetch("https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Z_total_words.json")
+
