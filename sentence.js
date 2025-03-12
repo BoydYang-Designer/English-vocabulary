@@ -21,16 +21,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("✅ Z_total_words.json 載入成功:", wordsData.length);
                 console.log("載入的資料樣本:", wordsData.slice(0, 2));
             }),
-        fetch("https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/sentence.json")
-            .then(res => {
-                if (!res.ok) throw new Error(`HTTP 錯誤: ${res.status}`);
-                return res.json();
-            })
-            .then(data => {
-                sentenceData = data["New Words"] || [];
-                console.log("✅ sentence.json 載入成功:", sentenceData.length);
-            })
-    ])
+fetch("https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/sentence.json")
+        .then(res => {
+            if (!res.ok) throw new Error(`HTTP 錯誤: ${res.status}`);
+            return res.json();
+        })
+        .then(data => {
+            sentenceData = data["New Words"] || [];
+            console.log("✅ sentence.json 載入成功:", sentenceData.length);
+            if (sentenceData.length === 0) {
+                console.warn("⚠️ sentenceData 為空，請檢查 sentence.json");
+            }
+        })
+        .catch(error => {
+            console.error("❌ 載入 sentence.json 失敗:", error);
+        })
+])
     .then(() => {
         renderAlphabetButtons();
         createCategoryButtons();
@@ -67,7 +73,7 @@ function renderAlphabetButtons() {
 // 第一層：生成分類按鈕
 function createCategoryButtons() {
     let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
-    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Note");
+    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Note", "重要句子", "錯誤句子");
 
     const categoryContainer = document.getElementById("categoryButtons");
     categoryContainer.innerHTML = categories.map(c => {
@@ -75,8 +81,29 @@ function createCategoryButtons() {
         if (c === "重要單字") return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
         if (c === "錯誤單字") return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
         if (c === "Note") return `<button class='letter-btn' onclick='showNoteWords()'>${c}</button>`;
+        if (c === "重要句子") return `<button class='letter-btn' onclick='showImportantSentences()'>${c}</button>`;
+        if (c === "錯誤句子") return `<button class='letter-btn' onclick='showWrongSentences()'>${c}</button>`;
         return `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`;
     }).join(" ");
+}
+
+function showImportantSentences() {
+    let importantSentences = sentenceData.filter(s => localStorage.getItem(`important_sentence_${s.Words}`) === "true");
+    console.log("Important sentences:", importantSentences);
+    if (importantSentences.length === 0) {
+        console.warn("⚠️ 沒有標記為重要的句子");
+    }
+    displaySentenceList(importantSentences);
+}
+
+function showWrongSentences() {
+    let wrongSentences = JSON.parse(localStorage.getItem("wrongSentences")) || [];
+    let filteredSentences = sentenceData.filter(s => wrongSentences.includes(s.Words));
+    console.log("Wrong sentences:", filteredSentences);
+    if (filteredSentences.length === 0) {
+        console.warn("⚠️ 沒有標記為錯誤的句子");
+    }
+    displaySentenceList(filteredSentences);
 }
 
 // 第一層：生成等級按鈕
@@ -106,6 +133,39 @@ function filterSentences() {
     document.getElementById("searchContainer").appendChild(searchResults);
 }
 
+function displaySentenceList(sentences) {
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("returnHomeBtn").style.display = "none";
+    document.getElementById("wordList").style.display = "none";
+    document.getElementById("sentenceList").style.display = "block";
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+    document.getElementById("bButton").style.display = "none";
+    // 隱藏 sentenceList 中的 back-button
+    document.querySelector('#sentenceList .back-button').style.display = "none";
+
+    let sentenceItems = document.getElementById("sentenceItems");
+    sentenceItems.innerHTML = sentences.length > 0
+        ? sentences.map(s => {
+            let sentenceId = s.Words;
+            let isImportant = localStorage.getItem(`important_sentence_${sentenceId}`) === "true";
+            return `
+                <div class='word-item-container'>
+                    <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
+                    <p class='word-item' data-sentence="${sentenceId}" onclick='showSentenceDetails("${sentenceId}")'>${sentenceId}: ${s.句子}</p>
+                    <button class='audio-btn' onclick='playSentenceAudio("${sentenceId}.mp3")'>
+                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
+                    </button>
+                </div>`;
+        }).join("")
+        : "<p>⚠️ 目前沒有符合的句子</p>";
+
+    // 添加「Back H」按鈕
+    sentenceItems.innerHTML = `<button id="backHomeBtn" onclick="backToFirstLayer()">Back H</button>` + sentenceItems.innerHTML;
+}
+
 // 第二層：顯示單字列表
 function showWords(type, value) {
     let titleText = type === "letter" ? value.toUpperCase() : type === "category" ? value : `${value} Level`;
@@ -123,6 +183,7 @@ function showWords(type, value) {
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
+    document.getElementById("bButton").style.display = "block"; // 恢復 bButton 顯示
 
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
@@ -249,7 +310,10 @@ function displayWordList(words) {
 
 // 以下為第三層與第四層功能（保持不變）
 function navigateTo(state) {
-    if (historyStack.length === 0 || historyStack[historyStack.length - 1].word !== state.word) {
+    if (historyStack.length === 0 || 
+        historyStack[historyStack.length - 1].page !== state.page ||
+        historyStack[historyStack.length - 1].type !== state.type ||
+        historyStack[historyStack.length - 1].word !== state.word) {
         historyStack.push(state);
     }
     if (historyStack.length > 10) historyStack.shift();
@@ -263,6 +327,9 @@ function showSentences(word) {
     document.getElementById("wordListTitle").style.display = "block";
     document.getElementById("wordList").style.display = "none";
     document.getElementById("sentenceList").style.display = "block";
+    document.getElementById("bButton").style.display = "block";
+    // 恢復 sentenceList 中的 back-button
+    document.querySelector('#sentenceList .back-button').style.display = "block";
 
     navigateTo({ page: "sentenceList", word: word });
     lastSentenceListWord = word;
@@ -306,7 +373,8 @@ function showSentenceDetails(sentenceId) {
     document.getElementById("sentenceList").style.display = "none";
     document.getElementById("sentenceDetails").style.display = "block";
     document.getElementById("wordListTitle").style.display = "none";
-
+    document.getElementById("bButton").style.display = "block";
+ 
     let word = sentenceId.split("-")[0];
     let wordObj = wordsData.find(w => w.Words === word);
 
@@ -444,6 +512,8 @@ function backToWordList() {
     else if (lastWordListType === "important") showImportantWords();
     else if (lastWordListType === "wrong") showWrongWords();
     else if (lastWordListType === "note") showNoteWords();
+    else if (lastWordListType === "importantSentences") showImportantSentences();
+    else if (lastWordListType === "wrongSentences") showWrongSentences();
     else if (lastWordListType && lastWordListValue) showWords(lastWordListType, lastWordListValue);
     else backToFirstLayer();
 }
@@ -455,11 +525,25 @@ function backToSentenceList() {
 
 function backToPrevious() {
     if (historyStack.length > 1) {
-        historyStack.pop();
-        let previousState = historyStack[historyStack.length - 1];
-        if (previousState.page === "sentenceDetails") showSentenceDetails(previousState.word);
-        else if (previousState.page === "sentenceList") showSentences(previousState.word);
-        else if (previousState.page === "wordList") showWords(previousState.type, previousState.value);
+        historyStack.pop(); // 移除當前狀態（第四層）
+        let previousState = historyStack[historyStack.length - 1]; // 獲取上一個狀態
+        if (previousState.page === "home") {
+            backToFirstLayer();
+        } else if (previousState.page === "sentenceDetails") {
+            showSentenceDetails(previousState.word);
+        } else if (previousState.page === "sentenceList") {
+            if (previousState.type === "importantSentences") {
+                showImportantSentences(); // 返回「重要句子」
+            } else if (previousState.type === "wrongSentences") {
+                showWrongSentences(); // 返回「錯誤句子」
+            } else {
+                showSentences(previousState.word); // 返回普通句子列表
+            }
+        } else if (previousState.page === "wordList") {
+            showWords(previousState.type, previousState.value);
+        }
+    } else {
+        backToFirstLayer(); // 堆疊不足時返回首頁
     }
     document.getElementById("bButton").disabled = historyStack.length <= 1;
     document.getElementById("bButton").style.backgroundColor = historyStack.length <= 1 ? "#ccc" : "";

@@ -983,5 +983,25 @@ body {
         border: none;
         cursor: pointer;
     }
->>>>>>> 4948d78f41241d9f415ab54f5e6c3843b04e0616
+
+/* index.css */
+#sentenceItems #backHomeBtn {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #424d57;
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 8px 0;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 0;
+}
+
+#sentenceItems #backHomeBtn:hover {
+    background-color: #6e8191;
 }

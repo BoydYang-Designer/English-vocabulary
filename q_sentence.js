@@ -40,19 +40,30 @@ function showSentenceQuizCategories() {
 function generateSentenceCategories(data) {
     let levelContainer = document.getElementById("sentenceLevelButtons");
     let categoryContainer = document.getElementById("sentenceCategoryButtons");
+    let alphabetContainer = document.createElement("div"); // 新增 A-Z 分類容器
+    alphabetContainer.id = "alphabetButtons";
 
     let levels = new Set();
     let categories = new Set();
+    let alphabetMap = {};
 
+    // 初始化 A-Z 分類
+    for (let i = 65; i <= 90; i++) {
+        alphabetMap[String.fromCharCode(i)] = [];
+    }
+
+    // 分類數據
     data.forEach(item => {
         let level = item.等級 || "未分類(等級)";
         let category = item.分類 || "未分類";
+        let firstLetter = item.句子.charAt(0).toUpperCase();
+
         levels.add(level);
         categories.add(category);
+        if (alphabetMap[firstLetter]) {
+            alphabetMap[firstLetter].push(item);
+        }
     });
-
-    console.log("📌 等級分類:", [...levels]);
-    console.log("📌 主題分類:", [...categories]);
 
     // 生成等級按鈕
     levelContainer.innerHTML = [...levels].map(level => `<button class="button" onclick="startSentenceQuiz('${level}')">${level}</button>`).join("");
@@ -63,6 +74,15 @@ function generateSentenceCategories(data) {
     // 添加「重要句子」和「錯誤句子」按鈕
     categoryContainer.innerHTML += `<button class="button" onclick="startSentenceQuiz('important')">重要句子</button>`;
     categoryContainer.innerHTML += `<button class="button" onclick="startSentenceQuiz('incorrect')">錯誤句子</button>`;
+
+    // 生成 A-Z 按鈕
+    alphabetContainer.innerHTML = Object.keys(alphabetMap)
+        .filter(letter => alphabetMap[letter].length > 0) // 只顯示有句子的字母
+        .map(letter => `<button class="button" onclick="startSentenceQuiz('alpha_${letter}')">${letter}</button>`)
+        .join("");
+
+    // 將 A-Z 分類添加到頁面
+    document.getElementById("sentenceQuizCategories").appendChild(alphabetContainer);
 }
 
 
@@ -77,6 +97,9 @@ function startSentenceQuiz(filter) {
         filteredSentences = sentenceData.filter(item => localStorage.getItem(`important_sentence_${item.Words}`) === "true");
     } else if (filter === "incorrect") {
         filteredSentences = sentenceData.filter(item => localStorage.getItem(`wrong_sentence_${item.Words}`) === "true");
+    } else if (filter.startsWith("alpha_")) {
+        let letter = filter.split("_")[1];
+        filteredSentences = sentenceData.filter(item => item.句子.charAt(0).toUpperCase() === letter);
     } else {
         filteredSentences = sentenceData.filter(item => item.分類 === filter || item.等級 === filter);
     }
@@ -91,7 +114,6 @@ function startSentenceQuiz(filter) {
     userAnswers = [];
     setTimeout(() => loadSentenceQuestion(), 100);
 }
-
 
 
 let currentAudio = null; // 儲存當前音檔，避免重複創建
@@ -559,12 +581,12 @@ function toggleImportantSentence(word, checkbox) {
 }
 
 // 📌 儲存測驗結果
+// 在 q_sentence.js 中
 function saveQuizResults() {
     let incorrectWords = incorrectSentences.map(sentence => sentence.Words);
-    incorrectWords.forEach(word => localStorage.setItem(`wrong_sentence_${word}`, "true"));
-    let existingWrongWords = JSON.parse(localStorage.getItem("wrongWords")) || [];
-    let updatedWrongWords = [...new Set([...existingWrongWords, ...incorrectWords.map(w => w.split("-")[0])])];
-    localStorage.setItem("wrongWords", JSON.stringify(updatedWrongWords));
+    let existingWrongSentences = JSON.parse(localStorage.getItem("wrongSentences")) || [];
+    let updatedWrongSentences = [...new Set([...existingWrongSentences, ...incorrectWords])];
+    localStorage.setItem("wrongSentences", JSON.stringify(updatedWrongSentences));
     alert("✅ 測驗結果已儲存！");
-    console.log("📌 已儲存錯誤單字:", updatedWrongWords);
+    console.log("📌 已儲存錯誤句子:", updatedWrongSentences);
 }
