@@ -12,6 +12,7 @@ let importantSentences = JSON.parse(localStorage.getItem("importantSentences")) 
 
 // 📌 進入 Q Sentence 測驗分類頁面
 function showSentenceQuizCategories() {
+    document.querySelector("h1").textContent = "句子測驗區";
     document.getElementById("mainMenu").style.display = "none";
     document.getElementById("sentenceQuizCategories").style.display = "block";
 

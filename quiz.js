@@ -191,6 +191,7 @@ function generateMultiSelectButtons() {
 }
 
 function showQuizCategories() {
+    document.querySelector("h1").textContent = "單字測驗區";
     if (!isDataLoaded) {
         alert("⚠️ 單字資料尚未載入完成，請稍後再試。");
         return;
@@ -564,6 +565,7 @@ function saveQuizResults() {
 
 // Back按鍵 // 
 function returnToMainMenu() {
+    document.querySelector("h1").textContent = "測驗區";
     document.getElementById("quizCategories").style.display = "none";
     document.getElementById("quizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "none";
