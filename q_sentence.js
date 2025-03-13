@@ -66,20 +66,25 @@ function generateSentenceCategories(data) {
     });
 
     // 生成等級按鈕
-    levelContainer.innerHTML = [...levels].map(level => `<button class="button" onclick="startSentenceQuiz('${level}')">${level}</button>`).join("");
+levelContainer.innerHTML = [...levels]
+    .map(level => `<button class="category-button" onclick="startSentenceQuiz('${level}')">${level}</button>`)
+    .join("");
+
 
     // 生成主題按鈕
-    categoryContainer.innerHTML = [...categories].map(category => `<button class="button" onclick="startSentenceQuiz('${category}')">${category}</button>`).join("");
+categoryContainer.innerHTML = [...categories]
+    .map(category => `<button class="category-button" onclick="startSentenceQuiz('${category}')">${category}</button>`)
+    .join("");
 
-    // 添加「重要句子」和「錯誤句子」按鈕
-    categoryContainer.innerHTML += `<button class="button" onclick="startSentenceQuiz('important')">重要句子</button>`;
-    categoryContainer.innerHTML += `<button class="button" onclick="startSentenceQuiz('incorrect')">錯誤句子</button>`;
+categoryContainer.innerHTML += `<button class="category-button" onclick="startSentenceQuiz('important')">重要句子</button>`;
+categoryContainer.innerHTML += `<button class="category-button" onclick="startSentenceQuiz('incorrect')">錯誤句子</button>`;
+
 
     // 生成 A-Z 按鈕
-    alphabetContainer.innerHTML = Object.keys(alphabetMap)
-        .filter(letter => alphabetMap[letter].length > 0) // 只顯示有句子的字母
-        .map(letter => `<button class="button" onclick="startSentenceQuiz('alpha_${letter}')">${letter}</button>`)
-        .join("");
+alphabetContainer.innerHTML = Object.keys(alphabetMap)
+    .filter(letter => alphabetMap[letter].length > 0)
+    .map(letter => `<button class="category-button" onclick="startSentenceQuiz('alpha_${letter}')">${letter}</button>`)
+    .join("");
 
     // 將 A-Z 分類添加到頁面
     document.getElementById("sentenceQuizCategories").appendChild(alphabetContainer);
