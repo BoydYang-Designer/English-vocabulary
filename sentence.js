@@ -323,17 +323,33 @@ function navigateTo(state) {
 }
 
 function showSentences(word) {
+    // 設置標題
     document.getElementById("wordListTitle").innerText = word;
     document.getElementById("wordListTitle").style.display = "block";
+
+    // 隱藏第一層的所有內容
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("returnHomeBtn").style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+
+    // 隱藏第二層的單字列表（如果存在）
     document.getElementById("wordList").style.display = "none";
+
+    // 顯示第三層的句子列表
     document.getElementById("sentenceList").style.display = "block";
+
+    // 顯示返回按鈕（如果需要）
     document.getElementById("bButton").style.display = "block";
-    // 恢復 sentenceList 中的 back-button
     document.querySelector('#sentenceList .back-button').style.display = "block";
 
+    // 記錄導航歷史
     navigateTo({ page: "sentenceList", word: word });
     lastSentenceListWord = word;
 
+    // 載入句子內容
     let sentenceItems = document.getElementById("sentenceItems");
     sentenceItems.innerHTML = "";
 

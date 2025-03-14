@@ -1005,3 +1005,11 @@ body {
 #sentenceItems #backHomeBtn:hover {
     background-color: #6e8191;
 }
+
+#sentenceList {
+    display: none; /* 預設隱藏，僅在 showSentences 中顯示 */
+}
+
+#searchContainer, #startQuizBtn, #returnHomeBtn, .alphabet-container, .category-container, .level-container {
+    display: block; /* 預設顯示，進入第三層時隱藏 */
+}
