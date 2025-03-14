@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     Promise.all([
         fetch("https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Z_total_words.json")
-
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP 錯誤: ${res.status}`);
                 return res.json();
@@ -19,24 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 wordsData = data["New Words"] || [];
                 console.log("✅ Z_total_words.json 載入成功:", wordsData.length);
-                console.log("載入的資料樣本:", wordsData.slice(0, 2));
             }),
-fetch("https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/sentence.json")
-        .then(res => {
-            if (!res.ok) throw new Error(`HTTP 錯誤: ${res.status}`);
-            return res.json();
-        })
-        .then(data => {
-            sentenceData = data["New Words"] || [];
-            console.log("✅ sentence.json 載入成功:", sentenceData.length);
-            if (sentenceData.length === 0) {
-                console.warn("⚠️ sentenceData 為空，請檢查 sentence.json");
-            }
-        })
-        .catch(error => {
-            console.error("❌ 載入 sentence.json 失敗:", error);
-        })
-])
+        fetch("https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/sentence.json")
+            .then(res => {
+                if (!res.ok) throw new Error(`HTTP 錯誤: ${res.status}`);
+                return res.json();
+            })
+            .then(data => {
+                sentenceData = data["New Words"] || [];
+                console.log("✅ sentence.json 載入成功:", sentenceData.length);
+            })
+    ])
     .then(() => {
         renderAlphabetButtons();
         createCategoryButtons();
@@ -49,6 +41,24 @@ fetch("https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/ma
             bButton.disabled = true;
             bButton.style.backgroundColor = "#ccc";
             bButton.addEventListener("click", backToPrevious);
+        }
+
+        // 解析 URL 參數並決定顯示內容
+        const urlParams = new URLSearchParams(window.location.search);
+        const sentenceParam = urlParams.get('sentence');
+        const fromParam = urlParams.get('from');
+        const layerParam = urlParams.get('layer');
+
+        if (sentenceParam && layerParam === '4') {
+            showSentenceDetails(sentenceParam);
+            // 如果從 quiz 進來，設置 Back 按鈕返回 quiz.html
+            if (fromParam === 'quiz') {
+                bButton.onclick = function() {
+                    window.location.href = "quiz.html?returning=true";
+                };
+            }
+        } else {
+            backToFirstLayer(); // 默認顯示第一層
         }
     })
     .catch(err => console.error("❌ 資料載入失敗:", err));
@@ -390,7 +400,17 @@ function showSentenceDetails(sentenceId) {
     document.getElementById("sentenceDetails").style.display = "block";
     document.getElementById("wordListTitle").style.display = "none";
     document.getElementById("bButton").style.display = "block";
- 
+
+    // 隱藏第一層和第二層的元素
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("returnHomeBtn").style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+    document.getElementById("wordList").style.display = "none";
+    document.getElementById("sentenceList").style.display = "none";
+
     let word = sentenceId.split("-")[0];
     let wordObj = wordsData.find(w => w.Words === word);
 
@@ -552,26 +572,25 @@ function backToSentenceList() {
 }
 
 function backToPrevious() {
-    if (historyStack.length > 1) {
-        historyStack.pop(); // 移除當前狀態（第四層）
-        let previousState = historyStack[historyStack.length - 1]; // 獲取上一個狀態
+    const urlParams = new URLSearchParams(window.location.search);
+    const fromParam = urlParams.get('from');
+
+    if (fromParam === 'quiz') {
+        window.location.href = "quiz.html?returning=true";
+    } else if (historyStack.length > 1) {
+        historyStack.pop();
+        let previousState = historyStack[historyStack.length - 1];
         if (previousState.page === "home") {
             backToFirstLayer();
         } else if (previousState.page === "sentenceDetails") {
             showSentenceDetails(previousState.word);
         } else if (previousState.page === "sentenceList") {
-            if (previousState.type === "importantSentences") {
-                showImportantSentences(); // 返回「重要句子」
-            } else if (previousState.type === "wrongSentences") {
-                showWrongSentences(); // 返回「錯誤句子」
-            } else {
-                showSentences(previousState.word); // 返回普通句子列表
-            }
+            showSentences(previousState.word);
         } else if (previousState.page === "wordList") {
             showWords(previousState.type, previousState.value);
         }
     } else {
-        backToFirstLayer(); // 堆疊不足時返回首頁
+        backToFirstLayer();
     }
     document.getElementById("bButton").disabled = historyStack.length <= 1;
     document.getElementById("bButton").style.backgroundColor = historyStack.length <= 1 ? "#ccc" : "";

@@ -17,6 +17,12 @@ let selectedSentenceFilters = {
     alphabet: new Set()
 };
 
+function getUserAnswer(index) {
+    return userAnswers[index] || "";
+}
+window.getUserAnswer = getUserAnswer;
+
+
 // 📌 進入 Q Sentence 測驗分類頁面
 function showSentenceQuizCategories() {
     document.querySelector("h1").textContent = "句子測驗區";
@@ -145,6 +151,7 @@ function startSentenceQuiz() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("sentenceQuizArea").style.display = "block";
 
+    // 根據條件篩選出本次要測驗的句子
     let filteredSentences = sentenceData.filter(item => {
         let levelMatch = selectedSentenceFilters.levels.size === 0 || selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
         let categoryMatch = selectedSentenceFilters.categories.size === 0 || 
@@ -161,11 +168,16 @@ function startSentenceQuiz() {
         return;
     }
 
+    // 只保留本次測驗用的句子
     sentenceData = filteredSentences;
     currentSentenceIndex = 0;
+    // 清空本次測驗的答案與錯誤資料
     userAnswers = [];
+    incorrectSentences = [];
+    
     setTimeout(() => loadSentenceQuestion(), 100);
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
@@ -334,6 +346,14 @@ function playAudio() {
         console.warn("⚠️ 尚未加載音檔，請確認檔案是否正確");
     }
 }
+
+function playSentenceAudio(audioFile) {
+    let audioUrl = GITHUB_MP3_BASE_URL + audioFile;
+    let audio = new Audio(audioUrl);
+    audio.play().catch(error => console.error("🔊 播放失敗:", error));
+}
+window.playSentenceAudio = playSentenceAudio;
+
 
 // 📌 監聽空白鍵來播放音檔
 function handleSpacebar(event) {
@@ -506,40 +526,32 @@ function finishSentenceQuiz() {
     let resultContainer = document.getElementById("quizResult");
     resultContainer.innerHTML = "<h2>測驗結果</h2>";
 
-    sentenceData.forEach((sentenceObj, index) => {
+    for (let index = 0; index < userAnswers.length; index++) {
+        let sentenceObj = sentenceData[index];
+        if (!sentenceObj) continue;
+
         let userAnswer = getUserAnswer(index);
         let correctSentence = sentenceObj.句子;
-        let isCorrect = userAnswer.toLowerCase() === correctSentence.toLowerCase();
+        let isCorrect = (userAnswer.trim().toLowerCase() === correctSentence.trim().toLowerCase());
 
-        if (!isCorrect) {
-            incorrectSentences.push({
-                Words: sentenceObj.Words,
-                句子: correctSentence,
-                userAnswer: userAnswer
-            });
-        }
+        let importantCheckbox = `<input type="checkbox" onchange="toggleImportantSentence('${sentenceObj.Words}', this)" ${localStorage.getItem('important_sentence_' + sentenceObj.Words) === "true" ? "checked" : ""} />`;
+        // 確保 URL 包含 sentence、from 和 layer 參數
+        let sentenceIdentifierLink = `<a href="sentence.html?sentence=${encodeURIComponent(sentenceObj.Words)}&from=quiz&layer=4">${sentenceObj.Words}</a>`;
+        let correctSentenceLink = `<a href="#" onclick="playSentenceAudio('${sentenceObj.Words}.mp3'); return false;">${correctSentence}</a>`;
+        let correctnessDisplay = isCorrect ? "正確" : "錯誤";
 
-        let wordButton = `<button class='word-button' onclick='goToWordDetail("${sentenceObj.Words}")'>${sentenceObj.Words}</button>`;
-        let highlightedSentence = highlightErrors(correctSentence, userAnswer);
-        let isImportant = localStorage.getItem(`important_sentence_${sentenceObj.Words}`) === "true";
-
-        let sentenceHTML = `
-            <div class='result-item'>
-                ${wordButton}
-                <p>正確句子: ${highlightedSentence}</p>
-                <p>你的回答: ${userAnswer || "<未填寫>"}</p>
-                <label>
-                    <input type='checkbox' onchange='toggleImportantSentence("${sentenceObj.Words}", this)' ${isImportant ? "checked" : ""}> 標記為重要句子
-                </label>
-            </div>`;
-        resultContainer.innerHTML += sentenceHTML;
-    });
-
-    resultContainer.innerHTML += `
-        <button onclick='returnToSentenceCategorySelection()'>返回分類頁面</button>
-        <button onclick='saveQuizResults()'>儲存測驗結果</button>
-    `;
+        resultContainer.innerHTML += `
+            <div class="result-item">
+                ${importantCheckbox} 
+                ${sentenceIdentifierLink} 
+                ${correctSentenceLink} 
+                <span>${correctnessDisplay}</span>
+            </div>
+        `;
+    }
 }
+
+
 
 // 📌 標記錯誤的字為紅色
 function highlightErrors(correctSentence, userAnswer) {
@@ -581,16 +593,14 @@ document.addEventListener("DOMContentLoaded", function () {
         restoreQuizResult();
     } else {
         console.log("ℹ️ 正常載入 quiz.html");
-        // 這裡可以保留原有的初始化邏輯，例如顯示主選單
         document.getElementById("mainMenu").style.display = "block";
     }
+
+    document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
 });
 
 // 新增恢復測驗結果的函數
 function restoreQuizResult() {
-    console.log("📌 sentenceData:", sentenceData);
-    console.log("📌 userAnswers:", userAnswers);
-
     if (sentenceData.length === 0 || userAnswers.length === 0) {
         console.warn("⚠️ 無測驗資料可恢復，回到分類頁面");
         showSentenceQuizCategories();
@@ -600,7 +610,7 @@ function restoreQuizResult() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "block";
-    finishSentenceQuiz(); // 重新生成測驗結果
+    finishSentenceQuiz();
 }
 
 // 📌 返回 Q Sentence 分類頁面

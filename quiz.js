@@ -228,6 +228,12 @@ function startQuiz() {
 
 // 提交答案並檢查正確性
 function submitAnswer() {
+    const quizArea = document.getElementById("quizArea");
+    if (!quizArea || quizArea.style.display === "none") {
+        // 如果 quizArea 不存在或隱藏，直接返回，避免執行錯誤的邏輯
+        return;
+    }
+    
     let userAnswer = Array.from(document.querySelectorAll("#wordInput input"))
                           .map(input => input.value.trim().toLowerCase())
                           .join(""); // 取得使用者輸入的單字（合併成字串）
