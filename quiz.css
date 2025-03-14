@@ -369,3 +369,22 @@ input[type="checkbox"]:checked + span {
     background-color: #90EE90;
     color: #000;
 }
+
+.action-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4CAF50; /* 綠色背景 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.action-button:hover {
+    background-color: #45a049; /* 懸停時稍深的綠色 */
+}
+
+.result-buttons {
+    text-align: center;
+}

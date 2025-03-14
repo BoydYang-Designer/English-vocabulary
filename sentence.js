@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 sentenceData = data["New Words"] || [];
                 console.log("✅ sentence.json 載入成功:", sentenceData.length);
+                console.log("✅ sentenceData 樣本:", sentenceData.slice(0, 5)); // 顯示前5筆資料檢查格式
             })
     ])
     .then(() => {
@@ -43,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
             bButton.addEventListener("click", backToPrevious);
         }
 
-        // 解析 URL 參數並決定顯示內容
         const urlParams = new URLSearchParams(window.location.search);
         const sentenceParam = urlParams.get('sentence');
         const fromParam = urlParams.get('from');
@@ -51,14 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (sentenceParam && layerParam === '4') {
             showSentenceDetails(sentenceParam);
-            // 如果從 quiz 進來，設置 Back 按鈕返回 quiz.html
             if (fromParam === 'quiz') {
                 bButton.onclick = function() {
                     window.location.href = "quiz.html?returning=true";
                 };
             }
         } else {
-            backToFirstLayer(); // 默認顯示第一層
+            backToFirstLayer();
         }
     })
     .catch(err => console.error("❌ 資料載入失敗:", err));
@@ -107,12 +106,33 @@ function showImportantSentences() {
 }
 
 function showWrongSentences() {
+    document.getElementById("wordListTitle").innerText = "錯誤句子";
+    document.getElementById("wordListTitle").style.display = "block";
+    lastWordListType = "wrongSentences";
+    lastWordListValue = null;
+
+    // 從 wrongSentences 鍵讀取
     let wrongSentences = JSON.parse(localStorage.getItem("wrongSentences")) || [];
+    
+    // 如果 wrongSentences 為空，檢查所有 wrong_sentence_* 鍵
+    if (wrongSentences.length === 0) {
+        wrongSentences = Object.keys(localStorage)
+            .filter(key => key.startsWith("wrong_sentence_") && localStorage.getItem(key) === "true")
+            .map(key => key.replace("wrong_sentence_", ""));
+    }
+    
+    console.log("✅ wrongSentences:", wrongSentences);
+
     let filteredSentences = sentenceData.filter(s => wrongSentences.includes(s.Words));
-    console.log("Wrong sentences:", filteredSentences);
+    console.log("✅ sentenceData 總數:", sentenceData.length);
+    console.log("✅ filteredSentences:", filteredSentences);
+    
     if (filteredSentences.length === 0) {
         console.warn("⚠️ 沒有標記為錯誤的句子");
+        console.log("檢查點：sentenceData 前5筆:", sentenceData.slice(0, 5).map(s => ({ Words: s.Words, 句子: s.句子 })));
+        console.log("檢查點：wrongSentences 是否匹配:", wrongSentences.map(w => sentenceData.some(s => s.Words === w)));
     }
+    
     displaySentenceList(filteredSentences);
 }
 
