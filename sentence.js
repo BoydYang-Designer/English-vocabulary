@@ -509,17 +509,29 @@ function importAllData() {
 }
 
 function backToFirstLayer() {
+    // 顯示第一層的元素
     document.getElementById("searchContainer").style.display = "block";
     document.getElementById("startQuizBtn").style.display = "block";
     document.getElementById("returnHomeBtn").style.display = "block";
+    
+    // 隱藏其他層的元素
     document.getElementById("wordList").style.display = "none";
     document.getElementById("sentenceList").style.display = "none";
     document.getElementById("sentenceDetails").style.display = "none";
+    
+    // 顯示第一層的其他組件（例如字母表、分類等）
     document.querySelector('.alphabet-container').style.display = "block";
     document.querySelector('.category-container').style.display = "block";
     document.querySelector('.level-container').style.display = "block";
-    document.getElementById("wordListTitle").style.display = "none";
-    historyStack = [];
+    
+    // 清空搜尋框內容
+    document.getElementById("searchInput").value = "";
+    
+    // 如果有搜尋結果，移除它
+    let searchResults = document.getElementById("searchResults");
+    if (searchResults) {
+        searchResults.remove();
+    }
 }
 
 function backToWordList() {
