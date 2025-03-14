@@ -183,19 +183,20 @@ function loadSentenceQuestion() {
     }
 
     let sentenceText = sentenceObj.句子;
-    let words = sentenceText.split(/\b/); // 使用正則表達式分割單字與標點符號
+    let words = sentenceText.split(/\b/); // Split into words and punctuation
 
     let sentenceInputContainer = document.getElementById("sentenceInput");
     sentenceInputContainer.innerHTML = "";
 
-    let firstInput = null; // 記錄第一個輸入框
-    let allInputs = [];   // 儲存所有輸入框
+    let firstInput = null;
+    let allInputs = [];
 
+    // Generate input boxes (unchanged)
     words.forEach((word, index) => {
         let wordContainer = document.createElement("div");
         wordContainer.classList.add("word-container");
 
-        if (/\w+/.test(word)) { // 如果是單字
+        if (/\w+/.test(word)) {
             word.split("").forEach((_, letterIndex) => {
                 let input = document.createElement("input");
                 input.type = "text";
@@ -209,10 +210,10 @@ function loadSentenceQuestion() {
                 allInputs.push(input);
 
                 if (!firstInput) {
-                    firstInput = input; // 記錄第一個輸入框
+                    firstInput = input;
                 }
             });
-        } else { // 如果是標點符號
+        } else {
             let span = document.createElement("span");
             span.classList.add("punctuation");
             span.innerText = word;
@@ -222,18 +223,39 @@ function loadSentenceQuestion() {
         sentenceInputContainer.appendChild(wordContainer);
     });
 
-    // 顯示完整的句子作為提示（sentenceHint）
-    document.getElementById("sentenceHint").innerHTML = sentenceText;
+    // Calculate how many words to show (1/5 of total words)
+    let wordCount = words.filter(word => /\w+/.test(word)).length; // Count only actual words
+    let wordsToShow = Math.max(1, Math.floor(wordCount / 5)); // Ensure at least 1 word is shown
+    let indicesToShow = new Set();
+    
+    // Randomly select indices for words to display
+    while (indicesToShow.size < wordsToShow) {
+        let randomIndex = Math.floor(Math.random() * words.length);
+        if (/\w+/.test(words[randomIndex])) {
+            indicesToShow.add(randomIndex);
+        }
+    }
 
-    // 自動聚焦第一個輸入框
+    // Create the partially revealed sentence for sentenceHint
+    let hintWords = words.map((word, index) => {
+        if (/\w+/.test(word) && !indicesToShow.has(index)) {
+            return "_".repeat(word.length); // Replace hidden words with underscores
+        }
+        return word; // Show the word or punctuation as is
+    });
+
+    // Display the partially revealed sentence
+    document.getElementById("sentenceHint").innerHTML = hintWords.join("");
+
+    // Auto-focus the first input
     if (firstInput) {
         firstInput.focus();
     }
 
-    // 隱藏「下一題」按鈕
+    // Hide "Next" button
     document.getElementById("nextSentenceBtn").style.display = "none";
 
-    // 播放音檔（保留原有邏輯）
+    // Play audio (unchanged)
     if (sentenceObj.Words) {
         let audioUrl = GITHUB_MP3_BASE_URL + encodeURIComponent(sentenceObj.Words) + ".mp3";
         if (currentAudio) {
@@ -359,33 +381,32 @@ function submitSentenceAnswer() {
     let correctSentence = sentenceObj.句子;
     let allInputs = document.querySelectorAll("#sentenceInput .letter-input");
 
-    // 將正確句子拆分成單字和標點符號
+    // Collect user's answer (unchanged)
     let correctWords = correctSentence.split(/\b/);
     let userAnswer = [];
     let inputIndex = 0;
 
-    // 收集使用者的回答
     correctWords.forEach((word, wordIndex) => {
-        if (/\w+/.test(word)) { // 如果是單字
+        if (/\w+/.test(word)) {
             let inputWord = "";
             while (inputIndex < allInputs.length && parseInt(allInputs[inputIndex].dataset.wordIndex) === wordIndex) {
                 inputWord += allInputs[inputIndex].value;
                 inputIndex++;
             }
             userAnswer.push(inputWord);
-        } else { // 如果是標點符號
-            userAnswer.push(word); // 直接保留標點符號
+        } else {
+            userAnswer.push(word);
         }
     });
 
-    // 存儲使用者回答
+    // Store user's answer
     userAnswers[currentSentenceIndex] = userAnswer.join(" ");
 
-    // 更新 sentenceHint
+    // Update sentenceHint to show the full correct sentence with highlighting
     updateSentenceHint(correctSentence, userAnswer);
     highlightUserAnswers(allInputs, correctSentence);
 
-    // 修改按鈕為「下一題」
+    // Modify button to "Next"
     let submitBtn = document.getElementById("submitSentenceBtn");
     submitBtn.innerText = "下一題";
     submitBtn.onclick = goToNextSentence;
