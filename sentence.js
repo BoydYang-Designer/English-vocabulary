@@ -163,7 +163,7 @@ function displaySentenceList(sentences) {
         : "<p>⚠️ 目前沒有符合的句子</p>";
 
     // 添加「Back H」按鈕
-    sentenceItems.innerHTML = `<button id="backHomeBtn" onclick="backToFirstLayer()">Back H</button>` + sentenceItems.innerHTML;
+    sentenceItems.innerHTML = `<button id="backHomeBtn" class="button back-button" onclick="backToFirstLayer()">Back H</button>` + sentenceItems.innerHTML;
 }
 
 // 第二層：顯示單字列表
