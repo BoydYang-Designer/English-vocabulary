@@ -304,15 +304,15 @@ h2 {
 }
 
 
-/* 讓每個單詞區塊有適當間隔 */
+/* 單字容器 */
 .word-container {
     display: inline-flex;
     gap: 3px;
-    margin: 0 10px;
+    margin: 0 5px;
     align-items: center;
 }
 
-/* 底線樣式的輸入框 */
+/* 輸入框樣式 */
 .letter-input {
     width: 20px;
     height: 30px;
@@ -321,6 +321,7 @@ h2 {
     border: none;
     border-bottom: 2px solid black;
     outline: none;
+    background: transparent;
 }
 
 /* 已顯示的單字樣式 */
@@ -351,10 +352,12 @@ h2 {
 
 
 
+/* 標點符號樣式 */
 .punctuation {
     font-size: 18px;
     font-weight: bold;
     margin: 0 5px;
+    color: black;
 }
 
 .hidden-word {
