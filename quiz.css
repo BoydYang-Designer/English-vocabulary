@@ -11,26 +11,16 @@ html, body {
     padding: 0;
 }
 
-/* ✅ 禁止橫向滾動，但保留垂直滾動 */
+/* ✅ 修正並統一禁止橫向滾動 */
 body {
-    overflow-x: auto;  /* 禁止水平滾動 */
-    touch-action: pan-x pan-y; 
-  }
-  
+    overflow-x: hidden; /* 修正原始檔案中的 'auto' 為 'hidden' */
+    touch-action: pan-x pan-y;
+}
 
 /* ==========================================
    🏷️ 標題樣式 (Headings)
 ========================================== */
-h1 {
-    text-align: center;
-    background: #333;
-    color: white;
-    padding: 15px 0;
-    margin: 0;
-    font-size: 24px;
-}
-
-h2 {
+h1, h2 {
     text-align: center;
     background: #333;
     color: white;
@@ -42,43 +32,29 @@ h2 {
 /* ==========================================
    📦 主要區塊樣式 (Main Sections)
 ========================================== */
-#mainMenu, #quizCategories, #quizArea, #quizResult {
+#mainMenu, #quizCategories, #quizArea, #quizResult, #sentenceQuizCategories, #sentenceQuizArea {
     max-width: 100%;
-    width: 100%; /* 保證元素不會超過螢幕寬度 */
-    margin: 10px auto; /* 顯示時加上自動居中 */
+    width: 100%; /* 保證元素不超出螢幕寬度 */
+    margin: 10px auto; /* 自動居中 */
     background-color: #fff;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 微調陰影，使其更適合手機顯示 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 微調陰影以適應手機 */
 }
 
 /* ==========================================
    🔘 按鈕樣式 (Buttons)
 ========================================== */
-
 .button-container {
     display: flex;
-    justify-content: center; /* 讓按鈕水平置中 */
+    justify-content: center; /* 水平置中 */
     gap: 10px; /* 按鈕間距 */
-    flex-wrap: wrap; /* 避免過多按鈕時擠在一行 */
-    width: 100%; /* 確保不超出容器 */
+    flex-wrap: wrap; /* 避免按鈕過多時擠壓 */
+    width: 100%;
     margin-top: 10px;
 }
 
-.back-button, #startFilteredQuizBtn {
-    padding: 10px 15px;
-    background-color: #617194;
-    color: white;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 150px; /* 確保兩個按鈕的寬度一致 */
-    text-align: center;
-    font-weight: bold;
-}
-
-.button, .back-button {
+.button, .back-button, #startFilteredQuizBtn, #startSentenceQuizBtn {
     display: block;
     width: 150px;
     height: 40px;
@@ -99,31 +75,24 @@ h2 {
 }
 
 #cancelBtn {
-    background-color: #f44336; /* 你可以設定任何顏色 */
-    color: white; /* 文字顏色 */
+    background-color: #f44336; /* 取消按鈕顏色 */
+    color: white;
 }
 
 #cancelBtn:hover {
-    background-color: #d32f2f; /* 滑鼠懸停時的顏色 */
+    background-color: #d32f2f;
 }
 
-#startFilteredQuizBtn {
-    background-color: #4CAF50; /* 設置背景顏色，這裡選擇綠色 */
-    color: white; /* 設置文字顏色為白色 */
-    border-radius: 25px; /* 邊角圓滑 */
-    padding: 10px 20px; /* 內邊距 */
-    border: none; /* 去掉邊框 */
-    font-size: 18px; /* 文字大小 */
-    cursor: pointer; /* 鼠標懸停時顯示指針 */
-    transition: background-color 0.3s ease; /* 背景顏色過渡效果 */
+#startFilteredQuizBtn, #startSentenceQuizBtn {
+    background-color: #4CAF50; /* 開始測驗按鈕顏色 */
+    padding: 10px 20px;
 }
 
-#startFilteredQuizBtn:hover {
-    background-color: #45a049; /* 滑鼠懸停時的顏色 */
+#startFilteredQuizBtn:hover, #startSentenceQuizBtn:hover {
+    background-color: #45a049;
 }
 
-
-/* ✅ 分類按鈕 */
+/* 確保 category-button 樣式應用於動態生成的 A-Z 按鈕 */
 .category-button {
     padding: 10px 15px;
     margin: 5px;
@@ -133,11 +102,14 @@ h2 {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 18px; /* 增大字體大小 */
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .category-button:hover {
-    background-color: #777;
+    background-color: #777; /* 懸停時的顏色 */
 }
 
 .category-button.selected {
@@ -146,27 +118,17 @@ h2 {
     border: 2px solid #4CAF50;
 }
 
-/* ✅ 置中按鈕區塊 */
+/* ✅ 按鈕群組置中 */
 .button-group {
     display: flex;
-    margin-right: 25px;
+    justify-content: center;
     gap: 20px;
     margin-top: 20px;
 }
 
-/* ✅ 特殊按鈕（返回/儲存） */
-.back-button {
-    background-color: #424d57;
-}
-
-.back-button:hover {
-    background-color: #6e8191;
-}
-
+/* ✅ 特殊按鈕 */
 #saveResultBtn {
-    display: block;
     width: 200px;
-    margin: 20px auto;
     padding: 12px;
     background-color: #424d57;
     color: white;
@@ -175,11 +137,8 @@ h2 {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 20px auto;
 }
-
-/* ✅ 單字按鈕 - 深藍色 */
-
-
 
 #saveResultBtn:hover {
     background-color: #6e8191;
@@ -188,16 +147,14 @@ h2 {
 /* ==========================================
    📝 測驗區塊樣式 (Quiz Area)
 ========================================== */
-#wordHint {
+#wordHint, #sentenceHint {
     font-size: 26px;
     margin: 20px 5px;
     text-align: center;
     letter-spacing: 4px;
-    margin-right: 10px;
 }
 
-#wordInput {
-    transform: translateX(-16px);
+#wordInput, #sentenceInput {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -207,26 +164,21 @@ h2 {
     margin: auto;
     padding: 5px;
     text-align: center;
-
 }
 
 /* ✅ 字母格樣式 */
-
-
-
 .letter-box {
     border-radius: 5px;
-    width: 24px !important;/* 避免 iOS 縮放 */
-    height: 24x !important;/* 避免 iOS 縮放 */
+    width: 24px !important;
+    height: 24px !important; /* 修正原始檔案中的 '24x' 拼寫錯誤 */
     font-size: 24px !important;
     text-align: center;
-    max-width: 400px;
-    border-color:#dfdfdf;
-    margin: 0px;
+    border: 1px solid #dfdfdf;
+    margin: 0;
     outline: none;
     background-color: transparent;
     position: relative;
-    text-transform: lowercase; /* 強制顯示小寫 */
+    text-transform: lowercase; /* 強制小寫 */
 }
 
 .letter-box::after {
@@ -252,7 +204,7 @@ h2 {
    📊 測驗結果樣式 (Quiz Results)
 ========================================== */
 #quizResult {
-    padding: 0px;
+    padding: 0;
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -260,17 +212,13 @@ h2 {
 
 .word-link, .phonetic-btn {
     background-color: transparent;
-}
-
-.word-link, .phonetic-btn {
     cursor: pointer;
     padding: 5px 3px;
     font-size: 18px;
     font-weight: bold;
-    /* margin: 2px auto; */
     border-radius: 15px;
     border: none;
-    transition: all 0.3sease-in-out;
+    transition: all 0.3s ease-in-out;
     color: white;
 }
 
@@ -282,7 +230,7 @@ h2 {
     margin-bottom: 2px;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    padding: 8px; /* 避免太擠 */
+    padding: 8px;
 }
 
 /* ✅ 重要單字標記 */
@@ -303,8 +251,7 @@ h2 {
     border-color: #ff002b;
 }
 
-
-/* 單字容器 */
+/* 單字容器與輸入框 */
 .word-container {
     display: inline-flex;
     gap: 3px;
@@ -312,7 +259,6 @@ h2 {
     align-items: center;
 }
 
-/* 輸入框樣式 */
 .letter-input {
     width: 20px;
     height: 30px;
@@ -324,7 +270,7 @@ h2 {
     background: transparent;
 }
 
-/* 已顯示的單字樣式 */
+/* 單字顯示樣式 */
 .filled-letter {
     font-size: 18px;
     font-weight: bold;
@@ -332,27 +278,25 @@ h2 {
 }
 
 .correct-word {
-    color: blue; /* ✅ 正確答案 → 藍色 */
+    color: blue; /* 正確答案 */
     font-weight: bold;
 }
 
 .wrong-word {
-    color: red; /* ❌ 錯誤答案 → 紅色 */
+    color: red; /* 錯誤答案 */
     font-weight: bold;
 }
 
 .unfilled-word {
-    color: red; /* ⬜ 沒填寫的答案 → 紅色 */
+    color: red; /* 未填寫答案 */
     font-weight: bold;
 }
 
 .default-word {
-    color: black; /* 🆗 原本就顯示的字 → 黑色 */
+    color: black; /* 預設顯示字 */
 }
 
-
-
-/* 標點符號樣式 */
+/* 標點符號與單字顯示 */
 .punctuation {
     font-size: 18px;
     font-weight: bold;
@@ -374,13 +318,6 @@ h2 {
     font-weight: bold;
 }
 
-.result-item {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 .word-button {
     background-color: #6e93ba;
     color: white;
@@ -391,5 +328,44 @@ h2 {
 
 .word-button:hover {
     background-color: #5a7fa6;
+}
 
+/* ==========================================
+   🆕 句子測驗分類樣式 (Sentence Quiz Categories)
+========================================== */
+.alphabet-container, .category-container, .level-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.alphabet-container label, .category-container label, .level-container label {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #617194;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.alphabet-container label:hover, .category-container label:hover, .level-container label:hover {
+    background-color: #777;
+}
+
+.alphabet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="checkbox"]:checked + span {
+    background-color: #90EE90;
+    color: #000;
 }
