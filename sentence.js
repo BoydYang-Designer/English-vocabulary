@@ -85,7 +85,20 @@ function createCategoryButtons() {
 }
 
 function showImportantSentences() {
+    console.log("進入 showImportantSentences, sentenceData.length:", sentenceData.length);
+    document.getElementById("wordListTitle").innerText = "重要句子";
+    document.getElementById("wordListTitle").style.display = "block";
+    lastWordListType = "importantSentences";
+    lastWordListValue = null;
+
+    if (!sentenceData || sentenceData.length === 0) {
+        console.error("❌ sentenceData 未載入或為空");
+        document.getElementById("sentenceItems").innerHTML = "<p>⚠️ 資料載入失敗，請刷新頁面</p>";
+        return;
+    }
+
     let importantSentences = sentenceData.filter(s => localStorage.getItem(`important_sentence_${s.Words}`) === "true");
+    console.log("過濾後的 importantSentences:", importantSentences);
     if (importantSentences.length === 0) console.warn("⚠️ 沒有標記為重要的句子");
     displaySentenceList(importantSentences);
 }
@@ -267,8 +280,8 @@ function showWrongWords() {
 function showSentenceNotes() {
     document.getElementById("wordListTitle").innerText = "Sentence Notes";
     document.getElementById("wordListTitle").style.display = "block";
-    lastWordListType = "sentenceNotes";
-    lastWordListValue = null;
+    lastWordListType = "sentenceNotes"; // 已設置
+    lastWordListValue = null; // 已設置
 
     // 從 localStorage 中篩選出有筆記的句子
     let sentenceNotes = Object.keys(localStorage)
@@ -548,10 +561,19 @@ function backToSentenceList() {
     const urlParams = new URLSearchParams(window.location.search);
     const fromParam = urlParams.get('from');
 
+    document.getElementById("sentenceDetails").style.display = "none";
+
     if (fromParam === 'quiz') {
         window.location.href = "quiz.html?returning=true";
-    } else {
-        document.getElementById("sentenceDetails").style.display = "none";
+    } else if (lastWordListType === "sentenceNotes") {
+        showSentenceNotes();
+    } else if (lastWordListType === "importantSentences") {
+        showImportantSentences(); // 這裡應該能正確返回
+    } else if (lastWordListType === "wrongSentences") {
+        showWrongSentences();
+    } else if (lastSentenceListWord) {
         showSentences(lastSentenceListWord);
+    } else {
+        backToFirstLayer();
     }
 }
