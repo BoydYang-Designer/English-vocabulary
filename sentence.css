@@ -1,4 +1,4 @@
-/* index.css */
+/* sentence.css */
 
 /* 基本樣式 */
 body {
@@ -17,27 +17,6 @@ h1 {
     font-size: 24px;
 }
 
-/* 字母按鈕區域 */
-.alphabet-container {
-    text-align: center;
-    margin: 15px 0;
-}
-
-.letter-btn {
-    padding: 10px 15px;
-    margin: 5px;
-    cursor: pointer;
-    border: none;
-    background: #555;
-    color: white;
-    font-size: 18px;
-    border-radius: 25px;
-}
-
-.letter-btn:hover {
-    background: #777;
-}
-
 /* 容器 */
 .container {
     max-width: 414px;
@@ -47,7 +26,24 @@ h1 {
     box-sizing: border-box;
 }
 
-/* 單字列表標題 */
+.category-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background: #555; /* 與 .letter-btn 相同的深灰色 */
+    color: white;    /* 與 .letter-btn 相同的白色文字 */
+    font-size: 18px;
+    border-radius: 25px; /* 與 .letter-btn 相同的圓角 */
+}
+
+.category-btn:hover {
+    background: #777; /* 與 .letter-btn 相同的懸停效果 */
+}
+
+
+
+/* 標題 */
 #wordListTitle {
     text-align: center;
     font-size: 24px;
@@ -56,7 +52,7 @@ h1 {
     margin-bottom: 15px;
 }
 
-/* 單字列表 */
+/* 單字/句子列表 */
 .word-list {
     display: none;
     max-width: 414px;
@@ -69,7 +65,7 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 單字項目 */
+/* 單字/句子項目 */
 .word-item {
     flex-grow: 1;
     font-size: 20px;
@@ -113,28 +109,16 @@ h1 {
     transform: scale(1.05);
 }
 
-/* 英文解釋容器 */
-#meaningContainer {
-    max-height: 420px;
-    overflow-y: auto;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background: #f9f9f9;
+/* 句子詳情容器 */
+.details {
+    width: 400px;
+    background: white;
+    padding: 15px;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    position: relative;
     font-size: 18px;
-    margin-left: 0px;
-    margin-right: 25px;
-}
-
-/* 中文解釋容器 */
-#chineseContainer {
-    font-size: 15px;
-}
-
-/* 搜尋輸入框 */
-#searchInput {
-    font-size: 16px;
-    padding: 10px;
 }
 
 /* 按鈕 */
@@ -243,23 +227,10 @@ h1 {
     transform: scale(1.05);
 }
 
-/* B 按鈕 */
-#bButton {
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    height: auto;
-    padding: 5px 10px;
+/* 搜尋結果 */
+#searchResultsDetails .word-item {
     font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-#bButton:hover {
-    background-color: #5a6268;
-    transform: scale(1.1);
+    padding: 8px;
 }
 
 /* 筆記容器 */
@@ -274,7 +245,7 @@ h1 {
     margin-left: -5px;
 }
 
-#wordNote {
+#sentenceNote {
     background: transparent;
     font-size: 16px;
     line-height: 1.2em;
@@ -283,7 +254,7 @@ h1 {
     resize: none;
 }
 
-#wordNote:focus {
+#sentenceNote:focus {
     border: none;
     outline: none;
 }
@@ -312,7 +283,7 @@ h1 {
     transform: scale(1.05);
 }
 
-/* 單字項目容器 */
+/* 單字/句子項目容器 */
 .word-item-container {
     display: flex;
     width: 100%;
@@ -354,7 +325,7 @@ h1 {
     transform: scale(1.1);
 }
 
-/* 重要單字標記 */
+/* 重要單字/句子標記 */
 .important-checkbox {
     width: 20px;
     height: 20px;
@@ -376,11 +347,6 @@ h1 {
 @media (max-width: 414px) {
     h1 {
         font-size: 20px;
-    }
-
-    .letter-btn {
-        padding: 12px 18px;
-        font-size: 14px;
     }
 
     .container {
