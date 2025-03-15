@@ -238,7 +238,7 @@ h1, h2 {
     border: none;
     cursor: pointer;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     transition: background-color 0.3s ease;
     margin-right: 5px; /* 添加右邊距，確保按鈕間分隔 */
 }
@@ -376,12 +376,12 @@ input[type="checkbox"]:checked + span {
 .action-button {
     padding: 10px 20px;
     margin: 0 10px;
-    background-color: #9b9b9b;
+    background-color: #5f5f5f;
     color: white;
     border: none;
-    border-radius: 16px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .action-button:hover {
@@ -430,13 +430,13 @@ input[type="checkbox"]:checked + span {
     }
 
     .important-checkbox {
-        width: 16px;
-        height: 16px;
+        width: 20px;
+        height: 20px;
     }
 
     .action-button {
-        font-size: 14px;
-        padding: 8px 15px;
+        font-size: 20px;
+        padding: 8px 20px;
     }
 }
 
@@ -477,7 +477,7 @@ input[type="checkbox"]:checked + span {
     border: none;
     cursor: pointer;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     transition: background-color 0.3s ease;
 }
 
