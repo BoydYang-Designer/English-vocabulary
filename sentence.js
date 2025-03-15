@@ -543,6 +543,11 @@ function backToFirstLayer() {
     document.getElementById("searchInput").value = "";
     let searchResults = document.getElementById("searchResults");
     if (searchResults) searchResults.remove();
+
+    // 隱藏並清空標題
+    let wordListTitle = document.getElementById("wordListTitle");
+    wordListTitle.style.display = "none"; // 隱藏標題
+    wordListTitle.innerText = ""; // 清空文字（可選）
 }
 
 function backToWordList() {
