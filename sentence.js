@@ -440,8 +440,10 @@ function showSentenceDetails(sentenceId) {
     displayNote(sentenceId);
 }
 
+let wordAudio = new Audio(); // 在全域定義
 function playAudio(filename) {
-    new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${filename}`).play();
+    wordAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${filename}`;
+    wordAudio.play();
 }
 
 function playSentenceAudio(filename) {
