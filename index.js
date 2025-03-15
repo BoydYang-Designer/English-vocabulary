@@ -6,11 +6,30 @@ let lastWordListValue = ""; // 記錄字母或分類值
 let lastSentenceListWord = "";
 
 document.addEventListener("DOMContentLoaded", function () {
+    // 設置初始顯示狀態
+    document.getElementById("searchContainer").style.display = "block";
+    document.getElementById("startQuizBtn").style.display = "block";
+    document.getElementById("sentencePageBtn").style.display = "block"; // 確保句子按鈕顯示
+    document.querySelector(".alphabet-container").style.display = "block";
+    document.querySelector(".category-container").style.display = "block";
+    document.querySelector(".level-container").style.display = "block";
+    document.getElementById("wordList").style.display = "none";
+    document.getElementById("wordDetails").style.display = "none";
+    document.getElementById("wordListTitle").style.display = "none";
+
     // 新增「進入句子頁面」按鈕的事件監聽器
     const sentenceButton = document.getElementById("sentencePageBtn");
     if (sentenceButton) {
         sentenceButton.addEventListener("click", function () {
             window.location.href = "sentence.html";
+        });
+    }
+
+    // 新增「進入測驗頁面」按鈕的事件監聽器
+    const quizButton = document.getElementById("startQuizBtn");
+    if (quizButton) {
+        quizButton.addEventListener("click", function () {
+            window.location.href = "quiz.html";
         });
     }
 
@@ -975,9 +994,10 @@ function getWordFromURL() {
 function displayWordDetailsFromURL() {
     let wordName = getWordFromURL();
     let fromPage = getFromPage();
-    if (!wordName) return;
-
-    if (!wordsData || wordsData.length === 0) return;
+    if (!wordName || !wordsData || wordsData.length === 0) {
+        console.log("ℹ️ 無 URL 參數或資料未載入，保持第一層顯示");
+        return;
+    }
 
     let wordData = wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordName.toLowerCase());
     if (wordData) {
@@ -987,6 +1007,7 @@ function displayWordDetailsFromURL() {
             updateBackButtonToSentence();
         }
     } else {
+        console.warn("⚠️ 未找到單字，回到第一層");
         backToFirstLayer();
     }
 }

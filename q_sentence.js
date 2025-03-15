@@ -551,6 +551,7 @@ function goToNextSentence() {
 
 
 // 📌 測驗完成後顯示結果
+// 📌 測驗完成後顯示結果
 function finishSentenceQuiz() {
     document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "block";
@@ -573,37 +574,35 @@ function finishSentenceQuiz() {
         let isCorrect = userAnswerNormalized === correctSentenceNormalized;
         let isUnanswered = userAnswer === "(未作答)";
 
-        // 根據正確性添加類別
+        // 根據正確性添加類別，無需顯示文字
         let resultClass = isCorrect ? "correct" : (isUnanswered ? "unanswered" : "wrong");
 
         let importantCheckbox = `<input type="checkbox" class="important-checkbox" onchange="toggleImportantSentence('${sentenceObj.Words}', this)" ${localStorage.getItem('important_sentence_' + sentenceObj.Words.toLowerCase()) === "true" ? "checked" : ""} />`;
         let sentenceIdentifierLink = `<a href="sentence.html?sentence=${encodeURIComponent(sentenceObj.Words)}&from=quiz&layer=4" class="sentence-link-btn">${sentenceObj.Words}</a>`;
+        let wordDetailButton = `<button class="word-detail-btn" onclick="goToWordDetail('${sentenceObj.Words.split("-")[0]}')">單字詳情</button>`;
         let correctSentenceLink = `<button class="sentence-link-btn" onclick="playSentenceAudio('${sentenceObj.Words}.mp3')">${correctSentence}</button>`;
-        let correctnessDisplay = isUnanswered ? "未作答" : (isCorrect ? "正確" : "錯誤");
-
-        // 可選：添加單字詳情按鈕
-        let baseWord = sentenceObj.Words.split("-")[0]; // 提取單字部分
-        let wordDetailButton = `<button class="word-detail-btn" onclick="goToWordDetail('${baseWord}')">單字詳情</button>`;
 
         resultContainer.innerHTML += `
             <div class="result-item ${resultClass}">
-                ${importantCheckbox} 
-                ${sentenceIdentifierLink} 
-                ${correctSentenceLink} 
-                <span>${correctnessDisplay}</span>
-                ${wordDetailButton} <!-- 可選 -->
+                ${importantCheckbox}
+                <div class="horizontal-group">
+                    ${sentenceIdentifierLink}
+                    ${wordDetailButton}
+                </div>
+                <div class="vertical-group">
+                    ${correctSentenceLink}
+                </div>
             </div>
         `;
     }
 
     resultContainer.innerHTML += `
-        <div class="result-buttons" style="margin-top: 20px;">
+        <div class="result-buttons">
             <button class="action-button" onclick="saveQSResults()">Save</button>
             <button class="action-button" onclick="returnToMainMenu()">Back</button>
         </div>
     `;
 
-    // 保存本次測驗的資料
     localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
     localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
     console.log("✅ 測驗結束時保存的資料:", { userAnswers, currentQuizSentences });

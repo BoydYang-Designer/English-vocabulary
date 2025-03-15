@@ -26,21 +26,20 @@ h1 {
     box-sizing: border-box;
 }
 
-.category-btn {
+.letter-btn {
     padding: 10px 15px;
     margin: 5px;
     cursor: pointer;
     border: none;
-    background: #555; /* 與 .letter-btn 相同的深灰色 */
-    color: white;    /* 與 .letter-btn 相同的白色文字 */
+    background: #555;
+    color: white;
     font-size: 18px;
-    border-radius: 25px; /* 與 .letter-btn 相同的圓角 */
+    border-radius: 25px;
 }
 
-.category-btn:hover {
-    background: #777; /* 與 .letter-btn 相同的懸停效果 */
+.letter-btn:hover {
+    background: #777;
 }
-
 
 
 /* 標題 */
