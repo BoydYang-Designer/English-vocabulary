@@ -1,3 +1,5 @@
+
+
 console.log("✅ q_sentence.js 已載入");
 
 
@@ -8,8 +10,10 @@ const GITHUB_MP3_BASE_URL = "https://raw.githubusercontent.com/BoydYang-Designer
 let sentenceData = JSON.parse(localStorage.getItem("sentenceData")) || [];
 let currentSentenceIndex = 0;
 let userAnswers = JSON.parse(localStorage.getItem("userAnswers")) || [];
-let incorrectSentences = JSON.parse(localStorage.getItem("incorrectSentences")) || [];
+let incorrectSentences = JSON.parse(localStorage.getItem("wrongQS")) || [];
 let importantSentences = JSON.parse(localStorage.getItem("importantSentences")) || [];
+
+
 
 let selectedSentenceFilters = {
     levels: new Set(),
@@ -153,12 +157,19 @@ function startSentenceQuiz() {
 
     // 根據條件篩選出本次要測驗的句子
     let filteredSentences = sentenceData.filter(item => {
-        let levelMatch = selectedSentenceFilters.levels.size === 0 || selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
+        let levelMatch = selectedSentenceFilters.levels.size === 0 || 
+                         selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
+        
         let categoryMatch = selectedSentenceFilters.categories.size === 0 || 
-                           selectedSentenceFilters.categories.has(item.分類 || "未分類") ||
-                           (selectedSentenceFilters.categories.has("important") && localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
-                           (selectedSentenceFilters.categories.has("incorrect") && localStorage.getItem(`wrong_sentence_${item.Words}`) === "true");
-        let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
+                            selectedSentenceFilters.categories.has(item.分類 || "未分類") ||
+                            (selectedSentenceFilters.categories.has("important") && 
+                             localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
+                            (selectedSentenceFilters.categories.has("incorrect") && 
+                             JSON.parse(localStorage.getItem("wrongQS") || "[]").includes(item.Words));
+                            
+        let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || 
+                            selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
+        
         return levelMatch && categoryMatch && alphabetMatch;
     });
 
@@ -274,9 +285,8 @@ function loadSentenceQuestion() {
     // Play audio (unchanged)
     if (sentenceObj.Words) {
         let audioUrl = GITHUB_MP3_BASE_URL + encodeURIComponent(sentenceObj.Words) + ".mp3";
-        if (currentAudio) {
+        if (currentAudio instanceof Audio) { // 修改這部分
             currentAudio.pause();
-            currentAudio = null;
         }
         currentAudio = new Audio(audioUrl);
         currentAudio.play().catch(error => console.warn("🔊 自動播放被禁止", error));
@@ -400,7 +410,7 @@ function submitSentenceAnswer() {
     let correctSentence = sentenceObj.句子;
     let allInputs = document.querySelectorAll("#sentenceInput .letter-input");
 
-    // Collect user's answer
+    // 收集用戶答案
     let correctWords = correctSentence.split(/\b/);
     let userAnswer = [];
     let inputIndex = 0;
@@ -418,52 +428,27 @@ function submitSentenceAnswer() {
         }
     });
 
-    // 更嚴謹的格式處理：移除多餘空格並標準化逗號
+    // 標準化答案進行比較
     let userAnswerStr = userAnswer.join("").replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
     let correctSentenceStr = correctSentence.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
 
-    // Store user's answer with normalized format
-    userAnswers[currentSentenceIndex] = userAnswer.join("").replace(/\s+/g, " ").replace(/,\s*/g, ",").trim();
-    console.log("📌 Stored userAnswer:", userAnswers[currentSentenceIndex]);
-    console.log("📌 correctSentence:", correctSentence);
+    // 儲存用戶答案
+    userAnswers[currentSentenceIndex] = userAnswer.join("").trim();
 
-    // 檢查答案是否正確並更新 incorrectSentences
+    // 檢查是否正確並更新 incorrectSentences
     let isCorrect = userAnswerStr === correctSentenceStr;
-    let existingWrongSentences = JSON.parse(localStorage.getItem("wrongSentences")) || [];
-
-    // 添加日誌檢查 existingWrongSentences
-    console.log("📌 existingWrongSentences before check:", existingWrongSentences);
-
-    // 管理 incorrectSentences
-    let incorrectIndex = incorrectSentences.indexOf(sentenceObj.Words);
-    if (isCorrect) {
-        if (incorrectIndex !== -1) {
-            incorrectSentences.splice(incorrectIndex, 1);
-            console.log("✅ 從 incorrectSentences 移除:", sentenceObj.Words);
-        }
-        // 統一格式：移除多餘空格並轉為小寫
-        let normalizedWord = sentenceObj.Words.trim().toLowerCase();
-        let wordIndex = existingWrongSentences.findIndex(item => item.trim().toLowerCase() === normalizedWord);
-        console.log("📌 檢查移除：normalizedWord=", normalizedWord, "existingWrongSentences=", existingWrongSentences);
-        if (wordIndex !== -1) {
-            existingWrongSentences.splice(wordIndex, 1);
-            localStorage.setItem("wrongSentences", JSON.stringify(existingWrongSentences));
-            console.log("✅ 已從 wrongSentences 移除:", normalizedWord);
-        } else {
-            console.log("⚠️ 未在 wrongSentences 中找到匹配項:", normalizedWord);
-        }
-        console.log("✅ 答案正確:", sentenceObj.Words);
-    } else {
-        if (incorrectIndex === -1) {
+    if (!isCorrect) {
+        if (!incorrectSentences.includes(sentenceObj.Words)) {
             incorrectSentences.push(sentenceObj.Words);
-            console.log("❌ 記錄錯誤句子:", sentenceObj.Words);
+        }
+    } else {
+        let index = incorrectSentences.indexOf(sentenceObj.Words);
+        if (index !== -1) {
+            incorrectSentences.splice(index, 1);
         }
     }
 
-    // 添加日誌檢查 incorrectSentences 狀態
-    console.log("📌 incorrectSentences after submission:", incorrectSentences);
-
-    // Update UI
+    // 更新 UI
     updateSentenceHint(correctSentence, userAnswer);
     highlightUserAnswers(allInputs, correctSentence);
 
@@ -573,16 +558,9 @@ function finishSentenceQuiz() {
         let userAnswer = getUserAnswer(index);
         let correctSentence = sentenceObj.句子;
 
-        // 統一格式處理並轉為小寫
         let userAnswerNormalized = userAnswer.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
         let correctSentenceNormalized = correctSentence.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
         let isCorrect = userAnswerNormalized === correctSentenceNormalized;
-
-        // 添加日誌檢查比對細節
-        console.log(`📌 句子 ${sentenceObj.Words}:`);
-        console.log(`  - 用户答案 (normalized): "${userAnswerNormalized}"`);
-        console.log(`  - 正確答案 (normalized): "${correctSentenceNormalized}"`);
-        console.log(`  - 是否正確: ${isCorrect}`);
 
         let importantCheckbox = `<input type="checkbox" onchange="toggleImportantSentence('${sentenceObj.Words}', this)" ${localStorage.getItem('important_sentence_' + sentenceObj.Words.toLowerCase()) === "true" ? "checked" : ""} />`;
         let sentenceIdentifierLink = `<a href="sentence.html?sentence=${encodeURIComponent(sentenceObj.Words)}&from=quiz&layer=4">${sentenceObj.Words}</a>`;
@@ -599,9 +577,11 @@ function finishSentenceQuiz() {
         `;
     }
 
+    // 修改按鈕區域，添加「匯出測驗結果」按鈕
     resultContainer.innerHTML += `
         <div class="result-buttons" style="margin-top: 20px;">
-            <button class="action-button" onclick="saveQuizResults()">儲存測驗結果</button>
+            <button class="action-button" onclick="saveQSResults()">儲存測驗結果</button>
+            <button class="action-button" onclick="exportTestResults()">匯出測驗結果</button>
             <button class="action-button" onclick="returnToMainMenu()">回到測驗第一層</button>
         </div>
     `;
@@ -622,6 +602,13 @@ function highlightErrors(correctSentence, userAnswer) {
             ? `<span style='color: red;'>${word}</span>` 
             : word;
     }).join("");
+}
+
+// 在 q_sentence.js 中，finishSentenceQuiz() 之後加入
+function saveQSResults() {
+    localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
+    console.log("✅ 錯誤句子已儲存到 localStorage['wrongQS']:", incorrectSentences);
+    alert("測驗結果中的錯誤句子已儲存！");
 }
 
 // 📌 連結到單字詳情頁面
@@ -718,56 +705,4 @@ function returnToMainMenu() {
     console.log("✅ 返回測驗第一層主選單");
 }
 
-function saveQuizResults() {
-    console.log("📌 incorrectSentences at save:", incorrectSentences);
 
-    let incorrectWords = incorrectSentences.map(word => word.trim().toLowerCase());
-    let existingWrongSentences = JSON.parse(localStorage.getItem("wrongSentences")) || [];
-
-    console.log("📌 existingWrongSentences before save:", existingWrongSentences);
-
-    let updatedWrongSentences = [...new Set(existingWrongSentences.map(word => word.trim().toLowerCase()))];
-
-    incorrectWords.forEach(word => {
-        if (!updatedWrongSentences.includes(word)) {
-            updatedWrongSentences.push(word);
-        }
-    });
-
-    userAnswers.forEach((answer, index) => {
-        let sentenceObj = sentenceData[index];
-        let userAnswerNormalized = answer.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
-        let correctSentenceNormalized = sentenceObj.句子.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
-        if (userAnswerNormalized === correctSentenceNormalized) {
-            let normalizedWord = sentenceObj.Words.trim().toLowerCase();
-            let wordIndex = updatedWrongSentences.indexOf(normalizedWord);
-            console.log("📌 檢查移除：normalizedWord=", normalizedWord, "updatedWrongSentences=", updatedWrongSentences);
-            if (wordIndex !== -1) {
-                updatedWrongSentences.splice(wordIndex, 1);
-                console.log("✅ 從 wrongSentences 中移除答對的句子:", normalizedWord);
-            } else {
-                console.log("⚠️ 未在 updatedWrongSentences 中找到答對的句子:", normalizedWord);
-            }
-        }
-    });
-
-    localStorage.setItem("wrongSentences", JSON.stringify(updatedWrongSentences));
-
-    let resultContainer = document.getElementById("quizResult");
-    let saveMessage = document.createElement("p");
-    saveMessage.id = "saveMessage";
-    saveMessage.style.color = "green";
-    saveMessage.innerText = incorrectWords.length > 0 
-        ? `✅ 錯誤句子已成功儲存: ${incorrectWords.join(", ")}` 
-        : "✅ 本次測驗無錯誤句子";
-    resultContainer.appendChild(saveMessage);
-
-    setTimeout(() => {
-        if (saveMessage && saveMessage.parentNode) {
-            saveMessage.parentNode.removeChild(saveMessage);
-        }
-    }, 3000);
-
-    console.log("✅ 本次測驗的錯誤句子:", incorrectWords);
-    console.log("📌 更新後的全部錯誤句子:", updatedWrongSentences);
-}

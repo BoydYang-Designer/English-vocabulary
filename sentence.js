@@ -111,28 +111,16 @@ function showWrongSentences() {
     lastWordListType = "wrongSentences";
     lastWordListValue = null;
 
-    // 從 wrongSentences 鍵讀取
-    let wrongSentences = JSON.parse(localStorage.getItem("wrongSentences")) || [];
-    
-    // 如果 wrongSentences 為空，檢查所有 wrong_sentence_* 鍵
-    if (wrongSentences.length === 0) {
-        wrongSentences = Object.keys(localStorage)
-            .filter(key => key.startsWith("wrong_sentence_") && localStorage.getItem(key) === "true")
-            .map(key => key.replace("wrong_sentence_", ""));
-    }
-    
+    let wrongSentences = JSON.parse(localStorage.getItem("wrongQS")) || [];
     console.log("✅ wrongSentences:", wrongSentences);
 
     let filteredSentences = sentenceData.filter(s => wrongSentences.includes(s.Words));
-    console.log("✅ sentenceData 總數:", sentenceData.length);
     console.log("✅ filteredSentences:", filteredSentences);
-    
+
     if (filteredSentences.length === 0) {
         console.warn("⚠️ 沒有標記為錯誤的句子");
-        console.log("檢查點：sentenceData 前5筆:", sentenceData.slice(0, 5).map(s => ({ Words: s.Words, 句子: s.句子 })));
-        console.log("檢查點：wrongSentences 是否匹配:", wrongSentences.map(w => sentenceData.some(s => s.Words === w)));
     }
-    
+
     displaySentenceList(filteredSentences);
 }
 
