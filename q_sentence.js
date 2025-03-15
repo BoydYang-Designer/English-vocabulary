@@ -179,14 +179,11 @@ function startSentenceQuiz() {
         return;
     }
 
-    // 只保留本次測驗的句子並清空相關資料
+    // 只保留本次測驗的句子，但不清空 incorrectSentences
     sentenceData = filteredSentences;
     currentSentenceIndex = 0;
-    userAnswers = [];
-    incorrectSentences = []; // 強制清空
-    localStorage.removeItem("incorrectSentences"); // 清除本地儲存的舊數據
+    userAnswers = []; // 清空本次答案，但保留 incorrectSentences
 
-    // 記錄本次篩選條件，供除錯用
     console.log("✅ 本次測驗的句子數量:", sentenceData.length);
     console.log("✅ 本次測驗的句子:", sentenceData.map(s => s.Words));
 
