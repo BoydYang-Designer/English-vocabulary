@@ -200,17 +200,22 @@ function startSentenceQuiz() {
         return;
     }
 
+    // 隨機排序 filteredSentences
+    for (let i = filteredSentences.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [filteredSentences[i], filteredSentences[j]] = [filteredSentences[j], filteredSentences[i]];
+    }
+
     // 使用臨時變數儲存本次測驗的句子，而不是修改全局 sentenceData
     currentQuizSentences = filteredSentences;
     currentSentenceIndex = 0;
     userAnswers = []; // 清空本次答案
 
     console.log("✅ 本次測驗的句子數量:", currentQuizSentences.length);
-    console.log("✅ 本次測驗的句子:", currentQuizSentences.map(s => s.Words));
+    console.log("✅ 本次測驗的隨機句子:", currentQuizSentences.map(s => s.Words));
 
     setTimeout(() => loadSentenceQuestion(), 100);
 }
-
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);

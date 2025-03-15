@@ -69,14 +69,15 @@ function renderAlphabetButtons() {
 // 第一層：生成分類按鈕
 function createCategoryButtons() {
     let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
-    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Note", "重要句子", "錯誤句子");
+    // 移除 "Note"，新增 "Sentence Notes"
+    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Sentence Notes", "重要句子", "錯誤句子");
 
     const categoryContainer = document.getElementById("categoryButtons");
     categoryContainer.innerHTML = categories.map(c => {
         if (c === "Checked 單字") return `<button class='letter-btn' onclick='showCheckedWords()'>${c}</button>`;
         if (c === "重要單字") return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
         if (c === "錯誤單字") return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
-        if (c === "Note") return `<button class='letter-btn' onclick='showNoteWords()'>${c}</button>`;
+        if (c === "Sentence Notes") return `<button class='letter-btn' onclick='showSentenceNotes()'>${c}</button>`;
         if (c === "重要句子") return `<button class='letter-btn' onclick='showImportantSentences()'>${c}</button>`;
         if (c === "錯誤句子") return `<button class='letter-btn' onclick='showWrongSentences()'>${c}</button>`;
         return `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`;
@@ -263,12 +264,23 @@ function showWrongWords() {
     displayWordList(wrongWords);
 }
 
-function showNoteWords() {
-    document.getElementById("wordListTitle").innerText = "Note";
+function showSentenceNotes() {
+    document.getElementById("wordListTitle").innerText = "Sentence Notes";
     document.getElementById("wordListTitle").style.display = "block";
-    lastWordListType = "note";
+    lastWordListType = "sentenceNotes";
     lastWordListValue = null;
-    displayWordList(Object.keys(localStorage).filter(key => key.startsWith("note_") && !key.includes("sentence")).map(key => key.replace("note_", "")));
+
+    // 從 localStorage 中篩選出有筆記的句子
+    let sentenceNotes = Object.keys(localStorage)
+        .filter(key => key.startsWith("note_sentence_") && localStorage.getItem(key).length > 0)
+        .map(key => key.replace("note_sentence_", ""));
+
+    // 根據 sentenceId 過濾出對應的句子資料
+    let filteredSentences = sentenceData.filter(s => sentenceNotes.includes(s.Words));
+    if (filteredSentences.length === 0) {
+        console.warn("⚠️ 沒有標記為筆記的句子");
+    }
+    displaySentenceList(filteredSentences);
 }
 
 function displayWordList(words) {
@@ -525,7 +537,7 @@ function backToWordList() {
     if (lastWordListType === "checked") showCheckedWords();
     else if (lastWordListType === "important") showImportantWords();
     else if (lastWordListType === "wrong") showWrongWords();
-    else if (lastWordListType === "note") showNoteWords();
+    else if (lastWordListType === "sentenceNotes") showSentenceNotes(); // 新增這行
     else if (lastWordListType === "importantSentences") showImportantSentences();
     else if (lastWordListType === "wrongSentences") showWrongSentences();
     else if (lastWordListType && lastWordListValue) showWords(lastWordListType, lastWordListValue);
