@@ -1,4 +1,3 @@
-let historyStack = [];
 let wordsData = [];
 let sentenceData = [];
 let sentenceAudio = new Audio();
@@ -27,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 sentenceData = data["New Words"] || [];
                 console.log("✅ sentence.json 載入成功:", sentenceData.length);
-                console.log("✅ sentenceData 樣本:", sentenceData.slice(0, 5)); // 顯示前5筆資料檢查格式
             })
     ])
     .then(() => {
@@ -37,12 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById("startQuizBtn").addEventListener("click", () => window.location.href = "quiz.html");
         document.getElementById("returnHomeBtn").addEventListener("click", () => window.location.href = "index.html");
-        let bButton = document.getElementById("bButton");
-        if (bButton) {
-            bButton.disabled = true;
-            bButton.style.backgroundColor = "#ccc";
-            bButton.addEventListener("click", backToPrevious);
-        }
 
         const urlParams = new URLSearchParams(window.location.search);
         const sentenceParam = urlParams.get('sentence');
@@ -51,11 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (sentenceParam && layerParam === '4') {
             showSentenceDetails(sentenceParam);
-            if (fromParam === 'quiz') {
-                bButton.onclick = function() {
-                    window.location.href = "quiz.html?returning=true";
-                };
-            }
         } else {
             backToFirstLayer();
         }
@@ -98,10 +85,7 @@ function createCategoryButtons() {
 
 function showImportantSentences() {
     let importantSentences = sentenceData.filter(s => localStorage.getItem(`important_sentence_${s.Words}`) === "true");
-    console.log("Important sentences:", importantSentences);
-    if (importantSentences.length === 0) {
-        console.warn("⚠️ 沒有標記為重要的句子");
-    }
+    if (importantSentences.length === 0) console.warn("⚠️ 沒有標記為重要的句子");
     displaySentenceList(importantSentences);
 }
 
@@ -112,15 +96,8 @@ function showWrongSentences() {
     lastWordListValue = null;
 
     let wrongSentences = JSON.parse(localStorage.getItem("wrongQS")) || [];
-    console.log("✅ wrongSentences:", wrongSentences);
-
     let filteredSentences = sentenceData.filter(s => wrongSentences.includes(s.Words));
-    console.log("✅ filteredSentences:", filteredSentences);
-
-    if (filteredSentences.length === 0) {
-        console.warn("⚠️ 沒有標記為錯誤的句子");
-    }
-
+    if (filteredSentences.length === 0) console.warn("⚠️ 沒有標記為錯誤的句子");
     displaySentenceList(filteredSentences);
 }
 
@@ -160,8 +137,6 @@ function displaySentenceList(sentences) {
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
-    document.getElementById("bButton").style.display = "none";
-    // 隱藏 sentenceList 中的 back-button
     document.querySelector('#sentenceList .back-button').style.display = "none";
 
     let sentenceItems = document.getElementById("sentenceItems");
@@ -180,7 +155,6 @@ function displaySentenceList(sentences) {
         }).join("")
         : "<p>⚠️ 目前沒有符合的句子</p>";
 
-    // 添加「Back H」按鈕
     sentenceItems.innerHTML = `<button id="backHomeBtn" class="button back-button" onclick="backToFirstLayer()">Back H</button>` + sentenceItems.innerHTML;
 }
 
@@ -190,7 +164,6 @@ function showWords(type, value) {
     document.getElementById("wordListTitle").innerText = titleText;
     document.getElementById("wordListTitle").style.display = "block";
 
-    navigateTo({ page: "wordList", type: type, value: value });
     lastWordListType = type;
     lastWordListValue = value;
 
@@ -201,7 +174,6 @@ function showWords(type, value) {
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
-    document.getElementById("bButton").style.display = "block"; // 恢復 bButton 顯示
 
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
@@ -326,48 +298,22 @@ function displayWordList(words) {
         : "<p>⚠️ 目前沒有符合的單字</p>";
 }
 
-// 以下為第三層與第四層功能（保持不變）
-function navigateTo(state) {
-    if (historyStack.length === 0 || 
-        historyStack[historyStack.length - 1].page !== state.page ||
-        historyStack[historyStack.length - 1].type !== state.type ||
-        historyStack[historyStack.length - 1].word !== state.word) {
-        historyStack.push(state);
-    }
-    if (historyStack.length > 10) historyStack.shift();
-    console.log("📌 歷史紀錄:", historyStack);
-    document.getElementById("bButton").disabled = historyStack.length <= 1;
-    document.getElementById("bButton").style.backgroundColor = historyStack.length <= 1 ? "#ccc" : "";
-}
-
 function showSentences(word) {
-    // 設置標題
     document.getElementById("wordListTitle").innerText = word;
     document.getElementById("wordListTitle").style.display = "block";
 
-    // 隱藏第一層的所有內容
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
-
-    // 隱藏第二層的單字列表（如果存在）
     document.getElementById("wordList").style.display = "none";
-
-    // 顯示第三層的句子列表
     document.getElementById("sentenceList").style.display = "block";
-
-    // 顯示返回按鈕（如果需要）
-    document.getElementById("bButton").style.display = "block";
     document.querySelector('#sentenceList .back-button').style.display = "block";
 
-    // 記錄導航歷史
-    navigateTo({ page: "sentenceList", word: word });
     lastSentenceListWord = word;
 
-    // 載入句子內容
     let sentenceItems = document.getElementById("sentenceItems");
     sentenceItems.innerHTML = "";
 
@@ -403,13 +349,10 @@ function showSentenceDetails(sentenceId) {
     let sentenceObj = sentenceData.find(s => s.Words === sentenceId);
     if (!sentenceObj) return;
 
-    navigateTo({ page: "sentenceDetails", word: sentenceId });
     document.getElementById("sentenceList").style.display = "none";
     document.getElementById("sentenceDetails").style.display = "block";
     document.getElementById("wordListTitle").style.display = "none";
-    document.getElementById("bButton").style.display = "block";
 
-    // 隱藏第一層和第二層的元素
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
@@ -440,7 +383,7 @@ function showSentenceDetails(sentenceId) {
     displayNote(sentenceId);
 }
 
-let wordAudio = new Audio(); // 在全域定義
+let wordAudio = new Audio();
 function playAudio(filename) {
     wordAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${filename}`;
     wordAudio.play();
@@ -469,15 +412,39 @@ function filterSentencesInDetails() {
     let input = document.getElementById("searchInputDetails").value.toLowerCase();
     let searchResults = document.getElementById("searchResultsDetails");
 
+    if (!wordsData || wordsData.length === 0) {
+        console.error("❌ wordsData 未加載");
+        return;
+    }
+
+    if (!searchResults) return;
+
     if (input === "") {
         searchResults.innerHTML = "";
         return;
     }
 
-    let filtered = sentenceData.filter(s => s.句子.toLowerCase().includes(input) || s.中文.toLowerCase().includes(input));
-    searchResults.innerHTML = filtered.length > 0
-        ? filtered.map(s => `<p class='word-item' onclick='showSentenceDetails("${s.Words}")'>${s.Words}: ${s.句子}</p>`).join("")
-        : "<p>⚠️ 沒有符合的句子</p>";
+    let filtered = wordsData.filter(w => {
+        let word = w.Words || w.word || w["單字"] || "";
+        return word.toLowerCase().startsWith(input);
+    });
+
+    searchResults.innerHTML = "";
+    if (filtered.length === 0) {
+        searchResults.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
+    } else {
+        filtered.forEach(wordObj => {
+            let wordText = wordObj.Words || wordObj.word || wordObj["單字"] || "";
+            let item = document.createElement("p");
+            item.className = "word-item";
+            item.textContent = wordText;
+            item.addEventListener("click", function() {
+                let currentSentenceId = document.getElementById("sentenceTitle")?.textContent.trim() || lastSentenceListWord;
+                window.location.href = `index.html?word=${encodeURIComponent(wordText)}&from=sentence&sentenceId=${encodeURIComponent(currentSentenceId)}`;
+            });
+            searchResults.appendChild(item);
+        });
+    }
 }
 
 function saveNote() {
@@ -539,29 +506,18 @@ function importAllData() {
 }
 
 function backToFirstLayer() {
-    // 顯示第一層的元素
     document.getElementById("searchContainer").style.display = "block";
     document.getElementById("startQuizBtn").style.display = "block";
     document.getElementById("returnHomeBtn").style.display = "block";
-    
-    // 隱藏其他層的元素
     document.getElementById("wordList").style.display = "none";
     document.getElementById("sentenceList").style.display = "none";
     document.getElementById("sentenceDetails").style.display = "none";
-    
-    // 顯示第一層的其他組件（例如字母表、分類等）
     document.querySelector('.alphabet-container').style.display = "block";
     document.querySelector('.category-container').style.display = "block";
     document.querySelector('.level-container').style.display = "block";
-    
-    // 清空搜尋框內容
     document.getElementById("searchInput").value = "";
-    
-    // 如果有搜尋結果，移除它
     let searchResults = document.getElementById("searchResults");
-    if (searchResults) {
-        searchResults.remove();
-    }
+    if (searchResults) searchResults.remove();
 }
 
 function backToWordList() {
@@ -581,36 +537,9 @@ function backToSentenceList() {
     const fromParam = urlParams.get('from');
 
     if (fromParam === 'quiz') {
-        // 從測驗結果頁面來的，返回 quiz.html 的測驗結果
         window.location.href = "quiz.html?returning=true";
     } else {
-        // 正常情況下返回句子列表
         document.getElementById("sentenceDetails").style.display = "none";
         showSentences(lastSentenceListWord);
     }
-}
-
-function backToPrevious() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const fromParam = urlParams.get('from');
-
-    if (fromParam === 'quiz') {
-        window.location.href = "quiz.html?returning=true";
-    } else if (historyStack.length > 1) {
-        historyStack.pop();
-        let previousState = historyStack[historyStack.length - 1];
-        if (previousState.page === "home") {
-            backToFirstLayer();
-        } else if (previousState.page === "sentenceDetails") {
-            showSentenceDetails(previousState.word);
-        } else if (previousState.page === "sentenceList") {
-            showSentences(previousState.word);
-        } else if (previousState.page === "wordList") {
-            showWords(previousState.type, previousState.value);
-        }
-    } else {
-        backToFirstLayer();
-    }
-    document.getElementById("bButton").disabled = historyStack.length <= 1;
-    document.getElementById("bButton").style.backgroundColor = historyStack.length <= 1 ? "#ccc" : "";
 }
