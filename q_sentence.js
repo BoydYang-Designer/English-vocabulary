@@ -562,7 +562,7 @@ function finishSentenceQuiz() {
     resultContainer.innerHTML = "<h2>測驗結果</h2>";
 
     for (let index = 0; index < userAnswers.length; index++) {
-        let sentenceObj = currentQuizSentences[index]; // 使用 currentQuizSentences
+        let sentenceObj = currentQuizSentences[index];
         if (!sentenceObj) continue;
 
         let userAnswer = getUserAnswer(index) || "(未作答)";
@@ -571,27 +571,35 @@ function finishSentenceQuiz() {
         let userAnswerNormalized = userAnswer.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
         let correctSentenceNormalized = correctSentence.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
         let isCorrect = userAnswerNormalized === correctSentenceNormalized;
+        let isUnanswered = userAnswer === "(未作答)";
 
-        let importantCheckbox = `<input type="checkbox" onchange="toggleImportantSentence('${sentenceObj.Words}', this)" ${localStorage.getItem('important_sentence_' + sentenceObj.Words.toLowerCase()) === "true" ? "checked" : ""} />`;
-        let sentenceIdentifierLink = `<a href="sentence.html?sentence=${encodeURIComponent(sentenceObj.Words)}&from=quiz&layer=4">${sentenceObj.Words}</a>`;
-        let correctSentenceLink = `<a href="#" onclick="playSentenceAudio('${sentenceObj.Words}.mp3'); return false;">${correctSentence}</a>`;
-        let correctnessDisplay = userAnswer === "(未作答)" ? "未作答" : (isCorrect ? "正確" : "錯誤");
+        // 根據正確性添加類別
+        let resultClass = isCorrect ? "correct" : (isUnanswered ? "unanswered" : "wrong");
+
+        let importantCheckbox = `<input type="checkbox" class="important-checkbox" onchange="toggleImportantSentence('${sentenceObj.Words}', this)" ${localStorage.getItem('important_sentence_' + sentenceObj.Words.toLowerCase()) === "true" ? "checked" : ""} />`;
+        let sentenceIdentifierLink = `<a href="sentence.html?sentence=${encodeURIComponent(sentenceObj.Words)}&from=quiz&layer=4" class="sentence-link-btn">${sentenceObj.Words}</a>`;
+        let correctSentenceLink = `<button class="sentence-link-btn" onclick="playSentenceAudio('${sentenceObj.Words}.mp3')">${correctSentence}</button>`;
+        let correctnessDisplay = isUnanswered ? "未作答" : (isCorrect ? "正確" : "錯誤");
+
+        // 可選：添加單字詳情按鈕
+        let baseWord = sentenceObj.Words.split("-")[0]; // 提取單字部分
+        let wordDetailButton = `<button class="word-detail-btn" onclick="goToWordDetail('${baseWord}')">單字詳情</button>`;
 
         resultContainer.innerHTML += `
-            <div class="result-item">
+            <div class="result-item ${resultClass}">
                 ${importantCheckbox} 
                 ${sentenceIdentifierLink} 
                 ${correctSentenceLink} 
                 <span>${correctnessDisplay}</span>
+                ${wordDetailButton} <!-- 可選 -->
             </div>
         `;
     }
 
     resultContainer.innerHTML += `
         <div class="result-buttons" style="margin-top: 20px;">
-            <button class="action-button" onclick="saveQSResults()">儲存測驗結果</button>
-            <button class="action-button" onclick="exportTestResults()">匯出測驗結果</button>
-            <button class="action-button" onclick="returnToMainMenu()">回到測驗第一層</button>
+            <button class="action-button" onclick="saveQSResults()">Save</button>
+            <button class="action-button" onclick="returnToMainMenu()">Back</button>
         </div>
     `;
 
@@ -623,8 +631,7 @@ function highlightErrors(correctSentence, userAnswer) {
 
 // 📌 連結到單字詳情頁面
 function goToWordDetail(word) {
-    // 移除後綴（如 -1, -2 等）
-    let baseWord = word.replace(/-\d+$/, '');
+    let baseWord = word.replace(/-\d+$/, ''); // 移除後綴
     window.location.href = `index.html?word=${encodeURIComponent(baseWord)}&from=quiz`;
 }
 

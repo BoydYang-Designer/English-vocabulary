@@ -226,11 +226,17 @@ h1, h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #495f70;
-    margin-bottom: 2px;
+    background-color: #a9cde9;
+    margin-bottom: 5px;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    padding: 8px;
+    padding: 10px;
+    flex-wrap: wrap; /* 允許換行 */
+    gap: 10px; /* 元素間距 */
+}
+
+.result-item > * {
+    margin: 0 5px; /* 內部元素間距 */
 }
 
 /* ✅ 重要單字標記 */
@@ -373,12 +379,12 @@ input[type="checkbox"]:checked + span {
 .action-button {
     padding: 10px 20px;
     margin: 0 10px;
-    background-color: #4CAF50; /* 綠色背景 */
+    background-color: #9b9b9b; 
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 16px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .action-button:hover {
@@ -387,4 +393,53 @@ input[type="checkbox"]:checked + span {
 
 .result-buttons {
     text-align: center;
+}
+
+/* 改進 result-item 的樣式，根據正確性動態變化 */
+.result-item.correct {
+    background-color: #d4edda; /* 淺綠色，表示正確 */
+    border-left: 5px solid #28a745; /* 綠色邊框 */
+}
+
+.result-item.wrong {
+    background-color: #f8d7da; /* 淺紅色，表示錯誤 */
+    border-left: 5px solid #dc3545; /* 紅色邊框 */
+}
+
+.result-item.unanswered {
+    background-color: #fff3cd; /* 淺黃色，表示未作答 */
+    border-left: 5px solid #ffc107; /* 黃色邊框 */
+}
+
+/* 按鈕化連結的樣式 */
+.sentence-link-btn {
+    background-color: #617194; /* 與 category-button 一致的深藍色 */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none; /* 移除下劃線 */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.sentence-link-btn:hover {
+    background-color: #777; /* 懸停效果 */
+}
+
+/* 可選：單字詳情按鈕 */
+.word-detail-btn {
+    background-color: #6e93ba; /* 淺藍色 */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.word-detail-btn:hover {
+    background-color: #5a7fa6;
 }
