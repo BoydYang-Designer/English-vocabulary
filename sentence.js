@@ -577,8 +577,17 @@ function backToWordList() {
 }
 
 function backToSentenceList() {
-    document.getElementById("sentenceDetails").style.display = "none";
-    showSentences(lastSentenceListWord);
+    const urlParams = new URLSearchParams(window.location.search);
+    const fromParam = urlParams.get('from');
+
+    if (fromParam === 'quiz') {
+        // 從測驗結果頁面來的，返回 quiz.html 的測驗結果
+        window.location.href = "quiz.html?returning=true";
+    } else {
+        // 正常情況下返回句子列表
+        document.getElementById("sentenceDetails").style.display = "none";
+        showSentences(lastSentenceListWord);
+    }
 }
 
 function backToPrevious() {

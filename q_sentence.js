@@ -1,19 +1,16 @@
-
-
 console.log("✅ q_sentence.js 已載入");
-
 
 const GITHUB_JSON_URL = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/sentence.json";
 const GITHUB_MP3_BASE_URL = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/";
 
-
-let sentenceData = JSON.parse(localStorage.getItem("sentenceData")) || [];
+// 初始化變數，但不直接從 localStorage 讀取
+let sentenceData = []; // 延遲到 DOMContentLoaded 時載入
 let currentSentenceIndex = 0;
-let userAnswers = JSON.parse(localStorage.getItem("userAnswers")) || [];
-let incorrectSentences = JSON.parse(localStorage.getItem("wrongQS")) || [];
-let importantSentences = JSON.parse(localStorage.getItem("importantSentences")) || [];
+let userAnswers = []; // 延遲到 DOMContentLoaded 時載入
+let incorrectSentences = []; // 設為空陣列，稍後動態載入
+let importantSentences = []; // 延遲到 DOMContentLoaded 時載入
 
-
+let currentQuizSentences = []; // 新增變數來儲存本次測驗的句子
 
 let selectedSentenceFilters = {
     levels: new Set(),
@@ -25,6 +22,33 @@ function getUserAnswer(index) {
     return userAnswers[index] || "";
 }
 window.getUserAnswer = getUserAnswer;
+
+// 在 DOMContentLoaded 中動態載入所有變數
+document.addEventListener("DOMContentLoaded", function () {
+    sentenceData = JSON.parse(localStorage.getItem("sentenceData")) || [];
+    userAnswers = JSON.parse(localStorage.getItem("userAnswers")) || [];
+    incorrectSentences = JSON.parse(localStorage.getItem("wrongQS")) || [];
+    importantSentences = JSON.parse(localStorage.getItem("importantSentences")) || [];
+    currentQuizSentences = JSON.parse(localStorage.getItem("currentQuizSentences")) || [];
+
+    console.log("✅ 頁面載入時恢復的資料：", {
+        sentenceDataLength: sentenceData.length,
+        userAnswersLength: userAnswers.length,
+        incorrectSentences: incorrectSentences,
+        importantSentences: importantSentences,
+        currentQuizSentencesLength: currentQuizSentences.length
+    });
+
+    if (getReturningStatus()) {
+        console.log("✅ 從外部返回，顯示測驗結果");
+        restoreQuizResult();
+    } else {
+        console.log("ℹ️ 正常載入 quiz.html");
+        document.getElementById("mainMenu").style.display = "block";
+    }
+
+    document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
+});
 
 
 // 📌 進入 Q Sentence 測驗分類頁面
@@ -159,17 +183,14 @@ function startSentenceQuiz() {
     let filteredSentences = sentenceData.filter(item => {
         let levelMatch = selectedSentenceFilters.levels.size === 0 || 
                          selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
-        
         let categoryMatch = selectedSentenceFilters.categories.size === 0 || 
                             selectedSentenceFilters.categories.has(item.分類 || "未分類") ||
                             (selectedSentenceFilters.categories.has("important") && 
                              localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
                             (selectedSentenceFilters.categories.has("incorrect") && 
                              JSON.parse(localStorage.getItem("wrongQS") || "[]").includes(item.Words));
-                            
         let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || 
                             selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
-        
         return levelMatch && categoryMatch && alphabetMatch;
     });
 
@@ -179,13 +200,13 @@ function startSentenceQuiz() {
         return;
     }
 
-    // 只保留本次測驗的句子，但不清空 incorrectSentences
-    sentenceData = filteredSentences;
+    // 使用臨時變數儲存本次測驗的句子，而不是修改全局 sentenceData
+    currentQuizSentences = filteredSentences;
     currentSentenceIndex = 0;
-    userAnswers = []; // 清空本次答案，但保留 incorrectSentences
+    userAnswers = []; // 清空本次答案
 
-    console.log("✅ 本次測驗的句子數量:", sentenceData.length);
-    console.log("✅ 本次測驗的句子:", sentenceData.map(s => s.Words));
+    console.log("✅ 本次測驗的句子數量:", currentQuizSentences.length);
+    console.log("✅ 本次測驗的句子:", currentQuizSentences.map(s => s.Words));
 
     setTimeout(() => loadSentenceQuestion(), 100);
 }
@@ -200,14 +221,14 @@ let currentAudio = null; // 儲存當前音檔，避免重複創建
 
 
 function loadSentenceQuestion() {
-    let sentenceObj = sentenceData[currentSentenceIndex];
+    let sentenceObj = currentQuizSentences[currentSentenceIndex]; // 使用 currentQuizSentences
     if (!sentenceObj) {
         console.error("❌ 找不到 sentenceObj！");
         return;
     }
 
     let sentenceText = sentenceObj.句子;
-    let words = sentenceText.split(/\b/); // Split into words and punctuation
+    let words = sentenceText.split(/\b/);
 
     let sentenceInputContainer = document.getElementById("sentenceInput");
     sentenceInputContainer.innerHTML = "";
@@ -215,7 +236,6 @@ function loadSentenceQuestion() {
     let firstInput = null;
     let allInputs = [];
 
-    // Generate input boxes (unchanged)
     words.forEach((word, index) => {
         let wordContainer = document.createElement("div");
         wordContainer.classList.add("word-container");
@@ -247,12 +267,10 @@ function loadSentenceQuestion() {
         sentenceInputContainer.appendChild(wordContainer);
     });
 
-    // Calculate how many words to show (1/5 of total words)
-    let wordCount = words.filter(word => /\w+/.test(word)).length; // Count only actual words
-    let wordsToShow = Math.max(1, Math.floor(wordCount / 5)); // Ensure at least 1 word is shown
+    let wordCount = words.filter(word => /\w+/.test(word)).length;
+    let wordsToShow = Math.max(1, Math.floor(wordCount / 5));
     let indicesToShow = new Set();
-    
-    // Randomly select indices for words to display
+
     while (indicesToShow.size < wordsToShow) {
         let randomIndex = Math.floor(Math.random() * words.length);
         if (/\w+/.test(words[randomIndex])) {
@@ -260,29 +278,24 @@ function loadSentenceQuestion() {
         }
     }
 
-    // Create the partially revealed sentence for sentenceHint
     let hintWords = words.map((word, index) => {
         if (/\w+/.test(word) && !indicesToShow.has(index)) {
-            return "_".repeat(word.length); // Replace hidden words with underscores
+            return "_".repeat(word.length);
         }
-        return word; // Show the word or punctuation as is
+        return word;
     });
 
-    // Display the partially revealed sentence
     document.getElementById("sentenceHint").innerHTML = hintWords.join("");
 
-    // Auto-focus the first input
     if (firstInput) {
         firstInput.focus();
     }
 
-    // Hide "Next" button
     document.getElementById("nextSentenceBtn").style.display = "none";
 
-    // Play audio (unchanged)
     if (sentenceObj.Words) {
         let audioUrl = GITHUB_MP3_BASE_URL + encodeURIComponent(sentenceObj.Words) + ".mp3";
-        if (currentAudio instanceof Audio) { // 修改這部分
+        if (currentAudio instanceof Audio) {
             currentAudio.pause();
         }
         currentAudio = new Audio(audioUrl);
@@ -403,11 +416,10 @@ document.addEventListener("keydown", function (event) {
 
 
 function submitSentenceAnswer() {
-    let sentenceObj = sentenceData[currentSentenceIndex];
+    let sentenceObj = currentQuizSentences[currentSentenceIndex];
     let correctSentence = sentenceObj.句子;
     let allInputs = document.querySelectorAll("#sentenceInput .letter-input");
 
-    // 收集用戶答案
     let correctWords = correctSentence.split(/\b/);
     let userAnswer = [];
     let inputIndex = 0;
@@ -425,14 +437,11 @@ function submitSentenceAnswer() {
         }
     });
 
-    // 標準化答案進行比較
     let userAnswerStr = userAnswer.join("").replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
     let correctSentenceStr = correctSentence.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
 
-    // 儲存用戶答案
     userAnswers[currentSentenceIndex] = userAnswer.join("").trim();
 
-    // 檢查是否正確並更新 incorrectSentences
     let isCorrect = userAnswerStr === correctSentenceStr;
     if (!isCorrect) {
         if (!incorrectSentences.includes(sentenceObj.Words)) {
@@ -445,7 +454,9 @@ function submitSentenceAnswer() {
         }
     }
 
-    // 更新 UI
+    localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
+    console.log("✅ submitSentenceAnswer 後更新 incorrectSentences:", incorrectSentences);
+
     updateSentenceHint(correctSentence, userAnswer);
     highlightUserAnswers(allInputs, correctSentence);
 
@@ -454,7 +465,6 @@ function submitSentenceAnswer() {
     submitBtn.onclick = goToNextSentence;
     submitBtn.dataset.next = "true";
 }
-
 
 function updateSentenceHint(correctSentence, userAnswer) {
     // 將正確句子拆分成單字和標點符號
@@ -525,7 +535,7 @@ function highlightUserAnswers(allInputs, correctSentence) {
 // 📌 切換到下一題
 function goToNextSentence() {
     currentSentenceIndex++;
-    if (currentSentenceIndex >= sentenceData.length) {
+    if (currentSentenceIndex >= currentQuizSentences.length) {
         alert("🎉 測驗結束！");
         finishSentenceQuiz();
         return;
@@ -536,7 +546,7 @@ function goToNextSentence() {
     let submitBtn = document.getElementById("submitSentenceBtn");
     submitBtn.innerText = "提交";
     submitBtn.onclick = submitSentenceAnswer;
-    submitBtn.dataset.next = "false"; // ✅ 重要！確保新題目時 `Enter` 先執行提交
+    submitBtn.dataset.next = "false";
 }
 
 
@@ -545,14 +555,17 @@ function finishSentenceQuiz() {
     document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "block";
 
+    incorrectSentences = JSON.parse(localStorage.getItem("wrongQS")) || incorrectSentences;
+    console.log("✅ finishSentenceQuiz 時的 incorrectSentences:", incorrectSentences);
+
     let resultContainer = document.getElementById("quizResult");
     resultContainer.innerHTML = "<h2>測驗結果</h2>";
 
     for (let index = 0; index < userAnswers.length; index++) {
-        let sentenceObj = sentenceData[index];
+        let sentenceObj = currentQuizSentences[index]; // 使用 currentQuizSentences
         if (!sentenceObj) continue;
 
-        let userAnswer = getUserAnswer(index);
+        let userAnswer = getUserAnswer(index) || "(未作答)";
         let correctSentence = sentenceObj.句子;
 
         let userAnswerNormalized = userAnswer.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
@@ -562,7 +575,7 @@ function finishSentenceQuiz() {
         let importantCheckbox = `<input type="checkbox" onchange="toggleImportantSentence('${sentenceObj.Words}', this)" ${localStorage.getItem('important_sentence_' + sentenceObj.Words.toLowerCase()) === "true" ? "checked" : ""} />`;
         let sentenceIdentifierLink = `<a href="sentence.html?sentence=${encodeURIComponent(sentenceObj.Words)}&from=quiz&layer=4">${sentenceObj.Words}</a>`;
         let correctSentenceLink = `<a href="#" onclick="playSentenceAudio('${sentenceObj.Words}.mp3'); return false;">${correctSentence}</a>`;
-        let correctnessDisplay = isCorrect ? "正確" : "錯誤";
+        let correctnessDisplay = userAnswer === "(未作答)" ? "未作答" : (isCorrect ? "正確" : "錯誤");
 
         resultContainer.innerHTML += `
             <div class="result-item">
@@ -574,7 +587,6 @@ function finishSentenceQuiz() {
         `;
     }
 
-    // 修改按鈕區域，添加「匯出測驗結果」按鈕
     resultContainer.innerHTML += `
         <div class="result-buttons" style="margin-top: 20px;">
             <button class="action-button" onclick="saveQSResults()">儲存測驗結果</button>
@@ -583,10 +595,17 @@ function finishSentenceQuiz() {
         </div>
     `;
 
-    console.log("📌 incorrectSentences after finish:", incorrectSentences);
+    // 保存本次測驗的資料
+    localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
+    localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
+    console.log("✅ 測驗結束時保存的資料:", { userAnswers, currentQuizSentences });
 }
 
-
+function saveQSResults() {
+    localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
+    console.log("✅ 錯誤句子已儲存到 localStorage['wrongQS']:", incorrectSentences);
+    alert("測驗結果中的錯誤句子已儲存！");
+}
 
 // 📌 標記錯誤的字為紅色
 function highlightErrors(correctSentence, userAnswer) {
@@ -601,12 +620,6 @@ function highlightErrors(correctSentence, userAnswer) {
     }).join("");
 }
 
-// 在 q_sentence.js 中，finishSentenceQuiz() 之後加入
-function saveQSResults() {
-    localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
-    console.log("✅ 錯誤句子已儲存到 localStorage['wrongQS']:", incorrectSentences);
-    alert("測驗結果中的錯誤句子已儲存！");
-}
 
 // 📌 連結到單字詳情頁面
 function goToWordDetail(word) {
@@ -643,7 +656,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // 新增恢復測驗結果的函數
 function restoreQuizResult() {
-    if (sentenceData.length === 0 || userAnswers.length === 0) {
+    currentQuizSentences = JSON.parse(localStorage.getItem("currentQuizSentences")) || [];
+    userAnswers = JSON.parse(localStorage.getItem("userAnswers")) || [];
+    incorrectSentences = JSON.parse(localStorage.getItem("wrongQS")) || [];
+
+    if (currentQuizSentences.length === 0 || userAnswers.length === 0) {
         console.warn("⚠️ 無測驗資料可恢復，回到分類頁面");
         showSentenceQuizCategories();
         return;
@@ -686,20 +703,15 @@ function returnToMainMenu() {
     document.getElementById("quizResult").style.display = "none";
     document.getElementById("mainMenu").style.display = "block";
     
-    // 重置測驗狀態
+    // 只重置當前測驗狀態，不清空 incorrectSentences
     currentSentenceIndex = 0;
     userAnswers = [];
-    incorrectSentences = [];
     sentenceData = JSON.parse(localStorage.getItem("sentenceData")) || [];
     selectedSentenceFilters.levels.clear();
     selectedSentenceFilters.categories.clear();
     selectedSentenceFilters.alphabet.clear();
 
-    // 可選：清空 localStorage（僅在需要時啟用）
-    // localStorage.clear();
-    // console.log("✅ 返回首頁並重置狀態與清空 LocalStorage");
-
-    console.log("✅ 返回測驗第一層主選單");
+    console.log("✅ 返回測驗第一層主選單，保留 incorrectSentences:", incorrectSentences);
 }
 
 
