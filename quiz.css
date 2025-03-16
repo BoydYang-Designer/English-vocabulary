@@ -279,8 +279,8 @@ h1, h2 {
 
 .word-container {
     display: inline-flex;
-    gap: 3px;
-    margin: 0 1px;
+    gap: 1px;
+    margin: 0 0.5px;
     align-items: center;
     flex-wrap: wrap; /* 允許單字內部換行 */
     max-width: 100%; /* 限制單字容器寬度 */
