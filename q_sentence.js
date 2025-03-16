@@ -304,8 +304,20 @@ function loadSentenceQuestion() {
             currentAudio.pause();
         }
         currentAudio = new Audio(audioUrl);
+        
+        const playBtn = document.getElementById("playSentenceAudioBtn");
+        
+        // 確保按鈕初始狀態沒有播放樣式
+        playBtn.classList.remove("playing");
+        
         currentAudio.play().catch(error => console.warn("🔊 自動播放被禁止", error));
-        document.getElementById("playSentenceAudioBtn").onclick = () => playAudio();
+        playBtn.onclick = () => playAudio();
+
+        // 添加播放結束事件監聽
+        currentAudio.onended = () => {
+            playBtn.classList.remove("playing");
+            console.log("✅ 音檔播放結束");
+        };
     }
 }
 
@@ -367,10 +379,27 @@ function handleArrowNavigation(event) {
 // 📌 播放音檔函數（統一版本）
 function playAudio() {
     if (currentAudio) {
+        const playBtn = document.getElementById("playSentenceAudioBtn");
+        
+        // 添加播放中樣式
+        playBtn.classList.add("playing");
+        
         currentAudio.currentTime = 0; // 從頭播放
         currentAudio.play()
-            .then(() => console.log("✅ 播放成功"))
-            .catch(error => console.error("🔊 播放失敗:", error));
+            .then(() => {
+                console.log("✅ 播放成功");
+            })
+            .catch(error => {
+                console.error("🔊 播放失敗:", error);
+                // 即使播放失敗也移除播放樣式
+                playBtn.classList.remove("playing");
+            });
+
+        // 當音檔播放結束時移除播放樣式
+        currentAudio.onended = () => {
+            playBtn.classList.remove("playing");
+            console.log("✅ 音檔播放結束");
+        };
     } else {
         console.warn("⚠️ 尚未加載音檔，請確認檔案是否正確");
     }
