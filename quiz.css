@@ -163,14 +163,15 @@ h1, h2 {
 
 #sentenceInput {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* 保留換行 */
     justify-content: left;
     gap: 1px;
-    width: 95%;
-    max-width: 380px;
-    margin: 5px;
+    width: 100%; /* 確保適應父容器 */
+    max-width: 100%; /* 改為 100%，移除固定 380px */
+    margin: 5px auto; /* 居中 */
     padding: 1px;
     text-align: left;
+    overflow-x: auto; /* 若內容過長，啟用水平滾動 */
 }
 
 .letter-box {
@@ -281,10 +282,12 @@ h1, h2 {
     gap: 3px;
     margin: 0 1px;
     align-items: center;
+    flex-wrap: wrap; /* 允許單字內部換行 */
+    max-width: 100%; /* 限制單字容器寬度 */
 }
 
 .letter-input {
-    width: 15px;
+    width: 15px; /* 默認寬度 */
     height: 25px;
     font-size: 20px;
     text-align: center;
@@ -292,6 +295,8 @@ h1, h2 {
     border-bottom: 2px solid black;
     outline: none;
     background: transparent;
+    min-width: 10px; /* 最小寬度，防止過窄 */
+    flex-shrink: 1; /* 允許縮減 */
 }
 
 .filled-letter {
@@ -324,6 +329,7 @@ h1, h2 {
     font-weight: bold;
     margin: 0 5px;
     color: black;
+    flex-shrink: 0; /* 標點符號不縮減 */
 }
 
 .hidden-word {

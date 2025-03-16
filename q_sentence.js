@@ -226,7 +226,7 @@ let currentAudio = null; // 儲存當前音檔，避免重複創建
 
 
 function loadSentenceQuestion() {
-    let sentenceObj = currentQuizSentences[currentSentenceIndex]; // 使用 currentQuizSentences
+    let sentenceObj = currentQuizSentences[currentSentenceIndex];
     if (!sentenceObj) {
         console.error("❌ 找不到 sentenceObj！");
         return;
@@ -241,6 +241,11 @@ function loadSentenceQuestion() {
     let firstInput = null;
     let allInputs = [];
 
+    // 計算最長單字的字母數
+    let maxWordLength = Math.max(...words.filter(w => /\w+/.test(w)).map(w => w.length));
+    let screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    let inputWidth = Math.min(15, Math.floor(screenWidth / (maxWordLength + 5))); // 動態計算寬度，留出餘量
+
     words.forEach((word, index) => {
         let wordContainer = document.createElement("div");
         wordContainer.classList.add("word-container");
@@ -251,6 +256,7 @@ function loadSentenceQuestion() {
                 input.type = "text";
                 input.maxLength = 1;
                 input.classList.add("letter-input");
+                input.style.width = `${inputWidth}px`; // 動態設置寬度
                 input.dataset.wordIndex = index;
                 input.dataset.letterIndex = letterIndex;
                 input.addEventListener("input", handleLetterInput);
@@ -272,6 +278,7 @@ function loadSentenceQuestion() {
         sentenceInputContainer.appendChild(wordContainer);
     });
 
+    // 提示文字邏輯保持不變
     let wordCount = words.filter(word => /\w+/.test(word)).length;
     let wordsToShow = Math.max(1, Math.floor(wordCount / 5));
     let indicesToShow = new Set();
@@ -306,14 +313,11 @@ function loadSentenceQuestion() {
         currentAudio = new Audio(audioUrl);
         
         const playBtn = document.getElementById("playSentenceAudioBtn");
-        
-        // 確保按鈕初始狀態沒有播放樣式
         playBtn.classList.remove("playing");
         
         currentAudio.play().catch(error => console.warn("🔊 自動播放被禁止", error));
         playBtn.onclick = () => playAudio();
 
-        // 添加播放結束事件監聽
         currentAudio.onended = () => {
             playBtn.classList.remove("playing");
             console.log("✅ 音檔播放結束");
