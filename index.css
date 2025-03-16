@@ -204,6 +204,11 @@ h1 {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.audio-btn.playing {
+    background-color: #00BFFF !important;
+    color: white !important;
+}
+
 .audio-btn:hover {
     background-color: #4a6375;
     transform: scale(1.05);
@@ -418,4 +423,10 @@ h1 {
         border: none;
         cursor: pointer;
     }
+}
+
+/* 在 index.css 底部添加 */
+.playing {
+    background-color: #00BFFF !important; /* 亮藍色 */
+    color: white !important; /* 確保文字可見 */
 }
