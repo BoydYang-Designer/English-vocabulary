@@ -404,7 +404,9 @@ function showSentenceDetails(sentenceId) {
     document.getElementById("sentenceContainer").innerHTML = sentenceText;
     document.getElementById("chineseContainer").innerHTML = chineseText;
 
-    document.getElementById("playAudioBtn").setAttribute("onclick", `playSentenceAudio("${sentenceId}.mp3")`);
+    const playAudioBtn = document.getElementById("playAudioBtn");
+    playAudioBtn.setAttribute("onclick", `playSentenceAudio("${sentenceId}.mp3")`);
+    playAudioBtn.classList.remove("playing"); // 確保初始狀態無播放樣式
     displayNote(sentenceId);
 }
 
@@ -415,8 +417,44 @@ function playAudio(filename) {
 }
 
 function playSentenceAudio(filename) {
+    // 找到觸發播放的按鈕
+    const playButtons = document.querySelectorAll(`.audio-btn[onclick="playSentenceAudio('${filename}')"]`);
+    const playBtn = playButtons[playButtons.length - 1] || document.getElementById("playAudioBtn"); // 優先取最後一個匹配的按鈕，或詳情頁的按鈕
+
+    // 設置音檔來源
     sentenceAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/Sentence%20file/${filename}`;
-    sentenceAudio.play();
+    
+    // 添加播放中樣式
+    if (playBtn) {
+        playBtn.classList.add("playing");
+    }
+
+    // 播放音檔
+    sentenceAudio.play()
+        .then(() => {
+            console.log(`✅ 播放 ${filename} 成功`);
+        })
+        .catch(error => {
+            console.error(`🔊 播放 ${filename} 失敗:`, error);
+            if (playBtn) {
+                playBtn.classList.remove("playing"); // 播放失敗時移除樣式
+            }
+        });
+
+    // 監聽播放結束事件
+    sentenceAudio.onended = () => {
+        if (playBtn) {
+            playBtn.classList.remove("playing");
+            console.log(`✅ ${filename} 播放結束`);
+        }
+    };
+
+    // 如果已經有其他音檔正在播放，先停止並移除其播放樣式
+    document.querySelectorAll(".audio-btn.playing").forEach(btn => {
+        if (btn !== playBtn) {
+            btn.classList.remove("playing");
+        }
+    });
 }
 
 function togglePauseAudio(button) {

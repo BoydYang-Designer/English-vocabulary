@@ -384,3 +384,9 @@ h1 {
         cursor: pointer;
     }
 }
+
+/* 在現有 CSS 文件底部添加 */
+.playing {
+    background-color: #00BFFF !important; /* 亮藍色 */
+    color: white !important; /* 確保文字可見 */
+}
