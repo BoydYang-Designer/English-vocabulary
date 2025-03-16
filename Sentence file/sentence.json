@@ -1035,40 +1035,52 @@
             "中文": "作家必須對人類情感有敏銳的洞察力，才能講述動人的故事。"
         },
         {
+            "音檔": "音檔 - acute-4",
             "等級": "B1",
             "分類": "daily",
             "Words": "acute-4",
-            "句子": "He felt an acute pain in his back after lifting the heavy box"
+            "句子": "He felt an acute pain in his back after lifting the heavy box",
+            "中文": "（他在抬起沉重的箱子後感到背部一陣劇痛。）"
         },
         {
+            "音檔": "音檔 - acute-5",
             "等級": "B1",
             "分類": "daily",
             "Words": "acute-5",
-            "句子": "The doctor diagnosed her with acute appendicitis, requiring immediate surgery"
+            "句子": "The doctor diagnosed her with acute appendicitis, requiring immediate surgery",
+            "中文": "（醫生診斷她患有急性闌尾炎，需要立即手術。）"
         },
         {
+            "音檔": "音檔 - acute-6",
             "等級": "B1",
             "分類": "daily",
             "Words": "acute-6",
-            "句子": "The architect designed the building with acute angles to create a modern look"
+            "句子": "The architect designed the building with acute angles to create a modern look",
+            "中文": "（建築師設計這棟建築時使用了銳角，以營造現代感。）"
         },
         {
+            "音檔": "音檔 - acute-7",
             "等級": "B1",
             "分類": "daily",
             "Words": "acute-7",
-            "句子": "An acute triangle has all its angles measuring less than 90 degrees"
+            "句子": "An acute triangle has all its angles measuring less than 90 degrees",
+            "中文": "（銳角三角形的所有角都小於90度。）"
         },
         {
+            "音檔": "音檔 - acute-8",
             "等級": "B1",
             "分類": "daily",
             "Words": "acute-8",
-            "句子": "Her acute understanding of human behavior made her an excellent psychologist"
+            "句子": "Her acute understanding of human behavior made her an excellent psychologist",
+            "中文": "（她對人類行為的敏銳理解使她成為一名出色的心理學家。）"
         },
         {
+            "音檔": "音檔 - acute-9",
             "等級": "B1",
             "分類": "daily",
             "Words": "acute-9",
-            "句子": "The artist had an acute eye for color and composition"
+            "句子": "The artist had an acute eye for color and composition",
+            "中文": "（這位藝術家對色彩和構圖有敏銳的眼光。）"
         },
         {
             "音檔": "音檔 - addict-1",
@@ -1095,43 +1107,55 @@
             "Words": "addict-3",
             "名人": "Carl Jung",
             "句子": "The addict seeks externally what can only be healed internally.",
-            "中文": "成癮者在外部尋找本應在內心治癒的東西。"
+            "中文": "(成癮者在外部尋找本應在內心治癒的東西。)"
         },
         {
+            "音檔": "音檔 - addict-4",
             "等級": "B1",
             "分類": "醫學",
             "Words": "addict-4",
-            "句子": "He is an addict to caffeine, needing several cups of coffee to function each day"
+            "句子": "He is an addict to caffeine, needing several cups of coffee to function each day",
+            "中文": "（他對咖啡因上癮，每天需要喝好幾杯咖啡才能正常運作。）"
         },
         {
+            "音檔": "音檔 - addict-5",
             "等級": "B1",
             "分類": "醫學",
             "Words": "addict-5",
-            "句子": ": Many former addicts have shared their stories to help others struggling with substance abuse"
+            "句子": "Many former addicts have shared their stories to help others struggling with substance abuse",
+            "中文": "（許多戒毒成功的前癮君子分享了自己的故事，以幫助其他正在與藥物濫用作鬥爭的人。）"
         },
         {
+            "音檔": "音檔 - addict-6",
             "等級": "B1",
             "分類": "醫學",
             "Words": "addict-6",
-            "句子": "She became an addict to exercise, spending hours at the gym every day"
+            "句子": "She became an addict to exercise, spending hours at the gym every day",
+            "中文": "（她對運動上癮，每天在健身房花費數小時。）"
         },
         {
+            "音檔": "音檔 - addict-7",
             "等級": "B1",
             "分類": "醫學",
             "Words": "addict-7",
-            "句子": "The new game addicted many players, leading them to spend all their free time on it"
+            "句子": "The new game addicted many players, leading them to spend all their free time on it",
+            "中文": "（這款新遊戲讓許多玩家上癮，使他們把所有空閒時間都投入其中。）"
         },
         {
+            "音檔": "音檔 - addict-8",
             "等級": "B1",
             "分類": "醫學",
             "Words": "addict-8",
-            "句子": "The company's marketing strategy was designed to addict consumers to their products"
+            "句子": "The company's marketing strategy was designed to addict consumers to their products",
+            "中文": "（該公司的行銷策略旨在讓消費者對其產品上癮。）"
         },
         {
+            "音檔": "音檔 - addict-9",
             "等級": "B1",
             "分類": "醫學",
             "Words": "addict-9",
-            "句子": "The series was so addicting that viewers binge-watched all the episodes in one weekend"
+            "句子": "The series was so addicting that viewers binge-watched all the episodes in one weekend",
+            "中文": "（這部影集如此令人上癮，以至於觀眾在一個週末內狂看完所有集數。）"
         },
         {
             "音檔": "音檔 - addictive-1",
@@ -1140,7 +1164,7 @@
             "Words": "addictive-1",
             "名人": "Elon Musk",
             "句子": "Technology can be both productive and dangerously addictive.",
-            "中文": "科技可以既有生產力，又可能具有危險的成癮性。"
+            "中文": "(科技可以既有生產力，又可能具有危險的成癮性。)"
         },
         {
             "音檔": "音檔 - addictive-2",
@@ -1149,7 +1173,7 @@
             "Words": "addictive-2",
             "名人": "Steve Jobs",
             "句子": "The most addictive products are those that seamlessly integrate into our lives.",
-            "中文": "最具成癮性的產品是那些無縫融入我們生活的產品。"
+            "中文": "(最具成癮性的產品是那些無縫融入我們生活的產品。)"
         },
         {
             "音檔": "音檔 - addictive-3",
@@ -1158,31 +1182,39 @@
             "Words": "addictive-3",
             "名人": "David Foster Wallace",
             "句子": "Modern entertainment is designed to be addictive, keeping us distracted from reality.",
-            "中文": "現代娛樂被設計成令人上癮，使我們與現實脫節。"
+            "中文": "(現代娛樂被設計成令人上癮，使我們與現實脫節。)"
         },
         {
+            "音檔": "音檔 - addictive-4",
             "等級": "C1",
             "分類": "醫學",
             "Words": "addictive-4",
-            "句子": "Many people find sugary snacks to be highly addictive, often craving them throughout the day"
+            "句子": "Many people find sugary snacks to be highly addictive, often craving them throughout the day",
+            "中文": "（許多人覺得含糖零食高度上癮，經常整天都想吃。）"
         },
         {
+            "音檔": "音檔 - addictive-5",
             "等級": "C1",
             "分類": "醫學",
             "Words": "addictive-5",
-            "句子": "Video games can be incredibly addictive, leading players to spend hours immersed in virtual worlds"
+            "句子": "Video games can be incredibly addictive, leading players to spend hours immersed in virtual worlds",
+            "中文": "（電子遊戲可能極具上癮性，使玩家花費數小時沉浸在虛擬世界中。）"
         },
         {
+            "音檔": "音檔 - addictive-6",
             "等級": "C1",
             "分類": "醫學",
             "Words": "addictive-6",
-            "句子": "Cigarettes are known to be addictive, making it hard for smokers to quit despite wanting to"
+            "句子": "Cigarettes are known to be addictive, making it hard for smokers to quit despite wanting to",
+            "中文": "（香菸被認為具有成癮性，使吸菸者即使想戒菸也很難做到。）"
         },
         {
+            "音檔": "音檔 - addictive-7",
             "等級": "C1",
             "分類": "醫學",
             "Words": "addictive-7",
-            "句子": "Scrolling through social media can become an addictive habit, as users find themselves lost in an endless feed of content"
+            "句子": "Scrolling through social media can become an addictive habit, as users find themselves lost in an endless feed of content",
+            "中文": "（瀏覽社交媒體可能會成為一種令人上癮的習慣，因為使用者會沉迷於無盡的內容流中。）"
         },
         {
             "音檔": "音檔 - adequacy-1",
@@ -1191,7 +1223,7 @@
             "Words": "adequacy-1",
             "名人": "Plato",
             "句子": "The adequacy of knowledge is measured by its ability to improve life.",
-            "中文": "知識的充分性取決於它改善生活的能力。"
+            "中文": "(知識的充分性取決於它改善生活的能力。)"
         },
         {
             "音檔": "音檔 - adequacy-2",
@@ -1200,7 +1232,7 @@
             "Words": "adequacy-2",
             "名人": "Abraham Lincoln",
             "句子": "The adequacy of a government is determined by how well it serves its people.",
-            "中文": "政府的充分性取決於它為人民服務的程度。"
+            "中文": "(政府的充分性取決於它為人民服務的程度。)"
         },
         {
             "音檔": "音檔 - adequacy-3",
@@ -1209,19 +1241,23 @@
             "Words": "adequacy-3",
             "名人": "Jane Austen",
             "句子": "The adequacy of love is not in grand gestures, but in everyday kindness.",
-            "中文": "愛的充分性不在於宏偉的舉動，而在於日常的善意。"
+            "中文": "(愛的充分性不在於宏偉的舉動，而在於日常的善意。)"
         },
         {
+            "音檔": "音檔 - adequacy-4",
             "等級": "B2",
             "分類": "daily",
             "Words": "adequacy-4",
-            "句子": "The company assessed the adequacy of its resources before committing to the new project"
+            "句子": "The company assessed the adequacy of its resources before committing to the new project",
+            "中文": "（公司在承諾新專案之前評估了其資源的充足性。）"
         },
         {
+            "音檔": "音檔 - adequacy-5",
             "等級": "B2",
             "分類": "daily",
             "Words": "adequacy-5",
-            "句子": "She doubted the adequacy of his explanation, feeling it lacked sufficient detail to address her concerns"
+            "句子": "She doubted the adequacy of his explanation, feeling it lacked sufficient detail to address her concerns",
+            "中文": "（她懷疑他的解釋是否充分，覺得缺乏足夠的細節來回應她的疑慮。）"
         },
         {
             "音檔": "音檔 - adequate-1",
@@ -1251,40 +1287,52 @@
             "中文": "充分的自我照顧對長期成功和健康至關重要。"
         },
         {
+            "音檔": "音檔 - adequate-4",
             "等級": "B2",
             "分類": "daily",
             "Words": "adequate-4",
-            "句子": "Be sure to allow adequate [=sufficient, enough] time for the paint to dry"
+            "句子": "Be sure to allow adequate time for the paint to dry",
+            "中文": "（一定要留出足夠的時間讓油漆乾燥。）[=sufficient, enough]"
         },
         {
+            "音檔": "音檔 - adequate-5",
             "等級": "B2",
             "分類": "daily",
             "Words": "adequate-5",
-            "句子": "The food was more than adequate for the six of us"
+            "句子": "The food was more than adequate for the six of us",
+            "中文": "（這些食物對我們六個人來說綽綽有餘。）"
         },
         {
+            "音檔": "音檔 - adequate-6",
             "等級": "B2",
             "分類": "daily",
             "Words": "adequate-6",
-            "句子": "Millions of people lack adequate [=sufficient] health care"
+            "句子": "Millions of people lack adequate health care",
+            "中文": "（數百萬人缺乏足夠的醫療保健。）"
         },
         {
+            "音檔": "音檔 - adequate-7",
             "等級": "B2",
             "分類": "daily",
             "Words": "adequate-7",
-            "句子": "The quality of his work was perfectly adequate"
+            "句子": "The quality of his work was perfectly adequate",
+            "中文": "（他的工作質量完全足夠。）"
         },
         {
+            "音檔": "音檔 - adequate-8",
             "等級": "B2",
             "分類": "daily",
             "Words": "adequate-8",
-            "句子": "Your performance is adequate, but I believe there's room for improvement"
+            "句子": "Your performance is adequate, but I believe there's room for improvement",
+            "中文": "（你的表現尚可，但我認為還有進步的空間。）"
         },
         {
+            "音檔": "音檔 - adequate-9",
             "等級": "B2",
             "分類": "daily",
             "Words": "adequate-9",
-            "句子": "That hotel is only adequate"
+            "句子": "That hotel is only adequate",
+            "中文": "（那間飯店只是勉強過得去。）"
         },
         {
             "音檔": "音檔 - adorn-1",
@@ -1314,16 +1362,20 @@
             "中文": "藝術通過將痛苦轉化為深刻的美，來裝飾人生。"
         },
         {
+            "音檔": "音檔 - adorn-4",
             "等級": "B1",
             "分類": "daily",
             "Words": "adorn-4",
-            "句子": "She adorned her hair with flowers for the special occasion, adding a touch of natural beauty to her appearance"
+            "句子": "She adorned her hair with flowers for the special occasion, adding a touch of natural beauty to her appearance",
+            "中文": "她在特別的場合用花朵裝飾頭髮，為自己的外貌增添了一絲自然美。）"
         },
         {
+            "音檔": "音檔 - adorn-5",
             "等級": "B1",
             "分類": "daily",
             "Words": "adorn-5",
-            "句子": "She adorned the cake with intricate icing designs, turning a simple dessert into a stunning centerpiece for the party"
+            "句子": "She adorned the cake with intricate icing designs, turning a simple dessert into a stunning centerpiece for the party",
+            "中文": "（她用精緻的糖霜圖案裝飾蛋糕，將一款簡單的甜點變成宴會上引人注目的中心。）"
         },
         {
             "音檔": "音檔 - adornment-1",
@@ -1353,10 +1405,12 @@
             "中文": "簡單是智慧與創造力的終極裝飾。"
         },
         {
+            "音檔": "音檔 - adornment-4",
             "等級": "C1",
             "分類": "daily",
             "Words": "adornment-4",
-            "句子": "The bride wore a stunning gown with intricate adornments of lace and pearls"
+            "句子": "The bride wore a stunning gown with intricate adornments of lace and pearls",
+            "中文": "（新娘穿著一襲華麗的禮服，上面點綴著精緻的蕾絲和珍珠裝飾。）"
         },
         {
             "音檔": "音檔 - adverse-1",
@@ -1386,22 +1440,28 @@
             "中文": "逆境經歷往往塑造出最堅韌和強大的人。"
         },
         {
+            "音檔": "音檔 - adverse-4",
             "等級": "B2",
             "分類": "daily",
             "Words": "adverse-4",
-            "句子": "The adverse weather conditions made driving hazardous"
+            "句子": "The adverse weather conditions made driving hazardous",
+            "中文": "（惡劣的天氣條件使駕駛變得危險。）"
         },
         {
+            "音檔": "音檔 - adverse-5",
             "等級": "B2",
             "分類": "daily",
             "Words": "adverse-5",
-            "句子": "The court ruling had adverse effects on the company's profits"
+            "句子": "The court ruling had adverse effects on the company's profits",
+            "中文": "（法院的裁決對公司的利潤產生了不利影響。）"
         },
         {
+            "音檔": "音檔 - adverse-6",
             "等級": "B2",
             "分類": "daily",
             "Words": "adverse-6",
-            "句子": "She faced adverse criticism from her peers"
+            "句子": "She faced adverse criticism from her peers",
+            "中文": "（她遭到了同儕的不利批評。）"
         },
         {
             "音檔": "音檔 - adversity-1",
@@ -1431,10 +1491,12 @@
             "中文": "我的許多偉大發明都源於逆境與堅持。"
         },
         {
+            "音檔": "音檔 - adversity-4",
             "等級": "C1",
             "分類": "心情",
             "Words": "adversity-4",
-            "句子": "He faced many adversities throughout his life, but he never lost hope or determination"
+            "句子": "He faced many adversities throughout his life, but he never lost hope or determination",
+            "中文": "（他一生中面臨許多逆境，但他從未失去希望或決心。）"
         },
         {
             "音檔": "音檔 - advertising campaign-1",
@@ -1464,62 +1526,84 @@
             "中文": "成功的廣告活動能夠將品牌轉變為一種生活方式。"
         },
         {
+            "音檔": "音檔 - advertising campaign-4",
             "等級": "C2",
             "分類": "商業",
             "Words": "advertising campaign-4",
-            "句子": "The company launched a massive advertising campaign to introduce its new smartphone model"
+            "句子": "The company launched a massive advertising campaign to introduce its new smartphone model",
+            "中文": "（該公司發起了一場大規模的廣告宣傳活動，以推廣其新的智能手機型號。）"
         },
         {
+            "音檔": "音檔 - advertising campaign-5",
             "等級": "C2",
             "分類": "商業",
             "Words": "advertising campaign-5",
-            "句子": "The advertising campaign for the movie generated a lot of buzz on social media"
+            "句子": "The advertising campaign for the movie generated a lot of buzz on social media",
+            "中文": "（該電影的廣告宣傳活動在社交媒體上引起了廣泛關注。）"
         },
         {
+            "音檔": "音檔 - advertising campaign-6",
             "等級": "C2",
             "分類": "商業",
             "Words": "advertising campaign-6",
-            "句子": "An effective advertising campaign helped boost the brand's visibility and sales"
+            "句子": "An effective advertising campaign helped boost the brand's visibility and sales",
+            "中文": "（一場有效的廣告宣傳活動提升了該品牌的知名度和銷售量。）"
         },
         {
-            "等級": "C1",
+            "音檔": "音檔 - aerial display-1",
+            "等級": "C2",
             "Words": "aerial display-1",
-            "句子": "The airshow featured an impressive aerial display by fighter jets"
+            "句子": "The airshow featured an impressive aerial display by fighter jets",
+            "中文": "（航空展上戰鬥機進行了一場令人印象深刻的空中表演。）"
         },
         {
-            "等級": "C1",
+            "音檔": "音檔 - aerial display-2",
+            "等級": "C2",
             "Words": "aerial display-2",
-            "句子": "The fireworks created a stunning aerial display that lit up the night sky"
+            "句子": "The fireworks created a stunning aerial display that lit up the night sky",
+            "中文": "（煙火在夜空中綻放，呈現出壯觀的空中展示。）"
         },
         {
-            "等級": "C1",
+            "音檔": "音檔 - aerial display-3",
+            "等級": "C2",
             "Words": "aerial display-3",
-            "句子": "The birds performed a synchronized aerial display during their migration"
+            "句子": "The birds performed a synchronized aerial display during their migration",
+            "中文": "（這些鳥類在遷徙途中進行了同步的空中展示。）"
         },
         {
-            "等級": "C1",
+            "音檔": "音檔 - aerial display-4",
+            "等級": "C2",
             "Words": "aerial display-4",
-            "句子": "The festival ended with a breathtaking aerial display of colorful lights"
+            "句子": "The festival ended with a breathtaking aerial display of colorful lights",
+            "中文": "（這場節日以一場令人驚嘆的彩色燈光空中展示結束。）"
         },
         {
+            "音檔": "音檔 - aerial survey-1",
             "等級": "C1",
             "Words": "aerial survey-1",
-            "句子": "The government conducted an aerial survey to assess the damage caused by the flood"
+            "句子": "The government conducted an aerial survey to assess the damage caused by the flood",
+            "中文": "（政府進行了空中勘測，以評估洪水造成的損害。）\n\n\n\n\n\n\n"
         },
         {
+            "音檔": "音檔 - aerial survey-2",
             "等級": "C1",
             "Words": "aerial survey-2",
-            "句子": "An aerial survey of the forest revealed signs of illegal logging"
+            "句子": "An aerial survey of the forest revealed signs of illegal logging",
+            "中文": "（對森林的空中勘測顯示出非法伐木的跡象。）"
         },
         {
+            "音檔": "音檔 - aerial survey-3",
             "等級": "C1",
             "Words": "aerial survey-3",
-            "句子": "The construction team used an aerial survey to map out the site before beginning work"
+            "句子": "The construction team used an aerial survey to map out the site before beginning work",
+            "中文": "（施工團隊利用空中勘測來繪製工地地圖，然後才開始施工。）"
         },
         {
+            "音檔": "音檔 - aerial survey-4",
             "等級": "C1",
             "Words": "aerial survey-4",
-            "句子": "Scientists performed an aerial survey to monitor wildlife populations in the national park"
+            "句子": "Scientists performed an aerial survey to monitor wildlife populations in the national park",
+            "中文": "（科學家進行空中勘測來監測國家公園內的野生動物數量。）"
         },
         {
             "音檔": "音檔 - aerial view-1",
