@@ -27,6 +27,9 @@ def update_excel_b(excel_a_path, excel_b_path, output_path, json_path):
 =======
 def update_excel_b(excel_a_path, excel_b_path, output_path):
     """將 Excel A 的新例句更新到 Excel B，並更新現有記錄的分類和等級"""
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     # 讀取 Excel A 和 Excel B
     df_a = pd.read_excel(excel_a_path)
@@ -38,6 +41,7 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
     
     # 儲存新條目和更新記錄
     new_rows = []
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     updated_records = []
     updated_cells = 0  # 記錄更新的單元格數量
@@ -105,6 +109,10 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
 =======
     updated_cells = 0  # 記錄更新的單元格數量
     
+=======
+    updated_cells = 0  # 記錄更新的單元格數量
+    
+>>>>>>> Stashed changes
     for index, row in df_a.iterrows():
         word = row['Words']
         eg_sentences = extract_eg_sentences(row['English meaning'])
@@ -155,11 +163,15 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
                     existing_sentences.add(sentence)
     
     # 追加新條目
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     if new_rows:
         for row in pd.DataFrame(new_rows).itertuples(index=False):
             ws.append(row)
     
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     # 保存更新後的 Excel 文件
     wb.save(output_path)
@@ -182,10 +194,15 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
         print(f"已更新 {len(new_rows)} 條新記錄和 {updated_cells} 個現有記錄的分類/等級到 {output_path}")
         print(f"更新詳細記錄已保存到 {json_path}")
 =======
+=======
+>>>>>>> Stashed changes
     # 保存更新後的 Excel B
     wb.save(output_path)
     if new_rows or updated_cells:
         print(f"已更新 {len(new_rows)} 條新記錄和 {updated_cells} 個現有記錄的分類/等級到 {output_path}")
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     else:
         print("沒有新記錄或更新需要保存")
@@ -195,8 +212,12 @@ excel_a_path = 'Z_total_words.xlsx'
 excel_b_path = 'sentence.xlsx'
 output_path = 'updated_sentence.xlsx'
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 json_path = 'update_summary.json'
 update_excel_b(excel_a_path, excel_b_path, output_path, json_path)
+=======
+update_excel_b(excel_a_path, excel_b_path, output_path)
+>>>>>>> Stashed changes
 =======
 update_excel_b(excel_a_path, excel_b_path, output_path)
 >>>>>>> Stashed changes
