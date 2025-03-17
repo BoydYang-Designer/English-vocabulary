@@ -28,6 +28,12 @@ def update_excel_b(excel_a_path, excel_b_path, output_path, json_path):
 def update_excel_b(excel_a_path, excel_b_path, output_path):
     """將 Excel A 的新例句更新到 Excel B，並更新現有記錄的分類和等級"""
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -41,6 +47,8 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
     
     # 儲存新條目和更新記錄
     new_rows = []
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     updated_records = []
@@ -113,6 +121,14 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
     updated_cells = 0  # 記錄更新的單元格數量
     
 >>>>>>> Stashed changes
+=======
+    updated_cells = 0  # 記錄更新的單元格數量
+    
+>>>>>>> Stashed changes
+=======
+    updated_cells = 0  # 記錄更新的單元格數量
+    
+>>>>>>> Stashed changes
     for index, row in df_a.iterrows():
         word = row['Words']
         eg_sentences = extract_eg_sentences(row['English meaning'])
@@ -164,6 +180,12 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
     
     # 追加新條目
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -171,6 +193,8 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
         for row in pd.DataFrame(new_rows).itertuples(index=False):
             ws.append(row)
     
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     # 保存更新後的 Excel 文件
@@ -196,11 +220,21 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     # 保存更新後的 Excel B
     wb.save(output_path)
     if new_rows or updated_cells:
         print(f"已更新 {len(new_rows)} 條新記錄和 {updated_cells} 個現有記錄的分類/等級到 {output_path}")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -213,8 +247,16 @@ excel_b_path = 'sentence.xlsx'
 output_path = 'updated_sentence.xlsx'
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 json_path = 'update_summary.json'
 update_excel_b(excel_a_path, excel_b_path, output_path, json_path)
+=======
+update_excel_b(excel_a_path, excel_b_path, output_path)
+>>>>>>> Stashed changes
+=======
+update_excel_b(excel_a_path, excel_b_path, output_path)
+>>>>>>> Stashed changes
 =======
 update_excel_b(excel_a_path, excel_b_path, output_path)
 >>>>>>> Stashed changes
