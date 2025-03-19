@@ -13,7 +13,9 @@ let quizResults = [];
 const baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
 
 document.addEventListener("DOMContentLoaded", function () {
-    // 新增「進入句子頁面」按鈕的事件監聽器
+    const params = new URLSearchParams(window.location.search);
+    const show = params.get("show");
+
     const sentenceButton = document.getElementById("sentencePageBtn");
     if (sentenceButton) {
         sentenceButton.addEventListener("click", function () {
@@ -28,15 +30,20 @@ document.addEventListener("DOMContentLoaded", function () {
             isDataLoaded = true;
             console.log("✅ 單字資料已載入");
 
-            // 如果 LocalStorage 中有儲存的測驗結果，則自動恢復
             if (localStorage.getItem("currentQuizResults")) {
                 quizResults = JSON.parse(localStorage.getItem("currentQuizResults"));
                 restoreQuizResults();
             }
+            else if (show === "categories") {
+                showQuizCategories();
+            }
         })
-        .catch(err => console.error("❌ 讀取 JSON 失敗:", err));
+        .catch(err => {
+            console.error("❌ 讀取 JSON 失敗:", err);
+            alert("⚠️ 無法載入單字資料，請稍後再試。");
+        });
 
-        initializeStartQuizButton();
+    initializeStartQuizButton();
 
         // 監聽鍵盤事件，按下空白鍵播放音檔
         document.addEventListener("keydown", function(event) {
