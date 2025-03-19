@@ -2,19 +2,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boyd Sentence</title>
+    <title>Boyd Vocabulary</title>
     <link rel="stylesheet" href="sentence.css">
 </head>
 <body>
-    <h1>Boyd Sentence</h1>
+    <h1>Boyd Vocabulary</h1>
 
     <!-- 第一層：搜尋與導航 -->
     <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
         <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterSentences()" style="font-size: 18px; padding: 5px; width: 200px;">
     </div>
     <div style="text-align: center; margin-top: 20px;">
-        <button id="startQuizBtn" class="button">進入測驗</button>
-        <button id="returnHomeBtn" class="button">返回首頁</button>
+        <button id="returnHomeBtn" class="button">單字頁面</button>
+        <button id="wordQuizBtn" class="button">單字測驗</button>
+        <button id="sentencePageBtn" class="button" style="background-color: #28a745;">句子頁面</button>
+        <button id="startQuizBtn" class="button">句子測驗</button>
     </div>
     <div class="alphabet-container" id="alphabetButtons"></div>
     <div class="category-container" id="categoryButtons">
