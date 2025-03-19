@@ -208,6 +208,10 @@ function showWords(type, value) {
 
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("wordPageBtn").style.display = "none";     // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
     let listContainer = document.getElementById("wordList");
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
@@ -307,6 +311,10 @@ function toggleCheck(word, button) {
 function backToFirstLayer() {
     document.getElementById("searchContainer").style.display = "block";
     document.getElementById("startQuizBtn").style.display = "block";
+    document.getElementById("startQuizBtn").style.display = "block"; // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "block";  // 單字測驗
+    document.getElementById("wordPageBtn").style.display = "block";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "block"; // 句子頁面
     document.getElementById("wordList").style.display = "none";
     document.getElementById("wordDetails").style.display = "none";
     document.querySelector('.alphabet-container').style.display = "block";
@@ -333,6 +341,8 @@ function showNoteWords() {
     document.getElementById("wordListTitle").style.display = "block";
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("wordQuizBtn").style.display = "none"; // 隱藏單字測驗按鈕
+    document.getElementById("wordPageBtn").style.display = "none"; // 隱藏單字頁面按鈕
 
     // 隱藏「進入句子頁面」按鈕
     let sentenceButton = document.getElementById("sentencePageBtn");
@@ -394,6 +404,10 @@ function showImportantWords() {
     document.getElementById("wordListTitle").innerText = "重要";
     document.getElementById("wordListTitle").style.display = "block";
     document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("wordPageBtn").style.display = "none";     // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
     document.getElementById("startQuizBtn").style.display = "none";
 
     // 隱藏「進入句子頁面」按鈕
@@ -460,6 +474,10 @@ function showWrongWords() {
     document.getElementById("wordListTitle").innerText = "錯誤";
     document.getElementById("wordListTitle").style.display = "block";
     document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("wordPageBtn").style.display = "none";     // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
     document.getElementById("startQuizBtn").style.display = "none";
 
     // 隱藏「進入句子頁面」按鈕
@@ -522,6 +540,10 @@ function showCheckedWords() {
     document.getElementById("wordListTitle").innerText = "Checked";
     document.getElementById("wordListTitle").style.display = "block";
     document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("wordPageBtn").style.display = "none";     // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
     document.getElementById("startQuizBtn").style.display = "none";
 
     // 隱藏「進入句子頁面」按鈕
@@ -592,6 +614,10 @@ function showDetails(word) {
     document.getElementById("wordList").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
     document.getElementById("wordListTitle").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("wordPageBtn").style.display = "none";     // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
     document.getElementById("wordDetails").style.display = "block";
     document.querySelector(".alphabet-container").style.display = "none";
     document.querySelector(".category-container").style.display = "none";

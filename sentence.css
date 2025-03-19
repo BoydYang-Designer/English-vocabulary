@@ -26,6 +26,15 @@ h1 {
     box-sizing: border-box;
 }
 
+/* 按鈕容器 */
+.button-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    gap: 10px; /* 按鈕之間的間距 */
+    flex-wrap: wrap; /* 如果空間不足，允許換行 */
+    margin-top: 20px; /* 與上方的間距 */
+}
+
 .letter-btn {
     padding: 10px 15px;
     margin: 5px;

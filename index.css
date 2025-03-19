@@ -157,6 +157,13 @@ h1 {
     background-color: #6e8191;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    gap: 10px; /* 按鈕之間的間距 */
+    flex-wrap: wrap; /* 如果空間不足，允許換行 */
+}
+
 /* 返回按鈕 */
 .back-button {
     position: sticky;

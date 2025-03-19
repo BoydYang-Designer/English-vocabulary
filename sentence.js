@@ -54,10 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 const quizSentences = JSON.parse(localStorage.getItem("currentQuizSentences")) || [];
                 console.log("從 localStorage 讀取的 currentQuizSentences:", quizSentences);
                 if (quizSentences.length > 0) {
-                    // 確保只使用本次測驗的句子，並限制最大 5 句
                     currentSentenceList = quizSentences.slice(0, 10);
                     currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceParam);
-                    console.log("✅ 從測驗結果進入，使用 currentQuizSentences (限制為 5 句):", currentSentenceList);
+                    console.log("✅ 從測驗結果進入，使用 currentQuizSentences (限制為 10 句):", currentSentenceList);
                 } else {
                     console.warn("⚠️ localStorage 中沒有 currentQuizSentences，fallback 到單字過濾");
                     isQuizMode = false;
@@ -131,6 +130,15 @@ function showImportantSentences() {
     lastWordListType = "importantSentences";
     lastWordListValue = null;
 
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+
     if (!sentenceData || sentenceData.length === 0) {
         console.error("❌ sentenceData 未載入或為空");
         document.getElementById("sentenceItems").innerHTML = "<p>⚠️ 資料載入失敗，請刷新頁面</p>";
@@ -148,6 +156,15 @@ function showWrongSentences() {
     document.getElementById("wordListTitle").style.display = "block";
     lastWordListType = "wrongSentences";
     lastWordListValue = null;
+
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
 
     let wrongSentences = JSON.parse(localStorage.getItem("wrongQS")) || [];
     let filteredSentences = sentenceData.filter(s => wrongSentences.includes(s.Words));
@@ -184,15 +201,16 @@ function filterSentences() {
 
 function displaySentenceList(sentences) {
     document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
     document.getElementById("wordList").style.display = "none";
     document.getElementById("sentenceList").style.display = "block";
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
     document.querySelector('#sentenceList .back-button').style.display = "none";
-
     // 儲存當前句子列表
     currentSentenceList = sentences;
     
@@ -225,8 +243,10 @@ function showWords(type, value) {
     lastWordListValue = value;
 
     document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
     document.getElementById("wordList").style.display = "block";
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
@@ -300,6 +320,15 @@ function showCheckedWords() {
     document.getElementById("wordListTitle").style.display = "block";
     lastWordListType = "checked";
     lastWordListValue = null;
+
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
     displayWordList(wordsData.filter(w => localStorage.getItem(`checked_${w.Words}`) === "true").map(w => w.Words));
 }
 
@@ -308,6 +337,15 @@ function showImportantWords() {
     document.getElementById("wordListTitle").style.display = "block";
     lastWordListType = "important";
     lastWordListValue = null;
+
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
     displayWordList(wordsData.filter(w => localStorage.getItem(`important_${w.Words}`) === "true").map(w => w.Words));
 }
 
@@ -316,6 +354,15 @@ function showWrongWords() {
     document.getElementById("wordListTitle").style.display = "block";
     lastWordListType = "wrong";
     lastWordListValue = null;
+
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
     let wrongWords = JSON.parse(localStorage.getItem("wrongWords")) || [];
     displayWordList(wrongWords);
 }
@@ -325,8 +372,10 @@ function showSentences(word) {
     document.getElementById("wordListTitle").style.display = "block";
 
     document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
@@ -374,8 +423,10 @@ function showSentences(word) {
 
 function displayWordList(words) {
     document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
     document.getElementById("wordList").style.display = "block";
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
@@ -476,7 +527,6 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
         return;
     }
 
-    // 在測驗模式下，不重新計算索引，除非提供了有效的 index
     if (isQuizMode && index === -1) {
         console.log("✅ 測驗模式：保持 currentSentenceList 不變");
     } else if (index !== -1) {
@@ -492,14 +542,12 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
 
     const detailsArea = document.getElementById("sentenceDetails");
 
-    // 如果有動畫方向，設置初始位置
     if (direction === "from-right") {
         detailsArea.classList.add("sliding-in-from-right");
     } else if (direction === "from-left") {
         detailsArea.classList.add("sliding-in-from-left");
     }
 
-    // 更新內容（保持不變）
     let word = sentenceId.split("-")[0];
     let wordObj = wordsData.find(w => w.Words === word);
     let header = `
@@ -523,7 +571,6 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     playAudioBtn.setAttribute("onclick", `playSentenceAudio("${sentenceId}.mp3")`);
     playAudioBtn.classList.remove("playing");
 
-    // 阻止按鈕的觸控事件冒泡
     playAudioBtn.addEventListener("touchstart", (event) => {
         event.stopPropagation();
     }, { passive: true });
@@ -536,20 +583,19 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
 
     displayNote(sentenceId);
 
-    // 切換顯示層級
     document.getElementById("sentenceList").style.display = "none";
     document.getElementById("sentenceDetails").style.display = "block";
     document.getElementById("wordListTitle").style.display = "none";
     document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
     document.getElementById("wordList").style.display = "none";
-    document.getElementById("sentenceList").style.display = "none";
 
-    // 執行滑入動畫
     if (direction) {
         setTimeout(() => {
             detailsArea.style.transform = "translateX(0)";
@@ -557,12 +603,10 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
         }, 10);
     }
 
-    // 移除舊的事件監聽器
     detailsArea.removeEventListener("touchstart", startTouch);
     detailsArea.removeEventListener("touchmove", moveTouch);
     detailsArea.removeEventListener("touchend", endTouch);
 
-    // 添加新的事件監聽器，標記 touchstart 和 touchmove 為被動
     detailsArea.addEventListener("touchstart", startTouch, { passive: true });
     detailsArea.addEventListener("touchmove", moveTouch, { passive: true });
     detailsArea.addEventListener("touchend", endTouch);
@@ -711,8 +755,10 @@ function importAllData() {
 
 function backToFirstLayer() {
     document.getElementById("searchContainer").style.display = "block";
-    document.getElementById("startQuizBtn").style.display = "block";
-    document.getElementById("returnHomeBtn").style.display = "block";
+    document.getElementById("startQuizBtn").style.display = "block";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "block";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "block";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "block"; // 句子頁面
     document.getElementById("wordList").style.display = "none";
     document.getElementById("sentenceList").style.display = "none";
     document.getElementById("sentenceDetails").style.display = "none";
