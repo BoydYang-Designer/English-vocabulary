@@ -48,10 +48,35 @@ document.addEventListener("DOMContentLoaded", function () {
         const layerParam = urlParams.get('layer');
 
         if (sentenceParam && layerParam === '4') {
-            // 如果從 URL 直接進入第四層，初始化 currentSentenceList
-            const word = sentenceParam.split("-")[0];
-            currentSentenceList = sentenceData.filter(s => s.Words.startsWith(word + "-"));
-            currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceParam);
+            if (fromParam === 'quiz') {
+                // 從測驗結果進入，使用 currentQuizSentences
+                const quizSentences = JSON.parse(localStorage.getItem("currentQuizSentences")) || [];
+                if (quizSentences.length > 0) {
+                    currentSentenceList = quizSentences;
+                    currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceParam);
+                    console.log("✅ 從測驗結果進入，使用 currentQuizSentences:", currentSentenceList);
+                } else {
+                    console.warn("⚠️ localStorage 中沒有 currentQuizSentences，fallback 到單字過濾");
+                    const word = sentenceParam.split("-")[0];
+                    currentSentenceList = sentenceData.filter(s => s.Words.startsWith(word + "-"));
+                    currentSentenceList.sort((a, b) => {
+                        const numA = parseInt(a.Words.split("-")[1], 10);
+                        const numB = parseInt(b.Words.split("-")[1], 10);
+                        return numA - numB;
+                    });
+                    currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceParam);
+                }
+            } else {
+                // 其他情況，按單字過濾
+                const word = sentenceParam.split("-")[0];
+                currentSentenceList = sentenceData.filter(s => s.Words.startsWith(word + "-"));
+                currentSentenceList.sort((a, b) => {
+                    const numA = parseInt(a.Words.split("-")[1], 10);
+                    const numB = parseInt(b.Words.split("-")[1], 10);
+                    return numA - numB;
+                });
+                currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceParam);
+            }
             showSentenceDetails(sentenceParam);
         } else {
             backToFirstLayer();
@@ -312,9 +337,9 @@ function showSentences(word) {
     // 過濾並排序句子
     let filteredSentences = sentenceData.filter(s => s.Words.startsWith(word + "-"));
     filteredSentences.sort((a, b) => {
-        const numA = parseInt(a.Words.split("-")[1], 10); // 提取編號並轉為整數
+        const numA = parseInt(a.Words.split("-")[1], 10);
         const numB = parseInt(b.Words.split("-")[1], 10);
-        return numA - numB; // 數值排序
+        return numA - numB;
     });
 
     // 更新 currentSentenceList
@@ -369,47 +394,6 @@ function displayWordList(words) {
         : "<p>⚠️ 目前沒有符合的單字</p>";
 }
 
-function showSentences(word) {
-    document.getElementById("wordListTitle").innerText = word;
-    document.getElementById("wordListTitle").style.display = "block";
-
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
-    document.getElementById("wordList").style.display = "none";
-    document.getElementById("sentenceList").style.display = "block";
-    document.querySelector('#sentenceList .back-button').style.display = "block";
-
-    lastSentenceListWord = word;
-
-    let sentenceItems = document.getElementById("sentenceItems");
-    sentenceItems.innerHTML = "";
-
-    let filteredSentences = sentenceData.filter(s => s.Words.startsWith(word + "-"));
-    if (filteredSentences.length === 0) {
-        sentenceItems.innerHTML = "<p>⚠️ 沒有符合的句子</p>";
-    } else {
-        filteredSentences.forEach(s => {
-            let sentenceId = s.Words;
-            let isImportant = localStorage.getItem(`important_sentence_${sentenceId}`) === "true";
-            let item = document.createElement("div");
-            item.className = "word-item-container";
-            item.innerHTML = `
-                <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
-                <p class='word-item' data-sentence="${sentenceId}">${sentenceId}: ${s.句子}</p>
-                <button class='audio-btn' onclick='playSentenceAudio("${sentenceId}.mp3")'>
-                    <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
-                </button>
-            `;
-            sentenceItems.appendChild(item);
-
-            item.querySelector('.word-item').addEventListener("click", () => showSentenceDetails(sentenceId));
-        });
-    }
-}
 
 function toggleImportantSentence(sentenceId, checkbox) {
     if (checkbox.checked) localStorage.setItem(`important_sentence_${sentenceId}`, "true");
@@ -445,35 +429,31 @@ function endTouch(event) {
     const swipeThreshold = 50;
     const swipeDistance = touchEndX - touchStartX;
     const detailsArea = document.getElementById("sentenceDetails");
-    detailsArea.style.transition = "transform 0.3s ease-in-out"; // 恢復過渡效果
+    detailsArea.style.transition = "transform 0.3s ease-in-out";
 
     if (Math.abs(swipeDistance) > swipeThreshold && currentSentenceList.length > 0) {
         if (swipeDistance > 0 && currentSentenceIndex > 0) {
-            // 右滑：上一句
             console.log("右滑：切換到上一句", currentSentenceIndex - 1);
             detailsArea.classList.add("sliding-out-right");
             setTimeout(() => {
                 currentSentenceIndex--;
                 showSentenceDetails(currentSentenceList[currentSentenceIndex].Words, currentSentenceIndex, "from-left");
                 detailsArea.classList.remove("sliding-out-right");
-                detailsArea.style.transform = "translateX(0)"; // 重置位置
+                detailsArea.style.transform = "translateX(0)";
             }, 300);
         } else if (swipeDistance < 0 && currentSentenceIndex < currentSentenceList.length - 1) {
-            // 左滑：下一句
             console.log("左滑：切換到下一句", currentSentenceIndex + 1);
             detailsArea.classList.add("sliding-out-left");
             setTimeout(() => {
                 currentSentenceIndex++;
                 showSentenceDetails(currentSentenceList[currentSentenceIndex].Words, currentSentenceIndex, "from-right");
                 detailsArea.classList.remove("sliding-out-left");
-                detailsArea.style.transform = "translateX(0)"; // 重置位置
+                detailsArea.style.transform = "translateX(0)";
             }, 300);
         } else {
-            // 未超出範圍，恢復原位
             detailsArea.style.transform = "translateX(0)";
         }
     } else {
-        // 滑動距離不足，恢復原位
         detailsArea.style.transform = "translateX(0)";
     }
 
@@ -488,24 +468,13 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
         return;
     }
 
-    // 如果 currentSentenceList 未初始化，根據單字生成並排序
-    if (currentSentenceList.length === 0) {
-        const word = sentenceId.split("-")[0];
-        currentSentenceList = sentenceData.filter(s => s.Words.startsWith(word + "-"));
-        currentSentenceList.sort((a, b) => {
-            const numA = parseInt(a.Words.split("-")[1], 10);
-            const numB = parseInt(b.Words.split("-")[1], 10);
-            return numA - numB;
-        });
-    }
-
-    // 設置當前索引
     if (index !== -1) {
         currentSentenceIndex = index;
-    } else if (currentSentenceIndex === -1) {
+    } else if (currentSentenceList.length > 0 && currentSentenceIndex === -1) {
         currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceId);
     }
 
+    console.log("進入 showSentenceDetails - sentenceId:", sentenceId);
     console.log("當前句子列表:", currentSentenceList);
     console.log("當前索引:", currentSentenceIndex);
 
@@ -518,7 +487,7 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
         detailsArea.classList.add("sliding-in-from-left");
     }
 
-    // 更新內容
+    // 更新內容（保持不變）
     let word = sentenceId.split("-")[0];
     let wordObj = wordsData.find(w => w.Words === word);
     let header = `
@@ -544,13 +513,13 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
 
     // 阻止按鈕的觸控事件冒泡
     playAudioBtn.addEventListener("touchstart", (event) => {
-        event.stopPropagation(); // 阻止 touchstart 冒泡到 #sentenceDetails
-    });
+        event.stopPropagation();
+    }, { passive: true });
     playAudioBtn.addEventListener("touchmove", (event) => {
-        event.stopPropagation(); // 阻止 touchmove 冒泡
-    });
+        event.stopPropagation();
+    }, { passive: true });
     playAudioBtn.addEventListener("touchend", (event) => {
-        event.stopPropagation(); // 阻止 touchend 冒泡
+        event.stopPropagation();
     });
 
     displayNote(sentenceId);
@@ -576,12 +545,14 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
         }, 10);
     }
 
-    // 綁定觸控事件
+    // 移除舊的事件監聽器
     detailsArea.removeEventListener("touchstart", startTouch);
     detailsArea.removeEventListener("touchmove", moveTouch);
     detailsArea.removeEventListener("touchend", endTouch);
-    detailsArea.addEventListener("touchstart", startTouch);
-    detailsArea.addEventListener("touchmove", moveTouch);
+
+    // 添加新的事件監聽器，標記 touchstart 和 touchmove 為被動
+    detailsArea.addEventListener("touchstart", startTouch, { passive: true });
+    detailsArea.addEventListener("touchmove", moveTouch, { passive: true });
     detailsArea.addEventListener("touchend", endTouch);
 }
 
