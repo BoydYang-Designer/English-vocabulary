@@ -35,7 +35,49 @@ h1, h2 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/* word-link 按鈕樣式 */
+.word-link {
+    background-color: #9babc4; /* 藍色背景 */
+    color: white; /* 白色文字 */
+    padding: 5px 10px; /* 內距 */
+    border-radius: 15px; /* 圓角 */
+    border: none; /* 無邊框 */
+    cursor: pointer; /* 手型指標 */
+    text-decoration: none; /* 移除下劃線 */
+    font-size: 18px; /* 字體大小與其他按鈕一致 */
+    transition: background-color 0.3s ease; /* 背景顏色平滑過渡 */
+    margin-right: 5px; /* 右側間距，與其他元素分隔 */
+}
 
+.word-link:hover {
+    background-color: #0056b3; /* 懸停時深藍色 */
+}
+
+/* phonetic-btn 按鈕樣式 */
+.phonetic-btn {
+    background-color: #9babc4; /* 綠色背景 */
+    color: white; /* 白色文字 */
+    padding: 5px 10px; /* 內距 */
+    border-radius: 15px; /* 圓角 */
+    border: none; /* 無邊框 */
+    cursor: pointer; /* 手型指標 */
+    text-decoration: none; /* 移除下劃線 */
+    font-size: 18px; /* 字體大小與其他按鈕一致 */
+    transition: background-color 0.3s ease; /* 背景顏色平滑過渡 */
+    margin-right: 5px; /* 右側間距，與其他元素分隔 */
+}
+
+.phonetic-btn:hover {
+    background-color: #218838; /* 懸停時深綠色 */
+}
+
+/* 手機適配 */
+@media (max-width: 600px) {
+    .word-link, .phonetic-btn {
+        font-size: 18px; /* 縮小字體 */
+        padding: 4px 8px; /* 縮小內距 */
+    }
+}
 /* ==========================================
    🔘 按鈕樣式 (Buttons)
 ========================================== */
