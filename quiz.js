@@ -230,50 +230,52 @@ function startQuiz() {
 function submitAnswer() {
     const quizArea = document.getElementById("quizArea");
     if (!quizArea || quizArea.style.display === "none") {
-        // 如果 quizArea 不存在或隱藏，直接返回，避免執行錯誤的邏輯
         return;
     }
     
     let userAnswer = Array.from(document.querySelectorAll("#wordInput input"))
                           .map(input => input.value.trim().toLowerCase())
-                          .join(""); // 取得使用者輸入的單字（合併成字串）
+                          .join("");
     let correctAnswer = currentWord.toLowerCase();
 
-    // ✅ 標準化比較（移除空格和 `-`）
-    let normalizedUserAnswer = userAnswer.replace(/[\s-]/g, ""); 
+    let normalizedUserAnswer = userAnswer.replace(/[\s-]/g, "");
     let normalizedCorrectAnswer = correctAnswer.replace(/[\s-]/g, "");
 
-    let isCorrect = normalizedUserAnswer === normalizedCorrectAnswer;
+    let result = '';
+    if (normalizedUserAnswer === '') {
+        result = '未作答'; // 如果用戶未輸入任何內容
+    } else {
+        result = normalizedUserAnswer === normalizedCorrectAnswer ? '正確' : '錯誤';
+    }
 
     quizResults.push({
         word: currentWord,
-        result: isCorrect ? "正確" : "錯誤",
+        result: result,
         timestamp: new Date().toLocaleString()
     });
 
     // ✅ 立即儲存錯誤單字到 localStorage
     let storedWrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
-    if (!isCorrect) {
+    if (result === '錯誤') {
         if (!storedWrongWords.includes(currentWord)) {
             storedWrongWords.push(currentWord);
         }
-    } else {
+    } else if (result === '正確') {
         storedWrongWords = storedWrongWords.filter(word => word !== currentWord);
     }
+    // 如果 result === '未作答'，不做任何操作
     localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
 
     // ✅ 顯示提示
-let revealedWord = "";
-for (let i = 0; i < currentWord.length; i++) {
-    if (userAnswer[i] === currentWord[i]) {
-        // ✅ 正確的字母顯示黑色
-        revealedWord += `<span style="color: black;">${currentWord[i]}</span>`;
-    } else {
-        // ❌ 錯誤的字母顯示紅色
-        revealedWord += `<span style="color: red;">${currentWord[i]}</span>`;
+    let revealedWord = "";
+    for (let i = 0; i < currentWord.length; i++) {
+        if (userAnswer[i] === currentWord[i]) {
+            revealedWord += `<span style="color: black;">${currentWord[i]}</span>`;
+        } else {
+            revealedWord += `<span style="color: red;">${currentWord[i]}</span>`;
+        }
     }
-}
-wordHint.innerHTML = revealedWord;
+    document.getElementById("wordHint").innerHTML = revealedWord;
 
     // ✅ 無論答對或答錯，都顯示「下一題」按鈕
     document.getElementById("submitBtn").style.display = "none"; 
@@ -428,14 +430,24 @@ function finishQuiz() {
         let wordData = wordsData.find(w => w.Words === result.word);
         let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
         let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
-
+    
         let phonetics = pronunciation1;
         if (pronunciation2) {
             phonetics += ` / ${pronunciation2}`;
         }
-
+    
+        // 根據結果添加對應的類別
+        let resultClass = '';
+        if (result.result === '正確') {
+            resultClass = 'correct';
+        } else if (result.result === '錯誤') {
+            resultClass = 'wrong';
+        } else {
+            resultClass = 'unanswered'; // 如果有未作答的情況
+        }
+    
         return `
-           <div class='result-item'>
+            <div class='result-item ${resultClass}'>
                 <label class='important-word'>
                     <input type='checkbox' class='important-checkbox' data-word='${result.word}' 
                     ${localStorage.getItem(`important_${result.word}`) === "true" ? "checked" : ""} 
@@ -443,7 +455,6 @@ function finishQuiz() {
                 </label>
                 <button class='word-link' onclick="goToWordDetail('${result.word}')">${result.word}</button>
                 <button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button>
-                <span class='result-status'>${result.result === '正確' ? '✅' : '❌'}</span>
             </div>
         `;
     }).join("");
@@ -622,14 +633,24 @@ function restoreQuizResults() {
         let wordData = wordsData.find(w => w.Words === result.word);
         let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
         let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
-
+    
         let phonetics = pronunciation1;
         if (pronunciation2) {
             phonetics += ` / ${pronunciation2}`;
         }
-
+    
+        // 根據結果添加對應的類別
+        let resultClass = '';
+        if (result.result === '正確') {
+            resultClass = 'correct';
+        } else if (result.result === '錯誤') {
+            resultClass = 'wrong';
+        } else {
+            resultClass = 'unanswered'; // 如果有未作答的情況
+        }
+    
         return `
-            <div class='result-item'>
+            <div class='result-item ${resultClass}'>
                 <label class='important-word'>
                     <input type='checkbox' class='important-checkbox' data-word='${result.word}' 
                     ${localStorage.getItem(`important_${result.word}`) === "true" ? "checked" : ""} 
@@ -637,7 +658,6 @@ function restoreQuizResults() {
                 </label>
                 <button class='word-link' onclick="goToWordDetail('${result.word}')">${result.word}</button>
                 <button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button>
-                <span class='result-status'>${result.result === '正確' ? '✅' : '❌'}</span>
             </div>
         `;
     }).join("");
