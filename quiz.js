@@ -99,6 +99,20 @@ function goBack() {
     window.location.href = "index.html";
 }
 
+function returnToSourcePage() {
+    const params = new URLSearchParams(window.location.search);
+    const from = params.get("from");
+
+    if (from === "index") {
+        window.location.href = "index.html";
+    } else if (from === "sentence") {
+        window.location.href = "sentence.html";
+    } else {
+        // 預設行為：返回主選單
+        returnToMainMenu(); // 假設已有此函數，若無則需定義
+    }
+}
+
 
 // 返回分類選擇頁面
 function returnToCategorySelection() {

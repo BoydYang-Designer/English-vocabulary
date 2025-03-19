@@ -7,31 +7,31 @@
 </head>
 <body>
     <h1>Boyd Vocabulary</h1>
-<div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
-    <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterWords()" style="padding: 8px; width: 200px;">
-</div>
-<div class="button-container" style="text-align: center; margin-top: 20px;">
-    <button id="wordPageBtn" class="button" style="background-color: #28a745;">單字頁面</button>
-    <button id="wordQuizBtn" class="button" onclick="window.location.href='quiz.html?show=categories'">單字測驗</button>
-    <button id="sentencePageBtn" class="button">句子頁面</button>
-    <button id="startQuizBtn" class="button">句子測驗</button>
-</div>
-<div class="alphabet-container">
-    <script>
-        document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => 
-            `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`
-        ).join(" "));
-         
-        document.addEventListener("DOMContentLoaded", function () {
-    const quizButton = document.getElementById("startQuizBtn");
-    if (quizButton) {
-        quizButton.addEventListener("click", function () {
-            window.location.href = "quiz.html"; // 跳轉到測驗頁面
-        });
-    }
-});
-    </script>
-</div>
+    <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
+        <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterWords()" style="padding: 8px; width: 200px;">
+    </div>
+    <div class="button-container" style="text-align: center; margin-top: 20px;">
+        <button id="wordPageBtn" class="button" style="background-color: #28a745;">單字頁面</button>
+        <button id="wordQuizBtn" class="button" onclick="window.location.href='quiz.html?show=categories&from=index'">單字測驗</button>
+        <button id="sentencePageBtn" class="button">句子頁面</button>
+        <button id="startQuizBtn" class="button">句子測驗</button>
+    </div>
+    <div class="alphabet-container">
+        <script>
+            document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => 
+                `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`
+            ).join(" "));
+            
+            document.addEventListener("DOMContentLoaded", function () {
+                const quizButton = document.getElementById("startQuizBtn");
+                if (quizButton) {
+                    quizButton.addEventListener("click", function () {
+                        window.location.href = "quiz.html?show=sentenceCategories&from=index"; // 修改為帶參數的跳轉
+                    });
+                }
+            });
+        </script>
+    </div>
 
 <!-- 顯示分類的容器 -->
 <div class="category-container" id="categoryButtons"></div>
