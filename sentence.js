@@ -419,10 +419,16 @@ function toggleImportantSentence(sentenceId, checkbox) {
 
 
 function startTouch(event) {
+    const target = event.target;
+    // 如果觸控目標是按鈕，則忽略滑動
+    if (target.tagName === "BUTTON" || target.closest(".audio-btn")) {
+        console.log("觸控目標是按鈕，忽略滑動");
+        return;
+    }
     console.log("觸控開始", event.touches[0].clientX);
     touchStartX = event.touches[0].clientX;
     const detailsArea = document.getElementById("sentenceDetails");
-    detailsArea.style.transition = "none"; // 移除過渡效果以實現即時拖曳
+    detailsArea.style.transition = "none";
 }
 
 function moveTouch(event) {
@@ -535,6 +541,18 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     const playAudioBtn = document.getElementById("playAudioBtn");
     playAudioBtn.setAttribute("onclick", `playSentenceAudio("${sentenceId}.mp3")`);
     playAudioBtn.classList.remove("playing");
+
+    // 阻止按鈕的觸控事件冒泡
+    playAudioBtn.addEventListener("touchstart", (event) => {
+        event.stopPropagation(); // 阻止 touchstart 冒泡到 #sentenceDetails
+    });
+    playAudioBtn.addEventListener("touchmove", (event) => {
+        event.stopPropagation(); // 阻止 touchmove 冒泡
+    });
+    playAudioBtn.addEventListener("touchend", (event) => {
+        event.stopPropagation(); // 阻止 touchend 冒泡
+    });
+
     displayNote(sentenceId);
 
     // 切換顯示層級
@@ -575,43 +593,25 @@ function playAudio(filename) {
 
 
 function playSentenceAudio(filename) {
-    // 找到觸發播放的按鈕
+    console.log("開始播放:", filename);
     const playButtons = document.querySelectorAll(`.audio-btn[onclick="playSentenceAudio('${filename}')"]`);
-    const playBtn = playButtons[playButtons.length - 1] || document.getElementById("playAudioBtn"); // 優先取最後一個匹配的按鈕，或詳情頁的按鈕
-
-    // 設置音檔來源
+    const playBtn = playButtons[playButtons.length - 1] || document.getElementById("playAudioBtn");
     sentenceAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/Sentence%20file/${filename}`;
-    
-    // 添加播放中樣式
     if (playBtn) {
         playBtn.classList.add("playing");
     }
-
-    // 播放音檔
     sentenceAudio.play()
-        .then(() => {
-            console.log(`✅ 播放 ${filename} 成功`);
-        })
+        .then(() => console.log(`✅ 播放 ${filename} 成功`))
         .catch(error => {
             console.error(`🔊 播放 ${filename} 失敗:`, error);
-            if (playBtn) {
-                playBtn.classList.remove("playing"); // 播放失敗時移除樣式
-            }
+            if (playBtn) playBtn.classList.remove("playing");
         });
-
-    // 監聽播放結束事件
     sentenceAudio.onended = () => {
-        if (playBtn) {
-            playBtn.classList.remove("playing");
-            console.log(`✅ ${filename} 播放結束`);
-        }
+        if (playBtn) playBtn.classList.remove("playing");
+        console.log(`✅ ${filename} 播放結束`);
     };
-
-    // 如果已經有其他音檔正在播放，先停止並移除其播放樣式
     document.querySelectorAll(".audio-btn.playing").forEach(btn => {
-        if (btn !== playBtn) {
-            btn.classList.remove("playing");
-        }
+        if (btn !== playBtn) btn.classList.remove("playing");
     });
 }
 
