@@ -390,3 +390,8 @@ h1 {
     background-color: #00BFFF !important; /* 亮藍色 */
     color: white !important; /* 確保文字可見 */
 }
+
+#sentenceDetails {
+    user-select: none; /* 防止滑動時選中文本 */
+    touch-action: pan-y; /* 允許垂直滾動，禁用水平滾動干擾 */
+}

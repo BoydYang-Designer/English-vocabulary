@@ -1,9 +1,15 @@
+// 在檔案頂部，與其他全局變數一起添加
 let wordsData = [];
 let sentenceData = [];
 let sentenceAudio = new Audio();
 let lastWordListType = "";
 let lastWordListValue = "";
 let lastSentenceListWord = "";
+let currentSentenceList = []; // 儲存當前的句子列表
+let currentSentenceIndex = -1; // 儲存當前句子的索引
+let touchStartX = 0; // 滑動起點 X 座標
+let touchEndX = 0; // 滑動終點 X 座標
+
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("開始載入資料...");
@@ -153,15 +159,18 @@ function displaySentenceList(sentences) {
     document.querySelector('.level-container').style.display = "none";
     document.querySelector('#sentenceList .back-button').style.display = "none";
 
+    // 儲存當前句子列表
+    currentSentenceList = sentences;
+    
     let sentenceItems = document.getElementById("sentenceItems");
     sentenceItems.innerHTML = sentences.length > 0
-        ? sentences.map(s => {
+        ? sentences.map((s, index) => {
             let sentenceId = s.Words;
             let isImportant = localStorage.getItem(`important_sentence_${sentenceId}`) === "true";
             return `
                 <div class='word-item-container'>
                     <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
-                    <p class='word-item' data-sentence="${sentenceId}" onclick='showSentenceDetails("${sentenceId}")'>${sentenceId}: ${s.句子}</p>
+                    <p class='word-item' data-sentence="${sentenceId}" onclick='showSentenceDetails("${sentenceId}", ${index})'>${sentenceId}: ${s.句子}</p>
                     <button class='audio-btn' onclick='playSentenceAudio("${sentenceId}.mp3")'>
                         <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
                     </button>
@@ -370,14 +379,56 @@ function toggleImportantSentence(sentenceId, checkbox) {
     else localStorage.removeItem(`important_sentence_${sentenceId}`);
 }
 
-function showSentenceDetails(sentenceId) {
-    let sentenceObj = sentenceData.find(s => s.Words === sentenceId);
-    if (!sentenceObj) return;
+// 在 showSentenceDetails 附近添加滑動處理函數
+// 建議放在 showSentenceDetails 之前，保持邏輯清晰
+function handleSwipe() {
+    const swipeThreshold = 50; // 滑動距離閾值（像素）
+    const swipeDistance = touchEndX - touchStartX;
 
+    if (Math.abs(swipeDistance) > swipeThreshold) {
+        if (swipeDistance > 0 && currentSentenceIndex > 0) {
+            // 向右滑動，顯示上一句
+            currentSentenceIndex--;
+            showSentenceDetails(currentSentenceList[currentSentenceIndex].Words, currentSentenceIndex);
+        } else if (swipeDistance < 0 && currentSentenceIndex < currentSentenceList.length - 1) {
+            // 向左滑動，顯示下一句
+            currentSentenceIndex++;
+            showSentenceDetails(currentSentenceList[currentSentenceIndex].Words, currentSentenceIndex);
+        }
+    }
+}
+
+function startTouch(event) {
+    touchStartX = event.type.includes("mouse") ? event.clientX : event.touches[0].clientX;
+}
+
+function moveTouch(event) {
+    if (event.type.includes("mouse") && event.buttons === 0) return; // 確保滑鼠左鍵按下
+    touchEndX = event.type.includes("mouse") ? event.clientX : event.touches[0].clientX;
+}
+
+function endTouch(event) {
+    handleSwipe();
+    touchStartX = 0;
+    touchEndX = 0;
+}
+
+function showSentenceDetails(sentenceId, index = -1) {
+    let sentenceObj = sentenceData.find(s => s.Words === sentenceId);
+    if (!sentenceObj) {
+        console.error(`❌ 未找到句子: ${sentenceId}`);
+        return;
+    }
+
+    // 更新當前索引
+    if (index !== -1) {
+        currentSentenceIndex = index;
+    }
+
+    // 切換顯示層級
     document.getElementById("sentenceList").style.display = "none";
     document.getElementById("sentenceDetails").style.display = "block";
     document.getElementById("wordListTitle").style.display = "none";
-
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
@@ -387,27 +438,65 @@ function showSentenceDetails(sentenceId) {
     document.getElementById("wordList").style.display = "none";
     document.getElementById("sentenceList").style.display = "none";
 
+    // 獲取單字資訊
     let word = sentenceId.split("-")[0];
     let wordObj = wordsData.find(w => w.Words === word);
 
-    let header = `<div class="phonetics-container">
-        <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${localStorage.getItem(`important_sentence_${sentenceId}`) === "true" ? "checked" : ""}>
-        <div id="sentenceTitle" style="font-size: 20px; font-weight: bold;">${sentenceId}</div>
-    </div>`;
-    let phonetics = wordObj ? (wordObj["pronunciation-1"] ? `<button class='button' onclick='playAudio("${word}.mp3")'>${wordObj["pronunciation-1"]}</button>` : "") +
-        (wordObj["pronunciation-2"] ? `<button class='button' onclick='playAudio("${word} 2.mp3")'>${wordObj["pronunciation-2"]}</button>` : "") || "<p>No pronunciation available</p>" : "<p>No pronunciation available</p>";
+    // 生成標頭
+    let header = `
+        <div class="phonetics-container">
+            <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${localStorage.getItem(`important_sentence_${sentenceId}`) === "true" ? "checked" : ""}>
+            <div id="sentenceTitle" style="font-size: 20px; font-weight: bold;">${sentenceId}</div>
+        </div>`;
+
+    // 生成發音（簡化邏輯）
+    let phonetics = "<p>No pronunciation available</p>";
+    if (wordObj) {
+        let pron1 = wordObj["pronunciation-1"];
+        let pron2 = wordObj["pronunciation-2"];
+        phonetics = "";
+        if (pron1) phonetics += `<button class='button' onclick='playAudio("${word}.mp3")'>${pron1}</button>`;
+        if (pron2) phonetics += `<button class='button' onclick='playAudio("${word} 2.mp3")'>${pron2}</button>`;
+        if (!pron1 && !pron2) phonetics = "<p>No pronunciation available</p>";
+    }
+
+    // 生成句子和中文翻譯
     let sentenceText = `<p>${sentenceObj.句子}</p>`;
     let chineseText = `<p>${sentenceObj.中文}</p>`;
 
+    // 渲染到 DOM
     document.getElementById("sentenceHeader").innerHTML = header;
     document.getElementById("phoneticContainer").innerHTML = phonetics;
     document.getElementById("sentenceContainer").innerHTML = sentenceText;
     document.getElementById("chineseContainer").innerHTML = chineseText;
 
+    // 設置音訊按鈕
     const playAudioBtn = document.getElementById("playAudioBtn");
     playAudioBtn.setAttribute("onclick", `playSentenceAudio("${sentenceId}.mp3")`);
-    playAudioBtn.classList.remove("playing"); // 確保初始狀態無播放樣式
+    playAudioBtn.classList.remove("playing");
+
+    // 顯示筆記
     displayNote(sentenceId);
+
+    // 添加滑動事件監聽器
+    const detailsArea = document.getElementById("sentenceDetails");
+    // 移除舊的監聽器，避免重複綁定
+    detailsArea.removeEventListener("touchstart", startTouch);
+    detailsArea.removeEventListener("touchmove", moveTouch);
+    detailsArea.removeEventListener("touchend", endTouch);
+    detailsArea.removeEventListener("mousedown", startTouch);
+    detailsArea.removeEventListener("mousemove", moveTouch);
+    detailsArea.removeEventListener("mouseup", endTouch);
+
+    // 綁定新的觸控事件監聽器（移動設備）
+    detailsArea.addEventListener("touchstart", startTouch);
+    detailsArea.addEventListener("touchmove", moveTouch);
+    detailsArea.addEventListener("touchend", endTouch);
+
+    // 綁定滑鼠事件監聽器（桌面測試用）
+    detailsArea.addEventListener("mousedown", startTouch);
+    detailsArea.addEventListener("mousemove", moveTouch);
+    detailsArea.addEventListener("mouseup", endTouch);
 }
 
 let wordAudio = new Audio();
@@ -415,6 +504,7 @@ function playAudio(filename) {
     wordAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${filename}`;
     wordAudio.play();
 }
+
 
 function playSentenceAudio(filename) {
     // 找到觸發播放的按鈕
