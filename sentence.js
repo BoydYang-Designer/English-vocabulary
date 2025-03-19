@@ -382,7 +382,7 @@ function toggleImportantSentence(sentenceId, checkbox) {
 // 在 showSentenceDetails 附近添加滑動處理函數
 // 建議放在 showSentenceDetails 之前，保持邏輯清晰
 function handleSwipe() {
-    const swipeThreshold = 50; // 滑動距離閾值（像素）
+    const swipeThreshold = 50;
     const swipeDistance = touchEndX - touchStartX;
 
     if (Math.abs(swipeDistance) > swipeThreshold) {
@@ -403,7 +403,7 @@ function startTouch(event) {
 }
 
 function moveTouch(event) {
-    if (event.type.includes("mouse") && event.buttons === 0) return; // 確保滑鼠左鍵按下
+    if (event.type.includes("mouse") && event.buttons === 0) return;
     touchEndX = event.type.includes("mouse") ? event.clientX : event.touches[0].clientX;
 }
 
@@ -438,49 +438,34 @@ function showSentenceDetails(sentenceId, index = -1) {
     document.getElementById("wordList").style.display = "none";
     document.getElementById("sentenceList").style.display = "none";
 
-    // 獲取單字資訊
     let word = sentenceId.split("-")[0];
     let wordObj = wordsData.find(w => w.Words === word);
 
-    // 生成標頭
     let header = `
         <div class="phonetics-container">
             <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${localStorage.getItem(`important_sentence_${sentenceId}`) === "true" ? "checked" : ""}>
             <div id="sentenceTitle" style="font-size: 20px; font-weight: bold;">${sentenceId}</div>
         </div>`;
-
-    // 生成發音（簡化邏輯）
-    let phonetics = "<p>No pronunciation available</p>";
-    if (wordObj) {
-        let pron1 = wordObj["pronunciation-1"];
-        let pron2 = wordObj["pronunciation-2"];
-        phonetics = "";
-        if (pron1) phonetics += `<button class='button' onclick='playAudio("${word}.mp3")'>${pron1}</button>`;
-        if (pron2) phonetics += `<button class='button' onclick='playAudio("${word} 2.mp3")'>${pron2}</button>`;
-        if (!pron1 && !pron2) phonetics = "<p>No pronunciation available</p>";
-    }
-
-    // 生成句子和中文翻譯
+    let phonetics = wordObj ? 
+        ((wordObj["pronunciation-1"] ? `<button class='button' onclick='playAudio("${word}.mp3")'>${wordObj["pronunciation-1"]}</button>` : "") +
+        (wordObj["pronunciation-2"] ? `<button class='button' onclick='playAudio("${word} 2.mp3")'>${wordObj["pronunciation-2"]}</button>` : "") || "<p>No pronunciation available</p>") : 
+        "<p>No pronunciation available</p>";
     let sentenceText = `<p>${sentenceObj.句子}</p>`;
     let chineseText = `<p>${sentenceObj.中文}</p>`;
 
-    // 渲染到 DOM
     document.getElementById("sentenceHeader").innerHTML = header;
     document.getElementById("phoneticContainer").innerHTML = phonetics;
     document.getElementById("sentenceContainer").innerHTML = sentenceText;
     document.getElementById("chineseContainer").innerHTML = chineseText;
 
-    // 設置音訊按鈕
     const playAudioBtn = document.getElementById("playAudioBtn");
     playAudioBtn.setAttribute("onclick", `playSentenceAudio("${sentenceId}.mp3")`);
     playAudioBtn.classList.remove("playing");
 
-    // 顯示筆記
     displayNote(sentenceId);
 
     // 添加滑動事件監聽器
     const detailsArea = document.getElementById("sentenceDetails");
-    // 移除舊的監聽器，避免重複綁定
     detailsArea.removeEventListener("touchstart", startTouch);
     detailsArea.removeEventListener("touchmove", moveTouch);
     detailsArea.removeEventListener("touchend", endTouch);
@@ -488,12 +473,9 @@ function showSentenceDetails(sentenceId, index = -1) {
     detailsArea.removeEventListener("mousemove", moveTouch);
     detailsArea.removeEventListener("mouseup", endTouch);
 
-    // 綁定新的觸控事件監聽器（移動設備）
     detailsArea.addEventListener("touchstart", startTouch);
     detailsArea.addEventListener("touchmove", moveTouch);
     detailsArea.addEventListener("touchend", endTouch);
-
-    // 綁定滑鼠事件監聽器（桌面測試用）
     detailsArea.addEventListener("mousedown", startTouch);
     detailsArea.addEventListener("mousemove", moveTouch);
     detailsArea.addEventListener("mouseup", endTouch);
@@ -690,7 +672,8 @@ function backToWordList() {
     else backToFirstLayer();
 }
 
-function backToSentenceList() {
+function backToSentenceList(event) {
+    event.stopPropagation(); // 阻止事件冒泡
     const urlParams = new URLSearchParams(window.location.search);
     const fromParam = urlParams.get('from');
 
@@ -701,7 +684,7 @@ function backToSentenceList() {
     } else if (lastWordListType === "sentenceNotes") {
         showSentenceNotes();
     } else if (lastWordListType === "importantSentences") {
-        showImportantSentences(); // 這裡應該能正確返回
+        showImportantSentences();
     } else if (lastWordListType === "wrongSentences") {
         showWrongSentences();
     } else if (lastSentenceListWord) {
