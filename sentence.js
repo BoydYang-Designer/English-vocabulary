@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         createCategoryButtons();
         createLevelButtons();
 
-        document.getElementById("startQuizBtn").addEventListener("click", () => window.location.href = "quiz.html");
+        document.getElementById("startQuizBtn").addEventListener("click", () => {window.location.href = "quiz.html?show=sentenceCategories&from=sentence";});
         document.getElementById("returnHomeBtn").addEventListener("click", () => window.location.href = "index.html");
         document.getElementById("wordQuizBtn").addEventListener("click", () => {window.location.href = "quiz.html?show=categories&from=sentence";});
 

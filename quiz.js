@@ -33,9 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
             if (localStorage.getItem("currentQuizResults")) {
                 quizResults = JSON.parse(localStorage.getItem("currentQuizResults"));
                 restoreQuizResults();
-            }
-            else if (show === "categories") {
+            } else if (show === "categories") {
                 showQuizCategories();
+            } else if (show === "sentenceCategories") { // 新增這部分
+                showSentenceQuizCategories();
             }
         })
         .catch(err => {
