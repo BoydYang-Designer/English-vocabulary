@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById("startQuizBtn").addEventListener("click", () => window.location.href = "quiz.html");
         document.getElementById("returnHomeBtn").addEventListener("click", () => window.location.href = "index.html");
+        document.getElementById("wordQuizBtn").addEventListener("click", () => {window.location.href = "quiz.html?show=categories&from=sentence";});
 
         const urlParams = new URLSearchParams(window.location.search);
         const sentenceParam = urlParams.get('sentence');

@@ -21,15 +21,6 @@
             document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l => 
                 `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`
             ).join(" "));
-            
-            document.addEventListener("DOMContentLoaded", function () {
-                const quizButton = document.getElementById("startQuizBtn");
-                if (quizButton) {
-                    quizButton.addEventListener("click", function () {
-                        window.location.href = "quiz.html?show=sentenceCategories&from=index"; // 修改為帶參數的跳轉
-                    });
-                }
-            });
         </script>
     </div>
 

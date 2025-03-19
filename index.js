@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const quizButton = document.getElementById("startQuizBtn");
     if (quizButton) {
         quizButton.addEventListener("click", function () {
-            window.location.href = "quiz.html";
+            window.location.href = "quiz.html?show=sentenceCategories&from=index";
         });
     }
 
