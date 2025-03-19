@@ -48,6 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const layerParam = urlParams.get('layer');
 
         if (sentenceParam && layerParam === '4') {
+            // 如果從 URL 直接進入第四層，初始化 currentSentenceList
+            const word = sentenceParam.split("-")[0];
+            currentSentenceList = sentenceData.filter(s => s.Words.startsWith(word + "-"));
+            currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceParam);
             showSentenceDetails(sentenceParam);
         } else {
             backToFirstLayer();
@@ -286,23 +290,56 @@ function showWrongWords() {
     displayWordList(wrongWords);
 }
 
-function showSentenceNotes() {
-    document.getElementById("wordListTitle").innerText = "Sentence Notes";
+function showSentences(word) {
+    document.getElementById("wordListTitle").innerText = word;
     document.getElementById("wordListTitle").style.display = "block";
-    lastWordListType = "sentenceNotes"; // 已設置
-    lastWordListValue = null; // 已設置
 
-    // 從 localStorage 中篩選出有筆記的句子
-    let sentenceNotes = Object.keys(localStorage)
-        .filter(key => key.startsWith("note_sentence_") && localStorage.getItem(key).length > 0)
-        .map(key => key.replace("note_sentence_", ""));
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("returnHomeBtn").style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+    document.getElementById("wordList").style.display = "none";
+    document.getElementById("sentenceList").style.display = "block";
+    document.querySelector('#sentenceList .back-button').style.display = "block";
 
-    // 根據 sentenceId 過濾出對應的句子資料
-    let filteredSentences = sentenceData.filter(s => sentenceNotes.includes(s.Words));
+    lastSentenceListWord = word;
+
+    let sentenceItems = document.getElementById("sentenceItems");
+    sentenceItems.innerHTML = "";
+
+    // 過濾並排序句子
+    let filteredSentences = sentenceData.filter(s => s.Words.startsWith(word + "-"));
+    filteredSentences.sort((a, b) => {
+        const numA = parseInt(a.Words.split("-")[1], 10); // 提取編號並轉為整數
+        const numB = parseInt(b.Words.split("-")[1], 10);
+        return numA - numB; // 數值排序
+    });
+
+    // 更新 currentSentenceList
+    currentSentenceList = filteredSentences;
+
     if (filteredSentences.length === 0) {
-        console.warn("⚠️ 沒有標記為筆記的句子");
+        sentenceItems.innerHTML = "<p>⚠️ 沒有符合的句子</p>";
+    } else {
+        filteredSentences.forEach((s, index) => {
+            let sentenceId = s.Words;
+            let isImportant = localStorage.getItem(`important_sentence_${sentenceId}`) === "true";
+            let item = document.createElement("div");
+            item.className = "word-item-container";
+            item.innerHTML = `
+                <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
+                <p class='word-item' data-sentence="${sentenceId}">${sentenceId}: ${s.句子}</p>
+                <button class='audio-btn' onclick='playSentenceAudio("${sentenceId}.mp3")'>
+                    <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
+                </button>
+            `;
+            sentenceItems.appendChild(item);
+
+            item.querySelector('.word-item').addEventListener("click", () => showSentenceDetails(sentenceId, index));
+        });
     }
-    displaySentenceList(filteredSentences);
 }
 
 function displayWordList(words) {
@@ -379,68 +416,105 @@ function toggleImportantSentence(sentenceId, checkbox) {
     else localStorage.removeItem(`important_sentence_${sentenceId}`);
 }
 
-// 在 showSentenceDetails 附近添加滑動處理函數
-// 建議放在 showSentenceDetails 之前，保持邏輯清晰
-function handleSwipe() {
-    const swipeThreshold = 50;
-    const swipeDistance = touchEndX - touchStartX;
 
-    if (Math.abs(swipeDistance) > swipeThreshold) {
-        if (swipeDistance > 0 && currentSentenceIndex > 0) {
-            // 向右滑動，顯示上一句
-            currentSentenceIndex--;
-            showSentenceDetails(currentSentenceList[currentSentenceIndex].Words, currentSentenceIndex);
-        } else if (swipeDistance < 0 && currentSentenceIndex < currentSentenceList.length - 1) {
-            // 向左滑動，顯示下一句
-            currentSentenceIndex++;
-            showSentenceDetails(currentSentenceList[currentSentenceIndex].Words, currentSentenceIndex);
-        }
-    }
-}
 
 function startTouch(event) {
-    touchStartX = event.type.includes("mouse") ? event.clientX : event.touches[0].clientX;
+    console.log("觸控開始", event.touches[0].clientX);
+    touchStartX = event.touches[0].clientX;
+    const detailsArea = document.getElementById("sentenceDetails");
+    detailsArea.style.transition = "none"; // 移除過渡效果以實現即時拖曳
 }
 
 function moveTouch(event) {
-    if (event.type.includes("mouse") && event.buttons === 0) return;
-    touchEndX = event.type.includes("mouse") ? event.clientX : event.touches[0].clientX;
+    console.log("觸控移動", event.touches[0].clientX);
+    touchEndX = event.touches[0].clientX;
+    const swipeDistance = touchEndX - touchStartX;
+    const detailsArea = document.getElementById("sentenceDetails");
+    // 即時更新位置，跟隨手指移動
+    detailsArea.style.transform = `translateX(${swipeDistance}px)`;
 }
 
 function endTouch(event) {
-    handleSwipe();
+    console.log("觸控結束");
+    const swipeThreshold = 50;
+    const swipeDistance = touchEndX - touchStartX;
+    const detailsArea = document.getElementById("sentenceDetails");
+    detailsArea.style.transition = "transform 0.3s ease-in-out"; // 恢復過渡效果
+
+    if (Math.abs(swipeDistance) > swipeThreshold && currentSentenceList.length > 0) {
+        if (swipeDistance > 0 && currentSentenceIndex > 0) {
+            // 右滑：上一句
+            console.log("右滑：切換到上一句", currentSentenceIndex - 1);
+            detailsArea.classList.add("sliding-out-right");
+            setTimeout(() => {
+                currentSentenceIndex--;
+                showSentenceDetails(currentSentenceList[currentSentenceIndex].Words, currentSentenceIndex, "from-left");
+                detailsArea.classList.remove("sliding-out-right");
+                detailsArea.style.transform = "translateX(0)"; // 重置位置
+            }, 300);
+        } else if (swipeDistance < 0 && currentSentenceIndex < currentSentenceList.length - 1) {
+            // 左滑：下一句
+            console.log("左滑：切換到下一句", currentSentenceIndex + 1);
+            detailsArea.classList.add("sliding-out-left");
+            setTimeout(() => {
+                currentSentenceIndex++;
+                showSentenceDetails(currentSentenceList[currentSentenceIndex].Words, currentSentenceIndex, "from-right");
+                detailsArea.classList.remove("sliding-out-left");
+                detailsArea.style.transform = "translateX(0)"; // 重置位置
+            }, 300);
+        } else {
+            // 未超出範圍，恢復原位
+            detailsArea.style.transform = "translateX(0)";
+        }
+    } else {
+        // 滑動距離不足，恢復原位
+        detailsArea.style.transform = "translateX(0)";
+    }
+
     touchStartX = 0;
     touchEndX = 0;
 }
 
-function showSentenceDetails(sentenceId, index = -1) {
+function showSentenceDetails(sentenceId, index = -1, direction = null) {
     let sentenceObj = sentenceData.find(s => s.Words === sentenceId);
     if (!sentenceObj) {
         console.error(`❌ 未找到句子: ${sentenceId}`);
         return;
     }
 
-    // 更新當前索引
-    if (index !== -1) {
-        currentSentenceIndex = index;
+    // 如果 currentSentenceList 未初始化，根據單字生成並排序
+    if (currentSentenceList.length === 0) {
+        const word = sentenceId.split("-")[0];
+        currentSentenceList = sentenceData.filter(s => s.Words.startsWith(word + "-"));
+        currentSentenceList.sort((a, b) => {
+            const numA = parseInt(a.Words.split("-")[1], 10);
+            const numB = parseInt(b.Words.split("-")[1], 10);
+            return numA - numB;
+        });
     }
 
-    // 切換顯示層級
-    document.getElementById("sentenceList").style.display = "none";
-    document.getElementById("sentenceDetails").style.display = "block";
-    document.getElementById("wordListTitle").style.display = "none";
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
-    document.getElementById("wordList").style.display = "none";
-    document.getElementById("sentenceList").style.display = "none";
+    // 設置當前索引
+    if (index !== -1) {
+        currentSentenceIndex = index;
+    } else if (currentSentenceIndex === -1) {
+        currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceId);
+    }
 
+    console.log("當前句子列表:", currentSentenceList);
+    console.log("當前索引:", currentSentenceIndex);
+
+    const detailsArea = document.getElementById("sentenceDetails");
+
+    // 如果有動畫方向，設置初始位置
+    if (direction === "from-right") {
+        detailsArea.classList.add("sliding-in-from-right");
+    } else if (direction === "from-left") {
+        detailsArea.classList.add("sliding-in-from-left");
+    }
+
+    // 更新內容
     let word = sentenceId.split("-")[0];
     let wordObj = wordsData.find(w => w.Words === word);
-
     let header = `
         <div class="phonetics-container">
             <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${localStorage.getItem(`important_sentence_${sentenceId}`) === "true" ? "checked" : ""}>
@@ -461,24 +535,36 @@ function showSentenceDetails(sentenceId, index = -1) {
     const playAudioBtn = document.getElementById("playAudioBtn");
     playAudioBtn.setAttribute("onclick", `playSentenceAudio("${sentenceId}.mp3")`);
     playAudioBtn.classList.remove("playing");
-
     displayNote(sentenceId);
 
-    // 添加滑動事件監聽器
-    const detailsArea = document.getElementById("sentenceDetails");
+    // 切換顯示層級
+    document.getElementById("sentenceList").style.display = "none";
+    document.getElementById("sentenceDetails").style.display = "block";
+    document.getElementById("wordListTitle").style.display = "none";
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("returnHomeBtn").style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+    document.getElementById("wordList").style.display = "none";
+    document.getElementById("sentenceList").style.display = "none";
+
+    // 執行滑入動畫
+    if (direction) {
+        setTimeout(() => {
+            detailsArea.style.transform = "translateX(0)";
+            detailsArea.classList.remove("sliding-in-from-right", "sliding-in-from-left");
+        }, 10);
+    }
+
+    // 綁定觸控事件
     detailsArea.removeEventListener("touchstart", startTouch);
     detailsArea.removeEventListener("touchmove", moveTouch);
     detailsArea.removeEventListener("touchend", endTouch);
-    detailsArea.removeEventListener("mousedown", startTouch);
-    detailsArea.removeEventListener("mousemove", moveTouch);
-    detailsArea.removeEventListener("mouseup", endTouch);
-
     detailsArea.addEventListener("touchstart", startTouch);
     detailsArea.addEventListener("touchmove", moveTouch);
     detailsArea.addEventListener("touchend", endTouch);
-    detailsArea.addEventListener("mousedown", startTouch);
-    detailsArea.addEventListener("mousemove", moveTouch);
-    detailsArea.addEventListener("mouseup", endTouch);
 }
 
 let wordAudio = new Audio();
