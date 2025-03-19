@@ -1,4 +1,4 @@
-// 在檔案頂部，與其他全局變數一起添加
+//全局變數
 let wordsData = [];
 let sentenceData = [];
 let sentenceAudio = new Audio();
@@ -9,6 +9,7 @@ let currentSentenceList = []; // 儲存當前的句子列表
 let currentSentenceIndex = -1; // 儲存當前句子的索引
 let touchStartX = 0; // 滑動起點 X 座標
 let touchEndX = 0; // 滑動終點 X 座標
+let isQuizMode = false; // 新增：標記是否為測驗模式
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -49,14 +50,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (sentenceParam && layerParam === '4') {
             if (fromParam === 'quiz') {
-                // 從測驗結果進入，使用 currentQuizSentences
+                isQuizMode = true;
                 const quizSentences = JSON.parse(localStorage.getItem("currentQuizSentences")) || [];
+                console.log("從 localStorage 讀取的 currentQuizSentences:", quizSentences);
                 if (quizSentences.length > 0) {
-                    currentSentenceList = quizSentences;
+                    // 確保只使用本次測驗的句子，並限制最大 5 句
+                    currentSentenceList = quizSentences.slice(0, 10);
                     currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceParam);
-                    console.log("✅ 從測驗結果進入，使用 currentQuizSentences:", currentSentenceList);
+                    console.log("✅ 從測驗結果進入，使用 currentQuizSentences (限制為 5 句):", currentSentenceList);
                 } else {
                     console.warn("⚠️ localStorage 中沒有 currentQuizSentences，fallback 到單字過濾");
+                    isQuizMode = false;
                     const word = sentenceParam.split("-")[0];
                     currentSentenceList = sentenceData.filter(s => s.Words.startsWith(word + "-"));
                     currentSentenceList.sort((a, b) => {
@@ -67,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceParam);
                 }
             } else {
-                // 其他情況，按單字過濾
+                isQuizMode = false;
                 const word = sentenceParam.split("-")[0];
                 currentSentenceList = sentenceData.filter(s => s.Words.startsWith(word + "-"));
                 currentSentenceList.sort((a, b) => {
@@ -79,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             showSentenceDetails(sentenceParam);
         } else {
+            isQuizMode = false;
             backToFirstLayer();
         }
     })
@@ -431,6 +436,7 @@ function endTouch(event) {
     const detailsArea = document.getElementById("sentenceDetails");
     detailsArea.style.transition = "transform 0.3s ease-in-out";
 
+    console.log("滑動距離:", swipeDistance, "當前列表長度:", currentSentenceList.length, "測驗模式:", isQuizMode);
     if (Math.abs(swipeDistance) > swipeThreshold && currentSentenceList.length > 0) {
         if (swipeDistance > 0 && currentSentenceIndex > 0) {
             console.log("右滑：切換到上一句", currentSentenceIndex - 1);
@@ -451,9 +457,11 @@ function endTouch(event) {
                 detailsArea.style.transform = "translateX(0)";
             }, 300);
         } else {
+            console.log("滑動無效：超出範圍或距離不足");
             detailsArea.style.transform = "translateX(0)";
         }
     } else {
+        console.log("滑動無效：列表為空或距離不足");
         detailsArea.style.transform = "translateX(0)";
     }
 
@@ -468,7 +476,10 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
         return;
     }
 
-    if (index !== -1) {
+    // 在測驗模式下，不重新計算索引，除非提供了有效的 index
+    if (isQuizMode && index === -1) {
+        console.log("✅ 測驗模式：保持 currentSentenceList 不變");
+    } else if (index !== -1) {
         currentSentenceIndex = index;
     } else if (currentSentenceList.length > 0 && currentSentenceIndex === -1) {
         currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceId);
@@ -477,6 +488,7 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     console.log("進入 showSentenceDetails - sentenceId:", sentenceId);
     console.log("當前句子列表:", currentSentenceList);
     console.log("當前索引:", currentSentenceIndex);
+    console.log("測驗模式:", isQuizMode);
 
     const detailsArea = document.getElementById("sentenceDetails");
 

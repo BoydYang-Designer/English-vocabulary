@@ -396,7 +396,7 @@ function showImportantWords() {
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
 
-// 隱藏「進入句子頁面」按鈕
+    // 隱藏「進入句子頁面」按鈕
     let sentenceButton = document.getElementById("sentencePageBtn");
     if (sentenceButton) {
         sentenceButton.style.display = "none";
@@ -406,7 +406,11 @@ function showImportantWords() {
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
-    let importantWords = Object.keys(localStorage).filter(key => key.startsWith("important_"));
+    // 只篩選單字的「important_」鍵，排除句子相關的鍵
+    let importantWords = Object.keys(localStorage).filter(key => 
+        key.startsWith("important_") && !key.startsWith("important_sentence_")
+    );
+
     if (importantWords.length === 0) {
         wordItems.innerHTML = "<p>⚠️ 目前沒有標記為重要的單字</p>";
     } else {

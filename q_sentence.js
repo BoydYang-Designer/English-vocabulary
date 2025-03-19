@@ -200,19 +200,22 @@ function startSentenceQuiz() {
         return;
     }
 
-    // 隨機排序 filteredSentences
+    // 隨機排序並限制為 5 句
     for (let i = filteredSentences.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [filteredSentences[i], filteredSentences[j]] = [filteredSentences[j], filteredSentences[i]];
     }
 
-    // 使用臨時變數儲存本次測驗的句子，而不是修改全局 sentenceData
-    currentQuizSentences = filteredSentences;
+    // 只取前 5 句（或更少，如果不足 5 句）
+    currentQuizSentences = filteredSentences.slice(0, 10);
     currentSentenceIndex = 0;
     userAnswers = []; // 清空本次答案
 
     console.log("✅ 本次測驗的句子數量:", currentQuizSentences.length);
     console.log("✅ 本次測驗的隨機句子:", currentQuizSentences.map(s => s.Words));
+
+    // 保存本次測驗的句子到 localStorage
+    localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
 
     setTimeout(() => loadSentenceQuestion(), 100);
 }
@@ -589,7 +592,6 @@ function goToNextSentence() {
 
 
 // 📌 測驗完成後顯示結果
-// 📌 測驗完成後顯示結果
 function finishSentenceQuiz() {
     document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "block";
@@ -612,10 +614,9 @@ function finishSentenceQuiz() {
         let isCorrect = userAnswerNormalized === correctSentenceNormalized;
         let isUnanswered = userAnswer === "(未作答)";
 
-        // 根據正確性添加類別，無需顯示文字
         let resultClass = isCorrect ? "correct" : (isUnanswered ? "unanswered" : "wrong");
 
-        let importantCheckbox = `<input type="checkbox" class="important-checkbox" onchange="toggleImportantSentence('${sentenceObj.Words}', this)" ${localStorage.getItem('important_sentence_' + sentenceObj.Words.toLowerCase()) === "true" ? "checked" : ""} />`;
+        let importantCheckbox = `<input type="checkbox" class="important-checkbox" onchange="toggleImportantSentence('${sentenceObj.Words}', this)" ${localStorage.getItem('important_sentence_' + sentenceObj.Words) === "true" ? "checked" : ""} />`;
         let sentenceIdentifierLink = `<a href="sentence.html?sentence=${encodeURIComponent(sentenceObj.Words)}&from=quiz&layer=4" class="sentence-link-btn">${sentenceObj.Words}</a>`;
         let wordDetailButton = `<button class="word-detail-btn" onclick="goToWordDetail('${sentenceObj.Words.split("-")[0]}')">單字詳情</button>`;
         let correctSentenceLink = `<button class="sentence-link-btn" onclick="playSentenceAudio('${sentenceObj.Words}.mp3')">${correctSentence}</button>`;
@@ -641,6 +642,7 @@ function finishSentenceQuiz() {
         </div>
     `;
 
+    // 確保保存本次測驗的 5 句
     localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
     localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
     console.log("✅ 測驗結束時保存的資料:", { userAnswers, currentQuizSentences });
