@@ -28,7 +28,7 @@ h1, h2 {
 ========================================== */
 #mainMenu, #quizCategories, #quizArea, #quizResult, #sentenceQuizCategories, #sentenceQuizArea {
     max-width: 100%;
-    width: 100%; /* 保證元素不超出螢幕寬度 */
+    width: 90%; /* 保證元素不超出螢幕寬度 */
     margin: 10px auto; /* 自動居中 */
     background-color: #fff;
     padding: 15px;

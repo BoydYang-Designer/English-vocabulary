@@ -94,22 +94,22 @@ h1 {
 .phonetics-container button {
     background-color: #647f91;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     text-align: left;
     padding: 5px 10px;
     min-width: 100px;
-    min-height: 30px;
+    min-height: 40px;
     width: auto;
     height: auto;
     white-space: nowrap;
     display: inline-block;
     border: none;
-    border-radius: 20px;
+    border-radius: 18px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .phonetics-container button:hover {
-    background-color: #4a6375;
+    background-color: #647f91;
     transform: scale(1.05);
 }
 
@@ -144,7 +144,7 @@ h1 {
     display: block;
     width: 150px;
     height: 50px;
-    background-color: #424d57;
+    background-color: #647f91;
     color: white;
     border: none;
     cursor: pointer;
@@ -169,7 +169,7 @@ h1 {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: #424d57;
+    background-color: #647f91;
     color: white;
     font-size: 18px;
     border: none;
@@ -257,7 +257,7 @@ h1 {
 
 /* B 按鈕 */
 #bButton {
-    background-color: #6c757d;
+    background-color: #647f91;
     color: white;
     border: none;
     height: auto;
@@ -270,7 +270,7 @@ h1 {
 }
 
 #bButton:hover {
-    background-color: #5a6268;
+    background-color: #597d96;
     transform: scale(1.1);
 }
 
@@ -281,7 +281,7 @@ h1 {
     padding: 10px;
     border-radius: 8px;
     margin-top: 5px;
-    max-height: 120px;
+    max-height: 90px;
     overflow: hidden;
     margin-left: -5px;
 }
@@ -426,7 +426,7 @@ h1 {
         left: 50%;
         transform: translateX(-50%);
         padding: 10px;
-        background-color: #424d57;
+        background-color: #647f91;
         border: none;
         cursor: pointer;
     }
