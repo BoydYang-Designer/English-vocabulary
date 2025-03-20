@@ -173,6 +173,45 @@ function showWrongSentences() {
     displaySentenceList(filteredSentences);
 }
 
+function showSentenceNotes() {
+    console.log("進入 showSentenceNotes, sentenceData.length:", sentenceData.length);
+    document.getElementById("wordListTitle").innerText = "Sentence Notes";
+    document.getElementById("wordListTitle").style.display = "block";
+    lastWordListType = "sentenceNotes"; // Set the type for navigation tracking
+    lastWordListValue = null;
+
+    // Hide first-layer elements
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+
+    if (!sentenceData || sentenceData.length === 0) {
+        console.error("❌ sentenceData 未載入或為空");
+        document.getElementById("sentenceItems").innerHTML = "<p>⚠️ 資料載入失敗，請刷新頁面</p>";
+        return;
+    }
+
+    // Filter sentences that have notes in localStorage
+    let sentencesWithNotes = sentenceData.filter(s => {
+        let note = localStorage.getItem(`note_sentence_${s.Words}`);
+        return note && note.trim().length > 0; // Only include sentences with non-empty notes
+    });
+    console.log("過濾後的 sentencesWithNotes:", sentencesWithNotes);
+
+    if (sentencesWithNotes.length === 0) {
+        console.warn("⚠️ 沒有帶筆記的句子");
+    }
+
+    // Display the filtered sentences
+    displaySentenceList(sentencesWithNotes);
+}
+
+
 // 第一層：生成等級按鈕
 function createLevelButtons() {
     let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
