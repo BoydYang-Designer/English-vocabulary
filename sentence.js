@@ -458,69 +458,6 @@ function toggleImportantSentence(sentenceId, checkbox) {
 }
 
 
-
-function startTouch(event) {
-    const target = event.target;
-    // 如果觸控目標是按鈕，則忽略滑動
-    if (target.tagName === "BUTTON" || target.closest(".audio-btn")) {
-        console.log("觸控目標是按鈕，忽略滑動");
-        return;
-    }
-    console.log("觸控開始", event.touches[0].clientX);
-    touchStartX = event.touches[0].clientX;
-    const detailsArea = document.getElementById("sentenceDetails");
-    detailsArea.style.transition = "none";
-}
-
-function moveTouch(event) {
-    console.log("觸控移動", event.touches[0].clientX);
-    touchEndX = event.touches[0].clientX;
-    const swipeDistance = touchEndX - touchStartX;
-    const detailsArea = document.getElementById("sentenceDetails");
-    // 即時更新位置，跟隨手指移動
-    detailsArea.style.transform = `translateX(${swipeDistance}px)`;
-}
-
-function endTouch(event) {
-    console.log("觸控結束");
-    const swipeThreshold = 50;
-    const swipeDistance = touchEndX - touchStartX;
-    const detailsArea = document.getElementById("sentenceDetails");
-    detailsArea.style.transition = "transform 0.3s ease-in-out";
-
-    console.log("滑動距離:", swipeDistance, "當前列表長度:", currentSentenceList.length, "測驗模式:", isQuizMode);
-    if (Math.abs(swipeDistance) > swipeThreshold && currentSentenceList.length > 0) {
-        if (swipeDistance > 0 && currentSentenceIndex > 0) {
-            console.log("右滑：切換到上一句", currentSentenceIndex - 1);
-            detailsArea.classList.add("sliding-out-right");
-            setTimeout(() => {
-                currentSentenceIndex--;
-                showSentenceDetails(currentSentenceList[currentSentenceIndex].Words, currentSentenceIndex, "from-left");
-                detailsArea.classList.remove("sliding-out-right");
-                detailsArea.style.transform = "translateX(0)";
-            }, 300);
-        } else if (swipeDistance < 0 && currentSentenceIndex < currentSentenceList.length - 1) {
-            console.log("左滑：切換到下一句", currentSentenceIndex + 1);
-            detailsArea.classList.add("sliding-out-left");
-            setTimeout(() => {
-                currentSentenceIndex++;
-                showSentenceDetails(currentSentenceList[currentSentenceIndex].Words, currentSentenceIndex, "from-right");
-                detailsArea.classList.remove("sliding-out-left");
-                detailsArea.style.transform = "translateX(0)";
-            }, 300);
-        } else {
-            console.log("滑動無效：超出範圍或距離不足");
-            detailsArea.style.transform = "translateX(0)";
-        }
-    } else {
-        console.log("滑動無效：列表為空或距離不足");
-        detailsArea.style.transform = "translateX(0)";
-    }
-
-    touchStartX = 0;
-    touchEndX = 0;
-}
-
 function showSentenceDetails(sentenceId, index = -1, direction = null) {
     let sentenceObj = sentenceData.find(s => s.Words === sentenceId);
     if (!sentenceObj) {
@@ -604,13 +541,6 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
         }, 10);
     }
 
-    detailsArea.removeEventListener("touchstart", startTouch);
-    detailsArea.removeEventListener("touchmove", moveTouch);
-    detailsArea.removeEventListener("touchend", endTouch);
-
-    detailsArea.addEventListener("touchstart", startTouch, { passive: true });
-    detailsArea.addEventListener("touchmove", moveTouch, { passive: true });
-    detailsArea.addEventListener("touchend", endTouch);
 }
 
 let wordAudio = new Audio();
@@ -619,6 +549,19 @@ function playAudio(filename) {
     wordAudio.play();
 }
 
+function switchToPreviousSentence() {
+    if (currentSentenceIndex > 0) {
+        currentSentenceIndex--;
+        showSentenceDetails(currentSentenceList[currentSentenceIndex].Words, currentSentenceIndex);
+    }
+}
+
+function switchToNextSentence() {
+    if (currentSentenceIndex < currentSentenceList.length - 1) {
+        currentSentenceIndex++;
+        showSentenceDetails(currentSentenceList[currentSentenceIndex].Words, currentSentenceIndex);
+    }
+}
 
 function playSentenceAudio(filename) {
     console.log("開始播放:", filename);

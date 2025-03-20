@@ -136,7 +136,7 @@ h1 {
     display: block;
     width: 150px;
     height: 50px;
-    background-color: #424d57;
+    background-color: #647f91;
     color: white;
     border: none;
     cursor: pointer;
@@ -154,7 +154,7 @@ h1 {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: #424d57;
+    background-color: #647f91;
     color: white;
     font-size: 18px;
     border: none;
@@ -388,7 +388,7 @@ h1 {
         left: 50%;
         transform: translateX(-50%);
         padding: 10px;
-        background-color: #424d57;
+        background-color: #647f91;
         border: none;
         cursor: pointer;
     }
@@ -401,25 +401,38 @@ h1 {
 }
 
 #sentenceDetails {
-    position: relative;
     width: 100%;
-    transition: transform 0.3s ease-in-out; /* 滑動動畫 */
-    user-select: none;
-    touch-action: pan-y;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
-#sentenceDetails.sliding-out-left {
-    transform: translateX(-100%); /* 向左滑出 */
+#sentenceContainer, #chineseContainer {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; /* 允許文字換行 */
 }
 
-#sentenceDetails.sliding-out-right {
-    transform: translateX(100%); /* 向右滑出 */
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3); /* 半透明黑色背景 */
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
 }
 
-#sentenceDetails.sliding-in-from-right {
-    transform: translateX(100%); /* 從右滑入初始位置 */
+.arrow-btn.left {
+    left: 10px;
 }
 
-#sentenceDetails.sliding-in-from-left {
-    transform: translateX(-100%); /* 從左滑入初始位置 */
+.arrow-btn.right {
+    right: 10px;
+}
+
+.arrow-btn:hover {
+    background: rgba(0, 0, 0, 0.5); /* 懸停時稍微加深透明度 */
 }

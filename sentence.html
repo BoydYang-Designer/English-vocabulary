@@ -44,6 +44,8 @@
         <!-- 第四層：句子詳情 -->
         <div id="sentenceDetails" class="details" style="display: none;">
             <button class="button" onclick="backToSentenceList(event)">Back</button>
+            <button id="prevSentenceBtn" class="arrow-btn left" onclick="switchToPreviousSentence()">◀</button>
+            <button id="nextSentenceBtn" class="arrow-btn right" onclick="switchToNextSentence()">▶</button>
             <div id="sentenceHeader"></div>
             <div id="phoneticContainer"></div>
             <div id="sentenceContainer"></div>
