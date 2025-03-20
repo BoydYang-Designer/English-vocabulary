@@ -208,13 +208,14 @@ h1 {
 
 /* 筆記按鈕 */
 .note-button {
-    padding: 8px 16px;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    padding: 8px 16px;           /* 內邊距：上下 8px，左右 16px */
+    font-size: 14px;            /* 字體大小 */
+    border: none;               /* 無邊框 */
+    border-radius: 5px;         /* 圓角 */
+    color: white;               /* 文字顏色 */
+    cursor: pointer;            /* 鼠標指針 */
+    margin-right: 10px;         /* 右邊距 15px */
+    transition: background 0.3s ease, transform 0.2s ease; /* 背景與變換的過渡效果 */
 }
 
 #saveNoteButton {
@@ -248,7 +249,7 @@ h1 {
     padding: 10px;
     border-radius: 8px;
     margin-top: 5px;
-    max-height: 120px;
+    max-height: 90px;
     overflow: hidden;
     margin-left: -5px;
 }
@@ -413,10 +414,10 @@ h1 {
 }
 
 .arrow-btn {
+    border-radius: 8px;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.3); /* 半透明黑色背景 */
+    top: 56%;
+    background: rgba(49, 49, 49, 0.2); /* 半透明黑色背景 */
     color: white;
     border: none;
     font-size: 24px;
@@ -435,4 +436,19 @@ h1 {
 
 .arrow-btn:hover {
     background: rgba(0, 0, 0, 0.5); /* 懸停時稍微加深透明度 */
+}
+
+#searchInDetails {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative; /* 或 absolute，視需求 */
+    margin: 5px 60px 10px 0; /* 右偏移 30px */
+    justify-content: flex-end; /* 靠右 */
+}
+
+#searchInputDetails {
+    font-size: 18px;
+    padding: 5px;
+    width: 250px;
 }

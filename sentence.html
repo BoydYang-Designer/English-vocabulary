@@ -57,21 +57,18 @@
                     <button class="audio-btn" id="playAudioBtn">
                         <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
                     </button>
-                    <button class="audio-btn" onclick="adjustAudioTime(-5)">
+                    <button class="audio-btn" onclick="adjustAudioTime(-2.5)">
                         <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg" alt="Rewind" width="24" height="24" />
                     </button>
                     <button class="audio-btn" id="pauseResumeBtn" onclick="togglePauseAudio(this)">
                         <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />
                     </button>
-                    <button class="audio-btn" onclick="adjustAudioTime(5)">
-                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/fast-forward.svg" alt="Fast Forward" width="24" height="24" />
-                    </button>
                 </div>
             </div>
 
             <!-- 搜尋框 -->
-            <div id="searchInDetails" style="text-align: center; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." oninput="filterSentencesInDetails()" style="font-size: 18px; padding: 5px; width: 200px;">
+            <div id="searchInDetails">
+                <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." oninput="filterSentencesInDetails()">
             </div>
             <div id="searchResultsDetails" style="max-height: 200px; overflow-y: auto; text-align: left;"></div>
 
