@@ -552,3 +552,12 @@ input[type="checkbox"]:checked + span {
     background-color: #00BFFF !important;
     color: white !important;
 }
+
+.wrong-letter {
+    color: red;
+    font-weight: bold;
+}
+
+.correct-letter {
+    color: black;
+}

@@ -254,7 +254,7 @@ function submitAnswer() {
     if (!quizArea || quizArea.style.display === "none") {
         return;
     }
-    
+
     let userAnswer = Array.from(document.querySelectorAll("#wordInput input"))
                           .map(input => input.value.trim().toLowerCase())
                           .join("");
@@ -263,12 +263,7 @@ function submitAnswer() {
     let normalizedUserAnswer = userAnswer.replace(/[\s-]/g, "");
     let normalizedCorrectAnswer = correctAnswer.replace(/[\s-]/g, "");
 
-    let result = '';
-    if (normalizedUserAnswer === '') {
-        result = '未作答'; // 如果用戶未輸入任何內容
-    } else {
-        result = normalizedUserAnswer === normalizedCorrectAnswer ? '正確' : '錯誤';
-    }
+    let result = normalizedUserAnswer === '' ? '未作答' : (normalizedUserAnswer === normalizedCorrectAnswer ? '正確' : '錯誤');
 
     quizResults.push({
         word: currentWord,
@@ -276,7 +271,7 @@ function submitAnswer() {
         timestamp: new Date().toLocaleString()
     });
 
-    // ✅ 立即儲存錯誤單字到 localStorage
+    // 儲存錯誤單字到 localStorage
     let storedWrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
     if (result === '錯誤') {
         if (!storedWrongWords.includes(currentWord)) {
@@ -285,25 +280,48 @@ function submitAnswer() {
     } else if (result === '正確') {
         storedWrongWords = storedWrongWords.filter(word => word !== currentWord);
     }
-    // 如果 result === '未作答'，不做任何操作
     localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
 
-    // ✅ 顯示提示
+    // **修正錯誤標記**
+    let userWords = userAnswer.split(" ");
+    let correctWords = correctAnswer.split(" ");
     let revealedWord = "";
-    for (let i = 0; i < currentWord.length; i++) {
-        if (userAnswer[i] === currentWord[i]) {
-            revealedWord += `<span style="color: black;">${currentWord[i]}</span>`;
-        } else {
-            revealedWord += `<span style="color: red;">${currentWord[i]}</span>`;
+
+    for (let i = 0; i < correctWords.length; i++) {
+        let correctWord = correctWords[i] || "";
+        let userWord = userWords[i] || "";
+
+        let wordHint = "";
+        let minLen = Math.min(userWord.length, correctWord.length);
+        let maxLen = correctWord.length;
+
+        for (let j = 0; j < maxLen; j++) {
+            if (j < userWord.length && userWord[j] === correctWord[j]) {
+                // ✅ 正確字母顯示黑色
+                wordHint += `<span class="correct-letter">${correctWord[j]}</span>`;
+            } else if (j < userWord.length) {
+                // ❌ 使用者輸入錯誤的字母
+                wordHint += `<span class="wrong-letter">${correctWord[j]}</span>`;
+            } else {
+                // ⚠️ **這裡修正了長度不足時的顯示**
+                wordHint += `<span class="missing-letter">${correctWord[j]}</span>`;
+            }
+        }
+
+        revealedWord += wordHint;
+
+        // ✅ 確保單字間的空格正常顯示
+        if (i < correctWords.length - 1) {
+            revealedWord += `<span class="correct-letter"> </span>`;
         }
     }
+
     document.getElementById("wordHint").innerHTML = revealedWord;
 
-    // ✅ 無論答對或答錯，都顯示「下一題」按鈕
+    // 顯示「下一題」按鈕
     document.getElementById("submitBtn").style.display = "none"; 
     document.getElementById("nextBtn").style.display = "inline-block"; 
 }
-
 
 // ✅ 手動進入下一題
 function goToNextWord() {
