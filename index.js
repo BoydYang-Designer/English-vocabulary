@@ -999,13 +999,20 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("keydown", function (event) {
     if (!sentenceAudio || isNaN(sentenceAudio.duration)) return;
 
+    // 獲取 wordNote 元素並檢查焦點
+    const noteTextArea = document.getElementById("wordNote");
+    const isNoteFocused = document.activeElement === noteTextArea;
+
     switch (event.code) {
         case "Space":
-            event.preventDefault();
-            if (sentenceAudio.paused || sentenceAudio.ended) {
-                sentenceAudio.play();
-            } else {
-                sentenceAudio.pause();
+            // 只有當焦點不在 wordNote 上時，才執行播放/暫停
+            if (!isNoteFocused) {
+                event.preventDefault();
+                if (sentenceAudio.paused || sentenceAudio.ended) {
+                    sentenceAudio.play();
+                } else {
+                    sentenceAudio.pause();
+                }
             }
             break;
         case "ArrowRight":
