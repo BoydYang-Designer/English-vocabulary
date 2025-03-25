@@ -255,15 +255,25 @@ function submitAnswer() {
         return;
     }
 
-    let userAnswer = Array.from(document.querySelectorAll("#wordInput input"))
-                          .map(input => input.value.trim().toLowerCase())
-                          .join("");
+    // 從輸入框和非輸入元素（空格或連字符）中重建 userAnswer
+    let wordInputElements = document.querySelectorAll("#wordInput input, #wordInput span.non-input-box");
+    let userAnswerArray = Array.from(wordInputElements).map(el => 
+        el.tagName === "INPUT" ? (el.value.trim().toLowerCase() || "_") : el.innerText
+    );
+    let userAnswer = userAnswerArray.join("");
     let correctAnswer = currentWord.toLowerCase();
 
+    // 確保 userAnswer 長度與 correctAnswer 一致，補足缺失部分
+    while (userAnswer.length < correctAnswer.length) {
+        userAnswer += "_";
+    }
+
+    // 去掉空格和連字符進行整體比較
     let normalizedUserAnswer = userAnswer.replace(/[\s-]/g, "");
     let normalizedCorrectAnswer = correctAnswer.replace(/[\s-]/g, "");
 
-    let result = normalizedUserAnswer === '' ? '未作答' : (normalizedUserAnswer === normalizedCorrectAnswer ? '正確' : '錯誤');
+    let result = normalizedUserAnswer === '' ? '未作答' : 
+                 (normalizedUserAnswer === normalizedCorrectAnswer ? '正確' : '錯誤');
 
     quizResults.push({
         word: currentWord,
@@ -282,45 +292,42 @@ function submitAnswer() {
     }
     localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
 
-    // **修正錯誤標記**
-    let userWords = userAnswer.split(" ");
-    let correctWords = correctAnswer.split(" ");
+    // 生成提示：根據連字符或空格分割單字
     let revealedWord = "";
+    let separator = correctAnswer.includes("-") ? "-" : " "; // 根據是否有連字符選擇分割方式
+    let wordParts = correctAnswer.split(separator);
 
-    for (let i = 0; i < correctWords.length; i++) {
-        let correctWord = correctWords[i] || "";
-        let userWord = userWords[i] || "";
+    for (let partIndex = 0; partIndex < wordParts.length; partIndex++) {
+        let correctWord = wordParts[partIndex] || "";
+        let startIndex = partIndex === 0 ? 0 : wordParts.slice(0, partIndex).join(separator).length + partIndex;
 
-        let wordHint = "";
-        let minLen = Math.min(userWord.length, correctWord.length);
-        let maxLen = correctWord.length;
-
-        for (let j = 0; j < maxLen; j++) {
-            if (j < userWord.length && userWord[j] === correctWord[j]) {
-                // ✅ 正確字母顯示黑色
-                wordHint += `<span class="correct-letter">${correctWord[j]}</span>`;
-            } else if (j < userWord.length) {
-                // ❌ 使用者輸入錯誤的字母
-                wordHint += `<span class="wrong-letter">${correctWord[j]}</span>`;
-            } else {
-                // ⚠️ **這裡修正了長度不足時的顯示**
-                wordHint += `<span class="missing-letter">${correctWord[j]}</span>`;
-            }
+        let userWord = "";
+        for (let i = startIndex; i < startIndex + correctWord.length; i++) {
+            userWord += userAnswer[i] || "_";
         }
 
+        let wordHint = "";
+        for (let j = 0; j < correctWord.length; j++) {
+            let globalIndex = startIndex + j;
+            if (userAnswer[globalIndex] === correctAnswer[globalIndex]) {
+                wordHint += `<span class="correct-letter">${correctWord[j]}</span>`;
+            } else {
+                wordHint += `<span class="wrong-letter">${correctWord[j]}</span>`;
+            }
+        }
         revealedWord += wordHint;
 
-        // ✅ 確保單字間的空格正常顯示
-        if (i < correctWords.length - 1) {
-            revealedWord += `<span class="correct-letter"> </span>`;
+        // 添加分隔符（空格或連字符）
+        if (partIndex < wordParts.length - 1) {
+            revealedWord += `<span class="correct-letter">${separator}</span>`;
         }
     }
 
     document.getElementById("wordHint").innerHTML = revealedWord;
 
     // 顯示「下一題」按鈕
-    document.getElementById("submitBtn").style.display = "none"; 
-    document.getElementById("nextBtn").style.display = "inline-block"; 
+    document.getElementById("submitBtn").style.display = "none";
+    document.getElementById("nextBtn").style.display = "inline-block";
 }
 
 // ✅ 手動進入下一題
