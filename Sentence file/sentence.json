@@ -1550,107 +1550,6 @@
             "中文": "（一場有效的廣告宣傳活動提升了該品牌的知名度和銷售量。）"
         },
         {
-            "音檔": "音檔 - aerial-display-1",
-            "等級": "C2",
-            "Words": "aerial-display-1",
-            "句子": "The airshow featured an impressive aerial display by fighter jets",
-            "中文": "（航空展上戰鬥機進行了一場令人印象深刻的空中表演。）"
-        },
-        {
-            "音檔": "音檔 - aerial-display-2",
-            "等級": "C2",
-            "Words": "aerial-display-2",
-            "句子": "The fireworks created a stunning aerial display that lit up the night sky",
-            "中文": "（煙火在夜空中綻放，呈現出壯觀的空中展示。）"
-        },
-        {
-            "音檔": "音檔 - aerial-display-3",
-            "等級": "C2",
-            "Words": "aerial-display-3",
-            "句子": "The birds performed a synchronized aerial display during their migration",
-            "中文": "（這些鳥類在遷徙途中進行了同步的空中展示。）"
-        },
-        {
-            "音檔": "音檔 - aerial-display-4",
-            "等級": "C2",
-            "Words": "aerial-display-4",
-            "句子": "The festival ended with a breathtaking aerial display of colorful lights",
-            "中文": "（這場節日以一場令人驚嘆的彩色燈光空中展示結束。）"
-        },
-        {
-            "音檔": "音檔 - aerial-survey-1",
-            "等級": "C1",
-            "Words": "aerial-survey-1",
-            "句子": "The government conducted an aerial survey to assess the damage caused by the flood",
-            "中文": "（政府進行了空中勘測，以評估洪水造成的損害。）\n\n\n\n\n\n\n"
-        },
-        {
-            "音檔": "音檔 - aerial-survey-2",
-            "等級": "C1",
-            "Words": "aerial-survey-2",
-            "句子": "An aerial survey of the forest revealed signs of illegal logging",
-            "中文": "（對森林的空中勘測顯示出非法伐木的跡象。）"
-        },
-        {
-            "音檔": "音檔 - aerial-survey-3",
-            "等級": "C1",
-            "Words": "aerial-survey-3",
-            "句子": "The construction team used an aerial survey to map out the site before beginning work",
-            "中文": "（施工團隊利用空中勘測來繪製工地地圖，然後才開始施工。）"
-        },
-        {
-            "音檔": "音檔 - aerial-survey-4",
-            "等級": "C1",
-            "Words": "aerial-survey-4",
-            "句子": "Scientists performed an aerial survey to monitor wildlife populations in the national park",
-            "中文": "（科學家進行空中勘測來監測國家公園內的野生動物數量。）"
-        },
-        {
-            "音檔": "音檔 - aerial-view-1",
-            "分類": "Design",
-            "Words": "aerial-view-1",
-            "名人": "Ansel Adams",
-            "句子": "The aerial view of nature captures its vastness and grandeur.",
-            "中文": "空中視角展現了大自然的廣闊與壯麗。"
-        },
-        {
-            "音檔": "音檔 - aerial-view-2",
-            "分類": "Design",
-            "Words": "aerial-view-2",
-            "名人": "Buzz Aldrin",
-            "句子": "The aerial view of Earth from the Moon reminds us how small yet precious our world is.",
-            "中文": "從月球俯瞰地球，讓我們意識到我們的世界雖小卻彌足珍貴。"
-        },
-        {
-            "音檔": "音檔 - aerial-view-3",
-            "分類": "Design",
-            "Words": "aerial-view-3",
-            "名人": "Frank Lloyd Wright",
-            "句子": "The aerial view of a city reveals the beauty of its architectural design.",
-            "中文": "俯瞰一座城市，能夠展現其建築設計的美感。"
-        },
-        {
-            "音檔": "音檔 - aerial-view-4",
-            "分類": "Design",
-            "Words": "aerial-view-4",
-            "句子": "The aerial view of the city showcased the intricate layout of streets and parks",
-            "中文": "（從空中俯瞰城市，街道與公園的錯綜布局一覽無遺。）"
-        },
-        {
-            "音檔": "音檔 - aerial-view-5",
-            "分類": "Design",
-            "Words": "aerial-view-5",
-            "句子": "The architect used an aerial view to illustrate how the new building would fit into the surrounding area",
-            "中文": "（建築師利用空中俯視圖來說明新建築如何融入周圍環境。）"
-        },
-        {
-            "音檔": "音檔 - aerial-view-6",
-            "分類": "Design",
-            "Words": "aerial-view-6",
-            "句子": "In the documentary, they included aerial views of the natural disaster's impact on the landscape",
-            "中文": "（在紀錄片中，他們加入了空中俯視圖來展示自然災害對景觀的影響。）"
-        },
-        {
             "音檔": "音檔 - aerial-1",
             "分類": "Design",
             "Words": "aerial-1",
@@ -1724,6 +1623,34 @@
             "中文": "（技術人員在屋頂安裝了一根新天線，以改善電視信號。）"
         },
         {
+            "音檔": "音檔 - aerial-display-1",
+            "等級": "C2",
+            "Words": "aerial-display-1",
+            "句子": "The airshow featured an impressive aerial display by fighter jets",
+            "中文": "（航空展上戰鬥機進行了一場令人印象深刻的空中表演。）"
+        },
+        {
+            "音檔": "音檔 - aerial-display-2",
+            "等級": "C2",
+            "Words": "aerial-display-2",
+            "句子": "The fireworks created a stunning aerial display that lit up the night sky",
+            "中文": "（煙火在夜空中綻放，呈現出壯觀的空中展示。）"
+        },
+        {
+            "音檔": "音檔 - aerial-display-3",
+            "等級": "C2",
+            "Words": "aerial-display-3",
+            "句子": "The birds performed a synchronized aerial display during their migration",
+            "中文": "（這些鳥類在遷徙途中進行了同步的空中展示。）"
+        },
+        {
+            "音檔": "音檔 - aerial-display-4",
+            "等級": "C2",
+            "Words": "aerial-display-4",
+            "句子": "The festival ended with a breathtaking aerial display of colorful lights",
+            "中文": "（這場節日以一場令人驚嘆的彩色燈光空中展示結束。）"
+        },
+        {
             "音檔": "音檔 - aerialist-1",
             "等級": "C1",
             "分類": "職業",
@@ -1746,6 +1673,79 @@
             "Words": "aerialist-3",
             "句子": "The aerialist captivated the audience with her daring stunts on the silks",
             "中文": "（那位空中雜技演員以她在絲帶上的驚險特技吸引了觀眾的目光。）"
+        },
+        {
+            "音檔": "音檔 - aerial-survey-1",
+            "等級": "C1",
+            "Words": "aerial-survey-1",
+            "句子": "The government conducted an aerial survey to assess the damage caused by the flood",
+            "中文": "（政府進行了空中勘測，以評估洪水造成的損害。）\n\n\n\n\n\n\n"
+        },
+        {
+            "音檔": "音檔 - aerial-survey-2",
+            "等級": "C1",
+            "Words": "aerial-survey-2",
+            "句子": "An aerial survey of the forest revealed signs of illegal logging",
+            "中文": "（對森林的空中勘測顯示出非法伐木的跡象。）"
+        },
+        {
+            "音檔": "音檔 - aerial-survey-3",
+            "等級": "C1",
+            "Words": "aerial-survey-3",
+            "句子": "The construction team used an aerial survey to map out the site before beginning work",
+            "中文": "（施工團隊利用空中勘測來繪製工地地圖，然後才開始施工。）"
+        },
+        {
+            "音檔": "音檔 - aerial-survey-4",
+            "等級": "C1",
+            "Words": "aerial-survey-4",
+            "句子": "Scientists performed an aerial survey to monitor wildlife populations in the national park",
+            "中文": "（科學家進行空中勘測來監測國家公園內的野生動物數量。）"
+        },
+        {
+            "音檔": "音檔 - aerial-view-1",
+            "分類": "Design",
+            "Words": "aerial-view-1",
+            "名人": "Ansel Adams",
+            "句子": "The aerial view of nature captures its vastness and grandeur.",
+            "中文": "空中視角展現了大自然的廣闊與壯麗。"
+        },
+        {
+            "音檔": "音檔 - aerial-view-2",
+            "分類": "Design",
+            "Words": "aerial-view-2",
+            "名人": "Buzz Aldrin",
+            "句子": "The aerial view of Earth from the Moon reminds us how small yet precious our world is.",
+            "中文": "從月球俯瞰地球，讓我們意識到我們的世界雖小卻彌足珍貴。"
+        },
+        {
+            "音檔": "音檔 - aerial-view-3",
+            "分類": "Design",
+            "Words": "aerial-view-3",
+            "名人": "Frank Lloyd Wright",
+            "句子": "The aerial view of a city reveals the beauty of its architectural design.",
+            "中文": "俯瞰一座城市，能夠展現其建築設計的美感。"
+        },
+        {
+            "音檔": "音檔 - aerial-view-4",
+            "分類": "Design",
+            "Words": "aerial-view-4",
+            "句子": "The aerial view of the city showcased the intricate layout of streets and parks",
+            "中文": "（從空中俯瞰城市，街道與公園的錯綜布局一覽無遺。）"
+        },
+        {
+            "音檔": "音檔 - aerial-view-5",
+            "分類": "Design",
+            "Words": "aerial-view-5",
+            "句子": "The architect used an aerial view to illustrate how the new building would fit into the surrounding area",
+            "中文": "（建築師利用空中俯視圖來說明新建築如何融入周圍環境。）"
+        },
+        {
+            "音檔": "音檔 - aerial-view-6",
+            "分類": "Design",
+            "Words": "aerial-view-6",
+            "句子": "In the documentary, they included aerial views of the natural disaster's impact on the landscape",
+            "中文": "（在紀錄片中，他們加入了空中俯視圖來展示自然災害對景觀的影響。）"
         },
         {
             "音檔": "音檔 - aerodynamic-1",
@@ -3928,30 +3928,6 @@
             "句子": "The market was filled with items made from local artisanry, including handmade baskets and leather goods"
         },
         {
-            "音檔": "音檔 - artistic-taste-1",
-            "等級": "C1",
-            "分類": "Design",
-            "Words": "artistic-taste-1",
-            "句子": "She has an exquisite artistic taste, always selecting the most striking and sophisticated pieces for her gallery",
-            "中文": "（她擁有精緻的藝術品味，總是為她的畫廊挑選最引人注目且高雅的作品）"
-        },
-        {
-            "音檔": "音檔 - artistic-taste-2",
-            "等級": "C1",
-            "分類": "Design",
-            "Words": "artistic-taste-2",
-            "句子": "His artistic taste leans towards minimalist designs, preferring simplicity and elegance",
-            "中文": "（他的藝術品味傾向極簡設計，偏好簡約與優雅）"
-        },
-        {
-            "音檔": "音檔 - artistic-taste-3",
-            "等級": "C1",
-            "分類": "Design",
-            "Words": "artistic-taste-3",
-            "句子": "The interior designer's artistic taste was evident in the carefully chosen artwork and decor",
-            "中文": "（室內設計師的藝術品味體現在精心挑選的藝術品與裝飾中）"
-        },
-        {
             "音檔": "音檔 - artistic-1",
             "等級": "B2",
             "分類": "Design",
@@ -4003,6 +3979,14 @@
             "中文": "（他的藝術才能體現在家具上精緻的雕刻中）"
         },
         {
+            "音檔": "音檔 - artistic-7",
+            "等級": "B2",
+            "分類": "Design",
+            "Words": "artistic-7",
+            "句子": "The artist created an artistic masterpiece with the use of vibrant colors",
+            "中文": "(那位藝術家運用鮮豔的色彩創造了一件藝術傑作)"
+        },
+        {
             "音檔": "音檔 - artistically-1",
             "等級": "B2",
             "分類": "Design",
@@ -4033,6 +4017,30 @@
             "Words": "artistically-4",
             "句子": "The film was artistically crafted, with a beautiful blend of visual and auditory elements",
             "中文": "（這部電影製作得極具藝術感，巧妙融合了視覺與聽覺元素）"
+        },
+        {
+            "音檔": "音檔 - artistic-taste-1",
+            "等級": "C1",
+            "分類": "Design",
+            "Words": "artistic-taste-1",
+            "句子": "She has an exquisite artistic taste, always selecting the most striking and sophisticated pieces for her gallery",
+            "中文": "（她擁有精緻的藝術品味，總是為她的畫廊挑選最引人注目且高雅的作品）"
+        },
+        {
+            "音檔": "音檔 - artistic-taste-2",
+            "等級": "C1",
+            "分類": "Design",
+            "Words": "artistic-taste-2",
+            "句子": "His artistic taste leans towards minimalist designs, preferring simplicity and elegance",
+            "中文": "（他的藝術品味傾向極簡設計，偏好簡約與優雅）"
+        },
+        {
+            "音檔": "音檔 - artistic-taste-3",
+            "等級": "C1",
+            "分類": "Design",
+            "Words": "artistic-taste-3",
+            "句子": "The interior designer's artistic taste was evident in the carefully chosen artwork and decor",
+            "中文": "（室內設計師的藝術品味體現在精心挑選的藝術品與裝飾中）"
         },
         {
             "等級": "B1",
@@ -6249,6 +6257,26 @@
             "句子": "A balanced diet with controlled carbohydrates is crucial for managing diabetes effectively"
         },
         {
+            "等級": "B1",
+            "Words": "carbon-1",
+            "句子": "Carbon is a fundamental building block of organic molecules, such as proteins and DNA"
+        },
+        {
+            "等級": "B1",
+            "Words": "carbon-2",
+            "句子": "Diamonds and graphite are two distinct forms of carbon with vastly different physical properties"
+        },
+        {
+            "等級": "B1",
+            "Words": "carbon-3",
+            "句子": "The increase in carbon emissions from burning fossil fuels is a major contributor to climate change"
+        },
+        {
+            "等級": "B1",
+            "Words": "carbon-4",
+            "句子": "I want two carbons for our files to keep as duplicates of the original document"
+        },
+        {
             "等級": "C2",
             "Words": "carbon-dioxide-1",
             "句子": "Human activities, such as burning fossil fuels, release large amounts of carbon dioxide into the atmosphere"
@@ -6320,26 +6348,6 @@
             "分類": "環保",
             "Words": "carbon-footprint-3",
             "句子": "Choosing products with a lower carbon footprint can help reduce your overall environmental impact"
-        },
-        {
-            "等級": "B1",
-            "Words": "carbon-1",
-            "句子": "Carbon is a fundamental building block of organic molecules, such as proteins and DNA"
-        },
-        {
-            "等級": "B1",
-            "Words": "carbon-2",
-            "句子": "Diamonds and graphite are two distinct forms of carbon with vastly different physical properties"
-        },
-        {
-            "等級": "B1",
-            "Words": "carbon-3",
-            "句子": "The increase in carbon emissions from burning fossil fuels is a major contributor to climate change"
-        },
-        {
-            "等級": "B1",
-            "Words": "carbon-4",
-            "句子": "I want two carbons for our files to keep as duplicates of the original document"
         },
         {
             "等級": "C2",
@@ -7781,6 +7789,57 @@
             "句子": "Effective cohesion in a team involves members working together seamlessly to achieve a common goal"
         },
         {
+            "音檔": "音檔 - cohesive-1",
+            "等級": "B2",
+            "分類": "Design",
+            "Words": "cohesive-1",
+            "名人": "Martin Luther King Jr.",
+            "句子": "A cohesive society is built on equality and justice.",
+            "中文": "團結的社會建立在平等與正義之上。"
+        },
+        {
+            "音檔": "音檔 - cohesive-2",
+            "等級": "B2",
+            "分類": "Design",
+            "Words": "cohesive-2",
+            "名人": "Steve Jobs",
+            "句子": "A cohesive team produces innovative and extraordinary results.",
+            "中文": "團結的團隊能夠創造出創新且非凡的成果。"
+        },
+        {
+            "音檔": "音檔 - cohesive-3",
+            "等級": "B2",
+            "分類": "Design",
+            "Words": "cohesive-3",
+            "名人": "Winston Churchill",
+            "句子": "Cohesive leadership unites a nation in times of crisis.",
+            "中文": "團結的領導能夠在危機時刻凝聚一個國家。"
+        },
+        {
+            "音檔": "音檔 - cohesive-4",
+            "等級": "B2",
+            "分類": "Design",
+            "Words": "cohesive-4",
+            "句子": "The team developed a cohesive strategy that aligned all their efforts toward a common goal",
+            "中文": "(團隊制定了一個協調一致的策略，使所有努力朝著共同目標邁進。)"
+        },
+        {
+            "音檔": "音檔 - cohesive-5",
+            "等級": "B2",
+            "分類": "Design",
+            "Words": "cohesive-5",
+            "句子": "Her presentation was cohesive, with each section smoothly connecting to the next and reinforcing the overall message",
+            "中文": "(她的演示條理清晰，每個部分都順暢銜接，並強化了整體訊息。)"
+        },
+        {
+            "音檔": "音檔 - cohesive-6",
+            "等級": "B2",
+            "分類": "Design",
+            "Words": "cohesive-6",
+            "句子": "The new design features a cohesive color scheme that ties all elements of the room together",
+            "中文": "(新設計具有和諧的配色方案，將房間的所有元素融為一體。)"
+        },
+        {
             "音檔": "音檔 - cohesive-design-1",
             "分類": "Design",
             "Words": "cohesive-design-1",
@@ -7831,57 +7890,6 @@
             "Words": "cohesive-design-7",
             "句子": "The new smartphone features a cohesive design, with its hardware and software blending perfectly for a seamless user experience",
             "中文": "(這款新智能手機具有協調一致的設計，其硬體和軟體完美融合，帶來流暢的使用體驗。)"
-        },
-        {
-            "音檔": "音檔 - cohesive-1",
-            "等級": "B2",
-            "分類": "Design",
-            "Words": "cohesive-1",
-            "名人": "Martin Luther King Jr.",
-            "句子": "A cohesive society is built on equality and justice.",
-            "中文": "團結的社會建立在平等與正義之上。"
-        },
-        {
-            "音檔": "音檔 - cohesive-2",
-            "等級": "B2",
-            "分類": "Design",
-            "Words": "cohesive-2",
-            "名人": "Steve Jobs",
-            "句子": "A cohesive team produces innovative and extraordinary results.",
-            "中文": "團結的團隊能夠創造出創新且非凡的成果。"
-        },
-        {
-            "音檔": "音檔 - cohesive-3",
-            "等級": "B2",
-            "分類": "Design",
-            "Words": "cohesive-3",
-            "名人": "Winston Churchill",
-            "句子": "Cohesive leadership unites a nation in times of crisis.",
-            "中文": "團結的領導能夠在危機時刻凝聚一個國家。"
-        },
-        {
-            "音檔": "音檔 - cohesive-4",
-            "等級": "B2",
-            "分類": "Design",
-            "Words": "cohesive-4",
-            "句子": "The team developed a cohesive strategy that aligned all their efforts toward a common goal",
-            "中文": "(團隊制定了一個協調一致的策略，使所有努力朝著共同目標邁進。)"
-        },
-        {
-            "音檔": "音檔 - cohesive-5",
-            "等級": "B2",
-            "分類": "Design",
-            "Words": "cohesive-5",
-            "句子": "Her presentation was cohesive, with each section smoothly connecting to the next and reinforcing the overall message",
-            "中文": "(她的演示條理清晰，每個部分都順暢銜接，並強化了整體訊息。)"
-        },
-        {
-            "音檔": "音檔 - cohesive-6",
-            "等級": "B2",
-            "分類": "Design",
-            "Words": "cohesive-6",
-            "句子": "The new design features a cohesive color scheme that ties all elements of the room together",
-            "中文": "(新設計具有和諧的配色方案，將房間的所有元素融為一體。)"
         },
         {
             "等級": "B2",
@@ -8364,21 +8372,6 @@
             "句子": "The threat of punishment created a strong compulsion for employees to follow the rules"
         },
         {
-            "等級": "C1",
-            "Words": "con-artist-1",
-            "句子": "The con artist posed as a financial advisor to scam people out of their savings"
-        },
-        {
-            "等級": "C1",
-            "Words": "con-artist-2",
-            "句子": "Authorities are searching for the con artist responsible for the recent wave of fraudulent investment schemes"
-        },
-        {
-            "等級": "C1",
-            "Words": "con-artist-3",
-            "句子": "She was a victim of a con artist who promised lucrative returns on a non-existent real estate deal"
-        },
-        {
             "等級": "B1",
             "Words": "con-1",
             "句子": "He conned his way into getting free meals by pretending to be a restaurant critic"
@@ -8402,6 +8395,21 @@
             "等級": "B1",
             "Words": "con-5",
             "句子": "They fell for a classic con that involved fake promises of high returns on investments"
+        },
+        {
+            "等級": "C1",
+            "Words": "con-artist-1",
+            "句子": "The con artist posed as a financial advisor to scam people out of their savings"
+        },
+        {
+            "等級": "C1",
+            "Words": "con-artist-2",
+            "句子": "Authorities are searching for the con artist responsible for the recent wave of fraudulent investment schemes"
+        },
+        {
+            "等級": "C1",
+            "Words": "con-artist-3",
+            "句子": "She was a victim of a con artist who promised lucrative returns on a non-existent real estate deal"
         },
         {
             "等級": "B2",
@@ -9297,30 +9305,6 @@
             "句子": "The retreat provided a perfect setting for contemplation and personal growth"
         },
         {
-            "音檔": "音檔 - contemporary-touch-1",
-            "等級": "C1",
-            "分類": "Design",
-            "Words": "contemporary-touch-1",
-            "句子": "The room had a contemporary touch, with sleek furniture and bold, modern artwork on the walls",
-            "中文": "(這個房間帶有當代風格，配有時尚的家具和牆上大膽現代的藝術品。)"
-        },
-        {
-            "音檔": "音檔 - contemporary-touch-2",
-            "等級": "C1",
-            "分類": "Design",
-            "Words": "contemporary-touch-2",
-            "句子": "She added a contemporary touch to the vintage furniture by reupholstering it with a bright, modern fabric",
-            "中文": "(她通過用明亮、現代的布料重新包覆老式家具，為其增添了當代風格。)"
-        },
-        {
-            "音檔": "音檔 - contemporary-touch-3",
-            "等級": "C1",
-            "分類": "Design",
-            "Words": "contemporary-touch-3",
-            "句子": "Her fashion designs incorporate a contemporary touch, making the overall look both modern and creative",
-            "中文": "(她的時尚設計融入了當代風格，使整體造型既現代又富有創意。)"
-        },
-        {
             "音檔": "音檔 - contemporary-1",
             "分類": "Design",
             "Words": "contemporary-1",
@@ -9380,6 +9364,30 @@
             "中文": "(她從藝術界同時代人的作品中找到了靈感)"
         },
         {
+            "音檔": "音檔 - contemporary-touch-1",
+            "等級": "C1",
+            "分類": "Design",
+            "Words": "contemporary-touch-1",
+            "句子": "The room had a contemporary touch, with sleek furniture and bold, modern artwork on the walls",
+            "中文": "(這個房間帶有當代風格，配有時尚的家具和牆上大膽現代的藝術品。)"
+        },
+        {
+            "音檔": "音檔 - contemporary-touch-2",
+            "等級": "C1",
+            "分類": "Design",
+            "Words": "contemporary-touch-2",
+            "句子": "She added a contemporary touch to the vintage furniture by reupholstering it with a bright, modern fabric",
+            "中文": "(她通過用明亮、現代的布料重新包覆老式家具，為其增添了當代風格。)"
+        },
+        {
+            "音檔": "音檔 - contemporary-touch-3",
+            "等級": "C1",
+            "分類": "Design",
+            "Words": "contemporary-touch-3",
+            "句子": "Her fashion designs incorporate a contemporary touch, making the overall look both modern and creative",
+            "中文": "(她的時尚設計融入了當代風格，使整體造型既現代又富有創意。)"
+        },
+        {
             "等級": "B1",
             "分類": "法政",
             "Words": "contempt-1",
@@ -9402,16 +9410,6 @@
             "分類": "法政",
             "Words": "contempt-4",
             "句子": "The journalist risked contempt charges by refusing to reveal her source"
-        },
-        {
-            "等級": "C2",
-            "Words": "Content-marketing-1",
-            "句子": "The company’s content marketing strategy includes blogs, videos, and social media posts to engage potential customers"
-        },
-        {
-            "等級": "C2",
-            "Words": "Content-marketing-2",
-            "句子": "By providing educational articles and tutorials, the brand's content marketing helps establish it as an authority in its field"
         },
         {
             "等級": "B2",
@@ -9467,6 +9465,16 @@
             "等級": "B2",
             "Words": "content-9",
             "句子": "A fancy hotel is not necessary; I'd be content with a warm meal and a clean place to sleep"
+        },
+        {
+            "等級": "C2",
+            "Words": "Content-marketing-1",
+            "句子": "The company’s content marketing strategy includes blogs, videos, and social media posts to engage potential customers"
+        },
+        {
+            "等級": "C2",
+            "Words": "Content-marketing-2",
+            "句子": "By providing educational articles and tutorials, the brand's content marketing helps establish it as an authority in its field"
         },
         {
             "等級": "C2",
@@ -9595,6 +9603,20 @@
             "中文": "光與影的對比創造出層次，使畫作更具深度。"
         },
         {
+            "音檔": "音檔 - contrast-10",
+            "分類": "Design",
+            "Words": "contrast-10",
+            "句子": "The designer contrasted the metallic finish of the stroller's frame with the soft textile of the seat for visual impact",
+            "中文": "(設計師將嬰兒車框架的金屬質感與座椅的柔軟織物進行對比，以營造視覺衝擊力)"
+        },
+        {
+            "音檔": "音檔 - contrast-11",
+            "分類": "Design",
+            "Words": "contrast-11",
+            "句子": "She contrasted the old and new buildings to show how the city had evolved",
+            "中文": "(她對比了新舊建築，以展示城市是如何演變的)"
+        },
+        {
             "音檔": "音檔 - contrast-2",
             "分類": "Design",
             "Words": "contrast-2",
@@ -9609,6 +9631,48 @@
             "名人": "Robert Frost",
             "句子": "The contrast between choices shapes the paths we take in life.",
             "中文": "選擇之間的對比塑造了我們人生的道路。"
+        },
+        {
+            "音檔": "音檔 - contrast-4",
+            "分類": "Design",
+            "Words": "contrast-4",
+            "句子": "There is a sharp contrast between the urban and rural lifestyles",
+            "中文": "(城市與鄉村的生活方式有著鮮明的對比)"
+        },
+        {
+            "音檔": "音檔 - contrast-5",
+            "分類": "Design",
+            "Words": "contrast-5",
+            "句子": "The contrast between the dark storm clouds and the bright sunset was striking",
+            "中文": "(黑暗的暴風雲與明亮的夕陽之間的對比令人印象深刻)"
+        },
+        {
+            "音檔": "音檔 - contrast-6",
+            "分類": "Design",
+            "Words": "contrast-6",
+            "句子": "The design of the stroller emphasizes the contrast between the upper frame with its muted metallic color and the lower frame, which features a practical textile-covered basket",
+            "中文": "(嬰兒車的設計強調了上部框架與其低調的金屬色調和下部框架之間的對比，下部框架配有一個實用的織物覆蓋籃子)"
+        },
+        {
+            "音檔": "音檔 - contrast-7",
+            "分類": "Design",
+            "Words": "contrast-7",
+            "句子": "The contrast in textures between the leather seats and the soft fabric cushions was noticeable",
+            "中文": "(皮革座椅與柔軟織物靠墊之間的質地對比非常明顯)"
+        },
+        {
+            "音檔": "音檔 - contrast-8",
+            "分類": "Design",
+            "Words": "contrast-8",
+            "句子": "The artist contrasted light and dark shades to create depth in the painting",
+            "中文": "(那位藝術家通過對比明暗色調來為畫作創造深度)"
+        },
+        {
+            "音檔": "音檔 - contrast-9",
+            "分類": "Design",
+            "Words": "contrast-9",
+            "句子": "The teacher asked the students to contrast the two novels in their essays",
+            "中文": "(老師要求學生們在文章中對比這兩部小說)"
         },
         {
             "音檔": "音檔 - controversial-1",
@@ -10481,6 +10545,31 @@
             "句子": "The creep of fog through the streets made it difficult to see"
         },
         {
+            "等級": "B1",
+            "Words": "creepy-1",
+            "句子": "The old abandoned house at the end of the street is really creepy at night"
+        },
+        {
+            "等級": "B1",
+            "Words": "creepy-2",
+            "句子": "He gave me a creepy look when I walked past him in the hallway"
+        },
+        {
+            "等級": "B1",
+            "Words": "creepy-3",
+            "句子": "There was a creepy silence in the room after the lights went out"
+        },
+        {
+            "等級": "B1",
+            "Words": "creepy-4",
+            "句子": "The way the doll’s eyes followed me around the room was downright creepy"
+        },
+        {
+            "等級": "B1",
+            "Words": "creepy-5",
+            "句子": "There was something creepy about the way she smiled, like she was hiding something"
+        },
+        {
             "等級": "C2",
             "分類": "生物",
             "Words": "creepy-crawly-1",
@@ -10509,31 +10598,6 @@
             "分類": "生物",
             "Words": "creepy-crawly-5",
             "句子": "The centipede was the creepy-crawliest of them all"
-        },
-        {
-            "等級": "B1",
-            "Words": "creepy-1",
-            "句子": "The old abandoned house at the end of the street is really creepy at night"
-        },
-        {
-            "等級": "B1",
-            "Words": "creepy-2",
-            "句子": "He gave me a creepy look when I walked past him in the hallway"
-        },
-        {
-            "等級": "B1",
-            "Words": "creepy-3",
-            "句子": "There was a creepy silence in the room after the lights went out"
-        },
-        {
-            "等級": "B1",
-            "Words": "creepy-4",
-            "句子": "The way the doll’s eyes followed me around the room was downright creepy"
-        },
-        {
-            "等級": "B1",
-            "Words": "creepy-5",
-            "句子": "There was something creepy about the way she smiled, like she was hiding something"
         },
         {
             "等級": "B2",
@@ -16586,26 +16650,6 @@
             "句子": "The patient was assisted into a hospital gown before undergoing medical tests to ensure proper access and comfort during the procedure"
         },
         {
-            "等級": "C2",
-            "Words": "grand-gesture-1",
-            "句子": "As a grand gesture of forgiveness, she paid off his debts without telling him"
-        },
-        {
-            "等級": "C2",
-            "Words": "grand-gesture-2",
-            "句子": "He surprised her with a grand gesture, arranging an elaborate dinner to celebrate their anniversary"
-        },
-        {
-            "等級": "C2",
-            "Words": "grand-gesture-3",
-            "句子": "To win back her trust, he made a grand gesture by volunteering for her favorite charity"
-        },
-        {
-            "等級": "C2",
-            "Words": "grand-gesture-4",
-            "句子": "The elaborate fireworks display was a grand gesture to celebrate the city's anniversary"
-        },
-        {
             "等級": "B1",
             "Words": "grand-1",
             "句子": "The grand hall was decorated with crystal chandeliers and velvet drapes"
@@ -16644,6 +16688,26 @@
             "等級": "B1",
             "Words": "grand-8",
             "句子": "She saved up ten grand for the down payment on her new home"
+        },
+        {
+            "等級": "C2",
+            "Words": "grand-gesture-1",
+            "句子": "As a grand gesture of forgiveness, she paid off his debts without telling him"
+        },
+        {
+            "等級": "C2",
+            "Words": "grand-gesture-2",
+            "句子": "He surprised her with a grand gesture, arranging an elaborate dinner to celebrate their anniversary"
+        },
+        {
+            "等級": "C2",
+            "Words": "grand-gesture-3",
+            "句子": "To win back her trust, he made a grand gesture by volunteering for her favorite charity"
+        },
+        {
+            "等級": "C2",
+            "Words": "grand-gesture-4",
+            "句子": "The elaborate fireworks display was a grand gesture to celebrate the city's anniversary"
         },
         {
             "等級": "B1",
@@ -17540,6 +17604,30 @@
             "句子": "Maintaining good hygiene by washing your hands frequently can help prevent the spread of germs and reduce the risk of illness"
         },
         {
+            "Words": "hype-1",
+            "句子": "The hype around the new movie made everyone eager to see it"
+        },
+        {
+            "Words": "hype-2",
+            "句子": "The product's success was largely due to the marketing hype"
+        },
+        {
+            "Words": "hype-3",
+            "句子": "Despite the hype, the restaurant didn’t live up to its reputation"
+        },
+        {
+            "Words": "hype-4",
+            "句子": "The company hyped their new product with flashy ads and celebrity endorsements"
+        },
+        {
+            "Words": "hype-5",
+            "句子": "The media hyped the concert, building great anticipation among fans"
+        },
+        {
+            "Words": "hype-6",
+            "句子": "The event was hyped as the biggest music festival of the year, drawing huge crowds"
+        },
+        {
             "Words": "hype-up-1",
             "句子": "The event organizers hyped up the concert with social media posts and interviews"
         },
@@ -17566,30 +17654,6 @@
         {
             "Words": "hype-up-7",
             "句子": "I was so hyped up, I couldn't sleep"
-        },
-        {
-            "Words": "hype-1",
-            "句子": "The hype around the new movie made everyone eager to see it"
-        },
-        {
-            "Words": "hype-2",
-            "句子": "The product's success was largely due to the marketing hype"
-        },
-        {
-            "Words": "hype-3",
-            "句子": "Despite the hype, the restaurant didn’t live up to its reputation"
-        },
-        {
-            "Words": "hype-4",
-            "句子": "The company hyped their new product with flashy ads and celebrity endorsements"
-        },
-        {
-            "Words": "hype-5",
-            "句子": "The media hyped the concert, building great anticipation among fans"
-        },
-        {
-            "Words": "hype-6",
-            "句子": "The event was hyped as the biggest music festival of the year, drawing huge crowds"
         },
         {
             "等級": "C1",
@@ -18032,38 +18096,6 @@
             "等級": "B2",
             "Words": "impurity-5",
             "句子": "They sought to eliminate any impurity from their motives in the charitable work they did"
-        },
-        {
-            "等級": "C1",
-            "Words": "in-nature-1",
-            "句子": "His kindness is evident in nature, as he is always helping others without expecting anything in return"
-        },
-        {
-            "等級": "C1",
-            "Words": "in-nature-2",
-            "句子": "The melancholic tone of the novel is in nature, reflecting the author's personal experiences with loss"
-        },
-        {
-            "等級": "C1",
-            "Words": "in-nature-3",
-            "句子": "The animal's behavior is in nature, as it follows instinctual patterns for survival"
-        },
-        {
-            "等級": "C1",
-            "Words": "in-nature-4",
-            "句子": "Plants in nature grow according to seasonal changes and natural processes"
-        },
-        {
-            "Words": "in-parallel-1",
-            "句子": "The engineers worked in parallel on different aspects of the stroller design to speed up the process"
-        },
-        {
-            "Words": "in-parallel-2",
-            "句子": "The new product development was carried out in parallel with the marketing strategy to ensure a timely launch"
-        },
-        {
-            "Words": "in-parallel-3",
-            "句子": "The two roads ran in parallel, offering alternate routes to the same destination"
         },
         {
             "等級": "B2",
@@ -18662,6 +18694,38 @@
             "等級": "B1",
             "Words": "innate-5",
             "句子": "The artist's innate sense of color and composition made her works stand out"
+        },
+        {
+            "等級": "C1",
+            "Words": "in-nature-1",
+            "句子": "His kindness is evident in nature, as he is always helping others without expecting anything in return"
+        },
+        {
+            "等級": "C1",
+            "Words": "in-nature-2",
+            "句子": "The melancholic tone of the novel is in nature, reflecting the author's personal experiences with loss"
+        },
+        {
+            "等級": "C1",
+            "Words": "in-nature-3",
+            "句子": "The animal's behavior is in nature, as it follows instinctual patterns for survival"
+        },
+        {
+            "等級": "C1",
+            "Words": "in-nature-4",
+            "句子": "Plants in nature grow according to seasonal changes and natural processes"
+        },
+        {
+            "Words": "in-parallel-1",
+            "句子": "The engineers worked in parallel on different aspects of the stroller design to speed up the process"
+        },
+        {
+            "Words": "in-parallel-2",
+            "句子": "The new product development was carried out in parallel with the marketing strategy to ensure a timely launch"
+        },
+        {
+            "Words": "in-parallel-3",
+            "句子": "The two roads ran in parallel, offering alternate routes to the same destination"
         },
         {
             "等級": "B2",
@@ -19601,21 +19665,6 @@
             "句子": "\"Her mind was a labyrinthine maze of thoughts and emotions, making it challenging for her to find clarity amidst the chaos"
         },
         {
-            "等級": "C2",
-            "Words": "lactose-intolerance-1",
-            "句子": "People with lactose intolerance may feel bloated or gassy after drinking milk"
-        },
-        {
-            "等級": "C2",
-            "Words": "lactose-intolerance-2",
-            "句子": "Some people can eat yogurt or cheese because they have less lactose than milk"
-        },
-        {
-            "等級": "C2",
-            "Words": "lactose-intolerance-3",
-            "句子": "Lactose-free milk is a good option for those who cannot digest lactose"
-        },
-        {
             "等級": "B2",
             "Words": "lactose-1",
             "句子": "Many people with lactose intolerance experience digestive issues after consuming milk or cheese"
@@ -19636,28 +19685,19 @@
             "句子": "Lactose-free milk is available for those who cannot digest lactose"
         },
         {
-            "音檔": "音檔 - landscape-view-1",
-            "等級": "B2",
-            "分類": "Design",
-            "Words": "landscape-view-1",
-            "句子": "The landscape view from the hilltop stretched for miles, showing the valley below",
-            "中文": "（從山頂的景觀延伸了數英里，展示了下面的山谷。）"
+            "等級": "C2",
+            "Words": "lactose-intolerance-1",
+            "句子": "People with lactose intolerance may feel bloated or gassy after drinking milk"
         },
         {
-            "音檔": "音檔 - landscape-view-2",
-            "等級": "B2",
-            "分類": "Design",
-            "Words": "landscape-view-2",
-            "句子": "The artist painted a beautiful landscape view of the ocean at sunset",
-            "中文": "（藝術家畫了一幅美麗的海洋日落景觀。）"
+            "等級": "C2",
+            "Words": "lactose-intolerance-2",
+            "句子": "Some people can eat yogurt or cheese because they have less lactose than milk"
         },
         {
-            "音檔": "音檔 - landscape-view-3",
-            "等級": "B2",
-            "分類": "Design",
-            "Words": "landscape-view-3",
-            "句子": "We enjoyed a magnificent landscape view from the top of the mountain, with a clear view of the entire valley",
-            "中文": "（我們在山頂欣賞了壯麗的景觀，清晰地看見整個山谷。）"
+            "等級": "C2",
+            "Words": "lactose-intolerance-3",
+            "句子": "Lactose-free milk is a good option for those who cannot digest lactose"
         },
         {
             "等級": "B1",
@@ -19698,6 +19738,30 @@
             "等級": "B1",
             "Words": "landscape-8",
             "句子": "The economic landscape of the region is defined by agriculture and tourism"
+        },
+        {
+            "音檔": "音檔 - landscape-view-1",
+            "等級": "B2",
+            "分類": "Design",
+            "Words": "landscape-view-1",
+            "句子": "The landscape view from the hilltop stretched for miles, showing the valley below",
+            "中文": "（從山頂的景觀延伸了數英里，展示了下面的山谷。）"
+        },
+        {
+            "音檔": "音檔 - landscape-view-2",
+            "等級": "B2",
+            "分類": "Design",
+            "Words": "landscape-view-2",
+            "句子": "The artist painted a beautiful landscape view of the ocean at sunset",
+            "中文": "（藝術家畫了一幅美麗的海洋日落景觀。）"
+        },
+        {
+            "音檔": "音檔 - landscape-view-3",
+            "等級": "B2",
+            "分類": "Design",
+            "Words": "landscape-view-3",
+            "句子": "We enjoyed a magnificent landscape view from the top of the mountain, with a clear view of the entire valley",
+            "中文": "（我們在山頂欣賞了壯麗的景觀，清晰地看見整個山谷。）"
         },
         {
             "等級": "B1",
@@ -20792,6 +20856,33 @@
             "中文": "（她對自己的平庸考試結果感到失望。）"
         },
         {
+            "音檔": "音檔 - mediocre-5",
+            "等級": "C1",
+            "分類": "Design",
+            "Words": "mediocre-5",
+            "名人": "Steve Jobs",
+            "句子": "Don’t settle for mediocre when excellence is within reach.",
+            "中文": "（當卓越近在咫尺時，不要滿足於平庸。）"
+        },
+        {
+            "音檔": "音檔 - mediocre-6",
+            "等級": "C1",
+            "分類": "Design",
+            "Words": "mediocre-6",
+            "名人": "Aristotle",
+            "句子": "The mediocre mind is content with what is, while the great mind seeks what could be.",
+            "中文": "（平庸的思想滿足於現狀，而偉大的思想追求可能性。）"
+        },
+        {
+            "音檔": "音檔 - mediocre-7",
+            "等級": "C1",
+            "分類": "Design",
+            "Words": "mediocre-7",
+            "名人": "Michael Jordan",
+            "句子": "I wasn’t afraid to fail, but I was afraid of being mediocre.",
+            "中文": "（我不害怕失敗，但我害怕平庸。）"
+        },
+        {
             "分類": "旅遊",
             "Words": "Mediterranean-1",
             "句子": "They planned to cruise around the Mediterranean, visiting historic cities and enjoying the region's renowned cuisine"
@@ -21227,31 +21318,36 @@
             "句子": "The artist is a minimalist, using basic shapes and muted colors in her paintings"
         },
         {
-            "音檔": "音檔 - mediocre-5",
+            "音檔": "音檔 - minimalistic-1",
             "等級": "C1",
             "分類": "Design",
-            "Words": "mediocre-5",
-            "名人": "Steve Jobs",
-            "句子": "Don’t settle for mediocre when excellence is within reach.",
-            "中文": "（當卓越近在咫尺時，不要滿足於平庸。）"
+            "Words": "minimalistic-1",
+            "句子": "Her apartment had a minimalistic design with only essential furniture",
+            "中文": "(她的公寓採用了極簡主義設計，只有必要的家具。)"
         },
         {
-            "音檔": "音檔 - mediocre-6",
+            "音檔": "音檔 - minimalistic-2",
             "等級": "C1",
             "分類": "Design",
-            "Words": "mediocre-6",
-            "名人": "Aristotle",
-            "句子": "The mediocre mind is content with what is, while the great mind seeks what could be.",
-            "中文": "（平庸的思想滿足於現狀，而偉大的思想追求可能性。）"
+            "Words": "minimalistic-2",
+            "句子": "He prefers a minimalistic wardrobe with neutral colors and simple outfits",
+            "中文": "(他偏好極簡主義的衣櫥，選擇中性色和簡單的服裝。)"
         },
         {
-            "音檔": "音檔 - mediocre-7",
+            "音檔": "音檔 - minimalistic-3",
             "等級": "C1",
             "分類": "Design",
-            "Words": "mediocre-7",
-            "名人": "Michael Jordan",
-            "句子": "I wasn’t afraid to fail, but I was afraid of being mediocre.",
-            "中文": "（我不害怕失敗，但我害怕平庸。）"
+            "Words": "minimalistic-3",
+            "句子": "The website’s minimalistic layout made navigation easy and intuitive",
+            "中文": "(該網站的極簡設計使得導航變得簡單直觀。)"
+        },
+        {
+            "音檔": "音檔 - minimalistic-4",
+            "等級": "C1",
+            "分類": "Design",
+            "Words": "minimalistic-4",
+            "句子": "She adopted a minimalistic lifestyle, reducing clutter and unnecessary purchases",
+            "中文": "(她採取了極簡主義的生活方式，減少雜物和不必要的購物。)"
         },
         {
             "音檔": "音檔 - minimalistic-aesthetics-1",
@@ -21286,60 +21382,36 @@
             "中文": "(網站的極簡主義美學使得用戶能夠輕鬆專注於內容。)"
         },
         {
-            "音檔": "音檔 - minimalistic-1",
-            "等級": "C1",
-            "分類": "Design",
-            "Words": "minimalistic-1",
-            "句子": "Her apartment had a minimalistic design with only essential furniture",
-            "中文": "(她的公寓採用了極簡主義設計，只有必要的家具。)"
-        },
-        {
-            "音檔": "音檔 - minimalistic-2",
-            "等級": "C1",
-            "分類": "Design",
-            "Words": "minimalistic-2",
-            "句子": "He prefers a minimalistic wardrobe with neutral colors and simple outfits",
-            "中文": "(他偏好極簡主義的衣櫥，選擇中性色和簡單的服裝。)"
-        },
-        {
-            "音檔": "音檔 - minimalistic-3",
-            "等級": "C1",
-            "分類": "Design",
-            "Words": "minimalistic-3",
-            "句子": "The website’s minimalistic layout made navigation easy and intuitive",
-            "中文": "(該網站的極簡設計使得導航變得簡單直觀。)"
-        },
-        {
-            "音檔": "音檔 - minimalistic-4",
-            "等級": "C1",
-            "分類": "Design",
-            "Words": "minimalistic-4",
-            "句子": "She adopted a minimalistic lifestyle, reducing clutter and unnecessary purchases",
-            "中文": "(她採取了極簡主義的生活方式，減少雜物和不必要的購物。)"
-        },
-        {
+            "音檔": "音檔 - minimize-1",
             "等級": "B1",
             "分類": "Design",
             "Words": "minimize-1",
-            "句子": "The company implemented new strategies to minimize costs and increase profits"
+            "句子": "The company implemented new strategies to minimize costs and increase profits",
+            "中文": "(公司實施了新策略以降低成本並提高利潤。)"
         },
         {
+            "音檔": "音檔 - minimize-2",
             "等級": "B1",
             "分類": "Design",
             "Words": "minimize-2",
-            "句子": "She tried to minimize the damage caused by the leak by shutting off the water supply"
+            "句子": "She tried to minimize the damage caused by the leak by shutting off the water supply",
+            "中文": "(她試圖透過關閉供水來將漏水造成的損害降到最低。)"
         },
         {
+            "音檔": "音檔 - minimize-3",
             "等級": "B1",
             "分類": "Design",
             "Words": "minimize-3",
-            "句子": "He tried to minimize the impact of his mistake by blaming the circumstances"
+            "句子": "He tried to minimize the impact of his mistake by blaming the circumstances",
+            "中文": "(他試圖透過責怪環境來減少自己錯誤的影響。)"
         },
         {
+            "音檔": "音檔 - minimize-4",
             "等級": "B1",
             "分類": "Design",
             "Words": "minimize-4",
-            "句子": "The manager minimized the team's concerns, claiming everything was under control"
+            "句子": "The manager minimized the team's concerns, claiming everything was under control",
+            "中文": "(經理淡化了團隊的擔憂，聲稱一切都在掌控之中。)"
         },
         {
             "等級": "B2",
@@ -21417,16 +21489,20 @@
             "句子": "The conference organizers hired an expert to moderate the Q&A session effectively"
         },
         {
+            "音檔": "音檔 - modern-aesthetic-1",
             "等級": "C1",
             "分類": "Design",
             "Words": "modern-aesthetic-1",
-            "句子": "The apartment was decorated with a modern aesthetic, featuring neutral tones and minimal furniture"
+            "句子": "The apartment was decorated with a modern aesthetic, featuring neutral tones and minimal furniture",
+            "中文": "(這間公寓以現代美學裝飾，採用中性色調和極簡家具。)"
         },
         {
+            "音檔": "音檔 - modern-aesthetic-2",
             "等級": "C1",
             "分類": "Design",
             "Words": "modern-aesthetic-2",
-            "句子": "The modern aesthetic of the building was reflected in its open spaces and large glass windows"
+            "句子": "The modern aesthetic of the building was reflected in its open spaces and large glass windows",
+            "中文": "(這座建築的現代美學體現在其開放空間和大面積玻璃窗中。)"
         },
         {
             "等級": "B2",
@@ -22917,16 +22993,20 @@
             "句子": "He went overboard with the food at the buffet"
         },
         {
+            "音檔": "音檔 - overhead-view-1",
             "等級": "C1",
             "分類": "Design",
             "Words": "overhead-view-1",
-            "句子": "The overhead view of the city revealed its intricate street patterns"
+            "句子": "The overhead view of the city revealed its intricate street patterns",
+            "中文": "(從俯瞰的角度看這座城市，可以清楚地看到其錯綜複雜的街道布局。)"
         },
         {
+            "音檔": "音檔 - overhead-view-2",
             "等級": "C1",
             "分類": "Design",
             "Words": "overhead-view-2",
-            "句子": "The map provided an overhead view of the entire park"
+            "句子": "The map provided an overhead view of the entire park",
+            "中文": "(地圖提供了整個公園的俯視圖。)"
         },
         {
             "等級": "B2",
@@ -23259,52 +23339,68 @@
             "句子": "They decided to panel the walls of the study with rich oak wood"
         },
         {
+            "音檔": "音檔 - panorama-1",
             "等級": "C1",
             "分類": "Design",
             "Words": "panorama-1",
-            "句子": "From the rooftop, we had a stunning panorama of the city stretching out to the horizon"
+            "句子": "From the rooftop, we had a stunning panorama of the city stretching out to the horizon",
+            "中文": "(從屋頂上，我們可以欣賞到延伸至地平線的壯麗城市全景。)"
         },
         {
+            "音檔": "音檔 - panorama-2",
             "等級": "C1",
             "分類": "Design",
             "Words": "panorama-2",
-            "句子": "The panoramic photograph of the mountain range was breathtaking"
+            "句子": "The panoramic photograph of the mountain range was breathtaking",
+            "中文": "The book provides a panorama of the history of the world wars"
         },
         {
+            "音檔": "音檔 - panorama-3",
             "等級": "C1",
             "分類": "Design",
             "Words": "panorama-3",
-            "句子": "The book provides a panorama of the history of the world wars"
+            "句子": "The book provides a panorama of the history of the world wars",
+            "中文": "(這本書提供了世界大戰歷史的全景概覽。)"
         },
         {
+            "音檔": "音檔 - panorama-4",
             "等級": "C1",
             "分類": "Design",
             "Words": "panorama-4",
-            "句子": "The documentary offered a panoramic view of wildlife across different continents"
+            "句子": "The documentary offered a panoramic view of wildlife across different continents",
+            "中文": "(這部紀錄片提供了跨大陸野生動物的全景觀。)"
         },
         {
+            "音檔": "音檔 - panoramic-1",
             "等級": "C1",
             "分類": "Design",
             "Words": "panoramic-1",
-            "句子": "The panoramic view from the mountaintop offered a glimpse of the entire valley below"
+            "句子": "The panoramic view from the mountaintop offered a glimpse of the entire valley below",
+            "中文": "(從山頂的全景視野中，可以一窺整個山谷的美景。)"
         },
         {
+            "音檔": "音檔 - panoramic-2",
             "等級": "C1",
             "分類": "Design",
             "Words": "panoramic-2",
-            "句子": "The photographer captured a panoramic shot of the city skyline at sunset"
+            "句子": "The photographer captured a panoramic shot of the city skyline at sunset",
+            "中文": "(攝影師捕捉到了日落時分的城市天際線全景照。)"
         },
         {
+            "音檔": "音檔 - panoramic-3",
             "等級": "C1",
             "分類": "Design",
             "Words": "panoramic-3",
-            "句子": "The film provided a panoramic history of the country’s cultural evolution"
+            "句子": "The film provided a panoramic history of the country’s cultural evolution",
+            "中文": "(這部電影提供了該國文化演變的全景歷史。)"
         },
         {
+            "音檔": "音檔 - panoramic-4",
             "等級": "C1",
             "分類": "Design",
             "Words": "panoramic-4",
-            "句子": "The book offers a panoramic overview of modern art"
+            "句子": "The book offers a panoramic overview of modern art",
+            "中文": "(這本書提供了現代藝術的全景概述。)"
         },
         {
             "Words": "parallel-1",
@@ -24002,58 +24098,76 @@
             "句子": "The plague swept through the medieval city, causing widespread death and devastation"
         },
         {
+            "音檔": "音檔 - please-1",
             "等級": "A2",
             "分類": "Design",
             "Words": "please-1",
-            "句子": "The surprise gift pleased her beyond words"
+            "句子": "The surprise gift pleased her beyond words",
+            "中文": "(這份驚喜禮物讓她高興得無法言喻。)"
         },
         {
+            "音檔": "音檔 - please-2",
             "等級": "A2",
             "分類": "Design",
             "Words": "please-2",
-            "句子": "He worked hard to please his parents with his achievements"
+            "句子": "He worked hard to please his parents with his achievements",
+            "中文": "(他努力工作，想要通過自己的成就來取悅父母。)"
         },
         {
+            "音檔": "音檔 - please-3",
             "等級": "A2",
             "分類": "Design",
             "Words": "please-3",
-            "句子": "She did everything in her power to please her customers"
+            "句子": "She did everything in her power to please her customers",
+            "中文": "(她竭盡全力取悅她的顧客。)"
         },
         {
+            "音檔": "音檔 - please-4",
             "等級": "A2",
             "分類": "Design",
             "Words": "please-4",
-            "句子": "Please let me know if you need any further assistance"
+            "句子": "Please let me know if you need any further assistance",
+            "中文": "(如果您需要任何進一步的幫助，請告訴我。)"
         },
         {
+            "音檔": "音檔 - please-5",
             "等級": "A2",
             "分類": "Design",
             "Words": "please-5",
-            "句子": "\"Please, I need your assistance urgently"
+            "句子": "\"Please, I need your assistance urgently",
+            "中文": "(請，我急需您的幫助。)"
         },
         {
+            "音檔": "音檔 - pleasing-1",
             "等級": "B2",
             "分類": "Design",
             "Words": "pleasing-1",
-            "句子": "The pleasing aroma of freshly baked bread filled the room"
+            "句子": "The pleasing aroma of freshly baked bread filled the room",
+            "中文": "(新鮮烘焙麵包的宜人香氣充滿了整個房間。)"
         },
         {
+            "音檔": "音檔 - pleasing-2",
             "等級": "B2",
             "分類": "Design",
             "Words": "pleasing-2",
-            "句子": "She had a pleasing voice that was perfect for singing"
+            "句子": "She had a pleasing voice that was perfect for singing",
+            "中文": "(她擁有一副悅耳的嗓音，非常適合唱歌。)"
         },
         {
+            "音檔": "音檔 - pleasing-3",
             "等級": "B2",
             "分類": "Design",
             "Words": "pleasing-3",
-            "句子": "The garden was full of pleasing colors and fragrant flowers"
+            "句子": "The garden was full of pleasing colors and fragrant flowers",
+            "中文": "(花園裡充滿了悅目的色彩和芬芳的花朵。)"
         },
         {
+            "音檔": "音檔 - pleasing-4",
             "等級": "B2",
             "分類": "Design",
             "Words": "pleasing-4",
-            "句子": "The house had a pleasing design that was both modern and welcoming"
+            "句子": "The house had a pleasing design that was both modern and welcoming",
+            "中文": "(這座房子的設計令人愉悅，既現代又充滿歡迎感。)"
         },
         {
             "等級": "B1",
@@ -24099,21 +24213,6 @@
             "等級": "B1",
             "Words": "plot-5",
             "句子": "He made a plot of the route of the hike"
-        },
-        {
-            "等級": "B2",
-            "Words": "pluck-up-1",
-            "句子": "She finally plucked up the courage to ask for a promotion"
-        },
-        {
-            "等級": "B2",
-            "Words": "pluck-up-2",
-            "句子": "He plucked up the nerve to confess his feelings to her"
-        },
-        {
-            "等級": "B2",
-            "Words": "pluck-up-3",
-            "句子": "After hesitating for a long time, I plucked up the confidence to speak in front of the large audience"
         },
         {
             "等級": "B1",
@@ -24169,6 +24268,21 @@
             "等級": "B1",
             "Words": "pluck-9",
             "句子": "It took real pluck to stand up to the bullies"
+        },
+        {
+            "等級": "B2",
+            "Words": "pluck-up-1",
+            "句子": "She finally plucked up the courage to ask for a promotion"
+        },
+        {
+            "等級": "B2",
+            "Words": "pluck-up-2",
+            "句子": "He plucked up the nerve to confess his feelings to her"
+        },
+        {
+            "等級": "B2",
+            "Words": "pluck-up-3",
+            "句子": "After hesitating for a long time, I plucked up the confidence to speak in front of the large audience"
         },
         {
             "等級": "B2",
@@ -27345,6 +27459,16 @@
             "句子": "The doctor skillfully seamed the wound, ensuring it would heal properly"
         },
         {
+            "等級": "B2",
+            "Words": "seamless-1",
+            "句子": "The integration of the new software into our existing system was seamless, with no disruptions to our workflow"
+        },
+        {
+            "等級": "B2",
+            "Words": "seamless-2",
+            "句子": "The new app seamlessly integrates user feedback into its design, resulting in an intuitive and user-friendly experience"
+        },
+        {
             "Words": "seamless-design-1",
             "句子": "The app's seamless design ensures an intuitive and fluid user experience"
         },
@@ -27359,16 +27483,6 @@
         {
             "Words": "seamless-design-4",
             "句子": "The website's seamless design allows users to navigate effortlessly between pages"
-        },
-        {
-            "等級": "B2",
-            "Words": "seamless-1",
-            "句子": "The integration of the new software into our existing system was seamless, with no disruptions to our workflow"
-        },
-        {
-            "等級": "B2",
-            "Words": "seamless-2",
-            "句子": "The new app seamlessly integrates user feedback into its design, resulting in an intuitive and user-friendly experience"
         },
         {
             "等級": "C1",
@@ -27882,31 +27996,6 @@
             "句子": "She wrapped herself snugly in a warm blanket on the cold winter night"
         },
         {
-            "等級": "B2",
-            "Words": "soak-up-1",
-            "句子": "The sponge quickly soaked up the spilled water"
-        },
-        {
-            "等級": "B2",
-            "Words": "soak-up-2",
-            "句子": "The towel soaked up the sweat after his workout"
-        },
-        {
-            "等級": "B2",
-            "Words": "soak-up-3",
-            "句子": "She loved to soak up knowledge by reading books"
-        },
-        {
-            "等級": "B2",
-            "Words": "soak-up-4",
-            "句子": "During their vacation, they soaked up the sun on the beach"
-        },
-        {
-            "等級": "B2",
-            "Words": "soak-up-5",
-            "句子": "He soaked up the peaceful atmosphere of the countryside"
-        },
-        {
             "Words": "soak-1",
             "句子": "She soaked the beans overnight to soften them"
         },
@@ -27937,6 +28026,31 @@
         {
             "Words": "soak-8",
             "句子": "After the heavy rain, the ground had a good soak"
+        },
+        {
+            "等級": "B2",
+            "Words": "soak-up-1",
+            "句子": "The sponge quickly soaked up the spilled water"
+        },
+        {
+            "等級": "B2",
+            "Words": "soak-up-2",
+            "句子": "The towel soaked up the sweat after his workout"
+        },
+        {
+            "等級": "B2",
+            "Words": "soak-up-3",
+            "句子": "She loved to soak up knowledge by reading books"
+        },
+        {
+            "等級": "B2",
+            "Words": "soak-up-4",
+            "句子": "During their vacation, they soaked up the sun on the beach"
+        },
+        {
+            "等級": "B2",
+            "Words": "soak-up-5",
+            "句子": "He soaked up the peaceful atmosphere of the countryside"
         },
         {
             "等級": "C1",
@@ -28490,6 +28604,86 @@
         },
         {
             "等級": "B1",
+            "Words": "spin-N-1",
+            "句子": "The gymnast's spin was flawless, showcasing her incredible balance and technique"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-N-2",
+            "句子": "The dancer executed multiple spins in her routine"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-N-3",
+            "句子": "The politician's statement had a positive spin to influence voters"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-N-4",
+            "句子": "Let's go for a spin in the countryside"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-N-5",
+            "句子": "After the roller coaster ride, I felt a bit of spin"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-N-6",
+            "句子": "The tennis player put spin on the ball to make it curve sharply"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-V-1",
+            "句子": "The wheels of the bicycle spun as he pedaled"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-V-10",
+            "句子": "Silkworms spin silk to create their cocoons, and spiders spin webs to catch prey"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-V-2",
+            "句子": "She spun the top on the table"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-V-3",
+            "句子": "He spun the globe to find his next travel destination"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-V-4",
+            "句子": "He spun the combination lock to open the safe"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-V-5",
+            "句子": "The politician tried to spin the negative news into a positive story"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-V-6",
+            "句子": "The company's PR team ( stands for Public Relations)  attempted to spin the product recall as a proactive measure to ensure customer safety"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-V-7",
+            "句子": "He spun a story to explain his absence"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-V-8",
+            "句子": "She spun gracefully across the dance floor"
+        },
+        {
+            "等級": "B1",
+            "Words": "spin-V-9",
+            "句子": "She spun wool into yarn using a spinning wheel"
+        },
+        {
+            "等級": "B1",
             "Words": "spirit-1",
             "句子": "Many people believe the spirit lives on after death"
         },
@@ -28767,6 +28961,101 @@
             "句子": "Ice and elevation are often used to treat a mild sprain"
         },
         {
+            "分類": "形狀",
+            "Words": "square-N-1",
+            "句子": "The square is the most basic and symmetrical shape in geometry"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-N-2",
+            "句子": "The carpenter cut the wood into perfect squares for the project"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-N-3",
+            "句子": "The students were asked to calculate the area of a square with a side length of 5 cm"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-N-4",
+            "句子": "The town square was filled with people celebrating the festival"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-N-5",
+            "句子": "They met at the central square before heading to the restaurant"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-N-6",
+            "句子": "Many European cities are known for their historic town squares"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-N-7",
+            "句子": "The room had a square layout with equal-length walls"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-N-8",
+            "句子": "They made a square deal when they agreed on the price"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-N-9",
+            "句子": "We're square now that you've paid back the money you borrowed"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-V-1",
+            "句子": "He squared the table with the wall"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-V-10",
+            "句子": "She looked him square in the eyes and told him the truth"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-V-2",
+            "句子": "The carpenter squared the frame before nailing it together"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-V-3",
+            "句子": "We squared the bill before leaving the restaurant"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-V-4",
+            "句子": "The two friends squared things after their argument"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-V-5",
+            "句子": "She squared the number 5 and got 25"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-V-6",
+            "句子": "The student was asked to square all the numbers in the table"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-V-7",
+            "句子": "He squared himself before entering the meeting"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-V-8",
+            "句子": "The team squared themselves for the final match"
+        },
+        {
+            "分類": "形狀",
+            "Words": "square-V-9",
+            "句子": "The ball hit him square in the chest"
+        },
+        {
             "等級": "C1",
             "分類": "商業",
             "Words": "stagnation-1",
@@ -28865,24 +29154,32 @@
             "句子": "The loud noise from the fireworks startled the sleeping dog"
         },
         {
+            "音檔": "音檔 - state-of-the-art-1",
             "分類": "Design",
             "Words": "state-of-the-art-1",
-            "句子": "The new hospital is equipped with state-of-the-art medical equipment"
+            "句子": "The new hospital is equipped with state-of-the-art medical equipment",
+            "中文": "(這家新醫院配備了最先進的醫療設備。)"
         },
         {
+            "音檔": "音檔 - state-of-the-art-2",
             "分類": "Design",
             "Words": "state-of-the-art-2",
-            "句子": "Their state-of-the-art design studio features cutting-edge software and tools"
+            "句子": "Their state-of-the-art design studio features cutting-edge software and tools",
+            "中文": "(他們的最先進設計工作室配備了尖端的軟體和工具)。"
         },
         {
+            "音檔": "音檔 - state-of-the-art-3",
             "分類": "Design",
             "Words": "state-of-the-art-3",
-            "句子": "The stroller incorporates state-of-the-art suspension technology for a smooth ride"
+            "句子": "The stroller incorporates state-of-the-art suspension technology for a smooth ride",
+            "中文": "(這款嬰兒車融合了最先進的懸吊技術，提供平穩的乘坐體驗)。"
         },
         {
+            "音檔": "音檔 - state-of-the-art-4",
             "分類": "Design",
             "Words": "state-of-the-art-4",
-            "句子": "This new i-Pad features the state-of-the-art interface design"
+            "句子": "This new i-Pad features the state-of-the-art interface design",
+            "中文": "(這款新iPad擁有最先進的界面設計)。"
         },
         {
             "等級": "C1",
@@ -28940,64 +29237,58 @@
             "句子": "The captain called for the crew to gather at the stern to prepare for docking"
         },
         {
+            "音檔": "音檔 - stick-out-1",
             "分類": "Design",
             "Words": "stick-out-1",
-            "句子": "The branch of the tree stuck out over the sidewalk"
+            "句子": "The branch of the tree stuck out over the sidewalk",
+            "中文": "(樹枝伸出在人行道上方)。"
         },
         {
+            "音檔": "音檔 - stick-out-2",
             "分類": "Design",
             "Words": "stick-out-2",
-            "句子": "His ears stick out, making him look unique"
+            "句子": "His ears stick out, making him look unique",
+            "中文": "(他的耳朵突出，使他看起來與眾不同)。"
         },
         {
+            "音檔": "音檔 - stick-out-3",
             "分類": "Design",
             "Words": "stick-out-3",
-            "句子": "Important for production, the magnet has to be flush with the surface of plastic parts (magnet should not stick out)"
+            "句子": "Important for production, the magnet has to be flush with the surface of plastic parts magnet should not stick out",
+            "中文": "(對於生產來說，磁鐵必須與塑料部件的表面齊平，磁鐵不應突出)。"
         },
         {
+            "音檔": "音檔 - stick-out-4",
             "分類": "Design",
             "Words": "stick-out-4",
-            "句子": "The bright red car stuck out among the sea of gray vehicles"
+            "句子": "The bright red car stuck out among the sea of gray vehicles",
+            "中文": "(那輛鮮紅色的車子在一片灰色車輛中十分引人注目)。"
         },
         {
+            "音檔": "音檔 - stick-out-5",
             "分類": "Design",
             "Words": "stick-out-5",
-            "句子": "Her dress really sticks out at the party"
+            "句子": "Her dress really sticks out at the party",
+            "中文": "(她的裙子在派對中非常引人注目)。"
         },
         {
+            "音檔": "音檔 - stick-out-6",
             "分類": "Design",
             "Words": "stick-out-6",
-            "句子": "He decided to stick out the tough job interview process despite the pressure"
+            "句子": "He decided to stick out the tough job interview process despite the pressure",
+            "中文": "(儘管面臨壓力，他決定堅持完成艱難的工作面試過程)。"
         },
         {
+            "音檔": "音檔 - stick-out-7",
             "分類": "Design",
             "Words": "stick-out-7",
-            "句子": "They stuck out the storm and continued their journey"
+            "句子": "They stuck out the storm and continued their journey",
+            "中文": "(他們忍受了風暴，並繼續他們的旅程)。"
         },
         {
             "等級": "B1",
             "Words": "stir-1",
             "句子": "Stir the sauce until it thickens"
-        },
-        {
-            "等級": "C1",
-            "Words": "stow-away-1",
-            "句子": "They decided to stow away on the cargo ship to reach the distant island"
-        },
-        {
-            "等級": "C1",
-            "Words": "stow-away-2",
-            "句子": "The young boy managed to stow away in the luggage compartment of the bus"
-        },
-        {
-            "等級": "C1",
-            "Words": "stow-away-3",
-            "句子": "Make sure to stow away your gear before the storm hits"
-        },
-        {
-            "等級": "C1",
-            "Words": "stow-away-4",
-            "句子": "She stowed away the extra blankets in the storage bin under the bed"
         },
         {
             "等級": "B1",
@@ -29025,34 +29316,64 @@
             "句子": "The stowaway was discovered hiding in the cargo hold of the ship"
         },
         {
+            "等級": "C1",
+            "Words": "stow-away-1",
+            "句子": "They decided to stow away on the cargo ship to reach the distant island"
+        },
+        {
             "等級": "B2",
             "Words": "stowaway-2",
             "句子": "Authorities apprehended the stowaway as he tried to escape from the plane after landing"
         },
         {
+            "等級": "C1",
+            "Words": "stow-away-2",
+            "句子": "The young boy managed to stow away in the luggage compartment of the bus"
+        },
+        {
+            "等級": "C1",
+            "Words": "stow-away-3",
+            "句子": "Make sure to stow away your gear before the storm hits"
+        },
+        {
+            "等級": "C1",
+            "Words": "stow-away-4",
+            "句子": "She stowed away the extra blankets in the storage bin under the bed"
+        },
+        {
+            "音檔": "音檔 - straightforward-1",
             "分類": "Design",
             "Words": "straightforward-1",
-            "句子": "The instructions for assembling the furniture were straightforward and easy to follow"
+            "句子": "The instructions for assembling the furniture were straightforward and easy to follow",
+            "中文": "(組裝家具的說明簡單易懂)。"
         },
         {
+            "音檔": "音檔 - straightforward-2",
             "分類": "Design",
             "Words": "straightforward-2",
-            "句子": "The job application process was straightforward and quick"
+            "句子": "The job application process was straightforward and quick",
+            "中文": "(工作申請過程簡單且快速)。"
         },
         {
+            "音檔": "音檔 - straightforward-3",
             "分類": "Design",
             "Words": "straightforward-3",
-            "句子": "He was very straightforward with us about the challenges he faced"
+            "句子": "He was very straightforward with us about the challenges he faced",
+            "中文": "(他對我們非常直截了當，講述了他面臨的挑戰)。"
         },
         {
+            "音檔": "音檔 - straightforward-4",
             "分類": "Design",
             "Words": "straightforward-4",
-            "句子": "She gave a straightforward account of what happened"
+            "句子": "She gave a straightforward account of what happened",
+            "中文": "(她對發生的事情給出了直截了當的描述)。"
         },
         {
+            "音檔": "音檔 - straightforward-5",
             "分類": "Design",
             "Words": "straightforward-5",
-            "句子": "I appreciate his straightforward attitude when dealing with difficult issues"
+            "句子": "I appreciate his straightforward attitude when dealing with difficult issues",
+            "中文": "(我很欣賞他在處理困難問題時的直率態度)。"
         },
         {
             "等級": "B1",
@@ -29195,64 +29516,88 @@
             "句子": "He was a mentor who guided young people who strayed back into a more positive trajectory"
         },
         {
+            "音檔": "音檔 - streamline-1",
             "分類": "Design",
             "Words": "streamline-1",
-            "句子": "The company streamlined its production process to reduce costs and improve efficiency"
+            "句子": "The company streamlined its production process to reduce costs and improve efficiency",
+            "中文": "(公司簡化了其生產流程，以降低成本並提高效率)。"
         },
         {
+            "音檔": "音檔 - streamline-2",
             "分類": "Design",
             "Words": "streamline-2",
-            "句子": "The design team streamlined the interface to make the app more user-friendly"
+            "句子": "The design team streamlined the interface to make the app more user-friendly",
+            "中文": "(設計團隊簡化了介面，使應用程式更具使用友好性)。"
         },
         {
+            "音檔": "音檔 - streamline-3",
             "分類": "Design",
             "Words": "streamline-3",
-            "句子": "The bicycle trailer was streamlined to reduce wind resistance"
+            "句子": "The bicycle trailer was streamlined to reduce wind resistance",
+            "中文": "(這輛自行車拖車經過流線型設計，以減少風阻)。"
         },
         {
+            "音檔": "音檔 - streamline-4",
             "分類": "Design",
             "Words": "streamline-4",
-            "句子": "The engineers streamlined the boat's hull(船體) to reduce drag and improve speed"
+            "句子": "The engineers streamlined the boat's hull(船體) to reduce drag and improve speed",
+            "中文": "(工程師對船體進行了流線型設計，以減少阻力並提高速度)。"
         },
         {
+            "音檔": "音檔 - streamline-5",
             "分類": "Design",
             "Words": "streamline-5",
-            "句子": "The car’s streamlined design minimized air resistance, making it more fuel-efficient"
+            "句子": "The car’s streamlined design minimized air resistance, making it more fuel-efficient",
+            "中文": "(這輛車的流線型設計將空氣阻力降至最低，使其更加省油)。"
         },
         {
+            "音檔": "音檔 - streamline-6",
             "分類": "Design",
             "Words": "streamline-6",
-            "句子": "The car’s streamlined shape reduced air resistance and improved fuel efficiency"
+            "句子": "The car’s streamlined shape reduced air resistance and improved fuel efficiency",
+            "中文": "(這輛車的流線型外形減少了空氣阻力，並提高了燃油效率)。"
         },
         {
+            "音檔": "音檔 - streamline-7",
             "分類": "Design",
             "Words": "streamline-7",
-            "句子": "The office was designed with a minimalist, streamlined look to create a modern atmosphere"
+            "句子": "The office was designed with a minimalist, streamlined look to create a modern atmosphere",
+            "中文": "(這個辦公室採用了極簡的流線型設計，營造出現代化的氛圍)。"
         },
         {
+            "音檔": "音檔 - streamline-8",
             "分類": "Design",
             "Words": "streamline-8",
-            "句子": "The airplane’s streamline is key to its ability to cut through the air effortlessly"
+            "句子": "The airplane’s streamline is key to its ability to cut through the air effortlessly",
+            "中文": "(飛機的流線型設計是其輕鬆穿越空氣的關鍵)。"
         },
         {
+            "音檔": "音檔 - streamlined-design-1",
             "分類": "Design",
             "Words": "streamlined-design-1",
-            "句子": "The car's streamlined design reduces air resistance, improving fuel efficiency"
+            "句子": "The car's streamlined design reduces air resistance, improving fuel efficiency",
+            "中文": "(這輛車的流線型設計減少了空氣阻力，從而提高了燃油效率)。"
         },
         {
+            "音檔": "音檔 - streamlined-design-2",
             "分類": "Design",
             "Words": "streamlined-design-2",
-            "句子": "The new smartphone features a streamlined design with fewer buttons and a sleeker interface"
+            "句子": "The new smartphone features a streamlined design with fewer buttons and a sleeker interface",
+            "中文": "(這款新智能手機具有流線型設計，按鈕更少，界面更簡潔)。"
         },
         {
+            "音檔": "音檔 - streamlined-design-3",
             "分類": "Design",
             "Words": "streamlined-design-3",
-            "句子": "Modern architecture often incorporates streamlined designs for a clean and futuristic appearance"
+            "句子": "Modern architecture often incorporates streamlined designs for a clean and futuristic appearance",
+            "中文": "(現代建築常採用流線型設計，營造乾淨且具有未來感的外觀)。"
         },
         {
+            "音檔": "音檔 - streamlined-design-4",
             "分類": "Design",
             "Words": "streamlined-design-4",
-            "句子": "The company adopted a streamlined design for its website to improve user navigation and experience"
+            "句子": "The company adopted a streamlined design for its website to improve user navigation and experience",
+            "中文": "(公司採用了流線型設計來改善網站的用戶導航和體驗)。"
         },
         {
             "等級": "B2",
@@ -29315,11 +29660,6 @@
             "句子": "They decided to stud the walls with decorative elements for added appeal"
         },
         {
-            "等級": "C2",
-            "Words": "stumble-upon-1",
-            "句子": "While hiking in the woods, we stumbled upon an old abandoned cabin hidden among the trees"
-        },
-        {
             "等級": "B2",
             "Words": "stumble-1",
             "句子": "He stumbled on the staircase and hurt his leg"
@@ -29363,6 +29703,11 @@
             "等級": "B2",
             "Words": "stumble-9",
             "句子": "The company faced financial difficulties due to a stumble in its investment strategy"
+        },
+        {
+            "等級": "C2",
+            "Words": "stumble-upon-1",
+            "句子": "While hiking in the woods, we stumbled upon an old abandoned cabin hidden among the trees"
         },
         {
             "等級": "C1",
@@ -29470,24 +29815,6 @@
             "句子": "He submitted to the terms of the agreement after lengthy negotiations"
         },
         {
-            "等級": "C2",
-            "分類": "法政",
-            "Words": "substance-abuse-1",
-            "句子": "Many individuals seek help for substance abuse to regain control of their lives and improve their well-being"
-        },
-        {
-            "等級": "C2",
-            "分類": "法政",
-            "Words": "substance-abuse-2",
-            "句子": "The community launched a program aimed at preventing substance abuse among teenagers"
-        },
-        {
-            "等級": "C2",
-            "分類": "法政",
-            "Words": "substance-abuse-3",
-            "句子": "Treatment for substance abuse often includes therapy, support groups, and sometimes medication"
-        },
-        {
             "等級": "C1",
             "Words": "substance-1",
             "句子": "Water is a vital substance for all forms of life"
@@ -29526,6 +29853,24 @@
             "等級": "C1",
             "Words": "substance-8",
             "句子": "In the business world, a person of substance often has significant influence and connections"
+        },
+        {
+            "等級": "C2",
+            "分類": "法政",
+            "Words": "substance-abuse-1",
+            "句子": "Many individuals seek help for substance abuse to regain control of their lives and improve their well-being"
+        },
+        {
+            "等級": "C2",
+            "分類": "法政",
+            "Words": "substance-abuse-2",
+            "句子": "The community launched a program aimed at preventing substance abuse among teenagers"
+        },
+        {
+            "等級": "C2",
+            "分類": "法政",
+            "Words": "substance-abuse-3",
+            "句子": "Treatment for substance abuse often includes therapy, support groups, and sometimes medication"
         },
         {
             "等級": "C2",
@@ -29913,69 +30258,95 @@
             "句子": "4"
         },
         {
+            "音檔": "音檔 - sustainability-1",
             "分類": "Design",
             "Words": "sustainability-1",
-            "句子": "Sustainability is a key goal for companies looking to reduce their environmental footprint"
+            "句子": "Sustainability is a key goal for companies looking to reduce their environmental footprint",
+            "中文": "(可持續性是尋求減少環境足跡的公司的一個關鍵目標)。"
         },
         {
+            "音檔": "音檔 - sustainability-2",
             "分類": "Design",
             "Words": "sustainability-2",
-            "句子": "The city has adopted sustainability initiatives to ensure its growth is environmentally responsible"
+            "句子": "The city has adopted sustainability initiatives to ensure its growth is environmentally responsible",
+            "中文": "(可持續性是尋求減少環境足跡的公司的一個關鍵目標)。"
         },
         {
+            "音檔": "音檔 - sustainability-3",
             "分類": "Design",
             "Words": "sustainability-3",
-            "句子": "Education on sustainability helps communities take actions that preserve natural resources for future generations"
+            "句子": "Education on sustainability helps communities take actions that preserve natural resources for future generations",
+            "中文": "(這座城市已經採取了可持續發展措施，以確保其增長對環境負責)。"
         },
         {
+            "音檔": "音檔 - sustainability-4",
             "分類": "Design",
             "Words": "sustainability-4",
-            "句子": "The use of renewable energy sources plays a major role in promoting sustainability in the energy sector"
+            "句子": "The use of renewable energy sources plays a major role in promoting sustainability in the energy sector",
+            "中文": "(可再生能源的使用在促進能源領域的可持續性方面發揮了重要作用)。"
         },
         {
+            "音檔": "音檔 - sustainability-5",
             "分類": "Design",
             "Words": "sustainability-5",
-            "句子": "In terms of national development, more and more countries are beginning to realize the importance of sustainability"
+            "句子": "In terms of national development, more and more countries are beginning to realize the importance of sustainability",
+            "中文": "(在國家發展方面，越來越多的國家開始意識到可持續性的重要性)。"
         },
         {
+            "音檔": "音檔 - sustainable-1",
             "分類": "Design",
             "Words": "sustainable-1",
-            "句子": "The company has adopted sustainable practices by using renewable energy sources in its production processes"
+            "句子": "The company has adopted sustainable practices by using renewable energy sources in its production processes",
+            "中文": "(該公司通過在生產過程中使用可再生能源來採用可持續的做法)。"
         },
         {
+            "音檔": "音檔 - sustainable-2",
             "分類": "Design",
             "Words": "sustainable-2",
-            "句子": "She chooses sustainable products to reduce her environmental impact"
+            "句子": "She chooses sustainable products to reduce her environmental impact",
+            "中文": "(她選擇可持續產品以減少她對環境的影響)。"
         },
         {
+            "音檔": "音檔 - sustainable-3",
             "分類": "Design",
             "Words": "sustainable-3",
-            "句子": "The town is focusing on sustainable development to ensure its growth without harming local ecosystems"
+            "句子": "The town is focusing on sustainable development to ensure its growth without harming local ecosystems",
+            "中文": "(這個鎮專注於可持續發展，以確保在不損害當地生態系統的情況下實現增長)。"
         },
         {
+            "音檔": "音檔 - sustainable-4",
             "分類": "Design",
             "Words": "sustainable-4",
-            "句子": "Solar and wind power are examples of sustainable energy that reduce reliance on fossil fuels"
+            "句子": "Solar and wind power are examples of sustainable energy that reduce reliance on fossil fuels",
+            "中文": "(太陽能和風能是可持續能源的例子，能減少對化石燃料的依賴)。"
         },
         {
+            "音檔": "音檔 - sustainably-1",
             "分類": "Design",
             "Words": "sustainably-1",
-            "句子": "The company aims to produce goods sustainably, using eco-friendly materials"
+            "句子": "The company aims to produce goods sustainably, using eco-friendly materials",
+            "中文": "(該公司旨在以可持續的方式生產商品，使用環保材料)。"
         },
         {
+            "音檔": "音檔 - sustainably-2",
             "分類": "Design",
             "Words": "sustainably-2",
-            "句子": "He farms sustainably, ensuring that the soil remains fertile for future generations"
+            "句子": "He farms sustainably, ensuring that the soil remains fertile for future generations",
+            "中文": "(他以可持續的方式進行耕作，確保土壤對未來幾代人保持肥沃)。"
         },
         {
+            "音檔": "音檔 - sustainably-3",
             "分類": "Design",
             "Words": "sustainably-3",
-            "句子": "They designed the building to be energy-efficient, using materials that could be sustainably sourced"
+            "句子": "They designed the building to be energy-efficient, using materials that could be sustainably sourced",
+            "中文": "(他們設計了這座建築，使其具有能源效率，並使用可以可持續採購的材料)。"
         },
         {
+            "音檔": "音檔 - sustainably-4",
             "分類": "Design",
             "Words": "sustainably-4",
-            "句子": "The product was designed sustainably, with recyclable components and a focus on reducing waste during production"
+            "句子": "The product was designed sustainably, with recyclable components and a focus on reducing waste during production",
+            "中文": "(該產品以可持續方式設計，具有可回收組件，並注重在生產過程中減少浪費)。"
         },
         {
             "等級": "C1",
@@ -30223,28 +30594,36 @@
             "句子": "Watching the tadpoles in the pond evolve into frogs was a fascinating experience"
         },
         {
+            "音檔": "音檔 - take-evasive-action-1",
             "等級": "C1",
             "分類": "Design",
             "Words": "take-evasive-action-1",
-            "句子": "The pilot had to take evasive action to avoid a mid-air collision"
+            "句子": "The pilot had to take evasive action to avoid a mid-air collision",
+            "中文": "(飛行員必須採取迴避措施以避免空中碰撞)。"
         },
         {
+            "音檔": "音檔 - take-evasive-action-2",
             "等級": "C1",
             "分類": "Design",
             "Words": "take-evasive-action-2",
-            "句子": "She took evasive action by changing the subject when asked about her personal life"
+            "句子": "She took evasive action by changing the subject when asked about her personal life",
+            "中文": "(當被問及她的私生活時，她通過換話題來採取迴避行動)。"
         },
         {
+            "音檔": "音檔 - take-evasive-action-3",
             "等級": "C1",
             "分類": "Design",
             "Words": "take-evasive-action-3",
-            "句子": "The driver swerved suddenly to take evasive action and avoid the accident"
+            "句子": "The driver swerved suddenly to take evasive action and avoid the accident",
+            "中文": "(駕駛員突然打方向盤採取迴避行動，以避免事故發生)。"
         },
         {
+            "音檔": "音檔 - take-evasive-action-4",
             "等級": "C1",
             "分類": "Design",
             "Words": "take-evasive-action-4",
-            "句子": "The company took evasive action to avoid financial losses during the economic downturn"
+            "句子": "The company took evasive action to avoid financial losses during the economic downturn",
+            "中文": "(該公司採取了迴避行動，以避免在經濟衰退期間的財務損失)。"
         },
         {
             "等級": "B2",
@@ -30427,14 +30806,14 @@
             "句子": "The dish was prepared tastily, with a perfect balance of seasonings and herbs"
         },
         {
-            "等級": "C2",
-            "Words": "tasty-treats-1",
-            "句子": "The bakery down the street sells all sorts of tasty treats, from cookies to cupcakes"
-        },
-        {
             "等級": "B1",
             "Words": "tasty-1",
             "句子": "The chef prepared a tasty meal using fresh ingredients from the garden"
+        },
+        {
+            "等級": "C2",
+            "Words": "tasty-treats-1",
+            "句子": "The bakery down the street sells all sorts of tasty treats, from cookies to cupcakes"
         },
         {
             "等級": "B2",
@@ -30511,21 +30890,6 @@
             "句子": "He tore a ligament during the game and had to leave the field"
         },
         {
-            "等級": "C2",
-            "Words": "tectonic-plates-1",
-            "句子": "Silfra is the only place in the world where you can dive or snorkel directly in a crack between two tectonic plates"
-        },
-        {
-            "等級": "C2",
-            "Words": "tectonic-plates-2",
-            "句子": "The collision of tectonic plates created the Taiwan island"
-        },
-        {
-            "等級": "C2",
-            "Words": "tectonic-plates-3",
-            "句子": "Earthquakes often occur at the edges of tectonic plates"
-        },
-        {
             "等級": "B2",
             "Words": "tectonic-1",
             "句子": "Tectonic activity can lead to the formation of mountains and earthquakes"
@@ -30544,6 +30908,21 @@
             "等級": "B2",
             "Words": "tectonic-4",
             "句子": "The company's decision to go green was a tectonic change in its business strategy"
+        },
+        {
+            "等級": "C2",
+            "Words": "tectonic-plates-1",
+            "句子": "Silfra is the only place in the world where you can dive or snorkel directly in a crack between two tectonic plates"
+        },
+        {
+            "等級": "C2",
+            "Words": "tectonic-plates-2",
+            "句子": "The collision of tectonic plates created the Taiwan island"
+        },
+        {
+            "等級": "C2",
+            "Words": "tectonic-plates-3",
+            "句子": "Earthquakes often occur at the edges of tectonic plates"
         },
         {
             "等級": "B2",
@@ -30596,24 +30975,32 @@
             "句子": "Mary likes her job as baby tender"
         },
         {
+            "音檔": "音檔 - terrain-1",
             "分類": "Design",
             "Words": "terrain-1",
-            "句子": "The stroller’s wheels are designed to handle rough terrain, making it suitable for outdoor adventures"
+            "句子": "The stroller’s wheels are designed to handle rough terrain, making it suitable for outdoor adventures",
+            "中文": "(這款嬰兒車的車輪設計能夠應對崎嶇的地形，適合戶外探險)。"
         },
         {
+            "音檔": "音檔 - terrain-2",
             "分類": "Design",
             "Words": "terrain-2",
-            "句子": "Navigating the rocky terrain was challenging, but the stroller’s suspension system made it much easier"
+            "句子": "Navigating the rocky terrain was challenging, but the stroller’s suspension system made it much easier",
+            "中文": "(穿越崎嶇的地形很具挑戰性，但嬰兒車的避震系統使得這一切變得更加容易)。"
         },
         {
+            "音檔": "音檔 - terrain-3",
             "分類": "Design",
             "Words": "terrain-3",
-            "句子": "The rugged terrain of the park made the all-terrain stroller a perfect choice for hiking families"
+            "句子": "The rugged terrain of the park made the all-terrain stroller a perfect choice for hiking families",
+            "中文": "(公園崎嶇的地形使得全地形嬰兒車成為喜愛遠足家庭的完美選擇)。"
         },
         {
+            "音檔": "音檔 - terrain-4",
             "分類": "Design",
             "Words": "terrain-4",
-            "句子": "The terrain around the city is mostly flat, making it ideal for cycling and stroller walks"
+            "句子": "The terrain around the city is mostly flat, making it ideal for cycling and stroller walks",
+            "中文": "(城市周圍的地形大多平坦，非常適合騎自行車和推嬰兒車散步)"
         },
         {
             "等級": "C2",
@@ -30825,6 +31212,56 @@
             "等級": "C2",
             "Words": "thoroughfare-4",
             "句子": "Street performers often entertain crowds along the thoroughfare in the downtown area"
+        },
+        {
+            "等級": "B1",
+            "Words": "thread-N-1",
+            "句子": "She sewed the buttons onto the shirt with a strong thread"
+        },
+        {
+            "等級": "B1",
+            "Words": "thread-N-2",
+            "句子": "The spider spun a delicate thread to weave its web"
+        },
+        {
+            "等級": "B1",
+            "Words": "thread-N-3",
+            "句子": "Even in the darkest of times, there is always a thread of hope to grasp, guiding us towards brighter days"
+        },
+        {
+            "等級": "B1",
+            "Words": "thread-N-4",
+            "句子": "The thread of their argument wove its way through the entire meeting"
+        },
+        {
+            "等級": "B1",
+            "Words": "thread-N-5",
+            "句子": "I must have skipped a page, because I lost the thread of the story"
+        },
+        {
+            "等級": "B1",
+            "Words": "thread-N-6",
+            "句子": "The bolt has a fine thread that matches the corresponding nut"
+        },
+        {
+            "等級": "B1",
+            "Words": "thread-V-1",
+            "句子": "She carefully threaded the needle before starting to sew"
+        },
+        {
+            "等級": "B1",
+            "Words": "thread-V-2",
+            "句子": "Can you thread this needle for me? I always have trouble with it"
+        },
+        {
+            "等級": "B1",
+            "Words": "thread-V-3",
+            "句子": "The hiker threaded her way through the dense forest, following the narrow path"
+        },
+        {
+            "等級": "B1",
+            "Words": "thread-V-4",
+            "句子": "He threaded his way through the crowded marketplace, trying to find the vendor he was looking for"
         },
         {
             "等級": "B1",
@@ -31632,19 +32069,25 @@
             "句子": "As the storm clouds gathered on the horizon, the villagers watched with trepidation, fearing the worst"
         },
         {
+            "音檔": "音檔 - triadic-1",
             "分類": "Design",
             "Words": "triadic-1",
-            "句子": "The triadic color scheme used in the design created a balanced and vibrant look"
+            "句子": "The triadic color scheme used in the design created a balanced and vibrant look",
+            "中文": "(設計中使用的三色配色方案創造了一個平衡且充滿活力的外觀)"
         },
         {
+            "音檔": "音檔 - triadic-2",
             "分類": "Design",
             "Words": "triadic-2",
-            "句子": "A triadic relationship involves three individuals interacting with each other"
+            "句子": "A triadic relationship involves three individuals interacting with each other",
+            "中文": "(三方關係涉及三個個體彼此互動)"
         },
         {
+            "音檔": "音檔 - triadic-3",
             "分類": "Design",
             "Words": "triadic-3",
-            "句子": "The triadic structure of the musical composition gives it complexity and harmony"
+            "句子": "The triadic structure of the musical composition gives it complexity and harmony",
+            "中文": "(音樂作品的三重結構賦予了它複雜性和和諧感)"
         },
         {
             "等級": "B2",
@@ -31737,16 +32180,6 @@
             "句子": "The surfers found the waves totally tubular that day"
         },
         {
-            "等級": "C1",
-            "Words": "tuck-away-1",
-            "句子": "She tucked away her jewelry in a hidden compartment of her drawer"
-        },
-        {
-            "等級": "C1",
-            "Words": "tuck-away-2",
-            "句子": "After the match, he tucked away a whole pizza by himself"
-        },
-        {
             "等級": "B1",
             "Words": "tuck-1",
             "句子": "She tucked her hair behind her ears"
@@ -31765,6 +32198,16 @@
             "等級": "B1",
             "Words": "tuck-4",
             "句子": "he dress was too big, so Mother put a tuck in it"
+        },
+        {
+            "等級": "C1",
+            "Words": "tuck-away-1",
+            "句子": "She tucked away her jewelry in a hidden compartment of her drawer"
+        },
+        {
+            "等級": "C1",
+            "Words": "tuck-away-2",
+            "句子": "After the match, he tucked away a whole pizza by himself"
         },
         {
             "等級": "B1",
@@ -32196,19 +32639,25 @@
             "句子": "Unforeseen circumstances forced them to change their travel plans"
         },
         {
+            "音檔": "音檔 - upcycle-1",
             "分類": "Design",
             "Words": "upcycle-1",
-            "句子": "She decided to upcycle an old wooden chair by repainting it and adding new fabric"
+            "句子": "She decided to upcycle an old wooden chair by repainting it and adding new fabric",
+            "中文": "(她決定通過重新塗漆和添加新布料來升級改造一把舊木椅)"
         },
         {
+            "音檔": "音檔 - upcycle-2",
             "分類": "Design",
             "Words": "upcycle-2",
-            "句子": "After the child outgrows the stroller, parents can upcycle it into a trolley, extending its use and functionality"
+            "句子": "After the child outgrows the stroller, parents can upcycle it into a trolley, extending its use and functionality",
+            "中文": "(在孩子長大不再使用嬰兒車後，父母可以將其升級改造成手推車，延長其使用壽命和功能性)"
         },
         {
+            "音檔": "音檔 - upcycle-3",
             "分類": "Design",
             "Words": "upcycle-3",
-            "句子": "By upcycling old clothes, the designer created a unique collection for the fashion show"
+            "句子": "By upcycling old clothes, the designer created a unique collection for the fashion show",
+            "中文": "(通過升級改造舊衣服，設計師為時裝秀創建了一個獨特的系列)"
         },
         {
             "等級": "B2",
@@ -32619,34 +33068,42 @@
             "句子": "The nightclub provided an intimate venue for her performance"
         },
         {
-            "等級": "C2",
-            "Words": "vernier-caliper-1",
-            "句子": "The machinist used a vernier caliper to determine the exact thickness of the metal sheet, ensuring precise cuts for the engineering project"
-        },
-        {
             "等級": "B2",
             "Words": "vernier-1",
             "句子": "The engineer carefully read the vernier scale of the caliper to obtain a precise measurement of the diameter of the small gear"
         },
         {
+            "等級": "C2",
+            "Words": "vernier-caliper-1",
+            "句子": "The machinist used a vernier caliper to determine the exact thickness of the metal sheet, ensuring precise cuts for the engineering project"
+        },
+        {
+            "音檔": "音檔 - versatility-1",
             "分類": "Design",
             "Words": "versatility-1",
-            "句子": "The versatility of the new smartphone makes it useful for both work and entertainment"
+            "句子": "The versatility of the new smartphone makes it useful for both work and entertainment",
+            "中文": "(新款智能手機的多功能性使其適用於工作和娛樂)"
         },
         {
+            "音檔": "音檔 - versatility-2",
             "分類": "Design",
             "Words": "versatility-2",
-            "句子": "Her versatility as an actress allowed her to play both dramatic and comedic roles"
+            "句子": "Her versatility as an actress allowed her to play both dramatic and comedic roles",
+            "中文": "(她作為演員的多才多藝使她能夠同時扮演戲劇性和喜劇性的角色)"
         },
         {
+            "音檔": "音檔 - versatility-3",
             "分類": "Design",
             "Words": "versatility-3",
-            "句子": "The versatility of the fabric makes it perfect for a variety of clothing styles"
+            "句子": "The versatility of the fabric makes it perfect for a variety of clothing styles",
+            "中文": "(這種面料的多功能性使其非常適合各種服裝風格)"
         },
         {
+            "音檔": "音檔 - versatility-4",
             "分類": "Design",
             "Words": "versatility-4",
-            "句子": "The tool’s versatility allows it to function as both a hammer and a screwdriver"
+            "句子": "The tool’s versatility allows it to function as both a hammer and a screwdriver",
+            "中文": "(這款工具的多功能性使其既能作為錘子又能作為螺絲刀使用)"
         },
         {
             "等級": "B1",
@@ -32807,28 +33264,36 @@
             "句子": "He has some rare old vintages in his collection of wine"
         },
         {
+            "音檔": "音檔 - vintage-inspired-1",
             "等級": "C1",
             "分類": "Design",
             "Words": "vintage-inspired-1",
-            "句子": "She wore a vintage-inspired dress that resembled 1950s fashion but was made with modern fabrics"
+            "句子": "She wore a vintage-inspired dress that resembled 1950s fashion but was made with modern fabrics",
+            "中文": "(她穿著一件復古風格的連衣裙，類似1950年代的時尚，但使用現代面料製作)"
         },
         {
+            "音檔": "音檔 - vintage-inspired-2",
             "等級": "C1",
             "分類": "Design",
             "Words": "vintage-inspired-2",
-            "句子": "The café had a vintage-inspired décor with antique furniture and classic wallpaper"
+            "句子": "The cafe had a vintage-inspired decor with antique furniture and classic wallpaper",
+            "中文": "(這家咖啡館擁有復古風格的裝飾，配有古董傢俱和經典壁紙)"
         },
         {
+            "音檔": "音檔 - vintage-inspired-3",
             "等級": "C1",
             "分類": "Design",
             "Words": "vintage-inspired-3",
-            "句子": "His vintage-inspired watch had the look of a classic timepiece but featured advanced technology"
+            "句子": "His vintage-inspired watch had the look of a classic timepiece but featured advanced technology",
+            "中文": "(他的復古風格手錶外觀像經典時計，但內置了先進技術)"
         },
         {
+            "音檔": "音檔 - vintage-inspired-4",
             "等級": "C1",
             "分類": "Design",
             "Words": "vintage-inspired-4",
-            "句子": "The designer created a vintage-inspired collection that blended retro patterns with contemporary tailoring"
+            "句子": "The designer created a vintage-inspired collection that blended retro patterns with contemporary tailoring",
+            "中文": "(設計師創建了一個復古風格的系列，將復古圖案與現代裁剪相融合)"
         },
         {
             "等級": "C1",
@@ -33006,24 +33471,92 @@
             "句子": "The flame wavered as the breeze blew through the open window"
         },
         {
+            "音檔": "音檔 - wear-and-tear-1",
             "分類": "Design",
             "Words": "wear-and-tear-1",
-            "句子": "The wear and tear on the old car's engine is becoming more noticeable after years of use"
+            "句子": "The wear and tear on the old car's engine is becoming more noticeable after years of use",
+            "中文": "(這輛舊車的引擎經過多年使用後，磨損越來越明顯)"
         },
         {
+            "音檔": "音檔 - wear-and-tear-2",
             "分類": "Design",
             "Words": "wear-and-tear-2",
-            "句子": "Apart from fair wear and tear, the bicycle is in excellent condition"
+            "句子": "Apart from fair wear and tear, the bicycle is in excellent condition",
+            "中文": "(除了正常的磨損外，這輛自行車的狀況極佳)"
         },
         {
+            "音檔": "音檔 - wear-and-tear-3",
             "分類": "Design",
             "Words": "wear-and-tear-3",
-            "句子": "The shoes were starting to show signs of wear and tear after several months of daily use"
+            "句子": "The shoes were starting to show signs of wear and tear after several months of daily use",
+            "中文": "(這雙鞋在幾個月的日常使用後開始出現磨損的跡象)"
         },
         {
+            "音檔": "音檔 - wear-and-tear-4",
             "分類": "Design",
             "Words": "wear-and-tear-4",
-            "句子": "Over the years, he had grown resilient to life's emotional wear and tear"
+            "句子": "Over the years, he had grown resilient to life's emotional wear and tear",
+            "中文": "(多年來，他對生活中情感上的磨損變得更有韌性)"
+        },
+        {
+            "等級": "B1",
+            "Words": "weave-N-1",
+            "句子": "The fabric had a tight weave, making it strong and durable"
+        },
+        {
+            "等級": "B1",
+            "Words": "weave-N-2",
+            "句子": "The silk scarf had a delicate weave that shimmered in the sunlight"
+        },
+        {
+            "等級": "B1",
+            "Words": "weave-V-1",
+            "句子": "The skilled artisan carefully wove a beautiful tapestry using vibrant colors and intricate patterns"
+        },
+        {
+            "等級": "B1",
+            "Words": "weave-V-10",
+            "句子": "She patiently weaved her way through the dense jungle, pushing aside vines and branches as she searched for the hidden temple"
+        },
+        {
+            "等級": "B1",
+            "Words": "weave-V-2",
+            "句子": "My grandmother taught me how to weave on her old loom, and now I cherish the tradition of making our own fabric"
+        },
+        {
+            "等級": "B1",
+            "Words": "weave-V-3",
+            "句子": "The snake silently weaved its way through the grass, hunting for its next meal"
+        },
+        {
+            "等級": "B1",
+            "Words": "weave-V-4",
+            "句子": "The cyclist weaved through the narrow streets of the city, avoiding pedestrians and potholes"
+        },
+        {
+            "等級": "B1",
+            "Words": "weave-V-5",
+            "句子": "The author weaves together multiple storylines to create a complex narrative"
+        },
+        {
+            "等級": "B1",
+            "Words": "weave-V-6",
+            "句子": "In her writing, she seamlessly weaves historical facts with fictional characters to create a vivid and immersive setting"
+        },
+        {
+            "等級": "B1",
+            "Words": "weave-V-7",
+            "句子": "The spider diligently weaved an intricate web between the branches of the tree to catch its prey"
+        },
+        {
+            "等級": "B1",
+            "Words": "weave-V-8",
+            "句子": "They weaved a web of lies to fool the people"
+        },
+        {
+            "等級": "B1",
+            "Words": "weave-V-9",
+            "句子": "Despite the crowded dance floor, he skillfully weaved through the crowd to reach his friends at the other side of the room"
         },
         {
             "等級": "B2",
@@ -33107,14 +33640,89 @@
             "句子": "They whispered to avoid disturbing the other people in the library"
         },
         {
+            "等級": "B1",
+            "Words": "winder-1",
+            "句子": "The textile factory installed new winders to increase production efficiency"
+        },
+        {
+            "等級": "B1",
+            "Words": "winder-2",
+            "句子": "The antique clock's winder required delicate care to wind the intricate mechanism without causing damage"
+        },
+        {
+            "等級": "B2",
+            "Words": "winding-1",
+            "句子": "The winding road led us through the mountains"
+        },
+        {
+            "等級": "B2",
+            "Words": "winding-2",
+            "句子": "She took us on a winding journey through her memories"
+        },
+        {
+            "等級": "B1",
+            "Words": "wind-N-1",
+            "句子": "The fan winded the cool air throughout the room"
+        },
+        {
+            "等級": "B1",
+            "Words": "wind-N-2",
+            "句子": "She hung the wet laundry on the line to be winded by the breeze and dried in the sun"
+        },
+        {
+            "等級": "B1",
+            "Words": "wind-N-3",
+            "句子": "Running up the hill winded him quickly, forcing him to stop and catch his breath"
+        },
+        {
+            "等級": "B1",
+            "Words": "wind-N-4",
+            "句子": "I was winded when I got to the top of the hill"
+        },
+        {
+            "等級": "B1",
+            "Words": "wind-N-5",
+            "句子": "After a long gallop, the rider winded the horse, allowing it to slow down and regain its breath"
+        },
+        {
+            "等級": "B1",
+            "Words": "wind-N-6",
+            "句子": "The tracker dog winded the trail of the escaped criminal through the dense forest"
+        },
+        {
+            "等級": "B1",
+            "Words": "wind-N-7",
+            "句子": "The wind blew fiercely, scattering leaves in every direction"
+        },
+        {
+            "等級": "B1",
+            "Words": "wind-N-8",
+            "句子": "Wind power is becoming an increasingly popular source of renewable energy"
+        },
+        {
+            "等級": "B1",
+            "Words": "windup-1",
+            "句子": "The windup of the project took longer than expected"
+        },
+        {
             "等級": "B2",
             "Words": "wind-up-1",
             "句子": "Let's wind up this meeting and get to work"
         },
         {
+            "等級": "B1",
+            "Words": "windup-2",
+            "句子": "The windup of the movie was unexpected, leaving the audience in suspense"
+        },
+        {
             "等級": "B2",
             "Words": "wind-up-2",
             "句子": "After the game, we wound up at a local diner for dinner"
+        },
+        {
+            "等級": "B1",
+            "Words": "windup-3",
+            "句子": "His windup speech before the big announcement seemed to go on forever"
         },
         {
             "等級": "B2",
@@ -33142,29 +33750,44 @@
             "句子": "She wound up the clock before going to bed"
         },
         {
-            "等級": "B2",
-            "Words": "winding-1",
-            "句子": "The winding road led us through the mountains"
-        },
-        {
-            "等級": "B2",
-            "Words": "winding-2",
-            "句子": "She took us on a winding journey through her memories"
+            "等級": "B1",
+            "Words": "wind-V-1",
+            "句子": "The road winds through the mountains, offering breathtaking views"
         },
         {
             "等級": "B1",
-            "Words": "windup-1",
-            "句子": "The windup of the project took longer than expected"
+            "Words": "wind-V-2",
+            "句子": "The maze of streets wound him around in circles until he was thoroughly lost"
         },
         {
             "等級": "B1",
-            "Words": "windup-2",
-            "句子": "The windup of the movie was unexpected, leaving the audience in suspense"
+            "Words": "wind-V-3",
+            "句子": "He wound the rope around the pole to secure it"
         },
         {
             "等級": "B1",
-            "Words": "windup-3",
-            "句子": "His windup speech before the big announcement seemed to go on forever"
+            "Words": "wind-V-4",
+            "句子": "monkeys wind their tails around branches"
+        },
+        {
+            "等級": "B1",
+            "Words": "wind-V-5",
+            "句子": "She wound the yarn into a tight ball for knitting"
+        },
+        {
+            "等級": "B1",
+            "Words": "wind-V-6",
+            "句子": "She wound the clock every evening before bed"
+        },
+        {
+            "等級": "B1",
+            "Words": "wind-V-7",
+            "句子": "The mountain trail was full of twists and winds, making it both challenging and scenic"
+        },
+        {
+            "等級": "B1",
+            "Words": "wind-V-8",
+            "句子": "The quaint cottage had a narrow winding staircase leading up to the cozy attic"
         },
         {
             "等級": "C2",
@@ -33402,427 +34025,6 @@
             "等級": "B1",
             "Words": "zigzag-3",
             "句子": "The drunken man zigzagged down the street"
-        },
-        {
-            "等級": "B2",
-            "分類": "Design",
-            "Words": "artistic-7",
-            "句子": "The artist created an artistic masterpiece with the use of vibrant colors"
-        },
-        {
-            "分類": "Design",
-            "Words": "contrast-4",
-            "句子": "There is a sharp contrast between the urban and rural lifestyles"
-        },
-        {
-            "分類": "Design",
-            "Words": "contrast-5",
-            "句子": "The contrast between the dark storm clouds and the bright sunset was striking"
-        },
-        {
-            "分類": "Design",
-            "Words": "contrast-6",
-            "句子": "The design of the stroller emphasizes the contrast between the upper frame with its muted metallic color and the lower frame, which features a practical textile-covered basket"
-        },
-        {
-            "分類": "Design",
-            "Words": "contrast-7",
-            "句子": "The contrast in textures between the leather seats and the soft fabric cushions was noticeable"
-        },
-        {
-            "分類": "Design",
-            "Words": "contrast-8",
-            "句子": "The artist contrasted light and dark shades to create depth in the painting"
-        },
-        {
-            "分類": "Design",
-            "Words": "contrast-9",
-            "句子": "The teacher asked the students to contrast the two novels in their essays"
-        },
-        {
-            "分類": "Design",
-            "Words": "contrast-10",
-            "句子": "The designer contrasted the metallic finish of the stroller's frame with the soft textile of the seat for visual impact"
-        },
-        {
-            "分類": "Design",
-            "Words": "contrast-11",
-            "句子": "She contrasted the old and new buildings to show how the city had evolved"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-V-1",
-            "句子": "The wheels of the bicycle spun as he pedaled"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-V-2",
-            "句子": "She spun the top on the table"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-V-3",
-            "句子": "He spun the globe to find his next travel destination"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-V-4",
-            "句子": "He spun the combination lock to open the safe"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-V-5",
-            "句子": "The politician tried to spin the negative news into a positive story"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-V-6",
-            "句子": "The company's PR team ( stands for Public Relations)  attempted to spin the product recall as a proactive measure to ensure customer safety"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-V-7",
-            "句子": "He spun a story to explain his absence"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-V-8",
-            "句子": "She spun gracefully across the dance floor"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-V-9",
-            "句子": "She spun wool into yarn using a spinning wheel"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-V-10",
-            "句子": "Silkworms spin silk to create their cocoons, and spiders spin webs to catch prey"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-N-1",
-            "句子": "The gymnast's spin was flawless, showcasing her incredible balance and technique"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-N-2",
-            "句子": "The dancer executed multiple spins in her routine"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-N-3",
-            "句子": "The politician's statement had a positive spin to influence voters"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-N-4",
-            "句子": "Let's go for a spin in the countryside"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-N-5",
-            "句子": "After the roller coaster ride, I felt a bit of spin"
-        },
-        {
-            "等級": "B1",
-            "Words": "spin-N-6",
-            "句子": "The tennis player put spin on the ball to make it curve sharply"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-N-1",
-            "句子": "The square is the most basic and symmetrical shape in geometry"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-N-2",
-            "句子": "The carpenter cut the wood into perfect squares for the project"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-N-3",
-            "句子": "The students were asked to calculate the area of a square with a side length of 5 cm"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-N-4",
-            "句子": "The town square was filled with people celebrating the festival"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-N-5",
-            "句子": "They met at the central square before heading to the restaurant"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-N-6",
-            "句子": "Many European cities are known for their historic town squares"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-N-7",
-            "句子": "The room had a square layout with equal-length walls"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-N-8",
-            "句子": "They made a square deal when they agreed on the price"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-N-9",
-            "句子": "We're square now that you've paid back the money you borrowed"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-V-1",
-            "句子": "He squared the table with the wall"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-V-2",
-            "句子": "The carpenter squared the frame before nailing it together"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-V-3",
-            "句子": "We squared the bill before leaving the restaurant"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-V-4",
-            "句子": "The two friends squared things after their argument"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-V-5",
-            "句子": "She squared the number 5 and got 25"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-V-6",
-            "句子": "The student was asked to square all the numbers in the table"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-V-7",
-            "句子": "He squared himself before entering the meeting"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-V-8",
-            "句子": "The team squared themselves for the final match"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-V-9",
-            "句子": "The ball hit him square in the chest"
-        },
-        {
-            "分類": "形狀",
-            "Words": "square-V-10",
-            "句子": "She looked him square in the eyes and told him the truth"
-        },
-        {
-            "等級": "B1",
-            "Words": "thread-N-1",
-            "句子": "She sewed the buttons onto the shirt with a strong thread"
-        },
-        {
-            "等級": "B1",
-            "Words": "thread-N-2",
-            "句子": "The spider spun a delicate thread to weave its web"
-        },
-        {
-            "等級": "B1",
-            "Words": "thread-N-3",
-            "句子": "Even in the darkest of times, there is always a thread of hope to grasp, guiding us towards brighter days"
-        },
-        {
-            "等級": "B1",
-            "Words": "thread-N-4",
-            "句子": "The thread of their argument wove its way through the entire meeting"
-        },
-        {
-            "等級": "B1",
-            "Words": "thread-N-5",
-            "句子": "I must have skipped a page, because I lost the thread of the story"
-        },
-        {
-            "等級": "B1",
-            "Words": "thread-N-6",
-            "句子": "The bolt has a fine thread that matches the corresponding nut"
-        },
-        {
-            "等級": "B1",
-            "Words": "thread-V-1",
-            "句子": "She carefully threaded the needle before starting to sew"
-        },
-        {
-            "等級": "B1",
-            "Words": "thread-V-2",
-            "句子": "Can you thread this needle for me? I always have trouble with it"
-        },
-        {
-            "等級": "B1",
-            "Words": "thread-V-3",
-            "句子": "The hiker threaded her way through the dense forest, following the narrow path"
-        },
-        {
-            "等級": "B1",
-            "Words": "thread-V-4",
-            "句子": "He threaded his way through the crowded marketplace, trying to find the vendor he was looking for"
-        },
-        {
-            "等級": "B1",
-            "Words": "weave-V-1",
-            "句子": "The skilled artisan carefully wove a beautiful tapestry using vibrant colors and intricate patterns"
-        },
-        {
-            "等級": "B1",
-            "Words": "weave-V-2",
-            "句子": "My grandmother taught me how to weave on her old loom, and now I cherish the tradition of making our own fabric"
-        },
-        {
-            "等級": "B1",
-            "Words": "weave-V-3",
-            "句子": "The snake silently weaved its way through the grass, hunting for its next meal"
-        },
-        {
-            "等級": "B1",
-            "Words": "weave-V-4",
-            "句子": "The cyclist weaved through the narrow streets of the city, avoiding pedestrians and potholes"
-        },
-        {
-            "等級": "B1",
-            "Words": "weave-V-5",
-            "句子": "The author weaves together multiple storylines to create a complex narrative"
-        },
-        {
-            "等級": "B1",
-            "Words": "weave-V-6",
-            "句子": "In her writing, she seamlessly weaves historical facts with fictional characters to create a vivid and immersive setting"
-        },
-        {
-            "等級": "B1",
-            "Words": "weave-V-7",
-            "句子": "The spider diligently weaved an intricate web between the branches of the tree to catch its prey"
-        },
-        {
-            "等級": "B1",
-            "Words": "weave-V-8",
-            "句子": "They weaved a web of lies to fool the people"
-        },
-        {
-            "等級": "B1",
-            "Words": "weave-V-9",
-            "句子": "Despite the crowded dance floor, he skillfully weaved through the crowd to reach his friends at the other side of the room"
-        },
-        {
-            "等級": "B1",
-            "Words": "weave-V-10",
-            "句子": "She patiently weaved her way through the dense jungle, pushing aside vines and branches as she searched for the hidden temple"
-        },
-        {
-            "等級": "B1",
-            "Words": "weave-N-1",
-            "句子": "The fabric had a tight weave, making it strong and durable"
-        },
-        {
-            "等級": "B1",
-            "Words": "weave-N-2",
-            "句子": "The silk scarf had a delicate weave that shimmered in the sunlight"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-N-1",
-            "句子": "The fan winded the cool air throughout the room"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-N-2",
-            "句子": "She hung the wet laundry on the line to be winded by the breeze and dried in the sun"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-N-3",
-            "句子": "Running up the hill winded him quickly, forcing him to stop and catch his breath"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-N-4",
-            "句子": "I was winded when I got to the top of the hill"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-N-5",
-            "句子": "After a long gallop, the rider winded the horse, allowing it to slow down and regain its breath"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-N-6",
-            "句子": "The tracker dog winded the trail of the escaped criminal through the dense forest"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-N-7",
-            "句子": "The wind blew fiercely, scattering leaves in every direction"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-N-8",
-            "句子": "Wind power is becoming an increasingly popular source of renewable energy"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-V-1",
-            "句子": "The road winds through the mountains, offering breathtaking views"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-V-2",
-            "句子": "The maze of streets wound him around in circles until he was thoroughly lost"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-V-3",
-            "句子": "He wound the rope around the pole to secure it"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-V-4",
-            "句子": "monkeys wind their tails around branches"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-V-5",
-            "句子": "She wound the yarn into a tight ball for knitting"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-V-6",
-            "句子": "She wound the clock every evening before bed"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-V-7",
-            "句子": "The mountain trail was full of twists and winds, making it both challenging and scenic"
-        },
-        {
-            "等級": "B1",
-            "Words": "wind-V-8",
-            "句子": "The quaint cottage had a narrow winding staircase leading up to the cozy attic"
-        },
-        {
-            "等級": "B1",
-            "Words": "winder-1",
-            "句子": "The textile factory installed new winders to increase production efficiency"
-        },
-        {
-            "等級": "B1",
-            "Words": "winder-2",
-            "句子": "The antique clock's winder required delicate care to wind the intricate mechanism without causing damage"
         }
     ]
 }
