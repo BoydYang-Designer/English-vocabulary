@@ -109,8 +109,8 @@ function renderAlphabetButtons() {
 // 第一層：生成分類按鈕
 function createCategoryButtons() {
     let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
-    // 移除 "Note"，新增 "Sentence Notes"
-    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Sentence Notes", "重要句子", "錯誤句子");
+    // 移除 "Note"，新增 "Sentence Notes" 和 "Checked句子"
+    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Sentence Notes", "重要句子", "錯誤句子", "Checked句子");
 
     const categoryContainer = document.getElementById("categoryButtons");
     categoryContainer.innerHTML = categories.map(c => {
@@ -120,6 +120,7 @@ function createCategoryButtons() {
         if (c === "Sentence Notes") return `<button class='letter-btn' onclick='showSentenceNotes()'>${c}</button>`;
         if (c === "重要句子") return `<button class='letter-btn' onclick='showImportantSentences()'>${c}</button>`;
         if (c === "錯誤句子") return `<button class='letter-btn' onclick='showWrongSentences()'>${c}</button>`;
+        if (c === "Checked句子") return `<button class='letter-btn' onclick='showCheckedSentences()'>${c}</button>`;
         return `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`;
     }).join(" ");
 }
@@ -173,6 +174,32 @@ function showWrongSentences() {
     displaySentenceList(filteredSentences);
 }
 
+function showCheckedSentences() {
+    document.getElementById("wordListTitle").innerText = "Checked 句子";
+    document.getElementById("wordListTitle").style.display = "block";
+    lastWordListType = "checkedSentences";
+    lastWordListValue = null;
+
+    // 隱藏首頁元素
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
+    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
+    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
+    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+
+    // 過濾勾選的句子
+    let checkedSentences = sentenceData.filter(s => localStorage.getItem(`checked_sentence_${s.Words}`) === "true");
+    if (checkedSentences.length === 0) {
+        console.warn("⚠️ 沒有標記為 Checked 的句子");
+        // 在 UI 上顯示友好提示
+        document.getElementById("sentenceItems").innerHTML = "<p>⚠️ 目前沒有勾選的句子</p>";
+    } else {
+        displaySentenceList(checkedSentences);
+    }
+}
 function showSentenceNotes() {
     console.log("進入 showSentenceNotes, sentenceData.length:", sentenceData.length);
     document.getElementById("wordListTitle").innerText = "Sentence Notes";
@@ -240,39 +267,51 @@ function filterSentences() {
 }
 
 function displaySentenceList(sentences) {
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
-    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
-    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
-    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
-    document.getElementById("wordList").style.display = "none";
-    document.getElementById("sentenceList").style.display = "block";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
-    document.querySelector('#sentenceList .back-button').style.display = "none";
-    // 儲存當前句子列表
-    currentSentenceList = sentences;
-    
-    let sentenceItems = document.getElementById("sentenceItems");
-    sentenceItems.innerHTML = sentences.length > 0
-        ? sentences.map((s, index) => {
-            let sentenceId = s.Words;
-            let isImportant = localStorage.getItem(`important_sentence_${sentenceId}`) === "true";
-            return `
-                <div class='word-item-container'>
-                    <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
-                    <p class='word-item' data-sentence="${sentenceId}" onclick='showSentenceDetails("${sentenceId}", ${index})'>${sentenceId}: ${s.句子}</p>
-                    <button class='audio-btn' onclick='playSentenceAudio("${sentenceId}.mp3")'>
-                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
-                    </button>
-                </div>`;
-        }).join("")
-        : "<p>⚠️ 目前沒有符合的句子</p>";
+    const sentenceList = document.getElementById('sentenceList');
+    sentenceList.style.display = "block"; // 確保句子列表顯示
+    document.getElementById("wordList").style.display = "none"; // 隱藏單字列表
+    document.querySelector('#sentenceList .back-button').style.display = "block"; // 顯示返回按鈕
 
-    sentenceItems.innerHTML = `<button id="backHomeBtn" class="button back-button" onclick="backToFirstLayer()">Back H</button>` + sentenceItems.innerHTML;
+    const sentenceItems = document.getElementById('sentenceItems');
+    sentenceItems.innerHTML = ''; // 清空現有內容
+
+    if (sentences.length === 0) {
+        sentenceItems.innerHTML = "<p>⚠️ 目前沒有符合的句子</p>";
+        return;
+    }
+
+    sentences.forEach(sentence => {
+        const sentenceId = sentence.Words;
+        const isChecked = localStorage.getItem(`checked_sentence_${sentenceId}`) === "true";
+        const isImportant = localStorage.getItem(`important_sentence_${sentenceId}`) === "true";
+        const iconSrc = isChecked 
+            ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" 
+            : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
+
+        const container = document.createElement('div');
+        container.className = `word-item-container ${isChecked ? "checked" : ""}`;
+
+        // 分離 sentenceId 和內文，並根據勾選狀態決定是否顯示內文
+        const sentenceDisplay = isChecked 
+            ? sentenceId // 只顯示 sentenceId
+            : `${sentenceId}: ${sentence.句子}`; // 顯示完整內容
+
+        container.innerHTML = `
+            <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
+            <p class='word-item' data-sentence="${sentenceId}">${sentenceDisplay}</p>
+            <button class='check-button' onclick='toggleCheckSentence("${sentenceId}", this)'>
+                <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
+            </button>
+            <button class='audio-btn' onclick='playSentenceAudio("${sentenceId}.mp3")'>
+                <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
+            </button>
+        `;
+
+        sentenceItems.appendChild(container);
+
+        container.querySelector('.word-item').addEventListener("click", () => showSentenceDetails(sentenceId));
+    });
 }
-
 // 第二層：顯示單字列表
 function showWords(type, value) {
     let titleText = type === "letter" ? value.toUpperCase() : type === "category" ? value : `${value} Level`;
@@ -354,6 +393,35 @@ function toggleImportant(word, checkbox) {
     if (checkbox.checked) localStorage.setItem(`important_${word}`, "true");
     else localStorage.removeItem(`important_${word}`);
 }
+
+function toggleCheckSentence(sentenceId, button) {
+    const isChecked = localStorage.getItem(`checked_sentence_${sentenceId}`) === "true";
+    const newState = !isChecked;
+
+    // 更新 localStorage
+    localStorage.setItem(`checked_sentence_${sentenceId}`, newState);
+
+    // 更新圖標
+    const icon = button.querySelector('img');
+    icon.src = newState 
+        ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" 
+        : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
+
+    // 更新容器樣式
+    const container = button.parentElement;
+    const wordItem = container.querySelector('.word-item');
+    const sentenceObj = sentenceData.find(s => s.Words === sentenceId);
+
+    if (newState) {
+        container.classList.add('checked');
+        wordItem.textContent = sentenceId; // 只顯示 sentenceId
+    } else {
+        container.classList.remove('checked');
+        wordItem.textContent = `${sentenceId}: ${sentenceObj.句子}`; // 恢復完整內容
+    }
+}
+
+
 
 function showCheckedWords() {
     document.getElementById("wordListTitle").innerText = "Checked 單字";
@@ -445,11 +513,19 @@ function showSentences(word) {
         filteredSentences.forEach((s, index) => {
             let sentenceId = s.Words;
             let isImportant = localStorage.getItem(`important_sentence_${sentenceId}`) === "true";
+            let isChecked = localStorage.getItem(`checked_sentence_${sentenceId}`) === "true";
+            let iconSrc = isChecked 
+                ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" 
+                : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
+
             let item = document.createElement("div");
-            item.className = "word-item-container";
+            item.className = `word-item-container ${isChecked ? "checked" : ""}`;
             item.innerHTML = `
                 <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
                 <p class='word-item' data-sentence="${sentenceId}">${sentenceId}: ${s.句子}</p>
+                <button class='check-button' onclick='toggleCheckSentence("${sentenceId}", this)'>
+                    <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
+                </button>
                 <button class='audio-btn' onclick='playSentenceAudio("${sentenceId}.mp3")'>
                     <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
                 </button>
@@ -763,9 +839,10 @@ function backToWordList() {
     if (lastWordListType === "checked") showCheckedWords();
     else if (lastWordListType === "important") showImportantWords();
     else if (lastWordListType === "wrong") showWrongWords();
-    else if (lastWordListType === "sentenceNotes") showSentenceNotes(); // 新增這行
+    else if (lastWordListType === "sentenceNotes") showSentenceNotes();
     else if (lastWordListType === "importantSentences") showImportantSentences();
     else if (lastWordListType === "wrongSentences") showWrongSentences();
+    else if (lastWordListType === "checkedSentences") showCheckedSentences();
     else if (lastWordListType && lastWordListValue) showWords(lastWordListType, lastWordListValue);
     else backToFirstLayer();
 }

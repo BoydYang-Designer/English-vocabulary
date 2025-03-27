@@ -193,7 +193,7 @@ h1 {
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, padding 0.3s ease; /* 添加 padding 的過渡效果 */
 }
 
 .audio-btn:hover {
@@ -204,6 +204,17 @@ h1 {
 .audio-btn img {
     width: 24px;
     height: 24px;
+    transition: width 0.3s ease, height 0.3s ease; /* 添加圖標大小的過渡效果 */
+}
+
+/* 勾選狀態下的音訊按鈕縮小 */
+.word-item-container.checked .audio-btn {
+    padding: 8px; /* 縮小按鈕的內邊距 */
+}
+
+.word-item-container.checked .audio-btn img {
+    width: 16px; /* 縮小圖標大小 */
+    height: 16px;
 }
 
 /* 筆記按鈕 */
@@ -305,12 +316,16 @@ h1 {
 }
 
 .word-item-container.checked {
-    font-size: 66.7%;
+    font-size: 66.7%; /* 原有的縮小字體效果 */
     padding: 2px 5px;
     color: #888;
     opacity: 0.7;
     height: 28px;
     line-height: 28px;
+}
+
+.word-item-container.checked .word-item {
+    font-style: italic; /* 可選：斜體表示勾選狀態 */
 }
 
 /* 勾選按鈕 */
