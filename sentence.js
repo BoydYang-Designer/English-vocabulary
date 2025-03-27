@@ -518,11 +518,16 @@ function showSentences(word) {
                 ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" 
                 : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
 
+            // 根據勾選狀態決定顯示內容
+            const sentenceDisplay = isChecked 
+                ? sentenceId // 只顯示 sentenceId
+                : `${sentenceId}: ${s.句子}`; // 顯示完整內容
+
             let item = document.createElement("div");
             item.className = `word-item-container ${isChecked ? "checked" : ""}`;
             item.innerHTML = `
                 <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
-                <p class='word-item' data-sentence="${sentenceId}">${sentenceId}: ${s.句子}</p>
+                <p class='word-item' data-sentence="${sentenceId}">${sentenceDisplay}</p>
                 <button class='check-button' onclick='toggleCheckSentence("${sentenceId}", this)'>
                     <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
                 </button>
@@ -836,15 +841,33 @@ function backToFirstLayer() {
 
 function backToWordList() {
     document.getElementById("sentenceList").style.display = "none";
-    if (lastWordListType === "checked") showCheckedWords();
-    else if (lastWordListType === "important") showImportantWords();
-    else if (lastWordListType === "wrong") showWrongWords();
-    else if (lastWordListType === "sentenceNotes") showSentenceNotes();
-    else if (lastWordListType === "importantSentences") showImportantSentences();
-    else if (lastWordListType === "wrongSentences") showWrongSentences();
-    else if (lastWordListType === "checkedSentences") showCheckedSentences();
-    else if (lastWordListType && lastWordListValue) showWords(lastWordListType, lastWordListValue);
-    else backToFirstLayer();
+
+    // 單字相關分類，返回到 wordList
+    if (lastWordListType === "checked") {
+        showCheckedWords();
+    } else if (lastWordListType === "important") {
+        showImportantWords();
+    } else if (lastWordListType === "wrong") {
+        showWrongWords();
+    }
+    // 句子相關分類，重新顯示 sentenceList
+    else if (lastWordListType === "sentenceNotes") {
+        showSentenceNotes();
+    } else if (lastWordListType === "importantSentences") {
+        showImportantSentences();
+    } else if (lastWordListType === "wrongSentences") {
+        showWrongSentences();
+    } else if (lastWordListType === "checkedSentences") {
+        showCheckedSentences();
+    }
+    // 其他情況（例如按字母或類別篩選的單字列表），返回到 wordList
+    else if (lastWordListType && lastWordListValue) {
+        showWords(lastWordListType, lastWordListValue);
+    }
+    // 如果沒有前一層級，返回到第一層
+    else {
+        backToFirstLayer();
+    }
 }
 
 function backToSentenceList(event) {
