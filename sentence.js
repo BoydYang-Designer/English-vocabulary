@@ -1,4 +1,5 @@
 //全局變數
+let parentLayer = "";
 let wordsData = [];
 let sentenceData = [];
 let sentenceAudio = new Audio();
@@ -126,6 +127,7 @@ function createCategoryButtons() {
 }
 
 function showImportantSentences() {
+    parentLayer = "firstLayer"; // 設置來源為第一層
     console.log("進入 showImportantSentences, sentenceData.length:", sentenceData.length);
     document.getElementById("wordListTitle").innerText = "重要句子";
     document.getElementById("wordListTitle").style.display = "block";
@@ -154,6 +156,7 @@ function showImportantSentences() {
 }
 
 function showWrongSentences() {
+    parentLayer = "firstLayer"; // 設置來源為第一層
     document.getElementById("wordListTitle").innerText = "錯誤句子";
     document.getElementById("wordListTitle").style.display = "block";
     lastWordListType = "wrongSentences";
@@ -175,6 +178,7 @@ function showWrongSentences() {
 }
 
 function showCheckedSentences() {
+    parentLayer = "firstLayer"; // 設置來源為第一層
     document.getElementById("wordListTitle").innerText = "Checked 句子";
     document.getElementById("wordListTitle").style.display = "block";
     lastWordListType = "checkedSentences";
@@ -201,10 +205,11 @@ function showCheckedSentences() {
     }
 }
 function showSentenceNotes() {
+    parentLayer = "firstLayer"; // 設置來源為第一層
     console.log("進入 showSentenceNotes, sentenceData.length:", sentenceData.length);
     document.getElementById("wordListTitle").innerText = "Sentence Notes";
     document.getElementById("wordListTitle").style.display = "block";
-    lastWordListType = "sentenceNotes"; // Set the type for navigation tracking
+    lastWordListType = "sentenceNotes";
     lastWordListValue = null;
 
     // Hide first-layer elements
@@ -476,6 +481,7 @@ function showWrongWords() {
 }
 
 function showSentences(word) {
+    parentLayer = "wordList"; // 設置來源為單字列表
     document.getElementById("wordListTitle").innerText = word;
     document.getElementById("wordListTitle").style.display = "block";
 
@@ -842,31 +848,23 @@ function backToFirstLayer() {
 function backToWordList() {
     document.getElementById("sentenceList").style.display = "none";
 
-    // 單字相關分類，返回到 wordList
-    if (lastWordListType === "checked") {
-        showCheckedWords();
-    } else if (lastWordListType === "important") {
-        showImportantWords();
-    } else if (lastWordListType === "wrong") {
-        showWrongWords();
-    }
-    // 句子相關分類，重新顯示 sentenceList
-    else if (lastWordListType === "sentenceNotes") {
-        showSentenceNotes();
-    } else if (lastWordListType === "importantSentences") {
-        showImportantSentences();
-    } else if (lastWordListType === "wrongSentences") {
-        showWrongSentences();
-    } else if (lastWordListType === "checkedSentences") {
-        showCheckedSentences();
-    }
-    // 其他情況（例如按字母或類別篩選的單字列表），返回到 wordList
-    else if (lastWordListType && lastWordListValue) {
-        showWords(lastWordListType, lastWordListValue);
-    }
-    // 如果沒有前一層級，返回到第一層
-    else {
-        backToFirstLayer();
+    if (parentLayer === "firstLayer") {
+        backToFirstLayer(); // 直接返回第一層
+    } else if (parentLayer === "wordList") {
+        // 返回到單字列表
+        if (lastWordListType === "checked") {
+            showCheckedWords();
+        } else if (lastWordListType === "important") {
+            showImportantWords();
+        } else if (lastWordListType === "wrong") {
+            showWrongWords();
+        } else if (lastWordListType && lastWordListValue) {
+            showWords(lastWordListType, lastWordListValue);
+        } else {
+            backToFirstLayer();
+        }
+    } else {
+        backToFirstLayer(); // 預設回到第一層
     }
 }
 
