@@ -134,6 +134,7 @@ function generateSentenceCategories(data) {
     // 添加「重要句子」和「錯誤句子」按鈕
     categoryContainer.innerHTML += `<button class="category-button" onclick="toggleSentenceSelection('categories', 'important')">重要句子</button>`;
     categoryContainer.innerHTML += `<button class="category-button" onclick="toggleSentenceSelection('categories', 'incorrect')">錯誤句子</button>`;
+    categoryContainer.innerHTML += `<button class="category-button" onclick="toggleSentenceSelection('categories', 'checked')">Checked 句子</button>`;
 
     // 將 A-Z 分類容器插入到 "Back" 和 "Start Quiz" 下方，且在 categoryContainer 上方
     let sentenceQuizCategories = document.getElementById("sentenceQuizCategories");
@@ -188,7 +189,9 @@ function startSentenceQuiz() {
                             (selectedSentenceFilters.categories.has("important") && 
                              localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
                             (selectedSentenceFilters.categories.has("incorrect") && 
-                             JSON.parse(localStorage.getItem("wrongQS") || "[]").includes(item.Words));
+                             JSON.parse(localStorage.getItem("wrongQS") || "[]").includes(item.Words)) ||
+                            (selectedSentenceFilters.categories.has("checked") && 
+                             localStorage.getItem(`checked_sentence_${item.Words}`) === "true");
         let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || 
                             selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
         return levelMatch && categoryMatch && alphabetMatch;
