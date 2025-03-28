@@ -2594,160 +2594,215 @@
             "等級": "C1",
             "分類": "daily",
             "Words": "ambiguity-2",
-            "句子": "You should remove ambiguity [=vagueness] from your essay by adding more details",
-            "中文": "(你應該透過添加更多細節來消除文章中的含糊不清)。"
+            "句子": "You should remove ambiguity from your essay by adding more details",
+            "中文": "(你應該透過添加更多細節來消除文章中的含糊不清)。 [=vagueness]"
         },
         {
             "音檔": "音檔 - ambiguous-1",
             "等級": "C1",
             "分類": "daily",
             "Words": "ambiguous-1",
-            "句子": "The statement was intentionally ambiguous, leaving room for various interpretations"
+            "句子": "The statement was intentionally ambiguous, leaving room for various interpretations",
+            "中文": "(你應該透過添加更多細節來消除文章中的含糊不清)。"
         },
         {
+            "音檔": "音檔 - ambiguous-2",
             "等級": "C1",
             "分類": "daily",
             "Words": "ambiguous-2",
-            "句子": "He felt that his role in the company was becoming more ambiguous"
+            "句子": "He felt that his role in the company was becoming more ambiguous",
+            "中文": "(他覺得自己在公司中的角色變得越來越模糊)。"
         },
         {
+            "音檔": "音檔 - ambiguous-3",
             "等級": "C1",
             "分類": "daily",
             "Words": "ambiguous-3",
-            "句子": "Due to the ambiguous nature of the question, it was difficult to choose the right answer"
+            "句子": "Due to the ambiguous nature of the question, it was difficult to choose the right answer",
+            "中文": "(由於問題的含糊性，很難選擇正確的答案)。"
         },
         {
+            "音檔": "音檔 - ambiguous-4",
             "等級": "C1",
             "分類": "daily",
             "Words": "ambiguous-4",
-            "句子": "His answers were worded ambiguously, so no one could be sure what he meant"
+            "句子": "His answers were worded ambiguously, so no one could be sure what he meant",
+            "中文": "(他的回答措辭含糊不清，所以沒有人能確定他的意思)。"
         },
         {
+            "音檔": "音檔 - ambush-1",
             "等級": "B1",
             "分類": "daily",
             "Words": "ambush-1",
-            "句子": "The soldiers walked into an ambush set by the enemy"
+            "句子": "The soldiers walked into an ambush set by the enemy",
+            "中文": "(士兵們走進了敵人設下的埋伏)。"
         },
         {
+            "音檔": "音檔 - ambush-2",
             "等級": "B1",
             "分類": "daily",
             "Words": "ambush-2",
-            "句子": "During the hike, the group stumbled into an ambush by a pack of wild animals"
+            "句子": "During the hike, the group stumbled into an ambush by a pack of wild animals",
+            "中文": "(在遠足過程中，隊伍偶然進入了一群野生動物設下的埋伏)。"
         },
         {
+            "音檔": "音檔 - ambush-3",
             "等級": "B1",
             "分類": "daily",
             "Words": "ambush-3",
-            "句子": "The police ambushed the robbers during their getaway"
+            "句子": "The police ambushed the robbers during their getaway",
+            "中文": "(警方在搶匪逃跑時對他們進行了伏擊)。"
         },
         {
+            "音檔": "音檔 - ambush-4",
             "等級": "B1",
             "分類": "daily",
             "Words": "ambush-4",
-            "句子": "The hunters set up camp and prepared to ambush the deer at dawn"
+            "句子": "The hunters set up camp and prepared to ambush the deer at dawn",
+            "中文": "(獵人們搭起帳篷，準備在黎明時伏擊那隻鹿)。"
         },
         {
+            "音檔": "音檔 - amend-1",
             "等級": "B1",
             "分類": "學術",
             "Words": "amend-1",
-            "句子": "The country's constitution was amended to allow women to vote"
+            "句子": "The country's constitution was amended to allow women to vote",
+            "中文": "(該國的憲法經過修訂，允許女性投票)。"
         },
         {
+            "音檔": "音檔 - amend-2",
             "等級": "B1",
             "分類": "學術",
             "Words": "amend-2",
-            "句子": "The law was amended to provide better protection for workers"
+            "句子": "The law was amended to provide better protection for workers",
+            "中文": "(法律經過修訂，以提供更好的勞工保護)。"
         },
         {
+            "音檔": "音檔 - amend-3",
             "等級": "B1",
             "分類": "學術",
             "Words": "amend-3",
-            "句子": "He tried to amend the situation by apologizing to me"
+            "句子": "He tried to amend the situation by apologizing to me",
+            "中文": "(他試圖通過向我道歉來改變這個情況)。"
         },
         {
+            "音檔": "音檔 - amendment-1",
             "等級": "C2",
             "Words": "amendment-1",
-            "句子": "The senator proposed an amendment to the existing law"
+            "句子": "The senator proposed an amendment to the existing law",
+            "中文": "(參議員提議對現有法律進行修訂)。"
         },
         {
+            "音檔": "音檔 - amendment-2",
             "等級": "C2",
             "Words": "amendment-2",
-            "句子": "The first amendment of the U"
+            "句子": "The first amendment of the U.S. Constitution guarantees freedom of speech",
+            "中文": "(美國憲法的第一修正案保障言論自由)。"
         },
         {
+            "音檔": "音檔 - amendment-3",
             "等級": "C2",
             "Words": "amendment-3",
-            "句子": "He made several amendments to his research paper before submitting it"
+            "句子": "He made several amendments to his research paper before submitting it",
+            "中文": "(在提交研究論文之前，他對其進行了幾次修訂)。"
         },
         {
+            "音檔": "音檔 - amendment-4",
             "等級": "C2",
             "Words": "amendment-4",
-            "句子": "The contract underwent multiple amendments to meet both parties' requirements"
+            "句子": "The contract underwent multiple amendments to meet both parties' requirements",
+            "中文": "(該合約經過多次修訂，以符合雙方的要求)。"
         },
         {
+            "音檔": "音檔 - amid-1",
             "等級": "B1",
             "Words": "amid-1",
-            "句子": "We lost our companions amid the storm and the darkness"
+            "句子": "We lost our companions amid the storm and the darkness",
+            "中文": "(在暴風雨和黑暗中，我們失去了同伴)。"
         },
         {
+            "音檔": "音檔 - amid-2",
             "等級": "B1",
             "Words": "amid-2",
-            "句子": "Amidst [=during] all the fighting there still remained a steady hope for peace"
+            "句子": "Amidst all the fighting there still remained a steady hope for peace",
+            "中文": "[=during](在所有的戰鬥中，仍然保留著對和平的堅定希望)。"
         },
         {
+            "音檔": "音檔 - amidst-1",
             "等級": "B1",
             "Words": "amidst-1",
-            "句子": "The company announced its new policy amidst growing concerns about privacy"
+            "句子": "The company announced its new policy amidst growing concerns about privacy",
+            "中文": "(在對隱私日益關注的背景下，該公司宣布了新政策)。"
         },
         {
+            "音檔": "音檔 - amidst-2",
             "等級": "B1",
             "Words": "amidst-2",
-            "句子": "Amidst the chaos of the crowded market, she managed to find a quiet spot to sit and relax"
+            "句子": "Amidst the chaos of the crowded market, she managed to find a quiet spot to sit and relax",
+            "中文": "(在擁擠市場的混亂中，她成功找到了一個安靜的地方坐下來放鬆)。"
         },
         {
+            "音檔": "音檔 - amphibious-1",
             "等級": "C1",
             "Words": "amphibious-1",
-            "句子": "The frog is an amphibious creature, equally comfortable hopping on land or swimming in the pond"
+            "句子": "The frog is an amphibious creature, equally comfortable hopping on land or swimming in the pond",
+            "中文": "(青蛙是一種兩棲生物，無論在陸地上跳躍還是游泳在池塘中都很自如)。"
         },
         {
+            "音檔": "音檔 - amphibious-2",
             "等級": "C1",
             "Words": "amphibious-2",
-            "句子": "The military launched an amphibious assault, using both naval ships and ground forces to secure the beach"
+            "句子": "The military launched an amphibious assault, using both naval ships and ground forces to secure the beach",
+            "中文": "(軍方發起了兩棲攻擊，利用海軍艦艇和地面部隊來確保海灘的安全)。"
         },
         {
+            "音檔": "音檔 - amphibious-3",
             "等級": "C1",
             "Words": "amphibious-3",
-            "句子": "The new vehicle is amphibious, allowing it to travel on roads as well as through rivers and lakes"
+            "句子": "The new vehicle is amphibious, allowing it to travel on roads as well as through rivers and lakes",
+            "中文": "(這輛新車是兩棲的，讓它既能在道路上行駛，也能穿越河流和湖泊)。"
         },
         {
+            "音檔": "音檔 - amplify-1",
             "等級": "B1",
             "Words": "amplify-1",
-            "句子": "The microphone amplified his voice so the entire audience could hear"
+            "句子": "The microphone amplified his voice so the entire audience could hear",
+            "中文": "(麥克風放大了他的聲音，使得全場觀眾都能聽見)。"
         },
         {
+            "音檔": "音檔 - amplify-2",
             "等級": "B1",
             "Words": "amplify-2",
-            "句子": "The music was amplified through large speakers at the concert"
+            "句子": "The music was amplified through large speakers at the concert",
+            "中文": "(音樂通過大型音響在音樂會上被放大播放)。"
         },
         {
+            "音檔": "音檔 - amplify-3",
             "等級": "B1",
             "Words": "amplify-3",
-            "句子": "Her emotions were amplified by the intense situation"
+            "句子": "Her emotions were amplified by the intense situation",
+            "中文": "(她的情緒在緊張的情況下被放大了)。"
         },
         {
+            "音檔": "音檔 - amplify-4",
             "等級": "B1",
             "Words": "amplify-4",
-            "句子": "He amplified his argument by providing more evidence"
+            "句子": "He amplified his argument by providing more evidence",
+            "中文": "(他通過提供更多證據來強化他的論點)。"
         },
         {
+            "音檔": "音檔 - amplify-5",
             "等級": "B1",
             "Words": "amplify-5",
-            "句子": "The author amplified the story by adding more background details"
+            "句子": "The author amplified the story by adding more background details",
+            "中文": "(作者通過添加更多背景細節來擴充故事內容)。"
         },
         {
+            "音檔": "音檔 - amplify-6",
             "等級": "B1",
             "Words": "amplify-6",
-            "句子": "She asked him to amplify his response with specific examples"
+            "句子": "She asked him to amplify his response with specific examples",
+            "中文": "(她請他用具體的例子來擴充他的回應)。"
         },
         {
             "等級": "B1",
@@ -2805,64 +2860,84 @@
             "句子": "Understanding the ancestry of crops helps scientists improve agricultural practices"
         },
         {
+            "音檔": "音檔 - anchor-1",
             "等級": "B2",
             "分類": "職業",
             "Words": "anchor-1",
-            "句子": "The sailor lowered the anchor to keep the boat steady"
+            "句子": "The sailor lowered the anchor to keep the boat steady",
+            "中文": "(水手放下了錨，以保持船隻穩定)。"
         },
         {
+            "音檔": "音檔 - anchor-10",
             "等級": "B2",
             "分類": "職業",
             "Words": "anchor-10",
-            "句子": "Meditation helps to anchor her mind in the present moment"
+            "句子": "Meditation helps to anchor her mind in the present moment",
+            "中文": "(冥想幫助她將注意力固定在當下)。"
         },
         {
+            "音檔": "音檔 - anchor-2",
             "等級": "B2",
             "分類": "職業",
             "Words": "anchor-2",
-            "句子": "The ship remained in place because its anchor was firmly secured"
+            "句子": "The ship remained in place because its anchor was firmly secured",
+            "中文": "(船隻保持原地不動，因為它的錨牢牢固定住了)。"
         },
         {
+            "音檔": "音檔 - anchor-3",
             "等級": "B2",
             "分類": "職業",
             "Words": "anchor-3",
-            "句子": "She was the emotional anchor of the family, always keeping everyone together"
+            "句子": "She was the emotional anchor of the family, always keeping everyone together",
+            "中文": "(她是家庭的情感支柱，總是讓每個人保持團結)。"
         },
         {
+            "音檔": "音檔 - anchor-4",
             "等級": "B2",
             "分類": "職業",
             "Words": "anchor-4",
-            "句子": "His strong leadership served as an anchor for the team"
+            "句子": "His strong leadership served as an anchor for the team",
+            "中文": "(他堅強的領導力成為了團隊的支柱)。"
         },
         {
+            "音檔": "音檔 - anchor-5",
             "等級": "B2",
             "分類": "職業",
             "Words": "anchor-5",
-            "句子": "The news anchor reported the breaking story live from the scene"
+            "句子": "The news anchor reported the breaking story live from the scene",
+            "中文": "(新聞主播從現場直播報導了這則突發新聞)。"
         },
         {
+            "音檔": "音檔 - anchor-6",
             "等級": "B2",
             "分類": "職業",
             "Words": "anchor-6",
-            "句子": "She worked for years before becoming the lead anchor of the evening news"
+            "句子": "She worked for years before becoming the lead anchor of the evening news",
+            "中文": "(她工作了多年後，才成為晚間新聞的首席主播)。"
         },
         {
+            "音檔": "音檔 - anchor-7",
             "等級": "B2",
             "分類": "職業",
             "Words": "anchor-7",
-            "句子": "They anchored the tent to the ground to prevent it from blowing away"
+            "句子": "They anchored the tent to the ground to prevent it from blowing away",
+            "中文": "(他們把帳篷固定在地面上，以防止它被風吹走)。"
         },
         {
+            "音檔": "音檔 - anchor-8",
             "等級": "B2",
             "分類": "職業",
             "Words": "anchor-8",
-            "句子": "The bridge is anchored by massive steel cables"
+            "句子": "The bridge is anchored by massive steel cables",
+            "中文": "(這座橋由巨大的鋼索固定)。"
         },
         {
+            "音檔": "音檔 - anchor-9",
             "等級": "B2",
             "分類": "職業",
             "Words": "anchor-9",
-            "句子": "His speech was anchored in strong research and facts"
+            "句子": "His speech was anchored in strong research and facts",
+            "中文": "(他的演講以扎實的研究和事實為依據)。"
         },
         {
             "等級": "B2",
@@ -3088,28 +3163,36 @@
             "句子": "Insects use their antennas to communicate and navigate their surroundings"
         },
         {
+            "音檔": "音檔 - anthropologist-1",
             "等級": "C1",
             "分類": "職業",
             "Words": "anthropologist-1",
-            "句子": "The anthropologist spent years studying ancient civilizations in South America"
+            "句子": "The anthropologist spent years studying ancient civilizations in South America",
+            "中文": "(人類學家花費數年時間研究南美的古代文明)。"
         },
         {
+            "音檔": "音檔 - anthropologist-2",
             "等級": "C1",
             "分類": "職業",
             "Words": "anthropologist-2",
-            "句子": "She works as an anthropologist, researching cultural traditions around the world"
+            "句子": "She works as an anthropologist, researching cultural traditions around the world",
+            "中文": "(她是一名人類學家，研究世界各地的文化傳統)。"
         },
         {
+            "音檔": "音檔 - anthropologist-3",
             "等級": "C1",
             "分類": "職業",
             "Words": "anthropologist-3",
-            "句子": "The museum invited an anthropologist to speak about early human migration"
+            "句子": "The museum invited an anthropologist to speak about early human migration",
+            "中文": "(博物館邀請了一位人類學家來講解早期人類的遷徙)。"
         },
         {
+            "音檔": "音檔 - anthropologist-4",
             "等級": "C1",
             "分類": "職業",
             "Words": "anthropologist-4",
-            "句子": "As an anthropologist, he examines how language shapes social interactions"
+            "句子": "As an anthropologist, he examines how language shapes social interactions",
+            "中文": "(作為人類學家，他研究語言如何影響社會互動)。"
         },
         {
             "等級": "C2",
@@ -3601,16 +3684,20 @@
             "句子": "Aquatics in the lake include ducks, fish, and algae, all vital parts of the ecosystem"
         },
         {
+            "音檔": "音檔 - archaeologist-1",
             "等級": "C2",
             "分類": "職業",
             "Words": "archaeologist-1",
-            "句子": "The archaeologist discovered ancient pottery while digging at the historical site"
+            "句子": "The archaeologist discovered ancient pottery while digging at the historical site",
+            "中文": "(考古學家在歷史遺址挖掘時發現了古代陶器)。"
         },
         {
+            "音檔": "音檔 - archaeologist-2",
             "等級": "C2",
             "分類": "職業",
             "Words": "archaeologist-2",
-            "句子": "She became an archaeologist to learn more about ancient civilizations"
+            "句子": "She became an archaeologist to learn more about ancient civilizations",
+            "中文": "(她成為考古學家，以深入了解古代文明)。"
         },
         {
             "音檔": "音檔 - archaic-1",
@@ -3737,28 +3824,36 @@
             "中文": "（這款時尚的智慧型手機是現代科技的典範——極簡、易用且高效能。）"
         },
         {
+            "音檔": "音檔 - architect-1",
             "等級": "B2",
             "分類": "職業",
             "Words": "architect-1",
-            "句子": "The architect designed a modern skyscraper for the city’s downtown area"
+            "句子": "The architect designed a modern skyscraper for the city’s downtown area",
+            "中文": "(建築師為該市市中心設計了一座現代摩天大樓)。"
         },
         {
+            "音檔": "音檔 - architect-2",
             "等級": "B2",
             "分類": "職業",
             "Words": "architect-2",
-            "句子": "She worked as an architect, specializing in sustainable housing projects"
+            "句子": "She worked as an architect, specializing in sustainable housing projects",
+            "中文": "(她是一名建築師，專門從事可持續住房專案)。"
         },
         {
+            "音檔": "音檔 - architect-3",
             "等級": "B2",
             "分類": "職業",
             "Words": "architect-3",
-            "句子": "The software architect developed the framework for the new application"
+            "句子": "The software architect developed the framework for the new application",
+            "中文": "(軟體架構師為新應用程式開發了框架)。"
         },
         {
+            "音檔": "音檔 - architect-4",
             "等級": "B2",
             "分類": "職業",
             "Words": "architect-4",
-            "句子": "He was the chief architect of the company’s expansion strategy"
+            "句子": "He was the chief architect of the company’s expansion strategy",
+            "中文": "(他是公司擴展戰略的主要策劃者)。"
         },
         {
             "等級": "B1",
@@ -4118,28 +4213,36 @@
             "句子": "As of yesterday, she had not responded to the email"
         },
         {
+            "音檔": "音檔 - assassin-1",
             "等級": "C1",
             "分類": "職業",
             "Words": "assassin-1",
-            "句子": "The assassin was hired to eliminate the political leader"
+            "句子": "The assassin was hired to eliminate the political leader",
+            "中文": "(刺客被雇來暗殺那位政治領袖)。"
         },
         {
+            "音檔": "音檔 - assassin-2",
             "等級": "C1",
             "分類": "職業",
             "Words": "assassin-2",
-            "句子": "The king's assassin carried out the attack in the dead of night"
+            "句子": "The king's assassin carried out the attack in the dead of night",
+            "中文": "(國王的刺客在深夜進行了襲擊)。"
         },
         {
+            "音檔": "音檔 - assassin-3",
             "等級": "C1",
             "分類": "職業",
             "Words": "assassin-3",
-            "句子": "The authorities arrested a suspected assassin before he could strike"
+            "句子": "The authorities arrested a suspected assassin before he could strike",
+            "中文": "(當局在嫌疑刺客還未動手之前將其逮捕)。"
         },
         {
+            "音檔": "音檔 - assassin-4",
             "等級": "C1",
             "分類": "職業",
             "Words": "assassin-4",
-            "句子": "History is full of famous assassins who changed the course of events"
+            "句子": "History is full of famous assassins who changed the course of events",
+            "中文": "(歷史上充滿了改變事件進程的著名刺客)。"
         },
         {
             "等級": "B1",
@@ -4400,22 +4503,28 @@
             "句子": "Neil Armstrong was the first astronaut to walk on the moon"
         },
         {
+            "音檔": "音檔 - at-first-blush-1",
             "等級": "C2",
             "分類": "daily",
             "Words": "at-first-blush-1",
-            "句子": "At first blush, the proposal seemed beneficial, but further analysis revealed several flaws"
+            "句子": "At first blush, the proposal seemed beneficial, but further analysis revealed several flaws",
+            "中文": "(乍看之下，這項提議似乎有利可圖，但進一步分析後發現了幾個缺陷)。"
         },
         {
+            "音檔": "音檔 - at-first-blush-2",
             "等級": "C2",
             "分類": "daily",
             "Words": "at-first-blush-2",
-            "句子": "She appeared confident at first blush, but later admitted she was quite nervous"
+            "句子": "She appeared confident at first blush, but later admitted she was quite nervous",
+            "中文": "(乍看之下，她顯得自信，但後來承認自己其實很緊張)。"
         },
         {
+            "音檔": "音檔 - at-first-blush-3",
             "等級": "C2",
             "分類": "daily",
             "Words": "at-first-blush-3",
-            "句子": "At first blush, the idea sounded great, but we need to consider the long-term implications"
+            "句子": "At first blush, the idea sounded great, but we need to consider the long-term implications",
+            "中文": "(乍看之下，這個想法聽起來很不錯，但我們需要考慮長遠影響)。"
         },
         {
             "等級": "C2",
@@ -4937,16 +5046,46 @@
             "句子": "Her speech at the conference was a baptism into public speaking"
         },
         {
+            "音檔": "音檔 - barista-1",
             "等級": "B2",
             "分類": "職業",
             "Words": "barista-1",
-            "句子": "The barista made a delicious cappuccino with perfectly frothed milk"
+            "句子": "The barista made a delicious cappuccino with perfectly frothed milk",
+            "中文": "(咖啡師用完美打發的牛奶做了一杯美味的卡布奇諾)。"
         },
         {
+            "音檔": "音檔 - barista-2",
             "等級": "B2",
             "分類": "職業",
             "Words": "barista-2",
-            "句子": "She worked as a barista while attending university, learning about coffee and customer service"
+            "句子": "She worked as a barista while attending university, learning about coffee and customer service",
+            "中文": "(她在大學期間擔任咖啡師，學習關於咖啡和顧客服務的知識)。"
+        },
+        {
+            "音檔": "音檔 - barista-3",
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "barista-3",
+            "名人": "Howard Schultz",
+            "句子": "A skilled barista doesn’t just make coffee; they craft an experience.",
+            "中文": "一位技藝精湛的咖啡師不只是製作咖啡，而是打造一種體驗。"
+        },
+        {
+            "音檔": "音檔 - barista-4",
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "barista-4",
+            "名人": "James Hoffmann",
+            "句子": "A great barista understands that coffee is both an art and a science.",
+            "中文": "優秀的咖啡師明白，咖啡既是一門藝術，也是一門科學。"
+        },
+        {
+            "音檔": "音檔 - barista-5",
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "barista-5",
+            "句子": "The best conversations often happen between a barista and their customers.",
+            "中文": "最棒的對話常常發生在咖啡師與顧客之間。"
         },
         {
             "等級": "C1",
@@ -5346,28 +5485,36 @@
             "中文": "（平分該圓的直線通過其圓心）"
         },
         {
+            "音檔": "音檔 - bittersweet-1",
             "等級": "C2",
             "分類": "family",
             "Words": "bittersweet-1",
-            "句子": "Graduating from college was a bittersweet moment, filled with pride but also sadness at leaving friends behind"
+            "句子": "Graduating from college was a bittersweet moment, filled with pride but also sadness at leaving friends behind",
+            "中文": "（從大學畢業是個充滿複雜情感的時刻）（既有驕傲，也有離開朋友時的傷感）。"
         },
         {
+            "音檔": "音檔 - bittersweet-2",
             "等級": "C2",
             "分類": "family",
             "Words": "bittersweet-2",
-            "句子": "The movie’s ending was bittersweet, leaving viewers both satisfied and emotional"
+            "句子": "The movie’s ending was bittersweet, leaving viewers both satisfied and emotional",
+            "中文": "（這部電影的結局充滿了複雜的情感）（讓觀眾既感到滿足，又情緒激動）。"
         },
         {
+            "音檔": "音檔 - bittersweet-3",
             "等級": "C2",
             "分類": "family",
             "Words": "bittersweet-3",
-            "句子": "It was bittersweet to sell the house where they had so many fond memories"
+            "句子": "It was bittersweet to sell the house where they had so many fond memories",
+            "中文": "（賣掉那座擁有許多美好回憶的房子）是令人感到複雜的情緒，既有不捨又有解脫。"
         },
         {
+            "音檔": "音檔 - bittersweet-4",
             "等級": "C2",
             "分類": "family",
             "Words": "bittersweet-4",
-            "句子": "I prefer bittersweet chocolate because it's not too sweet and has a rich flavor"
+            "句子": "I prefer bittersweet chocolate because it's not too sweet and has a rich flavor",
+            "中文": "（我喜歡苦甜巧克力，因為它不太甜，並且有著豐富的風味。）"
         },
         {
             "等級": "B1",
@@ -6028,46 +6175,60 @@
             "句子": "Despite the challenges, he remained buoyant and hopeful"
         },
         {
+            "音檔": "音檔 - burden-1",
             "等級": "B1",
             "分類": "family",
             "Words": "burden-1",
-            "句子": "The financial burden of paying for college is a challenge for many families"
+            "句子": "The financial burden of paying for college is a challenge for many families",
+            "中文": "（支付大學學費的財務負擔對許多家庭來說是一個挑戰。）"
         },
         {
+            "音檔": "音檔 - burden-2",
             "等級": "B1",
             "分類": "family",
             "Words": "burden-2",
-            "句子": "He felt the burden of caring for his aging parents"
+            "句子": "He felt the burden of caring for his aging parents",
+            "中文": "（他感受到了照顧年邁父母的負擔。）"
         },
         {
+            "音檔": "音檔 - burden-3",
             "等級": "B1",
             "分類": "family",
             "Words": "burden-3",
-            "句子": "The burden of guilt weighed heavily on her mind"
+            "句子": "The burden of guilt weighed heavily on her mind",
+            "中文": "（罪疚感的負擔沉重地壓在她的心頭。）"
         },
         {
+            "音檔": "音檔 - burden-4",
             "等級": "B1",
             "分類": "family",
             "Words": "burden-4",
-            "句子": "His illness has placed a huge financial burden on the family"
+            "句子": "His illness has placed a huge financial burden on the family",
+            "中文": "（他的病情給家庭帶來了巨大的財務負擔。）"
         },
         {
+            "音檔": "音檔 - burden-5",
             "等級": "B1",
             "分類": "family",
             "Words": "burden-5",
-            "句子": "I'm sorry to be such a burden on you"
+            "句子": "I'm sorry to be such a burden on you",
+            "中文": "（對不起，我給你帶來了這麼大的負擔。）"
         },
         {
+            "音檔": "音檔 - burden-6",
             "等級": "B1",
             "分類": "family",
             "Words": "burden-6",
-            "句子": "I didn’t want to burden you with my problems"
+            "句子": "I didn’t want to burden you with my problems",
+            "中文": "（我不想讓你因為我的問題而感到負擔。）"
         },
         {
+            "音檔": "音檔 - burden-7",
             "等級": "B1",
             "分類": "family",
             "Words": "burden-7",
-            "句子": "The new regulations could burden small businesses with extra costs"
+            "句子": "The new regulations could burden small businesses with extra costs",
+            "中文": "（新規定可能會讓小型企業承擔額外的成本負擔。）"
         },
         {
             "等級": "C1",
@@ -7333,28 +7494,36 @@
             "句子": "The school clamped new rules on student behavior"
         },
         {
+            "音檔": "音檔 - clan-1",
             "等級": "B1",
             "分類": "family",
             "Words": "clan-1",
-            "句子": "Every summer, the entire clan gathers at the family cabin by the lake for a reunion"
+            "句子": "Every summer, the entire clan gathers at the family cabin by the lake for a reunion",
+            "中文": "（每年夏天，整個家族會聚集在湖邊的家庭小屋，舉行重聚。）"
         },
         {
+            "音檔": "音檔 - clan-2",
             "等級": "B1",
             "分類": "family",
             "Words": "clan-2",
-            "句子": "The whole clan gets together for the holidays"
+            "句子": "The whole clan gets together for the holidays",
+            "中文": "（全家族在假期時會聚在一起。）"
         },
         {
+            "音檔": "音檔 - clan-3",
             "等級": "B1",
             "分類": "family",
             "Words": "clan-3",
-            "句子": "All the higher-grade engineers have formed a little clan of their own"
+            "句子": "All the higher-grade engineers have formed a little clan of their own",
+            "中文": "（所有高級工程師都組成了他們自己的小團體。）"
         },
         {
+            "音檔": "音檔 - clan-4",
             "等級": "B1",
             "分類": "family",
             "Words": "clan-4",
-            "句子": "The gaming clan competed in tournaments together, building a strong reputation online"
+            "句子": "The gaming clan competed in tournaments together, building a strong reputation online",
+            "中文": "（遊戲公會一起參加比賽，在網上建立了強大的聲譽。）"
         },
         {
             "等級": "C2",
@@ -8154,58 +8323,76 @@
             "句子": "The official commendation included a certificate and a public acknowledgment of her efforts"
         },
         {
+            "音檔": "音檔 - commerce-1",
             "等級": "B2",
             "分類": "商業",
             "Words": "commerce-1",
-            "句子": "The growth of e-commerce has revolutionized how global commerce operates"
+            "句子": "The growth of e-commerce has revolutionized how global commerce operates",
+            "中文": "（電子商務的成長徹底改變了全球商業運作的方式。）"
         },
         {
+            "音檔": "音檔 - commerce-2",
             "等級": "B2",
             "分類": "商業",
             "Words": "commerce-2",
-            "句子": "International commerce depends heavily on agreements like trade accords and tariffs"
+            "句子": "International commerce depends heavily on agreements like trade accords and tariffs",
+            "中文": "（國際商業在很大程度上依賴於貿易協定和關稅等協議。）"
         },
         {
+            "音檔": "音檔 - commerce-3",
             "等級": "B2",
             "分類": "商業",
             "Words": "commerce-3",
-            "句子": "The city's economy is heavily reliant on both tourism and commerce"
+            "句子": "The city's economy is heavily reliant on both tourism and commerce",
+            "中文": "（該市的經濟在很大程度上依賴於旅遊和商業。）"
         },
         {
+            "音檔": "音檔 - commodity-1",
             "等級": "C1",
             "分類": "商業",
             "Words": "commodity-1",
-            "句子": "Oil is a major global commodity traded on international markets"
+            "句子": "Oil is a major global commodity traded on international markets",
+            "中文": "(石油是國際市場上交易的主要全球商品。)"
         },
         {
+            "音檔": "音檔 - commodity-2",
             "等級": "C1",
             "分類": "商業",
             "Words": "commodity-2",
-            "句子": "Coffee, sugar, and wheat are all common commodities in the agricultural sector"
+            "句子": "Coffee, sugar, and wheat are all common commodities in the agricultural sector",
+            "中文": "(咖啡、糖和小麥都是農業部門中常見的商品。)"
         },
         {
+            "音檔": "音檔 - commodity-3",
             "等級": "C1",
             "分類": "商業",
             "Words": "commodity-3",
-            "句子": "Fluctuations in commodity prices can significantly impact the profitability of agricultural businesses"
+            "句子": "Fluctuations in commodity prices can significantly impact the profitability of agricultural businesses",
+            "中文": "(商品價格的波動可能會顯著影響農業企業的盈利能力。)"
         },
         {
+            "音檔": "音檔 - commodity-4",
             "等級": "C1",
             "分類": "商業",
             "Words": "commodity-4",
-            "句子": "In a fast-paced industry, time can be the most valuable commodity"
+            "句子": "In a fast-paced industry, time can be the most valuable commodity",
+            "中文": "(在一個快節奏的行業中，時間可能是最有價值的商品。)"
         },
         {
+            "音檔": "音檔 - commodity-5",
             "等級": "C1",
             "分類": "商業",
             "Words": "commodity-5",
-            "句子": "Creativity is a highly sought-after commodity in the world of advertising"
+            "句子": "Creativity is a highly sought-after commodity in the world of advertising",
+            "中文": "(創意在廣告界中是一種極受追捧的商品。)"
         },
         {
+            "音檔": "音檔 - commodity-6",
             "等級": "C1",
             "分類": "商業",
             "Words": "commodity-6",
-            "句子": "Your data has become a commodity in the digital age,\" meaning that personal information is often traded or used by companies to generate value"
+            "句子": "Your data has become a commodity in the digital age,\" meaning that personal information is often traded or used by companies to generate value",
+            "中文": "(在數位時代，你的數據已成為一種商品，) 意思是個人資訊常常被公司交易或用來創造價值。"
         },
         {
             "等級": "C2",
@@ -8728,82 +8915,108 @@
             "句子": "He consulted his doctor before deciding on a course of treatment"
         },
         {
+            "音檔": "音檔 - confidant-1",
             "等級": "C1",
             "分類": "family",
             "Words": "confidant-1",
-            "句子": "She confided her worries to her most trusted confidant"
+            "句子": "She confided her worries to her most trusted confidant",
+            "中文": "（她把自己的擔憂託付給了她最信任的知己。）"
         },
         {
+            "音檔": "音檔 - confidant-2",
             "等級": "C1",
             "分類": "family",
             "Words": "confidant-2",
-            "句子": "In times of crisis, having a confidant can make a significant difference"
+            "句子": "In times of crisis, having a confidant can make a significant difference",
+            "中文": "（在危機時期，有一位知己可以帶來重大影響。）"
         },
         {
+            "音檔": "音檔 - confidant-3",
             "等級": "C1",
             "分類": "family",
             "Words": "confidant-3",
-            "句子": "He relied on his best friend as a confidant for advice and support"
+            "句子": "He relied on his best friend as a confidant for advice and support",
+            "中文": "（他依賴最好的朋友作為知己，尋求建議和支持。）"
         },
         {
+            "音檔": "音檔 - confidant-4",
             "等級": "C1",
             "分類": "family",
             "Words": "confidant-4",
-            "句子": "He is a trusted confidant of the president"
+            "句子": "He is a trusted confidant of the president",
+            "中文": "（他是總統的可信賴知己。）"
         },
         {
+            "音檔": "音檔 - confide-1",
             "等級": "B2",
             "分類": "family",
             "Words": "confide-1",
-            "句子": "She decided to confide in her best friend about her concerns"
+            "句子": "She decided to confide in her best friend about her concerns",
+            "中文": "（她決定向她最好的朋友訴說她的擔憂。）"
         },
         {
+            "音檔": "音檔 - confide-2",
             "等級": "B2",
             "分類": "family",
             "Words": "confide-2",
-            "句子": "He confided his plans for the future only to his closest relatives"
+            "句子": "He confided his plans for the future only to his closest relatives",
+            "中文": "（他只向他最親密的親戚透露了自己未來的計劃。）"
         },
         {
+            "音檔": "音檔 - confide-3",
             "等級": "B2",
             "分類": "family",
             "Words": "confide-3",
-            "句子": "After the meeting, he felt comfortable enough to confide his doubts to his colleague"
+            "句子": "After the meeting, he felt comfortable enough to confide his doubts to his colleague",
+            "中文": "（會議結束後，他感到足夠舒適，可以向同事透露自己的疑慮。）"
         },
         {
+            "音檔": "音檔 - confide-4",
             "等級": "B2",
             "分類": "family",
             "Words": "confide-4",
-            "句子": "I’m grateful that you confided in me about your worries"
+            "句子": "I’m grateful that you confided in me about your worries",
+            "中文": "（我很感激你向我透露你的憂慮。）"
         },
         {
+            "音檔": "音檔 - confide-5",
             "等級": "B2",
             "分類": "family",
             "Words": "confide-5",
-            "句子": "He had no one to confide in"
+            "句子": "He had no one to confide in",
+            "中文": "（他沒有可以傾訴的人。）"
         },
         {
+            "音檔": "音檔 - confide-6",
             "等級": "B2",
             "分類": "family",
             "Words": "confide-6",
-            "句子": "He confided that he was very unhappy with his job"
+            "句子": "He confided that he was very unhappy with his job",
+            "中文": "（他向我透露，他對自己的工作感到非常不滿。）"
         },
         {
+            "音檔": "音檔 - confiding-1",
             "等級": "C1",
             "分類": "family",
             "Words": "confiding-1",
-            "句子": "Confiding in her mentor helped her gain valuable perspective on her career"
+            "句子": "Confiding in her mentor helped her gain valuable perspective on her career",
+            "中文": "（向她的導師坦白讓她在職業生涯中獲得了寶貴的視角。）"
         },
         {
+            "音檔": "音檔 - confiding-2",
             "等級": "C1",
             "分類": "family",
             "Words": "confiding-2",
-            "句子": "He felt a sense of relief after confiding his worries to his therapist"
+            "句子": "He felt a sense of relief after confiding his worries to his therapist",
+            "中文": "（在向他的治療師吐露心事後，他感到一種釋放的感覺。）"
         },
         {
+            "音檔": "音檔 - confiding-3",
             "等級": "C1",
             "分類": "family",
             "Words": "confiding-3",
-            "句子": "Confiding in someone requires a high level of trust and openness"
+            "句子": "Confiding in someone requires a high level of trust and openness",
+            "中文": "（向某人傾訴需要高度的信任和開放。）"
         },
         {
             "等級": "B2",
@@ -10751,22 +10964,28 @@
             "句子": "The project's success was measured against specific criteria, including timeliness and budget adherence"
         },
         {
+            "音檔": "音檔 - critic-1",
             "等級": "B1",
             "分類": "職業",
             "Words": "critic-1",
-            "句子": "He is a very famous film critic"
+            "句子": "He is a very famous film critic",
+            "中文": "(他是一位非常著名的電影評論家)。"
         },
         {
+            "音檔": "音檔 - critic-2",
             "等級": "B1",
             "分類": "職業",
             "Words": "critic-2",
-            "句子": "She was nervous about presenting her artwork to the critic, knowing that their feedback could greatly influence her career"
+            "句子": "She was nervous about presenting her artwork to the critic, knowing that their feedback could greatly influence her career",
+            "中文": "(她對向評論家展示自己的藝術作品感到緊張，因為她知道他們的反饋可能會對她的職業生涯產生重大影響)。"
         },
         {
+            "音檔": "音檔 - critic-3",
             "等級": "B1",
             "分類": "職業",
             "Words": "critic-3",
-            "句子": "The actor had to answer many charges from his critics"
+            "句子": "The actor had to answer many charges from his critics",
+            "中文": "(這位演員不得不回答來自評論家的許多指控)。"
         },
         {
             "等級": "C1",
@@ -11155,22 +11374,28 @@
             "中文": "(這位助理牧師主持了晨禱儀式。)"
         },
         {
+            "音檔": "音檔 - curator-1",
             "等級": "B2",
             "分類": "職業",
             "Words": "curator-1",
-            "句子": "The curator of the museum spent months researching and organizing the new exhibit on ancient Egyptian artifacts"
+            "句子": "The curator of the museum spent months researching and organizing the new exhibit on ancient Egyptian artifacts",
+            "中文": "(博物館的策展人花了幾個月的時間研究和整理有關古埃及文物的新展覽)。"
         },
         {
+            "音檔": "音檔 - curator-2",
             "等級": "B2",
             "分類": "職業",
             "Words": "curator-2",
-            "句子": "As a curator at the art gallery, she is responsible for acquiring new works and planning upcoming exhibitions"
+            "句子": "As a curator at the art gallery, she is responsible for acquiring new works and planning upcoming exhibitions",
+            "中文": "(作為藝術畫廊的策展人，她負責收購新作品和規劃即將舉辦的展覽)。"
         },
         {
+            "音檔": "音檔 - curator-3",
             "等級": "B2",
             "分類": "職業",
             "Words": "curator-3",
-            "句子": "The library curator is preparing a special collection of rare manuscripts to be displayed next month"
+            "句子": "The library curator is preparing a special collection of rare manuscripts to be displayed next month",
+            "中文": "(圖書館策展人正在準備一個特別的稀有手稿收藏，將於下個月展出)。"
         },
         {
             "等級": "B2",
@@ -11883,52 +12108,68 @@
             "句子": "The company's new software is a descendant of its first-generation product"
         },
         {
+            "音檔": "音檔 - descent-1",
             "等級": "B2",
             "分類": "family",
             "Words": "descent-1",
-            "句子": "The airplane began its gradual descent toward the airport"
+            "句子": "The airplane began its gradual descent toward the airport",
+            "中文": "（飛機開始向機場進行逐漸下降。）"
         },
         {
+            "音檔": "音檔 - descent-2",
             "等級": "B2",
             "分類": "family",
             "Words": "descent-2",
-            "句子": "The hikers struggled during the steep descent from the mountain"
+            "句子": "The hikers struggled during the steep descent from the mountain",
+            "中文": "（登山者在從山頂的陡峭下降過程中掙扎。）"
         },
         {
+            "音檔": "音檔 - descent-3",
             "等級": "B2",
             "分類": "family",
             "Words": "descent-3",
-            "句子": "His career took a sudden descent after the scandal"
+            "句子": "His career took a sudden descent after the scandal",
+            "中文": "（他的職業生涯在醜聞後突然下滑。）"
         },
         {
+            "音檔": "音檔 - descent-4",
             "等級": "B2",
             "分類": "family",
             "Words": "descent-4",
-            "句子": "She is of French descent and speaks the language fluently"
+            "句子": "She is of French descent and speaks the language fluently",
+            "中文": "（她有法國血統，並且流利地講法語。）"
         },
         {
+            "音檔": "音檔 - descent-5",
             "等級": "B2",
             "分類": "family",
             "Words": "descent-5",
-            "句子": "Many people in the region can trace their descent back to ancient tribes"
+            "句子": "Many people in the region can trace their descent back to ancient tribes",
+            "中文": "（該地區的許多人可以追溯他們的血統到古代部落。）"
         },
         {
+            "音檔": "音檔 - descent-6",
             "等級": "B2",
             "分類": "family",
             "Words": "descent-6",
-            "句子": "His descent from a noble family was well-documented"
+            "句子": "His descent from a noble family was well-documented",
+            "中文": "（他來自一個貴族家庭的血統有著充分的文獻記錄。）"
         },
         {
+            "音檔": "音檔 - descent-7",
             "等級": "B2",
             "分類": "family",
             "Words": "descent-7",
-            "句子": "The descent of the enemy troops caught them off guard"
+            "句子": "The descent of the enemy troops caught them off guard",
+            "中文": "（敵軍的下坡進攻讓他們措手不及。）"
         },
         {
+            "音檔": "音檔 - descent-8",
             "等級": "B2",
             "分類": "family",
             "Words": "descent-8",
-            "句子": "The town prepared for the sudden descent of tourists during the festival"
+            "句子": "The town prepared for the sudden descent of tourists during the festival",
+            "中文": "（城鎮為節日期間突如其來的遊客湧入做好了準備。）"
         },
         {
             "等級": "C1",
@@ -13082,34 +13323,44 @@
             "句子": "The wealthy family employed several domestics to manage their large estate"
         },
         {
+            "音檔": "音檔 - domesticated-1",
             "等級": "C1",
             "分類": "family",
             "Words": "domesticated-1",
-            "句子": "Dogs and cats are among the most commonly domesticated animals"
+            "句子": "Dogs and cats are among the most commonly domesticated animals",
+            "中文": "（狗和貓是最常被馴養的動物之一。）"
         },
         {
+            "音檔": "音檔 - domesticated-2",
             "等級": "C1",
             "分類": "family",
             "Words": "domesticated-2",
-            "句子": "The farm had several domesticated horses trained for riding"
+            "句子": "The farm had several domesticated horses trained for riding",
+            "中文": "（農場裡有幾匹馴養過的馬，訓練用於騎乘。）"
         },
         {
+            "音檔": "音檔 - domesticated-3",
             "等級": "C1",
             "分類": "family",
             "Words": "domesticated-3",
-            "句子": "Over generations, wild plants have been domesticated to produce better crops"
+            "句子": "Over generations, wild plants have been domesticated to produce better crops",
+            "中文": "（經過多代的選育，野生植物已經被馴化，用來生產更好的農作物。）"
         },
         {
+            "音檔": "音檔 - domesticated-4",
             "等級": "C1",
             "分類": "family",
             "Words": "domesticated-4",
-            "句子": "He became more domesticated after getting married, helping with chores and cooking"
+            "句子": "He became more domesticated after getting married, helping with chores and cooking",
+            "中文": "（結婚後，他變得更加家庭化，幫忙做家務和烹飪。）"
         },
         {
+            "音檔": "音檔 - domesticated-5",
             "等級": "C1",
             "分類": "family",
             "Words": "domesticated-5",
-            "句子": "She never saw herself as the domesticated type, preferring travel over home life"
+            "句子": "She never saw herself as the domesticated type, preferring travel over home life",
+            "中文": "（她從未認為自己是那種家庭化的人，喜歡旅行勝過安定的家庭生活。）"
         },
         {
             "等級": "B2",
@@ -16650,40 +16901,52 @@
             "中文": "（每當我需要英語諮詢時，ChatGPT 是我首選的工具；它的深刻回應和語言專業知識不斷幫助我提升溝通技巧。）"
         },
         {
+            "音檔": "音檔 - gourmet-1",
             "等級": "B2",
             "分類": "職業",
             "Words": "gourmet-1",
-            "句子": "They enjoyed a gourmet meal at the upscale restaurant"
+            "句子": "They enjoyed a gourmet meal at the upscale restaurant",
+            "中文": "(他們在高檔餐廳享受了一頓美食盛宴)。"
         },
         {
+            "音檔": "音檔 - gourmet-2",
             "等級": "B2",
             "分類": "職業",
             "Words": "gourmet-2",
-            "句子": "She always seeks out gourmet ingredients for her cooking"
+            "句子": "She always seeks out gourmet ingredients for her cooking",
+            "中文": "(她總是為她的烹飪尋找精緻的食材)。"
         },
         {
+            "音檔": "音檔 - gourmet-3",
             "等級": "B2",
             "分類": "職業",
             "Words": "gourmet-3",
-            "句子": "The gourmet chocolate was beautifully packaged and exquisite in taste"
+            "句子": "The gourmet chocolate was beautifully packaged and exquisite in taste",
+            "中文": "(這款美食巧克力包裝精美，味道極為精緻)。"
         },
         {
+            "音檔": "音檔 - gourmet-4",
             "等級": "B2",
             "分類": "職業",
             "Words": "gourmet-4",
-            "句子": "As a gourmet, he appreciates the art of food preparation and presentation"
+            "句子": "As a gourmet, he appreciates the art of food preparation and presentation",
+            "中文": "(作為一名美食家，他欣賞食物製作和擺盤的藝術)。"
         },
         {
+            "音檔": "音檔 - gourmet-5",
             "等級": "B2",
             "分類": "職業",
             "Words": "gourmet-5",
-            "句子": "The gourmet praised the chef for his innovative menu"
+            "句子": "The gourmet praised the chef for his innovative menu",
+            "中文": "(美食家讚揚廚師的創新菜單)。"
         },
         {
+            "音檔": "音檔 - gourmet-6",
             "等級": "B2",
             "分類": "職業",
             "Words": "gourmet-6",
-            "句子": "Many gourmets enjoy attending food festivals to sample different cuisines"
+            "句子": "Many gourmets enjoy attending food festivals to sample different cuisines",
+            "中文": "(許多美食家喜歡參加美食節，品嚐不同的料理)。"
         },
         {
             "等級": "B1",
@@ -17072,52 +17335,68 @@
             "中文": "（目前我們與鄰居的關係並不太和諧。）"
         },
         {
+            "音檔": "音檔 - harmony-1",
             "等級": "B2",
             "分類": "family",
             "Words": "harmony-1",
-            "句子": "The colors of the room were in perfect harmony, creating a calm and inviting atmosphere"
+            "句子": "The colors of the room were in perfect harmony, creating a calm and inviting atmosphere",
+            "中文": "（房間的顏色完美協調，創造出一個寧靜且誘人的氛圍。）"
         },
         {
+            "音檔": "音檔 - harmony-2",
             "等級": "B2",
             "分類": "family",
             "Words": "harmony-2",
-            "句子": "The choir’s voices blended in beautiful harmony"
+            "句子": "The choir’s voices blended in beautiful harmony",
+            "中文": "（合唱團的聲音融合在一起，形成美麗的和聲。）"
         },
         {
+            "音檔": "音檔 - harmony-3",
             "等級": "B2",
             "分類": "family",
             "Words": "harmony-3",
-            "句子": "The design of the garden was in harmony with the natural landscape"
+            "句子": "The design of the garden was in harmony with the natural landscape",
+            "中文": "（花園的設計與自然景觀和諧融合。）"
         },
         {
+            "音檔": "音檔 - harmony-4",
             "等級": "B2",
             "分類": "family",
             "Words": "harmony-4",
-            "句子": "The furniture in the room was arranged in harmony with the overall modern design"
+            "句子": "The furniture in the room was arranged in harmony with the overall modern design",
+            "中文": "（房間內的家具擺放與整體現代設計和諧融合。）"
         },
         {
+            "音檔": "音檔 - harmony-5",
             "等級": "B2",
             "分類": "family",
             "Words": "harmony-5",
-            "句子": "The team worked in harmony to complete the project on time"
+            "句子": "The team worked in harmony to complete the project on time",
+            "中文": "（團隊合作默契，按時完成了專案。）"
         },
         {
+            "音檔": "音檔 - harmony-6",
             "等級": "B2",
             "分類": "family",
             "Words": "harmony-6",
-            "句子": "The two countries have maintained harmony through diplomatic negotiations"
+            "句子": "The two countries have maintained harmony through diplomatic negotiations",
+            "中文": "（這兩個國家透過外交談判維持了和諧。）"
         },
         {
+            "音檔": "音檔 - harmony-7",
             "等級": "B2",
             "分類": "family",
             "Words": "harmony-7",
-            "句子": "They lived in harmony, respecting each other’s differences"
+            "句子": "They lived in harmony, respecting each other’s differences",
+            "中文": "（他們和諧地生活，尊重彼此的差異。）"
         },
         {
+            "音檔": "音檔 - harmony-8",
             "等級": "B2",
             "分類": "family",
             "Words": "harmony-8",
-            "句子": "The new policies aim to promote harmony between local communities and newcomers"
+            "句子": "The new policies aim to promote harmony between local communities and newcomers",
+            "中文": "（新政策旨在促進當地社區與新來者之間的和諧。）"
         },
         {
             "Words": "harness-1",
@@ -17712,28 +17991,36 @@
             "句子": "The stage magician used hypnotism to make the volunteer forget their own name during the performance"
         },
         {
+            "音檔": "音檔 - hypnotist-1",
             "等級": "C1",
             "分類": "職業",
             "Words": "hypnotist-1",
-            "句子": "The hypnotist helped her overcome her fear of flying through hypnosis"
+            "句子": "The hypnotist helped her overcome her fear of flying through hypnosis",
+            "中文": "(催眠師通過催眠幫助她克服了對飛行的恐懼)。"
         },
         {
+            "音檔": "音檔 - hypnotist-2",
             "等級": "C1",
             "分類": "職業",
             "Words": "hypnotist-2",
-            "句子": "At the show, the hypnotist amazed the audience by making volunteers follow his suggestions"
+            "句子": "At the show, the hypnotist amazed the audience by making volunteers follow his suggestions",
+            "中文": "(在表演中，催眠師通過讓志願者聽從他的建議，驚艷了觀眾)。"
         },
         {
+            "音檔": "音檔 - hypnotist-3",
             "等級": "C1",
             "分類": "職業",
             "Words": "hypnotist-3",
-            "句子": "Some people visit a hypnotist to quit smoking or manage stress"
+            "句子": "Some people visit a hypnotist to quit smoking or manage stress",
+            "中文": "(一些人會去看催眠師以戒菸或管理壓力)。"
         },
         {
+            "音檔": "音檔 - hypnotist-4",
             "等級": "C1",
             "分類": "職業",
             "Words": "hypnotist-4",
-            "句子": "The hypnotist guided him into a deep state of relaxation during the session"
+            "句子": "The hypnotist guided him into a deep state of relaxation during the session",
+            "中文": "(催眠師在療程中引導他進入深度放鬆狀態)。"
         },
         {
             "等級": "C1",
@@ -19038,28 +19325,36 @@
             "句子": "The artist worked on her painting with an intensity that impressed her peers"
         },
         {
+            "音檔": "音檔 - interactive-1",
             "等級": "C2",
             "分類": "family",
             "Words": "interactive-1",
-            "句子": "The website offers an interactive quiz to test your knowledge on history"
+            "句子": "The website offers an interactive quiz to test your knowledge on history",
+            "中文": "（這個網站提供了一個互動式小測驗，來測試你對歷史的知識。）"
         },
         {
+            "音檔": "音檔 - interactive-2",
             "等級": "C2",
             "分類": "family",
             "Words": "interactive-2",
-            "句子": "Video games have become more interactive, allowing players to control the storyline through their choices"
+            "句子": "Video games have become more interactive, allowing players to control the storyline through their choices",
+            "中文": "（電子遊戲變得更加互動，允許玩家透過自己的選擇來控制故事情節。）"
         },
         {
+            "音檔": "音檔 - interactive-3",
             "等級": "C2",
             "分類": "family",
             "Words": "interactive-3",
-            "句子": "The workshop was highly interactive, encouraging group discussions and problem-solving"
+            "句子": "The workshop was highly interactive, encouraging group discussions and problem-solving",
+            "中文": "（這個工作坊非常互動，鼓勵小組討論和解決問題。）"
         },
         {
+            "音檔": "音檔 - interactive-4",
             "等級": "C2",
             "分類": "family",
             "Words": "interactive-4",
-            "句子": "The teacher designed interactive lessons to keep students engaged and involved in the learning process"
+            "句子": "The teacher designed interactive lessons to keep students engaged and involved in the learning process",
+            "中文": "（老師設計了互動性課程，讓學生保持專注並參與學習過程。）"
         },
         {
             "等級": "C1",
@@ -19105,46 +19400,60 @@
             "句子": "The large intestine is responsible for absorbing water from digested food"
         },
         {
+            "音檔": "音檔 - intimate-1",
             "等級": "B2",
             "分類": "family",
             "Words": "intimate-1",
-            "句子": "They have been intimate friends for over a decade"
+            "句子": "They have been intimate friends for over a decade",
+            "中文": "（他們是多年的親密朋友。）"
         },
         {
+            "音檔": "音檔 - intimate-2",
             "等級": "B2",
             "分類": "family",
             "Words": "intimate-2",
-            "句子": "The restaurant had an intimate atmosphere, perfect for a quiet dinner"
+            "句子": "The restaurant had an intimate atmosphere, perfect for a quiet dinner",
+            "中文": "（餐廳有一種親密的氛圍，非常適合安靜的晚餐。）"
         },
         {
+            "音檔": "音檔 - intimate-3",
             "等級": "B2",
             "分類": "family",
             "Words": "intimate-3",
-            "句子": "She shared her most intimate thoughts with her closest friend"
+            "句子": "She shared her most intimate thoughts with her closest friend",
+            "中文": "（她與最親密的朋友分享了她最私密的想法。）"
         },
         {
+            "音檔": "音檔 - intimate-4",
             "等級": "B2",
             "分類": "family",
             "Words": "intimate-4",
-            "句子": "He intimated that he might be moving to a new city soon"
+            "句子": "He intimated that he might be moving to a new city soon",
+            "中文": "（他暗示他可能很快會搬到新城市。）"
         },
         {
+            "音檔": "音檔 - intimate-5",
             "等級": "B2",
             "分類": "family",
             "Words": "intimate-5",
-            "句子": "She intimated her concerns during the meeting without stating them directly"
+            "句子": "She intimated her concerns during the meeting without stating them directly",
+            "中文": "（她在會議中暗示了她的擔憂，並未直接說出來。）"
         },
         {
+            "音檔": "音檔 - intimate-6",
             "等級": "B2",
             "分類": "family",
             "Words": "intimate-6",
-            "句子": "She confided her secrets to her most trusted intimate"
+            "句子": "She confided her secrets to her most trusted intimate",
+            "中文": "（她把她的秘密託付給她最信任的親密朋友。）"
         },
         {
+            "音檔": "音檔 - intimate-7",
             "等級": "B2",
             "分類": "family",
             "Words": "intimate-7",
-            "句子": "The party was attended by a few close intimates"
+            "句子": "The party was attended by a few close intimates",
+            "中文": "（派對上出席的是一些親密的朋友。）"
         },
         {
             "等級": "C1",
@@ -19871,28 +20180,54 @@
             "句子": "The red-hot lava flowed down the mountainside, destroying everything in its path"
         },
         {
+            "音檔": "音檔 - leftover-1",
             "等級": "B2",
             "分類": "family",
             "Words": "leftover-1",
-            "句子": "We had leftovers from dinner, so we don’t need to cook tonight"
+            "句子": "We had leftovers from dinner, so we don’t need to cook tonight",
+            "中文": "（我們有晚餐剩菜，所以今晚不需要做飯。）"
         },
         {
+            "音檔": "音檔 - leftover-2",
             "等級": "B2",
             "分類": "family",
             "Words": "leftover-2",
-            "句子": "There were a few leftovers after the party, and we packed them up for later"
+            "句子": "There were a few leftovers after the party, and we packed them up for later",
+            "中文": "（派對後剩下了一些食物，我們把它們收拾起來留著以後吃。）"
         },
         {
+            "音檔": "音檔 - leftover-3",
             "等級": "B2",
             "分類": "family",
             "Words": "leftover-3",
-            "句子": "I used the leftover fabric to make a small pillow"
+            "句子": "I used the leftover fabric to make a small pillow",
+            "中文": "（我用剩下的布料做了一個小枕頭。）"
         },
         {
+            "音檔": "音檔 - leftover-4",
             "等級": "B2",
             "分類": "family",
             "Words": "leftover-4",
-            "句子": "The leftover cake from the birthday party was delicious the next day"
+            "句子": "The leftover cake from the birthday party was delicious the next day",
+            "中文": "（生日派對剩下的蛋糕隔天依然很好吃。）"
+        },
+        {
+            "音檔": "音檔 - leftover-5",
+            "等級": "B2",
+            "分類": "family",
+            "Words": "leftover-5",
+            "名人": "Gordon Ramsay",
+            "句子": "A creative chef can turn simple leftovers into a masterpiece.",
+            "中文": "有創意的廚師能將普通的剩菜變成一份傑作。"
+        },
+        {
+            "音檔": "音檔 - leftover-6",
+            "等級": "B2",
+            "分類": "family",
+            "Words": "leftover-6",
+            "名人": "Benjamin Franklin",
+            "句子": "Waste not, want not—leftovers can always serve a new purpose.",
+            "中文": "物盡其用，則無匱乏——剩餘之物總能發揮新的價值。"
         },
         {
             "等級": "C1",
@@ -19915,28 +20250,36 @@
             "句子": "The negotiations between the two parties were lengthy, spanning several months before reaching a final agreement"
         },
         {
+            "音檔": "音檔 - lifeblood-1",
             "等級": "C1",
             "分類": "daily",
             "Words": "lifeblood-1",
-            "句子": "Creativity is the lifeblood of the fashion industry"
+            "句子": "Creativity is the lifeblood of the fashion industry",
+            "中文": "(創造力是時尚產業的命脈)。"
         },
         {
+            "音檔": "音檔 - lifeblood-2",
             "等級": "C1",
             "分類": "daily",
             "Words": "lifeblood-2",
-            "句子": "Diamond is the lifeblood of South Africa's economy"
+            "句子": "Diamond is the lifeblood of South Africa's economy",
+            "中文": "(鑽石是南非經濟的命脈)。"
         },
         {
+            "音檔": "音檔 - lifeblood-3",
             "等級": "C1",
             "分類": "daily",
             "Words": "lifeblood-3",
-            "句子": "Water is the lifeblood of agriculture in the region, without which crops cannot grow"
+            "句子": "Water is the lifeblood of agriculture in the region, without which crops cannot grow",
+            "中文": "(水是該地區農業的命脈，沒有水作物無法生長)。"
         },
         {
+            "音檔": "音檔 - lifeblood-4",
             "等級": "C1",
             "分類": "daily",
             "Words": "lifeblood-4",
-            "句子": "In ancient times, warriors were willing to shed their lifeblood for their country"
+            "句子": "In ancient times, warriors were willing to shed their lifeblood for their country",
+            "中文": "(在古代，戰士們願意為國家捨命)。"
         },
         {
             "等級": "B2",
@@ -20324,24 +20667,32 @@
             "句子": "The machinery in the lab helps process scientific data quickly"
         },
         {
+            "音檔": "音檔 - magician-1",
             "分類": "職業",
             "Words": "magician-1",
-            "句子": "The magician pulled a rabbit out of his hat, amazing the audience"
+            "句子": "The magician pulled a rabbit out of his hat, amazing the audience",
+            "中文": "(魔術師從帽子裡拿出一隻兔子，讓觀眾驚嘆不已)。"
         },
         {
+            "音檔": "音檔 - magician-2",
             "分類": "職業",
             "Words": "magician-2",
-            "句子": "She hired a magician to perform at her son's birthday party"
+            "句子": "She hired a magician to perform at her son's birthday party",
+            "中文": "(她聘請了一位魔術師來為她兒子的生日派對表演)。"
         },
         {
+            "音檔": "音檔 - magician-3",
             "分類": "職業",
             "Words": "magician-3",
-            "句子": "He is a magician in the kitchen, creating incredible dishes from simple ingredients"
+            "句子": "He is a magician in the kitchen, creating incredible dishes from simple ingredients",
+            "中文": "(他在廚房裡像魔術師一樣，將簡單的食材變出令人難以置信的菜餚)。"
         },
         {
+            "音檔": "音檔 - magician-4",
             "分類": "職業",
             "Words": "magician-4",
-            "句子": "The software developer was a magician when it came to solving complex coding problems"
+            "句子": "The software developer was a magician when it came to solving complex coding problems",
+            "中文": "(這位軟體開發者在解決複雜的程式碼問題時像魔術師一樣)。"
         },
         {
             "等級": "B1",
@@ -20369,22 +20720,28 @@
             "句子": "It is difficult to imagine the magnitude of the universe"
         },
         {
+            "音檔": "音檔 - makeup-artist-1",
             "等級": "C2",
             "分類": "職業",
             "Words": "makeup-artist-1",
-            "句子": "The makeup artist transformed the actress's look for the red carpet premiere"
+            "句子": "The makeup artist transformed the actress's look for the red carpet premiere",
+            "中文": "(化妝師為女演員的紅毯首映改變了她的造型)。"
         },
         {
+            "音檔": "音檔 - makeup-artist-2",
             "等級": "C2",
             "分類": "職業",
             "Words": "makeup-artist-2",
-            "句子": "She hired a makeup artist for her wedding day to ensure she looked flawless"
+            "句子": "She hired a makeup artist for her wedding day to ensure she looked flawless",
+            "中文": "(她在婚禮當天聘請了化妝師，確保自己看起來完美無瑕)。"
         },
         {
+            "音檔": "音檔 - makeup-artist-3",
             "等級": "C2",
             "分類": "職業",
             "Words": "makeup-artist-3",
-            "句子": "The makeup artist demonstrated various techniques during the beauty workshop"
+            "句子": "The makeup artist demonstrated various techniques during the beauty workshop",
+            "中文": "(化妝師在美妝研討會上展示了各種化妝技巧)。"
         },
         {
             "等級": "C1",
@@ -26021,28 +26378,36 @@
             "句子": "His nationality isn't relevant to whether he is a good lawyer"
         },
         {
+            "音檔": "音檔 - reliant-1",
             "等級": "B2",
             "分類": "daily",
             "Words": "reliant-1",
-            "句子": "Many businesses are reliant on technology to streamline their operations and improve efficiency"
+            "句子": "Many businesses are reliant on technology to streamline their operations and improve efficiency",
+            "中文": "(許多企業依賴技術來簡化運營並提高效率)。"
         },
         {
+            "音檔": "音檔 - reliant-2",
             "等級": "B2",
             "分類": "daily",
             "Words": "reliant-2",
-            "句子": "She felt reliant on her mentor for guidance during her first year at the company"
+            "句子": "She felt reliant on her mentor for guidance during her first year at the company",
+            "中文": "(在公司工作的第一年，她感到依賴她的導師提供指導)。"
         },
         {
+            "音檔": "音檔 - reliant-3",
             "等級": "B2",
             "分類": "daily",
             "Words": "reliant-3",
-            "句子": "The region is reliant on tourism as a primary source of income"
+            "句子": "The region is reliant on tourism as a primary source of income",
+            "中文": "(該地區依賴旅遊業作為主要收入來源)。"
         },
         {
+            "音檔": "音檔 - reliant-4",
             "等級": "B2",
             "分類": "daily",
             "Words": "reliant-4",
-            "句子": "Students have become too reliant upon calculators and don't truly understand basic mathematical principles"
+            "句子": "Students have become too reliant upon calculators and don't truly understand basic mathematical principles",
+            "中文": "(學生們過於依賴計算器，並且並未真正理解基本的數學原則)。"
         },
         {
             "等級": "C1",
@@ -27358,40 +27723,52 @@
             "句子": "The professor's scholarship has contributed significantly to the field of economics"
         },
         {
+            "音檔": "音檔 - scroll-1",
             "等級": "B1",
             "分類": "daily",
             "Words": "scroll-1",
-            "句子": "The ancient manuscript was preserved as a scroll in a museum"
+            "句子": "The ancient manuscript was preserved as a scroll in a museum",
+            "中文": "(這本古老的手稿被保存為一卷軸，展示在博物館裡)。"
         },
         {
+            "音檔": "音檔 - scroll-2",
             "等級": "B1",
             "分類": "daily",
             "Words": "scroll-2",
-            "句子": "I found a scroll of parchment detailing the family's genealogy"
+            "句子": "I found a scroll of parchment detailing the family's genealogy",
+            "中文": "(我發現了一卷羊皮紙，上面詳細記錄了家族的家譜)。"
         },
         {
+            "音檔": "音檔 - scroll-3",
             "等級": "B1",
             "分類": "daily",
             "Words": "scroll-3",
-            "句子": "You can adjust the scroll wheel on your mouse to navigate through the document"
+            "句子": "You can adjust the scroll wheel on your mouse to navigate through the document",
+            "中文": "(你可以調整鼠標的滾輪來瀏覽文件)。"
         },
         {
+            "音檔": "音檔 - scroll-4",
             "等級": "B1",
             "分類": "daily",
             "Words": "scroll-4",
-            "句子": "I had to scroll down the webpage to find the information I needed"
+            "句子": "I had to scroll down the webpage to find the information I needed",
+            "中文": "(我必須向下滾動網頁才能找到所需的資訊)。"
         },
         {
+            "音檔": "音檔 - scroll-5",
             "等級": "B1",
             "分類": "daily",
             "Words": "scroll-5",
-            "句子": "She scrolled through her photos to find the best one for the album"
+            "句子": "She scrolled through her photos to find the best one for the album",
+            "中文": "(她滾動瀏覽照片，尋找最適合專輯的那一張)。"
         },
         {
+            "音檔": "音檔 - scroll-6",
             "等級": "B1",
             "分類": "daily",
             "Words": "scroll-6",
-            "句子": "He was so engrossed in scrolling through social media that he lost track of time"
+            "句子": "He was so engrossed in scrolling through social media that he lost track of time",
+            "中文": "(他沉迷於瀏覽社交媒體，以至於忘記了時間)。"
         },
         {
             "等級": "C1",
@@ -27424,22 +27801,28 @@
             "句子": "Under the scrutiny of the auditors, every aspect of the company's operations was carefully reviewed to ensure compliance with regulations"
         },
         {
+            "音檔": "音檔 - sculptor-1",
             "等級": "B2",
             "分類": "職業",
             "Words": "sculptor-1",
-            "句子": "The sculptor spent years perfecting her technique in marble"
+            "句子": "The sculptor spent years perfecting her technique in marble",
+            "中文": "(雕塑家花費數年時間完善她的雕刻大理石技藝)。"
         },
         {
+            "音檔": "音檔 - sculptor-2",
             "等級": "B2",
             "分類": "職業",
             "Words": "sculptor-2",
-            "句子": "He is a renowned sculptor known for his large-scale public installations"
+            "句子": "He is a renowned sculptor known for his large-scale public installations",
+            "中文": "(他是一位知名的雕塑家，以大型公共裝置作品聞名)。"
         },
         {
+            "音檔": "音檔 - sculptor-3",
             "等級": "B2",
             "分類": "職業",
             "Words": "sculptor-3",
-            "句子": "As a sculptor of ideas, she transformed abstract concepts into tangible forms"
+            "句子": "As a sculptor of ideas, she transformed abstract concepts into tangible forms",
+            "中文": "(作為一位思想的雕塑家，她將抽象概念轉化為具體的形式)。"
         },
         {
             "等級": "B2",
@@ -30400,34 +30783,44 @@
             "中文": "(該產品以可持續方式設計，具有可回收組件，並注重在生產過程中減少浪費)。"
         },
         {
+            "音檔": "音檔 - sustenance-1",
             "等級": "C1",
             "分類": "daily",
             "Words": "sustenance-1",
-            "句子": "The hikers packed enough sustenance to last them through the week-long trek"
+            "句子": "The hikers packed enough sustenance to last them through the week-long trek",
+            "中文": "(登山者攜帶了足夠的食物來支持他們度過為期一週的長途跋涉)。"
         },
         {
+            "音檔": "音檔 - sustenance-2",
             "等級": "C1",
             "分類": "daily",
             "Words": "sustenance-2",
-            "句子": "The farmers focused on sustainable practices to ensure the land provided sustenance for future generations"
+            "句子": "The farmers focused on sustainable practices to ensure the land provided sustenance for future generations",
+            "中文": "(農民們專注於可持續的做法，以確保土地能為未來的世代提供生計)。"
         },
         {
+            "音檔": "音檔 - sustenance-3",
             "等級": "C1",
             "分類": "daily",
             "Words": "sustenance-3",
-            "句子": "During tough times, emotional support can be just as important for sustenance as physical food"
+            "句子": "During tough times, emotional support can be just as important for sustenance as physical food",
+            "中文": "(在艱難時刻，情感支持與食物一樣，對生計的維持同樣重要)。"
         },
         {
+            "音檔": "音檔 - sustenance-4",
             "等級": "C1",
             "分類": "daily",
             "Words": "sustenance-4",
-            "句子": "Due to the lack of food, they relied upon gruel for their sustenance"
+            "句子": "Due to the lack of food, they relied upon gruel for their sustenance",
+            "中文": "(由於缺乏食物，他們依賴稀粥作為生計)。"
         },
         {
+            "音檔": "音檔 - sustenance-5",
             "等級": "C1",
             "分類": "daily",
             "Words": "sustenance-5",
-            "句子": "The village depends on the sea for sustenance"
+            "句子": "The village depends on the sea for sustenance",
+            "中文": "(這個村莊依賴大海來維持生計)。"
         },
         {
             "等級": "C1",
@@ -30495,34 +30888,44 @@
             "句子": "The music swelled, filling the room with emotion"
         },
         {
+            "音檔": "音檔 - swelter-1",
             "等級": "B2",
             "分類": "family",
             "Words": "swelter-1",
-            "句子": "We sweltered in the midday sun during the hike"
+            "句子": "We sweltered in the midday sun during the hike",
+            "中文": "（在徒步旅行中，我們在正午的陽光下酷熱難耐。）"
         },
         {
+            "音檔": "音檔 - swelter-2",
             "等級": "B2",
             "分類": "family",
             "Words": "swelter-2",
-            "句子": "People were sweltering as the temperature soared above 100 degrees"
+            "句子": "People were sweltering as the temperature soared above 100 degrees",
+            "中文": "（當氣溫飆升至 100 度以上時，人們在炎熱中苦苦煎熬。）"
         },
         {
+            "音檔": "音檔 - swelter-3",
             "等級": "B2",
             "分類": "family",
             "Words": "swelter-3",
-            "句子": "Nothing beats a refreshing ice cream cone on a sweltering afternoon"
+            "句子": "Nothing beats a refreshing ice cream cone on a sweltering afternoon",
+            "中文": "（在炎熱的午後，沒有什麼比來一根清爽的冰淇淋更能解渴了。）"
         },
         {
+            "音檔": "音檔 - swelter-4",
             "等級": "B2",
             "分類": "family",
             "Words": "swelter-4",
-            "句子": "The city was caught in the swelter of a heatwave"
+            "句子": "The city was caught in the swelter of a heatwave",
+            "中文": "（這座城市被熱浪所困，氣溫極高。）"
         },
         {
+            "音檔": "音檔 - swelter-5",
             "等級": "B2",
             "分類": "family",
             "Words": "swelter-5",
-            "句子": "The swelter in the crowded subway station was unbearable"
+            "句子": "The swelter in the crowded subway station was unbearable",
+            "中文": "（擁擠的地鐵站裡的悶熱令人無法忍受。）"
         },
         {
             "等級": "B2",
@@ -31568,94 +31971,124 @@
             "句子": "His top-notch skills make him one of the most sought-after professionals in the industry"
         },
         {
+            "音檔": "音檔 - torment-1",
             "等級": "B2",
             "分類": "daily",
             "Words": "torment-1",
-            "句子": "The prisoner endured days of torment"
+            "句子": "The prisoner endured days of torment",
+            "中文": "(囚犯忍受了幾天的折磨)。"
         },
         {
+            "音檔": "音檔 - torment-2",
             "等級": "B2",
             "分類": "daily",
             "Words": "torment-2",
-            "句子": "The idea of losing her job was a constant source of torment"
+            "句子": "The idea of losing her job was a constant source of torment",
+            "中文": "(失去工作的想法是她不斷的折磨來源)。"
         },
         {
+            "音檔": "音檔 - torment-3",
             "等級": "B2",
             "分類": "daily",
             "Words": "torment-3",
-            "句子": "The long wait for the test results was pure torment"
+            "句子": "The long wait for the test results was pure torment",
+            "中文": "(等待測試結果的漫長過程簡直是極大的折磨)。"
         },
         {
+            "音檔": "音檔 - torment-4",
             "等級": "B2",
             "分類": "daily",
             "Words": "torment-4",
-            "句子": "The constant noise tormented him throughout the night"
+            "句子": "The constant noise tormented him throughout the night",
+            "中文": "(整晚不斷的噪音折磨著他)。"
         },
         {
+            "音檔": "音檔 - torment-5",
             "等級": "B2",
             "分類": "daily",
             "Words": "torment-5",
-            "句子": "The bullying tormented her during her school years"
+            "句子": "The bullying tormented her during her school years",
+            "中文": "(在學校的那些年，欺凌折磨著她)。"
         },
         {
+            "音檔": "音檔 - torment-6",
             "等級": "B2",
             "分類": "daily",
             "Words": "torment-6",
-            "句子": "His thoughts tormented him, preventing him from sleeping"
+            "句子": "His thoughts tormented him, preventing him from sleeping",
+            "中文": "(他的思緒折磨著他，使他無法入睡)。"
         },
         {
+            "音檔": "音檔 - torment-7",
             "等級": "B2",
             "分類": "daily",
             "Words": "torment-7",
-            "句子": "She was tormented by guilt over her past mistakes"
+            "句子": "She was tormented by guilt over her past mistakes",
+            "中文": "(她因為過去的錯誤而被內疚折磨)。"
         },
         {
+            "音檔": "音檔 - torture-1",
             "等級": "B2",
             "分類": "daily",
             "Words": "torture-1",
-            "句子": "The prisoner endured hours of unbearable torture"
+            "句子": "The prisoner endured hours of unbearable torture",
+            "中文": "(囚犯忍受了數小時無法忍受的折磨)。"
         },
         {
+            "音檔": "音檔 - torture-2",
             "等級": "B2",
             "分類": "daily",
             "Words": "torture-2",
-            "句子": "The idea of public speaking is pure torture for some people"
+            "句子": "The idea of public speaking is pure torture for some people",
+            "中文": "(對某些人來說，公開演講的想法簡直是種折磨)。"
         },
         {
+            "音檔": "音檔 - torture-3",
             "等級": "B2",
             "分類": "daily",
             "Words": "torture-3",
-            "句子": "The captors tortured their victim for information"
+            "句子": "The captors tortured their victim for information",
+            "中文": "（囚禁者對受害者施以酷刑，逼問情報）。"
         },
         {
+            "音檔": "音檔 - torture-4",
             "等級": "B2",
             "分類": "daily",
             "Words": "torture-4",
-            "句子": "The memory of the tragic event tortured her mind for years"
+            "句子": "The memory of the tragic event tortured her mind for years",
+            "中文": "（那場悲劇事件的記憶多年間折磨著她的心靈）。"
         },
         {
+            "音檔": "音檔 - torture-5",
             "等級": "B2",
             "分類": "daily",
             "Words": "torture-5",
-            "句子": "The report revealed that prisoners had been repeatedly tortured"
+            "句子": "The report revealed that prisoners had been repeatedly tortured",
+            "中文": "（報告揭示囚犯曾遭受反覆的折磨）。"
         },
         {
+            "音檔": "音檔 - torture-6",
             "等級": "B2",
             "分類": "daily",
             "Words": "torture-6",
-            "句子": "He tortured himself with self-doubt before the big interview"
+            "句子": "He tortured himself with self-doubt before the big interview",
+            "中文": "（在面試前，他因自我懷疑而折磨自己）。"
         },
         {
+            "音檔": "音檔 - torture-7",
             "等級": "B2",
             "分類": "daily",
             "Words": "torture-7",
-            "句子": "The long, boring meeting felt like they were torturing us with unnecessary details"
+            "句子": "The long, boring meeting felt like they were torturing us with unnecessary details",
+            "中文": "（那場漫長且無聊的會議讓我們覺得他們在用不必要的細節折磨我們）。"
         },
         {
+            "音檔": "音檔 - torture-8",
             "等級": "B2",
             "分類": "daily",
             "Words": "torture-8",
-            "句子": "Don't torture yourself over the mistake"
+            "句子": "Don't torture yourself over the mistake",
+            "中文": "（不要因為那個錯誤折磨自己）。"
         },
         {
             "等級": "B1",
@@ -31724,46 +32157,60 @@
             "句子": "The tourist information center provides maps and guides to help visitors explore the area"
         },
         {
+            "音檔": "音檔 - towel-1",
             "等級": "B1",
             "分類": "daily",
             "Words": "towel-1",
-            "句子": "She grabbed a towel to dry her hair after the shower"
+            "句子": "She grabbed a towel to dry her hair after the shower",
+            "中文": "她洗完澡後拿起毛巾擦乾頭髮。"
         },
         {
+            "音檔": "音檔 - towel-2",
             "等級": "B1",
             "分類": "daily",
             "Words": "towel-2",
-            "句子": "The hotel provided fresh towels every day"
+            "句子": "The hotel provided fresh towels every day",
+            "中文": "酒店每天提供乾淨的毛巾。"
         },
         {
+            "音檔": "音檔 - towel-3",
             "等級": "B1",
             "分類": "daily",
             "Words": "towel-3",
-            "句子": "He wiped the table with a kitchen towel"
+            "句子": "He wiped the table with a kitchen towel",
+            "中文": "他用廚房毛巾擦拭桌子。"
         },
         {
+            "音檔": "音檔 - towel-4",
             "等級": "B1",
             "分類": "daily",
             "Words": "towel-4",
-            "句子": "The beach towel was covered in sand after a day at the shore"
+            "句子": "The beach towel was covered in sand after a day at the shore",
+            "中文": "海灘毛巾在一天的海邊活動後被沙子覆蓋。"
         },
         {
+            "音檔": "音檔 - towel-5",
             "等級": "B1",
             "分類": "daily",
             "Words": "towel-5",
-            "句子": "She toweled her face after washing it"
+            "句子": "She toweled her face after washing it",
+            "中文": "她洗完臉後用毛巾擦乾。"
         },
         {
+            "音檔": "音檔 - towel-6",
             "等級": "B1",
             "分類": "daily",
             "Words": "towel-6",
-            "句子": "He toweled off quickly before getting dressed"
+            "句子": "He toweled off quickly before getting dressed",
+            "中文": "他快速擦乾身體後才穿上衣服。"
         },
         {
+            "音檔": "音檔 - towel-7",
             "等級": "B1",
             "分類": "daily",
             "Words": "towel-7",
-            "句子": "The dog was toweled dry after its bath"
+            "句子": "The dog was toweled dry after its bath",
+            "中文": "狗洗完澡後被擦乾。"
         },
         {
             "等級": "B1",
@@ -31805,24 +32252,32 @@
             "句子": "Following negotiations, a trade accord was reached to boost exports of technology products between the U"
         },
         {
+            "音檔": "音檔 - traditionalists-1",
             "分類": "職業",
             "Words": "traditionalists-1",
-            "句子": "Traditionalists argue that classic teaching methods are more effective than modern approaches"
+            "句子": "Traditionalists argue that classic teaching methods are more effective than modern approaches",
+            "中文": "(作為一位思想的雕塑家，她將抽象概念轉化為具體的形式)。"
         },
         {
+            "音檔": "音檔 - traditionalists-2",
             "分類": "職業",
             "Words": "traditionalists-2",
-            "句子": "Many traditionalists prefer handwritten letters over digital communication"
+            "句子": "Many traditionalists prefer handwritten letters over digital communication",
+            "中文": "(許多傳統主義者更喜歡手寫信件勝過數位通訊)。"
         },
         {
+            "音檔": "音檔 - traditionalists-3",
             "分類": "職業",
             "Words": "traditionalists-3",
-            "句子": "The traditionalists in the community opposed the construction of a new shopping mall"
+            "句子": "The traditionalists in the community opposed the construction of a new shopping mall",
+            "中文": "(社區中的傳統主義者反對建造新的購物中心)。"
         },
         {
+            "音檔": "音檔 - traditionalists-4",
             "分類": "職業",
             "Words": "traditionalists-4",
-            "句子": "Some traditionalists believe in preserving ancient rituals and ceremonies"
+            "句子": "Some traditionalists believe in preserving ancient rituals and ceremonies",
+            "中文": "(一些傳統主義者認為應該保留古老的儀式和典禮)。"
         },
         {
             "等級": "B1",
