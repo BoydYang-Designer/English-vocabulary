@@ -2805,59 +2805,81 @@
             "中文": "(她請他用具體的例子來擴充他的回應)。"
         },
         {
+            "音檔": "音檔 - amulet-1",
             "等級": "B1",
             "Words": "amulet-1",
-            "句子": "She wore a silver amulet around her neck, believing it would protect her from harm"
+            "句子": "She wore a silver amulet around her neck, believing it would protect her from harm",
+            "中文": "(她脖子上戴著一個銀製護身符，相信它能保護她免受傷害)"
         },
         {
+            "音檔": "音檔 - amulet-2",
             "等級": "B1",
             "Words": "amulet-2",
-            "句子": "The ancient amulet was passed down through generations, thought to bring prosperity to its wearer"
+            "句子": "The ancient amulet was passed down through generations, thought to bring prosperity to its wearer",
+            "中文": "(這個古老的護身符代代相傳，被認為能為佩戴者帶來繁榮)"
         },
         {
+            "音檔": "音檔 - amulet-3",
             "等級": "B1",
             "Words": "amulet-3",
-            "句子": "Many cultures use amulets to safeguard against misfortune or illness"
+            "句子": "Many cultures use amulets to safeguard against misfortune or illness",
+            "中文": "（許多文化使用護身符來防範不幸或疾病。）"
         },
         {
+            "音檔": "音檔 - ancestor-1",
             "等級": "B2",
             "Words": "ancestor-1",
-            "句子": "She discovered that one of her ancestors was a famous explorer"
+            "句子": "She discovered that one of her ancestors was a famous explorer",
+            "中文": "（她發現自己的其中一位祖先是一位著名的探險家。）"
         },
         {
+            "音檔": "音檔 - ancestor-2",
             "等級": "B2",
             "Words": "ancestor-2",
-            "句子": "His ancestors immigrated to the country over a hundred years ago"
+            "句子": "His ancestors immigrated to the country over a hundred years ago",
+            "中文": "（他的祖先在一百多年前移民到這個國家。）"
         },
         {
+            "音檔": "音檔 - ancestor-3",
             "等級": "B2",
             "Words": "ancestor-3",
-            "句子": "The dinosaur is considered an ancestor of modern birds"
+            "句子": "The dinosaur is considered an ancestor of modern birds",
+            "中文": "（恐龍被認為是現代鳥類的祖先。）"
         },
         {
+            "音檔": "音檔 - ancestor-4",
             "等級": "B2",
             "Words": "ancestor-4",
-            "句子": "Scientists study fossils to learn about human ancestors and how they lived"
+            "句子": "Scientists study fossils to learn about human ancestors and how they lived",
+            "中文": "（科學家研究化石以了解人類祖先及其生活方式。）"
         },
         {
+            "音檔": "音檔 - ancestry-1",
             "等級": "B2",
             "Words": "ancestry-1",
-            "句子": "She researched her ancestry to learn more about her family's origins"
+            "句子": "She researched her ancestry to learn more about her family's origins",
+            "中文": "（她研究了自己的祖先，以了解更多關於家族起源的資訊。）"
         },
         {
+            "音檔": "音檔 - ancestry-2",
             "等級": "B2",
             "Words": "ancestry-2",
-            "句子": "His ancestry includes several cultures, reflecting a rich heritage"
+            "句子": "His ancestry includes several cultures, reflecting a rich heritage",
+            "中文": "（他的祖先包括多種文化，反映出豐富的文化傳承。）"
         },
         {
+            "音檔": "音檔 - ancestry-3",
             "等級": "B2",
             "Words": "ancestry-3",
-            "句子": "The ancestry of domestic cats can be traced back to wildcats in the Middle East"
+            "句子": "The ancestry of domestic cats can be traced back to wildcats in the Middle East",
+            "中文": "（家貓的血統可以追溯到中東的野貓。）"
         },
         {
+            "音檔": "音檔 - ancestry-4",
             "等級": "B2",
             "Words": "ancestry-4",
-            "句子": "Understanding the ancestry of crops helps scientists improve agricultural practices"
+            "句子": "Understanding the ancestry of crops helps scientists improve agricultural practices",
+            "中文": "（了解農作物的血統有助於科學家改進農業實踐。）"
         },
         {
             "音檔": "音檔 - anchor-1",
@@ -2940,227 +2962,311 @@
             "中文": "(他的演講以扎實的研究和事實為依據)。"
         },
         {
+            "音檔": "音檔 - anecdote-1",
             "等級": "B2",
             "分類": "對話",
             "Words": "anecdote-1",
-            "句子": "At family gatherings, my grandfather always entertained us with amusing anecdotes from his youth"
+            "句子": "At family gatherings, my grandfather always entertained us with amusing anecdotes from his youth",
+            "中文": "（在家庭聚會上，我的祖父總是用他年輕時的趣聞軼事來娛樂我們。）"
         },
         {
+            "音檔": "音檔 - anecdote-2",
             "等級": "B2",
             "分類": "對話",
             "Words": "anecdote-2",
-            "句子": "The speaker shared an anecdote about a memorable encounter she had while traveling in Europe"
+            "句子": "The speaker shared an anecdote about a memorable encounter she had while traveling in Europe",
+            "中文": "（演講者分享了一個關於她在歐洲旅行時所遇到的難忘經歷的軼事。）"
         },
         {
+            "音檔": "音檔 - animate-1",
             "等級": "B2",
             "Words": "animate-1",
-            "句子": "The documentary featured various animate creatures in their natural habitats"
+            "句子": "The documentary featured various animate creatures in their natural habitats",
+            "中文": "（這部紀錄片展示了各種在自然棲息地中的有生命的生物。）"
         },
         {
+            "音檔": "音檔 - animate-2",
             "等級": "B2",
             "Words": "animate-2",
-            "句子": "The zoo is home to many animate species from around the world"
+            "句子": "The zoo is home to many animate species from around the world",
+            "中文": "（這個動物園是來自世界各地的許多有生命物種的家。）"
         },
         {
+            "音檔": "音檔 - animate-3",
             "等級": "B2",
             "Words": "animate-3",
-            "句子": "Her animated expressions made the story come to life"
+            "句子": "Her animated expressions made the story come to life",
+            "中文": "（她生動的表情讓故事栩栩如生。）"
         },
         {
+            "音檔": "音檔 - animate-4",
             "等級": "B2",
             "Words": "animate-4",
-            "句子": "The artist used bright colors to animate the painting"
+            "句子": "The artist used bright colors to animate the painting",
+            "中文": "（藝術家使用明亮的色彩使畫作充滿生命。）"
         },
         {
+            "音檔": "音檔 - animate-5",
             "等級": "B2",
             "Words": "animate-5",
-            "句子": "The filmmakers worked hard to animate the characters for the animated movie"
+            "句子": "The filmmakers worked hard to animate the characters for the animated movie",
+            "中文": "（電影製作人努力工作，為動畫電影中的角色賦予生命。）"
         },
         {
+            "音檔": "音檔 - animate-6",
             "等級": "B2",
             "Words": "animate-6",
-            "句子": "He tried to animate the discussion with his enthusiasm"
+            "句子": "He tried to animate the discussion with his enthusiasm",
+            "中文": "（他試圖用他的熱情來激活討論。）"
         },
         {
+            "音檔": "音檔 - animate-7",
             "等級": "B2",
             "Words": "animate-7",
-            "句子": "The studio specializes in techniques that animate characters for both films and video games"
+            "句子": "The studio specializes in techniques that animate characters for both films and video games",
+            "中文": "（這個工作室專門從事動畫角色的技術，應用於電影和視頻遊戲。）"
         },
         {
+            "音檔": "音檔 - animate-8",
             "等級": "B2",
             "Words": "animate-8",
-            "句子": "She learned how to animate her illustrations using computer software"
+            "句子": "She learned how to animate her illustrations using computer software",
+            "中文": "（她學會了如何使用電腦軟體為她的插圖製作動畫。）"
         },
         {
+            "音檔": "音檔 - animation-1",
             "等級": "C1",
             "Words": "animation-1",
-            "句子": "The animation in the movie was so smooth that it felt lifelike"
+            "句子": "The animation in the movie was so smooth that it felt lifelike",
+            "中文": "（電影中的動畫非常流暢，讓人感覺栩栩如生。）"
         },
         {
+            "音檔": "音檔 - animation-2",
             "等級": "C1",
             "Words": "animation-2",
-            "句子": "She studied animation techniques to improve her skills in character design"
+            "句子": "She studied animation techniques to improve her skills in character design",
+            "中文": "（她學習了動畫技術，以提升自己在角色設計上的技巧。）"
         },
         {
+            "音檔": "音檔 - animation-3",
             "等級": "C1",
             "Words": "animation-3",
-            "句子": "The animation of the cartoon characters brought joy to children everywhere"
+            "句子": "The animation of the cartoon characters brought joy to children everywhere",
+            "中文": "（卡通角色的動畫使全球的孩子們都感到快樂。）"
         },
         {
+            "音檔": "音檔 - animation-4",
             "等級": "C1",
             "Words": "animation-4",
-            "句子": "His presentation was filled with animation, captivating the audience"
+            "句子": "His presentation was filled with animation, captivating the audience",
+            "中文": "（他的演講充滿了動畫，吸引了觀眾的注意。）"
         },
         {
+            "音檔": "音檔 - animation-5",
             "等級": "C1",
             "Words": "animation-5",
-            "句子": "The children played with great animation, enjoying their time at the park"
+            "句子": "The children played with great animation, enjoying their time at the park",
+            "中文": "（孩子們玩得非常有活力，享受著在公園的時光。）"
         },
         {
+            "音檔": "音檔 - annum-1",
             "等級": "B1",
             "Words": "annum-1",
-            "句子": "Her salary is $60,000 per annum"
+            "句子": "Her salary is $60,000 per annum",
+            "中文": "（她的年薪是60,000美元。）"
         },
         {
+            "音檔": "音檔 - annum-2",
             "等級": "B1",
             "Words": "annum-2",
-            "句子": "The company reported a growth rate of 10% per annum over the past five years"
+            "句子": "The company reported a growth rate of 10% per annum over the past five years",
+            "中文": "（該公司報告過去五年年增長率為10%。）"
         },
         {
+            "音檔": "音檔 - anodization-1",
             "分類": "技術",
             "Words": "anodization-1",
-            "句子": "The anodization of the aluminum components improved their durability and aesthetic appeal"
+            "句子": "The anodization of the aluminum components improved their durability and aesthetic appeal",
+            "中文": "（鋁製部件的陽極處理提高了它們的耐用性和美觀性。）"
         },
         {
+            "音檔": "音檔 - anodization-2",
             "分類": "技術",
             "Words": "anodization-2",
-            "句子": "Anodization is commonly used in the aerospace industry to protect metal parts from corrosion"
+            "句子": "Anodization is commonly used in the aerospace industry to protect metal parts from corrosion",
+            "中文": "（陽極處理通常用於航空航天業，以保護金屬零件免受腐蝕。）"
         },
         {
+            "音檔": "音檔 - anodize-1",
             "分類": "技術",
             "Words": "anodize-1",
-            "句子": "The aluminum parts were anodized to increase their durability and resistance to corrosion"
+            "句子": "The aluminum parts were anodized to increase their durability and resistance to corrosion",
+            "中文": "（這些鋁零件經過陽極處理，以提高其耐用性和抗腐蝕性。）"
         },
         {
+            "音檔": "音檔 - anodize-2",
             "分類": "技術",
             "Words": "anodize-2",
-            "句子": "Anodizing the metal gave it a smooth, attractive finish and improved its resistance to scratching"
+            "句子": "Anodizing the metal gave it a smooth, attractive finish and improved its resistance to scratching",
+            "中文": "（對金屬進行陽極處理使其表面光滑且具有吸引力，並提高了抗刮擦的能力。）"
         },
         {
+            "音檔": "音檔 - anonymous-1",
             "等級": "C1",
             "Words": "anonymous-1",
-            "句子": "The author of the book chose to remain anonymous to protect their privacy"
+            "句子": "The author of the book chose to remain anonymous to protect their privacy",
+            "中文": "（這本書的作者選擇保持匿名，以保護他們的隱私。）"
         },
         {
+            "音檔": "音檔 - anonymous-2",
             "等級": "C1",
             "Words": "anonymous-2",
-            "句子": "He made an anonymous phone call to the police"
+            "句子": "He made an anonymous phone call to the police",
+            "中文": "（他打了一通匿名電話給警方。）"
         },
         {
+            "音檔": "音檔 - anonymous-3",
             "等級": "C1",
             "Words": "anonymous-3",
-            "句子": "An anonymous buyer purchased the painting"
+            "句子": "An anonymous buyer purchased the painting",
+            "中文": "（一位匿名買家購買了那幅畫。）"
         },
         {
+            "音檔": "音檔 - anonymous-4",
             "等級": "C1",
             "Words": "anonymous-4",
-            "句子": "His was just another anonymous face in the crowd"
+            "句子": "His face was just another anonymous face in the crowd.",
+            "中文": "（他只是人群中一張不起眼的臉。）"
         },
         {
+            "音檔": "音檔 - anonymous-5",
             "等級": "C1",
             "Words": "anonymous-5",
-            "句子": "The restaurant had an anonymous atmosphere, lacking any unique decor"
+            "句子": "The restaurant had an anonymous atmosphere, lacking any unique decor",
+            "中文": "（這家餐廳的氛圍平淡無奇，缺乏任何獨特的裝飾。）"
         },
         {
+            "音檔": "音檔 - anonymous-6",
             "等級": "C1",
             "Words": "anonymous-6",
-            "句子": "The report was written in an anonymous style that made it hard to identify the author’s perspective"
+            "句子": "The report was written in an anonymous style that made it hard to identify the author’s perspective",
+            "中文": "（這份報告以一種沒有鮮明特色的風格撰寫，使人難以辨識作者的觀點。）"
         },
         {
+            "音檔": "音檔 - antagonism-1",
             "等級": "C2",
             "分類": "人物特性",
             "Words": "antagonism-1",
-            "句子": "There was clear antagonism between the two political rivals during the debate"
+            "句子": "There was clear antagonism between the two political rivals during the debate",
+            "中文": "（在辯論中，兩位政治對手之間明顯存在對立情緒。）"
         },
         {
+            "音檔": "音檔 - antagonism-2",
             "等級": "C2",
             "分類": "人物特性",
             "Words": "antagonism-2",
-            "句子": "His constant criticism created an atmosphere of antagonism in the workplace"
+            "句子": "His constant criticism created an atmosphere of antagonism in the workplace",
+            "中文": "（他不斷的批評在工作場所營造出對立的氛圍。）"
         },
         {
+            "音檔": "音檔 - antagonism-3",
             "等級": "C2",
             "分類": "人物特性",
             "Words": "antagonism-3",
-            "句子": "The antagonism between the two nations led to years of tension and conflict"
+            "句子": "The antagonism between the two nations led to years of tension and conflict",
+            "中文": "（兩國之間的對立導致多年來的緊張和衝突。）"
         },
         {
+            "音檔": "音檔 - antagonism-4",
             "等級": "C2",
             "分類": "人物特性",
             "Words": "antagonism-4",
-            "句子": "The new policy faced strong antagonism from the local community"
+            "句子": "The new policy faced strong antagonism from the local community",
+            "中文": "（新政策遭到當地社區的強烈反對。）"
         },
         {
+            "音檔": "音檔 - antagonist-1",
             "等級": "C1",
             "分類": "人物特性",
             "Words": "antagonist-1",
-            "句子": "The two politicians were fierce antagonists during the debate"
+            "句子": "The two politicians were fierce antagonists during the debate",
+            "中文": "（在辯論中，這兩位政治人物是激烈的對手。）"
         },
         {
+            "音檔": "音檔 - antagonist-2",
             "等級": "C1",
             "分類": "人物特性",
             "Words": "antagonist-2",
-            "句子": "She saw him as her main antagonist in the race for promotion"
+            "句子": "She saw him as her main antagonist in the race for promotion",
+            "中文": "（在升職競爭中，她將他視為主要對手。）"
         },
         {
+            "音檔": "音檔 - antagonist-3",
             "等級": "C1",
             "分類": "人物特性",
             "Words": "antagonist-3",
-            "句子": "The antagonist in the novel plotted against the hero at every turn"
+            "句子": "The antagonist in the novel plotted against the hero at every turn",
+            "中文": "（小說中的反派角色在每個轉折點都對英雄進行陰謀算計。）"
         },
         {
+            "音檔": "音檔 - antagonist-4",
             "等級": "C1",
             "分類": "人物特性",
             "Words": "antagonist-4",
-            "句子": "In many stories, the antagonist serves to test the protagonist’s strength and determination"
+            "句子": "In many stories, the antagonist serves to test the protagonist’s strength and determination",
+            "中文": "（在許多故事中，反派角色用來考驗主角的力量和決心。）"
         },
         {
+            "音檔": "音檔 - antagonist-5",
             "等級": "C1",
             "分類": "人物特性",
             "Words": "antagonist-5",
-            "句子": "This medication acts as an antagonist to the effects of the hormone"
+            "句子": "This medication acts as an antagonist to the effects of the hormone",
+            "中文": "（這種藥物對激素的作用起到拮抗作用。）"
         },
         {
+            "音檔": "音檔 - antagonist-6",
             "等級": "C1",
             "分類": "人物特性",
             "Words": "antagonist-6",
-            "句子": "Poverty became the greatest antagonist to his success"
+            "句子": "Poverty became the greatest antagonist to his success",
+            "中文": "（貧困成為他成功的最大障礙。）"
         },
         {
+            "音檔": "音檔 - antagonist-7",
             "等級": "C1",
             "分類": "人物特性",
             "Words": "antagonist-7",
-            "句子": "Fear can be an antagonist to personal growth, preventing people from taking risks"
+            "句子": "Fear can be an antagonist to personal growth, preventing people from taking risks",
+            "中文": "（恐懼可能成為個人成長的障礙，阻止人們冒險。）"
         },
         {
+            "音檔": "音檔 - antenna-1",
             "等級": "B2",
             "Words": "antenna-1",
-            "句子": "The radio reception improved after he adjusted the antenna"
+            "句子": "The radio reception improved after he adjusted the antenna",
+            "中文": "（他調整了天線後，收音效果改善了。）"
         },
         {
+            "音檔": "音檔 - antenna-2",
             "等級": "B2",
             "Words": "antenna-2",
-            "句子": "She installed a new antenna to get better TV channels"
+            "句子": "She installed a new antenna to get better TV channels",
+            "中文": "（她安裝了新的天線，以便獲得更好的電視頻道。）"
         },
         {
+            "音檔": "音檔 - antenna-3",
             "等級": "B2",
             "Words": "antenna-3",
-            "句子": "The antennas on the butterfly helped it detect flowers from a distance"
+            "句子": "The antennas on the butterfly helped it detect flowers from a distance",
+            "中文": "（昆蟲利用它們的觸角來交流和導航周圍的環境。）"
         },
         {
+            "音檔": "音檔 - antenna-4",
             "等級": "B2",
             "Words": "antenna-4",
-            "句子": "Insects use their antennas to communicate and navigate their surroundings"
+            "句子": "Insects use their antennas to communicate and navigate their surroundings",
+            "中文": "（昆蟲利用它們的觸角來交流和導航周圍的環境。）"
         },
         {
             "音檔": "音檔 - anthropologist-1",
@@ -3195,493 +3301,667 @@
             "中文": "(作為人類學家，他研究語言如何影響社會互動)。"
         },
         {
+            "音檔": "音檔 - anthropomorphic-1",
             "等級": "C2",
             "Words": "anthropomorphic-1",
-            "句子": "In many children's stories, animals are depicted as anthropomorphic characters who can talk and behave like humans"
+            "句子": "In many children's stories, animals are depicted as anthropomorphic characters who can talk and behave like humans",
+            "中文": "（在許多兒童故事中，動物被描繪成具有擬人化特徵的角色，能夠像人類一樣說話和行為。）"
         },
         {
+            "音檔": "音檔 - anthropomorphic-2",
             "等級": "C2",
             "Words": "anthropomorphic-2",
-            "句子": "The anthropomorphic design of the robot made it more relatable and appealing to users"
+            "句子": "The anthropomorphic design of the robot made it more relatable and appealing to users",
+            "中文": "（機器人的擬人化設計使其對用戶更加貼近和具有吸引力。）"
         },
         {
+            "音檔": "音檔 - anthropomorphic-3",
             "等級": "C2",
             "Words": "anthropomorphic-3",
-            "句子": "The movie features an anthropomorphic tree that expresses feelings and emotions similar to those of people"
+            "句子": "The movie features an anthropomorphic tree that expresses feelings and emotions similar to those of people",
+            "中文": "（這部電影中有一棵擬人化的樹，能表達類似人類的感情和情緒。）"
         },
         {
+            "音檔": "音檔 - antibiotics-1",
             "等級": "C2",
             "Words": "antibiotics-1",
-            "句子": "The doctor prescribed antibiotics to treat the bacterial infection in my lungs"
+            "句子": "The doctor prescribed antibiotics to treat the bacterial infection in my lungs",
+            "中文": "（醫生開了抗生素來治療我肺部的細菌感染。）"
         },
         {
+            "音檔": "音檔 - antibiotics-2",
             "等級": "C2",
             "Words": "antibiotics-2",
-            "句子": "Overuse of antibiotics can lead to antibiotic resistance, making infections harder to treat"
+            "句子": "Overuse of antibiotics can lead to antibiotic resistance, making infections harder to treat",
+            "中文": "（過度使用抗生素可能導致抗生素抗藥性，使得感染更難治療。）"
         },
         {
+            "音檔": "音檔 - antibiotics-3",
             "等級": "C2",
             "Words": "antibiotics-3",
-            "句子": "Some infections, such as the common cold, cannot be treated with antibiotics because they are caused by viruses"
+            "句子": "Some infections, such as the common cold, cannot be treated with antibiotics because they are caused by viruses",
+            "中文": "（一些感染，如感冒，無法用抗生素治療，因為它們是由病毒引起的。）"
         },
         {
+            "音檔": "音檔 - antibiotics-4",
             "等級": "C2",
             "Words": "antibiotics-4",
-            "句子": "Even though I felt better after a few days, I continued taking the antibiotics for the full 10-day course as prescribed by my doctor"
+            "句子": "Even though I felt better after a few days, I continued taking the antibiotics for the full 10-day course as prescribed by my doctor",
+            "中文": "（儘管我在幾天後感覺好轉，但我仍然按照醫生的指示，完成了整整10天的抗生素療程。）"
         },
         {
+            "音檔": "音檔 - antimicrobial-1",
             "等級": "C2",
             "Words": "antimicrobial-1",
-            "句子": "Antimicrobial soaps are designed to kill harmful bacteria and viruses"
+            "句子": "Antimicrobial soaps are designed to kill harmful bacteria and viruses",
+            "中文": "（抗菌肥皂是用來殺死有害的細菌和病毒的。）"
         },
         {
+            "音檔": "音檔 - antimicrobial-2",
             "等級": "C2",
             "Words": "antimicrobial-2",
-            "句子": "The hospital uses antimicrobial cleaning products to reduce the risk of infection"
+            "句子": "The hospital uses antimicrobial cleaning products to reduce the risk of infection",
+            "中文": "（醫院使用抗菌清潔產品來減少感染的風險。）"
         },
         {
+            "音檔": "音檔 - antimicrobial-3",
             "等級": "C2",
             "Words": "antimicrobial-3",
-            "句子": "Some fabrics are treated with antimicrobial agents to prevent odor-causing bacteria"
+            "句子": "Some fabrics are treated with antimicrobial agents to prevent odor-causing bacteria",
+            "中文": "（一些織物經過抗菌處理，以防止引起氣味的細菌。）"
         },
         {
+            "音檔": "音檔 - antimicrobial-4",
             "等級": "C2",
             "Words": "antimicrobial-4",
-            "句子": "The doctor prescribed an antimicrobial to treat the bacterial infection"
+            "句子": "The doctor prescribed an antimicrobial to treat the bacterial infection",
+            "中文": "（醫生開了抗菌藥物來治療細菌感染。）"
         },
         {
+            "音檔": "音檔 - antimicrobial-5",
             "等級": "C2",
             "Words": "antimicrobial-5",
-            "句子": "Antimicrobials play an important role in controlling the spread of disease in healthcare settings"
+            "句子": "Antimicrobials play an important role in controlling the spread of disease in healthcare settings",
+            "中文": "（抗菌劑在控制醫療環境中疾病傳播方面發揮著重要作用。）"
         },
         {
+            "音檔": "音檔 - antioxidant-1",
             "等級": "C2",
             "Words": "antioxidant-1",
-            "句子": "Blueberries are rich in antioxidants, which are beneficial for maintaining healthy skin"
+            "句子": "Blueberries are rich in antioxidants, which are beneficial for maintaining healthy skin",
+            "中文": "（藍莓富含抗氧化劑，有助於保持皮膚健康。）"
         },
         {
+            "音檔": "音檔 - antioxidant-2",
             "等級": "C2",
             "Words": "antioxidant-2",
-            "句子": "Vitamin C is a well-known antioxidant that helps protect cells from damage"
+            "句子": "Vitamin C is a well-known antioxidant that helps protect cells from damage",
+            "中文": "（維他命C是著名的抗氧化劑，有助於保護細胞免受損害。）"
         },
         {
+            "音檔": "音檔 - antioxidant-3",
             "等級": "C2",
             "Words": "antioxidant-3",
-            "句子": "The cream contains antioxidants to reduce signs of aging and improve skin elasticity"
+            "句子": "The cream contains antioxidants to reduce signs of aging and improve skin elasticity",
+            "中文": "（這款乳霜含有抗氧化劑，可減少衰老跡象並改善皮膚彈性。）"
         },
         {
+            "音檔": "音檔 - antioxidant-4",
             "等級": "C2",
             "Words": "antioxidant-4",
-            "句子": "Adding antioxidant-rich foods like spinach and nuts to your diet can boost your immune system"
+            "句子": "Adding antioxidant-rich foods like spinach and nuts to your diet can boost your immune system",
+            "中文": "（將富含抗氧化劑的食物，如菠菜和堅果，加入飲食中可以增強免疫系統。）"
         },
         {
+            "音檔": "音檔 - apathetic-1",
             "等級": "C1",
             "分類": "心情",
             "Words": "apathetic-1",
-            "句子": "The student's apathetic response to the teacher's question showed that he was not engaged with the lesson"
+            "句子": "The student's apathetic response to the teacher's question showed that he was not engaged with the lesson",
+            "中文": "（學生對老師問題的冷漠反應顯示他對課程沒有投入。）"
         },
         {
+            "音檔": "音檔 - apathetic-2",
             "等級": "C1",
             "分類": "心情",
             "Words": "apathetic-2",
-            "句子": "Despite the urgency of the situation, her apathetic attitude suggested that she did not care about the outcome"
+            "句子": "Despite the urgency of the situation, her apathetic attitude suggested that she did not care about the outcome",
+            "中文": "（儘管情況緊急，她冷漠的態度表明她並不在乎結果。）"
         },
         {
+            "音檔": "音檔 - apathetic-3",
             "等級": "C1",
             "分類": "心情",
             "Words": "apathetic-3",
-            "句子": "The community's apathetic reaction to the proposed changes in local policy made it clear that they were not invested in the discussion"
+            "句子": "The community's apathetic reaction to the proposed changes in local policy made it clear that they were not invested in the discussion",
+            "中文": "（社區對當地政策變動提案的冷漠反應清楚表明，他們並未參與討論。）"
         },
         {
+            "音檔": "音檔 - apathy-1",
             "等級": "B1",
             "分類": "心情",
             "Words": "apathy-1",
-            "句子": "Her apathy towards the team's project was evident when she missed several important meetings and failed to contribute ideas"
+            "句子": "Her apathy towards the team's project was evident when she missed several important meetings and failed to contribute ideas",
+            "中文": "（她對團隊項目的冷漠表現得很明顯，她錯過了幾次重要會議，也沒有提出任何想法。）"
         },
         {
+            "音檔": "音檔 - apathy-2",
             "等級": "B1",
             "分類": "心情",
             "Words": "apathy-2",
-            "句子": "The voter turnout was low, reflecting the widespread apathy among the electorate regarding the election"
+            "句子": "The voter turnout was low, reflecting the widespread apathy among the electorate regarding the election",
+            "中文": "（投票率很低，反映出選民對選舉的普遍冷漠。）"
         },
         {
+            "音檔": "音檔 - apathy-3",
             "等級": "B1",
             "分類": "心情",
             "Words": "apathy-3",
-            "句子": "Despite the growing concerns about climate change, there seems to be a general apathy towards taking action to address the issue"
+            "句子": "Despite the growing concerns about climate change, there seems to be a general apathy towards taking action to address the issue",
+            "中文": "（儘管對氣候變遷的關切日益增長，但似乎對採取行動解決這個問題存在普遍的冷漠。）"
         },
         {
+            "音檔": "音檔 - appall-1",
             "等級": "B1",
             "分類": "心情",
             "Words": "appall-1",
-            "句子": "The graphic images of the war's aftermath were enough to appal even the most hardened journalists"
+            "句子": "The graphic images of the war's aftermath were enough to appal even the most hardened journalists",
+            "中文": "（戰爭後果的畫面足以使即使是最老練的記者也感到震驚。）"
         },
         {
+            "音檔": "音檔 - appall-2",
             "等級": "B1",
             "分類": "心情",
             "Words": "appall-2",
-            "句子": "The cruelty depicted in the documentary appalled viewers worldwide, sparking calls for action against the perpetrators"
+            "句子": "The cruelty depicted in the documentary appalled viewers worldwide, sparking calls for action against the perpetrators",
+            "中文": "（紀錄片中所描繪的殘酷情景令全球觀眾震驚，並引發了對肇事者採取行動的呼籲。）"
         },
         {
+            "音檔": "音檔 - appall-3",
             "等級": "B1",
             "分類": "心情",
             "Words": "appall-3",
-            "句子": "Rescue workers were appalled at what they saw"
+            "句子": "Rescue workers were appalled at what they saw",
+            "中文": "（救援工作人員對他們所看到的情景感到震驚。）"
         },
         {
+            "音檔": "音檔 - appeal-1",
             "等級": "B2",
             "分類": "法政",
             "Words": "appeal-1",
-            "句子": "The defendant filed an appeal after being convicted of theft"
+            "句子": "The defendant filed an appeal after being convicted of theft",
+            "中文": "（被告在被判定盜竊罪名成立後提出了上訴。）"
         },
         {
+            "音檔": "音檔 - appeal-10",
             "等級": "B2",
             "分類": "法政",
             "Words": "appeal-10",
-            "句子": "The police appealed to the public for information about the missing person"
+            "句子": "The police appealed to the public for information about the missing person",
+            "中文": "（警方呼籲公眾提供有關失蹤者的資訊。）"
         },
         {
+            "音檔": "音檔 - appeal-11",
             "等級": "B2",
             "分類": "法政",
             "Words": "appeal-11",
-            "句子": "The new video game appeals to fans of both action and strategy genres"
+            "句子": "The new video game appeals to fans of both action and strategy genres",
+            "中文": "（這款新電子遊戲對動作和策略類型的愛好者都有吸引力。）"
         },
         {
+            "音檔": "音檔 - appeal-12",
             "等級": "B2",
             "分類": "法政",
             "Words": "appeal-12",
-            "句子": "The design of the house appeals to modern tastes with its minimalist style"
+            "句子": "The design of the house appeals to modern tastes with its minimalist style",
+            "中文": "（這棟房子的設計以其極簡風格迎合了現代品味。）"
         },
         {
+            "音檔": "音檔 - appeal-2",
             "等級": "B2",
             "分類": "法政",
             "Words": "appeal-2",
-            "句子": "The lawyer’s appeal was based on new evidence that had not been considered in the original trial"
+            "句子": "The lawyer’s appeal was based on new evidence that had not been considered in the original trial",
+            "中文": "（律師的上訴基於原審未考慮的新證據。）"
         },
         {
+            "音檔": "音檔 - appeal-3",
             "等級": "B2",
             "分類": "法政",
             "Words": "appeal-3",
-            "句子": "The appeal of the new movie was its unique storyline and stunning visuals"
+            "句子": "The appeal of the new movie was its unique storyline and stunning visuals",
+            "中文": "（這部新電影的吸引力在於其獨特的劇情和震撼的視覺效果。）"
         },
         {
+            "音檔": "音檔 - appeal-4",
             "等級": "B2",
             "分類": "法政",
             "Words": "appeal-4",
-            "句子": "His charm and charisma gave him a natural appeal to the audience"
+            "句子": "His charm and charisma gave him a natural appeal to the audience",
+            "中文": "（他的魅力和吸引力使他自然地受到觀眾的喜愛。）"
         },
         {
+            "音檔": "音檔 - appeal-5",
             "等級": "B2",
             "分類": "法政",
             "Words": "appeal-5",
-            "句子": "The charity launched an appeal for donations to help the victims of the disaster"
+            "句子": "The charity launched an appeal for donations to help the victims of the disaster",
+            "中文": "（該慈善機構發起募捐呼籲，以幫助災難受害者。）"
         },
         {
+            "音檔": "音檔 - appeal-6",
             "等級": "B2",
             "分類": "法政",
             "Words": "appeal-6",
-            "句子": "The government made an appeal for calm after the unrest in the city"
+            "句子": "The government made an appeal for calm after the unrest in the city",
+            "中文": "（在城市騷亂後，政府呼籲民眾保持冷靜。）"
         },
         {
+            "音檔": "音檔 - appeal-7",
             "等級": "B2",
             "分類": "法政",
             "Words": "appeal-7",
-            "句子": "The lawyer appealed the court's decision, hoping for a more lenient sentence"
+            "句子": "The lawyer appealed the court's decision, hoping for a more lenient sentence",
+            "中文": "（律師對法院的裁決提出上訴，希望獲得更寬大的判決。）"
         },
         {
+            "音檔": "音檔 - appeal-8",
             "等級": "B2",
             "分類": "法政",
             "Words": "appeal-8",
-            "句子": "They appealed to the judge for a reduction in their sentence"
+            "句子": "They appealed to the judge for a reduction in their sentence",
+            "中文": "（他們向法官提出減刑的請求。）"
         },
         {
+            "音檔": "音檔 - appeal-9",
             "等級": "B2",
             "分類": "法政",
             "Words": "appeal-9",
-            "句子": "The organization appealed for donations to help those affected by the hurricane"
+            "句子": "The organization appealed for donations to help those affected by the hurricane",
+            "中文": "（該組織發起募捐呼籲，幫助那些受到颶風影響的人們。）"
         },
         {
+            "音檔": "音檔 - appendage-1",
             "等級": "C1",
             "Words": "appendage-1",
-            "句子": "The tail is an appendage that helps the animal maintain balance while running"
+            "句子": "The tail is an appendage that helps the animal maintain balance while running",
+            "中文": "（尾巴是幫助動物在奔跑時保持平衡的附屬肢體。）"
         },
         {
+            "音檔": "音檔 - appendage-2",
             "等級": "C1",
             "Words": "appendage-2",
-            "句子": "The scientist studied the appendages of various marine animals to understand their adaptations"
+            "句子": "The scientist studied the appendages of various marine animals to understand their adaptations",
+            "中文": "（這位科學家研究了各種海洋動物的附肢，以了解它們的適應性。）"
         },
         {
+            "音檔": "音檔 - appendage-3",
             "等級": "C1",
             "Words": "appendage-3",
-            "句子": "The new office will serve as an appendage to the main building, providing extra space for staff"
+            "句子": "The new office will serve as an appendage to the main building, providing extra space for staff",
+            "中文": "（新辦公室將作為主樓的附屬部分，為員工提供額外的空間。）"
         },
         {
+            "音檔": "音檔 - appendage-4",
             "等級": "C1",
             "Words": "appendage-4",
-            "句子": "She viewed her job at the company as an appendage to her true passion for writing"
+            "句子": "She viewed her job at the company as an appendage to her true passion for writing",
+            "中文": "（她將在公司的工作視為自己對寫作的真正熱情的附屬部分。）"
         },
         {
+            "音檔": "音檔 - appendicitis-1",
             "等級": "C2",
             "分類": "醫學",
             "Words": "appendicitis-1",
-            "句子": "He went to the hospital with sharp pain in his lower abdomen and was diagnosed with appendicitis"
+            "句子": "He went to the hospital with sharp pain in his lower abdomen and was diagnosed with appendicitis",
+            "中文": "（他因下腹部劇烈疼痛前往醫院，並被診斷為闌尾炎。）"
         },
         {
+            "音檔": "音檔 - appendicitis-2",
             "等級": "C2",
             "分類": "醫學",
             "Words": "appendicitis-2",
-            "句子": "Appendicitis is usually treated by surgically removing the appendix"
+            "句子": "Appendicitis is usually treated by surgically removing the appendix",
+            "中文": "（闌尾炎通常通過手術切除闌尾來治療。）"
         },
         {
+            "音檔": "音檔 - appendicitis-3",
             "等級": "C2",
             "分類": "醫學",
             "Words": "appendicitis-3",
-            "句子": "Untreated appendicitis can lead to a ruptured appendix, which is a serious medical emergency"
+            "句子": "Untreated appendicitis can lead to a ruptured appendix, which is a serious medical emergency",
+            "中文": "（未治療的闌尾炎可能導致闌尾破裂，這是一個嚴重的醫療緊急情況。）"
         },
         {
+            "音檔": "音檔 - appendix-1",
             "等級": "B2",
             "分類": "醫學",
             "Words": "appendix-1",
-            "句子": "The doctor explained that the appendix can sometimes become inflamed, leading to appendicitis"
+            "句子": "The doctor explained that the appendix can sometimes become inflamed, leading to appendicitis",
+            "中文": "（醫生解釋說，闌尾有時會發炎，導致闌尾炎。）"
         },
         {
+            "音檔": "音檔 - appendix-2",
             "等級": "B2",
             "分類": "醫學",
             "Words": "appendix-2",
-            "句子": "Surgery to remove the appendix is common when it becomes infected"
+            "句子": "Surgery to remove the appendix is common when it becomes infected",
+            "中文": "（當闌尾感染時，切除闌尾的手術是常見的處置方式。）"
         },
         {
+            "音檔": "音檔 - appendix-3",
             "等級": "B2",
             "分類": "醫學",
             "Words": "appendix-3",
-            "句子": "The appendix of the report includes detailed data that supports the findings"
+            "句子": "The appendix of the report includes detailed data that supports the findings",
+            "中文": "（報告的附錄包括支持研究結果的詳細數據。）"
         },
         {
+            "音檔": "音檔 - appendix-4",
             "等級": "B2",
             "分類": "醫學",
             "Words": "appendix-4",
-            "句子": "For more information, refer to the appendix at the end of the book"
+            "句子": "For more information, refer to the appendix at the end of the book",
+            "中文": "（如需更多資訊，請參閱書末的附錄。）"
         },
         {
+            "音檔": "音檔 - applicable-1",
             "等級": "C1",
             "Words": "applicable-1",
-            "句子": "The new safety regulations are applicable to all manufacturing companies"
+            "句子": "The new safety regulations are applicable to all manufacturing companies",
+            "中文": "（新的安全法規適用於所有製造公司。）"
         },
         {
+            "音檔": "音檔 - applicable-2",
             "等級": "C1",
             "Words": "applicable-2",
-            "句子": "The principles discussed in the seminar are applicable to everyday decision-making"
+            "句子": "The principles discussed in the seminar are applicable to everyday decision-making",
+            "中文": "（研討會中討論的原則適用於日常決策。）"
         },
         {
+            "音檔": "音檔 - applicable-3",
             "等級": "C1",
             "Words": "applicable-3",
-            "句子": "The discount code is only applicable to online purchases"
+            "句子": "The discount code is only applicable to online purchases",
+            "中文": "（折扣碼僅適用於線上購物。）"
         },
         {
+            "音檔": "音檔 - applicable-4",
             "等級": "C1",
             "Words": "applicable-4",
-            "句子": "The guidelines are applicable to various industries and can be adapted as needed"
+            "句子": "The guidelines are applicable to various industries and can be adapted as needed",
+            "中文": "（這些指南適用於各行各業，並可根據需要進行調整。）"
         },
         {
+            "音檔": "音檔 - appraise-1",
             "等級": "B2",
             "Words": "appraise-1",
-            "句子": "The bank hired an expert to appraise the value of the property before granting the loan"
+            "句子": "The bank hired an expert to appraise the value of the property before granting the loan",
+            "中文": "（銀行聘請了一位專家來評估該房產的價值，然後才批准貸款。）"
         },
         {
+            "音檔": "音檔 - appraise-2",
             "等級": "B2",
             "Words": "appraise-2",
-            "句子": "She took her jewelry to a professional to appraise its value for insurance purposes"
+            "句子": "She took her jewelry to a professional to appraise its value for insurance purposes",
+            "中文": "（她將珠寶帶到專業人士處，評估其價值以作為保險用途。）"
         },
         {
+            "音檔": "音檔 - appraise-3",
             "等級": "B2",
             "Words": "appraise-3",
-            "句子": "The manager will appraise the employees’ performance at the end of the year"
+            "句子": "The manager will appraise the employees’ performance at the end of the year",
+            "中文": "（經理將在年底評估員工的表現。）"
         },
         {
+            "音檔": "音檔 - appraise-4",
             "等級": "B2",
             "Words": "appraise-4",
-            "句子": "The report aims to appraise the effectiveness of the new marketing strategy"
+            "句子": "The report aims to appraise the effectiveness of the new marketing strategy",
+            "中文": "（報告旨在評估新營銷策略的有效性。）"
         },
         {
+            "音檔": "音檔 - appraiser-1",
             "等級": "C1",
             "Words": "appraiser-1",
-            "句子": "The appraiser provided a detailed report on the market value of the house before it was sold"
+            "句子": "The appraiser provided a detailed report on the market value of the house before it was sold",
+            "中文": "（評估師在房屋出售前提供了關於其市場價值的詳細報告。）"
         },
         {
+            "音檔": "音檔 - appraiser-2",
             "等級": "C1",
             "Words": "appraiser-2",
-            "句子": "An art appraiser assessed the painting's authenticity and value at the auction"
+            "句子": "An art appraiser assessed the painting's authenticity and value at the auction",
+            "中文": "（藝術評估師在拍賣會上評估了這幅畫的真實性和價值。）"
         },
         {
+            "音檔": "音檔 - appreciate-1",
             "等級": "B1",
             "分類": "對話",
             "Words": "appreciate-1",
-            "句子": "I really appreciate your help with the project"
+            "句子": "I really appreciate your help with the project",
+            "中文": "（我真的很感謝你在這個項目中的幫助。）"
         },
         {
+            "音檔": "音檔 - appreciate-2",
             "等級": "B1",
             "分類": "對話",
             "Words": "appreciate-2",
-            "句子": "She appreciates the beauty of the old paintings in the gallery"
+            "句子": "She appreciates the beauty of the old paintings in the gallery",
+            "中文": "（她欣賞畫廊中那些古老畫作的美麗。）"
         },
         {
+            "音檔": "音檔 - appreciate-3",
             "等級": "B1",
             "分類": "對話",
             "Words": "appreciate-3",
-            "句子": "He appreciates the support his friends gave him during difficult times"
+            "句子": "He appreciates the support his friends gave him during difficult times",
+            "中文": "（他感激朋友們在困難時期給予他的支持。）"
         },
         {
+            "音檔": "音檔 - appreciate-4",
             "等級": "B1",
             "分類": "對話",
             "Words": "appreciate-4",
-            "句子": "We appreciated the delicious meal prepared by our host"
+            "句子": "We appreciated the delicious meal prepared by our host",
+            "中文": "（我們感謝主人準備的美味餐點。）"
         },
         {
+            "音檔": "音檔 - appreciate-5",
             "等級": "B1",
             "分類": "對話",
             "Words": "appreciate-5",
-            "句子": "The property appreciated in value after the new park was built nearby"
+            "句子": "The property appreciated in value after the new park was built nearby",
+            "中文": "（在附近建造新公園後，這處房產的價值上漲了。）"
         },
         {
+            "音檔": "音檔 - appreciate-6",
             "等級": "B1",
             "分類": "對話",
             "Words": "appreciate-6",
-            "句子": "His investments in stocks appreciated significantly over the years"
+            "句子": "His investments in stocks appreciated significantly over the years",
+            "中文": "（他對股票的投資在這些年中顯著增值。）"
         },
         {
+            "音檔": "音檔 - appreciation-1",
             "等級": "B1",
             "分類": "對話",
             "Words": "appreciation-1",
-            "句子": "His appreciation for fine art grew after attending the exhibition"
+            "句子": "His appreciation for fine art grew after attending the exhibition",
+            "中文": "（在參觀展覽後，他對藝術品的欣賞程度有所提高。）"
         },
         {
+            "音檔": "音檔 - appreciation-2",
             "等級": "B1",
             "分類": "對話",
             "Words": "appreciation-2",
-            "句子": "She showed her appreciation for the team's hard work with a heartfelt thank-you"
+            "句子": "She showed her appreciation for the team's hard work with a heartfelt thank-you",
+            "中文": "（她通過真誠的感謝表達了對團隊辛勤工作的感激。）"
         },
         {
+            "音檔": "音檔 - appreciation-3",
             "等級": "B1",
             "分類": "對話",
             "Words": "appreciation-3",
-            "句子": "The teacher received a card as a token of appreciation from her students"
+            "句子": "The teacher received a card as a token of appreciation from her students",
+            "中文": "（老師收到了學生們送來的卡片，作為感謝的象徵。）"
         },
         {
+            "音檔": "音檔 - appreciation-4",
             "等級": "B1",
             "分類": "對話",
             "Words": "appreciation-4",
-            "句子": "We want to show our appreciation for your generosity with a small gift"
+            "句子": "We want to show our appreciation for your generosity with a small gift",
+            "中文": "（我們想通過一份小禮物來表達對您慷慨的感謝。）"
         },
         {
+            "音檔": "音檔 - appreciation-5",
             "等級": "B1",
             "分類": "對話",
             "Words": "appreciation-5",
-            "句子": "The appreciation of the house's value allowed them to sell it for a profit"
+            "句子": "The appreciation of the house's value allowed them to sell it for a profit",
+            "中文": "（房產價值的增值使他們能夠以盈利的價格將其出售。）"
         },
         {
+            "音檔": "音檔 - appreciation-6",
             "等級": "B1",
             "分類": "對話",
             "Words": "appreciation-6",
-            "句子": "The appreciation of stocks over the past few years has been remarkable"
+            "句子": "The appreciation of stocks over the past few years has been remarkable",
+            "中文": "（過去幾年股票的增值令人驚訝。）"
         },
         {
+            "音檔": "音檔 - apprehend-1",
             "等級": "C1",
             "分類": "法政",
             "Words": "apprehend-1",
-            "句子": "The police apprehended the suspect after a lengthy investigation"
+            "句子": "The police apprehended the suspect after a lengthy investigation",
+            "中文": "（警方在經過長時間的調查後逮捕了嫌疑人。）"
         },
         {
+            "音檔": "音檔 - apprehend-2",
             "等級": "C1",
             "分類": "法政",
             "Words": "apprehend-2",
-            "句子": "It took me a while to apprehend the complexity of the situation"
+            "句子": "It took me a while to apprehend the complexity of the situation",
+            "中文": "（我花了一段時間才理解這個情況的複雜性。）"
         },
         {
+            "音檔": "音檔 - apprehend-3",
             "等級": "C1",
             "分類": "法政",
             "Words": "apprehend-3",
-            "句子": "She apprehended the outcome of the meeting with trepidation"
+            "句子": "She apprehended the outcome of the meeting with trepidation",
+            "中文": "（她懷著恐懼的心情擔心會議的結果。）"
         },
         {
+            "音檔": "音檔 - apprehension-1",
             "等級": "C2",
             "分類": "心情",
             "Words": "apprehension-1",
-            "句子": "The apprehension she felt before the job interview was overwhelming, causing her palms to sweat and her heart to race"
+            "句子": "The apprehension she felt before the job interview was overwhelming, causing her palms to sweat and her heart to race",
+            "中文": "（她在面試前感到的擔憂壓倒一切，讓她的手掌出汗，心跳加速。）"
         },
         {
+            "音檔": "音檔 - apprehension-2",
             "等級": "C2",
             "分類": "心情",
             "Words": "apprehension-2",
-            "句子": "As the storm clouds gathered overhead, a sense of apprehension settled over the small town"
+            "句子": "As the storm clouds gathered overhead, a sense of apprehension settled over the small town",
+            "中文": "（隨著暴風雲在頭頂聚集，一股不安的情緒籠罩了這個小鎮。）"
         },
         {
+            "音檔": "音檔 - apprehension-3",
             "等級": "C2",
             "分類": "心情",
             "Words": "apprehension-3",
-            "句子": "The student's apprehension of the mathematical concept grew as the teacher provided more examples and explanations"
+            "句子": "The student's apprehension of the mathematical concept grew as the teacher provided more examples and explanations",
+            "中文": "（隨著老師提供更多範例和解釋，學生對數學概念的理解逐漸加深。）"
         },
         {
+            "音檔": "音檔 - apprehension-4",
             "等級": "C2",
             "分類": "心情",
             "Words": "apprehension-4",
-            "句子": "After hours of study, she finally felt a sense of apprehension about the complicated theory, able to explain it to her classmates with confidence"
+            "句子": "After hours of study, she finally felt a sense of apprehension about the complicated theory, able to explain it to her classmates with confidence",
+            "中文": "（經過幾個小時的學習後，她終於對這個複雜的理論有了深刻的理解，並能自信地向同學解釋。）"
         },
         {
+            "音檔": "音檔 - apprehension-5",
             "等級": "C2",
             "分類": "心情",
             "Words": "apprehension-5",
-            "句子": "They will begin to cooperate in the apprehension of these gangsters"
+            "句子": "They will begin to cooperate in the apprehension of these gangsters",
+            "中文": "（他們將開始合作逮捕這些歹徒。）"
         },
         {
+            "音檔": "音檔 - apprehension-6",
             "等級": "C2",
             "分類": "心情",
             "Words": "apprehension-6",
-            "句子": "The apprehension of the criminal was the result of months of diligent police work and cooperation between multiple law enforcement agencies"
+            "句子": "The apprehension of the criminal was the result of months of diligent police work and cooperation between multiple law enforcement agencies",
+            "中文": "（這名罪犯的被捕是經過數月的警察努力工作和多個執法機構合作的結果。）"
         },
         {
+            "音檔": "音檔 - apprehensive-1",
             "等級": "C2",
             "分類": "心情",
             "Words": "apprehensive-1",
-            "句子": "She felt apprehensive about her first day at a new job"
+            "句子": "She felt apprehensive about her first day at a new job",
+            "中文": "（她對第一天上新工作感到不安。）"
         },
         {
+            "音檔": "音檔 - apprehensive-2",
             "等級": "C2",
             "分類": "心情",
             "Words": "apprehensive-2",
-            "句子": "John was apprehensive about the upcoming meeting with the CEO, as he was aware of the company's recent financial struggles and the team's recent underwhelming performance"
+            "句子": "John was apprehensive about the upcoming meeting with the CEO, as he was aware of the company's recent financial struggles and the team's recent underwhelming performance",
+            "中文": "（約翰對即將與CEO的會議感到不安，因為他知道公司最近的財務困境以及團隊最近表現不佳。）"
         },
         {
+            "音檔": "音檔 - apprise-1",
             "等級": "B2",
             "Words": "apprise-1",
-            "句子": "She decided to apprise her supervisor of the changes in the project timeline"
+            "句子": "She decided to apprise her supervisor of the changes in the project timeline",
+            "中文": "（她決定將項目時間表的變更告知她的上司。）"
         },
         {
+            "音檔": "音檔 - apprise-2",
             "等級": "B2",
             "Words": "apprise-2",
-            "句子": "The manager will apprise the team of any updates regarding the new policy"
+            "句子": "The manager will apprise the team of any updates regarding the new policy",
+            "中文": "（經理將向團隊通報有關新政策的任何更新。）"
         },
         {
+            "音檔": "音檔 - apprise-3",
             "等級": "B2",
             "Words": "apprise-3",
-            "句子": "Please apprise me of any changes in the situation"
+            "句子": "Please apprise me of any changes in the situation",
+            "中文": "（請告知我有關情況的任何變化。）"
         },
         {
+            "音檔": "音檔 - aquatic-1",
             "等級": "B2",
             "分類": "生物",
             "Words": "aquatic-1",
-            "句子": "Aquatic sports such as swimming and diving are popular during the summer"
+            "句子": "Aquatic sports such as swimming and diving are popular during the summer",
+            "中文": "（像游泳和潛水這樣的水上運動在夏季非常受歡迎。）"
         },
         {
+            "音檔": "音檔 - aquatic-2",
             "等級": "B2",
             "分類": "生物",
             "Words": "aquatic-2",
-            "句子": "We visited an aquatic city in Italy"
+            "句子": "We visited an aquatic city in Italy",
+            "中文": "（我們參觀了義大利的一座水上城市。）"
         },
         {
+            "音檔": "音檔 - aquatic-3",
             "等級": "B2",
             "分類": "生物",
             "Words": "aquatic-3",
-            "句子": "Aquatics in the lake include ducks, fish, and algae, all vital parts of the ecosystem"
+            "句子": "Aquatics in the lake include ducks, fish, and algae, all vital parts of the ecosystem",
+            "中文": "（湖中的水生生物包括鴨子、魚類和藻類，它們都是生態系統中至關重要的部分。）"
         },
         {
             "音檔": "音檔 - archaeologist-1",
