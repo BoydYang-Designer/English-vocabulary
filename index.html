@@ -93,13 +93,15 @@
         </div>
 
         <!-- 勾選框與匯出、匯入按鈕 -->
-        <div id="storageButtons" style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
-            <div style="display: flex; align-items: center;">
-                <input type="checkbox" id="noteCheckbox" onclick="handleCheckboxClick()" style="margin-right: 10px;">
+        <div id="storageButtons">
+            <div class="note-buttons-inner">
+                <input type="checkbox" id="noteCheckbox" onclick="handleCheckboxClick()">
                 <button onclick="saveNote()" id="saveNoteButton" class="note-button">Save Note</button>
                 <button onclick="exportAllData()" id="exportButton" class="note-button">Export</button>
                 <button onclick="importAllData()" id="importButton" class="note-button">Import</button>
             </div>
+        </div>
+        </div>
         </div>
     </div>
 </div>

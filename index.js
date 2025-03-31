@@ -354,9 +354,12 @@ function showNoteWords() {
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
-    // 過濾只包含單字的筆記鍵，排除句子相關的鍵
+    // 過濾只包含單字的筆記鍵，且值不為空
     let noteWords = Object.keys(localStorage).filter(key => 
-        key.startsWith("note_") && !key.startsWith("note_sentence_")
+        key.startsWith("note_") && 
+        !key.startsWith("note_sentence_") && 
+        localStorage.getItem(key)?.trim() !== "" && 
+        localStorage.getItem(key) !== null
     );
 
     if (noteWords.length === 0) {
@@ -365,7 +368,7 @@ function showNoteWords() {
         noteWords.forEach(key => {
             let wordText = key.replace("note_", "");
             let savedNote = localStorage.getItem(key);
-            let isChecked = savedNote && savedNote.trim() !== "";
+            let isChecked = savedNote && savedNote.trim() !== ""; // 這行其實多餘，因為過濾已確保不為空
             let iconSrc = isChecked
                 ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg"
                 : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
@@ -679,6 +682,8 @@ function showDetails(word) {
     document.getElementById("phoneticContainer").innerHTML = phonetics;
     document.getElementById("chineseContainer").innerHTML = chinese;
     document.getElementById("meaningContainer").innerHTML = meaning;
+    // 確保 wordTitle 已設置後再呼叫 displayNote
+    document.getElementById("wordTitle").textContent = word.Words;
 
     displayNote();
     updateBackButton();
@@ -922,7 +927,7 @@ function saveNote() {
     let savedNote = document.getElementById("savedNote");
 
     if (word && word !== "") {
-        if (checkbox.checked || note.length > 0) {
+        if (note.length > 0) { // 只在內容不為空時儲存
             localStorage.setItem(`note_${word}`, note);
             console.log("✅ Note saved:", word, note);
             savedNote.textContent = "✅ Note saved！";
@@ -930,7 +935,7 @@ function saveNote() {
             checkbox.checked = true;
             checkbox.style.opacity = "1";
             isCleared = false;
-        } else if (isCleared) {
+        } else { // 內容為空時移除
             localStorage.removeItem(`note_${word}`);
             noteTextArea.value = "";
             console.log("🗑️ Note deleted:", word);
@@ -951,6 +956,11 @@ function saveNote() {
         }, 2000);
 
         setTimeout(() => savedNote.textContent = "", 3000);
+
+        // 即時更新 Note 分類
+        if (lastWordListType === "noteWords") {
+            showNoteWords();
+        }
     } else {
         console.warn("⚠️ 無法保存筆記，wordTitle 未加載");
     }
