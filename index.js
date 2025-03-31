@@ -170,14 +170,14 @@ function filterWordsInDetails() {
 function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
     let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
-    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Note");
+    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Note單字"); // 修改這裡
 
     document.getElementById("categoryButtons").innerHTML = categories
         .map(c => {
             if (c === "Checked 單字") return `<button class='letter-btn' onclick='showCheckedWords()'>${c}</button>`;
             if (c === "重要單字") return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
             if (c === "錯誤單字") return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
-            if (c === "Note") return `<button class='letter-btn' onclick='showNoteWords()'>${c}</button>`;
+            if (c === "Note單字") return `<button class='letter-btn' onclick='showNoteWords()'>${c}</button>`; // 修改這裡
             return `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`;
         })
         .join(" ");
@@ -337,7 +337,7 @@ function backToFirstLayer() {
 
 function showNoteWords() {
     console.log("📌 顯示筆記單字");
-    document.getElementById("wordListTitle").innerText = "Note 單字";
+    document.getElementById("wordListTitle").innerText = "Note單字";
     document.getElementById("wordListTitle").style.display = "block";
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
