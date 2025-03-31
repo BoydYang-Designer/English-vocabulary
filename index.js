@@ -544,19 +544,16 @@ function showCheckedWords() {
     document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
     document.getElementById("wordPageBtn").style.display = "none";     // 單字頁面
     document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
-    document.getElementById("startQuizBtn").style.display = "none";
-
-    // 隱藏「進入句子頁面」按鈕
-    let sentenceButton = document.getElementById("sentencePageBtn");
-    if (sentenceButton) {
-        sentenceButton.style.display = "none";
-    }
 
     let listContainer = document.getElementById("wordList");
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
-    let checkedWords = Object.keys(localStorage).filter(key => key.startsWith("checked_"));
+    // 過濾只包含單字的勾選鍵，排除句子相關的鍵
+    let checkedWords = Object.keys(localStorage).filter(key => 
+        key.startsWith("checked_") && !key.startsWith("checked_sentence_")
+    );
+
     if (checkedWords.length === 0) {
         wordItems.innerHTML = "<p>⚠️ 目前沒有 Checked 單字</p>";
     } else {
@@ -577,7 +574,7 @@ function showCheckedWords() {
                 let wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]).trim().toLowerCase() === wordText.toLowerCase());
                 if (wordObj) {
                     lastWordListType = "checkedWords";
-                    lastWordListValue = checkedWords;
+                    lastWordListValue = null;
                     console.log("✅ 進入詳情頁面:", wordObj);
                     showDetails(wordObj);
                 } else {
