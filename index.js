@@ -341,8 +341,8 @@ function showNoteWords() {
     document.getElementById("wordListTitle").style.display = "block";
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none"; // 隱藏單字測驗按鈕
-    document.getElementById("wordPageBtn").style.display = "none"; // 隱藏單字頁面按鈕
+    document.getElementById("wordQuizBtn").style.display = "none";
+    document.getElementById("wordPageBtn").style.display = "none";
 
     // 隱藏「進入句子頁面」按鈕
     let sentenceButton = document.getElementById("sentencePageBtn");
@@ -354,7 +354,11 @@ function showNoteWords() {
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
-    let noteWords = Object.keys(localStorage).filter(key => key.startsWith("note_"));
+    // 過濾只包含單字的筆記鍵，排除句子相關的鍵
+    let noteWords = Object.keys(localStorage).filter(key => 
+        key.startsWith("note_") && !key.startsWith("note_sentence_")
+    );
+
     if (noteWords.length === 0) {
         wordItems.innerHTML = "<p>⚠️ 目前沒有筆記單字</p>";
     } else {
