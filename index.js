@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
-        .then(res => res.json())
-        .then(data => {
-            wordsData = data["New Words"] || [];
-            console.log("✅ JSON 載入成功:", wordsData);
+    fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
+    .then(res => res.json())
+    .then(data => {
+        wordsData = data["New Words"] || [];
+        console.log("✅ JSON 載入成功:", wordsData);
 
             // 確保分類和等級按鈕顯示
             setTimeout(() => {

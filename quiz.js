@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    fetch("https://boydyang-designer.github.io/English-vocabulary/Z_total_words.json")
-        .then(res => res.json())
-        .then(data => {
-            wordsData = data["New Words"] || [];
-            isDataLoaded = true;
-            console.log("✅ 單字資料已載入");
+    fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
+    .then(res => res.json())
+    .then(data => {
+        wordsData = data["New Words"] || [];
+        isDataLoaded = true;
+        console.log("✅ 單字資料已載入");
 
             if (localStorage.getItem("currentQuizResults")) {
                 quizResults = JSON.parse(localStorage.getItem("currentQuizResults"));

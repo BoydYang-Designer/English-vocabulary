@@ -108,17 +108,25 @@ function renderAlphabetButtons() {
 }
 
 // 第一層：生成分類按鈕
+// 全局變數：控制是否顯示單字相關分類
+let showWordCategories = false;
+
 function createCategoryButtons() {
     let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
-    // 移除 "Note"，新增 "Sentence Notes" 和 "Checked句子"
-    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Sentence Notes", "重要句子", "錯誤句子", "Checked句子");
+    // 預設只顯示句子相關分類
+    categories.unshift("Note句子", "重要句子", "錯誤句子", "Checked句子");
+
+    // 如果 showWordCategories 為 true，才加入單字相關分類
+    if (showWordCategories) {
+        categories.unshift("Checked 單字", "重要單字", "錯誤單字");
+    }
 
     const categoryContainer = document.getElementById("categoryButtons");
     categoryContainer.innerHTML = categories.map(c => {
         if (c === "Checked 單字") return `<button class='letter-btn' onclick='showCheckedWords()'>${c}</button>`;
         if (c === "重要單字") return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
         if (c === "錯誤單字") return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
-        if (c === "Sentence Notes") return `<button class='letter-btn' onclick='showSentenceNotes()'>${c}</button>`;
+        if (c === "Note句子") return `<button class='letter-btn' onclick='showSentenceNotes()'>${c}</button>`;
         if (c === "重要句子") return `<button class='letter-btn' onclick='showImportantSentences()'>${c}</button>`;
         if (c === "錯誤句子") return `<button class='letter-btn' onclick='showWrongSentences()'>${c}</button>`;
         if (c === "Checked句子") return `<button class='letter-btn' onclick='showCheckedSentences()'>${c}</button>`;
@@ -204,10 +212,11 @@ function showCheckedSentences() {
         displaySentenceList(checkedSentences);
     }
 }
+
 function showSentenceNotes() {
     parentLayer = "firstLayer"; // 設置來源為第一層
     console.log("進入 showSentenceNotes, sentenceData.length:", sentenceData.length);
-    document.getElementById("wordListTitle").innerText = "Sentence Notes";
+    document.getElementById("wordListTitle").innerText = "Note句子";
     document.getElementById("wordListTitle").style.display = "block";
     lastWordListType = "sentenceNotes";
     lastWordListValue = null;
