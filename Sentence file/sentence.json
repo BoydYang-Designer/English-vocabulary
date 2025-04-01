@@ -36441,6 +36441,258 @@
         {
             "Words": "strike-26",
             "句子": "A strike was called by the umpire"
+        },
+        {
+            "等級": "B2",
+            "分類": "科技",
+            "Words": "transmission-1",
+            "句子": "The transmission of the message was delayed due to network issues"
+        },
+        {
+            "等級": "B2",
+            "分類": "科技",
+            "Words": "transmission-2",
+            "句子": "The flu virus spreads through airborne transmission"
+        },
+        {
+            "等級": "B2",
+            "分類": "科技",
+            "Words": "transmission-3",
+            "句子": "Radio transmission allows communication over long distances"
+        },
+        {
+            "等級": "B2",
+            "分類": "科技",
+            "Words": "transmission-4",
+            "句子": "The car’s transmission needed repair after years of use"
+        },
+        {
+            "等級": "B2",
+            "分類": "科技",
+            "Words": "transmission-5",
+            "句子": "Manual transmission requires the driver to shift gears manually"
+        },
+        {
+            "等級": "B2",
+            "分類": "科技",
+            "Words": "transmission-6",
+            "句子": "The mechanic checked the automatic transmission for any faults"
+        },
+        {
+            "等級": "B2",
+            "分類": "技術",
+            "Words": "ground-based-1",
+            "句子": "The observatory uses ground-based telescopes to study distant galaxies"
+        },
+        {
+            "等級": "B2",
+            "分類": "技術",
+            "Words": "ground-based-2",
+            "句子": "Ground-based radar systems help monitor aircraft movements"
+        },
+        {
+            "等級": "B2",
+            "分類": "技術",
+            "Words": "ground-based-3",
+            "句子": "The military relies on both ground-based and satellite communication systems"
+        },
+        {
+            "等級": "B2",
+            "分類": "技術",
+            "Words": "technician-1",
+            "句子": "The technician fixed the air conditioning unit within an hour"
+        },
+        {
+            "等級": "B2",
+            "分類": "技術",
+            "Words": "technician-2",
+            "句子": "A lab technician prepared the samples for testing"
+        },
+        {
+            "等級": "B2",
+            "分類": "技術",
+            "Words": "technician-3",
+            "句子": "The computer technician upgraded the company’s network security"
+        },
+        {
+            "等級": "B2",
+            "分類": "對話",
+            "Words": "almost as if-1",
+            "句子": "She looked at him almost as if she knew what he was thinking"
+        },
+        {
+            "等級": "B2",
+            "分類": "對話",
+            "Words": "almost as if-2",
+            "句子": "The room was almost as if it had been frozen in time"
+        },
+        {
+            "等級": "B2",
+            "分類": "對話",
+            "Words": "almost as if-3",
+            "句子": "The weather felt almost as if it was going to rain"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "cleanse-1",
+            "句子": "She used soap and water to cleanse the wound"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "cleanse-2",
+            "句子": "The spa offers treatments to cleanse the skin of impurities"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "cleanse-3",
+            "句子": "He drank herbal tea to cleanse his body of toxins"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "cleanse-4",
+            "句子": "Meditation helped cleanse his mind of negative thoughts"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "cleanse-5",
+            "句子": "The ritual was meant to cleanse the soul of past mistakes"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "cleanse-6",
+            "句子": "The confession cleansed him of guilt"
+        },
+        {
+            "等級": "B2",
+            "分類": "自然災害",
+            "Words": "debris-1",
+            "句子": "After the storm, debris from fallen trees covered the streets"
+        },
+        {
+            "等級": "B2",
+            "分類": "自然災害",
+            "Words": "debris-2",
+            "句子": "The explosion left debris scattered across the entire area"
+        },
+        {
+            "等級": "B2",
+            "分類": "自然災害",
+            "Words": "debris-3",
+            "句子": "Workers cleared the construction debris from the site"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "embarrassment-1",
+            "句子": "She felt deep embarrassment when she forgot her speech in front of the audience"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "embarrassment-2",
+            "句子": "His voice cracked while speaking, and he turned red with embarrassment"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "embarrassment-3",
+            "句子": "Losing his wallet twice in one week was a source of great embarrassment for him"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-1",
+            "句子": "He rushed to catch the train before it left"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-2",
+            "句子": "She rushed through her chores so she could leave for the meeting"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-3",
+            "句子": "They rushed into the building when they heard the fire alarm"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-4",
+            "句子": "The nurse rushed the patient to the emergency room"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-5",
+            "句子": "The company rushed the shipment to meet the deadline"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-6",
+            "句子": "Don't rush into making decisions without considering all options"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-7",
+            "句子": "He rushed into the conversation without listening to what was said first"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-8",
+            "句子": "There was a rush of people when the store opened its doors for the sale"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-9",
+            "句子": "She felt a rush of adrenaline before the race"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-10",
+            "句子": "The morning rush hour caused major delays on the highway"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-11",
+            "句子": "He worked through the lunch rush at the restaurant"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-12",
+            "句子": "The rush to complete the project by the end of the day was overwhelming"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-13",
+            "句子": "He has a rush order that needs to be completed by noon"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-14",
+            "句子": "There's a rush demand for tickets to the concert"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush-15",
+            "句子": "The team worked in a rush to finish the last-minute preparations"
         }
     ]
 }

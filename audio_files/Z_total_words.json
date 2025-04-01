@@ -7807,6 +7807,86 @@
             "Unnamed: 9": "luster"
         },
         {
+            "等級": "B2",
+            "分類": "科技",
+            "Words": "transmission",
+            "pronunciation-1": "[trænsˋmɪʃən]",
+            "traditional Chinese": "N.\n1.傳輸，傳播：(指資訊、信號、疾病或其他事物從一個地方或人傳遞到另一個地方或人)\n2.傳動裝置，變速器：(在機械或汽車領域，指將動力從引擎傳遞到車輪的系統)",
+            "English meaning": "Transmission is a noun with the following meanings:\n1. The act or process of sending or transferring something from one place, person, or thing to another, such as information, signals, or diseases.\nE.g. The transmission of the message was delayed due to network issues.\nE.g. The flu virus spreads through airborne transmission.\nE.g. Radio transmission allows communication over long distances.\n2. A system in a vehicle that transmits power from the engine to the wheels, allowing movement and speed control.\nE.g. The car’s transmission needed repair after years of use.\nE.g. Manual transmission requires the driver to shift gears manually.\nE.g. The mechanic checked the automatic transmission for any faults.\nSummary:\n\"Transmission\" refers to the act of sending or transferring something, such as information, signals, or diseases, as well as the system in a vehicle that transfers power from the engine to the wheels.\nRelated Words:\nTransfer, conveyance, broadcasting, communication, gearbox, drivetrain\nAntonyms:\nInterruption, blockage, failure, suppression",
+            "Unnamed: 8": "transmission",
+            "Unnamed: 9": "transmission"
+        },
+        {
+            "等級": "B2",
+            "分類": "技術",
+            "Words": "ground-based",
+            "pronunciation-1": "/ˈɡraʊnd ˌbeɪst/",
+            "traditional Chinese": "Adj.\n地面上的，基於地面的：(指設施、設備或操作主要位於地面，而非空中或太空)",
+            "English meaning": "Ground-based is an adjective with the following meaning:\nReferring to something that is located on or operates from the ground, rather than being airborne or space-based.\nE.g. The observatory uses ground-based telescopes to study distant galaxies.\nE.g. Ground-based radar systems help monitor aircraft movements.\nE.g. The military relies on both ground-based and satellite communication systems.\nSummary:\n\"Ground-based\" describes things that are positioned or function on the ground, as opposed to being airborne or in space.\nRelated Words:\nLand-based, terrestrial, stationary, earthbound\nAntonyms:\nAirborne, space-based, satellite-mounted",
+            "Unnamed: 8": "ground-based",
+            "Unnamed: 9": "ground-based"
+        },
+        {
+            "等級": "B2",
+            "分類": "技術",
+            "Words": "technician",
+            "pronunciation-1": "[tɛkˋnɪʃən]",
+            "traditional Chinese": "N.\n技術員，技師：(指具有專業技能並從事技術性工作的專業人員，通常在工程、醫療、電子等領域)",
+            "English meaning": "Technician is a noun with the following meaning:\nA person who is skilled in a particular technical field, especially one who maintains, repairs, or operates specialized equipment or systems.\nE.g. The technician fixed the air conditioning unit within an hour.\nE.g. A lab technician prepared the samples for testing.\nE.g. The computer technician upgraded the company’s network security.\nSummary:\n\"Technician\" refers to a skilled worker who specializes in maintaining, repairing, or operating technical systems or equipment.\nRelated Words:\nEngineer, mechanic, specialist, operator, expert\nAntonyms:\nAmateur, novice, layperson, non-specialist",
+            "Unnamed: 8": "technician",
+            "Unnamed: 9": "technician"
+        },
+        {
+            "等級": "B2",
+            "分類": "對話",
+            "Words": "almost as if",
+            "pronunciation-1": "/ˈɔːlməʊst əz ɪf/",
+            "traditional Chinese": "Phrase.\n彷彿，好像：(表示某件事情看起來或感覺上與另一件事非常相似，儘管實際上並非如此)",
+            "English meaning": "\"Almost as if\" is a phrase used to suggest a comparison or to describe something that feels or appears in a way that is similar to another situation, condition, or scenario, though not exactly the same.\nE.g. She looked at him almost as if she knew what he was thinking.\nE.g. The room was almost as if it had been frozen in time.\nE.g. The weather felt almost as if it was going to rain.\nSummary:\n\"Almost as if\" is used to draw a comparison between two things, suggesting that one situation feels very similar to another, even though it isn't exactly the same.\nRelated Words:\nLike, as though, as if, similar to\nAntonyms:\nUnlike, different from, dissimilar",
+            "Unnamed: 8": "almost as if",
+            "Unnamed: 9": "almost as if"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "cleanse",
+            "pronunciation-1": "[klɛnz]",
+            "traditional Chinese": "V.\n1. 清潔，洗淨：(去除污垢或不純物，使某物變乾淨)\n2. 淨化，清除：(去除有害或不需要的物質，特別是在身體、思想或靈魂方面)",
+            "English meaning": "Cleanse is a verb: (cleanse / cleansed / cleansing) with the following meanings:\n1. To clean something thoroughly, especially to remove dirt, toxins, or harmful substances.\nE.g. She used soap and water to cleanse the wound.\nE.g. The spa offers treatments to cleanse the skin of impurities.\nE.g. He drank herbal tea to cleanse his body of toxins.\n2. To purify something, often in a moral, spiritual, or emotional sense.\nE.g. Meditation helped cleanse his mind of negative thoughts.\nE.g. The ritual was meant to cleanse the soul of past mistakes.\nE.g. The confession cleansed him of guilt.\nSummary:\n\"Cleanse\" means to clean something thoroughly or to purify it, either physically, emotionally, or spiritually.\nRelated Words:\nPurify, wash, disinfect, detox, sanitize\nAntonyms:\nContaminate, pollute, soil, dirty",
+            "Unnamed: 8": "cleanse",
+            "Unnamed: 9": "cleanse"
+        },
+        {
+            "等級": "B2",
+            "分類": "自然災害",
+            "Words": "debris",
+            "pronunciation-1": "[dəˋbri]",
+            "traditional Chinese": "N.\n殘骸，瓦礫：(指破壞後留下的物體碎塊，如建築物倒塌後的殘骸或爆炸後的碎片)\n",
+            "English meaning": "Debris is a noun that means scattered fragments or remains of something that has been broken, destroyed, or discarded.\nE.g. After the storm, debris from fallen trees covered the streets.\nE.g. The explosion left debris scattered across the entire area.\nE.g. Workers cleared the construction debris from the site.\nSummary:\n\"Debris\" refers to broken or scattered pieces of material, often resulting from destruction or waste.\nRelated Words:\nWreckage, rubble, remains, litter, fragments\nAntonyms:\nCleanliness, order, intactness, structure",
+            "Unnamed: 8": "debris",
+            "Unnamed: 9": "debris"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "embarrassment",
+            "pronunciation-1": "[ɪmˋbærəsmənt]",
+            "traditional Chinese": "N.\n尷尬，難堪：(因某事感到羞愧或不自在的情緒)\n令人尷尬的事物或情況：(讓人覺得不安或難堪的事情)\n財務困境，拮据：(經濟狀況困難，資金短缺)",
+            "English meaning": "Embarrassment is a noun that means a feeling of self-consciousness, shame, or awkwardness caused by a situation or mistake.\nE.g. She felt deep embarrassment when she forgot her speech in front of the audience.\nE.g. His voice cracked while speaking, and he turned red with embarrassment.\nE.g. Losing his wallet twice in one week was a source of great embarrassment for him.\nSummary:\n\"Embarrassment\" refers to a feeling of awkwardness, shame, or discomfort caused by an uncomfortable or humiliating situation.\nRelated Words:\nHumiliation, shame, awkwardness, discomfort, self-consciousness\nAntonyms:\nConfidence, pride, comfort, assurance",
+            "Unnamed: 8": "embarrassment",
+            "Unnamed: 9": "embarrassment"
+        },
+        {
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "rush",
+            "pronunciation-1": "[rʌʃ]",
+            "traditional Chinese": "\n\nV.\n1. 快速移動或行動（通常是因為緊急或匆忙）。\n2. 快速發送、運送或讓某物快速移動（通常是匆忙的方式）。\n3. 匆忙行事或未經充分考慮行動，通常會導致不小心或草率的結果。\nN.\n1. 快速的移動或行動。\n2. 繁忙或緊湊的活動時期，通常會帶來緊迫感或壓力。\n3. 緊急或需要快速完成某事的狀態。\nAdj.\n1. 緊急的，需要迅速行動或注意的。\n2. 特徵為快速或迅速的步伐，通常是因為時間有限。\n",
+            "English meaning": "Rush is a verb and a noun with the following meanings:\nAs a Verb: (rush / rushed / rushing)\n1. To move quickly or act with great speed (often due to urgency or in a hurry).\nE.g. He rushed to catch the train before it left.\nE.g. She rushed through her chores so she could leave for the meeting.\nE.g. They rushed into the building when they heard the fire alarm.\n2. To send, transport, or make something move quickly (often in a hasty manner).\nE.g. The nurse rushed the patient to the emergency room.\nE.g. The company rushed the shipment to meet the deadline.\n3. To act hastily or without sufficient thought, often leading to a careless outcome.\nE.g. Don't rush into making decisions without considering all options.\nE.g. He rushed into the conversation without listening to what was said first.\nAs a Noun:\n1. A sudden movement or action with great speed.\nE.g. There was a rush of people when the store opened its doors for the sale.\nE.g. She felt a rush of adrenaline before the race.\n2. A period of busy or hectic activity, often resulting in urgency or stress.\nE.g. The morning rush hour caused major delays on the highway.\nE.g. He worked through the lunch rush at the restaurant.\n3. Urgency or a state of being in a hurry or needing to do something quickly.\nE.g. The rush to complete the project by the end of the day was overwhelming.\nAs an Adjective:\n1. Urgent, requiring quick action or attention.\nE.g. He has a rush order that needs to be completed by noon.\nE.g. There's a rush demand for tickets to the concert.\n2. Characterized by speed or a fast pace, often due to limited time.\nE.g. The team worked in a rush to finish the last-minute preparations.\nSummary:\n\"Rush\" refers to moving, acting, or sending something quickly, often due to urgency or necessity, and can describe a period of busy or hectic activity. It also implies hasty actions or decisions.\nRelated Words:\nHurry, dash, rush hour, surge, haste\nAntonyms:\nDelay, slow down, pause, leisure",
+            "Unnamed: 8": "rush",
+            "Unnamed: 9": "rush"
+        },
+        {
             "等級": "C1",
             "Words": "luxurious",
             "Unnamed: 8": "luxurious",
