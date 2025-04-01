@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 wordsData = data["New Words"] || [];
                 console.log("✅ Z_total_words.json 載入成功:", wordsData.length);
             }),
-        fetch("https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/sentence.json")
+        fetch("https://boydyang-designer.github.io/English-vocabulary/Sentence%20file/sentence.json")
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP 錯誤: ${res.status}`);
                 return res.json();
@@ -490,15 +490,15 @@ function showWrongWords() {
 }
 
 function showSentences(word) {
-    parentLayer = "wordList"; // 設置來源為單字列表
+    parentLayer = "wordList";
     document.getElementById("wordListTitle").innerText = word;
     document.getElementById("wordListTitle").style.display = "block";
 
     document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
-    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
-    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
-    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("wordQuizBtn").style.display = "none";
+    document.getElementById("returnHomeBtn").style.display = "none";
+    document.getElementById("sentencePageBtn").style.display = "none";
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
@@ -511,15 +511,26 @@ function showSentences(word) {
     let sentenceItems = document.getElementById("sentenceItems");
     sentenceItems.innerHTML = "";
 
-    // 過濾並排序句子
-    let filteredSentences = sentenceData.filter(s => s.Words.startsWith(word + "-"));
+    // 確保 sentenceData 已載入並過濾無效資料
+    if (!sentenceData || !Array.isArray(sentenceData)) {
+        sentenceItems.innerHTML = "<p>⚠️ 句子資料尚未載入，請稍後再試</p>";
+        console.error("❌ sentenceData 未正確初始化:", sentenceData);
+        return;
+    }
+
+    let filteredSentences = sentenceData.filter(s => {
+        return s && s.Words && typeof s.Words === "string" && s.Words.startsWith(word + "-");
+    });
+
+    // 檢查過濾結果
+    console.log(`過濾後的句子 (${word}):`, filteredSentences);
+
     filteredSentences.sort((a, b) => {
-        const numA = parseInt(a.Words.split("-")[1], 10);
-        const numB = parseInt(b.Words.split("-")[1], 10);
+        const numA = parseInt(a.Words.split("-")[1], 10) || 0;
+        const numB = parseInt(b.Words.split("-")[1], 10) || 0;
         return numA - numB;
     });
 
-    // 更新 currentSentenceList
     currentSentenceList = filteredSentences;
 
     if (filteredSentences.length === 0) {
@@ -533,10 +544,9 @@ function showSentences(word) {
                 ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" 
                 : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
 
-            // 根據勾選狀態決定顯示內容
             const sentenceDisplay = isChecked 
-                ? sentenceId // 只顯示 sentenceId
-                : `${sentenceId}: ${s.句子}`; // 顯示完整內容
+                ? sentenceId 
+                : `${sentenceId}: ${s.句子}`;
 
             let item = document.createElement("div");
             item.className = `word-item-container ${isChecked ? "checked" : ""}`;
