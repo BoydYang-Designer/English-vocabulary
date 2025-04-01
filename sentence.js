@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("開始載入資料...");
 
     Promise.all([
-        fetch("https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Z_total_words.json")
+        fetch("https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/Z_total_words.json")
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP 錯誤: ${res.status}`);
                 return res.json();
