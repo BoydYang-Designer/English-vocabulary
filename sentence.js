@@ -631,8 +631,8 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
         detailsArea.classList.add("sliding-in-from-left");
     }
 
-    let word = sentenceId.split("-")[0];
-    let wordObj = wordsData.find(w => w.Words === word);
+    let word = sentenceId.replace(/-\d+$/, ""); // 將 "carbon-dioxide-1" 轉為 "carbon-dioxide"
+    let wordObj = wordsData.find(w => w.Words === word); // 查找 "carbon-dioxide" 的資料
     let header = `
         <div class="phonetics-container">
             <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${localStorage.getItem(`important_sentence_${sentenceId}`) === "true" ? "checked" : ""}>
