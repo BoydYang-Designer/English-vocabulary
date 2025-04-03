@@ -669,7 +669,7 @@ function showDetails(word) {
     let chinese = `<div>${formattedChinese}</div>`;
 
     let formattedMeaning = word["English meaning"]
-        .replace(/Summary:/g, "<h3>Summary:</h3>")
+        .replace(/^Summary:?/gm, "<h3>Summary</h3>")
         .replace(/Related Words:/g, "<h3>Related Words:</h3>")
         .replace(/Antonyms:/g, "<h3>Antonyms:</h3>")
         .replace(/\n1\./g, "<h3>1.</h3><p>")
