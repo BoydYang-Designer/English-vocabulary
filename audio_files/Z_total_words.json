@@ -2113,11 +2113,12 @@
             "Unnamed: 9": "chaos"
         },
         {
+            "等級": "B2",
             "分類": "人物特性",
             "Words": "character",
             "pronunciation-1": "[ˋkærɪktɚ]",
-            "traditional Chinese": "n.1.性格 \n  2.角色 \n   3.信誉或正直 \n   4.象征 符号\n   5.字體[",
-            "English meaning": "1.E.g.She has a strong character (disposition/trait) and always stands up for what she believes in.\n2.E.g.The main character in the novel undergoes significant growth and development throughout the story.\n3.E.g.His actions have demonstrated his true character and integrity.\n4.E.g.Emoticons and emoji characters are often used in digital communication to convey emotions or reactions.\n5.E.g.He wrote in italic characters",
+            "traditional Chinese": "N.\n1. 個人的精神和道德品質:(通常指誠實、正直、勇氣等特質)\n2. 故事、戲劇或電影中的人物:(通常具有特定的角色或性格)\n3.書寫或印刷中的符號:(如字母、數字或標點符號)\nV.\n1.雕刻或刻寫某物於表面（通常指字母或符號）。",
+            "English meaning": "Character is a noun and a verb with the following meanings:\nAs a Noun:\n1. The mental and moral qualities distinctive to an individual, often referring to traits such as honesty, integrity, and courage.\nE.g. She has a strong character and always stands up for what she believes in.\nE.g. His actions have demonstrated his true character and integrity.\nE.g. A person's character is often revealed in times of adversity.\n2. A person in a story, play, or movie, usually with a specific role or personality.\nE.g. The main character in the novel undergoes significant growth and development throughout the story.\nE.g. He identified with the protagonist, finding aspects of his own character reflected in the story.\n3. A written or printed symbol, such as a letter or number, used in writing or printing.\nE.g. Emoticons and emoji characters are often used in digital communication to convey emotions or reactions.\nE.g. He wrote in italic characters to emphasize the importance of the word.\nE.g. The ancient text contained symbols and characters that were hard to decipher.\nAs a Verb:\n1. To engrave or inscribe something onto a surface (often referring to letters or symbols).\nE.g. The artist characterized the sculpture with intricate details that added depth to its meaning.\nSummary:\n\"Character\" refers to a person’s moral qualities or personality, a figure in a narrative, or a written symbol used in communication. It can also be used as a verb meaning to engrave or inscribe.\nRelated Words:\nPersonality, trait, symbol, integrity, figure, emblem\nAntonyms:\nDishonor, weakness, villain, fake, impersonator",
             "Unnamed: 8": "character",
             "Unnamed: 9": "character"
         },
@@ -8781,6 +8782,7 @@
         },
         {
             "等級": "C1",
+            "分類": "情感",
             "Words": "nostalgia",
             "pronunciation-1": "[nɑsˋtældʒɪə]",
             "traditional Chinese": "n.鄉愁；懷舊之情",
@@ -8790,10 +8792,11 @@
         },
         {
             "等級": "C1",
+            "分類": "情感",
             "Words": "nostalgic",
             "pronunciation-1": "[nɑsˋtældʒɪk]",
-            "traditional Chinese": "adj.adj.鄉愁的；懷舊的",
-            "English meaning": "E.g.Seeing her childhood home after many years made her feel nostalgic for the carefree days of her youth.",
+            "traditional Chinese": "adj.鄉愁的；懷舊的",
+            "English meaning": "Nostalgic is an adjective with the following meaning:\nFeeling sentimental longing or affection for the past, often with a mix of happiness and sadness.\nE.g. Listening to old songs makes her feel nostalgic about her childhood.\nE.g. He felt nostalgic when he visited his hometown after many years.\nE.g. The movie’s setting created a nostalgic atmosphere, reminding the audience of simpler times.\nE.g. She keeps a nostalgic collection of letters from her school days.\nSummary:\n\"Nostalgic\" describes a sentimental longing for the past, often with a mix of warmth and sadness.\nRelated Words:\nSentimental, reminiscent, wistful, yearning, homesick\nAntonyms:\nIndifferent, forward-looking, unfeeling, detached",
             "Unnamed: 8": "nostalgic",
             "Unnamed: 9": "nostalgic"
         },
@@ -8818,10 +8821,11 @@
         },
         {
             "等級": "C1",
+            "分類": "法政",
             "Words": "notoriety",
             "pronunciation-1": "[͵notəˋraɪətɪ]",
             "traditional Chinese": "n.惡名昭彰；聲名狼藉",
-            "English meaning": "The state of being famous or well known, typically for some negative quality or behavior.\nE.g.The scandal brought him notoriety, tarnishing his reputation in the public eye.",
+            "English meaning": "Notoriety is a noun meaning:\nThe state of being famous or well-known for something negative or undesirable.\nE.g. The politician gained notoriety for his controversial statements.\nE.g. The restaurant achieved notoriety after a food poisoning incident.\nE.g. His notoriety as a hacker made him a target for law enforcement.\nE.g. The artist’s unique style brought her both fame and notoriety.\nSummary:\n\"Notoriety\" refers to being widely known, often for something bad or controversial.\nRelated Words:\nInfamy, disrepute, scandal, bad reputation, dishonor\nAntonyms:\nFame, honor, esteem, respect, renown",
             "Unnamed: 8": "notoriety",
             "Unnamed: 9": "notoriety"
         },
