@@ -304,13 +304,11 @@ function toggleAutoPlay() {
 }
 
 function startAutoPlay() {
-    // 如果沒有單字資料，無法播放
     if (!wordsData || wordsData.length === 0) {
         console.log("⚠️ wordsData 未加載或為空，無法自動播放");
         return;
     }
 
-    // 檢查是否未進入任何列表
     if (!lastWordListType) {
         console.log("⚠️ 尚未選擇任何單字列表，無法自動播放");
         alert("請先選擇一個單字列表（例如字母、分類、重要單字等）再啟動自動播放！");
@@ -325,7 +323,7 @@ function startAutoPlay() {
                 let wordText = key.replace("important_", "");
                 return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
             })
-            .filter(Boolean); // 過濾掉未找到的單字
+            .filter(Boolean);
     } else if (lastWordListType === "wrongWords") {
         let wrongWords = JSON.parse(localStorage.getItem("wrongWords")) || [];
         window.currentWordList = wrongWords
@@ -336,6 +334,14 @@ function startAutoPlay() {
             .filter(key => key.startsWith("checked_") && !key.startsWith("checked_sentence_"))
             .map(key => {
                 let wordText = key.replace("checked_", "");
+                return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
+            })
+            .filter(Boolean);
+    } else if (lastWordListType === "noteWords") {
+        window.currentWordList = Object.keys(localStorage)
+            .filter(key => key.startsWith("note_") && !key.startsWith("note_sentence_") && localStorage.getItem(key)?.trim() !== "")
+            .map(key => {
+                let wordText = key.replace("note_", "");
                 return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
             })
             .filter(Boolean);
@@ -354,17 +360,25 @@ function startAutoPlay() {
         return;
     }
 
-    // 檢查播放列表是否為空
     if (!window.currentWordList || window.currentWordList.length === 0) {
         console.log("⚠️ 當前單字列表為空，無法自動播放");
         return;
     }
 
-    // 開始自動播放
-    isAutoPlaying = true;
-    isPaused = false;
-    window.currentIndex = 0;
-    showDetails(window.currentWordList[window.currentIndex]);
+    // 從當前顯示的單字開始播放
+    if (window.currentIndex >= 0 && window.currentIndex < window.currentWordList.length) {
+        isAutoPlaying = true;
+        isPaused = false;
+        showDetails(window.currentWordList[window.currentIndex]);
+    } else {
+        console.log("⚠️ 當前單字不在列表中，從頭開始播放");
+        window.currentIndex = 0;
+        isAutoPlaying = true;
+        isPaused = false;
+        showDetails(window.currentWordList[window.currentIndex]);
+    }
+
+    updateAutoPlayButton();
 }
 
 function pauseAutoPlay() {
@@ -739,9 +753,8 @@ function showDetails(word) {
     let fromPage = params.get('from');
     lastSentenceListWord = word.Words;
 
-    document.getElementById("autoPlayBtn").style.display = "block"; // 顯示自動播放按鈕
+    document.getElementById("autoPlayBtn").style.display = "block";
 
-    // 如果從搜尋框進入，或從 sentence.js 跳轉過來，啟用「B」按鈕
     if (searchInput !== "" || fromPage === "sentence") {
         bButton.disabled = false;
         bButton.style.backgroundColor = "#6c757d";
@@ -753,25 +766,23 @@ function showDetails(word) {
     document.getElementById("wordList").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
     document.getElementById("wordListTitle").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
-    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
-    document.getElementById("wordPageBtn").style.display = "none";     // 單字頁面
-    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
+    document.getElementById("wordQuizBtn").style.display = "none";
+    document.getElementById("wordPageBtn").style.display = "none";
+    document.getElementById("sentencePageBtn").style.display = "none";
     document.getElementById("wordDetails").style.display = "block";
     document.querySelector(".alphabet-container").style.display = "none";
     document.querySelector(".category-container").style.display = "none";
     document.querySelector(".level-container").style.display = "none";
     document.getElementById("autoPlayBtn").style.display = "block";
 
-    // 隱藏「進入句子頁面」按鈕
-    let sentenceButton = document.getElementById("sentencePageBtn");
-    if (sentenceButton) {
-        sentenceButton.style.display = "none";
-    }
+    // 找到當前單字在列表中的索引
+    window.currentIndex = window.currentWordList.findIndex(w => 
+        (w.Words || w.word || w["單字"]).toLowerCase() === word.Words.toLowerCase()
+    );
 
+    // 以下為原有的顯示邏輯，保持不變
     document.getElementById("searchInputDetails").value = "";
     document.getElementById("searchResultsDetails").innerHTML = "";
-
     let audioControls = document.querySelector(".audio-controls");
     if (audioControls) audioControls.style.display = "flex";
 
@@ -780,10 +791,10 @@ function showDetails(word) {
     if (playButton) {
         let audioFile = `${encodeURIComponent(word.Words)} - sentence.mp3`;
         playButton.setAttribute("onclick", `playSentenceAudio("${audioFile}")`);
-        playButton.classList.remove("playing"); // 確保初始狀態無播放樣式
+        playButton.classList.remove("playing");
     }
     if (pauseButton) {
-        pauseButton.classList.remove("playing"); // 確保初始狀態無播放樣式
+        pauseButton.classList.remove("playing");
         pauseButton.innerHTML = `
             <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" 
                  alt="Play" width="24" height="24" />
@@ -803,7 +814,6 @@ function showDetails(word) {
 
     let formattedChinese = word["traditional Chinese"].replace(/(\d+)\./g, "<br><strong>$1.</strong> ");
     let chinese = `<div>${formattedChinese}</div>`;
-
     let formattedMeaning = word["English meaning"]
         .replace(/^Summary:?/gm, "<h3>Summary</h3>")
         .replace(/Related Words:/g, "<h3>Related Words:</h3>")
@@ -818,20 +828,17 @@ function showDetails(word) {
     document.getElementById("phoneticContainer").innerHTML = phonetics;
     document.getElementById("chineseContainer").innerHTML = chinese;
     document.getElementById("meaningContainer").innerHTML = meaning;
-    // 確保 wordTitle 已設置後再呼叫 displayNote
     document.getElementById("wordTitle").textContent = word.Words;
 
     displayNote();
     updateBackButton();
 
-    // 設置「Back」按鈕，固定顯示「Back」並綁定 backToWordList
     let backButton = document.querySelector("#wordDetails .button");
     if (backButton) {
         backButton.textContent = "Back";
         backButton.onclick = backToWordList;
     }
 
-    // 如果是自動播放模式，自動播放音檔
     if (isAutoPlaying && !isPaused) {
         playAudioSequentially(word);
     }
