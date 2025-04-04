@@ -448,3 +448,7 @@ h1 {
     background-color: #00BFFF !important; /* 亮藍色 */
     color: white !important; /* 確保文字可見 */
 }
+
+#autoPlayBtn {
+    display: none;
+}
