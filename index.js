@@ -6,7 +6,7 @@ let lastWordListValue = ""; // 記錄字母或分類值
 let lastSentenceListWord = "";
 let isAutoPlaying = false;
 let isPaused = false;
-let currentAudio = null;
+let currentAudio = new Audio();
 window.currentWordList = [];
 
 
@@ -326,46 +326,66 @@ function startListAutoPlay() {
 
     isAutoPlaying = true;
     isPaused = false;
-    window.currentIndex = 0; // 從第一個單字開始
-    playNextWord();
-}
+    window.currentIndex = 0;
 
-function playNextWord() {
-    
-    if (window.currentIndex >= window.currentWordList.length) {
+    // 測試音訊播放權限
+    let testAudio = new Audio();
+    testAudio.play().catch(() => {
+        alert("請先手動點擊頁面以啟用自動播放（瀏覽器限制）");
         isAutoPlaying = false;
         updateAutoPlayButton();
         return;
-        console.log(`▶️ 開始播放單字 ${wordText}，索引: ${window.currentIndex}`);
+    });
+
+    playNextWord(); // 直接開始播放，移除預載
+}
+
+function playNextWord() {
+    if (window.currentIndex >= window.currentWordList.length) {
+        console.log("🏁 播放結束");
+        isAutoPlaying = false;
+        updateAutoPlayButton();
+        return;
     }
 
     let wordObj = window.currentWordList[window.currentIndex];
     let wordText = (wordObj.Words || wordObj.word || wordObj["單字"] || "").trim();
+    console.log(`▶️ 開始播放: ${wordText}, 索引: ${window.currentIndex}`);
 
     highlightWord(wordText);
 
     let audioFile = `${encodeURIComponent(wordText)}.mp3`;
-    currentAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`);
-    currentAudio.oncanplay = () => {
+    currentAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`;
+
+    let retryCount = 0;
+    const maxRetries = 2;
+
+    function attemptPlay() {
         currentAudio.play()
             .then(() => {
+                console.log(`🎵 ${wordText} 播放成功`);
                 currentAudio.onended = () => {
+                    console.log(`⏹️ ${wordText} 播放結束`);
                     removeHighlight(wordText);
-                    currentAudio = null;
                     if (!isPaused && isAutoPlaying) {
-                        proceedToNextWord();
+                        setTimeout(proceedToNextWord, 500);
                     }
                 };
             })
             .catch(err => {
-                console.error("❌ 音檔播放失敗:", err);
-                proceedToNextWord();
+                console.error(`❌ 播放 ${wordText} 失敗:`, err);
+                retryCount++;
+                if (retryCount <= maxRetries) {
+                    console.log(`🔄 第 ${retryCount} 次重試...`);
+                    setTimeout(attemptPlay, 1000); // 1 秒後重試
+                } else {
+                    console.log(`❌ 重試 ${maxRetries} 次仍失敗，跳過`);
+                    proceedToNextWord();
+                }
             });
-    };
-    currentAudio.onerror = () => {
-        console.warn(`⚠️ 音檔 ${audioFile} 載入失敗`);
-        proceedToNextWord();
-    };
+    }
+
+    attemptPlay();
 }
 
 function proceedToNextWord() {
@@ -386,19 +406,6 @@ function preloadAudioFiles(wordList, limit = 5) {
     console.log("✅ 預載音檔完成:", preloadList.length);
 }
 
-function startListAutoPlay() {
-    if (!window.currentWordList || window.currentWordList.length === 0) {
-        console.log("⚠️ 當前單字列表為空，無法自動播放");
-        alert("單字列表為空，無法播放！");
-        return;
-    }
-
-    isAutoPlaying = true;
-    isPaused = false;
-    window.currentIndex = 0;
-    preloadAudioFiles(window.currentWordList); // 預載前 5 個音檔
-    playNextWord();
-}
 
 function highlightWord(wordText) {
     const currentActive = document.querySelector('.word-item-container.playing');
