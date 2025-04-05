@@ -331,10 +331,12 @@ function startListAutoPlay() {
 }
 
 function playNextWord() {
+    
     if (window.currentIndex >= window.currentWordList.length) {
         isAutoPlaying = false;
         updateAutoPlayButton();
         return;
+        console.log(`▶️ 開始播放單字 ${wordText}，索引: ${window.currentIndex}`);
     }
 
     let wordObj = window.currentWordList[window.currentIndex];
@@ -344,47 +346,73 @@ function playNextWord() {
 
     let audioFile = `${encodeURIComponent(wordText)}.mp3`;
     currentAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`);
-    currentAudio.onerror = () => {
-        console.warn(`⚠️ 音檔 ${audioFile} 載入失敗，嘗試替代格式`);
-        let altAudioFile = wordText.replace("-", "_") + ".mp3";
-        currentAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${altAudioFile}`;
-        currentAudio.play().catch(err => console.error("❌ 替代音檔播放失敗:", err));
+    currentAudio.oncanplay = () => {
+        currentAudio.play()
+            .then(() => {
+                currentAudio.onended = () => {
+                    removeHighlight(wordText);
+                    currentAudio = null;
+                    if (!isPaused && isAutoPlaying) {
+                        proceedToNextWord();
+                    }
+                };
+            })
+            .catch(err => {
+                console.error("❌ 音檔播放失敗:", err);
+                proceedToNextWord();
+            });
     };
-    currentAudio.play()
-        .then(() => {
-            currentAudio.onended = () => {
-                removeHighlight(wordText);
-                currentAudio = null;
-                if (!isPaused) {
-                    window.currentIndex++;
-                    setTimeout(playNextWord, 1000);
-                }
-            };
-        })
-        .catch(err => {
-            console.error("❌ 音檔播放失敗:", err);
-            removeHighlight(wordText);
-            currentAudio = null;
-            if (!isPaused) {
-                window.currentIndex++;
-                setTimeout(playNextWord, 1000);
-            }
-        });
+    currentAudio.onerror = () => {
+        console.warn(`⚠️ 音檔 ${audioFile} 載入失敗`);
+        proceedToNextWord();
+    };
+}
+
+function proceedToNextWord() {
+    window.currentIndex++;
+    if (isAutoPlaying && !isPaused) {
+        playNextWord();
+    }
+}
+
+function preloadAudioFiles(wordList, limit = 5) {
+    const preloadList = wordList.slice(0, Math.min(limit, wordList.length));
+    preloadList.forEach(wordObj => {
+        let wordText = (wordObj.Words || wordObj.word || wordObj["單字"] || "").trim();
+        let audioFile = `${encodeURIComponent(wordText)}.mp3`;
+        let audio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`);
+        audio.preload = "auto"; // 預載音檔
+    });
+    console.log("✅ 預載音檔完成:", preloadList.length);
+}
+
+function startListAutoPlay() {
+    if (!window.currentWordList || window.currentWordList.length === 0) {
+        console.log("⚠️ 當前單字列表為空，無法自動播放");
+        alert("單字列表為空，無法播放！");
+        return;
+    }
+
+    isAutoPlaying = true;
+    isPaused = false;
+    window.currentIndex = 0;
+    preloadAudioFiles(window.currentWordList); // 預載前 5 個音檔
+    playNextWord();
 }
 
 function highlightWord(wordText) {
-    document.querySelectorAll('.word-item-container').forEach(item => {
-        let itemWord = item.querySelector('.word-item').dataset.word;
-        if (itemWord === wordText) {
-            item.classList.add('playing');
-        } else {
-            item.classList.remove('playing');
-        }
-    });
+    const currentActive = document.querySelector('.word-item-container.playing');
+    if (currentActive) {
+        currentActive.classList.remove('playing');
+    }
+    const item = document.querySelector(`.word-item[data-word="${wordText}"]`)?.closest('.word-item-container');
+    if (item) {
+        item.classList.add('playing');
+    }
 }
 
 function removeHighlight(wordText) {
-    let item = document.querySelector(`.word-item[data-word="${wordText}"]`)?.closest('.word-item-container');
+    const item = document.querySelector(`.word-item[data-word="${wordText}"]`)?.closest('.word-item-container');
     if (item) {
         item.classList.remove('playing');
     }
