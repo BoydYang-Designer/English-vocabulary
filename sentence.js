@@ -405,10 +405,13 @@ function startAutoPlay() {
     }
     isAutoPlaying = true;
     isPaused = false;
-    currentSentenceIndex = 0; // 從第一個句子開始
-    playCurrentSentence();
+    // 如果 currentSentenceIndex 未設置（-1），則從 0 開始，否則從當前索引開始
+    if (currentSentenceIndex < 0) {
+        currentSentenceIndex = 0;
+    }
+    playCurrentSentence(); // 調用已定義的函數
+    console.log("開始自動播放從索引:", currentSentenceIndex, "句子:", currentSentenceList[currentSentenceIndex].Words);
 }
-
 
 // 自動撥放 Step 3
 function playCurrentSentence() {
@@ -426,10 +429,55 @@ function playCurrentSentence() {
                 }
             }
         };
+    } else {
+        isAutoPlaying = false;
+        updateAutoPlayButton();
     }
 }
 
 // 自動撥放 Step 4
+function playSentenceAudio(filename) {
+    console.log("開始播放:", filename);
+    const playButtons = document.querySelectorAll(`.audio-btn[onclick="playSentenceAudio('${filename}')"]`);
+    const playBtn = playButtons[playButtons.length - 1] || document.getElementById("playAudioBtn");
+    sentenceAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/Sentence%20file/${filename}`;
+    if (playBtn) {
+        playBtn.classList.add("playing");
+    }
+    sentenceAudio.play()
+        .then(() => console.log(`✅ 播放 ${filename} 成功`))
+        .catch(error => {
+            console.error(`🔊 播放 ${filename} 失敗:`, error);
+            if (playBtn) playBtn.classList.remove("playing");
+            if (isAutoPlaying && !isPaused) {
+                currentSentenceIndex++;
+                if (currentSentenceIndex < currentSentenceList.length) {
+                    playCurrentSentence();
+                } else {
+                    isAutoPlaying = false;
+                    updateAutoPlayButton();
+                }
+            }
+        });
+    sentenceAudio.onended = () => {
+        if (playBtn) playBtn.classList.remove("playing");
+        console.log(`✅ ${filename} 播放結束`);
+        if (isAutoPlaying && !isPaused) {
+            currentSentenceIndex++;
+            if (currentSentenceIndex < currentSentenceList.length) {
+                playCurrentSentence();
+            } else {
+                isAutoPlaying = false;
+                updateAutoPlayButton();
+            }
+        }
+    };
+    document.querySelectorAll(".audio-btn.playing").forEach(btn => {
+        if (btn !== playBtn) btn.classList.remove("playing");
+    });
+}
+
+// 自動撥放 Step 5
 function pauseAutoPlay() {
     isPaused = true;
     if (sentenceAudio && sentenceAudio.readyState >= 2) {
@@ -437,7 +485,7 @@ function pauseAutoPlay() {
     }
 }
 
-// 自動撥放 Step 4
+// 自動撥放 Step 6
 function resumeAutoPlay() {
     isPaused = false;
     if (sentenceAudio && sentenceAudio.readyState >= 2) {
@@ -445,14 +493,16 @@ function resumeAutoPlay() {
     }
 }
 
-// 自動撥放 Step 5
+// 自動撥放 Step 7
 function updateAutoPlayButton() {
     let autoPlayBtn = document.getElementById("autoPlayBtn");
     if (autoPlayBtn) {
         if (isAutoPlaying) {
             autoPlayBtn.textContent = isPaused ? "繼續播放" : "停止播放";
+            autoPlayBtn.classList.add("active"); // 自動播放時添加 active 類別
         } else {
             autoPlayBtn.textContent = "自動播放";
+            autoPlayBtn.classList.remove("active"); // 停止播放時移除 active 類別
         }
     }
 }
@@ -770,6 +820,7 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
         <div class="phonetics-container">
             <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${localStorage.getItem(`important_sentence_${sentenceId}`) === "true" ? "checked" : ""}>
             <div id="sentenceTitle" style="font-size: 20px; font-weight: bold;">${sentenceId}</div>
+            <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
         </div>`;
     let phonetics = wordObj ? 
         ((wordObj["pronunciation-1"] ? `<button class='button' onclick='playAudio("${word}.mp3")'>${wordObj["pronunciation-1"]}</button>` : "") +
@@ -803,10 +854,10 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     document.getElementById("sentenceDetails").style.display = "block";
     document.getElementById("wordListTitle").style.display = "none";
     document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
-    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
-    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
-    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("wordQuizBtn").style.display = "none";
+    document.getElementById("returnHomeBtn").style.display = "none";
+    document.getElementById("sentencePageBtn").style.display = "none";
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
@@ -819,6 +870,8 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
         }, 10);
     }
 
+    // 更新自動播放按鈕狀態
+    updateAutoPlayButton();
 }
 
 let wordAudio = new Audio();
