@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const quizSentences = JSON.parse(localStorage.getItem("currentQuizSentences")) || [];
                 console.log("從 localStorage 讀取的 currentQuizSentences:", quizSentences);
                 if (quizSentences.length > 0) {
-                    currentSentenceList = quizSentences.slice(0, 10);
+                    currentSentenceList = quizSentences.slice(0, 10); // 測驗模式保持原始順序
                     currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceParam);
                     console.log("✅ 從測驗結果進入，使用 currentQuizSentences (限制為 10 句):", currentSentenceList);
                 } else {
@@ -67,22 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     isQuizMode = false;
                     const word = sentenceParam.split("-")[0];
                     currentSentenceList = sentenceData.filter(s => s.Words.startsWith(word + "-"));
-                    currentSentenceList.sort((a, b) => {
-                        const numA = parseInt(a.Words.split("-")[1], 10);
-                        const numB = parseInt(b.Words.split("-")[1], 10);
-                        return numA - numB;
-                    });
+                    currentSentenceList = sortSentencesByWordAndNumber(currentSentenceList);
                     currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceParam);
                 }
             } else {
                 isQuizMode = false;
                 const word = sentenceParam.split("-")[0];
                 currentSentenceList = sentenceData.filter(s => s.Words.startsWith(word + "-"));
-                currentSentenceList.sort((a, b) => {
-                    const numA = parseInt(a.Words.split("-")[1], 10);
-                    const numB = parseInt(b.Words.split("-")[1], 10);
-                    return numA - numB;
-                });
+                currentSentenceList = sortSentencesByWordAndNumber(currentSentenceList);
                 currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceParam);
             }
             showSentenceDetails(sentenceParam);
@@ -132,12 +124,12 @@ function showWordsAndSentences(type, value) {
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
 
-    // 過濾單字並獲取相關句子
     let filteredWords = wordsData.filter(w => w.Words.toLowerCase().startsWith(value.toLowerCase()));
     let filteredSentences = sentenceData.filter(s => filteredWords.some(w => s.Words.startsWith(w.Words + "-")));
 
-    currentSentenceList = filteredSentences;
-    displaySentenceList(filteredSentences);
+    // 按單字和數字排序
+    currentSentenceList = sortSentencesByWordAndNumber(filteredSentences);
+    displaySentenceList(currentSentenceList);
 }
 
 // 第一層：生成分類按鈕
@@ -168,26 +160,23 @@ function createCategoryButtons() {
 }
 
 function showImportantSentences() {
-    parentLayer = "firstLayer"; // 設置來源為第一層
+    parentLayer = "firstLayer";
     console.log("進入 showImportantSentences, sentenceData.length:", sentenceData.length);
     
-    // 更新標題：包含「重要句子」文字與自動播放按鈕
     document.getElementById("wordListTitle").innerHTML = `
         <span>重要句子</span>
         <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
     `;
     document.getElementById("wordListTitle").style.display = "block";
     
-    // 設定當前列表類型與重置值
     lastWordListType = "importantSentences";
     lastWordListValue = null;
 
-    // 隱藏其他不必要的元素
     document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗按鈕
-    document.getElementById("wordQuizBtn").style.display = "none";        // 單字測驗按鈕
-    document.getElementById("returnHomeBtn").style.display = "none";      // 返回首頁按鈕
-    document.getElementById("sentencePageBtn").style.display = "none";    // 句子頁面按鈕
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("wordQuizBtn").style.display = "none";
+    document.getElementById("returnHomeBtn").style.display = "none";
+    document.getElementById("sentencePageBtn").style.display = "none";
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
@@ -198,16 +187,15 @@ function showImportantSentences() {
         return;
     }
 
-    // 過濾出標記為重要的句子
     let importantSentences = sentenceData.filter(s => localStorage.getItem(`important_sentence_${s.Words}`) === "true");
     console.log("過濾後的 importantSentences:", importantSentences);
     if (importantSentences.length === 0) {
         console.warn("⚠️ 沒有標記為重要的句子");
     }
 
-    // 設置全局播放列表為這些重要句子，並顯示列表
-    currentSentenceList = importantSentences;
-    displaySentenceList(importantSentences);
+    // 按單字和數字排序
+    currentSentenceList = sortSentencesByWordAndNumber(importantSentences);
+    displaySentenceList(currentSentenceList);
 }
 
 
@@ -234,8 +222,9 @@ function showWrongSentences() {
     let filteredSentences = sentenceData.filter(s => wrongSentences.includes(s.Words));
     if (filteredSentences.length === 0) console.warn("⚠️ 沒有標記為錯誤的句子");
 
-    currentSentenceList = filteredSentences;
-    displaySentenceList(filteredSentences);
+    // 按單字和數字排序
+    currentSentenceList = sortSentencesByWordAndNumber(filteredSentences);
+    displaySentenceList(currentSentenceList);
 }
 
 function showCheckedSentences() {
@@ -263,8 +252,9 @@ function showCheckedSentences() {
         document.getElementById("sentenceItems").innerHTML = "<p>⚠️ 目前沒有勾選的句子</p>";
     }
 
-    currentSentenceList = checkedSentences;
-    displaySentenceList(checkedSentences);
+    // 按單字和數字排序
+    currentSentenceList = sortSentencesByWordAndNumber(checkedSentences);
+    displaySentenceList(currentSentenceList);
 }
 
 function showSentenceNotes() {
@@ -297,8 +287,9 @@ function showSentenceNotes() {
         return note && note.trim().length > 0;
     });
 
-    currentSentenceList = sentencesWithNotes;
-    displaySentenceList(sentencesWithNotes);
+    // 按單字和數字排序
+    currentSentenceList = sortSentencesByWordAndNumber(sentencesWithNotes);
+    displaySentenceList(currentSentenceList);
 }
 
 
@@ -327,6 +318,23 @@ function filterSentences() {
         ? filtered.map(w => `<p class='word-item' onclick='showSentences("${w.Words}")'>${w.Words}</p>`).join("")
         : "<p>⚠️ 沒有符合的單字</p>";
     document.getElementById("searchContainer").appendChild(searchResults);
+}
+
+// 排序absorb-1/absorb-2/absorb-10
+function sortSentencesByWordAndNumber(sentences) {
+    return sentences.sort((a, b) => {
+        const wordA = a.Words.split("-").slice(0, -1).join("-"); // 提取單字部分
+        const wordB = b.Words.split("-").slice(0, -1).join("-");
+        const numA = parseInt(a.Words.split("-").pop(), 10); // 提取數字部分
+        const numB = parseInt(b.Words.split("-").pop(), 10);
+
+        // 忽略大小寫比較單字部分
+        const wordComparison = wordA.localeCompare(wordB, undefined, { sensitivity: 'base' });
+        if (wordComparison !== 0) return wordComparison;
+
+        // 單字相同時，比較數字部分
+        return numA - numB;
+    });
 }
 
 function displaySentenceList(sentences) {
@@ -614,7 +622,10 @@ function showWrongWords() {
 
 function showSentences(word) {
     parentLayer = "wordList";
-    document.getElementById("wordListTitle").innerText = word;
+    document.getElementById("wordListTitle").innerHTML = `
+        <span>${word}</span>
+        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
+    `;
     document.getElementById("wordListTitle").style.display = "block";
 
     document.getElementById("searchContainer").style.display = "none";
@@ -634,7 +645,6 @@ function showSentences(word) {
     let sentenceItems = document.getElementById("sentenceItems");
     sentenceItems.innerHTML = "";
 
-    // 確保 sentenceData 已載入並過濾無效資料
     if (!sentenceData || !Array.isArray(sentenceData)) {
         sentenceItems.innerHTML = "<p>⚠️ 句子資料尚未載入，請稍後再試</p>";
         console.error("❌ sentenceData 未正確初始化:", sentenceData);
@@ -645,21 +655,19 @@ function showSentences(word) {
         return s && s.Words && typeof s.Words === "string" && s.Words.startsWith(word + "-");
     });
 
-    // 檢查過濾結果
     console.log(`過濾後的句子 (${word}):`, filteredSentences);
 
-    filteredSentences.sort((a, b) => {
-        const numA = parseInt(a.Words.split("-")[1], 10) || 0;
-        const numB = parseInt(b.Words.split("-")[1], 10) || 0;
+    // 這裡只排序數字，因為是單一單字
+    currentSentenceList = filteredSentences.sort((a, b) => {
+        const numA = parseInt(a.Words.split("-").pop(), 10);
+        const numB = parseInt(b.Words.split("-").pop(), 10);
         return numA - numB;
     });
 
-    currentSentenceList = filteredSentences;
-
-    if (filteredSentences.length === 0) {
+    if (currentSentenceList.length === 0) {
         sentenceItems.innerHTML = "<p>⚠️ 沒有符合的句子</p>";
     } else {
-        filteredSentences.forEach((s, index) => {
+        currentSentenceList.forEach((s, index) => {
             let sentenceId = s.Words;
             let isImportant = localStorage.getItem(`important_sentence_${sentenceId}`) === "true";
             let isChecked = localStorage.getItem(`checked_sentence_${sentenceId}`) === "true";
@@ -740,6 +748,8 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     } else if (currentSentenceList.length > 0 && currentSentenceIndex === -1) {
         currentSentenceIndex = currentSentenceList.findIndex(s => s.Words === sentenceId);
     }
+
+    parentLayer = "sentenceList"; // 明確標記上一層是句子列表
 
     console.log("進入 showSentenceDetails - sentenceId:", sentenceId);
     console.log("當前句子列表:", currentSentenceList);
@@ -1043,21 +1053,37 @@ function backToSentenceList(event) {
 
     // 隱藏句子詳情頁面
     document.getElementById("sentenceDetails").style.display = "none";
-    
+
     const urlParams = new URLSearchParams(window.location.search);
     const fromParam = urlParams.get('from');
 
+    // 如果從測驗頁面返回，跳轉到 quiz.html
     if (fromParam === 'quiz') {
         window.location.href = "quiz.html?returning=true";
-    } else if (lastWordListType === "sentenceNotes") {
-        showSentenceNotes();
-    } else if (lastWordListType === "importantSentences") {
-        showImportantSentences();
-    } else if (lastWordListType === "wrongSentences") {
-        showWrongSentences();
-    } else if (lastSentenceListWord) {
-        showSentences(lastSentenceListWord);
-    } else {
+    }
+    // 如果上一層是句子列表，根據上下文恢復
+    else if (parentLayer === "sentenceList") {
+        if (lastWordListType === "sentenceNotes") {
+            showSentenceNotes();
+        } else if (lastWordListType === "importantSentences") {
+            showImportantSentences();
+        } else if (lastWordListType === "wrongSentences") {
+            showWrongSentences();
+        } else if (lastWordListType === "checkedSentences") {
+            showCheckedSentences();
+        } else if (lastWordListType === "letter" && lastWordListValue) {
+            showWordsAndSentences("letter", lastWordListValue);
+        } else if (lastSentenceListWord) {
+            showSentences(lastSentenceListWord);
+        } else {
+            // 如果無法確定上下文，顯示當前句子列表
+            displaySentenceList(currentSentenceList);
+            document.getElementById("sentenceList").style.display = "block";
+            document.getElementById("wordListTitle").style.display = "block";
+        }
+    }
+    // 默認回到第一層
+    else {
         backToFirstLayer();
     }
 }
