@@ -495,14 +495,28 @@ function resumeAutoPlay() {
 
 // 自動撥放 Step 7
 function updateAutoPlayButton() {
-    let autoPlayBtn = document.getElementById("autoPlayBtn");
+    let autoPlayBtn = document.getElementById("autoPlayBtn"); // 句子列表層的按鈕
+    let autoPlayBtnDetails = document.getElementById("autoPlayBtnDetails"); // 第四層的按鈕
+
+    // 更新句子列表層的按鈕（如果存在）
     if (autoPlayBtn) {
         if (isAutoPlaying) {
             autoPlayBtn.textContent = isPaused ? "繼續播放" : "停止播放";
-            autoPlayBtn.classList.add("active"); // 自動播放時添加 active 類別
+            autoPlayBtn.classList.add("active");
         } else {
             autoPlayBtn.textContent = "自動播放";
-            autoPlayBtn.classList.remove("active"); // 停止播放時移除 active 類別
+            autoPlayBtn.classList.remove("active");
+        }
+    }
+
+    // 更新第四層的按鈕（如果存在）
+    if (autoPlayBtnDetails) {
+        if (isAutoPlaying) {
+            autoPlayBtnDetails.textContent = isPaused ? "繼續播放" : "停止播放";
+            autoPlayBtnDetails.classList.add("active");
+        } else {
+            autoPlayBtnDetails.textContent = "自動播放";
+            autoPlayBtnDetails.classList.remove("active");
         }
     }
 }
@@ -817,11 +831,11 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     let word = sentenceId.replace(/-\d+$/, ""); // 將 "carbon-dioxide-1" 轉為 "carbon-dioxide"
     let wordObj = wordsData.find(w => w.Words === word); // 查找 "carbon-dioxide" 的資料
     let header = `
-        <div class="phonetics-container">
-            <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${localStorage.getItem(`important_sentence_${sentenceId}`) === "true" ? "checked" : ""}>
-            <div id="sentenceTitle" style="font-size: 20px; font-weight: bold;">${sentenceId}</div>
-            <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
-        </div>`;
+    <div class="phonetics-container">
+        <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${localStorage.getItem(`important_sentence_${sentenceId}`) === "true" ? "checked" : ""}>
+        <div id="sentenceTitle" style="font-size: 20px; font-weight: bold;">${sentenceId}</div>
+        <button id="autoPlayBtnDetails" onclick="toggleAutoPlay()">自動播放</button>
+    </div>`;
     let phonetics = wordObj ? 
         ((wordObj["pronunciation-1"] ? `<button class='button' onclick='playAudio("${word}.mp3")'>${wordObj["pronunciation-1"]}</button>` : "") +
         (wordObj["pronunciation-2"] ? `<button class='button' onclick='playAudio("${word} 2.mp3")'>${wordObj["pronunciation-2"]}</button>` : "") || "<p>No pronunciation available</p>") : 
