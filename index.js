@@ -893,7 +893,7 @@ function showDetails(word) {
         <div id="wordTitle" style="font-size: 20px; font-weight: bold;">${word.Words}</div>`;
     if (word["pronunciation-1"] || word["pronunciation-2"]) {
         if (word["pronunciation-1"]) phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word["pronunciation-1"]}</button>`;
-        if (word["pronunciation-2"]) phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)} 2.mp3")'>${word["pronunciation-2"]}</button>`;
+        if (word["pronunciation-2"]) phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}-2.mp3")'>${word["pronunciation-2"]}</button>`;
     } else {
         phonetics += `<p style="color: gray;">No pronunciation available</p>`;
     }
