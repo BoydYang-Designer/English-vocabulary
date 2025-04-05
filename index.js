@@ -6,7 +6,9 @@ let lastWordListValue = ""; // 記錄字母或分類值
 let lastSentenceListWord = "";
 let isAutoPlaying = false;
 let isPaused = false;
+let currentAudio = null;
 window.currentWordList = [];
+
 
 document.addEventListener("DOMContentLoaded", function () {
     // 設置初始顯示狀態
@@ -293,14 +295,95 @@ function showWords(type, value) {
 }
 
 function toggleAutoPlay() {
-    if (!isAutoPlaying) {
-        startAutoPlay();
-    } else if (!isPaused) {
-        pauseAutoPlay();
-    } else {
-        resumeAutoPlay();
+    if (document.getElementById("wordList").style.display === "block") {
+        // 第二層：單字列表頁面
+        if (!isAutoPlaying) {
+            startListAutoPlay();
+        } else if (!isPaused) {
+            pauseAutoPlay();
+        } else {
+            resumeAutoPlay();
+        }
+    } else if (document.getElementById("wordDetails").style.display === "block") {
+        // 第三層：單字詳情頁面，保持原有邏輯不變
+        if (!isAutoPlaying) {
+            startAutoPlay();
+        } else if (!isPaused) {
+            pauseAutoPlay();
+        } else {
+            resumeAutoPlay();
+        }
     }
     updateAutoPlayButton();
+}
+
+function startListAutoPlay() {
+    if (!window.currentWordList || window.currentWordList.length === 0) {
+        console.log("⚠️ 當前單字列表為空，無法自動播放");
+        alert("單字列表為空，無法播放！");
+        return;
+    }
+
+    isAutoPlaying = true;
+    isPaused = false;
+    window.currentIndex = 0; // 從第一個單字開始
+    playNextWord();
+}
+
+function playNextWord() {
+    if (window.currentIndex >= window.currentWordList.length) {
+        isAutoPlaying = false;
+        updateAutoPlayButton();
+        return;
+    }
+
+    let wordObj = window.currentWordList[window.currentIndex];
+    let wordText = wordObj.Words || wordObj.word || wordObj["單字"];
+
+    // 高亮顯示當前單字
+    highlightWord(wordText);
+
+    // 播放單字發音
+    let audioFile = `${encodeURIComponent(wordText)}.mp3`;
+    currentAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`);
+    currentAudio.play()
+        .then(() => {
+            currentAudio.onended = () => {
+                removeHighlight(wordText);
+                currentAudio = null; // 播放結束後清除記錄
+                if (!isPaused) {
+                    window.currentIndex++;
+                    setTimeout(playNextWord, 1000); // 等待1秒後播放下一個單字
+                }
+            };
+        })
+        .catch(err => {
+            console.error("❌ 音檔播放失敗:", err);
+            removeHighlight(wordText);
+            currentAudio = null; // 出錯時清除記錄
+            if (!isPaused) {
+                window.currentIndex++;
+                setTimeout(playNextWord, 1000); // 繼續下一個單字
+            }
+        });
+}
+
+function highlightWord(wordText) {
+    document.querySelectorAll('.word-item-container').forEach(item => {
+        let itemWord = item.querySelector('.word-item').dataset.word;
+        if (itemWord === wordText) {
+            item.classList.add('playing');
+        } else {
+            item.classList.remove('playing');
+        }
+    });
+}
+
+function removeHighlight(wordText) {
+    let item = document.querySelector(`.word-item[data-word="${wordText}"]`)?.closest('.word-item-container');
+    if (item) {
+        item.classList.remove('playing');
+    }
 }
 
 function startAutoPlay() {
@@ -383,25 +466,33 @@ function startAutoPlay() {
 
 function pauseAutoPlay() {
     isPaused = true;
-    if (sentenceAudio && sentenceAudio.readyState >= 2) { // HAVE_CURRENT_DATA 或更高
+    if (document.getElementById("wordList").style.display === "block") {
+        // 第二層暫停邏輯
+        if (currentAudio && !currentAudio.paused) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0; // 可選：重置播放進度
+        }
+        console.log("⏸️ 第二層自動播放已暫停");
+    } else if (sentenceAudio && sentenceAudio.readyState >= 2) {
+        // 第三層邏輯（保持不變）
         sentenceAudio.pause();
         console.log("⏸️ 音檔已暫停");
-    } else {
-        console.log("⚠️ 音檔尚未準備好，無法暫停");
     }
 }
 
 function resumeAutoPlay() {
     isPaused = false;
-    if (sentenceAudio && sentenceAudio.readyState >= 2) {
+    if (document.getElementById("wordList").style.display === "block") {
+        // 第二層恢復邏輯
+        playNextWord();
+        console.log("▶️ 第二層自動播放已恢復");
+    } else if (sentenceAudio && sentenceAudio.readyState >= 2) {
+        // 第三層邏輯（保持不變）
         sentenceAudio.play()
             .then(() => console.log("▶️ 音檔恢復播放"))
             .catch(err => console.error("🔊 播放失敗:", err));
-    } else {
-        console.log("⚠️ 音檔尚未準備好，無法恢復播放");
     }
 }
-
 
 function toggleCheck(word, button) {
     let isChecked = localStorage.getItem(`checked_${word}`) === "true";
