@@ -417,12 +417,16 @@ function startAutoPlay() {
 function playCurrentSentence() {
     if (currentSentenceIndex >= 0 && currentSentenceIndex < currentSentenceList.length) {
         let sentenceId = currentSentenceList[currentSentenceIndex].Words;
+        // 如果當前在第四層（句子詳情頁），更新畫面
+        if (document.getElementById("sentenceDetails").style.display === "block") {
+            showSentenceDetails(sentenceId, currentSentenceIndex);
+        }
         playSentenceAudio(`${sentenceId}.mp3`);
         sentenceAudio.onended = () => {
             if (isAutoPlaying && !isPaused) {
                 currentSentenceIndex++;
                 if (currentSentenceIndex < currentSentenceList.length) {
-                    playCurrentSentence();
+                    playCurrentSentence(); // 播放並切換到下一個句子
                 } else {
                     isAutoPlaying = false;
                     updateAutoPlayButton();
@@ -452,25 +456,17 @@ function playSentenceAudio(filename) {
             if (isAutoPlaying && !isPaused) {
                 currentSentenceIndex++;
                 if (currentSentenceIndex < currentSentenceList.length) {
-                    playCurrentSentence();
+                    playCurrentSentence(); // 跳到下一個並更新畫面
                 } else {
                     isAutoPlaying = false;
                     updateAutoPlayButton();
                 }
             }
         });
+    // 移除重複的 onended 處理，交給 playCurrentSentence 處理
     sentenceAudio.onended = () => {
         if (playBtn) playBtn.classList.remove("playing");
         console.log(`✅ ${filename} 播放結束`);
-        if (isAutoPlaying && !isPaused) {
-            currentSentenceIndex++;
-            if (currentSentenceIndex < currentSentenceList.length) {
-                playCurrentSentence();
-            } else {
-                isAutoPlaying = false;
-                updateAutoPlayButton();
-            }
-        }
     };
     document.querySelectorAll(".audio-btn.playing").forEach(btn => {
         if (btn !== playBtn) btn.classList.remove("playing");
