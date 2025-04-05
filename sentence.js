@@ -102,7 +102,7 @@ function renderAlphabetButtons() {
     });
 }
 
-// 新增函數：顯示單字並支持句子列表與自動播放
+// 新增函數：顯示單字並支持單字列表
 function showWordsAndSentences(type, value) {
     parentLayer = "firstLayer";
     const titleText = type === "letter" ? value.toUpperCase() : value;
@@ -123,13 +123,38 @@ function showWordsAndSentences(type, value) {
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
+    document.getElementById("wordList").style.display = "block";
+    document.getElementById("sentenceList").style.display = "none";
+
+    let wordItems = document.getElementById("wordItems");
+    wordItems.innerHTML = "";
 
     let filteredWords = wordsData.filter(w => w.Words.toLowerCase().startsWith(value.toLowerCase()));
-    let filteredSentences = sentenceData.filter(s => filteredWords.some(w => s.Words.startsWith(w.Words + "-")));
 
-    // 按單字和數字排序
-    currentSentenceList = sortSentencesByWordAndNumber(filteredSentences);
-    displaySentenceList(currentSentenceList);
+    if (filteredWords.length === 0) {
+        wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
+    } else {
+        filteredWords.forEach(word => {
+            let wordText = word.Words;
+            let isChecked = localStorage.getItem(`checked_${wordText}`) === "true";
+            let isImportant = localStorage.getItem(`important_${wordText}`) === "true";
+            let iconSrc = isChecked ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
+
+            let item = document.createElement('div');
+            item.className = 'word-item-container';
+            if (isChecked) item.classList.add("checked");
+            item.innerHTML = `
+                <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${wordText}", this)' ${isImportant ? "checked" : ""}>
+                <p class='word-item' data-word="${wordText}">${wordText}</p>
+                <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
+                    <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
+                </button>
+            `;
+            wordItems.appendChild(item);
+
+            item.querySelector('.word-item').addEventListener("click", () => showSentences(wordText));
+        });
+    }
 }
 
 // 第一層：生成分類按鈕
@@ -257,15 +282,13 @@ function showCheckedSentences() {
     displaySentenceList(currentSentenceList);
 }
 
-function showSentenceNotes() {
-    parentLayer = "firstLayer";
+function showSentences(word) {
+    parentLayer = "wordList";
     document.getElementById("wordListTitle").innerHTML = `
-        <span>Note句子</span>
+        <span>${word}</span>
         <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
     `;
     document.getElementById("wordListTitle").style.display = "block";
-    lastWordListType = "sentenceNotes";
-    lastWordListValue = null;
 
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
@@ -275,21 +298,66 @@ function showSentenceNotes() {
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
+    document.getElementById("wordList").style.display = "none";
+    document.getElementById("sentenceList").style.display = "block";
+    document.querySelector('#sentenceList .back-button').style.display = "block";
 
-    if (!sentenceData || sentenceData.length === 0) {
-        console.error("❌ sentenceData 未載入或為空");
-        document.getElementById("sentenceItems").innerHTML = "<p>⚠️ 資料載入失敗，請刷新頁面</p>";
+    lastSentenceListWord = word;
+
+    let sentenceItems = document.getElementById("sentenceItems");
+    sentenceItems.innerHTML = "";
+
+    if (!sentenceData || !Array.isArray(sentenceData)) {
+        sentenceItems.innerHTML = "<p>⚠️ 句子資料尚未載入，請稍後再試</p>";
+        console.error("❌ sentenceData 未正確初始化:", sentenceData);
         return;
     }
 
-    let sentencesWithNotes = sentenceData.filter(s => {
-        let note = localStorage.getItem(`note_sentence_${s.Words}`);
-        return note && note.trim().length > 0;
+    let filteredSentences = sentenceData.filter(s => {
+        return s && s.Words && typeof s.Words === "string" && s.Words.startsWith(word + "-");
     });
 
-    // 按單字和數字排序
-    currentSentenceList = sortSentencesByWordAndNumber(sentencesWithNotes);
-    displaySentenceList(currentSentenceList);
+    console.log(`過濾後的句子 (${word}):`, filteredSentences);
+
+    // 這裡只排序數字，因為是單一單字
+    currentSentenceList = filteredSentences.sort((a, b) => {
+        const numA = parseInt(a.Words.split("-").pop(), 10);
+        const numB = parseInt(b.Words.split("-").pop(), 10);
+        return numA - numB;
+    });
+
+    if (currentSentenceList.length === 0) {
+        sentenceItems.innerHTML = "<p>⚠️ 沒有符合的句子</p>";
+    } else {
+        currentSentenceList.forEach((s, index) => {
+            let sentenceId = s.Words;
+            let isImportant = localStorage.getItem(`important_sentence_${sentenceId}`) === "true";
+            let isChecked = localStorage.getItem(`checked_sentence_${sentenceId}`) === "true";
+            let iconSrc = isChecked 
+                ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" 
+                : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
+
+            const sentenceDisplay = isChecked 
+                ? sentenceId 
+                : `${sentenceId}: ${s.句子}`;
+
+            let item = document.createElement("div");
+            item.className = `word-item-container ${isChecked ? "checked" : ""}`;
+            item.innerHTML = `
+                <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
+                <p class='word-item' data-sentence="${sentenceId}">${sentenceDisplay}</p>
+                <button class='check-button' onclick='toggleCheckSentence("${sentenceId}", this)'>
+                    <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
+                </button>
+                <button class='audio-btn' onclick='playSentenceAudio("${sentenceId}.mp3")'>
+                    <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
+                </button>
+            `;
+            sentenceItems.appendChild(item);
+
+            item.querySelector('.word-item').addEventListener("click", () => showSentenceDetails(sentenceId, index));
+        });
+    }
 }
 
 
@@ -386,6 +454,10 @@ function displaySentenceList(sentences) {
 
 // 自動撥放 step 1
 function toggleAutoPlay() {
+    if (document.getElementById("wordList").style.display === "block") {
+        alert("請先選擇一個單字進入句子列表再啟動自動播放！");
+        return;
+    }
     if (!isAutoPlaying) {
         startAutoPlay();
     } else if (!isPaused) {
