@@ -338,32 +338,36 @@ function playNextWord() {
     }
 
     let wordObj = window.currentWordList[window.currentIndex];
-    let wordText = wordObj.Words || wordObj.word || wordObj["單字"];
+    let wordText = (wordObj.Words || wordObj.word || wordObj["單字"] || "").trim();
 
-    // 高亮顯示當前單字
     highlightWord(wordText);
 
-    // 播放單字發音
     let audioFile = `${encodeURIComponent(wordText)}.mp3`;
     currentAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`);
+    currentAudio.onerror = () => {
+        console.warn(`⚠️ 音檔 ${audioFile} 載入失敗，嘗試替代格式`);
+        let altAudioFile = wordText.replace("-", "_") + ".mp3";
+        currentAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${altAudioFile}`;
+        currentAudio.play().catch(err => console.error("❌ 替代音檔播放失敗:", err));
+    };
     currentAudio.play()
         .then(() => {
             currentAudio.onended = () => {
                 removeHighlight(wordText);
-                currentAudio = null; // 播放結束後清除記錄
+                currentAudio = null;
                 if (!isPaused) {
                     window.currentIndex++;
-                    setTimeout(playNextWord, 1000); // 等待1秒後播放下一個單字
+                    setTimeout(playNextWord, 1000);
                 }
             };
         })
         .catch(err => {
             console.error("❌ 音檔播放失敗:", err);
             removeHighlight(wordText);
-            currentAudio = null; // 出錯時清除記錄
+            currentAudio = null;
             if (!isPaused) {
                 window.currentIndex++;
-                setTimeout(playNextWord, 1000); // 繼續下一個單字
+                setTimeout(playNextWord, 1000);
             }
         });
 }
@@ -553,32 +557,27 @@ function showNoteWords() {
     document.getElementById("startQuizBtn").style.display = "none";
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("wordPageBtn").style.display = "none";
-    document.getElementById("autoPlayBtn").style.display = "block"; // 顯示自動播放按鈕
-
-    // 隱藏「進入句子頁面」按鈕
-    let sentenceButton = document.getElementById("sentencePageBtn");
-    if (sentenceButton) {
-        sentenceButton.style.display = "none";
-    }
+    document.getElementById("sentencePageBtn").style.display = "none";
+    document.getElementById("autoPlayBtn").style.display = "block";
 
     let listContainer = document.getElementById("wordList");
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
-    // 過濾只包含單字的筆記鍵，且值不為空
-    let noteWords = Object.keys(localStorage).filter(key => 
-        key.startsWith("note_") && 
-        !key.startsWith("note_sentence_") && 
-        localStorage.getItem(key)?.trim() !== "" && 
-        localStorage.getItem(key) !== null
-    );
+    let noteWords = Object.keys(localStorage)
+        .filter(key => key.startsWith("note_") && !key.startsWith("note_sentence_") && localStorage.getItem(key)?.trim() !== "")
+        .map(key => key.replace("note_", ""))
+        .sort();
+
+    window.currentWordList = noteWords
+        .map(wordText => wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase()))
+        .filter(Boolean);
 
     if (noteWords.length === 0) {
         wordItems.innerHTML = "<p>⚠️ 目前沒有筆記單字</p>";
     } else {
-        noteWords.forEach(key => {
-            let wordText = key.replace("note_", "");
-            let savedNote = localStorage.getItem(key);
+        noteWords.forEach(wordText => {
+            let savedNote = localStorage.getItem(`note_${wordText}`);
             let isChecked = savedNote && savedNote.trim() !== "";
             let iconSrc = isChecked
                 ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg"
@@ -612,9 +611,12 @@ function showNoteWords() {
 
     listContainer.style.display = "block";
     document.getElementById("wordDetails").style.display = "none";
-    document.querySelector(".alphabet-container").style.display = "none";
-    document.querySelector(".category-container").style.display = "none";
-    document.querySelector(".level-container").style.display = "none";
+    let alphabetContainer = document.querySelector(".alphabet-container");
+    let categoryContainer = document.querySelector(".category-container");
+    let levelContainer = document.querySelector(".level-container");
+    if (alphabetContainer) alphabetContainer.style.display = "none";
+    if (categoryContainer) categoryContainer.style.display = "none";
+    if (levelContainer) levelContainer.style.display = "none";
 }
 
 function showImportantWords() {
@@ -622,37 +624,29 @@ function showImportantWords() {
     document.getElementById("wordListTitle").innerText = "重要";
     document.getElementById("wordListTitle").style.display = "block";
     document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
-    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
-    document.getElementById("wordPageBtn").style.display = "none";     // 單字頁面
-    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
-    document.getElementById("autoPlayBtn").style.display = "block"; // 顯示自動播放按鈕
-
-    // 隱藏「進入句子頁面」按鈕
-    let sentenceButton = document.getElementById("sentencePageBtn");
-    if (sentenceButton) {
-        sentenceButton.style.display = "none";
-    }
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("wordQuizBtn").style.display = "none";
+    document.getElementById("wordPageBtn").style.display = "none";
+    document.getElementById("sentencePageBtn").style.display = "none";
+    document.getElementById("autoPlayBtn").style.display = "block";
 
     let listContainer = document.getElementById("wordList");
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
-    // 只篩選單字的「important_」鍵，排除句子相關的鍵
     let importantWords = Object.keys(localStorage)
-        .filter(key => key.startsWith("important_") && !key.startsWith("important_sentence_"));
+        .filter(key => key.startsWith("important_") && !key.startsWith("important_sentence_"))
+        .map(key => key.replace("important_", ""))
+        .sort();
+
     window.currentWordList = importantWords
-        .map(key => {
-            let wordText = key.replace("important_", "");
-            return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
-        })
+        .map(wordText => wordsData.find(w => (w.Words || w.word || w["單字"] || "").trim().toLowerCase() === wordText.toLowerCase()))
         .filter(Boolean);
 
     if (importantWords.length === 0) {
         wordItems.innerHTML = "<p>⚠️ 目前沒有標記為重要的單字</p>";
     } else {
-        importantWords.forEach(key => {
-            let wordText = key.replace("important_", "");
+        importantWords.forEach(wordText => {
             let isChecked = localStorage.getItem(`checked_${wordText}`) === "true";
             let iconSrc = isChecked
                 ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg"
@@ -671,7 +665,7 @@ function showImportantWords() {
             `;
 
             item.querySelector('.word-item').addEventListener("click", function () {
-                let wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]).trim().toLowerCase() === wordText.toLowerCase());
+                let wordObj = wordsData.find(w => (w.Words || w.word || w["單字"] || "").trim().toLowerCase() === wordText.toLowerCase());
                 if (wordObj) {
                     lastWordListType = "importantWords";
                     lastWordListValue = null;
@@ -687,11 +681,13 @@ function showImportantWords() {
 
     listContainer.style.display = "block";
     document.getElementById("wordDetails").style.display = "none";
-    document.querySelector(".alphabet-container").style.display = "none";
-    document.querySelector(".category-container").style.display = "none";
-    document.querySelector(".level-container").style.display = "none";
+    let alphabetContainer = document.querySelector(".alphabet-container");
+    let categoryContainer = document.querySelector(".category-container");
+    let levelContainer = document.querySelector(".level-container");
+    if (alphabetContainer) alphabetContainer.style.display = "none";
+    if (categoryContainer) categoryContainer.style.display = "none";
+    if (levelContainer) levelContainer.style.display = "none";
 
-    // 設置 lastWordListType，供自動播放使用
     lastWordListType = "importantWords";
     lastWordListValue = null;
 }
@@ -701,23 +697,19 @@ function showWrongWords() {
     document.getElementById("wordListTitle").innerText = "錯誤";
     document.getElementById("wordListTitle").style.display = "block";
     document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
-    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
-    document.getElementById("wordPageBtn").style.display = "none";     // 單字頁面
-    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
-    document.getElementById("autoPlayBtn").style.display = "block"; // 顯示自動播放按鈕
-
-    // 隱藏「進入句子頁面」按鈕
-    let sentenceButton = document.getElementById("sentencePageBtn");
-    if (sentenceButton) {
-        sentenceButton.style.display = "none";
-    }
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("wordQuizBtn").style.display = "none";
+    document.getElementById("wordPageBtn").style.display = "none";
+    document.getElementById("sentencePageBtn").style.display = "none";
+    document.getElementById("autoPlayBtn").style.display = "block";
 
     let listContainer = document.getElementById("wordList");
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
     let wrongWords = JSON.parse(localStorage.getItem("wrongWords")) || [];
+    wrongWords.sort();
+
     window.currentWordList = wrongWords
         .map(wordText => wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase()))
         .filter(Boolean);
@@ -761,11 +753,13 @@ function showWrongWords() {
 
     listContainer.style.display = "block";
     document.getElementById("wordDetails").style.display = "none";
-    document.querySelector(".alphabet-container").style.display = "none";
-    document.querySelector(".category-container").style.display = "none";
-    document.querySelector(".level-container").style.display = "none";
+    let alphabetContainer = document.querySelector(".alphabet-container");
+    let categoryContainer = document.querySelector(".category-container");
+    let levelContainer = document.querySelector(".level-container");
+    if (alphabetContainer) alphabetContainer.style.display = "none";
+    if (categoryContainer) categoryContainer.style.display = "none";
+    if (levelContainer) levelContainer.style.display = "none";
 
-    // 設置 lastWordListType，供自動播放使用
     lastWordListType = "wrongWords";
     lastWordListValue = null;
 }
@@ -775,31 +769,29 @@ function showCheckedWords() {
     document.getElementById("wordListTitle").innerText = "Checked";
     document.getElementById("wordListTitle").style.display = "block";
     document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
-    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
-    document.getElementById("wordPageBtn").style.display = "none";     // 單字頁面
-    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
-    document.getElementById("autoPlayBtn").style.display = "block"; // 顯示自動播放按鈕
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("wordQuizBtn").style.display = "none";
+    document.getElementById("wordPageBtn").style.display = "none";
+    document.getElementById("sentencePageBtn").style.display = "none";
+    document.getElementById("autoPlayBtn").style.display = "block";
 
     let listContainer = document.getElementById("wordList");
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
-    // 過濾只包含單字的勾選鍵，排除句子相關的鍵
     let checkedWords = Object.keys(localStorage)
-        .filter(key => key.startsWith("checked_") && !key.startsWith("checked_sentence_"));
+        .filter(key => key.startsWith("checked_") && !key.startsWith("checked_sentence_"))
+        .map(key => key.replace("checked_", ""))
+        .sort();
+
     window.currentWordList = checkedWords
-        .map(key => {
-            let wordText = key.replace("checked_", "");
-            return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
-        })
+        .map(wordText => wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase()))
         .filter(Boolean);
 
     if (checkedWords.length === 0) {
         wordItems.innerHTML = "<p>⚠️ 目前沒有 Checked 單字</p>";
     } else {
-        checkedWords.forEach(key => {
-            let wordText = key.replace("checked_", "");
+        checkedWords.forEach(wordText => {
             let isImportant = localStorage.getItem(`important_${wordText}`) === "true";
             let item = document.createElement("div");
             item.className = "word-item-container checked";
@@ -828,11 +820,13 @@ function showCheckedWords() {
 
     listContainer.style.display = "block";
     document.getElementById("wordDetails").style.display = "none";
-    document.querySelector(".alphabet-container").style.display = "none";
-    document.querySelector(".category-container").style.display = "none";
-    document.querySelector(".level-container").style.display = "none";
+    let alphabetContainer = document.querySelector(".alphabet-container");
+    let categoryContainer = document.querySelector(".category-container");
+    let levelContainer = document.querySelector(".level-container");
+    if (alphabetContainer) alphabetContainer.style.display = "none";
+    if (categoryContainer) categoryContainer.style.display = "none";
+    if (levelContainer) levelContainer.style.display = "none";
 
-    // 設置 lastWordListType，供自動播放使用
     lastWordListType = "checkedWords";
     lastWordListValue = null;
 }
@@ -867,9 +861,11 @@ function showDetails(word) {
     document.getElementById("autoPlayBtn").style.display = "block";
 
     // 找到當前單字在列表中的索引
-    window.currentIndex = window.currentWordList.findIndex(w => 
-        (w.Words || w.word || w["單字"]).toLowerCase() === word.Words.toLowerCase()
-    );
+    window.currentIndex = window.currentWordList.findIndex(w => {
+        let listWord = (w.Words || w.word || w["單字"] || "").trim().toLowerCase();
+        let targetWord = (word.Words || word.word || word["單字"] || "").trim().toLowerCase();
+        return listWord === targetWord;
+    });
 
     // 以下為原有的顯示邏輯，保持不變
     document.getElementById("searchInputDetails").value = "";
