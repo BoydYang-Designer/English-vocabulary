@@ -450,5 +450,17 @@ h1 {
 }
 
 #autoPlayBtn {
-    display: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #647f91;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#autoPlayBtn:hover {
+    background-color: #4a6375;
 }

@@ -1,4 +1,4 @@
-//全局變數
+// 全局變數整合
 let parentLayer = "";
 let wordsData = [];
 let sentenceData = [];
@@ -9,8 +9,11 @@ let lastSentenceListWord = "";
 let currentSentenceList = []; // 儲存當前的句子列表
 let currentSentenceIndex = -1; // 儲存當前句子的索引
 let touchStartX = 0; // 滑動起點 X 座標
-let touchEndX = 0; // 滑動終點 X 座標
-let isQuizMode = false; // 新增：標記是否為測驗模式
+let touchEndX = 0;   // 滑動終點 X 座標
+let isQuizMode = false;   // 標記是否為測驗模式
+let isAutoPlaying = false; // 是否處於自動播放模式
+let isPaused = false;      // 是否暫停
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -137,16 +140,24 @@ function createCategoryButtons() {
 function showImportantSentences() {
     parentLayer = "firstLayer"; // 設置來源為第一層
     console.log("進入 showImportantSentences, sentenceData.length:", sentenceData.length);
-    document.getElementById("wordListTitle").innerText = "重要句子";
+    
+    // 更新標題：包含「重要句子」文字與自動播放按鈕
+    document.getElementById("wordListTitle").innerHTML = `
+        <span>重要句子</span>
+        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
+    `;
     document.getElementById("wordListTitle").style.display = "block";
+    
+    // 設定當前列表類型與重置值
     lastWordListType = "importantSentences";
     lastWordListValue = null;
 
+    // 隱藏其他不必要的元素
     document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
-    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
-    document.getElementById("returnHomeBtn").style.display = "none";  // 單字頁面
-    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
+    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗按鈕
+    document.getElementById("wordQuizBtn").style.display = "none";        // 單字測驗按鈕
+    document.getElementById("returnHomeBtn").style.display = "none";      // 返回首頁按鈕
+    document.getElementById("sentencePageBtn").style.display = "none";    // 句子頁面按鈕
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
@@ -157,11 +168,19 @@ function showImportantSentences() {
         return;
     }
 
+    // 過濾出標記為重要的句子
     let importantSentences = sentenceData.filter(s => localStorage.getItem(`important_sentence_${s.Words}`) === "true");
     console.log("過濾後的 importantSentences:", importantSentences);
-    if (importantSentences.length === 0) console.warn("⚠️ 沒有標記為重要的句子");
+    if (importantSentences.length === 0) {
+        console.warn("⚠️ 沒有標記為重要的句子");
+    }
+
+    // 設置全局播放列表為這些重要句子，並顯示列表
+    currentSentenceList = importantSentences;
     displaySentenceList(importantSentences);
 }
+
+
 
 function showWrongSentences() {
     parentLayer = "firstLayer"; // 設置來源為第一層
@@ -326,6 +345,80 @@ function displaySentenceList(sentences) {
         container.querySelector('.word-item').addEventListener("click", () => showSentenceDetails(sentenceId));
     });
 }
+
+// 自動撥放 step 1
+function toggleAutoPlay() {
+    if (!isAutoPlaying) {
+        startAutoPlay();
+    } else if (!isPaused) {
+        pauseAutoPlay();
+    } else {
+        resumeAutoPlay();
+    }
+    updateAutoPlayButton();
+}
+
+
+// 自動撥放 Step 2
+function startAutoPlay() {
+    if (currentSentenceList.length === 0) {
+        alert("請先選擇一個句子列表再啟動自動播放！");
+        return;
+    }
+    isAutoPlaying = true;
+    isPaused = false;
+    currentSentenceIndex = 0; // 從第一個句子開始
+    playCurrentSentence();
+}
+
+
+// 自動撥放 Step 3
+function playCurrentSentence() {
+    if (currentSentenceIndex >= 0 && currentSentenceIndex < currentSentenceList.length) {
+        let sentenceId = currentSentenceList[currentSentenceIndex].Words;
+        playSentenceAudio(`${sentenceId}.mp3`);
+        sentenceAudio.onended = () => {
+            if (isAutoPlaying && !isPaused) {
+                currentSentenceIndex++;
+                if (currentSentenceIndex < currentSentenceList.length) {
+                    playCurrentSentence();
+                } else {
+                    isAutoPlaying = false;
+                    updateAutoPlayButton();
+                }
+            }
+        };
+    }
+}
+
+// 自動撥放 Step 4
+function pauseAutoPlay() {
+    isPaused = true;
+    if (sentenceAudio && sentenceAudio.readyState >= 2) {
+        sentenceAudio.pause();
+    }
+}
+
+// 自動撥放 Step 4
+function resumeAutoPlay() {
+    isPaused = false;
+    if (sentenceAudio && sentenceAudio.readyState >= 2) {
+        sentenceAudio.play();
+    }
+}
+
+// 自動撥放 Step 5
+function updateAutoPlayButton() {
+    let autoPlayBtn = document.getElementById("autoPlayBtn");
+    if (autoPlayBtn) {
+        if (isAutoPlaying) {
+            autoPlayBtn.textContent = isPaused ? "繼續播放" : "停止播放";
+        } else {
+            autoPlayBtn.textContent = "自動播放";
+        }
+    }
+}
+
 // 第二層：顯示單字列表
 function showWords(type, value) {
     let titleText = type === "letter" ? value.toUpperCase() : type === "category" ? value : `${value} Level`;
@@ -721,10 +814,29 @@ function playSentenceAudio(filename) {
         .catch(error => {
             console.error(`🔊 播放 ${filename} 失敗:`, error);
             if (playBtn) playBtn.classList.remove("playing");
+            // 如果自動播放中，跳到下一個
+            if (isAutoPlaying && !isPaused) {
+                currentSentenceIndex++;
+                if (currentSentenceIndex < currentSentenceList.length) {
+                    playCurrentSentence();
+                } else {
+                    isAutoPlaying = false;
+                    updateAutoPlayButton();
+                }
+            }
         });
     sentenceAudio.onended = () => {
         if (playBtn) playBtn.classList.remove("playing");
         console.log(`✅ ${filename} 播放結束`);
+        if (isAutoPlaying && !isPaused) {
+            currentSentenceIndex++;
+            if (currentSentenceIndex < currentSentenceList.length) {
+                playCurrentSentence();
+            } else {
+                isAutoPlaying = false;
+                updateAutoPlayButton();
+            }
+        }
     };
     document.querySelectorAll(".audio-btn.playing").forEach(btn => {
         if (btn !== playBtn) btn.classList.remove("playing");
@@ -888,11 +1000,22 @@ function backToWordList() {
 }
 
 function backToSentenceList(event) {
-    event.stopPropagation(); // 阻止事件冒泡
+    event.stopPropagation();
+
+    // 如果自動播放模式正在運行，則先停止自動播放
+    if (isAutoPlaying) {
+        isAutoPlaying = false;
+        isPaused = false;
+        if (sentenceAudio && sentenceAudio.readyState >= 2) {
+            sentenceAudio.pause();
+        }
+    }
+
+    // 隱藏句子詳情頁面
+    document.getElementById("sentenceDetails").style.display = "none";
+    
     const urlParams = new URLSearchParams(window.location.search);
     const fromParam = urlParams.get('from');
-
-    document.getElementById("sentenceDetails").style.display = "none";
 
     if (fromParam === 'quiz') {
         window.location.href = "quiz.html?returning=true";
