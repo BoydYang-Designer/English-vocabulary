@@ -486,16 +486,23 @@ function startAutoPlay() {
 }
 
 // 自動撥放 Step 3
+// 自動撥放 Step 3
 function playCurrentSentence() {
     if (currentSentenceIndex >= 0 && currentSentenceIndex < currentSentenceList.length) {
         let sentenceId = currentSentenceList[currentSentenceIndex].Words;
+
         // 如果當前在第四層（句子詳情頁），更新畫面
         if (document.getElementById("sentenceDetails").style.display === "block") {
             showSentenceDetails(sentenceId, currentSentenceIndex);
+        } else {
+            // 如果在句子列表頁，高亮當前句子
+            highlightCurrentSentence(sentenceId);
         }
+
         playSentenceAudio(`${sentenceId}.mp3`);
         sentenceAudio.onended = () => {
             if (isAutoPlaying && !isPaused) {
+                removeHighlight(sentenceId); // 移除當前高亮
                 currentSentenceIndex++;
                 if (currentSentenceIndex < currentSentenceList.length) {
                     playCurrentSentence(); // 播放並切換到下一個句子
@@ -511,34 +518,70 @@ function playCurrentSentence() {
     }
 }
 
+function highlightCurrentSentence(sentenceId) {
+    // 移除所有現有的播放高亮
+    document.querySelectorAll(".word-item-container.playing").forEach(item => {
+        item.classList.remove("playing");
+    });
+
+    // 找到當前句子並添加高亮
+    const currentItem = document.querySelector(`.word-item[data-sentence="${sentenceId}"]`);
+    if (currentItem) {
+        const container = currentItem.closest(".word-item-container");
+        if (container) {
+            container.classList.add("playing");
+            // 自動滾動到當前句子（可選）
+            container.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    }
+}
+
+function removeHighlight(sentenceId) {
+    const currentItem = document.querySelector(`.word-item[data-sentence="${sentenceId}"]`);
+    if (currentItem) {
+        const container = currentItem.closest(".word-item-container");
+        if (container) {
+            container.classList.remove("playing");
+        }
+    }
+}
+
 // 自動撥放 Step 4
 function playSentenceAudio(filename) {
     console.log("開始播放:", filename);
+    const sentenceId = filename.replace(".mp3", "");
     const playButtons = document.querySelectorAll(`.audio-btn[onclick="playSentenceAudio('${filename}')"]`);
     const playBtn = playButtons[playButtons.length - 1] || document.getElementById("playAudioBtn");
     sentenceAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/Sentence%20file/${filename}`;
     if (playBtn) {
         playBtn.classList.add("playing");
     }
+    
+    // 如果在句子列表頁，手動播放時也高亮
+    if (document.getElementById("sentenceList").style.display === "block") {
+        highlightCurrentSentence(sentenceId);
+    }
+
     sentenceAudio.play()
         .then(() => console.log(`✅ 播放 ${filename} 成功`))
         .catch(error => {
             console.error(`🔊 播放 ${filename} 失敗:`, error);
             if (playBtn) playBtn.classList.remove("playing");
             if (isAutoPlaying && !isPaused) {
+                removeHighlight(sentenceId);
                 currentSentenceIndex++;
                 if (currentSentenceIndex < currentSentenceList.length) {
-                    playCurrentSentence(); // 跳到下一個並更新畫面
+                    playCurrentSentence();
                 } else {
                     isAutoPlaying = false;
                     updateAutoPlayButton();
                 }
             }
         });
-    // 移除重複的 onended 處理，交給 playCurrentSentence 處理
     sentenceAudio.onended = () => {
         if (playBtn) playBtn.classList.remove("playing");
         console.log(`✅ ${filename} 播放結束`);
+        if (!isAutoPlaying) removeHighlight(sentenceId); // 手動播放結束時移除高亮
     };
     document.querySelectorAll(".audio-btn.playing").forEach(btn => {
         if (btn !== playBtn) btn.classList.remove("playing");
@@ -1192,12 +1235,17 @@ function backToSentenceList(event) {
     const urlParams = new URLSearchParams(window.location.search);
     const fromParam = urlParams.get('from');
 
-    // 如果從測驗頁面返回，跳轉到 quiz.html
+    // 如果從測驗頁面進入，跳轉回 quiz.html
     if (fromParam === 'quiz') {
         window.location.href = "quiz.html?returning=true";
     }
-    // 如果上一層是句子列表，根據上下文恢復
+    // 確認上一層是句子列表（第三層），並恢復顯示
     else if (parentLayer === "sentenceList") {
+        // 恢復句子列表頁的顯示
+        document.getElementById("sentenceList").style.display = "block";
+        document.getElementById("wordListTitle").style.display = "block";
+
+        // 根據上下文重新渲染句子列表
         if (lastWordListType === "sentenceNotes") {
             showSentenceNotes();
         } else if (lastWordListType === "importantSentences") {
@@ -1206,19 +1254,19 @@ function backToSentenceList(event) {
             showWrongSentences();
         } else if (lastWordListType === "checkedSentences") {
             showCheckedSentences();
-        } else if (lastWordListType === "letter" && lastWordListValue) {
-            showWordsAndSentences("letter", lastWordListValue);
         } else if (lastSentenceListWord) {
-            showSentences(lastSentenceListWord);
-        } else {
-            // 如果無法確定上下文，顯示當前句子列表
+            showSentences(lastSentenceListWord); // 根據最後的單字恢復句子列表
+        } else if (currentSentenceList.length > 0) {
+            // 如果有當前句子列表，直接顯示
             displaySentenceList(currentSentenceList);
-            document.getElementById("sentenceList").style.display = "block";
-            document.getElementById("wordListTitle").style.display = "block";
+        } else {
+            console.warn("⚠️ 無法確定句子列表上下文，返回第一層");
+            backToFirstLayer();
         }
     }
-    // 默認回到第一層
+    // 如果 parentLayer 不是 sentenceList，預設回到第一層
     else {
+        console.warn("⚠️ parentLayer 未正確設置為 sentenceList，返回第一層");
         backToFirstLayer();
     }
 }
