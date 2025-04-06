@@ -282,6 +282,56 @@ function showCheckedSentences() {
     displaySentenceList(currentSentenceList);
 }
 
+function showSentenceNotes() {
+    parentLayer = "firstLayer"; // 設定上一層為第一層
+    console.log("進入 showSentenceNotes, sentenceData.length:", sentenceData.length);
+
+    document.getElementById("wordListTitle").innerHTML = `
+        <span>Note句子</span>
+        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
+    `;
+    document.getElementById("wordListTitle").style.display = "block";
+
+    lastWordListType = "sentenceNotes"; // 記錄當前類型
+    lastWordListValue = null;
+
+    // 隱藏其他元素
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("wordQuizBtn").style.display = "none";
+    document.getElementById("returnHomeBtn").style.display = "none";
+    document.getElementById("sentencePageBtn").style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+
+    if (!sentenceData || sentenceData.length === 0) {
+        console.error("❌ sentenceData 未載入或為空");
+        document.getElementById("sentenceItems").innerHTML = "<p>⚠️ 資料載入失敗，請刷新頁面</p>";
+        return;
+    }
+
+    // 過濾出有筆記的句子
+    let noteSentences = sentenceData.filter(s => {
+        const note = localStorage.getItem(`note_sentence_${s.Words}`);
+        console.log(`檢查 ${s.Words} 的筆記:`, note); // 除錯用
+        return note && note.length > 0;
+    });
+    console.log("過濾後的 noteSentences:", noteSentences);
+
+    if (noteSentences.length === 0) {
+        console.warn("⚠️ 沒有標記為 Note 的句子");
+        document.getElementById("sentenceItems").innerHTML = "<p>⚠️ 目前沒有帶筆記的句子</p>";
+        return;
+    }
+
+    // 按單字和數字排序
+    currentSentenceList = sortSentencesByWordAndNumber(noteSentences);
+    console.log("排序後的 currentSentenceList:", currentSentenceList);
+    displaySentenceList(currentSentenceList); // 使用現有的顯示函數
+}
+
+
 function showSentences(word) {
     parentLayer = "wordList";
     document.getElementById("wordListTitle").innerHTML = `
