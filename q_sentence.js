@@ -238,7 +238,10 @@ function loadSentenceQuestion() {
         return;
     }
 
-    let sentenceText = sentenceObj.句子;
+    // 原始句子
+    let originalSentence = sentenceObj.句子;
+    // 移除括號內容（例如 [=critique]）
+    let sentenceText = originalSentence.replace(/\s*\[=[^\]]+\]/g, "").trim();
     let words = sentenceText.split(/\b/);
 
     let sentenceInputContainer = document.getElementById("sentenceInput");
@@ -250,7 +253,7 @@ function loadSentenceQuestion() {
     // 計算最長單字的字母數
     let maxWordLength = Math.max(...words.filter(w => /\w+/.test(w)).map(w => w.length));
     let screenWidth = window.innerWidth || document.documentElement.clientWidth;
-    let inputWidth = Math.min(15, Math.floor(screenWidth / (maxWordLength + 5))); // 動態計算寬度，留出餘量
+    let inputWidth = Math.min(15, Math.floor(screenWidth / (maxWordLength + 5)));
 
     words.forEach((word, index) => {
         let wordContainer = document.createElement("div");
@@ -262,7 +265,7 @@ function loadSentenceQuestion() {
                 input.type = "text";
                 input.maxLength = 1;
                 input.classList.add("letter-input");
-                input.style.width = `${inputWidth}px`; // 動態設置寬度
+                input.style.width = `${inputWidth}px`;
                 input.dataset.wordIndex = index;
                 input.dataset.letterIndex = letterIndex;
                 input.addEventListener("input", handleLetterInput);
@@ -284,7 +287,7 @@ function loadSentenceQuestion() {
         sentenceInputContainer.appendChild(wordContainer);
     });
 
-    // 提示文字邏輯保持不變
+    // 提示文字邏輯，使用過濾後的句子
     let wordCount = words.filter(word => /\w+/.test(word)).length;
     let wordsToShow = Math.max(1, Math.floor(wordCount / 5));
     let indicesToShow = new Set();
@@ -329,6 +332,9 @@ function loadSentenceQuestion() {
             console.log("✅ 音檔播放結束");
         };
     }
+
+    // 儲存過濾後的句子作為正確答案
+    sentenceObj.filteredSentence = sentenceText; // 添加到物件中供後續檢查使用
 }
 
 
@@ -461,7 +467,7 @@ document.addEventListener("keydown", function (event) {
 
 function submitSentenceAnswer() {
     let sentenceObj = currentQuizSentences[currentSentenceIndex];
-    let correctSentence = sentenceObj.句子;
+    let correctSentence = sentenceObj.filteredSentence || sentenceObj.句子.replace(/\s*\[=[^\]]+\]/g, "").trim(); // 使用過濾後的句子
     let allInputs = document.querySelectorAll("#sentenceInput .letter-input");
 
     let correctWords = correctSentence.split(/\b/);
