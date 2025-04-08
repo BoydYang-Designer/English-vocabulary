@@ -14153,54 +14153,74 @@
             "中文": "派對的噪音被大樓厚重的牆壁隔絕了。"
         },
         {
+            "音檔": "音檔 - dangle-1",
             "等級": "B1",
             "Words": "dangle-1",
-            "句子": "The keys dangled from her fingers as she walked"
+            "句子": "The keys dangled from her fingers as she walked",
+            "中文": "她走路時，鑰匙從她手指間晃蕩著。"
         },
         {
+            "音檔": "音檔 - dangle-2",
             "等級": "B1",
             "Words": "dangle-2",
-            "句子": "A necklace dangled from her neck, catching the sunlight"
+            "句子": "A necklace dangled from her neck, catching the sunlight",
+            "中文": "一條項鍊從她脖子上垂下來，映著陽光閃閃發亮。"
         },
         {
+            "音檔": "音檔 - dangle-3",
             "等級": "B1",
             "Words": "dangle-3",
-            "句子": "The curtain dangled from the rod, loosely hanging to the floor"
+            "句子": "The curtain dangled from the rod, loosely hanging to the floor",
+            "中文": "窗簾從桿子上垂下來，鬆散地掛到地板上。"
         },
         {
+            "音檔": "音檔 - dangle-4",
             "等級": "B1",
             "Words": "dangle-4",
-            "句子": "The promise of a bonus dangled before the employees, motivating them to work harder"
+            "句子": "The promise of a bonus dangled before the employees, motivating them to work harder",
+            "中文": "獎金的承諾在員工面前晃蕩，激勵他們更加努力工作。"
         },
         {
+            "音檔": "音檔 - dangle-5",
             "等級": "B1",
             "Words": "dangle-5",
-            "句子": "She dangled the idea of a vacation in front of her children, but they didn't know when it would happen"
+            "句子": "She dangled the idea of a vacation in front of her children, but they didn't know when it would happen",
+            "中文": "她在她孩子面前提起了度假的想法，但他們不知道什麼時候會實現。"
         },
         {
+            "音檔": "音檔 - deadlock-1",
             "等級": "B2",
             "Words": "deadlock-1",
-            "句子": "The negotiations deadlocked when both parties refused to budge on their demands"
+            "句子": "The negotiations deadlocked when both parties refused to budge on their demands",
+            "中文": "當雙方都不肯在各自的要求上讓步時，談判陷入了僵局。"
         },
         {
+            "音檔": "音檔 - deadlock-2",
             "等級": "B2",
             "Words": "deadlock-2",
-            "句子": "The two teams deadlocked in a scoreless match"
+            "句子": "The two teams deadlocked in a scoreless match",
+            "中文": "兩支隊伍在沒有得分的比賽中陷入僵局。"
         },
         {
+            "音檔": "音檔 - deadlock-3",
             "等級": "B2",
             "Words": "deadlock-3",
-            "句子": "Her home run deadlocked the game at 3–3"
+            "句子": "Her home run deadlocked the game at 3–3",
+            "中文": "她的一記全壘打讓比賽以3比3陷入僵局。"
         },
         {
+            "音檔": "音檔 - deadlock-4",
             "等級": "B2",
             "Words": "deadlock-4",
-            "句子": "The board meeting ended in a deadlock, with no decision reached on the proposed merger"
+            "句子": "The board meeting ended in a deadlock, with no decision reached on the proposed merger",
+            "中文": "董事會會議以僵局告終，對於提議的合併案未能達成任何決定。"
         },
         {
+            "音檔": "音檔 - deadlock-5",
             "等級": "B2",
             "Words": "deadlock-5",
-            "句子": "Today's meeting with the supervisor regarding employee workload ended in a deadlock"
+            "句子": "Today's meeting with the supervisor regarding employee workload ended in a deadlock",
+            "中文": "今天與主管關於員工工作量的會議以僵局結束。"
         },
         {
             "音檔": "音檔 - debris-1",
@@ -14227,89 +14247,123 @@
             "中文": "工人們清理了工地上的建築殘骸。"
         },
         {
+            "音檔": "音檔 - decay-1",
             "等級": "B1",
             "Words": "decay-1",
-            "句子": "The dentist warned him about tooth decay caused by too much sugar"
+            "句子": "The dentist warned him about tooth decay caused by too much sugar",
+            "中文": "牙醫警告他，過多的糖分會導致牙齒蛀壞。"
         },
         {
+            "音檔": "音檔 - decay-2",
             "等級": "B1",
             "Words": "decay-2",
-            "句子": "The old house showed signs of decay, with crumbling walls and broken windows"
+            "句子": "The old house showed signs of decay, with crumbling walls and broken windows",
+            "中文": "那座老房子顯示出衰敗的跡象，牆壁崩塌，窗戶破裂。"
         },
         {
+            "音檔": "音檔 - decay-3",
             "等級": "B1",
             "Words": "decay-3",
-            "句子": "The decay of moral values in society was a concern for many"
+            "句子": "The decay of moral values in society was a concern for many",
+            "中文": "社會道德價值的衰退令許多人感到擔憂。"
         },
         {
+            "音檔": "音檔 - decay-4",
             "等級": "B1",
             "Words": "decay-4",
-            "句子": "The once-great empire fell into decay over the centuries"
+            "句子": "The once-great empire fell into decay over the centuries",
+            "中文": "那個曾經偉大的帝國在幾個世紀裡陷入了衰亡。"
         },
         {
+            "音檔": "音檔 - decay-5",
             "等級": "B1",
             "Words": "decay-5",
-            "句子": "The fallen leaves began to decay on the forest floor"
+            "句子": "The fallen leaves began to decay on the forest floor",
+            "中文": "落葉開始在森林地面上腐爛。"
         },
         {
+            "音檔": "音檔 - decay-6",
             "等級": "B1",
             "Words": "decay-6",
-            "句子": "If food is left out for too long, it will start to decay"
+            "句子": "If food is left out for too long, it will start to decay",
+            "中文": "如果食物被放置太久，就會開始腐壞。"
         },
         {
+            "音檔": "音檔 - decay-7",
             "等級": "B1",
             "Words": "decay-7",
-            "句子": "His memory started to decay with age"
+            "句子": "His memory started to decay with age",
+            "中文": "隨著年齡增長，他的記憶開始衰退。"
         },
         {
+            "音檔": "音檔 - decay-8",
             "等級": "B1",
             "Words": "decay-8",
-            "句子": "Without proper maintenance, the building will quickly decay"
+            "句子": "Without proper maintenance, the building will quickly decay",
+            "中文": "如果沒有適當的維護，這棟建築很快就會衰敗。"
         },
         {
+            "音檔": "音檔 - deceit-1",
             "等級": "B1",
             "Words": "deceit-1",
-            "句子": "The con artist's deceit was exposed when his lies were uncovered by authorities"
+            "句子": "The con artist's deceit was exposed when his lies were uncovered by authorities",
+            "中文": "當騙子的謊言被當局揭穿時，他的欺騙行為暴露了出來。"
         },
         {
+            "音檔": "音檔 - deceive-1",
             "等級": "B2",
             "Words": "deceive-1",
-            "句子": "She deceived him into believing that she was wealthy"
+            "句子": "She deceived him into believing that she was wealthy",
+            "中文": "她欺騙他，讓他相信她很富有。"
         },
         {
+            "音檔": "音檔 - decelerate-1",
             "等級": "C1",
             "Words": "decelerate-1",
-            "句子": "1"
+            "句子": "As they approached the intersection, the driver began to decelerate, preparing to stop at the red light",
+            "中文": "當他們接近十字路口時，司機開始減速，準備在紅燈前停下來。"
         },
         {
+            "音檔": "音檔 - decelerate-2",
             "等級": "C1",
             "Words": "decelerate-2",
-            "句子": "2"
+            "句子": "Experts predict that economic growth will decelerate",
+            "中文": "專家預測經濟增長將會放緩。"
         },
         {
+            "音檔": "音檔 - decency-1",
             "等級": "B2",
             "Words": "decency-1",
-            "句子": "He was admired for his decency and honesty in all his dealings"
+            "句子": "He was admired for his decency and honesty in all his dealings",
+            "中文": "他因在所有交易中的正直與誠實而受到欽佩。"
         },
         {
+            "音檔": "音檔 - decency-2",
             "等級": "B2",
             "Words": "decency-2",
-            "句子": "Despite the heated debate, they maintained a level of decency toward each other"
+            "句子": "Despite the heated debate, they maintained a level of decency toward each other",
+            "中文": "儘管辯論激烈，他們仍然對彼此保持一定程度的禮貌。"
         },
         {
+            "音檔": "音檔 - decency-3",
             "等級": "B2",
             "Words": "decency-3",
-            "句子": "If you're going to be late, please have the decency to call and let me know"
+            "句子": "If you're going to be late, please have the decency to call and let me know",
+            "中文": "如果你會遲到，請有禮貌地打電話通知我。"
         },
         {
+            "音檔": "音檔 - deception-1",
             "等級": "C1",
             "Words": "deception-1",
-            "句子": "These deceptions cost them dear"
+            "句子": "These deceptions cost them dear",
+            "中文": "這些欺騙讓他們付出了慘重的代價。"
         },
         {
+            "音檔": "音檔 - deception-2",
             "等級": "C1",
             "Words": "deception-2",
-            "句子": "After years of trusting their financial advisor, they discovered that he had been involved in fraudulent schemes"
+            "句子": "After years of trusting their financial advisor, they discovered that he had been involved in fraudulent schemes",
+            "中文": "經過多年信任他們的財務顧問後，他們發現他一直參與詐騙計劃。"
         },
         {
             "音檔": "音檔 - decisive-1",
@@ -14326,34 +14380,46 @@
             "中文": "在攝影中，捕捉決定性瞬間通常需要技巧和直覺，將轉瞬即逝的時刻凝固，講述一個震撼人心的故事。"
         },
         {
+            "音檔": "音檔 - declaration-1",
             "等級": "C2",
             "Words": "declaration-1",
-            "句子": "The president’s declaration of the new policy changes was broadcast nationwide"
+            "句子": "The president’s declaration of the new policy changes was broadcast nationwide",
+            "中文": "總統宣佈新政策變動的消息已在全國廣播。"
         },
         {
+            "音檔": "音檔 - declaration-2",
             "等級": "C2",
             "Words": "declaration-2",
-            "句子": "Her declaration of intent to run for office gathered a lot of media attention"
+            "句子": "Her declaration of intent to run for office gathered a lot of media attention",
+            "中文": "她宣布有意參選的聲明引起了大量媒體關注。"
         },
         {
+            "音檔": "音檔 - declaration-3",
             "等級": "C2",
             "Words": "declaration-3",
-            "句子": "His declaration of innocence convinced the jury to consider his case carefully"
+            "句子": "His declaration of innocence convinced the jury to consider his case carefully",
+            "中文": "他聲明自己無辜的話語說服了陪審團仔細考慮他的案件。"
         },
         {
+            "音檔": "音檔 - declaration-4",
             "等級": "C2",
             "Words": "declaration-4",
-            "句子": "The company's declaration about its environmental efforts was well-received by the community"
+            "句子": "The company's declaration about its environmental efforts was well-received by the community",
+            "中文": "該公司關於其環保努力的聲明受到社區的好評。"
         },
         {
+            "音檔": "音檔 - declaration-5",
             "等級": "C2",
             "Words": "declaration-5",
-            "句子": "The Declaration of Independence is one of the most important documents in American history"
+            "句子": "The Declaration of Independence is one of the most important documents in American history",
+            "中文": "《獨立宣言》是美國歷史上最重要的文件之一。"
         },
         {
+            "音檔": "音檔 - declaration-6",
             "等級": "C2",
             "Words": "declaration-6",
-            "句子": "The court required a signed declaration of assets from the defendant"
+            "句子": "The court required a signed declaration of assets from the defendant",
+            "中文": "法院要求被告提供簽署的財產聲明。"
         },
         {
             "音檔": "音檔 - decor-1",
@@ -14377,119 +14443,165 @@
             "中文": "(這家餐廳的裝飾帶有工業風格，具有裸露的磚牆和金屬家具。)"
         },
         {
+            "音檔": "音檔 - deed-1",
             "等級": "B1",
             "Words": "deed-1",
-            "句子": "She performed a heroic deed by saving the child from the burning building"
+            "句子": "She performed a heroic deed by saving the child from the burning building",
+            "中文": "她通過將孩子從燃燒的建築中救出，完成了一項英雄壯舉。"
         },
         {
+            "音檔": "音檔 - deed-2",
             "等級": "B1",
             "Words": "deed-2",
-            "句子": "His good deeds in the community earned him the respect of his peers"
+            "句子": "His good deeds in the community earned him the respect of his peers",
+            "中文": "他在社區中的善行贏得了同儕的尊重。"
         },
         {
+            "音檔": "音檔 - deed-3",
             "等級": "B1",
             "Words": "deed-3",
-            "句子": "The thief was caught after committing several criminal deeds"
+            "句子": "The thief was caught after committing several criminal deeds",
+            "中文": "那名小偷在犯下幾起罪行後被抓獲。"
         },
         {
+            "音檔": "音檔 - deed-4",
             "等級": "B1",
             "Words": "deed-4",
-            "句子": "The house was officially transferred to him through a deed of sale"
+            "句子": "The house was officially transferred to him through a deed of sale",
+            "中文": "這棟房子通過一份銷售契約正式轉讓給了他。"
         },
         {
+            "音檔": "音檔 - deed-5",
             "等級": "B1",
             "Words": "deed-5",
-            "句子": "The lawyer presented the deed as proof of ownership of the land"
+            "句子": "The lawyer presented the deed as proof of ownership of the land",
+            "中文": "律師將契約呈交作為土地所有權的證明。"
         },
         {
+            "音檔": "音檔 - deem-1",
             "等級": "B1",
             "Words": "deem-1",
-            "句子": "The board deemed the proposal beneficial for the company’s future"
+            "句子": "The board deemed the proposal beneficial for the company’s future",
+            "中文": "董事會認為該提案對公司未來有利。"
         },
         {
+            "音檔": "音檔 - deem-2",
             "等級": "B1",
             "Words": "deem-2",
-            "句子": "She was deemed qualified for the position after a thorough review"
+            "句子": "She was deemed qualified for the position after a thorough review",
+            "中文": "經過徹底審查後，她被認為符合該職位的資格。"
         },
         {
+            "音檔": "音檔 - deem-3",
             "等級": "B1",
             "Words": "deem-3",
-            "句子": "The project was deemed successful based on the positive feedback"
+            "句子": "The project was deemed successful based on the positive feedback",
+            "中文": "根據正面的反饋，該項目被認為是成功的。"
         },
         {
+            "音檔": "音檔 - deem-4",
             "等級": "B1",
             "Words": "deem-4",
-            "句子": "The responsibility has been deemed too burdensome for one person to handle"
+            "句子": "The responsibility has been deemed too burdensome for one person to handle",
+            "中文": "這項責任已被認為對一個人來說過於沉重，無法承擔。"
         },
         {
+            "音檔": "音檔 - deem-5",
             "等級": "B1",
             "Words": "deem-5",
-            "句子": "The building was deemed [=considered, judged] unsafe after the fire"
+            "句子": "The building was deemed [=considered, judged] unsafe after the fire",
+            "中文": "這座建築在火災後被認為（= 被視為、判定為）不安全。"
         },
         {
+            "音檔": "音檔 - deem-6",
             "等級": "B1",
             "Words": "deem-6",
-            "句子": "He deemed that it was his duty to help the needy"
+            "句子": "He deemed that it was his duty to help the needy",
+            "中文": "他認為幫助有需要的人是他的責任。"
         },
         {
+            "音檔": "音檔 - default-1",
             "等級": "B2",
             "Words": "default-1",
-            "句子": "The company went into default on its loan"
+            "句子": "The company went into default on its loan",
+            "中文": "該公司未能履行其貸款義務。"
         },
         {
+            "音檔": "音檔 - default-2",
             "等級": "B2",
             "Words": "default-2",
-            "句子": "He was sued for defaulting on his rent payments"
+            "句子": "He was sued for defaulting on his rent payments",
+            "中文": "他因未支付租金而被起訴。"
         },
         {
+            "音檔": "音檔 - default-3",
             "等級": "B2",
             "Words": "default-3",
-            "句子": "The default setting on the computer was set to automatic updates"
+            "句子": "The default setting on the computer was set to automatic updates",
+            "中文": "電腦的預設設定為自動更新。"
         },
         {
+            "音檔": "音檔 - default-4",
             "等級": "B2",
             "Words": "default-4",
-            "句子": "The default font in the document is Times New Roman"
+            "句子": "The default font in the document is Times New Roman",
+            "中文": "文件中的預設字型是 Times New Roman。"
         },
         {
+            "音檔": "音檔 - default-5",
             "等級": "B2",
             "Words": "default-5",
-            "句子": "No one else wanted the job, so he became the club's president by default"
+            "句子": "No one else wanted the job, so he became the club's president by default",
+            "中文": "沒有人願意接這份工作，所以他自動成為了俱樂部的會長。"
         },
         {
+            "音檔": "音檔 - default-6",
             "等級": "B2",
             "Words": "default-6",
-            "句子": "We won the game by default when the other team failed to show up"
+            "句子": "We won the game by default when the other team failed to show up",
+            "中文": "當對方隊伍未能出現時，我們自動贏得了比賽。"
         },
         {
+            "音檔": "音檔 - default-7",
             "等級": "B2",
             "Words": "default-7",
-            "句子": "If you default on your mortgage, you could lose your home"
+            "句子": "If you default on your mortgage, you could lose your home",
+            "中文": "如果你未能償還房貸，可能會失去你的家。"
         },
         {
+            "音檔": "音檔 - default-8",
             "等級": "B2",
             "Words": "default-8",
-            "句子": "After the power outage, the system defaulted to its original settings"
+            "句子": "After the power outage, the system defaulted to its original settings",
+            "中文": "停電後，系統自動恢復到原始設定。"
         },
         {
+            "音檔": "音檔 - default-9",
             "等級": "B2",
             "Words": "default-9",
-            "句子": "The player defaulted in the tournament because of her injury"
+            "句子": "The player defaulted in the tournament because of her injury",
+            "中文": "該名選手因為受傷而在比賽中棄權。"
         },
         {
+            "音檔": "音檔 - defraud-1",
             "等級": "B2",
             "Words": "defraud-1",
-            "句子": "He defrauded them of their money"
+            "句子": "He defrauded them of their money",
+            "中文": "他詐騙了他們的錢。"
         },
         {
+            "音檔": "音檔 - deft-1",
             "等級": "B1",
             "Words": "deft-1",
-            "句子": "Using deft strokes of the brush, the artist created a masterpiece that captured the essence of the sunset"
+            "句子": "Using deft strokes of the brush, the artist created a masterpiece that captured the essence of the sunset",
+            "中文": "藝術家用巧妙的畫筆 strokes 創作了一幅捕捉日落精髓的傑作。"
         },
         {
+            "音檔": "音檔 - deft-2",
             "等級": "B1",
             "Words": "deft-2",
-            "句子": "She deftly navigated through the crowded streets, weaving between pedestrians with graceful ease"
+            "句子": "She deftly navigated through the crowded streets, weaving between pedestrians with graceful ease",
+            "中文": "她熟練地穿梭在擁擠的街道上，輕盈地在人群中穿行。"
         },
         {
             "等級": "C2",
