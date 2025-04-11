@@ -10,6 +10,16 @@
             "Unnamed: 9": "absorb"
         },
         {
+            "等級": "B2",
+            "分類": "娛樂",
+            "Words": "debut",
+            "pronunciation-1": "[ˋdɛb͵ju]",
+            "traditional Chinese": "N.首次露面；初次登臺\nV. 首次公開露面或表演",
+            "English meaning": "\"Debut\" is a noun and verb with the following meanings:\nAs a Noun:\nThe first public appearance or presentation of someone or something, especially in a professional context.\nE.g. The actress made her film debut at the age of sixteen.\nE.g. His debut as a conductor was highly praised by critics.\nE.g. The new smartphone will have its debut next month.\nAs a Verb (debut / debuted / debuting):\nTo make a first appearance or performance in public.\nE.g. The singer debuted her new song on live television.\nE.g. The product debuted to great fanfare at the tech conference.\nE.g. He debuted as a professional basketball player last season.\nSummary:\n\"Debut\" refers to the first appearance or introduction of someone or something, either as a noun (the event) or a verb (to appear for the first time).\nRelated Words:\nIntroduction, launch, premiere, opening\nAntonyms:\nRetirement, withdrawal, exit, conclusion",
+            "Unnamed: 8": "debut",
+            "Unnamed: 9": "debut"
+        },
+        {
             "分類": "Design",
             "Words": "absorption",
             "pronunciation-1": "[əbˋsɔrpʃən]",
@@ -39,7 +49,7 @@
         },
         {
             "等級": "B2",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "abusive",
             "pronunciation-1": "[əˋbjusɪv]",
             "traditional Chinese": "adj.辱罵的；濫用的",
@@ -119,7 +129,7 @@
         },
         {
             "等級": "C1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "actuation",
             "pronunciation-1": "[͵æktʃʊˋeʃən]",
             "traditional Chinese": "n.1.驅使；行動；\n  2.激勵",
@@ -129,7 +139,7 @@
         },
         {
             "等級": "B1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "acute",
             "pronunciation-1": "[əˋkjut]",
             "traditional Chinese": "adj.1.尖銳的；劇烈的；急性的\n    2.【數】銳角的\n    3. 敏銳的",
@@ -160,7 +170,7 @@
         },
         {
             "等級": "B2",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "adequacy",
             "pronunciation-1": "[ˋædəkwəsɪ]",
             "traditional Chinese": "n.適當；恰當；足夠",
@@ -170,7 +180,7 @@
         },
         {
             "等級": "B2",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "adequate",
             "pronunciation-1": "[ˋædəkwɪt]",
             "traditional Chinese": "adj.1.足夠的\n      2.適當的\n      3.尚可的，差強人意的",
@@ -180,7 +190,7 @@
         },
         {
             "等級": "B1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "adorn",
             "pronunciation-1": "/əˈdoɚn/",
             "traditional Chinese": "vt.裝飾；使生色(+with)",
@@ -190,7 +200,7 @@
         },
         {
             "等級": "C1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "adornment",
             "pronunciation-1": "[əˋdɔrnmənt]",
             "traditional Chinese": "n.裝飾(的動作with)\n   裝飾品",
@@ -200,7 +210,7 @@
         },
         {
             "等級": "B2",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "adverse",
             "pronunciation-1": "[ædˋvɝs]",
             "traditional Chinese": "adj.1.不利的，有害的\n     2.逆向的；反面的\n     3.反對的，敵對的",
@@ -239,6 +249,7 @@
         },
         {
             "等級": "C1",
+            "分類": "娛樂",
             "Words": "aerial-display",
             "pronunciation-1": "[ˋɛrɪəl dɪˋsple]",
             "traditional Chinese": "n.空中表演",
@@ -258,6 +269,7 @@
         },
         {
             "等級": "C1",
+            "分類": "建築",
             "Words": "aerial-survey",
             "pronunciation-1": "[ˋɛrɪəl sɚˋve]",
             "traditional Chinese": "n.空中測量 ; 航空勘測",
@@ -351,7 +363,7 @@
         },
         {
             "等級": "C1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "aftermath",
             "pronunciation-1": "[ˋæftɚ͵mæθ]",
             "traditional Chinese": "n.，餘波；事件結束後的一段時期",
@@ -371,7 +383,7 @@
         },
         {
             "等級": "B2",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "agility",
             "pronunciation-1": "əˋdʒɪlətɪ]",
             "traditional Chinese": "n.敏捷；靈活；機敏",
@@ -401,7 +413,7 @@
         },
         {
             "等級": "C2",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "agriculture",
             "pronunciation-1": "[ˋægrɪ͵kʌltʃɚ]",
             "traditional Chinese": "n.農業，農耕；農藝，農學",
@@ -431,7 +443,7 @@
         },
         {
             "等級": "B1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "album",
             "pronunciation-1": "ˋælbəm",
             "traditional Chinese": "n.1.唱片集，唱片套冊\n   2.相簿；集郵簿",
@@ -471,7 +483,7 @@
         },
         {
             "等級": "B1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "alley",
             "pronunciation-1": "[ˋælɪ]",
             "traditional Chinese": "n.小巷，胡同",
@@ -510,7 +522,7 @@
         },
         {
             "等級": "B1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "amber",
             "pronunciation-1": "[ˋæmbɚ]",
             "traditional Chinese": "n.1.琥珀\nadj. 1.琥珀似的",
@@ -520,7 +532,7 @@
         },
         {
             "等級": "B2",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "ambiance",
             "pronunciation-1": "[ˋæmbɪəns]",
             "traditional Chinese": "n.（地、人、物特有的）格調；氣氛；",
@@ -530,7 +542,7 @@
         },
         {
             "等級": "C1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "ambiguity",
             "pronunciation-1": "[͵æmbɪˋgjuətɪ]",
             "traditional Chinese": "n.模稜兩可的話；含糊話[C]",
@@ -540,7 +552,7 @@
         },
         {
             "等級": "C1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "ambiguous",
             "pronunciation-1": "[æmˋbɪgjʊəs]",
             "traditional Chinese": "adj.模稜兩可的，模糊不清的",
@@ -550,7 +562,7 @@
         },
         {
             "等級": "B1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "ambush",
             "pronunciation-1": "[ˋæmbʊʃ]",
             "traditional Chinese": "n.1.埋伏；伏擊\nv.2.埋伏；伏擊",
@@ -570,6 +582,7 @@
         },
         {
             "等級": "C2",
+            "分類": "法律",
             "Words": "amendment",
             "pronunciation-1": "[əˋmɛndmənt]",
             "traditional Chinese": "n.改正，修正；改善[U][C]",
@@ -579,6 +592,7 @@
         },
         {
             "等級": "B1",
+            "分類": "文學",
             "Words": "amid",
             "pronunciation-1": "[əˋmɪd]",
             "traditional Chinese": "prep.在……之間；在……之中",
@@ -588,6 +602,7 @@
         },
         {
             "等級": "B1",
+            "分類": "文學",
             "Words": "amidst",
             "pronunciation-1": "[əˋmɪdst]",
             "traditional Chinese": "prep.在……之間；在……之中",
@@ -597,6 +612,7 @@
         },
         {
             "等級": "C1",
+            "分類": "科技",
             "Words": "amphibious",
             "pronunciation-1": "[æmˋfɪbɪəs]",
             "traditional Chinese": "adj.水陸兩用的",
@@ -606,6 +622,7 @@
         },
         {
             "等級": "B1",
+            "分類": "科技",
             "Words": "amplify",
             "pronunciation-1": "[ˋæmplə͵faɪ]",
             "traditional Chinese": "v.1.放大（聲音等）；增強\n  2.詳述，詳說",
@@ -614,7 +631,8 @@
             "Unnamed: 9": "amplify"
         },
         {
-            "等級": "B1",
+            "等級": "B2",
+            "分類": "歷史文化",
             "Words": "amulet",
             "pronunciation-1": "[ˋæmjəlɪt]",
             "traditional Chinese": "n.護身符；避邪物",
@@ -624,6 +642,7 @@
         },
         {
             "等級": "B2",
+            "分類": "歷史文化",
             "Words": "ancestor",
             "pronunciation-1": "[ˋænsɛstɚ]",
             "traditional Chinese": "n.1.祖宗，祖先\n   2.原型；先驅\n  (現代動物是從過去的動物發展而來的)",
@@ -633,6 +652,7 @@
         },
         {
             "等級": "B2",
+            "分類": "歷史文化",
             "Words": "ancestry",
             "pronunciation-1": "[ˋænsɛstrɪ]",
             "traditional Chinese": "n.1.（總稱）祖先，列祖列宗\n  2. 血統",
@@ -652,7 +672,7 @@
         },
         {
             "等級": "B2",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "anecdote",
             "pronunciation-1": "[ˋænɪk͵dot]",
             "traditional Chinese": "n.軼事，趣聞；祕史，祕聞",
@@ -662,6 +682,7 @@
         },
         {
             "等級": "B2",
+            "分類": "動作",
             "Words": "animate",
             "pronunciation-1": "[ˋænə͵met]",
             "traditional Chinese": "adj.有生命的；活的\nv.1.使活潑，使有活力，使有生氣\n   2.繪製（卡通影片）",
@@ -671,6 +692,7 @@
         },
         {
             "等級": "C1",
+            "分類": "動作",
             "Words": "animation",
             "pronunciation-1": "[͵ænəˋmeʃən]",
             "traditional Chinese": "n.1.卡通片，動畫片\n   2.生氣，活潑，熱烈",
@@ -680,6 +702,7 @@
         },
         {
             "等級": "B1",
+            "分類": " 商業",
             "Words": "annum",
             "pronunciation-1": "[ˋænəm]",
             "traditional Chinese": "n.【拉丁語】年",
@@ -707,6 +730,7 @@
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "anonymous",
             "pronunciation-1": "[əˋnɑnəməs]",
             "traditional Chinese": "adj.1.匿名的；姓氏不明的\n     2. 無特色的，無個性特徵的",
@@ -736,6 +760,7 @@
         },
         {
             "等級": "B2",
+            "分類": "科技",
             "Words": "antenna",
             "pronunciation-1": "[ænˋtɛnə]",
             "traditional Chinese": "n.1.【無】【美】天線\n   2.【動】觸角，觸鬚",
@@ -755,6 +780,7 @@
         },
         {
             "等級": "C2",
+            "分類": "藝術",
             "Words": "anthropomorphic",
             "pronunciation-1": "[͵ænθrəpəˋmɔrfɪk]",
             "traditional Chinese": "adj.被賦予人形（或人性）的，擬人的",
@@ -764,6 +790,7 @@
         },
         {
             "等級": "C2",
+            "分類": "醫學",
             "Words": "antibiotics",
             "pronunciation-1": "[͵æntɪbaɪˋɑtɪks]",
             "traditional Chinese": "n. 【微】抗生素，抗菌素",
@@ -782,6 +809,7 @@
         },
         {
             "等級": "C2",
+            "分類": "健康",
             "Words": "antioxidant",
             "pronunciation-1": "[͵æntɪˋɑksədənt]",
             "traditional Chinese": "n.【化】抗氧化劑",
@@ -887,7 +915,7 @@
         },
         {
             "等級": "B1",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "appreciate",
             "pronunciation-1": "[əˋpriʃɪ͵et]",
             "traditional Chinese": "v.1.欣賞，賞識\n  2.感謝，感激\n  3.升值",
@@ -897,7 +925,7 @@
         },
         {
             "等級": "B1",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "appreciation",
             "pronunciation-1": "[ə͵priʃɪˋeʃən]",
             "traditional Chinese": "n1.欣賞，賞識\n  2.感激，表示感謝\n  3.漲價；增值[U][S1]",
@@ -1225,7 +1253,7 @@
         },
         {
             "等級": "C2",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "at-first-blush",
             "pronunciation-1": "[blʌʃ]",
             "traditional Chinese": "ph.乍一看|最初的印象",
@@ -4421,7 +4449,7 @@
         },
         {
             "等級": "C1",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "eavesdrop",
             "pronunciation-1": "[ˋivz͵drɑp]",
             "traditional Chinese": "v.竊聽 偷聽; 偷聽",
@@ -5321,7 +5349,7 @@
         },
         {
             "等級": "C1",
-            "分類": "歷史",
+            "分類": "歷史文化",
             "Words": "feud",
             "pronunciation-1": "[fjud]",
             "traditional Chinese": "n.世仇，長期爭鬥：(指家族、團體或個人之間持續已久且充滿敵意的衝突或爭端)\nv.長期爭鬥，持續爭執：(捲入長時間且充滿敵意的衝突或爭端)",
@@ -5350,9 +5378,12 @@
             "Unnamed: 9": "figurine"
         },
         {
+            "等級": "B2",
+            "分類": "工具",
             "Words": "file",
-            "traditional Chinese": "v.用銼刀銼[Q]",
-            "English meaning": "We had to file the plastic edges of the clasp to make to big enough for 2 belts.",
+            "pronunciation-1": "[faɪl]",
+            "traditional Chinese": "N.1檔案\n   2.工具，銼刀(指用於磨光、平整或去除物質表面的工具)\n\nV.1.整理檔案\n    2.使用銼刀處理物體\n\n",
+            "English meaning": "\"File\" is a noun and a verb with the following meanings:\nAs a Noun:\n1. A collection of documents, records, or information stored together, often organized for easy access or reference.\nE.g. She placed the important documents in a file labeled \"Confidential.\"\nE.g. The office maintains an electronic file for every employee.\nE.g. The lawyer reviewed the case file before the trial.\n2. A tool with a rough surface used for smoothing or shaping materials, especially metal or wood.\nE.g. He used a metal file to smooth the edges of the steel.\nE.g. She carefully filed the wooden surface to remove any rough patches.\nAs a Verb (file / filed / filing):\n1. To organize, store, or categorize documents or information in a file.\nE.g. She filed the paperwork in the correct folder.\nE.g. The secretary spent the afternoon filing the client forms.\nE.g. The assistant filed the reports for easy retrieval.\n2. To smooth, shape, or polish something using a file tool.\nE.g. He filed the nails carefully to give them a clean, even shape.\nE.g. The carpenter filed the wood to create a smooth surface.\nSummary:\n\"File\" refers to both a collection of documents or records, as well as a tool used for shaping or smoothing. It can also refer to the act of organizing documents or polishing materials.\nRelated Words:\nFolder, archive, document, tool, smooth, organize\nAntonyms:\nMisplace, disorganize, roughen, damage",
             "Unnamed: 8": "file",
             "Unnamed: 9": "file"
         },
@@ -5865,7 +5896,7 @@
         },
         {
             "等級": "B1",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "gossip",
             "pronunciation-1": "[ˋgɑsəp]",
             "traditional Chinese": "n.1.閒話，聊天，小道傳聞[U]\n  2.愛傳流言蜚語的人\nv.閒聊；傳播流言蜚語(+about)",
@@ -6159,7 +6190,7 @@
         },
         {
             "等級": "B2",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "hearsay",
             "pronunciation-1": "[ˈhɪrˌseɪ]",
             "traditional Chinese": "n. 傳聞；道聽途說；傳言",
@@ -6214,7 +6245,7 @@
         },
         {
             "等級": "B2",
-            "分類": "歷史",
+            "分類": "歷史文化",
             "Words": "heritage",
             "pronunciation-1": "[ˋhɛrətɪdʒ]",
             "traditional Chinese": "N.\n遺產，傳統，文化：(從前人傳承下來的傳統、習俗、文化或價值觀，通常指特定群體、社區或國家的歷史和遺產)",
@@ -7598,7 +7629,7 @@
         },
         {
             "等級": "C1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "lifeblood",
             "pronunciation-1": "[ˋlaɪf͵blʌd]",
             "traditional Chinese": "n.1.命脈 生機的根源 \n  2.生命必需的血液",
@@ -7839,7 +7870,7 @@
         },
         {
             "等級": "B2",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "almost as if",
             "pronunciation-1": "/ˈɔːlməʊst əz ɪf/",
             "traditional Chinese": "Phrase.\n彷彿，好像：(表示某件事情看起來或感覺上與另一件事非常相似，儘管實際上並非如此)",
@@ -9254,7 +9285,7 @@
         },
         {
             "等級": "B2",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "overhear",
             "pronunciation-1": "[͵ovɚˋhɪr]",
             "traditional Chinese": "v.無意中聽到；偷聽到",
@@ -10823,7 +10854,7 @@
         },
         {
             "等級": "B2",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "reliant",
             "pronunciation-1": "[rɪˋlaɪənt]",
             "traditional Chinese": "adj.依賴的；依靠的；有信心的",
@@ -11249,7 +11280,7 @@
         },
         {
             "等級": "C2",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "rumor-has-it",
             "pronunciation-1": "rumor has it",
             "traditional Chinese": "phr.有傳言說",
@@ -11259,7 +11290,7 @@
         },
         {
             "等級": "B1",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "rumour",
             "pronunciation-1": "[ˋrumɚ]",
             "traditional Chinese": "n.謠言，謠傳\nv..謠言，謠傳",
@@ -11415,7 +11446,7 @@
         },
         {
             "等級": "B1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "scroll",
             "pronunciation-1": "[skrol]",
             "traditional Chinese": "n.1.卷軸\nv.滾屏",
@@ -11462,7 +11493,7 @@
         },
         {
             "等級": "C2",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "scuttlebutt",
             "pronunciation-1": "[ˈskʌtlˌbʌt]",
             "traditional Chinese": "n.流言蜚語",
@@ -11892,7 +11923,7 @@
         },
         {
             "等級": "B2",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "social-media-influencer",
             "pronunciation-1": "[ˋsoʃəl]\n[ˋmidɪə]\n[ˈɪnflʊənsə]",
             "traditional Chinese": "n.社群媒體影響者\n   網紅",
@@ -12752,7 +12783,7 @@
         },
         {
             "等級": "C1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "sustenance",
             "pronunciation-1": "[ˋsʌstənəns]",
             "traditional Chinese": "n.食物，糧食；營養（品）；生計",
@@ -13339,7 +13370,7 @@
         },
         {
             "等級": "B2",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "token",
             "pronunciation-1": "[ˋtokən]",
             "traditional Chinese": "n.1.象徵，標誌\n  2.代幣\n  3.象徵性物品\nv.1.表達感謝或尊重",
@@ -13373,7 +13404,7 @@
         },
         {
             "等級": "B2",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "torment",
             "pronunciation-1": "[tɔrˋmɛnt]-v",
             "pronunciation-2": "[ˋtɔr͵mɛnt]-n",
@@ -13384,7 +13415,7 @@
         },
         {
             "等級": "B2",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "torture",
             "pronunciation-1": "[ˋtɔrtʃɚ]",
             "traditional Chinese": "n.折磨，酷刑；拷問\nv.1.拷打，酷刑；拷問[U]\n   2.折磨；使為難(+with/by)\n",
@@ -13420,7 +13451,7 @@
         },
         {
             "等級": "B1",
-            "分類": "daily",
+            "分類": "日常生活",
             "Words": "towel",
             "pronunciation-1": "[ˋtaʊəl]",
             "traditional Chinese": "n.毛巾，手巾；紙巾\nv.用毛巾擦(+down)",
@@ -14375,7 +14406,7 @@
         },
         {
             "等級": "B2",
-            "分類": "對話",
+            "分類": "日常生活",
             "Words": "whisper",
             "pronunciation-1": " [ˈwɪspər]",
             "traditional Chinese": "n. 低語聲；耳語\n    （風，樹葉等）颯颯地響\nv. 低語；耳語",
