@@ -329,16 +329,36 @@ h1, h2 {
 }
 
 .letter-input {
-    width: 15px; /* 默認寬度 */
+    width: 15px;
     height: 25px;
     font-size: 20px;
     text-align: center;
-    border: none;
-    border-bottom: 2px solid black;
+    border: 2px solid #6c757d; /* 深灰色完整邊框 */
+    border-radius: 4px;
     outline: none;
     background: transparent;
-    min-width: 10px; /* 最小寬度，防止過窄 */
-    flex-shrink: 1; /* 允許縮減 */
+    min-width: 10px;
+    flex-shrink: 1;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.letter-input:focus {
+    border-color: #007bff; /* 聚焦時藍色邊框 */
+    background: #f8f9fa; /* 聚焦時淺灰背景 */
+}
+
+@media (max-width: 600px) {
+    .letter-input {
+        width: 18px;
+        height: 28px;
+        font-size: 22px;
+        border: 2px solid #6c757d;
+        border-radius: 4px;
+    }
+
+    .letter-input:focus {
+        border-color: #007bff;
+    }
 }
 
 .filled-letter {
