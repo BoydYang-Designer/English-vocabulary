@@ -323,7 +323,20 @@ function submitAnswer() {
         }
     }
 
-    document.getElementById("wordHint").innerHTML = revealedWord;
+    // 查找單字的中文解釋
+    let wordData = wordsData.find(w => w.Words === currentWord);
+    let chineseExplanation = wordData && wordData["traditional Chinese"] 
+        ? wordData["traditional Chinese"].replace(/\n/g, "<br>") // 將換行符號轉為 HTML 換行
+        : "無中文解釋";
+
+    // 顯示提示和中文解釋
+    document.getElementById("wordHint").innerHTML = `
+        <div>${revealedWord}</div>
+        <div class="chinese-explanation">
+            <h3>中文解釋</h3>
+            <p>${chineseExplanation}</p>
+        </div>
+    `;
 
     // 顯示「下一題」按鈕
     document.getElementById("submitBtn").style.display = "none";
