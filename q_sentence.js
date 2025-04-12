@@ -9,8 +9,8 @@ let currentSentenceIndex = 0;
 let userAnswers = []; // 延遲到 DOMContentLoaded 時載入
 let incorrectSentences = []; // 設為空陣列，稍後動態載入
 let importantSentences = []; // 延遲到 DOMContentLoaded 時載入
-
 let currentQuizSentences = []; // 新增變數來儲存本次測驗的句子
+let userConstructedSentences = [];
 
 let selectedSentenceFilters = {
     levels: new Set(),
@@ -315,28 +315,272 @@ function loadSentenceQuestion() {
     document.getElementById("nextSentenceBtn").style.display = "none";
 
     if (sentenceObj.Words) {
+        // 生成音頻 URL
         let audioUrl = GITHUB_MP3_BASE_URL + encodeURIComponent(sentenceObj.Words) + ".mp3";
+        
+        // 如果已有音頻對象，先暫停
         if (currentAudio instanceof Audio) {
             currentAudio.pause();
         }
+        
+        // 創建新的音頻對象
         currentAudio = new Audio(audioUrl);
         
-        const playBtn = document.getElementById("playSentenceAudioBtn");
+        // 獲取重組測驗的播放按鈕
+        const playBtn = document.getElementById("playReorganizeAudioBtn");
         playBtn.classList.remove("playing");
         
-        currentAudio.play().catch(error => console.warn("🔊 自動播放被禁止", error));
-        playBtn.onclick = () => playAudio();
-
+        // 綁定點擊事件以手動播放音頻
+        playBtn.onclick = () => {
+            if (currentAudio) {
+                playBtn.classList.add("playing"); // 添加播放中的視覺反饋
+                currentAudio.currentTime = 0; // 重置到開頭
+                currentAudio.play().catch(error => {
+                    console.error("🔊 播放失敗:", error);
+                    playBtn.classList.remove("playing"); // 失敗時移除播放狀態
+                });
+            }
+        };
+        
+        // 監聽音頻播放結束
         currentAudio.onended = () => {
             playBtn.classList.remove("playing");
             console.log("✅ 音檔播放結束");
         };
+        
+        // 可選：嘗試自動播放（根據需求保留或移除）
+        // currentAudio.play().catch(error => console.warn("🔊 自動播放被禁止", error));
     }
 
     // 儲存過濾後的句子作為正確答案
     sentenceObj.filteredSentence = sentenceText; // 添加到物件中供後續檢查使用
 }
 
+// 📌 1開始測驗重組句子
+function startReorganizeQuiz() {
+    document.getElementById("sentenceQuizCategories").style.display = "none";
+    document.getElementById("reorganizeQuizArea").style.display = "block";
+
+    // 假設 sentenceData 和 selectedSentenceFilters 已定義
+    let filteredSentences = sentenceData.filter(item => {
+        let levelMatch = selectedSentenceFilters.levels.size === 0 || 
+                         selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
+        let categoryMatch = selectedSentenceFilters.categories.size === 0 || 
+                            selectedSentenceFilters.categories.has(item.分類 || "未分類") ||
+                            (selectedSentenceFilters.categories.has("important") && 
+                             localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
+                            (selectedSentenceFilters.categories.has("incorrect") && 
+                             incorrectSentences.includes(item.Words)) ||
+                            (selectedSentenceFilters.categories.has("checked") && 
+                             localStorage.getItem(`checked_sentence_${item.Words}`) === "true");
+        let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || 
+                            selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
+        return levelMatch && categoryMatch && alphabetMatch;
+    });
+
+    if (filteredSentences.length === 0) {
+        alert("❌ 沒有符合條件的測驗句子");
+        returnToSentenceCategorySelection();
+        return;
+    }
+
+    currentQuizSentences = filteredSentences.sort(() => Math.random() - 0.5).slice(0, 10);
+    currentSentenceIndex = 0;
+    userConstructedSentences = [];
+    localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
+    loadReorganizeQuestion();
+}
+
+
+// 📌 2載入重組問題
+function loadReorganizeQuestion() {
+    // 獲取當前句子並檢查有效性
+    let sentenceObj = currentQuizSentences[currentSentenceIndex];
+    if (!sentenceObj || !sentenceObj.句子) {
+        console.error("❌ 找不到有效的句子對象！");
+        return;
+    }
+
+    // 過濾句子並儲存
+    let sentenceText = sentenceObj.句子.replace(/\s*\[=[^\]]+\]/g, "").trim();
+    sentenceObj.filteredSentence = sentenceText;
+
+    // 分割句子，排除純空白，用於提示
+    let words = sentenceText.split(/\s+/).filter(w => w !== "");
+    let wordCount = words.filter(w => /\w+/.test(w)).length;
+    let wordsToShow = Math.max(1, Math.floor(wordCount / 5));
+    let indicesToShow = new Set();
+    while (indicesToShow.size < wordsToShow) {
+        let idx = Math.floor(Math.random() * words.length);
+        if (/\w+/.test(words[idx])) indicesToShow.add(idx);
+    }
+    let hintWords = words.map((w, i) => indicesToShow.has(i) ? w : "_".repeat(w.length));
+    document.getElementById("reorganizeSentenceHint").innerHTML = hintWords.join(" ");
+
+    // 生成詞塊（僅單詞，排除標點符號）
+    let blocks = [];
+    let regex = /[a-zA-Z]+(?:'s)?/g; // 匹配單詞，包含所有格 's
+    let match;
+    while ((match = regex.exec(sentenceText)) !== null) {
+        blocks.push({ value: match[0], type: "word" });
+    }
+
+    // 隨機打亂詞塊
+    blocks.sort(() => Math.random() - 0.5);
+    let blocksContainer = document.getElementById("wordBlocksContainer");
+    blocksContainer.innerHTML = blocks.map(b => 
+        `<div class="word-block" data-value="${b.value}" data-type="${b.type}" onclick="selectWordBlock(this)">${b.value}</div>`
+    ).join("");
+
+    // 清空構建區域
+    document.getElementById("sentenceConstructionArea").innerHTML = "";
+
+    // 添加音頻播放功能
+    if (sentenceObj.Words) {
+        let audioUrl = GITHUB_MP3_BASE_URL + encodeURIComponent(sentenceObj.Words) + ".mp3";
+        if (currentAudio instanceof Audio) {
+            currentAudio.pause();
+        }
+        currentAudio = new Audio(audioUrl);
+        
+        const playBtn = document.getElementById("playReorganizeAudioBtn");
+        playBtn.classList.remove("playing");
+        
+        playBtn.onclick = () => {
+            if (currentAudio) {
+                playBtn.classList.add("playing");
+                currentAudio.currentTime = 0;
+                currentAudio.play().catch(error => {
+                    console.error("🔊 播放失敗:", error);
+                    playBtn.classList.remove("playing");
+                });
+            }
+        };
+        
+        currentAudio.onended = () => {
+            playBtn.classList.remove("playing");
+            console.log("✅ 音檔播放結束");
+        };
+    }
+}
+
+// 📌 3選擇詞塊
+function selectWordBlock(block) {
+    let constructionArea = document.getElementById("sentenceConstructionArea");
+    if (block.parentNode === constructionArea) {
+        block.classList.remove("selected");
+        document.getElementById("wordBlocksContainer").appendChild(block);
+    } else {
+        block.classList.add("selected");
+        constructionArea.appendChild(block);
+    }
+}
+
+// 📌 4提交答案
+function submitReorganizeAnswer() {
+    let constructionArea = document.getElementById("sentenceConstructionArea");
+    let userAnswer = Array.from(constructionArea.children).map(b => b.dataset.value).join(" ");
+    let sentenceObj = currentQuizSentences[currentSentenceIndex];
+    let correctSentence = sentenceObj.filteredSentence;
+
+    userConstructedSentences[currentSentenceIndex] = userAnswer;
+
+    // 僅比較單詞部分，排除標點符號
+    let userWords = userAnswer.match(/[a-zA-Z]+(?:'s)?/g) || [];
+    let correctWords = correctSentence.match(/[a-zA-Z]+(?:'s)?/g) || [];
+    let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toLowerCase();
+
+    if (!isCorrect && !incorrectSentences.includes(sentenceObj.Words)) {
+        incorrectSentences.push(sentenceObj.Words);
+    } else if (isCorrect) {
+        incorrectSentences = incorrectSentences.filter(w => w !== sentenceObj.Words);
+    }
+    localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
+
+    // 更新詞塊反饋
+    constructionArea.querySelectorAll(".word-block").forEach((block, i) => {
+        let correctWord = correctWords[i] || "";
+        block.classList.add(block.dataset.value.toLowerCase() === correctWord.toLowerCase() ? "correct" : "incorrect");
+    });
+
+    // 更新提示區顯示完整正確答案（包含標點符號）
+    document.getElementById("reorganizeSentenceHint").innerHTML = correctSentence;
+
+    document.getElementById("submitReorganizeBtn").innerText = "下一題";
+    document.getElementById("submitReorganizeBtn").onclick = goToNextReorganizeSentence;
+}
+
+// 📌 5切換到下一題
+function goToNextReorganizeSentence() {
+    currentSentenceIndex++;
+    if (currentSentenceIndex >= currentQuizSentences.length) {
+        alert("🎉 測驗結束！");
+        finishReorganizeQuiz();
+        return;
+    }
+    loadReorganizeQuestion();
+    document.getElementById("submitReorganizeBtn").innerText = "提交";
+    document.getElementById("submitReorganizeBtn").onclick = submitReorganizeAnswer;
+}
+
+// 📌 6完成測驗
+function finishReorganizeQuiz() {
+    document.getElementById("reorganizeQuizArea").style.display = "none";
+    document.getElementById("quizResult").style.display = "block";
+
+    incorrectSentences = JSON.parse(localStorage.getItem("wrongQS")) || incorrectSentences;
+    console.log("✅ finishReorganizeQuiz 時的 incorrectSentences:", incorrectSentences);
+
+    let resultContainer = document.getElementById("quizResult");
+    resultContainer.innerHTML = "<h2>重組測驗結果</h2>";
+
+    for (let index = 0; index < userConstructedSentences.length; index++) {
+        let sentenceObj = currentQuizSentences[index];
+        if (!sentenceObj) continue;
+
+        let userAnswer = userConstructedSentences[index] || "(未作答)";
+        let correctSentence = sentenceObj.句子;
+
+        let userAnswerNormalized = userAnswer.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
+        let correctSentenceNormalized = correctSentence.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
+        let isCorrect = userAnswerNormalized === correctSentenceNormalized;
+        let isUnanswered = userAnswer === "(未作答)";
+
+        let resultClass = isCorrect ? "correct" : (isUnanswered ? "unanswered" : "wrong");
+
+        let importantCheckbox = `<input type="checkbox" class="important-checkbox" onchange="toggleImportantSentence('${sentenceObj.Words}', this)" ${localStorage.getItem('important_sentence_' + sentenceObj.Words) === "true" ? "checked" : ""} />`;
+        let sentenceIdentifierLink = `<a href="sentence.html?sentence=${encodeURIComponent(sentenceObj.Words)}&from=quiz&layer=4" class="sentence-link-btn">${sentenceObj.Words}</a>`;
+        let wordDetailButton = `<button class="word-detail-btn" onclick="goToWordDetail('${sentenceObj.Words.split("-")[0]}')">單字詳情</button>`;
+        let correctSentenceLink = `<button class="sentence-link-btn" onclick="playSentenceAudio('${sentenceObj.Words}.mp3')">${correctSentence}</button>`;
+
+        resultContainer.innerHTML += `
+            <div class="result-item ${resultClass}">
+                ${importantCheckbox}
+                <div class="horizontal-group">
+                    ${sentenceIdentifierLink}
+                    ${wordDetailButton}
+                </div>
+                <div class="vertical-group">
+                    ${correctSentenceLink}
+                </div>
+            </div>
+        `;
+    }
+
+    resultContainer.innerHTML += `
+        <div class="result-buttons">
+            <button class="action-button" onclick="saveQSResults()">Save</button>
+            <button class="action-button" onclick="returnToMainMenu()">Back</button>
+        </div>
+    `;
+
+    // 確保保存本次測驗的結果
+    localStorage.setItem("userConstructedSentences", JSON.stringify(userConstructedSentences));
+    localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
+    console.log("✅ 測驗結束時保存的資料:", { userConstructedSentences, currentQuizSentences });
+}
+
+document.getElementById("startReorganizeQuizBtn").addEventListener("click", startReorganizeQuiz);
 
 // 📌 **輸入監聽函數**
 function handleLetterInput(event) {
@@ -756,11 +1000,15 @@ function toggleImportantSentence(word, checkbox) {
 // 📌 返回主選單（測驗第一層）
 function returnToMainMenu() {
     document.getElementById("quizResult").style.display = "none";
+    document.getElementById("sentenceQuizArea").style.display = "none";
+    document.getElementById("reorganizeQuizArea").style.display = "none";
+    document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("mainMenu").style.display = "block";
     
     // 只重置當前測驗狀態，不清空 incorrectSentences
     currentSentenceIndex = 0;
     userAnswers = [];
+    userConstructedSentences = [];
     sentenceData = JSON.parse(localStorage.getItem("sentenceData")) || [];
     selectedSentenceFilters.levels.clear();
     selectedSentenceFilters.categories.clear();

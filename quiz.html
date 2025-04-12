@@ -35,12 +35,28 @@
             <div class="button-container">
                 <button class="back-button" onclick="returnToSourcePage()">Back</button>
                 <button id="startSentenceQuizBtn" class="button">Start Quiz</button>
+                <button id="startReorganizeQuizBtn" class="button">Reorganize Quiz</button>
             </div>
             <div class="category-container" id="sentenceCategoryButtons"></div>
             <div class="level-container" id="sentenceLevelButtons"></div>
             
 
         </div>
+
+        <!-- Q Sentence 重組測驗區 -->
+<div id="reorganizeQuizArea" style="display: none;">
+    <button id="cancelReorganizeQuizBtn" class="back-button" onclick="returnToSentenceCategorySelection()">Cancel</button>
+    <div id="reorganizeSentenceHint"></div>
+    <div id="sentenceConstructionArea" class="construction-area"></div>
+    <div id="wordBlocksContainer" class="word-blocks-container"></div>
+    <div class="button-group">
+        <button id="playReorganizeAudioBtn" class="button">🔊 播放</button>
+        <button id="submitReorganizeBtn" class="button" onclick="submitReorganizeAnswer()">提交</button>
+        <button id="nextReorganizeBtn" class="button" onclick="goToNextReorganizeSentence()" style="display: none;">下一題</button>
+        <button class="button" onclick="finishReorganizeQuiz()">完成測驗</button>
+    </div>
+</div>
+
 
         <!-- 單字測驗區 -->
         <div id="quizArea" style="display: none;">

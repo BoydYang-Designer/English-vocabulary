@@ -602,3 +602,83 @@ input[type="checkbox"]:checked + span {
     line-height: 1.2;
     color: #555;
 }
+
+/* 重組測驗的構建區域 */
+.construction-area {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 50px;
+    border: 2px dashed #ccc;
+    padding: 10px;
+    gap: 5px;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* 詞塊容器 */
+.word-blocks-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* 詞塊樣式 */
+.word-block {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.word-block:hover {
+    background-color: #e0e0e0;
+}
+
+.word-block.selected {
+    background-color: #d0d0d0;
+    opacity: 0.7;
+}
+
+.word-block.correct {
+    background-color: #d4edda; /* 與 result-item.correct 一致 */
+    border-color: #28a745;
+}
+
+.word-block.incorrect {
+    background-color: #f8d7da; /* 與 result-item.wrong 一致 */
+    border-color: #dc3545;
+}
+
+/* 重組提示文字 */
+#reorganizeSentenceHint {
+    font-size: 26px;
+    margin: 20px 5px;
+    text-align: center;
+    letter-spacing: 4px;
+    color: #333;
+}
+
+/* 手機適配 */
+@media (max-width: 600px) {
+    .construction-area {
+        min-height: 40px;
+        padding: 8px;
+    }
+    .word-block {
+        padding: 6px 10px;
+        font-size: 16px;
+    }
+    #reorganizeSentenceHint {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+}
