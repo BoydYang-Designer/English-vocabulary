@@ -521,6 +521,17 @@ function goToNextReorganizeSentence() {
     loadReorganizeQuestion();
     document.getElementById("submitReorganizeBtn").innerText = "提交";
     document.getElementById("submitReorganizeBtn").onclick = submitReorganizeAnswer;
+
+    // 自動播放音頻
+    if (currentAudio) {
+        const playBtn = document.getElementById("playReorganizeAudioBtn");
+        playBtn.classList.add("playing");
+        currentAudio.currentTime = 0;
+        currentAudio.play().catch(error => {
+            console.warn("🔊 自動播放失敗:", error);
+            playBtn.classList.remove("playing");
+        });
+    }
 }
 
 // 📌 6完成測驗
@@ -685,26 +696,59 @@ function handleSpacebar(event) {
 document.addEventListener("keydown", function (event) {
     // 處理 Enter 鍵
     if (event.key === "Enter") {
-        event.preventDefault(); // 避免滾動
-        if (document.getElementById("sentenceQuizArea").style.display !== "block") {
-            console.log("⚠️ 不在句子測驗模式，忽略 Enter 鍵");
-            return;
+        event.preventDefault(); // 防止滾動或其他默認行為
+        // Sentence Quiz
+        if (document.getElementById("sentenceQuizArea").style.display === "block") {
+            let submitBtn = document.getElementById("submitSentenceBtn");
+            if (!submitBtn) return;
+            if (submitBtn.dataset.next === "true") {
+                console.log("📌 進入下一題 (Sentence Quiz)");
+                goToNextSentence();
+            } else {
+                console.log("📌 提交答案 (Sentence Quiz)");
+                submitSentenceAnswer();
+            }
         }
-
-        let submitBtn = document.getElementById("submitSentenceBtn");
-        if (!submitBtn) return;
-
-        if (submitBtn.dataset.next === "true") {
-            console.log("📌 進入下一題");
-            goToNextSentence();
+        // Reorganize Quiz
+        else if (document.getElementById("reorganizeQuizArea").style.display === "block") {
+            let submitBtn = document.getElementById("submitReorganizeBtn");
+            if (!submitBtn) return;
+            if (submitBtn.innerText === "下一題") {
+                console.log("📌 進入下一題 (Reorganize Quiz)");
+                goToNextReorganizeSentence();
+            } else {
+                console.log("📌 提交答案 (Reorganize Quiz)");
+                submitReorganizeAnswer();
+            }
         } else {
-            console.log("📌 提交答案");
-            submitSentenceAnswer();
+            console.log("⚠️ 不在測驗模式，忽略 Enter 鍵");
         }
     }
 
     // 處理空白鍵
-    handleSpacebar(event);
+    if (event.code === "Space") {
+        event.preventDefault(); // 阻止頁面滾動
+        // Sentence Quiz
+        if (document.getElementById("sentenceQuizArea").style.display === "block") {
+            console.log("📌 空白鍵觸發音頻播放 (Sentence Quiz)");
+            playAudio();
+        }
+        // Reorganize Quiz
+        else if (document.getElementById("reorganizeQuizArea").style.display === "block") {
+            console.log("📌 空白鍵觸發音頻播放 (Reorganize Quiz)");
+            if (currentAudio) {
+                const playBtn = document.getElementById("playReorganizeAudioBtn");
+                playBtn.classList.add("playing");
+                currentAudio.currentTime = 0;
+                currentAudio.play().catch(error => {
+                    console.error("🔊 播放失敗:", error);
+                    playBtn.classList.remove("playing");
+                });
+            } else {
+                console.warn("⚠️ 無音頻可播放");
+            }
+        }
+    }
 });
 
 

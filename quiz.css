@@ -90,11 +90,11 @@ h1, h2 {
     margin-top: 10px;
 }
 
-.button, .back-button, #startFilteredQuizBtn, #startSentenceQuizBtn {
+.button, .back-button, #startFilteredQuizBtn, #startSentenceQuizBtn, #startReorganizeQuizBtn {
     display: block;
     width: 150px;
-    height: 40px;
-    background-color: #424d57;
+    height: 50px;
+    background-color: #424d57; /* 默認按鈕顏色 */
     color: white;
     font-size: 18px;
     border-radius: 25px;
@@ -119,15 +119,16 @@ h1, h2 {
     background-color: #d32f2f;
 }
 
-#startFilteredQuizBtn, #startSentenceQuizBtn {
-    background-color: #4CAF50;
+#startFilteredQuizBtn, #startSentenceQuizBtn, #startReorganizeQuizBtn {
+    background-color: #4CAF50; /* 綠色背景，與 Start Quiz 一致 */
     padding: 10px 20px;
 }
 
-#startFilteredQuizBtn:hover, #startSentenceQuizBtn:hover {
-    background-color: #45a049;
+#startFilteredQuizBtn:hover, #startSentenceQuizBtn:hover, #startReorganizeQuizBtn:hover {
+    background-color: #45a049; /* 懸停時略暗的綠色 */
 }
 
+/* 其他按鈕樣式保持不變 */
 .category-button {
     padding: 10px 15px;
     margin: 5px;
@@ -607,11 +608,12 @@ input[type="checkbox"]:checked + span {
 .construction-area {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中，確保單行時居中 */
     min-height: 50px;
     border: 2px dashed #ccc;
     padding: 10px;
     gap: 5px;
-    align-items: center;
     margin: 20px auto;
     max-width: 100%;
     background-color: #fff;
