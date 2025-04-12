@@ -406,20 +406,20 @@ function loadReorganizeQuestion() {
     sentenceObj.filteredSentence = sentenceText;
 
     // 分割句子，排除純空白，用於提示
-    let words = sentenceText.split(/\s+/).filter(w => w !== "");
-    let wordCount = words.filter(w => /\w+/.test(w)).length;
+    let words = sentenceText.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|[.,!?;]/g).filter(w => w !== "");
+    let wordCount = words.filter(w => /[a-zA-Z]/.test(w)).length;
     let wordsToShow = Math.max(1, Math.floor(wordCount / 5));
     let indicesToShow = new Set();
     while (indicesToShow.size < wordsToShow) {
         let idx = Math.floor(Math.random() * words.length);
-        if (/\w+/.test(words[idx])) indicesToShow.add(idx);
+        if (/[a-zA-Z]/.test(words[idx])) indicesToShow.add(idx);
     }
     let hintWords = words.map((w, i) => indicesToShow.has(i) ? w : "_".repeat(w.length));
     document.getElementById("reorganizeSentenceHint").innerHTML = hintWords.join(" ");
 
-    // 生成詞塊（僅單詞，排除標點符號）
+    // 生成詞塊（僅單詞和縮寫，排除標點符號）
     let blocks = [];
-    let regex = /[a-zA-Z]+(?:'s)?/g; // 匹配單詞，包含所有格 's
+    let regex = /[a-zA-Z]+(?:'[a-zA-Z]+)?/g; // 匹配單詞或縮寫（如 I'm, He's, building's）
     let match;
     while ((match = regex.exec(sentenceText)) !== null) {
         blocks.push({ value: match[0], type: "word" });
@@ -485,9 +485,9 @@ function submitReorganizeAnswer() {
 
     userConstructedSentences[currentSentenceIndex] = userAnswer;
 
-    // 僅比較單詞部分，排除標點符號
-    let userWords = userAnswer.match(/[a-zA-Z]+(?:'s)?/g) || [];
-    let correctWords = correctSentence.match(/[a-zA-Z]+(?:'s)?/g) || [];
+    // 僅比較單詞和縮寫部分，排除標點符號
+    let userWords = userAnswer.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?/g) || [];
+    let correctWords = correctSentence.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?/g) || [];
     let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toLowerCase();
 
     if (!isCorrect && !incorrectSentences.includes(sentenceObj.Words)) {
@@ -536,7 +536,8 @@ function goToNextReorganizeSentence() {
 
 // 📌 6完成測驗
 function finishReorganizeQuiz() {
-    document.getElementById("reorganizeQuizArea").style.display = "none";
+    document.getElementById("sentenceQuizArea").style.display = "none"; // 確保隱藏句子測驗區域
+    document.getElementById("reorganizeQuizArea").style.display = "none"; // 確保隱藏重組測驗區域
     document.getElementById("quizResult").style.display = "block";
 
     incorrectSentences = JSON.parse(localStorage.getItem("wrongQS")) || incorrectSentences;
@@ -581,7 +582,7 @@ function finishReorganizeQuiz() {
     resultContainer.innerHTML += `
         <div class="result-buttons">
             <button class="action-button" onclick="saveQSResults()">Save</button>
-            <button class="action-button" onclick="returnToMainMenu()">Back</button>
+            <button class="action-button" onclick="returnToSentenceCategorySelection()">Back</button>
         </div>
     `;
 
@@ -1019,6 +1020,7 @@ function restoreQuizResult() {
 function returnToSentenceCategorySelection() {
     document.getElementById("sentenceQuizCategories").style.display = "block";
     document.getElementById("sentenceQuizArea").style.display = "none";
+    document.getElementById("reorganizeQuizArea").style.display = "none"; // 明確隱藏重組測驗區域
     document.getElementById("quizResult").style.display = "none";
 
     // 重置選擇狀態
@@ -1028,6 +1030,8 @@ function returnToSentenceCategorySelection() {
     document.querySelectorAll(".category-button").forEach(button => {
         button.classList.remove("selected");
     });
+
+    console.log("✅ 返回句子測驗分類頁面，重置所有測驗區域");
 }
 
 function toggleImportantSentence(word, checkbox) {
