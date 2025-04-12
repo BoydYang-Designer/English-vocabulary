@@ -419,7 +419,7 @@ function loadReorganizeQuestion() {
     let sentenceText = sentenceObj.句子.replace(/\s*\[=[^\]]+\]/g, "").trim();
     sentenceObj.filteredSentence = sentenceText;
 
-    // 分割句子，排除純空白，用於提示
+    // 分割句子，用於提示，保留單詞、縮寫和標點
     let words = sentenceText.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|[.,!?;]/g).filter(w => w !== "");
     let wordCount = words.filter(w => /[a-zA-Z]/.test(w)).length;
     let wordsToShow = Math.max(1, Math.floor(wordCount / 5));
@@ -431,20 +431,20 @@ function loadReorganizeQuestion() {
     let hintWords = words.map((w, i) => indicesToShow.has(i) ? w : "_".repeat(w.length));
     document.getElementById("reorganizeSentenceHint").innerHTML = hintWords.join(" ");
 
-    // 生成詞塊（僅單詞和縮寫，排除標點符號）
-    let blocks = [];
-    let regex = /[a-zA-Z]+(?:'[a-zA-Z]+)?/g; // 匹配單詞或縮寫（如 I'm, He's, building's）
-    let match;
-    while ((match = regex.exec(sentenceText)) !== null) {
-        blocks.push({ value: match[0], type: "word" });
-    }
+// 生成詞塊（包括單詞、縮寫、所有格和連字符單詞，排除標點符號）
+let blocks = [];
+let regex = /[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g; // 支持連字符單詞
+let match;
+while ((match = regex.exec(sentenceText)) !== null) {
+    blocks.push({ value: match[0], type: "word" });
+}
 
     // 隨機打亂詞塊
     blocks.sort(() => Math.random() - 0.5);
     let blocksContainer = document.getElementById("wordBlocksContainer");
-    blocksContainer.innerHTML = blocks.map(b => 
-        `<div class="word-block" data-value="${b.value}" data-type="${b.type}" onclick="selectWordBlock(this)">${b.value}</div>`
-    ).join("");
+    blocksContainer.innerHTML = blocks
+        .map(b => `<div class="word-block" data-value="${b.value}" data-type="${b.type}" onclick="selectWordBlock(this)">${b.value}</div>`)
+        .join("");
 
     // 清空構建區域
     document.getElementById("sentenceConstructionArea").innerHTML = "";
@@ -506,10 +506,10 @@ function submitReorganizeAnswer() {
 
     userConstructedSentences[currentSentenceIndex] = userAnswer;
 
-    // 僅比較單詞和縮寫部分，排除標點符號
-    let userWords = userAnswer.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?/g) || [];
-    let correctWords = correctSentence.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?/g) || [];
-    let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toLowerCase();
+    // 提取單詞（含縮寫、所有格和連字符單詞），排除標點符號
+let userWords = userAnswer.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
+let correctWords = correctSentence.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
+let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toLowerCase();
 
     if (!isCorrect && !incorrectSentences.includes(sentenceObj.Words)) {
         incorrectSentences.push(sentenceObj.Words);
@@ -524,8 +524,15 @@ function submitReorganizeAnswer() {
         block.classList.add(block.dataset.value.toLowerCase() === correctWord.toLowerCase() ? "correct" : "incorrect");
     });
 
-    // 更新提示區顯示完整正確答案（包含標點符號）
-    document.getElementById("reorganizeSentenceHint").innerHTML = correctSentence;
+    // 更新提示區顯示完整正確答案（包含標點符號）並添加中文解釋
+    let chineseExplanation = sentenceObj.中文 ? sentenceObj.中文.replace(/\n/g, "<br>") : "無中文解釋";
+    document.getElementById("reorganizeSentenceHint").innerHTML = `
+        <div>${correctSentence}</div>
+        <div class="chinese-explanation">
+            <h3>中文解釋</h3>
+            <p>${chineseExplanation}</p>
+        </div>
+    `;
 
     document.getElementById("submitReorganizeBtn").innerText = "下一題";
     document.getElementById("submitReorganizeBtn").onclick = goToNextReorganizeSentence;
@@ -557,8 +564,8 @@ function goToNextReorganizeSentence() {
 
 // 📌 6完成測驗
 function finishReorganizeQuiz() {
-    document.getElementById("sentenceQuizArea").style.display = "none"; // 確保隱藏句子測驗區域
-    document.getElementById("reorganizeQuizArea").style.display = "none"; // 確保隱藏重組測驗區域
+    document.getElementById("sentenceQuizArea").style.display = "none";
+    document.getElementById("reorganizeQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "block";
 
     incorrectSentences = JSON.parse(localStorage.getItem("wrongQS")) || incorrectSentences;
@@ -572,11 +579,12 @@ function finishReorganizeQuiz() {
         if (!sentenceObj) continue;
 
         let userAnswer = userConstructedSentences[index] || "(未作答)";
-        let correctSentence = sentenceObj.句子;
+        let correctSentence = sentenceObj.filteredSentence;
 
-        let userAnswerNormalized = userAnswer.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
-        let correctSentenceNormalized = correctSentence.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
-        let isCorrect = userAnswerNormalized === correctSentenceNormalized;
+        // 提取單詞進行比較（含縮寫、所有格和連字符單詞）
+let userWords = userAnswer.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
+let correctWords = correctSentence.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
+let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toLowerCase();
         let isUnanswered = userAnswer === "(未作答)";
 
         let resultClass = isCorrect ? "correct" : (isUnanswered ? "unanswered" : "wrong");
@@ -585,6 +593,7 @@ function finishReorganizeQuiz() {
         let sentenceIdentifierLink = `<a href="sentence.html?sentence=${encodeURIComponent(sentenceObj.Words)}&from=quiz&layer=4" class="sentence-link-btn">${sentenceObj.Words}</a>`;
         let wordDetailButton = `<button class="word-detail-btn" onclick="goToWordDetail('${sentenceObj.Words.split("-")[0]}')">單字詳情</button>`;
         let correctSentenceLink = `<button class="sentence-link-btn" onclick="playSentenceAudio('${sentenceObj.Words}.mp3')">${correctSentence}</button>`;
+        let chineseExplanation = sentenceObj.中文 ? sentenceObj.中文.replace(/\n/g, "<br>") : "無中文解釋";
 
         resultContainer.innerHTML += `
             <div class="result-item ${resultClass}">
@@ -595,6 +604,10 @@ function finishReorganizeQuiz() {
                 </div>
                 <div class="vertical-group">
                     ${correctSentenceLink}
+                    <div class="chinese-explanation">
+                        <h3>中文解釋</h3>
+                        <p>${chineseExplanation}</p>
+                    </div>
                 </div>
             </div>
         `;

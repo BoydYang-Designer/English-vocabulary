@@ -119,12 +119,12 @@ h1, h2 {
     background-color: #d32f2f;
 }
 
-#startFilteredQuizBtn, #startSentenceQuizBtn, #startReorganizeQuizBtn {
+#startFilteredQuizBtn, #startSentenceQuizBtn, #startReorganizeQuizBtn, #startRewordQuizBtn {
     background-color: #4CAF50; /* 綠色背景，與 Start Quiz 一致 */
     padding: 10px 20px;
 }
 
-#startFilteredQuizBtn:hover, #startSentenceQuizBtn:hover, #startReorganizeQuizBtn:hover {
+#startFilteredQuizBtn:hover, #startSentenceQuizBtn:hover, #startReorganizeQuizBtn:hover , #startRewordQuizBtn:hover{
     background-color: #45a049; /* 懸停時略暗的綠色 */
 }
 
@@ -718,5 +718,46 @@ input[type="checkbox"]:checked + span {
     color: #333;
 }
 
+/* Reword Quiz 專用字母塊容器 */
+#rewordLetterBlocksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px auto;
+    justify-content: center;
+    max-width: 90%;
+}
+
+/* Reword Quiz 專用構建區域 */
+#rewordConstructionArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    border: 2px dashed #a0a0a0;
+    padding: 12px;
+    gap: 8px;
+    margin: 20px auto;
+    max-width: 90%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* 重組提示文字 */
+#rewordHint {
+    font-size: 24px;
+    margin: 20px 10px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #333;   
+}
+
+/* PC 上放大字體 */
+@media (min-width: 601px) {
+    #rewordHint {
+        font-size: 28px; /* PC 上放大到 28px */
+    }
+}
 
 }

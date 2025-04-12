@@ -24,19 +24,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
-    .then(res => res.json())
-    .then(data => {
-        wordsData = data["New Words"] || [];
-        isDataLoaded = true;
-        console.log("✅ 單字資料已載入");
+        .then(res => res.json())
+        .then(data => {
+            wordsData = data["New Words"] || [];
+            isDataLoaded = true;
+            console.log("✅ 單字資料已載入");
 
-            if (localStorage.getItem("currentQuizResults")) {
+            // 只在明確需要恢復結果時執行
+            if (params.get('returning') === 'true' && localStorage.getItem("currentQuizResults")) {
                 quizResults = JSON.parse(localStorage.getItem("currentQuizResults"));
                 restoreQuizResults();
             } else if (show === "categories") {
                 showQuizCategories();
-            } else if (show === "sentenceCategories") { // 新增這部分
+            } else if (show === "sentenceCategories") {
                 showSentenceQuizCategories();
+            } else {
+                document.getElementById("mainMenu").style.display = "block";
             }
         })
         .catch(err => {
@@ -117,8 +120,9 @@ function returnToSourcePage() {
 
 // 返回分類選擇頁面
 function returnToCategorySelection() {
-    document.getElementById("quizArea").style.display = "none";
-    document.getElementById("quizCategories").style.display = "block";
+    document.getElementById("quizArea").style.display = "none"; // 隱藏單字測驗區
+    document.getElementById("rewordQuizArea").style.display = "none"; // 隱藏單字重組測驗區
+    document.getElementById("quizCategories").style.display = "block"; // 顯示分類區
 }
 
 // 篩選與多選功能
@@ -239,6 +243,8 @@ function initializeStartQuizButton() {
         startQuizBtn.addEventListener("click", filterQuizWords);
     }
 }
+
+document.getElementById("startRewordQuizBtn").addEventListener("click", startRewordQuiz);
 
 // 開始測驗
 function startQuiz() {
@@ -552,7 +558,160 @@ function goToWordDetail(word) {
     window.location.href = `index.html?word=${encodeURIComponent(word)}&from=quiz`;
 }
 
+function startRewordQuiz() {
+    // 如果 quizWords 為空，自動填充（模擬 filterQuizWords 的邏輯）
+    if (quizWords.length === 0) {
+        quizWords = wordsData.filter(word => {
+            let letterMatch = selectedFilters.letters.size === 0 || selectedFilters.letters.has(word.Words[0].toUpperCase());
+            let wordCategory = word["分類"] || "未分類(種類)";
+            let categoryMatch = selectedFilters.categories.size === 0 || selectedFilters.categories.has(wordCategory);
+            let wordLevel = word["等級"] || "未分類(等級)";
+            let levelMatch = selectedFilters.levels.size === 0 || selectedFilters.levels.has(wordLevel);
+            let checkedMatch = !selectedFilters.checked || localStorage.getItem(`checked_${word.Words}`) === "true";
+            return letterMatch && categoryMatch && levelMatch && checkedMatch;
+        });
 
+        // 如果篩選後仍無單字，給予提示並返回分類頁面
+        if (quizWords.length === 0) {
+            alert("⚠️ 沒有符合條件的單字，請選擇分類！");
+            returnToCategorySelection();
+            return;
+        }
+    }
+
+    document.getElementById("quizCategories").style.display = "none";
+    document.getElementById("rewordQuizArea").style.display = "block";
+    loadNextReword();
+}
+
+function loadNextReword() {
+    if (quizWords.length === 0) {
+        alert("⚠️ 無可用單字，請重新選擇分類！");
+        returnToCategorySelection();
+        return;
+    }
+
+    let randomIndex = Math.floor(Math.random() * quizWords.length);
+    let wordData = quizWords.splice(randomIndex, 1)[0];
+    currentWord = wordData.Words;
+    currentAudio = `${baseURL}${currentWord}.mp3`;
+
+    let rewordHintContainer = document.getElementById("rewordHint");
+    let letterBlocksContainer = document.getElementById("rewordLetterBlocksContainer");
+    let constructionArea = document.getElementById("rewordConstructionArea");
+
+    rewordHintContainer.innerHTML = "";
+    letterBlocksContainer.innerHTML = "";
+    constructionArea.innerHTML = "";
+
+    // 顯示提示：首尾字母
+    rewordHintContainer.innerHTML = currentWord[0] + " _ ".repeat(currentWord.length - 2) + currentWord[currentWord.length - 1];
+
+    // 生成打亂的字母塊
+    let letters = currentWord.split("").sort(() => Math.random() - 0.5);
+    letters.forEach(letter => {
+        let block = document.createElement("div");
+        block.classList.add("word-block");
+        block.dataset.value = letter;
+        block.innerText = letter;
+        block.onclick = () => selectLetterBlock(block);
+        letterBlocksContainer.appendChild(block);
+    });
+
+    // 播放音訊
+    let audio = new Audio(currentAudio);
+    audio.play();
+
+    // 重置按鈕狀態
+    document.getElementById("submitRewordBtn").style.display = "inline-block";
+    document.getElementById("nextRewordBtn").style.display = "none";
+}
+
+function selectLetterBlock(block) {
+    let constructionArea = document.getElementById("rewordConstructionArea");
+    if (block.parentNode === constructionArea) {
+        block.classList.remove("selected");
+        document.getElementById("rewordLetterBlocksContainer").appendChild(block);
+    } else {
+        block.classList.add("selected");
+        constructionArea.appendChild(block);
+    }
+}
+
+function submitRewordAnswer() {
+    let constructionArea = document.getElementById("rewordConstructionArea");
+    let userAnswer = Array.from(constructionArea.children).map(b => b.dataset.value).join("");
+    let correctAnswer = currentWord.toLowerCase();
+
+    let result = userAnswer === "" ? "未作答" : (userAnswer.toLowerCase() === correctAnswer ? "正確" : "錯誤");
+
+    quizResults.push({
+        word: currentWord,
+        result: result,
+        timestamp: new Date().toLocaleString()
+    });
+
+    // 更新錯誤單字到 localStorage
+    let storedWrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
+    if (result === "錯誤") {
+        if (!storedWrongWords.includes(currentWord)) {
+            storedWrongWords.push(currentWord);
+        }
+    } else if (result === "正確") {
+        storedWrongWords = storedWrongWords.filter(word => word !== currentWord);
+    }
+    localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
+
+    // 查找單字的中文解釋
+    let wordData = wordsData.find(w => w.Words === currentWord);
+    let chineseExplanation = wordData && wordData["traditional Chinese"]
+        ? wordData["traditional Chinese"].replace(/\n/g, "<br>")
+        : "無中文解釋";
+
+    // 顯示正確答案和中文解釋
+    document.getElementById("rewordHint").innerHTML = `
+        <div>${currentWord}</div>
+        <div class="chinese-explanation">
+            <h3>中文解釋</h3>
+            <p>${chineseExplanation}</p>
+        </div>
+    `;
+
+    // 反饋字母塊
+    constructionArea.querySelectorAll(".word-block").forEach((block, i) => {
+        let correctLetter = correctAnswer[i] || "";
+        block.classList.add(block.dataset.value.toLowerCase() === correctLetter ? "correct" : "incorrect");
+    });
+
+    document.getElementById("submitRewordBtn").style.display = "none";
+    document.getElementById("nextRewordBtn").style.display = "inline-block";
+}
+
+function goToNextReword() {
+    loadNextReword();
+}
+
+function finishRewordQuiz() {
+    document.getElementById("rewordQuizArea").style.display = "none"; // 隱藏重組測驗區
+    document.getElementById("quizArea").style.display = "none"; // 確保單字測驗區隱藏
+    document.getElementById("quizResult").style.display = "block"; // 顯示結果區
+    finishQuiz(); // 顯示結果
+}
+
+document.getElementById("playRewordAudioBtn").addEventListener("click", function() {
+    if (currentWord) {
+        playAudioForWord(currentWord);
+    }
+});
+
+document.addEventListener("keydown", function(event) {
+    if (event.code === "Space" && document.getElementById("rewordQuizArea").style.display === "block") {
+        event.preventDefault();
+        if (currentWord) {
+            playAudioForWord(currentWord);
+        }
+    }
+});
 
 // ✅ 勾選或取消勾選時同步更新 localStorage
 function toggleImportant(word, checkbox) {
@@ -642,10 +801,12 @@ function saveQuizResults() {
 
 // Back按鍵 // 
 function returnToMainMenu() {
-    document.querySelector("h1").textContent = "測驗區";
     document.getElementById("quizCategories").style.display = "none";
     document.getElementById("quizArea").style.display = "none";
+    document.getElementById("rewordQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "none";
+    document.getElementById("sentenceQuizCategories").style.display = "none";
+    document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("mainMenu").style.display = "block";
 
     selectedFilters.letters.clear();
@@ -664,11 +825,11 @@ function returnToMainMenu() {
     document.getElementById("wordInput").value = "";
     document.getElementById("wordHint").innerText = "";
 
-    // ✅ 清除 Q Sentence 內的分類資訊
+    // 清除 Q Sentence 內的分類資訊
     sessionStorage.removeItem("loadedQSentence");
     document.getElementById("sentenceQuizCategories").style.display = "none";
 
-    // ✅ 清除 LocalStorage 中的測驗結果與滾動位置
+    // 清除 LocalStorage 中的測驗結果與滾動位置
     localStorage.removeItem("currentQuizResults");
     localStorage.removeItem("quizScrollPosition");
 
