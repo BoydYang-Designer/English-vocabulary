@@ -315,41 +315,33 @@ function loadSentenceQuestion() {
     document.getElementById("nextSentenceBtn").style.display = "none";
 
     if (sentenceObj.Words) {
-        // 生成音頻 URL
         let audioUrl = GITHUB_MP3_BASE_URL + encodeURIComponent(sentenceObj.Words) + ".mp3";
-        
-        // 如果已有音頻對象，先暫停
+        console.log("生成的音頻 URL:", audioUrl); // 調試用
         if (currentAudio instanceof Audio) {
             currentAudio.pause();
         }
-        
-        // 創建新的音頻對象
         currentAudio = new Audio(audioUrl);
-        
-        // 獲取重組測驗的播放按鈕
-        const playBtn = document.getElementById("playReorganizeAudioBtn");
+        const playBtn = document.getElementById("playSentenceAudioBtn");
+        if (!playBtn) {
+            console.error("❌ 未找到 playSentenceAudioBtn 元素");
+            return;
+        }
         playBtn.classList.remove("playing");
-        
-        // 綁定點擊事件以手動播放音頻
         playBtn.onclick = () => {
+            console.log("✅ 播放按鈕被點擊");
             if (currentAudio) {
-                playBtn.classList.add("playing"); // 添加播放中的視覺反饋
-                currentAudio.currentTime = 0; // 重置到開頭
+                playBtn.classList.add("playing");
+                currentAudio.currentTime = 0;
                 currentAudio.play().catch(error => {
                     console.error("🔊 播放失敗:", error);
-                    playBtn.classList.remove("playing"); // 失敗時移除播放狀態
+                    playBtn.classList.remove("playing");
                 });
             }
         };
-        
-        // 監聽音頻播放結束
         currentAudio.onended = () => {
             playBtn.classList.remove("playing");
-            console.log("✅ 音檔播放結束");
+            console.log("✅ 音頻播放結束");
         };
-        
-        // 可選：嘗試自動播放（根據需求保留或移除）
-        // currentAudio.play().catch(error => console.warn("🔊 自動播放被禁止", error));
     }
 
     // 儲存過濾後的句子作為正確答案
