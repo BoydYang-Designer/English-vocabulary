@@ -203,13 +203,12 @@ function startSentenceQuiz() {
         return;
     }
 
-    // 隨機排序並限制為 5 句
+    // 隨機排序並限制為 10 句
     for (let i = filteredSentences.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [filteredSentences[i], filteredSentences[j]] = [filteredSentences[j], filteredSentences[i]];
     }
 
-    // 只取前 5 句（或更少，如果不足 5 句）
     currentQuizSentences = filteredSentences.slice(0, 10);
     currentSentenceIndex = 0;
     userAnswers = []; // 清空本次答案
@@ -220,7 +219,11 @@ function startSentenceQuiz() {
     // 保存本次測驗的句子到 localStorage
     localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
 
-    setTimeout(() => loadSentenceQuestion(), 100);
+    // 載入第一題並自動播放
+    setTimeout(() => {
+        loadSentenceQuestion();
+        autoPlayAudio(); // ✅ 添加自動播放
+    }, 100);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -287,7 +290,7 @@ function loadSentenceQuestion() {
         sentenceInputContainer.appendChild(wordContainer);
     });
 
-    // 提示文字邏輯，使用過濾後的句子
+    // 提示文字邏輯
     let wordCount = words.filter(word => /\w+/.test(word)).length;
     let wordsToShow = Math.max(1, Math.floor(wordCount / 5));
     let indicesToShow = new Set();
@@ -314,9 +317,10 @@ function loadSentenceQuestion() {
 
     document.getElementById("nextSentenceBtn").style.display = "none";
 
+    // 音頻邏輯
     if (sentenceObj.Words) {
         let audioUrl = GITHUB_MP3_BASE_URL + encodeURIComponent(sentenceObj.Words) + ".mp3";
-        console.log("生成的音頻 URL:", audioUrl); // 調試用
+        console.log("✅ 音頻 URL:", audioUrl);
         if (currentAudio instanceof Audio) {
             currentAudio.pause();
         }
@@ -328,7 +332,7 @@ function loadSentenceQuestion() {
         }
         playBtn.classList.remove("playing");
         playBtn.onclick = () => {
-            console.log("✅ 播放按鈕被點擊");
+            console.log("✅ 手動點擊播放按鈕");
             if (currentAudio) {
                 playBtn.classList.add("playing");
                 currentAudio.currentTime = 0;
@@ -345,7 +349,25 @@ function loadSentenceQuestion() {
     }
 
     // 儲存過濾後的句子作為正確答案
-    sentenceObj.filteredSentence = sentenceText; // 添加到物件中供後續檢查使用
+    sentenceObj.filteredSentence = sentenceText;
+}
+
+function autoPlayAudio() {
+    if (currentAudio) {
+        const playBtn = document.getElementById("playSentenceAudioBtn");
+        if (!playBtn) {
+            console.error("❌ 未找到 playSentenceAudioBtn 元素");
+            return;
+        }
+        playBtn.classList.add("playing");
+        currentAudio.currentTime = 0;
+        currentAudio.play().catch(error => {
+            console.warn("🔊 自動播放失敗:", error);
+            playBtn.classList.remove("playing");
+        });
+    } else {
+        console.warn("⚠️ 無音頻可播放");
+    }
 }
 
 // 📌 1開始測驗重組句子
@@ -885,6 +907,8 @@ function goToNextSentence() {
     submitBtn.innerText = "提交";
     submitBtn.onclick = submitSentenceAnswer;
     submitBtn.dataset.next = "false";
+
+    autoPlayAudio(); // ✅ 添加自動播放
 }
 
 
