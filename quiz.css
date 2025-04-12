@@ -608,79 +608,110 @@ input[type="checkbox"]:checked + span {
 .construction-area {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* 水平置中 */
-    align-items: center; /* 垂直置中，確保單行時居中 */
-    min-height: 50px;
-    border: 2px dashed #ccc;
-    padding: 10px;
-    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px; /* 增加高度，容納更大的詞塊 */
+    border: 2px dashed #a0a0a0; /* 更柔和的邊框色 */
+    padding: 12px;
+    gap: 8px; /* 詞塊間距稍大 */
     margin: 20px auto;
-    max-width: 100%;
-    background-color: #fff;
-    border-radius: 5px;
+    max-width: 90%; /* 與容器寬度一致 */
+    background-color: #f9f9f9; /* 淺灰背景，區分區域 */
+    border-radius: 8px; /* 圓角更現代 */
 }
 
 /* 詞塊容器 */
 .word-blocks-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 12px; /* 增加間距，改善視覺分隔 */
+    margin: 20px auto; /* 居中且與上下元素保持距離 */
     justify-content: center;
+    max-width: 90%; /* 限制寬度，防止溢出 */
 }
 
 /* 詞塊樣式 */
 .word-block {
-    padding: 8px 12px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 10px 16px; /* 增加內距，提升點擊舒適度 */
+    background-color: #e8ecef; /* 更柔和的背景色 */
+    border: 1px solid #b0b0b0; /* 更細緻的邊框 */
+    border-radius: 6px; /* 稍大的圓角，現代感 */
     cursor: pointer;
     user-select: none;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
+    font-size: 20px; /* 加大字體，增強可讀性 */
+    font-weight: 500; /* 中等字重，清晰但不厚重 */
+    line-height: 1.4; /* 行高改善文字垂直居中 */
+    transition: all 0.2s ease; /* 平滑過渡所有屬性 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 輕微陰影，增加立體感 */
+    min-width: 50px; /* 確保短詞有足夠寬度 */
+    text-align: center; /* 文字居中 */
 }
 
 .word-block:hover {
-    background-color: #e0e0e0;
+    background-color: #d8dfe6; /* 懸停時更明顯的背景變化 */
+    transform: translateY(-2px); /* 輕微上移，增加互動感 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* 懸停時陰影加深 */
 }
 
 .word-block.selected {
-    background-color: #d0d0d0;
-    opacity: 0.7;
+    background-color: #b0c4de; /* 選中時藍灰色，與 UI 其他部分協調 */
+    border-color: #4682b4; /* 邊框強調選中狀態 */
+    opacity: 1; /* 移除透明度，增強可見性 */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* 選中時更強的陰影 */
 }
 
 .word-block.correct {
     background-color: #d4edda; /* 與 result-item.correct 一致 */
     border-color: #28a745;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .word-block.incorrect {
     background-color: #f8d7da; /* 與 result-item.wrong 一致 */
     border-color: #dc3545;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 重組提示文字 */
 #reorganizeSentenceHint {
-    font-size: 26px;
-    margin: 20px 5px;
+    font-size: 24px; /* 略小字體，與新尺寸協調 */
+    margin: 20px 10px;
     text-align: center;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     color: #333;
+    max-width: 90%; /* 防止提示文字溢出 */
+    word-wrap: break-word; /* 長句子自動換行 */
 }
 
 /* 手機適配 */
 @media (max-width: 600px) {
-    .construction-area {
-        min-height: 40px;
-        padding: 8px;
+    .word-blocks-container {
+        gap: 8px; /* 手機上縮小間距 */
+        max-width: 95%; /* 更充分利用螢幕 */
     }
+
     .word-block {
-        padding: 6px 10px;
-        font-size: 16px;
+        padding: 8px 12px; /* 手機上稍減內距 */
+        font-size: 18px; /* 手機上字體稍小 */
+        min-width: 40px; /* 短詞最小寬度 */
+        border-radius: 5px; /* 手機上圓角略小 */
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* 手機上陰影更輕 */
     }
+
+    .word-block:hover {
+        transform: none; /* 手機上禁用上移效果，減少誤觸 */
+    }
+
+    .construction-area {
+        min-height: 50px;
+        padding: 10px;
+        gap: 6px;
+        max-width: 95%;
+    }
+
     #reorganizeSentenceHint {
         font-size: 20px;
         letter-spacing: 2px;
+        margin: 15px 5px;
     }
 }

@@ -461,6 +461,13 @@ function loadReorganizeQuestion() {
             playBtn.classList.remove("playing");
             console.log("✅ 音檔播放結束");
         };
+
+        // 自動播放音頻
+        playBtn.classList.add("playing");
+        currentAudio.play().catch(error => {
+            console.warn("🔊 自動播放失敗:", error);
+            playBtn.classList.remove("playing");
+        });
     }
 }
 
