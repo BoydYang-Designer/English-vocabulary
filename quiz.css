@@ -348,13 +348,6 @@ h1, h2 {
 }
 
 @media (max-width: 600px) {
-    .letter-input {
-        width: 18px;
-        height: 28px;
-        font-size: 22px;
-        border: 2px solid #6c757d;
-        border-radius: 4px;
-    }
 
     .letter-input:focus {
         border-color: #007bff;
@@ -714,4 +707,16 @@ input[type="checkbox"]:checked + span {
         letter-spacing: 2px;
         margin: 15px 5px;
     }
+
+
+
+#reorganizeWordHint {
+    font-size: 24px;
+    margin: 20px 10px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #333;
+}
+
+
 }
