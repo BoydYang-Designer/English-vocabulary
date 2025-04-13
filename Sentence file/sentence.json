@@ -29181,76 +29181,100 @@
             "句子": "The sudden news of his illness was overwhelming for his family, who struggled to cope with the emotional burden"
         },
         {
+            "音檔": "音檔 - oxidation-1",
             "等級": "C1",
             "分類": "技術",
             "Words": "oxidation-1",
-            "句子": "The oxidation of iron causes the metal to rust"
+            "句子": "The oxidation of iron causes the metal to rust",
+            "中文": "鐵的氧化會導致金屬生鏽。"
         },
         {
+            "音檔": "音檔 - oxidation-2",
             "等級": "C1",
             "分類": "技術",
             "Words": "oxidation-2",
-            "句子": "Fruits turn brown due to oxidation after being exposed to air"
+            "句子": "Fruits turn brown due to oxidation after being exposed to air",
+            "中文": "鐵的氧化會導致金屬生鏽。"
         },
         {
+            "音檔": "音檔 - oxidation-3",
             "等級": "C1",
             "分類": "技術",
             "Words": "oxidation-3",
-            "句子": "The scientist studied oxidation to improve corrosion-resistant materials"
+            "句子": "The scientist studied oxidation to improve corrosion-resistant materials",
+            "中文": "科學家研究氧化作用以改良抗腐蝕材料。"
         },
         {
+            "音檔": "音檔 - oxide-1",
             "等級": "B1",
             "分類": "技術",
             "Words": "oxide-1",
-            "句子": "Rust is a common example of iron oxide, which forms when iron reacts with oxygen and moisture"
+            "句子": "Rust is a common example of iron oxide, which forms when iron reacts with oxygen and moisture",
+            "中文": "鐵鏽是鐵氧化物的一個常見例子，當鐵與氧氣和水分反應時便會形成。"
         },
         {
+            "音檔": "音檔 - oxidize-1",
             "等級": "B2",
             "分類": "技術",
             "Words": "oxidize-1",
-            "句子": "The iron will oxidize when exposed to moisture, forming rust"
+            "句子": "The iron will oxidize when exposed to moisture, forming rust",
+            "中文": "當鐵暴露在水分中時會氧化，形成鐵鏽。"
         },
         {
+            "音檔": "音檔 - oxidize-2",
             "等級": "B2",
             "分類": "技術",
             "Words": "oxidize-2",
-            "句子": "To prevent the fruit from browning, the chef added lemon juice to oxidize it"
+            "句子": "To prevent the fruit from browning, the chef added lemon juice to oxidize it",
+            "中文": "為了防止水果變褐，廚師加了檸檬汁來防止其氧化。"
         },
         {
+            "音檔": "音檔 - oxygen-1",
             "等級": "B1",
             "分類": "技術",
             "Words": "oxygen-1",
-            "句子": "Oxygen is crucial for breathing and sustaining life"
+            "句子": "Oxygen is crucial for breathing and sustaining life",
+            "中文": "氧氣對於呼吸和維持生命至關重要。"
         },
         {
+            "音檔": "音檔 - oxygen-2",
             "等級": "B1",
             "分類": "技術",
             "Words": "oxygen-2",
-            "句子": "The tank was filled with pure oxygen for medical use"
+            "句子": "The tank was filled with pure oxygen for medical use",
+            "中文": "氧氣瓶被充滿了純氧，用於醫療用途。"
         },
         {
+            "音檔": "音檔 - oxymoron-1",
             "等級": "B2",
             "分類": "語言",
             "Words": "oxymoron-1",
-            "句子": "The phrase \"deafening silence\" is an oxymoron that illustrates the profound impact of a complete lack of sound, making the silence feel overwhelming"
+            "句子": "The phrase \"deafening silence\" is an oxymoron that illustrates the profound impact of a complete lack of sound, making the silence feel overwhelming",
+            "中文": "短語「震耳欲聾的寂靜」（deafening silence）是一個矛盾修辭法（oxymoron），用來形容完全沒有聲音所帶來的強烈衝擊感，使寂靜顯得壓倒性地強烈。"
         },
         {
+            "音檔": "音檔 - oxymoron-2",
             "等級": "B2",
             "分類": "語言",
             "Words": "oxymoron-2",
-            "句子": "Her \"bitter sweet\" feelings about leaving the job were captured by the oxymoron, reflecting both joy and sorrow in her experience"
+            "句子": "Her \"bitter sweet\" feelings about leaving the job were captured by the oxymoron, reflecting both joy and sorrow in her experience",
+            "中文": "她對離職的「苦樂參半」情感被矛盾修辭所表達，反映出她經歷中的喜悅與哀傷。"
         },
         {
+            "音檔": "音檔 - oxymoron-3",
             "等級": "B2",
             "分類": "語言",
             "Words": "oxymoron-3",
-            "句子": "The term \"jumbo shrimp\" is a classic example of an oxymoron where \"jumbo\" (large) and \"shrimp\" (small) create a humorous contradiction about the size of the seafood"
+            "句子": "The term \"jumbo shrimp\" is a classic example of an oxymoron where \"jumbo\" (large) and \"shrimp\" (small) create a humorous contradiction about the size of the seafood",
+            "中文": "「特大蝦」這個詞是矛盾修辭的經典例子，其中「特大」（大）與「蝦」（小）形成了一種關於海鮮大小的幽默矛盾。"
         },
         {
+            "音檔": "音檔 - oxymoron-4",
             "等級": "B2",
             "分類": "語言",
             "Words": "oxymoron-4",
-            "句子": "The phrase \"cruel kindness\" is an oxymoron that combines opposing ideas to describe an act that, while seemingly kind, is actually harmful"
+            "句子": "The phrase \"cruel kindness\" is an oxymoron that combines opposing ideas to describe an act that, while seemingly kind, is actually harmful",
+            "中文": "「殘忍的善意」這個詞組是一種矛盾修辭，它結合了對立的概念，用來形容一種表面上看似善良、實際上卻帶來傷害的行為。"
         },
         {
             "Words": "palette-1",
@@ -29594,34 +29618,44 @@
             "句子": "The plant's growth pattern is peculiar to this region and cannot be found elsewhere"
         },
         {
+            "音檔": "音檔 - penalty-1",
             "等級": "B2",
             "分類": "法政",
             "Words": "penalty-1",
-            "句子": "The company faced a hefty penalty for failing to comply with environmental regulations"
+            "句子": "The company faced a hefty penalty for failing to comply with environmental regulations",
+            "中文": "該公司因未遵守環境法規而面臨巨額罰款。"
         },
         {
+            "音檔": "音檔 - penalty-2",
             "等級": "B2",
             "分類": "法政",
             "Words": "penalty-2",
-            "句子": "There is a penalty for late submission of tax returns, including fines and interest"
+            "句子": "There is a penalty for late submission of tax returns, including fines and interest",
+            "中文": "逾期申報稅務將會被處罰，包括罰款和利息。"
         },
         {
+            "音檔": "音檔 - penalty-3",
             "等級": "B2",
             "分類": "法政",
             "Words": "penalty-3",
-            "句子": "Missing the deadline will result in a penalty of reduced points in the competition"
+            "句子": "Missing the deadline will result in a penalty of reduced points in the competition",
+            "中文": "錯過截止日期將會被處以扣分的處罰，影響比賽成績。"
         },
         {
+            "音檔": "音檔 - penalty-4",
             "等級": "B2",
             "分類": "法政",
             "Words": "penalty-4",
-            "句子": "Lack of privacy is one of the penalties you pay for fame"
+            "句子": "Lack of privacy is one of the penalties you pay for fame",
+            "中文": "隱私缺失是你為成名所付出的代價之一。"
         },
         {
+            "音檔": "音檔 - penalty-5",
             "等級": "B2",
             "分類": "法政",
             "Words": "penalty-5",
-            "句子": "He had to pay the penalties for telling lies"
+            "句子": "He had to pay the penalties for telling lies",
+            "中文": "他必須為說謊付出代價。"
         },
         {
             "等級": "C1",
@@ -29879,58 +29913,76 @@
             "句子": "The pesky mosquitoes made it difficult to enjoy our evening picnic"
         },
         {
+            "音檔": "音檔 - pharaoh-1",
             "等級": "B2",
             "分類": "旅遊",
             "Words": "pharaoh-1",
-            "句子": "The pharaoh ordered the construction of a massive temple to honor the gods"
+            "句子": "The pharaoh ordered the construction of a massive temple to honor the gods",
+            "中文": "法老下令建造一座宏偉的神廟，以祭祀眾神。"
         },
         {
+            "音檔": "音檔 - pharaoh-2",
             "等級": "B2",
             "分類": "旅遊",
             "Words": "pharaoh-2",
-            "句子": "King Tutankhamun, often referred to as the \"Boy Pharaoh,\" ruled Egypt during the 18th dynasty"
+            "句子": "King Tutankhamun, often referred to as the \"Boy Pharaoh,\" ruled Egypt during the 18th dynasty",
+            "中文": "圖坦卡蒙王，常被稱為「小法老」，在第十八王朝統治埃及。"
         },
         {
+            "音檔": "音檔 - pharaoh-3",
             "等級": "B2",
             "分類": "旅遊",
             "Words": "pharaoh-3",
-            "句子": "The great pyramids of Giza were built as tombs for powerful pharaohs"
+            "句子": "The great pyramids of Giza were built as tombs for powerful pharaohs",
+            "中文": "吉薩的大金字塔是為了強大的法老們建造的陵墓。"
         },
         {
+            "音檔": "音檔 - philosophy-1",
             "等級": "C1",
             "分類": "學術",
             "Words": "philosophy-1",
-            "句子": "She majored in philosophy to explore the nature of reality and human thought"
+            "句子": "She majored in philosophy to explore the nature of reality and human thought",
+            "中文": "她主修哲學，旨在探索現實的本質和人類思維。"
         },
         {
+            "音檔": "音檔 - philosophy-2",
             "等級": "C1",
             "分類": "學術",
             "Words": "philosophy-2",
-            "句子": "Ancient Greek philosophy has greatly influenced modern intellectual traditions"
+            "句子": "Ancient Greek philosophy has greatly influenced modern intellectual traditions",
+            "中文": "古希臘哲學對現代知識傳統產生了深遠的影響。"
         },
         {
+            "音檔": "音檔 - philosophy-3",
             "等級": "C1",
             "分類": "學術",
             "Words": "philosophy-3",
-            "句子": "His philosophy of life is to always remain optimistic and open-minded"
+            "句子": "His philosophy of life is to always remain optimistic and open-minded",
+            "中文": "他的人生哲學是始終保持樂觀和開放的心態。"
         },
         {
+            "音檔": "音檔 - philosophy-4",
             "等級": "C1",
             "分類": "學術",
             "Words": "philosophy-4",
-            "句子": "The company follows a customer-first philosophy to ensure satisfaction"
+            "句子": "The company follows a customer-first philosophy to ensure satisfaction",
+            "中文": "該公司秉持以客為先的哲學，確保顧客滿意。"
         },
         {
+            "音檔": "音檔 - philosophy-5",
             "等級": "C1",
             "分類": "學術",
             "Words": "philosophy-5",
-            "句子": "He accepted the bad news with a philosophy of resilience and hope"
+            "句子": "He accepted the bad news with a philosophy of resilience and hope",
+            "中文": "他以堅韌與希望的哲學接受了這個壞消息。"
         },
         {
+            "音檔": "音檔 - philosophy-6",
             "等級": "C1",
             "分類": "學術",
             "Words": "philosophy-6",
-            "句子": "Her philosophy is to embrace change rather than fear it"
+            "句子": "Her philosophy is to embrace change rather than fear it",
+            "中文": "她的哲學是擁抱變化，而非害怕變化。"
         },
         {
             "等級": "B2",
@@ -30307,22 +30359,28 @@
             "句子": "The pirates divided the plunder among themselves after the attack"
         },
         {
+            "音檔": "音檔 - polliwog-1",
             "等級": "B2",
             "分類": "生物",
             "Words": "polliwog-1",
-            "句子": "The children were excited to see the polliwogs in the pond, watching them swim with their tails"
+            "句子": "The children were excited to see the polliwogs in the pond, watching them swim with their tails",
+            "中文": "孩子們看到池塘裡的小蝌蚪時興奮不已，看著它們用尾巴游動。"
         },
         {
+            "音檔": "音檔 - polliwog-2",
             "等級": "B2",
             "分類": "生物",
             "Words": "polliwog-2",
-            "句子": "The polliwog gradually developed legs and began to lose its tail as it neared the end of its transformation"
+            "句子": "The polliwog gradually developed legs and began to lose its tail as it neared the end of its transformation",
+            "中文": "小蝌蚪逐漸長出了腿，並在變態的過程接近尾聲時開始失去尾巴。"
         },
         {
+            "音檔": "音檔 - polliwog-3",
             "等級": "B2",
             "分類": "生物",
             "Words": "polliwog-3",
-            "句子": "He collected several polliwogs in a jar to observe their development into frogs"
+            "句子": "He collected several polliwogs in a jar to observe their development into frogs",
+            "中文": "他把幾隻小蝌蚪收集在罐子裡，觀察它們發育成青蛙的過程。"
         },
         {
             "Words": "polygon-1",
@@ -32366,34 +32424,44 @@
             "句子": "The design of the new phone resembles the older model"
         },
         {
+            "音檔": "音檔 - resident-1",
             "等級": "B2",
             "分類": "法政",
             "Words": "resident-1",
-            "句子": "The residents of the apartment building gathered for a community meeting to discuss building improvements"
+            "句子": "The residents of the apartment building gathered for a community meeting to discuss building improvements",
+            "中文": "公寓大樓的居民們聚集在一起，舉行社區會議，討論大樓的改善計劃。"
         },
         {
+            "音檔": "音檔 - resident-2",
             "等級": "B2",
             "分類": "法政",
             "Words": "resident-2",
-            "句子": "The city offers various services and benefits to its residents, including public transportation and local libraries"
+            "句子": "The city offers various services and benefits to its residents, including public transportation and local libraries",
+            "中文": "這座城市為居民提供各種服務和福利，包括公共交通和當地圖書館。"
         },
         {
+            "音檔": "音檔 - resident-3",
             "等級": "B2",
             "分類": "法政",
             "Words": "resident-3",
-            "句子": "The resident surgeon performed complex surgeries as part of their training program"
+            "句子": "The resident surgeon performed complex surgeries as part of their training program",
+            "中文": "駐院外科醫生在他們的訓練計劃中進行了複雜的手術。"
         },
         {
+            "音檔": "音檔 - resident-4",
             "等級": "B2",
             "分類": "法政",
             "Words": "resident-4",
-            "句子": "The resident doctor provides medical care to the hospital’s patients as part of their training"
+            "句子": "The resident doctor provides medical care to the hospital’s patients as part of their training",
+            "中文": "駐院醫生為醫院的病人提供醫療照護，這是他們訓練計劃的一部分。"
         },
         {
+            "音檔": "音檔 - resident-5",
             "等級": "B2",
             "分類": "法政",
             "Words": "resident-5",
-            "句子": "The resident artist was known for creating beautiful murals that reflected the local culture"
+            "句子": "The resident artist was known for creating beautiful murals that reflected the local culture",
+            "中文": "駐院藝術家以創作反映當地文化的美麗壁畫而聞名。"
         },
         {
             "等級": "C2",
@@ -32442,34 +32510,44 @@
             "中文": "橋樑建築所使用的材料極具韌性，能夠承受極端天氣條件。"
         },
         {
+            "音檔": "音檔 - resistance-1",
             "等級": "B2",
             "分類": "醫學",
             "Words": "resistance-1",
-            "句子": "The community showed resistance to the proposed construction project, arguing it would harm the environment"
+            "句子": "The community showed resistance to the proposed construction project, arguing it would harm the environment",
+            "中文": "社區對提議的建設項目表達了反對，認為這將對環境造成損害。"
         },
         {
+            "音檔": "音檔 - resistance-2",
             "等級": "B2",
             "分類": "醫學",
             "Words": "resistance-2",
-            "句子": "The resistance movement fought against the oppressive regime during the war"
+            "句子": "The resistance movement fought against the oppressive regime during the war",
+            "中文": "抵抗運動在戰爭期間對抗壓迫政權。"
         },
         {
+            "音檔": "音檔 - resistance-3",
             "等級": "B2",
             "分類": "醫學",
             "Words": "resistance-3",
-            "句子": "The resistance of the material to heat made it ideal for use in high-temperature environments"
+            "句子": "The resistance of the material to heat made it ideal for use in high-temperature environments",
+            "中文": "這種材料對熱的抗性使其成為高溫環境中理想的使用材料。"
         },
         {
+            "音檔": "音檔 - resistance-4",
             "等級": "B2",
             "分類": "醫學",
             "Words": "resistance-4",
-            "句子": "The vaccine boosts the body's resistance to the flu virus"
+            "句子": "The vaccine boosts the body's resistance to the flu virus",
+            "中文": "這種疫苗增強了身體對流感病毒的抵抗力。"
         },
         {
+            "音檔": "音檔 - resistance-5",
             "等級": "B2",
             "分類": "醫學",
             "Words": "resistance-5",
-            "句子": "The French Resistance played a significant role during World War II in sabotaging Nazi operations"
+            "句子": "The French Resistance played a significant role during World War II in sabotaging Nazi operations",
+            "中文": "法國抵抗運動在第二次世界大戰期間發揮了重要作用，破壞了納粹的作戰行動。"
         },
         {
             "等級": "B2",
@@ -32794,46 +32872,60 @@
             "句子": "His breathing became more rhythmical"
         },
         {
+            "音檔": "音檔 - rigorous-1",
             "等級": "B2",
             "分類": "法政",
             "Words": "rigorous-1",
-            "句子": "The scientist conducted a rigorous experiment to ensure the validity of the results"
+            "句子": "The scientist conducted a rigorous experiment to ensure the validity of the results",
+            "中文": "科學家進行了一個嚴謹的實驗，以確保結果的有效性。"
         },
         {
+            "音檔": "音檔 - rigorous-2",
             "等級": "B2",
             "分類": "法政",
             "Words": "rigorous-2",
-            "句子": "The rigorous review process ensured that only the highest quality papers were published"
+            "句子": "The rigorous review process ensured that only the highest quality papers were published",
+            "中文": "嚴格的審查過程確保了只有最高品質的論文才能發表。"
         },
         {
+            "音檔": "音檔 - rigorous-3",
             "等級": "B2",
             "分類": "法政",
             "Words": "rigorous-3",
-            "句子": "The training program was rigorous, requiring participants to meet high performance standards"
+            "句子": "The training program was rigorous, requiring participants to meet high performance standards",
+            "中文": "這個訓練計劃非常嚴格，要求參與者達到高水平的表現標準。"
         },
         {
+            "音檔": "音檔 - rigorous-4",
             "等級": "B2",
             "分類": "法政",
             "Words": "rigorous-4",
-            "句子": "The rules must be rigorously followed"
+            "句子": "The rules must be rigorously followed",
+            "中文": "規則必須嚴格遵守。"
         },
         {
+            "音檔": "音檔 - rigorous-5",
             "等級": "B2",
             "分類": "法政",
             "Words": "rigorous-5",
-            "句子": "These soldiers have to undergo very rigorous training before they become frogmen"
+            "句子": "These soldiers have to undergo very rigorous training before they become frogmen",
+            "中文": "這些士兵在成為蛙人之前，必須經歷非常嚴格的訓練。"
         },
         {
+            "音檔": "音檔 - rigorous-6",
             "等級": "B2",
             "分類": "法政",
             "Words": "rigorous-6",
-            "句子": "The hikers faced rigorous conditions during their trek through the arctic terrain"
+            "句子": "The hikers faced rigorous conditions during their trek through the arctic terrain",
+            "中文": "在穿越北極地形的跋涉過程中，登山者面對了極其嚴峻的環境條件。"
         },
         {
+            "音檔": "音檔 - rigorous-7",
             "等級": "B2",
             "分類": "法政",
             "Words": "rigorous-7",
-            "句子": "The rigorous schedule left little time for rest"
+            "句子": "The rigorous schedule left little time for rest",
+            "中文": "嚴格的日程安排幾乎沒有留下休息的時間。"
         },
         {
             "等級": "B1",
@@ -32921,208 +33013,276 @@
             "句子": "The robustness of the test procedure made it reliable for all conditions"
         },
         {
+            "音檔": "音檔 - ruling-1",
             "等級": "B1",
             "分類": "法政",
             "Words": "ruling-1",
-            "句子": "The Supreme Court will give the final ruling"
+            "句子": "The Supreme Court will give the final ruling",
+            "中文": "最高法院將作出最終裁決。"
         },
         {
+            "音檔": "音檔 - ruling-2",
             "等級": "B1",
             "分類": "法政",
             "Words": "ruling-2",
-            "句子": "The judge's ruling in the case set a new precedent for future legal decisions"
+            "句子": "The judge's ruling in the case set a new precedent for future legal decisions",
+            "中文": "法官在此案件中的裁決為未來的法律判決樹立了新的先例。"
         },
         {
+            "音檔": "音檔 - ruling-3",
             "等級": "B1",
             "分類": "法政",
             "Words": "ruling-3",
-            "句子": "The ruling party introduced several new policies aimed at improving the economy"
+            "句子": "The ruling party introduced several new policies aimed at improving the economy",
+            "中文": "執政黨推出了幾項新政策，旨在改善經濟狀況。"
         },
         {
+            "音檔": "音檔 - rumor-has-it-1",
             "等級": "C2",
             "分類": "對話",
             "Words": "rumor-has-it-1",
-            "句子": "Rumor has it that the company will announce a major acquisition next week"
+            "句子": "Rumor has it that the company will announce a major acquisition next week",
+            "中文": "有傳聞說該公司將在下週宣布一項重大收購。"
         },
         {
+            "音檔": "音檔 - rumor-has-it-2",
             "等級": "C2",
             "分類": "對話",
             "Words": "rumor-has-it-2",
-            "句子": "Rumor has it she's planning to leave the team for a new job opportunity"
+            "句子": "Rumor has it she's planning to leave the team for a new job opportunity",
+            "中文": "有傳聞說她計劃離開團隊，尋找新的工作機會。"
         },
         {
+            "音檔": "音檔 - rumor-has-it-3",
             "等級": "C2",
             "分類": "對話",
             "Words": "rumor-has-it-3",
-            "句子": "Rumor has it that a popular celebrity will be attending the event"
+            "句子": "Rumor has it that a popular celebrity will be attending the event",
+            "中文": "有傳聞說一位受歡迎的名人將會出席這個活動。"
         },
         {
+            "音檔": "音檔 - rumor-has-it-4",
             "等級": "C2",
             "分類": "對話",
             "Words": "rumor-has-it-4",
-            "句子": "Rumor has it that the school might implement a four-day week next semester"
+            "句子": "Rumor has it that the school might implement a four-day week next semester",
+            "中文": "有傳聞說學校可能在下學期實施四天工作週。"
         },
         {
+            "音檔": "音檔 - rumour-1",
             "等級": "B1",
             "分類": "對話",
             "Words": "rumour-1",
-            "句子": "There were rumors circulating about a possible merger between the two companies"
+            "句子": "There were rumors circulating about a possible merger between the two companies",
+            "中文": "有傳聞在流傳，說兩家公司可能會合併。"
         },
         {
+            "音檔": "音檔 - rumour-2",
             "等級": "B1",
             "分類": "對話",
             "Words": "rumour-2",
-            "句子": "She heard a rumor that they were planning to relocate the office"
+            "句子": "She heard a rumor that they were planning to relocate the office",
+            "中文": "她聽到一個傳聞，說他們計劃搬遷辦公室。"
         },
         {
+            "音檔": "音檔 - rumour-3",
             "等級": "B1",
             "分類": "對話",
             "Words": "rumour-3",
-            "句子": "The rumor about the surprise party spread quickly among friends"
+            "句子": "The rumor about the surprise party spread quickly among friends",
+            "中文": "關於驚喜派對的傳聞在朋友之間迅速傳開。"
         },
         {
+            "音檔": "音檔 - rumour-4",
             "等級": "B1",
             "分類": "對話",
             "Words": "rumour-4",
-            "句子": "They often rumor about celebrities' personal lives without any solid evidence"
+            "句子": "They often rumor about celebrities' personal lives without any solid evidence",
+            "中文": "他們經常在沒有確鑿證據的情況下散播有關名人私生活的傳聞。"
         },
         {
+            "音檔": "音檔 - rumour-5",
             "等級": "B1",
             "分類": "對話",
             "Words": "rumour-5",
-            "句子": "It was rumored that the actor would be starring in a new blockbuster film"
+            "句子": "It was rumored that the actor would be starring in a new blockbuster film",
+            "中文": "有傳聞說那位演員將主演一部新的賣座電影。"
         },
         {
+            "音檔": "音檔 - rumour-6",
             "等級": "B1",
             "分類": "對話",
             "Words": "rumour-6",
-            "句子": "She found out that her colleagues were rumoring about her promotion"
+            "句子": "She found out that her colleagues were rumoring about her promotion",
+            "中文": "她發現同事們正在傳她升職的消息。"
         },
         {
+            "音檔": "音檔 - rupture-1",
             "等級": "B2",
             "分類": "醫學",
             "Words": "rupture-1",
-            "句子": "The doctor diagnosed her with a rupture of the ligament"
+            "句子": "The doctor diagnosed her with a rupture of the ligament",
+            "中文": "醫生診斷她的韌帶撕裂。"
         },
         {
+            "音檔": "音檔 - rupture-2",
             "等級": "B2",
             "分類": "醫學",
             "Words": "rupture-2",
-            "句子": "The rupture in the pipeline caused a major spill"
+            "句子": "The rupture in the pipeline caused a major spill",
+            "中文": "管線的破裂導致了大規模的洩漏。"
         },
         {
+            "音檔": "音檔 - rupture-3",
             "等級": "B2",
             "分類": "醫學",
             "Words": "rupture-3",
-            "句子": "He felt a sharp pain after the rupture of his eardrum"
+            "句子": "He felt a sharp pain after the rupture of his eardrum",
+            "中文": "他的耳膜破裂後感到劇烈的疼痛。"
         },
         {
+            "音檔": "音檔 - rupture-4",
             "等級": "B2",
             "分類": "醫學",
             "Words": "rupture-4",
-            "句子": "The force of the explosion ruptured the building's walls"
+            "句子": "The force of the explosion ruptured the building's walls",
+            "中文": "爆炸的威力使建築物的牆壁破裂。"
         },
         {
+            "音檔": "音檔 - rupture-5",
             "等級": "B2",
             "分類": "醫學",
             "Words": "rupture-5",
-            "句子": "She accidentally ruptured the balloon while trying to inflate it"
+            "句子": "She accidentally ruptured the balloon while trying to inflate it",
+            "中文": "她在試圖將氣球充氣時不小心把它弄破了。"
         },
         {
+            "音檔": "音檔 - rupture-6",
             "等級": "B2",
             "分類": "醫學",
             "Words": "rupture-6",
-            "句子": "The doctor warned that if the cyst were to rupture, it could lead to serious complications"
+            "句子": "The doctor warned that if the cyst were to rupture, it could lead to serious complications",
+            "中文": "醫生警告說，如果囊腫破裂，可能會導致嚴重的併發症。"
         },
         {
+            "音檔": "音檔 - rush-1",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-1",
-            "句子": "He rushed to catch the train before it left"
+            "句子": "He rushed to catch the train before it left",
+            "中文": "他趕緊去追火車，趕在它開走之前。"
         },
         {
+            "音檔": "音檔 - rush-10",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-10",
-            "句子": "The morning rush hour caused major delays on the highway"
+            "句子": "The morning rush hour caused major delays on the highway",
+            "中文": "早高峰時段造成了高速公路的重大延誤。"
         },
         {
+            "音檔": "音檔 - rush-11",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-11",
-            "句子": "He worked through the lunch rush at the restaurant"
+            "句子": "He worked through the lunch rush at the restaurant",
+            "中文": "他在餐廳度過了午餐高峰時段的繁忙。"
         },
         {
+            "音檔": "音檔 - rush-12",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-12",
-            "句子": "The rush to complete the project by the end of the day was overwhelming"
+            "句子": "The rush to complete the project by the end of the day was overwhelming",
+            "中文": "趕在一天結束前完成項目的急迫感讓人感到壓力山大。"
         },
         {
+            "音檔": "音檔 - rush-13",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-13",
-            "句子": "He has a rush order that needs to be completed by noon"
+            "句子": "He has a rush order that needs to be completed by noon",
+            "中文": "他有一個急單需要在中午前完成。"
         },
         {
+            "音檔": "音檔 - rush-14",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-14",
-            "句子": "There's a rush demand for tickets to the concert"
+            "句子": "There's a rush demand for tickets to the concert",
+            "中文": "演唱會的門票需求非常急迫。"
         },
         {
+            "音檔": "音檔 - rush-15",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-15",
-            "句子": "The team worked in a rush to finish the last-minute preparations"
+            "句子": "The team worked in a rush to finish the last-minute preparations",
+            "中文": "團隊匆忙工作，趕在最後一刻完成準備工作。"
         },
         {
+            "音檔": "音檔 - rush-2",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-2",
-            "句子": "She rushed through her chores so she could leave for the meeting"
+            "句子": "She rushed through her chores so she could leave for the meeting",
+            "中文": "她匆忙完成家務，這樣就可以去開會了。"
         },
         {
+            "音檔": "音檔 - rush-3",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-3",
-            "句子": "They rushed into the building when they heard the fire alarm"
+            "句子": "They rushed into the building when they heard the fire alarm",
+            "中文": "當他們聽到火災警報時，他們匆忙進入了建築物。"
         },
         {
+            "音檔": "音檔 - rush-4",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-4",
-            "句子": "The nurse rushed the patient to the emergency room"
+            "句子": "The nurse rushed the patient to the emergency room",
+            "中文": "護士急忙將病人送往急診室。"
         },
         {
+            "音檔": "音檔 - rush-5",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-5",
-            "句子": "The company rushed the shipment to meet the deadline"
+            "句子": "The company rushed the shipment to meet the deadline",
+            "中文": "公司匆忙處理貨物發運，以趕上截止日期。"
         },
         {
+            "音檔": "音檔 - rush-6",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-6",
-            "句子": "Don't rush into making decisions without considering all options"
+            "句子": "Don't rush into making decisions without considering all options",
+            "中文": "不要在沒有考慮所有選擇的情況下匆忙做出決定。"
         },
         {
+            "音檔": "音檔 - rush-7",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-7",
-            "句子": "He rushed into the conversation without listening to what was said first"
+            "句子": "He rushed into the conversation without listening to what was said first",
+            "中文": "他沒有先聽清楚對方說了什麼，就匆忙插入對話。"
         },
         {
+            "音檔": "音檔 - rush-8",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-8",
-            "句子": "There was a rush of people when the store opened its doors for the sale"
+            "句子": "There was a rush of people when the store opened its doors for the sale",
+            "中文": "當商店開門開始特賣時，人潮湧入。"
         },
         {
+            "音檔": "音檔 - rush-9",
             "等級": "B1",
             "分類": "日常生活",
             "Words": "rush-9",
-            "句子": "She felt a rush of adrenaline before the race"
+            "句子": "She felt a rush of adrenaline before the race",
+            "中文": "比賽前，她感覺到一股腎上腺素的湧動。"
         },
         {
             "Words": "rust-1",
@@ -33387,76 +33547,100 @@
             "句子": "They schemed to overthrow the government"
         },
         {
+            "音檔": "音檔 - scholar-1",
             "等級": "B2",
             "分類": "學術",
             "Words": "scholar-1",
-            "句子": "The university invited a renowned scholar to give a lecture on ancient history"
+            "句子": "The university invited a renowned scholar to give a lecture on ancient history",
+            "中文": "大學邀請了一位著名學者來講授古代歷史的講座。"
         },
         {
+            "音檔": "音檔 - scholar-2",
             "等級": "B2",
             "分類": "學術",
             "Words": "scholar-2",
-            "句子": "As a scholar of philosophy, she has published several influential books on ethics"
+            "句子": "As a scholar of philosophy, she has published several influential books on ethics",
+            "中文": "作為一位哲學學者，她已經出版了幾本關於倫理學的有影響力的書籍。"
         },
         {
+            "音檔": "音檔 - scholar-3",
             "等級": "B2",
             "分類": "學術",
             "Words": "scholar-3",
-            "句子": "She was a Rhodes scholar, attending Oxford University on a full scholarship"
+            "句子": "She was a Rhodes scholar, attending Oxford University on a full scholarship",
+            "中文": "她是羅德學者，憑全額獎學金就讀牛津大學。"
         },
         {
+            "音檔": "音檔 - scholar-4",
             "等級": "B2",
             "分類": "學術",
             "Words": "scholar-4",
-            "句子": "The scholar received a prestigious fellowship to continue her research in environmental science"
+            "句子": "The scholar received a prestigious fellowship to continue her research in environmental science",
+            "中文": "這位學者獲得了一個享有盛譽的研究金，繼續她在環境科學領域的研究。"
         },
         {
+            "音檔": "音檔 - scholarly-1",
             "等級": "C1",
             "分類": "學術",
             "Words": "scholarly-1",
-            "句子": "The professor's lecture had a scholarly tone, filled with detailed references and analyses"
+            "句子": "The professor's lecture had a scholarly tone, filled with detailed references and analyses",
+            "中文": "教授的講座語氣學術化，充滿了詳細的引用和分析。"
         },
         {
+            "音檔": "音檔 - scholarly-2",
             "等級": "C1",
             "分類": "學術",
             "Words": "scholarly-2",
-            "句子": "His writings have been recently given scholarly attention"
+            "句子": "His writings have been recently given scholarly attention",
+            "中文": "他的著作最近受到了學術界的關注。"
         },
         {
+            "音檔": "音檔 - scholarly-3",
             "等級": "C1",
             "分類": "學術",
             "Words": "scholarly-3",
-            "句子": "She has a scholarly interest in music"
+            "句子": "She has a scholarly interest in music",
+            "中文": "她對音樂有學術上的興趣。"
         },
         {
+            "音檔": "音檔 - scholarship-1",
             "等級": "C2",
             "分類": "學術",
             "Words": "scholarship-1",
-            "句子": "She received a scholarship to study abroad for a year"
+            "句子": "She received a scholarship to study abroad for a year",
+            "中文": "她獲得了獎學金，去國外學習一年的機會。"
         },
         {
+            "音檔": "音檔 - scholarship-2",
             "等級": "C2",
             "分類": "學術",
             "Words": "scholarship-2",
-            "句子": "Many students apply for scholarships to help cover the cost of their education"
+            "句子": "Many students apply for scholarships to help cover the cost of their education",
+            "中文": "許多學生申請獎學金來幫助支付學費。"
         },
         {
+            "音檔": "音檔 - scholarship-3",
             "等級": "C2",
             "分類": "學術",
             "Words": "scholarship-3",
-            "句子": "His scholarship in medieval history is widely respected in the academic community"
+            "句子": "His scholarship in medieval history is widely respected in the academic community",
+            "中文": "他在中世紀歷史方面的學術研究在學術界廣受尊敬。"
         },
         {
+            "音檔": "音檔 - scholarship-4",
             "等級": "C2",
             "分類": "學術",
             "Words": "scholarship-4",
-            "句子": "The conference showcased the latest scholarship in environmental science"
+            "句子": "The conference showcased the latest scholarship in environmental science",
+            "中文": "這次會議展示了環境科學領域的最新學術研究成果。"
         },
         {
+            "音檔": "音檔 - scholarship-5",
             "等級": "C2",
             "分類": "學術",
             "Words": "scholarship-5",
-            "句子": "The professor's scholarship has contributed significantly to the field of economics"
+            "句子": "The professor's scholarship has contributed significantly to the field of economics",
+            "中文": "這位教授的學術研究對經濟學領域做出了重要貢獻。"
         },
         {
             "音檔": "音檔 - scroll-1",
@@ -33586,22 +33770,28 @@
             "句子": "After assessing the situation, they scuttled the vessel to keep it out of hostile territory"
         },
         {
+            "音檔": "音檔 - scuttlebutt-1",
             "等級": "C2",
             "分類": "對話",
             "Words": "scuttlebutt-1",
-            "句子": "The office was buzzing with scuttlebutt about the upcoming merger"
+            "句子": "The office was buzzing with scuttlebutt about the upcoming merger",
+            "中文": "辦公室裡充滿了關於即將合併的八卦傳聞。"
         },
         {
+            "音檔": "音檔 - scuttlebutt-2",
             "等級": "C2",
             "分類": "對話",
             "Words": "scuttlebutt-2",
-            "句子": "According to the scuttlebutt, he’s getting a promotion soon"
+            "句子": "According to the scuttlebutt, he’s getting a promotion soon",
+            "中文": "根據八卦傳聞，他很快就會晉升。"
         },
         {
+            "音檔": "音檔 - scuttlebutt-3",
             "等級": "C2",
             "分類": "對話",
             "Words": "scuttlebutt-3",
-            "句子": "She didn’t want to contribute to the scuttlebutt and stayed quiet during the meeting"
+            "句子": "She didn’t want to contribute to the scuttlebutt and stayed quiet during the meeting",
+            "中文": "她不想加入八卦的行列，所以在會議中保持沉默。"
         },
         {
             "等級": "B1",
@@ -33749,22 +33939,28 @@
             "句子": "Their meeting was a result of serendipity, leading to a lifelong friendship"
         },
         {
+            "音檔": "音檔 - Shakespeare-1",
             "等級": "C1",
             "分類": "名人",
             "Words": "Shakespeare-1",
-            "句子": "Shakespeare's works, such as Romeo and Juliet and Hamlet, are still performed worldwide today"
+            "句子": "Shakespeare's works, such as Romeo and Juliet and Hamlet, are still performed worldwide today",
+            "中文": "莎士比亞的作品，如《羅密歐與朱麗葉》和《哈姆雷特》，今天仍然在全球上演。"
         },
         {
+            "音檔": "音檔 - Shakespeare-2",
             "等級": "C1",
             "分類": "名人",
             "Words": "Shakespeare-2",
-            "句子": "The professor gave a lecture on Shakespeare's influence on modern theater"
+            "句子": "The professor gave a lecture on Shakespeare's influence on modern theater",
+            "中文": "教授就莎士比亞對現代劇場的影響進行了講座。"
         },
         {
+            "音檔": "音檔 - Shakespeare-3",
             "等級": "C1",
             "分類": "名人",
             "Words": "Shakespeare-3",
-            "句子": "She was a fan of Shakespeare’s sonnets, often quoting them in conversation"
+            "句子": "She was a fan of Shakespeare’s sonnets, often quoting them in conversation",
+            "中文": "她是莎士比亞十四行詩的粉絲，常常在對話中引用其中的詩句。"
         },
         {
             "Words": "sheen-1",
@@ -34120,34 +34316,44 @@
             "句子": "After falling off his bike, he wore a sling to support his injured arm"
         },
         {
+            "音檔": "音檔 - slump-1",
             "等級": "B1",
             "分類": "商業",
             "Words": "slump-1",
-            "句子": "The housing market experienced a significant slump, with prices dropping rapidly"
+            "句子": "The housing market experienced a significant slump, with prices dropping rapidly",
+            "中文": "房地產市場經歷了重大低迷，價格迅速下跌。"
         },
         {
+            "音檔": "音檔 - slump-2",
             "等級": "B1",
             "分類": "商業",
             "Words": "slump-2",
-            "句子": "After a strong start to the year, the company hit a slump in sales during the second quarter"
+            "句子": "After a strong start to the year, the company hit a slump in sales during the second quarter",
+            "中文": "在年初表現強勁後，該公司在第二季度銷售遭遇了下滑。"
         },
         {
+            "音檔": "音檔 - slump-3",
             "等級": "B1",
             "分類": "商業",
             "Words": "slump-3",
-            "句子": "The stock prices slumped after the disappointing earnings report was released"
+            "句子": "The stock prices slumped after the disappointing earnings report was released",
+            "中文": "在令人失望的財報發布後，股價大幅下跌。"
         },
         {
+            "音檔": "音檔 - slump-4",
             "等級": "B1",
             "分類": "商業",
             "Words": "slump-4",
-            "句子": "He slumped into his chair, exhausted after a long day of work"
+            "句子": "He slumped into his chair, exhausted after a long day of work",
+            "中文": "他疲憊不堪地倒進椅子裡，經過一天的辛勞工作後感到精疲力竭。"
         },
         {
+            "音檔": "音檔 - slump-5",
             "等級": "B1",
             "分類": "商業",
             "Words": "slump-5",
-            "句子": "The driver of the car was found slumped over the steering wheel, unconscious"
+            "句子": "The driver of the car was found slumped over the steering wheel, unconscious",
+            "中文": "駕駛員被發現昏迷不醒，頭部伏在方向盤上。"
         },
         {
             "等級": "B1",
@@ -34237,28 +34443,36 @@
             "句子": "She purchased a so-called \"miracle\" weight loss product, but it had no effect"
         },
         {
+            "音檔": "音檔 - social-media-influencer-1",
             "等級": "B2",
             "分類": "對話",
             "Words": "social-media-influencer-1",
-            "句子": "She became a social media influencer by posting beauty tutorials on Instagram"
+            "句子": "She became a social media influencer by posting beauty tutorials on Instagram",
+            "中文": "她透過在 Instagram 上發布美妝教學，成為了一位社交媒體紅人。"
         },
         {
+            "音檔": "音檔 - social-media-influencer-2",
             "等級": "B2",
             "分類": "對話",
             "Words": "social-media-influencer-2",
-            "句子": "Companies often collaborate with social media influencers to promote their products"
+            "句子": "Companies often collaborate with social media influencers to promote their products",
+            "中文": "公司經常與社交媒體紅人合作，推廣他們的產品。"
         },
         {
+            "音檔": "音檔 - social-media-influencer-3",
             "等級": "B2",
             "分類": "對話",
             "Words": "social-media-influencer-3",
-            "句子": "As a social media influencer, he built a loyal fan base by sharing fitness tips and workout routines"
+            "句子": "As a social media influencer, he built a loyal fan base by sharing fitness tips and workout routines",
+            "中文": "作為一名社交媒體紅人，他通過分享健身技巧和鍛煉計劃，建立了忠實的粉絲群體。"
         },
         {
+            "音檔": "音檔 - social-media-influencer-4",
             "等級": "B2",
             "分類": "對話",
             "Words": "social-media-influencer-4",
-            "句子": "The social media influencer’s review boosted sales of the new gadget"
+            "句子": "The social media influencer’s review boosted sales of the new gadget",
+            "中文": "這位社交媒體紅人的評論推動了新型小工具的銷售。"
         },
         {
             "等級": "C2",
@@ -34741,40 +34955,52 @@
             "句子": "The wheels of the bicycle spun as he pedaled"
         },
         {
+            "音檔": "音檔 - spine-1",
             "等級": "B1",
             "分類": "醫學",
             "Words": "spine-1",
-            "句子": "Injuries to the spine can cause long-term mobility issues"
+            "句子": "Injuries to the spine can cause long-term mobility issues",
+            "中文": "脊椎受傷可能會導致長期的行動問題。"
         },
         {
+            "音檔": "音檔 - spine-2",
             "等級": "B1",
             "分類": "醫學",
             "Words": "spine-2",
-            "句子": "Good posture helps maintain a healthy spine"
+            "句子": "Good posture helps maintain a healthy spine",
+            "中文": "良好的姿勢有助於保持脊椎健康。"
         },
         {
+            "音檔": "音檔 - spine-3",
             "等級": "B1",
             "分類": "醫學",
             "Words": "spine-3",
-            "句子": "The cactus is covered in spines to deter animals from eating it"
+            "句子": "The cactus is covered in spines to deter animals from eating it",
+            "中文": "仙人掌表面長滿了刺，以防止動物啃食它。"
         },
         {
+            "音檔": "音檔 - spine-4",
             "等級": "B1",
             "分類": "醫學",
             "Words": "spine-4",
-            "句子": "Sea urchins have spines that protect them from predators"
+            "句子": "Sea urchins have spines that protect them from predators",
+            "中文": "海膽有刺來保護自己免受掠食者的侵害。"
         },
         {
+            "音檔": "音檔 - spine-5",
             "等級": "B1",
             "分類": "醫學",
             "Words": "spine-5",
-            "句子": "The book's spine was worn, showing how often it had been read"
+            "句子": "The book's spine was worn, showing how often it had been read",
+            "中文": "這本書的書脊已經磨損，顯示出它被閱讀的頻繁程度。"
         },
         {
+            "音檔": "音檔 - spine-6",
             "等級": "B1",
             "分類": "醫學",
             "Words": "spine-6",
-            "句子": "She organized her library with each book’s spine facing outward"
+            "句子": "She organized her library with each book’s spine facing outward",
+            "中文": "她把書庫整理得井井有條，每本書的書脊都朝外排列。"
         },
         {
             "等級": "B1",
@@ -35230,22 +35456,28 @@
             "句子": "The ball hit him square in the chest"
         },
         {
+            "音檔": "音檔 - stagnation-1",
             "等級": "C1",
             "分類": "商業",
             "Words": "stagnation-1",
-            "句子": "The country's economy experienced stagnation due to a lack of investment in new industries"
+            "句子": "The country's economy experienced stagnation due to a lack of investment in new industries",
+            "中文": "由於缺乏對新興產業的投資，該國經濟出現了停滯。"
         },
         {
+            "音檔": "音檔 - stagnation-2",
             "等級": "C1",
             "分類": "商業",
             "Words": "stagnation-2",
-            "句子": "A period of stagnation in technology can slow innovation and productivity"
+            "句子": "A period of stagnation in technology can slow innovation and productivity",
+            "中文": "由於缺乏對新興產業的投資，該國經濟出現了停滯。"
         },
         {
+            "音檔": "音檔 - stagnation-3",
             "等級": "C1",
             "分類": "商業",
             "Words": "stagnation-3",
-            "句子": "The project fell into stagnation after the team lost motivation and funding"
+            "句子": "The project fell into stagnation after the team lost motivation and funding",
+            "中文": "在團隊失去動力與資金後，該項目陷入了停滯狀態。"
         },
         {
             "等級": "B1",
@@ -36133,22 +36365,28 @@
             "句子": "In the business world, a person of substance often has significant influence and connections"
         },
         {
+            "音檔": "音檔 - substance-abuse-1",
             "等級": "C2",
             "分類": "法政",
             "Words": "substance-abuse-1",
-            "句子": "Many individuals seek help for substance abuse to regain control of their lives and improve their well-being"
+            "句子": "Many individuals seek help for substance abuse to regain control of their lives and improve their well-being",
+            "中文": "許多人尋求藥物濫用方面的幫助，以重新掌控自己的生活並提升福祉。"
         },
         {
+            "音檔": "音檔 - substance-abuse-2",
             "等級": "C2",
             "分類": "法政",
             "Words": "substance-abuse-2",
-            "句子": "The community launched a program aimed at preventing substance abuse among teenagers"
+            "句子": "The community launched a program aimed at preventing substance abuse among teenagers",
+            "中文": "社區推出了一項計畫，旨在預防青少年藥物濫用。"
         },
         {
+            "音檔": "音檔 - substance-abuse-3",
             "等級": "C2",
             "分類": "法政",
             "Words": "substance-abuse-3",
-            "句子": "Treatment for substance abuse often includes therapy, support groups, and sometimes medication"
+            "句子": "Treatment for substance abuse often includes therapy, support groups, and sometimes medication",
+            "中文": "藥物濫用的治療通常包括心理治療、支持團體，有時也包括藥物治療。"
         },
         {
             "等級": "C2",
@@ -36782,16 +37020,20 @@
             "句子": "The scheme turned out to be a elaborate swindle"
         },
         {
+            "音檔": "音檔 - swollen-1",
             "等級": "B2",
             "分類": "醫學",
             "Words": "swollen-1",
-            "句子": "Her ankle was swollen after she twisted it"
+            "句子": "Her ankle was swollen after she twisted it",
+            "中文": "她扭傷腳踝後，腳踝腫了起來。"
         },
         {
+            "音檔": "音檔 - swollen-2",
             "等級": "B2",
             "分類": "醫學",
             "Words": "swollen-2",
-            "句子": "The bee sting made his arm swollen and red"
+            "句子": "The bee sting made his arm swollen and red",
+            "中文": "蜂螫使他的手臂又腫又紅。"
         },
         {
             "等級": "B1",
@@ -36874,22 +37116,28 @@
             "句子": "His tactic for winning the debate was to remain calm and focus on facts"
         },
         {
+            "音檔": "音檔 - tadpole-1",
             "等級": "B2",
             "分類": "生物",
             "Words": "tadpole-1",
-            "句子": "The tadpole was swimming around in the pond, its tail flicking back and forth as it grew"
+            "句子": "The tadpole was swimming around in the pond, its tail flicking back and forth as it grew",
+            "中文": "蝌蚪在池塘中游來游去，牠的尾巴一邊生長一邊來回擺動。"
         },
         {
+            "音檔": "音檔 - tadpole-2",
             "等級": "B2",
             "分類": "生物",
             "Words": "tadpole-2",
-            "句子": "As the tadpole matured, it began to develop tiny legs and lose its tail, signaling the start of its transformation into a frog"
+            "句子": "As the tadpole matured, it began to develop tiny legs and lose its tail, signaling the start of its transformation into a frog",
+            "中文": "隨著蝌蚪的成長，它開始長出小腿並逐漸失去尾巴，這標誌著牠開始蛻變成青蛙。"
         },
         {
+            "音檔": "音檔 - tadpole-3",
             "等級": "B2",
             "分類": "生物",
             "Words": "tadpole-3",
-            "句子": "Watching the tadpoles in the pond evolve into frogs was a fascinating experience"
+            "句子": "Watching the tadpoles in the pond evolve into frogs was a fascinating experience",
+            "中文": "觀察池塘裡的蝌蚪蛻變成青蛙是一段令人著迷的經歷。"
         },
         {
             "音檔": "音檔 - take-evasive-action-1",
@@ -37114,28 +37362,36 @@
             "句子": "The bakery down the street sells all sorts of tasty treats, from cookies to cupcakes"
         },
         {
+            "音檔": "音檔 - taxpayer-1",
             "等級": "B2",
             "分類": "法政",
             "Words": "taxpayer-1",
-            "句子": "As a taxpayer, she receives services such as public education and road maintenance funded by her tax contributions"
+            "句子": "As a taxpayer, she receives services such as public education and road maintenance funded by her tax contributions",
+            "中文": "作為納稅人，她享受由她的稅收貢獻資助的服務，如公共教育和道路維護。"
         },
         {
+            "音檔": "音檔 - taxpayer-2",
             "等級": "B2",
             "分類": "法政",
             "Words": "taxpayer-2",
-            "句子": "The government must ensure that taxpayer money is spent efficiently and transparently"
+            "句子": "The government must ensure that taxpayer money is spent efficiently and transparently",
+            "中文": "政府必須確保納稅人的錢被有效且透明地使用。"
         },
         {
+            "音檔": "音檔 - taxpayer-3",
             "等級": "B2",
             "分類": "法政",
             "Words": "taxpayer-3",
-            "句子": "The company is a large taxpayer and contributes significantly to the local economy through its taxes"
+            "句子": "The company is a large taxpayer and contributes significantly to the local economy through its taxes",
+            "中文": "這家公司是大納稅人，通過繳納稅款對當地經濟做出了重大貢獻。"
         },
         {
+            "音檔": "音檔 - taxpayer-4",
             "等級": "B2",
             "分類": "法政",
             "Words": "taxpayer-4",
-            "句子": "Many citizens were outraged by what they considered a waste of taxpayers' money on the failed project"
+            "句子": "Many citizens were outraged by what they considered a waste of taxpayers' money on the failed project",
+            "中文": "許多市民對他們認為是浪費納稅人錢的失敗項目感到憤怒。"
         },
         {
             "分類": "技術",
@@ -37188,22 +37444,28 @@
             "句子": "He tore a ligament during the game and had to leave the field"
         },
         {
+            "音檔": "音檔 - technician-1",
             "等級": "B2",
             "分類": "技術",
             "Words": "technician-1",
-            "句子": "The technician fixed the air conditioning unit within an hour"
+            "句子": "The technician fixed the air conditioning unit within an hour",
+            "中文": "技術員在一小時內修好了空調。"
         },
         {
+            "音檔": "音檔 - technician-2",
             "等級": "B2",
             "分類": "技術",
             "Words": "technician-2",
-            "句子": "A lab technician prepared the samples for testing"
+            "句子": "A lab technician prepared the samples for testing",
+            "中文": "實驗室技術員為測試準備了樣本。"
         },
         {
+            "音檔": "音檔 - technician-3",
             "等級": "B2",
             "分類": "技術",
             "Words": "technician-3",
-            "句子": "The computer technician upgraded the company’s network security"
+            "句子": "The computer technician upgraded the company’s network security",
+            "中文": "電腦技術員升級了公司的網絡安全系統。"
         },
         {
             "等級": "B2",
@@ -37364,28 +37626,36 @@
             "句子": "He drafted his last testament to ensure that his belongings would be distributed according to his wishes"
         },
         {
+            "音檔": "音檔 - testimony-1",
             "等級": "C1",
             "分類": "法政",
             "Words": "testimony-1",
-            "句子": "The witness provided compelling testimony that helped the jury reach a verdict"
+            "句子": "The witness provided compelling testimony that helped the jury reach a verdict",
+            "中文": "證人提供了令人信服的證詞，幫助陪審團做出了裁決。"
         },
         {
+            "音檔": "音檔 - testimony-2",
             "等級": "C1",
             "分類": "法政",
             "Words": "testimony-2",
-            "句子": "His testimony about the events of that night was crucial to the case"
+            "句子": "His testimony about the events of that night was crucial to the case",
+            "中文": "他關於那晚事件的證詞對案件至關重要。"
         },
         {
+            "音檔": "音檔 - testimony-3",
             "等級": "C1",
             "分類": "法政",
             "Words": "testimony-3",
-            "句子": "During the trial, several witnesses gave testimony regarding the defendant's alibi"
+            "句子": "During the trial, several witnesses gave testimony regarding the defendant's alibi",
+            "中文": "在審判期間，幾位證人就被告的不在場證明作了證詞。"
         },
         {
+            "音檔": "音檔 - testimony-4",
             "等級": "C1",
             "分類": "法政",
             "Words": "testimony-4",
-            "句子": "The video footage served as testimony to the fact that the incident occurred as described"
+            "句子": "The video footage served as testimony to the fact that the incident occurred as described",
+            "中文": "視頻影像作為證據，證明了事件確實按照描述發生。"
         },
         {
             "音檔": "音檔 - the-art-of-pottery-1",
@@ -37412,88 +37682,116 @@
             "中文": "在這個村莊，製陶的技藝代代相傳。"
         },
         {
+            "音檔": "音檔 - theoretical-1",
             "等級": "C2",
             "分類": "學術",
             "Words": "theoretical-1",
-            "句子": "The discussion was mostly theoretical, focusing on possibilities rather than actual plans"
+            "句子": "The discussion was mostly theoretical, focusing on possibilities rather than actual plans",
+            "中文": "討論主要是理論性的，側重於可能性而非實際計劃。"
         },
         {
+            "音檔": "音檔 - theoretical-2",
             "等級": "C2",
             "分類": "學術",
             "Words": "theoretical-2",
-            "句子": "Her research in physics is highly theoretical and doesn’t involve experiments"
+            "句子": "Her research in physics is highly theoretical and doesn’t involve experiments",
+            "中文": "她在物理學方面的研究高度理論化，並不涉及實驗。"
         },
         {
+            "音檔": "音檔 - theoretical-3",
             "等級": "C2",
             "分類": "學術",
             "Words": "theoretical-3",
-            "句子": "The class covered theoretical concepts before moving on to real-world applications"
+            "句子": "The class covered theoretical concepts before moving on to real-world applications",
+            "中文": "這門課先講解了理論概念，再進入現實應用。"
         },
         {
+            "音檔": "音檔 - theoretical-4",
             "等級": "C2",
             "分類": "學術",
             "Words": "theoretical-4",
-            "句子": "The danger is more than just a theoretical possibility"
+            "句子": "The danger is more than just a theoretical possibility",
+            "中文": "這種危險不僅僅是理論上的可能性。"
         },
         {
+            "音檔": "音檔 - theory-1",
             "等級": "B1",
             "分類": "學術",
             "Words": "theory-1",
-            "句子": "The theory of evolution offers an explanation for the diversity of species on Earth"
+            "句子": "The theory of evolution offers an explanation for the diversity of species on Earth",
+            "中文": "進化論提供了解釋地球上物種多樣性的理論。"
         },
         {
+            "音檔": "音檔 - theory-2",
             "等級": "B1",
             "分類": "學術",
             "Words": "theory-2",
-            "句子": "He proposed a new theory about the causes of climate change"
+            "句子": "He proposed a new theory about the causes of climate change",
+            "中文": "他提出了一個關於氣候變化原因的新理論。"
         },
         {
+            "音檔": "音檔 - theory-3",
             "等級": "B1",
             "分類": "學術",
             "Words": "theory-3",
-            "句子": "There are several different theories about the cause of the disease"
+            "句子": "There are several different theories about the cause of the disease",
+            "中文": "關於這種疾病的原因有幾種不同的理論。"
         },
         {
+            "音檔": "音檔 - theory-4",
             "等級": "B1",
             "分類": "學術",
             "Words": "theory-4",
-            "句子": "She has a theory about why her team is not performing well"
+            "句子": "She has a theory about why her team is not performing well",
+            "中文": "她有一個關於為何她的團隊表現不佳的理論。"
         },
         {
+            "音檔": "音檔 - theory-5",
             "等級": "B1",
             "分類": "學術",
             "Words": "theory-5",
-            "句子": "In theory, the plan sounds good, but it might not work in practice"
+            "句子": "In theory, the plan sounds good, but it might not work in practice",
+            "中文": "理論上，這個計劃聽起來不錯，但在實踐中可能無法奏效。"
         },
         {
+            "音檔": "音檔 - theory-6",
             "等級": "B1",
             "分類": "學術",
             "Words": "theory-6",
-            "句子": "I agree with you in theory, but realistically I don't think we have the time to do that"
+            "句子": "I agree with you in theory, but realistically I don't think we have the time to do that",
+            "中文": "我在理論上同意你的看法，但從現實來看，我覺得我們沒有時間去做那件事。"
         },
         {
+            "音檔": "音檔 - therapist-1",
             "等級": "C1",
             "分類": "醫學",
             "Words": "therapist-1",
-            "句子": "She started seeing a therapist to help manage her anxiety"
+            "句子": "She started seeing a therapist to help manage her anxiety",
+            "中文": "她開始看心理治療師，以幫助管理她的焦慮情緒。"
         },
         {
+            "音檔": "音檔 - therapist-2",
             "等級": "C1",
             "分類": "醫學",
             "Words": "therapist-2",
-            "句子": "The therapist suggested several techniques to improve her stress levels"
+            "句子": "The therapist suggested several techniques to improve her stress levels",
+            "中文": "治療師建議了幾種技術來改善她的壓力水平。"
         },
         {
+            "音檔": "音檔 - therapist-3",
             "等級": "C1",
             "分類": "醫學",
             "Words": "therapist-3",
-            "句子": "Finding a good therapist can be a crucial step in addressing mental health concerns"
+            "句子": "Finding a good therapist can be a crucial step in addressing mental health concerns",
+            "中文": "找到一位好的治療師對於解決心理健康問題來說是至關重要的一步。"
         },
         {
+            "音檔": "音檔 - therapist-4",
             "等級": "C1",
             "分類": "醫學",
             "Words": "therapist-4",
-            "句子": "His therapist was instrumental in helping him recover from his traumatic experience"
+            "句子": "His therapist was instrumental in helping him recover from his traumatic experience",
+            "中文": "他的治療師在幫助他從創傷經歷中恢復過來的過程中發揮了關鍵作用。"
         },
         {
             "等級": "B1",
@@ -37756,52 +38054,68 @@
             "句子": "They toiled for hours to prepare the feast for the celebration"
         },
         {
+            "音檔": "音檔 - token-1",
             "等級": "B2",
             "分類": "對話",
             "Words": "token-1",
-            "句子": "She gave him a token of appreciation for his help with the event"
+            "句子": "She gave him a token of appreciation for his help with the event",
+            "中文": "她給了他一個小小的感謝禮物，表達對他幫助籌辦活動的感激之情。"
         },
         {
+            "音檔": "音檔 - token-2",
             "等級": "B2",
             "分類": "對話",
             "Words": "token-2",
-            "句子": "The company handed out tokens of thanks to the volunteers at the fundraiser"
+            "句子": "The company handed out tokens of thanks to the volunteers at the fundraiser",
+            "中文": "公司在募款活動中向志願者發放了感謝小禮物。"
         },
         {
+            "音檔": "音檔 - token-3",
             "等級": "B2",
             "分類": "對話",
             "Words": "token-3",
-            "句子": "The arcade machines accepted tokens instead of coins"
+            "句子": "The arcade machines accepted tokens instead of coins",
+            "中文": "這些遊戲機使用代幣而不是硬幣。"
         },
         {
+            "音檔": "音檔 - token-4",
             "等級": "B2",
             "分類": "對話",
             "Words": "token-4",
-            "句子": "The public transport system uses tokens for fare payment"
+            "句子": "The public transport system uses tokens for fare payment",
+            "中文": "公共交通系統使用代幣來支付車費。"
         },
         {
+            "音檔": "音檔 - token-5",
             "等級": "B2",
             "分類": "對話",
             "Words": "token-5",
-            "句子": "The flowers she gave were a token of her affection"
+            "句子": "The flowers she gave were a token of her affection",
+            "中文": "她送的花是她情感的象徵。"
         },
         {
+            "音檔": "音檔 - token-6",
             "等級": "B2",
             "分類": "對話",
             "Words": "token-6",
-            "句子": "The award was a token of his hard work and dedication"
+            "句子": "The award was a token of his hard work and dedication",
+            "中文": "這個獎項是對他辛勤工作和奉獻精神的象徵。"
         },
         {
+            "音檔": "音檔 - token-7",
             "等級": "B2",
             "分類": "對話",
             "Words": "token-7",
-            "句子": "They tokened their appreciation by presenting him with a certificate"
+            "句子": "They tokened their appreciation by presenting him with a certificate",
+            "中文": "他們通過頒發證書來表達對他的感謝。"
         },
         {
+            "音檔": "音檔 - token-8",
             "等級": "B2",
             "分類": "對話",
             "Words": "token-8",
-            "句子": "She tokened her support by attending the event despite her busy schedule"
+            "句子": "She tokened her support by attending the event despite her busy schedule",
+            "中文": "儘管她的日程繁忙，她還是通過參加活動來表達她的支持。"
         },
         {
             "等級": "B1",
@@ -37959,46 +38273,60 @@
             "中文": "（不要因為那個錯誤折磨自己）。"
         },
         {
+            "音檔": "音檔 - toss-1",
             "等級": "B1",
             "分類": "動作",
             "Words": "toss-1",
-            "句子": "She tossed the keys onto the table"
+            "句子": "She tossed the keys onto the table",
+            "中文": "她把鑰匙丟到桌子上。"
         },
         {
+            "音檔": "音檔 - toss-2",
             "等級": "B1",
             "分類": "動作",
             "Words": "toss-2",
-            "句子": "The waves tossed the boat around violently"
+            "句子": "The waves tossed the boat around violently",
+            "中文": "波浪猛烈地把船搖來搖去。"
         },
         {
+            "音檔": "音檔 - toss-3",
             "等級": "B1",
             "分類": "動作",
             "Words": "toss-3",
-            "句子": "Let's toss a coin to decide"
+            "句子": "Let's toss a coin to decide",
+            "中文": "我們擲硬幣來決定吧。"
         },
         {
+            "音檔": "音檔 - toss-4",
             "等級": "B1",
             "分類": "動作",
             "Words": "toss-4",
-            "句子": "I'll toss you for the armchair"
+            "句子": "I'll toss you for the armchair",
+            "中文": "我來和你擲硬幣決定誰坐這張扶手椅。"
         },
         {
+            "音檔": "音檔 - toss-5",
             "等級": "B1",
             "分類": "動作",
             "Words": "toss-5",
-            "句子": "Toss the cooked vegetables in butter"
+            "句子": "Toss the cooked vegetables in butter",
+            "中文": "把煮熟的蔬菜拌上黃油。"
         },
         {
+            "音檔": "音檔 - toss-6",
             "等級": "B1",
             "分類": "動作",
             "Words": "toss-6",
-            "句子": "He tossed about in his sleep all night"
+            "句子": "He tossed about in his sleep all night",
+            "中文": "他整晚在睡夢中翻來覆去。"
         },
         {
+            "音檔": "音檔 - toss-7",
             "等級": "B1",
             "分類": "動作",
             "Words": "toss-7",
-            "句子": "He tossed out of the room in anger"
+            "句子": "He tossed out of the room in anger",
+            "中文": "他憤怒地衝出房間。"
         },
         {
             "等級": "A2",

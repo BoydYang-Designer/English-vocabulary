@@ -821,9 +821,10 @@ document.addEventListener("keydown", function (event) {
 
 function normalizeText(text) {
     return text
-        .normalize('NFD') // 將組合字符分解（如 é 分解為 e 和結合重音符號）
-        .replace(/[\u0300-\u036f]/g, '') // 移除所有重音符號
+        .normalize('NFD') // 將組合字符分解
+        .replace(/[\u0300-\u036f]/g, '') // 移除重音符號
         .toLowerCase()
+        .replace(/\bii\b/g, '2') // 將單獨的 "ii" 轉為 "2"（針對 World War II）
         .replace(/\s+/g, ' ') // 統一空格
         .replace(/,\s*/g, ',') // 處理逗號後的空格
         .trim();
@@ -887,9 +888,9 @@ function updateSentenceHint(correctSentence, userAnswer) {
 
     // 格式化顯示內容
     let formattedSentence = correctWords.map((word, index) => {
-        if (/\p{L}+/u.test(word)) {
+        if (/\p{L}+/u.test(word) || word === "II") {
             let userWord = userWords[index] || "";
-            if (normalizeText(userWord) === normalizeText(word)) {
+            if (normalizeText(userWord) === normalizeText(word) || (word === "II" && userWord === "2")) {
                 // 正確的單字：黑色粗體
                 return `<span style="color: black; font-weight: bold;">${word}</span>`;
             } else {
@@ -912,7 +913,7 @@ function highlightUserAnswers(allInputs, correctSentence) {
     let inputIndex = 0;
 
     correctWords.forEach((word, wordIndex) => {
-        if (/\p{L}+/u.test(word)) {
+        if (/\p{L}+/u.test(word) || word === "II") { // 明確處理 "II"
             let inputWord = "";
             let inputElements = [];
 
@@ -923,11 +924,11 @@ function highlightUserAnswers(allInputs, correctSentence) {
                 inputIndex++;
             }
 
-            // 對單詞進行正規化比對
+            // 對單詞進行正規化比對，特別處理 "II" 和 "2"
             let normalizedInputWord = normalizeText(inputWord);
             let normalizedWord = normalizeText(word);
 
-            if (normalizedInputWord === normalizedWord) {
+            if (normalizedInputWord === normalizedWord || (word === "II" && inputWord === "2")) {
                 // 整個單詞正確，標記為黑色
                 inputElements.forEach(input => {
                     input.style.color = "black";
@@ -939,7 +940,8 @@ function highlightUserAnswers(allInputs, correctSentence) {
                 inputElements.forEach((input, letterIndex) => {
                     let inputChar = input.value || "";
                     let correctChar = wordChars[letterIndex] || "";
-                    if (normalizeText(inputChar) === normalizeText(correctChar)) {
+                    if (normalizeText(inputChar) === normalizeText(correctChar) || 
+                        (word === "II" && inputWord === "2" && letterIndex === 0)) {
                         input.style.color = "black"; // 正確字符
                     } else {
                         input.style.color = "red"; // 錯誤或缺失字符
