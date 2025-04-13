@@ -653,16 +653,23 @@ input[type="checkbox"]:checked + span {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* 選中時更強的陰影 */
 }
 
+/* 正確的單字塊 */
 .word-block.correct {
-    background-color: #d4edda; /* 與 result-item.correct 一致 */
-    border-color: #28a745;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #d4edda; /* 淺綠色 */
+    border: 1px solid #28a745;
 }
 
+/* 錯誤的單字塊 */
 .word-block.incorrect {
-    background-color: #f8d7da; /* 與 result-item.wrong 一致 */
-    border-color: #dc3545;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f8d7da; /* 淺紅色 */
+    border: 3px solid red;
+}
+
+/* 未填入的占位符 */
+.construction-placeholder.unfilled {
+    background-color: #ffe9a2; /* 淺黃色 */
+    border: 3px solid red;
+    border-radius: 5px; /* 圓角 */
 }
 
 /* 重組提示文字 */
@@ -758,6 +765,40 @@ input[type="checkbox"]:checked + span {
     #rewordHint {
         font-size: 28px; /* PC 上放大到 28px */
     }
+}
+.word-block-placeholder {
+    display: inline-block;
+    margin: 5px;
+    min-width: 60px; /* 根據單字長度調整 */
+    min-height: 30px; /* 確保空位有高度 */
+    border: 1px dashed #ccc; /* 可選：顯示占位符邊框 */
+    vertical-align: middle;
+}
+
+.word-block-placeholder.empty {
+    background-color: #f0f0f0; /* 可選：空位背景色 */
+}
+
+.word-block {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* 構建區域的占位符樣式 */
+.construction-placeholder {
+    display: inline-block;
+    min-width: 60px; /* 根據單字長度調整 */
+    min-height: 30px; /* 確保空間可見 */
+    margin: 5px;
+    border: 1px dashed #ccc; /* 虛線邊框提示空間 */
+}
+
+.construction-placeholder:empty {
+    background-color: #f0f0f0; /* 空的占位符顯示灰色背景 */
 }
 
 }

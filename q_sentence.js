@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
 });
 
-
 // 📌 進入 Q Sentence 測驗分類頁面
 function showSentenceQuizCategories() {
     document.querySelector("h1").textContent = "句子測驗區";
@@ -73,7 +72,6 @@ function showSentenceQuizCategories() {
             console.error("❌ 無法載入 sentence.json:", error);
         });
 }
-
 
 function generateSentenceCategories(data) {
     let levelContainer = document.getElementById("sentenceLevelButtons");
@@ -230,9 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
 });
 
-
 let currentAudio = null; // 儲存當前音檔，避免重複創建
-
 
 function loadSentenceQuestion() {
     let sentenceObj = currentQuizSentences[currentSentenceIndex];
@@ -405,7 +401,6 @@ function startReorganizeQuiz() {
     loadReorganizeQuestion();
 }
 
-
 // 📌 2載入重組問題
 function loadReorganizeQuestion() {
     // 獲取當前句子並檢查有效性
@@ -419,7 +414,7 @@ function loadReorganizeQuestion() {
     let sentenceText = sentenceObj.句子.replace(/\s*\[=[^\]]+\]/g, "").trim();
     sentenceObj.filteredSentence = sentenceText;
 
-    // 分割句子，用於提示，保留單詞、縮寫和標點
+    // 分割句子，用於提示，保留單詞和標點符號
     let words = sentenceText.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|[.,!?;]/g).filter(w => w !== "");
     let wordCount = words.filter(w => /[a-zA-Z]/.test(w)).length;
     let wordsToShow = Math.max(1, Math.floor(wordCount / 5));
@@ -431,23 +426,33 @@ function loadReorganizeQuestion() {
     let hintWords = words.map((w, i) => indicesToShow.has(i) ? w : "_".repeat(w.length));
     document.getElementById("reorganizeSentenceHint").innerHTML = hintWords.join(" ");
 
-// 生成詞塊（包括單詞、縮寫、所有格和連字符單詞，排除標點符號）
-let blocks = [];
-let regex = /[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g; // 支持連字符單詞
-let match;
-while ((match = regex.exec(sentenceText)) !== null) {
-    blocks.push({ value: match[0], type: "word" });
-}
-
-    // 隨機打亂詞塊
-    blocks.sort(() => Math.random() - 0.5);
+    // 生成詞塊（僅包括單詞和所有格，排除標點符號）
+    let blocks = sentenceText.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
+    
+    // 隨機打亂詞塊並分配索引
+    let shuffledBlocks = blocks.map((value, index) => ({ value, index })).sort(() => Math.random() - 0.5);
+    
+    // 生成占位容器和詞塊
     let blocksContainer = document.getElementById("wordBlocksContainer");
-    blocksContainer.innerHTML = blocks
-        .map(b => `<div class="word-block" data-value="${b.value}" data-type="${b.type}" onclick="selectWordBlock(this)">${b.value}</div>`)
+    blocksContainer.innerHTML = shuffledBlocks
+        .map(b => `
+            <div class="word-block-placeholder" data-index="${b.index}">
+                <div class="word-block" data-value="${b.value}" data-index="${b.index}" onclick="selectWordBlock(this)">${b.value}</div>
+            </div>
+        `)
         .join("");
 
-    // 清空構建區域
-    document.getElementById("sentenceConstructionArea").innerHTML = "";
+    // 清空並設置構建區域
+    let constructionArea = document.getElementById("sentenceConstructionArea");
+    constructionArea.innerHTML = ""; // 清空現有內容
+
+    // 根據單字數量生成固定數量的占位符
+    for (let i = 0; i < blocks.length; i++) {
+        let placeholder = document.createElement("div");
+        placeholder.classList.add("construction-placeholder");
+        placeholder.dataset.position = i; // 記錄位置
+        constructionArea.appendChild(placeholder);
+    }
 
     // 添加音頻播放功能
     if (sentenceObj.Words) {
@@ -488,28 +493,41 @@ while ((match = regex.exec(sentenceText)) !== null) {
 // 📌 3選擇詞塊
 function selectWordBlock(block) {
     let constructionArea = document.getElementById("sentenceConstructionArea");
-    if (block.parentNode === constructionArea) {
-        block.classList.remove("selected");
-        document.getElementById("wordBlocksContainer").appendChild(block);
+    let placeholder = block.parentNode; // 當前方塊的父容器
+
+    if (placeholder.classList.contains("word-block-placeholder")) {
+        // 從原始區域移動到構建區域
+        let emptyPlaceholder = Array.from(constructionArea.children).find(
+            ph => ph.children.length === 0 // 找到第一個空的占位符
+        );
+
+        if (emptyPlaceholder) {
+            emptyPlaceholder.appendChild(block); // 將方塊放入空的占位符
+            block.classList.add("selected");
+        }
     } else {
-        block.classList.add("selected");
-        constructionArea.appendChild(block);
+        // 從構建區域移回原始區域
+        let blockIndex = block.dataset.index;
+        let originalPlaceholder = document.querySelector(`.word-block-placeholder[data-index="${blockIndex}"]`);
+        if (originalPlaceholder) {
+            originalPlaceholder.appendChild(block); // 移回原始位置
+            block.classList.remove("selected");
+        }
     }
 }
 
 // 📌 4提交答案
 function submitReorganizeAnswer() {
     let constructionArea = document.getElementById("sentenceConstructionArea");
-    let userAnswer = Array.from(constructionArea.children).map(b => b.dataset.value).join(" ");
+    let userAnswer = Array.from(constructionArea.children).map(b => b.children[0] ? b.children[0].dataset.value : "").join(" ");
     let sentenceObj = currentQuizSentences[currentSentenceIndex];
     let correctSentence = sentenceObj.filteredSentence;
 
     userConstructedSentences[currentSentenceIndex] = userAnswer;
 
-    // 提取單詞（含縮寫、所有格和連字符單詞），排除標點符號
-let userWords = userAnswer.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
-let correctWords = correctSentence.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
-let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toLowerCase();
+    let userWords = userAnswer.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
+    let correctWords = correctSentence.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
+    let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toLowerCase();
 
     if (!isCorrect && !incorrectSentences.includes(sentenceObj.Words)) {
         incorrectSentences.push(sentenceObj.Words);
@@ -519,12 +537,24 @@ let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toL
     localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
 
     // 更新詞塊反饋
-    constructionArea.querySelectorAll(".word-block").forEach((block, i) => {
-        let correctWord = correctWords[i] || "";
-        block.classList.add(block.dataset.value.toLowerCase() === correctWord.toLowerCase() ? "correct" : "incorrect");
+    let placeholders = constructionArea.querySelectorAll(".construction-placeholder");
+    placeholders.forEach((placeholder, i) => {
+        let block = placeholder.children[0];
+        if (block) {
+            let correctWord = correctWords[i] || "";
+            if (block.dataset.value.toLowerCase() === correctWord.toLowerCase()) {
+                block.classList.add("correct");
+                block.classList.remove("incorrect");
+            } else {
+                block.classList.add("incorrect");
+                block.classList.remove("correct");
+            }
+        } else {
+            placeholder.classList.add("unfilled");
+        }
     });
 
-    // 更新提示區顯示完整正確答案（包含標點符號）並添加中文解釋
+    // 更新提示區顯示完整正確答案和中文解釋
     let chineseExplanation = sentenceObj.中文 ? sentenceObj.中文.replace(/\n/g, "<br>") : "無中文解釋";
     document.getElementById("reorganizeSentenceHint").innerHTML = `
         <div>${correctSentence}</div>
@@ -582,9 +612,9 @@ function finishReorganizeQuiz() {
         let correctSentence = sentenceObj.filteredSentence;
 
         // 提取單詞進行比較（含縮寫、所有格和連字符單詞）
-let userWords = userAnswer.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
-let correctWords = correctSentence.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
-let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toLowerCase();
+        let userWords = userAnswer.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
+        let correctWords = correctSentence.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
+        let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toLowerCase();
         let isUnanswered = userAnswer === "(未作答)";
 
         let resultClass = isCorrect ? "correct" : (isUnanswered ? "unanswered" : "wrong");
@@ -681,7 +711,6 @@ function handleArrowNavigation(event) {
     }
 }
 
-
 // 📌 播放音檔函數（統一版本）
 function playAudio() {
     if (currentAudio) {
@@ -718,7 +747,6 @@ function playSentenceAudio(audioFile) {
 }
 window.playSentenceAudio = playSentenceAudio;
 
-
 // 📌 監聽空白鍵來播放音檔
 function handleSpacebar(event) {
     if (event.code === "Space" && document.getElementById("sentenceQuizArea").style.display === "block") {
@@ -726,7 +754,6 @@ function handleSpacebar(event) {
         playAudio();
     }
 }
-
 
 document.addEventListener("keydown", function (event) {
     // 處理 Enter 鍵
@@ -785,8 +812,6 @@ document.addEventListener("keydown", function (event) {
         }
     }
 });
-
-
 
 function submitSentenceAnswer() {
     let sentenceObj = currentQuizSentences[currentSentenceIndex];
@@ -865,7 +890,6 @@ function updateSentenceHint(correctSentence, userAnswer) {
     document.getElementById("sentenceHint").innerHTML = formattedSentence;
 }
 
-
 function highlightUserAnswers(allInputs, correctSentence) {
     let correctWords = correctSentence.split(/\b/);
     let inputIndex = 0;
@@ -903,8 +927,6 @@ function highlightUserAnswers(allInputs, correctSentence) {
     });
 }
 
-
-
 // 📌 切換到下一題
 function goToNextSentence() {
     currentSentenceIndex++;
@@ -923,7 +945,6 @@ function goToNextSentence() {
 
     autoPlayAudio(); // ✅ 添加自動播放
 }
-
 
 // 📌 測驗完成後顯示結果
 function finishSentenceQuiz() {
@@ -1001,7 +1022,6 @@ function highlightErrors(correctSentence, userAnswer) {
     }).join("");
 }
 
-
 // 📌 連結到單字詳情頁面
 function goToWordDetail(word) {
     let baseWord = word.replace(/-\d+$/, ''); // 移除後綴
@@ -1013,7 +1033,6 @@ function returnToQuizResult() {
     document.getElementById("quizResult").style.display = "block";
     finishSentenceQuiz();
 }
-
 
 // 在檔案頂部新增
 function getReturningStatus() {
@@ -1100,5 +1119,3 @@ function returnToMainMenu() {
 
     console.log("✅ 返回測驗第一層主選單，保留 incorrectSentences:", incorrectSentences);
 }
-
-
