@@ -315,10 +315,12 @@ function startQuiz() {
 
 function normalizeText(text) {
     return text
-        .normalize('NFD') // 將組合字符分解（如 é 分解為 e 和 結合重音符號）
+        .normalize('NFD') // 將組合字符分解（如 é 分解為 e 和結合重音符號）
         .replace(/[\u0300-\u036f]/g, '') // 移除所有重音符號
         .toLowerCase()
-        .replace(/[\s-]/g, ''); // 移除空格和連字符
+        .replace(/\s+/g, ' ') // 統一空格
+        .replace(/,\s*/g, ',') // 處理逗號後的空格
+        .trim();
 }
 
 // 提交答案並檢查正確性

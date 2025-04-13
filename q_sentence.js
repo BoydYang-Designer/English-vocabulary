@@ -241,7 +241,8 @@ function loadSentenceQuestion() {
     let originalSentence = sentenceObj.句子;
     // 移除括號內容（例如 [=critique]）
     let sentenceText = originalSentence.replace(/\s*\[=[^\]]+\]/g, "").trim();
-    let words = sentenceText.split(/\b/);
+    // 使用 Unicode 字母分割單詞，保留標點符號
+    let words = sentenceText.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]|\s+/gu) || [];
 
     let sentenceInputContainer = document.getElementById("sentenceInput");
     sentenceInputContainer.innerHTML = "";
@@ -250,7 +251,7 @@ function loadSentenceQuestion() {
     let allInputs = [];
 
     // 計算最長單字的字母數
-    let maxWordLength = Math.max(...words.filter(w => /\w+/.test(w)).map(w => w.length));
+    let maxWordLength = Math.max(...words.filter(w => /\p{L}+/u.test(w)).map(w => w.length));
     let screenWidth = window.innerWidth || document.documentElement.clientWidth;
     let inputWidth = Math.min(15, Math.floor(screenWidth / (maxWordLength + 5)));
 
@@ -258,8 +259,10 @@ function loadSentenceQuestion() {
         let wordContainer = document.createElement("div");
         wordContainer.classList.add("word-container");
 
-        if (/\w+/.test(word)) {
-            word.split("").forEach((_, letterIndex) => {
+        if (/\p{L}+/u.test(word)) {
+            // 將單詞拆分成單個字符（包括 é 等）
+            let chars = Array.from(word); // 使用 Array.from 確保正確分割 Unicode 字符
+            chars.forEach((char, letterIndex) => {
                 let input = document.createElement("input");
                 input.type = "text";
                 input.maxLength = 1;
@@ -287,19 +290,19 @@ function loadSentenceQuestion() {
     });
 
     // 提示文字邏輯
-    let wordCount = words.filter(word => /\w+/.test(word)).length;
+    let wordCount = words.filter(word => /\p{L}+/u.test(word)).length;
     let wordsToShow = Math.max(1, Math.floor(wordCount / 5));
     let indicesToShow = new Set();
 
     while (indicesToShow.size < wordsToShow) {
         let randomIndex = Math.floor(Math.random() * words.length);
-        if (/\w+/.test(words[randomIndex])) {
+        if (/\p{L}+/u.test(words[randomIndex])) {
             indicesToShow.add(randomIndex);
         }
     }
 
     let hintWords = words.map((word, index) => {
-        if (/\w+/.test(word) && !indicesToShow.has(index)) {
+        if (/\p{L}+/u.test(word) && !indicesToShow.has(index)) {
             return "_".repeat(word.length);
         }
         return word;
@@ -415,19 +418,19 @@ function loadReorganizeQuestion() {
     sentenceObj.filteredSentence = sentenceText;
 
     // 分割句子，用於提示，保留單詞和標點符號
-    let words = sentenceText.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|[.,!?;]/g).filter(w => w !== "");
-    let wordCount = words.filter(w => /[a-zA-Z]/.test(w)).length;
+    let words = sentenceText.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]/gu).filter(w => w !== "");
+    let wordCount = words.filter(w => /\p{L}+/u.test(w)).length;
     let wordsToShow = Math.max(1, Math.floor(wordCount / 5));
     let indicesToShow = new Set();
     while (indicesToShow.size < wordsToShow) {
         let idx = Math.floor(Math.random() * words.length);
-        if (/[a-zA-Z]/.test(words[idx])) indicesToShow.add(idx);
+        if (/\p{L}+/u.test(words[idx])) indicesToShow.add(idx);
     }
     let hintWords = words.map((w, i) => indicesToShow.has(i) ? w : "_".repeat(w.length));
     document.getElementById("reorganizeSentenceHint").innerHTML = hintWords.join(" ");
 
     // 生成詞塊（僅包括單詞和所有格，排除標點符號）
-    let blocks = sentenceText.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
+    let blocks = sentenceText.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+/gu) || [];
     
     // 隨機打亂詞塊並分配索引
     let shuffledBlocks = blocks.map((value, index) => ({ value, index })).sort(() => Math.random() - 0.5);
@@ -525,9 +528,11 @@ function submitReorganizeAnswer() {
 
     userConstructedSentences[currentSentenceIndex] = userAnswer;
 
-    let userWords = userAnswer.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
-    let correctWords = correctSentence.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
-    let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toLowerCase();
+    // 使用 normalizeText 進行正規化比對
+    let normalizedUserAnswer = normalizeText(userAnswer);
+    let normalizedCorrectSentence = normalizeText(correctSentence);
+
+    let isCorrect = normalizedUserAnswer === normalizedCorrectSentence;
 
     if (!isCorrect && !incorrectSentences.includes(sentenceObj.Words)) {
         incorrectSentences.push(sentenceObj.Words);
@@ -538,11 +543,12 @@ function submitReorganizeAnswer() {
 
     // 更新詞塊反饋
     let placeholders = constructionArea.querySelectorAll(".construction-placeholder");
+    let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+/gu) || [];
     placeholders.forEach((placeholder, i) => {
         let block = placeholder.children[0];
         if (block) {
             let correctWord = correctWords[i] || "";
-            if (block.dataset.value.toLowerCase() === correctWord.toLowerCase()) {
+            if (normalizeText(block.dataset.value) === normalizeText(correctWord)) {
                 block.classList.add("correct");
                 block.classList.remove("incorrect");
             } else {
@@ -815,12 +821,12 @@ document.addEventListener("keydown", function (event) {
 
 function normalizeText(text) {
     return text
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .replace(/\s+/g, ' ')
-        .replace(/,\s*/g, ',')
-        .trim()
-        .toLowerCase();
+        .normalize('NFD') // 將組合字符分解（如 é 分解為 e 和結合重音符號）
+        .replace(/[\u0300-\u036f]/g, '') // 移除所有重音符號
+        .toLowerCase()
+        .replace(/\s+/g, ' ') // 統一空格
+        .replace(/,\s*/g, ',') // 處理逗號後的空格
+        .trim();
 }
 
 function submitSentenceAnswer() {
