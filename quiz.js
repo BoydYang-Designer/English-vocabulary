@@ -3,7 +3,9 @@ let selectedFilters = {
     letters: new Set(),
     categories: new Set(),
     levels: new Set(),
-    checked: false
+    checked: false, 
+    important: false, // 新增：標記是否選擇重要單字
+    wrong: false      // 新增：標記是否選擇錯誤單字
 };
 let wordsData = [];
 let quizWords = [];
@@ -123,6 +125,10 @@ function returnToCategorySelection() {
     document.getElementById("quizArea").style.display = "none"; // 隱藏單字測驗區
     document.getElementById("rewordQuizArea").style.display = "none"; // 隱藏單字重組測驗區
     document.getElementById("quizCategories").style.display = "block"; // 顯示分類區
+    let quizTypeSelection = document.getElementById("quizTypeSelection");
+    if (quizTypeSelection) {
+        quizTypeSelection.style.display = "none"; // 隱藏測驗類型選擇區
+    }
 }
 
 // 篩選與多選功能
@@ -160,15 +166,13 @@ function updateButtonSelectionState(type, value) {
 }
 
 
-function filterQuizWords() {
+function filterQuizWords(event) {
     let filteredWords = wordsData.filter(word => {
         let letterMatch = selectedFilters.letters.size === 0 || selectedFilters.letters.has(word.Words[0].toUpperCase());
 
-        // ✅ 確保「未分類」的種類被識別
         let wordCategory = word["分類"] || "未分類(種類)";
         let categoryMatch = selectedFilters.categories.size === 0 || selectedFilters.categories.has(wordCategory);
 
-        // ✅ 確保「未分類」的等級被識別
         let wordLevel = word["等級"] || "未分類(等級)";
         let levelMatch = selectedFilters.levels.size === 0 || selectedFilters.levels.has(wordLevel);
 
@@ -183,37 +187,91 @@ function filterQuizWords() {
     }
 
     quizWords = filteredWords;
-    startQuiz();
+
+    // 檢查是否由「Start Quiz」按鈕觸發
+    if (event && event.target && event.target.id === "startFilteredQuizBtn") {
+        startQuiz(); // 直接進入單字測驗
+    } else {
+        showQuizTypeSelection(); // 顯示測驗類型選擇介面
+    }
 }
 
+function toggleImportantSelection() {
+    let importantWords = wordsData.filter(word => {
+        let wordText = word.Words || word.word || word["單字"];
+        return localStorage.getItem(`important_${wordText}`) === "true";
+    });
 
+    if (importantWords.length === 0) {
+        alert("⚠️ 沒有標記為重要的單字！");
+        return;
+    }
 
+    quizWords = importantWords;
+    filterQuizWords(null); // 傳遞 null，確保進入選擇介面
+}
+
+function toggleWrongSelection() {
+    let wrongWords = JSON.parse(localStorage.getItem("wrongWords")) || [];
+
+    let filteredWrongWords = wordsData.filter(word => {
+        let wordText = word.Words || word.word || word["單字"];
+        return wrongWords.includes(wordText);
+    });
+
+    if (filteredWrongWords.length === 0) {
+        alert("⚠️ 沒有錯誤單字！");
+        return;
+    }
+
+    quizWords = filteredWrongWords;
+    filterQuizWords(null); // 傳遞 null，確保進入選擇介面
+}
 function generateMultiSelectButtons() {
     let alphabetContainer = document.getElementById("alphabetButtons");
     alphabetContainer.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter =>
         `<button class='category-button' onclick='toggleSelection("letters", "${letter}")'>${letter}</button>`
     ).join("");
 
-    let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類(種類)"))]; // ✅ UI 改名稱
+    let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類(種類)"))];
     let categoryContainer = document.getElementById("categoryButtons");
     categoryContainer.innerHTML = categories.map(category =>
         `<button class='category-button' onclick='toggleSelection("categories", "${category}")'>${category}</button>`
     ).join(" ");
     
-    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類(等級)"))]; // ✅ UI 改名稱
+    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類(等級)"))];
     let levelContainer = document.getElementById("levelButtons");
     levelContainer.innerHTML = levels.map(level =>
         `<button class='category-button' onclick='toggleSelection("levels", "${level}")'>${level}</button>`
     ).join(" ");
     
-
-    // ✅ 新增 Checked, 重要單字, 錯誤單字按鈕
+    // 更新按鈕的 onclick 事件
     let checkedContainer = document.getElementById("checkedCategory");
     checkedContainer.innerHTML = `
         <button class='category-button' onclick='toggleCheckedSelection()'>Checked 單字</button>
-        <button class='category-button' onclick='toggleImportantSelection()'>重要單字</button>
-        <button class='category-button' onclick='toggleWrongSelection()'>錯誤單字</button>
+        <button class='category-button' onclick='toggleImportantFilter()'>重要單字</button>
+        <button class='category-button' onclick='toggleWrongFilter()'>錯誤單字</button>
     `;
+}
+
+function toggleImportantFilter() {
+    selectedFilters.important = !selectedFilters.important;
+    let importantButton = document.querySelector("#checkedCategory button:nth-child(2)"); // 假設「重要單字」是第二個按鈕
+    if (selectedFilters.important) {
+        importantButton.classList.add("selected");
+    } else {
+        importantButton.classList.remove("selected");
+    }
+}
+
+function toggleWrongFilter() {
+    selectedFilters.wrong = !selectedFilters.wrong;
+    let wrongButton = document.querySelector("#checkedCategory button:nth-child(3)"); // 假設「錯誤單字」是第三個按鈕
+    if (selectedFilters.wrong) {
+        wrongButton.classList.add("selected");
+    } else {
+        wrongButton.classList.remove("selected");
+    }
 }
 
 function showQuizCategories() {
@@ -224,8 +282,10 @@ function showQuizCategories() {
     }
     document.getElementById("mainMenu").style.display = "none";
     document.getElementById("quizCategories").style.display = "block";
-    generateMultiSelectButtons(); // 產生篩選按鈕
-    document.getElementById("startFilteredQuizBtn").style.display = "block";
+    generateMultiSelectButtons();
+    let startQuizBtn = document.getElementById("startFilteredQuizBtn");
+    startQuizBtn.style.display = "block";
+    startQuizBtn.textContent = "開始單字測驗"; // 可選：明確標示為單字測驗
 }
 
 function highlightCheckedWords() {
@@ -240,7 +300,7 @@ function highlightCheckedWords() {
 function initializeStartQuizButton() {
     let startQuizBtn = document.getElementById("startFilteredQuizBtn");
     if (startQuizBtn) {
-        startQuizBtn.addEventListener("click", filterQuizWords);
+        startQuizBtn.addEventListener("click", (event) => filterQuizWords(event));
     }
 }
 
@@ -329,17 +389,26 @@ function submitAnswer() {
         }
     }
 
-    // 查找單字的中文解釋
+    // 查找單字的中文解釋和音標
     let wordData = wordsData.find(w => w.Words === currentWord);
     let chineseExplanation = wordData && wordData["traditional Chinese"] 
-        ? wordData["traditional Chinese"].replace(/\n/g, "<br>") // 將換行符號轉為 HTML 換行
+        ? wordData["traditional Chinese"].replace(/\n/g, "<br>") 
         : "無中文解釋";
+    let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
+    let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
+    let phonetics = pronunciation1;
+    if (pronunciation2) {
+        phonetics += ` / ${pronunciation2}`;
+    }
+    phonetics = phonetics || "無音標";
 
-    // 顯示提示和中文解釋
+    // 顯示提示、音標和中文解釋
     document.getElementById("wordHint").innerHTML = `
         <div>${revealedWord}</div>
+        <div class="phonetic-explanation">
+            <p>${phonetics}</p>
+        </div>
         <div class="chinese-explanation">
-            <h3>中文解釋</h3>
             <p>${chineseExplanation}</p>
         </div>
     `;
@@ -662,17 +731,26 @@ function submitRewordAnswer() {
     }
     localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
 
-    // 查找單字的中文解釋
+    // 查找單字的中文解釋和音標
     let wordData = wordsData.find(w => w.Words === currentWord);
     let chineseExplanation = wordData && wordData["traditional Chinese"]
         ? wordData["traditional Chinese"].replace(/\n/g, "<br>")
         : "無中文解釋";
+    let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
+    let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
+    let phonetics = pronunciation1;
+    if (pronunciation2) {
+        phonetics += ` / ${pronunciation2}`;
+    }
+    phonetics = phonetics || "無音標";
 
-    // 顯示正確答案和中文解釋
+    // 顯示正確答案、音標和中文解釋
     document.getElementById("rewordHint").innerHTML = `
         <div>${currentWord}</div>
+        <div class="phonetic-explanation">
+            <p>${phonetics}</p>
+        </div>
         <div class="chinese-explanation">
-            <h3>中文解釋</h3>
             <p>${chineseExplanation}</p>
         </div>
     `;
@@ -724,40 +802,29 @@ function toggleImportant(word, checkbox) {
     }
 }
 
-//篩選「重要單字」測驗
-function toggleImportantSelection() {
-    let importantWords = wordsData.filter(word => {
-        let wordText = word.Words || word.word || word["單字"];
-        return localStorage.getItem(`important_${wordText}`) === "true";
-    });
 
-    if (importantWords.length === 0) {
-        alert("⚠️ 沒有標記為重要的單字！");
-        return;
+function showQuizTypeSelection() {
+    // 隱藏分類選擇區域
+    document.getElementById("quizCategories").style.display = "none";
+
+    // 顯示測驗類型選擇區域
+    let quizTypeSelection = document.getElementById("quizTypeSelection");
+    if (!quizTypeSelection) {
+        // 如果尚未存在，動態創建選擇區域
+        quizTypeSelection = document.createElement("div");
+        quizTypeSelection.id = "quizTypeSelection";
+        quizTypeSelection.innerHTML = `
+            <h2>選擇測驗類型</h2>
+            <div class="button-group">
+                <button class="button" onclick="startQuiz()">單字測驗</button>
+                <button class="button" onclick="startRewordQuiz()">單字重組測驗</button>
+                <button class="button" onclick="returnToCategorySelection()">取消</button>
+            </div>
+        `;
+        document.body.appendChild(quizTypeSelection);
     }
-
-    quizWords = importantWords;
-    startQuiz(); // ✅ 直接開始測驗
+    quizTypeSelection.style.display = "block";
 }
-
-// 篩選「錯誤單字」測驗
-function toggleWrongSelection() {
-    let wrongWords = JSON.parse(localStorage.getItem("wrongWords")) || [];
-
-    let filteredWrongWords = wordsData.filter(word => {
-        let wordText = word.Words || word.word || word["單字"];
-        return wrongWords.includes(wordText);
-    });
-
-    if (filteredWrongWords.length === 0) {
-        alert("⚠️ 沒有錯誤單字！");
-        return;
-    }
-
-    quizWords = filteredWrongWords;
-    startQuiz(); // ✅ 直接開始測驗
-}
-
 
 
 // ✅ 儲存測驗結果與更新錯誤單字、重要單字

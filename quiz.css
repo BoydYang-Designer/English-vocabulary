@@ -592,7 +592,7 @@ input[type="checkbox"]:checked + span {
 
 .chinese-explanation p {
     margin: 0;
-    font-size: 0.6em; /* Adjust this value to change the font size */
+    font-size: 0.8em; /* Adjust this value to change the font size */
     line-height: 1.2;
     color: #555;
 }
@@ -799,6 +799,17 @@ input[type="checkbox"]:checked + span {
 
 .construction-placeholder:empty {
     background-color: #f0f0f0; /* 空的占位符顯示灰色背景 */
+}
+
+.phonetic-explanation {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+
+.phonetic-explanation p {
+    font-size: 0.8em;
+    color: #333;
 }
 
 }
