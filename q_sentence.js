@@ -834,20 +834,23 @@ function submitSentenceAnswer() {
     let correctSentence = sentenceObj.filteredSentence || sentenceObj.句子.replace(/\s*\[=[^\]]+\]/g, "").trim();
     let allInputs = document.querySelectorAll("#sentenceInput .letter-input");
 
-    let correctWords = correctSentence.split(/\b/);
+    // 使用 Unicode-aware 的正則表達式分割正確句子
+    let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]|\s+/gu) || [];
     let userAnswer = [];
     let inputIndex = 0;
 
+    // 收集用戶輸入，按單詞對應
     correctWords.forEach((word, wordIndex) => {
-        if (/\w+/.test(word)) {
+        if (/\p{L}+/u.test(word)) {
             let inputWord = "";
+            // 收集對應 wordIndex 的所有輸入框內容
             while (inputIndex < allInputs.length && parseInt(allInputs[inputIndex].dataset.wordIndex) === wordIndex) {
-                inputWord += allInputs[inputIndex].value;
+                inputWord += allInputs[inputIndex].value || "";
                 inputIndex++;
             }
             userAnswer.push(inputWord);
         } else {
-            userAnswer.push(word);
+            userAnswer.push(word); // 保留標點符號或空格
         }
     });
 
@@ -862,10 +865,7 @@ function submitSentenceAnswer() {
             incorrectSentences.push(sentenceObj.Words);
         }
     } else {
-        let index = incorrectSentences.indexOf(sentenceObj.Words);
-        if (index !== -1) {
-            incorrectSentences.splice(index, 1);
-        }
+        incorrectSentences = incorrectSentences.filter(w => w !== sentenceObj.Words);
     }
 
     localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
@@ -881,15 +881,15 @@ function submitSentenceAnswer() {
 }
 
 function updateSentenceHint(correctSentence, userAnswer) {
-    // 將正確句子拆分成單字和標點符號
-    let correctWords = correctSentence.split(/\b/);
+    // 使用 Unicode-aware 的正則表達式分割正確句子
+    let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]|\s+/gu) || [];
     let userWords = userAnswer;
 
     // 格式化顯示內容
     let formattedSentence = correctWords.map((word, index) => {
-        if (/\w+/.test(word)) { // 如果是單字
-            let userWord = userWords[index] || ""; // 如果沒有輸入，預設為空字串
-            if (userWord.toLowerCase() === word.toLowerCase()) {
+        if (/\p{L}+/u.test(word)) {
+            let userWord = userWords[index] || "";
+            if (normalizeText(userWord) === normalizeText(word)) {
                 // 正確的單字：黑色粗體
                 return `<span style="color: black; font-weight: bold;">${word}</span>`;
             } else {
@@ -897,7 +897,7 @@ function updateSentenceHint(correctSentence, userAnswer) {
                 return `<span style="color: red; font-weight: bold;">${word}</span>`;
             }
         } else {
-            // 標點符號：黑色普通字體
+            // 標點符號或空格：黑色普通字體
             return `<span style="color: black;">${word}</span>`;
         }
     }).join("");
@@ -907,37 +907,50 @@ function updateSentenceHint(correctSentence, userAnswer) {
 }
 
 function highlightUserAnswers(allInputs, correctSentence) {
-    let correctWords = correctSentence.split(/\b/);
+    // 使用 Unicode-aware 的正則表達式分割正確句子
+    let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]|\s+/gu) || [];
     let inputIndex = 0;
 
-    correctWords.forEach((word, index) => {
-        if (/\w+/.test(word)) {
+    correctWords.forEach((word, wordIndex) => {
+        if (/\p{L}+/u.test(word)) {
             let inputWord = "";
             let inputElements = [];
 
-            while (inputIndex < allInputs.length && allInputs[inputIndex].dataset.wordIndex == index) {
-                inputWord += allInputs[inputIndex].value;
+            // 收集對應 wordIndex 的輸入框
+            while (inputIndex < allInputs.length && parseInt(allInputs[inputIndex].dataset.wordIndex) === wordIndex) {
+                inputWord += allInputs[inputIndex].value || "";
                 inputElements.push(allInputs[inputIndex]);
                 inputIndex++;
             }
 
-            if (inputWord.toLowerCase() === word.toLowerCase()) {
+            // 對單詞進行正規化比對
+            let normalizedInputWord = normalizeText(inputWord);
+            let normalizedWord = normalizeText(word);
+
+            if (normalizedInputWord === normalizedWord) {
+                // 整個單詞正確，標記為黑色
                 inputElements.forEach(input => {
-                    input.style.color = "black"; // 正確 → 黑體
+                    input.style.color = "black";
                     input.style.fontWeight = "bold";
                 });
             } else {
-                word.split("").forEach((letter, letterIndex) => {
-                    if (letterIndex < inputElements.length) {
-                        let input = inputElements[letterIndex];
-                        if (input.value.toLowerCase() === letter.toLowerCase()) {
-                            input.style.color = "black"; // 正確字母 → 黑色
-                        } else {
-                            input.style.color = "red"; // 錯誤字母 → 紅色
-                        }
-                        input.style.fontWeight = "bold";
+                // 逐字符比對
+                let wordChars = Array.from(word); // 正確單詞的字符
+                inputElements.forEach((input, letterIndex) => {
+                    let inputChar = input.value || "";
+                    let correctChar = wordChars[letterIndex] || "";
+                    if (normalizeText(inputChar) === normalizeText(correctChar)) {
+                        input.style.color = "black"; // 正確字符
+                    } else {
+                        input.style.color = "red"; // 錯誤或缺失字符
                     }
+                    input.style.fontWeight = "bold";
                 });
+
+                // 如果輸入框數量少於單詞字符數，剩餘字符視為錯誤
+                for (let i = inputElements.length; i < wordChars.length; i++) {
+                    console.log(`⚠️ 單詞 "${word}" 缺少字符: ${wordChars[i]}`);
+                }
             }
         }
     });
