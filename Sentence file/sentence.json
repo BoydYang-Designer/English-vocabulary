@@ -27073,52 +27073,68 @@
             "句子": "The Mid-Autumn Festival symbolizes unity and gratitude"
         },
         {
+            "音檔": "音檔 - mildew-1",
             "等級": "B1",
             "分類": "生物",
             "Words": "mildew-1",
-            "句子": "The damp basement was filled with mildew, causing a musty smell"
+            "句子": "The damp basement was filled with mildew, causing a musty smell",
+            "中文": "潮濕的地下室充滿了霉菌，散發出一股霉味。"
         },
         {
+            "音檔": "音檔 - mildew-2",
             "等級": "B1",
             "分類": "生物",
             "Words": "mildew-2",
-            "句子": "She noticed mildew growing on the walls after a period of heavy rain"
+            "句子": "She noticed mildew growing on the walls after a period of heavy rain",
+            "中文": "在一段時間的大雨之後，她注意到牆壁上長出了霉菌。"
         },
         {
+            "音檔": "音檔 - mildew-3",
             "等級": "B1",
             "分類": "生物",
             "Words": "mildew-3",
-            "句子": "Removing mildew stains is a laborious task"
+            "句子": "Removing mildew stains is a laborious task",
+            "中文": "清除霉菌污漬是一項費力的工作。"
         },
         {
+            "音檔": "音檔 - mildew-4",
             "等級": "B1",
             "分類": "生物",
             "Words": "mildew-4",
-            "句子": "The mildew on the shower curtain needed to be scrubbed off"
+            "句子": "The mildew on the shower curtain needed to be scrubbed off",
+            "中文": "浴簾上的霉菌需要刷洗乾淨。"
         },
         {
+            "音檔": "音檔 - mildew-5",
             "等級": "B1",
             "分類": "生物",
             "Words": "mildew-5",
-            "句子": "The damp clothes mildewed quickly if left in the washing machine too long"
+            "句子": "The damp clothes mildewed quickly if left in the washing machine too long",
+            "中文": "潮濕的衣服如果在洗衣機中放太久，很快就會發霉。"
         },
         {
+            "音檔": "音檔 - mildew-6",
             "等級": "B1",
             "分類": "生物",
             "Words": "mildew-6",
-            "句子": "If you don’t store the books properly, they may mildew over time"
+            "句子": "If you don’t store the books properly, they may mildew over time",
+            "中文": "如果你不妥善存放這些書，它們隨著時間可能會發霉。"
         },
         {
+            "音檔": "音檔 - mildew-7",
             "等級": "B1",
             "分類": "生物",
             "Words": "mildew-7",
-            "句子": "The humidity in the air caused the bread to mildew before it could be eaten"
+            "句子": "The humidity in the air caused the bread to mildew before it could be eaten",
+            "中文": "空氣中的濕氣使麵包在食用前就發霉了。"
         },
         {
+            "音檔": "音檔 - mildew-8",
             "等級": "B1",
             "分類": "生物",
             "Words": "mildew-8",
-            "句子": "She discovered that the forgotten leftovers had mildewed in the back of the fridge"
+            "句子": "She discovered that the forgotten leftovers had mildewed in the back of the fridge",
+            "中文": "她發現被遺忘的剩菜在冰箱後部已經發霉了。"
         },
         {
             "等級": "C2",
@@ -27905,40 +27921,79 @@
             "句子": "The project was completed successfully, bringing a sense of normality back to the team’s workflow"
         },
         {
+            "音檔": "音檔 - nostalgia-1",
             "等級": "C1",
             "分類": "情感",
             "Words": "nostalgia-1",
-            "句子": "As she looked through her old childhood photos, she felt a wave of nostalgia wash over her, remembering the carefree days spent playing in the backyard with her siblings"
+            "句子": "As she looked through her old childhood photos, she felt a wave of nostalgia wash over her, remembering the carefree days spent playing in the backyard with her siblings",
+            "中文": "當她翻看兒時的舊照片時，一股懷舊之情湧上心頭，讓她想起那些無憂無慮、與兄弟姐妹們在後院玩耍的日子。"
         },
         {
+            "音檔": "音檔 - nostalgia-2",
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "nostalgia-2",
+            "名人": "Audrey Hepburn",
+            "句子": "Nostalgia is a gentle reminder of the cherished moments that color the story of our lives.",
+            "中文": "懷舊感是提醒我們珍貴時光的溫柔信號，為人生增添色彩。"
+        },
+        {
+            "音檔": "音檔 - nostalgia-3",
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "nostalgia-3",
+            "名人": "Hayao Miyazaki",
+            "句子": "Nostalgia fuels the imagination, drawing magic from memories of simpler times.",
+            "中文": "懷舊激發想像力，從純真時光的記憶中汲取魔力。"
+        },
+        {
+            "音檔": "音檔 - nostalgia-4",
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "nostalgia-4",
+            "名人": "Barack Obama",
+            "句子": "Nostalgia should inspire progress, not hold us back in the past.",
+            "中文": "懷舊應該激勵我們前進，而不是讓我們停留在過去。"
+        },
+        {
+            "音檔": "音檔 - nostalgic-1",
             "等級": "C1",
             "分類": "情感",
             "Words": "nostalgic-1",
-            "句子": "Seeing her childhood home after many years made her feel nostalgic for the carefree days of her youth"
+            "句子": "Seeing her childhood home after many years made her feel nostalgic for the carefree days of her youth",
+            "中文": "多年後再見到她兒時的家，讓她對那段無憂無慮的青春歲月感到無比懷念。"
         },
         {
+            "音檔": "音檔 - nostalgic-2",
             "等級": "C1",
             "分類": "情感",
             "Words": "nostalgic-2",
-            "句子": "Listening to old songs makes her feel nostalgic about her childhood"
+            "句子": "Listening to old songs makes her feel nostalgic about her childhood",
+            "中文": "聽著老歌讓她對童年時光充滿了懷舊之情。"
         },
         {
+            "音檔": "音檔 - nostalgic-3",
             "等級": "C1",
             "分類": "情感",
             "Words": "nostalgic-3",
-            "句子": "He felt nostalgic when he visited his hometown after many years"
+            "句子": "He felt nostalgic when he visited his hometown after many years",
+            "中文": "他在多年後回到故鄉時感到懷舊。"
         },
         {
+            "音檔": "音檔 - nostalgic-4",
             "等級": "C1",
             "分類": "情感",
             "Words": "nostalgic-4",
-            "句子": "The movie’s setting created a nostalgic atmosphere, reminding the audience of simpler times"
+            "句子": "The movie’s setting created a nostalgic atmosphere, reminding the audience of simpler times",
+            "中文": "這部電影的背景營造出一種懷舊的氛圍，讓觀眾回想起更簡單的時光。"
         },
         {
+            "音檔": "音檔 - nostalgic-5",
             "等級": "C1",
             "分類": "情感",
             "Words": "nostalgic-5",
-            "句子": "She keeps a nostalgic collection of letters from her school days"
+            "句子": "She keeps a nostalgic collection of letters from her school days",
+            "中文": "她保留著一份懷舊的信件收藏，來自她的學生時代。"
         },
         {
             "等級": "B1",
@@ -27971,64 +28026,84 @@
             "句子": "The athlete notched another victory, adding to his record"
         },
         {
+            "音檔": "音檔 - notion-1",
             "等級": "B1",
             "分類": "學術",
             "Words": "notion-1",
-            "句子": "She has a notion that hard work always leads to success"
+            "句子": "She has a notion that hard work always leads to success",
+            "中文": "她有一種觀念，認為努力工作總是會帶來成功。"
         },
         {
+            "音檔": "音檔 - notion-2",
             "等級": "B1",
             "分類": "學術",
             "Words": "notion-2",
-            "句子": "His notion of friendship is different from mine"
+            "句子": "His notion of friendship is different from mine",
+            "中文": "他的友誼觀念與我的不同。"
         },
         {
+            "音檔": "音檔 - notion-3",
             "等級": "B1",
             "分類": "學術",
             "Words": "notion-3",
-            "句子": "I had a notion to go for a walk this evening"
+            "句子": "I had a notion to go for a walk this evening",
+            "中文": "我有個想法，今晚去散步。"
         },
         {
+            "音檔": "音檔 - notion-4",
             "等級": "B1",
             "分類": "學術",
             "Words": "notion-4",
-            "句子": "The notion struck him to try cooking a new recipe"
+            "句子": "The notion struck him to try cooking a new recipe",
+            "中文": "他突發奇想，決定嘗試做一道新菜譜。"
         },
         {
+            "音檔": "音檔 - notion-5",
             "等級": "B1",
             "分類": "學術",
             "Words": "notion-5",
-            "句子": "She picked up some sewing notions at the craft store"
+            "句子": "She picked up some sewing notions at the craft store",
+            "中文": "她在工藝店買了一些縫紉配件。"
         },
         {
+            "音檔": "音檔 - notoriety-1",
             "等級": "C1",
             "分類": "法政",
             "Words": "notoriety-1",
-            "句子": "The scandal brought him notoriety, tarnishing his reputation in the public eye"
+            "句子": "The scandal brought him notoriety, tarnishing his reputation in the public eye",
+            "中文": "這場醜聞使他聲名狼藉，玷污了他在公眾眼中的聲譽。"
         },
         {
+            "音檔": "音檔 - notoriety-2",
             "等級": "C1",
             "分類": "法政",
             "Words": "notoriety-2",
-            "句子": "The politician gained notoriety for his controversial statements"
+            "句子": "The politician gained notoriety for his controversial statements",
+            "中文": "那位政治家因為他爭議性的言論而聲名狼藉。"
         },
         {
+            "音檔": "音檔 - notoriety-3",
             "等級": "C1",
             "分類": "法政",
             "Words": "notoriety-3",
-            "句子": "The restaurant achieved notoriety after a food poisoning incident"
+            "句子": "The restaurant achieved notoriety after a food poisoning incident",
+            "中文": "那家餐廳因一次食物中毒事件而聲名狼藉。"
         },
         {
+            "音檔": "音檔 - notoriety-4",
             "等級": "C1",
             "分類": "法政",
             "Words": "notoriety-4",
-            "句子": "His notoriety as a hacker made him a target for law enforcement"
+            "句子": "His notoriety as a hacker made him a target for law enforcement",
+            "中文": "他作為黑客的惡名使他成為執法機構的目標。"
         },
         {
+            "音檔": "音檔 - notoriety-5",
             "等級": "C1",
             "分類": "法政",
             "Words": "notoriety-5",
-            "句子": "The artist’s unique style brought her both fame and notoriety"
+            "句子": "The artist’s unique style brought her both fame and notoriety",
+            "中文": "這位藝術家獨特的風格讓她同時獲得了名聲和惡名。"
         },
         {
             "等級": "B2",
@@ -28216,28 +28291,36 @@
             "句子": "Her objective is to complete her degree by next year"
         },
         {
+            "音檔": "音檔 - obligatory-1",
             "等級": "C1",
             "分類": "法政",
             "Words": "obligatory-1",
-            "句子": "Attendance at the safety training session is obligatory for all new employees"
+            "句子": "Attendance at the safety training session is obligatory for all new employees",
+            "中文": "參加安全培訓課程是所有新員工的必修課。"
         },
         {
+            "音檔": "音檔 - obligatory-2",
             "等級": "C1",
             "分類": "法政",
             "Words": "obligatory-2",
-            "句子": "Wearing a uniform is obligatory at this company"
+            "句子": "Wearing a uniform is obligatory at this company",
+            "中文": "在這家公司，穿制服是強制性的。"
         },
         {
+            "音檔": "音檔 - obligatory-3",
             "等級": "C1",
             "分類": "法政",
             "Words": "obligatory-3",
-            "句子": "Submitting your tax return by the deadline is obligatory to avoid penalties"
+            "句子": "Submitting your tax return by the deadline is obligatory to avoid penalties",
+            "中文": "按時提交稅務報表是強制性的，以避免處罰。"
         },
         {
+            "音檔": "音檔 - obligatory-4",
             "等級": "C1",
             "分類": "法政",
             "Words": "obligatory-4",
-            "句子": "It is obligatory to send a thank-you note after receiving a gift"
+            "句子": "It is obligatory to send a thank-you note after receiving a gift",
+            "中文": "收到禮物後，寫一張感謝卡是強制性的。"
         },
         {
             "等級": "B2",
@@ -28530,40 +28613,52 @@
             "句子": "The workers suffered under oppressive working conditions with long hours and low pay"
         },
         {
+            "音檔": "音檔 - orchid-1",
             "等級": "B1",
             "分類": "植物",
             "Words": "orchid-1",
-            "句子": "The orchid bloomed beautifully with vibrant purple petals"
+            "句子": "The orchid bloomed beautifully with vibrant purple petals",
+            "中文": "這朵蘭花盛開得非常美麗，擁有鮮豔的紫色花瓣。"
         },
         {
+            "音檔": "音檔 - orchid-2",
             "等級": "B1",
             "分類": "植物",
             "Words": "orchid-2",
-            "句子": "She loves collecting rare orchids from around the world"
+            "句子": "She loves collecting rare orchids from around the world",
+            "中文": "她喜歡收集來自世界各地的稀有蘭花。"
         },
         {
+            "音檔": "音檔 - orchid-3",
             "等級": "B1",
             "分類": "植物",
             "Words": "orchid-3",
-            "句子": "The wedding bouquet featured white orchids as a symbol of elegance"
+            "句子": "The wedding bouquet featured white orchids as a symbol of elegance",
+            "中文": "婚禮花束以白色蘭花為特色，象徵著優雅。"
         },
         {
+            "音檔": "音檔 - orchid-4",
             "等級": "B1",
             "分類": "植物",
             "Words": "orchid-4",
-            "句子": "She wore a beautiful orchid dress to the event"
+            "句子": "She wore a beautiful orchid dress to the event",
+            "中文": "她穿著一件美麗的蘭花圖案連衣裙參加活動。"
         },
         {
+            "音檔": "音檔 - orchid-5",
             "等級": "B1",
             "分類": "植物",
             "Words": "orchid-5",
-            "句子": "The walls of the room were painted in a soft orchid hue"
+            "句子": "The walls of the room were painted in a soft orchid hue",
+            "中文": "房間的牆壁漆成了柔和的蘭花色。"
         },
         {
+            "音檔": "音檔 - orchid-6",
             "等級": "B1",
             "分類": "植物",
             "Words": "orchid-6",
-            "句子": "The sunset painted the sky in shades of orchid and pink"
+            "句子": "The sunset painted the sky in shades of orchid and pink",
+            "中文": "日落將天空染成了蘭花色和粉紅色的色調。"
         },
         {
             "等級": "B2",
@@ -28898,28 +28993,36 @@
             "中文": "(地圖提供了整個公園的俯視圖。)"
         },
         {
+            "音檔": "音檔 - overhear-1",
             "等級": "B2",
             "分類": "對話",
             "Words": "overhear-1",
-            "句子": "She accidentally overheard her colleagues discussing the surprise party"
+            "句子": "She accidentally overheard her colleagues discussing the surprise party",
+            "中文": "她不小心聽到同事們討論驚喜派對的事情。"
         },
         {
+            "音檔": "音檔 - overhear-2",
             "等級": "B2",
             "分類": "對話",
             "Words": "overhear-2",
-            "句子": "I overheard a conversation on the bus about the new restaurant opening in town"
+            "句子": "I overheard a conversation on the bus about the new restaurant opening in town",
+            "中文": "我在公車上無意間聽到有人談論鎮上新開的餐廳。"
         },
         {
+            "音檔": "音檔 - overhear-3",
             "等級": "B2",
             "分類": "對話",
             "Words": "overhear-3",
-            "句子": "He didn't mean to eavesdrop, but he overheard their argument through the thin walls"
+            "句子": "He didn't mean to eavesdrop, but he overheard their argument through the thin walls",
+            "中文": "他並不是故意偷聽的，但他透過薄牆聽到了他們的爭吵。"
         },
         {
+            "音檔": "音檔 - overhear-4",
             "等級": "B2",
             "分類": "對話",
             "Words": "overhear-4",
-            "句子": "Overhearing their discussion in the café, she learned about the upcoming event"
+            "句子": "Overhearing their discussion in the café, she learned about the upcoming event",
+            "中文": "在咖啡館無意中聽到他們的討論後，她得知了即將舉行的活動。"
         },
         {
             "Words": "overlay-1",

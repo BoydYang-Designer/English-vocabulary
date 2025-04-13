@@ -813,9 +813,19 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
+function normalizeText(text) {
+    return text
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, ' ')
+        .replace(/,\s*/g, ',')
+        .trim()
+        .toLowerCase();
+}
+
 function submitSentenceAnswer() {
     let sentenceObj = currentQuizSentences[currentSentenceIndex];
-    let correctSentence = sentenceObj.filteredSentence || sentenceObj.句子.replace(/\s*\[=[^\]]+\]/g, "").trim(); // 使用過濾後的句子
+    let correctSentence = sentenceObj.filteredSentence || sentenceObj.句子.replace(/\s*\[=[^\]]+\]/g, "").trim();
     let allInputs = document.querySelectorAll("#sentenceInput .letter-input");
 
     let correctWords = correctSentence.split(/\b/);
@@ -835,8 +845,8 @@ function submitSentenceAnswer() {
         }
     });
 
-    let userAnswerStr = userAnswer.join("").replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
-    let correctSentenceStr = correctSentence.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
+    let userAnswerStr = normalizeText(userAnswer.join(""));
+    let correctSentenceStr = normalizeText(correctSentence);
 
     userAnswers[currentSentenceIndex] = userAnswer.join("").trim();
 

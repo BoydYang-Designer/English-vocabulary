@@ -313,6 +313,13 @@ function startQuiz() {
     loadNextWord();
 }
 
+function normalizeText(text) {
+    return text
+        .normalize('NFD') // 將組合字符分解（如 é 分解為 e 和 結合重音符號）
+        .replace(/[\u0300-\u036f]/g, '') // 移除所有重音符號
+        .toLowerCase()
+        .replace(/[\s-]/g, ''); // 移除空格和連字符
+}
 
 // 提交答案並檢查正確性
 function submitAnswer() {
@@ -321,22 +328,16 @@ function submitAnswer() {
         return;
     }
 
-    // 從輸入框和非輸入元素（空格或連字符）中重建 userAnswer
     let wordInputElements = document.querySelectorAll("#wordInput input, #wordInput span.non-input-box");
     let userAnswerArray = Array.from(wordInputElements).map(el => 
         el.tagName === "INPUT" ? (el.value.trim().toLowerCase() || "_") : el.innerText
     );
     let userAnswer = userAnswerArray.join("");
-    let correctAnswer = currentWord.toLowerCase();
+    let correctAnswer = currentWord;
 
-    // 確保 userAnswer 長度與 correctAnswer 一致，補足缺失部分
-    while (userAnswer.length < correctAnswer.length) {
-        userAnswer += "_";
-    }
-
-    // 去掉空格和連字符進行整體比較
-    let normalizedUserAnswer = userAnswer.replace(/[\s-]/g, "");
-    let normalizedCorrectAnswer = correctAnswer.replace(/[\s-]/g, "");
+    // 正規化答案
+    let normalizedUserAnswer = normalizeText(userAnswer);
+    let normalizedCorrectAnswer = normalizeText(correctAnswer);
 
     let result = normalizedUserAnswer === '' ? '未作答' : 
                  (normalizedUserAnswer === normalizedCorrectAnswer ? '正確' : '錯誤');
