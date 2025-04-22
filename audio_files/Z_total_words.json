@@ -800,6 +800,7 @@
         },
         {
             "等級": "C2",
+            "分類": "醫學",
             "Words": "antimicrobial",
             "pronunciation-1": "[antɪmʌɪˈkrəʊbɪəl]",
             "traditional Chinese": "adj.抗菌劑的\nn.抗菌劑  , 抗生素",
@@ -859,6 +860,7 @@
         },
         {
             "等級": "C1",
+            "分類": "生物",
             "Words": "appendage",
             "pronunciation-1": "[əˋpɛndɪdʒ]D",
             "traditional Chinese": "n.1.附屬肢體（如臂、腿、尾等）\n    2.附屬物，附加物(+to/of)",
@@ -888,6 +890,7 @@
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "applicable",
             "pronunciation-1": "[ˋæplɪkəb!]",
             "traditional Chinese": "adj.1. 與特定情況相關的或適合的\n      2.能夠應用的或使用的",
@@ -897,6 +900,7 @@
         },
         {
             "等級": "B2",
+            "分類": "商業",
             "Words": "appraise",
             "pronunciation-1": "[əˋprez]",
             "traditional Chinese": "v.1. 估計，估量；估價\n   2. 評價 ",
@@ -906,6 +910,7 @@
         },
         {
             "等級": "C1",
+            "分類": "商業",
             "Words": "appraiser",
             "pronunciation-1": "[əˋprezɚ]",
             "traditional Chinese": "n.評價人；鑑定人 ；估價官",
@@ -965,6 +970,7 @@
         },
         {
             "等級": "B2",
+            "分類": "商業",
             "Words": "apprise",
             "pronunciation-1": "[əˋpraɪz]",
             "traditional Chinese": "v.告知，通知",
@@ -1034,6 +1040,7 @@
         },
         {
             "等級": "B1",
+            "分類": "食物 ",
             "Words": "aroma",
             "pronunciation-1": "[əˋromə]",
             "traditional Chinese": "n.芳香，香氣，香味",
@@ -1043,6 +1050,7 @@
         },
         {
             "等級": "B2",
+            "分類": "食物 ",
             "Words": "aromatic",
             "pronunciation-1": "[͵ærəˋmætɪk]",
             "traditional Chinese": "adj.1.芳香的；馨香的",
@@ -1052,6 +1060,7 @@
         },
         {
             "等級": "B1",
+            "分類": "醫學",
             "Words": "artery",
             "pronunciation-1": "[ˋɑrtərɪ]",
             "traditional Chinese": "n.1.【解】動脈\n   2.(鐵路，公路等的)幹線，要道",
@@ -1161,6 +1170,7 @@
         },
         {
             "等級": "B1",
+            "分類": "語言",
             "Words": "assert",
             "pronunciation-1": "[əˋsɝt]",
             "traditional Chinese": "v.1.斷言，聲稱[+that]\n   2.維護，堅持\n   3.主張擁有",
@@ -1170,6 +1180,7 @@
         },
         {
             "等級": "C1",
+            "分類": "語言",
             "Words": "assertion",
             "pronunciation-1": "[əˋsɝʃən]",
             "traditional Chinese": "n.1.斷言，言明[C](that)\n  2.(意見等的)堅持[U]\n  3..(權利等的)主張，維護；",
@@ -1179,6 +1190,7 @@
         },
         {
             "等級": "B1",
+            "分類": "商業",
             "Words": "asset",
             "pronunciation-1": "[ˋæsɛt]",
             "traditional Chinese": "n.1.財產，資產\n  2.寶貴的人材；有益的品質，才能；有利條件",
@@ -1188,6 +1200,7 @@
         },
         {
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilate",
             "pronunciation-1": "[əˋsɪm!͵et]",
             "traditional Chinese": "v.1.吸收(知識文化等)；理解\n   2.同化(民族,群體等)\n   3.消化吸收(食物,營養等)",
@@ -1197,6 +1210,7 @@
         },
         {
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilation",
             "pronunciation-1": "[ə͵sɪm!ˋeʃən]",
             "traditional Chinese": "1.吸收，理解\n (指對知識文化或想法的吸收和理解)\n2.吸收或消化(營養)\n3.同化，融入\n(文化或社會層面的同化)",
@@ -1206,6 +1220,7 @@
         },
         {
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "associate",
             "pronunciation-1": " ə-ˈsō-shē-ˌāt ",
             "traditional Chinese": "v.\n1.將某人事物與其關聯在一起。\n 2.結交，交往[+with]\nn.\n1.合夥人；有關聯的事物\n 2.同伴或與之有聯繫的人。\nAdj.\n1.與其他事物相連或聯合，通常處於從屬角色。\n2.擁有部分或有限的會員資格或參與。",
@@ -1215,6 +1230,7 @@
         },
         {
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "associated",
             "pronunciation-1": " ə-ˈsō-shē-ˌā-təd ",
             "traditional Chinese": "adj.關聯的",
@@ -1224,6 +1240,7 @@
         },
         {
             "等級": "C1",
+            "分類": "語言",
             "Words": "assumption",
             "pronunciation-1": "[əˋsʌmpʃən]",
             "traditional Chinese": "n.1.假定，設想[U][C][+（that\n   2.擔任；承擔",
@@ -7928,7 +7945,11 @@
         },
         {
             "等級": "C1",
+            "分類": "情感",
             "Words": "maddening",
+            "pronunciation-1": "[ˋmædnɪŋ]",
+            "traditional Chinese": "adj.令人發狂的；使人惱怒的",
+            "English meaning": "Maddening is an adjective that describes something extremely annoying, frustrating, or infuriating.\nE.g. The constant noise from the construction site was absolutely maddening.\nE.g. His stubborn refusal to listen was maddening.\nE.g. It’s maddening how slowly the website loads sometimes.\nE.g. She found his indecisiveness maddening, especially under pressure.\nSummary:\n\"Maddening\" refers to something that causes intense irritation or frustration, often to the point of making someone feel overwhelmed or angry.\nRelated Words:\nInfuriating, frustrating, annoying, exasperating\nAntonyms:\nSoothing, calming, peaceful, comforting",
             "Unnamed: 8": "maddening",
             "Unnamed: 9": "maddening"
         },
@@ -8060,6 +8081,9 @@
         {
             "等級": "B1",
             "Words": "marine",
+            "pronunciation-1": "[məˋrin]",
+            "traditional Chinese": "adj.1.海的；海生的，海產的\nn.1.海軍陸戰隊隊員[C]\n   2.海洋生物或事物",
+            "English meaning": "Marine is an adjective and noun with the following meanings:\nAs an Adjective:\n1. Relating to the sea, ocean, or waterways; associated with marine life or activities.\nE.g. The marine ecosystem is home to a wide variety of animals and plants.\nE.g. Marine biology studies organisms that live in the ocean.\nE.g. He studied marine engineering to design better ships.\nAs a Noun:\n1. A member of a military force specialized in sea operations.\nE.g. The marine was stationed on a naval ship for six months.\nE.g. The Marines conducted the operation with precision and speed.\n2. Anything related to the sea, such as marine species, marine weather, or marine transportation.\nE.g. The museum showcased marine fossils and artifacts from the deep sea.\nSummary:\n\"Marine\" can refer to anything associated with the sea or ocean, as well as to a specialized member of the military.\nRelated Words:\nNautical, maritime, oceanic, naval, aquatic\nAntonyms:\nLand-based, terrestrial, inland",
             "Unnamed: 8": "marine",
             "Unnamed: 9": "marine"
         },
@@ -8075,9 +8099,13 @@
         },
         {
             "等級": "C1",
-            "Words": "marveling",
-            "Unnamed: 8": "marveling",
-            "Unnamed: 9": "marveling"
+            "分類": "情感",
+            "Words": "marvel",
+            "pronunciation-1": "[ˋmɑrv!]",
+            "traditional Chinese": "v.感到驚訝，表示讚嘆\nn.奇蹟，令人驚嘆的事物或現象",
+            "English meaning": "Marvel is a verb and a noun with the following meanings:\nAs a Verb: (marvel / marveled / marveling)\n1. To feel or express great wonder, admiration, or astonishment, often in response to something impressive or extraordinary.\nE.g. She marveled at the beauty of the ancient artwork.\nE.g. He marveled at the complexity of the new technology.\nE.g. We marveled at how quickly the team completed the project.\nE.g. They were marveling at the stunning view from the mountaintop.\nAs a Noun:\n1. A surprising or extraordinary thing, event, or person that causes wonder or admiration.\nE.g. The Great Wall of China is one of the modern marvels of the world.\nE.g. His quick thinking in a crisis was a marvel.\nE.g. The invention of the smartphone is considered a marvel of modern technology.\nSummary:\n\"Marvel\" refers to both the act of admiring something extraordinary and the extraordinary thing itself that provokes admiration or awe.\nRelated Words:\nAstonishment, wonder, admiration, feat, miracle\nAntonyms:\nIndifference, disregard, apathy, disdain",
+            "Unnamed: 8": "marvel",
+            "Unnamed: 9": "marvel"
         },
         {
             "等級": "B1",
@@ -8108,7 +8136,11 @@
         },
         {
             "等級": "C2",
+            "分類": "藝術",
             "Words": "masterpiece",
+            "pronunciation-1": "[ˋmæstɚ͵pis]",
+            "traditional Chinese": "n.傑作，名作",
+            "English meaning": "Masterpiece is a noun with the following meaning:\nA work of outstanding artistry, skill, or craftsmanship, considered the best or most important work of a particular artist or creator.\nE.g. The Mona Lisa is often regarded as Leonardo da Vinci’s greatest masterpiece.\nE.g. The film was hailed as a cinematic masterpiece, praised for its direction and acting.\nE.g. The architect's final design was a true masterpiece, blending modern and classical elements.\nE.g. His novel is considered a literary masterpiece, showcasing his unique storytelling ability.\nSummary:\nA \"masterpiece\" is a highly accomplished work, regarded as the best example of its kind, often praised for its artistic or intellectual excellence.\nRelated Words:\nMasterwork, classic, triumph, tour de force, gem\nAntonyms:\nFlop, failure, disaster, mediocrity",
             "Unnamed: 8": "masterpiece",
             "Unnamed: 9": "masterpiece"
         },
@@ -8150,8 +8182,12 @@
             "Unnamed: 9": "mazelike"
         },
         {
-            "等級": "B1",
+            "等級": "B2",
+            "分類": "自然地理",
             "Words": "meadow",
+            "pronunciation-1": "[ˋmɛdo]",
+            "traditional Chinese": "n.草地，牧草地[C][U]\n(通常長滿草、花卉和一些低矮植物，且經常用來指農村或自然環境中的開闊空地。)",
+            "English meaning": "Meadow is a noun:\nA field of grassland, often covered with wildflowers, typically used for grazing livestock or as a natural habitat for wildlife.\nE.g. The cows grazed peacefully in the meadow, surrounded by blooming flowers.\nE.g. We spent the afternoon walking through the meadow, enjoying the fresh air and sunshine.\nE.g. The meadow was filled with the sounds of birds singing and the rustle of grass in the breeze.\nE.g. A river ran through the meadow, adding to its tranquil beauty.\nSummary:\nA \"meadow\" is a grassy area, often rich in plants and wildlife, typically used for grazing or left as natural open land.\nRelated Words:\nField, pasture, plain, grassland, grass\nAntonyms:\nDesert, wasteland, urban area, concrete jungle",
             "Unnamed: 8": "meadow",
             "Unnamed: 9": "meadow"
         },
@@ -8222,7 +8258,11 @@
         },
         {
             "等級": "B2",
+            "分類": "醫學",
             "Words": "melanin",
+            "pronunciation-1": "[ˋmɛlənɪn]",
+            "traditional Chinese": "n.黑色素\n(一種天然色素，存在於皮膚、頭髮和眼睛中，負責決定它們的顏色，並能保護身體免受紫外線傷害。)",
+            "English meaning": "Melanin is a noun:\nA natural pigment found in most organisms, responsible for the color of skin, hair, and eyes. It also helps protect the skin from the harmful effects of ultraviolet (UV) radiation.\nE.g. People with darker skin have more melanin, which provides greater protection from sun damage.\nE.g. Melanin levels can affect how quickly someone tans or burns in the sun.\nE.g. The variation in eye color is due to differing amounts of melanin in the iris.\nE.g. Albinism is a condition characterized by the absence of melanin in the body.\nSummary:\n\"Melanin\" is the pigment that determines the color of skin, hair, and eyes, and plays a protective role against UV rays.\nRelated Words:\nPigment, coloration, skin tone, melatonin (not to be confused), eumelanin, pheomelanin\nAntonyms:\nDepigmentation, albinism, colorlessness",
             "Unnamed: 8": "melanin",
             "Unnamed: 9": "melanin"
         },
@@ -8236,8 +8276,22 @@
             "Unnamed: 9": "melody"
         },
         {
-            "等級": "B1",
+            "等級": "B2",
+            "分類": "語言 ",
+            "Words": "merely",
+            "pronunciation-1": "[ˋmɪrlɪ]",
+            "traditional Chinese": "adv.只是，僅僅，不過",
+            "English meaning": "Merely is an adverb:\nUsed to emphasize that something is only what you say and not better, more important, or more impressive.\nE.g. That was merely a guess of mine. \nE.g. I am not merely requesting, I am ordering\nE.g. It's not a solution—merely a temporary fix.\nE.g. She’s merely a beginner, not an expert.\nE.g. I’m not angry, merely disappointed.\nSummary:\n\"Merely\" means only or simply, often used to downplay the importance or extent of something.\nRelated Words:\nOnly, just, simply, solely\nAntonyms:\nConsiderably, significantly, greatly, importantly",
+            "Unnamed: 8": "merely",
+            "Unnamed: 9": "merely"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言 ",
             "Words": "mere",
+            "pronunciation-1": "[mɪr]",
+            "traditional Chinese": "adj.僅僅的，只不過的",
+            "English meaning": "Mere is an adjective:\nUsed to emphasize how small or unimportant something or someone is, often implying that nothing more is involved.\nE.g. The mere thought of losing him made her anxious.\nE.g. He won the match by a mere two points.\nE.g. She's a mere child and doesn’t understand the consequences.\nE.g. The mere mention of his name caused everyone to go silent.\nSummary:\n\"Mere\" emphasizes the insignificance or smallness of something, often used to highlight contrast or surprise.\nRelated Words:\nOnly, just, slight, insignificant\nAntonyms:\nSignificant, substantial, important, considerable",
             "Unnamed: 8": "mere",
             "Unnamed: 9": "mere"
         },
@@ -8575,8 +8629,12 @@
             "Unnamed: 9": "mortgage"
         },
         {
+            "等級": "B2",
             "分類": "旅遊",
             "Words": "mother-nature",
+            "pronunciation-1": "/ˌmʌð.əˈneɪ.tʃə/",
+            "traditional Chinese": "n.大地之母 \n   自然界或大自然本身",
+            "English meaning": "Mother Nature is a noun that refers to the natural world, especially when considered as a powerful force that controls the weather, environment, and life on Earth.\nE.g. We should respect the power of Mother Nature during natural disasters.\nE.g. The beauty of the forest is a reminder of how awe-inspiring Mother Nature can be.\nE.g. Climate change is a signal that Mother Nature is reacting to human actions.\nE.g. Mother Nature provides us with everything we need to survive—air, water, and food.\nSummary:\n\"Mother Nature\" personifies nature as a nurturing and powerful force, representing the natural environment and its influence on life.\nRelated Words:\nNature, environment, the wild, the outdoors, ecosystem\nAntonyms:\nHuman-made, artificial, man-made, synthetic",
             "Unnamed: 8": "mother-nature",
             "Unnamed: 9": "mother-nature"
         },
@@ -8752,20 +8810,40 @@
         },
         {
             "等級": "C1",
+            "分類": "商業",
             "Words": "newsletter",
+            "pronunciation-1": "[ˋnjuzˋlɛtɚ]",
+            "traditional Chinese": "n.電子報、時事通訊\n(通常用於傳達有關某一主題或組織的信息，可能會包含更新、新聞、活動或公告。)",
+            "English meaning": "Newsletter is a noun:\nA printed or digital publication that is regularly distributed, usually by email or mail, to provide news, updates, or information to a specific group or audience.\nE.g. The company sends out a monthly newsletter to keep customers informed of new products.\nE.g. I subscribed to the school newsletter to stay updated on upcoming events.\nE.g. Her travel newsletter features photos and stories from her latest adventures.\nE.g. The nonprofit's newsletter highlights its latest community outreach projects.\nSummary:\nA newsletter is a publication sent regularly to inform a specific audience about news, updates, or topics of interest.\nRelated Words:\nBulletin, report, update, publication\nAntonyms:\nSilence, secrecy, suppression",
             "Unnamed: 8": "newsletter",
             "Unnamed: 9": "newsletter"
         },
         {
             "等級": "B1",
             "Words": "niche",
-            "English meaning": "I have found my niche",
+            "pronunciation-1": "[nɪtʃ]",
+            "traditional Chinese": "n.1.某一特定或專門的市場或群體 (利基)\n   2.小而適合的環境\n   3.壁龕(牆壁上修建的凹處或嵌在牆壁中的櫥櫃)\nadj.特定的，專門的 (某小眾市場的)",
+            "English meaning": "Niche is a noun and an adjective with the following meanings:\nAs a Noun:\n1. A specialized segment of the market for a particular kind of product or service.\nE.g. The company found a niche in the luxury pet accessories market.\nE.g. The website targets a niche audience of eco-conscious consumers.\nE.g. He carved out a niche for himself in the field of sustainable architecture.\nE.g. You have to create a niche market for your products. \n2. A comfortable or suitable position in life or employment.\nE.g. She finally found her niche as a graphic designer.\nE.g. After years of uncertainty, he discovered his niche in the tech industry.\n3. A shallow recess, especially one in a wall to display a statue or ornament.\nE.g. The statue was placed in a niche in the corner of the room.\nE.g. The artwork was hung in a niche above the fireplace.\nAs an Adjective:\nDenoting or relating to products, services, or interests that appeal to a specific segment of the population.\nE.g. The store specializes in niche products for collectors.\nE.g. He runs a niche blog focused on rare books and manuscripts.\nSummary:\n\"Niche\" refers to a specific, specialized area in a market, career, or even a physical space, often focusing on particular interests or needs.\nRelated Words:\nSpecialty, sector, corner, market segment\nAntonyms:\nMainstream, broad, general, conventional",
             "Unnamed: 8": "niche",
             "Unnamed: 9": "niche"
         },
         {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "outreach",
+            "pronunciation-1": "[aʊtˋritʃ]",
+            "traditional Chinese": "n.1.拓展(服務或活動)\n   2.超越(某範圍或領域的行為)\nv.1.提供超越常規範圍的服務或幫助",
+            "English meaning": "Outreach is a noun and a verb with the following meanings:\nAs a Noun:\n1. The act of reaching out to provide services, support, or information to a community or group.\nE.g. The organization’s outreach program helps disadvantaged children gain access to education.\nE.g. Their community outreach initiatives focus on providing free healthcare to remote areas.\nE.g. The outreach to local businesses increased their awareness of the new policies.\n2. The extent or range of services or influence.\nE.g. The nonprofit’s outreach extends to several countries around the world.\nE.g. Their outreach has grown, attracting more volunteers each year.\nAs a Verb:\n1. To reach out or provide services, support, or information to others.\nE.g. They plan to outreach to the elderly to ensure they have access to health services.\nE.g. The charity is reaching out to homeless families with resources and food.\nSummary:\n\"Outreach\" refers to the effort to reach out and provide services or information, often in a community context, aiming to increase influence or assist those in need.\nRelated Words:\nAssistance, support, communication, connection\nAntonyms:\nNeglect, isolation, withdrawal",
+            "Unnamed: 8": "outreach",
+            "Unnamed: 9": "outreach"
+        },
+        {
             "等級": "C2",
+            "分類": "商業",
             "Words": "niche-market",
+            "pronunciation-1": "/niːʃ ˈmɑː.kɪt/",
+            "traditional Chinese": "n.利基市場、小眾市場",
+            "English meaning": "Niche-market is a noun, means a specific, defined segment of the market that focuses on a particular product, service, or interest, often targeting a smaller, specialized group of consumers.\nE.g. The company developed a niche-market for eco-friendly household products.\nE.g. The luxury watch brand successfully entered a niche-market catering to collectors.\nE.g. As a small business, they found success in a niche market for handmade jewelry.\nE.g. The startup has a niche-market for tech gadgets designed specifically for seniors.\nSummary:\nA \"niche-market\" refers to a focused and specialized segment within a larger market, often targeting a unique audience with specific interests or needs.\nRelated Words:\nSpecialty market, target market, segment, boutique\nAntonyms:\nMass market, general market, broad market",
             "Unnamed: 8": "niche-market",
             "Unnamed: 9": "niche-market"
         },
@@ -8901,7 +8979,11 @@
         },
         {
             "等級": "B1",
+            "分類": "語言 ",
             "Words": "oath",
+            "pronunciation-1": "[oθ]",
+            "traditional Chinese": "n.1.莊嚴的誓言(通常在神明面前發下)\n   2.宣誓或承諾(在法庭或儀式等正式場合中)\n   3.粗俗或冒犯性的語言，用來表達強烈情緒（較少見的用法）。",
+            "English meaning": "Oath is a noun:\n1. A solemn promise, often invoking a divine witness, regarding one's future action or behavior.\nE.g. He took an oath to serve his country faithfully.\nE.g. The witness swore an oath to tell the truth in court.\nE.g. Doctors take the Hippocratic oath to uphold medical ethics.\n2. A sworn declaration or commitment, especially in a formal setting like a courtroom or ceremony.\nE.g. She made an oath of allegiance during the citizenship ceremony.\nE.g. Every new president takes an oath before assuming office.\n3. A profane or offensive expression used to convey strong emotion (less common usage).\nE.g. He muttered an oath under his breath when he missed the shot.\nSummary:\nAn \"oath\" is a formal and solemn promise or declaration, often made publicly or in legal or ceremonial contexts, and can also refer to a strong exclamation in informal use.\nRelated Words:\nPledge, vow, promise, declaration\nAntonyms:\nLie, denial, breach, perjury",
             "Unnamed: 8": "oath",
             "Unnamed: 9": "oath"
         },
@@ -9007,7 +9089,11 @@
         },
         {
             "等級": "B2",
+            "分類": "醫學",
             "Words": "ointment",
+            "pronunciation-1": "[ˋɔɪntmənt]",
+            "traditional Chinese": "n.藥膏[U][C]； 軟膏",
+            "English meaning": "Ointment is a noun:\nA smooth, oily substance that is rubbed on the skin to heal a wound, soothe irritation, or deliver medication.\nE.g. The doctor prescribed an antibiotic ointment for the cut.\nE.g. She applied a soothing ointment to relieve the itching.\nE.g. This herbal ointment is known for its healing properties.\nE.g. He used a medicated ointment to treat his eczema.\nSummary:\n\"Ointment\" refers to a greasy or creamy medicinal preparation applied to the skin to promote healing or provide relief.\nRelated Words:\nSalve, balm, cream, lotion\nAntonyms:\nIrritant, toxin, powder, gel (in contrast to oily form)",
             "Unnamed: 8": "ointment",
             "Unnamed: 9": "ointment"
         },
@@ -9031,9 +9117,13 @@
         },
         {
             "等級": "B2",
-            "Words": "omitting",
-            "Unnamed: 8": "omitting",
-            "Unnamed: 9": "omitting"
+            "分類": "日常生活",
+            "Words": "omit",
+            "pronunciation-1": "[oˋmɪt]",
+            "traditional Chinese": "v.指的是故意或無意地省略、忽略或未提及某事。",
+            "English meaning": "Omit is a verb: omit / omitted / omitting\nTo leave out or exclude something intentionally or unintentionally.\nE.g. She omitted the details of the meeting from her report.\nE.g. He omitted his name from the guest list to remain anonymous.\nE.g. The teacher accidentally omitted the last chapter of the textbook.\nE.g. I decided to omit the unnecessary information from my presentation.\nSummary:\n\"Omit\" means to leave something out or fail to include it, either deliberately or by mistake.\nRelated Words:\nExclude, leave out, bypass, skip, disregard\nAntonyms:\nInclude, add, insert, encompass",
+            "Unnamed: 8": "omit",
+            "Unnamed: 9": "omit"
         },
         {
             "等級": "C2",
@@ -9046,13 +9136,21 @@
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "on-the-back-burner",
+            "pronunciation-1": "/ɒn ðə bæk ˈbɜː.nə/",
+            "traditional Chinese": "ph.將某事暫時擱置或優先順序降低",
+            "English meaning": "On-the-back-burner is an idiomatic expression, meaning something that is temporarily set aside or postponed in favor of more urgent tasks or priorities.\nE.g. The project is on the back burner until we finish the current assignment.\nE.g. I’ve put my personal plans on the back burner while I focus on work.\nE.g. His idea was put on the back burner until they resolved the more pressing issues.\nE.g. The proposal is on the back burner for now, but we’ll revisit it later.\nSummary:\n\"On-the-back-burner\" refers to a situation where something is given less attention or priority for the time being, often because more immediate concerns take precedence.\nRelated Words:\nPostpone, delay, set aside, deprioritize, shelve\nAntonyms:\nPrioritize, focus on, address immediately",
             "Unnamed: 8": "on-the-back-burner",
             "Unnamed: 9": "on-the-back-burner"
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "on-the-horizon",
+            "pronunciation-1": "/ɒn ðə hɒˈraɪ.zən/",
+            "traditional Chinese": "ph.即將出現",
+            "English meaning": "On-the-horizon is an idiomatic expression, meaning something that is likely to happen or become visible in the near future, usually referring to events or changes.\nE.g. There are new opportunities on the horizon for the company.\nE.g. With the new legislation on the horizon, businesses are preparing for changes.\nE.g. A new breakthrough in medicine is on the horizon.\nE.g. The team is excited about the new project on the horizon.\nSummary:\n\"On-the-horizon\" refers to something that is approaching or expected to happen soon.\nRelated Words:\nUpcoming, imminent, approaching, near, forthcoming\nAntonyms:\nDistant, far-off, remote, delayed",
             "Unnamed: 8": "on-the-horizon",
             "Unnamed: 9": "on-the-horizon"
         },
@@ -9112,21 +9210,23 @@
         },
         {
             "等級": "B2",
+            "分類": "商業",
             "Words": "opt-out",
+            "pronunciation-1": "/ɒpt aʊt/",
+            "traditional Chinese": "n. 指的是退出或選擇不參與某個計劃、服務或活動的行為。\nv. 選擇退出(選擇不參與或選擇退出某個計劃、服務或活動)",
+            "English meaning": "Opt-out is a noun and verb with the following meanings:\nAs a Noun:\nThe action of choosing not to participate in something or to withdraw from an activity or program. \nE.g. The company offered an opt-out option for employees who did not want to participate in the health plan. \nE.g. He requested an opt-out from the newsletter subscription. \nE.g. The opt-out clause in the contract allowed him to leave the agreement early.\nAs a Verb (opt-out / opted-out / opting-out):\nTo choose not to participate in something or to withdraw from a program, service, or agreement. \nE.g. She opted out of the event due to a scheduling conflict. \nE.g. Many people opt out of receiving marketing emails. \nE.g. The student opted out of the class trip after realizing it was not aligned with their interests.\nSummary:\n\"Opt-out\" refers to the action of choosing not to be involved in something, whether it be a service, subscription, or program.\nRelated Words:\nWithdraw, exclude, decline, bypass, avoid\nAntonyms:\nOpt-in, participate, engage, join",
             "Unnamed: 8": "opt-out",
             "Unnamed: 9": "opt-out"
         },
         {
             "等級": "B1",
+            "分類": "星宇",
             "Words": "orbit",
+            "pronunciation-1": "[ˋɔrbɪt]",
+            "traditional Chinese": "n.1.（天體等的）運行軌道[C][U]\n  2.勢力範圍；活動範圍；知識範圍[C][U]\nv.1.環繞（天體等）的軌道運行",
+            "English meaning": "Orbit is a noun and verb with the following meanings:\nAs a Noun:\n1. The curved path followed by an object around a planet, star, or moon due to gravitational forces.\nE.g. The Earth orbits around the Sun once every year.\nE.g. Satellites are placed in orbit around the Earth to provide communication services.\nE.g. The moon’s orbit around the Earth takes about 27 days.\n2. A particular area or range of influence, activity, or existence.\nE.g. His influence now extends beyond his local orbit, reaching international markets.\nE.g. She operates within a specific orbit of high-level corporate management.\nAs a Verb (orbit / orbited / orbiting):\nTo move around a central object or point in a circular or elliptical path, especially in space.\nE.g. The spacecraft orbits the planet every few hours.\nE.g. The Earth is orbiting the Sun at a speed of around 30 kilometers per second.\nE.g. The satellite is currently orbiting the Earth at an altitude of 500 kilometers.\nSummary:\n\"Orbit\" refers to the path that an object takes around a larger object, typically due to gravity, and can also refer to a range of influence or activity.\nRelated Words:\nRevolve, circle, trajectory, path, revolution\nAntonyms:\nStationary, rest, still, halt",
             "Unnamed: 8": "orbit",
             "Unnamed: 9": "orbit"
-        },
-        {
-            "等級": "B2",
-            "Words": "orbiting",
-            "Unnamed: 8": "orbiting",
-            "Unnamed: 9": "orbiting"
         },
         {
             "等級": "B1",
@@ -9155,12 +9255,6 @@
             "English meaning": "\"Organism\" is a noun with the following meanings:\n1. A living thing that has an organized structure and can grow, reproduce, and respond to its environment. This term includes animals, plants, bacteria, fungi, and other life forms.\nE.g. Bacteria are single-celled organisms that can survive in extreme environments.\nE.g. The human body hosts a variety of microorganisms that aid in digestion.\n2. An individual form of life classified by its unique biological characteristics. Organisms are grouped by species, genus, or other categories based on shared traits.\nE.g. The scientists discovered a new organism in the deep ocean that thrives without sunlight.\nE.g. Plants, animals, and fungi are all examples of complex organisms.\n3. A system or structure that functions as a unified, living entity. Used metaphorically to describe complex systems that operate as a whole.\nE.g. He thinks of the city as a complex social organism, with interdependent parts that work together.\nE.g. The corporation operated like a single organism, with each department playing a critical role in its success.\nSummary: \"Organism\" refers to any individual living entity that grows, reproduces, and adapts, from bacteria to complex animals. It can also describe a system that functions cohesively, like a society or organization.\nRelated Words: life form, creature, being, entity, microorganism\nAntonyms: non-living matter, inanimate object",
             "Unnamed: 8": "organism",
             "Unnamed: 9": "organism"
-        },
-        {
-            "等級": "C1",
-            "Words": "organisms",
-            "Unnamed: 8": "organisms",
-            "Unnamed: 9": "organisms"
         },
         {
             "等級": "B1",
@@ -9233,8 +9327,12 @@
             "Unnamed: 9": "outgrowth"
         },
         {
-            "等級": "B1",
+            "等級": "C1",
+            "分類": "商業",
             "Words": "outmaneuver",
+            "pronunciation-1": "[͵aʊtməˋnuvɚ]",
+            "traditional Chinese": "v.運用策略擊敗；以計謀勝過",
+            "English meaning": "Outmaneuver is a verb: outmaneuver / outmaneuvered / outmaneuvering\nMeaning:\nTo gain an advantage over someone or something by using greater skill, intelligence, or strategy.\nE.g. She managed to outmaneuver her political rivals and secure the leadership position.\nE.g. The smaller, faster car outmaneuvered the truck on the winding road.\nE.g. He was able to outmaneuver the opposition during the negotiation process.\nE.g. The team outmaneuvered their opponents with a brilliant play in the final seconds.\nSummary:\n\"Outmaneuver\" means to skillfully or strategically surpass or defeat an opponent or obstacle.\nRelated Words:\nOutsmart, outwit, outthink, surpass, overcome\nAntonyms:\nSurrender, yield, be outwitted, lose",
             "Unnamed: 8": "outmaneuver",
             "Unnamed: 9": "outmaneuver"
         },
@@ -9388,9 +9486,13 @@
         },
         {
             "等級": "C2",
-            "Words": "paleontologists",
-            "Unnamed: 8": "paleontologists",
-            "Unnamed: 9": "paleontologists"
+            "分類": "生物",
+            "Words": "paleontologist",
+            "pronunciation-1": "[͵pelɪɑnˋtɑlədʒɪst]",
+            "traditional Chinese": "n.古生物學者(研究化石、古生物)",
+            "English meaning": "Paleontologist is a noun.\nMeaning:\nA scientist who studies fossils and ancient life forms to understand the history of life on Earth.\nE.g. The paleontologist discovered a new species of dinosaur buried in the desert.\nE.g. As a child, she dreamed of becoming a paleontologist and digging up fossils.\nE.g. Paleontologists use fossil evidence to learn about extinct animals and ancient environments.\nE.g. The museum hired a renowned paleontologist to lead the fossil restoration project.\nSummary:\nA paleontologist is a scientist who examines fossils to study the history of life on Earth.\nRelated Words:\nArchaeologist, geologist, fossil expert, evolutionary biologist",
+            "Unnamed: 8": "paleontologist",
+            "Unnamed: 9": "paleontologist"
         },
         {
             "Words": "palette",
@@ -9442,6 +9544,9 @@
             "等級": "C2",
             "分類": "語言",
             "Words": "paradoxical",
+            "pronunciation-1": "[͵pærəˋdɑksɪk!]",
+            "traditional Chinese": "adj.自相矛盾的、似是而非的、悖論性的。\n(指某事物、陳述或情境表面上矛盾，但可能在某種條件下合理或真實。\n強調與常識或預期相悖的特質。)",
+            "English meaning": "Paradoxical is an adjective that describes something that seems self-contradictory or absurd, but may actually express a possible truth.\nE.g. It’s paradoxical that standing is more tiring than walking.\nE.g. His calm reaction in a crisis is paradoxical given his usually anxious personality.\nE.g. The medicine had a paradoxical effect—it made her feel more awake instead of sleepy.\nE.g. The paradoxical nature of freedom is that it can lead to chaos if unchecked.\nE.g. Her paradoxical behavior confused everyone—she was kind yet ruthless.\nE.g. The paradoxical nature of time travel makes it a favorite topic in science fiction.\nSummary:\n\"Paradoxical\" refers to something that appears illogical or contradictory, yet might contain truth or make sense upon deeper reflection.\nRelated Words:\nContradictory, puzzling, ironic, confusing, inconsistent\nAntonyms:\nLogical, straightforward, consistent, expected, rational",
             "Unnamed: 8": "paradoxical",
             "Unnamed: 9": "paradoxical"
         },
@@ -9490,21 +9595,33 @@
         },
         {
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "parchment",
+            "pronunciation-1": "[ˋpɑrtʃmənt]",
+            "traditional Chinese": "n.1.羊皮紙；仿羊皮紙[U]\n   2.烘焙用的烘焙紙",
+            "English meaning": "Parchment is a noun with the following meanings:\n1. A material made from specially prepared animal skin, used historically for writing or printing.\nE.g. The ancient manuscript was written on parchment and preserved in a museum.\nE.g. Medieval scribes carefully copied texts onto parchment with quills and ink.\nE.g. The university presented him with a diploma printed on fine parchment.\n2. A type of heat-resistant paper used in cooking and baking, also known as parchment paper.\nE.g. She used parchment paper to line the baking tray.\nE.g. Always use parchment when baking cookies to prevent sticking.\nSummary:\n\"Parchment\" refers to either a historical writing material made from animal skin or a modern paper used in cooking to prevent food from sticking or burning.\nRelated Words:\nVellum, scroll, baking paper, manuscript\nAntonyms:\nDigital file, e-document, screen, plastic wrap",
             "Unnamed: 8": "parchment",
             "Unnamed: 9": "parchment"
         },
         {
             "等級": "C1",
-            "Words": "pathogens",
-            "Unnamed: 8": "pathogens",
-            "Unnamed: 9": "pathogens"
+            "分類": "醫學",
+            "Words": "pathogen",
+            "pronunciation-1": "[ˋpæθədʒən]",
+            "traditional Chinese": "n.病原體",
+            "English meaning": "Pathogen is a noun, refers to a microorganism or agent—such as a virus, bacterium, fungus, or parasite—that causes disease in its host.\nE.g. The flu is caused by a viral pathogen that spreads easily from person to person.\nE.g. Researchers are developing vaccines to protect against deadly pathogens.\nE.g. This test detects the presence of a specific pathogen in the blood.\nE.g. Pathogen exposure can trigger a strong immune response in the body.\nSummary:\nA \"pathogen\" is a disease-causing organism or agent that can infect humans, animals, or plants.\nRelated Words:\nGerm, microbe, virus, bacteria, infectious agent\nAntonyms:\nProbiotic, non-pathogen, beneficial microbe, harmless organism",
+            "Unnamed: 8": "pathogen",
+            "Unnamed: 9": "pathogen"
         },
         {
             "等級": "B2",
-            "Words": "patrols",
-            "Unnamed: 8": "patrols",
-            "Unnamed: 9": "patrols"
+            "分類": "軍事",
+            "Words": "patrol",
+            "pronunciation-1": "[pəˋtrol]",
+            "traditional Chinese": "n.1.巡邏，偵察[U]\n   2.巡邏兵，巡邏隊 [C] \nv.巡邏；巡查",
+            "English meaning": "Patrol is a noun and a verb with the following meanings:\nAs a Noun:\n1. The act of monitoring, guarding, or inspecting an area, typically to maintain security or prevent illegal activity. E.g. The police conducted a routine patrol of the neighborhood late at night.\nE.g. The soldiers went on patrol to monitor the border.\nE.g. The security patrol checked the building for any signs of intrusion.\n2. A group of people engaged in a patrol. E.g. The patrol was stationed at the entrance to the park.\nE.g. The scouts went on a patrol to find the best camping spots.\nE.g. The scouts set up a patrol to search the forest for signs of wildlife.\nAs a Verb (patrol / patrolled / patrolling):\nTo move around an area to monitor it, often for security or safety purposes. E.g. The officers patrol the streets during the night to ensure public safety.\nE.g. He patrolled the perimeter of the property to check for any suspicious activity.\nE.g. They are patrolling the beaches to prevent illegal fishing.\nSummary:\n\"Patrol\" refers to the act of monitoring or guarding an area, or the group engaged in such an activity, typically for security purposes.\nRelated Words:\nMonitor, guard, survey, inspect, reconnaissance\nAntonyms:\nNeglect, abandon, ignore, disregard",
+            "Unnamed: 8": "patrol",
+            "Unnamed: 9": "patrol"
         },
         {
             "等級": "B2",
@@ -9546,14 +9663,22 @@
             "Unnamed: 9": "peculiar"
         },
         {
+            "等級": "B2",
             "分類": "職業",
-            "Words": "pedestrians",
-            "Unnamed: 8": "pedestrians",
-            "Unnamed: 9": "pedestrians"
+            "Words": "pedestrian",
+            "pronunciation-1": "[pəˋdɛstrɪən]",
+            "traditional Chinese": "n.步行者，行人[C]\nadj. (文章電影等)沉悶的；(人)缺乏想像力的；平庸的\n",
+            "English meaning": "Pedestrian is a noun and adjective with the following meanings:\nAs a Noun : A person who is walking, especially in an area where vehicles are also present.\nE.g. The pedestrian crossed the street at the crosswalk.\nE.g. There were many pedestrians on the sidewalk during rush hour.\nE.g. Pedestrians need to be cautious when crossing busy streets.\nAs an Adjective : Lacking in excitement, ordinary, or dull.\nE.g. His presentation was rather pedestrian, lacking any new ideas.\nE.g. The movie's plot was pedestrian, offering no surprises or twists.\nE.g. She found the restaurant’s menu to be quite pedestrian, with nothing special to offer.\nSummary:\n\"Pedestrian\" refers to a person who is walking or something that is ordinary, dull, or lacking excitement.\nRelated Words:\nWalker, traveler, ordinary, dull, boring\nAntonyms:\nExciting, exceptional, extraordinary, thrilling",
+            "Unnamed: 8": "pedestrian",
+            "Unnamed: 9": "pedestrian"
         },
         {
+            "等級": "B2",
             "分類": "職業",
             "Words": "peer",
+            "pronunciation-1": "[pɪr]",
+            "traditional Chinese": "n.1(地位，能力等)同等的人；同輩，同事，同儕\n   2.(英國的)貴族\nv.表示仔細看或費力地看",
+            "English meaning": "Peer is a noun and a verb with the following meanings:\nAs a Noun:\n1. A person who is equal to another in age, status, or ability.\nE.g. She felt a strong connection with her peers in the class.\nE.g. He’s a peer of mine in the research field.\nE.g. The company encourages collaboration among peers to foster creativity.\n2. A person of noble rank or title, especially in some European countries.\nE.g. The peer was invited to join the royal banquet.\nE.g. He inherited his peerage from his grandfather.\nE.g. Some members of the peerage still maintain aristocratic privileges.\nAs a Verb (peer / peered / peering):\nTo look closely or with difficulty, often to see something faint, unclear, or distant.\nE.g. She peered through the window to catch a glimpse of the snowstorm outside.\nE.g. He peered into the darkness but couldn't see anything.\nE.g. They were peering over the edge of the cliff to view the valley below.\nSummary:\n\"Peer\" can refer to a person of equal standing or rank, or to a member of a nobility, and as a verb, it means to look closely or with difficulty.\nRelated Words:\nEqual, colleague, companion, noble, aristocrat, gaze, look\nAntonyms:\nInferior, subordinate, underling",
             "Unnamed: 8": "peer",
             "Unnamed: 9": "peer"
         },
@@ -9767,9 +9892,12 @@
             "Unnamed: 9": "photosynthesis"
         },
         {
-            "等級": "C2",
-            "分類": "職業",
+            "等級": "C1",
+            "分類": "醫學",
             "Words": "physiotherapy",
+            "pronunciation-1": "[͵fɪzɪəˋθɛrəpɪ]",
+            "traditional Chinese": "n.物理療法\n(常用於受傷後康復、慢性病管理或手術後的恢復。)",
+            "English meaning": "Physiotherapy is a noun that refers to the treatment of injuries, diseases, or physical issues through physical methods such as exercise, massage, heat therapy, and other techniques rather than by drugs or surgery.\nE.g. She underwent physiotherapy to recover from her knee surgery.\nE.g. Regular physiotherapy sessions helped improve his posture and reduce back pain.\nE.g. The hospital offers physiotherapy for patients with sports injuries.\nE.g. After the accident, he needed months of physiotherapy to regain mobility.\nSummary:\n\"Physiotherapy\" is a physical treatment method used to improve movement, relieve pain, and promote healing without medication or surgery.\nRelated Words:\nPhysical therapy, rehabilitation, treatment, exercise therapy, manual therapy\nAntonyms:\nSurgery, medication, drug therapy, inactivity",
             "Unnamed: 8": "physiotherapy",
             "Unnamed: 9": "physiotherapy"
         },
@@ -10572,8 +10700,12 @@
             "Unnamed: 9": "rack"
         },
         {
+            "等級": "B2",
             "分類": "語言",
             "Words": "radically",
+            "pronunciation-1": "[ˋrædɪk!ɪ]",
+            "traditional Chinese": "adv.徹底地、根本地\n(通常用來形容重大的改變、不同或行動方式)",
+            "English meaning": "Radically is an adverb that means in a very significant, extreme, or fundamental way; used to describe major changes or differences.\nE.g. The company has radically changed its business strategy in recent years.\nE.g. Her hairstyle is radically different from what it used to be.\nE.g. The technology could radically transform the way we live and work.\nE.g. They approached the problem in a radically new way.\nSummary:\n\"Radically\" describes actions or changes that are extreme, thorough, or fundamental in nature.\nRelated Words:\nDrastically, extremely, fundamentally, profoundly\nAntonyms:\nSlightly, moderately, mildly, gradually",
             "Unnamed: 8": "radically",
             "Unnamed: 9": "radically"
         },
@@ -12899,8 +13031,12 @@
             "Unnamed: 9": "synonymous"
         },
         {
+            "等級": "C1",
             "分類": "語言",
             "Words": "synonymously",
+            "pronunciation-1": "/sɪˈnɑː.nə.məs.li/",
+            "traditional Chinese": "adv.同義地或可互換地使用\n(指兩個詞或概念具有相同或非常相近的意思，可以互相替代)",
+            "English meaning": "Synonymously is an adverb that means in a way that shows two things have the same or nearly the same meaning or are closely associated with each other.\nE.g. His name is used synonymously with honesty and integrity.\nE.g. In many cultures, success is synonymously linked with wealth.\nE.g. The brand became synonymously associated with quality and luxury.\nE.g. She spoke as if power and leadership were used synonymously.\nSummary:\n\"Synonymously\" describes the manner in which two things are considered to mean the same or be closely related in meaning or association.\nRelated Words:\nEquivalently, interchangeably, identically, alike\nAntonyms:\nDifferently, distinctly, separately, uniquely",
             "Unnamed: 8": "synonymously",
             "Unnamed: 9": "synonymously"
         },

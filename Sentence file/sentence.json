@@ -3444,6 +3444,7 @@
         {
             "音檔": "音檔 - antimicrobial-1",
             "等級": "C2",
+            "分類": "醫學",
             "Words": "antimicrobial-1",
             "句子": "Antimicrobial soaps are designed to kill harmful bacteria and viruses",
             "中文": "（抗菌肥皂是用來殺死有害的細菌和病毒的。）"
@@ -3451,6 +3452,7 @@
         {
             "音檔": "音檔 - antimicrobial-2",
             "等級": "C2",
+            "分類": "醫學",
             "Words": "antimicrobial-2",
             "句子": "The hospital uses antimicrobial cleaning products to reduce the risk of infection",
             "中文": "（醫院使用抗菌清潔產品來減少感染的風險。）"
@@ -3458,6 +3460,7 @@
         {
             "音檔": "音檔 - antimicrobial-3",
             "等級": "C2",
+            "分類": "醫學",
             "Words": "antimicrobial-3",
             "句子": "Some fabrics are treated with antimicrobial agents to prevent odor-causing bacteria",
             "中文": "（一些織物經過抗菌處理，以防止引起氣味的細菌。）"
@@ -3465,6 +3468,7 @@
         {
             "音檔": "音檔 - antimicrobial-4",
             "等級": "C2",
+            "分類": "醫學",
             "Words": "antimicrobial-4",
             "句子": "The doctor prescribed an antimicrobial to treat the bacterial infection",
             "中文": "（醫生開了抗菌藥物來治療細菌感染。）"
@@ -3472,6 +3476,7 @@
         {
             "音檔": "音檔 - antimicrobial-5",
             "等級": "C2",
+            "分類": "醫學",
             "Words": "antimicrobial-5",
             "句子": "Antimicrobials play an important role in controlling the spread of disease in healthcare settings",
             "中文": "（抗菌劑在控制醫療環境中疾病傳播方面發揮著重要作用。）"
@@ -3679,6 +3684,7 @@
         {
             "音檔": "音檔 - appendage-1",
             "等級": "C1",
+            "分類": "生物",
             "Words": "appendage-1",
             "句子": "The tail is an appendage that helps the animal maintain balance while running",
             "中文": "（尾巴是幫助動物在奔跑時保持平衡的附屬肢體。）"
@@ -3686,6 +3692,7 @@
         {
             "音檔": "音檔 - appendage-2",
             "等級": "C1",
+            "分類": "生物",
             "Words": "appendage-2",
             "句子": "The scientist studied the appendages of various marine animals to understand their adaptations",
             "中文": "（這位科學家研究了各種海洋動物的附肢，以了解它們的適應性。）"
@@ -3693,6 +3700,7 @@
         {
             "音檔": "音檔 - appendage-3",
             "等級": "C1",
+            "分類": "生物",
             "Words": "appendage-3",
             "句子": "The new office will serve as an appendage to the main building, providing extra space for staff",
             "中文": "（新辦公室將作為主樓的附屬部分，為員工提供額外的空間。）"
@@ -3700,6 +3708,7 @@
         {
             "音檔": "音檔 - appendage-4",
             "等級": "C1",
+            "分類": "生物",
             "Words": "appendage-4",
             "句子": "She viewed her job at the company as an appendage to her true passion for writing",
             "中文": "（她將在公司的工作視為自己對寫作的真正熱情的附屬部分。）"
@@ -3763,6 +3772,7 @@
         {
             "音檔": "音檔 - applicable-1",
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "applicable-1",
             "句子": "The new safety regulations are applicable to all manufacturing companies",
             "中文": "（新的安全法規適用於所有製造公司。）"
@@ -3770,6 +3780,7 @@
         {
             "音檔": "音檔 - applicable-2",
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "applicable-2",
             "句子": "The principles discussed in the seminar are applicable to everyday decision-making",
             "中文": "（研討會中討論的原則適用於日常決策。）"
@@ -3777,6 +3788,7 @@
         {
             "音檔": "音檔 - applicable-3",
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "applicable-3",
             "句子": "The discount code is only applicable to online purchases",
             "中文": "（折扣碼僅適用於線上購物。）"
@@ -3784,6 +3796,7 @@
         {
             "音檔": "音檔 - applicable-4",
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "applicable-4",
             "句子": "The guidelines are applicable to various industries and can be adapted as needed",
             "中文": "（這些指南適用於各行各業，並可根據需要進行調整。）"
@@ -3791,6 +3804,7 @@
         {
             "音檔": "音檔 - appraise-1",
             "等級": "B2",
+            "分類": "商業",
             "Words": "appraise-1",
             "句子": "The bank hired an expert to appraise the value of the property before granting the loan",
             "中文": "（銀行聘請了一位專家來評估該房產的價值，然後才批准貸款。）"
@@ -3798,6 +3812,7 @@
         {
             "音檔": "音檔 - appraise-2",
             "等級": "B2",
+            "分類": "商業",
             "Words": "appraise-2",
             "句子": "She took her jewelry to a professional to appraise its value for insurance purposes",
             "中文": "（她將珠寶帶到專業人士處，評估其價值以作為保險用途。）"
@@ -3805,6 +3820,7 @@
         {
             "音檔": "音檔 - appraise-3",
             "等級": "B2",
+            "分類": "商業",
             "Words": "appraise-3",
             "句子": "The manager will appraise the employees’ performance at the end of the year",
             "中文": "（經理將在年底評估員工的表現。）"
@@ -3812,6 +3828,7 @@
         {
             "音檔": "音檔 - appraise-4",
             "等級": "B2",
+            "分類": "商業",
             "Words": "appraise-4",
             "句子": "The report aims to appraise the effectiveness of the new marketing strategy",
             "中文": "（報告旨在評估新營銷策略的有效性。）"
@@ -3819,6 +3836,7 @@
         {
             "音檔": "音檔 - appraiser-1",
             "等級": "C1",
+            "分類": "商業",
             "Words": "appraiser-1",
             "句子": "The appraiser provided a detailed report on the market value of the house before it was sold",
             "中文": "（評估師在房屋出售前提供了關於其市場價值的詳細報告。）"
@@ -3826,6 +3844,7 @@
         {
             "音檔": "音檔 - appraiser-2",
             "等級": "C1",
+            "分類": "商業",
             "Words": "appraiser-2",
             "句子": "An art appraiser assessed the painting's authenticity and value at the auction",
             "中文": "（藝術評估師在拍賣會上評估了這幅畫的真實性和價值。）"
@@ -4017,6 +4036,7 @@
         {
             "音檔": "音檔 - apprise-1",
             "等級": "B2",
+            "分類": "商業",
             "Words": "apprise-1",
             "句子": "She decided to apprise her supervisor of the changes in the project timeline",
             "中文": "（她決定將項目時間表的變更告知她的上司。）"
@@ -4024,6 +4044,7 @@
         {
             "音檔": "音檔 - apprise-2",
             "等級": "B2",
+            "分類": "商業",
             "Words": "apprise-2",
             "句子": "The manager will apprise the team of any updates regarding the new policy",
             "中文": "（經理將向團隊通報有關新政策的任何更新。）"
@@ -4031,6 +4052,7 @@
         {
             "音檔": "音檔 - apprise-3",
             "等級": "B2",
+            "分類": "商業",
             "Words": "apprise-3",
             "句子": "Please apprise me of any changes in the situation",
             "中文": "（請告知我有關情況的任何變化。）"
@@ -4258,6 +4280,7 @@
         {
             "音檔": "音檔 - aroma-1",
             "等級": "B1",
+            "分類": "食物 ",
             "Words": "aroma-1",
             "句子": "As she entered the bakery, the warm aroma of freshly baked bread enveloped her, instantly triggering memories of her childhood",
             "中文": "（當她走進麵包店時，新鮮出爐的麵包散發出的溫暖香氣將她包圍，瞬間喚起了她童年的回憶。）"
@@ -4265,6 +4288,7 @@
         {
             "音檔": "音檔 - aromatic-1",
             "等級": "B2",
+            "分類": "食物 ",
             "Words": "aromatic-1",
             "句子": "The garden was filled with aromatic flowers, their sweet scent perfuming the air on a sunny afternoon",
             "中文": "（花園裡滿是芳香四溢的花朵，它們甜美的氣息在陽光燦爛的午後瀰漫在空氣中。）"
@@ -4272,6 +4296,7 @@
         {
             "音檔": "音檔 - artery-1",
             "等級": "B1",
+            "分類": "醫學",
             "Words": "artery-1",
             "句子": "The artery in your heart helps pump blood to keep it strong",
             "中文": "（你心臟的動脈有助於泵送血液，使其保持強壯。）"
@@ -4279,6 +4304,7 @@
         {
             "音檔": "音檔 - artery-2",
             "等級": "B1",
+            "分類": "醫學",
             "Words": "artery-2",
             "句子": "If an artery in your neck gets blocked, it can cause serious health issues",
             "中文": "（如果你頸部的動脈被阻塞，可能會引起嚴重的健康問題。）"
@@ -4286,6 +4312,7 @@
         {
             "音檔": "音檔 - artery-3",
             "等級": "B1",
+            "分類": "醫學",
             "Words": "artery-3",
             "句子": "The new highway is an important artery for trade between the cities",
             "中文": "（這條新高速公路是連接這些城市之間貿易的重要動脈。）"
@@ -4293,6 +4320,7 @@
         {
             "音檔": "音檔 - artery-4",
             "等級": "B1",
+            "分類": "醫學",
             "Words": "artery-4",
             "句子": "Traffic congestion on the main artery of the city caused significant delays",
             "中文": "（城市主要幹道的交通擁堵導致了嚴重的延誤。）"
@@ -4661,6 +4689,7 @@
         {
             "音檔": "音檔 - assert-1",
             "等級": "B1",
+            "分類": "語言",
             "Words": "assert-1",
             "句子": "She asserted that her proposal would lead to better results",
             "中文": "（她堅稱她的提議將帶來更好的結果。）"
@@ -4668,6 +4697,7 @@
         {
             "音檔": "音檔 - assert-2",
             "等級": "B1",
+            "分類": "語言",
             "Words": "assert-2",
             "句子": "He asserted his innocence despite the accusations",
             "中文": "（儘管面臨指控，他堅稱自己是無辜的。）"
@@ -4675,6 +4705,7 @@
         {
             "音檔": "音檔 - assert-3",
             "等級": "B1",
+            "分類": "語言",
             "Words": "assert-3",
             "句子": "He asserted that there were spies in the government",
             "中文": "（他斷言政府內部有間諜。）"
@@ -4682,6 +4713,7 @@
         {
             "音檔": "音檔 - assert-4",
             "等級": "B1",
+            "分類": "語言",
             "Words": "assert-4",
             "句子": "The activist asserted their right to free speech at the rally",
             "中文": "（該活動家在集會上堅持自己的言論自由權。）"
@@ -4689,6 +4721,7 @@
         {
             "音檔": "音檔 - assert-5",
             "等級": "B1",
+            "分類": "語言",
             "Words": "assert-5",
             "句子": "The manager asserted the company's commitment to quality service",
             "中文": "（經理強調了公司對提供優質服務的承諾。）"
@@ -4696,6 +4729,7 @@
         {
             "音檔": "音檔 - assert-6",
             "等級": "B1",
+            "分類": "語言",
             "Words": "assert-6",
             "句子": "She asserted her independence from her parents by getting her own apartment",
             "中文": "（她通過租了自己的公寓來堅定她與父母的獨立關係。）"
@@ -4703,6 +4737,7 @@
         {
             "音檔": "音檔 - assert-7",
             "等級": "B1",
+            "分類": "語言",
             "Words": "assert-7",
             "句子": "The lawyer asserted his client's right to a fair trial",
             "中文": "（律師堅持他客戶享有公正審判的權利。）"
@@ -4710,6 +4745,7 @@
         {
             "音檔": "音檔 - assert-8",
             "等級": "B1",
+            "分類": "語言",
             "Words": "assert-8",
             "句子": "The property owner asserted their claim to the disputed land",
             "中文": "（房產擁有者堅持對爭議土地的所有權。）"
@@ -4717,6 +4753,7 @@
         {
             "音檔": "音檔 - assert-9",
             "等級": "B1",
+            "分類": "語言",
             "Words": "assert-9",
             "句子": "If you want people to listen to your opinions, you'll need to learn how to assert yourself",
             "中文": "（如果你想讓人們聽取你的意見，你需要學會如何堅持自己的立場。）"
@@ -4724,6 +4761,7 @@
         {
             "音檔": "音檔 - assertion-1",
             "等級": "C1",
+            "分類": "語言",
             "Words": "assertion-1",
             "句子": "His assertion that he could complete the project ahead of schedule was met with skepticism",
             "中文": "（他聲稱自己可以提前完成項目，這一說法引起了懷疑。）"
@@ -4731,6 +4769,7 @@
         {
             "音檔": "音檔 - assertion-2",
             "等級": "C1",
+            "分類": "語言",
             "Words": "assertion-2",
             "句子": "The lawyer’s assertion in court was supported by substantial evidence",
             "中文": "（律師在法庭上的主張得到了充分證據的支持。）"
@@ -4738,6 +4777,7 @@
         {
             "音檔": "音檔 - assertion-3",
             "等級": "C1",
+            "分類": "語言",
             "Words": "assertion-3",
             "句子": "The teacher’s assertion about the importance of regular practice inspired the students",
             "中文": "（老師關於定期練習重要性的主張激勵了學生們。）"
@@ -4745,6 +4785,7 @@
         {
             "音檔": "音檔 - assertion-4",
             "等級": "C1",
+            "分類": "語言",
             "Words": "assertion-4",
             "句子": "Her assertion that the company would grow exponentially was based on market research",
             "中文": "（她關於公司將會呈指數增長的主張是基於市場研究。）"
@@ -4752,6 +4793,7 @@
         {
             "音檔": "音檔 - assertion-5",
             "等級": "C1",
+            "分類": "語言",
             "Words": "assertion-5",
             "句子": "The employee’s assertion of her rights led to a review of company policies",
             "中文": "（員工對她權利的主張導致了公司政策的檢討。）"
@@ -4759,34 +4801,39 @@
         {
             "音檔": "音檔 - assertion-6",
             "等級": "C1",
+            "分類": "語言",
             "Words": "assertion-6",
             "句子": "The assertion of one's rights in the face of unfair treatment can be crucial for justice",
             "中文": "（在面對不公平對待時主張自己的權利對於正義可能至關重要。）"
         },
         {
-            "音檔": "音檔 - asset--1",
+            "音檔": "音檔 - asset-1",
             "等級": "B1",
-            "Words": "asset--1",
+            "分類": "商業",
+            "Words": "asset-1",
             "句子": "The company’s assets include several office buildings and a fleet of delivery trucks",
             "中文": "（該公司的資產包括幾棟辦公樓和一隊送貨卡車。）"
         },
         {
-            "音檔": "音檔 - asset--2",
+            "音檔": "音檔 - asset-2",
             "等級": "B1",
-            "Words": "asset--2",
+            "分類": "商業",
+            "Words": "asset-2",
             "句子": "Her communication skills are a valuable asset to the team",
             "中文": "（她的溝通技巧是團隊的一個寶貴資產。）"
         },
         {
-            "音檔": "音檔 - asset--3",
+            "音檔": "音檔 - asset-3",
             "等級": "B1",
-            "Words": "asset--3",
+            "分類": "商業",
+            "Words": "asset-3",
             "句子": "He invested in various financial assets to secure his future",
             "中文": "（他投資了各種金融資產以保障自己的未來。）"
         },
         {
             "音檔": "音檔 - assimilate-1",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilate-1",
             "句子": "She quickly assimilated the new language after moving abroad",
             "中文": "（她在搬到國外後迅速地融入了新的語言。）"
@@ -4794,6 +4841,7 @@
         {
             "音檔": "音檔 - assimilate-2",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilate-2",
             "句子": "Students need time to assimilate complex scientific concepts",
             "中文": "（學生需要時間來吸收複雜的科學概念。）"
@@ -4801,6 +4849,7 @@
         {
             "音檔": "音檔 - assimilate-3",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilate-3",
             "句子": "The company assimilated new technology to improve efficiency",
             "中文": "（該公司吸收了新技術以提高效率。）"
@@ -4808,6 +4857,7 @@
         {
             "音檔": "音檔 - assimilate-4",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilate-4",
             "句子": "Immigrants often assimilate into the local culture over time",
             "中文": "移民通常會隨著時間的推移融入當地文化。"
@@ -4815,6 +4865,7 @@
         {
             "音檔": "音檔 - assimilate-5",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilate-5",
             "句子": "The minority group struggled to assimilate while maintaining their traditions",
             "中文": "少數族裔在努力融入的同時，也保持著他們的傳統。"
@@ -4822,6 +4873,7 @@
         {
             "音檔": "音檔 - assimilate-6",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilate-6",
             "句子": "The body assimilates nutrients from the food we eat",
             "中文": "身體將我們所吃的食物中的營養吸收並轉化利用。"
@@ -4829,6 +4881,7 @@
         {
             "音檔": "音檔 - assimilate-7",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilate-7",
             "句子": "Some vitamins are more easily assimilated than others",
             "中文": "有些維他命比其他的更容易被吸收。"
@@ -4836,6 +4889,7 @@
         {
             "音檔": "音檔 - assimilation-1",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilation-1",
             "句子": "Immigrants often face challenges during the assimilation into a new culture",
             "中文": "移民在融入新文化的過程中常常會面臨挑戰。"
@@ -4843,6 +4897,7 @@
         {
             "音檔": "音檔 - assimilation-2",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilation-2",
             "句子": "The student's quick assimilation of complex concepts impressed the professor",
             "中文": "這位學生對複雜概念的快速吸收給教授留下了深刻的印象。"
@@ -4850,6 +4905,7 @@
         {
             "音檔": "音檔 - assimilation-3",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilation-3",
             "句子": "Proper digestion is essential for the effective assimilation of nutrients",
             "中文": "適當的消化對於有效吸收營養至關重要。"
@@ -4857,6 +4913,7 @@
         {
             "音檔": "音檔 - assimilation-4",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilation-4",
             "句子": "Malnutrition can hinder the body's assimilation of essential vitamins",
             "中文": "營養不良會妨礙身體對必要維生素的吸收。"
@@ -4864,6 +4921,7 @@
         {
             "音檔": "音檔 - assimilation-5",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilation-5",
             "句子": "The assimilation of regional dialects has led to a more uniform language",
             "中文": "地方方言的融合導致了語言的更大統一。"
@@ -4871,6 +4929,7 @@
         {
             "音檔": "音檔 - assimilation-6",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "assimilation-6",
             "句子": "Urbanization often results in the assimilation of rural customs into city life",
             "中文": "城市化通常會導致鄉村習俗融入城市生活。"
@@ -4878,6 +4937,7 @@
         {
             "音檔": "音檔 - associate-1",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "associate-1",
             "句子": "People often associate the color red with danger or warning",
             "中文": "人們常將紅色與危險或警告聯繫在一起。"
@@ -4885,6 +4945,7 @@
         {
             "音檔": "音檔 - associate-2",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "associate-2",
             "句子": "She does not want to associate herself with that controversial group",
             "中文": "她不想與那個爭議性團體有所關聯。"
@@ -4892,6 +4953,7 @@
         {
             "音檔": "音檔 - associate-3",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "associate-3",
             "句子": "He is a long-time associate at the law firm",
             "中文": "他是這家律師事務所的長期合夥人。"
@@ -4899,6 +4961,7 @@
         {
             "音檔": "音檔 - associate-4",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "associate-4",
             "句子": "She was hired as an associate editor for the magazine",
             "中文": "她被雇為雜誌的助理編輯。"
@@ -4906,6 +4969,7 @@
         {
             "音檔": "音檔 - associate-5",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "associate-5",
             "句子": "He is an associate member of the committee, with limited voting rights",
             "中文": "他是該委員會的副會員，擁有有限的投票權。"
@@ -4913,6 +4977,7 @@
         {
             "音檔": "音檔 - associate-6",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "associate-6",
             "句子": "She invited a close associate to the event",
             "中文": "她邀請了一位親密的合夥人參加活動。"
@@ -4920,6 +4985,7 @@
         {
             "音檔": "音檔 - associated-1",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "associated-1",
             "句子": "Anyone associated with the terrorists will be apprehended and interrogated. ",
             "中文": "與恐怖分子有關聯的任何人都將被逮捕並接受審問。"
@@ -4927,6 +4993,7 @@
         {
             "音檔": "音檔 - associated-2",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "associated-2",
             "句子": "The disease is often associated with poor hygiene",
             "中文": "這種疾病通常與不良的衛生習慣有關。"
@@ -4934,6 +5001,7 @@
         {
             "音檔": "音檔 - associated-3",
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "associated-3",
             "句子": "The company offers a range of services associated with healthcare.",
             "中文": "該公司提供一系列與醫療保健相關的服務。"
@@ -4941,6 +5009,7 @@
         {
             "音檔": "音檔 - assumption-1",
             "等級": "C1",
+            "分類": "語言",
             "Words": "assumption-1",
             "句子": "Many of the conclusions in the report were built on faulty assumptions",
             "中文": "報告中的許多結論是建立在錯誤的假設之上的。"
@@ -4948,6 +5017,7 @@
         {
             "音檔": "音檔 - assumption-2",
             "等級": "C1",
+            "分類": "語言",
             "Words": "assumption-2",
             "句子": "He will come home tomorrow, At least, that's my assumption.",
             "中文": "他明天會回家，至少，這是我的假設。"
@@ -4955,6 +5025,7 @@
         {
             "音檔": "音檔 - assumption-3",
             "等級": "C1",
+            "分類": "語言",
             "Words": "assumption-3",
             "句子": "I'm sharing this report with you on the assumption that you will review the data for accuracy before presenting it to the team",
             "中文": "我在假設你會在向團隊呈報之前檢查數據的準確性，所以與你分享這份報告。"
@@ -4962,6 +5033,7 @@
         {
             "音檔": "音檔 - assumption-4",
             "等級": "C1",
+            "分類": "語言",
             "Words": "assumption-4",
             "句子": "Her assumption of the role of team leader came with new responsibilities",
             "中文": "她擔任團隊領袖的角色，帶來了新的責任。"
@@ -26019,6 +26091,30 @@
             "句子": "The machinery in the lab helps process scientific data quickly"
         },
         {
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "maddening-1",
+            "句子": "The constant noise from the construction site was absolutely maddening"
+        },
+        {
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "maddening-2",
+            "句子": "His stubborn refusal to listen was maddening"
+        },
+        {
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "maddening-3",
+            "句子": "It’s maddening how slowly the website loads sometimes"
+        },
+        {
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "maddening-4",
+            "句子": "She found his indecisiveness maddening, especially under pressure"
+        },
+        {
             "音檔": "音檔 - magician-1",
             "分類": "職業",
             "Words": "magician-1",
@@ -26311,6 +26407,36 @@
             "中文": "有些人使用大麻來幫助他們在壓力大的日子後放鬆。"
         },
         {
+            "等級": "B1",
+            "Words": "marine-1",
+            "句子": "The marine ecosystem is home to a wide variety of animals and plants"
+        },
+        {
+            "等級": "B1",
+            "Words": "marine-2",
+            "句子": "Marine biology studies organisms that live in the ocean"
+        },
+        {
+            "等級": "B1",
+            "Words": "marine-3",
+            "句子": "He studied marine engineering to design better ships"
+        },
+        {
+            "等級": "B1",
+            "Words": "marine-4",
+            "句子": "The marine was stationed on a naval ship for six months"
+        },
+        {
+            "等級": "B1",
+            "Words": "marine-5",
+            "句子": "The Marines conducted the operation with precision and speed"
+        },
+        {
+            "等級": "B1",
+            "Words": "marine-6",
+            "句子": "The museum showcased marine fossils and artifacts from the deep sea"
+        },
+        {
             "音檔": "音檔 - marrow-1",
             "等級": "B1",
             "分類": "醫學",
@@ -26349,6 +26475,48 @@
             "Words": "marrow-5",
             "句子": "We were frozen to the marrow after standing in the cold for hours",
             "中文": "我們在寒冷中站了幾個小時，冷得幾乎骨髓都凍僵了。"
+        },
+        {
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "marvel-1",
+            "句子": "She marveled at the beauty of the ancient artwork"
+        },
+        {
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "marvel-2",
+            "句子": "He marveled at the complexity of the new technology"
+        },
+        {
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "marvel-3",
+            "句子": "We marveled at how quickly the team completed the project"
+        },
+        {
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "marvel-4",
+            "句子": "They were marveling at the stunning view from the mountaintop"
+        },
+        {
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "marvel-5",
+            "句子": "The Great Wall of China is one of the modern marvels of the world"
+        },
+        {
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "marvel-6",
+            "句子": "His quick thinking in a crisis was a marvel"
+        },
+        {
+            "等級": "C1",
+            "分類": "情感",
+            "Words": "marvel-7",
+            "句子": "The invention of the smartphone is considered a marvel of modern technology"
         },
         {
             "等級": "B1",
@@ -26482,6 +26650,30 @@
         },
         {
             "等級": "C2",
+            "分類": "藝術",
+            "Words": "masterpiece-1",
+            "句子": "The Mona Lisa is often regarded as Leonardo da Vinci’s greatest masterpiece"
+        },
+        {
+            "等級": "C2",
+            "分類": "藝術",
+            "Words": "masterpiece-2",
+            "句子": "The film was hailed as a cinematic masterpiece, praised for its direction and acting"
+        },
+        {
+            "等級": "C2",
+            "分類": "藝術",
+            "Words": "masterpiece-3",
+            "句子": "The architect's final design was a true masterpiece, blending modern and classical elements"
+        },
+        {
+            "等級": "C2",
+            "分類": "藝術",
+            "Words": "masterpiece-4",
+            "句子": "His novel is considered a literary masterpiece, showcasing his unique storytelling ability"
+        },
+        {
+            "等級": "C2",
             "Words": "material-wealth-1",
             "句子": "After years of hard work, he accumulated great material wealth, including a large house and expensive cars"
         },
@@ -26551,6 +26743,30 @@
             "等級": "B2",
             "Words": "mazelike-1",
             "句子": "The ancient city was characterized by its mazelike streets, where one could easily get lost without a map"
+        },
+        {
+            "等級": "B2",
+            "分類": "自然地理",
+            "Words": "meadow-1",
+            "句子": "The cows grazed peacefully in the meadow, surrounded by blooming flowers"
+        },
+        {
+            "等級": "B2",
+            "分類": "自然地理",
+            "Words": "meadow-2",
+            "句子": "We spent the afternoon walking through the meadow, enjoying the fresh air and sunshine"
+        },
+        {
+            "等級": "B2",
+            "分類": "自然地理",
+            "Words": "meadow-3",
+            "句子": "The meadow was filled with the sounds of birds singing and the rustle of grass in the breeze"
+        },
+        {
+            "等級": "B2",
+            "分類": "自然地理",
+            "Words": "meadow-4",
+            "句子": "A river ran through the meadow, adding to its tranquil beauty"
         },
         {
             "等級": "B2",
@@ -26696,6 +26912,30 @@
             "句子": "Her melancholic nature made her a great poet, often writing about loss and longing"
         },
         {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "melanin-1",
+            "句子": "People with darker skin have more melanin, which provides greater protection from sun damage"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "melanin-2",
+            "句子": "Melanin levels can affect how quickly someone tans or burns in the sun"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "melanin-3",
+            "句子": "The variation in eye color is due to differing amounts of melanin in the iris"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "melanin-4",
+            "句子": "Albinism is a condition characterized by the absence of melanin in the body"
+        },
+        {
             "等級": "B1",
             "Words": "melody-1",
             "句子": "The melody of the song stayed in my head all day"
@@ -26709,6 +26949,54 @@
             "等級": "B1",
             "Words": "melody-3",
             "句子": "The composer is known for creating simple but catchy melodies"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言 ",
+            "Words": "mere-1",
+            "句子": "The mere thought of losing him made her anxious"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言 ",
+            "Words": "mere-2",
+            "句子": "He won the match by a mere two points"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言 ",
+            "Words": "mere-3",
+            "句子": "She's a mere child and doesn’t understand the consequences"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言 ",
+            "Words": "mere-4",
+            "句子": "The mere mention of his name caused everyone to go silent"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言 ",
+            "Words": "merely-1",
+            "句子": "That was merely a guess of mine"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言 ",
+            "Words": "merely-2",
+            "句子": "It's not a solution—merely a temporary fix"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言 ",
+            "Words": "merely-3",
+            "句子": "She’s merely a beginner, not an expert"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言 ",
+            "Words": "merely-4",
+            "句子": "I’m not angry, merely disappointed"
         },
         {
             "等級": "B1",
@@ -27530,6 +27818,30 @@
         },
         {
             "等級": "B2",
+            "分類": "旅遊",
+            "Words": "mother-nature-1",
+            "句子": "We should respect the power of Mother Nature during natural disasters"
+        },
+        {
+            "等級": "B2",
+            "分類": "旅遊",
+            "Words": "mother-nature-2",
+            "句子": "The beauty of the forest is a reminder of how awe-inspiring Mother Nature can be"
+        },
+        {
+            "等級": "B2",
+            "分類": "旅遊",
+            "Words": "mother-nature-3",
+            "句子": "Climate change is a signal that Mother Nature is reacting to human actions"
+        },
+        {
+            "等級": "B2",
+            "分類": "旅遊",
+            "Words": "mother-nature-4",
+            "句子": "Mother Nature provides us with everything we need to survive—air, water, and food"
+        },
+        {
+            "等級": "B2",
             "Words": "motive-1",
             "句子": "The police investigated the suspect’s motive for the crime"
         },
@@ -27849,6 +28161,104 @@
             "等級": "B1",
             "Words": "nestle-3",
             "句子": "Nearby, nestling in the hills, was the children's home"
+        },
+        {
+            "等級": "C1",
+            "分類": "商業",
+            "Words": "newsletter-1",
+            "句子": "The company sends out a monthly newsletter to keep customers informed of new products"
+        },
+        {
+            "等級": "C1",
+            "分類": "商業",
+            "Words": "newsletter-2",
+            "句子": "I subscribed to the school newsletter to stay updated on upcoming events"
+        },
+        {
+            "等級": "C1",
+            "分類": "商業",
+            "Words": "newsletter-3",
+            "句子": "Her travel newsletter features photos and stories from her latest adventures"
+        },
+        {
+            "等級": "C1",
+            "分類": "商業",
+            "Words": "newsletter-4",
+            "句子": "The nonprofit's newsletter highlights its latest community outreach projects"
+        },
+        {
+            "等級": "B1",
+            "Words": "niche-1",
+            "句子": "The company found a niche in the luxury pet accessories market"
+        },
+        {
+            "等級": "B1",
+            "Words": "niche-10",
+            "句子": "He runs a niche blog focused on rare books and manuscripts"
+        },
+        {
+            "等級": "B1",
+            "Words": "niche-2",
+            "句子": "The website targets a niche audience of eco-conscious consumers"
+        },
+        {
+            "等級": "B1",
+            "Words": "niche-3",
+            "句子": "He carved out a niche for himself in the field of sustainable architecture"
+        },
+        {
+            "等級": "B1",
+            "Words": "niche-4",
+            "句子": "You have to create a niche market for your products"
+        },
+        {
+            "等級": "B1",
+            "Words": "niche-5",
+            "句子": "She finally found her niche as a graphic designer"
+        },
+        {
+            "等級": "B1",
+            "Words": "niche-6",
+            "句子": "After years of uncertainty, he discovered his niche in the tech industry"
+        },
+        {
+            "等級": "B1",
+            "Words": "niche-7",
+            "句子": "The statue was placed in a niche in the corner of the room"
+        },
+        {
+            "等級": "B1",
+            "Words": "niche-8",
+            "句子": "The artwork was hung in a niche above the fireplace"
+        },
+        {
+            "等級": "B1",
+            "Words": "niche-9",
+            "句子": "The store specializes in niche products for collectors"
+        },
+        {
+            "等級": "C2",
+            "分類": "商業",
+            "Words": "niche-market-1",
+            "句子": "The company developed a niche-market for eco-friendly household products"
+        },
+        {
+            "等級": "C2",
+            "分類": "商業",
+            "Words": "niche-market-2",
+            "句子": "The luxury watch brand successfully entered a niche-market catering to collectors"
+        },
+        {
+            "等級": "C2",
+            "分類": "商業",
+            "Words": "niche-market-3",
+            "句子": "As a small business, they found success in a niche market for handmade jewelry"
+        },
+        {
+            "等級": "C2",
+            "分類": "商業",
+            "Words": "niche-market-4",
+            "句子": "The startup has a niche-market for tech gadgets designed specifically for seniors"
         },
         {
             "等級": "B1",
@@ -28201,6 +28611,42 @@
             "句子": "The nursery program included activities that helped prepare children for kindergarten"
         },
         {
+            "等級": "B1",
+            "分類": "語言 ",
+            "Words": "oath-1",
+            "句子": "He took an oath to serve his country faithfully"
+        },
+        {
+            "等級": "B1",
+            "分類": "語言 ",
+            "Words": "oath-2",
+            "句子": "The witness swore an oath to tell the truth in court"
+        },
+        {
+            "等級": "B1",
+            "分類": "語言 ",
+            "Words": "oath-3",
+            "句子": "Doctors take the Hippocratic oath to uphold medical ethics"
+        },
+        {
+            "等級": "B1",
+            "分類": "語言 ",
+            "Words": "oath-4",
+            "句子": "She made an oath of allegiance during the citizenship ceremony"
+        },
+        {
+            "等級": "B1",
+            "分類": "語言 ",
+            "Words": "oath-5",
+            "句子": "Every new president takes an oath before assuming office"
+        },
+        {
+            "等級": "B1",
+            "分類": "語言 ",
+            "Words": "oath-6",
+            "句子": "He muttered an oath under his breath when he missed the shot"
+        },
+        {
             "等級": "B2",
             "Words": "obesity-1",
             "句子": "Obesity is a significant risk factor for heart disease, diabetes, and certain cancers"
@@ -28424,6 +28870,30 @@
         },
         {
             "等級": "B2",
+            "分類": "醫學",
+            "Words": "ointment-1",
+            "句子": "The doctor prescribed an antibiotic ointment for the cut"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "ointment-2",
+            "句子": "She applied a soothing ointment to relieve the itching"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "ointment-3",
+            "句子": "This herbal ointment is known for its healing properties"
+        },
+        {
+            "等級": "B2",
+            "分類": "醫學",
+            "Words": "ointment-4",
+            "句子": "He used a medicated ointment to treat his eczema"
+        },
+        {
+            "等級": "B2",
             "Words": "ominous-1",
             "句子": "The sudden silence in the room after the power outage felt ominous, hinting at the uncertainty of what might happen next"
         },
@@ -28453,6 +28923,30 @@
             "句子": "There are a few omissions in the list"
         },
         {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "omit-1",
+            "句子": "She omitted the details of the meeting from her report"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "omit-2",
+            "句子": "He omitted his name from the guest list to remain anonymous"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "omit-3",
+            "句子": "The teacher accidentally omitted the last chapter of the textbook"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "omit-4",
+            "句子": "I decided to omit the unnecessary information from my presentation"
+        },
+        {
             "等級": "C2",
             "Words": "on-one's-last-legs-1",
             "句子": "After working three consecutive shifts, she was on her last legs and barely able to stay awake"
@@ -28466,6 +28960,54 @@
             "等級": "C2",
             "Words": "on-one's-last-legs-3",
             "句子": "With their finances in ruins, the business was on its last legs and close to shutting down"
+        },
+        {
+            "等級": "C2",
+            "分類": "日常生活",
+            "Words": "on-the-back-burner-1",
+            "句子": "The project is on the back burner until we finish the current assignment"
+        },
+        {
+            "等級": "C2",
+            "分類": "日常生活",
+            "Words": "on-the-back-burner-2",
+            "句子": "I’ve put my personal plans on the back burner while I focus on work"
+        },
+        {
+            "等級": "C2",
+            "分類": "日常生活",
+            "Words": "on-the-back-burner-3",
+            "句子": "His idea was put on the back burner until they resolved the more pressing issues"
+        },
+        {
+            "等級": "C2",
+            "分類": "日常生活",
+            "Words": "on-the-back-burner-4",
+            "句子": "The proposal is on the back burner for now, but we’ll revisit it later"
+        },
+        {
+            "等級": "C2",
+            "分類": "日常生活",
+            "Words": "on-the-horizon-1",
+            "句子": "There are new opportunities on the horizon for the company"
+        },
+        {
+            "等級": "C2",
+            "分類": "日常生活",
+            "Words": "on-the-horizon-2",
+            "句子": "With the new legislation on the horizon, businesses are preparing for changes"
+        },
+        {
+            "等級": "C2",
+            "分類": "日常生活",
+            "Words": "on-the-horizon-3",
+            "句子": "A new breakthrough in medicine is on the horizon"
+        },
+        {
+            "等級": "C2",
+            "分類": "日常生活",
+            "Words": "on-the-horizon-4",
+            "句子": "The team is excited about the new project on the horizon"
         },
         {
             "等級": "C1",
@@ -28611,6 +29153,90 @@
             "等級": "C1",
             "Words": "oppressive-6",
             "句子": "The workers suffered under oppressive working conditions with long hours and low pay"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "opt-out-1",
+            "句子": "The company offered an opt-out option for employees who did not want to participate in the health plan"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "opt-out-2",
+            "句子": "He requested an opt-out from the newsletter subscription"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "opt-out-3",
+            "句子": "The opt-out clause in the contract allowed him to leave the agreement early"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "opt-out-4",
+            "句子": "She opted out of the event due to a scheduling conflict"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "opt-out-5",
+            "句子": "Many people opt out of receiving marketing emails"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "opt-out-6",
+            "句子": "The student opted out of the class trip after realizing it was not aligned with their interests"
+        },
+        {
+            "等級": "B1",
+            "分類": "星宇",
+            "Words": "orbit-1",
+            "句子": "The Earth orbits around the Sun once every year"
+        },
+        {
+            "等級": "B1",
+            "分類": "星宇",
+            "Words": "orbit-2",
+            "句子": "Satellites are placed in orbit around the Earth to provide communication services"
+        },
+        {
+            "等級": "B1",
+            "分類": "星宇",
+            "Words": "orbit-3",
+            "句子": "The moon’s orbit around the Earth takes about 27 days"
+        },
+        {
+            "等級": "B1",
+            "分類": "星宇",
+            "Words": "orbit-4",
+            "句子": "His influence now extends beyond his local orbit, reaching international markets"
+        },
+        {
+            "等級": "B1",
+            "分類": "星宇",
+            "Words": "orbit-5",
+            "句子": "She operates within a specific orbit of high-level corporate management"
+        },
+        {
+            "等級": "B1",
+            "分類": "星宇",
+            "Words": "orbit-6",
+            "句子": "The spacecraft orbits the planet every few hours"
+        },
+        {
+            "等級": "B1",
+            "分類": "星宇",
+            "Words": "orbit-7",
+            "句子": "The Earth is orbiting the Sun at a speed of around 30 kilometers per second"
+        },
+        {
+            "等級": "B1",
+            "分類": "星宇",
+            "Words": "orbit-8",
+            "句子": "The satellite is currently orbiting the Earth at an altitude of 500 kilometers"
         },
         {
             "音檔": "音檔 - orchid-1",
@@ -28919,6 +29545,72 @@
         {
             "Words": "outgrowth-5",
             "句子": "The patient had a small outgrowth on his skin that required removal"
+        },
+        {
+            "等級": "C1",
+            "分類": "商業",
+            "Words": "outmaneuver-1",
+            "句子": "She managed to outmaneuver her political rivals and secure the leadership position"
+        },
+        {
+            "等級": "C1",
+            "分類": "商業",
+            "Words": "outmaneuver-2",
+            "句子": "The smaller, faster car outmaneuvered the truck on the winding road"
+        },
+        {
+            "等級": "C1",
+            "分類": "商業",
+            "Words": "outmaneuver-3",
+            "句子": "He was able to outmaneuver the opposition during the negotiation process"
+        },
+        {
+            "等級": "C1",
+            "分類": "商業",
+            "Words": "outmaneuver-4",
+            "句子": "The team outmaneuvered their opponents with a brilliant play in the final seconds"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "outreach-1",
+            "句子": "The organization’s outreach program helps disadvantaged children gain access to education"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "outreach-2",
+            "句子": "Their community outreach initiatives focus on providing free healthcare to remote areas"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "outreach-3",
+            "句子": "The outreach to local businesses increased their awareness of the new policies"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "outreach-4",
+            "句子": "The nonprofit’s outreach extends to several countries around the world"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "outreach-5",
+            "句子": "Their outreach has grown, attracting more volunteers each year"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "outreach-6",
+            "句子": "They plan to outreach to the elderly to ensure they have access to health services"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "outreach-7",
+            "句子": "The charity is reaching out to homeless families with resources and food"
         },
         {
             "等級": "B2",
@@ -29277,6 +29969,30 @@
             "中文": "「殘忍的善意」這個詞組是一種矛盾修辭，它結合了對立的概念，用來形容一種表面上看似善良、實際上卻帶來傷害的行為。"
         },
         {
+            "等級": "C2",
+            "分類": "生物",
+            "Words": "paleontologist-1",
+            "句子": "The paleontologist discovered a new species of dinosaur buried in the desert"
+        },
+        {
+            "等級": "C2",
+            "分類": "生物",
+            "Words": "paleontologist-2",
+            "句子": "As a child, she dreamed of becoming a paleontologist and digging up fossils"
+        },
+        {
+            "等級": "C2",
+            "分類": "生物",
+            "Words": "paleontologist-3",
+            "句子": "Paleontologists use fossil evidence to learn about extinct animals and ancient environments"
+        },
+        {
+            "等級": "C2",
+            "分類": "生物",
+            "Words": "paleontologist-4",
+            "句子": "The museum hired a renowned paleontologist to lead the fossil restoration project"
+        },
+        {
             "Words": "palette-1",
             "句子": "The artist's palette was covered in vibrant colors"
         },
@@ -29419,6 +30135,44 @@
             "中文": "(這本書提供了現代藝術的全景概述。)"
         },
         {
+            "等級": "C2",
+            "分類": "語言",
+            "Words": "paradoxical-1",
+            "句子": "It’s paradoxical that standing is more tiring than walking"
+        },
+        {
+            "等級": "C2",
+            "分類": "語言",
+            "Words": "paradoxical-2",
+            "句子": "His calm reaction in a crisis is paradoxical given his usually anxious personality"
+        },
+        {
+            "等級": "C2",
+            "分類": "語言",
+            "Words": "paradoxical-3",
+            "句子": "The medicine had a paradoxical effect—it made her feel more awake instead of sleepy"
+        },
+        {
+            "等級": "C2",
+            "分類": "語言",
+            "Words": "paradoxical-4",
+            "句子": "The paradoxical nature of freedom is that it can lead to chaos if unchecked",
+            "中文": "自由的悖論性在於，如果不加限制，它可能導致混亂。"
+        },
+        {
+            "等級": "C2",
+            "分類": "語言",
+            "Words": "paradoxical-5",
+            "句子": "Her paradoxical behavior confused everyone—she was kind yet ruthless",
+            "中文": "她自相矛盾的行為讓所有人困惑——她既善良又無情。"
+        },
+        {
+            "等級": "C2",
+            "分類": "語言",
+            "Words": "paradoxical-6",
+            "句子": "The paradoxical nature of time travel makes it a favorite topic in science fiction"
+        },
+        {
             "Words": "parallel-1",
             "句子": "The designer paralleled the new stroller's frame to the one used in their previous model to maintain continuity"
         },
@@ -29533,6 +30287,114 @@
             "句子": "Moms often pack baby paraphernalia, such as diapers, wipes, and toys, when they travel with their children"
         },
         {
+            "等級": "C1",
+            "分類": "歷史文化",
+            "Words": "parchment-1",
+            "句子": "The ancient manuscript was written on parchment and preserved in a museum"
+        },
+        {
+            "等級": "C1",
+            "分類": "歷史文化",
+            "Words": "parchment-2",
+            "句子": "Medieval scribes carefully copied texts onto parchment with quills and ink"
+        },
+        {
+            "等級": "C1",
+            "分類": "歷史文化",
+            "Words": "parchment-3",
+            "句子": "The university presented him with a diploma printed on fine parchment"
+        },
+        {
+            "等級": "C1",
+            "分類": "歷史文化",
+            "Words": "parchment-4",
+            "句子": "She used parchment paper to line the baking tray"
+        },
+        {
+            "等級": "C1",
+            "分類": "歷史文化",
+            "Words": "parchment-5",
+            "句子": "Always use parchment when baking cookies to prevent sticking"
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "pathogen-1",
+            "句子": "The flu is caused by a viral pathogen that spreads easily from person to person"
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "pathogen-2",
+            "句子": "Researchers are developing vaccines to protect against deadly pathogens"
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "pathogen-3",
+            "句子": "This test detects the presence of a specific pathogen in the blood"
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "pathogen-4",
+            "句子": "Pathogen exposure can trigger a strong immune response in the body"
+        },
+        {
+            "等級": "B2",
+            "分類": "軍事",
+            "Words": "patrol-1",
+            "句子": "The police conducted a routine patrol of the neighborhood late at night"
+        },
+        {
+            "等級": "B2",
+            "分類": "軍事",
+            "Words": "patrol-2",
+            "句子": "The soldiers went on patrol to monitor the border"
+        },
+        {
+            "等級": "B2",
+            "分類": "軍事",
+            "Words": "patrol-3",
+            "句子": "The security patrol checked the building for any signs of intrusion"
+        },
+        {
+            "等級": "B2",
+            "分類": "軍事",
+            "Words": "patrol-4",
+            "句子": "The patrol was stationed at the entrance to the park"
+        },
+        {
+            "等級": "B2",
+            "分類": "軍事",
+            "Words": "patrol-5",
+            "句子": "The scouts went on a patrol to find the best camping spots"
+        },
+        {
+            "等級": "B2",
+            "分類": "軍事",
+            "Words": "patrol-6",
+            "句子": "The scouts set up a patrol to search the forest for signs of wildlife"
+        },
+        {
+            "等級": "B2",
+            "分類": "軍事",
+            "Words": "patrol-7",
+            "句子": "The officers patrol the streets during the night to ensure public safety"
+        },
+        {
+            "等級": "B2",
+            "分類": "軍事",
+            "Words": "patrol-8",
+            "句子": "He patrolled the perimeter of the property to check for any suspicious activity"
+        },
+        {
+            "等級": "B2",
+            "分類": "軍事",
+            "Words": "patrol-9",
+            "句子": "They are patrolling the beaches to prevent illegal fishing"
+        },
+        {
             "等級": "B1",
             "Words": "paw-1",
             "句子": "The dog placed its muddy paw on my lap"
@@ -29616,6 +30478,96 @@
             "等級": "B2",
             "Words": "peculiar-4",
             "句子": "The plant's growth pattern is peculiar to this region and cannot be found elsewhere"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "pedestrian-1",
+            "句子": "The pedestrian crossed the street at the crosswalk"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "pedestrian-2",
+            "句子": "There were many pedestrians on the sidewalk during rush hour"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "pedestrian-3",
+            "句子": "Pedestrians need to be cautious when crossing busy streets"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "pedestrian-4",
+            "句子": "His presentation was rather pedestrian, lacking any new ideas"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "pedestrian-5",
+            "句子": "The movie's plot was pedestrian, offering no surprises or twists"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "pedestrian-6",
+            "句子": "She found the restaurant’s menu to be quite pedestrian, with nothing special to offer"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "peer-1",
+            "句子": "She felt a strong connection with her peers in the class"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "peer-2",
+            "句子": "He’s a peer of mine in the research field"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "peer-3",
+            "句子": "The company encourages collaboration among peers to foster creativity"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "peer-4",
+            "句子": "The peer was invited to join the royal banquet"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "peer-5",
+            "句子": "He inherited his peerage from his grandfather"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "peer-6",
+            "句子": "Some members of the peerage still maintain aristocratic privileges"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "peer-7",
+            "句子": "She peered through the window to catch a glimpse of the snowstorm outside"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "peer-8",
+            "句子": "He peered into the darkness but couldn't see anything"
+        },
+        {
+            "等級": "B2",
+            "分類": "職業",
+            "Words": "peer-9",
+            "句子": "They were peering over the edge of the cliff to view the valley below"
         },
         {
             "音檔": "音檔 - penalty-1",
@@ -30023,6 +30975,30 @@
             "等級": "C1",
             "Words": "photosynthesis-4",
             "句子": "Without photosynthesis, life on Earth would not have access to the oxygen necessary for survival"
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "physiotherapy-1",
+            "句子": "She underwent physiotherapy to recover from her knee surgery"
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "physiotherapy-2",
+            "句子": "Regular physiotherapy sessions helped improve his posture and reduce back pain"
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "physiotherapy-3",
+            "句子": "The hospital offers physiotherapy for patients with sports injuries"
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "physiotherapy-4",
+            "句子": "After the accident, he needed months of physiotherapy to regain mobility"
         },
         {
             "等級": "B1",
@@ -31546,6 +32522,30 @@
             "等級": "B1",
             "Words": "query-4",
             "句子": "I have a query regarding the new project timeline"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言",
+            "Words": "radically-1",
+            "句子": "The company has radically changed its business strategy in recent years"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言",
+            "Words": "radically-2",
+            "句子": "Her hairstyle is radically different from what it used to be"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言",
+            "Words": "radically-3",
+            "句子": "The technology could radically transform the way we live and work"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言",
+            "Words": "radically-4",
+            "句子": "They approached the problem in a radically new way"
         },
         {
             "等級": "B1",
@@ -37059,6 +38059,30 @@
             "分類": "語言",
             "Words": "synonymous-2",
             "句子": "When I said that I wanted to become a family with you, it was synonymous with saying that I loved you"
+        },
+        {
+            "等級": "C1",
+            "分類": "語言",
+            "Words": "synonymously-1",
+            "句子": "His name is used synonymously with honesty and integrity"
+        },
+        {
+            "等級": "C1",
+            "分類": "語言",
+            "Words": "synonymously-2",
+            "句子": "In many cultures, success is synonymously linked with wealth"
+        },
+        {
+            "等級": "C1",
+            "分類": "語言",
+            "Words": "synonymously-3",
+            "句子": "The brand became synonymously associated with quality and luxury"
+        },
+        {
+            "等級": "C1",
+            "分類": "語言",
+            "Words": "synonymously-4",
+            "句子": "She spoke as if power and leadership were used synonymously"
         },
         {
             "等級": "B2",
