@@ -30395,6 +30395,54 @@
             "句子": "They are patrolling the beaches to prevent illegal fishing"
         },
         {
+            "等級": "B2",
+            "分類": "建築",
+            "Words": "pavilion-1",
+            "句子": "They had their wedding ceremony under a beautifully decorated pavilion in the garden"
+        },
+        {
+            "等級": "B2",
+            "分類": "建築",
+            "Words": "pavilion-2",
+            "句子": "Visitors rested in the shade of the pavilion near the lake"
+        },
+        {
+            "等級": "B2",
+            "分類": "建築",
+            "Words": "pavilion-3",
+            "句子": "The music pavilion hosted summer concerts every weekend"
+        },
+        {
+            "等級": "B2",
+            "分類": "建築",
+            "Words": "pavilion-4",
+            "句子": "The French pavilion at the world expo featured cutting-edge design"
+        },
+        {
+            "等級": "B2",
+            "分類": "建築",
+            "Words": "pavilion-5",
+            "句子": "Companies set up pavilions to showcase their new products at the trade fair"
+        },
+        {
+            "等級": "B2",
+            "分類": "建築",
+            "Words": "pavilion-6",
+            "句子": "We walked through several pavilions at the international art exhibition"
+        },
+        {
+            "等級": "B2",
+            "分類": "建築",
+            "Words": "pavilion-7",
+            "句子": "The hospital's new surgical pavilion is equipped with state-of-the-art technology"
+        },
+        {
+            "等級": "B2",
+            "分類": "建築",
+            "Words": "pavilion-8",
+            "句子": "The sports pavilion includes locker rooms and a viewing gallery"
+        },
+        {
             "等級": "B1",
             "Words": "paw-1",
             "句子": "The dog placed its muddy paw on my lap"
@@ -30423,6 +30471,42 @@
             "等級": "B1",
             "Words": "paw-6",
             "句子": "She pulled away as he tried to paw her arm in an awkward attempt at affection"
+        },
+        {
+            "等級": "B1",
+            "分類": "生物",
+            "Words": "peacock-1",
+            "句子": "The peacock spread its magnificent tail to impress the peahen"
+        },
+        {
+            "等級": "B1",
+            "分類": "生物",
+            "Words": "peacock-2",
+            "句子": "Peacocks are often seen strutting around palace gardens in India"
+        },
+        {
+            "等級": "B1",
+            "分類": "生物",
+            "Words": "peacock-3",
+            "句子": "The zoo had several peacocks roaming freely among the visitors"
+        },
+        {
+            "等級": "B1",
+            "分類": "生物",
+            "Words": "peacock-4",
+            "句子": "He’s such a peacock, always showing off his designer suits"
+        },
+        {
+            "等級": "B1",
+            "分類": "生物",
+            "Words": "peacock-5",
+            "句子": "She accused him of being a peacock who loved being in the spotlight"
+        },
+        {
+            "等級": "B1",
+            "分類": "生物",
+            "Words": "peacock-6",
+            "句子": "His peacock behavior made it clear he wanted everyone to notice him"
         },
         {
             "等級": "B1",
@@ -30865,6 +30949,84 @@
             "句子": "The pesky mosquitoes made it difficult to enjoy our evening picnic"
         },
         {
+            "等級": "B1",
+            "分類": "生物",
+            "Words": "pest-1",
+            "句子": "The garden was full of pests like aphids and beetles that were damaging the plants"
+        },
+        {
+            "等級": "B1",
+            "分類": "生物",
+            "Words": "pest-2",
+            "句子": "Farmers use pesticides to control pests that threaten their crops"
+        },
+        {
+            "等級": "B1",
+            "分類": "生物",
+            "Words": "pest-3",
+            "句子": "Rats are considered pests in many urban areas because they carry diseases"
+        },
+        {
+            "等級": "B1",
+            "分類": "生物",
+            "Words": "pest-4",
+            "句子": "His younger brother is a real pest, always interrupting his work"
+        },
+        {
+            "等級": "B1",
+            "分類": "生物",
+            "Words": "pest-5",
+            "句子": "The kids were pestering their mother for more candy"
+        },
+        {
+            "等級": "B1",
+            "分類": "生物",
+            "Words": "pest-6",
+            "句子": "The constant noise from the construction site was a pest throughout the day"
+        },
+        {
+            "等級": "B2",
+            "分類": "情感",
+            "Words": "pester-1",
+            "句子": "She kept pestering her parents for a new phone"
+        },
+        {
+            "等級": "B2",
+            "分類": "情感",
+            "Words": "pester-2",
+            "句子": "The children pestered their teacher with questions about the homework"
+        },
+        {
+            "等級": "B2",
+            "分類": "情感",
+            "Words": "pester-3",
+            "句子": "He pestered his colleague for updates on the project every hour"
+        },
+        {
+            "等級": "B2",
+            "分類": "情感",
+            "Words": "pester-4",
+            "句子": "He was pestered by calls from telemarketers all afternoon"
+        },
+        {
+            "等級": "C1",
+            "分類": "科技",
+            "Words": "petroleum-1",
+            "句子": "The country relies heavily on petroleum exports to drive its economy"
+        },
+        {
+            "等級": "C1",
+            "分類": "科技",
+            "Words": "petroleum-2",
+            "句子": "Petroleum is refined into gasoline and other products used in transportation"
+        },
+        {
+            "等級": "C1",
+            "分類": "科技",
+            "Words": "petroleum-3",
+            "句子": "Oil spills from petroleum extraction can cause significant environmental damage"
+        },
+        {
             "音檔": "音檔 - pharaoh-1",
             "等級": "B2",
             "分類": "旅遊",
@@ -30887,6 +31049,30 @@
             "Words": "pharaoh-3",
             "句子": "The great pyramids of Giza were built as tombs for powerful pharaohs",
             "中文": "吉薩的大金字塔是為了強大的法老們建造的陵墓。"
+        },
+        {
+            "等級": "C2",
+            "分類": "社會",
+            "Words": "phenomenon-1",
+            "句子": "The Northern Lights are a natural phenomenon that attracts many tourists"
+        },
+        {
+            "等級": "C2",
+            "分類": "社會",
+            "Words": "phenomenon-2",
+            "句子": "The rise of social media has been a global phenomenon in recent years"
+        },
+        {
+            "等級": "C2",
+            "分類": "社會",
+            "Words": "phenomenon-3",
+            "句子": "Scientists are studying the phenomenon of climate change and its effects on the planet"
+        },
+        {
+            "等級": "C2",
+            "分類": "社會",
+            "Words": "phenomenon-4",
+            "句子": "A child who can play the piano at the age of two would be called a phenomenon"
         },
         {
             "音檔": "音檔 - philosophy-1",
@@ -31001,6 +31187,24 @@
             "句子": "After the accident, he needed months of physiotherapy to regain mobility"
         },
         {
+            "等級": "C1",
+            "分類": "藝術",
+            "Words": "picturesque-1",
+            "句子": "The village was picturesque, with its cobblestone streets and old stone houses"
+        },
+        {
+            "等級": "C1",
+            "分類": "藝術",
+            "Words": "picturesque-2",
+            "句子": "We took a walk through the picturesque park, with its blooming flowers and serene lake"
+        },
+        {
+            "等級": "C1",
+            "分類": "藝術",
+            "Words": "picturesque-3",
+            "句子": "The sunset over the mountains was simply picturesque, with vibrant hues of orange and pink"
+        },
+        {
             "等級": "B1",
             "Words": "pierce-1",
             "句子": "The needle will pierce the fabric to create a stitch"
@@ -31061,6 +31265,42 @@
         {
             "Words": "pigmentation-4",
             "句子": "The pigmentation of the fabric faded after years of exposure to sunlight"
+        },
+        {
+            "等級": "B2",
+            "分類": "形狀",
+            "Words": "pillar-1",
+            "句子": "The ancient temple had tall marble pillars that supported the roof"
+        },
+        {
+            "等級": "B2",
+            "分類": "形狀",
+            "Words": "pillar-2",
+            "句子": "The pillar of the bridge was damaged during the storm"
+        },
+        {
+            "等級": "B2",
+            "分類": "形狀",
+            "Words": "pillar-3",
+            "句子": "She leaned against the pillar, waiting for her friend to arrive"
+        },
+        {
+            "等級": "B2",
+            "分類": "形狀",
+            "Words": "pillar-4",
+            "句子": "Honesty is one of the pillars of a good relationship"
+        },
+        {
+            "等級": "B2",
+            "分類": "形狀",
+            "Words": "pillar-5",
+            "句子": "The university is known as a pillar of academic excellence"
+        },
+        {
+            "等級": "B2",
+            "分類": "形狀",
+            "Words": "pillar-6",
+            "句子": "She was considered a pillar of the community, always helping those in need"
         },
         {
             "等級": "B2",
@@ -31335,6 +31575,30 @@
             "句子": "The pirates divided the plunder among themselves after the attack"
         },
         {
+            "等級": "B2",
+            "分類": "社會",
+            "Words": "political-correctness-1",
+            "句子": "The debate on political correctness often centers around whether it stifles free speech"
+        },
+        {
+            "等級": "B2",
+            "分類": "社會",
+            "Words": "political-correctness-2",
+            "句子": "Many people argue that political correctness has gone too far in some areas, limiting honest conversations"
+        },
+        {
+            "等級": "B2",
+            "分類": "社會",
+            "Words": "political-correctness-3",
+            "句子": "The company's policy on political correctness aims to ensure respectful communication among employees"
+        },
+        {
+            "等級": "B2",
+            "分類": "社會",
+            "Words": "political-correctness-4",
+            "句子": "Some see political correctness as necessary for promoting equality, while others view it as overly restrictive"
+        },
+        {
             "音檔": "音檔 - polliwog-1",
             "等級": "B2",
             "分類": "生物",
@@ -31419,6 +31683,78 @@
             "等級": "B1",
             "Words": "ponder-6",
             "句子": "The students pondered the ethical implications of their research project"
+        },
+        {
+            "等級": "C1",
+            "分類": "生物",
+            "Words": "porcupine-1",
+            "句子": "The porcupine rolled into a ball, using its quills to protect itself from predators"
+        },
+        {
+            "等級": "C1",
+            "分類": "生物",
+            "Words": "porcupine-2",
+            "句子": "A porcupine’s quills can detach and embed in the skin of its attacker"
+        },
+        {
+            "等級": "C1",
+            "分類": "生物",
+            "Words": "porcupine-3",
+            "句子": "While hiking, we spotted a porcupine in the trees, munching on leaves"
+        },
+        {
+            "等級": "C1",
+            "分類": "生物",
+            "Words": "porcupine-4",
+            "句子": "The porcupine’s quills are not only a defense mechanism but also a means of regulating body temperature"
+        },
+        {
+            "等級": "B1",
+            "分類": "建築",
+            "Words": "portal-1",
+            "句子": "The grand portal of the castle was adorned with intricate carvings"
+        },
+        {
+            "等級": "B1",
+            "分類": "建築",
+            "Words": "portal-2",
+            "句子": "The university's main portal opens into a large courtyard"
+        },
+        {
+            "等級": "B1",
+            "分類": "建築",
+            "Words": "portal-3",
+            "句子": "She walked through the portal of the ancient temple, feeling a sense of awe"
+        },
+        {
+            "等級": "B1",
+            "分類": "建築",
+            "Words": "portal-4",
+            "句子": "The company’s portal allows employees to access their schedules and pay information"
+        },
+        {
+            "等級": "B1",
+            "分類": "建築",
+            "Words": "portal-5",
+            "句子": "The portal for online shopping provided a wide variety of services in one place"
+        },
+        {
+            "等級": "B1",
+            "分類": "建築",
+            "Words": "portal-6",
+            "句子": "I logged into the student portal to check my grades"
+        },
+        {
+            "等級": "B1",
+            "分類": "建築",
+            "Words": "portal-7",
+            "句子": "The novel served as a portal into the world of fantasy and adventure"
+        },
+        {
+            "等級": "B1",
+            "分類": "建築",
+            "Words": "portal-8",
+            "句子": "His blog became a portal for new ideas and innovative solutions"
         },
         {
             "等級": "B1",
@@ -31591,6 +31927,24 @@
             "Words": "pottery-4",
             "句子": "Pottery has been practiced for thousands of years across many cultures",
             "中文": "陶藝在許多文化中已經實踐了數千年。"
+        },
+        {
+            "等級": "B2",
+            "分類": "食物",
+            "Words": "poultry-1",
+            "句子": "The farm specializes in free-range poultry, including chickens and turkeys"
+        },
+        {
+            "等級": "B2",
+            "分類": "食物",
+            "Words": "poultry-2",
+            "句子": "Poultry farming has become a major industry in many countries"
+        },
+        {
+            "等級": "B2",
+            "分類": "食物",
+            "Words": "poultry-3",
+            "句子": "She prepares poultry dishes like roast chicken and duck for special occasions"
         },
         {
             "Words": "practicality-1",
@@ -31833,6 +32187,90 @@
             "句子": "The theater will premiere the new play next month"
         },
         {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "prescribe-1",
+            "句子": "The doctor prescribed antibiotics to treat the infection"
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "prescribe-2",
+            "句子": "He was prescribed a painkiller to manage his back pain"
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "prescribe-3",
+            "句子": "The therapist prescribed regular exercises for rehabilitation"
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "prescribe-4",
+            "句子": "The guidelines prescribe how the process should be followed"
+        },
+        {
+            "等級": "C1",
+            "分類": "醫學",
+            "Words": "prescribe-5",
+            "句子": "The regulations prescribe the steps needed to complete the application"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "presence-1",
+            "句子": "Her presence at the meeting was crucial for the decision-making process"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "presence-2",
+            "句子": "The teacher noticed his presence as soon as he walked into the classroom"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "presence-3",
+            "句子": "The presence of security guards made everyone feel safe during the concert"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "presence-4",
+            "句子": "The presence of a large crowd made the event even more exciting"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "presence-5",
+            "句子": "His presence in the room was both comforting and commanding"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "presence-6",
+            "句子": "The absence of her presence was deeply felt by all"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "presence-7",
+            "句子": "She has a strong presence that draws people in"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "presence-8",
+            "句子": "The actor's commanding presence on stage captivated the audience"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "presence-9",
+            "句子": "His presence in the boardroom was felt by everyone"
+        },
+        {
             "等級": "B2",
             "Words": "preserve-1",
             "句子": "The committee is in charge of preserving the city's historical buildings"
@@ -31886,6 +32324,90 @@
             "等級": "B2",
             "Words": "preserve-9",
             "句子": "The military was once an all-male preserve"
+        },
+        {
+            "等級": "C2",
+            "分類": "商業",
+            "Words": "prestigious-1",
+            "句子": "She graduated from a prestigious university known for its law program"
+        },
+        {
+            "等級": "C2",
+            "分類": "商業",
+            "Words": "prestigious-2",
+            "句子": "The award is one of the most prestigious honors in the scientific community"
+        },
+        {
+            "等級": "C2",
+            "分類": "商業",
+            "Words": "prestigious-3",
+            "句子": "He landed a job at a prestigious law firm"
+        },
+        {
+            "等級": "C2",
+            "分類": "商業",
+            "Words": "prestigious-4",
+            "句子": "The gallery hosted a prestigious exhibition featuring world-renowned artists"
+        },
+        {
+            "等級": "B1",
+            "分類": "法政",
+            "Words": "prior-1",
+            "句子": "She had no prior experience in teaching before joining the school"
+        },
+        {
+            "等級": "B1",
+            "分類": "法政",
+            "Words": "prior-2",
+            "句子": "Please give us prior notice if you wish to cancel the appointment"
+        },
+        {
+            "等級": "B1",
+            "分類": "法政",
+            "Words": "prior-3",
+            "句子": "His prior commitment prevented him from attending the meeting"
+        },
+        {
+            "等級": "B1",
+            "分類": "法政",
+            "Words": "prior-4",
+            "句子": "They had met on several prior occasions"
+        },
+        {
+            "等級": "B1",
+            "分類": "法政",
+            "Words": "prior-5",
+            "句子": "The defendant had two priors on his record for theft"
+        },
+        {
+            "等級": "B1",
+            "分類": "法政",
+            "Words": "prior-6",
+            "句子": "Because of his priors, the judge was less lenient in sentencing"
+        },
+        {
+            "等級": "C2",
+            "分類": "語言",
+            "Words": "prior-to-that-1",
+            "句子": "He worked as a journalist for five years, Prior to that, he was a teacher"
+        },
+        {
+            "等級": "C2",
+            "分類": "語言",
+            "Words": "prior-to-that-2",
+            "句子": "Prior to that moment, everything had gone according to plan"
+        },
+        {
+            "等級": "C2",
+            "分類": "語言",
+            "Words": "prior-to-that-3",
+            "句子": "She had never traveled abroad prior to that trip"
+        },
+        {
+            "等級": "C2",
+            "分類": "語言",
+            "Words": "prior-to-that-4",
+            "句子": "Prior to that day, they had never met in person"
         },
         {
             "等級": "C1",
@@ -32357,6 +32879,42 @@
         {
             "Words": "puncture-4",
             "句子": "The doctor punctured the skin to draw a blood sample"
+        },
+        {
+            "等級": "B2",
+            "分類": "食物",
+            "Words": "pungent-1",
+            "句子": "The cheese had a pungent aroma that filled the entire room"
+        },
+        {
+            "等級": "B2",
+            "分類": "食物",
+            "Words": "pungent-2",
+            "句子": "The curry was so pungent that it lingered in the air for hours"
+        },
+        {
+            "等級": "B2",
+            "分類": "食物",
+            "Words": "pungent-3",
+            "句子": "The pungent odor of garlic filled the kitchen"
+        },
+        {
+            "等級": "B2",
+            "分類": "食物",
+            "Words": "pungent-4",
+            "句子": "She made a pungent comment about the poor design of the website"
+        },
+        {
+            "等級": "B2",
+            "分類": "食物",
+            "Words": "pungent-5",
+            "句子": "His pungent remarks made everyone in the meeting uncomfortable"
+        },
+        {
+            "等級": "B2",
+            "分類": "食物",
+            "Words": "pungent-6",
+            "句子": "The comedian's pungent sense of humor often made the audience laugh and cringe"
         },
         {
             "等級": "B1",
@@ -35070,6 +35628,42 @@
             "等級": "B1",
             "Words": "shiver-4",
             "句子": "He felt a shiver of excitement when he saw the surprise party"
+        },
+        {
+            "等級": "B2",
+            "分類": "人物特性",
+            "Words": "showy-1",
+            "句子": "She wore a showy dress to the party, hoping to stand out among the crowd"
+        },
+        {
+            "等級": "B2",
+            "分類": "人物特性",
+            "Words": "showy-2",
+            "句子": "The showy decorations on the building caught everyone's eye during the festival"
+        },
+        {
+            "等級": "B2",
+            "分類": "人物特性",
+            "Words": "showy-3",
+            "句子": "His showy attitude made him unpopular with his colleagues"
+        },
+        {
+            "等級": "B2",
+            "分類": "人物特性",
+            "Words": "showy-4",
+            "句子": "The peacock's showy feathers were on full display during the mating season"
+        },
+        {
+            "等級": "B2",
+            "分類": "人物特性",
+            "Words": "showy-5",
+            "句子": "The showy performance by the dancer captivated the audience"
+        },
+        {
+            "等級": "B2",
+            "分類": "人物特性",
+            "Words": "showy-6",
+            "句子": "The car's showy exterior was covered in gold paint and had sparkling details"
         },
         {
             "等級": "C2",
