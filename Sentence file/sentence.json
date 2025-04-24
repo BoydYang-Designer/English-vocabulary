@@ -21447,44 +21447,60 @@
             "句子": "Understanding geologic processes helps scientists predict natural disasters like earthquakes"
         },
         {
+            "音檔": "音檔 - geometric-1",
             "分類": "形狀",
             "Words": "geometric-1",
-            "句子": "The artist's painting featured bold geometric patterns"
+            "句子": "The artist's painting featured bold geometric patterns",
+            "中文": "那位藝術家的畫作以大膽的幾何圖案為特色。"
         },
         {
+            "音檔": "音檔 - geometric-2",
             "分類": "形狀",
             "Words": "geometric-2",
-            "句子": "The room was decorated with geometric wallpaper, featuring repeating triangles and hexagons"
+            "句子": "The room was decorated with geometric wallpaper, featuring repeating triangles and hexagons",
+            "中文": "這個房間裝飾著幾何圖案的壁紙，上面重複著三角形和六邊形的圖樣。"
         },
         {
+            "音檔": "音檔 - geometric-3",
             "分類": "形狀",
             "Words": "geometric-3",
-            "句子": "The toy set included several geometric shapes such as circles, triangles, squares, pentagons, hexagons, and octagons"
+            "句子": "The toy set included several geometric shapes such as circles, triangles, squares, pentagons, hexagons, and octagons",
+            "中文": "這組玩具包含了數種幾何圖形，例如圓形、三角形、正方形、五邊形、六邊形和八邊形。"
         },
         {
+            "音檔": "音檔 - geometric-4",
             "分類": "形狀",
             "Words": "geometric-4",
-            "句子": "The math lesson covered various 3D geometric shapes, including cubes, spheres, cones, pyramids, and cylinders"
+            "句子": "The math lesson covered various 3D geometric shapes, including cubes, spheres, cones, pyramids, and cylinders",
+            "中文": "數學課程涵蓋了各種三維幾何圖形，包括立方體、球體、圓錐體、金字塔和圓柱體。"
         },
         {
+            "音檔": "音檔 - geometry-1",
             "分類": "形狀",
             "Words": "geometry-1",
-            "句子": "In geometry class, we learned how to calculate the area of a circle"
+            "句子": "In geometry class, we learned how to calculate the area of a circle",
+            "中文": "在幾何課上，我們學會了如何計算圓的面積。"
         },
         {
+            "音檔": "音檔 - geometry-2",
             "分類": "形狀",
             "Words": "geometry-2",
-            "句子": "The principles of geometry are applied in architecture and engineering"
+            "句子": "The principles of geometry are applied in architecture and engineering",
+            "中文": "幾何原理被應用於建築與工程領域中。"
         },
         {
+            "音檔": "音檔 - geometry-3",
             "分類": "形狀",
             "Words": "geometry-3",
-            "句子": "The geometry of the building's design allows for maximum light exposure"
+            "句子": "The geometry of the building's design allows for maximum light exposure",
+            "中文": "這座建築的幾何設計讓自然光得以最大程度地照射進來。"
         },
         {
+            "音檔": "音檔 - geometry-4",
             "分類": "形狀",
             "Words": "geometry-4",
-            "句子": "The bike’s geometry affects its comfort and performance during rides"
+            "句子": "The bike’s geometry affects its comfort and performance during rides",
+            "中文": "自行車的幾何設計會影響騎乘時的舒適度與性能。"
         },
         {
             "等級": "C1",
@@ -21507,19 +21523,25 @@
             "句子": "The city is known for its glamorous nightlife and vibrant culture"
         },
         {
+            "音檔": "音檔 - gold-leaf-1",
             "分類": "技術",
             "Words": "gold-leaf-1",
-            "句子": "The picture frame was beautifully adorned with gold leaf, making it stand out in the gallery"
+            "句子": "The picture frame was beautifully adorned with gold leaf, making it stand out in the gallery",
+            "中文": "畫框上以金箔精美裝飾，使它在畫廊中格外引人注目。"
         },
         {
+            "音檔": "音檔 - gold-leaf-2",
             "分類": "技術",
             "Words": "gold-leaf-2",
-            "句子": "The artist used gold leaf to highlight the intricate details of the manuscript"
+            "句子": "The artist used gold leaf to highlight the intricate details of the manuscript",
+            "中文": "這位藝術家使用金箔來突顯手稿中精緻的細節。"
         },
         {
+            "音檔": "音檔 - gold-leaf-3",
             "分類": "技術",
             "Words": "gold-leaf-3",
-            "句子": "The chef created a gold leaf hamburger, a luxurious dish for special occasions"
+            "句子": "The chef created a gold leaf hamburger, a luxurious dish for special occasions",
+            "中文": "這位廚師創造了一款金箔漢堡，這是一道適合特殊場合的奢華料理。"
         },
         {
             "音檔": "音檔 - gossip-1",
@@ -26925,9 +26947,35 @@
             "中文": "（我不害怕失敗，但我害怕平庸。）"
         },
         {
+            "音檔": "音檔 - Mediterranean-1",
             "分類": "旅遊",
             "Words": "Mediterranean-1",
-            "句子": "They planned to cruise around the Mediterranean, visiting historic cities and enjoying the region's renowned cuisine"
+            "句子": "They planned to cruise around the Mediterranean, visiting historic cities and enjoying the region's renowned cuisine",
+            "中文": "他們計劃在地中海航行，造訪歷史悠久的城市，並品嚐該地區著名的美食。"
+        },
+        {
+            "音檔": "音檔 - Mediterranean-2",
+            "分類": "技術",
+            "Words": "Mediterranean-2",
+            "名人": "Jamie Oliver",
+            "句子": "The Mediterranean diet is not just healthy—it’s a celebration of fresh, vibrant ingredients.",
+            "中文": "地中海飲食不只是健康，更是對新鮮和活力食材的讚頌。"
+        },
+        {
+            "音檔": "音檔 - Mediterranean-3",
+            "分類": "技術",
+            "Words": "Mediterranean-3",
+            "名人": "Sophia Loren",
+            "句子": "The Mediterranean lifestyle taught me to savor food, family, and the sun.",
+            "中文": "地中海式生活教會我享受食物、家庭與陽光。"
+        },
+        {
+            "音檔": "音檔 - Mediterranean-4",
+            "分類": "技術",
+            "Words": "Mediterranean-4",
+            "名人": "Anthony Bourdain",
+            "句子": "The Mediterranean isn’t just a region—it’s a way of life built around connection and culture.",
+            "中文": "地中海不僅是一個地理區域，更是一種圍繞連結與文化的生活方式。"
         },
         {
             "等級": "C2",
@@ -27939,20 +27987,20 @@
             "中文": "氣候變遷是大自然對人類行為作出反應的信號。"
         },
         {
-            "音檔": "音檔 - mother-nature-5",
-            "等級": "B2",
-            "分類": "旅遊",
-            "Words": "mother-nature-5",
-            "句子": "Mother Nature doesn’t need us—we need her, and it’s time we start acting like it.",
-            "中文": "大自然不需要我們，是我們需要她，是時候開始這樣行動了。"
-        },
-        {
             "音檔": "音檔 - mother-nature-4",
             "等級": "B2",
             "分類": "旅遊",
             "Words": "mother-nature-4",
             "句子": "Mother Nature provides us with everything we need to survive—air, water, and food",
             "中文": "大自然為我們提供了生存所需的一切——空氣、水和食物。"
+        },
+        {
+            "音檔": "音檔 - mother-nature-5",
+            "等級": "B2",
+            "分類": "旅遊",
+            "Words": "mother-nature-5",
+            "句子": "Mother Nature doesn’t need us—we need her, and it’s time we start acting like it.",
+            "中文": "大自然不需要我們，是我們需要她，是時候開始這樣行動了。"
         },
         {
             "等級": "B2",
@@ -28383,6 +28431,14 @@
             "中文": "作為一家小型企業，他們在手工珠寶的利基市場中取得了成功。"
         },
         {
+            "音檔": "音檔 - niche-market-4",
+            "等級": "C2",
+            "分類": "商業",
+            "Words": "niche-market-4",
+            "句子": "The startup has a niche-market for tech gadgets designed specifically for seniors",
+            "中文": "這家初創公司擁有一個專門為老年人設計的科技小工具的利基市場。"
+        },
+        {
             "音檔": "音檔 - niche-market-5",
             "等級": "C2",
             "分類": "商業",
@@ -28399,14 +28455,6 @@
             "名人": "Jeff Bezos",
             "句子": "In a niche market, focus creates loyalty, and loyalty builds success.",
             "中文": "在利基市場中，專注創造忠誠，忠誠帶來成功。"
-        },
-        {
-            "音檔": "音檔 - niche-market-4",
-            "等級": "C2",
-            "分類": "商業",
-            "Words": "niche-market-4",
-            "句子": "The startup has a niche-market for tech gadgets designed specifically for seniors",
-            "中文": "這家初創公司擁有一個專門為老年人設計的科技小工具的利基市場。"
         },
         {
             "等級": "B1",
@@ -30547,160 +30595,212 @@
             "句子": "Moms often pack baby paraphernalia, such as diapers, wipes, and toys, when they travel with their children"
         },
         {
+            "音檔": "音檔 - parchment-1",
             "等級": "C1",
             "分類": "歷史文化",
             "Words": "parchment-1",
-            "句子": "The ancient manuscript was written on parchment and preserved in a museum"
+            "句子": "The ancient manuscript was written on parchment and preserved in a museum",
+            "中文": "這本古老的手稿寫在羊皮紙上，並被保存在博物館中。"
         },
         {
+            "音檔": "音檔 - parchment-2",
             "等級": "C1",
             "分類": "歷史文化",
             "Words": "parchment-2",
-            "句子": "Medieval scribes carefully copied texts onto parchment with quills and ink"
+            "句子": "Medieval scribes carefully copied texts onto parchment with quills and ink",
+            "中文": "中世紀的抄寫員小心翼翼地用羽毛筆和墨水將文本抄寫在羊皮紙上。"
         },
         {
+            "音檔": "音檔 - parchment-3",
             "等級": "C1",
             "分類": "歷史文化",
             "Words": "parchment-3",
-            "句子": "The university presented him with a diploma printed on fine parchment"
+            "句子": "The university presented him with a diploma printed on fine parchment",
+            "中文": "大學頒發給他一張印刷在精美羊皮紙上的文憑。"
         },
         {
+            "音檔": "音檔 - parchment-4",
             "等級": "C1",
             "分類": "歷史文化",
             "Words": "parchment-4",
-            "句子": "She used parchment paper to line the baking tray"
+            "句子": "She used parchment paper to line the baking tray",
+            "中文": "她用烤盤紙來鋪烤盤。"
         },
         {
+            "音檔": "音檔 - parchment-5",
             "等級": "C1",
             "分類": "歷史文化",
             "Words": "parchment-5",
-            "句子": "Always use parchment when baking cookies to prevent sticking"
+            "句子": "Always use parchment when baking cookies to prevent sticking",
+            "中文": "烤餅乾時，務必使用烤盤紙，以防止黏連。"
         },
         {
+            "音檔": "音檔 - pathogen-1",
             "等級": "C1",
             "分類": "醫學",
             "Words": "pathogen-1",
-            "句子": "The flu is caused by a viral pathogen that spreads easily from person to person"
+            "句子": "The flu is caused by a viral pathogen that spreads easily from person to person",
+            "中文": "流感是由一種容易在人與人之間傳播的病毒性病原體引起的。"
         },
         {
+            "音檔": "音檔 - pathogen-2",
             "等級": "C1",
             "分類": "醫學",
             "Words": "pathogen-2",
-            "句子": "Researchers are developing vaccines to protect against deadly pathogens"
+            "句子": "Researchers are developing vaccines to protect against deadly pathogens",
+            "中文": "研究人員正在開發疫苗，以保護人們免受致命病原體的侵害。"
         },
         {
+            "音檔": "音檔 - pathogen-3",
             "等級": "C1",
             "分類": "醫學",
             "Words": "pathogen-3",
-            "句子": "This test detects the presence of a specific pathogen in the blood"
+            "句子": "This test detects the presence of a specific pathogen in the blood",
+            "中文": "這項測試能檢測血液中是否存在特定的病原體。"
         },
         {
+            "音檔": "音檔 - pathogen-4",
             "等級": "C1",
             "分類": "醫學",
             "Words": "pathogen-4",
-            "句子": "Pathogen exposure can trigger a strong immune response in the body"
+            "句子": "Pathogen exposure can trigger a strong immune response in the body",
+            "中文": "病原體的暴露會觸發體內強烈的免疫反應。"
         },
         {
+            "音檔": "音檔 - patrol-1",
             "等級": "B2",
             "分類": "軍事",
             "Words": "patrol-1",
-            "句子": "The police conducted a routine patrol of the neighborhood late at night"
+            "句子": "The police conducted a routine patrol of the neighborhood late at night",
+            "中文": "警方在深夜進行了對社區的例行巡邏。"
         },
         {
+            "音檔": "音檔 - patrol-2",
             "等級": "B2",
             "分類": "軍事",
             "Words": "patrol-2",
-            "句子": "The soldiers went on patrol to monitor the border"
+            "句子": "The soldiers went on patrol to monitor the border",
+            "中文": "士兵們進行了巡邏，以監視邊界。"
         },
         {
+            "音檔": "音檔 - patrol-3",
             "等級": "B2",
             "分類": "軍事",
             "Words": "patrol-3",
-            "句子": "The security patrol checked the building for any signs of intrusion"
+            "句子": "The security patrol checked the building for any signs of intrusion",
+            "中文": "保安巡邏檢查了大樓，查看是否有入侵的跡象。"
         },
         {
+            "音檔": "音檔 - patrol-4",
             "等級": "B2",
             "分類": "軍事",
             "Words": "patrol-4",
-            "句子": "The patrol was stationed at the entrance to the park"
+            "句子": "The patrol was stationed at the entrance to the park",
+            "中文": "巡邏隊駐守在公園入口處。"
         },
         {
+            "音檔": "音檔 - patrol-5",
             "等級": "B2",
             "分類": "軍事",
             "Words": "patrol-5",
-            "句子": "The scouts went on a patrol to find the best camping spots"
+            "句子": "The scouts went on a patrol to find the best camping spots",
+            "中文": "偵察隊進行了巡邏，以尋找最佳的露營地點。"
         },
         {
+            "音檔": "音檔 - patrol-6",
             "等級": "B2",
             "分類": "軍事",
             "Words": "patrol-6",
-            "句子": "The scouts set up a patrol to search the forest for signs of wildlife"
+            "句子": "The scouts set up a patrol to search the forest for signs of wildlife",
+            "中文": "偵察隊設置了巡邏隊，搜尋森林中的野生動物跡象。"
         },
         {
+            "音檔": "音檔 - patrol-7",
             "等級": "B2",
             "分類": "軍事",
             "Words": "patrol-7",
-            "句子": "The officers patrol the streets during the night to ensure public safety"
+            "句子": "The officers patrol the streets during the night to ensure public safety",
+            "中文": "警察在夜間巡邏街道，以確保公共安全。"
         },
         {
+            "音檔": "音檔 - patrol-8",
             "等級": "B2",
             "分類": "軍事",
             "Words": "patrol-8",
-            "句子": "He patrolled the perimeter of the property to check for any suspicious activity"
+            "句子": "He patrolled the perimeter of the property to check for any suspicious activity",
+            "中文": "他巡邏了財產的周邊，以檢查是否有可疑活動。"
         },
         {
+            "音檔": "音檔 - patrol-9",
             "等級": "B2",
             "分類": "軍事",
             "Words": "patrol-9",
-            "句子": "They are patrolling the beaches to prevent illegal fishing"
+            "句子": "They are patrolling the beaches to prevent illegal fishing",
+            "中文": "他們正在巡邏海灘，以防止非法捕魚。"
         },
         {
+            "音檔": "音檔 - pavilion-1",
             "等級": "B2",
             "分類": "建築",
             "Words": "pavilion-1",
-            "句子": "They had their wedding ceremony under a beautifully decorated pavilion in the garden"
+            "句子": "They had their wedding ceremony under a beautifully decorated pavilion in the garden",
+            "中文": "他們在花園中一座精美裝飾的涼亭下舉行了婚禮。"
         },
         {
+            "音檔": "音檔 - pavilion-2",
             "等級": "B2",
             "分類": "建築",
             "Words": "pavilion-2",
-            "句子": "Visitors rested in the shade of the pavilion near the lake"
+            "句子": "Visitors rested in the shade of the pavilion near the lake",
+            "中文": "遊客們在湖邊涼亭的陰涼處休息。"
         },
         {
+            "音檔": "音檔 - pavilion-3",
             "等級": "B2",
             "分類": "建築",
             "Words": "pavilion-3",
-            "句子": "The music pavilion hosted summer concerts every weekend"
+            "句子": "The music pavilion hosted summer concerts every weekend",
+            "中文": "音樂涼亭每個週末舉辦夏季音樂會。"
         },
         {
+            "音檔": "音檔 - pavilion-4",
             "等級": "B2",
             "分類": "建築",
             "Words": "pavilion-4",
-            "句子": "The French pavilion at the world expo featured cutting-edge design"
+            "句子": "The French pavilion at the world expo featured cutting-edge design",
+            "中文": "世界博覽會上的法國館展示了前衛的設計。"
         },
         {
+            "音檔": "音檔 - pavilion-5",
             "等級": "B2",
             "分類": "建築",
             "Words": "pavilion-5",
-            "句子": "Companies set up pavilions to showcase their new products at the trade fair"
+            "句子": "Companies set up pavilions to showcase their new products at the trade fair",
+            "中文": "公司在貿易博覽會上設立了展館，展示他們的新產品。"
         },
         {
+            "音檔": "音檔 - pavilion-6",
             "等級": "B2",
             "分類": "建築",
             "Words": "pavilion-6",
-            "句子": "We walked through several pavilions at the international art exhibition"
+            "句子": "We walked through several pavilions at the international art exhibition",
+            "中文": "我們在國際藝術展覽中走訪了幾個展館。"
         },
         {
+            "音檔": "音檔 - pavilion-7",
             "等級": "B2",
             "分類": "建築",
             "Words": "pavilion-7",
-            "句子": "The hospital's new surgical pavilion is equipped with state-of-the-art technology"
+            "句子": "The hospital's new surgical pavilion is equipped with state-of-the-art technology",
+            "中文": "醫院的新外科大樓配備了最先進的技術。"
         },
         {
+            "音檔": "音檔 - pavilion-8",
             "等級": "B2",
             "分類": "建築",
             "Words": "pavilion-8",
-            "句子": "The sports pavilion includes locker rooms and a viewing gallery"
+            "句子": "The sports pavilion includes locker rooms and a viewing gallery",
+            "中文": "體育館包括更衣室和觀景廊。"
         },
         {
             "等級": "B1",
@@ -30733,40 +30833,52 @@
             "句子": "She pulled away as he tried to paw her arm in an awkward attempt at affection"
         },
         {
+            "音檔": "音檔 - peacock-1",
             "等級": "B1",
             "分類": "生物",
             "Words": "peacock-1",
-            "句子": "The peacock spread its magnificent tail to impress the peahen"
+            "句子": "The peacock spread its magnificent tail to impress the peahen",
+            "中文": "孔雀展開了它那華麗的尾巴，吸引孔雀母。"
         },
         {
+            "音檔": "音檔 - peacock-2",
             "等級": "B1",
             "分類": "生物",
             "Words": "peacock-2",
-            "句子": "Peacocks are often seen strutting around palace gardens in India"
+            "句子": "Peacocks are often seen strutting around palace gardens in India",
+            "中文": "孔雀常常在印度的宮殿花園中昂首闊步。"
         },
         {
+            "音檔": "音檔 - peacock-3",
             "等級": "B1",
             "分類": "生物",
             "Words": "peacock-3",
-            "句子": "The zoo had several peacocks roaming freely among the visitors"
+            "句子": "The zoo had several peacocks roaming freely among the visitors",
+            "中文": "動物園裡有幾隻孔雀在遊客中自由走動。"
         },
         {
+            "音檔": "音檔 - peacock-4",
             "等級": "B1",
             "分類": "生物",
             "Words": "peacock-4",
-            "句子": "He’s such a peacock, always showing off his designer suits"
+            "句子": "He’s such a peacock, always showing off his designer suits",
+            "中文": "他真像隻孔雀，總是炫耀他的名牌西裝。"
         },
         {
+            "音檔": "音檔 - peacock-5",
             "等級": "B1",
             "分類": "生物",
             "Words": "peacock-5",
-            "句子": "She accused him of being a peacock who loved being in the spotlight"
+            "句子": "She accused him of being a peacock who loved being in the spotlight",
+            "中文": "她指責他像隻孔雀，愛出風頭。"
         },
         {
+            "音檔": "音檔 - peacock-6",
             "等級": "B1",
             "分類": "生物",
             "Words": "peacock-6",
-            "句子": "His peacock behavior made it clear he wanted everyone to notice him"
+            "句子": "His peacock behavior made it clear he wanted everyone to notice him",
+            "中文": "他的孔雀行為清楚表明他想讓所有人都注意他。"
         },
         {
             "等級": "B1",
@@ -30824,94 +30936,124 @@
             "句子": "The plant's growth pattern is peculiar to this region and cannot be found elsewhere"
         },
         {
+            "音檔": "音檔 - pedestrian-1",
             "等級": "B2",
             "分類": "職業",
             "Words": "pedestrian-1",
-            "句子": "The pedestrian crossed the street at the crosswalk"
+            "句子": "The pedestrian crossed the street at the crosswalk",
+            "中文": "行人在斑馬線上過馬路。"
         },
         {
+            "音檔": "音檔 - pedestrian-2",
             "等級": "B2",
             "分類": "職業",
             "Words": "pedestrian-2",
-            "句子": "There were many pedestrians on the sidewalk during rush hour"
+            "句子": "There were many pedestrians on the sidewalk during rush hour",
+            "中文": "尖峰時段人行道上有很多行人。"
         },
         {
+            "音檔": "音檔 - pedestrian-3",
             "等級": "B2",
             "分類": "職業",
             "Words": "pedestrian-3",
-            "句子": "Pedestrians need to be cautious when crossing busy streets"
+            "句子": "Pedestrians need to be cautious when crossing busy streets",
+            "中文": "行人在穿越繁忙街道時需要小心。"
         },
         {
+            "音檔": "音檔 - pedestrian-4",
             "等級": "B2",
             "分類": "職業",
             "Words": "pedestrian-4",
-            "句子": "His presentation was rather pedestrian, lacking any new ideas"
+            "句子": "His presentation was rather pedestrian, lacking any new ideas",
+            "中文": "他的簡報相當平庸，缺乏新意。"
         },
         {
+            "音檔": "音檔 - pedestrian-5",
             "等級": "B2",
             "分類": "職業",
             "Words": "pedestrian-5",
-            "句子": "The movie's plot was pedestrian, offering no surprises or twists"
+            "句子": "The movie's plot was pedestrian, offering no surprises or twists",
+            "中文": "這部電影的劇情很平凡，沒有任何驚喜或轉折。"
         },
         {
+            "音檔": "音檔 - pedestrian-6",
             "等級": "B2",
             "分類": "職業",
             "Words": "pedestrian-6",
-            "句子": "She found the restaurant’s menu to be quite pedestrian, with nothing special to offer"
+            "句子": "She found the restaurant’s menu to be quite pedestrian, with nothing special to offer",
+            "中文": "她覺得餐廳的菜單很普通，沒什麼特別之處。"
         },
         {
+            "音檔": "音檔 - peer-1",
             "等級": "B2",
             "分類": "職業",
             "Words": "peer-1",
-            "句子": "She felt a strong connection with her peers in the class"
+            "句子": "She felt a strong connection with her peers in the class",
+            "中文": "她感覺與班上同學有很強的聯繫。"
         },
         {
+            "音檔": "音檔 - peer-2",
             "等級": "B2",
             "分類": "職業",
             "Words": "peer-2",
-            "句子": "He’s a peer of mine in the research field"
+            "句子": "He’s a peer of mine in the research field",
+            "中文": "他是我的研究領域的同儕。"
         },
         {
+            "音檔": "音檔 - peer-3",
             "等級": "B2",
             "分類": "職業",
             "Words": "peer-3",
-            "句子": "The company encourages collaboration among peers to foster creativity"
+            "句子": "The company encourages collaboration among peers to foster creativity",
+            "中文": "公司鼓勵同儕間合作以激發創意。"
         },
         {
+            "音檔": "音檔 - peer-4",
             "等級": "B2",
             "分類": "職業",
             "Words": "peer-4",
-            "句子": "The peer was invited to join the royal banquet"
+            "句子": "The peer was invited to join the royal banquet",
+            "中文": "這位貴族被邀請參加皇家宴會。"
         },
         {
+            "音檔": "音檔 - peer-5",
             "等級": "B2",
             "分類": "職業",
             "Words": "peer-5",
-            "句子": "He inherited his peerage from his grandfather"
+            "句子": "He inherited his peerage from his grandfather",
+            "中文": "他從祖父那裡繼承了貴族頭銜。"
         },
         {
+            "音檔": "音檔 - peer-6",
             "等級": "B2",
             "分類": "職業",
             "Words": "peer-6",
-            "句子": "Some members of the peerage still maintain aristocratic privileges"
+            "句子": "Some members of the peerage still maintain aristocratic privileges",
+            "中文": "一些貴族成員仍保留貴族特權。"
         },
         {
+            "音檔": "音檔 - peer-7",
             "等級": "B2",
             "分類": "職業",
             "Words": "peer-7",
-            "句子": "She peered through the window to catch a glimpse of the snowstorm outside"
+            "句子": "She peered through the window to catch a glimpse of the snowstorm outside",
+            "中文": "她透過窗戶偷看外面的暴風雪。"
         },
         {
+            "音檔": "音檔 - peer-8",
             "等級": "B2",
             "分類": "職業",
             "Words": "peer-8",
-            "句子": "He peered into the darkness but couldn't see anything"
+            "句子": "He peered into the darkness but couldn't see anything",
+            "中文": "他凝視黑暗，但什麼也看不見。"
         },
         {
+            "音檔": "音檔 - peer-9",
             "等級": "B2",
             "分類": "職業",
             "Words": "peer-9",
-            "句子": "They were peering over the edge of the cliff to view the valley below"
+            "句子": "They were peering over the edge of the cliff to view the valley below",
+            "中文": "他們從懸崖邊緣俯瞰下面的山谷。"
         },
         {
             "音檔": "音檔 - penalty-1",
@@ -31209,82 +31351,108 @@
             "句子": "The pesky mosquitoes made it difficult to enjoy our evening picnic"
         },
         {
+            "音檔": "音檔 - pest-1",
             "等級": "B1",
             "分類": "生物",
             "Words": "pest-1",
-            "句子": "The garden was full of pests like aphids and beetles that were damaging the plants"
+            "句子": "The garden was full of pests like aphids and beetles that were damaging the plants",
+            "中文": "花園裡滿是蚜蟲和甲蟲等害蟲，正在破壞植物。"
         },
         {
+            "音檔": "音檔 - pest-2",
             "等級": "B1",
             "分類": "生物",
             "Words": "pest-2",
-            "句子": "Farmers use pesticides to control pests that threaten their crops"
+            "句子": "Farmers use pesticides to control pests that threaten their crops",
+            "中文": "農民使用農藥來控制威脅作物的害蟲。"
         },
         {
+            "音檔": "音檔 - pest-3",
             "等級": "B1",
             "分類": "生物",
             "Words": "pest-3",
-            "句子": "Rats are considered pests in many urban areas because they carry diseases"
+            "句子": "Rats are considered pests in many urban areas because they carry diseases",
+            "中文": "老鼠在許多都市地區被視為害蟲，因為牠們會傳播疾病。"
         },
         {
+            "音檔": "音檔 - pest-4",
             "等級": "B1",
             "分類": "生物",
             "Words": "pest-4",
-            "句子": "His younger brother is a real pest, always interrupting his work"
+            "句子": "His younger brother is a real pest, always interrupting his work",
+            "中文": "他弟弟真是個小搗蛋，老是打斷他的工作。"
         },
         {
+            "音檔": "音檔 - pest-5",
             "等級": "B1",
             "分類": "生物",
             "Words": "pest-5",
-            "句子": "The kids were pestering their mother for more candy"
+            "句子": "The kids were pestering their mother for more candy",
+            "中文": "孩子們一直纏著媽媽要更多的糖果。"
         },
         {
+            "音檔": "音檔 - pest-6",
             "等級": "B1",
             "分類": "生物",
             "Words": "pest-6",
-            "句子": "The constant noise from the construction site was a pest throughout the day"
+            "句子": "The constant noise from the construction site was a pest throughout the day",
+            "中文": "來自施工現場的持續噪音整天都讓人感到煩擾。"
         },
         {
+            "音檔": "音檔 - pester-1",
             "等級": "B2",
             "分類": "情感",
             "Words": "pester-1",
-            "句子": "She kept pestering her parents for a new phone"
+            "句子": "She kept pestering her parents for a new phone",
+            "中文": "她不停地纏著父母要一支新手機。"
         },
         {
+            "音檔": "音檔 - pester-2",
             "等級": "B2",
             "分類": "情感",
             "Words": "pester-2",
-            "句子": "The children pestered their teacher with questions about the homework"
+            "句子": "The children pestered their teacher with questions about the homework",
+            "中文": "孩子們不停地纏著老師問關於作業的問題。"
         },
         {
+            "音檔": "音檔 - pester-3",
             "等級": "B2",
             "分類": "情感",
             "Words": "pester-3",
-            "句子": "He pestered his colleague for updates on the project every hour"
+            "句子": "He pestered his colleague for updates on the project every hour",
+            "中文": "他每小時都纏著同事詢問專案的最新進展。"
         },
         {
+            "音檔": "音檔 - pester-4",
             "等級": "B2",
             "分類": "情感",
             "Words": "pester-4",
-            "句子": "He was pestered by calls from telemarketers all afternoon"
+            "句子": "He was pestered by calls from telemarketers all afternoon",
+            "中文": "整個下午他都被電話行銷員的來電騷擾得不得安寧。"
         },
         {
+            "音檔": "音檔 - petroleum-1",
             "等級": "C1",
             "分類": "科技",
             "Words": "petroleum-1",
-            "句子": "The country relies heavily on petroleum exports to drive its economy"
+            "句子": "The country relies heavily on petroleum exports to drive its economy",
+            "中文": "這個國家依賴石油出口來推動其經濟發展。"
         },
         {
+            "音檔": "音檔 - petroleum-2",
             "等級": "C1",
             "分類": "科技",
             "Words": "petroleum-2",
-            "句子": "Petroleum is refined into gasoline and other products used in transportation"
+            "句子": "Petroleum is refined into gasoline and other products used in transportation",
+            "中文": "石油經過精煉後，轉化為汽油和其他用於交通運輸的產品。"
         },
         {
+            "音檔": "音檔 - petroleum-3",
             "等級": "C1",
             "分類": "科技",
             "Words": "petroleum-3",
-            "句子": "Oil spills from petroleum extraction can cause significant environmental damage"
+            "句子": "Oil spills from petroleum extraction can cause significant environmental damage",
+            "中文": "石油開採中的漏油事故可能對環境造成重大損害。"
         },
         {
             "音檔": "音檔 - pharaoh-1",
@@ -31311,28 +31479,36 @@
             "中文": "吉薩的大金字塔是為了強大的法老們建造的陵墓。"
         },
         {
+            "音檔": "音檔 - phenomenon-1",
             "等級": "C2",
             "分類": "社會",
             "Words": "phenomenon-1",
-            "句子": "The Northern Lights are a natural phenomenon that attracts many tourists"
+            "句子": "The Northern Lights are a natural phenomenon that attracts many tourists",
+            "中文": "北極光是一種自然現象，吸引了許多遊客。"
         },
         {
+            "音檔": "音檔 - phenomenon-2",
             "等級": "C2",
             "分類": "社會",
             "Words": "phenomenon-2",
-            "句子": "The rise of social media has been a global phenomenon in recent years"
+            "句子": "The rise of social media has been a global phenomenon in recent years",
+            "中文": "社交媒體的興起在近年來成為全球現象。"
         },
         {
+            "音檔": "音檔 - phenomenon-3",
             "等級": "C2",
             "分類": "社會",
             "Words": "phenomenon-3",
-            "句子": "Scientists are studying the phenomenon of climate change and its effects on the planet"
+            "句子": "Scientists are studying the phenomenon of climate change and its effects on the planet",
+            "中文": "科學家們正在研究氣候變遷及其對地球的影響這一現象。"
         },
         {
+            "音檔": "音檔 - phenomenon-4",
             "等級": "C2",
             "分類": "社會",
             "Words": "phenomenon-4",
-            "句子": "A child who can play the piano at the age of two would be called a phenomenon"
+            "句子": "A child who can play the piano at the age of two would be called a phenomenon",
+            "中文": "一個兩歲就能彈鋼琴的孩子會被稱為一個現象。"
         },
         {
             "音檔": "音檔 - philosophy-1",
@@ -31423,46 +31599,60 @@
             "句子": "Without photosynthesis, life on Earth would not have access to the oxygen necessary for survival"
         },
         {
+            "音檔": "音檔 - physiotherapy-1",
             "等級": "C1",
             "分類": "醫學",
             "Words": "physiotherapy-1",
-            "句子": "She underwent physiotherapy to recover from her knee surgery"
+            "句子": "She underwent physiotherapy to recover from her knee surgery",
+            "中文": "她接受了物理治療來從膝蓋手術中恢復。"
         },
         {
+            "音檔": "音檔 - physiotherapy-2",
             "等級": "C1",
             "分類": "醫學",
             "Words": "physiotherapy-2",
-            "句子": "Regular physiotherapy sessions helped improve his posture and reduce back pain"
+            "句子": "Regular physiotherapy sessions helped improve his posture and reduce back pain",
+            "中文": "定期的物理治療幫助改善了他的姿勢並減少了背痛。"
         },
         {
+            "音檔": "音檔 - physiotherapy-3",
             "等級": "C1",
             "分類": "醫學",
             "Words": "physiotherapy-3",
-            "句子": "The hospital offers physiotherapy for patients with sports injuries"
+            "句子": "The hospital offers physiotherapy for patients with sports injuries",
+            "中文": "這家醫院為運動傷害患者提供物理治療。"
         },
         {
+            "音檔": "音檔 - physiotherapy-4",
             "等級": "C1",
             "分類": "醫學",
             "Words": "physiotherapy-4",
-            "句子": "After the accident, he needed months of physiotherapy to regain mobility"
+            "句子": "After the accident, he needed months of physiotherapy to regain mobility",
+            "中文": "事故後，他需要數月的物理治療才能恢復行動能力。"
         },
         {
+            "音檔": "音檔 - picturesque-1",
             "等級": "C1",
             "分類": "藝術",
             "Words": "picturesque-1",
-            "句子": "The village was picturesque, with its cobblestone streets and old stone houses"
+            "句子": "The village was picturesque, with its cobblestone streets and old stone houses",
+            "中文": "這個村莊如畫般美麗，擁有鵝卵石街道和古老的石屋。"
         },
         {
+            "音檔": "音檔 - picturesque-2",
             "等級": "C1",
             "分類": "藝術",
             "Words": "picturesque-2",
-            "句子": "We took a walk through the picturesque park, with its blooming flowers and serene lake"
+            "句子": "We took a walk through the picturesque park, with its blooming flowers and serene lake",
+            "中文": "我們在如畫的公園中散步，公園裡盛開的花朵和寧靜的湖泊令人陶醉。"
         },
         {
+            "音檔": "音檔 - picturesque-3",
             "等級": "C1",
             "分類": "藝術",
             "Words": "picturesque-3",
-            "句子": "The sunset over the mountains was simply picturesque, with vibrant hues of orange and pink"
+            "句子": "The sunset over the mountains was simply picturesque, with vibrant hues of orange and pink",
+            "中文": "夕陽在山脈上空落下，簡直如畫，橙色和粉紅色的鮮豔色調令人陶醉。"
         },
         {
             "等級": "B1",
@@ -31527,40 +31717,52 @@
             "句子": "The pigmentation of the fabric faded after years of exposure to sunlight"
         },
         {
+            "音檔": "音檔 - pillar-1",
             "等級": "B2",
             "分類": "形狀",
             "Words": "pillar-1",
-            "句子": "The ancient temple had tall marble pillars that supported the roof"
+            "句子": "The ancient temple had tall marble pillars that supported the roof",
+            "中文": "那座古老的寺廟擁有高聳的大理石柱子，支撐著屋頂。"
         },
         {
+            "音檔": "音檔 - pillar-2",
             "等級": "B2",
             "分類": "形狀",
             "Words": "pillar-2",
-            "句子": "The pillar of the bridge was damaged during the storm"
+            "句子": "The pillar of the bridge was damaged during the storm",
+            "中文": "橋樑的支柱在風暴中受損。"
         },
         {
+            "音檔": "音檔 - pillar-3",
             "等級": "B2",
             "分類": "形狀",
             "Words": "pillar-3",
-            "句子": "She leaned against the pillar, waiting for her friend to arrive"
+            "句子": "She leaned against the pillar, waiting for her friend to arrive",
+            "中文": "她倚在柱子上，等待她的朋友到來。"
         },
         {
+            "音檔": "音檔 - pillar-4",
             "等級": "B2",
             "分類": "形狀",
             "Words": "pillar-4",
-            "句子": "Honesty is one of the pillars of a good relationship"
+            "句子": "Honesty is one of the pillars of a good relationship",
+            "中文": "誠實是良好關係的基石之一。"
         },
         {
+            "音檔": "音檔 - pillar-5",
             "等級": "B2",
             "分類": "形狀",
             "Words": "pillar-5",
-            "句子": "The university is known as a pillar of academic excellence"
+            "句子": "The university is known as a pillar of academic excellence",
+            "中文": "這所大學被認為是學術卓越的基石。"
         },
         {
+            "音檔": "音檔 - pillar-6",
             "等級": "B2",
             "分類": "形狀",
             "Words": "pillar-6",
-            "句子": "She was considered a pillar of the community, always helping those in need"
+            "句子": "She was considered a pillar of the community, always helping those in need",
+            "中文": "她被視為社區的支柱，總是幫助有需要的人。"
         },
         {
             "等級": "B2",
@@ -31835,28 +32037,36 @@
             "句子": "The pirates divided the plunder among themselves after the attack"
         },
         {
+            "音檔": "音檔 - political-correctness-1",
             "等級": "B2",
             "分類": "社會",
             "Words": "political-correctness-1",
-            "句子": "The debate on political correctness often centers around whether it stifles free speech"
+            "句子": "The debate on political correctness often centers around whether it stifles free speech",
+            "中文": "關於政治正確的辯論通常圍繞是否會扼殺言論自由。"
         },
         {
+            "音檔": "音檔 - political-correctness-2",
             "等級": "B2",
             "分類": "社會",
             "Words": "political-correctness-2",
-            "句子": "Many people argue that political correctness has gone too far in some areas, limiting honest conversations"
+            "句子": "Many people argue that political correctness has gone too far in some areas, limiting honest conversations",
+            "中文": "許多人認為在某些領域，政治正確已經走得太遠，限制了誠實的對話。"
         },
         {
+            "音檔": "音檔 - political-correctness-3",
             "等級": "B2",
             "分類": "社會",
             "Words": "political-correctness-3",
-            "句子": "The company's policy on political correctness aims to ensure respectful communication among employees"
+            "句子": "The company's policy on political correctness aims to ensure respectful communication among employees",
+            "中文": "該公司關於政治正確的政策旨在確保員工之間的尊重溝通。"
         },
         {
+            "音檔": "音檔 - political-correctness-4",
             "等級": "B2",
             "分類": "社會",
             "Words": "political-correctness-4",
-            "句子": "Some see political correctness as necessary for promoting equality, while others view it as overly restrictive"
+            "句子": "Some see political correctness as necessary for promoting equality, while others view it as overly restrictive",
+            "中文": "有些人認為政治正確對促進平等是必要的，而另一些人則認為它過於限制自由。"
         },
         {
             "音檔": "音檔 - polliwog-1",
@@ -31945,76 +32155,100 @@
             "句子": "The students pondered the ethical implications of their research project"
         },
         {
+            "音檔": "音檔 - porcupine-1",
             "等級": "C1",
             "分類": "生物",
             "Words": "porcupine-1",
-            "句子": "The porcupine rolled into a ball, using its quills to protect itself from predators"
+            "句子": "The porcupine rolled into a ball, using its quills to protect itself from predators",
+            "中文": "豪豬捲成一個球，利用它的刺來保護自己免受掠食者的侵害。"
         },
         {
+            "音檔": "音檔 - porcupine-2",
             "等級": "C1",
             "分類": "生物",
             "Words": "porcupine-2",
-            "句子": "A porcupine’s quills can detach and embed in the skin of its attacker"
+            "句子": "A porcupine’s quills can detach and embed in the skin of its attacker",
+            "中文": "豪豬的刺可以脫落並嵌入攻擊者的皮膚中。"
         },
         {
+            "音檔": "音檔 - porcupine-3",
             "等級": "C1",
             "分類": "生物",
             "Words": "porcupine-3",
-            "句子": "While hiking, we spotted a porcupine in the trees, munching on leaves"
+            "句子": "While hiking, we spotted a porcupine in the trees, munching on leaves",
+            "中文": "在健行時，我們在樹上發現了一隻豪豬，正在啃食葉子。"
         },
         {
+            "音檔": "音檔 - porcupine-4",
             "等級": "C1",
             "分類": "生物",
             "Words": "porcupine-4",
-            "句子": "The porcupine’s quills are not only a defense mechanism but also a means of regulating body temperature"
+            "句子": "The porcupine’s quills are not only a defense mechanism but also a means of regulating body temperature",
+            "中文": "豪豬的刺不僅是防禦機制，也是調節體溫的方式。"
         },
         {
+            "音檔": "音檔 - portal-1",
             "等級": "B1",
             "分類": "建築",
             "Words": "portal-1",
-            "句子": "The grand portal of the castle was adorned with intricate carvings"
+            "句子": "The grand portal of the castle was adorned with intricate carvings",
+            "中文": "城堡的宏大門戶裝飾著精緻的雕刻。"
         },
         {
+            "音檔": "音檔 - portal-2",
             "等級": "B1",
             "分類": "建築",
             "Words": "portal-2",
-            "句子": "The university's main portal opens into a large courtyard"
+            "句子": "The university's main portal opens into a large courtyard",
+            "中文": "大學的主入口通向一個寬敞的庭院。"
         },
         {
+            "音檔": "音檔 - portal-3",
             "等級": "B1",
             "分類": "建築",
             "Words": "portal-3",
-            "句子": "She walked through the portal of the ancient temple, feeling a sense of awe"
+            "句子": "She walked through the portal of the ancient temple, feeling a sense of awe",
+            "中文": "她走過古老神殿的門廊，心中充滿敬畏之情。"
         },
         {
+            "音檔": "音檔 - portal-4",
             "等級": "B1",
             "分類": "建築",
             "Words": "portal-4",
-            "句子": "The company’s portal allows employees to access their schedules and pay information"
+            "句子": "The company’s portal allows employees to access their schedules and pay information",
+            "中文": "公司的入口網站讓員工能夠查閱自己的工作時間表與薪資資訊。"
         },
         {
+            "音檔": "音檔 - portal-5",
             "等級": "B1",
             "分類": "建築",
             "Words": "portal-5",
-            "句子": "The portal for online shopping provided a wide variety of services in one place"
+            "句子": "The portal for online shopping provided a wide variety of services in one place",
+            "中文": "這個線上購物入口網站在同一平台上提供了各種多樣的服務。"
         },
         {
+            "音檔": "音檔 - portal-6",
             "等級": "B1",
             "分類": "建築",
             "Words": "portal-6",
-            "句子": "I logged into the student portal to check my grades"
+            "句子": "I logged into the student portal to check my grades",
+            "中文": "我登入了學生入口網站來查看我的成績。"
         },
         {
+            "音檔": "音檔 - portal-7",
             "等級": "B1",
             "分類": "建築",
             "Words": "portal-7",
-            "句子": "The novel served as a portal into the world of fantasy and adventure"
+            "句子": "The novel served as a portal into the world of fantasy and adventure",
+            "中文": "這本小說如同一扇通往奇幻與冒險世界的門戶。"
         },
         {
+            "音檔": "音檔 - portal-8",
             "等級": "B1",
             "分類": "建築",
             "Words": "portal-8",
-            "句子": "His blog became a portal for new ideas and innovative solutions"
+            "句子": "His blog became a portal for new ideas and innovative solutions",
+            "中文": "他的部落格成為新點子與創新解方的門戶。"
         },
         {
             "等級": "B1",
@@ -32189,22 +32423,28 @@
             "中文": "陶藝在許多文化中已經實踐了數千年。"
         },
         {
+            "音檔": "音檔 - poultry-1",
             "等級": "B2",
             "分類": "食物",
             "Words": "poultry-1",
-            "句子": "The farm specializes in free-range poultry, including chickens and turkeys"
+            "句子": "The farm specializes in free-range poultry, including chickens and turkeys",
+            "中文": "這家農場專門飼養放養家禽，包括雞和火雞。"
         },
         {
+            "音檔": "音檔 - poultry-2",
             "等級": "B2",
             "分類": "食物",
             "Words": "poultry-2",
-            "句子": "Poultry farming has become a major industry in many countries"
+            "句子": "Poultry farming has become a major industry in many countries",
+            "中文": "家禽養殖已成為許多國家的主要產業。"
         },
         {
+            "音檔": "音檔 - poultry-3",
             "等級": "B2",
             "分類": "食物",
             "Words": "poultry-3",
-            "句子": "She prepares poultry dishes like roast chicken and duck for special occasions"
+            "句子": "She prepares poultry dishes like roast chicken and duck for special occasions",
+            "中文": "她會在特殊場合準備像烤雞和烤鴨這類的家禽料理。"
         },
         {
             "Words": "practicality-1",
@@ -32447,88 +32687,116 @@
             "句子": "The theater will premiere the new play next month"
         },
         {
+            "音檔": "音檔 - prescribe-1",
             "等級": "C1",
             "分類": "醫學",
             "Words": "prescribe-1",
-            "句子": "The doctor prescribed antibiotics to treat the infection"
+            "句子": "The doctor prescribed antibiotics to treat the infection",
+            "中文": "醫生開立了抗生素來治療感染。"
         },
         {
+            "音檔": "音檔 - prescribe-2",
             "等級": "C1",
             "分類": "醫學",
             "Words": "prescribe-2",
-            "句子": "He was prescribed a painkiller to manage his back pain"
+            "句子": "He was prescribed a painkiller to manage his back pain",
+            "中文": "他被開了止痛藥來控制背部疼痛。"
         },
         {
+            "音檔": "音檔 - prescribe-3",
             "等級": "C1",
             "分類": "醫學",
             "Words": "prescribe-3",
-            "句子": "The therapist prescribed regular exercises for rehabilitation"
+            "句子": "The therapist prescribed regular exercises for rehabilitation",
+            "中文": "治療師開了定期運動來進行康復。"
         },
         {
+            "音檔": "音檔 - prescribe-4",
             "等級": "C1",
             "分類": "醫學",
             "Words": "prescribe-4",
-            "句子": "The guidelines prescribe how the process should be followed"
+            "句子": "The guidelines prescribe how the process should be followed",
+            "中文": "這些指導方針規定了應該如何遵循這個過程。"
         },
         {
+            "音檔": "音檔 - prescribe-5",
             "等級": "C1",
             "分類": "醫學",
             "Words": "prescribe-5",
-            "句子": "The regulations prescribe the steps needed to complete the application"
+            "句子": "The regulations prescribe the steps needed to complete the application",
+            "中文": "這些規定規定了完成申請所需的步驟。"
         },
         {
+            "音檔": "音檔 - presence-1",
             "等級": "B2",
             "分類": "日常生活",
             "Words": "presence-1",
-            "句子": "Her presence at the meeting was crucial for the decision-making process"
+            "句子": "Her presence at the meeting was crucial for the decision-making process",
+            "中文": "她在會議中的出席對決策過程至關重要。"
         },
         {
+            "音檔": "音檔 - presence-2",
             "等級": "B2",
             "分類": "日常生活",
             "Words": "presence-2",
-            "句子": "The teacher noticed his presence as soon as he walked into the classroom"
+            "句子": "The teacher noticed his presence as soon as he walked into the classroom",
+            "中文": "老師一進教室就注意到了他的出席。"
         },
         {
+            "音檔": "音檔 - presence-3",
             "等級": "B2",
             "分類": "日常生活",
             "Words": "presence-3",
-            "句子": "The presence of security guards made everyone feel safe during the concert"
+            "句子": "The presence of security guards made everyone feel safe during the concert",
+            "中文": "保安的存在讓大家在音樂會期間感到安全。"
         },
         {
+            "音檔": "音檔 - presence-4",
             "等級": "B2",
             "分類": "日常生活",
             "Words": "presence-4",
-            "句子": "The presence of a large crowd made the event even more exciting"
+            "句子": "The presence of a large crowd made the event even more exciting",
+            "中文": "大量人群的存在讓這個活動更加激動人心。"
         },
         {
+            "音檔": "音檔 - presence-5",
             "等級": "B2",
             "分類": "日常生活",
             "Words": "presence-5",
-            "句子": "His presence in the room was both comforting and commanding"
+            "句子": "His presence in the room was both comforting and commanding",
+            "中文": "他在房間裡的存在既令人安慰又充滿威嚴。"
         },
         {
+            "音檔": "音檔 - presence-6",
             "等級": "B2",
             "分類": "日常生活",
             "Words": "presence-6",
-            "句子": "The absence of her presence was deeply felt by all"
+            "句子": "The absence of her presence was deeply felt by all",
+            "中文": "她的缺席讓所有人都深感失落。"
         },
         {
+            "音檔": "音檔 - presence-7",
             "等級": "B2",
             "分類": "日常生活",
             "Words": "presence-7",
-            "句子": "She has a strong presence that draws people in"
+            "句子": "She has a strong presence that draws people in",
+            "中文": "她擁有一種強大的存在感，能吸引人們的注意。"
         },
         {
+            "音檔": "音檔 - presence-8",
             "等級": "B2",
             "分類": "日常生活",
             "Words": "presence-8",
-            "句子": "The actor's commanding presence on stage captivated the audience"
+            "句子": "The actor's commanding presence on stage captivated the audience",
+            "中文": "那位演員在舞台上的威嚴存在感吸引了觀眾的目光。"
         },
         {
+            "音檔": "音檔 - presence-9",
             "等級": "B2",
             "分類": "日常生活",
             "Words": "presence-9",
-            "句子": "His presence in the boardroom was felt by everyone"
+            "句子": "His presence in the boardroom was felt by everyone",
+            "中文": "他在董事會中的存在感讓每個人都能感受到。"
         },
         {
             "等級": "B2",
@@ -32586,28 +32854,36 @@
             "句子": "The military was once an all-male preserve"
         },
         {
+            "音檔": "音檔 - prestigious-1",
             "等級": "C2",
             "分類": "商業",
             "Words": "prestigious-1",
-            "句子": "She graduated from a prestigious university known for its law program"
+            "句子": "She graduated from a prestigious university known for its law program",
+            "中文": "她從一所以法學課程聞名的著名大學畢業。"
         },
         {
+            "音檔": "音檔 - prestigious-2",
             "等級": "C2",
             "分類": "商業",
             "Words": "prestigious-2",
-            "句子": "The award is one of the most prestigious honors in the scientific community"
+            "句子": "The award is one of the most prestigious honors in the scientific community",
+            "中文": "這個獎項是科學界最具聲望的榮譽之一。"
         },
         {
+            "音檔": "音檔 - prestigious-3",
             "等級": "C2",
             "分類": "商業",
             "Words": "prestigious-3",
-            "句子": "He landed a job at a prestigious law firm"
+            "句子": "He landed a job at a prestigious law firm",
+            "中文": "他在一家著名的律師事務所找到了一份工作。"
         },
         {
+            "音檔": "音檔 - prestigious-4",
             "等級": "C2",
             "分類": "商業",
             "Words": "prestigious-4",
-            "句子": "The gallery hosted a prestigious exhibition featuring world-renowned artists"
+            "句子": "The gallery hosted a prestigious exhibition featuring world-renowned artists",
+            "中文": "畫廊舉辦了一個享有盛譽的展覽，展出了世界知名藝術家的作品。"
         },
         {
             "等級": "B1",

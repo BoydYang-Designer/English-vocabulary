@@ -8241,7 +8241,6 @@
         {
             "分類": "旅遊",
             "Words": "Mediterranean",
-            "pronunciation-1": "[͵mɛdətəˋrenɪən]",
             "traditional Chinese": "n.地中海\nadj.地中海的",
             "English meaning": "The term \"Mediterranean\" refers to the region surrounding the Mediterranean Sea, which is bordered by Southern Europe, North Africa, and Western Asia. It is characterized by a mild climate, diverse cultures, and a rich history dating back thousands of years. Countries such as Spain, France, Italy, Greece, Turkey, Egypt, and Morocco are all part of the Mediterranean region.\nE.g.They planned to cruise around the Mediterranean, visiting historic cities and enjoying the region's renowned cuisine.",
             "Unnamed: 8": "Mediterranean",
@@ -8578,7 +8577,6 @@
         {
             "分類": "旅遊",
             "Words": "molten",
-            "pronunciation-1": "[ˋmoltən]",
             "traditional Chinese": "adj.熔化的，熔解的\n   澆鑄的，模鑄的",
             "English meaning": "\"Molten\" refers to a substance that has been heated to the point of liquefaction, usually through high temperatures. When a solid material is melted by heat, it becomes molten, transforming into a liquid state. For example, when metal is heated to its melting point, it becomes molten metal. Similarly, when rock is heated to extreme temperatures, it becomes molten rock, also known as magma or lava when it reaches the Earth's surface during a volcanic eruption. The term \"molten\" is commonly used in contexts related to metallurgy, geology, and processes involving extreme heat.\nE.g. The blacksmith poured the molten metal into the mold, shaping it into a finely crafted sword.\nE.g. As the volcano erupted, streams of molten lava flowed down the mountainside, engulfing everything in their path.",
             "Unnamed: 8": "molten",
@@ -10146,10 +10144,15 @@
             "分類": "生物",
             "Words": "porcupine",
             "pronunciation-1": "[ˋpɔrkjəpaɪn]",
-            "traditional Chinese": "n.刺蝟",
+            "traditional Chinese": "n.豪豬，(又稱箭豬)",
             "English meaning": "Porcupine is a noun that refers to a large, nocturnal rodent known for its coat of sharp, stiff spines or quills, which it uses as a defense mechanism when threatened.\nE.g. The porcupine rolled into a ball, using its quills to protect itself from predators.\nE.g. A porcupine’s quills can detach and embed in the skin of its attacker.\nE.g. While hiking, we spotted a porcupine in the trees, munching on leaves.\nE.g. The porcupine’s quills are not only a defense mechanism but also a means of regulating body temperature.\nSummary:\nA porcupine is a spiny, herbivorous rodent, known for its defensive quills, which can detach and cause harm to predators.\nRelated Words:\nRodent, quills, spines, nocturnal, mammal\n",
             "Unnamed: 8": "porcupine",
             "Unnamed: 9": "porcupine"
+        },
+        {
+            "Words": "hedgehog",
+            "Unnamed: 8": "hedgehog",
+            "Unnamed: 9": "hedgehog"
         },
         {
             "等級": "B1",
