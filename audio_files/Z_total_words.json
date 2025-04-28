@@ -2604,6 +2604,8 @@
             "Unnamed: 9": "colloquial"
         },
         {
+            "等級": "C1",
+            "分類": "藝術",
             "Words": "coloration",
             "pronunciation-1": "[͵kʌləˋreʃən]",
             "traditional Chinese": "n.染色，著色\n  天然色",
@@ -3123,6 +3125,8 @@
             "Unnamed: 9": "contingent"
         },
         {
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuity",
             "pronunciation-1": "[͵kɑntəˋnjuətɪ]",
             "traditional Chinese": "n.連續性；持續性；連貫性(+in/between)",
@@ -3131,6 +3135,8 @@
             "Unnamed: 9": "continuity"
         },
         {
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuous",
             "pronunciation-1": "[kənˋtɪnjʊəs]",
             "traditional Chinese": "adj. 連續的，不斷的",
@@ -3846,6 +3852,8 @@
             "Unnamed: 9": "densely"
         },
         {
+            "等級": "B2",
+            "分類": "旅遊",
             "Words": "departure",
             "pronunciation-1": "[dɪˋpɑrtʃɚ]",
             "traditional Chinese": "n.1.離開\n   2.背離，違背，變更(+from)\n   3.出發，起程(+for)",
@@ -4904,10 +4912,11 @@
         },
         {
             "等級": "B2",
+            "分類": "自然災害",
             "Words": "eruption",
             "pronunciation-1": "[ɪˋrʌpʃən]",
-            "traditional Chinese": "n.1.(火山)爆發；(熔岩的)噴出\n   2.(感情等的)爆發；(戰爭、危機等的)突發",
-            "English meaning": "\"Eruption\" refers to the act or process of bursting forth or breaking out suddenly and violently. It is commonly used to describe the sudden release of material, energy, or emotion, often with explosive force.\n1. Volcanic Eruption: This is the most common usage, referring to the sudden release of magma, gases, and volcanic ash from a volcano.\nE.g. The volcanic eruption caused widespread destruction and displaced thousands of people.\n2. Emotional Eruption: In a figurative sense, \"eruption\" can describe a sudden and intense outburst of emotion, such as anger, excitement, or joy.\nE.g. Her eruption of laughter filled the room with warmth and happiness.\n3.Other Uses: \"Eruption\" can also be used in various contexts where something bursts forth suddenly and forcefully, such as the eruption of applause, an eruption of violence, or an eruption of activity.\nE.g. The eruption of applause greeted the performer as they took the stage.",
+            "traditional Chinese": "n.1.(火山)爆發；(熔岩的)噴出\n   2.(感情等的)爆發；(戰爭、危機等的)突發\n   3.其他爆發\n（可以指任何突然而強烈的釋放或爆發，如掌聲、暴力或活動等。）",
+            "English meaning": "Eruption refers to the act or process of bursting forth or breaking out suddenly and violently. It is commonly used to describe the sudden release of material, energy, or emotion, often with explosive force.\n1. Volcanic Eruption: Refers to the sudden release of magma, gases, and volcanic ash from a volcano.\nE.g. The volcanic eruption caused widespread destruction and displaced thousands of people.\n2. Emotional Eruption: In a figurative sense, describes a sudden and intense outburst of emotion, such as anger, excitement, or joy.\nE.g. Her eruption of laughter filled the room with warmth and happiness.\n3. Other Uses: \"Eruption\" can also describe any sudden and forceful bursting forth, such as an eruption of applause, violence, or activity.\nE.g. The eruption of applause greeted the performer as they took the stage.\nSummary:\nEruption refers to a sudden, often violent, outburst or release of energy, material, or emotion, whether natural, emotional, or situational.\nRelated Words: explosion, outburst, discharge, upheaval.\nAntonyms: calm, silence, stillness, peace.",
             "Unnamed: 8": "eruption",
             "Unnamed: 9": "eruption"
         },
@@ -4916,7 +4925,7 @@
             "Words": "escapade",
             "pronunciation-1": "[͵ɛskəˋped]",
             "traditional Chinese": "n.冒險行為",
-            "English meaning": "An adventurous, daring, or unconventional act or undertaking, often with an element of risk or excitement.\nE.g.Their spontaneous escapade to the mountains ended with an unexpected encounter with a bear.\nE.g. As a teenager he embarked on a series of ill-advised escapades.",
+            "English meaning": "Escapade is a noun refers to an adventurous, exciting, or sometimes reckless act or incident that often involves daring or mischievous behavior.\nE.g. Their spontaneous escapade to the mountains ended with an unexpected encounter with a bear.\nE.g. As a teenager he embarked on a series of ill-advised escapades.\nE.g. The group’s escapade through the abandoned house became the talk of the neighborhood.\nE.g. Their overseas escapade during the summer break was filled with thrilling adventures and unforgettable memories.\nSummary:\nEscapade refers to an adventurous or risky experience, often marked by excitement, mischief, or recklessness.\nRelated Words: adventure, exploit, misadventure, prank.\nAntonyms: routine, seriousness, caution, predictability.",
             "Unnamed: 8": "escapade",
             "Unnamed: 9": "escapade"
         },
@@ -5073,7 +5082,7 @@
             "Words": "excessive",
             "pronunciation-1": "[ɪkˋsɛsɪv]",
             "traditional Chinese": "adj.過度的；過分的；極度的",
-            "English meaning": "If you describe the amount or level of something as excessive, you disapprove of it because it is more or higher than is necessary or reasonable.\nE.g.The government says that local authority spending is excessive.\nE.g.The food was bad and the bill was excessive.",
+            "English meaning": "Excessive is an adjective.\nMeaning:\nGoing beyond what is usual, normal, or proper; more than necessary, reasonable, or acceptable.\nE.g. The government says that local authority spending is excessive.\nE.g. The food was bad and the bill was excessive.\nE.g. She was criticized for her excessive use of social media during work hours.\nE.g. Excessive noise from the construction site disturbed the entire neighborhood.\nSummary:\nExcessive describes something that surpasses normal limits or reasonable amounts, often leading to negative effects.\nRelated Words: extreme, immoderate, undue, extravagant.\nAntonyms: moderate, reasonable, limited, restrained.",
             "Unnamed: 8": "excessive",
             "Unnamed: 9": "excessive"
         },
@@ -5137,7 +5146,7 @@
             "Words": "expedite",
             "pronunciation-1": "[ˋɛkspɪ͵daɪt]",
             "traditional Chinese": "vt.迅速執行；促進",
-            "English meaning": "expedite as a verb : expedite expedited expedited expediting\n\"Expedite\" means to speed up a process or make something happen more quickly. It involves taking actions to ensure that a task or procedure is completed promptly or ahead of schedule. For example, in a business context, you might expedite an order to ensure it is delivered to the customer as soon as possible. \nE.g. To meet the tight deadline, the manager decided to expedite the production process by allocating additional resources and working overtime.\nE.g. In order to avoid any delays, please expedite the approval process for the new project proposal.",
+            "English meaning": "Expedite is a verb: expedite / expedited / expediting\nMeaning:\nTo make a process, action, or task happen more quickly or efficiently; to speed up the progress or completion of something.\nE.g. To meet the tight deadline, the manager decided to expedite the production process by allocating additional resources and working overtime.\nE.g. In order to avoid any delays, please expedite the approval process for the new project proposal.\nE.g. The company hired extra staff to expedite the delivery of holiday orders.\nE.g. We need to expedite the visa application process to ensure timely travel.\nSummary:\nExpedite means to speed up or facilitate the completion of a task or process, making it happen faster and more efficiently.\nRelated Words: accelerate, hasten, quicken, advance, facilitate.\nAntonyms: delay, hinder, slow, impede.",
             "Unnamed: 8": "expedite",
             "Unnamed: 9": "expedite"
         },
@@ -5239,7 +5248,7 @@
             "Words": "exude",
             "pronunciation-1": "[ɪgˋzjud]",
             "traditional Chinese": "v.發散（氣味等）",
-            "English meaning": "Verb : exude exuded exuding\n\"Exude\" means to emit, release, or give off a particular quality, feeling, or substance in a noticeable and often subtle way. It implies that something is naturally or effortlessly projecting a certain characteristic. For example, someone might exude confidence, charm, or warmth, or a flower might exude a pleasant fragrance.\nE.g.He was exuding with confidence when he took the podium.\nE.g.Even in challenging situations, Sarah always seemed to exude calmness and composure, which had a calming effect on those around her.",
+            "English meaning": "Exude is a verb: exude / exuded / exuding\nMeaning:\nTo display or project a quality, emotion, or characteristic strongly and openly; to release or give off (liquid, smell, or feeling) gradually.\nE.g. He was exuding confidence when he took the podium.\nE.g. Even in challenging situations, Sarah always seemed to exude calmness and composure, which had a calming effect on those around her.\nE.g. The tree exuded a sticky sap from its bark after being damaged.\nE.g. His speech exuded warmth and sincerity, making everyone feel welcomed.\nSummary:\nExude means to clearly display a quality or feeling, or to gradually release a substance.\nRelated Words: emit, radiate, ooze, project, release.\nAntonyms: conceal, suppress, withhold, absorb.",
             "Unnamed: 8": "exude",
             "Unnamed: 9": "exude"
         },
@@ -5267,7 +5276,7 @@
             "Words": "falsify",
             "pronunciation-1": "[ˋfɔlsə͵faɪ]",
             "traditional Chinese": "v.竄改；偽造",
-            "English meaning": "As a verb : falsify falsified falsifying \nTo alter or manipulate something in order to make it false or misleading.\nE.g.The accountant was caught falsifying the company's financial records to hide losses.",
+            "English meaning": "Falsify is a verb: falsify / falsified / falsifying\nMeaning:\nTo alter (information, documents, evidence, etc.) dishonestly or deceptively, often to mislead others or conceal the truth.\nE.g. The accountant was caught falsifying the company's financial records to hide losses.\nE.g. He tried to falsify the data to make the experiment seem more successful.\nE.g. The witness was accused of falsifying his testimony under oath.\nE.g. Officials were arrested for falsifying documents to approve illegal activities.\nSummary:\nFalsify means to deliberately change or misrepresent information to deceive others or conceal the truth.\nRelated Words: distort, fabricate, misrepresent, forge, counterfeit.\nAntonyms: verify, authenticate, confirm, validate, substantiate.",
             "Unnamed: 8": "falsify",
             "Unnamed: 9": "falsify"
         },
@@ -5290,6 +5299,8 @@
             "Unnamed: 9": "fascinate"
         },
         {
+            "等級": "B1",
+            "分類": "日常生活",
             "Words": "fasten",
             "pronunciation-1": "[ˋfæsn]",
             "traditional Chinese": "v.\n1.固定，扣緊(用扣子、帶子或夾子等固定或保證某物不會移動)\n\n2. 繫緊，固定(通過綁紮、鎖住或固定某物來使其變得牢固)\n\n3. 牢牢附著於某物(將某物牢固地固定在其他物體上)",
@@ -5337,6 +5348,7 @@
         },
         {
             "等級": "B2",
+            "分類": "食物",
             "Words": "ferment",
             "pronunciation-1": "[ˋfɝmɛnt]-n",
             "pronunciation-2": "[fɝˋmɛnt]-v",
@@ -5347,6 +5359,7 @@
         },
         {
             "等級": "C2",
+            "分類": "食物",
             "Words": "fermentation",
             "pronunciation-1": "[͵fɝmɛnˋteʃən]",
             "traditional Chinese": "n.發酵；騷動；動亂",
@@ -5426,6 +5439,7 @@
         },
         {
             "等級": "B1",
+            "分類": "人物特性",
             "Words": "flair",
             "pronunciation-1": "[flɛr]",
             "traditional Chinese": "n.1. 增強外觀或效果的特殊或獨特品質\n2. 通常在創意或藝術背景下做好某事的天生能力",
@@ -5444,7 +5458,8 @@
             "Unnamed: 9": "flawless"
         },
         {
-            "等級": "C2",
+            "等級": "C1",
+            "分類": "日常生活",
             "Words": "flea-market",
             "pronunciation-1": "flea market",
             "traditional Chinese": "ph. 跳蚤市場 二手市場",
@@ -5453,6 +5468,8 @@
             "Unnamed: 9": "flea-market"
         },
         {
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet",
             "pronunciation-1": "[flit]",
             "traditional Chinese": "n.1.艦隊 ; 車隊\n  2.一組,一隊(一起移動的事物)\nadj.快速的；敏捷的\nv.1.疾飛；掠過\n   2.消磨（時間）\n   3.（已過時）漂浮或漂移。",
@@ -5461,6 +5478,8 @@
             "Unnamed: 9": "fleet"
         },
         {
+            "等級": "B2",
+            "分類": "日常生活",
             "Words": "fleeting",
             "pronunciation-1": "[ˋflitɪŋ]",
             "traditional Chinese": "adj.1.轉瞬間的；短暫的；\n     2.fleet的動詞現在分詞、動名詞",
@@ -5489,7 +5508,8 @@
             "Unnamed: 9": "flood"
         },
         {
-            "等級": "B1",
+            "等級": "B2",
+            "分類": "日常生活",
             "Words": "floral",
             "pronunciation-1": "[ˋflorəl]",
             "traditional Chinese": "adgj.花的；似花的",
@@ -5499,6 +5519,7 @@
         },
         {
             "等級": "C1",
+            "分類": "商業",
             "Words": "fluctuate",
             "pronunciation-1": "[ˋflʌktʃʊ͵et]",
             "traditional Chinese": "vi.1.波動，變動；動搖\n   2.經常改變或改變",
@@ -5518,19 +5539,21 @@
         },
         {
             "等級": "B1",
+            "分類": "物理",
             "Words": "fluid",
             "pronunciation-1": "[ˋfluɪd]",
-            "traditional Chinese": "adj.\n1.流動的 ; 流體的 ; 液體的\n2.流暢的\n3.不固定的；易變的",
-            "English meaning": "1.A substance that flows and takes the shape of its container; a liquid or gas.\nE.g.Water is a common fluid that fills lakes, rivers, and oceans.\n2.Smooth and graceful in motion or performance.\nE.g.The dancer moved with fluid movements across the stage.\n3.Capable of easily changing and adapting; flexible.\nE.g.His fluid leadership style allows him to adjust to different situations effectively.",
+            "traditional Chinese": "n.\n1.流動的 ; 流體的 ; 液體的\n\nadj.\n2.流暢的\n3.不固定的；易變的",
+            "English meaning": "Fluid is a noun and adjective with the following meanings:\n1. As a Noun (Substance):\nA substance that flows and takes the shape of its container, including liquids and gases.\nE.g. Water is a common fluid that fills lakes, rivers, and oceans.\nE.g. Oil is a fluid that can be used in various industrial processes.\n2. As an Adjective (Graceful Motion):\nDescribes something smooth and graceful in motion or performance.\nE.g. The dancer moved with fluid movements across the stage.\nE.g. His fluid gestures made the presentation captivating.\n3. As an Adjective (Adaptability):\nDescribes something capable of easily changing or adapting; flexible.\nE.g. His fluid leadership style allows him to adjust to different situations effectively.\nE.g. The company's fluid strategy enables it to respond quickly to market changes.\nSummary:\nFluid refers to a substance that flows easily, smooth and graceful movement, or the ability to adapt and change with flexibility.\nRelated Words: liquid, adaptable, graceful, flexible, smooth.\nAntonyms: rigid, stiff, unchanging, fixed.",
             "Unnamed: 8": "fluid",
             "Unnamed: 9": "fluid"
         },
         {
             "等級": "B2",
+            "分類": "物理",
             "Words": "fluidity",
             "pronunciation-1": "[fluˋɪdətɪ]",
-            "traditional Chinese": "n.1.流動性",
-            "English meaning": "the quality or state of being fluid\nE.g.This bottle of wine has lost its fluidity. It is hence undrinkable.\nE.g.OpenAI has achieved a level of fluidity in Sora that makes the videos feel real.",
+            "traditional Chinese": "n.1.流動性\n   2.(也可以指某事物的變化或發展的)自然性與靈活性。",
+            "English meaning": "Fluidity is a noun with the following meaning:\nRefers to the quality of being smooth, flowing, or easy to change or adapt. It can describe the physical properties of a liquid, or the smoothness and ease of motion, transitions, or change in different contexts.\n1. As a Physical Property:\nThe characteristic of being smooth, flowing, and easy to move or change shape. Often used to describe liquids or substances that flow easily.\nE.g. This bottle of wine has lost its fluidity. It is hence undrinkable.\nE.g. The fluidity of water allows it to easily take the shape of its container.\n2. As a Metaphor for Smoothness or Adaptability:\nDescribes something that is smooth, graceful, or able to adapt and change without difficulty.\nE.g. OpenAI has achieved a level of fluidity in Sora that makes the videos feel real.\nE.g. Her speech had a remarkable fluidity, making it easy for the audience to follow her ideas.\nSummary:\nFluidity refers to the quality of smoothness, adaptability, or ease in motion or change, either physically or metaphorically.\nRelated Words: smoothness, flow, adaptability, flexibility.\nAntonyms: rigidity, stiffness, obstruction, inflexibility.",
             "Unnamed: 8": "fluidity",
             "Unnamed: 9": "fluidity"
         },
@@ -5554,6 +5577,7 @@
         },
         {
             "等級": "B1",
+            "分類": "情感",
             "Words": "fond",
             "pronunciation-1": "[fɑnd]",
             "traditional Chinese": "adj.溺愛的；溫柔的，多情的",
@@ -5563,6 +5587,7 @@
         },
         {
             "等級": "B2",
+            "分類": "情感",
             "Words": "fondness",
             "pronunciation-1": "[ˋfɑndnɪs]",
             "traditional Chinese": "n.喜愛；鍾愛",
@@ -5581,6 +5606,7 @@
         },
         {
             "等級": "C1",
+            "分類": "技術",
             "Words": "foolproof",
             "pronunciation-1": "[ˋful͵pruf]",
             "traditional Chinese": "adj.笨人也能懂（或會用）的；極簡單的；安全無比的",
@@ -5590,6 +5616,7 @@
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "forebode",
             "pronunciation-1": "[forˋbod]",
             "traditional Chinese": "v.預示；預感",
@@ -5599,6 +5626,7 @@
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "foreboding",
             "pronunciation-1": "[forˋbodɪŋ]",
             "traditional Chinese": "n.(不祥的)預感[+that]",
@@ -5608,6 +5636,7 @@
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "forefront",
             "pronunciation-1": "[ˋfor͵frʌnt]",
             "traditional Chinese": "n.最前方，最前線",
@@ -5636,6 +5665,7 @@
         },
         {
             "等級": "C2",
+            "分類": "自然災害",
             "Words": "forest-fire",
             "pronunciation-1": "forest fire",
             "traditional Chinese": "森林火災",
@@ -5645,6 +5675,7 @@
         },
         {
             "等級": "B1",
+            "分類": "歷史文化",
             "Words": "fossil",
             "pronunciation-1": "[ˋfɑs!]",
             "traditional Chinese": "n.1化石\n   2.頑固不化的人；守舊的事物",
@@ -5663,6 +5694,7 @@
         },
         {
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "fossilize",
             "pronunciation-1": "[ˋfɑs!͵aɪz]",
             "traditional Chinese": "v.1.使成化石\n  2.使陳腐 固定化",
@@ -5672,15 +5704,17 @@
         },
         {
             "等級": "B2",
+            "分類": "建築",
             "Words": "fountain",
             "pronunciation-1": "ˋfaʊntɪn",
-            "traditional Chinese": "n.1. 人造噴泉；噴水池\n   2. 泉水；噴泉；水源\n   3.源泉：引申指能源、資訊等不斷湧出的來源或來源",
-            "English meaning": "1. an artificially produced jet of water\nE.g. A beautiful stone fountain was set in the middle of the garden. \nE.g. In the restaurant, the soda fountain offers a variety of refreshing beverages.\n2. a spring of water issuing from the earth\nE.g. The city is famous for its historical fountains.\n3. metaphorically refers to a source or origin from which something continuously emerges, such as energy, information, or inspiration\nE.g.Her mind was a fountain of creativity, constantly generating new ideas",
+            "traditional Chinese": "n.1. 人造噴泉；噴水池\n   2.源泉：引申指能源、資訊等不斷湧出的來源或來源",
+            "English meaning": "Fountain has two meanings:\n1. As a Noun:\nRefers to a structure, often decorative, from which water flows, typically found in gardens, parks, or public spaces. It can also refer to a source of water or a place where water is collected and dispensed.\nE.g. A beautiful stone fountain was set in the middle of the garden.\nE.g. In the restaurant, the soda fountain offers a variety of refreshing beverages.\nE.g. The city is famous for its historical fountains.\nAs a Noun (Metaphorical Meaning):\nRefers to a source or abundance of something, often used to describe a person or thing that generates or produces a continuous flow of something, such as ideas or creativity.\nE.g. Her mind was a fountain of creativity, constantly generating new ideas.\nSummary:\nA fountain refers to a structure or device that dispenses water, or it can describe an abundant source of something, such as ideas or inspiration.\nRelated Words: spring, reservoir, well, source, stream.\nAntonyms: drought, depletion, scarcity.",
             "Unnamed: 8": "fountain",
             "Unnamed: 9": "fountain"
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "fragrance",
             "pronunciation-1": "[ˋfregrəns]",
             "traditional Chinese": "n.芬芳；香味；香氣[C][U]",
@@ -5690,6 +5724,7 @@
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "fragrant",
             "pronunciation-1": "[ˋfregrənt]",
             "traditional Chinese": "adj.香的，芳香的",
@@ -5699,6 +5734,7 @@
         },
         {
             "等級": "B1",
+            "分類": "法政",
             "Words": "fraud",
             "pronunciation-1": "[frɔd]",
             "traditional Chinese": "n.欺騙（行為）；詭計；騙局 騙子；假貨",
@@ -5708,6 +5744,7 @@
         },
         {
             "等級": "C1",
+            "分類": "法政",
             "Words": "fraudulent",
             "pronunciation-1": "[ˋfrɔdʒələnt]",
             "traditional Chinese": "adj.欺詐的",
@@ -5717,15 +5754,17 @@
         },
         {
             "等級": "B2",
+            "分類": "心情",
             "Words": "fraught",
             "pronunciation-1": "[frɔt]",
-            "traditional Chinese": "adj.充滿……的；伴隨……的[F](+with) 令人憂慮的",
-            "English meaning": "1.Filled with or accompanied by something undesirable or stressful; marked by tension, anxiety, or difficulty.\nE.g.Their relationship was fraught with tension and disagreements, making communication difficult.\n2.Full of or containing something, often implying a sense of heaviness or burden.\nE.g.The speech was fraught with emotion as the speaker recounted her personal struggles.",
+            "traditional Chinese": "adj.1.充滿的，(通常指的是某個情況中包含大量的負面情感或風險。)\n\n2.使人憂慮的，充滿困難的。",
+            "English meaning": "Fraught: as an Adjective\n1. Full of or laden with something (usually negative)\nDescribing a situation, event, or condition that is filled with or accompanied by something, often something undesirable or troubling.\nE.g. The meeting was fraught with tension as the team debated the new policy.\nE.g. The journey was fraught with difficulties, from bad weather to technical issues.\nE.g. The negotiation process was fraught with challenges, requiring patience and diplomacy.\nE.g. The speech was fraught with emotion as the speaker recounted her personal struggles.\nE.g. Their relationship was fraught with tension and disagreements, making communication difficult.\n2. Worried or anxious\nDescribing a person who is filled with anxiety, worry, or stress due to a particular situation.\nE.g. She was fraught with worry about her upcoming exam.\nE.g. He felt fraught with guilt after the argument with his friend.\nE.g. The parents were fraught with concern when their child didn't return home on time.\nSummary:\nFraught describes something that is filled with trouble, difficulty, or anxiety. It can refer to situations or feelings that are burdened with negative elements.\nRelated Words: laden, filled, burdened, tense, anxious.\nAntonyms: calm, relaxed, easygoing, peaceful.",
             "Unnamed: 8": "fraught",
             "Unnamed: 9": "fraught"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "fray",
             "pronunciation-1": "[fre]",
             "traditional Chinese": "v.1.磨損(織物等)的邊緣 緊張\nn.2.爭鬥 打架 磨損處\nprh.3.卻置身事外",
@@ -5735,6 +5774,7 @@
         },
         {
             "等級": "C2",
+            "分類": "運動",
             "Words": "front-crawl",
             "pronunciation-1": "front crawl",
             "traditional Chinese": "n.(游泳)自由式",
@@ -5764,15 +5804,17 @@
         },
         {
             "等級": "B1",
+            "分類": "商業",
             "Words": "fuel",
             "pronunciation-1": "[ˋfjʊəl]",
             "traditional Chinese": "n.1.燃料\nv.2.對……供給燃料",
-            "English meaning": "1.Any material that is burned or used to produce energy, typically to power machinery, vehicles, or heat buildings.\nE.g.Gasoline is a common fuel used in automobiles.\n2.To supply or power something with fuel.\nE.g.The company fueled its growth by investing in innovative technology.",
+            "English meaning": "Fuel has two meanings:\n1. As a Noun:\nRefers to any material that is burned or consumed to produce energy, typically in the form of heat or power. Common fuels include gasoline, diesel, coal, and natural gas.\nE.g. Gasoline is a common fuel used in automobiles.\nE.g. The factory uses coal as a primary fuel for its machinery.\n2. As a Verb:\nTo provide or increase energy, power, or intensity to something, often figuratively referring to the process of stimulating or driving growth, emotions, or actions.\nE.g. The company fueled its growth by investing in innovative technology.\nE.g. His passion for the project fueled the team's motivation to work harder.\nSummary:\n\"Fuel\" refers both to substances used to produce energy and the act of stimulating or powering something, often metaphorically.\nRelated Words: energy, power, gasoline, gasoline, fuel source, stimulate, propel.\nAntonyms: deplete, exhaust, drain, diminish.",
             "Unnamed: 8": "fuel",
             "Unnamed: 9": "fuel"
         },
         {
             "等級": "B1",
+            "分類": "醫學",
             "Words": "fungal",
             "pronunciation-1": "[ˋfʌŋg!]",
             "traditional Chinese": "adj.1.真菌的\n     2.由真菌引起的; ",
@@ -5782,6 +5824,7 @@
         },
         {
             "等級": "B1",
+            "分類": "醫學",
             "Words": "fungus",
             "pronunciation-1": "[ˋfʌŋgəs]",
             "traditional Chinese": "n.1.真菌[U]\n  2.由真菌引起的感染",
@@ -5821,6 +5864,7 @@
         },
         {
             "等級": "B1",
+            "分類": "娛樂",
             "Words": "gala",
             "pronunciation-1": "[ˋgelə]",
             "pronunciation-2": "[ˋgɑ:lə]",
@@ -5831,6 +5875,7 @@
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "garment",
             "pronunciation-1": "[ˋgɑrmənt]",
             "traditional Chinese": "n.1.服裝，衣著[P]\nvt.2.給……穿衣服",
@@ -5840,6 +5885,7 @@
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "gasp-one's-last-breath",
             "pronunciation-1": "gasp one's last breath",
             "traditional Chinese": "phr.喘息最後一口氣",
@@ -5859,15 +5905,17 @@
         },
         {
             "等級": "C1",
+            "分類": "人物特性",
             "Words": "generosity",
             "pronunciation-1": "[͵dʒɛnəˋrɑsətɪ]",
             "traditional Chinese": "n.寬宏大量；慷慨",
-            "English meaning": "Generosity as a noun refers to the quality of being kind, giving, and willing to help others without expecting anything in return. It involves a selfless attitude and a willingness to share resources, time, or support with those in need.\nE.g. Many people benefited from his countless generosities.\nE.g. We were overwhelmed by the generosity of strangers who offered assistance during our time of need.",
+            "English meaning": "Generosity: as a Noun\nThe quality of being kind, understanding, and willing to give help, resources, or kindness to others without expecting anything in return. It also refers to the act of giving more than what is necessary or expected, often in a selfless manner.\nE.g. Her generosity knew no bounds, always helping those in need.\nE.g. He was known for his generosity, often donating to various charities.\nE.g. Many people benefited from his countless generosities.\nE.g. We were overwhelmed by the generosity of strangers who offered assistance during our time of need.\nSummary:\nGenerosity refers to the act of selflessly giving or sharing, helping others, and going beyond what is required or expected.\nRelated Words: kindness, charity, altruism, benevolence, selflessness.\nAntonyms: selfishness, greed, stinginess.",
             "Unnamed: 8": "generosity",
             "Unnamed: 9": "generosity"
         },
         {
             "等級": "B2",
+            "分類": "科學",
             "Words": "geologic",
             "pronunciation-1": "[dʒɪəˋlɑdʒɪk]",
             "traditional Chinese": "adj.地質學上的，地質的",
@@ -5895,10 +5943,11 @@
         },
         {
             "等級": "C1",
+            "分類": "時尚",
             "Words": "glamorous",
             "pronunciation-1": "/ˈɡlæmərəs/",
             "traditional Chinese": "adj. 1. 迷人的；有魅力的；奢华的",
-            "English meaning": "Glamorous refers to the quality of being attractive, exciting, and full of glamour, often associated with beauty and sophistication.\nE.g. The glamorous actress captivated the audience with her stunning performance.\nE.g. She wore a glamorous dress that turned heads at the gala.\nE.g. Living in a glamorous world often comes with its own set of challenges.\nE.g. The city is known for its glamorous nightlife and vibrant culture.",
+            "English meaning": "Glamorous: as an Adjective\nRefers to the quality of being attractive, exciting, and full of glamour, often associated with beauty, sophistication, and allure. It describes something or someone that exudes charm, elegance, and an air of excitement.\nE.g. The glamorous actress captivated the audience with her stunning performance.\nE.g. She wore a glamorous dress that turned heads at the gala.\nE.g. Living in a glamorous world often comes with its own set of challenges.\nE.g. The city is known for its glamorous nightlife and vibrant culture.\nSummary:\nGlamorous describes something or someone that is strikingly beautiful, stylish, and captivating, often with an element of sophistication and allure.\nRelated Words: elegant, chic, stunning, alluring, sophisticated.\nAntonyms: plain, dull, unattractive, unremarkable.",
             "Unnamed: 8": "glamorous",
             "Unnamed: 9": "glamorous"
         },
@@ -5943,15 +5992,17 @@
         },
         {
             "等級": "B1",
+            "分類": "時尚",
             "Words": "gown",
             "pronunciation-1": "[gaʊn]",
             "traditional Chinese": "n.1.禮服；長袍",
-            "English meaning": "\"Gown\" typically refers to a long, usually formal, loose-fitting garment worn by women and sometimes men. Gowns can vary widely in style and purpose, ranging from elegant evening gowns worn at formal events like weddings or galas to more casual designs worn for lounging or sleeping. In medical contexts, \"gown\" can also refer to a sterile garment worn by healthcare professionals during surgical procedures to maintain a clean environment and prevent the spread of infection.\nE.g. As the bride twirled in her satin gown, she couldn't help but feel like a princess on her wedding day, surrounded by love and joy.\nE.g. After a long day at work, she slipped into her soft, cozy gown and drifted off to sleep, feeling warm and content.\nE.g. The patient was assisted into a hospital gown before undergoing medical tests to ensure proper access and comfort during the procedure.",
+            "English meaning": "Gown: as a Noun\nA gown is a long, elegant dress or robe, typically worn for formal events, ceremonies, or special occasions. It can also refer to a loose-fitting garment worn for specific purposes, such as a hospital gown or nightgown.\nE.g. As the bride twirled in her satin gown, she couldn't help but feel like a princess on her wedding day, surrounded by love and joy.\nE.g. After a long day at work, she slipped into her soft, cozy gown and drifted off to sleep, feeling warm and content.\nE.g. The patient was assisted into a hospital gown before undergoing medical tests to ensure proper access and comfort during the procedure.\nSummary:\nA gown is a formal, elegant dress or robe, often worn for special occasions, or a loose garment like a hospital gown, typically worn for comfort or practical purposes.\nRelated Words: dress, robe, outfit, nightgown, attire.\nAntonyms: casual wear, suit, pants, shorts.",
             "Unnamed: 8": "gown",
             "Unnamed: 9": "gown"
         },
         {
             "等級": "B1",
+            "分類": "建築",
             "Words": "grand",
             "pronunciation-1": "[grænd]",
             "traditional Chinese": "adj.1.雄偉的；堂皇的；盛大的\n    2.重要的，重大的\n    3.偉大的；崇高的；高貴的\nn.【俚】一千美元； 一千英鎊",
@@ -5961,6 +6012,7 @@
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "grand-gesture",
             "pronunciation-1": "grand gesture",
             "traditional Chinese": "n.隆重的舉動, 故作姿態",
@@ -5980,15 +6032,17 @@
         },
         {
             "等級": "B1",
+            "分類": "商業",
             "Words": "grant",
             "pronunciation-1": "[grænt]",
-            "traditional Chinese": "v.1.授予、給予\n   2.承認、同意\nn.1補助金、津貼",
-            "English meaning": "As a verb : grant granted granting\n1.E.g. The government granted her citizenship.\n2.E.g. They granted his request for an extension.\nAs a noun : grant grants\n1.She received a grant to conduct research.",
+            "traditional Chinese": "n.1補助金、津貼\nv.1.授予、給予\n   2.承認、同意",
+            "English meaning": "Grant: as a Noun and Verb\nAs a Noun:\nA grant is a sum of money given for a specific purpose, typically by an organization, government, or foundation, to support projects, research, or other activities.\nE.g. The university received a research grant to study renewable energy technologies.\nE.g. She applied for a grant to help fund her community outreach program.\nE.g. The government offered grants to small businesses affected by the pandemic.\nAs a Verb:\n1. To give or allow something, often officially or formally\nTo provide permission or approval for something.\nE.g. The committee granted her permission to travel abroad for the conference.\nE.g. He granted her request for additional funding to complete the project.\nE.g. The school granted an extension on the assignment deadline.\n2. To acknowledge or admit something\nTo accept or recognize a fact or truth.\nE.g. The judge granted the defendant's appeal.\nE.g. He granted that his decision may not have been the best one.\nE.g. She granted that there was a possibility of error in the report.\nSummary:\nGrant refers to providing financial assistance or giving permission, often formally. It can also mean acknowledging or admitting something.\nRelated Words: award, provide, allow, fund, give.\nAntonyms: deny, refuse, withhold, reject.",
             "Unnamed: 8": "grant",
             "Unnamed: 9": "grant"
         },
         {
             "等級": "B2",
+            "分類": "科技",
             "Words": "graphite",
             "pronunciation-1": "[ˋgræfaɪt]",
             "traditional Chinese": "n.石墨，黑鉛[U]",
@@ -5998,6 +6052,7 @@
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "grasp",
             "pronunciation-1": "[græsp]",
             "traditional Chinese": "v.1.抓牢；握緊；抱住\n   2.領會，理解\nn.1.抓，緊握；抱\n  2.理解，領會",
@@ -6007,15 +6062,17 @@
         },
         {
             "等級": "C2",
+            "分類": "心情",
             "Words": "gratification",
             "pronunciation-1": "[͵grætəfəˋkeʃən]",
             "traditional Chinese": "n.滿足；滿意；喜悅[U]",
-            "English meaning": "Gratification refers to the feeling of pleasure, satisfaction, or contentment that comes from the fulfillment of a desire, need, or expectation. It can also refer to the act of satisfying or fulfilling someone's desires or wishes. For example, achieving a personal goal can bring a sense of gratification, as can receiving praise or recognition for one's efforts. In essence, gratification is the positive emotional response that arises when something desired or sought after is obtained or accomplished.\nE.g.Winning the championship was a moment of immense gratification for the team after months of hard work and dedication.\nE.g.His son's success was a great gratification to him.",
+            "English meaning": "Gratification refers to the feeling of pleasure, satisfaction, or reward that one experiences after achieving something or fulfilling a desire.\nE.g. Winning the championship was a moment of immense gratification for the team after months of hard work and dedication.\nE.g. His son's success was a great gratification to him.\nE.g. She experienced deep gratification after completing the challenging project successfully.\nE.g. The gratification of helping others was what kept him volunteering year after year.\nSummary:\nGratification is the sense of satisfaction or pleasure that arises from achieving a goal or having one's desires fulfilled.\nRelated Words: satisfaction, pleasure, fulfillment, reward, contentment.\nAntonyms: dissatisfaction, disappointment, frustration, discontent.",
             "Unnamed: 8": "gratification",
             "Unnamed: 9": "gratification"
         },
         {
             "等級": "B2",
+            "分類": "心情",
             "Words": "gratify",
             "pronunciation-1": "ˋgrætə͵faɪ]",
             "traditional Chinese": "v.使高興，使滿意(+at/with)(+to-v)",
@@ -6025,6 +6082,7 @@
         },
         {
             "等級": "C1",
+            "分類": "心情",
             "Words": "gratifying",
             "pronunciation-1": "[ˋgrætə͵faɪɪŋ]",
             "traditional Chinese": "adj.悅人的；令人心滿意足的",
@@ -6034,37 +6092,41 @@
         },
         {
             "等級": "B1",
+            "分類": "人物特性",
             "Words": "greedy",
             "pronunciation-1": "[ˋgridɪ]",
-            "traditional Chinese": "adj.貪婪的(+for/of)",
-            "English meaning": "Having or showing an intense and selfish desire for wealth, possessions, or food; wanting more than what is necessary or deserved.\nE.g.The greedy businessman cared only about maximizing profits, regardless of the impact on others.\nConnotation: \"Greedy\" typically carries a negative connotation. It implies a selfish and excessive desire for material wealth or resources, often at the expense of others. Unlike \"voracious,\" \"greedy\" is seldom used in positive contexts.",
+            "traditional Chinese": "adj.貪婪的(+for/of)\n(表示對食物、金錢、物品或其他事物有過度的需求或渴望。)",
+            "English meaning": "Greedy refers to having a strong desire for more than one needs or deserves, often to the point of selfishness or excess.\nE.g. The greedy businessman cared only about maximizing profits, regardless of the impact on others.\nE.g. He was so greedy that he wanted to take all the credit for the team's success.\nE.g. The greedy child refused to share his toys with anyone.\nE.g. Greedy individuals may harm relationships by always seeking more for themselves.\nE.g. Her greedy desire for fame led her to make unethical decisions.\nSummary:\nGreedy describes someone who desires more than necessary, typically in a selfish or excessive manner.\nRelated Words: selfish, covetous, acquisitive, materialistic.\nAntonyms: generous, selfless, altruistic, unselfish.",
             "Unnamed: 8": "greedy",
             "Unnamed: 9": "greedy"
         },
         {
             "等級": "B1",
+            "分類": "心情",
             "Words": "grief",
             "pronunciation-1": "[grif]",
             "traditional Chinese": "n.悲痛，悲傷",
-            "English meaning": "\"Grief\" refers to the intense emotional suffering and sorrow experienced in response to a significant loss, particularly the death of a loved one. It encompasses a range of emotions such as sadness, despair, anguish, and longing. Grief is a natural and universal response to loss, and it often involves a process of mourning as individuals navigate their feelings and adjust to life without the person or thing they have lost.\nE.g. She was overwhelmed by grief after the sudden death of her best friend.\nE.g. The family found solace in sharing their grief with one another during the funeral service.\nE.g. Despite the passage of time, the grief of losing her parents never fully subsided.\nE.g. The community came together to support each other through their collective grief after the tragic accident.",
+            "English meaning": "\"Grief\" refers to the intense emotional suffering and sorrow experienced in response to a significant loss, particularly the death of a loved one. It encompasses a range of emotions such as sadness, despair, anguish, and longing. Grief is a natural and universal response to loss, and it often involves a process of mourning as individuals navigate their feelings and adjust to life without the person or thing they have lost.\nE.g. She was overwhelmed by grief after the sudden death of her best friend.\nE.g. The family found solace in sharing their grief with one another during the funeral service.\nE.g. The grief of losing her parents remained with her for many years, even as time passed.\nE.g. The community came together to support each other through their collective grief after the tragic accident.\nSummary:\nGrief is the emotional suffering caused by loss or misfortune, typically accompanied by sadness, mourning, or regret.\nRelated Words: sorrow, mourning, sadness, anguish, lament.\nAntonyms: joy, happiness, relief, contentment.",
             "Unnamed: 8": "grief",
             "Unnamed: 9": "grief"
         },
         {
             "等級": "C1",
+            "分類": "心情",
             "Words": "grievance",
             "pronunciation-1": "[ˋgrivəns]",
             "traditional Chinese": "n.不滿，不平；抱怨，牢騷[C][（(+against)",
-            "English meaning": "Grievance is a noun with the following meaning:\nA formal complaint or resentment about a real or perceived wrong or injustice: Refers to a formal expression of dissatisfaction or a reason for feeling aggrieved, often involving a structured process for addressing issues within organizations or institutions.\nE.g. She filed a grievance with the company over unfair treatment by her supervisor.\nE.g. The workers expressed their grievances regarding unsafe working conditions.\nE.g. The union filed a grievance against the management for violating the terms of the contract.\nE.g. The student's grievance about the grading policy was reviewed by the academic committee.\nE.g. He has a deep sense of grievance against his former employer.\nSummary: \"Grievance\" refers to a formal complaint or dissatisfaction related to perceived wrongs or injustices, often requiring a formal process for resolution.\nRelated Words: complaint, objection, protest, dispute.\nAntonyms: satisfaction, contentment, approval.",
+            "English meaning": "Grievance is a noun that refers to a formal complaint or resentment about a real or perceived wrong or injustice. It is a formal expression of dissatisfaction or a reason for feeling aggrieved, often involving a structured process for addressing issues within organizations or institutions.\nE.g. She filed a grievance with the company over unfair treatment by her supervisor.\nE.g. The workers expressed their grievances regarding unsafe working conditions.\nE.g. The union filed a grievance against the management for violating the terms of the contract.\nE.g. The student's grievance about the grading policy was reviewed by the academic committee.\nE.g. He has a deep sense of grievance against his former employer.\nSummary: \"Grievance\" refers to a formal complaint or dissatisfaction related to perceived wrongs or injustices, often requiring a formal process for resolution.\nRelated Words: complaint, objection, protest, dispute.\nAntonyms: satisfaction, contentment, approval.",
             "Unnamed: 8": "grievance",
             "Unnamed: 9": "grievance"
         },
         {
             "等級": "C2",
+            "分類": "Design",
             "Words": "groundbreaking",
             "pronunciation-1": "[ˋgraʊnd͵brekɪŋ]",
             "traditional Chinese": "n.1.（建築工程的）破土\nadj. 2.開創性的",
-            "English meaning": "1.\"Groundbreaking\" as a noun, refers to something that literally breaks the ground, such as the start of construction on a new building or infrastructure project. It could also refer to the act of breaking the earth's surface for agricultural purposes.\nE.g. The groundbreaking ceremony for the new hospital took place yesterday, marking the start of an exciting new chapter for the community\n2.\"Groundbreaking\" as an adjuctive : describes something that is innovative, pioneering, or revolutionary. It refers to ideas, technologies, discoveries, or works of art that introduce new concepts or methods and significantly change or advance their field.\nE.g. The groundbreaking technology developed by the startup company revolutionized the way we communicate, making instant messaging accessible to billions of people worldwide.\nE.g. The video could mark the beginning of a potentially groundbreaking trend of using AI in video production.",
+            "English meaning": "Groundbreaking has two meanings:\n1. As a Noun:\nRefers to the event or action of literally breaking the ground, such as the start of construction on a new building or infrastructure project. It can also refer to the act of breaking the earth’s surface for agricultural purposes.\nE.g. The groundbreaking ceremony for the new hospital took place yesterday, marking the start of an exciting new chapter for the community.\n2. As an Adjective:\nDescribes something that is innovative, pioneering, or revolutionary. It refers to ideas, technologies, discoveries, or works of art that introduce new concepts or methods and significantly change or advance their field.\nE.g. The groundbreaking technology developed by the startup company revolutionized the way we communicate, making instant messaging accessible to billions of people worldwide.\nE.g. The video could mark the beginning of a potentially groundbreaking trend of using AI in video production.\nSummary:\n\"Groundbreaking\" refers to both the literal act of breaking the ground, often marking the start of a project, and the figurative meaning of being innovative or revolutionary in a particular field.\nRelated Words: pioneering, innovative, revolutionary, trailblazing, transformative.\nAntonyms: conventional, unoriginal, ordinary, traditional.",
             "Unnamed: 8": "groundbreaking",
             "Unnamed: 9": "groundbreaking"
         },
@@ -8241,6 +8303,7 @@
         {
             "分類": "旅遊",
             "Words": "Mediterranean",
+            "pronunciation-1": "[͵mɛdətəˋrenɪən]",
             "traditional Chinese": "n.地中海\nadj.地中海的",
             "English meaning": "The term \"Mediterranean\" refers to the region surrounding the Mediterranean Sea, which is bordered by Southern Europe, North Africa, and Western Asia. It is characterized by a mild climate, diverse cultures, and a rich history dating back thousands of years. Countries such as Spain, France, Italy, Greece, Turkey, Egypt, and Morocco are all part of the Mediterranean region.\nE.g.They planned to cruise around the Mediterranean, visiting historic cities and enjoying the region's renowned cuisine.",
             "Unnamed: 8": "Mediterranean",
@@ -8577,6 +8640,7 @@
         {
             "分類": "旅遊",
             "Words": "molten",
+            "pronunciation-1": "[ˋmoltən]",
             "traditional Chinese": "adj.熔化的，熔解的\n   澆鑄的，模鑄的",
             "English meaning": "\"Molten\" refers to a substance that has been heated to the point of liquefaction, usually through high temperatures. When a solid material is melted by heat, it becomes molten, transforming into a liquid state. For example, when metal is heated to its melting point, it becomes molten metal. Similarly, when rock is heated to extreme temperatures, it becomes molten rock, also known as magma or lava when it reaches the Earth's surface during a volcanic eruption. The term \"molten\" is commonly used in contexts related to metallurgy, geology, and processes involving extreme heat.\nE.g. The blacksmith poured the molten metal into the mold, shaping it into a finely crafted sword.\nE.g. As the volcano erupted, streams of molten lava flowed down the mountainside, engulfing everything in their path.",
             "Unnamed: 8": "molten",
@@ -10144,15 +10208,10 @@
             "分類": "生物",
             "Words": "porcupine",
             "pronunciation-1": "[ˋpɔrkjəpaɪn]",
-            "traditional Chinese": "n.豪豬，(又稱箭豬)",
+            "traditional Chinese": "n.刺蝟",
             "English meaning": "Porcupine is a noun that refers to a large, nocturnal rodent known for its coat of sharp, stiff spines or quills, which it uses as a defense mechanism when threatened.\nE.g. The porcupine rolled into a ball, using its quills to protect itself from predators.\nE.g. A porcupine’s quills can detach and embed in the skin of its attacker.\nE.g. While hiking, we spotted a porcupine in the trees, munching on leaves.\nE.g. The porcupine’s quills are not only a defense mechanism but also a means of regulating body temperature.\nSummary:\nA porcupine is a spiny, herbivorous rodent, known for its defensive quills, which can detach and cause harm to predators.\nRelated Words:\nRodent, quills, spines, nocturnal, mammal\n",
             "Unnamed: 8": "porcupine",
             "Unnamed: 9": "porcupine"
-        },
-        {
-            "Words": "hedgehog",
-            "Unnamed: 8": "hedgehog",
-            "Unnamed: 9": "hedgehog"
         },
         {
             "等級": "B1",

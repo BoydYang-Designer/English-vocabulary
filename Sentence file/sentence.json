@@ -10051,24 +10051,32 @@
         },
         {
             "音檔": "音檔 - coloration-1",
+            "等級": "C1",
+            "分類": "藝術",
             "Words": "coloration-1",
             "句子": "The vibrant coloration of the butterfly's wings helps it camouflage in its environment",
             "中文": "蝴蝶翅膀的鮮豔色彩有助於它在環境中偽裝。"
         },
         {
             "音檔": "音檔 - coloration-2",
+            "等級": "C1",
+            "分類": "藝術",
             "Words": "coloration-2",
             "句子": "The artist admired the unique coloration of the sunset, blending orange and purple hues",
             "中文": "藝術家欣賞日落獨特的色彩，融合了橙色與紫色的色調。"
         },
         {
             "音檔": "音檔 - coloration-3",
+            "等級": "C1",
+            "分類": "藝術",
             "Words": "coloration-3",
             "句子": "Changes in the bird's coloration occur during mating season",
             "中文": "鳥類在交配季節的色彩會發生變化。"
         },
         {
             "音檔": "音檔 - coloration-4",
+            "等級": "C1",
+            "分類": "藝術",
             "Words": "coloration-4",
             "句子": "The fabric's coloration faded after prolonged exposure to sunlight",
             "中文": "織物的色彩在長時間暴露於陽光下後褪色了。"
@@ -12140,66 +12148,88 @@
         },
         {
             "音檔": "音檔 - continuity-1",
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuity-1",
             "句子": "The continuity of the company’s operations was maintained even during the crisis",
             "中文": "即使在危機期間，公司營運的持續性仍得以維持。"
         },
         {
             "音檔": "音檔 - continuity-2",
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuity-2",
             "句子": "Good storytelling relies on the continuity of plot and character development",
             "中文": "好的故事敘述仰賴情節與角色發展的連貫性。"
         },
         {
             "音檔": "音檔 - continuity-3",
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuity-3",
             "句子": "Historical continuity is important for preserving cultural heritage",
             "中文": "歷史的延續性對於保存文化遺產至關重要。"
         },
         {
             "音檔": "音檔 - continuity-4",
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuity-4",
             "句子": "The continuity of care is essential for effective patient recovery",
             "中文": "照護的連續性對於病患的有效康復至關重要。"
         },
         {
             "音檔": "音檔 - continuity-5",
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuity-5",
             "句子": "The design of the building ensures continuity between the indoor and outdoor spaces, creating a seamless flow",
             "中文": "建築的設計確保了室內與室外空間的連貫性，營造出流暢無縫的動線。"
         },
         {
             "音檔": "音檔 - continuous-1",
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuous-1",
             "句子": "The continuous lines and curves of the smartphone's design make it ergonomic and visually appealing",
             "中文": "智慧型手機設計中的連續線條與曲線使其符合人體工學且具有視覺吸引力。"
         },
         {
             "音檔": "音檔 - continuous-2",
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuous-2",
             "句子": "The continuous integration of sustainable materials throughout the product design reflects the company's commitment to eco-friendly practices",
             "中文": "在產品設計中持續融入永續材料，展現了公司對環保實踐的承諾。"
         },
         {
             "音檔": "音檔 - continuous-3",
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuous-3",
             "句子": "The continuous noise from the construction site made it difficult to concentrate",
             "中文": "來自工地的持續噪音讓人難以集中精神。"
         },
         {
             "音檔": "音檔 - continuous-4",
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuous-4",
             "句子": "The team worked tirelessly through a week of continuous meetings to finalize the project proposal",
             "中文": "團隊不辭辛勞地經過一週的持續會議，終於完成了專案提案。"
         },
         {
             "音檔": "音檔 - continuous-5",
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuous-5",
             "句子": "We experienced a week of continuous rain, which caused flooding in many low-lying areas",
             "中文": "我們經歷了一週的持續降雨，造成許多低窪地區淹水。"
         },
         {
             "音檔": "音檔 - continuous-6",
+            "等級": "B2",
+            "分類": "Design",
             "Words": "continuous-6",
             "句子": "The continuous flow of traffic made crossing the street challenging",
             "中文": "持續的車流讓過馬路變得很具挑戰性。"
@@ -12239,6 +12269,10 @@
             "Words": "contrary-6",
             "句子": "Contrary to expectation, he didn't win in the contest",
             "中文": "與預期相反，他在比賽中沒有獲勝。"
+        },
+        {
+            "Words": "contrary-7",
+            "句子": "You didn't bother me"
         },
         {
             "音檔": "音檔 - contrast-1",
@@ -14913,54 +14947,72 @@
         },
         {
             "音檔": "音檔 - departure-1",
+            "等級": "B2",
+            "分類": "旅遊",
             "Words": "departure-1",
             "句子": "Her departure from the company surprised her colleagues",
             "中文": "她離開公司讓同事們感到驚訝。"
         },
         {
             "音檔": "音檔 - departure-2",
+            "等級": "B2",
+            "分類": "旅遊",
             "Words": "departure-2",
             "句子": "The train's departure is scheduled for 9:00 AM",
             "中文": "火車的開車時間定於早上9點。"
         },
         {
             "音檔": "音檔 - departure-3",
+            "等級": "B2",
+            "分類": "旅遊",
             "Words": "departure-3",
             "句子": "His sudden departure from the event raised many questions",
             "中文": "他突然離開活動引起了許多疑問。"
         },
         {
             "音檔": "音檔 - departure-4",
+            "等級": "B2",
+            "分類": "旅遊",
             "Words": "departure-4",
             "句子": "The artist's new style was a departure from his earlier, more traditional work",
             "中文": "這位藝術家的新風格與他早期更傳統的作品有所不同。"
         },
         {
             "音檔": "音檔 - departure-5",
+            "等級": "B2",
+            "分類": "旅遊",
             "Words": "departure-5",
             "句子": "The policy marked a departure from previous government approaches",
             "中文": "這項政策標誌著與以往政府做法的不同。"
         },
         {
             "音檔": "音檔 - departure-6",
+            "等級": "B2",
+            "分類": "旅遊",
             "Words": "departure-6",
             "句子": "This innovative design represents a significant departure from conventional architecture",
             "中文": "這個創新的設計代表了對傳統建築的重大突破。"
         },
         {
             "音檔": "音檔 - departure-7",
+            "等級": "B2",
+            "分類": "旅遊",
             "Words": "departure-7",
             "句子": "The airport announced the departure of Flight 303",
             "中文": "機場公告了303航班的起飛。"
         },
         {
             "音檔": "音檔 - departure-8",
+            "等級": "B2",
+            "分類": "旅遊",
             "Words": "departure-8",
             "句子": "We all gathered at the gate to bid him farewell before his departure",
             "中文": "在他離開之前，我們都聚集在門口為他送行。"
         },
         {
             "音檔": "音檔 - departure-9",
+            "等級": "B2",
+            "分類": "旅遊",
             "Words": "departure-9",
             "句子": "The departure of the cruise ship was delayed due to weather conditions",
             "中文": "由於天氣狀況，郵輪的起航被延遲。"
@@ -16631,6 +16683,13 @@
             "中文": "辦公室中意見的多樣性促進了對當前問題的更全面理解，並激發了創新的解決方案。"
         },
         {
+            "音檔": "音檔 - diversity-2",
+            "等級": "C1",
+            "Words": "diversity-2",
+            "句子": "The company values diversity in its workforce, believing that different perspectives lead to better decision-making",
+            "中文": "公司重視員工的多樣性，相信不同的觀點能夠促進更好的決策。"
+        },
+        {
             "音檔": "音檔 - diversity-3",
             "等級": "C1",
             "Words": "diversity-3",
@@ -16653,13 +16712,6 @@
             "名人": "Maya Angelou",
             "句子": "In diversity, we find beauty and resilience.",
             "中文": "在多樣性中，我們發現了美麗與堅韌。"
-        },
-        {
-            "音檔": "音檔 - diversity-2",
-            "等級": "C1",
-            "Words": "diversity-2",
-            "句子": "The company values diversity in its workforce, believing that different perspectives lead to better decision-making",
-            "中文": "公司重視員工的多樣性，相信不同的觀點能夠促進更好的決策。"
         },
         {
             "音檔": "音檔 - dividend-1",
@@ -18141,6 +18193,13 @@
             "中文": "皮革日記封面上的壓印使它看起來既精緻又獨特。"
         },
         {
+            "音檔": "音檔 - embossing-2",
+            "等級": "C1",
+            "Words": "embossing-2",
+            "句子": "The wedding invitations featured elegant embossing that gave them a luxurious feel",
+            "中文": "婚禮邀請函上精緻的壓印賦予了它們一種奢華的質感。"
+        },
+        {
             "音檔": "音檔 - embossing-3",
             "等級": "C1",
             "Words": "embossing-3",
@@ -18163,13 +18222,6 @@
             "名人": "Jonathan Ive (Apple Designer)",
             "句子": "Embossing a brand name onto a plastic surface creates a sleek, lasting impression without extra materials.",
             "中文": "將品牌名稱以浮雕方式壓印在塑膠表面上，能打造出簡潔而持久的印象，且無需額外材料。"
-        },
-        {
-            "音檔": "音檔 - embossing-2",
-            "等級": "C1",
-            "Words": "embossing-2",
-            "句子": "The wedding invitations featured elegant embossing that gave them a luxurious feel",
-            "中文": "婚禮邀請函上精緻的壓印賦予了它們一種奢華的質感。"
         },
         {
             "音檔": "音檔 - embrace-1",
@@ -18365,6 +18417,13 @@
             "中文": "城市開發對鄉村地區的侵占威脅到自然景觀和野生動物棲息地。"
         },
         {
+            "音檔": "音檔 - encroachment-2",
+            "等級": "C2",
+            "Words": "encroachment-2",
+            "句子": "I'm becoming increasingly frustrated by the encroachments on my personal space in the crowded subway during rush hour",
+            "中文": "在尖峰時段擁擠的地鐵裡，我對個人空間被侵犯感到越來越沮喪。"
+        },
+        {
             "音檔": "音檔 - encroachment-3",
             "等級": "C2",
             "Words": "encroachment-3",
@@ -18379,13 +18438,6 @@
             "名人": "Elon Musk",
             "句子": "Innovation must progress without the encroachment on personal freedom.",
             "中文": "創新必須在不侵害個人自由的前提下推進。"
-        },
-        {
-            "音檔": "音檔 - encroachment-2",
-            "等級": "C2",
-            "Words": "encroachment-2",
-            "句子": "I'm becoming increasingly frustrated by the encroachments on my personal space in the crowded subway during rush hour",
-            "中文": "在尖峰時段擁擠的地鐵裡，我對個人空間被侵犯感到越來越沮喪。"
         },
         {
             "音檔": "音檔 - endear-1",
@@ -18991,6 +19043,7 @@
         {
             "音檔": "音檔 - eruption-1",
             "等級": "B2",
+            "分類": "自然災害",
             "Words": "eruption-1",
             "句子": "The volcanic eruption caused widespread destruction and displaced thousands of people",
             "中文": "火山爆發造成了大規模的破壞，並使數千人流離失所。"
@@ -18998,6 +19051,7 @@
         {
             "音檔": "音檔 - eruption-2",
             "等級": "B2",
+            "分類": "自然災害",
             "Words": "eruption-2",
             "句子": "Her eruption of laughter filled the room with warmth and happiness",
             "中文": "她爆發出的笑聲為整個房間帶來了溫暖與歡樂。"
@@ -19005,6 +19059,7 @@
         {
             "音檔": "音檔 - eruption-3",
             "等級": "B2",
+            "分類": "自然災害",
             "Words": "eruption-3",
             "句子": "The eruption of applause greeted the performer as they took the stage",
             "中文": "當表演者登上舞台時，爆發出的掌聲熱烈歡迎了他們。"
@@ -19018,6 +19073,16 @@
             "等級": "B2",
             "Words": "escapade-2",
             "句子": "As a teenager he embarked on a series of ill-advised escapades"
+        },
+        {
+            "等級": "B2",
+            "Words": "escapade-3",
+            "句子": "The group’s escapade through the abandoned house became the talk of the neighborhood"
+        },
+        {
+            "等級": "B2",
+            "Words": "escapade-4",
+            "句子": "Their overseas escapade during the summer break was filled with thrilling adventures and unforgettable memories"
         },
         {
             "等級": "B2",
@@ -19391,6 +19456,16 @@
             "句子": "The food was bad and the bill was excessive"
         },
         {
+            "等級": "C1",
+            "Words": "excessive-3",
+            "句子": "She was criticized for her excessive use of social media during work hours"
+        },
+        {
+            "等級": "C1",
+            "Words": "excessive-4",
+            "句子": "Excessive noise from the construction site disturbed the entire neighborhood"
+        },
+        {
             "等級": "B2",
             "Words": "exclude-1",
             "句子": "The club decided to exclude new members until the end of the year"
@@ -19546,6 +19621,16 @@
             "等級": "B2",
             "Words": "expedite-2",
             "句子": "In order to avoid any delays, please expedite the approval process for the new project proposal"
+        },
+        {
+            "等級": "B2",
+            "Words": "expedite-3",
+            "句子": "The company hired extra staff to expedite the delivery of holiday orders"
+        },
+        {
+            "等級": "B2",
+            "Words": "expedite-4",
+            "句子": "We need to expedite the visa application process to ensure timely travel"
         },
         {
             "音檔": "音檔 - expedition-1",
@@ -19845,6 +19930,21 @@
             "句子": "Even in challenging situations, Sarah always seemed to exude calmness and composure, which had a calming effect on those around her"
         },
         {
+            "等級": "B1",
+            "Words": "exude-3",
+            "句子": "He was exuding confidence when he took the podium"
+        },
+        {
+            "等級": "B1",
+            "Words": "exude-4",
+            "句子": "The tree exuded a sticky sap from its bark after being damaged"
+        },
+        {
+            "等級": "B1",
+            "Words": "exude-5",
+            "句子": "His speech exuded warmth and sincerity, making everyone feel welcomed"
+        },
+        {
             "等級": "C1",
             "Words": "facilitate-1",
             "句子": "The new software will facilitate communication between team members"
@@ -19912,6 +20012,21 @@
             "句子": "The accountant was caught falsifying the company's financial records to hide losses"
         },
         {
+            "等級": "B2",
+            "Words": "falsify-2",
+            "句子": "He tried to falsify the data to make the experiment seem more successful"
+        },
+        {
+            "等級": "B2",
+            "Words": "falsify-3",
+            "句子": "The witness was accused of falsifying his testimony under oath"
+        },
+        {
+            "等級": "B2",
+            "Words": "falsify-4",
+            "句子": "Officials were arrested for falsifying documents to approve illegal activities"
+        },
+        {
             "音檔": "音檔 - fan-shaped-1",
             "分類": "形狀",
             "Words": "fan-shaped-1",
@@ -19958,32 +20073,60 @@
             "句子": "The documentary about deep-sea creatures was absolutely fascinating"
         },
         {
+            "音檔": "音檔 - fasten-1",
+            "等級": "B1",
+            "分類": "日常生活",
             "Words": "fasten-1",
-            "句子": "She fastened her seatbelt before the car started moving"
+            "句子": "She fastened her seatbelt before the car started moving",
+            "中文": "她在汽車開始行駛前繫好了安全帶。"
         },
         {
+            "音檔": "音檔 - fasten-2",
+            "等級": "B1",
+            "分類": "日常生活",
             "Words": "fasten-2",
-            "句子": "He fastened the lid tightly on the jar"
+            "句子": "He fastened the lid tightly on the jar",
+            "中文": "他把罐子的蓋子緊緊地蓋上了。"
         },
         {
+            "音檔": "音檔 - fasten-3",
+            "等級": "B1",
+            "分類": "日常生活",
             "Words": "fasten-3",
-            "句子": "Don't forget to fasten your shoes before you go outside"
+            "句子": "Don't forget to fasten your shoes before you go outside",
+            "中文": "在你出門之前，別忘了把鞋帶繫好。"
         },
         {
+            "音檔": "音檔 - fasten-4",
+            "等級": "B1",
+            "分類": "日常生活",
             "Words": "fasten-4",
-            "句子": "The workers fastened the ropes to the ship to secure it to the dock"
+            "句子": "The workers fastened the ropes to the ship to secure it to the dock",
+            "中文": "工人們將繩索繫在船上，以便將它固定在碼頭上。"
         },
         {
+            "音檔": "音檔 - fasten-5",
+            "等級": "B1",
+            "分類": "日常生活",
             "Words": "fasten-5",
-            "句子": "They fastened the door shut to prevent anyone from entering"
+            "句子": "They fastened the door shut to prevent anyone from entering",
+            "中文": "他們將門牢牢關上，以防止任何人進入。"
         },
         {
+            "音檔": "音檔 - fasten-6",
+            "等級": "B1",
+            "分類": "日常生活",
             "Words": "fasten-6",
-            "句子": "The photo was fastened to the wall with a pin"
+            "句子": "The photo was fastened to the wall with a pin",
+            "中文": "照片用圖釘固定在牆上。"
         },
         {
+            "音檔": "音檔 - fasten-7",
+            "等級": "B1",
+            "分類": "日常生活",
             "Words": "fasten-7",
-            "句子": "She fastened the label to the box"
+            "句子": "She fastened the label to the box",
+            "中文": "她把標籤固定在箱子上。"
         },
         {
             "音檔": "音檔 - fatigue-1",
@@ -20247,54 +20390,84 @@
             "中文": "這所大學提供獎學金，幫助學生專注於研究，而無需擔心財務問題。"
         },
         {
+            "音檔": "音檔 - ferment-1",
             "等級": "B2",
+            "分類": "食物",
             "Words": "ferment-1",
-            "句子": "The fermentation of grapes produces wine"
+            "句子": "The fermentation of grapes produces wine",
+            "中文": "葡萄的發酵產生了葡萄酒。"
         },
         {
+            "音檔": "音檔 - ferment-2",
             "等級": "B2",
+            "分類": "食物",
             "Words": "ferment-2",
-            "句子": "The yeast causes the dough to undergo a slow ferment, making it rise"
+            "句子": "The yeast causes the dough to undergo a slow ferment, making it rise",
+            "中文": "酵母使麵糰經過緩慢發酵，從而使其膨脹。"
         },
         {
+            "音檔": "音檔 - ferment-3",
             "等級": "B2",
+            "分類": "食物",
             "Words": "ferment-3",
-            "句子": "The country was in a state of ferment after the announcement of the new law"
+            "句子": "The country was in a state of ferment after the announcement of the new law",
+            "中文": "在新法律宣布後，該國處於動盪不安的狀態。"
         },
         {
+            "音檔": "音檔 - ferment-4",
             "等級": "B2",
+            "分類": "食物",
             "Words": "ferment-4",
-            "句子": "The bread dough must ferment for several hours before baking"
+            "句子": "The bread dough must ferment for several hours before baking",
+            "中文": "麵包麵糰在烘焙之前必須發酵幾個小時。"
         },
         {
+            "音檔": "音檔 - ferment-5",
             "等級": "B2",
+            "分類": "食物",
             "Words": "ferment-5",
-            "句子": "The wine was left to ferment in barrels for six months"
+            "句子": "The wine was left to ferment in barrels for six months",
+            "中文": "葡萄酒被放在桶中發酵了六個月。"
         },
         {
+            "音檔": "音檔 - ferment-6",
             "等級": "B2",
+            "分類": "食物",
             "Words": "ferment-6",
-            "句子": "His ideas began to ferment in the minds of the group, leading to a major change"
+            "句子": "His ideas began to ferment in the minds of the group, leading to a major change",
+            "中文": "他的想法在小組成員的心中發酵，最終引發了重大的變革。"
         },
         {
+            "音檔": "音檔 - fermentation-1",
             "等級": "C2",
+            "分類": "食物",
             "Words": "fermentation-1",
-            "句子": "The fermentation of grapes produces wine and carbon dioxide"
+            "句子": "The fermentation of grapes produces wine and carbon dioxide",
+            "中文": "葡萄的發酵過程會產生酒精和二氧化碳。"
         },
         {
+            "音檔": "音檔 - fermentation-2",
             "等級": "C2",
+            "分類": "食物",
             "Words": "fermentation-2",
-            "句子": "The bacteria are responsible for the fermentation process in yogurt"
+            "句子": "The bacteria are responsible for the fermentation process in yogurt",
+            "中文": "細菌負責酸奶中的發酵過程。"
         },
         {
+            "音檔": "音檔 - fermentation-3",
             "等級": "C2",
+            "分類": "食物",
             "Words": "fermentation-3",
-            "句子": "The fermentation of dough helps it rise before baking"
+            "句子": "The fermentation of dough helps it rise before baking",
+            "中文": "麵團的發酵過程有助於在烘焙前使其膨脹。"
         },
         {
+            "音檔": "音檔 - fermentation-4",
             "等級": "C2",
+            "分類": "食物",
             "Words": "fermentation-4",
-            "句子": "Fermentation is a key step in the production of beer and spirits"
+            "句子": "Fermentation is a key step in the production of beer and spirits",
+            "中文": "發酵是啤酒和烈酒製作過程中的關鍵步驟。"
         },
         {
             "音檔": "音檔 - fertilizer-1",
@@ -20657,39 +20830,60 @@
             "中文": "財政責任對於維持可持續的經濟至關重要。"
         },
         {
+            "音檔": "音檔 - flair-1",
             "等級": "B1",
+            "分類": "人物特性",
             "Words": "flair-1",
-            "句子": "She decorated her home with a flair for design, making it feel warm and inviting"
+            "句子": "She decorated her home with a flair for design, making it feel warm and inviting",
+            "中文": "她以卓越的設計眼光裝飾她的家，讓它看起來既溫暖又充滿邀請感。"
         },
         {
+            "音檔": "音檔 - flair-2",
             "等級": "B1",
+            "分類": "人物特性",
             "Words": "flair-2",
-            "句子": "His writing has a certain flair that captivates readers and keeps them engaged"
+            "句子": "His writing has a certain flair that captivates readers and keeps them engaged",
+            "中文": "他的寫作風格獨具魅力，能吸引讀者並讓他們保持專注。"
         },
         {
+            "音檔": "音檔 - flair-3",
             "等級": "B1",
+            "分類": "人物特性",
             "Words": "flair-3",
-            "句子": "They opened a restaurant with a European flair, featuring unique dishes and an elegant ambiance"
+            "句子": "They opened a restaurant with a European flair, featuring unique dishes and an elegant ambiance",
+            "中文": "他們開了一家帶有歐洲風情的餐廳，提供獨特的菜餚和優雅的氛圍。"
         },
         {
+            "音檔": "音檔 - flair-4",
             "等級": "B1",
+            "分類": "人物特性",
             "Words": "flair-4",
-            "句子": "The product was designed with a modern flair, attracting customers with its sleek lines and vibrant colors"
+            "句子": "The product was designed with a modern flair, attracting customers with its sleek lines and vibrant colors",
+            "中文": "這款產品以現代風格設計，吸引顧客的目光，擁有流線型的外觀和鮮豔的色彩。"
         },
         {
+            "音檔": "音檔 - flair-5",
             "等級": "B1",
+            "分類": "人物特性",
             "Words": "flair-5",
-            "句子": "He has a flair for cooking, often creating delicious dishes without following a recipe"
+            "句子": "He has a flair for cooking, often creating delicious dishes without following a recipe",
+            "中文": "他對烹飪有天賦，經常能不依照食譜創造出美味的菜肴。"
         },
         {
+            "音檔": "音檔 - flair-6",
             "等級": "B1",
+            "分類": "人物特性",
             "Words": "flair-6",
-            "句子": "The artist showcased her flair in the use of color, creating vibrant and eye-catching paintings"
+            "句子": "The artist showcased her flair in the use of color, creating vibrant and eye-catching paintings",
+            "中文": "這位藝術家在色彩運用上展示了她的天賦，創作出色彩鮮豔且引人注目的畫作。"
         },
         {
+            "音檔": "音檔 - flair-7",
             "等級": "B1",
+            "分類": "人物特性",
             "Words": "flair-7",
-            "句子": "She has a little flair for conversation, effortlessly engaging everyone at the table"
+            "句子": "She has a little flair for conversation, effortlessly engaging everyone at the table",
+            "中文": "她擁有一點交談的魅力，能輕鬆地吸引桌上每個人的注意。"
         },
         {
             "音檔": "音檔 - flawless-1",
@@ -20716,82 +20910,156 @@
             "中文": "他在會議中做了一場完美無瑕的演講。"
         },
         {
+            "音檔": "音檔 - flea-market-1",
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "flea-market-1",
-            "句子": "She found a vintage lamp at the flea market that perfectly matched her living room decor"
+            "句子": "She found a vintage lamp at the flea market that perfectly matched her living room decor",
+            "中文": "她在跳蚤市場找到了一盞復古燈，完美地與她的客廳裝飾相配。"
         },
         {
+            "音檔": "音檔 - flea-market-2",
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "flea-market-2",
-            "句子": "The flea market was filled with stalls offering everything from old records to handmade crafts"
+            "句子": "The flea market was filled with stalls offering everything from old records to handmade crafts",
+            "中文": "跳蚤市場裡擺滿了攤位，提供從舊唱片到手工藝品的各種商品。"
         },
         {
+            "音檔": "音檔 - fleet-1",
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet-1",
-            "句子": "The navy deployed its largest fleet to the region"
+            "句子": "The navy deployed its largest fleet to the region",
+            "中文": "海軍將其最大規模的艦隊部署到該地區。"
         },
         {
+            "音檔": "音檔 - fleet-10",
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet-10",
-            "句子": "The clouds fleeted across the sky before the storm arrived"
+            "句子": "The clouds fleeted across the sky before the storm arrived",
+            "中文": "雲朵在暴風雨來臨之前迅速飄過天空。"
         },
         {
+            "音檔": "音檔 - fleet-11",
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet-11",
-            "句子": "His happiness fleeted as reality set in"
+            "句子": "His happiness fleeted as reality set in",
+            "中文": "他的快樂隨著現實的到來而迅速消失。"
         },
         {
+            "音檔": "音檔 - fleet-12",
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet-12",
-            "句子": "The boat was fleeted down the river by the strong current"
+            "句子": "The boat was fleeted down the river by the strong current",
+            "中文": "這艘船被強烈的水流沖向河下。"
         },
         {
+            "音檔": "音檔 - fleet-2",
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet-2",
-            "句子": "The company expanded its fleet of delivery trucks"
+            "句子": "The company expanded its fleet of delivery trucks",
+            "中文": "公司擴展了其配送卡車的車隊。"
         },
         {
+            "音檔": "音檔 - fleet-3",
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet-3",
-            "句子": "A fleet of taxis was waiting outside the airport"
+            "句子": "A fleet of taxis was waiting outside the airport",
+            "中文": "一隊計程車正等候在機場外。"
         },
         {
+            "音檔": "音檔 - fleet-4",
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet-4",
-            "句子": "A fleet of birds soared across the sky"
+            "句子": "A fleet of birds soared across the sky",
+            "中文": "一群鳥群在天空中翱翔。"
         },
         {
+            "音檔": "音檔 - fleet-5",
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet-5",
-            "句子": "The fishing fleet returned to shore before the storm hit"
+            "句子": "The fishing fleet returned to shore before the storm hit",
+            "中文": "漁船隊在風暴來臨前返回岸邊。"
         },
         {
+            "音檔": "音檔 - fleet-6",
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet-6",
-            "句子": "The deer was too fleet for the hunter to catch"
+            "句子": "The deer was too fleet for the hunter to catch",
+            "中文": "那隻鹿跑得太快，獵人無法追上。"
         },
         {
+            "音檔": "音檔 - fleet-7",
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet-7",
-            "句子": "She was known for her fleet movements on the track"
+            "句子": "She was known for her fleet movements on the track",
+            "中文": "她因在跑道上的迅捷動作而聞名。"
         },
         {
+            "音檔": "音檔 - fleet-8",
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet-8",
-            "句子": "His fleet fingers played the piano with incredible speed"
+            "句子": "His fleet fingers played the piano with incredible speed",
+            "中文": "他那雙迅捷的手指以驚人的速度彈奏鋼琴。"
         },
         {
+            "音檔": "音檔 - fleet-9",
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "fleet-9",
-            "句子": "Time fleeted away as they enjoyed the evening"
+            "句子": "Time fleeted away as they enjoyed the evening",
+            "中文": "時間在他們享受晚上的時光中飛快地流逝。"
         },
         {
+            "音檔": "音檔 - fleeting-1",
+            "等級": "B2",
+            "分類": "日常生活",
             "Words": "fleeting-1",
-            "句子": "She caught a fleeting glimpse of the sunset before it disappeared"
+            "句子": "She caught a fleeting glimpse of the sunset before it disappeared",
+            "中文": "她匆匆瞥見夕陽一眼，然後它就消失了。"
         },
         {
+            "音檔": "音檔 - fleeting-2",
+            "等級": "B2",
+            "分類": "日常生活",
             "Words": "fleeting-2",
-            "句子": "Their happiness was fleeting, vanishing as quickly as it came"
+            "句子": "Their happiness was fleeting, vanishing as quickly as it came",
+            "中文": "他們的快樂是短暫的，來得快，去得也快。"
         },
         {
+            "音檔": "音檔 - fleeting-3",
+            "等級": "B2",
+            "分類": "日常生活",
             "Words": "fleeting-3",
-            "句子": "He felt a fleeting sense of regret before moving on"
+            "句子": "He felt a fleeting sense of regret before moving on",
+            "中文": "他感到一絲短暫的懊悔，隨後便繼續前行。"
         },
         {
+            "音檔": "音檔 - fleeting-4",
+            "等級": "B2",
+            "分類": "日常生活",
             "Words": "fleeting-4",
-            "句子": "The days were fleeting as summer came to an end"
+            "句子": "The days were fleeting as summer came to an end",
+            "中文": "隨著夏天的結束，日子匆匆而過。"
         },
         {
+            "音檔": "音檔 - fleeting-5",
+            "等級": "B2",
+            "分類": "日常生活",
             "Words": "fleeting-5",
-            "句子": "His thoughts kept fleeting from one idea to another"
+            "句子": "His thoughts kept fleeting from one idea to another",
+            "中文": "他的思緒不停地從一個想法跳到另一個想法。"
         },
         {
             "音檔": "音檔 - floating-1",
@@ -20898,34 +21166,79 @@
             "中文": "公告發布後，她的收件箱被大量電子郵件塞滿。"
         },
         {
+            "音檔": "音檔 - floral-1",
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "floral-1",
-            "句子": "The room was decorated with floral curtains, adding a touch of elegance and charm with their vibrant flower patterns"
+            "句子": "The room was decorated with floral curtains, adding a touch of elegance and charm with their vibrant flower patterns",
+            "中文": "房間裝飾著花卉窗簾，鮮豔的花卉圖案為房間增添了一絲優雅和魅力。"
         },
         {
+            "音檔": "音檔 - floral-2",
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "floral-2",
+            "名人": "Claude Monet",
+            "句子": "A floral scene captures the fleeting beauty of nature with every brushstroke.",
+            "中文": "花卉景象用每一筆觸捕捉大自然稍縱即逝的美麗。"
+        },
+        {
+            "音檔": "音檔 - floral-3",
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "floral-3",
+            "名人": "Vera Wang",
+            "句子": "A touch of floral design brings elegance and freshness to any creation.",
+            "中文": "加入花卉設計能為任何作品帶來優雅與清新。"
+        },
+        {
+            "音檔": "音檔 - floral-4",
+            "等級": "B1",
+            "分類": "日常生活",
+            "Words": "floral-4",
+            "名人": "Christian Dior",
+            "句子": "Floral patterns are timeless, embodying both romance and vitality.",
+            "中文": "花卉圖案是永恆的，蘊含著浪漫與生命力。"
+        },
+        {
+            "音檔": "音檔 - fluctuate-1",
             "等級": "C1",
+            "分類": "商業",
             "Words": "fluctuate-1",
-            "句子": "The temperature fluctuated throughout the day, making it hard to dress appropriately"
+            "句子": "The temperature fluctuated throughout the day, making it hard to dress appropriately",
+            "中文": "氣溫在一天中波動不定，讓人難以適當穿著。"
         },
         {
+            "音檔": "音檔 - fluctuate-2",
             "等級": "C1",
+            "分類": "商業",
             "Words": "fluctuate-2",
-            "句子": "Prices of goods fluctuate based on supply and demand"
+            "句子": "Prices of goods fluctuate based on supply and demand",
+            "中文": "氣溫在一天中波動不定，讓人難以適當穿著。"
         },
         {
+            "音檔": "音檔 - fluctuate-3",
             "等級": "C1",
+            "分類": "商業",
             "Words": "fluctuate-3",
-            "句子": "Her mood fluctuated between excitement and anxiety as the event approached"
+            "句子": "Her mood fluctuated between excitement and anxiety as the event approached",
+            "中文": "隨著活動的臨近，她的情緒在興奮和焦慮之間波動。"
         },
         {
+            "音檔": "音檔 - fluctuate-4",
             "等級": "C1",
+            "分類": "商業",
             "Words": "fluctuate-4",
-            "句子": "The stock market can fluctuate greatly in response to economic news"
+            "句子": "The stock market can fluctuate greatly in response to economic news",
+            "中文": "股市可能會因經濟新聞而大幅波動。"
         },
         {
+            "音檔": "音檔 - fluctuate-5",
             "等級": "C1",
+            "分類": "商業",
             "Words": "fluctuate-5",
-            "句子": "His interest in the hobby fluctuated over the years"
+            "句子": "His interest in the hobby fluctuated over the years",
+            "中文": "他對這項愛好的興趣隨著時間波動。"
         },
         {
             "音檔": "音檔 - fluctuation-1",
@@ -20952,29 +21265,84 @@
             "中文": "需求的波動影響了公司的銷售。"
         },
         {
+            "音檔": "音檔 - fluid-1",
             "等級": "B1",
+            "分類": "物理",
             "Words": "fluid-1",
-            "句子": "Water is a common fluid that fills lakes, rivers, and oceans"
+            "句子": "Water is a common fluid that fills lakes, rivers, and oceans",
+            "中文": "水是一種常見的液體，充滿了湖泊、河流和海洋。"
         },
         {
+            "音檔": "音檔 - fluid-2",
             "等級": "B1",
+            "分類": "物理",
             "Words": "fluid-2",
-            "句子": "The dancer moved with fluid movements across the stage"
+            "句子": "The dancer moved with fluid movements across the stage",
+            "中文": "那位舞者在舞台上以流暢的動作舞動。"
         },
         {
+            "音檔": "音檔 - fluid-3",
             "等級": "B1",
+            "分類": "物理",
             "Words": "fluid-3",
-            "句子": "His fluid leadership style allows him to adjust to different situations effectively"
+            "句子": "His fluid leadership style allows him to adjust to different situations effectively",
+            "中文": "他流暢的領導風格使他能夠有效地適應不同的情況。"
         },
         {
+            "音檔": "音檔 - fluid-4",
+            "等級": "B1",
+            "分類": "物理",
+            "Words": "fluid-4",
+            "句子": "Oil is a fluid that can be used in various industrial processes",
+            "中文": "油是一種流體，可以用於各種工業過程。"
+        },
+        {
+            "音檔": "音檔 - fluid-5",
+            "等級": "B1",
+            "分類": "物理",
+            "Words": "fluid-5",
+            "句子": "His fluid gestures made the presentation captivating",
+            "中文": "他的流暢手勢使得演示充滿吸引力。"
+        },
+        {
+            "音檔": "音檔 - fluid-6",
+            "等級": "B1",
+            "分類": "物理",
+            "Words": "fluid-6",
+            "句子": "The company's fluid strategy enables it to respond quickly to market changes",
+            "中文": "該公司的靈活策略使其能夠迅速應對市場變化。"
+        },
+        {
+            "音檔": "音檔 - fluidity-1",
             "等級": "B2",
+            "分類": "物理",
             "Words": "fluidity-1",
-            "句子": "This bottle of wine has lost its fluidity"
+            "句子": "This bottle of wine has lost its fluidity",
+            "中文": "這瓶葡萄酒已經失去了流動性。"
         },
         {
+            "音檔": "音檔 - fluidity-2",
             "等級": "B2",
+            "分類": "物理",
             "Words": "fluidity-2",
-            "句子": "OpenAI has achieved a level of fluidity in Sora that makes the videos feel real"
+            "句子": "OpenAI has achieved a level of fluidity in Sora that makes the videos feel real",
+            "中文": "OpenAI 在 Sora 中達到了某種流暢度，使得影片感覺非常真實。"
+        },
+        {
+            "音檔": "音檔 - fluidity-3",
+            "等級": "B2",
+            "分類": "物理",
+            "Words": "fluidity-3",
+            "句子": "The fluidity of water allows it to easily take the shape of its container",
+            "中文": "水的流動性使它能輕易地適應容器的形狀。"
+        },
+        {
+            "音檔": "音檔 - fluidity-4",
+            "等級": "B2",
+            "分類": "物理",
+            "Words": "fluidity-4",
+            "句子": "Her speech had a remarkable fluidity, making it easy for the audience to follow her ideas",
+            "中文": "她的演講具有卓越的流暢性，使觀眾能輕鬆跟隨她的想法。"
         },
         {
             "音檔": "音檔 - flush-1",
@@ -21083,16 +21451,19 @@
         },
         {
             "等級": "B1",
+            "分類": "情感",
             "Words": "fond-1",
             "句子": "As they sat together reminiscing, they shared fond memories of their childhood adventures and family vacations"
         },
         {
             "等級": "B2",
+            "分類": "情感",
             "Words": "fondness-1",
             "句子": "She developed a fondness for the small town she grew up in, cherishing its familiar streets and friendly neighbors"
         },
         {
             "等級": "B2",
+            "分類": "情感",
             "Words": "fondness-2",
             "句子": "She has a fondness for red wine"
         },
@@ -21140,61 +21511,73 @@
         },
         {
             "等級": "C1",
+            "分類": "技術",
             "Words": "foolproof-1",
             "句子": "The new software is foolproof, so even beginners can use it without any problems"
         },
         {
             "等級": "C1",
+            "分類": "技術",
             "Words": "foolproof-2",
             "句子": "They came up with a foolproof plan to ensure the event would run smoothly"
         },
         {
             "等級": "C1",
+            "分類": "技術",
             "Words": "foolproof-3",
             "句子": "This cake recipe is foolproof—there's almost no way to mess it up"
         },
         {
             "等級": "C1",
+            "分類": "技術",
             "Words": "foolproof-4",
             "句子": "The installation process is foolproof, with clear instructions and no complicated steps"
         },
         {
             "等級": "C1",
+            "分類": "技術",
             "Words": "foolproof-5",
             "句子": "The folding mechanism isn't entirely foolproof, but once you learn it, you'll never forget how to do it"
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "forebode-1",
             "句子": "The sudden drop in stock prices seemed to forebode an economic downturn, causing investors to become increasingly cautious"
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "foreboding-1",
             "句子": "As the storm clouds gathered overhead, a sense of foreboding settled over the town, hinting at the impending danger of the approaching hurricane"
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "foreboding-2",
             "句子": "Her sudden silence and downcast eyes filled the room with a heavy sense of foreboding, leaving everyone wondering what troubling news she might reveal"
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "forefront-1",
             "句子": "The company has been at the forefront of renewable energy technology for years"
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "forefront-2",
             "句子": "He was at the forefront of the movement to improve public education"
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "forefront-3",
             "句子": "The new product places the brand at the forefront of the tech industry"
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "forefront-4",
             "句子": "The discussion has brought the issue of health care to the forefront"
         },
@@ -21266,36 +21649,43 @@
         },
         {
             "等級": "C2",
+            "分類": "自然災害",
             "Words": "forest-fire-1",
             "句子": "The forest fire consumed thousands of acres of woodland and displaced many animals"
         },
         {
             "等級": "C2",
+            "分類": "自然災害",
             "Words": "forest-fire-2",
             "句子": "Firefighters worked tirelessly to contain the forest fire before it reached nearby homes"
         },
         {
             "等級": "C2",
+            "分類": "自然災害",
             "Words": "forest-fire-3",
             "句子": "The smoke from the forest fire was visible from miles away, affecting air quality in surrounding areas"
         },
         {
             "等級": "B1",
+            "分類": "歷史文化",
             "Words": "fossil-1",
             "句子": "The archaeologist uncovered a fossil of a leaf that dates back millions of years"
         },
         {
             "等級": "B1",
+            "分類": "歷史文化",
             "Words": "fossil-2",
             "句子": "A well-preserved dinosaur fossil was displayed in the museum"
         },
         {
             "等級": "B1",
+            "分類": "歷史文化",
             "Words": "fossil-3",
             "句子": "My grandfather is a bit of a fossil; he still thinks we should use typewriters instead of computers"
         },
         {
             "等級": "B1",
+            "分類": "歷史文化",
             "Words": "fossil-4",
             "句子": "The professor’s views on technology felt fossilized compared to the more modern perspectives of his students"
         },
@@ -21321,151 +21711,223 @@
         },
         {
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "fossilize-1",
             "句子": "The tree was fossilized over millions of years, allowing scientists to study its ancient structure"
         },
         {
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "fossilize-2",
             "句子": "Fossilized remains of dinosaurs have been found in many parts of the world"
         },
         {
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "fossilize-3",
             "句子": "The mud helped to preserve and fossilize the wood"
         },
         {
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "fossilize-4",
             "句子": "The company’s practices began to fossilize, making it unable to adapt to new market trends"
         },
         {
             "等級": "C1",
+            "分類": "歷史文化",
             "Words": "fossilize-5",
             "句子": "His rigid beliefs had fossilized over the years, preventing him from considering new ideas"
         },
         {
             "等級": "B2",
+            "分類": "建築",
             "Words": "fountain-1",
             "句子": "A beautiful stone fountain was set in the middle of the garden"
         },
         {
             "等級": "B2",
+            "分類": "建築",
             "Words": "fountain-2",
             "句子": "In the restaurant, the soda fountain offers a variety of refreshing beverages"
         },
         {
             "等級": "B2",
+            "分類": "建築",
             "Words": "fountain-3",
             "句子": "The city is famous for its historical fountains"
         },
         {
+            "等級": "B2",
+            "分類": "建築",
+            "Words": "fountain-4",
+            "句子": "Her mind was a fountain of creativity, constantly generating new ideas"
+        },
+        {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "fragrance-1",
             "句子": "The flowers spread their fragrance far and wide"
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "fragrant-1",
             "句子": "The café was filled with the fragrant aroma of freshly brewed coffee, inviting passersby to step inside and enjoy a warm cup on a chilly morning"
         },
         {
             "等級": "B1",
+            "分類": "法政",
             "Words": "fraud-1",
             "句子": "He was found guilty of fraud"
         },
         {
             "等級": "B1",
+            "分類": "法政",
             "Words": "fraud-2",
             "句子": "That man was a fraud"
         },
         {
             "等級": "C1",
+            "分類": "法政",
             "Words": "fraudulent-1",
             "句子": "The company was accused of making fraudulent claims about the safety of its products"
         },
         {
             "等級": "C1",
+            "分類": "法政",
             "Words": "fraudulent-2",
             "句子": "The salesman was arrested for selling fraudulent investment schemes to unsuspecting clients, promising unrealistic returns on their money"
         },
         {
             "等級": "B2",
+            "分類": "心情",
             "Words": "fraught-1",
             "句子": "Their relationship was fraught with tension and disagreements, making communication difficult"
         },
         {
             "等級": "B2",
+            "分類": "心情",
             "Words": "fraught-2",
             "句子": "The speech was fraught with emotion as the speaker recounted her personal struggles"
         },
         {
+            "等級": "B2",
+            "分類": "心情",
+            "Words": "fraught-3",
+            "句子": "The meeting was fraught with tension as the team debated the new policy"
+        },
+        {
+            "等級": "B2",
+            "分類": "心情",
+            "Words": "fraught-4",
+            "句子": "The journey was fraught with difficulties, from bad weather to technical issues"
+        },
+        {
+            "等級": "B2",
+            "分類": "心情",
+            "Words": "fraught-5",
+            "句子": "The negotiation process was fraught with challenges, requiring patience and diplomacy"
+        },
+        {
+            "等級": "B2",
+            "分類": "心情",
+            "Words": "fraught-6",
+            "句子": "She was fraught with worry about her upcoming exam"
+        },
+        {
+            "等級": "B2",
+            "分類": "心情",
+            "Words": "fraught-7",
+            "句子": "He felt fraught with guilt after the argument with his friend"
+        },
+        {
+            "等級": "B2",
+            "分類": "心情",
+            "Words": "fraught-8",
+            "句子": "The parents were fraught with concern when their child didn't return home on time"
+        },
+        {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "fray-1",
             "句子": "The fabric on the sofa began to fray after years of use"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "fray-10",
             "句子": "The CEO stayed above the fray, allowing the managers to handle the internal conflicts"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "fray-2",
             "句子": "As the debate heated up, their patience started to fray"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "fray-3",
             "句子": "The rope frayed and eventually snapped under pressure"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "fray-4",
             "句子": "His nerves were frayed after the long, stressful week"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "fray-5",
             "句子": "The tension in the room was evident as tempers started fraying"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "fray-6",
             "句子": "He jumped into the fray, eager to defend his position"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "fray-7",
             "句子": "After a few moments of argument, the fray escalated into a full-blown dispute"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "fray-8",
             "句子": "Many companies are joining the fray in the race for new technology"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "fray-9",
             "句子": "His political aides handled the controversy while he remained above the fray"
         },
         {
             "等級": "C2",
+            "分類": "運動",
             "Words": "front-crawl-1",
             "句子": "She practiced the front crawl to improve her speed for the upcoming race"
         },
         {
             "等級": "C2",
+            "分類": "運動",
             "Words": "front-crawl-2",
             "句子": "The front crawl is commonly used in triathlons due to its efficiency"
         },
         {
             "等級": "C2",
+            "分類": "運動",
             "Words": "front-crawl-3",
             "句子": "Coaches often recommend the front crawl for beginners to build endurance"
         },
         {
             "等級": "C2",
+            "分類": "運動",
             "Words": "front-crawl-4",
             "句子": "He mastered the front crawl after weeks of practice in the pool"
         },
@@ -21535,51 +21997,73 @@
         },
         {
             "等級": "B1",
+            "分類": "商業",
             "Words": "fuel-1",
             "句子": "Gasoline is a common fuel used in automobiles"
         },
         {
             "等級": "B1",
+            "分類": "商業",
             "Words": "fuel-2",
             "句子": "The company fueled its growth by investing in innovative technology"
         },
         {
             "等級": "B1",
+            "分類": "商業",
+            "Words": "fuel-3",
+            "句子": "The factory uses coal as a primary fuel for its machinery"
+        },
+        {
+            "等級": "B1",
+            "分類": "商業",
+            "Words": "fuel-4",
+            "句子": "His passion for the project fueled the team's motivation to work harder"
+        },
+        {
+            "等級": "B1",
+            "分類": "醫學",
             "Words": "fungal-1",
             "句子": "Fungal spores can spread quickly in damp environments"
         },
         {
             "等級": "B1",
+            "分類": "醫學",
             "Words": "fungal-2",
             "句子": "The fungal growth on the tree trunk was identified as a type of mold"
         },
         {
             "等級": "B1",
+            "分類": "醫學",
             "Words": "fungal-3",
             "句子": "The athlete's foot infection was diagnosed as a fungal condition"
         },
         {
             "等級": "B1",
+            "分類": "醫學",
             "Words": "fungal-4",
             "句子": "Doctors often treat fungal infections with antifungal creams or medications"
         },
         {
             "等級": "B1",
+            "分類": "醫學",
             "Words": "fungus-1",
             "句子": "A mushroom is a type of fungus that grows in damp environments"
         },
         {
             "等級": "B1",
+            "分類": "醫學",
             "Words": "fungus-2",
             "句子": "Mildew is a common household fungus that can appear in moist areas"
         },
         {
             "等級": "B1",
+            "分類": "醫學",
             "Words": "fungus-3",
             "句子": "Athlete’s foot is a type of fungus that commonly affects the feet"
         },
         {
             "等級": "B1",
+            "分類": "醫學",
             "Words": "fungus-4",
             "句子": "The doctor prescribed an ointment to treat the fungal infection"
         },
@@ -21681,46 +22165,55 @@
         },
         {
             "等級": "B1",
+            "分類": "娛樂",
             "Words": "gala-1",
             "句子": "The charity gala raised a significant amount of money for the cause"
         },
         {
             "等級": "B1",
+            "分類": "娛樂",
             "Words": "gala-2",
             "句子": "She attended a gala at the art museum, where elegant dresses and suits were the norm"
         },
         {
             "等級": "B1",
+            "分類": "娛樂",
             "Words": "gala-3",
             "句子": "The annual gala featured performances by renowned musicians"
         },
         {
             "等級": "B1",
+            "分類": "娛樂",
             "Words": "gala-4",
             "句子": "The company hosted a gala to celebrate its anniversary, inviting all employees and their families"
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "garment-1",
             "句子": "She carefully selected a flowing garment for the summer weather, ensuring both comfort and style for her outdoor adventure"
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "garment-2",
             "句子": "The fashion designer showcased her latest collection, featuring a diverse range of garments, from elegant evening gowns to casual everyday wear"
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "garment-3",
             "句子": "She garmented herself in layers to brave the chilly weather, wrapping a cozy scarf around her neck before heading out"
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "gasp-one's-last-breath-1",
             "句子": "The old man gasped his last breath, surrounded by his family who had gathered to say their goodbyes"
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "gasp-one's-last-breath-2",
             "句子": "The injured soldier lay on the battlefield, gasping his last breath as the medics tried in vain to save him"
         },
@@ -21750,21 +22243,37 @@
         },
         {
             "等級": "C1",
+            "分類": "人物特性",
             "Words": "generosity-1",
             "句子": "Many people benefited from his countless generosities"
         },
         {
             "等級": "C1",
+            "分類": "人物特性",
             "Words": "generosity-2",
             "句子": "We were overwhelmed by the generosity of strangers who offered assistance during our time of need"
         },
         {
+            "等級": "C1",
+            "分類": "人物特性",
+            "Words": "generosity-3",
+            "句子": "Her generosity knew no bounds, always helping those in need"
+        },
+        {
+            "等級": "C1",
+            "分類": "人物特性",
+            "Words": "generosity-4",
+            "句子": "He was known for his generosity, often donating to various charities"
+        },
+        {
             "等級": "B2",
+            "分類": "科學",
             "Words": "geologic-1",
             "句子": "The geologic formations in the area reveal a rich history of volcanic activity"
         },
         {
             "等級": "B2",
+            "分類": "科學",
             "Words": "geologic-2",
             "句子": "Understanding geologic processes helps scientists predict natural disasters like earthquakes"
         },
@@ -21826,21 +22335,25 @@
         },
         {
             "等級": "C1",
+            "分類": "時尚",
             "Words": "glamorous-1",
             "句子": "The glamorous actress captivated the audience with her stunning performance"
         },
         {
             "等級": "C1",
+            "分類": "時尚",
             "Words": "glamorous-2",
             "句子": "She wore a glamorous dress that turned heads at the gala"
         },
         {
             "等級": "C1",
+            "分類": "時尚",
             "Words": "glamorous-3",
             "句子": "Living in a glamorous world often comes with its own set of challenges"
         },
         {
             "等級": "C1",
+            "分類": "時尚",
             "Words": "glamorous-4",
             "句子": "The city is known for its glamorous nightlife and vibrant culture"
         },
@@ -22035,76 +22548,91 @@
         },
         {
             "等級": "B1",
+            "分類": "時尚",
             "Words": "gown-1",
             "句子": "As the bride twirled in her satin gown, she couldn't help but feel like a princess on her wedding day, surrounded by love and joy"
         },
         {
             "等級": "B1",
+            "分類": "時尚",
             "Words": "gown-2",
             "句子": "After a long day at work, she slipped into her soft, cozy gown and drifted off to sleep, feeling warm and content"
         },
         {
             "等級": "B1",
+            "分類": "時尚",
             "Words": "gown-3",
             "句子": "The patient was assisted into a hospital gown before undergoing medical tests to ensure proper access and comfort during the procedure"
         },
         {
             "等級": "B1",
+            "分類": "建築",
             "Words": "grand-1",
             "句子": "The grand hall was decorated with crystal chandeliers and velvet drapes"
         },
         {
             "等級": "B1",
+            "分類": "建築",
             "Words": "grand-2",
             "句子": "Despite its grand name, the hotel is small and somewhat seedy"
         },
         {
             "等級": "B1",
+            "分類": "建築",
             "Words": "grand-3",
             "句子": "The architect presented a grand vision for the new city park"
         },
         {
             "等級": "B1",
+            "分類": "建築",
             "Words": "grand-4",
             "句子": "He thinks everything the government does is part of some grand conspiracy"
         },
         {
             "等級": "B1",
+            "分類": "建築",
             "Words": "grand-5",
             "句子": "He made a grand gesture by donating a significant amount to charity"
         },
         {
             "等級": "B1",
+            "分類": "建築",
             "Words": "grand-6",
             "句子": "Her grandfather was a grand old man whom everyone admired"
         },
         {
             "等級": "B1",
+            "分類": "建築",
             "Words": "grand-7",
             "句子": "He bought a used car for about five grand"
         },
         {
             "等級": "B1",
+            "分類": "建築",
             "Words": "grand-8",
             "句子": "She saved up ten grand for the down payment on her new home"
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "grand-gesture-1",
             "句子": "As a grand gesture of forgiveness, she paid off his debts without telling him"
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "grand-gesture-2",
             "句子": "He surprised her with a grand gesture, arranging an elaborate dinner to celebrate their anniversary"
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "grand-gesture-3",
             "句子": "To win back her trust, he made a grand gesture by volunteering for her favorite charity"
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "grand-gesture-4",
             "句子": "The elaborate fireworks display was a grand gesture to celebrate the city's anniversary"
         },
@@ -22134,141 +22662,265 @@
         },
         {
             "等級": "B1",
+            "分類": "商業",
             "Words": "grant-1",
             "句子": "The government granted her citizenship"
         },
         {
             "等級": "B1",
+            "分類": "商業",
+            "Words": "grant-10",
+            "句子": "He granted that his decision may not have been the best one"
+        },
+        {
+            "等級": "B1",
+            "分類": "商業",
+            "Words": "grant-11",
+            "句子": "She granted that there was a possibility of error in the report"
+        },
+        {
+            "等級": "B1",
+            "分類": "商業",
             "Words": "grant-2",
             "句子": "They granted his request for an extension"
         },
         {
+            "等級": "B1",
+            "分類": "商業",
+            "Words": "grant-3",
+            "句子": "The university received a research grant to study renewable energy technologies"
+        },
+        {
+            "等級": "B1",
+            "分類": "商業",
+            "Words": "grant-4",
+            "句子": "She applied for a grant to help fund her community outreach program"
+        },
+        {
+            "等級": "B1",
+            "分類": "商業",
+            "Words": "grant-5",
+            "句子": "The government offered grants to small businesses affected by the pandemic"
+        },
+        {
+            "等級": "B1",
+            "分類": "商業",
+            "Words": "grant-6",
+            "句子": "The committee granted her permission to travel abroad for the conference"
+        },
+        {
+            "等級": "B1",
+            "分類": "商業",
+            "Words": "grant-7",
+            "句子": "He granted her request for additional funding to complete the project"
+        },
+        {
+            "等級": "B1",
+            "分類": "商業",
+            "Words": "grant-8",
+            "句子": "The school granted an extension on the assignment deadline"
+        },
+        {
+            "等級": "B1",
+            "分類": "商業",
+            "Words": "grant-9",
+            "句子": "The judge granted the defendant's appeal"
+        },
+        {
             "等級": "B2",
+            "分類": "科技",
             "Words": "graphite-1",
             "句子": "Graphite is used as the \"lead\" in pencils because it leaves a dark mark on paper"
         },
         {
             "等級": "B2",
+            "分類": "科技",
             "Words": "graphite-2",
             "句子": "The graphite in lithium-ion batteries helps conduct electricity efficiently"
         },
         {
             "等級": "B2",
+            "分類": "科技",
             "Words": "graphite-3",
             "句子": "Due to its high melting point and conductivity, graphite is used in many industrial processes"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "grasp-1",
             "句子": "He grasped the rope tightly to avoid falling"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "grasp-2",
             "句子": "She grasped the handlebars as she navigated the rough trail"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "grasp-3",
             "句子": "She quickly grasped the concept and explained it to the rest of the class"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "grasp-4",
             "句子": "He struggled to grasp the full meaning of the lecture"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "grasp-5",
             "句子": "His grasp on the steering wheel was firm as he drove through the storm"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "grasp-6",
             "句子": "The climber's grasp slipped, but she managed to catch herself"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "grasp-7",
             "句子": "Her grasp of advanced mathematics impressed her professors"
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "grasp-8",
             "句子": "They wanted to ensure everyone had a good grasp of the new procedures"
         },
         {
             "等級": "C2",
+            "分類": "心情",
             "Words": "gratification-1",
             "句子": "Winning the championship was a moment of immense gratification for the team after months of hard work and dedication"
         },
         {
             "等級": "C2",
+            "分類": "心情",
             "Words": "gratification-2",
             "句子": "His son's success was a great gratification to him"
         },
         {
+            "等級": "C2",
+            "分類": "心情",
+            "Words": "gratification-3",
+            "句子": "She experienced deep gratification after completing the challenging project successfully"
+        },
+        {
+            "等級": "C2",
+            "分類": "心情",
+            "Words": "gratification-4",
+            "句子": "The gratification of helping others was what kept him volunteering year after year"
+        },
+        {
             "等級": "B2",
+            "分類": "心情",
             "Words": "gratify-1",
             "句子": "The chef's delicious meal gratified the guests, leaving them satisfied and content"
         },
         {
             "等級": "B2",
+            "分類": "心情",
             "Words": "gratify-2",
             "句子": "Receiving praise for her hard work gratified Sarah, affirming her efforts and boosting her confidence"
         },
         {
             "等級": "C1",
+            "分類": "心情",
             "Words": "gratifying-1",
             "句子": "Seeing her students' progress throughout the semester was a gratifying experience for the teacher, affirming the effectiveness of her teaching methods"
         },
         {
             "等級": "B1",
+            "分類": "人物特性",
             "Words": "greedy-1",
             "句子": "The greedy businessman cared only about maximizing profits, regardless of the impact on others"
         },
         {
             "等級": "B1",
+            "分類": "人物特性",
+            "Words": "greedy-2",
+            "句子": "He was so greedy that he wanted to take all the credit for the team's success"
+        },
+        {
+            "等級": "B1",
+            "分類": "人物特性",
+            "Words": "greedy-3",
+            "句子": "The greedy child refused to share his toys with anyone"
+        },
+        {
+            "等級": "B1",
+            "分類": "人物特性",
+            "Words": "greedy-4",
+            "句子": "Greedy individuals may harm relationships by always seeking more for themselves"
+        },
+        {
+            "等級": "B1",
+            "分類": "人物特性",
+            "Words": "greedy-5",
+            "句子": "Her greedy desire for fame led her to make unethical decisions"
+        },
+        {
+            "等級": "B1",
+            "分類": "心情",
             "Words": "grief-1",
             "句子": "She was overwhelmed by grief after the sudden death of her best friend"
         },
         {
             "等級": "B1",
+            "分類": "心情",
             "Words": "grief-2",
             "句子": "The family found solace in sharing their grief with one another during the funeral service"
         },
         {
             "等級": "B1",
+            "分類": "心情",
             "Words": "grief-3",
             "句子": "Despite the passage of time, the grief of losing her parents never fully subsided"
         },
         {
             "等級": "B1",
+            "分類": "心情",
             "Words": "grief-4",
             "句子": "The community came together to support each other through their collective grief after the tragic accident"
         },
         {
+            "等級": "B1",
+            "分類": "心情",
+            "Words": "grief-5",
+            "句子": "The grief of losing her parents remained with her for many years, even as time passed"
+        },
+        {
             "等級": "C1",
+            "分類": "心情",
             "Words": "grievance-1",
             "句子": "She filed a grievance with the company over unfair treatment by her supervisor"
         },
         {
             "等級": "C1",
+            "分類": "心情",
             "Words": "grievance-2",
             "句子": "The workers expressed their grievances regarding unsafe working conditions"
         },
         {
             "等級": "C1",
+            "分類": "心情",
             "Words": "grievance-3",
             "句子": "The union filed a grievance against the management for violating the terms of the contract"
         },
         {
             "等級": "C1",
+            "分類": "心情",
             "Words": "grievance-4",
             "句子": "The student's grievance about the grading policy was reviewed by the academic committee"
         },
         {
             "等級": "C1",
+            "分類": "心情",
             "Words": "grievance-5",
             "句子": "He has a deep sense of grievance against his former employer"
         },
@@ -22298,13 +22950,21 @@
         },
         {
             "等級": "C2",
+            "分類": "Design",
             "Words": "groundbreaking-1",
             "句子": "The groundbreaking technology developed by the startup company revolutionized the way we communicate, making instant messaging accessible to billions of people worldwide"
         },
         {
             "等級": "C2",
+            "分類": "Design",
             "Words": "groundbreaking-2",
             "句子": "The video could mark the beginning of a potentially groundbreaking trend of using AI in video production"
+        },
+        {
+            "等級": "C2",
+            "分類": "Design",
+            "Words": "groundbreaking-3",
+            "句子": "The groundbreaking ceremony for the new hospital took place yesterday, marking the start of an exciting new chapter for the community"
         },
         {
             "音檔": "音檔 - gruel-1",
@@ -41445,15 +42105,6 @@
             "中文": "和平條約結束了兩個鄰國之間多年的衝突。"
         },
         {
-            "音檔": "音檔 - treaty-4",
-            "等級": "B1",
-            "分類": "法政",
-            "Words": "treaty-4",
-            "名人": "Kofi Annan",
-            "句子": "A treaty is only as strong as the trust and commitment behind it.",
-            "中文": "條約的力量取決於背後的信任與承諾。"
-        },
-        {
             "音檔": "音檔 - treaty-2",
             "等級": "B1",
             "分類": "法政",
@@ -41468,6 +42119,15 @@
             "Words": "treaty-3",
             "句子": "The treaty established clear guidelines for trade between the two regions",
             "中文": "該條約為兩個地區之間的貿易建立了明確的指導方針。"
+        },
+        {
+            "音檔": "音檔 - treaty-4",
+            "等級": "B1",
+            "分類": "法政",
+            "Words": "treaty-4",
+            "名人": "Kofi Annan",
+            "句子": "A treaty is only as strong as the trust and commitment behind it.",
+            "中文": "條約的力量取決於背後的信任與承諾。"
         },
         {
             "等級": "B2",
