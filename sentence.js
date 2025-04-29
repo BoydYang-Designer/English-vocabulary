@@ -500,9 +500,23 @@ function displaySentenceList(sentences) {
     updateAutoPlayButton();
 }
 
+// 如果同時有 #autoPlayBtn 和 #autoPlayBtnDetails，就回傳目前可見的那一顆
+function getAutoPlayBtn() {
+    const btn1 = document.getElementById("autoPlayBtn");
+    const btn2 = document.getElementById("autoPlayBtnDetails");
+    // offsetParent 不為 null 代表實際上在畫面上可見
+    if (btn2 && btn2.offsetParent !== null) return btn2;
+    if (btn1 && btn1.offsetParent !== null) return btn1;
+    // fallback
+    return btn1 || btn2;
+}
+
+
 // 自動播放邏輯
 function toggleAutoPlay() {
-    const autoPlayBtn = document.getElementById("autoPlayBtn") || document.getElementById("autoPlayBtnDetails");
+    const autoPlayBtn = getAutoPlayBtn();
+    if (!autoPlayBtn) return;   // 找不到就不做
+    
     if (isAutoPlaying) {
         stopAutoPlay();
         autoPlayBtn.textContent = "自動播放";
@@ -514,8 +528,9 @@ function toggleAutoPlay() {
     }
 }
 
+
 function startAutoPlay() {
-    const autoPlayBtn = document.getElementById("autoPlayBtn") || document.getElementById("autoPlayBtnDetails");
+    const autoPlayBtn = getAutoPlayBtn();
     isAutoPlaying = true;
 
     if (document.getElementById("wordList").style.display === "block") {
@@ -592,16 +607,13 @@ function playCurrentSentence() {
 }
 
 function updateAutoPlayButton() {
-    const autoPlayBtn = document.getElementById("autoPlayBtn") || document.getElementById("autoPlayBtnDetails");
-    if (autoPlayBtn) {
-        autoPlayBtn.textContent = isAutoPlaying ? "取消播放" : "自動播放";
-        if (isAutoPlaying) {
-            autoPlayBtn.classList.add("auto-playing");
-        } else {
-            autoPlayBtn.classList.remove("auto-playing");
-        }
-    }
+    const autoPlayBtn = getAutoPlayBtn();
+    if (!autoPlayBtn) return;
+    
+    autoPlayBtn.textContent = isAutoPlaying ? "取消播放" : "自動播放";
+    autoPlayBtn.classList.toggle("auto-playing", isAutoPlaying);
 }
+
 
 // 第二層：顯示單字列表
 function showWords(type, value) {
