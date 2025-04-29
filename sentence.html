@@ -52,19 +52,29 @@
             <div id="chineseContainer"></div>
 
             <!-- 播放控制 -->
-            <div class="audio-controls-wrapper">
-                <div class="audio-controls">
-                    <button class="audio-btn" id="playAudioBtn">
-                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
-                    </button>
-                    <button class="audio-btn" onclick="adjustAudioTime(-2.5)">
-                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg" alt="Rewind" width="24" height="24" />
-                    </button>
-                    <button class="audio-btn" id="pauseResumeBtn" onclick="togglePauseAudio(this)">
-                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />
-                    </button>
-                </div>
-            </div>
+            <!-- 播放控制 -->
+<div class="audio-controls-wrapper">
+    <div class="audio-controls">
+      <!-- 播放整句 -->
+      <button class="audio-btn" id="playAudioBtn" onclick="playSentenceAudio(currentSentenceList[currentSentenceIndex].Words + '.mp3')">
+        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg"
+             alt="Play" width="24" height="24" />
+      </button>
+  
+      <!-- 快退 2.5 秒 -->
+      <button class="audio-btn" onclick="adjustAudioTime(-2.5)">
+        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg"
+             alt="Rewind" width="24" height="24" />
+      </button>
+  
+      <!-- 暫停／繼續 按鈕 -->
+      <button class="audio-btn" id="pauseResumeBtn" onclick="togglePauseAudio(this)">
+        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg"
+             alt="Pause" width="24" height="24" />
+      </button>
+    </div>
+  </div>
+  
 
             <!-- 搜尋框 -->
             <div id="searchInDetails">

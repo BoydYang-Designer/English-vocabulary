@@ -13,6 +13,7 @@ let currentWordIndex = -1; // 儲存當前單字的索引
 let isQuizMode = false;   // 標記是否為測驗模式
 let isAutoPlaying = false; // 是否處於自動播放模式
 let isPaused = false;      // 是否暫停
+let lastPlayBtn = null;
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("開始載入資料...");
@@ -942,6 +943,7 @@ function playSentenceAudio(filename) {
     sentenceAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/Sentence%20file/${filename}`;
     if (playBtn) {
         playBtn.classList.add("playing");
+        lastPlayBtn = playBtn;       // ← 記録這顆按鈕
     }
     sentenceAudio.play()
         .then(() => console.log(`✅ 播放 ${filename} 成功`))
@@ -977,14 +979,30 @@ function playSentenceAudio(filename) {
 }
 
 function togglePauseAudio(button) {
+    const pauseBtn = button;  // #pauseResumeBtn 或頁面上的那顆暫停/繼續按鈕
+    // svg 路徑請改成你自己的 icon URL
+    const playIcon  = '<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg"  alt="Play"  width="24" height="24"/>';
+    const pauseIcon = '<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24"/>';
+
     if (sentenceAudio.paused || sentenceAudio.ended) {
+        // ——「繼續播放」邏輯
         sentenceAudio.play();
-        button.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />`;
+        pauseBtn.innerHTML = pauseIcon;
+        // 暫停按鈕去除藍色
+        pauseBtn.classList.remove("auto-playing");
+        // 原本的播放按鈕恢復藍色
+        if (lastPlayBtn) lastPlayBtn.classList.add("playing");
     } else {
+        // ——「暫停」邏輯
         sentenceAudio.pause();
-        button.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />`;
+        pauseBtn.innerHTML = playIcon;
+        // 暫停按鈕加上藍色
+        pauseBtn.classList.add("auto-playing");
+        // 並且讓原本的播放按鈕去掉藍色
+        if (lastPlayBtn) lastPlayBtn.classList.remove("playing");
     }
 }
+
 
 function adjustAudioTime(seconds) {
     sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
