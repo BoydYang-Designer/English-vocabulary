@@ -1,6 +1,7 @@
 {
     "New Words": [
         {
+            "等級": "B2",
             "分類": "Design",
             "Words": "absorb",
             "pronunciation-1": "[əbˋsɔrb]",
@@ -11,15 +12,6 @@
         },
         {
             "等級": "B2",
-            "分類": "娛樂",
-            "Words": "debut",
-            "pronunciation-1": "[ˋdɛb͵ju]",
-            "traditional Chinese": "N.首次露面；初次登臺\nV. 首次公開露面或表演",
-            "English meaning": "\"Debut\" is a noun and verb with the following meanings:\nAs a Noun:\nThe first public appearance or presentation of someone or something, especially in a professional context.\nE.g. The actress made her film debut at the age of sixteen.\nE.g. His debut as a conductor was highly praised by critics.\nE.g. The new smartphone will have its debut next month.\nAs a Verb (debut / debuted / debuting):\nTo make a first appearance or performance in public.\nE.g. The singer debuted her new song on live television.\nE.g. The product debuted to great fanfare at the tech conference.\nE.g. He debuted as a professional basketball player last season.\nSummary:\n\"Debut\" refers to the first appearance or introduction of someone or something, either as a noun (the event) or a verb (to appear for the first time).\nRelated Words:\nIntroduction, launch, premiere, opening\nAntonyms:\nRetirement, withdrawal, exit, conclusion",
-            "Unnamed: 8": "debut",
-            "Unnamed: 9": "debut"
-        },
-        {
             "分類": "Design",
             "Words": "absorption",
             "pronunciation-1": "[əbˋsɔrpʃən]",
@@ -29,6 +21,7 @@
             "Unnamed: 9": "absorption"
         },
         {
+            "等級": "B2",
             "分類": "Design",
             "Words": "abstract",
             "pronunciation-1": "[ˋæbstrækt]-Adj N",
@@ -39,6 +32,7 @@
             "Unnamed: 9": "abstract"
         },
         {
+            "等級": "B2",
             "分類": "Design",
             "Words": "abstractly",
             "pronunciation-1": "[æbˋstræktlɪ]",
@@ -239,6 +233,7 @@
             "Unnamed: 9": "advertising-campaign"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "aerial",
             "pronunciation-1": "[ˋɛrɪəl]",
@@ -278,6 +273,7 @@
             "Unnamed: 9": "aerial-survey"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "aerial-view",
             "pronunciation-1": "aerial view",
@@ -287,6 +283,7 @@
             "Unnamed: 9": "aerial-view"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "aerodynamic",
             "pronunciation-1": "[͵ɛrodaɪˋnæmɪk]",
@@ -296,6 +293,7 @@
             "Unnamed: 9": "aerodynamic"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "aerodynamically",
             "pronunciation-1": "[͵ɛrodaɪˋnæmɪkəlɪ]",
@@ -315,6 +313,7 @@
             "Unnamed: 9": "aerospace"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "aesthetic",
             "pronunciation-1": "[ɛsˋθɛtɪk]",
@@ -324,6 +323,7 @@
             "Unnamed: 9": "aesthetic"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "aesthetically",
             "pronunciation-1": "[ɛsˋθɛtɪklɪ]",
@@ -333,6 +333,7 @@
             "Unnamed: 9": "aesthetically"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "aesthetics",
             "pronunciation-1": "[ɛsˋθɛtɪks]",
@@ -372,6 +373,7 @@
             "Unnamed: 9": "aftermath"
         },
         {
+            "等級": "C1",
             "分類": "人物特性",
             "Words": "agile",
             "pronunciation-1": "[ˋædʒaɪl]",
@@ -512,6 +514,17 @@
             "Unnamed: 9": "almond"
         },
         {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "almost as if",
+            "pronunciation-1": "/ˈɔːlməʊst əz ɪf/",
+            "traditional Chinese": "Phrase.\n彷彿，好像：(表示某件事情看起來或感覺上與另一件事非常相似，儘管實際上並非如此)",
+            "English meaning": "\"Almost as if\" is a phrase used to suggest a comparison or to describe something that feels or appears in a way that is similar to another situation, condition, or scenario, though not exactly the same.\nE.g. She looked at him almost as if she knew what he was thinking.\nE.g. The room was almost as if it had been frozen in time.\nE.g. The weather felt almost as if it was going to rain.\nSummary:\n\"Almost as if\" is used to draw a comparison between two things, suggesting that one situation feels very similar to another, even though it isn't exactly the same.\nRelated Words:\nLike, as though, as if, similar to\nAntonyms:\nUnlike, different from, dissimilar",
+            "Unnamed: 8": "almost as if",
+            "Unnamed: 9": "almost as if"
+        },
+        {
+            "等級": "C1",
             "分類": "技術",
             "Words": "aluminum",
             "pronunciation-1": "[əˋlumɪnəm]",
@@ -711,6 +724,7 @@
             "Unnamed: 9": "annum"
         },
         {
+            "等級": "C1",
             "分類": "技術",
             "Words": "anodization",
             "pronunciation-1": "ˌa-ˌnō-də-ˈzā-shən ",
@@ -720,6 +734,7 @@
             "Unnamed: 9": "anodization"
         },
         {
+            "等級": "C1",
             "分類": "技術",
             "Words": "anodize",
             "pronunciation-1": "ˋæno͵daɪz]",
@@ -1310,6 +1325,7 @@
         },
         {
             "等級": "C1",
+            "分類": "商業",
             "Words": "attainable",
             "pronunciation-1": "[əˋtenəb!]",
             "traditional Chinese": "adj.可達到的；可獲得的",
@@ -1319,6 +1335,7 @@
         },
         {
             "等級": "C1",
+            "分類": "語言",
             "Words": "attribute",
             "pronunciation-1": "[ˋætrə͵bjut]",
             "traditional Chinese": "1.n.屬性；特性，特質\n2.v.把…歸因於；把…歸咎於(+to)",
@@ -1328,6 +1345,7 @@
         },
         {
             "等級": "C2",
+            "分類": "語言",
             "Words": "attribution",
             "pronunciation-1": "[͵ætrəˋbjuʃən]",
             "traditional Chinese": "n.1.歸因：把某個特質或原因給某人或某事。\n2.來源：指出某個想法或信息的來源。",
@@ -1357,6 +1375,7 @@
         },
         {
             "等級": "B1",
+            "分類": "情感",
             "Words": "aura",
             "pronunciation-1": "[ˋɔrə]",
             "traditional Chinese": "n.氣場 光環",
@@ -1366,6 +1385,7 @@
         },
         {
             "等級": "C1",
+            "分類": "商業",
             "Words": "authentic",
             "pronunciation-1": "[ɔˋθɛntɪk]",
             "traditional Chinese": "adj.可信的，真實的，真正的，非假冒的[Z]",
@@ -1375,6 +1395,7 @@
         },
         {
             "等級": "C2",
+            "分類": "商業",
             "Words": "authenticity",
             "pronunciation-1": "[͵ɔθɛnˋtɪsətɪ]",
             "traditional Chinese": "n.真實性",
@@ -1404,6 +1425,7 @@
         },
         {
             "等級": "C1",
+            "分類": "語言",
             "Words": "auxiliary",
             "pronunciation-1": "[ɔgˋzɪljərɪ]",
             "traditional Chinese": "n.輔助者，助手；輔助物\nadj.輔助的",
@@ -1422,6 +1444,7 @@
             "Unnamed: 9": "avatar"
         },
         {
+            "等級": "A2 ",
             "分類": "Design",
             "Words": "background",
             "pronunciation-1": "[ˋbæk͵graʊnd]",
@@ -1462,6 +1485,7 @@
         },
         {
             "等級": "C1",
+            "分類": "建築",
             "Words": "barricade",
             "pronunciation-1": "[ˋbærə͵ked]",
             "traditional Chinese": "n.[C]路障，擋牆，障礙物\nv.在……設置路障",
@@ -1471,6 +1495,7 @@
         },
         {
             "等級": "B2",
+            "分類": "建築",
             "Words": "barrier",
             "pronunciation-1": "[ˋbærɪr]",
             "traditional Chinese": "n.障礙物；路障，柵欄",
@@ -1489,6 +1514,7 @@
             "Unnamed: 9": "beaver"
         },
         {
+            "等級": "B2",
             "分類": "Design",
             "Words": "beforehand",
             "pronunciation-1": "[bɪˋfor͵hænd]",
@@ -1509,6 +1535,7 @@
         },
         {
             "等級": "C2",
+            "分類": "食物",
             "Words": "beta-carotene",
             "pronunciation-1": "beta-carotene",
             "traditional Chinese": "n.β-胡蘿蔔素",
@@ -1518,6 +1545,7 @@
         },
         {
             "等級": "B1",
+            "分類": "情感",
             "Words": "bias",
             "pronunciation-1": "[ˋbaɪəs]",
             "traditional Chinese": "v.1.使存偏見；使有偏心\nn.2.偏見，成見；偏心",
@@ -1527,6 +1555,7 @@
         },
         {
             "等級": "B1",
+            "分類": "情感",
             "Words": "biased",
             "pronunciation-1": "[ˋbaɪəst]",
             "traditional Chinese": "adj.存有偏見的；偏見的",
@@ -1536,6 +1565,7 @@
         },
         {
             "等級": "B1",
+            "分類": "動作",
             "Words": "bind",
             "pronunciation-1": "[baɪnd]",
             "traditional Chinese": "v.1.捆，綁\n   2.使黏結；使連接\nn.【口】困境，尷尬處境[S]",
@@ -1555,6 +1585,7 @@
         },
         {
             "等級": "C2",
+            "分類": "醫學",
             "Words": "biocompatible",
             "pronunciation-1": "[ˌbaɪəʊkəmˈpætəbl]",
             "traditional Chinese": "adj.生物適合的",
@@ -1564,6 +1595,7 @@
         },
         {
             "等級": "B2",
+            "分類": "科技",
             "Words": "biofuel",
             "pronunciation-1": "[ˈbaɪəʊfjʊəl]",
             "traditional Chinese": "n.生質燃料；生物燃料",
@@ -1572,6 +1604,7 @@
             "Unnamed: 9": "biofuel"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "bisect",
             "pronunciation-1": "[baɪˋsɛkt]",
@@ -1592,6 +1625,7 @@
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "blaze",
             "pronunciation-1": "[blez]",
             "traditional Chinese": "n.1.火焰；熊熊燃燒\n    2.鮮明的色彩，燦爛，光輝\nv.1.燃燒， 閃耀\n   2.爆發  快速或劇烈地移\n   3.在（樹）上刻記號",
@@ -1601,6 +1635,7 @@
         },
         {
             "等級": "C2",
+            "分類": "醫學",
             "Words": "bleaching-agent",
             "pronunciation-1": "[ˋblitʃɪŋ ˋedʒənt]",
             "traditional Chinese": "n.漂白劑",
@@ -1610,6 +1645,7 @@
         },
         {
             "等級": "B2",
+            "分類": "軍事",
             "Words": "blockade",
             "pronunciation-1": "[blɑˋked]",
             "traditional Chinese": "n.封鎖；道路阻塞\nv.封鎖",
@@ -1619,6 +1655,7 @@
         },
         {
             "等級": "B2",
+            "分類": "軍事",
             "Words": "blockage",
             "pronunciation-1": "[ˋblɑkɪdʒ]",
             "traditional Chinese": "n.1 阻塞物\n  2.封鎖；妨礙",
@@ -1627,6 +1664,7 @@
             "Unnamed: 9": "blockage"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "blur",
             "pronunciation-1": "[blɝ]",
@@ -1636,6 +1674,7 @@
             "Unnamed: 9": "blur"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "blurry",
             "pronunciation-1": "[ˋblɝɪ]",
@@ -1646,6 +1685,7 @@
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "blush",
             "pronunciation-1": "[blʌʃ]",
             "traditional Chinese": "v.1.(因害羞，尷尬等而)臉紅[(+at/with/for)(+to-v)\nn.1.羞愧\n  2.腮紅粉",
@@ -1655,6 +1695,7 @@
         },
         {
             "等級": "B2",
+            "分類": "軍事",
             "Words": "bombard",
             "pronunciation-1": "[bɑmˋbɑrd]",
             "traditional Chinese": "v.1.砲擊；轟炸\n  2.不斷攻擊；\n      向…連續提出問題(+with)",
@@ -1664,6 +1705,7 @@
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "boredom",
             "pronunciation-1": "[ˋbordəm]",
             "traditional Chinese": "n.無聊；厭倦",
@@ -1673,6 +1715,7 @@
         },
         {
             "等級": "B2",
+            "分類": "商業",
             "Words": "bottom-line",
             "pronunciation-1": "bottom line",
             "traditional Chinese": "ph. 帳本底線，基本意思（或情況），概要",
@@ -1682,6 +1725,7 @@
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "brace",
             "pronunciation-1": "[bres]",
             "traditional Chinese": "v.1.做好準備(+for/against)\n   2.加固\n   3.使繃緊 支撐\nn.1.支柱；支撐物\n   2.【醫】支架\n   3.(牙齒) 矯正器\n   4.大括號[P]",
@@ -1691,6 +1735,7 @@
         },
         {
             "等級": "B1",
+            "分類": "情感",
             "Words": "brave",
             "pronunciation-1": "[brev]",
             "traditional Chinese": "vt.勇敢地面對\nadj.勇敢的\nn.勇士；（北美印第安人的）武士",
@@ -1700,6 +1745,7 @@
         },
         {
             "等級": "B2",
+            "分類": "情感",
             "Words": "bravery",
             "pronunciation-1": "[ˋbrevərɪ]",
             "traditional Chinese": "n.勇敢，勇氣",
@@ -1709,6 +1755,7 @@
         },
         {
             "等級": "B1",
+            "分類": "法政",
             "Words": "breach",
             "pronunciation-1": "[britʃ]",
             "traditional Chinese": "n.1.（對法律等的）破壞，違反；（對他人權利的）侵害\n   2.破裂；裂痕；缺口[C]\nv.1.破壞，違反；侵害 突破",
@@ -1718,6 +1765,7 @@
         },
         {
             "等級": "B1",
+            "分類": "生物",
             "Words": "breed",
             "pronunciation-1": "[brid]",
             "traditional Chinese": "1. n.(尤指經人工培育的動植物)品種(+of)\n2. v.a.育種\n       b.使繁殖，飼養\n       c.養育；教養\n       d.滋生，產生",
@@ -1727,6 +1775,7 @@
         },
         {
             "等級": "B2",
+            "分類": "生物",
             "Words": "breeding",
             "pronunciation-1": "[ˋbridɪŋ]",
             "traditional Chinese": "n.1.生育，生殖；繁殖\n   2.(動物的)飼養；(植物的)培植\n   3.教養(尤指行為或禮貌方面)；訓育",
@@ -1736,6 +1785,7 @@
         },
         {
             "等級": "B1",
+            "分類": "法政",
             "Words": "Brexit",
             "pronunciation-1": "Brexit",
             "traditional Chinese": "n.英國脫離歐盟（Britain與exit的縮寫）",
@@ -1745,6 +1795,7 @@
         },
         {
             "等級": "B2",
+            "分類": "技術",
             "Words": "brittle",
             "pronunciation-1": "[ˋbrɪt!]",
             "traditional Chinese": "adj.1.易碎的 \n     2.易生氣的\n     3.尖利的(聲音)",
@@ -1763,6 +1814,7 @@
             "Unnamed: 9": "brochure"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "bulky",
             "pronunciation-1": "[ˋbʌlkɪ]",
@@ -1803,6 +1855,7 @@
         },
         {
             "等級": "C1",
+            "分類": "情感",
             "Words": "burdensome",
             "pronunciation-1": "[ˋbɝdnsəm]",
             "traditional Chinese": "adj.累贅的；惱人的；繁重的",
@@ -1822,6 +1875,7 @@
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "burst",
             "pronunciation-1": "[bɝst]",
             "traditional Chinese": "vt.vi.1.爆炸；破裂 爆發\n  n.2.爆炸；破裂\n      爆發，突發(+of)",
@@ -1831,6 +1885,7 @@
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "bustle",
             "pronunciation-1": "[ˋbʌsl]",
             "traditional Chinese": "1.vi.vt.奔忙[（+about）\n2.n.忙亂，喧囂\n3.n.衣服或裙子下的蓬鬆擺飾",
@@ -1840,6 +1895,7 @@
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "bustling",
             "pronunciation-1": "[ˋbʌs!ɪŋ]",
             "traditional Chinese": "adj.熙攘的",
@@ -1849,6 +1905,7 @@
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "bypass",
             "pronunciation-1": "[ˋbaɪ͵pæs]",
             "traditional Chinese": "1.n.旁道，旁路\n2.v. a.避開或繞過(地方或地區)\n       b.越過；置…於不顧",
@@ -1858,6 +1915,7 @@
         },
         {
             "等級": "B1",
+            "分類": "植物",
             "Words": "cactus",
             "pronunciation-1": "[ˋkæktəs]",
             "traditional Chinese": "n.【植】仙人掌[C]",
@@ -1867,6 +1925,7 @@
         },
         {
             "等級": "B2",
+            "分類": "自然災害",
             "Words": "calamity",
             "pronunciation-1": "kə-ˈla-mə-tē ",
             "traditional Chinese": "n.災難；大禍；大災害；（巨大的）不幸；苦難",
@@ -1876,6 +1935,7 @@
         },
         {
             "等級": "C1",
+            "分類": "技術",
             "Words": "calibrate",
             "pronunciation-1": "[ˋkælə͵bret]",
             "traditional Chinese": "v.校準",
@@ -1884,6 +1944,7 @@
             "Unnamed: 9": "calibrate"
         },
         {
+            "等級": "C1",
             "分類": "技術",
             "Words": "caliper",
             "pronunciation-1": "[ˋkæləpɚ]",
@@ -1894,6 +1955,7 @@
         },
         {
             "等級": "C2",
+            "分類": "藝術",
             "Words": "calligraphy",
             "pronunciation-1": "[kəˋlɪgrəfɪ]",
             "traditional Chinese": "n.書法 書法藝術",
@@ -1903,6 +1965,7 @@
         },
         {
             "等級": "B1",
+            "分類": "藝術",
             "Words": "canvas",
             "pronunciation-1": "[ˋkænvəs]",
             "traditional Chinese": "n.帆布[U] 油畫布",
@@ -1912,6 +1975,7 @@
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "captivate",
             "pronunciation-1": "[ˋkæptə͵vet]",
             "traditional Chinese": "v.使入迷 ; 迷住",
@@ -1921,6 +1985,7 @@
         },
         {
             "等級": "B2",
+            "分類": "食物",
             "Words": "caramel",
             "pronunciation-1": "[ˋkærəm!]-US",
             "pronunciation-2": "ˈkär-məl",
@@ -1931,6 +1996,7 @@
         },
         {
             "等級": "C2",
+            "分類": "食物",
             "Words": "carbohydrate",
             "pronunciation-1": "[͵kɑrbəˋhaɪdret]",
             "traditional Chinese": "n.碳水化合物",
@@ -1940,6 +2006,7 @@
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "carbon",
             "pronunciation-1": "ˋkɑrbən]",
             "traditional Chinese": "n.1.碳[U]\n2.複寫紙[C][U]\n3.複寫的副本[C]",
@@ -1949,6 +2016,7 @@
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "carbon-dioxide",
             "pronunciation-1": "[ˋkɑrbən ; daɪˋɑksaɪd]",
             "traditional Chinese": "n.【化】二氧化碳",
@@ -1967,6 +2035,7 @@
             "Unnamed: 9": "carbon-emission"
         },
         {
+            "等級": "C1",
             "分類": "環保",
             "Words": "carbon-emissions",
             "pronunciation-1": "carbon emissions",
@@ -1976,6 +2045,7 @@
             "Unnamed: 9": "carbon-emissions"
         },
         {
+            "等級": "C1",
             "分類": "環保",
             "Words": "carbon-footprint",
             "pronunciation-1": "carbon footprint",
@@ -1986,6 +2056,7 @@
         },
         {
             "等級": "C2",
+            "分類": "醫學",
             "Words": "cardiovascular",
             "pronunciation-1": "[͵kɑrdɪoˋvæskjʊlɚ]",
             "traditional Chinese": "adj.心血管的",
@@ -1995,6 +2066,7 @@
         },
         {
             "等級": "B2",
+            "分類": "情感",
             "Words": "carefree",
             "pronunciation-1": "[ˋkɛr͵fri]",
             "traditional Chinese": "adj.無憂無慮的；輕鬆愉快的",
@@ -2004,6 +2076,7 @@
         },
         {
             "等級": "B1",
+            "分類": "藝術",
             "Words": "carve",
             "pronunciation-1": "[kɑrv]",
             "traditional Chinese": "v. 1. 切，雕刻",
@@ -2013,6 +2086,7 @@
         },
         {
             "等級": "C2",
+            "分類": "幻想",
             "Words": "cast-a-spell",
             "pronunciation-1": "cast a spell",
             "traditional Chinese": "ph. 施魔法，用符咒迷惑",
@@ -2022,6 +2096,7 @@
         },
         {
             "等級": "B1",
+            "分類": "娛樂",
             "Words": "catchy",
             "pronunciation-1": "[ˋkætʃɪ]",
             "traditional Chinese": "adj.引起注意（或興趣）的；（曲調等）動聽而易記的",
@@ -2041,6 +2116,7 @@
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "catnap",
             "pronunciation-1": "[ˋkætnæp]",
             "traditional Chinese": "n.打瞌睡；假寐\nv.打瞌睡；假寐",
@@ -2050,6 +2126,7 @@
         },
         {
             "等級": "B1",
+            "分類": "自然",
             "Words": "cave",
             "pronunciation-1": "[kev]",
             "traditional Chinese": "1.n.洞穴，洞窟\n2.v. a.【口】屈服，投降(+in)(+to)\n        b.塌落，倒坍(+in)",
@@ -2059,6 +2136,7 @@
         },
         {
             "等級": "B2",
+            "分類": "建築",
             "Words": "cave-in",
             "pronunciation-1": "cave-in",
             "traditional Chinese": "n.塌方",
@@ -2068,6 +2146,7 @@
         },
         {
             "等級": "C1",
+            "分類": "科學",
             "Words": "celestial",
             "pronunciation-1": "[sɪˋlɛstʃəl]",
             "traditional Chinese": "adj.1.天的，天空的\n     2.天國的；神聖的",
@@ -2077,6 +2156,7 @@
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "cellar",
             "pronunciation-1": "ˋsɛlɚ]",
             "traditional Chinese": "vt.1.把…藏入地窖(或酒窖)\nn.2. 地下室，地窖[C]",
@@ -2086,6 +2166,7 @@
         },
         {
             "等級": "B2",
+            "分類": "科學",
             "Words": "celsius",
             "pronunciation-1": "[ˋsɛlsɪəs]",
             "traditional Chinese": "n.攝氏溫標\nadj.攝氏的",
@@ -2095,6 +2176,7 @@
         },
         {
             "等級": "B1",
+            "分類": "建築",
             "Words": "cement",
             "pronunciation-1": "[sɪˋmɛnt]",
             "traditional Chinese": "n.水泥；膠結材料\nv.1.鞏固，加強；凝成\n   2.用水泥接合+together\n      用水泥塗(+over)",
@@ -2104,6 +2186,7 @@
         },
         {
             "等級": "C2",
+            "分類": "藝術",
             "Words": "centerpiece",
             "pronunciation-1": "[ˋsɛntɚ͵pis]",
             "traditional Chinese": "n.在正中央的東西",
@@ -2113,6 +2196,7 @@
         },
         {
             "等級": "C1",
+            "分類": "科學",
             "Words": "centigrade",
             "pronunciation-1": "[ˋsɛntə͵gred]",
             "traditional Chinese": "n.攝氏溫標\nadj.攝氏的",
@@ -2132,6 +2216,7 @@
         },
         {
             "等級": "C1",
+            "分類": "法政",
             "Words": "cessation",
             "pronunciation-1": "[sɛˋseʃən]",
             "traditional Chinese": "n.停止；中斷[C][U][（+of）",
@@ -2141,6 +2226,7 @@
         },
         {
             "等級": "B1",
+            "分類": "宗教",
             "Words": "chant",
             "pronunciation-1": "[tʃænt]",
             "traditional Chinese": "n.1.詠唱，吟誦\nv.2.反覆(單調)地唱(或說)；吟誦\n     歌頌",
@@ -2150,6 +2236,7 @@
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "chaos",
             "pronunciation-1": "[ˋkeɑs]",
             "traditional Chinese": "n.混亂；雜亂的一團 混沌",
@@ -2168,25 +2255,28 @@
             "Unnamed: 9": "character"
         },
         {
+            "等級": "B2",
             "分類": "人物特性",
             "Words": "characteristic",
             "pronunciation-1": "ker-ik-tə-ˈri-stik ",
-            "traditional Chinese": "n.特點/特徵",
-            "English meaning": "\"Characteristic meaning\" refers to the distinguishing features, qualities, or traits that define or describe something. These attributes help to identify or differentiate one thing from another and contribute to its overall nature or essence.\nIn a person, characteristics might include physical attributes (such as height, hair color, or facial features) as well as personality traits (such as kindness, intelligence, or assertiveness).\nIn a product, characteristics might include its size, shape, color, functionality, and performance.\nIn a place or environment, characteristics might include its climate, geography, culture, and infrastructure.\nUnderstanding the characteristics of something provides insight into what it is like and helps to categorize or analyze it within its context.\nE.g. Her optimism and resilience are two of her most admirable characteristics, enabling her to face challenges with a positive attitude and bounce back from setbacks.\nE.g. The lightweight design is a notable characteristic of this stroller, allowing for easy maneuverability and convenient transportation, especially for busy parents navigating crowded spaces.\nE.g. The rugged landscape and geothermal activity are characteristic of Iceland, offering visitors a unique experience of natural beauty and volcanic terrain.",
+            "traditional Chinese": "n.\n\n1. 特徵、特性\n（指某人、某物或某情況的獨特屬性或特點。）\n2. 特徵、標誌\n（指明顯且具有識別性的特點。）\n\nadj.\n\n3. 具有特徵的\n（形容某物或某人擁有明顯的特點或質素。）",
+            "English meaning": "Characteristic can be a noun and adjective with the following meanings:\nAs a noun\n1. Feature or Trait\nRefers to the unique attributes or traits that define or describe a person, thing, or situation.\nE.g. The characteristic of the machine is its energy efficiency, which sets it apart from others in the market.\nE.g. The characteristic color of the butterfly's wings is a vibrant blue, making it easy to identify.\n2. Distinguishing Mark(Refers to an obvious and identifiable feature or trait.\nE.g. The large, green leaves are a characteristic of the plant, helping to distinguish it from others.\nE.g. A characteristic of the city's architecture is its tall, modern skyscrapers that dominate the skyline.\nAs an adjective\n3. Having Distinctive Features\nDescribes something or someone as having distinct and noticeable traits or qualities.\nE.g. The characteristic smile on her face made everyone feel welcome and at ease.\nE.g. His characteristic enthusiasm for the project inspired the entire team to work harder.\nSummary:\nCharacteristic refers to traits or features that define or distinguish something, whether as a noun for the defining features or as an adjective for something possessing those features.\nRelated Words: trait, feature, quality, attribute.\nAntonyms: unremarkable, ordinary, atypical.",
             "Unnamed: 8": "characteristic",
             "Unnamed: 9": "characteristic"
         },
         {
+            "等級": "B2",
             "分類": "人物特性",
             "Words": "characterize",
             "pronunciation-1": "ˋkærəktə͵raɪz]",
-            "traditional Chinese": "vt.描繪……的特性",
-            "English meaning": "characterize as a verb : characterize characterized characterizing\n\"Characterize meaning\" refers to the act of describing or portraying the essential qualities or features of something, typically a person, thing, situation, or concept. When you characterize something, you are providing an understanding of its nature, attributes, or characteristics. This can involve describing its appearance, behavior, personality traits, motives, or other defining aspects.\nE.g.The novel characterizes the protagonist as a courageous and resilient individual.\nE.g.The politician's speech attempted to characterize the opposing party as incompetent .\nE.g.The CEO's speech aimed to characterize the company's vision for the future, emphasizing innovation and sustainability as core values.",
+            "traditional Chinese": "\n\nv.\n1.描述特徵、界定\n（指描述某人或某物的特徵或性格。）\n\n\n2.使具特徵\n（指賦予某物或某人某種特徵。）\n\n\n3.（在特定的背景下）標示或顯示出\n",
+            "English meaning": "Characterize is a verb with the following meanings:\n1. To Describe or Define the Qualities of Someone or Something(Refers to the act of describing or identifying the distinctive features or qualities that define someone or something.\nE.g.  The novel characterizes the protagonist as a courageous and resilient individual.\nE.g.  The artist's work characterizes the struggle of the working class through vivid imagery and bold colors.\n2. To Portray or Depict in a Specific Way\nRefers to the way someone or something is portrayed or represented, often focusing on specific traits or qualities.\nE.g.  The politician's speech attempted to characterize the opposing party as incompetent.\nE.g.  The documentary characterizes the wildlife of the Amazon as both fragile and incredibly diverse.\n3.To Represent or Embody a Particular Trait\nRefers to the portrayal of someone or something as embodying a specific characteristic or quality.\nE.g.  The CEO's speech aimed to characterize the company's vision for the future, emphasizing innovation and sustainability as core values.\nE.g. Her actions characterize a strong sense of justice and fairness.\nSummary:\nCharacterize means to describe or define the distinctive qualities of someone or something, often focusing on their defining traits, or to portray them in a specific way.\nRelated Words: describe, define, depict, portray, represent.\nAntonyms: misrepresent, distort, obscure.",
             "Unnamed: 8": "characterize",
             "Unnamed: 9": "characterize"
         },
         {
             "等級": "B1",
+            "分類": "人物特性",
             "Words": "charm",
             "pronunciation-1": "[tʃɑrm]",
             "traditional Chinese": "n.1.魅力[C][U]\n   2.符咒，咒語；護身符[C]\n \nv.1.使陶醉；使高興；吸引(+into)\n   2.施魔法",
@@ -2196,6 +2286,7 @@
         },
         {
             "等級": "B2",
+            "分類": "情感",
             "Words": "cherish",
             "pronunciation-1": "[ˋtʃɛrɪʃ]",
             "traditional Chinese": "v.珍愛；撫育；愛護\n  抱有，懷有(希望，感情等)",
@@ -2205,6 +2296,7 @@
         },
         {
             "等級": "C1",
+            "分類": "醫學",
             "Words": "chlorinate",
             "pronunciation-1": "[ˋklorɪ͵net]",
             "traditional Chinese": "vt.使氯化",
@@ -2214,6 +2306,7 @@
         },
         {
             "等級": "C2",
+            "分類": "醫學",
             "Words": "chlorinated",
             "pronunciation-1": "[ˋklorɪnetɪd]",
             "traditional Chinese": "adj.加氯消過毒的",
@@ -2223,6 +2316,7 @@
         },
         {
             "等級": "C2",
+            "分類": "醫學",
             "Words": "chlorination",
             "pronunciation-1": "[klorɪˋneʃn]",
             "traditional Chinese": "n.加氯消毒 , 加氯處理",
@@ -2232,6 +2326,7 @@
         },
         {
             "等級": "B2",
+            "分類": "醫學",
             "Words": "chlorine",
             "pronunciation-1": "[ˋklorin]",
             "traditional Chinese": "n.【化】氯[U]",
@@ -2240,6 +2335,7 @@
             "Unnamed: 9": "chlorine"
         },
         {
+            "等級": "C1",
             "分類": "技術",
             "Words": "choppy",
             "pronunciation-1": "[ˋtʃɑpɪ]",
@@ -2249,6 +2345,7 @@
             "Unnamed: 9": "choppy"
         },
         {
+            "等級": "C1",
             "分類": "技術",
             "Words": "chrome",
             "pronunciation-1": "[krom]",
@@ -2269,6 +2366,7 @@
         },
         {
             "等級": "C2",
+            "分類": "醫學",
             "Words": "chronically",
             "pronunciation-1": "[ˋkrɑnɪklɪ]",
             "traditional Chinese": "adv.慢性地；長期地",
@@ -2278,6 +2376,7 @@
         },
         {
             "等級": "C1",
+            "分類": "生物",
             "Words": "chrysalis",
             "pronunciation-1": "[ˋkrɪsəlɪs]",
             "traditional Chinese": "n.【昆】蝶蛹",
@@ -2297,6 +2396,7 @@
         },
         {
             "等級": "C1",
+            "分類": "生物",
             "Words": "circadian",
             "pronunciation-1": "[sɚˋkedɪən]",
             "traditional Chinese": "adj.晝夜節律的 全天的",
@@ -2305,6 +2405,7 @@
             "Unnamed: 9": "circadian"
         },
         {
+            "等級": "B2",
             "分類": "形狀",
             "Words": "circular",
             "pronunciation-1": "[ˋsɝkjəlɚ]",
@@ -2315,6 +2416,7 @@
         },
         {
             "等級": "B1",
+            "分類": "法政",
             "Words": "cite",
             "pronunciation-1": "[saɪt]",
             "traditional Chinese": "v.1.引…為證；舉出\n   2.【律】傳喚，傳訊 \n   3. 引用\n   4.表揚，表彰；傳令嘉獎(+for)",
@@ -2354,6 +2456,7 @@
         },
         {
             "等級": "C2",
+            "分類": "神學",
             "Words": "clairvoyance",
             "pronunciation-1": "[klɛrˋvɔɪəns]",
             "traditional Chinese": "n.1.千里眼 / 超感知覺\n  2.洞察力 / 直覺",
@@ -2363,6 +2466,7 @@
         },
         {
             "等級": "B1",
+            "分類": "日常生活",
             "Words": "clammy",
             "pronunciation-1": "[ˋklæmɪ]",
             "traditional Chinese": "adj.1潮濕的或黏稠的\n     2.出冷汗的和寒冷的\n(緊張或疾病引起的冷汗或不適的感覺)",
@@ -2422,6 +2526,7 @@
         },
         {
             "等級": "C2",
+            "分類": "醫學",
             "Words": "claustrophobia",
             "pronunciation-1": "[͵klɔstrəˋfobɪə]",
             "traditional Chinese": "n.【醫】幽閉恐怖症",
@@ -2431,6 +2536,7 @@
         },
         {
             "等級": "C2",
+            "分類": "醫學",
             "Words": "claustrophobic",
             "pronunciation-1": "͵klɔstrəˋfobɪk]",
             "traditional Chinese": "adj.患幽閉恐怖症的\nn.幽閉恐怖症患者",
@@ -2450,6 +2556,16 @@
         },
         {
             "等級": "B2",
+            "分類": "醫學",
+            "Words": "cleanse",
+            "pronunciation-1": "[klɛnz]",
+            "traditional Chinese": "V.\n1. 清潔，洗淨：(去除污垢或不純物，使某物變乾淨)\n2. 淨化，清除：(去除有害或不需要的物質，特別是在身體、思想或靈魂方面)",
+            "English meaning": "Cleanse is a verb: (cleanse / cleansed / cleansing) with the following meanings:\n1. To clean something thoroughly, especially to remove dirt, toxins, or harmful substances.\nE.g. She used soap and water to cleanse the wound.\nE.g. The spa offers treatments to cleanse the skin of impurities.\nE.g. He drank herbal tea to cleanse his body of toxins.\n2. To purify something, often in a moral, spiritual, or emotional sense.\nE.g. Meditation helped cleanse his mind of negative thoughts.\nE.g. The ritual was meant to cleanse the soul of past mistakes.\nE.g. The confession cleansed him of guilt.\nSummary:\n\"Cleanse\" means to clean something thoroughly or to purify it, either physically, emotionally, or spiritually.\nRelated Words:\nPurify, wash, disinfect, detox, sanitize\nAntonyms:\nContaminate, pollute, soil, dirty",
+            "Unnamed: 8": "cleanse",
+            "Unnamed: 9": "cleanse"
+        },
+        {
+            "等級": "B2",
             "分類": "Design",
             "Words": "close-up-view",
             "pronunciation-1": "[klos]-[ʌp] [vju]",
@@ -2460,6 +2576,7 @@
         },
         {
             "等級": "C1",
+            "分類": "Design",
             "Words": "clunky",
             "pronunciation-1": "[ˋklʌŋkɪ]",
             "traditional Chinese": "adj. 1.笨重的，沉重的\n      2.不靈活的，設計不佳的\n      3.笨拙的，不流暢的",
@@ -2469,6 +2586,7 @@
         },
         {
             "等級": "B1",
+            "分類": "技術",
             "Words": "clutch",
             "pronunciation-1": "[klʌtʃ]",
             "traditional Chinese": "\nn1.抓住；攫取\n2.【機】離合器；離合器踏板；\n3.手拿包\n\nv.1抓住；攫取",
@@ -2488,6 +2606,7 @@
         },
         {
             "等級": "C2",
+            "分類": "社會",
             "Words": "code-of-ethics",
             "pronunciation-1": "code of ethics",
             "traditional Chinese": "phr.道德準則",
@@ -2497,6 +2616,7 @@
         },
         {
             "等級": "B2",
+            "分類": "社會",
             "Words": "coexist",
             "pronunciation-1": "ˋkoɪgˋzɪst]",
             "traditional Chinese": "vi.共存",
@@ -2506,6 +2626,7 @@
         },
         {
             "等級": "C2",
+            "分類": "社會",
             "Words": "coexistence",
             "pronunciation-1": "[ˋkoɪgˋzɪstəns]",
             "traditional Chinese": "n. 共存，共處",
@@ -2515,6 +2636,7 @@
         },
         {
             "等級": "C1",
+            "分類": "醫學",
             "Words": "cognitive",
             "pronunciation-1": "[ˋkɑgnətɪv]",
             "traditional Chinese": "adj.認知的；認識的",
@@ -2524,6 +2646,7 @@
         },
         {
             "等級": "C1",
+            "分類": "Design",
             "Words": "coherence",
             "pronunciation-1": "[koˋhɪrəns]",
             "traditional Chinese": "n.黏著；凝聚；統一；連貫性",
@@ -2533,6 +2656,7 @@
         },
         {
             "等級": "B2",
+            "分類": "Design",
             "Words": "coherent",
             "pronunciation-1": "[koˋhɪrənt]",
             "traditional Chinese": "adj.1.條理清楚的，連貫的\n    2.一致的，協調的",
@@ -2542,6 +2666,7 @@
         },
         {
             "等級": "B2",
+            "分類": "Design",
             "Words": "cohesion",
             "pronunciation-1": "[koˋhiʒən]",
             "traditional Chinese": "n.結合；凝聚；團結力；附著；【物】內聚力",
@@ -2550,6 +2675,7 @@
             "Unnamed: 9": "cohesion"
         },
         {
+            "等級": "C1 ",
             "分類": "Design",
             "Words": "cohesive",
             "pronunciation-1": "/koʊˈhiːsɪv/ ",
@@ -2559,6 +2685,7 @@
             "Unnamed: 9": "cohesive"
         },
         {
+            "等級": "C1 ",
             "分類": "Design",
             "Words": "cohesive-design",
             "pronunciation-1": "cohesive design",
@@ -2569,6 +2696,7 @@
         },
         {
             "等級": "B2",
+            "分類": "建築",
             "Words": "collapse",
             "pronunciation-1": "[kəˋlæps]",
             "traditional Chinese": "v1.倒塌\n2..(計畫等)突然失敗; (價格)暴跌\nn.突然失敗 倒塌；崩潰\n ",
@@ -2578,6 +2706,7 @@
         },
         {
             "等級": "C2",
+            "分類": "社會",
             "Words": "collectively",
             "pronunciation-1": "[kəˋlɛktɪvlɪ]",
             "traditional Chinese": "adv.全體地；共同地 ",
@@ -2587,6 +2716,7 @@
         },
         {
             "等級": "C1",
+            "分類": "社會",
             "Words": "collision",
             "pronunciation-1": "[kəˋlɪʒən]",
             "traditional Chinese": "n 1.碰撞；相撞\n   2.(意見、利益等的)衝突，抵觸",
@@ -2596,6 +2726,7 @@
         },
         {
             "等級": "C1",
+            "分類": "語言",
             "Words": "colloquial",
             "pronunciation-1": "[kəˋlokwɪəl]",
             "traditional Chinese": "adj.口語的；會話的",
@@ -2615,6 +2746,7 @@
         },
         {
             "等級": "B1",
+            "分類": "形狀",
             "Words": "column",
             "pronunciation-1": "ˋkɑləm]",
             "traditional Chinese": "n.1.圓柱；圓柱狀物[（+of）\n   2.(報紙的 雜誌的)欄，專欄\n   3.(士兵的)縱隊；小分遣隊",
@@ -2624,6 +2756,7 @@
         },
         {
             "等級": "C1",
+            "分類": "科學",
             "Words": "combustion",
             "pronunciation-1": "[kəmˋbʌstʃən]",
             "traditional Chinese": "n.1.燃燒\n   2.燃燒裝置\n   3.極度的激動；騷動；混亂",
@@ -2633,6 +2766,7 @@
         },
         {
             "等級": "C2",
+            "分類": "社會",
             "Words": "commendation",
             "pronunciation-1": "[͵kɑmɛnˋdeʃən]",
             "traditional Chinese": "n.1.表揚，稱讚；推薦[U]\n  2.獎狀，獎賞[C]",
@@ -2662,6 +2796,7 @@
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "commonplace",
             "pronunciation-1": "[ˋkɑmən͵ples]",
             "traditional Chinese": "adj.1.平淡無味的；平凡的\n     2.普遍的\nn.1.司空見慣的事",
@@ -2671,6 +2806,7 @@
         },
         {
             "等級": "B1",
+            "分類": "社會",
             "Words": "compel",
             "pronunciation-1": "[kəmˋpɛl]",
             "traditional Chinese": "v.強制 使不得不 迫使",
@@ -2680,6 +2816,7 @@
         },
         {
             "等級": "C1",
+            "分類": "社會",
             "Words": "compelling",
             "pronunciation-1": "[kəmˋpɛlɪŋ]",
             "traditional Chinese": "adj.1.引人入勝的 難以抗拒的\n     2.令人信服的\n     3.強制的",
@@ -2689,6 +2826,7 @@
         },
         {
             "等級": "C1",
+            "分類": "商業",
             "Words": "competent",
             "pronunciation-1": "[ˋkɑmpətənt]",
             "traditional Chinese": "adj. 有能力的，能幹的；能勝任的",
@@ -2698,6 +2836,7 @@
         },
         {
             "等級": "B2",
+            "分類": "商業",
             "Words": "compile",
             "pronunciation-1": "[kəmˋpaɪl]",
             "traditional Chinese": "v.1.匯編；編輯）\n  2.收集 (彙整)",
@@ -2707,6 +2846,7 @@
         },
         {
             "等級": "C1",
+            "分類": "社會",
             "Words": "compliance",
             "pronunciation-1": "[kəmˋplaɪəns]",
             "traditional Chinese": "n.1.遵守規則、規定或要求的行為\n   2.願意遵守指示或規則的狀態",
@@ -2716,6 +2856,7 @@
         },
         {
             "等級": "C2",
+            "分類": "醫學",
             "Words": "complication",
             "pronunciation-1": "[͵kɑmpləˋkeʃən]",
             "traditional Chinese": "n.1.糾紛；混亂；複雜（化）[U][C]\n   2.【醫】併發症[C]",
@@ -2725,6 +2866,7 @@
         },
         {
             "等級": "C1",
+            "分類": "情感",
             "Words": "composure",
             "pronunciation-1": "[kəmˋpoʒɚ]",
             "traditional Chinese": "n.平靜，鎮靜，沉著[U]",
@@ -2734,6 +2876,7 @@
         },
         {
             "等級": "B2",
+            "分類": "語言",
             "Words": "compound",
             "pronunciation-1": "[kɑmˋpaʊnd]",
             "traditional Chinese": "n.1.化合物；混合物\n  2.複合物\n   3.住宅群，大院\nv.1.增加，加重，使惡化\n   2.使混合；使化合；使合成\nadj.合成的，複合的，混合的",
@@ -2743,6 +2886,7 @@
         },
         {
             "等級": "C1",
+            "分類": "社會",
             "Words": "compulsion",
             "pronunciation-1": "[kəmˋpʌlʃən]",
             "traditional Chinese": "被）強迫，（被）強制[U][+to-v]；強制力，強迫力",
@@ -2752,6 +2896,7 @@
         },
         {
             "等級": "B1",
+            "分類": "法政",
             "Words": "con",
             "pronunciation-1": "[kɑn]",
             "traditional Chinese": "1.v.欺騙\n   n.詐騙",
@@ -2761,6 +2906,7 @@
         },
         {
             "等級": "C1",
+            "分類": "法政",
             "Words": "con-artist",
             "pronunciation-1": "con artist",
             "traditional Chinese": "n.以花言巧語騙人的人",
@@ -2770,6 +2916,7 @@
         },
         {
             "等級": "B2",
+            "分類": "人物特性",
             "Words": "conceit",
             "pronunciation-1": "[kənˋsit]",
             "traditional Chinese": "n.1.自滿，自大，自負[U]\n   2.精心設計或巧妙的想法：",
@@ -2779,6 +2926,7 @@
         },
         {
             "等級": "C1",
+            "分類": "人物特性",
             "Words": "conceited",
             "pronunciation-1": "[kənˋsitɪd]",
             "traditional Chinese": "adj.自負的，驕傲自滿的，自誇的\n   ",
@@ -2788,6 +2936,7 @@
         },
         {
             "等級": "C2",
+            "分類": "科學 ",
             "Words": "concentrate",
             "pronunciation-1": "[ˋkɑnsɛn͵tret]",
             "traditional Chinese": "v.1.全神貫注；全力以赴(+on/upon)\n   2.集中；聚集，集結\nn.濃縮物；濃縮液[C][U]",
@@ -2797,6 +2946,7 @@
         },
         {
             "等級": "C1",
+            "分類": "Design",
             "Words": "conceptual",
             "pronunciation-1": "[kənˋsɛptʃʊəl]",
             "traditional Chinese": "adj.概念上的",
@@ -2805,6 +2955,7 @@
             "Unnamed: 9": "conceptual"
         },
         {
+            "等級": "C1 ",
             "分類": "Design",
             "Words": "conceptually",
             "pronunciation-1": "[kənˋsɛptʃuəlɪ]",
@@ -2815,6 +2966,7 @@
         },
         {
             "等級": "C2",
+            "分類": "社會",
             "Words": "conciliatory",
             "pronunciation-1": "[kənˋsɪlɪə͵torɪ]",
             "traditional Chinese": "adj.1.調解的; 和解的\n     2.安撫的; ",
@@ -2824,6 +2976,7 @@
         },
         {
             "等級": "B2",
+            "分類": "Design",
             "Words": "concrete",
             "pronunciation-1": "[ˋkɑnkrit]",
             "traditional Chinese": "n.混凝土；凝結物\nadj.1.具象的；具體的\n     2.混凝土的",
@@ -2833,6 +2986,7 @@
         },
         {
             "等級": "C1",
+            "分類": "Design",
             "Words": "concretely",
             "pronunciation-1": "[ˋkɑnkrɪtlɪ]",
             "traditional Chinese": "adv.具體地",
@@ -2842,6 +2996,7 @@
         },
         {
             "等級": "B1",
+            "分類": "商業",
             "Words": "confer",
             "pronunciation-1": "[kənˋfɝ]",
             "traditional Chinese": "vi.1.商談，協商(+with/on)\nvt.2.給予，賦予",
@@ -2881,6 +3036,7 @@
         },
         {
             "等級": "B2",
+            "分類": "法政",
             "Words": "confine",
             "pronunciation-1": "[kənˋfaɪn]",
             "traditional Chinese": "v.1. 限制在特定區域或範圍：\n   2. 保持在一定的界線內：",
@@ -2890,6 +3046,7 @@
         },
         {
             "等級": "B2",
+            "分類": "法政",
             "Words": "confines",
             "pronunciation-1": "[kənˋfaɪnz]",
             "traditional Chinese": "n.境界 限度；範圍",
@@ -2899,6 +3056,7 @@
         },
         {
             "等級": "B2",
+            "分類": "商業",
             "Words": "conform",
             "pronunciation-1": "[kənˋfɔrm]",
             "traditional Chinese": "v.1.遵照，遵守\n   2.符合，遵從規章(或習慣)\n   3.適應\n(+to/with)",
@@ -2908,6 +3066,7 @@
         },
         {
             "等級": "C2",
+            "分類": "社會",
             "Words": "confrontation",
             "pronunciation-1": "[͵kɑnfrʌnˋteʃən]",
             "traditional Chinese": "n.1.對抗 沖突\n  2.對質 比較",
@@ -2917,6 +3076,7 @@
         },
         {
             "等級": "C2",
+            "分類": "社會",
             "Words": "confrontational",
             "pronunciation-1": "[͵kɑnfrʌnˋteʃənəl]",
             "traditional Chinese": "adj.1.咄咄逼人的\n     2.對抗的",
@@ -2926,6 +3086,7 @@
         },
         {
             "等級": "C1",
+            "分類": "學術",
             "Words": "conjecture",
             "pronunciation-1": "[kənˋdʒɛktʃɚ]",
             "traditional Chinese": "1.n.推測，猜測；推測的結果\n2.v.推測，猜測",
@@ -2935,6 +3096,7 @@
         },
         {
             "等級": "C2",
+            "分類": "Design",
             "Words": "consecutive",
             "pronunciation-1": "[kənˋsɛkjʊtɪv]",
             "traditional Chinese": "adj.連續不斷的 連貫的",
@@ -2944,6 +3106,7 @@
         },
         {
             "等級": "C1",
+            "分類": "社會",
             "Words": "consensus",
             "pronunciation-1": "[kənˋsɛnsəs]",
             "traditional Chinese": "n.共識 一致",
@@ -2953,6 +3116,7 @@
         },
         {
             "等級": "B2",
+            "分類": "社會",
             "Words": "consent",
             "pronunciation-1": "[kənˋsɛnt]",
             "traditional Chinese": "n.1..同意，贊成，答應[U](+to)\nvi.2.意，贊成，答應(+to)(+to-v)",
@@ -2962,6 +3126,7 @@
         },
         {
             "等級": "B2",
+            "分類": "Design",
             "Words": "consist",
             "pronunciation-1": "[kənˋsɪst]",
             "traditional Chinese": "v.1.在於，存在於[（+in）]\n   2.組成，構成[（+of）]",
@@ -2971,6 +3136,7 @@
         },
         {
             "等級": "C2",
+            "分類": "Design",
             "Words": "consistency",
             "pronunciation-1": "[kənˋsɪstənsɪ]",
             "traditional Chinese": "n.1.一貫；一致；符合；協調[U]\n  2.（液體等的）濃度；黏稠；堅硬；堅硬度",
@@ -2980,6 +3146,7 @@
         },
         {
             "等級": "C1",
+            "分類": "Design",
             "Words": "consistent",
             "pronunciation-1": "[kənˋsɪstənt]",
             "traditional Chinese": "adj.1. 始終如一的,前後一致的(+in)\n    2. 與…一致的；符合的(+with)\n    3.呈現統一的外觀或性格：",
@@ -2989,6 +3156,7 @@
         },
         {
             "等級": "C1",
+            "分類": "法政",
             "Words": "conspiracy",
             "pronunciation-1": "[kənˋspɪrəsɪ]",
             "traditional Chinese": "n.陰謀；謀叛；共謀",
@@ -2998,6 +3166,7 @@
         },
         {
             "等級": "C2",
+            "分類": "建築",
             "Words": "construction-site",
             "pronunciation-1": "construction site",
             "traditional Chinese": "n.建築工地\nn.a building site.",
@@ -3007,6 +3176,7 @@
         },
         {
             "等級": "B2",
+            "分類": "商業",
             "Words": "consult",
             "pronunciation-1": "[kənˋsʌlt]",
             "traditional Chinese": "v.1.與…商量 ; 請教  (+with)\n    當顧問[（+for）\n   2.查閱 ",
@@ -3016,6 +3186,7 @@
         },
         {
             "等級": "C1",
+            "分類": "醫學",
             "Words": "consultant",
             "pronunciation-1": "[kənˋsʌltənt]",
             "traditional Chinese": "n.1.顧問\n   2.會診醫生，顧問醫生",
@@ -3025,6 +3196,7 @@
         },
         {
             "等級": "B2",
+            "分類": "商業",
             "Words": "consumption",
             "pronunciation-1": "[kənˋsʌmpʃən]",
             "traditional Chinese": "n.[U]消耗；用盡；消耗量；消費量",
@@ -3034,6 +3206,7 @@
         },
         {
             "等級": "B1",
+            "分類": "科學",
             "Words": "contain",
             "pronunciation-1": "[kənˋten]",
             "traditional Chinese": "v.1.包含；容納\n   2.控制或抑制某種情況\n   3.包含或擁有某物",
@@ -3043,6 +3216,7 @@
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "contemplate",
             "pronunciation-1": "[ˋkɑntɛm͵plet]",
             "traditional Chinese": "v.1思忖，思量，仔細考慮[+v-ing]\n  2.注視，凝視",
@@ -3052,6 +3226,7 @@
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "contemplation",
             "pronunciation-1": "[͵kɑntɛmˋpleʃən]",
             "traditional Chinese": "n. 1.深思熟慮 周密思考\n   2.沉思，冥想",
@@ -3060,6 +3235,7 @@
             "Unnamed: 9": "contemplation"
         },
         {
+            "等級": "C1 ",
             "分類": "Design",
             "Words": "contemporary",
             "pronunciation-1": "[kənˋtɛmpə͵rɛrɪ]",
@@ -3090,6 +3266,7 @@
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "content",
             "pronunciation-1": "[kənˋtɛnt]",
             "traditional Chinese": "n.1. 內容 內容物 \n   2.含量\n   3.滿足\nadj.滿足的，甘願的\nv.使滿足(+with)",
@@ -3099,6 +3276,7 @@
         },
         {
             "等級": "C2",
+            "分類": "商業",
             "Words": "Content-marketing",
             "pronunciation-1": "Content marketing",
             "traditional Chinese": "n.內容行銷",
@@ -3108,6 +3286,7 @@
         },
         {
             "等級": "C2",
+            "分類": "社會",
             "Words": "contentment",
             "pronunciation-1": "[kənˋtɛntmənt]",
             "traditional Chinese": "n.滿足，知足；滿意[U]",
@@ -3116,7 +3295,8 @@
             "Unnamed: 9": "contentment"
         },
         {
-            "等級": "C1",
+            "等級": "C2",
+            "分類": "商業",
             "Words": "contingent",
             "pronunciation-1": "[kənˋtɪndʒənt]",
             "traditional Chinese": "adj.1.附帶的(+to)；以…為條件的(+on/upon)\n     2.可能的，不一定的；難以預料的\nn.1.分遣隊；代表團；\n   2.意外事故；偶然事件",
@@ -3145,6 +3325,8 @@
             "Unnamed: 9": "continuous"
         },
         {
+            "等級": "B2",
+            "分類": "語言",
             "Words": "contrary",
             "pronunciation-1": "[ˋkɑntrɛrɪ]",
             "traditional Chinese": "adj. 1.相反的，對立的(+to)\nn.2.相反；對立面\nadv.3.相反地；反對地(+to)",
@@ -3153,6 +3335,7 @@
             "Unnamed: 9": "contrary"
         },
         {
+            "等級": "B2",
             "分類": "Design",
             "Words": "contrast",
             "pronunciation-1": "ˋkɑn͵træst]",
@@ -3163,6 +3346,7 @@
         },
         {
             "等級": "C2",
+            "分類": "社會",
             "Words": "controversial",
             "pronunciation-1": "[͵kɑntrəˋvɝʃəl]",
             "traditional Chinese": "adj.爭論的；有爭議的",
@@ -3172,6 +3356,7 @@
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "converge",
             "pronunciation-1": "[kənˋvɝdʒ]",
             "pronunciation-2": "diverge",
@@ -3182,6 +3367,7 @@
         },
         {
             "等級": "C1",
+            "分類": "商業",
             "Words": "conversion",
             "pronunciation-1": "[kənˋvɝʃən]",
             "traditional Chinese": "n.1.(宗教)改變信仰；皈依\n  2.(數學/科學)單位轉換\n  3.(法律)挪用\n  4.(程式)轉檔\n  5.(市場行銷)行銷轉換率",
@@ -3191,6 +3377,7 @@
         },
         {
             "等級": "B1",
+            "分類": "商業",
             "Words": "convey",
             "pronunciation-1": "[kənˋve]",
             "traditional Chinese": "v.1.傳達，傳遞，表達(+to)(that)\n   2.運送，搬運，轉運(+from/to)\n   3.轉讓(財產等)(+to)",
@@ -3200,6 +3387,7 @@
         },
         {
             "等級": "C1",
+            "分類": "法政",
             "Words": "conviction",
             "pronunciation-1": "[kənˋvɪkʃən]",
             "traditional Chinese": "n.1.定罪；證明有罪\n   2.確信，信念[U][C](that)",
@@ -3219,6 +3407,7 @@
         },
         {
             "等級": "C2",
+            "分類": "商業",
             "Words": "copyright-infringement",
             "pronunciation-1": "copyright infringement",
             "traditional Chinese": "ph.侵犯版權",
@@ -3228,6 +3417,7 @@
         },
         {
             "等級": "B1",
+            "分類": "軍事",
             "Words": "cordon",
             "pronunciation-1": "[ˋkɔrdn]",
             "traditional Chinese": "1.n.封鎖線；警戒線\n2.v.包圍隔離（某地區）（常與off連用）",
@@ -3237,6 +3427,7 @@
         },
         {
             "等級": "C2",
+            "分類": "商業",
             "Words": "corporate-ladder",
             "pronunciation-1": "corporate ladder",
             "traditional Chinese": "n.企業階梯",
@@ -3246,6 +3437,7 @@
         },
         {
             "等級": "C1",
+            "分類": "日常生活",
             "Words": "correspond",
             "pronunciation-1": "/ˌkorəˈspɑːnd/",
             "traditional Chinese": "vt.1.符合，一致(+to/with)\n   2.通信[（+with） \n",
@@ -3255,6 +3447,7 @@
         },
         {
             "等級": "C2",
+            "分類": "日常生活",
             "Words": "corresponding",
             "pronunciation-1": "[͵kɔrɪˋspɑndɪŋ]",
             "traditional Chinese": "adj.符合的；一致的；相同的；對應的；相當的",
@@ -3264,6 +3457,7 @@
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "corridor",
             "pronunciation-1": "[ˋkɔrɪdɚ]",
             "traditional Chinese": "n.1.走廊，迴廊，通道\n   2.狹長通道；空中走廊",
@@ -3293,6 +3487,7 @@
         },
         {
             "等級": "B2",
+            "分類": "日常生活",
             "Words": "cosmetic",
             "pronunciation-1": "[kɑzˋmɛtɪk]",
             "traditional Chinese": "adj.1.化妝用的；化妝品的\n     2.裝飾性的；表面的\nn.化妝品；裝飾品[P]",
@@ -3302,15 +3497,17 @@
         },
         {
             "等級": "C1",
+            "分類": "商業",
             "Words": "counselor",
             "pronunciation-1": "[ˋkaʊns!ɚ]",
             "traditional Chinese": "n.顧問 輔導員",
-            "English meaning": "A \"counselor\" is a professional trained to provide guidance, support, and assistance to individuals or groups facing personal, social, emotional, or psychological challenges. Counselors work in various settings such as schools, colleges, hospitals, community centers, or private practices, and they may specialize in areas such as mental health, education, career development, or substance abuse.\nE.g. After experiencing difficulties adjusting to college life, she sought help from a campus counselor who provided her with coping strategies and emotional support.\nE.g. A school counselor helps students with academic, social, and emotional issues.\ncounselors focus on providing support and guidance for personal, social, or emotional challenges, consultants offer expert advice and solutions in specific professional or organizational contexts.",
+            "English meaning": "Counselor is a noun that refers to a professional who is trained to offer guidance, support, and assistance to individuals or groups facing personal, emotional, social, or psychological challenges. Counselors may work in various environments, such as schools, hospitals, community centers, or private practices, and may specialize in areas like mental health, career development, education, or substance abuse.\nE.g. After experiencing difficulties adjusting to college life, she sought help from a campus counselor who provided her with coping strategies and emotional support.\nE.g. A school counselor helps students with academic, social, and emotional issues.\nE.g. The counselor at the clinic assisted the family in addressing their child's behavioral challenges and offered strategies to improve communication.\nSummary:\nA counselor is a professional who helps individuals or groups with personal, emotional, or psychological difficulties, offering strategies for coping and emotional well-being.\nRelated Words: therapist, advisor, guide, psychologist, social worker.\nAntonyms: critic, adversary, opponent.",
             "Unnamed: 8": "counselor",
             "Unnamed: 9": "counselor"
         },
         {
             "等級": "B1",
+            "分類": "Design",
             "Words": "craft",
             "pronunciation-1": "[kræft]",
             "traditional Chinese": "v.1.熟練地製作\nn.1.手藝[C][U]\n   2.工藝[C][U]",
@@ -3319,25 +3516,28 @@
             "Unnamed: 9": "craft"
         },
         {
+            "等級": "B2 ",
             "分類": "職業",
             "Words": "craftsman",
             "pronunciation-1": "[ˋkræftsmən]",
-            "traditional Chinese": "n.工匠；技工；巧匠；工藝師",
-            "English meaning": "A \"craftsman\" refers to a skilled worker who specializes in making things by hand. They often possess expertise in a particular craft or trade and are known for their ability to produce high-quality, often bespoke, items.",
+            "traditional Chinese": "n.工匠；工藝師",
+            "English meaning": "Craftsman is a noun referring to a skilled worker who creates or builds things by hand with great expertise, often in a specific trade or craft. A craftsman is known for producing high-quality, intricate work, demonstrating mastery in their field.\n\nE.g.The craftsman spent years perfecting his woodworking skills, creating intricate furniture that was both functional and beautiful.\nE.g.The jeweler was a true craftsman, designing intricate necklaces that took hours of detailed work.\nE.g.The blacksmith, a true craftsman, forged metal into beautiful, durable tools and weapons.\nE.g.Her pottery was highly sought after, with each piece reflecting the skill and care of a seasoned craftsman.\n\nSummary:\nA craftsman is an expert in a trade or craft, producing finely crafted objects with skill and precision.\n\nRelated Words: artisan, builder, maker, creator.\nAntonyms: amateur, novice, unskilled worker.",
             "Unnamed: 8": "craftsman",
             "Unnamed: 9": "craftsman"
         },
         {
             "等級": "C2",
+            "分類": "Design",
             "Words": "craftsmanship",
             "pronunciation-1": "K[ˋkræftsmən͵ʃɪp]",
             "traditional Chinese": "n.做工; 技藝",
-            "English meaning": "\"Craftsmanship\" refers to the quality of skill and artistry shown in making something by hand or using traditional methods. It emphasizes the high level of skill, attention to detail, and precision involved in creating a product.\nE.g. The fine craftsmanship of the table is remarkable.\nE.g. The craftsmanship of the antique furniture was evident in its intricate carvings and sturdy construction.\"\nE.g. \"The craftsmanship of the handmade rugs from the region has been passed down through generations.\"",
+            "English meaning": "Craftsmanship is a noun that refers to the quality of skill and artistry demonstrated in making something by hand or using traditional methods. It emphasizes high levels of skill, precision, attention to detail, and the artistry involved in creating a product.\nE.g.The fine craftsmanship of the table is remarkable.\nE.g.The craftsmanship of the antique furniture was evident in its intricate carvings and sturdy construction.\nE.g.The craftsmanship of the handmade rugs from the region has been passed down through generations.\nE.g.He admired the craftsmanship of the watch, noting the delicate engravings and smooth finish.\nSummary:\nCraftsmanship refers to the high level of skill and attention to detail involved in the creation of a product, often highlighting traditional or hand-made methods.\nRelated Words: artistry, skill, expertise, workmanship, mastery.\nAntonyms: clumsiness, incompetence, inaccuracy, roughness.",
             "Unnamed: 8": "craftsmanship",
             "Unnamed: 9": "craftsmanship"
         },
         {
             "等級": "B1",
+            "分類": "醫學",
             "Words": "cramp",
             "pronunciation-1": "[kræmp]",
             "traditional Chinese": "n.抽筋，痙攣[C][U",
@@ -3347,10 +3547,11 @@
         },
         {
             "等級": "B2",
+            "分類": "心情",
             "Words": "craving",
             "pronunciation-1": "[ˋkrevɪŋ]",
             "traditional Chinese": "n.渴望，熱望[C](+for)",
-            "English meaning": "\"Craving\" refers to a powerful desire or longing for something. It often implies a strong need or urge that can be difficult to ignore.\nE.g.The miserable girl had a craving for sympathy.\nE.g. His craving for adventure led him to travel around the world.\nE.g. After a long day of work, he had a craving for a hot bowl of ramen.\nE.g. His craving for success motivated him to work late into the night.",
+            "English meaning": "Craving is a noun that refers to a powerful desire or longing for something. It often implies a strong need or urge that can be difficult to ignore.\nE.g.The miserable girl had a craving for sympathy.\nE.g.His craving for adventure led him to travel around the world.\nE.g.After a long day of work, he had a craving for a hot bowl of ramen.\nE.g.His craving for success motivated him to work late into the night.\nE.g.She had a craving for chocolate and couldn’t resist buying a bar from the store.\nSummary:\nCraving refers to an intense or strong desire for something, often one that is hard to resist or ignore.\nRelated Words: longing, desire, hunger, urge, appetite.\nAntonyms: indifference, aversion, dislike, contentment.",
             "Unnamed: 8": "craving",
             "Unnamed: 9": "craving"
         },
@@ -3396,6 +3597,7 @@
         },
         {
             "等級": "C1",
+            "分類": "商業",
             "Words": "credential",
             "pronunciation-1": "[krɪˋdɛnʃəl]",
             "traditional Chinese": "n.1.證書\n   2.資歷 資格\n   3.憑證(系統或服務)",
@@ -3405,6 +3607,7 @@
         },
         {
             "等級": "B1",
+            "分類": "宗教",
             "Words": "creed",
             "pronunciation-1": "[krid]",
             "traditional Chinese": "n.教義，信條",
@@ -3607,6 +3810,7 @@
             "Unnamed: 9": "cunning"
         },
         {
+            "等級": "C1 ",
             "分類": "Design",
             "Words": "curate",
             "pronunciation-1": "[ˋkjʊrɪt]",
@@ -3636,6 +3840,7 @@
             "Unnamed: 9": "custody"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "cutting-edge",
             "pronunciation-1": "cutting-edge",
@@ -3645,6 +3850,7 @@
             "Unnamed: 9": "cutting-edge"
         },
         {
+            "等級": "B2",
             "分類": "形狀",
             "Words": "cylinder",
             "pronunciation-1": "[ˋsɪlɪndɚ]",
@@ -3654,6 +3860,7 @@
             "Unnamed: 9": "cylinder"
         },
         {
+            "等級": "B2",
             "分類": "形狀",
             "Words": "cylindrical",
             "pronunciation-1": "[sɪˋlɪndrɪk!]",
@@ -3688,6 +3895,26 @@
             "English meaning": "Deadlock can be used as both a verb and a noun, referring to a situation where no progress or agreement can be made due to opposing positions or forces.\nAs a Verb: deadlock / deadlocked / deadlocking\nTo bring about a situation where no agreement or decision can be made due to opposing positions:\nThis refers to causing a stalemate or impasse, often in negotiations or discussions, where both sides refuse to compromise.\nE.g. The negotiations deadlocked when both parties refused to budge on their demands.\nE.g. The two teams deadlocked in a scoreless match.\nE.g. Her home run deadlocked the game at 3–3.\nAs a Noun:\nA situation where no progress can be made because two opposing sides are equally strong and neither is willing to change their position : This refers to an impasse or stalemate in which both sides are stuck, and no resolution can be achieved.\nE.g. The board meeting ended in a deadlock, with no decision reached on the proposed merger.\nE.g. Today's meeting with the supervisor regarding employee workload ended in a deadlock.\nSummary\n\"Deadlock\" refers to a situation in which no agreement or progress can be made due to opposing positions or forces.\nRelated Words : stalemate, impasse, gridlock, standstill\nAntonyms : agreement, resolution, compromise, breakthrough",
             "Unnamed: 8": "deadlock",
             "Unnamed: 9": "deadlock"
+        },
+        {
+            "等級": "B2",
+            "分類": "自然災害",
+            "Words": "debris",
+            "pronunciation-1": "[dəˋbri]",
+            "traditional Chinese": "N.\n殘骸，瓦礫：(指破壞後留下的物體碎塊，如建築物倒塌後的殘骸或爆炸後的碎片)\n",
+            "English meaning": "Debris is a noun that means scattered fragments or remains of something that has been broken, destroyed, or discarded.\nE.g. After the storm, debris from fallen trees covered the streets.\nE.g. The explosion left debris scattered across the entire area.\nE.g. Workers cleared the construction debris from the site.\nSummary:\n\"Debris\" refers to broken or scattered pieces of material, often resulting from destruction or waste.\nRelated Words:\nWreckage, rubble, remains, litter, fragments\nAntonyms:\nCleanliness, order, intactness, structure",
+            "Unnamed: 8": "debris",
+            "Unnamed: 9": "debris"
+        },
+        {
+            "等級": "B2",
+            "分類": "娛樂",
+            "Words": "debut",
+            "pronunciation-1": "[ˋdɛb͵ju]",
+            "traditional Chinese": "N.首次露面；初次登臺\nV. 首次公開露面或表演",
+            "English meaning": "\"Debut\" is a noun and verb with the following meanings:\nAs a Noun:\nThe first public appearance or presentation of someone or something, especially in a professional context.\nE.g. The actress made her film debut at the age of sixteen.\nE.g. His debut as a conductor was highly praised by critics.\nE.g. The new smartphone will have its debut next month.\nAs a Verb (debut / debuted / debuting):\nTo make a first appearance or performance in public.\nE.g. The singer debuted her new song on live television.\nE.g. The product debuted to great fanfare at the tech conference.\nE.g. He debuted as a professional basketball player last season.\nSummary:\n\"Debut\" refers to the first appearance or introduction of someone or something, either as a noun (the event) or a verb (to appear for the first time).\nRelated Words:\nIntroduction, launch, premiere, opening\nAntonyms:\nRetirement, withdrawal, exit, conclusion",
+            "Unnamed: 8": "debut",
+            "Unnamed: 9": "debut"
         },
         {
             "等級": "B1",
@@ -3744,6 +3971,7 @@
             "Unnamed: 9": "deception"
         },
         {
+            "等級": "C1",
             "分類": "人物特性",
             "Words": "decisive",
             "pronunciation-1": "[dɪˋsaɪsɪv]",
@@ -3762,13 +3990,14 @@
             "Unnamed: 9": "declaration"
         },
         {
+            "等級": "B2",
             "分類": "Design",
-            "Words": "decor",
+            "Words": "décor",
             "pronunciation-1": "[deˋkɔr]",
             "traditional Chinese": "n.裝飾，室內裝潢",
             "English meaning": "Décor is a noun with the following meaning:\nThe style and design of the interior of a room, building, or space, including furniture, colors, and decorative elements.\nE.g. The living room's decor was modern, with sleek furniture and neutral tones.\nE.g. She spent hours perfecting the decor for her wedding, choosing elegant flowers and vintage decorations.\nE.g. The restaurant’s decor had an industrial feel, with exposed brick walls and metal furniture.\nSummary: \"Décor\" refers to the decorative elements and overall style that create a particular atmosphere or design in a space.\nRelated Words: Interior design, Furnishings, Style, Decoration\nAntonyms: Simplicity, Bare, Plain, Spartan",
-            "Unnamed: 8": "decor",
-            "Unnamed: 9": "decor"
+            "Unnamed: 8": "décor",
+            "Unnamed: 9": "décor"
         },
         {
             "等級": "B1",
@@ -3880,6 +4109,7 @@
             "Unnamed: 9": "depiction"
         },
         {
+            "等級": "C1",
             "分類": "環保",
             "Words": "deplete",
             "pronunciation-1": "[dɪˋplit]",
@@ -4377,6 +4607,7 @@
             "Unnamed: 8": "dormant"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "dotted-line",
             "pronunciation-1": "[ɪmˋbɑdɪ]",
@@ -4386,12 +4617,14 @@
             "Unnamed: 9": "dotted-line"
         },
         {
+            "等級": "C1",
             "分類": "技術",
             "Words": "dovetail",
             "pronunciation-1": "[ˋdʌv͵tel]",
             "traditional Chinese": "v.1.使吻合\n   2.用鳩尾榫頭接合\nn.鳩尾榫頭；楔形榫頭",
             "English meaning": "Dovetail is a verb and noun with the following meanings:\nAs a Verb: dovetail / dovetailed / dovetailing\n1. To fit or combine precisely and harmoniously, especially referring to ideas, plans, or pieces of work that complement each other well.\nE.g. The two departments dovetail their projects to ensure a seamless workflow.\nE.g. Her goals dovetail perfectly with the company's mission.\n2. In carpentry, to join two pieces of wood with interlocking, fan-shaped cutouts for a secure and durable fit.\nE.g. The carpenter dovetailed the drawers to ensure a sturdy construction.\nAs a Noun:\nA type of woodworking joint where two pieces of wood are joined with interlocking, fan-shaped projections, making a strong and durable connection.\nE.g. The cabinet’s dovetail joints enhance its durability and craftsmanship.\nE.g. The dovetail was skillfully crafted to create a perfect fit between the wooden panels.\nSummary:\n\"Dovetail\" means to fit or align closely and effectively, either conceptually or physically. It also refers to a precise woodworking joint that interlocks two pieces of wood securely.\nRelated Words : Align, Interlock, Harmonize, Fit together\nAntonyms : Clash, Separate, Mismatch",
-            "Unnamed: 8": "dovetail"
+            "Unnamed: 8": "dovetail",
+            "Unnamed: 9": "dovetail"
         },
         {
             "等級": "B1",
@@ -4550,37 +4783,45 @@
             "Unnamed: 8": "elicit"
         },
         {
+            "等級": "C1",
             "分類": "形狀",
             "Words": "ellipse",
             "pronunciation-1": "[ɪˋlɪps]",
             "traditional Chinese": "n.1.橢圓\n   2.省略字",
             "English meaning": "Ellipse is a noun with the following meanings:\nGeometry: A closed curve around two focal points such that the sum of the distances to the focal points is constant for every point on the curve. It is a type of conic section.\nE.g. The orbits of planets around the sun are elliptical in shape.\nE.g. The garden was designed with an ellipse in the center for a unique look.\nLinguistics: The omission of one or more words in a sentence that are understood from the context but are not explicitly stated.\nE.g. In the sentence “She can play the guitar, and he, the piano,” the word “can” is omitted after “he” due to ellipsis.\nE.g. I went to the store, and she to the park\" uses ellipsis to omit the repeated verb.\nSummary: An \"ellipse\" refers to a specific geometric shape or a linguistic device where parts of a sentence are omitted but implied.\nRelated Words: oval, curve, conic section. Antonyms: circle (for shape); complete sentence (for linguistic use).",
-            "Unnamed: 8": "ellipse"
+            "Unnamed: 8": "ellipse",
+            "Unnamed: 9": "ellipse"
         },
         {
+            "等級": "C1",
             "分類": "形狀",
             "Words": "elliptical",
             "pronunciation-1": "[ɪˋlɪptɪk!]",
             "pronunciation-2": "elliptic ",
             "traditional Chinese": "adj.1.橢圓形的\n     2.省略的\nn. 滑步機",
             "English meaning": "Elliptical is an adjective and a noun with the following meanings:\nAs an Adjective:\n1. Shape: Describes a shape or path that is elongated and rounded, similar to an ellipse.\nE.g. The design of the new stadium features an elliptical shape.\nE.g. The elliptical orbit of the planet around the sun was observed by the scientists.\n2. Language: Refers to a style of writing or speech that is vague or indirect, often omitting details for brevity.\nE.g. The president’s elliptical remarks left many unsure of his exact stance on the issue.\nE.g. The writer’s use of elliptical phrasing made the poem open to multiple interpretations.\nAs a Noun : Exercise Machine: A fitness machine that simulates walking, running, or stair climbing with a smooth, elliptical motion, often used for cardiovascular workouts.\nE.g. She uses the elliptical at the gym to get a low-impact cardiovascular workout.\nE.g. The new elliptical in the fitness center has various settings to adjust the intensity of the exercise.\nSummary: \"Elliptical\" as an adjective describes something with an elongated, rounded shape or an indirect style of communication. As a noun, it refers to a type of exercise machine that provides a smooth, elliptical motion for cardiovascular workouts.\nRelated Words: oval, elliptical orbit, indirect, ambiguous. Antonyms: circular (for shape), direct (for communication).",
-            "Unnamed: 8": "elliptical"
+            "Unnamed: 8": "elliptical",
+            "Unnamed: 9": "elliptical"
         },
         {
+            "等級": "C1",
             "分類": "形狀",
             "Words": "elongate",
             "pronunciation-1": "[ɪˋlɔŋ͵get]",
             "traditional Chinese": "v.1.拉長；伸長；\n   2.延長長度或持續時間。\nadj.1.伸長的；延長的",
             "English meaning": "Elongate is a verb and an adjective with the following meanings:\nAs a Verb: elongate / elongated / elongating\n1. To make something longer, especially by stretching or extending it.\nE.g. The designer decided to elongate the sleeves to create a more dramatic look.\nE.g. The road was elongated to connect the two cities.\n2. To extend in length or duration.\nE.g. The meeting was elongated due to the number of discussions.\nE.g. The scientist wanted to elongate the experiment to gather more data.\nAs an Adjective: elongated\nDescribing something that has been stretched or made longer than usual.\nE.g. The elongated neck of the giraffe allowed it to reach the high leaves.\nE.g. The building's elongated shape made it stand out against the skyline.\nE.g. The artist drew an elongated circle to create a sense of movement in the piece.\nSummary:\nElongate refers to making something longer either physically or in terms of duration. It can also describe something that is stretched or extended in form.\nRelated Words : Stretch, extend, lengthen, prolong, broaden\nAntonyms : Shorten, contract, compress, reduce",
-            "Unnamed: 8": "elongate"
+            "Unnamed: 8": "elongate",
+            "Unnamed: 9": "elongate"
         },
         {
+            "等級": "C1",
             "分類": "形狀",
             "Words": "elongation",
             "pronunciation-1": "[ɪ͵lɔŋˋgeʃən]",
             "traditional Chinese": "n.伸長；延長[U]\n",
             "English meaning": "Elongation is a noun that refers to the act or process of making something longer, or the state of being stretched or extended in length.\nE.g. The elongation of the metal occurred when it was heated and pulled into a wire.\nE.g. The elongation of the road improved access to the new neighborhood.\nE.g. The elongation of the muscles during the stretch helped improve flexibility.\nE.g. The dotted lines indicate the elongation of the handlebar adjustment for people with different height requirements.\nSummary:\nElongation refers to the process of lengthening or stretching something.\nRelated Words : Extension, lengthening, stretching, prolongation\nAntonyms : Contraction, shortening, compression, reduction",
-            "Unnamed: 8": "elongation"
+            "Unnamed: 8": "elongation",
+            "Unnamed: 9": "elongation"
         },
         {
             "等級": "B2",
@@ -4597,6 +4838,16 @@
             "traditional Chinese": "n.1.開始一段旅程、專案或冒險。\n    2.登上輪船、飛機或其他交通工具。",
             "English meaning": "\"Embark\" is a verb :  embark embarked  embarking : that means to begin a journey, project, or venture, often with a sense of purpose or commitment. It can also specifically refer to boarding a ship, aircraft, or other mode of transportation.\n1. To begin a journey, project, or venture.\nE.g. They decided to embark on a road trip across the country to explore new places.\nE.g. She embarked on a new career path after years of working in finance.\n2. To board a ship, aircraft, or other mode of transportation.\nE.g. The passengers began to embark on the cruise ship, excited for the upcoming voyage.\nSummary:\n\"Embark\" is used to describe the start of a significant journey, project, or experience, whether it involves literal travel or a new phase in life.",
             "Unnamed: 8": "embark"
+        },
+        {
+            "等級": "B2",
+            "分類": "日常生活",
+            "Words": "embarrassment",
+            "pronunciation-1": "[ɪmˋbærəsmənt]",
+            "traditional Chinese": "N.\n尷尬，難堪：(因某事感到羞愧或不自在的情緒)\n令人尷尬的事物或情況：(讓人覺得不安或難堪的事情)\n財務困境，拮据：(經濟狀況困難，資金短缺)",
+            "English meaning": "Embarrassment is a noun that means a feeling of self-consciousness, shame, or awkwardness caused by a situation or mistake.\nE.g. She felt deep embarrassment when she forgot her speech in front of the audience.\nE.g. His voice cracked while speaking, and he turned red with embarrassment.\nE.g. Losing his wallet twice in one week was a source of great embarrassment for him.\nSummary:\n\"Embarrassment\" refers to a feeling of awkwardness, shame, or discomfort caused by an uncomfortable or humiliating situation.\nRelated Words:\nHumiliation, shame, awkwardness, discomfort, self-consciousness\nAntonyms:\nConfidence, pride, comfort, assurance",
+            "Unnamed: 8": "embarrassment",
+            "Unnamed: 9": "embarrassment"
         },
         {
             "等級": "B1",
@@ -4623,6 +4874,7 @@
             "Unnamed: 8": "embellishment"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "embody",
             "pronunciation-1": "[ɪmˋbɑdɪ]",
@@ -4684,6 +4936,7 @@
             "Unnamed: 9": "emphasis"
         },
         {
+            "等級": "B2",
             "分類": "Design",
             "Words": "enable",
             "pronunciation-1": "[ɪnˋeb!]",
@@ -4875,6 +5128,7 @@
             "Unnamed: 9": "era"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "ergonomic",
             "pronunciation-1": "[͵ɝgəˋnɑmɪk]",
@@ -4884,6 +5138,7 @@
             "Unnamed: 9": "ergonomic"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "ergonomically",
             "pronunciation-1": "[͵ɝgəˋnɑmɪk!ɪ]",
@@ -4893,6 +5148,7 @@
             "Unnamed: 9": "ergonomically"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "ergonomics",
             "pronunciation-1": "[͵ɝgəˋnɑmɪks]",
@@ -5281,6 +5537,7 @@
             "Unnamed: 9": "falsify"
         },
         {
+            "等級": "C1",
             "分類": "形狀",
             "Words": "fan-shaped",
             "pronunciation-1": "fan-shaped",
@@ -5309,6 +5566,7 @@
             "Unnamed: 9": "fasten"
         },
         {
+            "等級": "B2",
             "分類": "技術",
             "Words": "fatigue",
             "pronunciation-1": "[fəˋtig]",
@@ -5318,6 +5576,7 @@
             "Unnamed: 9": "fatigue"
         },
         {
+            "等級": "B2",
             "分類": "技術",
             "Words": "feasibility",
             "pronunciation-1": "[͵fizəˋbɪlətɪ]",
@@ -5558,6 +5817,7 @@
             "Unnamed: 9": "fluidity"
         },
         {
+            "等級": "B2",
             "分類": "Design",
             "Words": "flush",
             "pronunciation-1": "[flʌʃ]",
@@ -5567,6 +5827,7 @@
             "Unnamed: 9": "flush"
         },
         {
+            "等級": "C1",
             "分類": "技術",
             "Words": "foil",
             "pronunciation-1": "[fɔɪl]",
@@ -5596,6 +5857,7 @@
             "Unnamed: 9": "fondness"
         },
         {
+            "等級": "B2",
             "分類": "Design",
             "Words": "font",
             "pronunciation-1": "[fɑnt]",
@@ -5645,6 +5907,7 @@
             "Unnamed: 9": "forefront"
         },
         {
+            "等級": "B2",
             "分類": "Design",
             "Words": "foreground",
             "pronunciation-1": "[ˋfor͵graʊnd]",
@@ -5924,6 +6187,7 @@
             "Unnamed: 9": "geologic"
         },
         {
+            "等級": "B2",
             "分類": "形狀",
             "Words": "geometric",
             "pronunciation-1": "[dʒɪəˋmɛtrɪk]",
@@ -5933,6 +6197,7 @@
             "Unnamed: 9": "geometric"
         },
         {
+            "等級": "B2",
             "分類": "形狀",
             "Words": "geometry",
             "pronunciation-1": "[dʒɪˋɑmətrɪ]",
@@ -5952,6 +6217,7 @@
             "Unnamed: 9": "glamorous"
         },
         {
+            "等級": "C1",
             "分類": "技術",
             "Words": "gold-leaf",
             "pronunciation-1": "gold leaf",
@@ -6121,6 +6387,16 @@
             "Unnamed: 9": "grievance"
         },
         {
+            "等級": "B2",
+            "分類": "技術",
+            "Words": "ground-based",
+            "pronunciation-1": "/ˈɡraʊnd ˌbeɪst/",
+            "traditional Chinese": "Adj.\n地面上的，基於地面的：(指設施、設備或操作主要位於地面，而非空中或太空)",
+            "English meaning": "Ground-based is an adjective with the following meaning:\nReferring to something that is located on or operates from the ground, rather than being airborne or space-based.\nE.g. The observatory uses ground-based telescopes to study distant galaxies.\nE.g. Ground-based radar systems help monitor aircraft movements.\nE.g. The military relies on both ground-based and satellite communication systems.\nSummary:\n\"Ground-based\" describes things that are positioned or function on the ground, as opposed to being airborne or in space.\nRelated Words:\nLand-based, terrestrial, stationary, earthbound\nAntonyms:\nAirborne, space-based, satellite-mounted",
+            "Unnamed: 8": "ground-based",
+            "Unnamed: 9": "ground-based"
+        },
+        {
             "等級": "C2",
             "分類": "Design",
             "Words": "groundbreaking",
@@ -6205,6 +6481,7 @@
             "Unnamed: 9": "hardship"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "harmonious",
             "pronunciation-1": "hɑrˋmonɪəs]",
@@ -6224,6 +6501,8 @@
             "Unnamed: 9": "harmony"
         },
         {
+            "等級": "C1",
+            "分類": "技術",
             "Words": "harness",
             "pronunciation-1": "[ˋhɑrnɪs]",
             "traditional Chinese": "n.馬具，安全帶\nv1.治理，利用；控制，駕馭\n  2.給…上挽具；套（馬）(+to)",
@@ -6333,6 +6612,8 @@
             "Unnamed: 9": "heritage"
         },
         {
+            "等級": "C1",
+            "分類": "形狀",
             "Words": "hexagonal",
             "pronunciation-1": "[hɛkˋsægən!]",
             "traditional Chinese": "adj.六角形的",
@@ -6404,6 +6685,8 @@
             "Unnamed: 9": "hoist"
         },
         {
+            "等級": "C1",
+            "分類": "形狀",
             "Words": "honeycomb",
             "pronunciation-1": "[ˋhʌnɪ͵kom]",
             "traditional Chinese": "n.蜂巢[C][U]\n   蜂巢狀之物[C]\nv.使成蜂巢狀 \n   把……弄得千瘡百孔",
@@ -6450,6 +6733,8 @@
             "Unnamed: 9": "hostility"
         },
         {
+            "等級": "B2",
+            "分類": "藝術",
             "Words": "hue",
             "pronunciation-1": "[hju]",
             "traditional Chinese": "n.色調，色澤",
@@ -6485,6 +6770,8 @@
             "Unnamed: 9": "hygiene"
         },
         {
+            "等級": "B2",
+            "分類": "商業",
             "Words": "hype",
             "pronunciation-1": "[haɪp]",
             "traditional Chinese": "n.大肆宣傳；天花亂墜的公開宣傳\n v.人為地刺激 大肆宣傳",
@@ -6493,6 +6780,8 @@
             "Unnamed: 9": "hype"
         },
         {
+            "等級": "B2",
+            "分類": "商業",
             "Words": "hype-up",
             "pronunciation-1": "hype up",
             "traditional Chinese": "v.1.增加對某事的興奮、熱情或宣傳。(通常使其看起來比實際情況更重要或更令人興奮)\n   2.某人或某事更加興奮或精力充沛。(通常以誇張或熱情的方式)",
@@ -6629,6 +6918,8 @@
             "Unnamed: 9": "immense"
         },
         {
+            "等級": "B2",
+            "分類": "娛樂",
             "Words": "immerse",
             "pronunciation-1": "[ɪˋmɝs]",
             "traditional Chinese": "v1.使浸沒(+in)\n  2.使埋首於；使深陷於(+in)",
@@ -6729,6 +7020,8 @@
             "Unnamed: 9": "implement"
         },
         {
+            "等級": "B2",
+            "分類": "商業",
             "Words": "implementation",
             "pronunciation-1": "[͵ɪmpləmɛnˋteʃən]",
             "traditional Chinese": "n.履行；完成；成就",
@@ -7075,6 +7368,8 @@
             "Unnamed: 9": "in-nature"
         },
         {
+            "等級": "C1",
+            "分類": "技術",
             "Words": "in-parallel",
             "pronunciation-1": "in parallel",
             "traditional Chinese": "ph.1.和…同時\n     2.相似的方法\n     3.並排；平行的物理佈置",
@@ -7389,6 +7684,8 @@
             "Unnamed: 9": "iteration"
         },
         {
+            "等級": "B2",
+            "分類": "日常生活",
             "Words": "jag",
             "pronunciation-1": "[dʒæg]",
             "traditional Chinese": "n.1.缺口 ; 鋸齒狀突起\n   2.【口】狂飲\nv.1.使成缺口 使成鋸齒狀\n   2.進行一段激烈的或無法控制的活動或行為：",
@@ -7470,6 +7767,8 @@
             "Unnamed: 9": "jumbo"
         },
         {
+            "等級": "C1",
+            "分類": "Design",
             "Words": "juxtapose",
             "pronunciation-1": "[͵dʒʌkstəˋpoz]",
             "traditional Chinese": "v.將…並置，將…並列",
@@ -7478,6 +7777,8 @@
             "Unnamed: 9": "juxtapose"
         },
         {
+            "等級": "C1",
+            "分類": "Design",
             "Words": "juxtaposition",
             "pronunciation-1": "[͵dʒʌkstəpəˋzɪʃən]",
             "traditional Chinese": "n.並置，並列",
@@ -7919,76 +8220,6 @@
         },
         {
             "等級": "B2",
-            "分類": "科技",
-            "Words": "transmission",
-            "pronunciation-1": "[trænsˋmɪʃən]",
-            "traditional Chinese": "N.\n1.傳輸，傳播：(指資訊、信號、疾病或其他事物從一個地方或人傳遞到另一個地方或人)\n2.傳動裝置，變速器：(在機械或汽車領域，指將動力從引擎傳遞到車輪的系統)",
-            "English meaning": "Transmission is a noun with the following meanings:\n1. The act or process of sending or transferring something from one place, person, or thing to another, such as information, signals, or diseases.\nE.g. The transmission of the message was delayed due to network issues.\nE.g. The flu virus spreads through airborne transmission.\nE.g. Radio transmission allows communication over long distances.\n2. A system in a vehicle that transmits power from the engine to the wheels, allowing movement and speed control.\nE.g. The car’s transmission needed repair after years of use.\nE.g. Manual transmission requires the driver to shift gears manually.\nE.g. The mechanic checked the automatic transmission for any faults.\nSummary:\n\"Transmission\" refers to the act of sending or transferring something, such as information, signals, or diseases, as well as the system in a vehicle that transfers power from the engine to the wheels.\nRelated Words:\nTransfer, conveyance, broadcasting, communication, gearbox, drivetrain\nAntonyms:\nInterruption, blockage, failure, suppression",
-            "Unnamed: 8": "transmission",
-            "Unnamed: 9": "transmission"
-        },
-        {
-            "等級": "B2",
-            "分類": "技術",
-            "Words": "ground-based",
-            "pronunciation-1": "/ˈɡraʊnd ˌbeɪst/",
-            "traditional Chinese": "Adj.\n地面上的，基於地面的：(指設施、設備或操作主要位於地面，而非空中或太空)",
-            "English meaning": "Ground-based is an adjective with the following meaning:\nReferring to something that is located on or operates from the ground, rather than being airborne or space-based.\nE.g. The observatory uses ground-based telescopes to study distant galaxies.\nE.g. Ground-based radar systems help monitor aircraft movements.\nE.g. The military relies on both ground-based and satellite communication systems.\nSummary:\n\"Ground-based\" describes things that are positioned or function on the ground, as opposed to being airborne or in space.\nRelated Words:\nLand-based, terrestrial, stationary, earthbound\nAntonyms:\nAirborne, space-based, satellite-mounted",
-            "Unnamed: 8": "ground-based",
-            "Unnamed: 9": "ground-based"
-        },
-        {
-            "等級": "B2",
-            "分類": "技術",
-            "Words": "technician",
-            "pronunciation-1": "[tɛkˋnɪʃən]",
-            "traditional Chinese": "N.\n技術員，技師：(指具有專業技能並從事技術性工作的專業人員，通常在工程、醫療、電子等領域)",
-            "English meaning": "Technician is a noun with the following meaning:\nA person who is skilled in a particular technical field, especially one who maintains, repairs, or operates specialized equipment or systems.\nE.g. The technician fixed the air conditioning unit within an hour.\nE.g. A lab technician prepared the samples for testing.\nE.g. The computer technician upgraded the company’s network security.\nSummary:\n\"Technician\" refers to a skilled worker who specializes in maintaining, repairing, or operating technical systems or equipment.\nRelated Words:\nEngineer, mechanic, specialist, operator, expert\nAntonyms:\nAmateur, novice, layperson, non-specialist",
-            "Unnamed: 8": "technician",
-            "Unnamed: 9": "technician"
-        },
-        {
-            "等級": "B2",
-            "分類": "日常生活",
-            "Words": "almost as if",
-            "pronunciation-1": "/ˈɔːlməʊst əz ɪf/",
-            "traditional Chinese": "Phrase.\n彷彿，好像：(表示某件事情看起來或感覺上與另一件事非常相似，儘管實際上並非如此)",
-            "English meaning": "\"Almost as if\" is a phrase used to suggest a comparison or to describe something that feels or appears in a way that is similar to another situation, condition, or scenario, though not exactly the same.\nE.g. She looked at him almost as if she knew what he was thinking.\nE.g. The room was almost as if it had been frozen in time.\nE.g. The weather felt almost as if it was going to rain.\nSummary:\n\"Almost as if\" is used to draw a comparison between two things, suggesting that one situation feels very similar to another, even though it isn't exactly the same.\nRelated Words:\nLike, as though, as if, similar to\nAntonyms:\nUnlike, different from, dissimilar",
-            "Unnamed: 8": "almost as if",
-            "Unnamed: 9": "almost as if"
-        },
-        {
-            "等級": "B2",
-            "分類": "醫學",
-            "Words": "cleanse",
-            "pronunciation-1": "[klɛnz]",
-            "traditional Chinese": "V.\n1. 清潔，洗淨：(去除污垢或不純物，使某物變乾淨)\n2. 淨化，清除：(去除有害或不需要的物質，特別是在身體、思想或靈魂方面)",
-            "English meaning": "Cleanse is a verb: (cleanse / cleansed / cleansing) with the following meanings:\n1. To clean something thoroughly, especially to remove dirt, toxins, or harmful substances.\nE.g. She used soap and water to cleanse the wound.\nE.g. The spa offers treatments to cleanse the skin of impurities.\nE.g. He drank herbal tea to cleanse his body of toxins.\n2. To purify something, often in a moral, spiritual, or emotional sense.\nE.g. Meditation helped cleanse his mind of negative thoughts.\nE.g. The ritual was meant to cleanse the soul of past mistakes.\nE.g. The confession cleansed him of guilt.\nSummary:\n\"Cleanse\" means to clean something thoroughly or to purify it, either physically, emotionally, or spiritually.\nRelated Words:\nPurify, wash, disinfect, detox, sanitize\nAntonyms:\nContaminate, pollute, soil, dirty",
-            "Unnamed: 8": "cleanse",
-            "Unnamed: 9": "cleanse"
-        },
-        {
-            "等級": "B2",
-            "分類": "自然災害",
-            "Words": "debris",
-            "pronunciation-1": "[dəˋbri]",
-            "traditional Chinese": "N.\n殘骸，瓦礫：(指破壞後留下的物體碎塊，如建築物倒塌後的殘骸或爆炸後的碎片)\n",
-            "English meaning": "Debris is a noun that means scattered fragments or remains of something that has been broken, destroyed, or discarded.\nE.g. After the storm, debris from fallen trees covered the streets.\nE.g. The explosion left debris scattered across the entire area.\nE.g. Workers cleared the construction debris from the site.\nSummary:\n\"Debris\" refers to broken or scattered pieces of material, often resulting from destruction or waste.\nRelated Words:\nWreckage, rubble, remains, litter, fragments\nAntonyms:\nCleanliness, order, intactness, structure",
-            "Unnamed: 8": "debris",
-            "Unnamed: 9": "debris"
-        },
-        {
-            "等級": "B2",
-            "分類": "日常生活",
-            "Words": "embarrassment",
-            "pronunciation-1": "[ɪmˋbærəsmənt]",
-            "traditional Chinese": "N.\n尷尬，難堪：(因某事感到羞愧或不自在的情緒)\n令人尷尬的事物或情況：(讓人覺得不安或難堪的事情)\n財務困境，拮据：(經濟狀況困難，資金短缺)",
-            "English meaning": "Embarrassment is a noun that means a feeling of self-consciousness, shame, or awkwardness caused by a situation or mistake.\nE.g. She felt deep embarrassment when she forgot her speech in front of the audience.\nE.g. His voice cracked while speaking, and he turned red with embarrassment.\nE.g. Losing his wallet twice in one week was a source of great embarrassment for him.\nSummary:\n\"Embarrassment\" refers to a feeling of awkwardness, shame, or discomfort caused by an uncomfortable or humiliating situation.\nRelated Words:\nHumiliation, shame, awkwardness, discomfort, self-consciousness\nAntonyms:\nConfidence, pride, comfort, assurance",
-            "Unnamed: 8": "embarrassment",
-            "Unnamed: 9": "embarrassment"
-        },
-        {
-            "等級": "B2",
             "分類": "旅遊",
             "Words": "luxurious",
             "pronunciation-1": "[lʌgˋʒʊrɪəs]",
@@ -7998,6 +8229,8 @@
             "Unnamed: 9": "luxurious"
         },
         {
+            "等級": "B2",
+            "分類": "技術",
             "Words": "machinery",
             "pronunciation-1": "[məˋʃinərɪ]",
             "traditional Chinese": "n.1.機器；機械 \n   2.設備",
@@ -8016,6 +8249,7 @@
             "Unnamed: 9": "maddening"
         },
         {
+            "等級": "B2",
             "分類": "職業",
             "Words": "magician",
             "pronunciation-1": "[məˋdʒɪʃən]",
@@ -8072,6 +8306,8 @@
             "Unnamed: 9": "mandatory"
         },
         {
+            "等級": "B2",
+            "分類": "軍事",
             "Words": "maneuver",
             "pronunciation-1": "[məˋnuvɚ]",
             "traditional Chinese": "n.1.(船、飛機等的)\n       機動動作\n   2.策略，謀略，花招\n   3.演習\nv.1.巧妙地操縱(或處理)\n   2.用計謀\n   3.調動；使演習",
@@ -8089,6 +8325,8 @@
             "Unnamed: 9": "mantle"
         },
         {
+            "等級": "B2",
+            "分類": "Design",
             "Words": "manufacture",
             "pronunciation-1": "[͵mænjəˋfæktʃɚ]",
             "traditional Chinese": "v.1.(大量)製造，加工\n   2.捏造，虛構\nn. 製造[U]  製造業[U]",
@@ -8097,6 +8335,8 @@
             "Unnamed: 9": "manufacture"
         },
         {
+            "等級": "B2",
+            "分類": "Design",
             "Words": "manufacturing",
             "pronunciation-1": "[͵mænjəˋfæktʃərɪŋ]",
             "traditional Chinese": "n.1.製造業\n   2.工業\nadj.製造業的",
@@ -8105,6 +8345,8 @@
             "Unnamed: 9": "manufacturing"
         },
         {
+            "等級": "C1",
+            "分類": "學術",
             "Words": "manuscript",
             "pronunciation-1": "[ˋmænjə͵skrɪpt]",
             "traditional Chinese": "n.n.手寫本，手稿；打字稿；原稿[C]",
@@ -8301,11 +8543,12 @@
             "Unnamed: 9": "mediocre"
         },
         {
+            "等級": "C1",
             "分類": "旅遊",
             "Words": "Mediterranean",
             "pronunciation-1": "[͵mɛdətəˋrenɪən]",
-            "traditional Chinese": "n.地中海\nadj.地中海的",
-            "English meaning": "The term \"Mediterranean\" refers to the region surrounding the Mediterranean Sea, which is bordered by Southern Europe, North Africa, and Western Asia. It is characterized by a mild climate, diverse cultures, and a rich history dating back thousands of years. Countries such as Spain, France, Italy, Greece, Turkey, Egypt, and Morocco are all part of the Mediterranean region.\nE.g.They planned to cruise around the Mediterranean, visiting historic cities and enjoying the region's renowned cuisine.",
+            "traditional Chinese": "adj.地中海的\n(通常用來描述與地中海有關的事物，如氣候、地區、文化等；也可作為名詞，指「地中海」本身。）\n\nn.地中海\n",
+            "English meaning": "Mediterranean is an adjective and noun with the following meanings:\n1. As an adjective: Refers to anything related to the Mediterranean Sea or the regions surrounding it, particularly in terms of climate, culture, geography, or cuisine.\nE.g.The Mediterranean climate is known for its mild, wet winters and hot, dry summers, ideal for growing olives and grapes.\n2. As a noun: Refers to the Mediterranean Sea, which is a large sea connected to the Atlantic Ocean, surrounded by Europe, Asia, and Africa. It is a historically significant body of water, known for its role in trade, culture, and history.\nE.g.They planned to cruise around the Mediterranean, visiting historic cities and enjoying the region's renowned cuisine.\nSummary:\nMediterranean refers to anything related to the Mediterranean Sea, including its geography, culture, climate, and surrounding regions.\nRelated Words: sea, coast, region, Mediterranean diet, Mediterranean climate.\nAntonyms: inland, non-coastal, polar (in terms of climate).",
             "Unnamed: 8": "Mediterranean",
             "Unnamed: 9": "Mediterranean"
         },
@@ -8340,22 +8583,22 @@
         {
             "等級": "B2",
             "分類": "語言 ",
-            "Words": "merely",
-            "pronunciation-1": "[ˋmɪrlɪ]",
-            "traditional Chinese": "adv.只是，僅僅，不過",
-            "English meaning": "Merely is an adverb:\nUsed to emphasize that something is only what you say and not better, more important, or more impressive.\nE.g. That was merely a guess of mine. \nE.g. I am not merely requesting, I am ordering\nE.g. It's not a solution—merely a temporary fix.\nE.g. She’s merely a beginner, not an expert.\nE.g. I’m not angry, merely disappointed.\nSummary:\n\"Merely\" means only or simply, often used to downplay the importance or extent of something.\nRelated Words:\nOnly, just, simply, solely\nAntonyms:\nConsiderably, significantly, greatly, importantly",
-            "Unnamed: 8": "merely",
-            "Unnamed: 9": "merely"
-        },
-        {
-            "等級": "B2",
-            "分類": "語言 ",
             "Words": "mere",
             "pronunciation-1": "[mɪr]",
             "traditional Chinese": "adj.僅僅的，只不過的",
             "English meaning": "Mere is an adjective:\nUsed to emphasize how small or unimportant something or someone is, often implying that nothing more is involved.\nE.g. The mere thought of losing him made her anxious.\nE.g. He won the match by a mere two points.\nE.g. She's a mere child and doesn’t understand the consequences.\nE.g. The mere mention of his name caused everyone to go silent.\nSummary:\n\"Mere\" emphasizes the insignificance or smallness of something, often used to highlight contrast or surprise.\nRelated Words:\nOnly, just, slight, insignificant\nAntonyms:\nSignificant, substantial, important, considerable",
             "Unnamed: 8": "mere",
             "Unnamed: 9": "mere"
+        },
+        {
+            "等級": "B2",
+            "分類": "語言 ",
+            "Words": "merely",
+            "pronunciation-1": "[ˋmɪrlɪ]",
+            "traditional Chinese": "adv.只是，僅僅，不過",
+            "English meaning": "Merely is an adverb:\nUsed to emphasize that something is only what you say and not better, more important, or more impressive.\nE.g. That was merely a guess of mine. \nE.g. I am not merely requesting, I am ordering\nE.g. It's not a solution—merely a temporary fix.\nE.g. She’s merely a beginner, not an expert.\nE.g. I’m not angry, merely disappointed.\nSummary:\n\"Merely\" means only or simply, often used to downplay the importance or extent of something.\nRelated Words:\nOnly, just, simply, solely\nAntonyms:\nConsiderably, significantly, greatly, importantly",
+            "Unnamed: 8": "merely",
+            "Unnamed: 9": "merely"
         },
         {
             "等級": "B1",
@@ -8385,6 +8628,8 @@
             "Unnamed: 9": "mesmerize"
         },
         {
+            "等級": "C1",
+            "分類": "技術",
             "Words": "metallic",
             "pronunciation-1": "[məˋtælɪk]",
             "traditional Chinese": "adj.金屬的",
@@ -8517,6 +8762,8 @@
             "Unnamed: 9": "milling-about"
         },
         {
+            "等級": "C1",
+            "分類": "Design",
             "Words": "minimalist",
             "pronunciation-1": "[ˋmɪnəməlɪst]",
             "traditional Chinese": "1. adj.極簡抽象派藝術的\n2. n.極簡抽象派藝術家",
@@ -8638,11 +8885,12 @@
             "Unnamed: 9": "molecule"
         },
         {
-            "分類": "旅遊",
+            "等級": "C1",
+            "分類": "自然災害",
             "Words": "molten",
             "pronunciation-1": "[ˋmoltən]",
             "traditional Chinese": "adj.熔化的，熔解的\n   澆鑄的，模鑄的",
-            "English meaning": "\"Molten\" refers to a substance that has been heated to the point of liquefaction, usually through high temperatures. When a solid material is melted by heat, it becomes molten, transforming into a liquid state. For example, when metal is heated to its melting point, it becomes molten metal. Similarly, when rock is heated to extreme temperatures, it becomes molten rock, also known as magma or lava when it reaches the Earth's surface during a volcanic eruption. The term \"molten\" is commonly used in contexts related to metallurgy, geology, and processes involving extreme heat.\nE.g. The blacksmith poured the molten metal into the mold, shaping it into a finely crafted sword.\nE.g. As the volcano erupted, streams of molten lava flowed down the mountainside, engulfing everything in their path.",
+            "English meaning": "Molten is an adjective, referring to a substance that has been melted by heat, typically a metal or rock that is in liquid form due to intense heat.\nE.g. The blacksmith poured the molten metal into the mold, shaping it into a finely crafted sword.\nE.g. As the volcano erupted, streams of molten lava flowed down the mountainside, engulfing everything in their path.\nE.g. The molten gold glistened as it was carefully poured into intricate molds for jewelry.\nSummary:\nMolten refers to a substance that is in liquid form because it has been heated to the point of melting, often used to describe metals or rocks.\nRelated Words: melted, liquefied, hot, fluid, lava.\nAntonyms: solid, frozen, solidified.",
             "Unnamed: 8": "molten",
             "Unnamed: 9": "molten"
         },
@@ -8656,6 +8904,8 @@
             "Unnamed: 9": "monetary"
         },
         {
+            "等級": "C1",
+            "分類": "藝術",
             "Words": "monochrome",
             "pronunciation-1": "[ˋmɑnə͵krom]",
             "traditional Chinese": "1.adj.單色的；黑白的\n2.n.單色畫；黑白相片",
@@ -8746,6 +8996,8 @@
             "Unnamed: 9": "mundane"
         },
         {
+            "等級": "B2",
+            "分類": "藝術",
             "Words": "muted",
             "pronunciation-1": "[ˋmjutɪd]",
             "traditional Chinese": "adj.1.柔和的(顏色)\n      2.聲音柔和或安靜\n      3.克制的 \nv.減輕(聲音)，消除(聲音)",
@@ -8888,16 +9140,6 @@
             "English meaning": "Niche is a noun and an adjective with the following meanings:\nAs a Noun:\n1. A specialized segment of the market for a particular kind of product or service.\nE.g. The company found a niche in the luxury pet accessories market.\nE.g. The website targets a niche audience of eco-conscious consumers.\nE.g. He carved out a niche for himself in the field of sustainable architecture.\nE.g. You have to create a niche market for your products. \n2. A comfortable or suitable position in life or employment.\nE.g. She finally found her niche as a graphic designer.\nE.g. After years of uncertainty, he discovered his niche in the tech industry.\n3. A shallow recess, especially one in a wall to display a statue or ornament.\nE.g. The statue was placed in a niche in the corner of the room.\nE.g. The artwork was hung in a niche above the fireplace.\nAs an Adjective:\nDenoting or relating to products, services, or interests that appeal to a specific segment of the population.\nE.g. The store specializes in niche products for collectors.\nE.g. He runs a niche blog focused on rare books and manuscripts.\nSummary:\n\"Niche\" refers to a specific, specialized area in a market, career, or even a physical space, often focusing on particular interests or needs.\nRelated Words:\nSpecialty, sector, corner, market segment\nAntonyms:\nMainstream, broad, general, conventional",
             "Unnamed: 8": "niche",
             "Unnamed: 9": "niche"
-        },
-        {
-            "等級": "B2",
-            "分類": "商業",
-            "Words": "outreach",
-            "pronunciation-1": "[aʊtˋritʃ]",
-            "traditional Chinese": "n.1.拓展(服務或活動)\n   2.超越(某範圍或領域的行為)\nv.1.提供超越常規範圍的服務或幫助",
-            "English meaning": "Outreach is a noun and a verb with the following meanings:\nAs a Noun:\n1. The act of reaching out to provide services, support, or information to a community or group.\nE.g. The organization’s outreach program helps disadvantaged children gain access to education.\nE.g. Their community outreach initiatives focus on providing free healthcare to remote areas.\nE.g. The outreach to local businesses increased their awareness of the new policies.\n2. The extent or range of services or influence.\nE.g. The nonprofit’s outreach extends to several countries around the world.\nE.g. Their outreach has grown, attracting more volunteers each year.\nAs a Verb:\n1. To reach out or provide services, support, or information to others.\nE.g. They plan to outreach to the elderly to ensure they have access to health services.\nE.g. The charity is reaching out to homeless families with resources and food.\nSummary:\n\"Outreach\" refers to the effort to reach out and provide services or information, often in a community context, aiming to increase influence or assist those in need.\nRelated Words:\nAssistance, support, communication, connection\nAntonyms:\nNeglect, isolation, withdrawal",
-            "Unnamed: 8": "outreach",
-            "Unnamed: 9": "outreach"
         },
         {
             "等級": "C2",
@@ -9373,6 +9615,8 @@
             "Unnamed: 9": "outdate"
         },
         {
+            "等級": "B2",
+            "分類": "日常生活",
             "Words": "outgrow",
             "pronunciation-1": "[ˋaʊtˋgro",
             "traditional Chinese": "v.1.長大了便不再適用\n   2.長大成熟而不再",
@@ -9381,6 +9625,8 @@
             "Unnamed: 9": "outgrow"
         },
         {
+            "等級": "B2",
+            "分類": "日常生活",
             "Words": "outgrowth",
             "pronunciation-1": "[ˋaʊt͵groθ]",
             "traditional Chinese": "n.1.自然的發展；產物 後果 \n   2.分枝；樹芽",
@@ -9397,6 +9643,16 @@
             "English meaning": "Outmaneuver is a verb: outmaneuver / outmaneuvered / outmaneuvering\nMeaning:\nTo gain an advantage over someone or something by using greater skill, intelligence, or strategy.\nE.g. She managed to outmaneuver her political rivals and secure the leadership position.\nE.g. The smaller, faster car outmaneuvered the truck on the winding road.\nE.g. He was able to outmaneuver the opposition during the negotiation process.\nE.g. The team outmaneuvered their opponents with a brilliant play in the final seconds.\nSummary:\n\"Outmaneuver\" means to skillfully or strategically surpass or defeat an opponent or obstacle.\nRelated Words:\nOutsmart, outwit, outthink, surpass, overcome\nAntonyms:\nSurrender, yield, be outwitted, lose",
             "Unnamed: 8": "outmaneuver",
             "Unnamed: 9": "outmaneuver"
+        },
+        {
+            "等級": "B2",
+            "分類": "商業",
+            "Words": "outreach",
+            "pronunciation-1": "[aʊtˋritʃ]",
+            "traditional Chinese": "n.1.拓展(服務或活動)\n   2.超越(某範圍或領域的行為)\nv.1.提供超越常規範圍的服務或幫助",
+            "English meaning": "Outreach is a noun and a verb with the following meanings:\nAs a Noun:\n1. The act of reaching out to provide services, support, or information to a community or group.\nE.g. The organization’s outreach program helps disadvantaged children gain access to education.\nE.g. Their community outreach initiatives focus on providing free healthcare to remote areas.\nE.g. The outreach to local businesses increased their awareness of the new policies.\n2. The extent or range of services or influence.\nE.g. The nonprofit’s outreach extends to several countries around the world.\nE.g. Their outreach has grown, attracting more volunteers each year.\nAs a Verb:\n1. To reach out or provide services, support, or information to others.\nE.g. They plan to outreach to the elderly to ensure they have access to health services.\nE.g. The charity is reaching out to homeless families with resources and food.\nSummary:\n\"Outreach\" refers to the effort to reach out and provide services or information, often in a community context, aiming to increase influence or assist those in need.\nRelated Words:\nAssistance, support, communication, connection\nAntonyms:\nNeglect, isolation, withdrawal",
+            "Unnamed: 8": "outreach",
+            "Unnamed: 9": "outreach"
         },
         {
             "等級": "B2",
@@ -9417,6 +9673,8 @@
             "Unnamed: 9": "outwit"
         },
         {
+            "等級": "B2",
+            "分類": "形狀",
             "Words": "oval",
             "pronunciation-1": "[ˋov!]",
             "traditional Chinese": "adj.卵形的；橢圓形的\nn.橢圓形物",
@@ -9454,6 +9712,8 @@
             "Unnamed: 9": "overhear"
         },
         {
+            "等級": "B2",
+            "分類": "Design",
             "Words": "overlay",
             "pronunciation-1": "[ˋovɚˋle]",
             "traditional Chinese": "n.覆蓋物；外罩；鍍金\nv.a.鋪在…上面；鍍\n   b.覆蓋；遮蓋\n   c.(象徵性組合元素)增強或傳達更深層的含義。",
@@ -9462,6 +9722,8 @@
             "Unnamed: 9": "overlay"
         },
         {
+            "等級": "B2",
+            "分類": "日常生活",
             "Words": "overlook",
             "pronunciation-1": "[͵ovɚˋlʊk]",
             "traditional Chinese": "v.1.看漏；疏忽\n   2.眺望；俯瞰\n   3.寬恕，寬容\n   4.忽略\nn. 鳥瞰點\n   ",
@@ -9557,6 +9819,8 @@
             "Unnamed: 9": "paleontologist"
         },
         {
+            "等級": "C1",
+            "分類": "Design",
             "Words": "palette",
             "pronunciation-1": "[ˋpælɪt]",
             "traditional Chinese": "n.1.調色板；調色板上的顏料\n   2.色調\n    3.調調(風格或形式)",
@@ -9613,6 +9877,8 @@
             "Unnamed: 9": "paradoxical"
         },
         {
+            "等級": "B2",
+            "分類": "形狀",
             "Words": "parallel",
             "pronunciation-1": "[ˋpærə͵lɛl]",
             "traditional Chinese": "1.v使成平行；比較(+with)\n2.adj.平行的，同方向的(+to/with)\n3.n.相似處[C](+between/with)",
@@ -9621,6 +9887,8 @@
             "Unnamed: 9": "parallel"
         },
         {
+            "等級": "B2",
+            "分類": "形狀",
             "Words": "parallelogram",
             "pronunciation-1": "[͵pærəˋlɛlə͵græm]",
             "traditional Chinese": "n.（幾何）平行四邊形",
@@ -9703,15 +9971,6 @@
             "English meaning": "Paw is a noun and a verb that refers to the foot of certain animals with claws or soft pads or the act of touching or scratching with such a foot or the hands.\nAs a Noun:\nThe foot of an animal with claws or soft pads:\nThis meaning refers to the limb used by animals, such as cats, dogs, and bears, for walking, running, or grasping.\nE.g. The dog placed its muddy paw on my lap.\nE.g. The lion's massive paw left deep imprints in the ground.\nAs a Verb: paw / pawed / pawing\n1. To touch or scrape with a paw or hands in a rough or clumsy way:\nThis refers to the act of animals using their paws or humans using their hands in a manner resembling an animal’s movement.\nE.g. The cat pawed at the door, trying to get out.\nE.g. He pawed through the pile of clothes to find his jacket.\n2. To handle or touch something or someone repeatedly or clumsily:\nThis meaning describes rough or unwelcome handling, often associated with human behavior.\nE.g. The child pawed at the window to see the puppies outside.\nE.g. She pulled away as he tried to paw her arm in an awkward attempt at affection.\nSummary:\n\"Paw\" refers to the foot of certain animals or the act of touching or scraping with such a foot or clumsy hands.\nRelated Words : foot, claw, pad, scratch, scrape\nAntonyms : hand (as a noun), refrain (as a verb)",
             "Unnamed: 8": "paw",
             "Unnamed: 9": "paw"
-        },
-        {
-            "等級": "B2",
-            "分類": "人物特性",
-            "Words": "showy",
-            "pronunciation-1": "[ˋʃoɪ]",
-            "traditional Chinese": "adj.(過分)豔麗的，浮華的；顯眼的，引人注目的\n     2.炫耀的，賣弄的",
-            "English meaning": "Showy is an adjective with the following meanings:\n1. Intended to attract attention or impress others through its appearance or display, often in a way that is considered excessive or ostentatious.\nE.g. She wore a showy dress to the party, hoping to stand out among the crowd.\nE.g. The showy decorations on the building caught everyone's eye during the festival.\nE.g. His showy attitude made him unpopular with his colleagues.\n2. Bright, colorful, or striking in a way that is meant to be noticed or admired.\nE.g. The peacock's showy feathers were on full display during the mating season.\nE.g. The showy performance by the dancer captivated the audience.\nE.g. The car's showy exterior was covered in gold paint and had sparkling details.\nSummary:\n\"Showy\" describes something that is designed to attract attention, often with an emphasis on being extravagant or ostentatious in appearance or behavior.\nRelated Words:\nOstentatious, flashy, extravagant, flamboyant\nAntonyms:\nModest, subtle, plain, simple",
-            "Unnamed: 9": "showy"
         },
         {
             "等級": "B1",
@@ -9817,6 +10076,8 @@
             "Unnamed: 9": "percolate"
         },
         {
+            "等級": "C1 ",
+            "分類": "工藝",
             "Words": "perforate",
             "pronunciation-1": "[ˋpɝfə͵ret]",
             "traditional Chinese": "v.穿孔於，打眼於\n(adj. perforate 穿孔的)",
@@ -10022,6 +10283,8 @@
             "Unnamed: 9": "pierce"
         },
         {
+            "等級": "C1",
+            "分類": "藝術",
             "Words": "pigment",
             "pronunciation-1": "[ˋpɪgmənt]",
             "traditional Chinese": "n.1.顏料[C][U]\n      【生】色素[U",
@@ -10030,6 +10293,8 @@
             "Unnamed: 9": "pigment"
         },
         {
+            "等級": "C1",
+            "分類": "藝術",
             "Words": "pigmentation",
             "pronunciation-1": "[͵pɪgmənˋteʃən]",
             "traditional Chinese": "n.【生】染色 色素沉著；(生物的)天然顏色",
@@ -10169,6 +10434,8 @@
             "Unnamed: 9": "polliwog"
         },
         {
+            "等級": "C1",
+            "分類": "形狀",
             "Words": "polygon",
             "pronunciation-1": "[ˋpɑlɪ͵gɑn]",
             "traditional Chinese": "n.多邊形；多角形",
@@ -10307,6 +10574,8 @@
             "Unnamed: 9": "poultry"
         },
         {
+            "等級": "C1",
+            "分類": "日常生活",
             "Words": "practicality",
             "pronunciation-1": "[͵præktɪˋkælətɪ]",
             "traditional Chinese": "n.實際；實用性；實例；實際性",
@@ -10378,11 +10647,12 @@
             "Unnamed: 9": "predetermine"
         },
         {
-            "分類": "人物特性",
+            "等級": "C1",
+            "分類": "商業",
             "Words": "pre-emptive",
             "pronunciation-1": "/priˈɛmptɪv/",
             "traditional Chinese": "adj.先發制人的",
-            "English meaning": "\"Pre-emptive\" refers to actions or measures taken in anticipation of a possible future event or problem in order to prevent it from occurring or to mitigate its impact. It involves acting beforehand to forestall or neutralize a potential threat or difficulty.\nE.g. The company implemented pre-emptive safety measures to reduce the risk of accidents in the workplace.\nE.g. A preemptive attack by the army prevented the enemy from launching their planned assault.\nE.g. The government decided to preemptively evacuate coastal areas in anticipation of the approaching hurricane",
+            "English meaning": "Pre-emptive is an adjective meaning:\nDone in advance to prevent something from happening\n(Refers to actions taken or measures adopted before a potential situation occurs, often to avoid a threat or issue.)\n\nE.g. The company implemented pre-emptive safety measures to reduce the risk of accidents in the workplace.\nE.g. A preemptive attack by the army prevented the enemy from launching their planned assault.\nE.g. The government decided to preemptively evacuate coastal areas in anticipation of the approaching hurricane.\nE.g.She made a pre-emptive apology to avoid any misunderstandings before the meeting.\n\nSummary:\nPre-emptive refers to actions taken in advance to avoid or prevent a possible event, often to stay ahead of potential issues or threats.\n\nRelated Words: preventative, anticipatory, proactive, precautionary.\n\nAntonyms: reactive, delayed, defensive.",
             "Unnamed: 8": "pre-emptive",
             "Unnamed: 9": "pre-emptive"
         },
@@ -10501,11 +10771,12 @@
             "Unnamed: 9": "privilege"
         },
         {
+            "等級": "C1",
             "分類": "人物特性",
             "Words": "proactive",
             "pronunciation-1": "[proˋæktɪv]",
             "traditional Chinese": "adj.(人、政策、行為等)主動的；先發制人的",
-            "English meaning": "\"Proactive\" describes the quality of taking action to initiate change or achieve a goal rather than just reacting to events after they happen. It involves anticipating future needs or problems and taking steps to address them before they become significant issues.\nE.g. The proactive approach of the team helped them identify potential problems early and find solutions before they escalated.\nE.g. Anticipating potential setbacks, the project manager took proactive measures to allocate resources effectively and ensure timely completion.\nE.g. The government is taking proactive measures against terrorism. \nE.g. The manager's response to the employees' inquiry was reactive rather than proactive",
+            "English meaning": "\"Proactive\" describes the quality of taking action to initiate change or achieve a goal rather than just reacting to events after they happen. It involves anticipating future needs or problems and taking steps to address them before they become significant issues.\nE.g. The manager took a proactive approach to improve team communication before misunderstandings could arise.\nE.g. The proactive approach of the team helped them identify potential problems early and find solutions before they escalated.\nE.g. Anticipating potential setbacks, the project manager took proactive measures to allocate resources effectively and ensure timely completion.\nE.g. The government is taking proactive measures against terrorism. \nE.g. The manager's response to the employees' inquiry was reactive rather than proactive\nSummary:\nProactive refers to taking initiative and acting ahead of time to prevent problems or ensure progress, rather than waiting for things to happen.\nRelated Words: anticipatory, preventive, forward-thinking, initiative.\nAntonyms: reactive, passive, indifferent.",
             "Unnamed: 8": "proactive",
             "Unnamed: 9": "proactive"
         },
@@ -10673,15 +10944,18 @@
             "Unnamed: 9": "prospect"
         },
         {
+            "等級": "C1",
             "分類": "人物特性",
             "Words": "protagonist",
             "pronunciation-1": "prō-ˈta-gə-nist ",
             "traditional Chinese": "n.(故事的)主人公",
-            "English meaning": "is the central character or main figure in a story, around whom the plot revolves. Typically, the protagonist is the character with whom the audience identifies the most, and their actions and decisions drive the narrative forward. They often face challenges or conflicts that they must overcome throughout the course of the story.\nE.g.Harry Potter is the protagonist of JK Rowling's famous series, \"Harry Potter.\"",
+            "English meaning": "\"Protagonist\" is a noun that refers to the main character in a story, drama, or narrative, typically the one with whom the audience is meant to empathize or who drives the plot forward. The protagonist is often central to the conflict and its resolution.\nE.g. Harry Potter is the protagonist of J.K. Rowling's famous series, \"Harry Potter.\"\nE.g. The protagonist in the novel struggles with overcoming personal challenges while trying to achieve a greater purpose.\nE.g. In the movie, the protagonist embarks on a journey of self-discovery.\nSummary:\nA protagonist is the central character in a narrative, around whom the main story revolves, often facing challenges or conflicts that drive the plot.\nRelated Words: hero, main character, lead, central figure.\nAntonyms: antagonist, villain, opposing character.",
             "Unnamed: 8": "protagonist",
             "Unnamed: 9": "protagonist"
         },
         {
+            "等級": "C1",
+            "分類": "法政",
             "Words": "protocol",
             "pronunciation-1": "[ˋprotə͵kɑl]",
             "traditional Chinese": "n.1.議定書；草案\n   2.協議；\n   3.（尤指外交的）禮節",
@@ -10690,6 +10964,8 @@
             "Unnamed: 9": "protocol"
         },
         {
+            "等級": "B2",
+            "分類": "工具",
             "Words": "protractor",
             "pronunciation-1": "[proˋtræktɚ]",
             "traditional Chinese": "n.量角器；半圓規；分度器",
@@ -10716,10 +10992,12 @@
             "Unnamed: 9": "provoke"
         },
         {
-            "分類": "職業",
+            "等級": "C1",
+            "分類": "醫學",
             "Words": "psychiatrist",
             "pronunciation-1": "[saɪˋkaɪətrɪst]",
             "traditional Chinese": "n.精神病醫師",
+            "English meaning": "Psychiatrist is a noun referring to a medical professional who specializes in diagnosing, treating, and preventing mental health disorders. Psychiatrists are trained to prescribe medications and offer therapy for various mental health conditions.\nE.g. After struggling with anxiety for months, John decided to see a psychiatrist for professional help.\nE.g. The psychiatrist recommended a combination of therapy and medication to manage the patient's depression.\nE.g. Psychiatrists often work alongside psychologists to provide comprehensive mental health care.\nSummary:\nA psychiatrist is a medical doctor specializing in mental health, capable of diagnosing and treating psychological disorders, and authorized to prescribe medication.\nRelated Words: mental health professional, doctor, therapist, counselor.\nAntonyms: patient (in context of treatment), non-specialist.",
             "Unnamed: 8": "psychiatrist",
             "Unnamed: 9": "psychiatrist"
         },
@@ -10733,6 +11011,8 @@
             "Unnamed: 9": "pulse"
         },
         {
+            "等級": "C1",
+            "分類": "技術",
             "Words": "puncture",
             "pronunciation-1": "[ˋpʌŋktʃɚ]",
             "traditional Chinese": "n.穿刺[U] 刺孔[C]\nv.刺，刺穿；戳破",
@@ -10795,6 +11075,7 @@
             "Unnamed: 9": "pursuit"
         },
         {
+            "等級": "B2",
             "分類": "形狀",
             "Words": "quadrilateral",
             "pronunciation-1": "[͵kwɑdrɪˋlætərəl]",
@@ -10882,11 +11163,12 @@
             "Unnamed: 9": "ratio"
         },
         {
-            "分類": "人物特性",
+            "等級": "C1",
+            "分類": "情感",
             "Words": "reactive",
             "pronunciation-1": "[rɪˋæktɪv]",
-            "traditional Chinese": "adj. (針對事情發生後)反應作為的",
-            "English meaning": "\"Reactive\" refers to responding to events or situations after they occur rather than doing something to prevent them. It involves reacting to circumstances as they arise rather than proactively addressing them before they become problematic.\nE.g. The company's reactive approach to customer complaints led to a loss of trust among its clientele.\nE.g. The manager's response to the employees' inquiry was reactive rather than proactive",
+            "traditional Chinese": "adj. 1.對外界事物或情況的反應，常指迅速或被動反應\n     2.描述容易對刺激做出反應的人或物。",
+            "English meaning": "Reactive is an adjective with the following meanings:\n1. Responding to events or situations after they occur\n(Describes a tendency to respond to circumstances rather than actively shaping them or anticipating future needs.)\nE.g. The company's reactive approach to customer complaints led to a loss of trust among its clientele.\nE.g. The manager's response to the employees' inquiry was reactive rather than proactive.\n2. Chemically reactive\n(Referring to substances that react quickly when exposed to other substances or conditions.)\nE.g. Some metals are highly reactive when exposed to water.\nE.g. The reactive nature of the chemicals made them dangerous to handle without proper safety precautions.\nSummary:\nReactive describes a tendency to respond to situations after they occur, often implying a lack of initiative, or refers to substances that react quickly to other conditions.\nRelated Words: responsive, defensive, passive, impulsive.\nAntonyms: proactive, anticipatory, prepared, active.",
             "Unnamed: 8": "reactive",
             "Unnamed: 9": "reactive"
         },
@@ -10897,6 +11179,8 @@
             "Unnamed: 9": "readily"
         },
         {
+            "等級": "B2",
+            "分類": "人物特性",
             "Words": "realistic",
             "pronunciation-1": "[rɪəˋlɪstɪk]",
             "traditional Chinese": "adj.1.實際可行的\n     2.現實主義的，寫實(派)的",
@@ -10947,6 +11231,7 @@
             "Unnamed: 9": "rebellious"
         },
         {
+            "等級": "B2",
             "分類": "食物",
             "Words": "recipe",
             "pronunciation-1": "[ˋrɛsəpɪ]",
@@ -11007,6 +11292,7 @@
             "Unnamed: 9": "reconciliation"
         },
         {
+            "等級": "B2",
             "分類": "形狀",
             "Words": "rectangle",
             "pronunciation-1": "[rɛkˋtæŋg!]",
@@ -11230,6 +11516,8 @@
             "Unnamed: 9": "repel"
         },
         {
+            "等級": "B2",
+            "分類": "語言",
             "Words": "repetition",
             "pronunciation-1": "[͵rɛpɪˋtɪʃən]",
             "traditional Chinese": "n.1.重複；反覆；重說；重做[C][U]\n   2.重複的事物",
@@ -11299,20 +11587,22 @@
             "Unnamed: 9": "resignation"
         },
         {
+            "等級": "C1 ",
             "分類": "人物特性",
             "Words": "resilience",
             "pronunciation-1": "rɪˋzɪlɪəns]",
             "traditional Chinese": "n.1.恢復力（= resiliency）\n   2.彈回；彈性；",
-            "English meaning": "1.The ability to withstand or recover quickly from difficult conditions or adversity.\nE.g.Her resilience in the face of adversity inspired those around her to persevere\n2.The property of being able to spring back into shape or position after being stretched, bent, or compressed.\nE.g.The resilience of the material used in the construction of the building allowed it to withstand the force of the earthquake.\"\nE.g.Do your muscles have the strength and resilience that they should have?",
+            "English meaning": "Resilience is a noun with the following meanings:\n1. The ability to withstand or recover quickly from difficult conditions or adversity\n(Refers to a person's or thing's capacity to bounce back or endure challenges, hardships, or setbacks.)\nE.g. Her resilience in the face of adversity inspired those around her to persevere.\nE.g. After the financial crisis, the company’s resilience helped it recover and thrive.\n2. The property of being able to spring back into shape or position after being stretched, bent, or compressed\n(Refers to the physical ability of materials or substances to return to their original state after stress or deformation.)\nE.g. The resilience of the material used in the construction of the building allowed it to withstand the force of the earthquake.\nE.g. Do your muscles have the strength and resilience that they should have?\nSummary:\nResilience refers to the capacity to recover from challenges, or the ability of materials to regain their shape after deformation.\nRelated Words: toughness, endurance, elasticity, flexibility.\nAntonyms: fragility, weakness, brittleness.",
             "Unnamed: 8": "resilience",
             "Unnamed: 9": "resilience"
         },
         {
+            "等級": "C1 ",
             "分類": "人物特性",
             "Words": "resilient",
             "pronunciation-1": "[rɪˋzɪlɪənt]",
             "traditional Chinese": "adj.1.迅速恢復精力的\n     2.彈回的；有彈力的",
-            "English meaning": "1.Able to withstand or recover quickly from difficult conditions.\nE.g.Despite facing numerous setbacks, she remained resilient and bounced back stronger each time.\n2.Having the ability to spring back into shape or position after being stretched, bent, or \ncompressed\nE.g.The material used in the construction of the bridge is highly resilient, capable of enduring extreme weather conditions.",
+            "English meaning": "Resilient is an adjective with the following meanings:\n1. Able to withstand or recover quickly from difficult conditions\n(Refers to the ability to endure hardships and bounce back from adversity.)\nE.g. Despite facing numerous setbacks, she remained resilient and bounced back stronger each time.\nE.g. The community showed its resilient spirit after the devastating flood, rebuilding homes and lives.\nE.g. His resilient attitude allowed him to overcome the challenges he faced at work.\n2. Having the ability to spring back into shape or position after being stretched, bent, or compressed\n(Refers to the physical ability of materials or objects to return to their original form after deformation.)\nE.g. The material used in the construction of the bridge is highly resilient, capable of enduring extreme weather conditions.\nE.g. The resilient rubber bands quickly regained their shape after being stretched.\nE.g. The foam mattress is resilient, maintaining its shape and comfort after years of use.\nSummary:\nResilient describes something or someone that is able to recover from difficulties or return to its original form after being stretched, bent, or compressed.\nRelated Words: tough, adaptable, elastic, durable.\nAntonyms: fragile, weak, brittle.",
             "Unnamed: 8": "resilient",
             "Unnamed: 9": "resilient"
         },
@@ -11459,6 +11749,8 @@
             "Unnamed: 9": "revolve"
         },
         {
+            "等級": "B2",
+            "分類": "形狀",
             "Words": "rhombus",
             "pronunciation-1": "[ˋrɑmbəs]",
             "traditional Chinese": "n.【數】菱形；斜方形",
@@ -11529,6 +11821,7 @@
             "Unnamed: 9": "roar"
         },
         {
+            "等級": "C1",
             "分類": "技術",
             "Words": "robustness",
             "pronunciation-1": "[roˋbʌstnɪs]",
@@ -11586,6 +11879,8 @@
             "Unnamed: 9": "rupture"
         },
         {
+            "等級": "B2",
+            "分類": "技術",
             "Words": "rust",
             "pronunciation-1": "[rʌst]",
             "traditional Chinese": "1.n.a.鏽，鐵鏽\n     b.鏽蝕\n     c.（植）鏽病\n2.v.a.生鏽\n     b. 生疏；(能力等)荒廢\n3.adj.鐵鏽色的",
@@ -11633,6 +11928,8 @@
             "Unnamed: 9": "salmonella"
         },
         {
+            "等級": "C1",
+            "分類": "商業",
             "Words": "saturate",
             "pronunciation-1": "[ˋsætʃə͵ret]",
             "traditional Chinese": "v 1.浸透；滲透 使飽和\n  2.使充滿 (color or emotion)\n  3.使飽和(市場)\nadj.（顏色）深的，濃的",
@@ -11797,6 +12094,8 @@
             "Unnamed: 9": "seamless"
         },
         {
+            "等級": "C1",
+            "分類": "Design",
             "Words": "seamless-design",
             "pronunciation-1": "seamless design",
             "traditional Chinese": "n.無縫設計",
@@ -11941,6 +12240,8 @@
             "Unnamed: 9": "shedding-light"
         },
         {
+            "等級": "C1",
+            "分類": "藝術",
             "Words": "sheen",
             "pronunciation-1": "[ʃin]",
             "traditional Chinese": "n.1.有光澤的紡織品\n   2.光輝，光澤\nv.發光，閃耀",
@@ -11949,6 +12250,7 @@
             "Unnamed: 9": "sheen"
         },
         {
+            "等級": "A2 ",
             "分類": "形狀",
             "Words": "sheet",
             "pronunciation-1": "[ʃit]",
@@ -11991,6 +12293,15 @@
             "Unnamed: 9": "shiver"
         },
         {
+            "等級": "B2",
+            "分類": "人物特性",
+            "Words": "showy",
+            "pronunciation-1": "[ˋʃoɪ]",
+            "traditional Chinese": "adj.(過分)豔麗的，浮華的；顯眼的，引人注目的\n     2.炫耀的，賣弄的",
+            "English meaning": "Showy is an adjective with the following meanings:\n1. Intended to attract attention or impress others through its appearance or display, often in a way that is considered excessive or ostentatious.\nE.g. She wore a showy dress to the party, hoping to stand out among the crowd.\nE.g. The showy decorations on the building caught everyone's eye during the festival.\nE.g. His showy attitude made him unpopular with his colleagues.\n2. Bright, colorful, or striking in a way that is meant to be noticed or admired.\nE.g. The peacock's showy feathers were on full display during the mating season.\nE.g. The showy performance by the dancer captivated the audience.\nE.g. The car's showy exterior was covered in gold paint and had sparkling details.\nSummary:\n\"Showy\" describes something that is designed to attract attention, often with an emphasis on being extravagant or ostentatious in appearance or behavior.\nRelated Words:\nOstentatious, flashy, extravagant, flamboyant\nAntonyms:\nModest, subtle, plain, simple",
+            "Unnamed: 9": "showy"
+        },
+        {
             "等級": "C2",
             "Words": "side-hustle",
             "pronunciation-1": "side hustle",
@@ -12025,6 +12336,8 @@
             "Unnamed: 9": "signify"
         },
         {
+            "等級": "B2",
+            "分類": "Design",
             "Words": "simplicity",
             "pronunciation-1": "[sɪmˋplɪsətɪ]",
             "traditional Chinese": "n.1.簡單，簡易；簡明[U]\n   2.簡樸，樸素[U]\n   3.真誠，坦率[U]",
@@ -12033,6 +12346,8 @@
             "Unnamed: 9": "simplicity"
         },
         {
+            "等級": "B2",
+            "分類": "技術",
             "Words": "simultaneously",
             "pronunciation-1": "[saɪməlˋtenɪəslɪ]",
             "traditional Chinese": "adv.同時地",
@@ -12110,6 +12425,8 @@
             "Unnamed: 9": "skyrocket"
         },
         {
+            "等級": "B2",
+            "分類": "Design",
             "Words": "sleek",
             "pronunciation-1": "[slik]",
             "traditional Chinese": "adj.1光滑的，柔滑的\n     2.雅緻的；時髦的；時尚的\n3. 體態苗條的、流線型的。\nV.使光滑，使發油光",
@@ -12173,6 +12490,8 @@
             "Unnamed: 9": "snugly"
         },
         {
+            "等級": "B2",
+            "分類": "日常生活",
             "Words": "soak",
             "pronunciation-1": "[sok]",
             "traditional Chinese": "v.1.浸泡，浸漬(+in)\n  2.使濕透 吸收(水)(+in/up)\n   3.浸泡 (在水裡)\nn.浸泡，浸漬",
@@ -12374,6 +12693,7 @@
             "Unnamed: 9": "speculation"
         },
         {
+            "等級": "C1",
             "分類": "形狀",
             "Words": "spherical",
             "pronunciation-1": "[ˋsfɛrək!]",
@@ -12447,6 +12767,8 @@
             "Unnamed: 9": "spoilage"
         },
         {
+            "等級": "A2",
+            "分類": "日常生活",
             "Words": "sponge",
             "pronunciation-1": "[spʌndʒ]",
             "traditional Chinese": "n.1.海綿\n  2.(海中動物)海綿\n  3.海綿蛋糕\n  4.寄生他人生活的人\n    （俗稱「吃白食的人」）\nv.1.用海綿擦拭或清潔\n  2.揩油，依賴他人過活\n  （非正式用法）",
@@ -12506,6 +12828,7 @@
             "Unnamed: 9": "sprain"
         },
         {
+            "等級": "B2",
             "分類": "形狀",
             "Words": "square-N",
             "pronunciation-1": "[skwɛr]",
@@ -12515,6 +12838,7 @@
             "Unnamed: 9": "square-N"
         },
         {
+            "等級": "B2",
             "分類": "形狀",
             "Words": "square-V",
             "pronunciation-1": "[skwɛr]",
@@ -12582,6 +12906,7 @@
             "Unnamed: 9": "startle"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "state-of-the-art",
             "pronunciation-1": "state-of-the-art",
@@ -12615,6 +12940,7 @@
             "Unnamed: 9": "stern"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "stick-out",
             "pronunciation-1": "stick out",
@@ -12679,6 +13005,7 @@
             "Unnamed: 9": "stow-away"
         },
         {
+            "等級": "B2",
             "分類": "Design",
             "Words": "straightforward",
             "pronunciation-1": "͵stretˋfɔrwɚd]",
@@ -12724,6 +13051,7 @@
             "Unnamed: 9": "stray"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "streamline",
             "pronunciation-1": "[ˋstrim͵laɪn]",
@@ -12733,6 +13061,7 @@
             "Unnamed: 9": "streamline"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "streamlined-design",
             "pronunciation-1": "[ˋstrim͵laɪn]",
@@ -12742,6 +13071,8 @@
             "Unnamed: 9": "streamlined-design"
         },
         {
+            "等級": "B2",
+            "分類": "動作",
             "Words": "strike",
             "pronunciation-1": "[straɪk]",
             "traditional Chinese": "v.1.擊打，敲擊\n  2.衝擊，襲擊\n  3.攻擊，突襲\n  4.給人印象，使意識到\n  5.刪除，移除\n  6.罷工，拒絕工作 (Go on strike)\n   7.產生火花、火焰或聲音\n\n n.1.打擊，攻擊\n    2.突襲，軍事攻擊\n    3.罷工，抗議 (Labor strike)\n    4.發現，成功\n    5.（棒球）好球，擊球失敗",
@@ -13032,6 +13363,7 @@
             "Unnamed: 9": "susceptible"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "sustainability",
             "pronunciation-1": "[sə͵stenəˋbɪlɪtɪ]",
@@ -13041,6 +13373,7 @@
             "Unnamed: 9": "sustainability"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "sustainable",
             "pronunciation-1": "[səˋstenəb!]",
@@ -13050,6 +13383,7 @@
             "Unnamed: 9": "sustainable"
         },
         {
+            "等級": "C1",
             "分類": "Design",
             "Words": "sustainably",
             "pronunciation-1": "[səˈsteɪnəbli]",
@@ -13158,20 +13492,22 @@
             "Unnamed: 9": "synchronize"
         },
         {
+            "等級": "B2",
             "分類": "語言",
             "Words": "synonym",
             "pronunciation-1": "[ˋsɪnə͵nɪm]",
             "traditional Chinese": "n.同義字；類義字",
-            "English meaning": "A synonym is a word or phrase that has the same or nearly the same meaning as another word or phrase in the same language. For example, \"big\" is a synonym for \"large,\" and \"happy\" is a synonym for \"joyful.\" Synonyms are often used to add variety to language and to avoid repetition in writing or speech.",
+            "English meaning": "A synonym is a word or phrase that has the same or nearly the same meaning as another word or phrase in the same language, For example, \"big\" is a synonym for \"large,\" and \"happy\" is a synonym for \"joyful.\" Synonyms are often used to add variety to language and to avoid repetition in writing or speech.\nE.g. The word intelligent is a synonym for smart, both describing someone who has a high level of cognitive ability.\nE.g. She used a synonym to avoid repeating the same word in her essay.\nE.g. Knowing the synonym of a word can help improve your vocabulary.\nSummary:\nSynonyms help add variety to language and allow speakers and writers to choose the word that best fits the context, tone, or style they wish to convey.\nRelated Words: equivalent, alternative, parallel, substitute, counterpart.\nAntonyms: antonym, opposite, reverse, contrary.",
             "Unnamed: 8": "synonym",
             "Unnamed: 9": "synonym"
         },
         {
+            "等級": "B2",
             "分類": "語言",
             "Words": "synonymous",
             "pronunciation-1": "[sɪˋnɑnəməs]",
-            "traditional Chinese": "adj.同義的；同義詞性質的\n   2.等同於的",
-            "English meaning": "\"Synonymous\" refers to things that are closely related in meaning or have a very similar meaning. Two words are synonymous if they can be used interchangeably in a particular context without changing the overall meaning. For example, \"big\" and \"large\" are synonymous because they both refer to something of considerable size.\nE.g. \"In this context, 'happy' and 'joyful' are synonymous; they both convey a sense of contentment and delight.\"\n\"To be synonymous with\" means that two things are closely associated or have a very similar meaning. \nE.g. When I said that I wanted to become a family with you, it was synonymous with saying that I loved you. \nE.g. His name has become synonymous with innovation in the tech industry, as he has consistently introduced groundbreaking ideas and products",
+            "traditional Chinese": "adj.同義的；同義詞性質的",
+            "English meaning": "Synonymous is an adjective that refers to two or more words, phrases, or expressions having the same or nearly the same meaning. It is used to describe words or expressions that can be used interchangeably in certain contexts.\n\nE.g. In some contexts, \"car\" and \"automobile\" are synonymous, as both refer to a motor vehicle.\nE.g. When I said that I wanted to become a family with you, it was synonymous with saying that I loved you.\nE.g. His name has become synonymous with innovation in the tech industry, as he has consistently introduced groundbreaking ideas and products.\nE.g. In his mind, failure was synonymous with giving up.\nE.g. The words 'environmentally friendly' have become synonymous with sustainable practices.\n\nSummary:\nSynonymous describes words or expressions that have the same or very similar meanings and can be used interchangeably in specific contexts.\n\nRelated Words: equivalent, interchangeable, identical, matching, alike.\nAntonyms: different, opposite, contrary, dissimilar.",
             "Unnamed: 8": "synonymous",
             "Unnamed: 9": "synonymous"
         },
@@ -13380,7 +13716,8 @@
             "Unnamed: 9": "taxpayer"
         },
         {
-            "分類": "技術",
+            "等級": "B2",
+            "分類": "動作",
             "Words": "tear",
             "pronunciation-1": "[tɛr]-V",
             "pronunciation-2": "[tɪr]-n",
@@ -13388,6 +13725,16 @@
             "English meaning": "Tear is a noun and a verb with the following meanings:\nAs a Noun : \n1. A drop of liquid from the eye: Refers to a droplet produced by the eyes due to emotion, irritation, or injury.\nE.g. Tears streamed down her face as she watched the emotional movie.\nE.g. He wiped away a tear of joy after hearing the good news.\n2. A hole or split: Refers to a rip or damage in a material.\nE.g. The shirt had a tear in the sleeve after it caught on a nail.\nE.g. The document had a noticeable tear along the edge.\nAs a Verb: tear / tore / torn / tearing:\n1. To rip or split something: Refers to damaging material by pulling it apart.\nE.g. She accidentally tore the page out of the book.\nE.g. He tore the wrapping paper to reveal the gift.\n2. To move forcefully or quickly: Refers to rushing or speeding in an intense or uncontrolled way.\nE.g. The child tore through the house, knocking over furniture.\nE.g. The car tore down the highway at full speed.\n3. To injure a body part by straining it: Refers to causing damage to muscles, ligaments, or tendons.\nE.g. He tore a ligament during the game and had to leave the field.\nE.g. She felt a sharp pain after tearing a muscle while exercising.\nSummary:\nTear can mean a drop of liquid from the eye or a hole in something as a noun, and to rip, move quickly, or cause injury as a verb.\nRelated Words: rip, split, rush, damage, weep.\nAntonyms: mend, repair, fix, stroll, calm.",
             "Unnamed: 8": "tear",
             "Unnamed: 9": "tear"
+        },
+        {
+            "等級": "B2",
+            "分類": "技術",
+            "Words": "technician",
+            "pronunciation-1": "[tɛkˋnɪʃən]",
+            "traditional Chinese": "N.\n技術員，技師：(指具有專業技能並從事技術性工作的專業人員，通常在工程、醫療、電子等領域)",
+            "English meaning": "Technician is a noun with the following meaning:\nA person who is skilled in a particular technical field, especially one who maintains, repairs, or operates specialized equipment or systems.\nE.g. The technician fixed the air conditioning unit within an hour.\nE.g. A lab technician prepared the samples for testing.\nE.g. The computer technician upgraded the company’s network security.\nSummary:\n\"Technician\" refers to a skilled worker who specializes in maintaining, repairing, or operating technical systems or equipment.\nRelated Words:\nEngineer, mechanic, specialist, operator, expert\nAntonyms:\nAmateur, novice, layperson, non-specialist",
+            "Unnamed: 8": "technician",
+            "Unnamed: 9": "technician"
         },
         {
             "等級": "B2",
@@ -13760,6 +14107,7 @@
             "Unnamed: 9": "trade-accord"
         },
         {
+            "等級": "B2",
             "分類": "職業",
             "Words": "traditionalists",
             "pronunciation-1": "[trəˋdɪʃənlɪst]",
@@ -13805,6 +14153,16 @@
             "Unnamed: 9": "trance"
         },
         {
+            "等級": "B2",
+            "分類": "科技",
+            "Words": "transmission",
+            "pronunciation-1": "[trænsˋmɪʃən]",
+            "traditional Chinese": "N.\n1.傳輸，傳播：(指資訊、信號、疾病或其他事物從一個地方或人傳遞到另一個地方或人)\n2.傳動裝置，變速器：(在機械或汽車領域，指將動力從引擎傳遞到車輪的系統)",
+            "English meaning": "Transmission is a noun with the following meanings:\n1. The act or process of sending or transferring something from one place, person, or thing to another, such as information, signals, or diseases.\nE.g. The transmission of the message was delayed due to network issues.\nE.g. The flu virus spreads through airborne transmission.\nE.g. Radio transmission allows communication over long distances.\n2. A system in a vehicle that transmits power from the engine to the wheels, allowing movement and speed control.\nE.g. The car’s transmission needed repair after years of use.\nE.g. Manual transmission requires the driver to shift gears manually.\nE.g. The mechanic checked the automatic transmission for any faults.\nSummary:\n\"Transmission\" refers to the act of sending or transferring something, such as information, signals, or diseases, as well as the system in a vehicle that transfers power from the engine to the wheels.\nRelated Words:\nTransfer, conveyance, broadcasting, communication, gearbox, drivetrain\nAntonyms:\nInterruption, blockage, failure, suppression",
+            "Unnamed: 8": "transmission",
+            "Unnamed: 9": "transmission"
+        },
+        {
             "等級": "C1",
             "分類": "醫學",
             "Words": "transplant",
@@ -13815,6 +14173,7 @@
             "Unnamed: 9": "transplant"
         },
         {
+            "等級": "B2",
             "分類": "形狀",
             "Words": "trapezoid",
             "pronunciation-1": "[ˋtræpə͵zɔɪd]",
@@ -13870,6 +14229,7 @@
             "Unnamed: 9": "trepidation"
         },
         {
+            "等級": "B2",
             "分類": "Design",
             "Words": "triadic",
             "pronunciation-1": "trī-ˈa-dik",
@@ -14067,6 +14427,7 @@
             "Unnamed: 9": "underage"
         },
         {
+            "等級": "C1",
             "分類": "技術",
             "Words": "underlay",
             "pronunciation-1": "[͵ʌndɚˋle]",
@@ -14076,6 +14437,7 @@
             "Unnamed: 9": "underlay"
         },
         {
+            "等級": "C1",
             "分類": "技術",
             "Words": "underlying",
             "pronunciation-1": "[͵ʌndɚˋlaɪɪŋ]",
@@ -14136,6 +14498,7 @@
             "Unnamed: 9": "unforeseen"
         },
         {
+            "等級": "upcycle",
             "分類": "Design",
             "Words": "upcycle",
             "pronunciation-1": "upcycle",
@@ -14378,6 +14741,7 @@
             "Unnamed: 9": "vernier-caliper"
         },
         {
+            "等級": "upcycle",
             "分類": "Design",
             "Words": "versatility",
             "pronunciation-1": "[͵vɝsəˋtɪlətɪ]",
@@ -14605,6 +14969,7 @@
             "Unnamed: 9": "waver"
         },
         {
+            "等級": "upcycle",
             "分類": "Design",
             "Words": "wear-and-tear",
             "pronunciation-1": "wear and tear",
@@ -14799,7 +15164,12 @@
             "Unnamed: 9": "wit"
         },
         {
+            "等級": "C2",
+            "分類": "社會",
             "Words": "woke-Culture",
+            "pronunciation-1": "/wəʊk ˈkʌltʃər/",
+            "traditional Chinese": "n.社會覺醒文化",
+            "English meaning": "Woke Culture refers to a social movement or cultural trend focused on awareness of social inequalities, especially in relation to race, gender, and other identity groups. It emphasizes the recognition of systemic oppression and social justice issues, advocating for social change and inclusivity. \"Woke\" originally comes from African American Vernacular English (AAVE) and referred to being alert to social injustices, particularly racial discrimination.\nHowever, \"woke culture\" has been critiqued and sometimes used pejoratively, particularly in discussions about political correctness or \"cancel culture,\" where it can imply excessive or overly righteous attention to social issues.\nE.g. Some argue that woke culture sometimes goes too far in its pursuit of social justice. \nE.g. The rise of woke culture in recent years has sparked debates about free speech and the limits of political correctness. \nE.g. The company's adoption of woke culture led to changes in its policies, ensuring better representation and inclusivity in their workforce.\nSummary:\nWoke culture refers to a movement that highlights social justice, awareness of inequalities, and systemic oppression, often advocating for inclusive and progressive changes in society. It can also be a point of controversy depending on how it is implemented and perceived.\nRelated Words: social justice, inclusivity, political correctness, activism.\nAntonyms: apathy, indifference, ignorance, complacency.",
             "Unnamed: 8": "woke-Culture",
             "Unnamed: 9": "woke-Culture"
         },
@@ -14846,9 +15216,12 @@
             "Unnamed: 9": "wrongful"
         },
         {
+            "等級": "C1",
             "分類": "旅遊",
             "Words": "yacht",
             "pronunciation-1": "[jɑt]",
+            "traditional Chinese": "n.1.豪華遊艇\n   2.賽艇",
+            "English meaning": "Yacht is a noun that refers to a large, luxurious boat or ship, typically used for recreational purposes, cruising, or racing. Yachts are often equipped with various amenities and can range in size, from small private vessels to massive, opulent ships.\nE.g. The couple spent their vacation cruising through the Mediterranean on their private yacht.\nE.g. The yacht’s sleek design and spacious decks made it the perfect setting for a luxury party.\nE.g. He dreams of one day owning a yacht and traveling the world’s oceans in style.\nSummary:\nA yacht is a luxury boat or ship designed for recreation or pleasure, often associated with wealth and leisure travel.\nRelated Words: vessel, boat, cruiser, sailboat, luxury ship.\nAntonyms: dinghy, rowboat, canoe.",
             "Unnamed: 8": "yacht",
             "Unnamed: 9": "yacht"
         },
