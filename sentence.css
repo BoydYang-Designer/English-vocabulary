@@ -504,6 +504,12 @@ h1 {
     background-color: #00BFFF !important;
 }
 
+/* 自動播放按鈕激活狀態 */
+.auto-playing {
+    background-color: #00BFFF !important; /* 亮藍色 */
+    color: white !important; /* 白色文字 */
+}
+
 /* 高亮當前播放的句子 */
 .word-item-container.playing {
     background-color: #e0f7fa; /* 清淡的藍色背景 */
