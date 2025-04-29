@@ -8,13 +8,11 @@ let lastWordListValue = "";
 let lastSentenceListWord = "";
 let currentSentenceList = []; // 儲存當前的句子列表
 let currentSentenceIndex = -1; // 儲存當前句子的索引
-let touchStartX = 0; // 滑動起點 X 座標
-let touchEndX = 0;   // 滑動終點 X 座標
+let currentWordList = []; // 儲存當前分類的單字列表
+let currentWordIndex = -1; // 儲存當前單字的索引
 let isQuizMode = false;   // 標記是否為測驗模式
 let isAutoPlaying = false; // 是否處於自動播放模式
 let isPaused = false;      // 是否暫停
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("開始載入資料...");
@@ -134,6 +132,7 @@ function showWordsAndSentences(type, value) {
     if (filteredWords.length === 0) {
         wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
     } else {
+        currentWordList = filteredWords.map(w => w.Words); // 儲存當前分類的單字列表
         filteredWords.forEach(word => {
             let wordText = word.Words;
             let isChecked = localStorage.getItem(`checked_${wordText}`) === "true";
@@ -502,183 +501,96 @@ function displaySentenceList(sentences) {
     });
 }
 
-// 自動撥放 step 1
+// 自動播放邏輯
 function toggleAutoPlay() {
-    if (document.getElementById("wordList").style.display === "block") {
-        alert("請先選擇一個單字進入句子列表再啟動自動播放！");
-        return;
-    }
-    if (!isAutoPlaying) {
-        startAutoPlay();
-    } else if (!isPaused) {
-        pauseAutoPlay();
+    if (isAutoPlaying) {
+        stopAutoPlay();
     } else {
-        resumeAutoPlay();
+        startAutoPlay();
     }
+}
+
+function startAutoPlay() {
+    if (document.getElementById("wordList").style.display === "block") {
+        // 在單字列表層（第二層）啟動自動播放
+        if (currentWordList.length === 0) {
+            alert("請先選擇一個分類");
+            return;
+        }
+        isAutoPlaying = true;
+        currentWordIndex = 0;
+        playNextWord();
+    } else if (document.getElementById("sentenceList").style.display === "block") {
+        // 在句子列表層（第三層）啟動自動播放
+        if (currentSentenceList.length === 0) {
+            alert("請先選擇一個單字");
+            return;
+        }
+        isAutoPlaying = true;
+        currentSentenceIndex = 0;
+        playNextSentence();
+    } else if (document.getElementById("sentenceDetails").style.display === "block") {
+        // 在句子詳情頁面（第四層）啟動自動播放
+        isAutoPlaying = true;
+        playCurrentSentence();
+    }
+}
+
+function stopAutoPlay() {
+    isAutoPlaying = false;
+    sentenceAudio.pause();
     updateAutoPlayButton();
 }
 
-
-// 自動撥放 Step 2
-function startAutoPlay() {
-    if (currentSentenceList.length === 0) {
-        alert("請先選擇一個句子列表再啟動自動播放！");
-        return;
-    }
-    isAutoPlaying = true;
-    isPaused = false;
-    // 如果 currentSentenceIndex 未設置（-1），則從 0 開始，否則從當前索引開始
-    if (currentSentenceIndex < 0) {
+function playNextWord() {
+    if (currentWordIndex < currentWordList.length) {
+        const word = currentWordList[currentWordIndex];
+        showSentences(word);
         currentSentenceIndex = 0;
+        playNextSentence();
+    } else {
+        stopAutoPlay();
     }
-    playCurrentSentence(); // 調用已定義的函數
-    console.log("開始自動播放從索引:", currentSentenceIndex, "句子:", currentSentenceList[currentSentenceIndex].Words);
 }
 
-// 自動撥放 Step 3
-// 自動撥放 Step 3
-function playCurrentSentence() {
-    if (currentSentenceIndex >= 0 && currentSentenceIndex < currentSentenceList.length) {
-        let sentenceId = currentSentenceList[currentSentenceIndex].Words;
-
-        // 如果當前在第四層（句子詳情頁），更新畫面
-        if (document.getElementById("sentenceDetails").style.display === "block") {
-            showSentenceDetails(sentenceId, currentSentenceIndex);
-        } else {
-            // 如果在句子列表頁，高亮當前句子
-            highlightCurrentSentence(sentenceId);
-        }
-
+function playNextSentence() {
+    if (currentSentenceIndex < currentSentenceList.length) {
+        const sentenceId = currentSentenceList[currentSentenceIndex].Words;
+        showSentenceDetails(sentenceId); // 切換到句子詳情頁面
         playSentenceAudio(`${sentenceId}.mp3`);
         sentenceAudio.onended = () => {
-            if (isAutoPlaying && !isPaused) {
-                removeHighlight(sentenceId); // 移除當前高亮
-                currentSentenceIndex++;
-                if (currentSentenceIndex < currentSentenceList.length) {
-                    playCurrentSentence(); // 播放並切換到下一個句子
-                } else {
-                    isAutoPlaying = false;
-                    updateAutoPlayButton();
-                }
+            currentSentenceIndex++;
+            if (currentSentenceIndex < currentSentenceList.length) {
+                playNextSentence();
+            } else {
+                currentWordIndex++;
+                playNextWord();
             }
         };
     } else {
-        isAutoPlaying = false;
-        updateAutoPlayButton();
+        currentWordIndex++;
+        playNextWord();
     }
 }
 
-function highlightCurrentSentence(sentenceId) {
-    // 移除所有現有的播放高亮
-    document.querySelectorAll(".word-item-container.playing").forEach(item => {
-        item.classList.remove("playing");
-    });
-
-    // 找到當前句子並添加高亮
-    const currentItem = document.querySelector(`.word-item[data-sentence="${sentenceId}"]`);
-    if (currentItem) {
-        const container = currentItem.closest(".word-item-container");
-        if (container) {
-            container.classList.add("playing");
-            // 自動滾動到當前句子（可選）
-            container.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-    }
-}
-
-function removeHighlight(sentenceId) {
-    const currentItem = document.querySelector(`.word-item[data-sentence="${sentenceId}"]`);
-    if (currentItem) {
-        const container = currentItem.closest(".word-item-container");
-        if (container) {
-            container.classList.remove("playing");
-        }
-    }
-}
-
-// 自動撥放 Step 4
-function playSentenceAudio(filename) {
-    console.log("開始播放:", filename);
-    const sentenceId = filename.replace(".mp3", "");
-    const playButtons = document.querySelectorAll(`.audio-btn[onclick="playSentenceAudio('${filename}')"]`);
-    const playBtn = playButtons[playButtons.length - 1] || document.getElementById("playAudioBtn");
-    sentenceAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/Sentence%20file/${filename}`;
-    if (playBtn) {
-        playBtn.classList.add("playing");
-    }
-    
-    // 如果在句子列表頁，手動播放時也高亮
-    if (document.getElementById("sentenceList").style.display === "block") {
-        highlightCurrentSentence(sentenceId);
-    }
-
-    sentenceAudio.play()
-        .then(() => console.log(`✅ 播放 ${filename} 成功`))
-        .catch(error => {
-            console.error(`🔊 播放 ${filename} 失敗:`, error);
-            if (playBtn) playBtn.classList.remove("playing");
-            if (isAutoPlaying && !isPaused) {
-                removeHighlight(sentenceId);
-                currentSentenceIndex++;
-                if (currentSentenceIndex < currentSentenceList.length) {
-                    playCurrentSentence();
-                } else {
-                    isAutoPlaying = false;
-                    updateAutoPlayButton();
-                }
-            }
-        });
+function playCurrentSentence() {
+    const sentenceId = currentSentenceList[currentSentenceIndex].Words;
+    playSentenceAudio(`${sentenceId}.mp3`);
     sentenceAudio.onended = () => {
-        if (playBtn) playBtn.classList.remove("playing");
-        console.log(`✅ ${filename} 播放結束`);
-        if (!isAutoPlaying) removeHighlight(sentenceId); // 手動播放結束時移除高亮
+        currentSentenceIndex++;
+        if (currentSentenceIndex < currentSentenceList.length) {
+            showSentenceDetails(currentSentenceList[currentSentenceIndex].Words);
+            intestayCurrentSentence();
+        } else {
+            stopAutoPlay();
+        }
     };
-    document.querySelectorAll(".audio-btn.playing").forEach(btn => {
-        if (btn !== playBtn) btn.classList.remove("playing");
-    });
 }
 
-// 自動撥放 Step 5
-function pauseAutoPlay() {
-    isPaused = true;
-    if (sentenceAudio && sentenceAudio.readyState >= 2) {
-        sentenceAudio.pause();
-    }
-}
-
-// 自動撥放 Step 6
-function resumeAutoPlay() {
-    isPaused = false;
-    if (sentenceAudio && sentenceAudio.readyState >= 2) {
-        sentenceAudio.play();
-    }
-}
-
-// 自動撥放 Step 7
 function updateAutoPlayButton() {
-    let autoPlayBtn = document.getElementById("autoPlayBtn"); // 句子列表層的按鈕
-    let autoPlayBtnDetails = document.getElementById("autoPlayBtnDetails"); // 第四層的按鈕
-
-    // 更新句子列表層的按鈕（如果存在）
+    const autoPlayBtn = document.getElementById("autoPlayBtn");
     if (autoPlayBtn) {
-        if (isAutoPlaying) {
-            autoPlayBtn.textContent = isPaused ? "繼續播放" : "停止播放";
-            autoPlayBtn.classList.add("active");
-        } else {
-            autoPlayBtn.textContent = "自動播放";
-            autoPlayBtn.classList.remove("active");
-        }
-    }
-
-    // 更新第四層的按鈕（如果存在）
-    if (autoPlayBtnDetails) {
-        if (isAutoPlaying) {
-            autoPlayBtnDetails.textContent = isPaused ? "繼續播放" : "停止播放";
-            autoPlayBtnDetails.classList.add("active");
-        } else {
-            autoPlayBtnDetails.textContent = "自動播放";
-            autoPlayBtnDetails.classList.remove("active");
-        }
+        autoPlayBtn.textContent = isAutoPlaying ? "停止播放" : "自動播放";
     }
 }
 
