@@ -934,8 +934,12 @@ function showDetails(word) {
     }
     phonetics += `</div>`;
 
-    let formattedChinese = word["traditional Chinese"].replace(/(\d+)\./g, "<br><strong>$1.</strong> ");
+    let formattedChinese = word["traditional Chinese"]
+    .replace(/(\d+)\./g, "<br><strong>$1.</strong> ")
+    .replace(/\s*([nN]\.|[vV]\.|[aA][dD][jJ]\.|[aA][dD][vV]\.|[pP][rR][eE][pP]\.|[cC][oO][nN][jJ]\.|[pP][rR][oO][nN]\.|[iI][nN][tT]\.)/g, "<br>$1 ")
+    .replace(/^<br>/, "");
     let chinese = `<div>${formattedChinese}</div>`;
+    
     let formattedMeaning = word["English meaning"]
         .replace(/^Summary:?/gm, "<h3>Summary</h3>")
         .replace(/Related Words:/g, "<h3>Related Words:</h3>")
