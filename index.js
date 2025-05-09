@@ -1170,39 +1170,49 @@ function playAudio(filename) {
     new Audio(baseURL + filename).play();
 }
 
-function playSentenceAudio(filename) {
-    let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
-    const playBtn = document.getElementById("playAudioBtn");
-    const pauseBtn = document.getElementById("pauseResumeBtn");
+function playSentenceAudio(audioFile) {
+    let playBtn = document.getElementById("playAudioBtn");
+    let pauseBtn = document.getElementById("pauseResumeBtn");
 
-    console.log("🔍 playBtn:", playBtn);
-    console.log("🔍 pauseBtn:", pauseBtn);
-    console.log("🔍 音檔 URL:", baseURL + filename);
+    // 取消自動播放
+    isAutoPlaying = false;
+    isPaused = false;
+    updateAutoPlayButton(); // 更新自動播放按鈕狀態
 
-    sentenceAudio.src = baseURL + filename;
-
-    // 只高亮播放按鈕
-    if (playBtn) playBtn.classList.add("playing");
-    if (pauseBtn) {
-        pauseBtn.classList.remove("playing");
-        pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />`;
+    // 停止當前音檔（如果有）
+    if (sentenceAudio && !sentenceAudio.paused) {
+        sentenceAudio.pause();
+        sentenceAudio.currentTime = 0;
     }
 
+    // 創建並播放新音檔
+    sentenceAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`);
     sentenceAudio.play()
-        .then(() => console.log(`✅ 播放 ${filename} 成功`))
-        .catch(error => {
-            console.error(`🔊 播放 ${filename} 失敗:`, error);
+        .then(() => {
+            // 更新按鈕狀態為播放中
+            if (playBtn) playBtn.classList.add("playing");
+            if (pauseBtn) {
+                pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />`;
+                pauseBtn.classList.remove("playing");
+            }
+            sentenceAudio.onended = () => {
+                // 音檔結束後重置按鈕狀態
+                if (playBtn) playBtn.classList.remove("playing");
+                if (pauseBtn) {
+                    pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
+                    pauseBtn.classList.add("playing");
+                }
+            };
+        })
+        .catch(err => {
+            console.error("❌ 音檔播放失敗:", err);
+            // 播放失敗時重置按鈕狀態
             if (playBtn) playBtn.classList.remove("playing");
-            if (pauseBtn) pauseBtn.classList.remove("playing");
+            if (pauseBtn) {
+                pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
+                pauseBtn.classList.add("playing");
+            }
         });
-
-    sentenceAudio.onended = () => {
-        if (playBtn) playBtn.classList.remove("playing");
-        if (pauseBtn) {
-            pauseBtn.classList.remove("playing");
-            pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
-        }
-    };
 }
 
 function togglePauseAudio(button) {
