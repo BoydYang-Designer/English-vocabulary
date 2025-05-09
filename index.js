@@ -15,14 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("searchContainer").style.display = "block";
     document.getElementById("startQuizBtn").style.display = "block";
     document.getElementById("sentencePageBtn").style.display = "block"; // 確保句子按鈕顯示
+    document.getElementById("wordQuizBtn").style.display = "block";
+    document.getElementById("wordPageBtn").style.display = "block";
     document.querySelector(".alphabet-container").style.display = "block";
     document.querySelector(".category-container").style.display = "block";
     document.querySelector(".level-container").style.display = "block";
     document.getElementById("wordList").style.display = "none";
     document.getElementById("wordDetails").style.display = "none";
     document.getElementById("wordListTitle").style.display = "none";
-
-
+    document.getElementById("autoPlayBtn").style.display = "none"; // 確保第一層隱藏「單字自動播放」
 
     // 新增「進入句子頁面」按鈕的事件監聽器
     const sentenceButton = document.getElementById("sentencePageBtn");
@@ -41,10 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
-    .then(res => res.json())
-    .then(data => {
-        wordsData = data["New Words"] || [];
-        console.log("✅ JSON 載入成功:", wordsData);
+        .then(res => res.json())
+        .then(data => {
+            wordsData = data["New Words"] || [];
+            console.log("✅ JSON 載入成功:", wordsData);
 
             // 確保分類和等級按鈕顯示
             setTimeout(() => {
@@ -305,7 +306,7 @@ function toggleAutoPlay() {
             resumeAutoPlay();
         }
     } else if (document.getElementById("wordDetails").style.display === "block") {
-        // 第三層：單字詳情頁面，保持原有邏輯不變
+        // 第三層：單字詳情頁面
         if (!isAutoPlaying) {
             startAutoPlay();
         } else if (!isPaused) {
@@ -559,10 +560,9 @@ function toggleCheck(word, button) {
 function backToFirstLayer() {
     document.getElementById("searchContainer").style.display = "block";
     document.getElementById("startQuizBtn").style.display = "block";
-    document.getElementById("startQuizBtn").style.display = "block"; // 句子測驗
-    document.getElementById("wordQuizBtn").style.display = "block";  // 單字測驗
-    document.getElementById("wordPageBtn").style.display = "block";  // 單字頁面
-    document.getElementById("sentencePageBtn").style.display = "block"; // 句子頁面
+    document.getElementById("wordQuizBtn").style.display = "block";
+    document.getElementById("wordPageBtn").style.display = "block";
+    document.getElementById("sentencePageBtn").style.display = "block";
     document.getElementById("wordList").style.display = "none";
     document.getElementById("wordDetails").style.display = "none";
     document.querySelector('.alphabet-container').style.display = "block";
@@ -571,7 +571,7 @@ function backToFirstLayer() {
     document.getElementById("wordItems").innerHTML = "";
     document.getElementById("wordListTitle").style.display = "none";
     document.getElementById("searchInput").value = "";
-    document.getElementById("autoPlayBtn").style.display = "none"; // 隱藏按鈕
+    document.getElementById("autoPlayBtn").style.display = "none"; // 確保第一層隱藏
 
     let searchResults = document.getElementById("searchResults");
     if (searchResults) {
@@ -873,7 +873,7 @@ function showDetails(word) {
     let fromPage = params.get('from');
     lastSentenceListWord = word.Words;
 
-    document.getElementById("autoPlayBtn").style.display = "block";
+    document.getElementById("autoPlayBtn").style.display = "none"; // 隱藏「單字自動播放」按鈕
 
     if (searchInput !== "" || fromPage === "sentence") {
         bButton.disabled = false;
@@ -893,7 +893,6 @@ function showDetails(word) {
     document.querySelector(".alphabet-container").style.display = "none";
     document.querySelector(".category-container").style.display = "none";
     document.querySelector(".level-container").style.display = "none";
-    document.getElementById("autoPlayBtn").style.display = "block";
 
     // 找到當前單字在列表中的索引
     window.currentIndex = window.currentWordList.findIndex(w => {
@@ -935,9 +934,9 @@ function showDetails(word) {
     phonetics += `</div>`;
 
     let formattedChinese = word["traditional Chinese"]
-    .replace(/(\d+)\./g, "<br><strong>$1.</strong> ")
-    .replace(/\s*([nN]\.|[vV]\.|[aA][dD][jJ]\.|[aA][dD][vV]\.|[pP][rR][eE][pP]\.|[cC][oO][nN][jJ]\.|[pP][rR][oO][nN]\.|[iI][nN][tT]\.)/g, "<br>$1 ")
-    .replace(/^<br>/, "");
+        .replace(/(\d+)\./g, "<br><strong>$1.</strong> ")
+        .replace(/\s*([nN]\.|[vV]\.|[aA][dD][jJ]\.|[aA][dD][vV]\.|[pP][rR][eE][pP]\.|[cC][oO][nN][jJ]\.|[pP][rR][oO][nN]\.|[iI][nN][tT]\.)/g, "<br>$1 ")
+        .replace(/^<br>/, "");
     let chinese = `<div>${formattedChinese}</div>`;
     
     let formattedMeaning = word["English meaning"]
@@ -1032,15 +1031,25 @@ function getFromPage() {
 
 function updateAutoPlayButton() {
     let autoPlayBtn = document.getElementById("autoPlayBtn");
-    if (autoPlayBtn) {
-        if (isAutoPlaying) {
-            if (isPaused) {
-                autoPlayBtn.textContent = "繼續播放";
+    let autoPlayDetailsBtn = document.getElementById("autoPlayDetailsBtn");
+
+    if (document.getElementById("wordList").style.display === "block") {
+        // 第二層：更新 autoPlayBtn
+        if (autoPlayBtn) {
+            if (isAutoPlaying) {
+                autoPlayBtn.textContent = isPaused ? "繼續播放" : "停止播放";
             } else {
-                autoPlayBtn.textContent = "停止播放";
+                autoPlayBtn.textContent = "單字自動播放";
             }
-        } else {
-            autoPlayBtn.textContent = "自動播放";
+        }
+    } else if (document.getElementById("wordDetails").style.display === "block") {
+        // 第三層：更新 autoPlayDetailsBtn
+        if (autoPlayDetailsBtn) {
+            if (isAutoPlaying) {
+                autoPlayDetailsBtn.textContent = isPaused ? "繼續播放" : "停止播放";
+            } else {
+                autoPlayDetailsBtn.textContent = "內文自動播放";
+            }
         }
     }
 }
@@ -1081,35 +1090,35 @@ function backToWordList() {
         updateAutoPlayButton();
     }
 
-        // 原有的返回邏輯
-        if (lastWordListType === "search") {
-            document.getElementById("searchContainer").style.display = "block";
-            document.getElementById("wordList").style.display = "none";
-            document.getElementById("wordDetails").style.display = "none";
-            document.querySelector('.alphabet-container').style.display = "block";
-            document.querySelector('.category-container').style.display = "block";
-            document.querySelector('.level-container').style.display = "block";
-            document.getElementById("autoPlayBtn").style.display = "block"; // 隱藏按鈕
-        } else if (lastWordListType === "importantWords") {
-            console.log("🔙 返回重要單字列表");
-            showImportantWords();
-        } else if (lastWordListType === "wrongWords") {
-            console.log("🔙 返回錯誤單字列表");
-            showWrongWords();
-        } else if (lastWordListType === "checkedWords") {
-            console.log("🔙 返回 Checked 單字列表");
-            showCheckedWords();
-        } else if (lastWordListType === "noteWords") {
-            console.log("🔙 返回 Note 單字列表");
-            showNoteWords();
-        } else if (lastWordListType && lastWordListValue) {
-            console.log(`🔙 返回 ${lastWordListType} 類別: ${lastWordListValue}`);
-            showWords(lastWordListType, lastWordListValue);
-        } else {
-            console.error("❌ 無法返回，lastWordListType 為空，回到第一層");
-            backToFirstLayer();
-        }
+    // 原有的返回邏輯
+    if (lastWordListType === "search") {
+        document.getElementById("searchContainer").style.display = "block";
+        document.getElementById("wordList").style.display = "none";
+        document.getElementById("wordDetails").style.display = "none";
+        document.querySelector('.alphabet-container').style.display = "block";
+        document.querySelector('.category-container').style.display = "block";
+        document.querySelector('.level-container').style.display = "block";
+        document.getElementById("autoPlayBtn").style.display = "none"; // 第一層不顯示
+    } else if (lastWordListType === "importantWords") {
+        console.log("🔙 返回重要單字列表");
+        showImportantWords();
+    } else if (lastWordListType === "wrongWords") {
+        console.log("🔙 返回錯誤單字列表");
+        showWrongWords();
+    } else if (lastWordListType === "checkedWords") {
+        console.log("🔙 返回 Checked 單字列表");
+        showCheckedWords();
+    } else if (lastWordListType === "noteWords") {
+        console.log("🔙 返回 Note 單字列表");
+        showNoteWords();
+    } else if (lastWordListType && lastWordListValue) {
+        console.log(`🔙 返回 ${lastWordListType} 類別: ${lastWordListValue}`);
+        showWords(lastWordListType, lastWordListValue);
+    } else {
+        console.error("❌ 無法返回，lastWordListType 為空，回到第一層");
+        backToFirstLayer();
     }
+}
 
 function playAudio(filename) {
     let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";

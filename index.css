@@ -137,6 +137,14 @@ h1 {
     padding: 10px;
 }
 
+/* 在 index.css 中新增 */
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
 /* 按鈕 */
 .button {
     font-size: 18px;
