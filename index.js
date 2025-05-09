@@ -15,14 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("searchContainer").style.display = "block";
     document.getElementById("startQuizBtn").style.display = "block";
     document.getElementById("sentencePageBtn").style.display = "block"; // 確保句子按鈕顯示
+    document.getElementById("wordQuizBtn").style.display = "block";
+    document.getElementById("wordPageBtn").style.display = "block";
     document.querySelector(".alphabet-container").style.display = "block";
     document.querySelector(".category-container").style.display = "block";
     document.querySelector(".level-container").style.display = "block";
     document.getElementById("wordList").style.display = "none";
     document.getElementById("wordDetails").style.display = "none";
     document.getElementById("wordListTitle").style.display = "none";
-
-
+    document.getElementById("autoPlayBtn").style.display = "none"; // 確保第一層隱藏「單字自動播放」
 
     // 新增「進入句子頁面」按鈕的事件監聽器
     const sentenceButton = document.getElementById("sentencePageBtn");
@@ -41,10 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
-    .then(res => res.json())
-    .then(data => {
-        wordsData = data["New Words"] || [];
-        console.log("✅ JSON 載入成功:", wordsData);
+        .then(res => res.json())
+        .then(data => {
+            wordsData = data["New Words"] || [];
+            console.log("✅ JSON 載入成功:", wordsData);
 
             // 確保分類和等級按鈕顯示
             setTimeout(() => {
@@ -305,7 +306,7 @@ function toggleAutoPlay() {
             resumeAutoPlay();
         }
     } else if (document.getElementById("wordDetails").style.display === "block") {
-        // 第三層：單字詳情頁面，保持原有邏輯不變
+        // 第三層：單字詳情頁面
         if (!isAutoPlaying) {
             startAutoPlay();
         } else if (!isPaused) {
@@ -513,10 +514,11 @@ function pauseAutoPlay() {
         }
         console.log("⏸️ 第二層自動播放已暫停");
     } else if (sentenceAudio && sentenceAudio.readyState >= 2) {
-        // 第三層邏輯（保持不變）
+        // 第三層暫停邏輯
         sentenceAudio.pause();
         console.log("⏸️ 音檔已暫停");
     }
+    updateAutoPlayButton(); // 更新按鈕狀態
 }
 
 function resumeAutoPlay() {
@@ -526,11 +528,12 @@ function resumeAutoPlay() {
         playNextWord();
         console.log("▶️ 第二層自動播放已恢復");
     } else if (sentenceAudio && sentenceAudio.readyState >= 2) {
-        // 第三層邏輯（保持不變）
+        // 第三層恢復邏輯
         sentenceAudio.play()
             .then(() => console.log("▶️ 音檔恢復播放"))
             .catch(err => console.error("🔊 播放失敗:", err));
     }
+    updateAutoPlayButton(); // 更新按鈕狀態
 }
 
 function toggleCheck(word, button) {
@@ -559,10 +562,9 @@ function toggleCheck(word, button) {
 function backToFirstLayer() {
     document.getElementById("searchContainer").style.display = "block";
     document.getElementById("startQuizBtn").style.display = "block";
-    document.getElementById("startQuizBtn").style.display = "block"; // 句子測驗
-    document.getElementById("wordQuizBtn").style.display = "block";  // 單字測驗
-    document.getElementById("wordPageBtn").style.display = "block";  // 單字頁面
-    document.getElementById("sentencePageBtn").style.display = "block"; // 句子頁面
+    document.getElementById("wordQuizBtn").style.display = "block";
+    document.getElementById("wordPageBtn").style.display = "block";
+    document.getElementById("sentencePageBtn").style.display = "block";
     document.getElementById("wordList").style.display = "none";
     document.getElementById("wordDetails").style.display = "none";
     document.querySelector('.alphabet-container').style.display = "block";
@@ -571,7 +573,7 @@ function backToFirstLayer() {
     document.getElementById("wordItems").innerHTML = "";
     document.getElementById("wordListTitle").style.display = "none";
     document.getElementById("searchInput").value = "";
-    document.getElementById("autoPlayBtn").style.display = "none"; // 隱藏按鈕
+    document.getElementById("autoPlayBtn").style.display = "none"; // 確保第一層隱藏
 
     let searchResults = document.getElementById("searchResults");
     if (searchResults) {
@@ -873,7 +875,7 @@ function showDetails(word) {
     let fromPage = params.get('from');
     lastSentenceListWord = word.Words;
 
-    document.getElementById("autoPlayBtn").style.display = "block";
+    document.getElementById("autoPlayBtn").style.display = "none"; // 隱藏「單字自動播放」按鈕
 
     if (searchInput !== "" || fromPage === "sentence") {
         bButton.disabled = false;
@@ -893,7 +895,6 @@ function showDetails(word) {
     document.querySelector(".alphabet-container").style.display = "none";
     document.querySelector(".category-container").style.display = "none";
     document.querySelector(".level-container").style.display = "none";
-    document.getElementById("autoPlayBtn").style.display = "block";
 
     // 找到當前單字在列表中的索引
     window.currentIndex = window.currentWordList.findIndex(w => {
@@ -935,9 +936,9 @@ function showDetails(word) {
     phonetics += `</div>`;
 
     let formattedChinese = word["traditional Chinese"]
-    .replace(/(\d+)\./g, "<br><strong>$1.</strong> ")
-    .replace(/\s*([nN]\.|[vV]\.|[aA][dD][jJ]\.|[aA][dD][vV]\.|[pP][rR][eE][pP]\.|[cC][oO][nN][jJ]\.|[pP][rR][oO][nN]\.|[iI][nN][tT]\.)/g, "<br>$1 ")
-    .replace(/^<br>/, "");
+        .replace(/(\d+)\./g, "<br><strong>$1.</strong> ")
+        .replace(/\s*([nN]\.|[vV]\.|[aA][dD][jJ]\.|[aA][dD][vV]\.|[pP][rR][eE][pP]\.|[cC][oO][nN][jJ]\.|[pP][rR][oO][nN]\.|[iI][nN][tT]\.)/g, "<br>$1 ")
+        .replace(/^<br>/, "");
     let chinese = `<div>${formattedChinese}</div>`;
     
     let formattedMeaning = word["English meaning"]
@@ -974,6 +975,15 @@ function playAudioSequentially(word) {
     let phoneticAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word.Words)}.mp3`);
     sentenceAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word.Words)} - sentence.mp3`);
 
+    // 更新播放和暫停按鈕狀態
+    let playBtn = document.getElementById("playAudioBtn");
+    let pauseBtn = document.getElementById("pauseResumeBtn");
+    if (playBtn) playBtn.classList.add("playing");
+    if (pauseBtn) {
+        pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />`;
+        pauseBtn.classList.remove("playing");
+    }
+
     phoneticAudio.play()
         .then(() => new Promise(resolve => {
             phoneticAudio.onended = resolve;
@@ -986,7 +996,14 @@ function playAudioSequentially(word) {
             if (!isPaused) {
                 sentenceAudio.play()
                     .then(() => new Promise(resolve => {
-                        sentenceAudio.onended = resolve;
+                        sentenceAudio.onended = () => {
+                            if (playBtn) playBtn.classList.remove("playing");
+                            if (pauseBtn) {
+                                pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
+                                pauseBtn.classList.add("playing");
+                            }
+                            resolve();
+                        };
                         if (isPaused) {
                             sentenceAudio.pause();
                             resolve();
@@ -1007,6 +1024,11 @@ function playAudioSequentially(word) {
         })
         .catch(err => {
             console.error("❌ 音檔播放失敗:", err);
+            if (playBtn) playBtn.classList.remove("playing");
+            if (pauseBtn) {
+                pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
+                pauseBtn.classList.add("playing");
+            }
             if (isAutoPlaying && !isPaused) {
                 window.currentIndex++;
                 if (window.currentIndex < window.currentWordList.length) {
@@ -1032,15 +1054,47 @@ function getFromPage() {
 
 function updateAutoPlayButton() {
     let autoPlayBtn = document.getElementById("autoPlayBtn");
-    if (autoPlayBtn) {
-        if (isAutoPlaying) {
-            if (isPaused) {
-                autoPlayBtn.textContent = "繼續播放";
+    let autoPlayDetailsBtn = document.getElementById("autoPlayDetailsBtn");
+    let playBtn = document.getElementById("playAudioBtn");
+    let pauseBtn = document.getElementById("pauseResumeBtn");
+
+    if (document.getElementById("wordList").style.display === "block") {
+        // 第二層：更新 autoPlayBtn
+        if (autoPlayBtn) {
+            if (isAutoPlaying) {
+                autoPlayBtn.textContent = isPaused ? "繼續播放" : "停止播放";
+                autoPlayBtn.classList.add("playing");
             } else {
-                autoPlayBtn.textContent = "停止播放";
+                autoPlayBtn.textContent = "單字自動播放";
+                autoPlayBtn.classList.remove("playing");
             }
-        } else {
-            autoPlayBtn.textContent = "自動播放";
+        }
+    } else if (document.getElementById("wordDetails").style.display === "block") {
+        // 第三層：更新 autoPlayDetailsBtn、playAudioBtn 和 pauseResumeBtn
+        if (autoPlayDetailsBtn) {
+            if (isAutoPlaying) {
+                autoPlayDetailsBtn.textContent = isPaused ? "繼續播放" : "停止播放";
+                autoPlayDetailsBtn.classList.add("playing");
+            } else {
+                autoPlayDetailsBtn.textContent = "內文自動播放";
+                autoPlayDetailsBtn.classList.remove("playing");
+            }
+        }
+        if (playBtn) {
+            if (isAutoPlaying && !isPaused) {
+                playBtn.classList.add("playing");
+            } else {
+                playBtn.classList.remove("playing");
+            }
+        }
+        if (pauseBtn) {
+            if (isAutoPlaying && !isPaused) {
+                pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />`;
+                pauseBtn.classList.remove("playing");
+            } else {
+                pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
+                pauseBtn.classList.add("playing");
+            }
         }
     }
 }
@@ -1081,74 +1135,84 @@ function backToWordList() {
         updateAutoPlayButton();
     }
 
-        // 原有的返回邏輯
-        if (lastWordListType === "search") {
-            document.getElementById("searchContainer").style.display = "block";
-            document.getElementById("wordList").style.display = "none";
-            document.getElementById("wordDetails").style.display = "none";
-            document.querySelector('.alphabet-container').style.display = "block";
-            document.querySelector('.category-container').style.display = "block";
-            document.querySelector('.level-container').style.display = "block";
-            document.getElementById("autoPlayBtn").style.display = "block"; // 隱藏按鈕
-        } else if (lastWordListType === "importantWords") {
-            console.log("🔙 返回重要單字列表");
-            showImportantWords();
-        } else if (lastWordListType === "wrongWords") {
-            console.log("🔙 返回錯誤單字列表");
-            showWrongWords();
-        } else if (lastWordListType === "checkedWords") {
-            console.log("🔙 返回 Checked 單字列表");
-            showCheckedWords();
-        } else if (lastWordListType === "noteWords") {
-            console.log("🔙 返回 Note 單字列表");
-            showNoteWords();
-        } else if (lastWordListType && lastWordListValue) {
-            console.log(`🔙 返回 ${lastWordListType} 類別: ${lastWordListValue}`);
-            showWords(lastWordListType, lastWordListValue);
-        } else {
-            console.error("❌ 無法返回，lastWordListType 為空，回到第一層");
-            backToFirstLayer();
-        }
+    // 原有的返回邏輯
+    if (lastWordListType === "search") {
+        document.getElementById("searchContainer").style.display = "block";
+        document.getElementById("wordList").style.display = "none";
+        document.getElementById("wordDetails").style.display = "none";
+        document.querySelector('.alphabet-container').style.display = "block";
+        document.querySelector('.category-container').style.display = "block";
+        document.querySelector('.level-container').style.display = "block";
+        document.getElementById("autoPlayBtn").style.display = "none"; // 第一層不顯示
+    } else if (lastWordListType === "importantWords") {
+        console.log("🔙 返回重要單字列表");
+        showImportantWords();
+    } else if (lastWordListType === "wrongWords") {
+        console.log("🔙 返回錯誤單字列表");
+        showWrongWords();
+    } else if (lastWordListType === "checkedWords") {
+        console.log("🔙 返回 Checked 單字列表");
+        showCheckedWords();
+    } else if (lastWordListType === "noteWords") {
+        console.log("🔙 返回 Note 單字列表");
+        showNoteWords();
+    } else if (lastWordListType && lastWordListValue) {
+        console.log(`🔙 返回 ${lastWordListType} 類別: ${lastWordListValue}`);
+        showWords(lastWordListType, lastWordListValue);
+    } else {
+        console.error("❌ 無法返回，lastWordListType 為空，回到第一層");
+        backToFirstLayer();
     }
+}
 
 function playAudio(filename) {
     let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
     new Audio(baseURL + filename).play();
 }
 
-function playSentenceAudio(filename) {
-    let baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
-    const playBtn = document.getElementById("playAudioBtn");
-    const pauseBtn = document.getElementById("pauseResumeBtn");
+function playSentenceAudio(audioFile) {
+    let playBtn = document.getElementById("playAudioBtn");
+    let pauseBtn = document.getElementById("pauseResumeBtn");
 
-    console.log("🔍 playBtn:", playBtn);
-    console.log("🔍 pauseBtn:", pauseBtn);
-    console.log("🔍 音檔 URL:", baseURL + filename);
+    // 取消自動播放
+    isAutoPlaying = false;
+    isPaused = false;
+    updateAutoPlayButton(); // 更新自動播放按鈕狀態
 
-    sentenceAudio.src = baseURL + filename;
-
-    // 只高亮播放按鈕
-    if (playBtn) playBtn.classList.add("playing");
-    if (pauseBtn) {
-        pauseBtn.classList.remove("playing");
-        pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />`;
+    // 停止當前音檔（如果有）
+    if (sentenceAudio && !sentenceAudio.paused) {
+        sentenceAudio.pause();
+        sentenceAudio.currentTime = 0;
     }
 
+    // 創建並播放新音檔
+    sentenceAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`);
     sentenceAudio.play()
-        .then(() => console.log(`✅ 播放 ${filename} 成功`))
-        .catch(error => {
-            console.error(`🔊 播放 ${filename} 失敗:`, error);
+        .then(() => {
+            // 更新按鈕狀態為播放中
+            if (playBtn) playBtn.classList.add("playing");
+            if (pauseBtn) {
+                pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />`;
+                pauseBtn.classList.remove("playing");
+            }
+            sentenceAudio.onended = () => {
+                // 音檔結束後重置按鈕狀態
+                if (playBtn) playBtn.classList.remove("playing");
+                if (pauseBtn) {
+                    pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
+                    pauseBtn.classList.add("playing");
+                }
+            };
+        })
+        .catch(err => {
+            console.error("❌ 音檔播放失敗:", err);
+            // 播放失敗時重置按鈕狀態
             if (playBtn) playBtn.classList.remove("playing");
-            if (pauseBtn) pauseBtn.classList.remove("playing");
+            if (pauseBtn) {
+                pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
+                pauseBtn.classList.add("playing");
+            }
         });
-
-    sentenceAudio.onended = () => {
-        if (playBtn) playBtn.classList.remove("playing");
-        if (pauseBtn) {
-            pauseBtn.classList.remove("playing");
-            pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
-        }
-    };
 }
 
 function togglePauseAudio(button) {
