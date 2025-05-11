@@ -654,6 +654,7 @@ function updateAutoPlayButton() {
 
 // 第二層：顯示單字列表
 function showWords(type, value) {
+    console.log("✅ 進入 showWords, type:", type, "value:", value);
     let titleText = type === "letter" ? value.toUpperCase() : type === "category" ? value : `${value} Level`;
     document.getElementById("wordListTitle").innerHTML = `
         <span>${titleText}</span>
@@ -664,20 +665,31 @@ function showWords(type, value) {
     lastWordListType = type;
     lastWordListValue = value;
 
+    // 隱藏其他層
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    document.getElementById("wordList").style.display = "block";
     document.querySelector('.alphabet-container').style.display = "none";
     document.querySelector('.category-container').style.display = "none";
     document.querySelector('.level-container').style.display = "none";
+    document.getElementById("sentenceList").style.display = "none";
+    document.getElementById("sentenceDetails").style.display = "none";
 
+    // 顯示單字列表
+    let wordList = document.getElementById("wordList");
+    wordList.style.display = "block";
+    
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
+    // 修改過濾邏輯，排除無 Words 屬性的項目
     let filteredWords = wordsData.filter(w => {
+        if (!w.Words) {
+            console.warn("⚠️ wordsData 中存在無 Words 屬性的項目:", w);
+            return false;
+        }
         let word = w.Words;
         let category = w["分類"] || "未分類";
         let level = w["等級"] || "未分類";
@@ -687,10 +699,12 @@ function showWords(type, value) {
         return false;
     });
 
+    console.log("✅ 過濾後的單字數量:", filteredWords.length);
+
     if (filteredWords.length === 0) {
         wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
     } else {
-        currentWordList = filteredWords.map(w => w.Words); // 儲存單字列表以支持自動播放
+        currentWordList = filteredWords.map(w => w.Words);
         filteredWords.forEach(word => {
             let wordText = word.Words;
             let isChecked = localStorage.getItem(`checked_${wordText}`) === "true";
@@ -1163,23 +1177,25 @@ function backToFirstLayer() {
 }
 
 function backToWordList() {
+    console.log("✅ 進入 backToWordList, parentLayer:", parentLayer);
     document.getElementById("sentenceList").style.display = "none";
-
+    document.getElementById("sentenceDetails").style.display = "none"; // 確保詳情頁也隱藏
+    
     if (parentLayer === "firstLayer") {
         backToFirstLayer();
     } else if (parentLayer === "wordList") {
-        if (lastWordListType === "checked") {
-            showCheckedWords();
-        } else if (lastWordListType === "important") {
-            showImportantWords();
-        } else if (lastWordListType === "wrong") {
-            showWrongWords();
-        } else if (lastWordListType && lastWordListValue) {
-            showWords(lastWordListType, lastWordListValue);
+        console.log("✅ 返回單字列表, lastWordListType:", lastWordListType, "lastWordListValue:", lastWordListValue);
+        document.getElementById("wordList").style.display = "block"; // 強制顯示單字列表
+        document.getElementById("wordListTitle").style.display = "block"; // 顯示標題
+        
+        if (lastWordListType && lastWordListValue) {
+            showWords(lastWordListType, lastWordListValue); // 重新渲染單字列表
         } else {
+            console.warn("⚠️ lastWordListType 或 lastWordListValue 未設置，返回第一層");
             backToFirstLayer();
         }
     } else {
+        console.warn("⚠️ parentLayer 未定義，返回第一層");
         backToFirstLayer();
     }
 }
