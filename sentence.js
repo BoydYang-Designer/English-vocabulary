@@ -27,6 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 wordsData = data["New Words"] || [];
                 console.log("✅ Z_total_words.json 載入成功:", wordsData.length);
+                if (wordsData.length === 0) {
+                    console.error("❌ wordsData 為空，請檢查 JSON 結構");
+                }
+            })
+            .catch(err => {
+                console.error("❌ 載入 wordsData 失敗:", err);
+                alert("載入單字資料失敗，請檢查網路連線或資料來源。");
             }),
         fetch("https://boydyang-designer.github.io/English-vocabulary/Sentence%20file/sentence.json")
             .then(res => {
@@ -37,8 +44,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 sentenceData = data["New Words"] || [];
                 console.log("✅ sentence.json 載入成功:", sentenceData.length);
             })
+            .catch(err => {
+                console.error("❌ 載入 sentenceData 失敗:", err);
+                alert("載入句子資料失敗，請檢查網路連線或資料來源。");
+            })
     ])
     .then(() => {
+        if (!wordsData.length || !sentenceData.length) {
+            console.error("❌ 資料載入不完整，無法繼續");
+            return;
+        }
         renderAlphabetButtons();
         createCategoryButtons();
         createLevelButtons();
@@ -88,6 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
 // 第一層：生成字母按鈕
 function renderAlphabetButtons() {
     const alphabetContainer = document.getElementById("alphabetButtons");
+    if (!alphabetContainer) {
+        console.error("❌ 未找到 #alphabetButtons，請檢查 HTML");
+        return;
+    }
     const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
     alphabetContainer.innerHTML = alphabet
         .map(letter => `<button class='letter-btn' data-letter='${letter.toLowerCase()}'>${letter}</button>`)
@@ -96,6 +115,7 @@ function renderAlphabetButtons() {
     alphabetContainer.querySelectorAll(".letter-btn").forEach(button => {
         button.addEventListener("click", () => {
             const letter = button.getAttribute("data-letter");
+            console.log("✅ 點擊字母:", letter);
             showWordsAndSentences("letter", letter);
         });
     });
@@ -103,6 +123,7 @@ function renderAlphabetButtons() {
 
 // 新增函數：顯示單字並支持單字列表
 function showWordsAndSentences(type, value) {
+    console.log("✅ 進入 showWordsAndSentences, type:", type, "value:", value);
     parentLayer = "firstLayer";
     const titleText = type === "letter" ? value.toUpperCase() : value;
     document.getElementById("wordListTitle").innerHTML = `
@@ -126,14 +147,25 @@ function showWordsAndSentences(type, value) {
     document.getElementById("sentenceList").style.display = "none";
 
     let wordItems = document.getElementById("wordItems");
+    if (!wordItems) {
+        console.error("❌ 未找到 #wordItems，請檢查 HTML");
+        return;
+    }
     wordItems.innerHTML = "";
 
-    let filteredWords = wordsData.filter(w => w.Words.toLowerCase().startsWith(value.toLowerCase()));
+    let filteredWords = wordsData.filter(w => {
+        if (!w.Words) {
+            console.warn("⚠️ wordsData 中存在無 Words 屬性的項目:", w);
+            return false;
+        }
+        return w.Words.toLowerCase().startsWith(value.toLowerCase());
+    });
+    console.log("✅ 過濾後的單字數量:", filteredWords.length);
 
     if (filteredWords.length === 0) {
         wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
     } else {
-        currentWordList = filteredWords.map(w => w.Words); // 儲存當前分類的單字列表
+        currentWordList = filteredWords.map(w => w.Words);
         filteredWords.forEach(word => {
             let wordText = word.Words;
             let isChecked = localStorage.getItem(`checked_${wordText}`) === "true";
@@ -152,7 +184,10 @@ function showWordsAndSentences(type, value) {
             `;
             wordItems.appendChild(item);
 
-            item.querySelector('.word-item').addEventListener("click", () => showSentences(wordText));
+            item.querySelector('.word-item').addEventListener("click", () => {
+                console.log("✅ 點擊單字:", wordText);
+                showSentences(wordText);
+            });
         });
     }
 }
@@ -330,6 +365,7 @@ function showSentenceNotes() {
 }
 
 function showSentences(word) {
+    console.log("✅ 進入 showSentences, word:", word);
     parentLayer = "wordList";
     document.getElementById("wordListTitle").innerHTML = `
         <span>${word}</span>
@@ -337,7 +373,7 @@ function showSentences(word) {
     `;
     document.getElementById("wordListTitle").style.display = "block";
 
-    document.getElementById("searchContainer").style.display = "none";
+document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
@@ -365,7 +401,7 @@ function showSentences(word) {
         return s && s.Words && typeof s.Words === "string" && s.Words.startsWith(word + "-");
     });
 
-    console.log(`過濾後的句子 (${word}):`, filteredSentences);
+    console.log(`✅ 過濾後的句子 (${word}):`, filteredSentences);
 
     currentSentenceList = filteredSentences.sort((a, b) => {
         const numA = parseInt(a.Words.split("-").pop(), 10);
