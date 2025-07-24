@@ -168,6 +168,11 @@ function updateButtonSelectionState(type, value) {
 
 function filterQuizWords(event) {
     let filteredWords = wordsData.filter(word => {
+        // 檢查 word.Words 是否存在且為非空字串
+        if (!word.Words || typeof word.Words !== 'string' || word.Words.trim() === '') {
+            return false; // 跳過無效的單字
+        }
+
         let letterMatch = selectedFilters.letters.size === 0 || selectedFilters.letters.has(word.Words[0].toUpperCase());
 
         let wordCategory = word["分類"] || "未分類(種類)";
