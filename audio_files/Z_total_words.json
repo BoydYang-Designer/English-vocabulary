@@ -53,7 +53,7 @@
         },
         {
             "等級": "B2",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "academic",
             "pronunciation-1": "[͵ækəˋdɛmɪk]",
             "traditional Chinese": "adj.\n    1.大學的，學院的；學校的\n     2.學術的\n     3.純理論的 不切實的\nn.1.大學教師，教授；大學生\n   2.學術領域。",
@@ -585,7 +585,7 @@
         },
         {
             "等級": "B1",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "amend",
             "pronunciation-1": "[əˋmɛnd]",
             "traditional Chinese": "v.1. 修訂，修改；訂正\n   2. 改進，改善",
@@ -1165,7 +1165,7 @@
         },
         {
             "等級": "B1",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "as-of",
             "pronunciation-1": "[æz ɑv]",
             "traditional Chinese": "pp.從…開始, 或截至…時\n(Prepositional Phrase)",
@@ -1185,7 +1185,7 @@
         },
         {
             "等級": "B1",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "assert",
             "pronunciation-1": "[əˋsɝt]",
             "traditional Chinese": "v.1.斷言，聲稱[+that]\n   2.維護，堅持\n   3.主張擁有",
@@ -1195,7 +1195,7 @@
         },
         {
             "等級": "C1",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "assertion",
             "pronunciation-1": "[əˋsɝʃən]",
             "traditional Chinese": "n.1.斷言，言明[C](that)\n  2.(意見等的)堅持[U]\n  3..(權利等的)主張，維護；",
@@ -1255,7 +1255,7 @@
         },
         {
             "等級": "C1",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "assumption",
             "pronunciation-1": "[əˋsʌmpʃən]",
             "traditional Chinese": "n.1.假定，設想[U][C][+（that\n   2.擔任；承擔",
@@ -1335,7 +1335,7 @@
         },
         {
             "等級": "C1",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "attribute",
             "pronunciation-1": "[ˋætrə͵bjut]",
             "traditional Chinese": "1.n.屬性；特性，特質\n2.v.把…歸因於；把…歸咎於(+to)",
@@ -1345,7 +1345,7 @@
         },
         {
             "等級": "C2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "attribution",
             "pronunciation-1": "[͵ætrəˋbjuʃən]",
             "traditional Chinese": "n.1.歸因：把某個特質或原因給某人或某事。\n2.來源：指出某個想法或信息的來源。",
@@ -1425,7 +1425,7 @@
         },
         {
             "等級": "C1",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "auxiliary",
             "pronunciation-1": "[ɔgˋzɪljərɪ]",
             "traditional Chinese": "n.輔助者，助手；輔助物\nadj.輔助的",
@@ -2726,7 +2726,7 @@
         },
         {
             "等級": "C1",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "colloquial",
             "pronunciation-1": "[kəˋlokwɪəl]",
             "traditional Chinese": "adj.口語的；會話的",
@@ -2876,7 +2876,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "compound",
             "pronunciation-1": "[kɑmˋpaʊnd]",
             "traditional Chinese": "n.1.化合物；混合物\n  2.複合物\n   3.住宅群，大院\nv.1.增加，加重，使惡化\n   2.使混合；使化合；使合成\nadj.合成的，複合的，混合的",
@@ -3086,7 +3086,7 @@
         },
         {
             "等級": "C1",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "conjecture",
             "pronunciation-1": "[kənˋdʒɛktʃɚ]",
             "traditional Chinese": "1.n.推測，猜測；推測的結果\n2.v.推測，猜測",
@@ -3326,7 +3326,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "contrary",
             "pronunciation-1": "[ˋkɑntrɛrɪ]",
             "traditional Chinese": "adj. 1.相反的，對立的(+to)\nn.2.相反；對立面\nadv.3.相反地；反對地(+to)",
@@ -4159,7 +4159,7 @@
         },
         {
             "等級": "B1",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "derive",
             "pronunciation-1": "[dɪˋraɪv]",
             "traditional Chinese": "v.1.起源,由來(+from)\n   2.引申出,推知(+from)",
@@ -4219,7 +4219,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "despite",
             "pronunciation-1": "[dɪˋspaɪt]",
             "traditional Chinese": "perp.不管，儘管，任憑\nDespite/Even though/Although/Though",
@@ -4229,7 +4229,7 @@
         },
         {
             "等級": "B2",
-            "分類": "學術文學",
+            "分類": "教育文學",
             "Words": "destine",
             "pronunciation-1": "[ˋdɛstɪn]",
             "traditional Chinese": "v.1.預定；指定(作某種用處)(+to/for)\n   2.命定，注定[H](+for/to)",
@@ -5089,7 +5089,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "emphasis",
             "pronunciation-1": "[ˋɛmfəsɪs]",
             "traditional Chinese": "n. 1. 強調，重視，重點[C][U](+on/upon)；\n   2.【語】加強語氣",
@@ -5510,7 +5510,7 @@
         },
         {
             "等級": "C1",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "excellence",
             "pronunciation-1": "[ˋɛks!əns]",
             "traditional Chinese": "n.優秀；傑出；卓越[U][（+in/at）]；長處；優點",
@@ -5520,7 +5520,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "excerpt",
             "pronunciation-1": "[ˋɛksɝpt]-N",
             "pronunciation-2": "[ɪkˋsɝpt]-V",
@@ -5631,7 +5631,7 @@
         },
         {
             "等級": "C1",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "explicit",
             "pronunciation-1": "[ɪkˈsplɪsɪt]",
             "traditional Chinese": "adj.1.詳盡的；清楚的\n      2.露骨的",
@@ -5641,7 +5641,7 @@
         },
         {
             "等級": "C1",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "explicitly",
             "pronunciation-1": "[ɪkˋsplɪsɪtlɪ]",
             "traditional Chinese": "adv.1.明白地；明確地\n       2.詳細地",
@@ -5813,7 +5813,7 @@
         },
         {
             "等級": "C1",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "fellowship",
             "pronunciation-1": "[ˋfɛlo͵ʃɪp]",
             "traditional Chinese": "n.1.夥伴關係，交情，友誼[U]\n   2.合夥關係(具有共同興趣或感情的人的關係：)\n  3.團體；團契；協會；聯誼會\n4.研究員薪金 獎學金 講學基金[C]",
@@ -6745,7 +6745,7 @@
         },
         {
             "等級": "B1",
-            "分類": "hasten",
+            "分類": "動作",
             "Words": "hasten",
             "pronunciation-1": "[ˋhesn]",
             "traditional Chinese": "v.催促；加速\n   趕緊，趕快",
@@ -7077,6 +7077,7 @@
         },
         {
             "等級": "C2",
+            "分類": "政治",
             "Words": "ideological",
             "pronunciation-1": "[͵aɪdɪəˋlɑdʒɪk!]",
             "traditional Chinese": "adj.觀念學的 意識形態的",
@@ -7086,6 +7087,7 @@
         },
         {
             "等級": "C2",
+            "分類": "政治",
             "Words": "ideologically",
             "pronunciation-1": "͵aɪdɪəˋlɑdʒɪk!ɪ]",
             "traditional Chinese": "adv.在意識形態方面",
@@ -7095,6 +7097,7 @@
         },
         {
             "等級": "B2",
+            "分類": "人物特性",
             "Words": "idiotic",
             "pronunciation-1": "[͵ɪdɪˋɑtɪk]",
             "traditional Chinese": "adj.十分愚蠢的",
@@ -7104,6 +7107,7 @@
         },
         {
             "等級": "B1",
+            "分類": "人物特性",
             "Words": "idle",
             "pronunciation-1": "[ˋaɪd!]",
             "traditional Chinese": "adj.閒置的 無所事事的 無目的的\nvi.無所事事 （機器）空轉\nvt.虛度（光陰）(+away)",
@@ -7113,6 +7117,7 @@
         },
         {
             "等級": "B2",
+            "分類": "自然地理",
             "Words": "idyllic",
             "pronunciation-1": "[aɪˋdɪlɪk]",
             "traditional Chinese": "adj.田園風光的",
@@ -7122,6 +7127,7 @@
         },
         {
             "等級": "B1",
+            "分類": "動作",
             "Words": "ignite",
             "pronunciation-1": "[ɪgˋnaɪt]",
             "traditional Chinese": "vt.vi.點燃 激起 ",
@@ -7131,6 +7137,7 @@
         },
         {
             "等級": "B2",
+            "分類": "法律",
             "Words": "illicit",
             "pronunciation-1": "[ɪˋlɪsɪt]",
             "traditional Chinese": "adj.非法的，不法的，違禁的；不正當的",
@@ -7150,19 +7157,31 @@
         },
         {
             "等級": "B2",
+            "分類": "文學",
             "Words": "imagery",
             "pronunciation-1": "[ˋɪmɪdʒərɪ]",
-            "traditional Chinese": "n.【心】表象，意象",
-            "English meaning": "E.g.The author's use of vivid imagery transported readers to a mystical forest, where moonlight danced among the whispering trees, and shadows stretched like ink across the forest floor.",
+            "traditional Chinese": "n.表象，意象",
+            "English meaning": "Part of Speech: Noun\nMeaning:\nImagery refers to the use of vivid or figurative language to create mental pictures, sensations, or impressions in the mind of the reader or listener. It involves descriptive language that appeals to the senses (sight, sound, smell, taste, touch) to help convey meaning or emotion.\nE.g. The poet's use of imagery made the sunset feel almost tangible.\nE.g. The book is full of beautiful imagery that paints a vivid picture of the forest.\nE.g. Through imagery, the author described the scent of fresh rain and the sound of rustling leaves.\nE.g. The movie’s imagery brought the fantasy world to life with bright colors and detailed scenery.\nSummary:\nImagery is descriptive language that evokes sensory experiences and mental pictures, enhancing the reader’s or listener’s connection to the subject.\nRelated Words:\ndescription, visualization, metaphor, symbolism, representation\nAntonyms:\nabstract language, vagueness, ambiguity",
             "Unnamed: 8": "imagery",
             "Unnamed: 9": "imagery"
         },
         {
             "等級": "B2",
+            "分類": "人體",
+            "Words": "sensation",
+            "pronunciation-1": "[sɛnˋseʃən]",
+            "traditional Chinese": "n.1.感覺能力\n   2.感覺，知覺[C][+that]\n   3.轟動，激動",
+            "English meaning": "Sensation\nPart of Speech: Noun\n1. The physical feeling or perception resulting from stimulation of the body's sensory organs (such as touch, taste, smell, sight, or hearing).\nE.g. The cold water created a tingling sensation on her skin.\nE.g. She felt a sharp sensation when the needle pricked her arm.\nE.g. A dead body is without sensation.\n2. A general feeling or awareness caused by a particular stimulus or event.\nE.g. He had a sensation of dizziness after spinning around quickly.\nE.g. There was a strange sensation of heat rising through his body.\n3. A widespread feeling of excitement or interest among people about something.\nE.g. The news of the discovery caused a sensation in the scientific community.\nE.g. The singer’s new album became an overnight sensation.\nSummary:\nSensation is a physical or emotional feeling experienced through the senses or as a response to stimuli, and can also describe strong public excitement about an event or discovery.\nRelated Words:\nfeeling, perception, impression, excitement, awareness\nAntonyms:\nnumbness, insensitivity, dullness, indifference",
+            "Unnamed: 8": "sensation",
+            "Unnamed: 9": "sensation"
+        },
+        {
+            "等級": "B2",
+            "分類": "自然地理",
             "Words": "immense",
             "pronunciation-1": "[ɪˋmɛns]",
             "traditional Chinese": "adj.巨大的；廣大的；無邊無際的；無限的",
-            "English meaning": "\"Immense\" means extremely large or vast in size, extent, or degree. It suggests something of great magnitude, scale, or significance.\nE.g.  The starry sky stretched out before us with immense beauty.",
+            "English meaning": "Immense is an adjective.\n\"Immense\" means extremely large or vast in size, extent, or degree. It suggests something of great magnitude, scale, or significance.\nE.g. The mountain offered an immense view of the valley below.\nE.g. She has an immense amount of patience with children.\nE.g. The project required an immense amount of resources.\nE.g. The ocean’s immense power can be both beautiful and dangerous.\nSummary:\n\"Immense\" describes something very large, vast, or huge in scale or intensity.\nRelated Words:\nhuge, enormous, vast, massive, gigantic.\nAntonyms:\nsmall, tiny, limited, insignificant.",
             "Unnamed: 8": "immense",
             "Unnamed: 9": "immense"
         },
@@ -7188,10 +7207,11 @@
         },
         {
             "等級": "B2",
+            "分類": "動作",
             "Words": "imminent",
             "pronunciation-1": "[ˋɪmənənt]",
             "traditional Chinese": "adj.(危險等)逼近的；即將發生的",
-            "English meaning": "\"Imminent\" describes something that is about to happen or occur very soon, often with the implication that it will happen momentarily or in the immediate future. It conveys a sense of urgency or inevitability.\nE.g. The company announced layoffs due to the imminent closure of its manufacturing facility.\nE.g. These patients are facing imminent death.",
+            "English meaning": "Imminent is an adjective. It describes something that is about to happen or occur very soon, often implying it will happen momentarily or in the immediate future. It conveys a sense of urgency or inevitability.\nE.g. The dark clouds signaled an imminent storm.\nE.g. They were warned of the imminent arrival of the guests.\nE.g. The company faced imminent bankruptcy if changes weren’t made.\nE.g. These patients are facing imminent death.\nSummary:\n\"Imminent\" describes something expected to happen at any moment, usually soon and unavoidable.\nRelated Words:\nforthcoming, impending, approaching, near, upcoming.\nAntonyms:\ndistant, delayed, unlikely, avoidable.",
             "Unnamed: 8": "imminent",
             "Unnamed: 9": "imminent"
         },
@@ -7207,51 +7227,57 @@
         },
         {
             "等級": "B1",
+            "分類": "教育",
             "Words": "impart",
             "pronunciation-1": "[ɪmˋpɑrt]",
             "traditional Chinese": "v.告知；透露 傳授",
-            "English meaning": "Verb : impart imparted imparting\n \"impart\" means to communicate or convey information, knowledge, or a quality to someone or something. It often implies sharing something valuable or meaningful.\nE.g.The teacher sought to impart important life lessons to her students through storytelling and personal anecdotes.",
+            "English meaning": "Impart is a verb: impart / imparted / imparting\nMeaning:\nTo give, share, or communicate information, knowledge, wisdom, or feelings to someone.\nE.g. The teacher imparts knowledge to her students every day.\nE.g. He imparted valuable advice during the meeting.\nE.g. Stories from grandparents often impart cultural traditions to the younger generation.\nSummary: Impart means to pass on or share something important, such as knowledge or information, with others.\nRelated Words: communicate, share, convey, teach, transmit.\nAntonyms: withhold, keep, conceal, suppress.",
             "Unnamed: 8": "impart",
             "Unnamed: 9": "impart"
         },
         {
             "等級": "C1",
+            "分類": "法律",
             "Words": "impartial",
             "pronunciation-1": "[ɪmˋpɑrʃəl]",
             "traditional Chinese": "adj.不偏不倚的，公正的，無偏見的",
-            "English meaning": "Impartial is an adjective that describes a lack of bias or favoritism, indicating fairness and neutrality in judgment or decision-making.\nE.g. The judge is expected to remain impartial throughout the trial, ensuring a fair and unbiased verdict.\nE.g. To provide an impartial review, the committee included members from various backgrounds to avoid any conflicts of interest.\nE.g. Her impartial analysis of the data helped the team make objective decisions based on facts rather than personal opinions.",
+            "English meaning": "Impartial is an adjective that describes treating all people and sides fairly, without letting personal feelings, opinions, or biases influence decisions or actions.\nE.g. The judge is expected to remain impartial throughout the trial, ensuring a fair and unbiased verdict.\nE.g. To provide an impartial review, the committee included members from various backgrounds to avoid any conflicts of interest.\nE.g. Her impartial analysis of the data helped the team make objective decisions based on facts rather than personal opinions.\nE.g. News reporters should be impartial and present only the facts.\nSummary: Impartial means fair and unbiased, giving equal consideration to all sides.\nRelated Words: fair, neutral, objective, unbiased, even-handed.\nAntonyms: biased, partial, unfair, prejudiced.",
             "Unnamed: 8": "impartial",
             "Unnamed: 9": "impartial"
         },
         {
             "等級": "B1",
+            "分類": "動作",
             "Words": "impede",
             "pronunciation-1": "[ɪmˋpid]",
             "traditional Chinese": "vt.妨礙，阻礙；阻止",
-            "English meaning": "To delay or hinder the progress or movement of someone or something.\nE.g.The heavy snowfall impeded the travelers' journey, slowing down their progress on the road.",
+            "English meaning": "Impede is a verb: impede / impeded / impeding.\n\"Impede\" means to slow down, block, or hinder the progress or movement of someone or something. It suggests creating an obstacle that makes an action or process more difficult or delayed.\nE.g. The heavy snow will impede traffic on the roads.\nE.g. Poor planning can impede the success of a project.\nE.g. His injured leg impeded his ability to walk quickly.\nE.g. Bureaucratic red tape often impedes important reforms.\nSummary:\n\"Impede\" means to obstruct or slow down the progress or movement of something.\nRelated Words:\nhinder, obstruct, delay, block, interfere.\nAntonyms:\nassist, facilitate, promote, advance, aid.",
             "Unnamed: 8": "impede",
             "Unnamed: 9": "impede"
         },
         {
             "等級": "C1",
+            "分類": "動作",
             "Words": "impediment",
             "pronunciation-1": "[ɪmˋpɛdəmənt]",
             "traditional Chinese": "n.妨礙，阻礙；障礙物(+to)",
-            "English meaning": "Something that hinders or obstructs progress, movement, or achievement; a barrier or obstacle.\nE.g.The language barrier proved to be a significant impediment to effective communication during the international conference.",
+            "English meaning": "Impediment is a noun.\n\"Impediment\" means something that obstructs, delays, or makes it difficult for a person or thing to move forward, progress, or succeed. It can refer to both physical and non-physical obstacles, such as objects, conditions, or situations.\nE.g. Poor eyesight can be an impediment to driving safely.\nE.g. Lack of funding is the main impediment to completing the project.\nE.g. His speech impediment made public speaking challenging.\nE.g. Cultural differences need not be an impediment to mutual understanding.\nSummary:\n\"Impediment\" refers to anything that hinders progress or creates a barrier to achieving something.\nRelated Words:\nobstacle, barrier, hindrance, obstruction, limitation.\nAntonyms:\naid, assistance, support, advantage, benefit.",
             "Unnamed: 8": "impediment",
             "Unnamed: 9": "impediment"
         },
         {
             "等級": "C1",
+            "分類": "動作",
             "Words": "impending",
             "pronunciation-1": "[ɪmˋpɛndɪŋ]",
             "traditional Chinese": "adj.即將發生的",
-            "English meaning": "\"Impending\" refers to something that is about to happen, often with a sense of looming or imminent arrival. It describes events or situations that are approaching and are likely to occur soon.\nE.g.Dark clouds gathered on the horizon, signaling the impending storm.",
+            "English meaning": "Impending is an adjective.\n\"Impending\" refers to something that is about to happen, often with a sense of looming or imminent arrival. It describes events or situations that are approaching and are likely to occur soon.\nE.g. Dark clouds gathered on the horizon, signaling the impending storm.\nE.g. The company is preparing for impending changes in government regulations.\nE.g. He felt nervous about his impending job interview.\nE.g. The soldiers braced themselves for the impending battle.\nSummary:\n\"Impending\" describes something that is approaching and expected to happen soon, often creating a feeling of anticipation or concern.\nRelated Words:\nimminent, forthcoming, approaching, looming, upcoming.\nAntonyms:\ndistant, remote, delayed, avoidable.",
             "Unnamed: 8": "impending",
             "Unnamed: 9": "impending"
         },
         {
             "等級": "B2",
+            "分類": "醫學",
             "Words": "implant",
             "pronunciation-1": "[ɪmˋplænt]",
             "traditional Chinese": "n.1.【醫】植入物；植入管\nv.1.【醫】移植 \n       埋置 灌輸",
@@ -7261,6 +7287,7 @@
         },
         {
             "等級": "C1",
+            "分類": "動作",
             "Words": "implement",
             "pronunciation-1": "[ˋɪmpləmənt]",
             "traditional Chinese": "1.v.履行；實施；執行\n2.n.工具；器具；用具",
@@ -7280,6 +7307,7 @@
         },
         {
             "等級": "C1",
+            "分類": "法律",
             "Words": "implicate",
             "pronunciation-1": "[ˋɪmplɪ͵ket]",
             "traditional Chinese": "v.1.牽連；連累\n  2.意味著；暗指",
@@ -7289,6 +7317,7 @@
         },
         {
             "等級": "C2",
+            "分類": "法律",
             "Words": "implication",
             "pronunciation-1": "[͵ɪmplɪˋkeʃən]",
             "traditional Chinese": "n.1.未來可能的影響或結果\n   2.含意；言外之意；暗示[C][U][+that][(+for)\n   3.牽連；涉及；捲入[U](+in)",
@@ -7709,7 +7738,7 @@
         },
         {
             "等級": "C1",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "intellect",
             "pronunciation-1": "[ˋɪnt!͵ɛkt]",
             "traditional Chinese": "N.\n1. 智慧，智力：(思考、推理和理解的能力，理解並解決複雜問題的心智力量)\n2. 才智出眾的人：(具備良好智力的人)",
@@ -7719,7 +7748,7 @@
         },
         {
             "等級": "C2",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "intellectual",
             "pronunciation-1": "[͵ɪnt!ˋɛktʃʊəl]",
             "traditional Chinese": "n.知識分子；\nadj.智力的；理智的；需智力的",
@@ -8333,7 +8362,7 @@
         },
         {
             "等級": "C1",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "literature",
             "pronunciation-1": "[ˋlɪtərətʃɚ]",
             "traditional Chinese": "n.1.文學；文學作品[U][C]\n   2.文獻，圖書資料[U][C]",
@@ -8597,7 +8626,7 @@
         },
         {
             "等級": "C1",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "manuscript",
             "pronunciation-1": "[ˋmænjə͵skrɪpt]",
             "traditional Chinese": "n.n.手寫本，手稿；打字稿；原稿[C]",
@@ -8833,7 +8862,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言 ",
+            "分類": "教育 ",
             "Words": "mere",
             "pronunciation-1": "[mɪr]",
             "traditional Chinese": "adj.僅僅的，只不過的",
@@ -8843,7 +8872,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言 ",
+            "分類": "教育 ",
             "Words": "merely",
             "pronunciation-1": "[ˋmɪrlɪ]",
             "traditional Chinese": "adv.只是，僅僅，不過",
@@ -8900,7 +8929,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "metaphor",
             "pronunciation-1": "[ˋmɛtəfɚ]",
             "traditional Chinese": "n.隱喻(一種修辭法)；象徵",
@@ -8910,7 +8939,7 @@
         },
         {
             "等級": "C2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "metaphoric",
             "pronunciation-1": "[ˌmetəˈfɒrɪk]",
             "traditional Chinese": "adj.隱喻的; 含比喻的",
@@ -8920,7 +8949,7 @@
         },
         {
             "等級": "C2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "metaphorical",
             "pronunciation-1": "[͵mɛtəˋfɔrɪk!]",
             "traditional Chinese": "adj.用隱喻的；比喻的",
@@ -8930,7 +8959,7 @@
         },
         {
             "等級": "C2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "metaphorically",
             "pronunciation-1": "[͵mɛtəˋfɑrɪkəlɪ]",
             "traditional Chinese": "adv.比喻地",
@@ -9469,7 +9498,7 @@
         },
         {
             "等級": "B1",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "notion",
             "pronunciation-1": "[ˋnoʃən]",
             "traditional Chinese": "n.1.概念；想法；見解(+of)[+that][+wh-]\n  2.打算，意 一時興起的念頭\n  3.(針、線、鈕扣等)小用品",
@@ -9534,7 +9563,7 @@
         },
         {
             "等級": "B1",
-            "分類": "語言 ",
+            "分類": "教育 ",
             "Words": "oath",
             "pronunciation-1": "[oθ]",
             "traditional Chinese": "n.1.莊嚴的誓言(通常在神明面前發下)\n   2.宣誓或承諾(在法庭或儀式等正式場合中)\n   3.粗俗或冒犯性的語言，用來表達強烈情緒（較少見的用法）。",
@@ -10051,7 +10080,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "oxymoron",
             "pronunciation-1": "[͵ɑksɪˋmɔrɑn]",
             "traditional Chinese": "n.【文】矛盾修飾法",
@@ -10119,7 +10148,7 @@
         },
         {
             "等級": "C2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "paradoxical",
             "pronunciation-1": "[͵pærəˋdɑksɪk!]",
             "traditional Chinese": "adj.自相矛盾的、似是而非的、悖論性的。\n(指某事物、陳述或情境表面上矛盾，但可能在某種條件下合理或真實。\n強調與常識或預期相悖的特質。)",
@@ -10478,7 +10507,7 @@
         },
         {
             "等級": "C1",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "philosophy",
             "pronunciation-1": "[fəˋlɑsəfɪ]",
             "traditional Chinese": "n.1.哲學；哲理\n   2.人生觀；主義\n   3.哲人態度；達觀；鎮靜",
@@ -11004,7 +11033,7 @@
         },
         {
             "等級": "C2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "prior-to-that",
             "pronunciation-1": "/ˈpraɪə tə ðæt/",
             "traditional Chinese": "ph.在那之前",
@@ -11385,7 +11414,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "radically",
             "pronunciation-1": "[ˋrædɪk!ɪ]",
             "traditional Chinese": "adv.徹底地、根本地\n(通常用來形容重大的改變、不同或行動方式)",
@@ -11775,7 +11804,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "repetition",
             "pronunciation-1": "[͵rɛpɪˋtɪʃən]",
             "traditional Chinese": "n.1.重複；反覆；重說；重做[C][U]\n   2.重複的事物",
@@ -12242,7 +12271,7 @@
         },
         {
             "等級": "B2",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "scholar",
             "pronunciation-1": "[ˋskɑlɚ]",
             "traditional Chinese": "n.1學者\n  2.獎學金獲得者",
@@ -12252,7 +12281,7 @@
         },
         {
             "等級": "C1",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "scholarly",
             "pronunciation-1": "[ˋskɑlɚlɪ]",
             "traditional Chinese": "adj.1.學術性的,有學問的",
@@ -12262,7 +12291,7 @@
         },
         {
             "等級": "C2",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "scholarship",
             "pronunciation-1": "[ˋskɑlɚ͵ʃɪp]",
             "traditional Chinese": "n. 1.獎學金[C][（+to）]\n   2.學問，學識；\n   3.學術成就[U]",
@@ -13751,7 +13780,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "synonym",
             "pronunciation-1": "[ˋsɪnə͵nɪm]",
             "traditional Chinese": "n.同義字；類義字",
@@ -13761,7 +13790,7 @@
         },
         {
             "等級": "B2",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "synonymous",
             "pronunciation-1": "[sɪˋnɑnəməs]",
             "traditional Chinese": "adj.同義的；同義詞性質的",
@@ -13771,7 +13800,7 @@
         },
         {
             "等級": "C1",
-            "分類": "語言",
+            "分類": "教育",
             "Words": "synonymously",
             "pronunciation-1": "/sɪˈnɑː.nə.məs.li/",
             "traditional Chinese": "adv.同義地或可互換地使用\n(指兩個詞或概念具有相同或非常相近的意思，可以互相替代)",
@@ -14095,7 +14124,7 @@
         },
         {
             "等級": "C2",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "theoretical",
             "pronunciation-1": "[͵θiəˋrɛtɪk!]",
             "traditional Chinese": "adj.理論的；非應用的；假設的，推理的",
@@ -14105,7 +14134,7 @@
         },
         {
             "等級": "B1",
-            "分類": "學術",
+            "分類": "教育",
             "Words": "theory",
             "pronunciation-1": "ˋθiərɪ]",
             "traditional Chinese": "n.1.學說；論說\n  2.意見；推測，揣度",
