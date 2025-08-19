@@ -614,8 +614,7 @@ function showNoteWords() {
         wordItems.innerHTML = "<p>⚠️ 目前沒有筆記單字</p>";
     } else {
         noteWords.forEach(wordText => {
-            let savedNote = localStorage.getItem(`note_${wordText}`);
-            let isChecked = savedNote && savedNote.trim() !== "";
+            let isChecked = localStorage.getItem(`checked_${wordText}`) === "true";
             let iconSrc = isChecked
                 ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg"
                 : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
@@ -625,35 +624,38 @@ function showNoteWords() {
             if (isChecked) item.classList.add("checked");
 
             item.innerHTML = `
+                <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${wordText}", this)' ${localStorage.getItem(`important_${wordText}`) === "true" ? "checked" : ""}>
                 <p class='word-item' data-word="${wordText}">${wordText}</p>
                 <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
                     <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
                 </button>
             `;
-
-            item.querySelector('.word-item').addEventListener("click", function () {
-                let wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]).trim().toLowerCase() === wordText.toLowerCase());
-                if (wordObj) {
-                    lastWordListType = "noteWords";
-                    lastWordListValue = null;
-                    console.log("✅ 進入詳情頁面:", wordObj);
-                    showDetails(wordObj);
-                } else {
-                    console.error("❌ 找不到單字資料:", wordText);
-                }
-            });
             wordItems.appendChild(item);
         });
     }
 
     listContainer.style.display = "block";
     document.getElementById("wordDetails").style.display = "none";
-    let alphabetContainer = document.querySelector(".alphabet-container");
-    let categoryContainer = document.querySelector(".category-container");
-    let levelContainer = document.querySelector(".level-container");
-    if (alphabetContainer) alphabetContainer.style.display = "none";
-    if (categoryContainer) categoryContainer.style.display = "none";
-    if (levelContainer) levelContainer.style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+
+    setTimeout(() => {
+        document.querySelectorAll(".word-item").forEach(button => {
+            button.addEventListener("click", function () {
+                let wordText = this.dataset.word.trim();
+                let wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]).trim().toLowerCase() === wordText.toLowerCase());
+                if (!wordObj) {
+                    console.error("❌ 找不到單字:", wordText);
+                    return;
+                }
+                console.log("✅ 點擊成功:", wordObj);
+                showDetails(wordObj);
+            });
+        });
+    }, 300);
+
+    lastWordListType = "noteWords";
 }
 
 function showImportantWords() {
