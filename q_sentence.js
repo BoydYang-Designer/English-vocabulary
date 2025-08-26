@@ -58,19 +58,29 @@ function showSentenceQuizCategories() {
     console.log("✅ 顯示句子測驗分類頁面");
 
     fetch(GITHUB_JSON_URL)
-        .then(response => response.json())
-        .then(data => {
-            console.log("✅ 成功載入 sentence.json", data);
-            if (!data["New Words"] || !Array.isArray(data["New Words"])) {
-                console.error("❌ 資料格式錯誤，'New Words' 不是一個數組。");
-                return;
+    .then(response => response.json())
+    .then(data => {
+        console.log("✅ 成功載入 sentence.json", data);
+        if (!data["New Words"] || !Array.isArray(data["New Words"])) {
+            console.error("❌ 資料格式錯誤，'New Words' 不是一個數組。");
+            return;
+        }
+
+        // 修改：確保每個句子的分類是陣列
+        sentenceData = data["New Words"].filter(item => item.句子 && item.中文);
+        sentenceData.forEach(item => {
+            if (typeof item["分類"] === "string") {
+                item["分類"] = [item["分類"]];  // 如果是單字串，轉為陣列
+            } else if (!Array.isArray(item["分類"])) {
+                item["分類"] = [];  // 如果無效，設為空陣列
             }
-            sentenceData = data["New Words"].filter(item => item.句子 && item.中文);
-            generateSentenceCategories(sentenceData);
-        })
-        .catch(error => {
-            console.error("❌ 無法載入 sentence.json:", error);
         });
+
+        generateSentenceCategories(sentenceData);
+    })
+    .catch(error => {
+        console.error("❌ 無法載入 sentence.json:", error);
+    });
 }
 
 function generateSentenceCategories(data) {
@@ -89,8 +99,11 @@ function generateSentenceCategories(data) {
     alphabetContainer.classList.add("alphabet-container");
 
     let levels = new Set();
-    let categories = new Set();
     let alphabetMap = {};
+
+    // 修改：使用 flatMap 展開所有分類陣列，收集唯一值
+    let allCategories = data.flatMap(item => item["分類"] || ["未分類"]);  // 展開陣列，預設為 ["未分類"]
+    let categories = new Set(allCategories);  // 取唯一值
 
     // 初始化 A-Z 分類
     for (let i = 65; i <= 90; i++) {
@@ -100,11 +113,9 @@ function generateSentenceCategories(data) {
     // 分類數據
     data.forEach(item => {
         let level = item.等級 || "未分類(等級)";
-        let category = item.分類 || "未分類";
         let firstLetter = item.句子.charAt(0).toUpperCase();
 
         levels.add(level);
-        categories.add(category);
         if (alphabetMap[firstLetter]) {
             alphabetMap[firstLetter].push(item);
         }
@@ -176,27 +187,21 @@ function toggleSentenceSelection(type, value) {
 // 📌 開始測驗
 function startSentenceQuiz() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
-    document.getElementById("sentenceQuizArea").style.display = "block";
 
-    // 根據條件篩選出本次要測驗的句子
     let filteredSentences = sentenceData.filter(item => {
-        let levelMatch = selectedSentenceFilters.levels.size === 0 || 
-                         selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
+        let levelMatch = selectedSentenceFilters.levels.size === 0 || selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
+
+        // 修改：檢查分類陣列中是否有任何一個匹配 selected categories
         let categoryMatch = selectedSentenceFilters.categories.size === 0 || 
-                            selectedSentenceFilters.categories.has(item.分類 || "未分類") ||
-                            (selectedSentenceFilters.categories.has("important") && 
-                             localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
-                            (selectedSentenceFilters.categories.has("incorrect") && 
-                             JSON.parse(localStorage.getItem("wrongQS") || "[]").includes(item.Words)) ||
-                            (selectedSentenceFilters.categories.has("checked") && 
-                             localStorage.getItem(`checked_sentence_${item.Words}`) === "true");
-        let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || 
-                            selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
+            (item["分類"] || []).some(cat => selectedSentenceFilters.categories.has(cat));
+
+        let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
+
         return levelMatch && categoryMatch && alphabetMatch;
     });
 
-    if (filteredSentences.length === 0) {
-        alert("❌ 沒有符合條件的測驗句子");
+if (filteredSentences.length === 0) {
+        alert("⚠️ 沒有符合條件的句子！");
         returnToSentenceCategorySelection();
         return;
     }

@@ -25,12 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
-        .then(res => res.json())
-        .then(data => {
-            wordsData = data["New Words"] || [];
-            isDataLoaded = true;
-            console.log("✅ 單字資料已載入");
+fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
+    .then(res => res.json())
+    .then(data => {
+        wordsData = data["New Words"] || [];
+        wordsData.forEach(w => {
+            if (typeof w["分類"] === "string") {
+                w["分類"] = [w["分類"]];
+            } else if (!Array.isArray(w["分類"])) {
+                w["分類"] = [];
+            }
+        });
+        isDataLoaded = true;
+        console.log("✅ 單字資料已載入");
 
             // 只在明確需要恢復結果時執行
             if (params.get('returning') === 'true' && localStorage.getItem("currentQuizResults")) {
@@ -175,8 +182,9 @@ function filterQuizWords(event) {
 
         let letterMatch = selectedFilters.letters.size === 0 || selectedFilters.letters.has(word.Words[0].toUpperCase());
 
-        let wordCategory = word["分類"] || "未分類(種類)";
-        let categoryMatch = selectedFilters.categories.size === 0 || selectedFilters.categories.has(wordCategory);
+        // 修改：檢查單字的分類陣列中是否有任何一個匹配 selected categories
+        let categoryMatch = selectedFilters.categories.size === 0 || 
+            (word["分類"] || []).some(cat => selectedFilters.categories.has(cat));
 
         let wordLevel = word["等級"] || "未分類(等級)";
         let levelMatch = selectedFilters.levels.size === 0 || selectedFilters.levels.has(wordLevel);
@@ -238,7 +246,9 @@ function generateMultiSelectButtons() {
         `<button class='category-button' onclick='toggleSelection("letters", "${letter}")'>${letter}</button>`
     ).join("");
 
-    let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類(種類)"))];
+    // 修改：扁平化所有分類，然後去重
+    let allCategories = wordsData.flatMap(w => w["分類"] || ["未分類(種類)"]);
+    let categories = [...new Set(allCategories)];
     let categoryContainer = document.getElementById("categoryButtons");
     categoryContainer.innerHTML = categories.map(category =>
         `<button class='category-button' onclick='toggleSelection("categories", "${category}")'>${category}</button>`
@@ -313,6 +323,42 @@ document.getElementById("startRewordQuizBtn").addEventListener("click", startRew
 
 // 開始測驗
 function startQuiz() {
+    if (!isDataLoaded || wordsData.length === 0) {
+        console.error("❌ 資料尚未載入，無法開始測驗");
+        alert("⚠️ 資料尚未載入，請稍後再試。");
+        return;
+    }
+
+    let filteredWords = wordsData.filter(w => {
+        let word = w.Words || w.word || w["單字"];
+        let category = w["分類"] || [];
+        let level = w["等級"] || "未分類";
+        let isChecked = localStorage.getItem(`checked_${word}`) === "true";
+        let isImportant = localStorage.getItem(`important_${word}`) === "true";
+        let isWrong = JSON.parse(localStorage.getItem("wrongWords") || "[]").includes(word);
+
+        if (selectedFilters.letters.size > 0 && ![...selectedFilters.letters].some(letter => word.toLowerCase().startsWith(letter.toLowerCase()))) return false;
+        if (selectedFilters.categories.size > 0 && ![...selectedFilters.categories].some(c => category.includes(c))) return false;
+        if (selectedFilters.levels.size > 0 && !selectedFilters.levels.has(level)) return false;
+        if (selectedFilters.checked && !isChecked) return false;
+        if (selectedFilters.important && !isImportant) return false;
+        if (selectedFilters.wrong && !isWrong) return false;
+        return true;
+    });
+
+    console.log("📌 過濾結果:", filteredWords.map(w => w.Words));
+    quizWords = filteredWords;
+    if (quizWords.length === 0) {
+        console.warn("⚠️ 沒有符合條件的單字");
+        alert("⚠️ 沒有符合條件的單字，請重新選擇篩選條件。");
+        document.getElementById("quizCategories").style.display = "block";
+        document.getElementById("quizArea").style.display = "none";
+        return;
+    }
+
+    currentWord = null;
+    quizResults = [];
+    localStorage.setItem("currentQuizResults", JSON.stringify(quizResults));
     document.getElementById("quizCategories").style.display = "none";
     document.getElementById("quizArea").style.display = "block";
     loadNextWord();

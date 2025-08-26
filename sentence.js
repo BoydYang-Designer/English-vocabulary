@@ -50,13 +50,23 @@ document.addEventListener("DOMContentLoaded", function () {
             })
     ])
     .then(() => {
-        if (!wordsData.length || !sentenceData.length) {
-            console.error("❌ 資料載入不完整，無法繼續");
-            return;
+    if (!wordsData.length || !sentenceData.length) {
+        console.error("❌ 資料載入不完整，無法繼續");
+        return;
+    }
+
+    // 新增：確保每個單字的分類是陣列
+    wordsData.forEach(w => {
+        if (typeof w["分類"] === "string") {
+            w["分類"] = [w["分類"]];  // 如果是單字串，轉為陣列
+        } else if (!Array.isArray(w["分類"])) {
+            w["分類"] = [];  // 如果無效，設為空陣列
         }
-        renderAlphabetButtons();
-        createCategoryButtons();
-        createLevelButtons();
+    });
+
+    renderAlphabetButtons();
+    createCategoryButtons();
+    createLevelButtons();
 
         document.getElementById("startQuizBtn").addEventListener("click", () => {window.location.href = "quiz.html?show=sentenceCategories&from=sentence";});
         document.getElementById("returnHomeBtn").addEventListener("click", () => window.location.href = "index.html");
@@ -196,24 +206,25 @@ function showWordsAndSentences(type, value) {
 let showWordCategories = false;
 
 function createCategoryButtons() {
-    let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
-    categories.unshift("Note句子", "重要句子", "錯誤句子", "Checked句子");
+    if (!wordsData || !Array.isArray(wordsData)) return;
 
-    if (showWordCategories) {
-        categories.unshift("Checked 單字", "重要單字", "錯誤單字");
+    // 修改：使用 flatMap 展開所有分類陣列，收集唯一值
+    let allCategories = wordsData.flatMap(w => w["分類"] || ["未分類"]);  // 展開陣列，預設為 ["未分類"]
+    let categories = [...new Set(allCategories)];  // 取唯一值
+    if (categories.length === 0) {
+        categories.push("未分類");
     }
+    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Note單字");
 
-    const categoryContainer = document.getElementById("categoryButtons");
-    categoryContainer.innerHTML = categories.map(c => {
-        if (c === "Checked 單字") return `<button class='letter-btn' onclick='showCheckedWords()'>${c}</button>`;
-        if (c === "重要單字") return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
-        if (c === "錯誤單字") return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
-        if (c === "Note句子") return `<button class='letter-btn' onclick='showSentenceNotes()'>${c}</button>`;
-        if (c === "重要句子") return `<button class='letter-btn' onclick='showImportantSentences()'>${c}</button>`;
-        if (c === "錯誤句子") return `<button class='letter-btn' onclick='showWrongSentences()'>${c}</button>`;
-        if (c === "Checked句子") return `<button class='letter-btn' onclick='showCheckedSentences()'>${c}</button>`;
-        return `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`;
-    }).join(" ");
+    document.getElementById("categoryButtons").innerHTML = categories
+        .map(c => {
+            if (c === "Checked 單字") return `<button class='letter-btn' onclick='showCheckedWords()'>${c}</button>`;
+            if (c === "重要單字") return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
+            if (c === "錯誤單字") return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
+            if (c === "Note單字") return `<button class='letter-btn' onclick='showNoteWords()'>${c}</button>`;
+            return `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`;
+        })
+        .join(" ");
 }
 
 function showImportantSentences() {
@@ -654,8 +665,8 @@ function updateAutoPlayButton() {
 
 // 第二層：顯示單字列表
 function showWords(type, value) {
-    console.log("✅ 進入 showWords, type:", type, "value:", value);
-    let titleText = type === "letter" ? value.toUpperCase() : type === "category" ? value : `${value} Level`;
+    console.log("📌 點擊分類/等級/A-Z 按鈕:", type, value);
+    let titleText = type === "letter" ? value.toUpperCase() : type === "category" ? value : value;
     document.getElementById("wordListTitle").innerHTML = `
         <span>${titleText}</span>
         <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
@@ -685,17 +696,17 @@ function showWords(type, value) {
     wordItems.innerHTML = "";
 
     // 修改過濾邏輯，排除無 Words 屬性的項目
-    let filteredWords = wordsData.filter(w => {
-        if (!w.Words) {
-            console.warn("⚠️ wordsData 中存在無 Words 屬性的項目:", w);
-            return false;
+let filteredWords = wordsData.filter(w => {
+        if (!w.Words) return false;
+
+        if (type === "letter") {
+            return w.Words.toLowerCase().startsWith(value.toLowerCase());
+        } else if (type === "category") {
+            // 修改：檢查分類陣列中是否包含 value
+            return (w["分類"] || []).includes(value);
+        } else if (type === "level") {
+            return w["等級"] === value;  // 等級假設為單一字符串，保持不變
         }
-        let word = w.Words;
-        let category = w["分類"] || "未分類";
-        let level = w["等級"] || "未分類";
-        if (type === "letter") return word.toLowerCase().startsWith(value.toLowerCase());
-        if (type === "category") return category === value;
-        if (type === "level") return level === value;
         return false;
     });
 
