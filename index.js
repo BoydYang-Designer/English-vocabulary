@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 設置初始顯示狀態
     document.getElementById("searchContainer").style.display = "block";
     document.getElementById("startQuizBtn").style.display = "block";
-    document.getElementById("sentencePageBtn").style.display = "block"; // 確保句子按鈕顯示
+    document.getElementById("sentencePageBtn").style.display = "block";
     document.getElementById("wordQuizBtn").style.display = "block";
     document.getElementById("wordPageBtn").style.display = "block";
     document.querySelector(".alphabet-container").style.display = "block";
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("wordList").style.display = "none";
     document.getElementById("wordDetails").style.display = "none";
     document.getElementById("wordListTitle").style.display = "none";
-    document.getElementById("autoPlayBtn").style.display = "none"; // 確保第一層隱藏「單字自動播放」
+    document.getElementById("autoPlayBtn").style.display = "none";
 
     // 新增「進入句子頁面」按鈕的事件監聽器
     const sentenceButton = document.getElementById("sentencePageBtn");
@@ -45,6 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(res => res.json())
         .then(data => {
             wordsData = data["New Words"] || [];
+            // 修改：確保每個單字的分類是陣列（預防舊資料或格式錯誤）
+            wordsData.forEach(w => {
+                if (typeof w["分類"] === "string") {
+                    w["分類"] = [w["分類"]];  // 如果是單字串，轉為陣列
+                } else if (!Array.isArray(w["分類"])) {
+                    w["分類"] = [];  // 如果無效，設為空陣列
+                }
+            });
             console.log("✅ JSON 載入成功:", wordsData);
 
             // 確保分類和等級按鈕顯示
@@ -177,15 +185,20 @@ function filterWordsInDetails() {
 
 function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
-    let categories = [...new Set(wordsData.map(w => w["分類"] || "未分類"))];
-    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Note單字"); // 修改這裡
+    // 修改：使用 flatMap 展開所有分類陣列，收集唯一值
+    let allCategories = wordsData.flatMap(w => w["分類"] || []);  // 展開陣列
+    let categories = [...new Set(allCategories)];  // 取唯一值
+    if (categories.length === 0) {
+        categories.push("未分類");
+    }
+    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Note單字");
 
     document.getElementById("categoryButtons").innerHTML = categories
         .map(c => {
             if (c === "Checked 單字") return `<button class='letter-btn' onclick='showCheckedWords()'>${c}</button>`;
             if (c === "重要單字") return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
             if (c === "錯誤單字") return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
-            if (c === "Note單字") return `<button class='letter-btn' onclick='showNoteWords()'>${c}</button>`; // 修改這裡
+            if (c === "Note單字") return `<button class='letter-btn' onclick='showNoteWords()'>${c}</button>`;
             return `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`;
         })
         .join(" ");
@@ -216,11 +229,10 @@ function showWords(type, value) {
 
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";     // 句子測驗
-    document.getElementById("wordQuizBtn").style.display = "none";     // 單字測驗
-    document.getElementById("wordPageBtn").style.display = "none";     // 單字頁面
-    document.getElementById("sentencePageBtn").style.display = "none"; // 句子頁面
-    document.getElementById("autoPlayBtn").style.display = "block"; // 顯示自動播放按鈕
+    document.getElementById("wordQuizBtn").style.display = "none";
+    document.getElementById("wordPageBtn").style.display = "none";
+    document.getElementById("sentencePageBtn").style.display = "none";
+    document.getElementById("autoPlayBtn").style.display = "block";
     let listContainer = document.getElementById("wordList");
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
@@ -238,10 +250,10 @@ function showWords(type, value) {
 
     let filteredWords = wordsData.filter(w => {
         let word = w.Words || w.word || w["單字"];
-        let category = w["分類"] || "未分類";
+        let category = w["分類"] || [];  // 修改：預設為空陣列
         let level = w["等級"] || "未分類";
         if (type === "letter") return word ? word.toLowerCase().startsWith(value.toLowerCase()) : false;
-        if (type === "category") return category === value;
+        if (type === "category") return category.includes(value);  // 修改：使用 includes 檢查陣列
         if (type === "level") return level === value;
         return false;
     });
