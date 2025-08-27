@@ -372,6 +372,11 @@ h1 {
     h1 {
         font-size: 20px;
     }
+    .category-title {
+        font-size: 16px;
+        margin: 8px 0;
+    }
+}
 
     .container {
         padding: 1px;
@@ -527,4 +532,13 @@ h1 {
     padding: 5px;
     border-bottom: 1px solid #ddd;
     transition: all 0.3s ease;
+}
+
+/* 新增：分類標題樣式 */
+.category-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #375c85;
+    margin: 10px 0;
 }

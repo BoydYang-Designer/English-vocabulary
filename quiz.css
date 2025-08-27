@@ -77,7 +77,13 @@ h1, h2 {
         font-size: 18px; /* 縮小字體 */
         padding: 4px 8px; /* 縮小內距 */
     }
+
+    .category-title {
+        font-size: 16px;
+        margin: 8px 0;
+    }
 }
+
 /* ==========================================
    🔘 按鈕樣式 (Buttons)
 ========================================== */
@@ -162,157 +168,126 @@ h1, h2 {
     width: 390px;
     margin-left: auto; /* 加入這行 */
     margin-right: auto; /* 加入這行 */
-    
-}
-
-#saveResultBtn {
-    width: 200px;
-    padding: 12px;
-    background-color: #424d57;
-    color: white;
-    font-size: 18px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 20px auto;
-}
-
-#saveResultBtn:hover {
-    background-color: #6e8191;
+    flex-wrap: wrap; /* 允許換行 */
 }
 
 /* ==========================================
-   📝 測驗區塊樣式 (Quiz Area)
+   📑 結果樣式 (Results)
 ========================================== */
-#wordHint, #sentenceHint {
-    font-size: 26px;
-    margin: 20px 5px;
-    text-align: center;
-    letter-spacing: 4px;
-}
-
-#wordInput {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1px;
-    width: 100%;
-    max-width: 380px;
-    margin: auto;
-    padding: 5px;
-    text-align: center;
-}
-
-#sentenceInput {
-    display: flex;
-    flex-wrap: wrap; /* 保留換行 */
-    justify-content: left;
-    gap: 1px;
-    width: 100%; /* 確保適應父容器 */
-    max-width: 100%; /* 改為 100%，移除固定 380px */
-    margin: 5px auto; /* 居中 */
-    padding: 1px;
-    text-align: left;
-    overflow-x: auto; /* 若內容過長，啟用水平滾動 */
-}
-
-.letter-box {
-    border-radius: 5px;
-    width: 24px !important;
-    height: 24px !important;
-    font-size: 24px !important;
-    text-align: center;
-    border: 1px solid #dfdfdf;
-    margin: 0;
-    outline: none;
-    background-color: transparent;
-    position: relative;
-    text-transform: lowercase;
-}
-
-.letter-box::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ccc;
-}
-
-.non-input-box {
-    display: inline-block;
-    width: 15px;
-    text-align: center;
-    font-size: 15px;
-    color: gray;
-    font-weight: bold;
-}
-
-/* ==========================================
-   📊 測驗結果樣式 (Quiz Results)
-========================================== */
-#quizResult {
-    padding: 15px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    margin: 10px auto;
-}
-
 .result-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 10px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    flex-wrap: wrap;
-    gap: 8px; /* 確保按鈕間有適當間距 */
+    justify-content: space-between;
 }
 
 .result-item.correct {
-    background-color: #d4edda; /* 淺綠色，表示正確 */
+    background-color: #d4edda;
+    border-color: #28a745;
 }
 
 .result-item.wrong {
-    background-color: #f8d7da; /* 粉紅色，表示錯誤 */
+    background-color: #f8d7da;
+    border-color: #dc3545;
 }
 
 .result-item.unanswered {
-    background-color: #fff3cd; /* 淺黃色，表示未作答 */
+    background-color: #fff3cd;
+    border-color: #ffc107;
 }
 
-.sentence-link-btn, .word-detail-btn {
-    background-color: #617194;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
+/* ==========================================
+   📝 輸入框樣式 (Inputs)
+========================================== */
+#wordInput {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
     font-size: 18px;
-    transition: background-color 0.3s ease;
-    margin-right: 5px; /* 添加右邊距，確保按鈕間分隔 */
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.sentence-link-btn:hover, .word-detail-btn:hover {
-    background-color: #777;
+#wordInput input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-transform: lowercase;
+}
+
+/* ==========================================
+   🔗 連結樣式 (Links)
+========================================== */
+.word-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.word-link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   🎧 音標樣式 (Phonetics)
+========================================== */
+.phonetic-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+}
+
+.phonetic-btn:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   📊 進度條樣式 (Progress Bar)
+========================================== */
+#progressBarContainer {
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 20px;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background-color: #4caf50;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* ==========================================
+   ⭐ 重要單字標記 (Important Words)
+========================================== */
+.important-word {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .important-checkbox {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
+    transform: scale(1.3);
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
     border: 2px solid #5c5c5c;
     appearance: none;
     background-color: white;
     transition: all 0.2s ease-in-out;
-    flex-shrink: 0;
 }
 
 .important-checkbox:checked {
@@ -320,313 +295,62 @@ h1, h2 {
     border-color: #ff002b;
 }
 
-.word-container {
-    display: inline-flex;
-    gap: 1px;
-    margin: 0 0.5px;
-    align-items: center;
-    flex-wrap: wrap; /* 允許單字內部換行 */
-    max-width: 100%; /* 限制單字容器寬度 */
-}
-
-.letter-input {
-    width: 15px;
-    height: 25px;
-    font-size: 20px;
-    text-align: center;
-    border: none;
-    border-bottom: 3px solid #6080a3; /* 改為藍色，稍微加粗 */
-    outline: none;
-    background: transparent;
-    min-width: 10px;
-    flex-shrink: 1;
-}
-
-.letter-input:focus {
-    border-color: #007bff; /* 聚焦時藍色邊框 */
-    background: #dfeefc; /* 聚焦時淺灰背景 */
-}
-
-@media (max-width: 600px) {
-
-    .letter-input:focus {
-        border-color: #007bff;
-    }
-}
-
-.filled-letter {
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.correct-word {
-    color: blue;
-    font-weight: bold;
-}
-
-.wrong-word {
-    color: red;
-    font-weight: bold;
-}
-
-.unfilled-word {
-    color: red;
-    font-weight: bold;
-}
-
-.default-word {
-    color: black;
-}
-
-.punctuation {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0 5px;
-    color: black;
-    flex-shrink: 0; /* 標點符號不縮減 */
-}
-
-.hidden-word {
-    display: inline-block;
-    border-bottom: 2px solid black;
-    width: auto;
-    letter-spacing: 4px;
-    font-size: 18px;
-    text-align: center;
-}
-
-.visible-word {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.word-button {
-    background-color: #6e93ba;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.word-button:hover {
-    background-color: #5a7fa6;
-}
-
 /* ==========================================
-   🆕 句子測驗分類樣式 (Sentence Quiz Categories)
+   ❗ 錯誤單字列表樣式 (Wrong Words List)
 ========================================== */
-.alphabet-container, .category-container, .level-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 10px;
+#wrongWordsList {
+    max-width: 100%;
+    width: 90%;
+    margin: 10px auto;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.alphabet-container label, .category-container label, .level-container label {
-    margin: 5px;
-    padding: 5px 10px;
-    background-color: #617194;
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.alphabet-container label:hover, .category-container label:hover, .level-container label:hover {
-    background-color: #777;
-}
-
-input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-input[type="checkbox"]:checked + span {
-    background-color: #90EE90;
-    color: #000;
-}
-
-.action-button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #5f5f5f;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.action-button:hover {
-    background-color: #45a049;
-}
-
-.result-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-/* ==========================================
-   📱 手機適配
-========================================== */
-@media (max-width: 600px) {
-    h1, h2 {
-        font-size: 20px; /* 縮小標題 */
-    }
-
-    .button, .back-button, #startFilteredQuizBtn, #startSentenceQuizBtn {
-        width: 120px; /* 縮小按鈕寬度 */
-        font-size: 16px;
-    }
-
-    .category-button {
-        font-size: 16px;
-        padding: 8px 12px;
-    }
-
-    #wordHint, #sentenceHint {
-        font-size: 20px; /* 縮小提示文字 */
-        letter-spacing: 2px;
-    }
-
-    .result-item {
-        flex-direction: column; /* 垂直排列 */
-        align-items: flex-start;
-        padding: 8px;
-    }
-
-    .sentence-link-btn, .word-detail-btn {
-        font-size: 12px;
-        padding: 4px 8px;
-    }
-
-    .important-checkbox {
-        width: 20px;
-        height: 20px;
-    }
-
-    .action-button {
-        font-size: 20px;
-        padding: 8px 20px;
-    }
-}
-
-/* ==========================================
-   🆕 水平與垂直容器樣式
-========================================== */
-.horizontal-group {
+.wrong-word-item {
     display: flex;
     align-items: center;
-    gap: 10px; /* 控制 absorb-1 與單字詳情按鈕之間的間距 */
-    flex-wrap: nowrap; /* 防止換行 */
-}
-
-.vertical-group {
-    margin-top: 10px; /* 與上方水平容器的垂直間距 */
-    width: 100%; /* 確保句子按鈕佔滿寬度 */
-}
-
-/* 調整按鈕樣式以適應新佈局 */
-.result-item {
-    display: flex;
-    flex-direction: row; /* 勾選框與水平容器並排 */
-    align-items: flex-start;
-    justify-content: flex-start;
+    padding: 10px;
     margin-bottom: 10px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    gap: 10px; /* 勾選框與水平容器之間的間距 */
-    flex-wrap: wrap; /* 允許內容換行 */
-}
-
-.sentence-link-btn, .word-detail-btn {
-    background-color: #617194;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
-
-/* 確保句子按鈕在垂直容器中佔滿寬度 */
-.vertical-group .sentence-link-btn {
-    width: 100%;
-    text-align: left; /* 左對齊句子內容 */
-    padding: 8px 10px; /* 增加內距以適應寬度 */
-}
-
-.playing {
-    background-color: #00BFFF !important;
-    color: white !important;
-}
-
-.wrong-letter {
-    color: red;
-    font-weight: bold;
-}
-
-.correct-letter {
-    color: black;
-}
-
-.chinese-explanation {
-    margin-top: 20px;
-    padding: 10px;
     background-color: #f9f9f9;
-    border-radius: 5px;
     border: 1px solid #ddd;
+    border-radius: 8px;
+    justify-content: space-between;
 }
 
-.chinese-explanation h3 {
-    margin: 0 0 10px;
-    font-size: 0.6em;
-    line-height: 1.2;
-    color: #333;
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.chinese-explanation p {
-    margin: 0;
-    font-size: 0.8em; /* Adjust this value to change the font size */
-    line-height: 1.2;
-    color: #555;
+.delete-btn:hover {
+    background-color: #d32f2f;
 }
 
-/* 重組測驗的構建區域 */
-.construction-area {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 60px; /* 增加高度，容納更大的詞塊 */
-    border: 2px dashed #a0a0a0; /* 更柔和的邊框色 */
-    padding: 12px;
-    gap: 8px; /* 詞塊間距稍大 */
-    margin: 20px auto;
-    max-width: 90%; /* 與容器寬度一致 */
-    background-color: #f9f9f9; /* 淺灰背景，區分區域 */
-    border-radius: 8px; /* 圓角更現代 */
+.delete-btn.selected {
+    background-color: #d32f2f;
 }
 
-/* 詞塊容器 */
+/* ==========================================
+   🔄 重組單字區塊樣式 (Word Blocks)
+========================================== */
 .word-blocks-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px; /* 增加間距，改善視覺分隔 */
-    margin: 20px auto; /* 居中且與上下元素保持距離 */
+    gap: 12px;
+    margin: 20px auto;
     justify-content: center;
-    max-width: 90%; /* 限制寬度，防止溢出 */
+    max-width: 90%;
 }
 
-/* 詞塊樣式 */
 .word-block {
-    padding: 10px 16px; /* 增加內距，提升點擊舒適度 */
-    background-color: #e8ecef; /* 更柔和的背景色 */
+    padding: 10px 15px; /* 調整內距，適中大小 */
+    background-color: #e9ecef; /* 更柔和的背景色 */
     border: 1px solid #b0b0b0; /* 更細緻的邊框 */
     border-radius: 6px; /* 稍大的圓角，現代感 */
     cursor: pointer;
@@ -714,8 +438,6 @@ input[type="checkbox"]:checked + span {
         letter-spacing: 2px;
         margin: 15px 5px;
     }
-
-
 
 #reorganizeWordHint {
     font-size: 24px;
@@ -812,4 +534,13 @@ input[type="checkbox"]:checked + span {
     color: #333;
 }
 
+}
+
+/* 新增：分類標題樣式 */
+.category-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #375c85;
+    margin: 10px 0;
 }

@@ -185,21 +185,47 @@ function filterWordsInDetails() {
 
 function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
-    // 修改：使用 flatMap 展開所有分類陣列，收集唯一值
-    let allCategories = wordsData.flatMap(w => w["分類"] || []);  // 展開陣列
-    let categories = [...new Set(allCategories)];  // 取唯一值
-    if (categories.length === 0) {
-        categories.push("未分類");
-    }
-    categories.unshift("Checked 單字", "重要單字", "錯誤單字", "Note單字");
+    // 分離主分類（陣列[0]）和次分類（陣列[1]及之後）
+    let primaryCategories = [...new Set(wordsData.map(w => w["分類"][0] || "未分類").filter(c => c))];
+    let secondaryCategories = [...new Set(wordsData.flatMap(w => w["分類"].slice(1)).filter(c => c))];
+    let specialCategories = ["Checked 單字", "重要單字", "錯誤單字", "Note單字"];
 
-    document.getElementById("categoryButtons").innerHTML = categories
+    let categoryButtons = document.getElementById("categoryButtons");
+    categoryButtons.innerHTML = '';
+
+    // 添加主分類標題和按鈕
+    let primaryTitle = document.createElement('h3');
+    primaryTitle.className = 'category-title';
+    primaryTitle.textContent = '主分類';
+    categoryButtons.appendChild(primaryTitle);
+
+    categoryButtons.innerHTML += primaryCategories
+        .map(c => `<button class='letter-btn' onclick='showWords("primary_category", "${c}")'>${c}</button>`)
+        .join(" ");
+
+    // 添加次分類標題和按鈕
+    let secondaryTitle = document.createElement('h3');
+    secondaryTitle.className = 'category-title';
+    secondaryTitle.textContent = '次分類';
+    categoryButtons.appendChild(secondaryTitle);
+
+    categoryButtons.innerHTML += secondaryCategories
+        .map(c => `<button class='letter-btn' onclick='showWords("secondary_category", "${c}")'>${c}</button>`)
+        .join(" ");
+
+    // 添加特殊分類標題和按鈕
+    let specialTitle = document.createElement('h3');
+    specialTitle.className = 'category-title';
+    specialTitle.textContent = '特殊分類';
+    categoryButtons.appendChild(specialTitle);
+
+    categoryButtons.innerHTML += specialCategories
         .map(c => {
             if (c === "Checked 單字") return `<button class='letter-btn' onclick='showCheckedWords()'>${c}</button>`;
             if (c === "重要單字") return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
             if (c === "錯誤單字") return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
             if (c === "Note單字") return `<button class='letter-btn' onclick='showNoteWords()'>${c}</button>`;
-            return `<button class='letter-btn' onclick='showWords("category", "${c}")'>${c}</button>`;
+            return '';
         })
         .join(" ");
 }
@@ -219,7 +245,10 @@ function createLevelButtons() {
 
 function showWords(type, value) {
     console.log("📌 點擊分類/等級/A-Z 按鈕:", type, value);
-    let titleText = type === "letter" ? value.toUpperCase() : type === "category" ? value : `${value} Level`;
+    let titleText = type === "letter" ? value.toUpperCase() : 
+                   type === "primary_category" ? `主分類: ${value}` : 
+                   type === "secondary_category" ? `次分類: ${value}` : 
+                   type === "category" ? value : `${value} Level`;
     document.getElementById("wordListTitle").innerText = titleText;
     document.getElementById("wordListTitle").style.display = "block";
 
@@ -237,7 +266,6 @@ function showWords(type, value) {
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
-    // 隱藏「進入句子頁面」按鈕
     let sentenceButton = document.getElementById("sentencePageBtn");
     if (sentenceButton) {
         sentenceButton.style.display = "none";
@@ -250,10 +278,12 @@ function showWords(type, value) {
 
     let filteredWords = wordsData.filter(w => {
         let word = w.Words || w.word || w["單字"];
-        let category = w["分類"] || [];  // 修改：預設為空陣列
+        let category = w["分類"] || [];
         let level = w["等級"] || "未分類";
         if (type === "letter") return word ? word.toLowerCase().startsWith(value.toLowerCase()) : false;
-        if (type === "category") return category.includes(value);  // 修改：使用 includes 檢查陣列
+        if (type === "primary_category") return category[0] === value;
+        if (type === "secondary_category") return category.slice(1).includes(value);
+        if (type === "category") return category.includes(value);
         if (type === "level") return level === value;
         return false;
     });

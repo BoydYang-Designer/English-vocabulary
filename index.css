@@ -408,46 +408,9 @@ h1 {
     h1 {
         font-size: 20px;
     }
-
-    .letter-btn {
-        padding: 12px 18px;
-        font-size: 14px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .word-list {
-        width: 100%;
-        max-width: 414px;
-        margin: 0 auto;
-        padding: 10px;
-        box-sizing: border-box;
-        overflow-y: auto;
-        text-align: center;
-    }
-
-    .word-item {
-        font-size: 24px;
-        text-align: left;
-    }
-
-    .button {
-        width: 200px;
-        height: 55px;
+    .category-title {
         font-size: 16px;
-    }
-
-    .back-button {
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 10px;
-        background-color: #647f91;
-        border: none;
-        cursor: pointer;
+        margin: 8px 0;
     }
 }
 
@@ -490,4 +453,12 @@ h1 {
 .word-item-container.playing {
     background-color: #00BFFF; /* 亮藍色 */
     color: white; /* 確保文字可見 */
+}
+/* 分類標題 */
+.category-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #375c85;
+    margin: 10px 0;
 }
