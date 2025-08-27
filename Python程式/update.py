@@ -62,10 +62,19 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
             continue
         
         eg_sentences = extract_eg_sentences(row['English meaning'])
-        category_a = row['分類'] if pd.notna(row['分類']) else ''
+
+        # 🔹 支援多分類
+        categories = []
+        for c in ['分類1', '分類2', '分類3']:
+            if c in row and pd.notna(row[c]):
+                categories.append(str(row[c]).strip())
+        category1 = categories[0] if len(categories) > 0 else ''
+        category2 = categories[1] if len(categories) > 1 else ''
+        category3 = categories[2] if len(categories) > 2 else ''
+
         level_a = row['等級'] if pd.notna(row['等級']) else ''
         
-        print(f"處理單字: {word}, 分類: {category_a}, 等級: {level_a}")
+        print(f"處理單字: {word}, 分類: {categories}, 等級: {level_a}")
         
         word_records = df_b[df_b['Words'].notna() & df_b['Words'].str.match(rf'^{re.escape(word)}-\d+$')]
         max_suffix = get_max_suffix(word, df_b)
@@ -76,8 +85,11 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
             b_row_idx = b_index + 2
             update_needed = False
             
-            if category_a:
-                ws.cell(row=b_row_idx, column=3, value=category_a)
+            # 更新分類
+            if category1 or category2 or category3:
+                ws.cell(row=b_row_idx, column=3, value=category1)
+                ws.cell(row=b_row_idx, column=4, value=category2)
+                ws.cell(row=b_row_idx, column=5, value=category3)
                 update_needed = True
             
             current_level = b_row['等級'] if pd.notna(b_row['等級']) else ''
@@ -86,7 +98,7 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
                 update_needed = True
                 
             if update_needed:
-                print(f"更新行 {b_row_idx}: Words={b_row['Words']}, 分類={category_a}, 等級={level_a}")
+                print(f"更新行 {b_row_idx}: Words={b_row['Words']}, 分類=({category1},{category2},{category3}), 等級={level_a}")
         
         if eg_sentences:
             for sentence in eg_sentences:
@@ -97,7 +109,9 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
                     new_row = {
                         '音檔': '',
                         '等級': level_a,
-                        '分類': category_a,
+                        '分類1': category1,
+                        '分類2': category2,
+                        '分類3': category3,
                         'Words': new_word,
                         '名人': '',
                         '句子': sentence,
@@ -128,7 +142,7 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
 
 def compare_excel_files(excel_a_path, excel_b_path, output_json_path):
     """比對兩個 Excel 檔案的指定欄位（不含音檔），並在有差異時記錄到 JSON 檔案"""
-    columns_to_compare = ['等級', '分類', 'Words', '名人', '句子', '中文']
+    columns_to_compare = ['等級', '分類1', '分類2', '分類3', 'Words', '名人', '句子', '中文']
     
     if not os.path.exists(excel_a_path):
         raise FileNotFoundError(f"找不到 Excel A 檔案: {excel_a_path}")
