@@ -1,11 +1,12 @@
 let selectedCategory = null;
 let selectedFilters = {
     letters: new Set(),
-    categories: new Set(),
+    primaryCategories: new Set(),
+    secondaryCategories: new Set(),
     levels: new Set(),
-    checked: false, 
-    important: false, // 新增：標記是否選擇重要單字
-    wrong: false      // 新增：標記是否選擇錯誤單字
+    checked: false,
+    important: false,
+    wrong: false
 };
 let wordsData = [];
 let quizWords = [];
@@ -175,24 +176,44 @@ function updateButtonSelectionState(type, value) {
 
 function filterQuizWords(event) {
     let filteredWords = wordsData.filter(word => {
-        // 檢查 word.Words 是否存在且為非空字串
-        if (!word.Words || typeof word.Words !== 'string' || word.Words.trim() === '') {
-            return false; // 跳過無效的單字
-        }
+    // === 基本檢查 ===
+    let wordText = word.Words || word.word || word["單字"];
+    if (!wordText) return false;
 
-        let letterMatch = selectedFilters.letters.size === 0 || selectedFilters.letters.has(word.Words[0].toUpperCase());
+    let letterMatch = selectedFilters.letters.size === 0 ||
+        selectedFilters.letters.has(wordText[0].toUpperCase());
 
-        // 修改：檢查單字的分類陣列中是否有任何一個匹配 selected categories
-        let categoryMatch = selectedFilters.categories.size === 0 || 
-            (word["分類"] || []).some(cat => selectedFilters.categories.has(cat));
+    // === 主分類 / 次分類 ===
+    let category = word["分類"] || [];
+    let primary = category[0] || "未分類";
+    let secondary = category.slice(1);
 
-        let wordLevel = word["等級"] || "未分類(等級)";
-        let levelMatch = selectedFilters.levels.size === 0 || selectedFilters.levels.has(wordLevel);
+    // 主分類條件：如果沒選就不限制，有選就要符合其中一個
+    let primaryMatch = selectedFilters.primaryCategories.size === 0 ||
+        selectedFilters.primaryCategories.has(primary);
 
-        let checkedMatch = !selectedFilters.checked || localStorage.getItem(`checked_${word.Words}`) === "true";
+    // 次分類條件：如果沒選就不限制，有選就至少要符合一個
+    let secondaryMatch = selectedFilters.secondaryCategories.size === 0 ||
+        secondary.some(c => selectedFilters.secondaryCategories.has(c));
 
-        return letterMatch && categoryMatch && levelMatch && checkedMatch;
-    });
+    // === 等級 / Checked / 重要 / 錯誤 單字 ===
+    let level = word["等級"] || "未分類";
+    let levelMatch = selectedFilters.levels.size === 0 || selectedFilters.levels.has(level);
+
+    let checkedMatch = !selectedFilters.checked ||
+        localStorage.getItem(`checked_${wordText}`) === "true";
+
+    let importantMatch = !selectedFilters.important ||
+        localStorage.getItem(`important_${wordText}`) === "true";
+
+    let wrongWords = JSON.parse(localStorage.getItem("wrongWords") || "[]");
+    let wrongMatch = !selectedFilters.wrong || wrongWords.includes(wordText);
+
+    // === 最後回傳 ===
+    return letterMatch && primaryMatch && secondaryMatch &&
+           levelMatch && checkedMatch && importantMatch && wrongMatch;
+});
+
 
     if (filteredWords.length === 0) {
         alert("⚠️ 沒有符合條件的單字！");
@@ -247,18 +268,20 @@ function generateMultiSelectButtons() {
     ).join("");
 
     // 修改：扁平化所有分類，然後去重
-    let allCategories = wordsData.flatMap(w => w["分類"] || ["未分類(種類)"]);
-    let categories = [...new Set(allCategories)];
-    let categoryContainer = document.getElementById("categoryButtons");
-    categoryContainer.innerHTML = categories.map(category =>
-        `<button class='category-button' onclick='toggleSelection("categories", "${category}")'>${category}</button>`
-    ).join(" ");
-    
-    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類(等級)"))];
-    let levelContainer = document.getElementById("levelButtons");
-    levelContainer.innerHTML = levels.map(level =>
-        `<button class='category-button' onclick='toggleSelection("levels", "${level}")'>${level}</button>`
-    ).join(" ");
+let primaryCategories = [...new Set(wordsData.map(w => w["分類"][0] || "未分類"))];
+let secondaryCategories = [...new Set(wordsData.flatMap(w => w["分類"].slice(1)).filter(c => c))];
+
+let categoryContainer = document.getElementById("categoryButtons");
+categoryContainer.innerHTML = `
+    <h3>主分類</h3>
+    ${primaryCategories.map(c =>
+        `<button class='category-button' onclick='toggleSelection("primaryCategories", "${c}")'>${c}</button>`
+    ).join(" ")}
+    <h3>次分類</h3>
+    ${secondaryCategories.map(c =>
+        `<button class='category-button' onclick='toggleSelection("secondaryCategories", "${c}")'>${c}</button>`
+    ).join(" ")}
+`;
     
     // 更新按鈕的 onclick 事件
     let checkedContainer = document.getElementById("checkedCategory");
@@ -337,12 +360,25 @@ function startQuiz() {
         let isImportant = localStorage.getItem(`important_${word}`) === "true";
         let isWrong = JSON.parse(localStorage.getItem("wrongWords") || "[]").includes(word);
 
+        // 檢查字母
         if (selectedFilters.letters.size > 0 && ![...selectedFilters.letters].some(letter => word.toLowerCase().startsWith(letter.toLowerCase()))) return false;
-        if (selectedFilters.categories.size > 0 && ![...selectedFilters.categories].some(c => category.includes(c))) return false;
+
+        // 檢查主分類
+        let primary = category[0] || "未分類";
+        if (selectedFilters.primaryCategories.size > 0 && !selectedFilters.primaryCategories.has(primary)) return false;
+
+        // 檢查次分類
+        let secondary = category.slice(1);
+        if (selectedFilters.secondaryCategories.size > 0 && !secondary.some(c => selectedFilters.secondaryCategories.has(c))) return false;
+
+        // 檢查等級
         if (selectedFilters.levels.size > 0 && !selectedFilters.levels.has(level)) return false;
+
+        // 檢查其他條件
         if (selectedFilters.checked && !isChecked) return false;
         if (selectedFilters.important && !isImportant) return false;
         if (selectedFilters.wrong && !isWrong) return false;
+
         return true;
     });
 

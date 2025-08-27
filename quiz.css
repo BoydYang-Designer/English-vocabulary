@@ -35,6 +35,7 @@ h1, h2 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 /* word-link 按鈕樣式 */
 .word-link {
     background-color: #9babc4; /* 藍色背景 */
@@ -130,7 +131,7 @@ h1, h2 {
     padding: 10px 20px;
 }
 
-#startFilteredQuizBtn:hover, #startSentenceQuizBtn:hover, #startReorganizeQuizBtn:hover , #startRewordQuizBtn:hover{
+#startFilteredQuizBtn:hover, #startSentenceQuizBtn:hover, #startReorganizeQuizBtn:hover, #startRewordQuizBtn:hover {
     background-color: #45a049; /* 懸停時略暗的綠色 */
 }
 
@@ -204,22 +205,74 @@ h1, h2 {
    📝 輸入框樣式 (Inputs)
 ========================================== */
 #wordInput {
+    display: flex; /* Use flexbox to arrange boxes */
+    flex-wrap: wrap; /* Allow wrapping for long words */
+    justify-content: center; /* Center the boxes */
+    gap: 5px; /* Small gap between boxes */
     width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    font-size: 18px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    max-width: 600px; /* Increased max-width for better layout */
+    margin: 10px auto; /* Center the container */
 }
 
-#wordInput input {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-transform: lowercase;
+/* Letter input boxes for word quiz */
+.letter-box {
+    width: 40px; /* Fixed width for square shape */
+    height: 40px; /* Equal height for square shape */
+    padding: 5px; /* Reduced padding for balance */
+    font-size: 18px; /* Maintain readable font size */
+    border: 1px solid #ccc; /* Border for visibility */
+    border-radius: 5px; /* Slight rounding for aesthetics */
+    text-align: center; /* Center the letter */
+    text-transform: lowercase; /* Ensure lowercase input */
+    margin: 2px; /* Small margin between boxes */
+    display: inline-flex; /* Use flex to center content */
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+    box-sizing: border-box; /* Include padding and border in size */
+}
+
+/* Non-input boxes (for spaces or hyphens) */
+.non-input-box {
+    width: 40px; /* Match letter-box size */
+    height: 40px; /* Match letter-box size */
+    line-height: 40px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+    font-size: 18px; /* Match letter-box font size */
+    margin: 2px; /* Match letter-box margin */
+    display: inline-flex; /* Match letter-box display */
+    align-items: center; /* Match letter-box alignment */
+    justify-content: center; /* Match letter-box alignment */
+}
+
+/* Mobile adaptation for letter boxes */
+@media (max-width: 600px) {
+    .letter-box, .non-input-box {
+        width: 32px; /* Smaller size for mobile */
+        height: 32px; /* Equal height for square shape */
+        font-size: 16px; /* Slightly smaller font for mobile */
+        padding: 4px; /* Adjusted padding for mobile */
+        margin: 1px; /* Smaller margin for mobile */
+    }
+}
+
+/* Word hint text for word quiz */
+#wordHint {
+    font-size: 28px; /* Larger font size for better visibility */
+    margin: 20px 10px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #333;
+    max-width: 90%; /* Prevent overflow */
+    word-wrap: break-word; /* Ensure long hints wrap */
+}
+
+/* Mobile adaptation for word hint */
+@media (max-width: 600px) {
+    #wordHint {
+        font-size: 22px; /* Slightly smaller for mobile */
+        letter-spacing: 2px;
+        margin: 15px 5px;
+    }
 }
 
 /* ==========================================
@@ -439,12 +492,13 @@ h1, h2 {
         margin: 15px 5px;
     }
 
-#reorganizeWordHint {
-    font-size: 24px;
-    margin: 20px 10px;
-    text-align: center;
-    letter-spacing: 3px;
-    color: #333;
+    #reorganizeWordHint {
+        font-size: 24px;
+        margin: 20px 10px;
+        text-align: center;
+        letter-spacing: 3px;
+        color: #333;
+    }
 }
 
 /* Reword Quiz 專用字母塊容器 */
@@ -488,6 +542,7 @@ h1, h2 {
         font-size: 28px; /* PC 上放大到 28px */
     }
 }
+
 .word-block-placeholder {
     display: inline-block;
     margin: 5px;
@@ -509,7 +564,6 @@ h1, h2 {
     cursor: pointer;
 }
 
-
 /* 構建區域的占位符樣式 */
 .construction-placeholder {
     display: inline-block;
@@ -528,12 +582,9 @@ h1, h2 {
     border-top: 1px solid #ccc;
 }
 
-
 .phonetic-explanation p {
     font-size: 0.8em;
     color: #333;
-}
-
 }
 
 /* 新增：分類標題樣式 */

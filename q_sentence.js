@@ -14,8 +14,10 @@ let userConstructedSentences = [];
 
 let selectedSentenceFilters = {
     levels: new Set(),
-    categories: new Set(),
-    alphabet: new Set()
+    primaryCategories: new Set(),
+    secondaryCategories: new Set(),
+    alphabet: new Set(),
+    special: new Set() // 添加這行
 };
 
 function getUserAnswer(index) {
@@ -58,7 +60,12 @@ function showSentenceQuizCategories() {
     console.log("✅ 顯示句子測驗分類頁面");
 
     fetch(GITHUB_JSON_URL)
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
         console.log("✅ 成功載入 sentence.json", data);
         if (!data["New Words"] || !Array.isArray(data["New Words"])) {
@@ -66,21 +73,50 @@ function showSentenceQuizCategories() {
             return;
         }
 
-        // 修改：確保每個句子的分類是陣列
         sentenceData = data["New Words"].filter(item => item.句子 && item.中文);
         sentenceData.forEach(item => {
             if (typeof item["分類"] === "string") {
-                item["分類"] = [item["分類"]];  // 如果是單字串，轉為陣列
+                item["分類"] = [item["分類"]];
             } else if (!Array.isArray(item["分類"])) {
-                item["分類"] = [];  // 如果無效，設為空陣列
+                item["分類"] = [];
             }
+            item.primaryCategory = item["分類"][0] || "未分類";
+            item.secondaryCategories = item["分類"].slice(1);
         });
 
+        localStorage.setItem("sentenceData", JSON.stringify(sentenceData));
         generateSentenceCategories(sentenceData);
     })
     .catch(error => {
-        console.error("❌ 無法載入 sentence.json:", error);
-    });
+    console.error("❌ 無法載入 sentence.json:", error);
+    alert("⚠️ 無法載入句子資料，請檢查網路或 URL 是否正確。使用本地儲存的資料（如果可用）。");
+    if (sentenceData.length > 0) {
+        generateSentenceCategories(sentenceData); // 使用本地 fallback
+    } else {
+        // 添加臨時樣本資料（使用您提供的 JSON 片段）
+        sentenceData = [
+            {
+                "等級": "B2",
+                "Words": "absorb-1",
+                "名人": "Barack Obama",
+                "句子": "A great leader absorbs criticism, not as a wound, but as a lesson to grow stronger.",
+                "中文": "（偉大的領袖吸收批評，不是當作傷害，而是當作讓自己更強大的課程。）",
+                "分類": ["藝術與美學", "Design"]
+            },
+            {
+                "等級": "B2",
+                "Words": "absorb-10",
+                "句子": "The towel absorbed the spilled water quickly",
+                "中文": "（毛巾迅速吸收了灑出的水。）",
+                "分類": ["藝術與美學", "Design"]
+            }
+            // 添加更多樣本資料如果需要
+        ];
+        console.log("✅ 使用臨時樣本資料載入分類");
+        generateSentenceCategories(sentenceData); // 使用樣本資料生成分類
+        localStorage.setItem("sentenceData", JSON.stringify(sentenceData)); // 儲存到 localStorage 以便下次使用
+    }
+});
 }
 
 function generateSentenceCategories(data) {
@@ -101,9 +137,11 @@ function generateSentenceCategories(data) {
     let levels = new Set();
     let alphabetMap = {};
 
-    // 修改：使用 flatMap 展開所有分類陣列，收集唯一值
-    let allCategories = data.flatMap(item => item["分類"] || ["未分類"]);  // 展開陣列，預設為 ["未分類"]
-    let categories = new Set(allCategories);  // 取唯一值
+    // --- 新增開始 ---
+    // 建立新的 Set 來儲存主分類和次分類
+    let primaryCategories = new Set();
+    let secondaryCategories = new Set();
+    // --- 新增結束 ---
 
     // 初始化 A-Z 分類
     for (let i = 65; i <= 90; i++) {
@@ -119,9 +157,24 @@ function generateSentenceCategories(data) {
         if (alphabetMap[firstLetter]) {
             alphabetMap[firstLetter].push(item);
         }
+
+        // --- 新增開始 ---
+        // 確保分類是陣列
+        if (Array.isArray(item["分類"])) {
+            // 將第一個分類作為主分類
+            if (item["分類"].length > 0) {
+                primaryCategories.add(item["分類"][0]);
+            }
+            // 將其餘分類作為次分類
+            item["分類"].slice(1).forEach(cat => secondaryCategories.add(cat));
+        } else if (typeof item["分類"] === "string") {
+            // 如果只有一個分類且為字串
+            primaryCategories.add(item["分類"]);
+        }
+        // --- 新增結束 ---
     });
 
-    console.log("✅ 分類數據:", { levels: [...levels], categories: [...categories], alphabetMap });
+    console.log("✅ 分類數據:", { levels: [...levels], primaryCategories: [...primaryCategories], secondaryCategories: [...secondaryCategories], alphabetMap });
 
     // 生成 A-Z 按鈕（保留複選功能）
     alphabetContainer.innerHTML = Object.keys(alphabetMap)
@@ -130,25 +183,32 @@ function generateSentenceCategories(data) {
         .join("");
     console.log("📌 A-Z buttons HTML:", alphabetContainer.innerHTML);
 
-    // 生成主題按鈕
-    categoryContainer.innerHTML = [...categories]
-        .map(category => `<button class="category-button" onclick="toggleSentenceSelection('categories', '${category}')">${category}</button>`)
-        .join("");
-
-    // 生成等級按鈕
-    levelContainer.innerHTML = [...levels]
-        .map(level => `<button class="category-button" onclick="toggleSentenceSelection('levels', '${level}')">${level}</button>`)
-        .join("");
-
-    // 添加「重要句子」和「錯誤句子」按鈕
-    categoryContainer.innerHTML += `<button class="category-button" onclick="toggleSentenceSelection('categories', 'important')">重要句子</button>`;
-    categoryContainer.innerHTML += `<button class="category-button" onclick="toggleSentenceSelection('categories', 'incorrect')">錯誤句子</button>`;
-    categoryContainer.innerHTML += `<button class="category-button" onclick="toggleSentenceSelection('categories', 'checked')">Checked 句子</button>`;
+    // 生成分類按鈕（主分類 + 次分類）
+    categoryContainer.innerHTML = `
+        <h3>主分類</h3>
+        ${[...primaryCategories].map(c =>
+            `<button class="category-button" onclick="toggleSentenceSelection('primaryCategories', '${c}')">${c}</button>`
+        ).join("")}
+        <h3>次分類</h3>
+        ${[...secondaryCategories].map(c =>
+            `<button class="category-button" onclick="toggleSentenceSelection('secondaryCategories', '${c}')">${c}</button>`
+        ).join("")}
+        <h3>特殊篩選</h3>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'important')">重要句子</button>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'incorrect')">錯誤句子</button>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'checked')">Checked 句子</button>
+    `;
 
     // 將 A-Z 分類容器插入到 "Back" 和 "Start Quiz" 下方，且在 categoryContainer 上方
     let sentenceQuizCategories = document.getElementById("sentenceQuizCategories");
     let buttonContainer = sentenceQuizCategories.querySelector(".button-container");
-    sentenceQuizCategories.insertBefore(alphabetContainer, categoryContainer);
+    // 確保插入位置正確
+    if (buttonContainer) {
+        sentenceQuizCategories.insertBefore(alphabetContainer, buttonContainer);
+    } else {
+        sentenceQuizCategories.appendChild(alphabetContainer);
+    }
+
 
     // 恢復已選狀態
     document.querySelectorAll(".category-button").forEach(button => {
@@ -187,20 +247,25 @@ function toggleSentenceSelection(type, value) {
 // 📌 開始測驗
 function startSentenceQuiz() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
+    document.getElementById("sentenceQuizArea").style.display = "block";
 
     let filteredSentences = sentenceData.filter(item => {
         let levelMatch = selectedSentenceFilters.levels.size === 0 || selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
 
-        // 修改：檢查分類陣列中是否有任何一個匹配 selected categories
-        let categoryMatch = selectedSentenceFilters.categories.size === 0 || 
-            (item["分類"] || []).some(cat => selectedSentenceFilters.categories.has(cat));
+        // 檢查主分類
+        let primaryCategoryMatch = selectedSentenceFilters.primaryCategories.size === 0 || selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
+        
+        // 檢查次分類
+        let secondaryCategoryMatch = selectedSentenceFilters.secondaryCategories.size === 0 || 
+                                     (item.secondaryCategories || []).some(cat => selectedSentenceFilters.secondaryCategories.has(cat));
 
         let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
 
-        return levelMatch && categoryMatch && alphabetMatch;
+        // 使用更新後的過濾條件
+        return levelMatch && primaryCategoryMatch && secondaryCategoryMatch && alphabetMatch;
     });
 
-if (filteredSentences.length === 0) {
+    if (filteredSentences.length === 0) {
         alert("⚠️ 沒有符合條件的句子！");
         returnToSentenceCategorySelection();
         return;
@@ -379,21 +444,28 @@ function startReorganizeQuiz() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("reorganizeQuizArea").style.display = "block";
 
-    // 假設 sentenceData 和 selectedSentenceFilters 已定義
     let filteredSentences = sentenceData.filter(item => {
         let levelMatch = selectedSentenceFilters.levels.size === 0 || 
                          selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
-        let categoryMatch = selectedSentenceFilters.categories.size === 0 || 
-                            selectedSentenceFilters.categories.has(item.分類 || "未分類") ||
-                            (selectedSentenceFilters.categories.has("important") && 
-                             localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
-                            (selectedSentenceFilters.categories.has("incorrect") && 
-                             incorrectSentences.includes(item.Words)) ||
-                            (selectedSentenceFilters.categories.has("checked") && 
-                             localStorage.getItem(`checked_sentence_${item.Words}`) === "true");
+
+        let primaryMatch = selectedSentenceFilters.primaryCategories.size === 0 ||
+                           selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
+
+        let secondaryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
+                             item.secondaryCategories.some(c => selectedSentenceFilters.secondaryCategories.has(c));
+
         let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || 
                             selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
-        return levelMatch && categoryMatch && alphabetMatch;
+
+        let specialMatch = selectedSentenceFilters.special.size === 0 ||
+                           (selectedSentenceFilters.special.has('important') && 
+                            localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
+                           (selectedSentenceFilters.special.has('incorrect') && 
+                            incorrectSentences.includes(item.Words)) ||
+                           (selectedSentenceFilters.special.has('checked') && 
+                            localStorage.getItem(`checked_sentence_${item.Words}`) === "true");
+
+        return levelMatch && primaryMatch && secondaryMatch && alphabetMatch && specialMatch;
     });
 
     if (filteredSentences.length === 0) {
