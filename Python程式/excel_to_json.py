@@ -5,8 +5,18 @@ from tkinter import filedialog, messagebox
 import os
 
 def clean_data(record):
-    """ 移除空白欄位（例如 NaN 或 None） """
-    return {key: value for key, value in record.items() if pd.notna(value) and value != ""}
+    """ 移除空白欄位（例如 NaN 或 None），並將多個分類欄位合併為陣列 """
+    cleaned = {}
+    categories = []  # 用於儲存所有分類值
+    for key, value in record.items():
+        if pd.notna(value) and value != "":
+            if key.startswith("分類"):  # 檢查是否為分類欄位（例如 分類1、分類2）
+                categories.append(str(value).strip())  # 將非空分類值加入陣列
+            else:
+                cleaned[key] = value
+    # 將所有分類值合併為單一 "分類" 欄位
+    cleaned["分類"] = categories if categories else []  # 如果無分類，設為空陣列
+    return cleaned
 
 def convert_excel_to_json():
     # 開啟文件選擇對話框
@@ -16,7 +26,7 @@ def convert_excel_to_json():
         return  # 如果使用者沒選擇檔案，直接返回
 
     try:
-        # 讀取 Excel 檔案（加上 engine="openpyxl" 以避免讀取失敗）
+        # 讀取 Excel 檔案
         df = pd.read_excel(file_path, engine="openpyxl")
 
         # 轉換 DataFrame 每一列，並移除空欄位
