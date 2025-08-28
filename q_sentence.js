@@ -358,25 +358,9 @@ function loadSentenceQuestion() {
     });
 
     // 提示文字邏輯
-    let wordCount = words.filter(word => /\p{L}+/u.test(word)).length;
-    let wordsToShow = Math.max(1, Math.floor(wordCount / 5));
-    let indicesToShow = new Set();
-
-    while (indicesToShow.size < wordsToShow) {
-        let randomIndex = Math.floor(Math.random() * words.length);
-        if (/\p{L}+/u.test(words[randomIndex])) {
-            indicesToShow.add(randomIndex);
-        }
-    }
-
-    let hintWords = words.map((word, index) => {
-        if (/\p{L}+/u.test(word) && !indicesToShow.has(index)) {
-            return "_".repeat(word.length);
-        }
-        return word;
-    });
-
-    document.getElementById("sentenceHint").innerHTML = hintWords.join("");
+// 提示文字邏輯 (更新為顯示中文翻譯)
+    let chineseHint = sentenceObj.中文 || "（無中文提示）";
+    document.getElementById("sentenceHint").innerHTML = chineseHint;
 
     if (firstInput) {
         firstInput.focus();
@@ -493,16 +477,9 @@ function loadReorganizeQuestion() {
     sentenceObj.filteredSentence = sentenceText;
 
     // 分割句子，用於提示，保留單詞和標點符號
-    let words = sentenceText.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]/gu).filter(w => w !== "");
-    let wordCount = words.filter(w => /\p{L}+/u.test(w)).length;
-    let wordsToShow = Math.max(1, Math.floor(wordCount / 5));
-    let indicesToShow = new Set();
-    while (indicesToShow.size < wordsToShow) {
-        let idx = Math.floor(Math.random() * words.length);
-        if (/\p{L}+/u.test(words[idx])) indicesToShow.add(idx);
-    }
-    let hintWords = words.map((w, i) => indicesToShow.has(i) ? w : "_".repeat(w.length));
-    document.getElementById("reorganizeSentenceHint").innerHTML = hintWords.join(" ");
+// 更新提示為顯示中文翻譯
+    let chineseHint = sentenceObj.中文 || "（無中文提示）";
+    document.getElementById("reorganizeSentenceHint").innerHTML = chineseHint;
 
     // 生成詞塊（僅包括單詞和所有格，排除標點符號）
     let blocks = sentenceText.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+/gu) || [];

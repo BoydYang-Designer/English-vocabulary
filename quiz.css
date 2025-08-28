@@ -465,7 +465,7 @@ h1, h2 {
 }
 
 /* 重組提示文字 */
-#reorganizeSentenceHint {
+#sentenceHint, #reorganizeSentenceHint {
     font-size: 24px; /* 略小字體，與新尺寸協調 */
     margin: 20px 10px;
     text-align: center;
@@ -501,7 +501,7 @@ h1, h2 {
         max-width: 95%;
     }
 
-    #reorganizeSentenceHint {
+    #sentenceHint, #reorganizeSentenceHint {
         font-size: 20px;
         letter-spacing: 2px;
         margin: 15px 5px;
