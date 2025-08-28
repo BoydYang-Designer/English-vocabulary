@@ -323,7 +323,6 @@ function loadSentenceQuestion() {
     // 計算最長單字的字母數
     let maxWordLength = Math.max(...words.filter(w => /\p{L}+/u.test(w)).map(w => w.length));
     let screenWidth = window.innerWidth || document.documentElement.clientWidth;
-    let inputWidth = Math.min(15, Math.floor(screenWidth / (maxWordLength + 5)));
 
     words.forEach((word, index) => {
         let wordContainer = document.createElement("div");
@@ -337,7 +336,6 @@ function loadSentenceQuestion() {
                 input.type = "text";
                 input.maxLength = 1;
                 input.classList.add("letter-input");
-                input.style.width = `${inputWidth}px`;
                 input.dataset.wordIndex = index;
                 input.dataset.letterIndex = letterIndex;
                 input.addEventListener("input", handleLetterInput);

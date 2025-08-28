@@ -72,11 +72,26 @@ h1, h2 {
     background-color: #218838; /* 懸停時深綠色 */
 }
 
+/* Letter input boxes for sentence word quiz */
+.letter-input {
+    width: 40px;  /* 您想要的新寬度 */
+    height: 40px; /* 您想要的新高度 */
+    font-size: 24px; /* 加大字體讓格子看起來更飽滿 */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: lowercase;
+    margin: 2px;
+    box-sizing: border-box;
+}
+
 /* 手機適配 */
 @media (max-width: 600px) {
-    .word-link, .phonetic-btn {
-        font-size: 18px; /* 縮小字體 */
-        padding: 4px 8px; /* 縮小內距 */
+    .letter-input {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
     }
 
     .category-title {
