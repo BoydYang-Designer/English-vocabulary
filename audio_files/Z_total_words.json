@@ -14715,9 +14715,14 @@
         {
             "等級": "C2",
             "Words": "rehabilitate",
+            "pronunciation-1": "[͵rihəˋbɪlə͵tet]",
+            "traditional Chinese": "v.（使）復興；（使）恢復原狀；（使）復權；（使）復職",
+            "English meaning": "\"Rehabilitate\" is a verb: rehabilitate / rehabilitated / rehabilitating\nMeaning:\nTo restore someone or something to a good, healthy, or functional condition after illness, injury, imprisonment, or damage. It can also mean helping someone return to normal life or improving the condition of buildings, land, or systems.\nE.g. The hospital aims to rehabilitate patients after surgery.\nE.g. The program helps rehabilitate former prisoners so they can rejoin society.\nE.g. The organization is working to rehabilitate injured wildlife.\nE.g. The city plans to rehabilitate old factories into community centers.\nSummary:\n\"Rehabilitate\" means to make someone or something healthy, useful, or functional again after damage, illness, or decline.\nRelated Words: restore, recover, rebuild, repair.\nAntonyms: damage, harm, destroy, neglect.",
             "Unnamed: 10": "rehabilitate",
             "Unnamed: 11": "rehabilitate",
-            "分類": []
+            "分類": [
+                "醫學與健康"
+            ]
         },
         {
             "等級": "B1",
@@ -14732,9 +14737,14 @@
         {
             "等級": "C1",
             "Words": "relatable",
+            "pronunciation-1": "[rɪˈleɪtəbl]",
+            "traditional Chinese": "adj.有關聯的;能引起共鳴的",
+            "English meaning": "\"Relatable\" is an adjective.\nMeaning:\nEasily understood or recognized because it is similar to one’s own experiences, feelings, or situations.\nE.g. The movie’s story about friendship was very relatable.\nE.g. Her struggles with balancing work and family are relatable to many people.\nE.g. The character is relatable because he faces everyday challenges.\nE.g. He shared a relatable post about dealing with stress at work.\nSummary:\n\"Relatable\" describes something that people can connect with or understand because it reflects their own experiences or feelings.\nRelated Words: understandable, familiar, identifiable, sympathetic.\nAntonyms: alien, unfamiliar, unrecognizable, disconnected.",
             "Unnamed: 10": "relatable",
             "Unnamed: 11": "relatable",
-            "分類": []
+            "分類": [
+                "行為與心理"
+            ]
         },
         {
             "等級": "B2",
@@ -14915,9 +14925,15 @@
         {
             "等級": "C1",
             "Words": "resentment",
+            "pronunciation-1": "[rɪˋzɛntmənt]",
+            "traditional Chinese": "n.憤慨，忿怒，怨恨[U][C]+at/against",
+            "English meaning": "\"Resentment\" is a noun.\nMeaning:\nA feeling of anger, bitterness, or displeasure toward someone or something, often because of perceived unfair treatment or insult.\nE.g. She felt deep resentment toward her colleague for taking credit for her work.\nE.g. Years of neglect built up resentment between the siblings.\nE.g. His resentment grew when he was passed over for a promotion.\nE.g. Resentment can harm relationships if it is not addressed.\nSummary:\n\"Resentment\" is a strong feeling of anger or bitterness toward someone or something, usually due to perceived injustice or mistreatment.\nRelated Words: bitterness, anger, grudge, irritation.\nAntonyms: forgiveness, acceptance, contentment, goodwill.",
             "Unnamed: 10": "resentment",
             "Unnamed: 11": "resentment",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "B2",
@@ -15032,11 +15048,30 @@
             "分類": []
         },
         {
-            "等級": "C1",
-            "Words": "retaining ",
-            "Unnamed: 10": "retaining ",
-            "Unnamed: 11": "retaining ",
-            "分類": []
+            "等級": "B2",
+            "Words": "retain",
+            "pronunciation-1": "[rɪˋten]",
+            "traditional Chinese": "vt.保留，保持；留住；擋住，攔住",
+            "English meaning": "\"Retain\" is a verb: retain / retained / retaining\nMeaning:\nTo keep, hold, or continue to have something; to maintain possession, control, or memory of something.\nE.g. The company decided to retain its best employees despite the budget cuts.\nE.g. She retained all the details of the meeting in her notes.\nE.g. The sponge can retain water for a long time.\nE.g. He struggled to retain his composure during the stressful situation.\nSummary:\n\"Retain\" means to keep or hold onto something, whether it’s physical, mental, or abstract.\nRelated Words: keep, maintain, preserve, hold.\nAntonyms: lose, discard, give up, forget.",
+            "Unnamed: 10": "retain",
+            "Unnamed: 11": "retain",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "retaining",
+            "pronunciation-1": "[rɪˋtenɪŋ]",
+            "traditional Chinese": "adj.使固定的，定位的；留住的",
+            "English meaning": "\"Retaining\" is the present participle of the verb retain (retain / retained / retaining).\nMeaning:\nThe act of keeping, holding, or continuing to have something; maintaining possession, control, or memory of something.\nE.g. The company is retaining its employees despite the budget cuts.\nE.g. She is retaining all the important information from the lecture.\nE.g. This material is good at retaining heat.\nE.g. He is retaining his composure even under pressure.\nSummary:\n\"Retaining\" refers to the action of keeping or holding onto something, whether physical, mental, or abstract.\nRelated Words: keeping, maintaining, preserving, holding.\nAntonyms: losing, discarding, giving up, forgetting.",
+            "Unnamed: 10": "retaining",
+            "Unnamed: 11": "retaining",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
         },
         {
             "等級": "C1",
@@ -19243,6 +19278,154 @@
             "Unnamed: 10": "zigzag",
             "Unnamed: 11": "zigzag",
             "分類": []
+        },
+        {
+            "等級": "C1",
+            "Words": "curvature",
+            "pronunciation-1": "[ˋkɝvətʃɚ]",
+            "traditional Chinese": "n.彎曲；（幾何）曲率",
+            "English meaning": "Curvature\" is a noun.\nMeaning:\nThe state, quality, or degree of being curved or bent, or the measurement of how much something curves. It can describe shapes, lines, surfaces, or natural forms.\nE.g. The curvature of the Earth becomes visible from high altitudes.\nE.g. The architect admired the graceful curvature of the building’s roof.\nE.g. The doctor studied the curvature of the patient’s spine.\nE.g. The road’s sharp curvature made it dangerous to drive fast.\nSummary:\n\"Curvature\" refers to the quality or degree of being curved, whether in natural forms, objects, or geometric shapes.\nRelated Words: bend, arc, curve, roundness.\nAntonyms: straightness, flatness, linearity.",
+            "Unnamed: 10": "curvature",
+            "Unnamed: 11": "curvature",
+            "分類": [
+                "科學與工程",
+                "Design",
+                "形狀"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "linear",
+            "pronunciation-1": "ˋlɪnɪɚ]",
+            "traditional Chinese": "adj.線的，直線的；使用線的；長度的",
+            "English meaning": "\"Linear\" is an adjective.\nMeaning:\n1. Arranged in or extending along a straight line.\n2. In mathematics or logic, involving a direct relationship between variables, often represented by a straight line.\n3. Sequential or following a straight, orderly progression without deviation.\nE.g. The artist used simple linear patterns in the painting.\nE.g. A linear equation shows a straight-line relationship between x and y.\nE.g. The story had a linear structure, moving from beginning to end without flashbacks.\nE.g. Engineers measured the linear distance between the two points.\nSummary:\n\"Linear\" describes something straight, direct, or sequential, often used in mathematics, design, or storytelling.\nRelated Words: straight, direct, sequential, proportional.\nAntonyms: curved, nonlinear, irregular, complex.",
+            "Unnamed: 10": "linear",
+            "Unnamed: 11": "linear",
+            "分類": [
+                "科學與工程",
+                "Design",
+                "形狀"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "linearity",
+            "pronunciation-1": "[liniˋærəti]",
+            "traditional Chinese": "n.線性，線性關係",
+            "English meaning": "\"Linearity\" is a noun.\nMeaning:\nThe quality, condition, or state of being linear (arranged in a straight line or involving a direct, proportional relationship). It can describe shapes, patterns, thought processes, or mathematical relationships.\nE.g. The linearity of the design gives the building a modern look.\nE.g. In mathematics, linearity means that the relationship between two variables is directly proportional.\nE.g. The teacher explained the linearity of the equation to the students.\nE.g. His thinking lacked linearity, jumping from one topic to another.\nSummary:\n\"Linearity\" refers to the state of being straight, orderly, or directly proportional, often used in design, logic, or mathematics.\nRelated Words: straightness, alignment, directness, proportionality.\nAntonyms: curvature, complexity, irregularity, nonlinearity.",
+            "Unnamed: 10": "linearity",
+            "Unnamed: 11": "linearity",
+            "分類": [
+                "科學與工程",
+                "Design",
+                "形狀"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "intact",
+            "pronunciation-1": "[ɪnˋtækt]",
+            "traditional Chinese": "adj.完整無缺的；原封不動的；未受損傷的",
+            "English meaning": "\"Intact\" is an adjective.\nMeaning:\nNot damaged, harmed, or changed; remaining whole and complete.\nE.g. The ancient vase was found intact after centuries underground.\nE.g. Despite the storm, the house remained intact.\nE.g. His reputation stayed intact after the investigation.\nE.g. The package arrived intact, without any signs of damage.\nSummary:\n\"Intact\" describes something that is unbroken, undamaged, or preserved in its original state.\nRelated Words: whole, unbroken, unharmed, complete.\nAntonyms: damaged, broken, ruined, incomplete.",
+            "Unnamed: 10": "intact",
+            "Unnamed: 11": "intact",
+            "分類": [
+                "藝術與美學",
+                "Design"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "teleport",
+            "pronunciation-1": "[ˋtɛlɪ͵port]",
+            "traditional Chinese": "vt.利用心靈傳動移動（人或物體）",
+            "English meaning": "\"Teleport\" is a verb: teleport / teleported / teleporting\nMeaning:\nTo move or transfer instantly from one place to another without physically traveling the distance, often used in science fiction or fantasy.\nE.g. The wizard could teleport across the kingdom in the blink of an eye.\nE.g. In the game, players can teleport to different levels without walking.\nE.g. She wished she could teleport home after a long day at work.\nE.g. The sci-fi movie featured a machine that could teleport objects through space.\nIn a figurative or casual sense, “teleport” can be used to describe feeling as if you instantly moved somewhere, even though it’s not literally happening. It’s often used humorously or imaginatively.\nE.g. When I opened the window in the summer heat, it felt like I had been teleported to the Arctic.\nE.g. Seeing her best friend after years apart made her feel like she was teleported back to childhood.\nE.g. I spilled coffee on my shirt and suddenly teleported into panic mode.\nSummary:\n\"Teleport\" means to instantly transport oneself or an object from one place to another, typically in a fictional or imaginative context.\nFiguratively, “teleport” can describe the sensation of suddenly being somewhere else emotionally or mentally, even if physically you haven’t moved.\nRelated Words: transport, transfer, translocate, vanish.\nAntonyms: stay, remain, move gradually, travel normally.",
+            "Unnamed: 10": "teleport",
+            "Unnamed: 11": "teleport",
+            "分類": [
+                "科學與工程",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "distinctive",
+            "pronunciation-1": "[dɪˋstɪŋktɪv]",
+            "traditional Chinese": "adj.有特色的，特殊的",
+            "English meaning": "\"Distinctive\" is an adjective.\nMeaning:\nHaving a special quality, feature, or characteristic that makes someone or something different from others and easily recognized.\nE.g. The artist has a distinctive style that sets her work apart.\nE.g. His deep voice is distinctive and immediately recognizable.\nE.g. The building is known for its distinctive architecture.\nE.g. The cake has a distinctive flavor because of the special spices used.\nSummary:\n\"Distinctive\" describes something that stands out because of unique or special qualities that make it easily identifiable.\nRelated Words: unique, characteristic, special, recognizable.\nAntonyms: ordinary, common, typical, unremarkable.",
+            "Unnamed: 10": "distinctive",
+            "Unnamed: 11": "distinctive",
+            "分類": [
+                "藝術與美學",
+                "Design"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "proportion",
+            "pronunciation-1": "[prəˋporʃən]",
+            "traditional Chinese": "n.1.比例；比率\n   2.部分，份兒\n   3.調和；均衡，相稱\nv.使成比例；使平衡；使相稱（+to）",
+            "English meaning": "\"Proportion\" can be used as a noun or a verb.\nAs a Noun:\nMeaning:\n1. The relationship in size, amount, or degree between two or more things.\n2. A part or portion of a whole.\n3. The sense of balance and harmony in dimensions, amounts, or elements.\nE.g. The proportion of women to men in the class is roughly equal.\nE.g. Only a small proportion of the population voted in the election.\nE.g. The artist adjusted the proportions of the painting to make it more visually appealing.\nE.g. The ingredients should be mixed in the correct proportion for the recipe to work.\nAs a Verb: proportion / proportioned / proportioning\nTo adjust or regulate something so that it has the correct size, amount, or ratio relative to something else.\nE.g. The chef proportioned the ingredients carefully to ensure the recipe turned out perfectly.\nE.g. The teacher proportioned the tasks among the students according to their abilities.\nE.g. The designer proportioned the elements of the layout for visual harmony.\nSummary:\n\"Proportion\" as a noun refers to the relationship or ratio between parts of a whole, or the balance among elements. As a verb, it means to adjust or distribute something in correct relation to other parts.\nRelated Words: ratio, balance, part, segment, allocate, distribute.\nAntonyms: imbalance, disproportion, inequality, misallocate.",
+            "Unnamed: 10": "proportion",
+            "Unnamed: 11": "proportion",
+            "分類": [
+                "藝術與美學",
+                "Design"
+            ]
+        },
+        {
+            "Words": "silhouette",
+            "Unnamed: 10": "silhouette",
+            "Unnamed: 11": "silhouette",
+            "分類": [
+                "藝術與美學",
+                "Design"
+            ]
+        },
+        {
+            "Words": "imitation",
+            "Unnamed: 10": "imitation",
+            "Unnamed: 11": "imitation",
+            "分類": [
+                "藝術與美學",
+                "Design"
+            ]
+        },
+        {
+            "Words": "constraint",
+            "Unnamed: 10": "constraint",
+            "Unnamed: 11": "constraint",
+            "分類": [
+                "藝術與美學",
+                "Design"
+            ]
+        },
+        {
+            "Words": "iterate",
+            "Unnamed: 10": "iterate",
+            "Unnamed: 11": "iterate",
+            "分類": [
+                "藝術與美學",
+                "Design"
+            ]
+        },
+        {
+            "Words": "systematic",
+            "Unnamed: 10": "systematic",
+            "Unnamed: 11": "systematic",
+            "分類": [
+                "藝術與美學",
+                "Design"
+            ]
+        },
+        {
+            "Words": "specialty",
+            "Unnamed: 10": "specialty",
+            "Unnamed: 11": "specialty",
+            "分類": [
+                "藝術與美學",
+                "Design"
+            ]
         }
     ]
 }
