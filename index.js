@@ -1019,6 +1019,9 @@ function playAudioSequentially(word) {
     let phoneticAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word.Words)}.mp3`);
     sentenceAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word.Words)} - sentence.mp3`);
 
+    // [新增] 重設滾動條至頂部
+    document.getElementById('meaningContainer').scrollTop = 0;
+
     // 更新播放和暫停按鈕狀態
     let playBtn = document.getElementById("playAudioBtn");
     let pauseBtn = document.getElementById("pauseResumeBtn");
@@ -1040,7 +1043,13 @@ function playAudioSequentially(word) {
             if (!isPaused) {
                 sentenceAudio.play()
                     .then(() => new Promise(resolve => {
+                        // [新增] 開始播放句子時，加上監聽器
+                        sentenceAudio.addEventListener('timeupdate', handleAutoScroll);
+
                         sentenceAudio.onended = () => {
+                            // [新增] 句子播放結束時，移除監聽器
+                            sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
+
                             if (playBtn) playBtn.classList.remove("playing");
                             if (pauseBtn) {
                                 pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
@@ -1050,6 +1059,8 @@ function playAudioSequentially(word) {
                         };
                         if (isPaused) {
                             sentenceAudio.pause();
+                            // [新增] 如果暫停，也要移除監聽器
+                            sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
                             resolve();
                         }
                     }))
@@ -1227,12 +1238,20 @@ function playSentenceAudio(audioFile) {
     if (sentenceAudio && !sentenceAudio.paused) {
         sentenceAudio.pause();
         sentenceAudio.currentTime = 0;
+        // [新增] 移除舊的監聽器，防止重複觸發
+        sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
     }
+    
+    // [新增] 每次播放新的音檔時，將滾動條重設回頂部
+    document.getElementById('meaningContainer').scrollTop = 0;
 
     // 創建並播放新音檔
     sentenceAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`);
     sentenceAudio.play()
         .then(() => {
+            // [新增] 為新的音訊加上 timeupdate 監聽器
+            sentenceAudio.addEventListener('timeupdate', handleAutoScroll);
+
             // 更新按鈕狀態為播放中
             if (playBtn) playBtn.classList.add("playing");
             if (pauseBtn) {
@@ -1240,6 +1259,9 @@ function playSentenceAudio(audioFile) {
                 pauseBtn.classList.remove("playing");
             }
             sentenceAudio.onended = () => {
+                // [新增] 音檔結束後，移除監聽器
+                sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
+
                 // 音檔結束後重置按鈕狀態
                 if (playBtn) playBtn.classList.remove("playing");
                 if (pauseBtn) {
@@ -1585,5 +1607,29 @@ function updateBackButtonToSentence() {
                 window.location.href = 'sentence.html?word=' + encodeURIComponent(lastSentenceListWord);
             };
         }
+    });
+}
+
+/**
+ * 處理 meaningContainer 的自動滾動
+ */
+function handleAutoScroll() {
+    const container = document.getElementById('meaningContainer');
+    
+    // 確保 audio 元素和其時長都已就緒
+    if (!sentenceAudio || isNaN(sentenceAudio.duration) || sentenceAudio.duration === 0) {
+        return;
+    }
+
+    // 計算可滾動的總高度
+    const scrollableHeight = container.scrollHeight - container.clientHeight;
+    
+    // 根據音訊播放進度計算應該滾動到的位置
+    const scrollPosition = (sentenceAudio.currentTime / sentenceAudio.duration) * scrollableHeight;
+
+    // 平滑地滾動到指定位置
+    container.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
     });
 }
