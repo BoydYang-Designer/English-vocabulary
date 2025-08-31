@@ -462,3 +462,19 @@ h1 {
     color: #375c85;
     margin: 10px 0;
 }
+
+.category-display {
+    margin-bottom: 12px; /* 與下方的中文解釋保持間距 */
+    font-size: 16px;
+}
+
+.category-tag {
+    display: inline-block; /* 讓標籤並排顯示 */
+    background-color: #647f91; /* 與主題顏色匹配 */
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px; /* 圓角效果 */
+    font-size: 15px;
+    margin-right: 8px; /* 標籤之間的右間距 */
+    margin-top: 5px; /* 避免與上方元素太近 */
+}

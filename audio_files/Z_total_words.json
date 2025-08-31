@@ -15212,10 +15212,16 @@
         },
         {
             "等級": "B1",
-            "Words": "rinses",
-            "Unnamed: 10": "rinses",
-            "Unnamed: 11": "rinses",
-            "分類": []
+            "Words": "rinse",
+            "pronunciation-1": "[rɪns]",
+            "traditional Chinese": "vt.沖洗；輕洗；潤絲（+out）；涮，漱（+out）\nn.沖洗，漂洗[C]",
+            "English meaning": "\"Rinse\" can be used as a verb or a noun.\nAs a Verb: rinse / rinsed / rinsing\nMeaning:\nTo wash something quickly with water, usually to remove dirt, soap, or other substances.\nE.g. Please rinse the vegetables before cooking.\nE.g. She rinsed her hair after applying shampoo.\nE.g. The baby’s bottle needs to be rinsed thoroughly after washing.\nE.g. Rinse the cloth to remove any remaining detergent.\nAs a Noun:\nMeaning:\nThe act of rinsing or a quick wash with water.\nE.g. Give the lettuce a good rinse before using it in the salad.\nE.g. After shampooing, use a final rinse of cold water.\nE.g. The car received a quick rinse after the muddy drive.\nSummary:\n\"Rinse\" means to wash something quickly with water to remove dirt, soap, or residue, either as an action (verb) or as the act itself (noun).\nRelated Words: wash, flush, clean, spray\nAntonyms: soil, dirty, contaminate, stain",
+            "Unnamed: 10": "rinse",
+            "Unnamed: 11": "rinse",
+            "分類": [
+                "日常生活",
+                "動作"
+            ]
         },
         {
             "等級": "B1",
@@ -15355,11 +15361,17 @@
             "分類": []
         },
         {
-            "等級": "B1",
+            "等級": "C1",
             "Words": "sabotage",
+            "pronunciation-1": "[ˋsæbə͵tɑʒ]",
+            "traditional Chinese": "n.破壞；妨害\nvi.破壞；從事破壞活動",
+            "English meaning": "\"Sabotage\" can be used as a noun or a verb.\nAs a Noun:\nMeaning:\nThe deliberate destruction, damage, or obstruction of something, often to weaken or disrupt an organization, system, or plan.\nE.g. The workers were accused of sabotage after the machinery broke down.\nE.g. Corporate espionage can involve acts of sabotage to gain competitive advantage.\nE.g. The fire was an act of sabotage, investigators concluded.\nAs a Verb: sabotage / sabotaged / sabotaging\nMeaning:\nTo deliberately destroy, damage, or obstruct something to prevent it from functioning properly.\nE.g. Someone sabotaged the project by deleting critical files.\nE.g. The competitor tried to sabotage their new product launch.\nE.g. He sabotaged the experiment to test the team’s response to failure.\nSummary:\n\"Sabotage\" refers to the intentional act of causing damage or disruption, either as a noun (the act) or a verb (to perform the act).\nRelated Words: undermine, disrupt, damage, wreck\nAntonyms: support, aid, protect, preserve",
             "Unnamed: 10": "sabotage",
             "Unnamed: 11": "sabotage",
-            "分類": []
+            "分類": [
+                "社會與法律",
+                "軍事"
+            ]
         },
         {
             "等級": "C2",
@@ -19374,7 +19386,11 @@
             ]
         },
         {
+            "等級": "B2",
             "Words": "silhouette",
+            "pronunciation-1": "[͵sɪlʊˋɛt]",
+            "traditional Chinese": "n. 輪廓 剪影\nv.1.把……畫成側面影像\n   2.使現出輪廓",
+            "English meaning": "Silhouette shows the dark outline or shape of a person, object, or scene, usually seen against a lighter background. It can be used as both a noun and a verb.\nAs a Noun\nMeaning:\nThe dark shape or outline of someone or something visible against a brighter background.\nE.g. The silhouette of the mountain stood out against the sunset.\nE.g.I saw her silhouette through the window.\nE.g.The city skyline created a striking silhouette at night.\nE.g.The stroller’s silhouette looks sleek from the side view; that’s what makes it stand out on the market.\nE.g.Before adding details, let’s finalize the silhouette of the chair. The basic shape matters most.\nAs a Verb\nForms: silhouette / silhouetted / silhouetting\nMeaning:\nTo cause something to appear as a dark shape against a lighter background.\nE.g.The castle was silhouetted against the moonlit sky.\nE.g.A bird was silhouetted as it flew across the sunrise.\nE.g.The photographer silhouetted the couple in front of the bright window.\nE.g.The designer silhouetted the new stroller concept to test its overall shape before finalizing details.\nSummary:\nAs a Noun: the outline or dark shape of someone or something.\nAs a Verb: to make someone or something appear as a dark shape.\nSynonyms: outline, shadow, contour, profile\nAntonyms: detail, brightness, fullness",
             "Unnamed: 10": "silhouette",
             "Unnamed: 11": "silhouette",
             "分類": [
@@ -19383,7 +19399,11 @@
             ]
         },
         {
+            "等級": "B2",
             "Words": "imitation",
+            "pronunciation-1": "[͵ɪməˋteʃən]",
+            "traditional Chinese": "n.1.模仿，模擬；仿造；偽造[U]\n    2.仿製品；贗品[C]",
+            "English meaning": "Imitation is a noun.\nMeaning:\n1. The act of copying or reproducing the appearance, behavior, or style of someone or something.\n2. Something made to look like or resemble another thing, often as a substitute or fake.\nE.g. The child’s imitation of his teacher made the class laugh.\nE.g. The museum displayed an imitation of the famous painting.\nE.g. She wore imitation pearls that looked just like the real ones.\nE.g. His accent was an exact imitation of the actor’s voice.\nSummary:\n\"Imitation\" refers to copying someone or something, or an object made to resemble another.\nRelated Words: copy, replica, mimicry, reproduction\nAntonyms: original, authenticity, originality, uniqueness",
             "Unnamed: 10": "imitation",
             "Unnamed: 11": "imitation",
             "分類": [
@@ -19392,7 +19412,11 @@
             ]
         },
         {
+            "等級": "B2",
             "Words": "constraint",
+            "pronunciation-1": "[kənˋstrent]",
+            "traditional Chinese": "n.約束；限制[C][（+on）]；強迫；強制[U]",
+            "English meaning": "\"Constraint\" is a noun.\nMeaning:\nA limitation, restriction, or condition that controls or restricts what can be done. It can be physical, legal, social, or situational.\nE.g. Budget constraints forced the team to reduce the project’s scope.\nE.g. Time constraints made it difficult to finish the work on schedule.\nE.g. The engineer designed the machine within the constraints of safety regulations.\nE.g. Social constraints sometimes influence people’s behavior more than laws do.\nSummary:\n\"Constraint\" refers to a restriction or limitation that affects actions, decisions, or possibilities.\nRelated Words: limitation, restriction, control, boundary\nAntonyms: freedom, flexibility, liberty, allowance",
             "Unnamed: 10": "constraint",
             "Unnamed: 11": "constraint",
             "分類": [
@@ -19401,7 +19425,11 @@
             ]
         },
         {
+            "等級": "B2",
             "Words": "iterate",
+            "pronunciation-1": "[ˋɪtə͵ret]",
+            "traditional Chinese": "vt. 疊代，反覆，重複",
+            "English meaning": "\"Iterate\" is a verb: iterate / iterated / iterating\nMeaning:\nTo repeat a process, action, or set of instructions, or to say or perform something repeatedly, often to improve or refine it each time.\nE.g. The designer iterated the stroller prototype several times before finalizing the shape.\nE.g. In software development, engineers iterate on the code to fix bugs and improve performance.\nE.g. She iterated her explanation until everyone understood the concept.\nE.g. The teacher asked the students to iterate the steps in the experiment to ensure accuracy.\nSummary:\n\"Iterate\" means to repeat a process, action, or statement, often to improve or refine it through multiple attempts.\nRelated Words: repeat, revise, refine, redo\nAntonyms: stop, halt, finish, conclude",
             "Unnamed: 10": "iterate",
             "Unnamed: 11": "iterate",
             "分類": [
@@ -19410,18 +19438,79 @@
             ]
         },
         {
+            "等級": "B2",
             "Words": "systematic",
+            "pronunciation-1": "[͵sɪstəˋmætɪk]",
+            "traditional Chinese": "adj.有系統的；成體系的；（做事）有條理的",
+            "English meaning": "\"Systematic\" is an adjective.\nMeaning:\nDone according to a fixed plan, method, or system; organized and methodical.\nE.g. The team conducted a systematic review of all the project files.\nE.g. She approached the research in a systematic way to ensure accuracy.\nE.g. A systematic maintenance schedule keeps the machines running efficiently.\nE.g. The designer used a systematic process to refine the stroller’s shape.\nSummary:\n\"Systematic\" describes actions, processes, or approaches that are organized, methodical, and carried out according to a plan or system.\nRelated Words: methodical, organized, structured, planned\nAntonyms: random, chaotic, haphazard, unorganized",
             "Unnamed: 10": "systematic",
             "Unnamed: 11": "systematic",
+            "分類": [
+                "科學與工程",
+                "Design",
+                "科技"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "specialty",
+            "pronunciation-1": "[ˋspɛʃəltɪ]",
+            "traditional Chinese": "n. 1.專業；專長\n    2.特製品，特產，名產\n",
+            "English meaning": "\"Specialty\" is a noun.\nMeaning:\n1. A particular area of expertise, skill, or knowledge.\n2. A product, dish, or item for which a person, place, or company is particularly known.\nE.g. His specialty is designing innovative strollers that combine style and function.\nE.g. Cardiology is her medical specialty.\nE.g. This restaurant’s specialty is homemade pasta.\nE.g. The company produces a range of electronics, but its specialty is high-quality headphones.\nSummary:\n\"Specialty\" refers to a specific skill, field of expertise, or a unique product for which someone or something is known.\nRelated Words: expertise, skill, forte, niche, signature\nAntonyms: generality, weakness, inexperience, mediocrity",
+            "Unnamed: 10": "specialty",
+            "Unnamed: 11": "specialty",
             "分類": [
                 "藝術與美學",
                 "Design"
             ]
         },
         {
-            "Words": "specialty",
-            "Unnamed: 10": "specialty",
-            "Unnamed: 11": "specialty",
+            "等級": "B2",
+            "Words": "obsession",
+            "pronunciation-1": "[əbˋsɛʃən]",
+            "traditional Chinese": "n.著迷，被纏住[U]；擺脫不了的思想（或情感）[C][（+about/with）]",
+            "English meaning": "\"Obsession\" is a noun.\nMeaning:\nA persistent, intense, or dominating interest, thought, or feeling that preoccupies someone’s mind. It can be positive (strong passion) or negative (unhealthy fixation).\nE.g. Her obsession with design drives her to constantly improve every product detail.\nE.g. He has an obsession with cleanliness and organizes everything meticulously.\nE.g. The team’s obsession with user experience led to an outstanding stroller design.\nE.g. His obsession with winning affected his personal relationships.\nSummary:\n\"Obsession\" refers to an intense focus, preoccupation, or passion for something, which can be either productive or detrimental depending on context.\nRelated Words: fixation, passion, preoccupation, compulsion\nAntonyms: indifference, disregard, detachment, neglect",
+            "Unnamed: 10": "obsession",
+            "Unnamed: 11": "obsession",
+            "分類": [
+                "行為與心理",
+                "情緒"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "preoccupation",
+            "pronunciation-1": "[pri͵ɑkjəˋpeʃən]",
+            "traditional Chinese": "n.搶先佔據；搶先佔有[U]；全神貫注，入神[U][S][（+with）]",
+            "English meaning": "\"Preoccupation\" is a noun.\nMeaning:\nA state of being absorbed, engrossed, or excessively concerned with something, often to the point of distraction.\nE.g. Her preoccupation with the project made her miss lunch.\nE.g. He has a preoccupation with safety, checking everything twice.\nE.g. The designer’s preoccupation with user experience improved the stroller’s usability.\nE.g. His constant preoccupation with work affected his family life.\nSummary:\n\"Preoccupation\" refers to being deeply focused or concerned with something, sometimes to the extent of distraction from other matters.\nRelated Words: absorption, engrossment, concern, fixation\nAntonyms: indifference, neglect, disregard, inattentiveness",
+            "Unnamed: 10": "preoccupation",
+            "Unnamed: 11": "preoccupation",
+            "分類": [
+                "行為與心理",
+                "情緒"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "user-obsession",
+            "pronunciation-1": "/ˈjuːzər əbˈsɛʃən/",
+            "traditional Chinese": "n.用戶至上",
+            "English meaning": "\"User Obsession\" is a noun phrase commonly used in product design and business contexts.\nMeaning:\nA mindset or approach where every decision, feature, and design choice is guided by a deep focus on understanding and satisfying the needs, preferences, and experiences of the end user.\nE.g. The company’s user obsession led to a stroller that is both intuitive and comfortable for parents and children.\nE.g. Designers practiced user obsession by conducting extensive interviews and usability tests before finalizing the product.\nE.g. User obsession ensures that even small details, like handle grips or canopy shapes, enhance the customer experience.\nE.g. Startups with strong user obsession often outperform competitors because they prioritize real customer needs.\nSummary:\n\"User obsession\" refers to an intense focus on the end user in every aspect of design, development, and decision-making, aiming to create the best possible experience.\nRelated Words: customer focus, user-centric, empathy-driven design, human-centered design\nAntonyms: factory obsession, feature obsession, business-centric focus, developer-centric design",
+            "Unnamed: 10": "user-obsession",
+            "Unnamed: 11": "user-obsession",
+            "分類": [
+                "藝術與美學",
+                "Design"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "pain point",
+            "pronunciation-1": "/peɪn pɔɪnt/",
+            "traditional Chinese": "n.痛點；問題點",
+            "English meaning": "\"Pain Point\" is a noun.\nMeaning:\nA specific problem, difficulty, or challenge that a person, customer, or organization experiences, which needs to be solved or improved.\nE.g. Understanding customer pain points is crucial for designing successful products.\nE.g. The team identified that slow checkout processes were a major pain point for online shoppers.\nE.g. Reducing maintenance time was a key pain point addressed in the new stroller design.\nE.g. Businesses often innovate by finding solutions to common pain points in their industry.\nSummary:\nA \"pain point\" is a specific problem or challenge that causes frustration or difficulty, which can be addressed to improve experience or efficiency.\nRelated Words: problem, difficulty, challenge, obstacle\nAntonyms: benefit, advantage, solution, ease",
+            "Unnamed: 10": "pain point",
+            "Unnamed: 11": "pain point",
             "分類": [
                 "藝術與美學",
                 "Design"
