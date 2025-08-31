@@ -41,21 +41,13 @@ document.addEventListener("DOMContentLoaded", function () {
         currentQuizSentencesLength: currentQuizSentences.length
     });
 
-    if (getReturningStatus()) {
-        console.log("✅ 從外部返回，顯示測驗結果");
-        restoreQuizResult();
-    } else {
-        console.log("ℹ️ 正常載入 quiz.html");
-        document.getElementById("mainMenu").style.display = "block";
-    }
-
     document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
 });
 
 // 📌 進入 Q Sentence 測驗分類頁面
 function showSentenceQuizCategories() {
     document.querySelector("h1").textContent = "句子測驗區";
-    document.getElementById("mainMenu").style.display = "none";
+    // document.getElementById("mainMenu").style.display = "none"; // 這一行已被刪除
     document.getElementById("sentenceQuizCategories").style.display = "block";
     console.log("✅ 顯示句子測驗分類頁面");
 
@@ -199,13 +191,16 @@ function generateSentenceCategories(data) {
         <button class="category-button" onclick="toggleSentenceSelection('special', 'checked')">Checked 句子</button>
     `;
 
-    // 將 A-Z 分類容器插入到 "Back" 和 "Start Quiz" 下方，且在 categoryContainer 上方
+    // 【*** 修正點 ***】
+    // 將 A-Z 分類容器插入到 "Sentence Quiz" 按鈕容器的後面
     let sentenceQuizCategories = document.getElementById("sentenceQuizCategories");
     let buttonContainer = sentenceQuizCategories.querySelector(".button-container");
     // 確保插入位置正確
     if (buttonContainer) {
-        sentenceQuizCategories.insertBefore(alphabetContainer, buttonContainer);
+        // 使用 .after() 將字母按鈕容器插入到按鈕容器之後
+        buttonContainer.after(alphabetContainer);
     } else {
+        // 如果找不到按鈕容器，作為備用方案，將其附加到末尾
         sentenceQuizCategories.appendChild(alphabetContainer);
     }
 
@@ -1184,21 +1179,16 @@ function toggleImportantSentence(word, checkbox) {
 }
 
 // 📌 返回主選單（測驗第一層）
+// q_sentence.js
+
 function returnToMainMenu() {
-    document.getElementById("quizResult").style.display = "none";
-    document.getElementById("sentenceQuizArea").style.display = "none";
-    document.getElementById("reorganizeQuizArea").style.display = "none";
-    document.getElementById("sentenceQuizCategories").style.display = "none";
-    document.getElementById("mainMenu").style.display = "block";
+    // 直接導向到應用程式首頁
+    window.location.href = 'index.html';
     
-    // 只重置當前測驗狀態，不清空 incorrectSentences
+    // 清理相關的測驗狀態
     currentSentenceIndex = 0;
     userAnswers = [];
     userConstructedSentences = [];
-    sentenceData = JSON.parse(localStorage.getItem("sentenceData")) || [];
-    selectedSentenceFilters.levels.clear();
-    selectedSentenceFilters.categories.clear();
-    selectedSentenceFilters.alphabet.clear();
 
-    console.log("✅ 返回測驗第一層主選單，保留 incorrectSentences:", incorrectSentences);
+    console.log("✅ 返回首頁並重置測驗狀態");
 }

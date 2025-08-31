@@ -9,21 +9,18 @@
 <body>
     <h1>測驗區</h1>
 
-    <!-- 導覽按鈕區 -->
-    <div id="mainMenu">
-        <button class="back-button" onclick="goBack()">進入單字頁面</button>
-        <button id="sentencePageBtn" class="button">進入句子頁面</button>
-        <button class="button" onclick="showQuizCategories()">單字測驗</button>
-        <button class="button" onclick="showSentenceQuizCategories()">句子測驗</button>
+    <div class="button-container" style="text-align: center; margin-top: 20px; margin-bottom: 15px;">
+        <button id="wordPageBtn" class="button" onclick="window.location.href='index.html'">單字頁面</button>
+        <button id="wordQuizBtn" class="button" onclick="window.location.href='quiz.html?show=categories'">單字測驗</button>
+        <button id="sentencePageBtn" class="button" onclick="window.location.href='sentence.html'">句子頁面</button>
+        <button id="startQuizBtn" class="button" onclick="window.location.href='quiz.html?show=sentenceCategories'">句子測驗</button>
     </div>
 
     <div class="container">
-        <!-- 單字測驗分類區 -->
         <div id="quizCategories" style="display: none;">
             <div class="button-container">
-                <button class="back-button" onclick="returnToSourcePage()">Back</button>
                 <button id="startFilteredQuizBtn" class="button">Word Quiz</button>
-                <button id="startRewordQuizBtn" class="button">Reword Quiz</button> <!-- 新增按鈕 -->
+                <button id="startRewordQuizBtn" class="button">Reword Quiz</button> 
             </div>
             <div class="alphabet-container" id="alphabetButtons"></div>
             <div class="category-container" id="categoryButtons"></div>
@@ -31,57 +28,45 @@
             <div id="checkedCategory"></div>
         </div>
 
-        <!-- Q Sentence 測驗分類 -->
         <div id="sentenceQuizCategories" style="display: none;">
             <div class="button-container">
-                <button class="back-button" onclick="returnToSourcePage()">Back</button>
-                <button id="startSentenceQuizBtn" class="button">Word Quiz</button>
+                <button id="startSentenceQuizBtn" class="button">Sentense Quiz</button>
                 <button id="startReorganizeQuizBtn" class="button">Reorganize Quiz</button>
             </div>
             <div class="category-container" id="sentenceCategoryButtons"></div>
             <div class="level-container" id="sentenceLevelButtons"></div>
-            
-
         </div>
 
-        <!-- Q Sentence 重組測驗區 -->
-<div id="reorganizeQuizArea" style="display: none;">
-    <button id="cancelReorganizeQuizBtn" class="back-button" onclick="returnToSentenceCategorySelection()">Cancel</button>
-    <div id="reorganizeSentenceHint"></div>
-    <div id="sentenceConstructionArea" class="construction-area"></div>
-    <div id="wordBlocksContainer" class="word-blocks-container"></div>
-    <div class="button-group">
-        <button id="playReorganizeAudioBtn" class="button">🔊 播放</button>
-        <button id="submitReorganizeBtn" class="button" onclick="submitReorganizeAnswer()">提交</button>
-        <button id="nextReorganizeBtn" class="button" onclick="goToNextReorganizeSentence()" style="display: none;">下一題</button>
-        <button class="button" onclick="finishReorganizeQuiz()">完成測驗</button>
-    </div>
-</div>
+        <div id="reorganizeQuizArea" style="display: none;">
+            <button id="cancelReorganizeQuizBtn" class="back-button" onclick="returnToSentenceCategorySelection()">Cancel</button>
+            <div id="reorganizeSentenceHint"></div>
+            <div id="sentenceConstructionArea" class="construction-area"></div>
+            <div id="wordBlocksContainer" class="word-blocks-container"></div>
+            <div class="button-group">
+                <button id="playReorganizeAudioBtn" class="button">🔊 播放</button>
+                <button id="submitReorganizeBtn" class="button" onclick="submitReorganizeAnswer()">提交</button>
+                <button id="nextReorganizeBtn" class="button" onclick="goToNextReorganizeSentence()" style="display: none;">下一題</button>
+                <button class="button" onclick="finishReorganizeQuiz()">完成測驗</button>
+            </div>
+        </div>
 
-<!-- Reword Quiz 測驗區 -->
-<div id="rewordQuizArea" style="display: none;">
-    <button id="cancelRewordQuizBtn" class="back-button" onclick="returnToCategorySelection()">Cancel</button>
-    <div id="rewordHint"></div>
-    <div id="rewordConstructionArea" class="construction-area"></div>
-    <div id="rewordLetterBlocksContainer" class="word-blocks-container"></div>
-    <div class="button-group">
-        <button id="playRewordAudioBtn" class="button">🔊 播放</button>
-        <button id="submitRewordBtn" class="button" onclick="submitRewordAnswer()">提交</button>
-        <button id="nextRewordBtn" class="button" onclick="goToNextReword()" style="display: none;">下一題</button>
-        <button class="button" onclick="finishRewordQuiz()">完成測驗</button>
-    </div>
-</div>
+        <div id="rewordQuizArea" style="display: none;">
+            <button id="cancelRewordQuizBtn" class="back-button" onclick="returnToCategorySelection()">Cancel</button>
+            <div id="rewordHint"></div>
+            <div id="rewordConstructionArea" class="construction-area"></div>
+            <div id="rewordLetterBlocksContainer" class="word-blocks-container"></div>
+            <div class="button-group">
+                <button id="playRewordAudioBtn" class="button">🔊 播放</button>
+                <button id="submitRewordBtn" class="button" onclick="submitRewordAnswer()">提交</button>
+                <button id="nextRewordBtn" class="button" onclick="goToNextReword()" style="display: none;">下一題</button>
+                <button class="button" onclick="finishRewordQuiz()">完成測驗</button>
+            </div>
+        </div>
 
-        <!-- 單字測驗區 -->
         <div id="quizArea" style="display: none;">
             <button id="cancelBtn" class="back-button" onclick="returnToCategorySelection()">Cancel</button>
             <div id="wordHint"></div>
-
-            <!-- 字母格輸入框 -->
-            <div id="wordInput" class="letter-grid">
-               <!-- JavaScript 會動態生成字母格 -->
-            </div>
-
+            <div id="wordInput" class="letter-grid"></div>
             <div class="button-group">
                 <button id="playAudioCenterBtn" class="button">🔊 Voice</button>
                 <button id="submitBtn" class="button" onclick="submitAnswer()">Submit</button>
@@ -90,16 +75,12 @@
             </div>
         </div>
 
-        <!-- Q Sentence 測驗區 -->
         <div id="sentenceQuizArea" style="display: none;">
             <button id="cancelSentenceQuizBtn" class="back-button" onclick="returnToSentenceCategorySelection()">Cancel</button>
             <div id="sentenceHint"></div>
-
-            <!-- 句子填空輸入框 -->
             <div id="sentenceInput" class="letter-grid">
                 <input type="text" id="userSentenceAnswer" placeholder="輸入你的答案">
             </div>
-
             <div class="button-group">
                 <button id="playSentenceAudioBtn" class="button">🔊 播放</button>
                 <button id="submitSentenceBtn" class="button" onclick="submitSentenceAnswer()">提交</button>
@@ -108,63 +89,14 @@
             </div>
         </div>
 
-        <!-- 測驗結果 -->
-         <div id="quizResult" style="display: none;">
+        <div id="quizResult" style="display: none;">
            <div class="button-group">
-             <button class="button" onclick="returnToMainMenu()">返回主頁</button>
-            </div>
+             <button class="button" onclick="window.location.href='index.html'">返回首頁</button> </div>
          </div>
+    </div>
 
-<!-- JavaScript 檔案 -->
-<script src="q_sentence.js" defer></script>
-<script src="quiz.js" defer></script>
-<!-- 其他腳本保持不變 -->
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let params = new URLSearchParams(window.location.search);
-
-        if (params.get('returning') === 'true') {
-            let checkDataLoaded = setInterval(() => {
-                if (typeof wordsData !== 'undefined' && wordsData.length > 0) {
-                    clearInterval(checkDataLoaded);
-                    console.log("✅ wordsData 已成功載入，準備恢復測驗結果");
-
-                    // 顯示測驗結果區塊，隱藏其他區塊
-                    document.getElementById("quizResult").style.display = "block";
-                    document.getElementById("mainMenu").style.display = "none";
-                    document.getElementById("quizCategories").style.display = "none";
-                    document.getElementById("quizArea").style.display = "none";
-                    document.getElementById("sentenceQuizCategories").style.display = "none";
-                    document.getElementById("sentenceQuizArea").style.display = "none";
-
-                    // 恢復滾動位置
-                    let scrollPosition = localStorage.getItem('quizScrollPosition');
-                    if (scrollPosition) {
-                        let resultContainer = document.getElementById("quizResult");
-                        if (resultContainer) {
-                            resultContainer.scrollTop = parseInt(scrollPosition, 10);
-                            console.log("🔄 測驗結果已恢復到上次位置");
-                        }
-                    }
-
-                    // 恢復測驗結果
-                    let savedResults = localStorage.getItem('currentQuizResults');
-                    if (savedResults) {
-                        quizResults = JSON.parse(savedResults);
-                        console.log("✅ 測驗結果已恢復", quizResults);
-                        restoreQuizResults();
-                    } else {
-                        console.log("⚠️ 沒有找到儲存的測驗結果");
-                    }
-
-                    // 清除 LocalStorage 中的 returnToQuizResult，防止重複觸發
-                    localStorage.removeItem('returnToQuizResult');
-                }
-            }, 100);
-        }
-    });
-    </script>
+    <script src="q_sentence.js" defer></script>
+    <script src="quiz.js" defer></script>
 
 </body>
 </html>

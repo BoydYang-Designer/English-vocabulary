@@ -26,35 +26,54 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
-    .then(res => res.json())
-    .then(data => {
-        wordsData = data["New Words"] || [];
-        wordsData.forEach(w => {
-            if (typeof w["分類"] === "string") {
-                w["分類"] = [w["分類"]];
-            } else if (!Array.isArray(w["分類"])) {
-                w["分類"] = [];
+    fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
+        .then(res => {
+            // 新增：檢查網路請求是否成功，提供更明確的錯誤訊息
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
             }
-        });
-        isDataLoaded = true;
-        console.log("✅ 單字資料已載入");
+            return res.json();
+        })
+        .then(data => {
+            wordsData = data["New Words"] || [];
+            wordsData.forEach(w => {
+                if (typeof w["分類"] === "string") {
+                    w["分類"] = [w["分類"]];
+                } else if (!Array.isArray(w["分類"])) {
+                    w["分類"] = [];
+                }
+            });
+            isDataLoaded = true;
+            console.log("✅ 單字資料已載入");
 
-            // 只在明確需要恢復結果時執行
+            // --- 核心修正：將所有頁面初始化邏輯移到這裡 ---
+            // 這個區塊確保了所有操作都在資料載入後才執行
+
             if (params.get('returning') === 'true' && localStorage.getItem("currentQuizResults")) {
+                // 從單字詳情頁返回，恢復測驗結果
                 quizResults = JSON.parse(localStorage.getItem("currentQuizResults"));
                 restoreQuizResults();
             } else if (show === "categories") {
+                // 高亮「單字測驗」按鈕並顯示分類
+                const wordQuizBtn = document.getElementById('wordQuizBtn');
+                if(wordQuizBtn) wordQuizBtn.style.backgroundColor = '#28a745';
                 showQuizCategories();
             } else if (show === "sentenceCategories") {
+                // 高亮「句子測驗」按鈕並顯示分類
+                const startQuizBtn = document.getElementById('startQuizBtn');
+                if(startQuizBtn) startQuizBtn.style.backgroundColor = '#28a745';
                 showSentenceQuizCategories();
             } else {
-                document.getElementById("mainMenu").style.display = "block";
+                // 如果 URL 沒有指定，預設顯示「單字測驗」
+                const wordQuizBtn = document.getElementById('wordQuizBtn');
+                if(wordQuizBtn) wordQuizBtn.style.backgroundColor = '#28a745';
+                showQuizCategories();
             }
         })
         .catch(err => {
             console.error("❌ 讀取 JSON 失敗:", err);
-            alert("⚠️ 無法載入單字資料，請稍後再試。");
+            // 提示更詳細的錯誤訊息
+            alert("⚠️ 無法載入單字資料，請檢查您的網路連線或重新整理頁面。");
         });
 
     initializeStartQuizButton();
@@ -318,12 +337,12 @@ function showQuizCategories() {
         alert("⚠️ 單字資料尚未載入完成，請稍後再試。");
         return;
     }
-    document.getElementById("mainMenu").style.display = "none";
+    // document.getElementById("mainMenu").style.display = "none"; // 這一行已被刪除
     document.getElementById("quizCategories").style.display = "block";
     generateMultiSelectButtons();
     let startQuizBtn = document.getElementById("startFilteredQuizBtn");
     startQuizBtn.style.display = "block";
-    startQuizBtn.textContent = "開始單字測驗"; // 可選：明確標示為單字測驗
+    startQuizBtn.textContent = "Word Quiz"; // 可選：明確標示為單字測驗
 }
 
 function highlightCheckedWords() {
@@ -957,40 +976,17 @@ function saveQuizResults() {
 
 
 // Back按鍵 // 
+// quiz.js
+
 function returnToMainMenu() {
-    document.getElementById("quizCategories").style.display = "none";
-    document.getElementById("quizArea").style.display = "none";
-    document.getElementById("rewordQuizArea").style.display = "none";
-    document.getElementById("quizResult").style.display = "none";
-    document.getElementById("sentenceQuizCategories").style.display = "none";
-    document.getElementById("sentenceQuizArea").style.display = "none";
-    document.getElementById("mainMenu").style.display = "block";
-
-    selectedFilters.letters.clear();
-    selectedFilters.categories.clear();
-    selectedFilters.levels.clear();
-    selectedFilters.checked = false;
-
-    quizWords = [];
-    quizResults = [];
-    currentWord = null;
-
-    document.querySelectorAll(".category-button").forEach(button => {
-        button.classList.remove("selected");
-    });
-
-    document.getElementById("wordInput").value = "";
-    document.getElementById("wordHint").innerText = "";
-
-    // 清除 Q Sentence 內的分類資訊
-    sessionStorage.removeItem("loadedQSentence");
-    document.getElementById("sentenceQuizCategories").style.display = "none";
-
-    // 清除 LocalStorage 中的測驗結果與滾動位置
+    // 直接導向到應用程式首頁
+    window.location.href = 'index.html';
+    
+    // 清理 LocalStorage 中的暫存測驗數據
     localStorage.removeItem("currentQuizResults");
     localStorage.removeItem("quizScrollPosition");
-
-    console.log("✅ 返回首頁並重置狀態與清空 LocalStorage");
+    
+    console.log("✅ 返回首頁並重置狀態");
 }
 
 
