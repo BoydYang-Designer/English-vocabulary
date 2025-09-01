@@ -291,7 +291,7 @@ h1, h2 {
 /* Mobile adaptation for word hint */
 @media (max-width: 600px) {
     #wordHint {
-        font-size: 22px; /* Slightly smaller for mobile */
+        font-size: 18px; /* Slightly smaller for mobile */
         letter-spacing: 2px;
         margin: 15px 5px;
     }
