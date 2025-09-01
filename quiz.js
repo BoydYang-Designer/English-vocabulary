@@ -437,17 +437,37 @@ function submitAnswer() {
     }
 
     let wordInputElements = document.querySelectorAll("#wordInput input, #wordInput span.non-input-box");
-    let userAnswerArray = Array.from(wordInputElements).map(el => 
+    let userAnswerArray = Array.from(wordInputElements).map(el =>
         el.tagName === "INPUT" ? (el.value.trim().toLowerCase() || "_") : el.innerText
     );
     let userAnswer = userAnswerArray.join("");
     let correctAnswer = currentWord;
 
+    // [MODIFICATION START] - Highlight incorrect letters in input boxes
+    let inputIndex = 0;
+    document.querySelectorAll("#wordInput input").forEach(input => {
+        // Find the corresponding character in the correct answer, skipping spaces/hyphens
+        while (correctAnswer[inputIndex] === ' ' || correctAnswer[inputIndex] === '-') {
+            inputIndex++;
+        }
+        
+        let userChar = input.value.trim().toLowerCase();
+        let correctChar = correctAnswer[inputIndex] ? correctAnswer[inputIndex].toLowerCase() : '';
+
+        if (userChar !== correctChar) {
+            input.classList.add('incorrect-letter-input');
+        } else {
+            input.classList.remove('incorrect-letter-input');
+        }
+        inputIndex++;
+    });
+    // [MODIFICATION END]
+
     // 正規化答案
     let normalizedUserAnswer = normalizeText(userAnswer);
     let normalizedCorrectAnswer = normalizeText(correctAnswer);
 
-    let result = normalizedUserAnswer === '' ? '未作答' : 
+    let result = normalizedUserAnswer === '' ? '未作答' :
                  (normalizedUserAnswer === normalizedCorrectAnswer ? '正確' : '錯誤');
 
     quizResults.push({
@@ -500,8 +520,8 @@ function submitAnswer() {
 
     // 查找單字的中文解釋和音標
     let wordData = wordsData.find(w => w.Words === currentWord);
-    let chineseExplanation = wordData && wordData["traditional Chinese"] 
-        ? wordData["traditional Chinese"].replace(/\n/g, "<br>") 
+    let chineseExplanation = wordData && wordData["traditional Chinese"]
+        ? wordData["traditional Chinese"].replace(/\n/g, "<br>")
         : "無中文解釋";
     let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
     let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
@@ -526,6 +546,7 @@ function submitAnswer() {
     document.getElementById("submitBtn").style.display = "none";
     document.getElementById("nextBtn").style.display = "inline-block";
 }
+
 
 // ✅ 手動進入下一題
 function goToNextWord() {
@@ -740,13 +761,27 @@ function startRewordQuiz() {
     // 如果 quizWords 為空，自動填充（模擬 filterQuizWords 的邏輯）
     if (quizWords.length === 0) {
         quizWords = wordsData.filter(word => {
-            let letterMatch = selectedFilters.letters.size === 0 || selectedFilters.letters.has(word.Words[0].toUpperCase());
-            let wordCategory = word["分類"] || "未分類(種類)";
-            let categoryMatch = selectedFilters.categories.size === 0 || selectedFilters.categories.has(wordCategory);
+            // [FIX START] - Corrected filtering logic for Reword Quiz
+            let wordText = word.Words;
+            let letterMatch = selectedFilters.letters.size === 0 || selectedFilters.letters.has(wordText[0].toUpperCase());
+
+            let category = word["分類"] || [];
+            let primary = category[0] || "未分類";
+            let secondary = category.slice(1);
+
+            let primaryMatch = selectedFilters.primaryCategories.size === 0 || selectedFilters.primaryCategories.has(primary);
+            let secondaryMatch = selectedFilters.secondaryCategories.size === 0 || secondary.some(c => selectedFilters.secondaryCategories.has(c));
+            
             let wordLevel = word["等級"] || "未分類(等級)";
             let levelMatch = selectedFilters.levels.size === 0 || selectedFilters.levels.has(wordLevel);
-            let checkedMatch = !selectedFilters.checked || localStorage.getItem(`checked_${word.Words}`) === "true";
-            return letterMatch && categoryMatch && levelMatch && checkedMatch;
+
+            let checkedMatch = !selectedFilters.checked || localStorage.getItem(`checked_${wordText}`) === "true";
+            let importantMatch = !selectedFilters.important || localStorage.getItem(`important_${wordText}`) === "true";
+            let wrongWords = JSON.parse(localStorage.getItem("wrongWords") || "[]");
+            let wrongMatch = !selectedFilters.wrong || wrongWords.includes(wordText);
+
+            return letterMatch && primaryMatch && secondaryMatch && levelMatch && checkedMatch && importantMatch && wrongMatch;
+            // [FIX END]
         });
 
         // 如果篩選後仍無單字，給予提示並返回分類頁面
@@ -761,6 +796,7 @@ function startRewordQuiz() {
     document.getElementById("rewordQuizArea").style.display = "block";
     loadNextReword();
 }
+
 
 function loadNextReword() {
     if (quizWords.length === 0) {
@@ -1164,6 +1200,3 @@ function deleteSelectedImportantWords() {
 
 // 取消按鈕返回上一頁
 document.getElementById("cancelBtn").addEventListener("click", returnToCategorySelection);
-
-
-

@@ -86,6 +86,13 @@ h1, h2 {
     box-sizing: border-box;
 }
 
+/* [NEW] Style for incorrect letters in Word Quiz input boxes */
+.incorrect-letter-input {
+    color: red !important; /* Use !important to override other styles */
+    font-weight: bold;
+}
+
+
 /* 手機適配 */
 @media (max-width: 600px) {
     .letter-input {
