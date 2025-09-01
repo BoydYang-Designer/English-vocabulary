@@ -1000,16 +1000,31 @@ let formattedChinese = word["traditional Chinese"]
 // [修改] 將分類 HTML 和中文解釋組合在一起
 let chinese = `${categoryHTML}<div>${formattedChinese}</div>`;
     
-    let formattedMeaning = word["English meaning"]
-        .replace(/^Summary:?/gm, "<h3>Summary</h3>")
-        .replace(/Related Words:/g, "<h3>Related Words:</h3>")
-        .replace(/Antonyms:/g, "<h3>Antonyms:</h3>")
-        .replace(/\n1\./g, "<h3>1.</h3><p>")
-        .replace(/\n2\./g, "<h3>2.</h3><p>")
-        .replace(/\n3\./g, "<h3>3.</h3><p>")
-        .replace(/\nE\.g\./g, "</p><p><strong>Example:</strong>")
-        .replace(/\n/g, "<br>");
-    let meaning = `<p>${formattedMeaning}</p>`;
+// 從 JSON 讀取原始文字
+let rawMeaning = word["English meaning"];
+
+// 1. 將主要段落標題轉換為 <h3> 標籤
+let formattedMeaning = rawMeaning
+    .replace(/^Summary:?/gim, "<h3>Summary</h3>")
+    .replace(/Related Words:/gi, "<h3>Related Words:</h3>")
+    .replace(/Antonyms:/gi, "<h3>Antonyms:</h3>");
+
+// 2. 將數字編號的項目格式化
+// 這會為每個編號建立一個小標題 (h4) 和一個新的段落 (p)
+formattedMeaning = formattedMeaning.replace(/\n(\d+\.)/g, '</p><h4 class="meaning-number">$1</h4><p>');
+
+// 3. (核心更新) 將每個範例 (E.g. 或 Example) 格式化為獨立的段落
+// 這會結束前一個段落，並為範例開啟一個新的、帶有 "example" class 的段落
+formattedMeaning = formattedMeaning.replace(/\n(E\.g\.|Example):/gi, '</p><p class="example"><strong>$1:</strong>');
+
+// 4. 將剩下的換行符號轉換為 <br>
+formattedMeaning = formattedMeaning.replace(/\n/g, "<br>");
+
+// 5. 將所有內容包裹在一個 <div> 中
+let meaning = `<div><p>${formattedMeaning.trim()}</p></div>`;
+
+// 移除因為取代邏輯可能產生的空 <p> 標籤
+meaning = meaning.replace(/<p><\/p>/g, '');
 
     document.getElementById("phoneticContainer").innerHTML = phonetics;
     document.getElementById("chineseContainer").innerHTML = chinese;

@@ -478,3 +478,18 @@ h1 {
     margin-right: 8px; /* 標籤之間的右間距 */
     margin-top: 5px; /* 避免與上方元素太近 */
 }
+
+#meaningContainer h4 {
+  margin-top: 1.5em; /* Add more space above each numbered heading */
+  margin-bottom: 0.5em; /* Reduce space between the number and its text */
+}
+
+#meaningContainer p {
+  margin-top: 0; /* Remove extra space at the start of a paragraph */
+  line-height: 1.6; /* Improve readability of the text itself */
+}
+
+#meaningContainer p.example {
+  margin-left: 20px; /* 讓範例向右縮排 20px */
+  font-style: italic; /* 讓範例文字變斜體 (可選) */
+}
