@@ -176,6 +176,10 @@ function generateSentenceCategories(data) {
     console.log("📌 A-Z buttons HTML:", alphabetContainer.innerHTML);
 
     // 生成分類按鈕（主分類 + 次分類）
+// q_sentence.js 中的更新後程式碼
+
+
+    // 生成分類按鈕（主分類 + 次分類）
     categoryContainer.innerHTML = `
         <h3>主分類</h3>
         ${[...primaryCategories].map(c =>
@@ -188,7 +192,7 @@ function generateSentenceCategories(data) {
         <h3>特殊篩選</h3>
         <button class="category-button" onclick="toggleSentenceSelection('special', 'important')">重要句子</button>
         <button class="category-button" onclick="toggleSentenceSelection('special', 'incorrect')">錯誤句子</button>
-        <button class="category-button" onclick="toggleSentenceSelection('special', 'checked')">Checked 句子</button>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'checked')">已經checked 句子</button>
     `;
 
     // 【*** 修正點 ***】
@@ -240,24 +244,26 @@ function toggleSentenceSelection(type, value) {
 }
 
 // 📌 開始測驗
+// 【q_sentence.js 檔案中請更新成此版本】
 function startSentenceQuiz() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("sentenceQuizArea").style.display = "block";
 
     let filteredSentences = sentenceData.filter(item => {
         let levelMatch = selectedSentenceFilters.levels.size === 0 || selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
-
-        // 檢查主分類
         let primaryCategoryMatch = selectedSentenceFilters.primaryCategories.size === 0 || selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
-        
-        // 檢查次分類
         let secondaryCategoryMatch = selectedSentenceFilters.secondaryCategories.size === 0 || 
                                      (item.secondaryCategories || []).some(cat => selectedSentenceFilters.secondaryCategories.has(cat));
-
         let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
 
-        // 使用更新後的過濾條件
-        return levelMatch && primaryCategoryMatch && secondaryCategoryMatch && alphabetMatch;
+        // 【核心修改】新增特殊條件的篩選邏輯
+        let specialMatch = selectedSentenceFilters.special.size === 0 ||
+                           (selectedSentenceFilters.special.has('important') && localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
+                           (selectedSentenceFilters.special.has('incorrect') && incorrectSentences.includes(item.Words)) ||
+                           (selectedSentenceFilters.special.has('checked') && localStorage.getItem(`checked_sentence_${item.Words}`) === "true");
+
+        // 將 specialMatch 加入到最終的 return 條件中
+        return levelMatch && primaryCategoryMatch && secondaryCategoryMatch && alphabetMatch && specialMatch;
     });
 
     if (filteredSentences.length === 0) {

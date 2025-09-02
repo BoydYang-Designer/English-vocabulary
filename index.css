@@ -493,3 +493,14 @@ h1 {
   margin-left: 20px; /* 讓範例向右縮排 20px */
   font-style: italic; /* 讓範例文字變斜體 (可選) */
 }
+
+/* index.css */
+
+/* index.css */
+
+/* 讓例句中的目標單字粗體 */
+.highlight-word {
+  font-weight: bold;
+  color: #007bff; /* 可以選擇一個你喜歡的顏色，例如藍色 */
+  /* color: #e60023; */ /* 或是稍紅的顏色 */
+}

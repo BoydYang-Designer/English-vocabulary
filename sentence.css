@@ -542,3 +542,9 @@ h1 {
     color: #375c85;
     margin: 10px 0;
 }
+
+/* 讓句子中的目標單字粗體 */
+.highlight-word {
+  font-weight: bold;
+  color: #007bff; /* 也可以換成您喜歡的其他顏色，例如 #e60023 (紅色系) */
+}

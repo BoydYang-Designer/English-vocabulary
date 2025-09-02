@@ -1,3 +1,31 @@
+/**
+ * 根據一個基礎單字，建立一個可以匹配其常見變化的正規表示式。
+ * 例如：'dance' -> /danc(e|es|ed|ing)\b/gi
+ * 例如：'study' -> /stud(y|ies|ied|ying)\b/gi
+ * 例如：'absorb' -> /absorb(s|ed|ing)?\b/gi
+ * @param {string} baseWord - 基礎單字 (e.g., "absorb").
+ * @returns {RegExp} - 一個用於匹配的正規表示式物件.
+ */
+function createWordVariationsRegex(baseWord) {
+    let stem = baseWord.toLowerCase();
+    let pattern;
+
+    // 規則1：處理以 'e' 結尾的單字 (例如 dance -> danc)
+    if (stem.endsWith('e')) {
+        stem = stem.slice(0, -1);
+        pattern = `\\b${stem}(e|es|ed|ing)\\b`;
+    // 規則2：處理以 'y' 結尾的單字 (例如 study -> stud)
+    } else if (stem.endsWith('y')) {
+        stem = stem.slice(0, -1);
+        pattern = `\\b${stem}(y|ies|ied|ying)\\b`;
+    // 規則3：通用規則，處理大部分情況 (例如 absorb, work)
+    } else {
+        pattern = `\\b${stem}(s|es|ed|ing)?\\b`;
+    }
+
+    return new RegExp(pattern, 'gi');
+}
+
 // 全局變數整合
 let parentLayer = "";
 let wordsData = [];
@@ -216,50 +244,51 @@ function showWordsAndSentences(type, value) {
 // 第一層：生成分類按鈕
 let showWordCategories = false;
 
+// 【sentence.js 更新後的版本】
+
 function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
-    // 分離主分類（陣列[0]）和次分類（陣列[1]及之後）
+    
+    // 從 wordsData 獲取主分類和次分類
     let primaryCategories = [...new Set(wordsData.map(w => w["分類"][0] || "未分類").filter(c => c))];
     let secondaryCategories = [...new Set(wordsData.flatMap(w => w["分類"].slice(1)).filter(c => c))];
-    let specialCategories = ["Checked 單字", "重要單字", "錯誤單字", "Note單字"];
+    
+    // 【核心修改】定義句子的特殊分類
+    let specialCategories = [
+        { label: "已經checked 句子", func: "showCheckedSentences()" },
+        { label: "重要句子", func: "showImportantSentences()" },
+        { label: "錯誤句子", func: "showWrongSentences()" },
+        { label: "Note句子", func: "showSentenceNotes()" }
+    ];
 
     let categoryButtons = document.getElementById("categoryButtons");
-    categoryButtons.innerHTML = '';
+    categoryButtons.innerHTML = ''; // 清空現有按鈕
 
-    // 添加主分類標題和按鈕
+    // 渲染主分類按鈕
     let primaryTitle = document.createElement('h3');
     primaryTitle.className = 'category-title';
     primaryTitle.textContent = '主分類';
     categoryButtons.appendChild(primaryTitle);
-
     categoryButtons.innerHTML += primaryCategories
         .map(c => `<button class='letter-btn' onclick='showWordsAndSentences("primary_category", "${c}")'>${c}</button>`)
         .join(" ");
 
-    // 添加次分類標題和按鈕
+    // 渲染次分類按鈕
     let secondaryTitle = document.createElement('h3');
     secondaryTitle.className = 'category-title';
     secondaryTitle.textContent = '次分類';
     categoryButtons.appendChild(secondaryTitle);
-
     categoryButtons.innerHTML += secondaryCategories
         .map(c => `<button class='letter-btn' onclick='showWordsAndSentences("secondary_category", "${c}")'>${c}</button>`)
         .join(" ");
 
-    // 添加特殊分類標題和按鈕
+    // 【核心修改】渲染句子的特殊分類按鈕
     let specialTitle = document.createElement('h3');
     specialTitle.className = 'category-title';
     specialTitle.textContent = '特殊分類';
     categoryButtons.appendChild(specialTitle);
-
     categoryButtons.innerHTML += specialCategories
-        .map(c => {
-            if (c === "Checked 單字") return `<button class='letter-btn' onclick='showCheckedWords()'>${c}</button>`;
-            if (c === "重要單字") return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
-            if (c === "錯誤單字") return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
-            if (c === "Note單字") return `<button class='letter-btn' onclick='showNoteWords()'>${c}</button>`;
-            return '';
-        })
+        .map(cat => `<button class='letter-btn' onclick='${cat.func}'>${cat.label}</button>`)
         .join(" ");
 }
 
@@ -300,6 +329,49 @@ function showImportantSentences() {
     // 儲存單字列表以支持自動播放
     currentWordList = [...new Set(importantSentences.map(s => s.Words.split('-').slice(0, -1).join('-')))];
     currentSentenceList = sortSentencesByWordAndNumber(importantSentences);
+    displaySentenceList(currentSentenceList);
+}
+
+// 【sentence.js 新增此函式】
+
+/**
+ * 篩選並顯示所有被標記為 "checked" 的句子
+ */
+function showCheckedSentences() {
+    parentLayer = "firstLayer"; // 標記我們是從第一層進入的
+    
+    // 設定頁面標題，並加上自動播放按鈕
+    document.getElementById("wordListTitle").innerHTML = `
+        <span>已經checked 句子</span>
+        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
+    `;
+    document.getElementById("wordListTitle").style.display = "block";
+    
+    // 記錄當前的篩選類型，以便返回時能恢復狀態
+    lastWordListType = "checkedSentences";
+    lastWordListValue = null;
+
+    // 隱藏第一層的介面元素
+    document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("startQuizBtn").style.display = "none";
+    document.getElementById("wordQuizBtn").style.display = "none";
+    document.getElementById("returnHomeBtn").style.display = "none";
+    document.getElementById("sentencePageBtn").style.display = "none";
+    document.querySelector('.alphabet-container').style.display = "none";
+    document.querySelector('.category-container').style.display = "none";
+    document.querySelector('.level-container').style.display = "none";
+
+    // 從 localStorage 中篩選出所有 key 為 "checked_sentence_..." 的項目
+    let checkedSentences = sentenceData.filter(s => localStorage.getItem(`checked_sentence_${s.Words}`) === "true");
+
+    if (checkedSentences.length === 0) {
+        console.warn("⚠️ 沒有標記為 Checked 的句子");
+    }
+
+    // 將篩選結果存入當前句子列表，並排序
+    currentSentenceList = sortSentencesByWordAndNumber(checkedSentences);
+    
+    // 使用現有的 displaySentenceList 函式來顯示列表
     displaySentenceList(currentSentenceList);
 }
 
@@ -966,8 +1038,18 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
         ((wordObj["pronunciation-1"] ? `<button class='button' onclick='playAudio("${word}.mp3")'>${wordObj["pronunciation-1"]}</button>` : "") +
         (wordObj["pronunciation-2"] ? `<button class='button' onclick='playAudio("${word} 2.mp3")'>${wordObj["pronunciation-2"]}</button>` : "") || "<p>No pronunciation available</p>") : 
         "<p>No pronunciation available</p>";
+        
     let sentenceText = `<p>${sentenceObj.句子}</p>`;
     let chineseText = `<p>${sentenceObj.中文}</p>`;
+
+    // --- ↓↓↓ 新增的程式碼 從這裡開始 ↓↓↓ ---
+    // 取得要標示的單字 (例如從 "absorb-1" 取得 "absorb")
+    let wordToHighlight = sentenceId.replace(/-\d+$/, "");
+    // 建立可以匹配各種時態的正規表示式
+    const highlightRegex = createWordVariationsRegex(wordToHighlight);
+    // 將句子內文中的目標單字用 <span> 包裹起來，並保留原始大小寫
+    sentenceText = sentenceText.replace(highlightRegex, (match) => `<span class="highlight-word">${match}</span>`);
+    // --- ↑↑↑ 新增的程式碼 到這裡結束 ↑↑↑ ---
 
     document.getElementById("sentenceHeader").innerHTML = header;
     document.getElementById("phoneticContainer").innerHTML = phonetics;

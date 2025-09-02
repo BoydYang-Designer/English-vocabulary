@@ -912,6 +912,34 @@ function showCheckedWords() {
     lastWordListValue = null;
 }
 
+/**
+ * 根據一個基礎單字，建立一個可以匹配其常見變化的正規表示式。
+ * 例如：'dance' -> /danc(e|es|ed|ing)\b/gi
+ * 例如：'study' -> /stud(y|ies|ied|ying)\b/gi
+ * 例如：'absorb' -> /absorb(s|ed|ing)?\b/gi
+ * @param {string} baseWord - 基礎單字 (e.g., "absorb").
+ * @returns {RegExp} - 一個用於匹配的正規表示式物件.
+ */
+function createWordVariationsRegex(baseWord) {
+    let stem = baseWord.toLowerCase();
+    let pattern;
+
+    // 規則1：處理以 'e' 結尾的單字 (例如 dance -> danc)
+    if (stem.endsWith('e')) {
+        stem = stem.slice(0, -1);
+        pattern = `\\b${stem}(e|es|ed|ing)\\b`;
+    // 規則2：處理以 'y' 結尾的單字 (例如 study -> stud)
+    } else if (stem.endsWith('y')) {
+        stem = stem.slice(0, -1);
+        pattern = `\\b${stem}(y|ies|ied|ying)\\b`;
+    // 規則3：通用規則，處理大部分情況 (例如 absorb, work)
+    } else {
+        pattern = `\\b${stem}(s|es|ed|ing)?\\b`;
+    }
+
+    return new RegExp(pattern, 'gi');
+}
+
 function showDetails(word) {
     let searchInput = document.getElementById("searchInputDetails").value.trim();
     let bButton = document.getElementById("bButton");
@@ -1025,6 +1053,11 @@ let meaning = `<div><p>${formattedMeaning.trim()}</p></div>`;
 
 // 移除因為取代邏輯可能產生的空 <p> 標籤
 meaning = meaning.replace(/<p><\/p>/g, '');
+
+// 在 meaning 內文中，將目標單字用 <span> 包裹起來
+const wordToHighlight = word.Words;
+const highlightRegex = createWordVariationsRegex(wordToHighlight);
+meaning = meaning.replace(highlightRegex, (match) => `<span class="highlight-word">${match}</span>`);
 
     document.getElementById("phoneticContainer").innerHTML = phonetics;
     document.getElementById("chineseContainer").innerHTML = chinese;
