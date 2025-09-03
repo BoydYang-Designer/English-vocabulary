@@ -931,7 +931,8 @@ function createWordVariationsRegex(baseWord) {
     // 規則2：處理以 'y' 結尾的單字 (例如 study -> stud)
     } else if (stem.endsWith('y')) {
         stem = stem.slice(0, -1);
-        pattern = `\\b${stem}(y|ies|ied|ying)\\b`;
+        // [修改] 在這裡新增 ier 和 iest 的匹配規則
+        pattern = `\\b${stem}(y|ies|ied|ier|iest|ying)\\b`;
     // 規則3：通用規則，處理大部分情況 (例如 absorb, work)
     } else {
         pattern = `\\b${stem}(s|es|ed|ing)?\\b`;
