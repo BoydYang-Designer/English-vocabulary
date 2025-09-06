@@ -17,12 +17,79 @@ margin: 0;
 font-size: 24px;
 }
 
-/* 字母按鈕區域 */
-.alphabet-container {
-text-align: center;
-margin: 15px 0;
+/* 容器 */
+.container {
+max-width: 414px;
+width: 100%;
+margin: 0 auto;
+overflow-x: hidden;
+box-sizing: border-box;
 }
 
+/* Collapsible Section Styles Start */
+.collapsible-section-wrapper {
+    max-width: 414px;
+    margin: 15px auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.collapsible-section {
+    margin-bottom: 8px;
+}
+
+.collapsible-header {
+    background-color: #647f91; /* Match button theme */
+    color: white;
+    cursor: pointer;
+    padding: 12px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative; /* For the arrow icon */
+}
+
+.collapsible-header:hover {
+    background-color: #597d96;
+}
+
+/* Arrow icon using pseudo-element */
+/* Arrow icon using pseudo-element */
+.collapsible-header::after {
+    content: '\002B'; /* Plus sign */
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.collapsible-header.active::after {
+    content: '\2212'; /* Minus sign */
+}
+
+.collapsible-content {
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f1f1f1;
+    border-radius: 0 0 5px 5px;
+}
+
+.collapsible-content .button-wrapper {
+    padding: 10px 0;
+    text-align: center;
+}
+/* Collapsible Section Styles End */
+
+
+/* 字母按鈕區域 */
 .letter-btn {
 padding: 10px 15px;
 margin: 5px;
@@ -36,15 +103,6 @@ border-radius: 25px;
 
 .letter-btn:hover {
 background: #777;
-}
-
-/* 容器 */
-.container {
-max-width: 414px;
-width: 100%;
-margin: 0 auto;
-overflow-x: hidden;
-box-sizing: border-box;
 }
 
 /* 單字列表標題 */

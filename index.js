@@ -17,9 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("sentencePageBtn").style.display = "block";
     document.getElementById("wordQuizBtn").style.display = "block";
     document.getElementById("wordPageBtn").style.display = "block";
-    document.querySelector(".alphabet-container").style.display = "block";
-    document.querySelector(".category-container").style.display = "block";
-    document.querySelector(".level-container").style.display = "block";
+    document.querySelector(".collapsible-section-wrapper").style.display = "block";
     document.getElementById("wordList").style.display = "none";
     document.getElementById("wordDetails").style.display = "none";
     document.getElementById("wordListTitle").style.display = "none";
@@ -41,6 +39,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Add collapsible functionality
+    document.querySelectorAll(".collapsible-header").forEach(button => {
+        button.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+
     fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
         .then(res => res.json())
         .then(data => {
@@ -57,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // 確保分類和等級按鈕顯示
             setTimeout(() => {
+                createAlphabetButtons();
                 createCategoryButtons();
                 createLevelButtons();
             }, 500);
@@ -183,51 +195,64 @@ function filterWordsInDetails() {
     }
 }
 
+function createAlphabetButtons() {
+    const container = document.getElementById("alphabetButtons");
+    if (container) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'button-wrapper';
+        wrapper.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l =>
+            `<button class='letter-btn' onclick='showWords("letter", "${l.toLowerCase()}")'>${l}</button>`
+        ).join(" ");
+        container.appendChild(wrapper);
+    }
+}
+
 function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
-    // 分離主分類（陣列[0]）和次分類（陣列[1]及之後）
+
+    // 分離主分類、次分類和特殊分類
     let primaryCategories = [...new Set(wordsData.map(w => w["分類"][0] || "未分類").filter(c => c))];
     let secondaryCategories = [...new Set(wordsData.flatMap(w => w["分類"].slice(1)).filter(c => c))];
     let specialCategories = ["Checked 單字", "重要單字", "錯誤單字", "Note單字"];
 
-    let categoryButtons = document.getElementById("categoryButtons");
-    categoryButtons.innerHTML = '';
+    // 填充主分類
+    const primaryContainer = document.getElementById("primaryCategoryButtons");
+    if (primaryContainer) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'button-wrapper';
+        wrapper.innerHTML = primaryCategories
+            .map(c => `<button class='letter-btn' onclick='showWords("primary_category", "${c}")'>${c}</button>`)
+            .join(" ");
+        primaryContainer.appendChild(wrapper);
+    }
 
-    // 添加主分類標題和按鈕
-    let primaryTitle = document.createElement('h3');
-    primaryTitle.className = 'category-title';
-    primaryTitle.textContent = '主分類';
-    categoryButtons.appendChild(primaryTitle);
+    // 填充次分類
+    const secondaryContainer = document.getElementById("secondaryCategoryButtons");
+    if (secondaryContainer) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'button-wrapper';
+        wrapper.innerHTML = secondaryCategories
+            .map(c => `<button class='letter-btn' onclick='showWords("secondary_category", "${c}")'>${c}</button>`)
+            .join(" ");
+        secondaryContainer.appendChild(wrapper);
+    }
 
-    categoryButtons.innerHTML += primaryCategories
-        .map(c => `<button class='letter-btn' onclick='showWords("primary_category", "${c}")'>${c}</button>`)
-        .join(" ");
-
-    // 添加次分類標題和按鈕
-    let secondaryTitle = document.createElement('h3');
-    secondaryTitle.className = 'category-title';
-    secondaryTitle.textContent = '次分類';
-    categoryButtons.appendChild(secondaryTitle);
-
-    categoryButtons.innerHTML += secondaryCategories
-        .map(c => `<button class='letter-btn' onclick='showWords("secondary_category", "${c}")'>${c}</button>`)
-        .join(" ");
-
-    // 添加特殊分類標題和按鈕
-    let specialTitle = document.createElement('h3');
-    specialTitle.className = 'category-title';
-    specialTitle.textContent = '特殊分類';
-    categoryButtons.appendChild(specialTitle);
-
-    categoryButtons.innerHTML += specialCategories
-        .map(c => {
-            if (c === "Checked 單字") return `<button class='letter-btn' onclick='showCheckedWords()'>${c}</button>`;
-            if (c === "重要單字") return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
-            if (c === "錯誤單字") return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
-            if (c === "Note單字") return `<button class='letter-btn' onclick='showNoteWords()'>${c}</button>`;
-            return '';
-        })
-        .join(" ");
+    // 填充特殊分類
+    const specialContainer = document.getElementById("specialCategoryButtons");
+    if (specialContainer) {
+         const wrapper = document.createElement('div');
+         wrapper.className = 'button-wrapper';
+         wrapper.innerHTML = specialCategories
+            .map(c => {
+                if (c === "Checked 單字") return `<button class='letter-btn' onclick='showCheckedWords()'>${c}</button>`;
+                if (c === "重要單字") return `<button class='letter-btn' onclick='showImportantWords()'>${c}</button>`;
+                if (c === "錯誤單字") return `<button class='letter-btn' onclick='showWrongWords()'>${c}</button>`;
+                if (c === "Note單字") return `<button class='letter-btn' onclick='showNoteWords()'>${c}</button>`;
+                return '';
+            })
+            .join(" ");
+        specialContainer.appendChild(wrapper);
+    }
 }
 
 function createLevelButtons() {
@@ -238,9 +263,15 @@ function createLevelButtons() {
     let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
     console.log("📌 生成等級按鈕:", levels);
 
-    document.getElementById("levelButtons").innerHTML = levels
-        .map(l => `<button class='letter-btn' onclick='showWords("level", "${l}")'>${l}</button>`)
-        .join(" ");
+    const container = document.getElementById("levelButtonsContent");
+    if (container) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'button-wrapper';
+        wrapper.innerHTML = levels
+            .map(l => `<button class='letter-btn' onclick='showWords("level", "${l}")'>${l}</button>`)
+            .join(" ");
+        container.appendChild(wrapper);
+    }
 }
 
 function showWords(type, value) {
@@ -317,9 +348,7 @@ function showWords(type, value) {
 
     listContainer.style.display = "block";
     document.getElementById("wordDetails").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
 
     setTimeout(() => {
         document.querySelectorAll(".word-item").forEach(button => {
@@ -609,9 +638,7 @@ function backToFirstLayer() {
     document.getElementById("sentencePageBtn").style.display = "block";
     document.getElementById("wordList").style.display = "none";
     document.getElementById("wordDetails").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "block";
-    document.querySelector('.category-container').style.display = "block";
-    document.querySelector('.level-container').style.display = "block";
+    document.querySelector('.collapsible-section-wrapper').style.display = "block";
     document.getElementById("wordItems").innerHTML = "";
     document.getElementById("wordListTitle").style.display = "none";
     document.getElementById("searchInput").value = "";
@@ -678,9 +705,8 @@ function showNoteWords() {
 
     listContainer.style.display = "block";
     document.getElementById("wordDetails").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+
 
     setTimeout(() => {
         document.querySelectorAll(".word-item").forEach(button => {
@@ -762,12 +788,7 @@ function showImportantWords() {
 
     listContainer.style.display = "block";
     document.getElementById("wordDetails").style.display = "none";
-    let alphabetContainer = document.querySelector(".alphabet-container");
-    let categoryContainer = document.querySelector(".category-container");
-    let levelContainer = document.querySelector(".level-container");
-    if (alphabetContainer) alphabetContainer.style.display = "none";
-    if (categoryContainer) categoryContainer.style.display = "none";
-    if (levelContainer) levelContainer.style.display = "none";
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
 
     lastWordListType = "importantWords";
     lastWordListValue = null;
@@ -834,12 +855,7 @@ function showWrongWords() {
 
     listContainer.style.display = "block";
     document.getElementById("wordDetails").style.display = "none";
-    let alphabetContainer = document.querySelector(".alphabet-container");
-    let categoryContainer = document.querySelector(".category-container");
-    let levelContainer = document.querySelector(".level-container");
-    if (alphabetContainer) alphabetContainer.style.display = "none";
-    if (categoryContainer) categoryContainer.style.display = "none";
-    if (levelContainer) levelContainer.style.display = "none";
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
 
     lastWordListType = "wrongWords";
     lastWordListValue = null;
@@ -901,12 +917,7 @@ function showCheckedWords() {
 
     listContainer.style.display = "block";
     document.getElementById("wordDetails").style.display = "none";
-    let alphabetContainer = document.querySelector(".alphabet-container");
-    let categoryContainer = document.querySelector(".category-container");
-    let levelContainer = document.querySelector(".level-container");
-    if (alphabetContainer) alphabetContainer.style.display = "none";
-    if (categoryContainer) categoryContainer.style.display = "none";
-    if (levelContainer) levelContainer.style.display = "none";
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
 
     lastWordListType = "checkedWords";
     lastWordListValue = null;
@@ -965,9 +976,7 @@ function showDetails(word) {
     document.getElementById("wordPageBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
     document.getElementById("wordDetails").style.display = "block";
-    document.querySelector(".alphabet-container").style.display = "none";
-    document.querySelector(".category-container").style.display = "none";
-    document.querySelector(".level-container").style.display = "none";
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
 
     // 找到當前單字在列表中的索引
     window.currentIndex = window.currentWordList.findIndex(w => {
@@ -1269,9 +1278,7 @@ function backToWordList() {
         document.getElementById("searchContainer").style.display = "block";
         document.getElementById("wordList").style.display = "none";
         document.getElementById("wordDetails").style.display = "none";
-        document.querySelector('.alphabet-container').style.display = "block";
-        document.querySelector('.category-container').style.display = "block";
-        document.querySelector('.level-container').style.display = "block";
+        document.querySelector('.collapsible-section-wrapper').style.display = "block";
         document.getElementById("autoPlayBtn").style.display = "none"; // 第一層不顯示
     } else if (lastWordListType === "importantWords") {
         console.log("🔙 返回重要單字列表");
