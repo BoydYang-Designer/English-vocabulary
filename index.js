@@ -1008,26 +1008,36 @@ function showDetails(word) {
     }
     phonetics += `</div>`;
 
-// 修改後的程式碼
-// [新增] 建立分類標籤的 HTML
-let categoryHTML = '';
-const categories = word["分類"]; // 從 JSON 取得分類陣列
 
-// 檢查分類是否存在且不為空陣列
-if (categories && Array.isArray(categories) && categories.length > 0) {
-    // 將陣列中的每個分類轉換成一個 span 標籤
-    const categoryTags = categories.map(cat => `<span class="category-tag">${cat}</span>`).join('');
-    // 組合成一個完整的 div
-    categoryHTML = `<div class="category-display"><strong>分類: </strong>${categoryTags}</div>`;
+// [修改] 建立等級與分類標籤的 HTML
+let displayTagsHTML = '';
+const level = word["等級"];
+const categories = word["分類"];
+
+// 優先顯示等級標籤
+if (level) {
+    displayTagsHTML += `<span class="level-tag">${level}</span>`;
 }
+
+// 接著顯示分類標籤
+if (categories && Array.isArray(categories) && categories.length > 0) {
+    displayTagsHTML += categories.map(cat => `<span class="category-tag">${cat}</span>`).join('');
+}
+
+// 如果有任何標籤，則建立容器
+let finalDisplayHTML = '';
+if (displayTagsHTML) {
+    finalDisplayHTML = `<div class="category-display">${displayTagsHTML}</div>`;
+}
+
 
 let formattedChinese = word["traditional Chinese"]
     .replace(/(\d+)\./g, "<br><strong>$1.</strong> ")
     .replace(/\s*([nN]\.|[vV]\.|[aA][dD][jJ]\.|[aA][dD][vV]\.|[pP][rR][eE][pP]\.|[cC][oO][nN][jJ]\.|[pP][rR][oO][nN]\.|[iI][nN][tT]\.)/g, "<br>$1 ")
     .replace(/^<br>/, "");
 
-// [修改] 將分類 HTML 和中文解釋組合在一起
-let chinese = `${categoryHTML}<div>${formattedChinese}</div>`;
+// 將等級/分類 HTML 和中文解釋組合在一起
+let chinese = `${finalDisplayHTML}<div>${formattedChinese}</div>`;
     
 // 從 JSON 讀取原始文字
 let rawMeaning = word["English meaning"];

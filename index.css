@@ -479,6 +479,18 @@ margin-right: 8px; /* 標籤之間的右間距 */
 margin-top: 5px; /* 避免與上方元素太近 */
 }
 
+.level-tag {
+  display: inline-block; /* 讓標籤並排顯示 */
+  background-color: #4a755d; /* 選擇一個不同的顏色，例如深綠色 */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px; /* 圓角效果 */
+  font-size: 15px;
+  margin-right: 8px; /* 標籤之間的右間距 */
+  margin-top: 5px; /* 避免與上方元素太近 */
+}
+
+
 #meaningContainer h4 {
 margin-top: 1.5em; /* Add more space above each numbered heading */
 margin-bottom: 0.5em; /* Reduce space between the number and its text */
