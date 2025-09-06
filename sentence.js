@@ -1,5 +1,5 @@
 /**
- * 根據一個基礎單字，建立一個可以匹配其常見變化的正規表示式。
+ * 根據一個基礎單字，建立一個可以匹配其常見變化正規表示式。
  * 例如：'dance' -> /danc(e|es|ed|ing)\b/gi
  * 例如：'study' -> /stud(y|ies|ied|ying)\b/gi
  * 例如：'absorb' -> /absorb(s|ed|ing)?\b/gi
@@ -46,6 +46,21 @@ let lastPlayBtn = null;
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("開始載入資料...");
+
+    // ▼▼▼ 更新的程式碼從這裡開始 ▼▼▼
+    // 加入摺疊/展開功能
+    document.querySelectorAll(".collapsible-header").forEach(button => {
+        button.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+    // ▲▲▲ 更新的程式碼到這裡結束 ▲▲▲
 
     Promise.all([
         fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
@@ -182,9 +197,9 @@ function showWordsAndSentences(type, value) {
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
     document.getElementById("wordList").style.display = "block";
     document.getElementById("sentenceList").style.display = "none";
 
@@ -242,11 +257,8 @@ function showWordsAndSentences(type, value) {
     }
 }
 
-// 第一層：生成分類按鈕
-let showWordCategories = false;
-
-// 【sentence.js 更新後的版本】
-
+// ▼▼▼ 更新的程式碼從這裡開始 ▼▼▼
+// 重寫 createCategoryButtons 函式以適應新結構
 function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
     
@@ -254,7 +266,7 @@ function createCategoryButtons() {
     let primaryCategories = [...new Set(wordsData.map(w => w["分類"][0] || "未分類").filter(c => c))];
     let secondaryCategories = [...new Set(wordsData.flatMap(w => w["分類"].slice(1)).filter(c => c))];
     
-    // 【核心修改】定義句子的特殊分類
+    // 定義句子的特殊分類
     let specialCategories = [
         { label: "已經checked 句子", func: "showCheckedSentences()" },
         { label: "重要句子", func: "showImportantSentences()" },
@@ -262,36 +274,31 @@ function createCategoryButtons() {
         { label: "Note句子", func: "showSentenceNotes()" }
     ];
 
-    let categoryButtons = document.getElementById("categoryButtons");
-    categoryButtons.innerHTML = ''; // 清空現有按鈕
+    // 填充主分類
+    const primaryContainer = document.getElementById("primaryCategoryButtons");
+    if (primaryContainer) {
+        primaryContainer.innerHTML = primaryCategories
+            .map(c => `<button class='letter-btn' onclick='showWordsAndSentences("primary_category", "${c}")'>${c}</button>`)
+            .join(" ");
+    }
 
-    // 渲染主分類按鈕
-    let primaryTitle = document.createElement('h3');
-    primaryTitle.className = 'category-title';
-    primaryTitle.textContent = '主分類';
-    categoryButtons.appendChild(primaryTitle);
-    categoryButtons.innerHTML += primaryCategories
-        .map(c => `<button class='letter-btn' onclick='showWordsAndSentences("primary_category", "${c}")'>${c}</button>`)
-        .join(" ");
+    // 填充次分類
+    const secondaryContainer = document.getElementById("secondaryCategoryButtons");
+    if (secondaryContainer) {
+        secondaryContainer.innerHTML = secondaryCategories
+            .map(c => `<button class='letter-btn' onclick='showWordsAndSentences("secondary_category", "${c}")'>${c}</button>`)
+            .join(" ");
+    }
 
-    // 渲染次分類按鈕
-    let secondaryTitle = document.createElement('h3');
-    secondaryTitle.className = 'category-title';
-    secondaryTitle.textContent = '次分類';
-    categoryButtons.appendChild(secondaryTitle);
-    categoryButtons.innerHTML += secondaryCategories
-        .map(c => `<button class='letter-btn' onclick='showWordsAndSentences("secondary_category", "${c}")'>${c}</button>`)
-        .join(" ");
-
-    // 【核心修改】渲染句子的特殊分類按鈕
-    let specialTitle = document.createElement('h3');
-    specialTitle.className = 'category-title';
-    specialTitle.textContent = '特殊分類';
-    categoryButtons.appendChild(specialTitle);
-    categoryButtons.innerHTML += specialCategories
-        .map(cat => `<button class='letter-btn' onclick='${cat.func}'>${cat.label}</button>`)
-        .join(" ");
+    // 渲染句子的特殊分類按鈕
+    const specialContainer = document.getElementById("specialCategoryButtons");
+    if (specialContainer) {
+        specialContainer.innerHTML = specialCategories
+            .map(cat => `<button class='letter-btn' onclick='${cat.func}'>${cat.label}</button>`)
+            .join(" ");
+    }
 }
+// ▲▲▲ 更新的程式碼到這裡結束 ▲▲▲
 
 function showImportantSentences() {
     parentLayer = "firstLayer";
@@ -311,9 +318,9 @@ function showImportantSentences() {
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
 
     if (!sentenceData || sentenceData.length === 0) {
         console.error("❌ sentenceData 未載入或為空");
@@ -333,11 +340,6 @@ function showImportantSentences() {
     displaySentenceList(currentSentenceList);
 }
 
-// 【sentence.js 新增此函式】
-
-/**
- * 篩選並顯示所有被標記為 "checked" 的句子
- */
 function showCheckedSentences() {
     parentLayer = "firstLayer"; // 標記我們是從第一層進入的
     
@@ -358,9 +360,9 @@ function showCheckedSentences() {
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
 
     // 從 localStorage 中篩選出所有 key 為 "checked_sentence_..." 的項目
     let checkedSentences = sentenceData.filter(s => localStorage.getItem(`checked_sentence_${s.Words}`) === "true");
@@ -391,9 +393,9 @@ function showWrongSentences() {
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
 
     let wrongSentences = JSON.parse(localStorage.getItem("wrongQS")) || [];
     let filteredSentences = sentenceData.filter(s => wrongSentences.includes(s.Words));
@@ -402,37 +404,6 @@ function showWrongSentences() {
     // 儲存單字列表以支持自動播放
     currentWordList = [...new Set(filteredSentences.map(s => s.Words.split('-').slice(0, -1).join('-')))];
     currentSentenceList = sortSentencesByWordAndNumber(filteredSentences);
-    displaySentenceList(currentSentenceList);
-}
-
-function showCheckedSentences() {
-    parentLayer = "firstLayer";
-    document.getElementById("wordListTitle").innerHTML = `
-        <span>Checked 句子</span>
-        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
-    `;
-    document.getElementById("wordListTitle").style.display = "block";
-    lastWordListType = "checkedSentences";
-    lastWordListValue = null;
-
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
-
-    let checkedSentences = sentenceData.filter(s => localStorage.getItem(`checked_sentence_${s.Words}`) === "true");
-    if (checkedSentences.length === 0) {
-        console.warn("⚠️ 沒有標記為 Checked 的句子");
-        document.getElementById("sentenceItems").innerHTML = "<p>⚠️ 目前沒有勾選的句子</p>";
-    }
-
-    // 儲存單字列表以支持自動播放
-    currentWordList = [...new Set(checkedSentences.map(s => s.Words.split('-').slice(0, -1).join('-')))];
-    currentSentenceList = sortSentencesByWordAndNumber(checkedSentences);
     displaySentenceList(currentSentenceList);
 }
 
@@ -454,9 +425,9 @@ function showSentenceNotes() {
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
 
     if (!sentenceData || sentenceData.length === 0) {
         console.error("❌ sentenceData 未載入或為空");
@@ -466,7 +437,6 @@ function showSentenceNotes() {
 
     let noteSentences = sentenceData.filter(s => {
         const note = localStorage.getItem(`note_sentence_${s.Words}`);
-        console.log(`檢查 ${s.Words} 的筆記:`, note);
         return note && note.length > 0;
     });
     console.log("過濾後的 noteSentences:", noteSentences);
@@ -493,14 +463,14 @@ function showSentences(word) {
     `;
     document.getElementById("wordListTitle").style.display = "block";
 
-document.getElementById("searchContainer").style.display = "none";
+    document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
     document.getElementById("wordList").style.display = "none";
     document.getElementById("sentenceList").style.display = "block";
     document.querySelector('#sentenceList .back-button').style.display = "block";
@@ -561,8 +531,6 @@ document.getElementById("searchContainer").style.display = "none";
             item.querySelector('.word-item').addEventListener("click", () => showSentenceDetails(sentenceId, index));
         });
     }
-
-    // 更新自動播放按鈕狀態
     updateAutoPlayButton();
 }
 
@@ -653,26 +621,20 @@ function displaySentenceList(sentences) {
         container.querySelector('.word-item').addEventListener("click", () => showSentenceDetails(sentenceId));
     });
 
-    // 更新自動播放按鈕狀態
     updateAutoPlayButton();
 }
 
-// 如果同時有 #autoPlayBtn 和 #autoPlayBtnDetails，就回傳目前可見的那一顆
 function getAutoPlayBtn() {
     const btn1 = document.getElementById("autoPlayBtn");
     const btn2 = document.getElementById("autoPlayBtnDetails");
-    // offsetParent 不為 null 代表實際上在畫面上可見
     if (btn2 && btn2.offsetParent !== null) return btn2;
     if (btn1 && btn1.offsetParent !== null) return btn1;
-    // fallback
     return btn1 || btn2;
 }
 
-
-// 自動播放邏輯
 function toggleAutoPlay() {
     const autoPlayBtn = getAutoPlayBtn();
-    if (!autoPlayBtn) return;   // 找不到就不做
+    if (!autoPlayBtn) return;
     
     if (isAutoPlaying) {
         stopAutoPlay();
@@ -685,23 +647,19 @@ function toggleAutoPlay() {
     }
 }
 
-
 function startAutoPlay() {
     const autoPlayBtn = getAutoPlayBtn();
     isAutoPlaying = true;
 
     if (document.getElementById("wordList").style.display === "block") {
-        // 從單字列表啟動 → 從頭開始
         currentWordIndex = 0;
         playNextWord();
 
     } else if (document.getElementById("sentenceList").style.display === "block") {
-        // 從句子列表啟動 → 接著剛剛的單字繼續
         currentSentenceIndex = 0;
         playNextSentence();
 
     } else if (document.getElementById("sentenceDetails").style.display === "block") {
-        // 在句子詳情直接播放
         playCurrentSentence();
     }
 
@@ -785,36 +743,32 @@ function showWords(type, value) {
     lastWordListType = type;
     lastWordListValue = value;
 
-    // 隱藏其他層
     document.getElementById("searchContainer").style.display = "none";
     document.getElementById("startQuizBtn").style.display = "none";
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
     document.getElementById("sentenceList").style.display = "none";
     document.getElementById("sentenceDetails").style.display = "none";
 
-    // 顯示單字列表
     let wordList = document.getElementById("wordList");
     wordList.style.display = "block";
     
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
-    // 修改過濾邏輯，排除無 Words 屬性的項目
-let filteredWords = wordsData.filter(w => {
+    let filteredWords = wordsData.filter(w => {
         if (!w.Words) return false;
 
         if (type === "letter") {
             return w.Words.toLowerCase().startsWith(value.toLowerCase());
         } else if (type === "category") {
-            // 修改：檢查分類陣列中是否包含 value
             return (w["分類"] || []).includes(value);
         } else if (type === "level") {
-            return w["等級"] === value;  // 等級假設為單一字符串，保持不變
+            return w["等級"] === value;
         }
         return false;
     });
@@ -910,9 +864,9 @@ function showCheckedWords() {
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
 
     currentWordList = wordsData.filter(w => localStorage.getItem(`checked_${w.Words}`) === "true").map(w => w.Words);
     displayWordList(currentWordList);
@@ -932,9 +886,9 @@ function showImportantWords() {
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
 
     currentWordList = wordsData.filter(w => localStorage.getItem(`important_${w.Words}`) === "true").map(w => w.Words);
     displayWordList(currentWordList);
@@ -954,9 +908,9 @@ function showWrongWords() {
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
 
     let wrongWords = JSON.parse(localStorage.getItem("wrongWords")) || [];
     currentWordList = wrongWords;
@@ -970,9 +924,9 @@ function displayWordList(words) {
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
     document.getElementById("wordList").style.display = "block";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
 
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = words.length > 0
@@ -1043,14 +997,9 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     let sentenceText = `<p>${sentenceObj.句子}</p>`;
     let chineseText = `<p>${sentenceObj.中文}</p>`;
 
-    // --- ↓↓↓ 新增的程式碼 從這裡開始 ↓↓↓ ---
-    // 取得要標示的單字 (例如從 "absorb-1" 取得 "absorb")
     let wordToHighlight = sentenceId.replace(/-\d+$/, "");
-    // 建立可以匹配各種時態的正規表示式
     const highlightRegex = createWordVariationsRegex(wordToHighlight);
-    // 將句子內文中的目標單字用 <span> 包裹起來，並保留原始大小寫
     sentenceText = sentenceText.replace(highlightRegex, (match) => `<span class="highlight-word">${match}</span>`);
-    // --- ↑↑↑ 新增的程式碼 到這裡結束 ↑↑↑ ---
 
     document.getElementById("sentenceHeader").innerHTML = header;
     document.getElementById("phoneticContainer").innerHTML = phonetics;
@@ -1061,15 +1010,9 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     playAudioBtn.setAttribute("onclick", `playSentenceAudio("${sentenceId}.mp3")`);
     playAudioBtn.classList.remove("playing");
 
-    playAudioBtn.addEventListener("touchstart", (event) => {
-        event.stopPropagation();
-    }, { passive: true });
-    playAudioBtn.addEventListener("touchmove", (event) => {
-        event.stopPropagation();
-    }, { passive: true });
-    playAudioBtn.addEventListener("touchend", (event) => {
-        event.stopPropagation();
-    });
+    playAudioBtn.addEventListener("touchstart", (event) => event.stopPropagation(), { passive: true });
+    playAudioBtn.addEventListener("touchmove", (event) => event.stopPropagation(), { passive: true });
+    playAudioBtn.addEventListener("touchend", (event) => event.stopPropagation());
 
     displayNote(sentenceId);
 
@@ -1081,9 +1024,9 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "none";
-    document.querySelector('.category-container').style.display = "none";
-    document.querySelector('.level-container').style.display = "none";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
     document.getElementById("wordList").style.display = "none";
 
     if (direction) {
@@ -1123,7 +1066,7 @@ function playSentenceAudio(filename) {
     sentenceAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/Sentence%20file/${filename}`;
     if (playBtn) {
         playBtn.classList.add("playing");
-        lastPlayBtn = playBtn;       // ← 記録這顆按鈕
+        lastPlayBtn = playBtn;
     }
     sentenceAudio.play()
         .then(() => console.log(`✅ 播放 ${filename} 成功`))
@@ -1159,26 +1102,19 @@ function playSentenceAudio(filename) {
 }
 
 function togglePauseAudio(button) {
-    const pauseBtn = button;  // #pauseResumeBtn 或頁面上的那顆暫停/繼續按鈕
-    // svg 路徑請改成你自己的 icon URL
+    const pauseBtn = button;
     const playIcon  = '<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg"  alt="Play"  width="24" height="24"/>';
     const pauseIcon = '<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24"/>';
 
     if (sentenceAudio.paused || sentenceAudio.ended) {
-        // ——「繼續播放」邏輯
         sentenceAudio.play();
         pauseBtn.innerHTML = pauseIcon;
-        // 暫停按鈕去除藍色
         pauseBtn.classList.remove("auto-playing");
-        // 原本的播放按鈕恢復藍色
         if (lastPlayBtn) lastPlayBtn.classList.add("playing");
     } else {
-        // ——「暫停」邏輯
         sentenceAudio.pause();
         pauseBtn.innerHTML = playIcon;
-        // 暫停按鈕加上藍色
         pauseBtn.classList.add("auto-playing");
-        // 並且讓原本的播放按鈕去掉藍色
         if (lastPlayBtn) lastPlayBtn.classList.remove("playing");
     }
 }
@@ -1294,9 +1230,9 @@ function backToFirstLayer() {
     document.getElementById("wordList").style.display = "none";
     document.getElementById("sentenceList").style.display = "none";
     document.getElementById("sentenceDetails").style.display = "none";
-    document.querySelector('.alphabet-container').style.display = "block";
-    document.querySelector('.category-container').style.display = "block";
-    document.querySelector('.level-container').style.display = "block";
+    // ▼▼▼ 更新的程式碼 ▼▼▼
+    document.querySelector('.collapsible-section-wrapper').style.display = "block";
+    // ▲▲▲ 更新的程式碼 ▲▲▲
     document.getElementById("searchInput").value = "";
     let searchResults = document.getElementById("searchResults");
     if (searchResults) searchResults.remove();
