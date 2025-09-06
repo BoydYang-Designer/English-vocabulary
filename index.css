@@ -144,6 +144,7 @@ background: #f0f0f0;
 
 /* 音標容器 */
 .phonetics-container {
+margin-left: 10px;
 display: flex;
 align-items: center;
 gap: 5px;
@@ -180,13 +181,14 @@ border: 1px solid #ddd;
 background: #f9f9f9;
 border-radius: 10px;
 font-size: 20px;
-margin-left: 0px;
+margin-left: 5px;
 margin-right: 25px;
 }
 
 /* 中文解釋容器 */
 #chineseContainer {
 font-size: 15px;
+margin-left: 10px;
 }
 
 /* 搜尋輸入框 */
