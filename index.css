@@ -470,8 +470,8 @@ font-size: 16px;
 
 .category-tag {
 display: inline-block; /* 讓標籤並排顯示 */
-background-color: #647f91; /* 與主題顏色匹配 */
-color: white;
+background-color: #e4e4e4; /* 與主題顏色匹配 */
+color: rgb(0, 0, 0);
 padding: 4px 10px;
 border-radius: 15px; /* 圓角效果 */
 font-size: 15px;
@@ -481,8 +481,8 @@ margin-top: 5px; /* 避免與上方元素太近 */
 
 .level-tag {
   display: inline-block; /* 讓標籤並排顯示 */
-  background-color: #4a755d; /* 選擇一個不同的顏色，例如深綠色 */
-  color: white;
+  background-color: #e4e4e4; /* 選擇一個不同的顏色，例如深綠色 */
+  color: rgb(0, 0, 0);
   padding: 4px 10px;
   border-radius: 15px; /* 圓角效果 */
   font-size: 15px;
