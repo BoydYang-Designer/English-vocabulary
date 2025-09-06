@@ -161,16 +161,13 @@ h1, h2 {
 .category-button {
     padding: 10px 15px;
     margin: 5px;
-    background-color: #617194;
-    color: white;
-    border-radius: 20px;
-    border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border: none;
+    background: #555; /* 顏色與 index.css 統一 */
+    color: white;
     font-size: 18px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 25px; /* 圓角與 index.css 統一 */
+    transition: background-color 0.3s ease;
 }
 
 .category-button:hover {
@@ -193,6 +190,68 @@ h1, h2 {
     margin-right: auto; /* 加入這行 */
     flex-wrap: wrap; /* 允許換行 */
 }
+
+.collapsible-section-wrapper {
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.collapsible-section {
+    margin-bottom: 8px;
+}
+
+.collapsible-header {
+    background-color: #647f91;
+    color: white;
+    cursor: pointer;
+    padding: 12px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.collapsible-header:hover {
+    background-color: #597d96;
+}
+
+.collapsible-header::after {
+    content: '\002B'; /* Plus sign */
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.collapsible-header.active::after {
+    content: '\2212'; /* Minus sign */
+}
+
+/* ▼▼▼ 更新的程式碼從這裡開始 ▼▼▼ */
+.collapsible-content {
+    padding: 0 10px; /* 外層 padding 與 index.css 統一 */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f1f1f1;
+    border-radius: 0 0 5px 5px;
+}
+
+/* 新增 button-wrapper 確保內部按鈕排版與 index.css 一致 */
+.collapsible-content .button-wrapper {
+    padding: 10px 0;
+    text-align: center;
+}
+
+
 
 /* ==========================================
    📑 結果樣式 (Results)
@@ -617,3 +676,4 @@ h1, h2 {
     color: #375c85;
     margin: 10px 0;
 }
+

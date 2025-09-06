@@ -1,3 +1,4 @@
+
 console.log("✅ q_sentence.js 已載入");
 
 const GITHUB_JSON_URL = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/sentence.json";
@@ -27,6 +28,7 @@ window.getUserAnswer = getUserAnswer;
 
 // 在 DOMContentLoaded 中動態載入所有變數
 document.addEventListener("DOMContentLoaded", function () {
+
     sentenceData = JSON.parse(localStorage.getItem("sentenceData")) || [];
     userAnswers = JSON.parse(localStorage.getItem("userAnswers")) || [];
     incorrectSentences = JSON.parse(localStorage.getItem("wrongQS")) || [];
@@ -112,111 +114,68 @@ function showSentenceQuizCategories() {
 }
 
 function generateSentenceCategories(data) {
-    let levelContainer = document.getElementById("sentenceLevelButtons");
-    let categoryContainer = document.getElementById("sentenceCategoryButtons");
+    // 定義各分類的容器
+    const alphabetContainer = document.getElementById("sentenceAlphabetButtons");
+    const primaryContainer = document.getElementById("sentencePrimaryCategoryButtons");
+    const secondaryContainer = document.getElementById("sentenceSecondaryCategoryButtons");
+    const specialContainer = document.getElementById("sentenceSpecialCategoryButtons");
+    const levelContainer = document.getElementById("sentenceLevelButtons");
 
-    // 檢查 DOM 元素是否存在
-    if (!levelContainer || !categoryContainer) {
-        console.error("❌ DOM 元素未找到：", { levelContainer, categoryContainer });
+    if (!alphabetContainer || !primaryContainer || !secondaryContainer || !specialContainer || !levelContainer) {
+        console.error("❌ 句子測驗的分類容器未全部找到，請檢查 quiz.html 的 ID。");
         return;
     }
 
-    // 動態創建 A-Z 分類容器
-    let alphabetContainer = document.createElement("div");
-    alphabetContainer.id = "alphabetButtons";
-    alphabetContainer.classList.add("alphabet-container");
+    // 提取所有分類
+    const levels = new Set();
+    const primaryCategories = new Set();
+    const secondaryCategories = new Set();
+    const alphabetSet = new Set();
 
-    let levels = new Set();
-    let alphabetMap = {};
-
-    // --- 新增開始 ---
-    // 建立新的 Set 來儲存主分類和次分類
-    let primaryCategories = new Set();
-    let secondaryCategories = new Set();
-    // --- 新增結束 ---
-
-    // 初始化 A-Z 分類
-    for (let i = 65; i <= 90; i++) {
-        alphabetMap[String.fromCharCode(i)] = [];
-    }
-
-    // 分類數據
     data.forEach(item => {
-        let level = item.等級 || "未分類(等級)";
-        let firstLetter = item.句子.charAt(0).toUpperCase();
-
-        levels.add(level);
-        if (alphabetMap[firstLetter]) {
-            alphabetMap[firstLetter].push(item);
+        levels.add(item.等級 || "未分類(等級)");
+        const firstLetter = item.句子.charAt(0).toUpperCase();
+        if (/[A-Z]/.test(firstLetter)) {
+            alphabetSet.add(firstLetter);
         }
-
-        // --- 新增開始 ---
-        // 確保分類是陣列
-        if (Array.isArray(item["分類"])) {
-            // 將第一個分類作為主分類
-            if (item["分類"].length > 0) {
-                primaryCategories.add(item["分類"][0]);
-            }
-            // 將其餘分類作為次分類
-            item["分類"].slice(1).forEach(cat => secondaryCategories.add(cat));
-        } else if (typeof item["分類"] === "string") {
-            // 如果只有一個分類且為字串
-            primaryCategories.add(item["分類"]);
+        if (item.primaryCategory) {
+            primaryCategories.add(item.primaryCategory);
         }
-        // --- 新增結束 ---
+        item.secondaryCategories.forEach(cat => secondaryCategories.add(cat));
     });
 
-    console.log("✅ 分類數據:", { levels: [...levels], primaryCategories: [...primaryCategories], secondaryCategories: [...secondaryCategories], alphabetMap });
+    // 渲染按鈕到對應的容器
+    alphabetContainer.innerHTML = [...alphabetSet].sort().map(letter => 
+        `<button class="category-button" onclick="toggleSentenceSelection('alphabet', '${letter}')">${letter}</button>`
+    ).join("");
 
-    // 生成 A-Z 按鈕（保留複選功能）
-    alphabetContainer.innerHTML = Object.keys(alphabetMap)
-        .filter(letter => alphabetMap[letter].length > 0)
-        .map(letter => `<button class="category-button" onclick="toggleSentenceSelection('alphabet', '${letter}')">${letter}</button>`)
-        .join("");
-    console.log("📌 A-Z buttons HTML:", alphabetContainer.innerHTML);
+    primaryContainer.innerHTML = [...primaryCategories].map(c =>
+        `<button class="category-button" onclick="toggleSentenceSelection('primaryCategories', '${c}')">${c}</button>`
+    ).join("");
 
-    // 生成分類按鈕（主分類 + 次分類）
-// q_sentence.js 中的更新後程式碼
-
-
-    // 生成分類按鈕（主分類 + 次分類）
-    categoryContainer.innerHTML = `
-        <h3>主分類</h3>
-        ${[...primaryCategories].map(c =>
-            `<button class="category-button" onclick="toggleSentenceSelection('primaryCategories', '${c}')">${c}</button>`
-        ).join("")}
-        <h3>次分類</h3>
-        ${[...secondaryCategories].map(c =>
-            `<button class="category-button" onclick="toggleSentenceSelection('secondaryCategories', '${c}')">${c}</button>`
-        ).join("")}
-        <h3>特殊篩選</h3>
+    secondaryContainer.innerHTML = [...secondaryCategories].map(c =>
+        `<button class="category-button" onclick="toggleSentenceSelection('secondaryCategories', '${c}')">${c}</button>`
+    ).join("");
+    
+    specialContainer.innerHTML = `
         <button class="category-button" onclick="toggleSentenceSelection('special', 'important')">重要句子</button>
         <button class="category-button" onclick="toggleSentenceSelection('special', 'incorrect')">錯誤句子</button>
         <button class="category-button" onclick="toggleSentenceSelection('special', 'checked')">已經checked 句子</button>
     `;
 
-    // 【*** 修正點 ***】
-    // 將 A-Z 分類容器插入到 "Sentence Quiz" 按鈕容器的後面
-    let sentenceQuizCategories = document.getElementById("sentenceQuizCategories");
-    let buttonContainer = sentenceQuizCategories.querySelector(".button-container");
-    // 確保插入位置正確
-    if (buttonContainer) {
-        // 使用 .after() 將字母按鈕容器插入到按鈕容器之後
-        buttonContainer.after(alphabetContainer);
-    } else {
-        // 如果找不到按鈕容器，作為備用方案，將其附加到末尾
-        sentenceQuizCategories.appendChild(alphabetContainer);
-    }
-
-
+    levelContainer.innerHTML = [...levels].map(l =>
+        `<button class="category-button" onclick="toggleSentenceSelection('levels', '${l}')">${l}</button>`
+    ).join("");
+    
     // 恢復已選狀態
-    document.querySelectorAll(".category-button").forEach(button => {
-        const typeMatch = button.onclick.toString().match(/toggleSentenceSelection\('(\w+)'/);
-        const valueMatch = button.onclick.toString().match(/toggleSentenceSelection\('\w+', '([^']+)'\)/);
+    document.querySelectorAll("#sentenceQuizCategories .category-button").forEach(button => {
+        const onclickAttr = button.getAttribute('onclick');
+        const typeMatch = onclickAttr.match(/toggleSentenceSelection\('(\w+)'/);
+        const valueMatch = onclickAttr.match(/,\s*'([^']+)'\)/);
         if (typeMatch && valueMatch) {
             const type = typeMatch[1];
             const value = valueMatch[1];
-            if (selectedSentenceFilters[type].has(value)) {
+            if (selectedSentenceFilters[type] && selectedSentenceFilters[type].has(value)) {
                 button.classList.add("selected");
             }
         }
@@ -1131,7 +1090,7 @@ document.addEventListener("DOMContentLoaded", function () {
         restoreQuizResult();
     } else {
         console.log("ℹ️ 正常載入 quiz.html");
-        document.getElementById("mainMenu").style.display = "block";
+        // The line trying to access "mainMenu" has been removed.
     }
 
     document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);

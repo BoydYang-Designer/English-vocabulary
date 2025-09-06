@@ -22,20 +22,58 @@
                 <button id="startFilteredQuizBtn" class="button">Word Quiz</button>
                 <button id="startRewordQuizBtn" class="button">Reword Quiz</button> 
             </div>
-            <div class="alphabet-container" id="alphabetButtons"></div>
-            <div class="category-container" id="categoryButtons"></div>
-            <div class="level-container" id="levelButtons"></div>
-            <div id="checkedCategory"></div>
-        </div>
+            <div class="collapsible-section-wrapper">
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">字母分類</button>
+                    <div class="collapsible-content" id="alphabetButtons"></div>
+                </div>
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">主分類</button>
+                    <div class="collapsible-content" id="primaryCategoryButtons"></div>
+                </div>
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">次分類</button>
+                    <div class="collapsible-content" id="secondaryCategoryButtons"></div>
+                </div>
+                 <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">特殊分類</button>
+                    <div class="collapsible-content" id="specialCategoryButtons"></div>
+                </div>
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">等級分類</button>
+                    <div class="collapsible-content" id="levelButtons"></div>
+                </div>
+            </div>
+            </div>
 
         <div id="sentenceQuizCategories" style="display: none;">
             <div class="button-container">
                 <button id="startSentenceQuizBtn" class="button">Sentense Quiz</button>
                 <button id="startReorganizeQuizBtn" class="button">Reorganize Quiz</button>
             </div>
-            <div class="category-container" id="sentenceCategoryButtons"></div>
-            <div class="level-container" id="sentenceLevelButtons"></div>
-        </div>
+             <div class="collapsible-section-wrapper">
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">字母分類</button>
+                    <div class="collapsible-content" id="sentenceAlphabetButtons"></div>
+                </div>
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">主分類</button>
+                    <div class="collapsible-content" id="sentencePrimaryCategoryButtons"></div>
+                </div>
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">次分類</button>
+                    <div class="collapsible-content" id="sentenceSecondaryCategoryButtons"></div>
+                </div>
+                 <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">特殊分類</button>
+                    <div class="collapsible-content" id="sentenceSpecialCategoryButtons"></div>
+                </div>
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">等級分類</button>
+                    <div class="collapsible-content" id="sentenceLevelButtons"></div>
+                </div>
+            </div>
+            </div>
 
         <div id="reorganizeQuizArea" style="display: none;">
             <button id="cancelReorganizeQuizBtn" class="back-button" onclick="returnToSentenceCategorySelection()">Cancel</button>

@@ -19,6 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const show = params.get("show");
 
+    // ▼▼▼ 新增：加入收合/展開功能 ▼▼▼
+    document.querySelectorAll(".collapsible-header").forEach(button => {
+        button.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+
     const sentenceButton = document.getElementById("sentencePageBtn");
     if (sentenceButton) {
         sentenceButton.addEventListener("click", function () {
@@ -280,35 +293,52 @@ function toggleWrongSelection() {
     quizWords = filteredWrongWords;
     filterQuizWords(null); // 傳遞 null，確保進入選擇介面
 }
+
 function generateMultiSelectButtons() {
+    // 字母分類
     let alphabetContainer = document.getElementById("alphabetButtons");
-    alphabetContainer.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter =>
-        `<button class='category-button' onclick='toggleSelection("letters", "${letter}")'>${letter}</button>`
-    ).join("");
+    if(alphabetContainer) {
+        alphabetContainer.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter =>
+            `<button class='category-button' onclick='toggleSelection("letters", "${letter}")'>${letter}</button>`
+        ).join("");
+    }
 
-    // 修改：扁平化所有分類，然後去重
-let primaryCategories = [...new Set(wordsData.map(w => w["分類"][0] || "未分類"))];
-let secondaryCategories = [...new Set(wordsData.flatMap(w => w["分類"].slice(1)).filter(c => c))];
+    // 主分類和次分類
+    let primaryCategories = [...new Set(wordsData.map(w => w["分類"][0] || "未分類").filter(c => c))];
+    let secondaryCategories = [...new Set(wordsData.flatMap(w => w["分類"].slice(1)).filter(c => c))];
 
-let categoryContainer = document.getElementById("categoryButtons");
-categoryContainer.innerHTML = `
-    <h3>主分類</h3>
-    ${primaryCategories.map(c =>
-        `<button class='category-button' onclick='toggleSelection("primaryCategories", "${c}")'>${c}</button>`
-    ).join(" ")}
-    <h3>次分類</h3>
-    ${secondaryCategories.map(c =>
-        `<button class='category-button' onclick='toggleSelection("secondaryCategories", "${c}")'>${c}</button>`
-    ).join(" ")}
-`;
+    let primaryContainer = document.getElementById("primaryCategoryButtons");
+    if(primaryContainer) {
+        primaryContainer.innerHTML = primaryCategories.map(c =>
+            `<button class='category-button' onclick='toggleSelection("primaryCategories", "${c}")'>${c}</button>`
+        ).join(" ");
+    }
+
+    let secondaryContainer = document.getElementById("secondaryCategoryButtons");
+    if(secondaryContainer) {
+        secondaryContainer.innerHTML = secondaryCategories.map(c =>
+            `<button class='category-button' onclick='toggleSelection("secondaryCategories", "${c}")'>${c}</button>`
+        ).join(" ");
+    }
     
-    // 更新按鈕的 onclick 事件
-    let checkedContainer = document.getElementById("checkedCategory");
-    checkedContainer.innerHTML = `
-        <button class='category-button' onclick='toggleCheckedSelection()'>Checked 單字</button>
-        <button class='category-button' onclick='toggleImportantFilter()'>重要單字</button>
-        <button class='category-button' onclick='toggleWrongFilter()'>錯誤單字</button>
-    `;
+    // 特殊分類
+    let specialContainer = document.getElementById("specialCategoryButtons");
+    if(specialContainer) {
+        specialContainer.innerHTML = `
+            <button class='category-button' onclick='toggleCheckedSelection()'>Checked 單字</button>
+            <button class='category-button' onclick='toggleImportantFilter()'>重要單字</button>
+            <button class='category-button' onclick='toggleWrongFilter()'>錯誤單字</button>
+        `;
+    }
+
+    // 等級分類
+    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
+    let levelContainer = document.getElementById("levelButtons");
+    if(levelContainer) {
+        levelContainer.innerHTML = levels.map(l => 
+            `<button class='category-button' onclick='toggleSelection("levels", "${l}")'>${l}</button>`
+        ).join("");
+    }
 }
 
 function toggleImportantFilter() {
