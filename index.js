@@ -597,16 +597,18 @@ function startAutoPlay() {
                 return wordsData.find(w => (w.Words || w.word || w["單字"]).toLowerCase() === wordText.toLowerCase());
             })
             .filter(Boolean);
-    } else if (lastWordListType === "letter" || lastWordListType === "category" || lastWordListType === "level") {
-        window.currentWordList = wordsData.filter(w => {
-            let word = w.Words || w.word || w["單字"];
-            let category = w["分類"] || "未分類";
-            let level = w["等級"] || "未分類";
-            if (lastWordListType === "letter") return word ? word.toLowerCase().startsWith(lastWordListValue.toLowerCase()) : false;
-            if (lastWordListType === "category") return category === lastWordListValue;
-            if (lastWordListType === "level") return level === lastWordListValue;
-            return false;
-        });
+  } else if (lastWordListType === "letter" || lastWordListType === "category" || lastWordListType === "level" || lastWordListType === "primary_category" || lastWordListType === "secondary_category") {
+    window.currentWordList = wordsData.filter(w => {
+        let word = w.Words || w.word || w["單字"];
+        let category = w["分類"] || []; // 改為空陣列以策安全
+        let level = w["等級"] || "未分類";
+        if (lastWordListType === "letter") return word ? word.toLowerCase().startsWith(lastWordListValue.toLowerCase()) : false;
+        if (lastWordListType === "primary_category") return category[0] === lastWordListValue; // 新增主分類判斷
+        if (lastWordListType === "secondary_category") return category.slice(1).includes(lastWordListValue); // 新增次分類判斷
+        if (lastWordListType === "category") return category.includes(lastWordListValue); // 原有的 category 判斷
+        if (lastWordListType === "level") return level === lastWordListValue;
+        return false;
+    });
     } else {
         console.log("⚠️ 此列表類型不支援自動播放:", lastWordListType);
         return;
@@ -1273,7 +1275,9 @@ function updateAutoPlayButton() {
         // 第三層：更新 autoPlayDetailsBtn、playAudioBtn 和 pauseResumeBtn
         if (autoPlayDetailsBtn) {
             if (isAutoPlaying) {
-                autoPlayDetailsBtn.textContent = isPaused ? "繼續播放" : "停止播放";
+                // 【*** 修改部分開始 ***】
+                autoPlayDetailsBtn.textContent = isPaused ? "繼續自動撥放內文" : "暫停撥放";
+                // 【*** 修改部分結束 ***】
                 autoPlayDetailsBtn.classList.add("playing");
             } else {
                 autoPlayDetailsBtn.textContent = "內文自動播放";
