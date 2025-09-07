@@ -9,8 +9,27 @@ let isPaused = false;
 let currentAudio = new Audio();
 window.currentWordList = [];
 
+function showNotification(message, type = 'success') {
+    const container = document.getElementById('notification-container');
+    if (!container) return;
+
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+
+    container.appendChild(toast);
+
+    // 4秒後自動移除
+    setTimeout(() => {
+        toast.remove();
+    }, 4000);
+}
 
 document.addEventListener("DOMContentLoaded", function () {
+    // ▼▼▼ 新增這一行 ▼▼▼
+    const loadingOverlay = document.getElementById('loading-overlay');
+    // ▲▲▲ 新增結束 ▲▲▲
+
     // 設置初始顯示狀態
     document.getElementById("searchContainer").style.display = "block";
     document.getElementById("startQuizBtn").style.display = "block";
@@ -52,18 +71,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
+     fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
         .then(res => res.json())
         .then(data => {
             wordsData = data["New Words"] || [];
-            // 修改：確保每個單字的分類是陣列（預防舊資料或格式錯誤）
+            
             wordsData.forEach(w => {
                 if (typeof w["分類"] === "string") {
-                    w["分類"] = [w["分類"]];  // 如果是單字串，轉為陣列
+                    w["分類"] = [w["分類"]];
                 } else if (!Array.isArray(w["分類"])) {
-                    w["分類"] = [];  // 如果無效，設為空陣列
+                    w["分類"] = [];
                 }
             });
+
+            // 資料成功載入後的操作
+            loadingOverlay.style.opacity = '0'; // 開始淡出
+            setTimeout(() => {
+                loadingOverlay.style.display = 'none'; // 淡出後隱藏
+            }, 300);
+            showNotification('✅ 資料載入完成！', 'success');
+
             console.log("✅ JSON 載入成功:", wordsData);
 
             // 確保分類和等級按鈕顯示
@@ -98,6 +125,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 300);
         })
         .catch(err => {
+            // 資料載入失敗後的操作
+            loadingOverlay.style.opacity = '0';
+            setTimeout(() => {
+                loadingOverlay.style.display = 'none';
+            }, 300);
+            showNotification('❌ 資料載入失敗，請檢查網路連線。', 'error');
             console.error("❌ 讀取 JSON 失敗:", err);
         });
 });

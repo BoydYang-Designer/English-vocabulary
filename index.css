@@ -620,3 +620,94 @@ font-style: italic; /* 讓範例文字變斜體 (可選) */
   color: #007bff; /* 可以選擇一個你喜歡的顏色，例如藍色 */
   /* color: #e60023; */ /* 或是稍紅的顏色 */
 }
+
+/* ▼▼▼ 新增的載入指示器與通知系統樣式 ▼▼▼ */
+
+/* 載入指示器 - 遮罩層 */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex; /* 使用 flexbox 垂直和水平居中 */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 讓 spinner 和文字垂直排列 */
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+    opacity: 1; /* 預設可見 */
+}
+
+/* 載入指示器 - 旋轉動畫 */
+.loading-spinner {
+    border: 5px solid #f3f3f3; /* 淺灰色軌道 */
+    border-top: 5px solid #3498db; /* 藍色旋轉部分 */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1.5s linear infinite;
+}
+
+/* 載入指示器 - 提示文字 */
+.loading-text {
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 通知系統 - 容器 */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    width: calc(100% - 40px);
+    max-width: 350px;
+}
+
+/* 通知系統 - 提示框 (Toast) */
+.toast {
+    color: white;
+    padding: 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 0.5s forwards, fadeOut 0.5s 3s forwards;
+    font-weight: bold;
+}
+
+.toast.success {
+    background-color: #28a745; /* 綠色 */
+}
+
+.toast.error {
+    background-color: #dc3545; /* 紅色 */
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+/* ▲▲▲ 新增的樣式到此結束 ▲▲▲ */
