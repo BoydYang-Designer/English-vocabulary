@@ -335,9 +335,12 @@ function showWords(type, value) {
             item.className = 'word-item-container';
             if (isChecked) item.classList.add("checked");
 
-            item.innerHTML = `
+              item.innerHTML = `
                 <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${wordText}", this)' ${isImportant ? "checked" : ""}>
                 <p class='word-item' data-word="${wordText}">${wordText}</p>
+                <button class='play-word-btn' onclick='playSingleWord(event, "${wordText}")'>
+                    <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play">
+                </button>
                 <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
                     <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
                 </button>
@@ -398,7 +401,11 @@ function startListAutoPlay() {
 
     isAutoPlaying = true;
     isPaused = false;
-    window.currentIndex = 0;
+    // 如果 currentIndex 未被設定，或已超出範圍，則從 0 開始
+    // 這允許 playSingleWord 函式預先設定播放起點
+    if (typeof window.currentIndex === 'undefined' || window.currentIndex >= window.currentWordList.length) {
+        window.currentIndex = 0;
+    }
 
     // 測試音訊播放權限
     let testAudio = new Audio();
@@ -410,6 +417,48 @@ function startListAutoPlay() {
     });
 
     playNextWord(); // 直接開始播放，移除預載
+}
+
+// 新增此函式
+function playSingleWord(event, wordText) {
+    event.stopPropagation(); // 阻止事件冒泡，避免觸發進入單字詳情頁
+
+    // 如果主自動播放在運行，先停止它
+    if (isAutoPlaying) {
+        isAutoPlaying = false;
+        isPaused = false;
+        updateAutoPlayButton();
+    }
+    if (currentAudio && !currentAudio.paused) {
+        currentAudio.pause();
+    }
+
+    // 在當前列表中找到該單字的索引
+    const wordIndex = window.currentWordList.findIndex(w => (w.Words || w.word || w["單字"]).trim().toLowerCase() === wordText.trim().toLowerCase());
+    if (wordIndex === -1) {
+        console.error("單獨播放失敗: 在列表中找不到單字:", wordText);
+        return;
+    }
+
+    // 設定全域索引，這樣主「自動播放」就會從這裡開始
+    window.currentIndex = wordIndex;
+
+    // 高亮正在播放的單字
+    highlightWord(wordText);
+
+    // 播放音檔
+    const audioFile = `${encodeURIComponent(wordText)}.mp3`;
+    currentAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`;
+
+    currentAudio.play().catch(err => {
+        console.error(`單獨播放 "${wordText}" 失敗:`, err);
+        removeHighlight(wordText); // 播放失敗時取消高亮
+    });
+
+    // 播放結束後，取消高亮
+    currentAudio.onended = () => {
+        removeHighlight(wordText);
+    };
 }
 
 function playNextWord() {
@@ -424,7 +473,16 @@ function playNextWord() {
     let wordText = (wordObj.Words || wordObj.word || wordObj["單字"] || "").trim();
     console.log(`▶️ 開始播放: ${wordText}, 索引: ${window.currentIndex}`);
 
-    highlightWord(wordText);
+    highlightWord(wordText); // <<-- 新增這一行來觸發高亮
+
+    // 自動滾動到正在播放的單字
+    const itemElement = document.querySelector(`.word-item[data-word="${wordText}"]`)?.closest('.word-item-container');
+    if (itemElement) {
+        itemElement.scrollIntoView({
+            behavior: 'smooth', // 平滑滾動
+            block: 'center'    // 將元素置於可視區域的中央
+        });
+    }
 
     let audioFile = `${encodeURIComponent(wordText)}.mp3`;
     currentAudio.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`;
@@ -830,9 +888,12 @@ function showWrongWords() {
             item.className = "word-item-container";
             if (isChecked) item.classList.add("checked");
 
-            item.innerHTML = `
+              item.innerHTML = `
                 <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${wordText}", this)' ${isImportant ? "checked" : ""}>
                 <p class='word-item' data-word="${wordText}">${wordText}</p>
+                <button class='play-word-btn' onclick='playSingleWord(event, "${wordText}")'>
+                    <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play">
+                </button>
                 <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
                     <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
                 </button>
@@ -1083,7 +1144,8 @@ meaning = meaning.replace(highlightRegex, (match) => `<span class="highlight-wor
     document.getElementById("chineseContainer").innerHTML = chinese;
     document.getElementById("meaningContainer").innerHTML = meaning;
     document.getElementById("wordTitle").textContent = word.Words;
-
+    document.getElementById('tempQuizBackButton')?.remove();
+    
     displayNote();
     updateBackButton();
 
@@ -1259,7 +1321,8 @@ function updateBackButton() {
 }
 
 function returnToQuiz() {
-    console.log("✅ 返回 quiz.html 測驗結果頁面");
+    // 這個函數的功能很簡單：跳轉回 quiz.html，並帶上參數告訴它要恢復結果
+    console.log("✅ 準備返回測驗結果頁面...");
     window.location.href = 'quiz.html?returning=true';
 }
 

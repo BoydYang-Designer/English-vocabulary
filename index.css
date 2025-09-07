@@ -424,6 +424,45 @@ height: 28px;
 line-height: 28px;
 }
 
+.word-item-container {
+    display: flex;
+    width: 100%;
+    margin: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.play-word-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 5px; /* 與旁邊元素保持間距 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-word-btn img {
+    width: 22px;
+    height: 22px;
+    opacity: 1; /* 顏色變淺後，可以把透明度設回 1，讓它更清晰 */
+    transition: opacity 0.2s, transform 0.2s, filter 0.2s; /* 加入 filter 的過渡動畫 */
+    filter: brightness(0) invert(0.8); /* 將圖示改為淺灰色 */
+}
+
+.play-word-btn:hover img {
+    opacity: 1; 
+    transform: scale(1.15); 
+    filter: brightness(0) invert(0.5); /* 滑鼠懸停時，變成深一點的灰色 */
+}
+
+
+
+
 /* 勾選按鈕 */
 .check-button {
 background: none;
@@ -514,6 +553,11 @@ background-color: #00BFFF !important;
 background-color: #00BFFF; /* 亮藍色 */
 color: white; /* 確保文字可見 */
 }
+
+.word-item-container.playing .word-item {
+    color: white;
+}
+
 /* 分類標題 */
 .category-title {
 text-align: center;
