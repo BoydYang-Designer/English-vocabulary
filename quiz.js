@@ -15,11 +15,18 @@ let isDataLoaded = false;
 let quizResults = [];
 const baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/";
 
+// --- 新增：測驗歷史紀錄 ---
+let wordQuizHistory = {};
+
 document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const show = params.get("show");
 
-    // ▼▼▼ 新增：加入收合/展開功能 ▼▼▼
+    const loadingOverlay = document.getElementById('loadingOverlay');
+
+    // 載入測驗歷史
+    wordQuizHistory = JSON.parse(localStorage.getItem('wordQuizHistory')) || {};
+
     document.querySelectorAll(".collapsible-header").forEach(button => {
         button.addEventListener("click", function() {
             this.classList.toggle("active");
@@ -41,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
         .then(res => {
-            // 新增：檢查網路請求是否成功，提供更明確的錯誤訊息
             if (!res.ok) {
                 throw new Error(`HTTP error! status: ${res.status}`);
             }
@@ -58,26 +64,24 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             isDataLoaded = true;
             console.log("✅ 單字資料已載入");
+            console.log("📖 已載入單字測驗歷史:", Object.keys(wordQuizHistory).length, "筆");
+            
+            // 顯示成功提示
+            showToast("✅ 資料載入成功！", "success");
 
-            // --- 核心修正：將所有頁面初始化邏輯移到這裡 ---
-            // 這個區塊確保了所有操作都在資料載入後才執行
-
+            // --- 原有的邏輯繼續 ---
             if (params.get('returning') === 'true' && localStorage.getItem("currentQuizResults")) {
-                // 從單字詳情頁返回，恢復測驗結果
                 quizResults = JSON.parse(localStorage.getItem("currentQuizResults"));
                 restoreQuizResults();
             } else if (show === "categories") {
-                // 高亮「單字測驗」按鈕並顯示分類
                 const wordQuizBtn = document.getElementById('wordQuizBtn');
                 if(wordQuizBtn) wordQuizBtn.style.backgroundColor = '#28a745';
                 showQuizCategories();
             } else if (show === "sentenceCategories") {
-                // 高亮「句子測驗」按鈕並顯示分類
                 const startQuizBtn = document.getElementById('startQuizBtn');
                 if(startQuizBtn) startQuizBtn.style.backgroundColor = '#28a745';
                 showSentenceQuizCategories();
             } else {
-                // 如果 URL 沒有指定，預設顯示「單字測驗」
                 const wordQuizBtn = document.getElementById('wordQuizBtn');
                 if(wordQuizBtn) wordQuizBtn.style.backgroundColor = '#28a745';
                 showQuizCategories();
@@ -85,52 +89,56 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(err => {
             console.error("❌ 讀取 JSON 失敗:", err);
-            // 提示更詳細的錯誤訊息
-            alert("⚠️ 無法載入單字資料，請檢查您的網路連線或重新整理頁面。");
+            // 顯示錯誤提示，並移除原有的 alert
+            showToast("⚠️ 無法載入單字資料，請檢查網路連線。", "error");
+        })
+        .finally(() => {
+            // 無論成功或失敗，都在最後隱藏載入畫面
+            if (loadingOverlay) {
+                loadingOverlay.style.opacity = '0';
+                // 等待淡出動畫結束後再徹底隱藏，避免閃爍
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 500);
+            }
         });
 
     initializeStartQuizButton();
 
-        // 監聽鍵盤事件，按下空白鍵播放音檔
-        document.addEventListener("keydown", function(event) {
-            if (event.key === " " || event.key === "Spacebar") { // 兼容不同瀏覽器的空白鍵鍵值
-                event.preventDefault();  // 防止空白鍵觸發其他瀏覽器行為（如滾動頁面）
-                if (currentWord) {
-                    playAudioForWord(currentWord); // 播放當前單字的音檔
-                }
+    document.addEventListener("keydown", function(event) {
+        if (event.key === " " || event.key === "Spacebar") {
+            event.preventDefault();
+            if (currentWord) {
+                playAudioForWord(currentWord);
             }
-    
-            // 當在輸入框中時，按下箭頭鍵控制焦點跳轉
-            let activeInput = document.querySelector("#wordInput input:focus");
-    
-            // 左箭頭鍵：移動焦點到前一個格子（如果不是已經是第一個格子）
-            if (activeInput && event.key === "ArrowLeft") {
+        }
+
+        let activeInput = document.querySelector("#wordInput input:focus");
+
+        if (activeInput && event.key === "ArrowLeft") {
+            let previousInput = activeInput.previousElementSibling;
+            if (previousInput) {
+                previousInput.focus();
+            }
+        }
+
+        if (activeInput && event.key === "ArrowRight") {
+            let nextInput = activeInput.nextElementSibling;
+            if (nextInput) {
+                nextInput.focus();
+            }
+        }
+
+        if (event.key === "Backspace") {
+            if (activeInput && activeInput.value === "") {
                 let previousInput = activeInput.previousElementSibling;
                 if (previousInput) {
-                    previousInput.focus(); // 移動焦點到前一個輸入框
+                    previousInput.focus();
                 }
             }
-    
-            // 右箭頭鍵：移動焦點到下一個格子（如果不是已經是最後一個格子）
-            if (activeInput && event.key === "ArrowRight") {
-                let nextInput = activeInput.nextElementSibling;
-                if (nextInput) {
-                    nextInput.focus(); // 移動焦點到下一個輸入框
-                }
-            }
-    
-            // 監聽刪除鍵（Backspace）處理
-            if (event.key === "Backspace") {
-                if (activeInput && activeInput.value === "") {
-                    // 如果當前格子是空的，跳回上一格
-                    let previousInput = activeInput.previousElementSibling;
-                    if (previousInput) {
-                        previousInput.focus(); // 移動焦點到前一個輸入框
-                    }
-                }
-            }
-        });
+        }
     });
+});
     
     function playAudioForWord(word) {
         let audioLink = `${baseURL}${word}.mp3`;
@@ -183,9 +191,10 @@ function toggleSelection(type, value) {
 
 function toggleCheckedSelection() {
     selectedFilters.checked = !selectedFilters.checked;
-    let checkedButton = document.querySelector("#checkedCategory button");
+    // 將 #checkedCategory button 改為 #specialCategoryButtons button:nth-child(1)
+    let checkedButton = document.querySelector("#specialCategoryButtons button:nth-child(1)"); 
     if (selectedFilters.checked) {
-        checkedButton.classList.add("selected"); // 加入選擇樣式
+        checkedButton.classList.add("selected");
     } else {
         checkedButton.classList.remove("selected");
     }
@@ -343,7 +352,8 @@ function generateMultiSelectButtons() {
 
 function toggleImportantFilter() {
     selectedFilters.important = !selectedFilters.important;
-    let importantButton = document.querySelector("#checkedCategory button:nth-child(2)"); // 假設「重要單字」是第二個按鈕
+    // 將 #checkedCategory 改為 #specialCategoryButtons
+    let importantButton = document.querySelector("#specialCategoryButtons button:nth-child(2)"); 
     if (selectedFilters.important) {
         importantButton.classList.add("selected");
     } else {
@@ -353,7 +363,8 @@ function toggleImportantFilter() {
 
 function toggleWrongFilter() {
     selectedFilters.wrong = !selectedFilters.wrong;
-    let wrongButton = document.querySelector("#checkedCategory button:nth-child(3)"); // 假設「錯誤單字」是第三個按鈕
+    // 將 #checkedCategory 改為 #specialCategoryButtons
+    let wrongButton = document.querySelector("#specialCategoryButtons button:nth-child(3)"); 
     if (selectedFilters.wrong) {
         wrongButton.classList.add("selected");
     } else {
@@ -409,37 +420,42 @@ function startQuiz() {
         let isImportant = localStorage.getItem(`important_${word}`) === "true";
         let isWrong = JSON.parse(localStorage.getItem("wrongWords") || "[]").includes(word);
 
-        // 檢查字母
         if (selectedFilters.letters.size > 0 && ![...selectedFilters.letters].some(letter => word.toLowerCase().startsWith(letter.toLowerCase()))) return false;
-
-        // 檢查主分類
         let primary = category[0] || "未分類";
         if (selectedFilters.primaryCategories.size > 0 && !selectedFilters.primaryCategories.has(primary)) return false;
-
-        // 檢查次分類
         let secondary = category.slice(1);
         if (selectedFilters.secondaryCategories.size > 0 && !secondary.some(c => selectedFilters.secondaryCategories.has(c))) return false;
-
-        // 檢查等級
         if (selectedFilters.levels.size > 0 && !selectedFilters.levels.has(level)) return false;
-
-        // 檢查其他條件
         if (selectedFilters.checked && !isChecked) return false;
         if (selectedFilters.important && !isImportant) return false;
         if (selectedFilters.wrong && !isWrong) return false;
-
         return true;
     });
 
-    console.log("📌 過濾結果:", filteredWords.map(w => w.Words));
-    quizWords = filteredWords;
-    if (quizWords.length === 0) {
+    if (filteredWords.length === 0) {
         console.warn("⚠️ 沒有符合條件的單字");
         alert("⚠️ 沒有符合條件的單字，請重新選擇篩選條件。");
-        document.getElementById("quizCategories").style.display = "block";
-        document.getElementById("quizArea").style.display = "none";
         return;
     }
+
+    // --- 核心修改：排序與篩選 ---
+    // 1. 根據測驗次數排序 (次數少的優先)
+    filteredWords.sort((a, b) => {
+        const countA = wordQuizHistory[a.Words] || 0;
+        const countB = wordQuizHistory[b.Words] || 0;
+        return countA - countB;
+    });
+
+    // 2. 隨機打亂排序，增加變化性
+    for (let i = filteredWords.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [filteredWords[i], filteredWords[j]] = [filteredWords[j], filteredWords[i]];
+    }
+
+    // 3. 最多只取 10 個單字
+    quizWords = filteredWords.slice(0, 10);
+    console.log(`✅ 本次測驗單字數: ${quizWords.length}`, quizWords.map(w => w.Words));
+
 
     currentWord = null;
     quizResults = [];
@@ -447,6 +463,134 @@ function startQuiz() {
     document.getElementById("quizCategories").style.display = "none";
     document.getElementById("quizArea").style.display = "block";
     loadNextWord();
+}
+
+
+// 載入下一個單字 (主要修改處)
+function loadNextWord() {
+    if (quizWords.length === 0) {
+        finishQuiz();
+        return;
+    }
+
+    let wordData = quizWords.shift(); // 從陣列開頭取出，確保優先測驗次數少的
+    currentWord = wordData.Words;
+    currentAudio = `${baseURL}${currentWord}.mp3`;
+
+    // --- 核心修改：更新歷史紀錄 ---
+    wordQuizHistory[currentWord] = (wordQuizHistory[currentWord] || 0) + 1;
+    localStorage.setItem('wordQuizHistory', JSON.stringify(wordQuizHistory));
+    console.log(`📈 更新測驗紀錄: ${currentWord}, 次數: ${wordQuizHistory[currentWord]}`);
+
+
+    let wordHintContainer = document.getElementById("wordHint");
+    let wordInputContainer = document.getElementById("wordInput");
+
+    wordInputContainer.innerHTML = "";
+    wordHintContainer.innerHTML = "";
+
+    let audio = new Audio(currentAudio);
+    audio.play();
+
+    for (let i = 0; i < currentWord.length; i++) {
+        let char = currentWord[i];
+        if (char === " " || char === "-") {
+            let spanElement = document.createElement("span");
+            spanElement.innerText = char;
+            spanElement.classList.add("non-input-box");
+            wordInputContainer.appendChild(spanElement);
+            wordHintContainer.innerHTML += char;
+        } else {
+            let inputElement = document.createElement("input");
+            inputElement.type = "text";
+            inputElement.maxLength = "1";
+            inputElement.classList.add("letter-box");
+            inputElement.addEventListener("input", function () {
+                if (inputElement.value.length === 1) {
+                    let nextInput = inputElement.nextElementSibling;
+                    while (nextInput && nextInput.tagName === "SPAN") {
+                        nextInput = nextInput.nextElementSibling;
+                    }
+                    if (nextInput) {
+                        nextInput.focus();
+                    }
+                }
+            });
+            wordInputContainer.appendChild(inputElement);
+            if (i === 0 || i === currentWord.length - 1) {
+                wordHintContainer.innerHTML += char;
+            } else {
+                wordHintContainer.innerHTML += "_ ";
+            }
+        }
+    }
+
+    let firstInput = wordInputContainer.querySelector("input");
+    if (firstInput) firstInput.focus();
+}
+
+
+// 載入下一個單字 (主要修改處)
+function loadNextWord() {
+    if (quizWords.length === 0) {
+        finishQuiz();
+        return;
+    }
+
+    let wordData = quizWords.shift(); // 從陣列開頭取出，確保優先測驗次數少的
+    currentWord = wordData.Words;
+    currentAudio = `${baseURL}${currentWord}.mp3`;
+
+    // --- 核心修改：更新歷史紀錄 ---
+    wordQuizHistory[currentWord] = (wordQuizHistory[currentWord] || 0) + 1;
+    localStorage.setItem('wordQuizHistory', JSON.stringify(wordQuizHistory));
+    console.log(`📈 更新測驗紀錄: ${currentWord}, 次數: ${wordQuizHistory[currentWord]}`);
+
+
+    let wordHintContainer = document.getElementById("wordHint");
+    let wordInputContainer = document.getElementById("wordInput");
+
+    wordInputContainer.innerHTML = "";
+    wordHintContainer.innerHTML = "";
+
+    let audio = new Audio(currentAudio);
+    audio.play();
+
+    for (let i = 0; i < currentWord.length; i++) {
+        let char = currentWord[i];
+        if (char === " " || char === "-") {
+            let spanElement = document.createElement("span");
+            spanElement.innerText = char;
+            spanElement.classList.add("non-input-box");
+            wordInputContainer.appendChild(spanElement);
+            wordHintContainer.innerHTML += char;
+        } else {
+            let inputElement = document.createElement("input");
+            inputElement.type = "text";
+            inputElement.maxLength = "1";
+            inputElement.classList.add("letter-box");
+            inputElement.addEventListener("input", function () {
+                if (inputElement.value.length === 1) {
+                    let nextInput = inputElement.nextElementSibling;
+                    while (nextInput && nextInput.tagName === "SPAN") {
+                        nextInput = nextInput.nextElementSibling;
+                    }
+                    if (nextInput) {
+                        nextInput.focus();
+                    }
+                }
+            });
+            wordInputContainer.appendChild(inputElement);
+            if (i === 0 || i === currentWord.length - 1) {
+                wordHintContainer.innerHTML += char;
+            } else {
+                wordHintContainer.innerHTML += "_ ";
+            }
+        }
+    }
+
+    let firstInput = wordInputContainer.querySelector("input");
+    if (firstInput) firstInput.focus();
 }
 
 function normalizeText(text) {
@@ -1225,8 +1369,23 @@ function deleteSelectedImportantWords() {
 }
 
 
-
-
-
 // 取消按鈕返回上一頁
 document.getElementById("cancelBtn").addEventListener("click", returnToCategorySelection);
+
+// ... 您檔案中其他的程式碼 ...
+
+// ✅ 新增：顯示提示框 (Toast Notification) 的函式
+function showToast(message, type = 'success') {
+    const toast = document.getElementById('toastNotification');
+    if (!toast) return;
+
+    toast.textContent = message;
+    toast.className = `show ${type}`; // 加上 show 和 success/error class
+
+    // 3 秒後自動隱藏
+    setTimeout(() => {
+        toast.className = toast.className.replace('show', '');
+    }, 3000);
+}
+
+// ... 確保這是檔案的最後一行，如果您的檔案結尾有 `}` 的話

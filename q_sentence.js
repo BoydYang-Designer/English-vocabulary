@@ -13,12 +13,14 @@ let importantSentences = []; // 延遲到 DOMContentLoaded 時載入
 let currentQuizSentences = []; // 新增變數來儲存本次測驗的句子
 let userConstructedSentences = [];
 
+let sentenceQuizHistory = {};
+
 let selectedSentenceFilters = {
     levels: new Set(),
     primaryCategories: new Set(),
     secondaryCategories: new Set(),
     alphabet: new Set(),
-    special: new Set() // 添加這行
+    special: new Set()
 };
 
 function getUserAnswer(index) {
@@ -26,8 +28,9 @@ function getUserAnswer(index) {
 }
 window.getUserAnswer = getUserAnswer;
 
-// 在 DOMContentLoaded 中動態載入所有變數
 document.addEventListener("DOMContentLoaded", function () {
+    // 載入句子測驗歷史
+    sentenceQuizHistory = JSON.parse(localStorage.getItem('sentenceQuizHistory')) || {};
 
     sentenceData = JSON.parse(localStorage.getItem("sentenceData")) || [];
     userAnswers = JSON.parse(localStorage.getItem("userAnswers")) || [];
@@ -42,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         importantSentences: importantSentences,
         currentQuizSentencesLength: currentQuizSentences.length
     });
+    console.log("📖 已載入句子測驗歷史:", Object.keys(sentenceQuizHistory).length, "筆");
 
     document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
 });
@@ -203,7 +207,6 @@ function toggleSentenceSelection(type, value) {
 }
 
 // 📌 開始測驗
-// 【q_sentence.js 檔案中請更新成此版本】
 function startSentenceQuiz() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("sentenceQuizArea").style.display = "block";
@@ -211,17 +214,13 @@ function startSentenceQuiz() {
     let filteredSentences = sentenceData.filter(item => {
         let levelMatch = selectedSentenceFilters.levels.size === 0 || selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
         let primaryCategoryMatch = selectedSentenceFilters.primaryCategories.size === 0 || selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
-        let secondaryCategoryMatch = selectedSentenceFilters.secondaryCategories.size === 0 || 
+        let secondaryCategoryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
                                      (item.secondaryCategories || []).some(cat => selectedSentenceFilters.secondaryCategories.has(cat));
         let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
-
-        // 【核心修改】新增特殊條件的篩選邏輯
         let specialMatch = selectedSentenceFilters.special.size === 0 ||
                            (selectedSentenceFilters.special.has('important') && localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
                            (selectedSentenceFilters.special.has('incorrect') && incorrectSentences.includes(item.Words)) ||
                            (selectedSentenceFilters.special.has('checked') && localStorage.getItem(`checked_sentence_${item.Words}`) === "true");
-
-        // 將 specialMatch 加入到最終的 return 條件中
         return levelMatch && primaryCategoryMatch && secondaryCategoryMatch && alphabetMatch && specialMatch;
     });
 
@@ -231,7 +230,13 @@ function startSentenceQuiz() {
         return;
     }
 
-    // 隨機排序並限制為 10 句
+    // --- 核心修改：排序與篩選 ---
+    filteredSentences.sort((a, b) => {
+        const countA = sentenceQuizHistory[a.Words] || 0;
+        const countB = sentenceQuizHistory[b.Words] || 0;
+        return countA - countB;
+    });
+
     for (let i = filteredSentences.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [filteredSentences[i], filteredSentences[j]] = [filteredSentences[j], filteredSentences[i]];
@@ -239,18 +244,16 @@ function startSentenceQuiz() {
 
     currentQuizSentences = filteredSentences.slice(0, 10);
     currentSentenceIndex = 0;
-    userAnswers = []; // 清空本次答案
+    userAnswers = [];
 
     console.log("✅ 本次測驗的句子數量:", currentQuizSentences.length);
     console.log("✅ 本次測驗的隨機句子:", currentQuizSentences.map(s => s.Words));
 
-    // 保存本次測驗的句子到 localStorage
     localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
 
-    // 載入第一題並自動播放
     setTimeout(() => {
         loadSentenceQuestion();
-        autoPlayAudio(); // ✅ 添加自動播放
+        autoPlayAudio();
     }, 100);
 }
 
@@ -267,6 +270,11 @@ function loadSentenceQuestion() {
         return;
     }
 
+      // --- 核心修改：更新歷史紀錄 ---
+    sentenceQuizHistory[sentenceObj.Words] = (sentenceQuizHistory[sentenceObj.Words] || 0) + 1;
+    localStorage.setItem('sentenceQuizHistory', JSON.stringify(sentenceQuizHistory));
+    console.log(`📈 更新測驗紀錄: ${sentenceObj.Words}, 次數: ${sentenceQuizHistory[sentenceObj.Words]}`);
+    
     // 原始句子
     let originalSentence = sentenceObj.句子;
     // 移除括號內容（例如 [=critique]）
@@ -387,26 +395,18 @@ function startReorganizeQuiz() {
     document.getElementById("reorganizeQuizArea").style.display = "block";
 
     let filteredSentences = sentenceData.filter(item => {
-        let levelMatch = selectedSentenceFilters.levels.size === 0 || 
+        let levelMatch = selectedSentenceFilters.levels.size === 0 ||
                          selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
-
         let primaryMatch = selectedSentenceFilters.primaryCategories.size === 0 ||
                            selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
-
         let secondaryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
                              item.secondaryCategories.some(c => selectedSentenceFilters.secondaryCategories.has(c));
-
-        let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || 
+        let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 ||
                             selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
-
         let specialMatch = selectedSentenceFilters.special.size === 0 ||
-                           (selectedSentenceFilters.special.has('important') && 
-                            localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
-                           (selectedSentenceFilters.special.has('incorrect') && 
-                            incorrectSentences.includes(item.Words)) ||
-                           (selectedSentenceFilters.special.has('checked') && 
-                            localStorage.getItem(`checked_sentence_${item.Words}`) === "true");
-
+                           (selectedSentenceFilters.special.has('important') && localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
+                           (selectedSentenceFilters.special.has('incorrect') && incorrectSentences.includes(item.Words)) ||
+                           (selectedSentenceFilters.special.has('checked') && localStorage.getItem(`checked_sentence_${item.Words}`) === "true");
         return levelMatch && primaryMatch && secondaryMatch && alphabetMatch && specialMatch;
     });
 
@@ -415,6 +415,13 @@ function startReorganizeQuiz() {
         returnToSentenceCategorySelection();
         return;
     }
+
+    // --- 核心修改：排序與篩選 ---
+    filteredSentences.sort((a, b) => {
+        const countA = sentenceQuizHistory[a.Words] || 0;
+        const countB = sentenceQuizHistory[b.Words] || 0;
+        return countA - countB;
+    });
 
     currentQuizSentences = filteredSentences.sort(() => Math.random() - 0.5).slice(0, 10);
     currentSentenceIndex = 0;
