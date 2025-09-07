@@ -7,6 +7,16 @@ body {
     padding: 0;
     background: #f9f9f9;
 }
+
+/* ▼▼▼ 新增這段 CSS ▼▼▼ */
+html, body {
+    /* 隱藏水平方向的滾動條 */
+    overflow-x: hidden;
+    /* 確保寬度不會超過螢幕 */
+    width: 100%;
+}
+/* ▲▲▲ 新增結束 ▲▲▲ */
+
 h1 {
 
     text-align: center;
@@ -367,7 +377,7 @@ h1 {
 /* 單字/句子項目容器 */
 .word-item-container {
     display: flex;
-    width: 100%;
+    width: 90%;
     margin: 5px;
     justify-content: space-between;
     align-items: center;
@@ -437,7 +447,6 @@ h1 {
         font-size: 16px;
         margin: 8px 0;
     }
-}
 
     .container {
         padding: 1px;
@@ -464,6 +473,8 @@ h1 {
         font-size: 16px;
     }
 
+    /* 修正 back-button 樣式，確保它在媒體查詢內部 */
+    /* 注意：您在此處使用了 absolute，這會覆蓋之前的 sticky，請確認這是您想要的效果 */
     .back-button {
         position: absolute;
         top: 10px;
@@ -474,7 +485,7 @@ h1 {
         border: none;
         cursor: pointer;
     }
-}
+} /* <--- 媒體查詢正確的結尾 */
 
 /* 在現有 CSS 文件底部添加 */
 .playing {
@@ -583,10 +594,11 @@ h1 {
     transition: background-color 0.3s ease, border-left 0.3s ease; /* 平滑過渡 */
 }
 
-/* 確保普通狀態下的容器沒有高亮效果 */
+
+/* 確保普通狀態下的容器沒有高亮效果 (此處合併了重複的規則) */
 .word-item-container {
     display: flex;
-    width: 100%;
+    width: 100%; /* 已合併，您可以根據需求改回 90% */
     margin: 5px;
     justify-content: space-between;
     align-items: center;

@@ -733,7 +733,19 @@ function updateAutoPlayButton() {
 // 第二層：顯示單字列表
 function showWords(type, value) {
     console.log("📌 點擊分類/等級/A-Z 按鈕:", type, value);
-    let titleText = type === "letter" ? value.toUpperCase() : type === "category" ? value : value;
+    let titleText;
+    if (type === "letter") {
+        titleText = value.toUpperCase();
+    } else if (type === "primary_category") {
+        titleText = `主分類: ${value}`;
+    } else if (type === "secondary_category") {
+        titleText = `次分類: ${value}`;
+    } else if (type === "level") {
+        titleText = `${value} Level`;
+    } else {
+        titleText = value;
+    }
+
     document.getElementById("wordListTitle").innerHTML = `
         <span>${titleText}</span>
         <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
@@ -748,9 +760,7 @@ function showWords(type, value) {
     document.getElementById("wordQuizBtn").style.display = "none";
     document.getElementById("returnHomeBtn").style.display = "none";
     document.getElementById("sentencePageBtn").style.display = "none";
-    // ▼▼▼ 更新的程式碼 ▼▼▼
     document.querySelector('.collapsible-section-wrapper').style.display = "none";
-    // ▲▲▲ 更新的程式碼 ▲▲▲
     document.getElementById("sentenceList").style.display = "none";
     document.getElementById("sentenceDetails").style.display = "none";
 
@@ -760,16 +770,21 @@ function showWords(type, value) {
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
+   
     let filteredWords = wordsData.filter(w => {
-        if (!w.Words) return false;
-
-        if (type === "letter") {
-            return w.Words.toLowerCase().startsWith(value.toLowerCase());
-        } else if (type === "category") {
-            return (w["分類"] || []).includes(value);
-        } else if (type === "level") {
-            return w["等級"] === value;
+        if (!w.Words) {
+            console.warn("⚠️ wordsData 中存在無 Words 屬性的項目:", w);
+            return false;
         }
+        let word = w.Words;
+        let category = w["分類"] || [];
+        let level = w["等級"] || "未分類";
+
+        if (type === "letter") return word.toLowerCase().startsWith(value.toLowerCase());
+        if (type === "primary_category") return category[0] === value; // 新增的邏輯
+        if (type === "secondary_category") return category.slice(1).includes(value); // 新增的邏輯
+        if (type === "category") return category.includes(value);
+        if (type === "level") return level === value;
         return false;
     });
 
