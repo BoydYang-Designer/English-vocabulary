@@ -1717,17 +1717,30 @@ document.addEventListener("keydown", function (event) {
 });
 
 function exportAllData() {
-    let allData = { ...localStorage };
-    let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(allData, null, 2));
-    let downloadAnchor = document.createElement("a");
-    downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", "localStorage_backup.json");
-    document.body.appendChild(downloadAnchor);
-    downloadAnchor.click();
-    downloadAnchor.remove();
-    alert("✅ 學習資料已匯出！");
-    console.log("✅ 所有 `localStorage` 資料已匯出！", allData);
+try {
+let allData = { ...localStorage };
+let jsonString = JSON.stringify(allData, null, 2);
+let blob = new Blob([jsonString], { type: 'application/json;charset=utf-8' });
+let url = URL.createObjectURL(blob);
+let downloadAnchor = document.createElement("a");
+downloadAnchor.href = url;
+downloadAnchor.download = "localStorage_backup.json";
+document.body.appendChild(downloadAnchor);
+// 觸發點擊
+downloadAnchor.click();
+// 清理
+document.body.removeChild(downloadAnchor);
+URL.revokeObjectURL(url);
+// 假設執行到這裡沒有錯誤，即視為成功（但移動端可能不準確）
+setTimeout(() => {
+alert("✅ 學習資料已匯出！");
+console.log("✅ 所有 localStorage 資料已匯出！", allData);
+}, 500);  // 延遲 500ms 顯示，給瀏覽器時間處理下載
+} catch (error) {
+console.error("❌ 下載失敗:", error);
+alert("❌ 下載失敗，請檢查瀏覽器權限或儲存空間！");
 }
+}網頁
 
 function importAllData() {
     let fileInput = document.createElement("input");
