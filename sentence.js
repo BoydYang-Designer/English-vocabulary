@@ -218,6 +218,7 @@ function handlePrimaryCategoryClick(btn, categoryName) {
     }, 310);
 }
 
+// ▼▼▼ 修改此函式 ▼▼▼
 function startLearning() {
     const selectedLetters = Array.from(document.querySelectorAll('#alphabetButtons .letter-btn.selected')).map(btn => btn.dataset.value);
     const selectedPrimaries = Array.from(document.querySelectorAll('#primaryCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
@@ -227,10 +228,12 @@ function startLearning() {
 
     let finalSentences = sentenceData;
 
-    if (selectedSpecials.length > 0) {
+    // 步驟 1: 根據「句子相關」的特殊分類預先篩選句子
+    const sentenceSpecialFilters = selectedSpecials.filter(s => s !== 'checked_word');
+    if (sentenceSpecialFilters.length > 0) {
         finalSentences = finalSentences.filter(s => {
             const sentenceId = s.Words;
-            return selectedSpecials.some(specialType => {
+            return sentenceSpecialFilters.some(specialType => {
                 switch (specialType) {
                     case 'checked':
                         return localStorage.getItem(`checked_sentence_${sentenceId}`) === "true";
@@ -248,8 +251,13 @@ function startLearning() {
             });
         });
     }
-
-    const hasWordFilters = selectedLetters.length > 0 || selectedPrimaries.length > 0 || selectedSecondaries.length > 0 || selectedLevels.length > 0;
+    
+    // 步驟 2: 判斷是否需要根據「單字屬性」來篩選
+    const hasWordFilters = selectedLetters.length > 0 || 
+                           selectedPrimaries.length > 0 || 
+                           selectedSecondaries.length > 0 || 
+                           selectedLevels.length > 0 ||
+                           selectedSpecials.includes('checked_word');
     
     if (hasWordFilters) {
         let filteredWords = wordsData;
@@ -273,9 +281,17 @@ function startLearning() {
         if (selectedLevels.length > 0) {
             filteredWords = filteredWords.filter(w => selectedLevels.includes(w["等級"] || "未分類"));
         }
+        // [新增] 處理 "Checked 單字" 篩選
+        if (selectedSpecials.includes('checked_word')) {
+            filteredWords = filteredWords.filter(w => {
+                const wordText = w.Words || w.word || w["單字"] || "";
+                return localStorage.getItem(`checked_${wordText}`) === "true";
+            });
+        }
 
         const allowedWordNames = new Set(filteredWords.map(w => w.Words));
 
+        // 根據篩選後的單字列表，過濾 finalSentences
         finalSentences = finalSentences.filter(s => {
             const baseWord = s.Words.split('-').slice(0, -1).join('-');
             return allowedWordNames.has(baseWord);
@@ -290,8 +306,10 @@ function startLearning() {
     currentSentenceList = sortSentencesByWordAndNumber(finalSentences);
     displaySentenceList(currentSentenceList, "學習列表");
 }
+// ▲▲▲ 修改結束 ▲▲▲
 
 
+// ▼▼▼ 修改此函式 ▼▼▼
 function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
     
@@ -315,7 +333,8 @@ function createCategoryButtons() {
         { name: "Checked 句子", value: "checked" },
         { name: "重要句子", value: "important" },
         { name: "錯誤句子", value: "wrong" },
-        { name: "Note句子", value: "note" }
+        { name: "Note句子", value: "note" },
+        { name: "Checked 單字", value: "checked_word" } // [新增]
     ];
     const specialContainer = document.getElementById("specialCategoryButtons");
     if (specialContainer) {
@@ -327,6 +346,7 @@ function createCategoryButtons() {
         specialContainer.appendChild(wrapper);
     }
 }
+// ▲▲▲ 修改結束 ▲▲▲
 
 function createLevelButtons() {
     let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
