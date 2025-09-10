@@ -1130,7 +1130,8 @@ function returnToSentenceCategorySelection() {
 
     // 重置選擇狀態
     selectedSentenceFilters.levels.clear();
-    selectedSentenceFilters.categories.clear();
+    selectedSentenceFilters.primaryCategories.clear();
+    selectedSentenceFilters.secondaryCategories.clear();
     selectedSentenceFilters.alphabet.clear();
     document.querySelectorAll(".category-button").forEach(button => {
         button.classList.remove("selected");
