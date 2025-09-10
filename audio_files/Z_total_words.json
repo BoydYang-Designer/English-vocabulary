@@ -62,8 +62,7 @@
             "Unnamed: 10": "abusive",
             "Unnamed: 11": "abusive",
             "分類": [
-                "日常生活",
-                "日常生活"
+                "行為與心理"
             ]
         },
         {
@@ -166,8 +165,7 @@
             "Unnamed: 10": "actuation",
             "Unnamed: 11": "actuation",
             "分類": [
-                "日常生活",
-                "日常生活"
+                "科學與工程"
             ]
         },
         {
@@ -179,8 +177,7 @@
             "Unnamed: 10": "acute",
             "Unnamed: 11": "acute",
             "分類": [
-                "日常生活",
-                "日常生活"
+                "醫學與健康"
             ]
         },
         {
@@ -219,8 +216,7 @@
             "Unnamed: 10": "adequacy",
             "Unnamed: 11": "adequacy",
             "分類": [
-                "日常生活",
-                "日常生活"
+                "學術與教育"
             ]
         },
         {
@@ -232,8 +228,7 @@
             "Unnamed: 10": "adequate",
             "Unnamed: 11": "adequate",
             "分類": [
-                "日常生活",
-                "日常生活"
+                "學術與教育"
             ]
         },
         {
@@ -245,8 +240,7 @@
             "Unnamed: 10": "adorn",
             "Unnamed: 11": "adorn",
             "分類": [
-                "日常生活",
-                "日常生活"
+                "藝術與美學"
             ]
         },
         {
@@ -258,8 +252,7 @@
             "Unnamed: 10": "adornment",
             "Unnamed: 11": "adornment",
             "分類": [
-                "日常生活",
-                "日常生活"
+                "藝術與美學"
             ]
         },
         {
@@ -349,7 +342,7 @@
             "Unnamed: 10": "aerial-survey",
             "Unnamed: 11": "aerial-survey",
             "分類": [
-                "建築",
+                "藝術與美學",
                 "建築"
             ]
         },
@@ -519,7 +512,7 @@
             "Unnamed: 10": "agitate",
             "Unnamed: 11": "agitate",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -532,7 +525,7 @@
             "Unnamed: 10": "agitation",
             "Unnamed: 11": "agitation",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -662,7 +655,7 @@
             "Unnamed: 10": "almond",
             "Unnamed: 11": "almond",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -1377,7 +1370,7 @@
             "Unnamed: 10": "aroma",
             "Unnamed: 11": "aroma",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -1390,7 +1383,7 @@
             "Unnamed: 10": "aromatic",
             "Unnamed: 11": "aromatic",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -1936,7 +1929,7 @@
             "Unnamed: 10": "barricade",
             "Unnamed: 11": "barricade",
             "分類": [
-                "建築",
+                "藝術與美學",
                 "建築"
             ]
         },
@@ -1949,7 +1942,7 @@
             "Unnamed: 10": "barrier",
             "Unnamed: 11": "barrier",
             "分類": [
-                "建築",
+                "藝術與美學",
                 "建築"
             ]
         },
@@ -2001,7 +1994,7 @@
             "Unnamed: 10": "beta-carotene",
             "Unnamed: 11": "beta-carotene",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -2105,7 +2098,7 @@
             "Unnamed: 10": "bittersweet",
             "Unnamed: 11": "bittersweet",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -2404,7 +2397,7 @@
             "Unnamed: 10": "burden",
             "Unnamed: 11": "burden",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -2587,7 +2580,7 @@
             "Unnamed: 10": "caramel",
             "Unnamed: 11": "caramel",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -2600,7 +2593,7 @@
             "Unnamed: 10": "carbohydrate",
             "Unnamed: 11": "carbohydrate",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -2717,8 +2710,7 @@
             "Unnamed: 10": "cast-a-spell",
             "Unnamed: 11": "cast-a-spell",
             "分類": [
-                "幻想",
-                "幻想"
+                "幻想與神話"
             ]
         },
         {
@@ -2782,7 +2774,7 @@
             "Unnamed: 10": "cave-in",
             "Unnamed: 11": "cave-in",
             "分類": [
-                "建築",
+                "藝術與美學",
                 "建築"
             ]
         },
@@ -2834,7 +2826,7 @@
             "Unnamed: 10": "cement",
             "Unnamed: 11": "cement",
             "分類": [
-                "建築",
+                "藝術與美學",
                 "建築"
             ]
         },
@@ -3237,7 +3229,7 @@
             "Unnamed: 10": "clan",
             "Unnamed: 11": "clan",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -3510,7 +3502,7 @@
             "Unnamed: 10": "collapse",
             "Unnamed: 11": "collapse",
             "分類": [
-                "建築",
+                "藝術與美學",
                 "建築"
             ]
         },
@@ -3913,7 +3905,7 @@
             "Unnamed: 10": "confidant",
             "Unnamed: 11": "confidant",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -3926,7 +3918,7 @@
             "Unnamed: 10": "confide",
             "Unnamed: 11": "confide",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -3939,7 +3931,7 @@
             "Unnamed: 10": "confiding",
             "Unnamed: 11": "confiding",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -4121,7 +4113,7 @@
             "Unnamed: 10": "construction-site",
             "Unnamed: 11": "construction-site",
             "分類": [
-                "建築",
+                "藝術與美學",
                 "建築"
             ]
         },
@@ -4772,7 +4764,7 @@
             "Unnamed: 10": "crispy",
             "Unnamed: 11": "crispy",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -4890,7 +4882,7 @@
             "Unnamed: 10": "crumb",
             "Unnamed: 11": "crumb",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -4903,7 +4895,7 @@
             "Unnamed: 10": "crumble",
             "Unnamed: 11": "crumble",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -4916,7 +4908,7 @@
             "Unnamed: 10": "crunchy",
             "Unnamed: 11": "crunchy",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -4942,7 +4934,7 @@
             "Unnamed: 10": "crust",
             "Unnamed: 11": "crust",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -4956,7 +4948,7 @@
             "Unnamed: 10": "culinary",
             "Unnamed: 11": "culinary",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -5450,7 +5442,7 @@
             "Unnamed: 10": "descent",
             "Unnamed: 11": "descent",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -6115,7 +6107,7 @@
             "Unnamed: 10": "domesticated",
             "Unnamed: 11": "domesticated",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -7547,7 +7539,7 @@
             "Unnamed: 10": "feast",
             "Unnamed: 11": "feast",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -7574,7 +7566,7 @@
             "Unnamed: 10": "ferment",
             "Unnamed: 11": "ferment",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -7587,7 +7579,7 @@
             "Unnamed: 10": "fermentation",
             "Unnamed: 11": "fermentation",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -8042,7 +8034,7 @@
             "Unnamed: 10": "fountain",
             "Unnamed: 11": "fountain",
             "分類": [
-                "建築",
+                "藝術與美學",
                 "建築"
             ]
         },
@@ -8290,7 +8282,7 @@
             "Unnamed: 10": "genealogy",
             "Unnamed: 11": "genealogy",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -8433,7 +8425,7 @@
             "Unnamed: 10": "grand",
             "Unnamed: 11": "grand",
             "分類": [
-                "建築",
+                "藝術與美學",
                 "建築"
             ]
         },
@@ -8615,7 +8607,7 @@
             "Unnamed: 10": "gruel",
             "Unnamed: 11": "gruel",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -8732,7 +8724,7 @@
             "Unnamed: 10": "harmony",
             "Unnamed: 11": "harmony",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -8862,7 +8854,7 @@
             "Unnamed: 10": "herbal",
             "Unnamed: 11": "herbal",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -10051,7 +10043,7 @@
             "Unnamed: 10": "interactive",
             "Unnamed: 11": "interactive",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -10110,7 +10102,7 @@
             "Unnamed: 10": "intimate",
             "Unnamed: 11": "intimate",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -10589,7 +10581,7 @@
             "Unnamed: 10": "leftover",
             "Unnamed: 11": "leftover",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },
@@ -12962,7 +12954,7 @@
             "Unnamed: 10": "pavilion",
             "Unnamed: 11": "pavilion",
             "分類": [
-                "建築",
+                "藝術與美學",
                 "建築"
             ]
         },
@@ -13595,7 +13587,7 @@
             "Unnamed: 10": "portal",
             "Unnamed: 11": "portal",
             "分類": [
-                "建築",
+                "藝術與美學",
                 "建築"
             ]
         },
@@ -13691,7 +13683,7 @@
             "Unnamed: 10": "poultry",
             "Unnamed: 11": "poultry",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -14225,7 +14217,7 @@
             "Unnamed: 10": "pungent",
             "Unnamed: 11": "pungent",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -14526,7 +14518,7 @@
             "Unnamed: 10": "recipe",
             "Unnamed: 11": "recipe",
             "分類": [
-                "食物",
+                "日常生活",
                 "食物"
             ]
         },
@@ -17221,7 +17213,7 @@
             "Unnamed: 10": "swelter",
             "Unnamed: 11": "swelter",
             "分類": [
-                "family",
+                "家庭與人際",
                 "family"
             ]
         },

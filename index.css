@@ -710,4 +710,73 @@ font-style: italic; /* 讓範例文字變斜體 (可選) */
         transform: translateY(-20px);
     }
 }
-/* ▲▲▲ 新增的樣式到此結束 ▲▲▲ */
+
+/* index.css - 請在檔案末尾新增以下樣式 */
+
+/* 按鈕被選中時的樣式 */
+.letter-btn.selected {
+    background: #007bff;
+    color: white;
+    border: 1px solid #0056b3;
+    transform: scale(1.05);
+}
+
+/* 次分類容器的樣式 */
+.subcategory-wrapper {
+    padding-left: 20px; /* 讓次分類向內縮排 */
+    margin-top: 8px;
+    margin-bottom: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f0f4f8; /* 給次分類一個淺色背景以作區分 */
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* 「開始學習」按鈕的容器樣式 */
+.start-learning-container {
+    padding: 20px 15px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* 「開始學習」按鈕的樣式 */
+#startLearningBtn {
+    width: 80%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 20px;
+    background-color: #28a745; /* 使用醒目的綠色 */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#startLearningBtn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* 修正分類容器過長的問題 */
+.collapsible-content {
+    /* ... 保留您原有的樣式 ... */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f1f1f1;
+    
+    /* ▼▼▼ 新增這兩行 ▼▼▼ */
+    max-height: 250px; /* 設定一個最大高度 */
+    overflow-y: auto;  /* 當內容超出時，顯示垂直捲動條 */
+}
+
+/* 當區塊展開時，確保JS設定的高度不會被覆蓋 */
+.collapsible-header.active + .collapsible-content {
+    /* 這裡不需要特別設定，JS會動態添加 maxHeight */
+    /* CSS 的 max-height: 250px 會作為上限 */
+}
