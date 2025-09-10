@@ -1,6 +1,5 @@
 /**
  * 根據一個基礎單字，建立一個可以匹配其常見變化正規表示式。
- * (此函式及其他全域變數宣告保持不變)
  */
 function createWordVariationsRegex(baseWord) {
     let stem = baseWord.toLowerCase();
@@ -17,7 +16,7 @@ function createWordVariationsRegex(baseWord) {
     return new RegExp(pattern, 'gi');
 }
 
-// 全局變數整合
+// 全局變數
 let parentLayer = "";
 let wordsData = [];
 let sentenceData = [];
@@ -50,19 +49,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const loadingOverlay = document.getElementById('loading-overlay');
     console.log("開始載入資料...");
 
+    // ▼▼▼ BUG 修正與功能實作 ▼▼▼
+    // 1. 確保所有分類內容區域在載入時都是收合的
+    document.querySelectorAll('.collapsible-content').forEach(content => {
+        content.style.maxHeight = '0px';
+    });
+
+    // 2. 修正並綁定摺疊/展開的點擊事件
     document.querySelectorAll(".collapsible-header").forEach(button => {
         button.addEventListener("click", function() {
             this.classList.toggle("active");
             const content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            
+            // 檢查是否已展開 (maxHeight 有值且不為 '0px')
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px'; // 如果是，則收合
             } else {
-                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.maxHeight = content.scrollHeight + "px"; // 如果不是，則展開
             }
         });
     });
+    // ▲▲▲ 修正結束 ▲▲▲
 
-    // ▼▼▼ 這是 sentence.js 正確的資料讀取邏輯 ▼▼▼
     Promise.all([
         fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
             .then(res => {
@@ -84,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
             })
     ])
     .then(() => {
-        // 當兩個 fetch 都成功時，執行這裡
         loadingOverlay.style.opacity = '0';
         setTimeout(() => {
             loadingOverlay.style.display = 'none';
@@ -110,6 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("startQuizBtn").addEventListener("click", () => {window.location.href = "quiz.html?show=sentenceCategories&from=sentence";});
         document.getElementById("returnHomeBtn").addEventListener("click", () => window.location.href = "index.html");
         document.getElementById("wordQuizBtn").addEventListener("click", () => {window.location.href = "quiz.html?show=categories&from=sentence";});
+        
+        document.getElementById("startLearningBtn").addEventListener("click", startLearning);
 
         const urlParams = new URLSearchParams(window.location.search);
         const sentenceParam = urlParams.get('sentence');
@@ -144,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
     .catch(err => {
-        // 當任何一個 fetch 失敗時，執行這裡
         console.error("❌ 資料載入過程中發生錯誤:", err);
         loadingOverlay.style.opacity = '0';
         setTimeout(() => {
@@ -152,290 +160,292 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 300);
         showNotification('❌ 資料載入失敗，請檢查網路或檔案路徑。', 'error');
     });
-    // ▲▲▲ Promise.all 的邏輯到此結束 ▲▲▲
 });
 
-
-// ... 其餘所有 sentence.js 的函式保持不變 ...
-// (此處省略您檔案中其他正確的函式，以節省篇幅)
-// 您檔案中其他的函式如 renderAlphabetButtons, showWordsAndSentences, createCategoryButtons, showSentences, etc. 都是正確的，請保留它們。
-// 我只修正了最開頭的 DOMContentLoaded 事件監聽器部分。
-
-// ... (貼上您 `sentence.js` 原有的所有其他函式) ...
-// (此處省略您檔案中未變動的部分，以節省篇幅)
-
-// 第一層：生成字母按鈕
-function renderAlphabetButtons() {
-    const alphabetContainer = document.getElementById("alphabetButtons");
-    if (!alphabetContainer) {
-        console.error("❌ 未找到 #alphabetButtons，請檢查 HTML");
-        return;
-    }
-    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-    alphabetContainer.innerHTML = alphabet
-        .map(letter => `<button class='letter-btn' data-letter='${letter.toLowerCase()}'>${letter}</button>`)
-        .join(" ");
-
-    alphabetContainer.querySelectorAll(".letter-btn").forEach(button => {
-        button.addEventListener("click", () => {
-            const letter = button.getAttribute("data-letter");
-            console.log("✅ 點擊字母:", letter);
-            showWordsAndSentences("letter", letter);
-        });
-    });
+function toggleSelection(btn) {
+    btn.classList.toggle('selected');
 }
 
-// 新增函數：顯示單字並支持單字列表
-function showWordsAndSentences(type, value) {
-    console.log("✅ 進入 showWordsAndSentences, type:", type, "value:", value);
-    parentLayer = "firstLayer";
-    const titleText = type === "letter" ? value.toUpperCase() : 
-                      type === "primary_category" ? `主分類: ${value}` : 
-                      type === "secondary_category" ? `次分類: ${value}` : 
-                      type === "category" ? value : `${value} Level`;
-    document.getElementById("wordListTitle").innerHTML = `
-        <span>${titleText}</span>
-        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
-    `;
-    document.getElementById("wordListTitle").style.display = "block";
+function handlePrimaryCategoryClick(btn, categoryName) {
+    toggleSelection(btn);
 
-    lastWordListType = type;
-    lastWordListValue = value;
+    let parentContainer = btn.closest('.collapsible-content');
+    let subcategoryWrapper = document.getElementById(`sub-for-${categoryName.replace(/\s/g, '-')}`);
 
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.collapsible-section-wrapper').style.display = "none";
-    document.getElementById("wordList").style.display = "block";
-    document.getElementById("sentenceList").style.display = "none";
+    if (!subcategoryWrapper) {
+        subcategoryWrapper = document.createElement('div');
+        subcategoryWrapper.className = 'subcategory-wrapper';
+        subcategoryWrapper.id = `sub-for-${categoryName.replace(/\s/g, '-')}`;
 
-    let wordItems = document.getElementById("wordItems");
-    if (!wordItems) {
-        console.error("❌ 未找到 #wordItems，請檢查 HTML");
-        return;
-    }
-    wordItems.innerHTML = "";
+        const secondaryCategories = [...new Set(
+            wordsData
+                .filter(w => w["分類"] && w["分類"][0] === categoryName && w["分類"][1])
+                .map(w => w["分類"][1])
+        )];
 
-    let filteredWords = wordsData.filter(w => {
-        if (!w.Words) {
-            console.warn("⚠️ wordsData 中存在無 Words 屬性的項目:", w);
-            return false;
+        const hasUncategorized = wordsData.some(w => 
+            w["分類"] && w["分類"][0] === categoryName && (!w["分類"][1] || w["分類"][1].trim() === '')
+        );
+
+        if (hasUncategorized) {
+            secondaryCategories.unshift("未分類");
         }
-        let word = w.Words;
-        let category = w["分類"] || [];
-        let level = w["等級"] || "未分類";
-        if (type === "letter") return word.toLowerCase().startsWith(value.toLowerCase());
-        if (type === "primary_category") return category[0] === value;
-        if (type === "secondary_category") return category.slice(1).includes(value);
-        if (type === "category") return category.includes(value);
-        if (type === "level") return level === value;
-        return false;
-    });
-    console.log("✅ 過濾後的單字數量:", filteredWords.length);
+        
+        if (secondaryCategories.length > 0) {
+            const subWrapper = document.createElement('div');
+            subWrapper.className = 'button-wrapper';
+            subWrapper.innerHTML = secondaryCategories.map(subCat => 
+                `<button class="letter-btn" data-value='${subCat}' onclick="toggleSelection(this)">${subCat}</button>`
+            ).join(' ');
+            subcategoryWrapper.appendChild(subWrapper);
+        }
+        
+        btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
+    }
 
-    if (filteredWords.length === 0) {
-        wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
+    const mainCollapsibleContent = btn.closest('.collapsible-content');
+
+    if (subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px') {
+        subcategoryWrapper.style.maxHeight = '0px';
     } else {
-        currentWordList = filteredWords.map(w => w.Words);
-        filteredWords.forEach(word => {
-            let wordText = word.Words;
-            let isChecked = localStorage.getItem(`checked_${wordText}`) === "true";
-            let isImportant = localStorage.getItem(`important_${wordText}`) === "true";
-            let iconSrc = isChecked ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
+        subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
+    }
 
-            let item = document.createElement('div');
-            item.className = 'word-item-container';
-            if (isChecked) item.classList.add("checked");
-            item.innerHTML = `
-                <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${wordText}", this)' ${isImportant ? "checked" : ""}>
-                <p class='word-item' data-word="${wordText}">${wordText}</p>
-                <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
-                    <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
-                </button>
-            `;
-            wordItems.appendChild(item);
+    setTimeout(() => {
+        if (mainCollapsibleContent.style.maxHeight !== '0px') {
+             mainCollapsibleContent.style.maxHeight = mainCollapsibleContent.scrollHeight + "px";
+        }
+    }, 310);
+}
 
-            item.querySelector('.word-item').addEventListener("click", () => {
-                console.log("✅ 點擊單字:", wordText);
-                showSentences(wordText);
+function startLearning() {
+    const selectedLetters = Array.from(document.querySelectorAll('#alphabetButtons .letter-btn.selected')).map(btn => btn.dataset.value);
+    const selectedPrimaries = Array.from(document.querySelectorAll('#primaryCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
+    const selectedSecondaries = Array.from(document.querySelectorAll('.subcategory-wrapper .letter-btn.selected')).map(btn => btn.dataset.value);
+    const selectedLevels = Array.from(document.querySelectorAll('#levelButtons .letter-btn.selected')).map(btn => btn.dataset.value);
+    const selectedSpecials = Array.from(document.querySelectorAll('#specialCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
+
+    let finalSentences = sentenceData;
+
+    if (selectedSpecials.length > 0) {
+        finalSentences = finalSentences.filter(s => {
+            const sentenceId = s.Words;
+            return selectedSpecials.some(specialType => {
+                switch (specialType) {
+                    case 'checked':
+                        return localStorage.getItem(`checked_sentence_${sentenceId}`) === "true";
+                    case 'important':
+                        return localStorage.getItem(`important_sentence_${sentenceId}`) === "true";
+                    case 'wrong':
+                        const wrongQS = JSON.parse(localStorage.getItem("wrongQS")) || [];
+                        return wrongQS.includes(sentenceId);
+                    case 'note':
+                        const note = localStorage.getItem(`note_sentence_${sentenceId}`);
+                        return note && note.trim() !== "";
+                    default:
+                        return false;
+                }
             });
         });
     }
+
+    const hasWordFilters = selectedLetters.length > 0 || selectedPrimaries.length > 0 || selectedSecondaries.length > 0 || selectedLevels.length > 0;
+    
+    if (hasWordFilters) {
+        let filteredWords = wordsData;
+
+        if (selectedLetters.length > 0) {
+            filteredWords = filteredWords.filter(w => selectedLetters.includes((w.Words || "").charAt(0).toLowerCase()));
+        }
+        if (selectedPrimaries.length > 0) {
+            filteredWords = filteredWords.filter(w => selectedPrimaries.includes((w["分類"] && w["分類"][0]) || "未分類"));
+        }
+        if (selectedSecondaries.length > 0) {
+            filteredWords = filteredWords.filter(w => {
+                 const primaryCat = (w["分類"] && w["分類"][0]) || "未分類";
+                 if (selectedPrimaries.length > 0 && !selectedPrimaries.includes(primaryCat)) {
+                     return false;
+                 }
+                 const secondaryCat = (w["分類"] && w["分類"][1]) || "未分類";
+                 return selectedSecondaries.includes(secondaryCat);
+            });
+        }
+        if (selectedLevels.length > 0) {
+            filteredWords = filteredWords.filter(w => selectedLevels.includes(w["等級"] || "未分類"));
+        }
+
+        const allowedWordNames = new Set(filteredWords.map(w => w.Words));
+
+        finalSentences = finalSentences.filter(s => {
+            const baseWord = s.Words.split('-').slice(0, -1).join('-');
+            return allowedWordNames.has(baseWord);
+        });
+    }
+
+    if (finalSentences.length === 0) {
+        showNotification("⚠️ 找不到符合條件的句子。", "error");
+        return;
+    }
+    
+    currentSentenceList = sortSentencesByWordAndNumber(finalSentences);
+    displaySentenceList(currentSentenceList, "學習列表");
 }
+
 
 function createCategoryButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
     
-    let primaryCategories = [...new Set(wordsData.map(w => w["分類"][0] || "未分類").filter(c => c))];
-    let secondaryCategories = [...new Set(wordsData.flatMap(w => w["分類"].slice(1)).filter(c => c))];
-    
-    let specialCategories = [
-        { label: "已經checked 句子", func: "showCheckedSentences()" },
-        { label: "重要句子", func: "showImportantSentences()" },
-        { label: "錯誤句子", func: "showWrongSentences()" },
-        { label: "Note句子", func: "showSentenceNotes()" }
-    ];
-
+    let primaryCategories = [...new Set(wordsData.map(w => (w["分類"] && w["分類"][0]) || "未分類").filter(c => c))];
     const primaryContainer = document.getElementById("primaryCategoryButtons");
     if (primaryContainer) {
-        primaryContainer.innerHTML = primaryCategories
-            .map(c => `<button class='letter-btn' onclick='showWordsAndSentences("primary_category", "${c}")'>${c}</button>`)
-            .join(" ");
+        const wrapper = document.createElement('div');
+        wrapper.className = 'button-wrapper';
+        primaryCategories.forEach(category => {
+            const btn = document.createElement('button');
+            btn.className = 'letter-btn';
+            btn.textContent = category;
+            btn.dataset.value = category;
+            btn.onclick = () => handlePrimaryCategoryClick(btn, category);
+            wrapper.appendChild(btn);
+        });
+        primaryContainer.appendChild(wrapper);
     }
 
-    const secondaryContainer = document.getElementById("secondaryCategoryButtons");
-    if (secondaryContainer) {
-        secondaryContainer.innerHTML = secondaryCategories
-            .map(c => `<button class='letter-btn' onclick='showWordsAndSentences("secondary_category", "${c}")'>${c}</button>`)
-            .join(" ");
-    }
-
+    const specialCategories = [
+        { name: "Checked 句子", value: "checked" },
+        { name: "重要句子", value: "important" },
+        { name: "錯誤句子", value: "wrong" },
+        { name: "Note句子", value: "note" }
+    ];
     const specialContainer = document.getElementById("specialCategoryButtons");
     if (specialContainer) {
-        specialContainer.innerHTML = specialCategories
-            .map(cat => `<button class='letter-btn' onclick='${cat.func}'>${cat.label}</button>`)
-            .join(" ");
+        const wrapper = document.createElement('div');
+        wrapper.className = 'button-wrapper';
+        wrapper.innerHTML = specialCategories.map(c => 
+           `<button class='letter-btn' data-value='${c.value}' onclick='toggleSelection(this)'>${c.name}</button>`
+        ).join(" ");
+        specialContainer.appendChild(wrapper);
     }
 }
 
-function showImportantSentences() {
-    parentLayer = "firstLayer";
-    console.log("進入 showImportantSentences, sentenceData.length:", sentenceData.length);
-    
-    document.getElementById("wordListTitle").innerHTML = `
-        <span>重要句子</span>
-        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
-    `;
-    document.getElementById("wordListTitle").style.display = "block";
-    
-    lastWordListType = "importantSentences";
-    lastWordListValue = null;
-
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.collapsible-section-wrapper').style.display = "none";
-
-    if (!sentenceData || sentenceData.length === 0) {
-        console.error("❌ sentenceData 未載入或為空");
-        document.getElementById("sentenceItems").innerHTML = "<p>⚠️ 資料載入失敗，請刷新頁面</p>";
-        return;
+function createLevelButtons() {
+    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
+    const levelContainer = document.getElementById("levelButtons");
+    if(levelContainer){
+        const wrapper = document.createElement('div');
+        wrapper.className = 'button-wrapper';
+        wrapper.innerHTML = levels
+            .map(l => `<button class='letter-btn' data-value='${l}' onclick='toggleSelection(this)'>${l}</button>`).join(" ");
+        levelContainer.appendChild(wrapper);
     }
-
-    let importantSentences = sentenceData.filter(s => localStorage.getItem(`important_sentence_${s.Words}`) === "true");
-    console.log("過濾後的 importantSentences:", importantSentences);
-    if (importantSentences.length === 0) {
-        console.warn("⚠️ 沒有標記為重要的句子");
-    }
-
-    currentWordList = [...new Set(importantSentences.map(s => s.Words.split('-').slice(0, -1).join('-')))];
-    currentSentenceList = sortSentencesByWordAndNumber(importantSentences);
-    displaySentenceList(currentSentenceList);
 }
 
-function showCheckedSentences() {
-    parentLayer = "firstLayer";
-    
-    document.getElementById("wordListTitle").innerHTML = `
-        <span>已經checked 句子</span>
-        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
-    `;
-    document.getElementById("wordListTitle").style.display = "block";
-    
-    lastWordListType = "checkedSentences";
-    lastWordListValue = null;
+function renderAlphabetButtons() {
+    const alphabetContainer = document.getElementById("alphabetButtons");
+    if (!alphabetContainer) return;
 
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.collapsible-section-wrapper').style.display = "none";
-
-    let checkedSentences = sentenceData.filter(s => localStorage.getItem(`checked_sentence_${s.Words}`) === "true");
-
-    if (checkedSentences.length === 0) {
-        console.warn("⚠️ 沒有標記為 Checked 的句子");
-    }
-
-    currentSentenceList = sortSentencesByWordAndNumber(checkedSentences);
-    displaySentenceList(currentSentenceList);
+    const wrapper = document.createElement('div');
+    wrapper.className = 'button-wrapper';
+    wrapper.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
+        .map(letter => `<button class='letter-btn' data-value='${letter.toLowerCase()}' onclick='toggleSelection(this)'>${letter}</button>`)
+        .join(" ");
+    alphabetContainer.appendChild(wrapper);
 }
 
-function showWrongSentences() {
-    parentLayer = "firstLayer";
-    document.getElementById("wordListTitle").innerHTML = `
-        <span>錯誤句子</span>
-        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
-    `;
-    document.getElementById("wordListTitle").style.display = "block";
-    lastWordListType = "wrongSentences";
-    lastWordListValue = null;
+function sortSentencesByWordAndNumber(sentences) {
+    return sentences.sort((a, b) => {
+        const wordA = a.Words.split("-").slice(0, -1).join("-");
+        const wordB = b.Words.split("-").slice(0, -1).join("-");
+        const numA = parseInt(a.Words.split("-").pop(), 10);
+        const numB = parseInt(b.Words.split("-").pop(), 10);
 
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.collapsible-section-wrapper').style.display = "none";
+        const wordComparison = wordA.localeCompare(wordB, undefined, { sensitivity: 'base' });
+        if (wordComparison !== 0) return wordComparison;
 
-    let wrongSentences = JSON.parse(localStorage.getItem("wrongQS")) || [];
-    let filteredSentences = sentenceData.filter(s => wrongSentences.includes(s.Words));
-    if (filteredSentences.length === 0) console.warn("⚠️ 沒有標記為錯誤的句子");
-
-    currentWordList = [...new Set(filteredSentences.map(s => s.Words.split('-').slice(0, -1).join('-')))];
-    currentSentenceList = sortSentencesByWordAndNumber(filteredSentences);
-    displaySentenceList(currentSentenceList);
-}
-
-function showSentenceNotes() {
-    parentLayer = "firstLayer";
-    console.log("進入 showSentenceNotes, sentenceData.length:", sentenceData.length);
-
-    document.getElementById("wordListTitle").innerHTML = `
-        <span>Note句子</span>
-        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
-    `;
-    document.getElementById("wordListTitle").style.display = "block";
-
-    lastWordListType = "sentenceNotes";
-    lastWordListValue = null;
-
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.collapsible-section-wrapper').style.display = "none";
-
-    if (!sentenceData || sentenceData.length === 0) {
-        console.error("❌ sentenceData 未載入或為空");
-        document.getElementById("sentenceItems").innerHTML = "<p>⚠️ 資料載入失敗，請刷新頁面</p>";
-        return;
-    }
-
-    let noteSentences = sentenceData.filter(s => {
-        const note = localStorage.getItem(`note_sentence_${s.Words}`);
-        return note && note.length > 0;
+        return numA - numB;
     });
-    console.log("過濾後的 noteSentences:", noteSentences);
+}
 
-    if (noteSentences.length === 0) {
-        console.warn("⚠️ 沒有標記為 Note 的句子");
-        document.getElementById("sentenceItems").innerHTML = "<p>⚠️ 目前沒有帶筆記的句子</p>";
+function displaySentenceList(sentences, title = "句子列表") {
+    document.getElementById("mainPageContainer").style.display = "none";
+    document.getElementById("wordListTitle").innerHTML = `
+        <span>${title} (${sentences.length}句)</span>
+        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
+    `;
+    document.getElementById("wordListTitle").style.display = "block";
+    
+    const sentenceList = document.getElementById('sentenceList');
+    sentenceList.style.display = "block";
+    document.getElementById("wordList").style.display = "none";
+    document.querySelector('#sentenceList .back-button').style.display = "block";
+
+    const sentenceItems = document.getElementById('sentenceItems');
+    sentenceItems.innerHTML = '';
+
+    if (sentences.length === 0) {
+        sentenceItems.innerHTML = "<p>⚠️ 目前沒有符合的句子</p>";
         return;
     }
 
-    currentWordList = [...new Set(noteSentences.map(s => s.Words.split('-').slice(0, -1).join('-')))];
-    currentSentenceList = sortSentencesByWordAndNumber(noteSentences);
-    console.log("排序後的 currentSentenceList:", currentSentenceList);
-    displaySentenceList(currentSentenceList);
+    currentSentenceList = sentences;
+
+    sentences.forEach((sentence, index) => {
+        const sentenceId = sentence.Words;
+        const isChecked = localStorage.getItem(`checked_sentence_${sentenceId}`) === "true";
+        const isImportant = localStorage.getItem(`important_sentence_${sentenceId}`) === "true";
+        const iconSrc = isChecked 
+            ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" 
+            : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
+
+        const container = document.createElement('div');
+        container.className = `word-item-container ${isChecked ? "checked" : ""}`;
+
+        const sentenceDisplay = isChecked 
+            ? sentenceId 
+            : `${sentenceId}: ${sentence.句子}`;
+
+        container.innerHTML = `
+            <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
+            <p class='word-item' data-sentence="${sentenceId}">${sentenceDisplay}</p>
+            <button class='check-button' onclick='toggleCheckSentence("${sentenceId}", this)'>
+                <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
+            </button>
+            <button class='audio-btn' onclick='playSentenceAudio("${sentenceId}.mp3")'>
+                <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
+            </button>
+        `;
+
+        sentenceItems.appendChild(container);
+
+        container.querySelector('.word-item').addEventListener("click", () => showSentenceDetails(sentenceId, index));
+    });
+
+    updateAutoPlayButton();
 }
 
+function backToFirstLayer() {
+    document.getElementById("mainPageContainer").style.display = "block";
+    
+    document.getElementById("wordList").style.display = "none";
+    document.getElementById("sentenceList").style.display = "none";
+    document.getElementById("sentenceDetails").style.display = "none";
+    document.getElementById("wordListTitle").style.display = "none";
+    
+    document.getElementById("searchInput").value = "";
+    let searchResults = document.getElementById("searchResults");
+    if (searchResults) searchResults.innerHTML = "";
+
+    document.querySelectorAll('.letter-btn.selected').forEach(btn => btn.classList.remove('selected'));
+    
+    document.querySelectorAll('.subcategory-wrapper').forEach(wrapper => wrapper.remove());
+    
+    document.querySelectorAll('.collapsible-header.active').forEach(header => {
+        header.classList.remove('active');
+        header.nextElementSibling.style.maxHeight = '0px';
+    });
+}
+
+// ... (其他函式保持不變) ...
 function showSentences(word) {
     console.log("✅ 進入 showSentences, word:", word);
     parentLayer = "wordList";
@@ -514,13 +524,6 @@ function showSentences(word) {
     updateAutoPlayButton();
 }
 
-function createLevelButtons() {
-    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
-    const levelContainer = document.getElementById("levelButtons");
-    levelContainer.innerHTML = levels
-        .map(l => `<button class='letter-btn' onclick='showWords("level", "${l}")'>${l}</button>`).join(" ");
-}
-
 function filterSentences() {
     let input = document.getElementById("searchInput").value.toLowerCase();
     if (!wordsData.length) return;
@@ -537,68 +540,6 @@ function filterSentences() {
         ? filtered.map(w => `<p class='word-item' onclick='showSentences("${w.Words}")'>${w.Words}</p>`).join("")
         : "<p>⚠️ 沒有符合的單字</p>";
     document.getElementById("searchContainer").appendChild(searchResults);
-}
-
-function sortSentencesByWordAndNumber(sentences) {
-    return sentences.sort((a, b) => {
-        const wordA = a.Words.split("-").slice(0, -1).join("-");
-        const wordB = b.Words.split("-").slice(0, -1).join("-");
-        const numA = parseInt(a.Words.split("-").pop(), 10);
-        const numB = parseInt(b.Words.split("-").pop(), 10);
-
-        const wordComparison = wordA.localeCompare(wordB, undefined, { sensitivity: 'base' });
-        if (wordComparison !== 0) return wordComparison;
-
-        return numA - numB;
-    });
-}
-
-function displaySentenceList(sentences) {
-    const sentenceList = document.getElementById('sentenceList');
-    sentenceList.style.display = "block";
-    document.getElementById("wordList").style.display = "none";
-    document.querySelector('#sentenceList .back-button').style.display = "block";
-
-    const sentenceItems = document.getElementById('sentenceItems');
-    sentenceItems.innerHTML = '';
-
-    if (sentences.length === 0) {
-        sentenceItems.innerHTML = "<p>⚠️ 目前沒有符合的句子</p>";
-        return;
-    }
-
-    sentences.forEach(sentence => {
-        const sentenceId = sentence.Words;
-        const isChecked = localStorage.getItem(`checked_sentence_${sentenceId}`) === "true";
-        const isImportant = localStorage.getItem(`important_sentence_${sentenceId}`) === "true";
-        const iconSrc = isChecked 
-            ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" 
-            : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
-
-        const container = document.createElement('div');
-        container.className = `word-item-container ${isChecked ? "checked" : ""}`;
-
-        const sentenceDisplay = isChecked 
-            ? sentenceId 
-            : `${sentenceId}: ${sentence.句子}`;
-
-        container.innerHTML = `
-            <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
-            <p class='word-item' data-sentence="${sentenceId}">${sentenceDisplay}</p>
-            <button class='check-button' onclick='toggleCheckSentence("${sentenceId}", this)'>
-                <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
-            </button>
-            <button class='audio-btn' onclick='playSentenceAudio("${sentenceId}.mp3")'>
-                <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play" width="24" height="24" />
-            </button>
-        `;
-
-        sentenceItems.appendChild(container);
-
-        container.querySelector('.word-item').addEventListener("click", () => showSentenceDetails(sentenceId));
-    });
-
-    updateAutoPlayButton();
 }
 
 function getAutoPlayBtn() {
@@ -706,115 +647,6 @@ function updateAutoPlayButton() {
     autoPlayBtn.classList.toggle("auto-playing", isAutoPlaying);
 }
 
-function showWords(type, value) {
-    console.log("📌 點擊分類/等級/A-Z 按鈕:", type, value);
-    let titleText;
-    if (type === "letter") {
-        titleText = value.toUpperCase();
-    } else if (type === "primary_category") {
-        titleText = `主分類: ${value}`;
-    } else if (type === "secondary_category") {
-        titleText = `次分類: ${value}`;
-    } else if (type === "level") {
-        titleText = `${value} Level`;
-    } else {
-        titleText = value;
-    }
-
-    document.getElementById("wordListTitle").innerHTML = `
-        <span>${titleText}</span>
-        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
-    `;
-    document.getElementById("wordListTitle").style.display = "block";
-
-    lastWordListType = type;
-    lastWordListValue = value;
-
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.collapsible-section-wrapper').style.display = "none";
-    document.getElementById("sentenceList").style.display = "none";
-    document.getElementById("sentenceDetails").style.display = "none";
-
-    let wordList = document.getElementById("wordList");
-    wordList.style.display = "block";
-    
-    let wordItems = document.getElementById("wordItems");
-    wordItems.innerHTML = "";
-
-   
-    let filteredWords = wordsData.filter(w => {
-        if (!w.Words) {
-            console.warn("⚠️ wordsData 中存在無 Words 屬性的項目:", w);
-            return false;
-        }
-        let word = w.Words;
-        let category = w["分類"] || [];
-        let level = w["等級"] || "未分類";
-
-        if (type === "letter") return word.toLowerCase().startsWith(value.toLowerCase());
-        if (type === "primary_category") return category[0] === value;
-        if (type === "secondary_category") return category.slice(1).includes(value);
-        if (type === "category") return category.includes(value);
-        if (type === "level") return level === value;
-        return false;
-    });
-
-    console.log("✅ 過濾後的單字數量:", filteredWords.length);
-
-    if (filteredWords.length === 0) {
-        wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
-    } else {
-        currentWordList = filteredWords.map(w => w.Words);
-        filteredWords.forEach(word => {
-            let wordText = word.Words;
-            let isChecked = localStorage.getItem(`checked_${wordText}`) === "true";
-            let isImportant = localStorage.getItem(`important_${wordText}`) === "true";
-            let iconSrc = isChecked ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
-
-            let item = document.createElement('div');
-            item.className = 'word-item-container';
-            if (isChecked) item.classList.add("checked");
-            item.innerHTML = `
-                <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${wordText}", this)' ${isImportant ? "checked" : ""}>
-                <p class='word-item' data-word="${wordText}">${wordText}</p>
-                <button class='check-button' onclick='toggleCheck("${wordText}", this)'>
-                    <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
-                </button>
-            `;
-            wordItems.appendChild(item);
-
-            item.querySelector('.word-item').addEventListener("click", () => showSentences(wordText));
-        });
-    }
-}
-
-function toggleCheck(word, button) {
-    let isChecked = localStorage.getItem(`checked_${word}`) === "true";
-    let icon = button.querySelector("img");
-    let container = button.closest(".word-item-container");
-
-    if (isChecked) {
-        localStorage.removeItem(`checked_${word}`);
-        icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
-        container.classList.remove("checked");
-        container.style.opacity = "1";
-    } else {
-        localStorage.setItem(`checked_${word}`, "true");
-        icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg";
-        container.classList.add("checked");
-        container.style.opacity = "0.3";
-    }
-}
-
-function toggleImportant(word, checkbox) {
-    if (checkbox.checked) localStorage.setItem(`important_${word}`, "true");
-    else localStorage.removeItem(`important_${word}`);
-}
-
 function toggleCheckSentence(sentenceId, button) {
     const isChecked = localStorage.getItem(`checked_sentence_${sentenceId}`) === "true";
     const newState = !isChecked;
@@ -839,94 +671,6 @@ function toggleCheckSentence(sentenceId, button) {
     }
 }
 
-function showCheckedWords() {
-    document.getElementById("wordListTitle").innerHTML = `
-        <span>Checked 單字</span>
-        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
-    `;
-    document.getElementById("wordListTitle").style.display = "block";
-    lastWordListType = "checked";
-    lastWordListValue = null;
-
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.collapsible-section-wrapper').style.display = "none";
-
-    currentWordList = wordsData.filter(w => localStorage.getItem(`checked_${w.Words}`) === "true").map(w => w.Words);
-    displayWordList(currentWordList);
-}
-
-function showImportantWords() {
-    document.getElementById("wordListTitle").innerHTML = `
-        <span>重要單字</span>
-        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
-    `;
-    document.getElementById("wordListTitle").style.display = "block";
-    lastWordListType = "important";
-    lastWordListValue = null;
-
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.collapsible-section-wrapper').style.display = "none";
-
-    currentWordList = wordsData.filter(w => localStorage.getItem(`important_${w.Words}`) === "true").map(w => w.Words);
-    displayWordList(currentWordList);
-}
-
-function showWrongWords() {
-    document.getElementById("wordListTitle").innerHTML = `
-        <span>錯誤單字</span>
-        <button id="autoPlayBtn" onclick="toggleAutoPlay()">自動播放</button>
-    `;
-    document.getElementById("wordListTitle").style.display = "block";
-    lastWordListType = "wrong";
-    lastWordListValue = null;
-
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.collapsible-section-wrapper').style.display = "none";
-
-    let wrongWords = JSON.parse(localStorage.getItem("wrongWords")) || [];
-    currentWordList = wrongWords;
-    displayWordList(wrongWords);
-}
-
-function displayWordList(words) {
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.getElementById("sentencePageBtn").style.display = "none";
-    document.getElementById("wordList").style.display = "block";
-    document.querySelector('.collapsible-section-wrapper').style.display = "none";
-
-    let wordItems = document.getElementById("wordItems");
-    wordItems.innerHTML = words.length > 0
-        ? words.map(word => {
-            let isChecked = localStorage.getItem(`checked_${word}`) === "true";
-            let isImportant = localStorage.getItem(`important_${word}`) === "true";
-            let iconSrc = isChecked ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
-            return `
-                <div class='word-item-container ${isChecked ? "checked" : ""}'>
-                    <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${word}", this)' ${isImportant ? "checked" : ""}>
-                    <p class='word-item' data-word="${word}" onclick='showSentences("${word}")'>${word}</p>
-                    <button class='check-button' onclick='toggleCheck("${word}", this)'>
-                        <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
-                    </button>
-                </div>`;
-        }).join("")
-        : "<p>⚠️ 目前沒有符合的單字</p>";
-}
-
 function toggleImportantSentence(sentenceId, checkbox) {
     if (checkbox.checked) localStorage.setItem(`important_sentence_${sentenceId}`, "true");
     else localStorage.removeItem(`important_sentence_${sentenceId}`);
@@ -948,11 +692,6 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     }
 
     parentLayer = "sentenceList";
-
-    console.log("進入 showSentenceDetails - sentenceId:", sentenceId);
-    console.log("當前句子列表:", currentSentenceList);
-    console.log("當前索引:", currentSentenceIndex);
-    console.log("測驗模式:", isQuizMode);
 
     const detailsArea = document.getElementById("sentenceDetails");
 
@@ -1000,13 +739,7 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     document.getElementById("sentenceList").style.display = "none";
     document.getElementById("sentenceDetails").style.display = "block";
     document.getElementById("wordListTitle").style.display = "none";
-    document.getElementById("searchContainer").style.display = "none";
-    document.getElementById("startQuizBtn").style.display = "none";
-    document.getElementById("wordQuizBtn").style.display = "none";
-    document.getElementById("returnHomeBtn").style.display = "none";
-    document.getElementById("sentencePageBtn").style.display = "none";
-    document.querySelector('.collapsible-section-wrapper').style.display = "none";
-    document.getElementById("wordList").style.display = "none";
+    document.getElementById("mainPageContainer").style.display = "none";
 
     if (direction) {
         setTimeout(() => {
@@ -1200,49 +933,6 @@ function importAllData() {
     fileInput.click();
 }
 
-function backToFirstLayer() {
-    document.getElementById("searchContainer").style.display = "block";
-    document.getElementById("startQuizBtn").style.display = "block";
-    document.getElementById("wordQuizBtn").style.display = "block";
-    document.getElementById("returnHomeBtn").style.display = "block";
-    document.getElementById("sentencePageBtn").style.display = "block";
-    document.getElementById("wordList").style.display = "none";
-    document.getElementById("sentenceList").style.display = "none";
-    document.getElementById("sentenceDetails").style.display = "none";
-    document.querySelector('.collapsible-section-wrapper').style.display = "block";
-    document.getElementById("searchInput").value = "";
-    let searchResults = document.getElementById("searchResults");
-    if (searchResults) searchResults.remove();
-
-    let wordListTitle = document.getElementById("wordListTitle");
-    wordListTitle.style.display = "none";
-    wordListTitle.innerText = "";
-}
-
-function backToWordList() {
-    console.log("✅ 進入 backToWordList, parentLayer:", parentLayer);
-    document.getElementById("sentenceList").style.display = "none";
-    document.getElementById("sentenceDetails").style.display = "none";
-    
-    if (parentLayer === "firstLayer") {
-        backToFirstLayer();
-    } else if (parentLayer === "wordList") {
-        console.log("✅ 返回單字列表, lastWordListType:", lastWordListType, "lastWordListValue:", lastWordListValue);
-        document.getElementById("wordList").style.display = "block";
-        document.getElementById("wordListTitle").style.display = "block";
-        
-        if (lastWordListType && lastWordListValue) {
-            showWords(lastWordListType, lastWordListValue);
-        } else {
-            console.warn("⚠️ lastWordListType 或 lastWordListValue 未設置，返回第一層");
-            backToFirstLayer();
-        }
-    } else {
-        console.warn("⚠️ parentLayer 未定義，返回第一層");
-        backToFirstLayer();
-    }
-}
-
 function backToSentenceList(event) {
     event.stopPropagation();
 
@@ -1261,28 +951,9 @@ function backToSentenceList(event) {
 
     if (fromParam === 'quiz') {
         window.location.href = "quiz.html?returning=true";
-    } else if (parentLayer === "sentenceList") {
+    } else {
+        // For any other case, just show the sentence list again
         document.getElementById("sentenceList").style.display = "block";
         document.getElementById("wordListTitle").style.display = "block";
-
-        if (lastWordListType === "sentenceNotes") {
-            showSentenceNotes();
-        } else if (lastWordListType === "importantSentences") {
-            showImportantSentences();
-        } else if (lastWordListType === "wrongSentences") {
-            showWrongSentences();
-        } else if (lastWordListType === "checkedSentences") {
-            showCheckedSentences();
-        } else if (lastSentenceListWord) {
-            showSentences(lastSentenceListWord);
-        } else if (currentSentenceList.length > 0) {
-            displaySentenceList(currentSentenceList);
-        } else {
-            console.warn("⚠️ 無法確定句子列表上下文，返回第一層");
-            backToFirstLayer();
-        }
-    } else {
-        console.warn("⚠️ parentLayer 未正確設置為 sentenceList，返回第一層");
-        backToFirstLayer();
     }
 }

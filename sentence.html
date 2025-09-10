@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="sentence.css">
 </head>
 <body>
-        <div id="loading-overlay">
+    <div id="loading-overlay">
         <div class="loading-spinner"></div>
         <p class="loading-text">資料載入中，請稍候...</p>
     </div>
@@ -14,52 +14,54 @@
     <div id="notification-container"></div>
     <h1>Boyd Vocabulary</h1>
 
-    <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
-        <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterSentences()" style="font-size: 18px; padding: 5px; width: 200px;">
-    </div>
-    <div class="button-container">
-        <button id="returnHomeBtn" class="button">單字頁面</button>
-        <button id="wordQuizBtn" class="button">單字測驗</button>
-        <button id="sentencePageBtn" class="button" style="background-color: #28a745;">句子頁面</button>
-        <button id="startQuizBtn" class="button">句子測驗</button>
-    </div>
-    
-    <div class="collapsible-section-wrapper">
-        <div class="collapsible-section">
-            <button type="button" class="collapsible-header">字母分類</button>
-            <div class="collapsible-content" id="alphabetButtons">
-                </div>
+    <div id="mainPageContainer">
+        <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
+            <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterSentences()" style="font-size: 18px; padding: 5px; width: 200px;">
         </div>
-        <div class="collapsible-section">
-            <button type="button" class="collapsible-header">主分類</button>
-            <div class="collapsible-content" id="primaryCategoryButtons">
-                </div>
+        <div class="button-container">
+            <button id="returnHomeBtn" class="button">單字頁面</button>
+            <button id="wordQuizBtn" class="button">單字測驗</button>
+            <button id="sentencePageBtn" class="button" style="background-color: #28a745;">句子頁面</button>
+            <button id="startQuizBtn" class="button">句子測驗</button>
         </div>
-        <div class="collapsible-section">
-            <button type="button" class="collapsible-header">次分類</button>
-            <div class="collapsible-content" id="secondaryCategoryButtons">
-                </div>
+        
+        <div class="collapsible-section-wrapper">
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">字母分類</button>
+                <div class="collapsible-content" id="alphabetButtons">
+                    </div>
+            </div>
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">主分類</button>
+                <div class="collapsible-content" id="primaryCategoryButtons">
+                    </div>
+            </div>
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">特殊分類</button>
+                <div class="collapsible-content" id="specialCategoryButtons">
+                    </div>
+            </div>
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">等級分類</button>
+                <div class="collapsible-content" id="levelButtons">
+                    </div>
+            </div>
         </div>
-        <div class="collapsible-section">
-            <button type="button" class="collapsible-header">特殊分類</button>
-            <div class="collapsible-content" id="specialCategoryButtons">
-                </div>
+
+        <div class="start-learning-container">
+            <button id="startLearningBtn" class="button">開始學習</button>
         </div>
-        <div class="collapsible-section">
-            <button type="button" class="collapsible-header">等級分類</button>
-            <div class="collapsible-content" id="levelButtons">
-                </div>
         </div>
-    </div>
+
     <h2 id="wordListTitle" style="text-align: center; margin-bottom: 10px; display: none;"></h2>
     <div class="container">
-        <div id="wordList" class="word-list">
+        <div id="wordList" class="word-list" style="display: none;">
             <button class="button back-button" onclick="backToFirstLayer()">Back</button>
             <div id="wordItems"></div>
         </div>
 
         <div id="sentenceList" class="word-list" style="display: none;">
-            <button class="button back-button" onclick="backToWordList()">Back</button>
+            <button class="button back-button" onclick="backToFirstLayer()">Back</button>
             <div id="sentenceItems"></div>
         </div>
 

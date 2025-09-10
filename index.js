@@ -116,6 +116,7 @@ function toggleSelection(btn) {
     btn.classList.toggle('selected');
 }
 
+// ▼▼▼ 修改此函式 ▼▼▼
 function handlePrimaryCategoryClick(btn, categoryName) {
     toggleSelection(btn);
 
@@ -127,11 +128,21 @@ function handlePrimaryCategoryClick(btn, categoryName) {
         subcategoryWrapper.className = 'subcategory-wrapper';
         subcategoryWrapper.id = `sub-for-${categoryName.replace(/\s/g, '-')}`;
 
+        // 提取所有明確的次分類
         const secondaryCategories = [...new Set(
             wordsData
                 .filter(w => w["分類"] && w["分類"][0] === categoryName && w["分類"][1])
                 .map(w => w["分類"][1])
         )];
+
+        // 檢查是否存在沒有次分類的單字
+        const hasUncategorized = wordsData.some(w => 
+            w["分類"] && w["分類"][0] === categoryName && (!w["分類"][1] || w["分類"][1].trim() === '')
+        );
+
+        if (hasUncategorized) {
+            secondaryCategories.unshift("未分類"); // 將「未分類」選項放在最前面
+        }
         
         if (secondaryCategories.length > 0) {
             const subWrapper = document.createElement('div');
@@ -142,23 +153,27 @@ function handlePrimaryCategoryClick(btn, categoryName) {
             subcategoryWrapper.appendChild(subWrapper);
         }
         
+        // 將次分類容器插入到主分類按鈕的後面
         btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
     }
 
     const mainCollapsibleContent = btn.closest('.collapsible-content');
 
+    // 切換次分類容器的顯示/隱藏
     if (subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px') {
         subcategoryWrapper.style.maxHeight = '0px';
     } else {
         subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
     }
 
+    // 重新計算並設定主分類容器的高度以容納次分類容器
     setTimeout(() => {
         if (mainCollapsibleContent.style.maxHeight !== '0px') {
              mainCollapsibleContent.style.maxHeight = mainCollapsibleContent.scrollHeight + "px";
         }
-    }, 310);
+    }, 310); // 等待次分類動畫完成
 }
+// ▲▲▲ 修改結束 ▲▲▲
 
 function createAlphabetButtons() {
     const container = document.getElementById("alphabetButtons");
@@ -188,6 +203,7 @@ function createCategoryButtons() {
             btn.className = 'letter-btn';
             btn.textContent = category;
             btn.dataset.value = category;
+            // ▼▼▼ 修改 onclick 事件 ▼▼▼
             btn.onclick = () => handlePrimaryCategoryClick(btn, category);
             wrapper.appendChild(btn);
         });
@@ -195,7 +211,6 @@ function createCategoryButtons() {
         primaryContainer.appendChild(wrapper);
     }
 
-    // ▼▼▼ 修改此處，讓特殊分類也變成複選按鈕 ▼▼▼
     const specialCategories = [
         { name: "Checked 單字", value: "checked" },
         { name: "重要單字", value: "important" },
@@ -212,7 +227,6 @@ function createCategoryButtons() {
          ).join(" ");
         specialContainer.appendChild(wrapper);
     }
-    // ▲▲▲ 修改結束 ▲▲▲
 }
 
 function createLevelButtons() {
@@ -229,12 +243,12 @@ function createLevelButtons() {
     }
 }
 
+// ▼▼▼ 修改此函式以處理「未分類」的篩選 ▼▼▼
 function startLearning() {
     const selectedLetters = Array.from(document.querySelectorAll('#alphabetButtons .letter-btn.selected')).map(btn => btn.dataset.value);
     const selectedPrimaries = Array.from(document.querySelectorAll('#primaryCategoryButtons > .button-wrapper > .letter-btn.selected')).map(btn => btn.dataset.value);
     const selectedSecondaries = Array.from(document.querySelectorAll('.subcategory-wrapper .letter-btn.selected')).map(btn => btn.dataset.value);
     const selectedLevels = Array.from(document.querySelectorAll('#levelButtonsContent .letter-btn.selected')).map(btn => btn.dataset.value);
-    // ▼▼▼ 新增：獲取選擇的特殊分類 ▼▼▼
     const selectedSpecials = Array.from(document.querySelectorAll('#specialCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
     
     let filteredWords = wordsData;
@@ -255,8 +269,15 @@ function startLearning() {
 
     if (selectedSecondaries.length > 0) {
         filteredWords = filteredWords.filter(w => {
-            const cats = w["分類"] || [];
-            return cats.length > 1 && selectedSecondaries.includes(cats[1]);
+            // 如果一個單字的主分類沒有被選中，那麼它的次分類也不應該被匹配
+            // （除非使用者根本沒有篩選主分類）
+            const primaryCat = (w["分類"] && w["分類"][0]) || "未分類";
+            if (selectedPrimaries.length > 0 && !selectedPrimaries.includes(primaryCat)) {
+                return false;
+            }
+            
+            const secondaryCat = (w["分類"] && w["分類"][1]) || "未分類"; // 將空次分類視為 "未分類"
+            return selectedSecondaries.includes(secondaryCat);
         });
     }
     
@@ -267,7 +288,6 @@ function startLearning() {
         });
     }
     
-    // ▼▼▼ 新增：處理特殊分類的篩選邏輯 ▼▼▼
     if (selectedSpecials.length > 0) {
         const specialWordsSet = new Set();
 
@@ -295,13 +315,11 @@ function startLearning() {
             }
         });
 
-        // 用彙整好的 specialWordsSet 來過濾目前的單字列表
         filteredWords = filteredWords.filter(w => {
             const wordText = w.Words || w.word || w["單字"] || "";
             return specialWordsSet.has(wordText);
         });
     }
-    // ▲▲▲ 修改結束 ▲▲▲
 
     if (filteredWords.length === 0) {
         showNotification("⚠️ 找不到符合條件的單字。", "error");
@@ -310,6 +328,7 @@ function startLearning() {
 
     displayWordList(filteredWords, "學習列表");
 }
+// ▲▲▲ 修改結束 ▲▲▲
 
 function displayWordList(words, title) {
     document.getElementById("wordListTitle").innerText = title;
@@ -367,6 +386,7 @@ function displayWordList(words, title) {
     lastWordListType = "custom_selection";
 }
 
+// ... (其他函式保持不變) ...
 function backToFirstLayer() {
     document.getElementById("mainPageContainer").style.display = "block";
     document.getElementById("wordList").style.display = "none";
@@ -396,8 +416,6 @@ function backToWordList() {
     }
     backToFirstLayer();
 }
-
-// ... (以下所有其他函式保持不變) ...
 
 function navigateTo(state) {
     if (historyStack.length === 0 || historyStack[historyStack.length - 1].word !== state.word) {
