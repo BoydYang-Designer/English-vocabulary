@@ -1,4 +1,3 @@
-
 console.log("✅ q_sentence.js 已載入");
 
 const GITHUB_JSON_URL = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/sentence.json";
@@ -53,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // 📌 進入 Q Sentence 測驗分類頁面
 function showSentenceQuizCategories() {
     document.querySelector("h1").textContent = "句子測驗區";
-    // document.getElementById("mainMenu").style.display = "none"; // 這一行已被刪除
     document.getElementById("sentenceQuizCategories").style.display = "block";
     console.log("✅ 顯示句子測驗分類頁面");
 
@@ -108,7 +106,6 @@ function showSentenceQuizCategories() {
                 "中文": "（毛巾迅速吸收了灑出的水。）",
                 "分類": ["藝術與美學", "Design"]
             }
-            // 添加更多樣本資料如果需要
         ];
         console.log("✅ 使用臨時樣本資料載入分類");
         generateSentenceCategories(sentenceData); // 使用樣本資料生成分類
@@ -117,15 +114,73 @@ function showSentenceQuizCategories() {
 });
 }
 
+// ▼▼▼ [新增] 處理主分類點擊、動態生成次分類的函式 ▼▼▼
+function handleSentencePrimaryCategoryClick(btn, categoryName) {
+    toggleSentenceSelection('primaryCategories', categoryName, btn);
+
+    // 尋找或創建次分類容器
+    let subcategoryWrapperId = `sub-for-sentence-${categoryName.replace(/\s/g, '-')}`;
+    let subcategoryWrapper = document.getElementById(subcategoryWrapperId);
+
+    if (!subcategoryWrapper) {
+        subcategoryWrapper = document.createElement('div');
+        // 使用與 sentence.css 和 quiz.css 相同的 class 以保持樣式一致
+        subcategoryWrapper.className = 'subcategory-wrapper'; 
+        subcategoryWrapper.id = subcategoryWrapperId;
+
+        // 找出此主分類下的所有次分類
+        const secondaryCategories = [...new Set(
+            sentenceData
+                .filter(s => s.primaryCategory === categoryName && s.secondaryCategories && s.secondaryCategories.length > 0)
+                .flatMap(s => s.secondaryCategories)
+        )];
+
+        // 檢查是否存在沒有次分類的項目
+        const hasUncategorized = sentenceData.some(s =>
+            s.primaryCategory === categoryName && (!s.secondaryCategories || s.secondaryCategories.length === 0)
+        );
+
+        if (hasUncategorized) {
+            secondaryCategories.unshift("未分類"); // 將「未分類」加到最前面
+        }
+
+        // 如果有次分類，則生成按鈕
+        if (secondaryCategories.length > 0) {
+            subcategoryWrapper.innerHTML = secondaryCategories.map(subCat =>
+                `<button class="category-button" onclick="toggleSentenceSelection('secondaryCategories', '${subCat}', this)">${subCat}</button>`
+            ).join('');
+        }
+        
+        // 將次分類容器插入到主分類按鈕之後
+        btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
+    }
+
+    // 透過控制 maxHeight 來實現展開/收合的動畫效果
+    if (subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px') {
+        subcategoryWrapper.style.maxHeight = '0px';
+    } else {
+        subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
+    }
+
+    // 延遲後重新計算父容器的高度，以確保能容納展開的次分類
+    setTimeout(() => {
+        const mainCollapsibleContent = btn.closest('.collapsible-content');
+        if (mainCollapsibleContent && mainCollapsibleContent.style.maxHeight !== '0px') {
+             mainCollapsibleContent.style.maxHeight = mainCollapsibleContent.scrollHeight + "px";
+        }
+    }, 310); // 延遲時間略大於 CSS transition 時間 (0.3s)
+}
+// ▲▲▲ [新增] 函式結束 ▲▲▲
+
+// ▼▼▼ [修改] 分類按鈕生成函式 ▼▼▼
 function generateSentenceCategories(data) {
-    // 定義各分類的容器
     const alphabetContainer = document.getElementById("sentenceAlphabetButtons");
     const primaryContainer = document.getElementById("sentencePrimaryCategoryButtons");
-    const secondaryContainer = document.getElementById("sentenceSecondaryCategoryButtons");
+    const secondaryContainer = document.getElementById("sentenceSecondaryCategoryButtons"); // 這個容器將不再被使用
     const specialContainer = document.getElementById("sentenceSpecialCategoryButtons");
     const levelContainer = document.getElementById("sentenceLevelButtons");
 
-    if (!alphabetContainer || !primaryContainer || !secondaryContainer || !specialContainer || !levelContainer) {
+    if (!alphabetContainer || !primaryContainer || !specialContainer || !levelContainer) {
         console.error("❌ 句子測驗的分類容器未全部找到，請檢查 quiz.html 的 ID。");
         return;
     }
@@ -133,7 +188,6 @@ function generateSentenceCategories(data) {
     // 提取所有分類
     const levels = new Set();
     const primaryCategories = new Set();
-    const secondaryCategories = new Set();
     const alphabetSet = new Set();
 
     data.forEach(item => {
@@ -145,68 +199,59 @@ function generateSentenceCategories(data) {
         if (item.primaryCategory) {
             primaryCategories.add(item.primaryCategory);
         }
-        item.secondaryCategories.forEach(cat => secondaryCategories.add(cat));
     });
 
-    // 渲染按鈕到對應的容器
+    // 渲染字母按鈕
     alphabetContainer.innerHTML = [...alphabetSet].sort().map(letter => 
-        `<button class="category-button" onclick="toggleSentenceSelection('alphabet', '${letter}')">${letter}</button>`
+        `<button class="category-button" onclick="toggleSentenceSelection('alphabet', '${letter}', this)">${letter}</button>`
     ).join("");
 
+    // 渲染主分類按鈕，並將 onclick 事件指向新的處理函式
     primaryContainer.innerHTML = [...primaryCategories].map(c =>
-        `<button class="category-button" onclick="toggleSentenceSelection('primaryCategories', '${c}')">${c}</button>`
+        `<button class="category-button" onclick="handleSentencePrimaryCategoryClick(this, '${c}')">${c}</button>`
     ).join("");
 
-    secondaryContainer.innerHTML = [...secondaryCategories].map(c =>
-        `<button class="category-button" onclick="toggleSentenceSelection('secondaryCategories', '${c}')">${c}</button>`
-    ).join("");
+    // 清空並隱藏舊的次分類容器
+    if (secondaryContainer) {
+        secondaryContainer.innerHTML = "";
+        secondaryContainer.closest('.collapsible-section').style.display = 'none'; // 直接隱藏整個區塊
+    }
     
+    // 渲染特殊分類按鈕
     specialContainer.innerHTML = `
-        <button class="category-button" onclick="toggleSentenceSelection('special', 'important')">重要句子</button>
-        <button class="category-button" onclick="toggleSentenceSelection('special', 'incorrect')">錯誤句子</button>
-        <button class="category-button" onclick="toggleSentenceSelection('special', 'checked')">已經checked 句子</button>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'important', this)">重要句子</button>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'incorrect', this)">錯誤句子</button>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'checked', this)">已經checked 句子</button>
     `;
 
+    // 渲染等級分類按鈕
     levelContainer.innerHTML = [...levels].map(l =>
-        `<button class="category-button" onclick="toggleSentenceSelection('levels', '${l}')">${l}</button>`
+        `<button class="category-button" onclick="toggleSentenceSelection('levels', '${l}', this)">${l}</button>`
     ).join("");
-    
-    // 恢復已選狀態
-    document.querySelectorAll("#sentenceQuizCategories .category-button").forEach(button => {
-        const onclickAttr = button.getAttribute('onclick');
-        const typeMatch = onclickAttr.match(/toggleSentenceSelection\('(\w+)'/);
-        const valueMatch = onclickAttr.match(/,\s*'([^']+)'\)/);
-        if (typeMatch && valueMatch) {
-            const type = typeMatch[1];
-            const value = valueMatch[1];
-            if (selectedSentenceFilters[type] && selectedSentenceFilters[type].has(value)) {
-                button.classList.add("selected");
-            }
-        }
-    });
 }
+// ▲▲▲ [修改] 函式結束 ▲▲▲
 
-// 📌 切換篩選條件並更新按鈕樣式
-function toggleSentenceSelection(type, value) {
+// ▼▼▼ [修改] 切換篩選條件函式，使其能處理按鈕樣式切換 ▼▼▼
+function toggleSentenceSelection(type, value, button) {
     let filterSet = selectedSentenceFilters[type];
-    let button = document.querySelector(`button[onclick="toggleSentenceSelection('${type}', '${value}')"]`);
     
     if (!button) {
-        console.error(`❌ 未找到按鈕: type=${type}, value=${value}`);
-        return;
+        // 如果 button 未傳入，嘗試從 DOM 中尋找
+        button = document.querySelector(`button[onclick*="'${type}', '${value}'"]`);
     }
 
     if (filterSet.has(value)) {
         filterSet.delete(value);
-        button.classList.remove("selected");
+        if(button) button.classList.remove("selected");
     } else {
         filterSet.add(value);
-        button.classList.add("selected");
+        if(button) button.classList.add("selected");
     }
     console.log(`✅ ${type} 篩選更新:`, [...filterSet]);
 }
+// ▲▲▲ [修改] 函式結束 ▲▲▲
 
-// 📌 開始測驗
+// ▼▼▼ [修改] 開始測驗的篩選邏輯 ▼▼▼
 function startSentenceQuiz() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("sentenceQuizArea").style.display = "block";
@@ -214,13 +259,24 @@ function startSentenceQuiz() {
     let filteredSentences = sentenceData.filter(item => {
         let levelMatch = selectedSentenceFilters.levels.size === 0 || selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
         let primaryCategoryMatch = selectedSentenceFilters.primaryCategories.size === 0 || selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
+        
+        // 更新的次分類篩選邏輯
         let secondaryCategoryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
-                                     (item.secondaryCategories || []).some(cat => selectedSentenceFilters.secondaryCategories.has(cat));
+            ((item.secondaryCategories && item.secondaryCategories.length > 0) && item.secondaryCategories.some(cat => selectedSentenceFilters.secondaryCategories.has(cat))) ||
+            (selectedSentenceFilters.secondaryCategories.has('未分類') && (!item.secondaryCategories || item.secondaryCategories.length === 0));
+
         let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
-        let specialMatch = selectedSentenceFilters.special.size === 0 ||
-                           (selectedSentenceFilters.special.has('important') && localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
-                           (selectedSentenceFilters.special.has('incorrect') && incorrectSentences.includes(item.Words)) ||
-                           (selectedSentenceFilters.special.has('checked') && localStorage.getItem(`checked_sentence_${item.Words}`) === "true");
+        
+        let specialMatch = true;
+        if (selectedSentenceFilters.special.size > 0) {
+            specialMatch = [...selectedSentenceFilters.special].every(filter => {
+                 if (filter === 'important') return localStorage.getItem(`important_sentence_${item.Words}`) === "true";
+                 if (filter === 'incorrect') return (JSON.parse(localStorage.getItem("wrongQS")) || []).includes(item.Words);
+                 if (filter === 'checked') return localStorage.getItem(`checked_sentence_${item.Words}`) === "true";
+                 return true;
+            });
+        }
+        
         return levelMatch && primaryCategoryMatch && secondaryCategoryMatch && alphabetMatch && specialMatch;
     });
 
@@ -230,7 +286,6 @@ function startSentenceQuiz() {
         return;
     }
 
-    // --- 核心修改：排序與篩選 ---
     filteredSentences.sort((a, b) => {
         const countA = sentenceQuizHistory[a.Words] || 0;
         const countB = sentenceQuizHistory[b.Words] || 0;
@@ -256,12 +311,13 @@ function startSentenceQuiz() {
         autoPlayAudio();
     }, 100);
 }
+// ▲▲▲ [修改] 函式結束 ▲▲▲
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
 });
 
-let currentAudio = null; // 儲存當前音檔，避免重複創建
+let currentAudio = null;
 
 function loadSentenceQuestion() {
     let sentenceObj = currentQuizSentences[currentSentenceIndex];
@@ -270,16 +326,12 @@ function loadSentenceQuestion() {
         return;
     }
 
-      // --- 核心修改：更新歷史紀錄 ---
     sentenceQuizHistory[sentenceObj.Words] = (sentenceQuizHistory[sentenceObj.Words] || 0) + 1;
     localStorage.setItem('sentenceQuizHistory', JSON.stringify(sentenceQuizHistory));
     console.log(`📈 更新測驗紀錄: ${sentenceObj.Words}, 次數: ${sentenceQuizHistory[sentenceObj.Words]}`);
     
-    // 原始句子
     let originalSentence = sentenceObj.句子;
-    // 移除括號內容（例如 [=critique]）
     let sentenceText = originalSentence.replace(/\s*\[=[^\]]+\]/g, "").trim();
-    // 使用 Unicode 字母分割單詞，保留標點符號
     let words = sentenceText.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]|\s+/gu) || [];
 
     let sentenceInputContainer = document.getElementById("sentenceInput");
@@ -288,7 +340,6 @@ function loadSentenceQuestion() {
     let firstInput = null;
     let allInputs = [];
 
-    // 計算最長單字的字母數
     let maxWordLength = Math.max(...words.filter(w => /\p{L}+/u.test(w)).map(w => w.length));
     let screenWidth = window.innerWidth || document.documentElement.clientWidth;
 
@@ -297,8 +348,7 @@ function loadSentenceQuestion() {
         wordContainer.classList.add("word-container");
 
         if (/\p{L}+/u.test(word)) {
-            // 將單詞拆分成單個字符（包括 é 等）
-            let chars = Array.from(word); // 使用 Array.from 確保正確分割 Unicode 字符
+            let chars = Array.from(word);
             chars.forEach((char, letterIndex) => {
                 let input = document.createElement("input");
                 input.type = "text";
@@ -325,8 +375,6 @@ function loadSentenceQuestion() {
         sentenceInputContainer.appendChild(wordContainer);
     });
 
-    // 提示文字邏輯
-// 提示文字邏輯 (更新為顯示中文翻譯)
     let chineseHint = sentenceObj.中文 || "（無中文提示）";
     document.getElementById("sentenceHint").innerHTML = chineseHint;
 
@@ -336,7 +384,6 @@ function loadSentenceQuestion() {
 
     document.getElementById("nextSentenceBtn").style.display = "none";
 
-    // 音頻邏輯
     if (sentenceObj.Words) {
         let audioUrl = GITHUB_MP3_BASE_URL + encodeURIComponent(sentenceObj.Words) + ".mp3";
         console.log("✅ 音頻 URL:", audioUrl);
@@ -367,7 +414,6 @@ function loadSentenceQuestion() {
         };
     }
 
-    // 儲存過濾後的句子作為正確答案
     sentenceObj.filteredSentence = sentenceText;
 }
 
@@ -389,7 +435,7 @@ function autoPlayAudio() {
     }
 }
 
-// 📌 1開始測驗重組句子
+// ▼▼▼ [修改] 開始重組測驗的篩選邏輯 ▼▼▼
 function startReorganizeQuiz() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("reorganizeQuizArea").style.display = "block";
@@ -399,14 +445,25 @@ function startReorganizeQuiz() {
                          selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
         let primaryMatch = selectedSentenceFilters.primaryCategories.size === 0 ||
                            selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
+        
+        // 更新的次分類篩選邏輯
         let secondaryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
-                             item.secondaryCategories.some(c => selectedSentenceFilters.secondaryCategories.has(c));
+            ((item.secondaryCategories && item.secondaryCategories.length > 0) && item.secondaryCategories.some(cat => selectedSentenceFilters.secondaryCategories.has(cat))) ||
+            (selectedSentenceFilters.secondaryCategories.has('未分類') && (!item.secondaryCategories || item.secondaryCategories.length === 0));
+
         let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 ||
                             selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
-        let specialMatch = selectedSentenceFilters.special.size === 0 ||
-                           (selectedSentenceFilters.special.has('important') && localStorage.getItem(`important_sentence_${item.Words}`) === "true") ||
-                           (selectedSentenceFilters.special.has('incorrect') && incorrectSentences.includes(item.Words)) ||
-                           (selectedSentenceFilters.special.has('checked') && localStorage.getItem(`checked_sentence_${item.Words}`) === "true");
+        
+        let specialMatch = true;
+        if (selectedSentenceFilters.special.size > 0) {
+             specialMatch = [...selectedSentenceFilters.special].every(filter => {
+                 if (filter === 'important') return localStorage.getItem(`important_sentence_${item.Words}`) === "true";
+                 if (filter === 'incorrect') return (JSON.parse(localStorage.getItem("wrongQS")) || []).includes(item.Words);
+                 if (filter === 'checked') return localStorage.getItem(`checked_sentence_${item.Words}`) === "true";
+                 return true;
+            });
+        }
+        
         return levelMatch && primaryMatch && secondaryMatch && alphabetMatch && specialMatch;
     });
 
@@ -416,7 +473,6 @@ function startReorganizeQuiz() {
         return;
     }
 
-    // --- 核心修改：排序與篩選 ---
     filteredSentences.sort((a, b) => {
         const countA = sentenceQuizHistory[a.Words] || 0;
         const countB = sentenceQuizHistory[b.Words] || 0;
@@ -429,32 +485,25 @@ function startReorganizeQuiz() {
     localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
     loadReorganizeQuestion();
 }
+// ▲▲▲ [修改] 函式結束 ▲▲▲
 
-// 📌 2載入重組問題
 function loadReorganizeQuestion() {
-    // 獲取當前句子並檢查有效性
     let sentenceObj = currentQuizSentences[currentSentenceIndex];
     if (!sentenceObj || !sentenceObj.句子) {
         console.error("❌ 找不到有效的句子對象！");
         return;
     }
 
-    // 過濾句子並儲存
     let sentenceText = sentenceObj.句子.replace(/\s*\[=[^\]]+\]/g, "").trim();
     sentenceObj.filteredSentence = sentenceText;
 
-    // 分割句子，用於提示，保留單詞和標點符號
-// 更新提示為顯示中文翻譯
     let chineseHint = sentenceObj.中文 || "（無中文提示）";
     document.getElementById("reorganizeSentenceHint").innerHTML = chineseHint;
 
-    // 生成詞塊（僅包括單詞和所有格，排除標點符號）
     let blocks = sentenceText.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+/gu) || [];
     
-    // 隨機打亂詞塊並分配索引
     let shuffledBlocks = blocks.map((value, index) => ({ value, index })).sort(() => Math.random() - 0.5);
     
-    // 生成占位容器和詞塊
     let blocksContainer = document.getElementById("wordBlocksContainer");
     blocksContainer.innerHTML = shuffledBlocks
         .map(b => `
@@ -464,19 +513,16 @@ function loadReorganizeQuestion() {
         `)
         .join("");
 
-    // 清空並設置構建區域
     let constructionArea = document.getElementById("sentenceConstructionArea");
-    constructionArea.innerHTML = ""; // 清空現有內容
+    constructionArea.innerHTML = "";
 
-    // 根據單字數量生成固定數量的占位符
     for (let i = 0; i < blocks.length; i++) {
         let placeholder = document.createElement("div");
         placeholder.classList.add("construction-placeholder");
-        placeholder.dataset.position = i; // 記錄位置
+        placeholder.dataset.position = i;
         constructionArea.appendChild(placeholder);
     }
 
-    // 添加音頻播放功能
     if (sentenceObj.Words) {
         let audioUrl = GITHUB_MP3_BASE_URL + encodeURIComponent(sentenceObj.Words) + ".mp3";
         if (currentAudio instanceof Audio) {
@@ -503,7 +549,6 @@ function loadReorganizeQuestion() {
             console.log("✅ 音檔播放結束");
         };
 
-        // 自動播放音頻
         playBtn.classList.add("playing");
         currentAudio.play().catch(error => {
             console.warn("🔊 自動播放失敗:", error);
@@ -512,33 +557,29 @@ function loadReorganizeQuestion() {
     }
 }
 
-// 📌 3選擇詞塊
 function selectWordBlock(block) {
     let constructionArea = document.getElementById("sentenceConstructionArea");
-    let placeholder = block.parentNode; // 當前方塊的父容器
+    let placeholder = block.parentNode;
 
     if (placeholder.classList.contains("word-block-placeholder")) {
-        // 從原始區域移動到構建區域
         let emptyPlaceholder = Array.from(constructionArea.children).find(
-            ph => ph.children.length === 0 // 找到第一個空的占位符
+            ph => ph.children.length === 0
         );
 
         if (emptyPlaceholder) {
-            emptyPlaceholder.appendChild(block); // 將方塊放入空的占位符
+            emptyPlaceholder.appendChild(block);
             block.classList.add("selected");
         }
     } else {
-        // 從構建區域移回原始區域
         let blockIndex = block.dataset.index;
         let originalPlaceholder = document.querySelector(`.word-block-placeholder[data-index="${blockIndex}"]`);
         if (originalPlaceholder) {
-            originalPlaceholder.appendChild(block); // 移回原始位置
+            originalPlaceholder.appendChild(block);
             block.classList.remove("selected");
         }
     }
 }
 
-// 📌 4提交答案
 function submitReorganizeAnswer() {
     let constructionArea = document.getElementById("sentenceConstructionArea");
     let userAnswer = Array.from(constructionArea.children).map(b => b.children[0] ? b.children[0].dataset.value : "").join(" ");
@@ -547,7 +588,6 @@ function submitReorganizeAnswer() {
 
     userConstructedSentences[currentSentenceIndex] = userAnswer;
 
-    // 使用 normalizeText 進行正規化比對
     let normalizedUserAnswer = normalizeText(userAnswer);
     let normalizedCorrectSentence = normalizeText(correctSentence);
 
@@ -560,7 +600,6 @@ function submitReorganizeAnswer() {
     }
     localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
 
-    // 更新詞塊反饋
     let placeholders = constructionArea.querySelectorAll(".construction-placeholder");
     let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+/gu) || [];
     placeholders.forEach((placeholder, i) => {
@@ -579,7 +618,6 @@ function submitReorganizeAnswer() {
         }
     });
 
-    // 更新提示區顯示完整正確答案和中文解釋
     let chineseExplanation = sentenceObj.中文 ? sentenceObj.中文.replace(/\n/g, "<br>") : "無中文解釋";
     document.getElementById("reorganizeSentenceHint").innerHTML = `
         <div>${correctSentence}</div>
@@ -593,7 +631,6 @@ function submitReorganizeAnswer() {
     document.getElementById("submitReorganizeBtn").onclick = goToNextReorganizeSentence;
 }
 
-// 📌 5切換到下一題
 function goToNextReorganizeSentence() {
     currentSentenceIndex++;
     if (currentSentenceIndex >= currentQuizSentences.length) {
@@ -605,7 +642,6 @@ function goToNextReorganizeSentence() {
     document.getElementById("submitReorganizeBtn").innerText = "提交";
     document.getElementById("submitReorganizeBtn").onclick = submitReorganizeAnswer;
 
-    // 自動播放音頻
     if (currentAudio) {
         const playBtn = document.getElementById("playReorganizeAudioBtn");
         playBtn.classList.add("playing");
@@ -617,7 +653,6 @@ function goToNextReorganizeSentence() {
     }
 }
 
-// 📌 6完成測驗
 function finishReorganizeQuiz() {
     document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("reorganizeQuizArea").style.display = "none";
@@ -636,7 +671,6 @@ function finishReorganizeQuiz() {
         let userAnswer = userConstructedSentences[index] || "(未作答)";
         let correctSentence = sentenceObj.filteredSentence;
 
-        // 提取單詞進行比較（含縮寫、所有格和連字符單詞）
         let userWords = userAnswer.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
         let correctWords = correctSentence.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
         let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toLowerCase();
@@ -675,7 +709,6 @@ function finishReorganizeQuiz() {
         </div>
     `;
 
-    // 確保保存本次測驗的結果
     localStorage.setItem("userConstructedSentences", JSON.stringify(userConstructedSentences));
     localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
     console.log("✅ 測驗結束時保存的資料:", { userConstructedSentences, currentQuizSentences });
@@ -683,7 +716,6 @@ function finishReorganizeQuiz() {
 
 document.getElementById("startReorganizeQuizBtn").addEventListener("click", startReorganizeQuiz);
 
-// 📌 **輸入監聽函數**
 function handleLetterInput(event) {
     let input = event.target;
     let value = input.value.trim();
@@ -692,7 +724,6 @@ function handleLetterInput(event) {
         input.value = value[0];
     }
 
-    // ✅ **自動跳到下一個填空**
     let allInputs = Array.from(document.querySelectorAll(".letter-input"));
     let currentIndex = allInputs.indexOf(input);
 
@@ -704,7 +735,6 @@ function handleLetterInput(event) {
     }
 }
 
-// 📌 **方向鍵 + Backspace 處理**
 function handleArrowNavigation(event) {
     let input = event.target;
     let allInputs = Array.from(document.querySelectorAll(".letter-input"));
@@ -725,37 +755,33 @@ function handleArrowNavigation(event) {
     } else if (event.key === "Backspace") {
         event.preventDefault();
         if (input.value) {
-            input.value = ""; // 先刪除當前字母
+            input.value = "";
         } else {
             let prevInput = allInputs[currentIndex - 1];
             if (prevInput) {
-                prevInput.value = ""; // 刪除前一格的字母
+                prevInput.value = "";
                 prevInput.focus();
             }
         }
     }
 }
 
-// 📌 播放音檔函數（統一版本）
 function playAudio() {
     if (currentAudio) {
         const playBtn = document.getElementById("playSentenceAudioBtn");
         
-        // 添加播放中樣式
         playBtn.classList.add("playing");
         
-        currentAudio.currentTime = 0; // 從頭播放
+        currentAudio.currentTime = 0;
         currentAudio.play()
             .then(() => {
                 console.log("✅ 播放成功");
             })
             .catch(error => {
                 console.error("🔊 播放失敗:", error);
-                // 即使播放失敗也移除播放樣式
                 playBtn.classList.remove("playing");
             });
 
-        // 當音檔播放結束時移除播放樣式
         currentAudio.onended = () => {
             playBtn.classList.remove("playing");
             console.log("✅ 音檔播放結束");
@@ -772,19 +798,16 @@ function playSentenceAudio(audioFile) {
 }
 window.playSentenceAudio = playSentenceAudio;
 
-// 📌 監聽空白鍵來播放音檔
 function handleSpacebar(event) {
     if (event.code === "Space" && document.getElementById("sentenceQuizArea").style.display === "block") {
-        event.preventDefault(); // 阻止頁面滾動
+        event.preventDefault();
         playAudio();
     }
 }
 
 document.addEventListener("keydown", function (event) {
-    // 處理 Enter 鍵
     if (event.key === "Enter") {
-        event.preventDefault(); // 防止滾動或其他默認行為
-        // Sentence Quiz
+        event.preventDefault();
         if (document.getElementById("sentenceQuizArea").style.display === "block") {
             let submitBtn = document.getElementById("submitSentenceBtn");
             if (!submitBtn) return;
@@ -796,7 +819,6 @@ document.addEventListener("keydown", function (event) {
                 submitSentenceAnswer();
             }
         }
-        // Reorganize Quiz
         else if (document.getElementById("reorganizeQuizArea").style.display === "block") {
             let submitBtn = document.getElementById("submitReorganizeBtn");
             if (!submitBtn) return;
@@ -812,15 +834,12 @@ document.addEventListener("keydown", function (event) {
         }
     }
 
-    // 處理空白鍵
     if (event.code === "Space") {
-        event.preventDefault(); // 阻止頁面滾動
-        // Sentence Quiz
+        event.preventDefault();
         if (document.getElementById("sentenceQuizArea").style.display === "block") {
             console.log("📌 空白鍵觸發音頻播放 (Sentence Quiz)");
             playAudio();
         }
-        // Reorganize Quiz
         else if (document.getElementById("reorganizeQuizArea").style.display === "block") {
             console.log("📌 空白鍵觸發音頻播放 (Reorganize Quiz)");
             if (currentAudio) {
@@ -840,12 +859,12 @@ document.addEventListener("keydown", function (event) {
 
 function normalizeText(text) {
     return text
-        .normalize('NFD') // 將組合字符分解
-        .replace(/[\u0300-\u036f]/g, '') // 移除重音符號
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
         .toLowerCase()
-        .replace(/\bii\b/g, '2') // 將單獨的 "ii" 轉為 "2"（針對 World War II）
-        .replace(/\s+/g, ' ') // 統一空格
-        .replace(/,\s*/g, ',') // 處理逗號後的空格
+        .replace(/\bii\b/g, '2')
+        .replace(/\s+/g, ' ')
+        .replace(/,\s*/g, ',')
         .trim();
 }
 
@@ -854,23 +873,20 @@ function submitSentenceAnswer() {
     let correctSentence = sentenceObj.filteredSentence || sentenceObj.句子.replace(/\s*\[=[^\]]+\]/g, "").trim();
     let allInputs = document.querySelectorAll("#sentenceInput .letter-input");
 
-    // 使用 Unicode-aware 的正則表達式分割正確句子
     let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]|\s+/gu) || [];
     let userAnswer = [];
     let inputIndex = 0;
 
-    // 收集用戶輸入，按單詞對應
     correctWords.forEach((word, wordIndex) => {
         if (/\p{L}+/u.test(word)) {
             let inputWord = "";
-            // 收集對應 wordIndex 的所有輸入框內容
             while (inputIndex < allInputs.length && parseInt(allInputs[inputIndex].dataset.wordIndex) === wordIndex) {
                 inputWord += allInputs[inputIndex].value || "";
                 inputIndex++;
             }
             userAnswer.push(inputWord);
         } else {
-            userAnswer.push(word); // 保留標點符號或空格
+            userAnswer.push(word);
         }
     });
 
@@ -901,74 +917,62 @@ function submitSentenceAnswer() {
 }
 
 function updateSentenceHint(correctSentence, userAnswer) {
-    // 使用 Unicode-aware 的正則表達式分割正確句子
     let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]|\s+/gu) || [];
     let userWords = userAnswer;
 
-    // 格式化顯示內容
     let formattedSentence = correctWords.map((word, index) => {
         if (/\p{L}+/u.test(word) || word === "II") {
             let userWord = userWords[index] || "";
             if (normalizeText(userWord) === normalizeText(word) || (word === "II" && userWord === "2")) {
-                // 正確的單字：黑色粗體
                 return `<span style="color: black; font-weight: bold;">${word}</span>`;
             } else {
-                // 錯誤的單字：紅色粗體
                 return `<span style="color: red; font-weight: bold;">${word}</span>`;
             }
         } else {
-            // 標點符號或空格：黑色普通字體
             return `<span style="color: black;">${word}</span>`;
         }
     }).join("");
 
-    // 更新 sentenceHint 的顯示
     document.getElementById("sentenceHint").innerHTML = formattedSentence;
 }
 
 function highlightUserAnswers(allInputs, correctSentence) {
-    // 使用 Unicode-aware 的正則表達式分割正確句子
     let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]|\s+/gu) || [];
     let inputIndex = 0;
 
     correctWords.forEach((word, wordIndex) => {
-        if (/\p{L}+/u.test(word) || word === "II") { // 明確處理 "II"
+        if (/\p{L}+/u.test(word) || word === "II") {
             let inputWord = "";
             let inputElements = [];
 
-            // 收集對應 wordIndex 的輸入框
             while (inputIndex < allInputs.length && parseInt(allInputs[inputIndex].dataset.wordIndex) === wordIndex) {
                 inputWord += allInputs[inputIndex].value || "";
                 inputElements.push(allInputs[inputIndex]);
                 inputIndex++;
             }
 
-            // 對單詞進行正規化比對，特別處理 "II" 和 "2"
             let normalizedInputWord = normalizeText(inputWord);
             let normalizedWord = normalizeText(word);
 
             if (normalizedInputWord === normalizedWord || (word === "II" && inputWord === "2")) {
-                // 整個單詞正確，標記為黑色
                 inputElements.forEach(input => {
                     input.style.color = "black";
                     input.style.fontWeight = "bold";
                 });
             } else {
-                // 逐字符比對
-                let wordChars = Array.from(word); // 正確單詞的字符
+                let wordChars = Array.from(word);
                 inputElements.forEach((input, letterIndex) => {
                     let inputChar = input.value || "";
                     let correctChar = wordChars[letterIndex] || "";
                     if (normalizeText(inputChar) === normalizeText(correctChar) || 
                         (word === "II" && inputWord === "2" && letterIndex === 0)) {
-                        input.style.color = "black"; // 正確字符
+                        input.style.color = "black";
                     } else {
-                        input.style.color = "red"; // 錯誤或缺失字符
+                        input.style.color = "red";
                     }
                     input.style.fontWeight = "bold";
                 });
 
-                // 如果輸入框數量少於單詞字符數，剩餘字符視為錯誤
                 for (let i = inputElements.length; i < wordChars.length; i++) {
                     console.log(`⚠️ 單詞 "${word}" 缺少字符: ${wordChars[i]}`);
                 }
@@ -977,7 +981,6 @@ function highlightUserAnswers(allInputs, correctSentence) {
     });
 }
 
-// 📌 切換到下一題
 function goToNextSentence() {
     currentSentenceIndex++;
     if (currentSentenceIndex >= currentQuizSentences.length) {
@@ -993,10 +996,9 @@ function goToNextSentence() {
     submitBtn.onclick = submitSentenceAnswer;
     submitBtn.dataset.next = "false";
 
-    autoPlayAudio(); // ✅ 添加自動播放
+    autoPlayAudio();
 }
 
-// 📌 測驗完成後顯示結果
 function finishSentenceQuiz() {
     document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "block";
@@ -1047,7 +1049,6 @@ function finishSentenceQuiz() {
         </div>
     `;
 
-    // 確保保存本次測驗的 5 句
     localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
     localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
     console.log("✅ 測驗結束時保存的資料:", { userAnswers, currentQuizSentences });
@@ -1059,7 +1060,6 @@ function saveQSResults() {
     alert("測驗結果中的錯誤句子已儲存！");
 }
 
-// 📌 標記錯誤的字為紅色
 function highlightErrors(correctSentence, userAnswer) {
     let correctWords = correctSentence.split(/\b/);
     let userWords = userAnswer.split(/\b/);
@@ -1072,9 +1072,8 @@ function highlightErrors(correctSentence, userAnswer) {
     }).join("");
 }
 
-// 📌 連結到單字詳情頁面
 function goToWordDetail(word) {
-    let baseWord = word.replace(/-\d+$/, ''); // 移除後綴
+    let baseWord = word.replace(/-\d+$/, '');
     window.location.href = `index.html?word=${encodeURIComponent(baseWord)}&from=quiz`;
 }
 
@@ -1084,26 +1083,22 @@ function returnToQuizResult() {
     finishSentenceQuiz();
 }
 
-// 在檔案頂部新增
 function getReturningStatus() {
     let params = new URLSearchParams(window.location.search);
     return params.get('returning') === 'true';
 }
 
-// 在檔案底部或適當位置添加初始化邏輯
 document.addEventListener("DOMContentLoaded", function () {
     if (getReturningStatus()) {
         console.log("✅ 從外部返回，顯示測驗結果");
         restoreQuizResult();
     } else {
         console.log("ℹ️ 正常載入 quiz.html");
-        // The line trying to access "mainMenu" has been removed.
     }
 
     document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
 });
 
-// 新增恢復測驗結果的函數
 function restoreQuizResult() {
     currentQuizSentences = JSON.parse(localStorage.getItem("currentQuizSentences")) || [];
     userAnswers = JSON.parse(localStorage.getItem("userAnswers")) || [];
@@ -1121,27 +1116,32 @@ function restoreQuizResult() {
     finishSentenceQuiz();
 }
 
-// 📌 返回 Q Sentence 分類頁面
+// ▼▼▼ [修改] 返回分類頁面函式，增加清理動態元素的邏輯 ▼▼▼
 function returnToSentenceCategorySelection() {
     document.getElementById("sentenceQuizCategories").style.display = "block";
     document.getElementById("sentenceQuizArea").style.display = "none";
-    document.getElementById("reorganizeQuizArea").style.display = "none"; // 明確隱藏重組測驗區域
+    document.getElementById("reorganizeQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "none";
 
-    // 重置選擇狀態
-    selectedSentenceFilters.levels.clear();
-    selectedSentenceFilters.primaryCategories.clear();
-    selectedSentenceFilters.secondaryCategories.clear();
-    selectedSentenceFilters.alphabet.clear();
-    document.querySelectorAll(".category-button").forEach(button => {
+    // 重置篩選條件
+    Object.keys(selectedSentenceFilters).forEach(key => selectedSentenceFilters[key].clear());
+    
+    // 移除所有按鈕的 'selected' class
+    document.querySelectorAll(".category-button.selected").forEach(button => {
         button.classList.remove("selected");
+    });
+    
+    // 移除所有動態生成的次分類容器
+    document.querySelectorAll(".subcategory-wrapper").forEach(wrapper => {
+        wrapper.remove();
     });
 
     console.log("✅ 返回句子測驗分類頁面，重置所有測驗區域");
 }
+// ▲▲▲ [修改] 函式結束 ▲▲▲
 
 function toggleImportantSentence(word, checkbox) {
-    let lowerWord = word.toLowerCase();  // 轉為小寫
+    let lowerWord = word.toLowerCase();
     if (checkbox.checked) {
         localStorage.setItem(`important_sentence_${lowerWord}`, "true");
         console.log(`⭐ 句子 ${word} 標記為重要`);
@@ -1151,14 +1151,9 @@ function toggleImportantSentence(word, checkbox) {
     }
 }
 
-// 📌 返回主選單（測驗第一層）
-// q_sentence.js
-
 function returnToMainMenu() {
-    // 直接導向到應用程式首頁
     window.location.href = 'index.html';
     
-    // 清理相關的測驗狀態
     currentSentenceIndex = 0;
     userAnswers = [];
     userConstructedSentences = [];
