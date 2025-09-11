@@ -174,15 +174,15 @@ transform: scale(1.05);
 
 /* 英文解釋容器 */
 #meaningContainer {
-max-height: 420px;
+max-height: 400px;
 overflow-y: auto;
-padding: 10px;
+padding: 15px;
 border: 1px solid #ddd;
 background: #f9f9f9;
-border-radius: 10px;
+border-radius: 15px;
 font-size: 20px;
-margin-left: 5px;
-margin-right: 25px;
+margin-left: 8px;
+margin-right: 8px;
 }
 
 /* 中文解釋容器 */

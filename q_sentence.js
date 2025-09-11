@@ -28,7 +28,6 @@ function getUserAnswer(index) {
 window.getUserAnswer = getUserAnswer;
 
 document.addEventListener("DOMContentLoaded", function () {
-    // 載入句子測驗歷史
     sentenceQuizHistory = JSON.parse(localStorage.getItem('sentenceQuizHistory')) || {};
 
     sentenceData = JSON.parse(localStorage.getItem("sentenceData")) || [];
@@ -114,7 +113,6 @@ function showSentenceQuizCategories() {
 });
 }
 
-// ▼▼▼ [新增] 處理主分類點擊、動態生成次分類的函式 ▼▼▼
 function handleSentencePrimaryCategoryClick(btn, categoryName) {
     toggleSentenceSelection('primaryCategories', categoryName, btn);
 
@@ -170,9 +168,9 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
         }
     }, 310); // 延遲時間略大於 CSS transition 時間 (0.3s)
 }
-// ▲▲▲ [新增] 函式結束 ▲▲▲
 
-// ▼▼▼ [修改] 分類按鈕生成函式 ▼▼▼
+
+
 function generateSentenceCategories(data) {
     const alphabetContainer = document.getElementById("sentenceAlphabetButtons");
     const primaryContainer = document.getElementById("sentencePrimaryCategoryButtons");
@@ -217,21 +215,24 @@ function generateSentenceCategories(data) {
         secondaryContainer.closest('.collapsible-section').style.display = 'none'; // 直接隱藏整個區塊
     }
     
-    // 渲染特殊分類按鈕
+ 
+    // 渲染特殊分類按鈕 (新增 Checked 單字)
     specialContainer.innerHTML = `
         <button class="category-button" onclick="toggleSentenceSelection('special', 'important', this)">重要句子</button>
         <button class="category-button" onclick="toggleSentenceSelection('special', 'incorrect', this)">錯誤句子</button>
-        <button class="category-button" onclick="toggleSentenceSelection('special', 'checked', this)">已經checked 句子</button>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'checked', this)">Checked 句子</button>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'word_checked', this)">Checked 單字</button>
     `;
+
 
     // 渲染等級分類按鈕
     levelContainer.innerHTML = [...levels].map(l =>
         `<button class="category-button" onclick="toggleSentenceSelection('levels', '${l}', this)">${l}</button>`
     ).join("");
 }
-// ▲▲▲ [修改] 函式結束 ▲▲▲
 
-// ▼▼▼ [修改] 切換篩選條件函式，使其能處理按鈕樣式切換 ▼▼▼
+
+
 function toggleSentenceSelection(type, value, button) {
     let filterSet = selectedSentenceFilters[type];
     
@@ -249,9 +250,7 @@ function toggleSentenceSelection(type, value, button) {
     }
     console.log(`✅ ${type} 篩選更新:`, [...filterSet]);
 }
-// ▲▲▲ [修改] 函式結束 ▲▲▲
 
-// ▼▼▼ [修改] 開始測驗的篩選邏輯 ▼▼▼
 function startSentenceQuiz() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("sentenceQuizArea").style.display = "block";
@@ -260,7 +259,6 @@ function startSentenceQuiz() {
         let levelMatch = selectedSentenceFilters.levels.size === 0 || selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
         let primaryCategoryMatch = selectedSentenceFilters.primaryCategories.size === 0 || selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
         
-        // 更新的次分類篩選邏輯
         let secondaryCategoryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
             ((item.secondaryCategories && item.secondaryCategories.length > 0) && item.secondaryCategories.some(cat => selectedSentenceFilters.secondaryCategories.has(cat))) ||
             (selectedSentenceFilters.secondaryCategories.has('未分類') && (!item.secondaryCategories || item.secondaryCategories.length === 0));
@@ -269,10 +267,15 @@ function startSentenceQuiz() {
         
         let specialMatch = true;
         if (selectedSentenceFilters.special.size > 0) {
+
             specialMatch = [...selectedSentenceFilters.special].every(filter => {
                  if (filter === 'important') return localStorage.getItem(`important_sentence_${item.Words}`) === "true";
                  if (filter === 'incorrect') return (JSON.parse(localStorage.getItem("wrongQS")) || []).includes(item.Words);
                  if (filter === 'checked') return localStorage.getItem(`checked_sentence_${item.Words}`) === "true";
+                 if (filter === 'word_checked') {
+                     const baseWord = item.Words.split('-')[0];
+                     return localStorage.getItem(`checked_${baseWord}`) === "true";
+                 }
                  return true;
             });
         }
@@ -285,6 +288,7 @@ function startSentenceQuiz() {
         returnToSentenceCategorySelection();
         return;
     }
+
 
     filteredSentences.sort((a, b) => {
         const countA = sentenceQuizHistory[a.Words] || 0;
@@ -311,7 +315,7 @@ function startSentenceQuiz() {
         autoPlayAudio();
     }, 100);
 }
-// ▲▲▲ [修改] 函式結束 ▲▲▲
+
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
@@ -435,7 +439,7 @@ function autoPlayAudio() {
     }
 }
 
-// ▼▼▼ [修改] 開始重組測驗的篩選邏輯 ▼▼▼
+
 function startReorganizeQuiz() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("reorganizeQuizArea").style.display = "block";
@@ -446,7 +450,6 @@ function startReorganizeQuiz() {
         let primaryMatch = selectedSentenceFilters.primaryCategories.size === 0 ||
                            selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
         
-        // 更新的次分類篩選邏輯
         let secondaryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
             ((item.secondaryCategories && item.secondaryCategories.length > 0) && item.secondaryCategories.some(cat => selectedSentenceFilters.secondaryCategories.has(cat))) ||
             (selectedSentenceFilters.secondaryCategories.has('未分類') && (!item.secondaryCategories || item.secondaryCategories.length === 0));
@@ -460,6 +463,10 @@ function startReorganizeQuiz() {
                  if (filter === 'important') return localStorage.getItem(`important_sentence_${item.Words}`) === "true";
                  if (filter === 'incorrect') return (JSON.parse(localStorage.getItem("wrongQS")) || []).includes(item.Words);
                  if (filter === 'checked') return localStorage.getItem(`checked_sentence_${item.Words}`) === "true";
+                 if (filter === 'word_checked') {
+                     const baseWord = item.Words.split('-')[0];
+                     return localStorage.getItem(`checked_${baseWord}`) === "true";
+                 }
                  return true;
             });
         }
@@ -485,7 +492,7 @@ function startReorganizeQuiz() {
     localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
     loadReorganizeQuestion();
 }
-// ▲▲▲ [修改] 函式結束 ▲▲▲
+
 
 function loadReorganizeQuestion() {
     let sentenceObj = currentQuizSentences[currentSentenceIndex];
@@ -1116,29 +1123,24 @@ function restoreQuizResult() {
     finishSentenceQuiz();
 }
 
-// ▼▼▼ [修改] 返回分類頁面函式，增加清理動態元素的邏輯 ▼▼▼
 function returnToSentenceCategorySelection() {
     document.getElementById("sentenceQuizCategories").style.display = "block";
     document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("reorganizeQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "none";
 
-    // 重置篩選條件
     Object.keys(selectedSentenceFilters).forEach(key => selectedSentenceFilters[key].clear());
     
-    // 移除所有按鈕的 'selected' class
     document.querySelectorAll(".category-button.selected").forEach(button => {
         button.classList.remove("selected");
     });
     
-    // 移除所有動態生成的次分類容器
     document.querySelectorAll(".subcategory-wrapper").forEach(wrapper => {
         wrapper.remove();
     });
 
     console.log("✅ 返回句子測驗分類頁面，重置所有測驗區域");
 }
-// ▲▲▲ [修改] 函式結束 ▲▲▲
 
 function toggleImportantSentence(word, checkbox) {
     let lowerWord = word.toLowerCase();
