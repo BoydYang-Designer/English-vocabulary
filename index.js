@@ -408,13 +408,27 @@ function backToFirstLayer() {
 }
 
 function backToWordList() {
+    // 停止單字細節頁面可能正在播放的音訊
     if (isAutoPlaying) {
         isAutoPlaying = false;
         isPaused = false;
-        if (sentenceAudio && sentenceAudio.readyState >= 2) sentenceAudio.pause();
         updateAutoPlayButton();
     }
-    backToFirstLayer();
+    if (sentenceAudio && !sentenceAudio.paused) {
+        sentenceAudio.pause();
+        sentenceAudio.currentTime = 0;
+    }
+
+    // 隱藏單字細節區塊
+    document.getElementById("wordDetails").style.display = "none";
+
+    // 顯示單字列表區塊及相關按鈕
+    document.getElementById("wordList").style.display = "block";
+    document.getElementById("wordListTitle").style.display = "block";
+    document.getElementById("autoPlayBtn").style.display = "block";
+    
+    // 確保主頁面仍然是隱藏的
+    document.getElementById("mainPageContainer").style.display = "none";
 }
 
 function navigateTo(state) {
@@ -723,7 +737,7 @@ function showDetails(word) {
     let formattedChinese = word["traditional Chinese"].replace(/(\d+)\./g, "<br><strong>$1.</strong> ").replace(/\s*([nN]\.|[vV]\.|[aA][dD][jJ]\.|[aA][dD][vV]\.|[pP][rR][eE][pP]\.|[cC][oO][nN][jJ]\.|[pP][rR][oO][nN]\.|[iI][nN][tT]\.)/g, "<br>$1 ").replace(/^<br>/, "");
     let chinese = `${finalDisplayHTML}<div>${formattedChinese}</div>`;
     let rawMeaning = word["English meaning"];
-    let formattedMeaning = rawMeaning.replace(/^Summary:?/gim, "<h3>Summary</h3>").replace(/Related Words:/gi, "<h3>Related Words:</h3>").replace(/Antonyms:/gi, "<h3>Antonyms:</h3>");
+    let formattedMeaning = rawMeaning.replace(/^Summary:?/gim, "<h3>Summary</h3>").replace(/Related Words:/gi, "<h3>Related Words:</h3>").replace(/Antonyms:/gi, "<h3>Antonyms:</h3>").replace(/Synonyms:/gi, "<h3>Synonyms:</h3>");
     formattedMeaning = formattedMeaning.replace(/\n(\d+\.)/g, '</p><h4 class="meaning-number">$1</h4><p>');
     formattedMeaning = formattedMeaning.replace(/\n(E\.g\.|Example):/gi, '</p><p class="example"><strong>$1:</strong>');
     formattedMeaning = formattedMeaning.replace(/\n/g, "<br>");
