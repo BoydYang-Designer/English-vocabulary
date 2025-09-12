@@ -15653,9 +15653,15 @@
         {
             "等級": "B2",
             "Words": "sequence",
+            "pronunciation-1": "[ˋsikwəns]",
+            "traditional Chinese": "n.次序；順序；先後[U]\n連續；接續；一連串[C]",
+            "English meaning": "\"Sequence\" is a noun.\nMeaning:\n1. A particular order in which events, actions, or things follow each other.\n2. A set of related things arranged in a specific order, often in mathematics, science, or storytelling.\nE.g. The movie began with a dramatic opening sequence.\nE.g. Please follow the correct sequence of steps to complete the task.\nE.g. DNA contains a unique sequence of genetic information.\nE.g. The numbers appear in a repeating sequence.\nSummary:\n\"Sequence\" refers to an ordered arrangement of events, actions, or elements, showing how they follow one another logically or chronologically.\nRelated Words: order, arrangement, progression, series\nAntonyms: disorder, randomness, chaos, disorganization",
             "Unnamed: 10": "sequence",
             "Unnamed: 11": "sequence",
-            "分類": []
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
         },
         {
             "等級": "C2",
@@ -15678,11 +15684,43 @@
             "分類": []
         },
         {
+            "等級": "B2",
+            "Words": "showcase",
+            "pronunciation-1": "[ˋʃo͵kes]",
+            "traditional Chinese": "n.【主美】顯示優點的東西；供亮相的地方（或媒介）\nv. 使展現；使亮相",
+            "English meaning": "\"Showcase\" can be a noun or a verb.\nAs a Noun:\nMeaning: A display or event that presents something in an attractive or impressive way.\nE.g. The exhibition was a showcase of modern art.\nE.g. The company used the event as a showcase for its new technology.\nE.g. Her performance was a showcase of her singing talent.\nAs a Verb: showcase / showcased / showcasing\nMeaning: To display or present something in a way that highlights its best features.\nE.g. The store showcased its new collection in the front window.\nE.g. He showcased his skills during the interview.\nE.g. The website showcases local businesses to attract more customers.\nSummary:\n\"Showcase\" can mean either a display of something impressive (noun) or the act of presenting something attractively (verb).\nRelated Words: display, exhibit, presentation, highlight\nAntonyms: conceal, hide, cover, neglect",
+            "Unnamed: 10": "showcase",
+            "Unnamed: 11": "showcase",
+            "分類": [
+                "藝術與美學",
+                "Design"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "sever",
+            "pronunciation-1": "[ˋsɛvɚ]",
+            "traditional Chinese": "vt.切斷，割斷 ; 斷絕，中斷",
+            "English meaning": "\"Sever\" is a verb: sever / severed / severing.\nMeaning:\n1. To cut something off completely, especially by force.\n2. To end or break a connection, relationship, or agreement.\nE.g. His arm was severed from the body in the accident.\nE.g. He severed his finger while chopping vegetables.\nE.g. The company decided to sever its partnership with the supplier.\nE.g. She severed all contact with her former colleagues.\nE.g. She had to sever all ties with her parents.\nSummary:\n\"Sever\" means to cut off something physically or to completely end a connection or relationship.\nRelated Words: cut, split, detach, break, terminate\nAntonyms: connect, attach, join, unite, maintain",
+            "Unnamed: 10": "sever",
+            "Unnamed: 11": "sever",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
             "等級": "C1",
             "Words": "sever-ties",
+            "pronunciation-1": "/ˈsɛvər taɪz/",
+            "traditional Chinese": "v.斷絕關係；切斷聯繫",
+            "English meaning": "\"Sever ties\" is a phrase (verb expression).\nMeaning:\nTo completely end a relationship, connection, or association with a person, organization, or group.\nExamples:\nE.g. After the argument, she decided to sever ties with her old friend.\nE.g. The company severed ties with its supplier due to poor quality.\nE.g. He severed ties with the organization when their values no longer aligned.\nE.g. Many celebrities choose to sever ties with brands after scandals.\nSummary:\n\"Sever ties\" means to break off or cut off a relationship or connection permanently.\nRelated Words: cut off, break up, end relationship, disconnect\nAntonyms: maintain ties, establish ties, reconnect, bond",
             "Unnamed: 10": "sever-ties",
             "Unnamed: 11": "sever-ties",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
         },
         {
             "等級": "C1",
@@ -15698,17 +15736,74 @@
             ]
         },
         {
+            "等級": "B2",
+            "Words": "layout",
+            "pronunciation-1": "[ˋle͵aʊt]",
+            "traditional Chinese": "n.\n1.版面設計，版面編排[C][U]\n2.安排；設計；布局[C]；（書籍、廣告等的）",
+            "English meaning": "\"Layout\" is a noun.\nMeaning:\n1. The arrangement or design of elements on a page, screen, or surface.\n2. The way in which something is organized or planned.\nE.g. The magazine’s layout makes it easy to read.\nE.g. The website has a clean and user-friendly layout.\nE.g. The office layout was redesigned to improve workflow.\nE.g. The designer showed the layout of the stroller brochure before printing.\nSummary:\n\"Layout\" refers to the way elements are arranged or organized in a design, space, or plan.\nRelated Words: arrangement, design, structure, plan\nAntonyms: disorder, clutter, chaos, confusion",
+            "Unnamed: 10": "layout",
+            "Unnamed: 11": "layout",
+            "分類": [
+                "藝術與美學",
+                "Design"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "slop",
+            "pronunciation-1": "[slɑp]",
+            "traditional Chinese": "n.1.【口】半流汁食物\n   2.豬吃的廚餘\nv.濺出；溢出；潑出",
+            "English meaning": "\"Slop\" can be used as a noun or a verb.\nAs a Noun:\nMeaning:\n1. Liquid or semi-liquid waste or food, often messy or unappetizing.\n2. Food for animals, especially pigs.\nE.g. The kitchen floor was covered in slop after the soup spilled.\nE.g. The farmer poured slop into the pig trough.\nE.g. The toddler’s meal ended up as slop all over the high chair.\nAs a Verb: slop / slopped / slopping\nMeaning:\nTo spill or splash liquid carelessly; to pour roughly.\nE.g. He slopped soup all over the table.\nE.g. She accidentally slopped water on the floor while washing dishes.\nE.g. Don’t slop paint outside the lines.\nSummary:\n\"Slop\" refers to messy liquid or food (noun) or the act of spilling/pouring liquid carelessly (verb).\nRelated Words: spill, splash, mess, mush\nAntonyms: contain, tidy, clean, pour neatly",
+            "Unnamed: 10": "slop",
+            "Unnamed: 11": "slop",
+            "分類": [
+                "日常生活",
+                "食物"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "slopping",
+            "pronunciation-1": "/ˈslɒpɪŋ/",
+            "traditional Chinese": "gerund.指液體或半液體物質不小心灑出或外流，也可形容做事草率、不整齊。",
+            "English meaning": "\"Slopping\" is the present participle of the verb slop.\nMeaning:\n1. Spilling or splashing liquid carelessly.\n2. Pouring roughly or messily.\nE.g. He was slopping soup all over the table.\nE.g. The rain kept slopping water onto the windowsill.\nE.g. She was slopping paint outside the lines while decorating.\nE.g. The farmer was slopping water into the trough for the pigs.\nSummary:\n\"Slopping\" describes the act of spilling, splashing, or pouring liquid in a careless or messy way.\nRelated Words: spilling, splashing, overflowing, dribbling\nAntonyms: contain, pour neatly, control, tidy",
+            "Unnamed: 10": "slopping",
+            "Unnamed: 11": "slopping",
+            "分類": [
+                "日常生活",
+                "食物"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "slope",
+            "pronunciation-1": "[slop]",
+            "traditional Chinese": "n.1.坡；斜面[C]\n   2.傾斜；坡度[C][U]\nv.傾斜",
+            "English meaning": "\"Slope\" can be used as a noun or a verb.\nAs a Noun:\nMeaning:\n1. A surface or piece of land that is inclined or goes up or down at an angle.\n2. The degree of steepness of such a surface.\nE.g. The children enjoyed skiing down the snowy slope.\nE.g. The roof has a steep slope to allow rain to drain.\nE.g. The road has a gentle slope leading to the village.\nE.g. Engineers calculated the slope of the ramp for accessibility.\nAs a Verb: slope / sloped / sloping\nMeaning:\nTo be at an angle, or to cause something to incline.\nE.g. The ground slopes toward the river.\nE.g. The roof slopes to prevent water accumulation.\nE.g. The path sloped gently upward through the park.\nSummary:\n\"Slope\" refers to an inclined surface or the act of inclining, either naturally or intentionally.\nRelated Words: incline, tilt, gradient, hill\nAntonyms: flat, level, horizontal, even",
+            "Unnamed: 10": "slope",
+            "Unnamed: 11": "slope",
+            "分類": [
+                "科學與工程",
+                "形狀"
+            ]
+        },
+        {
+            "Words": "sloping",
+            "pronunciation-1": "[ˋslopɪŋ]",
+            "traditional Chinese": "adj.傾斜的；有坡度的；(slope的動詞現在分詞、動名詞)",
+            "English meaning": "\"Sloping\" is an adjective.\nMeaning:\nInclined or having a surface that goes downward or upward at an angle, rather than being flat or vertical.\nE.g. The house was built on a sloping hillside.\nE.g. The sloping roof allows rainwater to drain easily.\nE.g. The field has a gentle sloping terrain, perfect for hiking.\nE.g. The stroller design includes a sloping handle for ergonomic comfort.\nSummary:\n\"Sloping\" describes a surface, ground, or object that is angled or inclined.\nRelated Words: inclined, tilted, slanted, angled\nAntonyms: flat, level, horizontal, even",
+            "Unnamed: 10": "sloping",
+            "Unnamed: 11": "sloping",
+            "分類": [
+                "科學與工程",
+                "形狀"
+            ]
+        },
+        {
             "等級": "B1",
             "Words": "shed",
             "Unnamed: 10": "shed",
             "Unnamed: 11": "shed",
-            "分類": []
-        },
-        {
-            "等級": "B1",
-            "Words": "shed ",
-            "Unnamed: 10": "shed ",
-            "Unnamed: 11": "shed ",
             "分類": []
         },
         {
