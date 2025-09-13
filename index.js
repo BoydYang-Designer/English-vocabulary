@@ -231,9 +231,22 @@ function createCategoryButtons() {
 
 function createLevelButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
-    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
+
+    let levels = [...new Set(
+        wordsData.map(w => (w["等級"] || "未分類").toUpperCase().trim())
+    )];
+
+    // 自訂排序規則
+    const levelOrder = ["A1", "A2", "B1", "B2", "C1", "C2", "未分類"];
+    levels.sort((a, b) => {
+        const indexA = levelOrder.indexOf(a);
+        const indexB = levelOrder.indexOf(b);
+        return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
+    });
+
     const container = document.getElementById("levelButtonsContent");
     if (container) {
+        container.innerHTML = ""; // ← 先清空，避免重複
         const wrapper = document.createElement('div');
         wrapper.className = 'button-wrapper';
         wrapper.innerHTML = levels
@@ -242,6 +255,7 @@ function createLevelButtons() {
         container.appendChild(wrapper);
     }
 }
+
 
 // ▼▼▼ 修改此函式以處理「未分類」的篩選 ▼▼▼
 function startLearning() {
