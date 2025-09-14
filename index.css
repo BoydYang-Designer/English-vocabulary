@@ -178,7 +178,7 @@ max-height: 400px;
 overflow-y: auto;
 padding: 15px;
 border: 1px solid #ddd;
-background: #f9f9f9;
+background: #e9eef1;
 border-radius: 15px;
 font-size: 20px;
 margin-left: 8px;
@@ -380,10 +380,6 @@ width: 100%;
 display: flex;
 align-items: center;
 gap: 10px; /* 按鈕間距 */
-}
-
-#noteCheckbox {
-margin-right: 10px; /* 勾選框與按鈕之間的間距 */
 }
 
 
