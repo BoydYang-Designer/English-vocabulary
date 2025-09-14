@@ -102,14 +102,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     initializeStartQuizButton();
 
+    // ▼▼▼ [修改] 全域鍵盤監聽事件，增加 Enter 鍵功能 ▼▼▼
     document.addEventListener("keydown", function(event) {
+        // 播放音檔 (空白鍵)
         if (event.key === " " || event.key === "Spacebar") {
             event.preventDefault();
             if (currentWord) {
                 playAudioForWord(currentWord);
             }
+        } 
+        // 提交或下一題 (Enter 鍵)
+        else if (event.key === 'Enter') {
+            const quizArea = document.getElementById('quizArea');
+            if (quizArea && quizArea.style.display === 'block') {
+                event.preventDefault(); // 防止預設行為
+                const submitBtn = document.getElementById('submitBtn');
+                const nextBtn = document.getElementById('nextBtn');
+
+                if (submitBtn && submitBtn.style.display !== 'none') {
+                    submitBtn.click();
+                } else if (nextBtn && nextBtn.style.display !== 'none') {
+                    nextBtn.click();
+                }
+            }
         }
     });
+    // ▲▲▲ [修改] 結束 ▲▲▲
 });
 
 // ▼▼▼ [新增] 處理主分類點擊的函式 ▼▼▼
@@ -384,6 +402,8 @@ function startQuiz() {
     document.getElementById("quizArea").style.display = "block";
     loadNextWord();
 }
+
+// ▼▼▼ [修改] loadNextWord 函式，為輸入框增加 Backspace 鍵監聽 ▼▼▼
 function loadNextWord() {
     if (quizWords.length === 0) {
         finishQuiz();
@@ -414,6 +434,8 @@ function loadNextWord() {
             inputElement.type = "text";
             inputElement.maxLength = "1";
             inputElement.classList.add("letter-box");
+
+            // 自動跳到下一格
             inputElement.addEventListener("input", function () {
                 if (inputElement.value.length === 1) {
                     let nextInput = inputElement.nextElementSibling;
@@ -425,6 +447,22 @@ function loadNextWord() {
                     }
                 }
             });
+
+            // [新增] Backspace 功能
+            inputElement.addEventListener('keydown', function(e) {
+                if (e.key === 'Backspace' && inputElement.value === '') {
+                    e.preventDefault(); // 防止觸發其他行為
+                    let prevInput = inputElement.previousElementSibling;
+                    // 持續往前找，直到找到一個 INPUT 元素
+                    while (prevInput && prevInput.tagName !== 'INPUT') {
+                        prevInput = prevInput.previousElementSibling;
+                    }
+                    if (prevInput) {
+                        prevInput.focus();
+                    }
+                }
+            });
+
             wordInputContainer.appendChild(inputElement);
             if (i === 0 || i === currentWord.length - 1) {
                 wordHintContainer.innerHTML += char;
@@ -436,6 +474,8 @@ function loadNextWord() {
     let firstInput = wordInputContainer.querySelector("input");
     if (firstInput) firstInput.focus();
 }
+// ▲▲▲ [修改] 結束 ▲▲▲
+
 function submitAnswer() {
     const quizArea = document.getElementById("quizArea");
     if (!quizArea || quizArea.style.display === "none") {
