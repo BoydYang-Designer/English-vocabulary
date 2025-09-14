@@ -349,12 +349,16 @@ function createCategoryButtons() {
 // ▲▲▲ 修改結束 ▲▲▲
 
 function createLevelButtons() {
-    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
+    if (!wordsData || !Array.isArray(wordsData)) return;
+
+    const allLevels = new Set(wordsData.map(w => w["等級"] || "未分類"));
+    const standardLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', '未分類'].filter(l => allLevels.has(l));
+
     const levelContainer = document.getElementById("levelButtons");
     if(levelContainer){
         const wrapper = document.createElement('div');
         wrapper.className = 'button-wrapper';
-        wrapper.innerHTML = levels
+        wrapper.innerHTML = standardLevels
             .map(l => `<button class='letter-btn' data-value='${l}' onclick='toggleSelection(this)'>${l}</button>`).join(" ");
         levelContainer.appendChild(wrapper);
     }

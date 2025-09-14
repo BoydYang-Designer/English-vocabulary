@@ -176,15 +176,10 @@ function generateMultiSelectButtons() {
     let primaryContainer = document.getElementById("primaryCategoryButtons");
     if(primaryContainer) {
         primaryContainer.innerHTML = primaryCategories.map(c =>
-            // 修改 onclick 事件，調用新的處理函式
             `<button class='category-button' onclick='handleQuizPrimaryCategoryClick(this, "${c}")'>${c}</button>`
         ).join(" ");
     }
     
-    // 不再需要預先生成次分類按鈕
-    // let secondaryContainer = document.getElementById("secondaryCategoryButtons");
-    // if(secondaryContainer) { ... }
-
     let specialContainer = document.getElementById("specialCategoryButtons");
     if(specialContainer) {
         specialContainer.innerHTML = `
@@ -194,10 +189,14 @@ function generateMultiSelectButtons() {
         `;
     }
 
-    let levels = [...new Set(wordsData.map(w => w["等級"] || "未分類"))];
+    // 修改等級部分：使用固定順序並過濾重複
+    if (!wordsData || !Array.isArray(wordsData)) return;
+    const allLevels = new Set(wordsData.map(w => w["等級"] || "未分類"));
+    const standardLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', '未分類'].filter(l => allLevels.has(l));
+
     let levelContainer = document.getElementById("levelButtons");
     if(levelContainer) {
-        levelContainer.innerHTML = levels.map(l => 
+        levelContainer.innerHTML = standardLevels.map(l => 
             `<button class='category-button' onclick='toggleSelection("levels", "${l}")'>${l}</button>`
         ).join("");
     }

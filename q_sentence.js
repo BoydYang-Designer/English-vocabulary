@@ -174,7 +174,7 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
 function generateSentenceCategories(data) {
     const alphabetContainer = document.getElementById("sentenceAlphabetButtons");
     const primaryContainer = document.getElementById("sentencePrimaryCategoryButtons");
-    const secondaryContainer = document.getElementById("sentenceSecondaryCategoryButtons"); // 這個容器將不再被使用
+    const secondaryContainer = document.getElementById("sentenceSecondaryCategoryButtons");
     const specialContainer = document.getElementById("sentenceSpecialCategoryButtons");
     const levelContainer = document.getElementById("sentenceLevelButtons");
 
@@ -189,7 +189,7 @@ function generateSentenceCategories(data) {
     const alphabetSet = new Set();
 
     data.forEach(item => {
-        levels.add(item.等級 || "未分類(等級)");
+        levels.add(item.等級 || "未分類");
         const firstLetter = item.句子.charAt(0).toUpperCase();
         if (/[A-Z]/.test(firstLetter)) {
             alphabetSet.add(firstLetter);
@@ -198,6 +198,10 @@ function generateSentenceCategories(data) {
             primaryCategories.add(item.primaryCategory);
         }
     });
+
+    // 修改等級部分：使用固定順序並過濾重複
+    const allLevels = new Set(Array.from(levels));
+    const standardLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', '未分類'].filter(l => allLevels.has(l));
 
     // 渲染字母按鈕
     alphabetContainer.innerHTML = [...alphabetSet].sort().map(letter => 
@@ -212,10 +216,9 @@ function generateSentenceCategories(data) {
     // 清空並隱藏舊的次分類容器
     if (secondaryContainer) {
         secondaryContainer.innerHTML = "";
-        secondaryContainer.closest('.collapsible-section').style.display = 'none'; // 直接隱藏整個區塊
+        secondaryContainer.closest('.collapsible-section').style.display = 'none';
     }
     
- 
     // 渲染特殊分類按鈕 (新增 Checked 單字)
     specialContainer.innerHTML = `
         <button class="category-button" onclick="toggleSentenceSelection('special', 'important', this)">重要句子</button>
@@ -224,9 +227,8 @@ function generateSentenceCategories(data) {
         <button class="category-button" onclick="toggleSentenceSelection('special', 'word_checked', this)">Checked 單字</button>
     `;
 
-
-    // 渲染等級分類按鈕
-    levelContainer.innerHTML = [...levels].map(l =>
+    // 渲染等級分類按鈕：使用標準順序
+    levelContainer.innerHTML = standardLevels.map(l =>
         `<button class="category-button" onclick="toggleSentenceSelection('levels', '${l}', this)">${l}</button>`
     ).join("");
 }
