@@ -1076,6 +1076,17 @@ function enableWordCopyOnClick() {
         navigator.clipboard.writeText(selectedWord)
             .then(() => {
                 showNotification(`✅ 已複製單字：${selectedWord}`, 'success');
+                
+                // ▼▼▼【請求修改處】▼▼▼
+                // 2. 自動貼到 searchInputDetails 的搜尋框
+                const searchInput = document.getElementById('searchInputDetails');
+                if (searchInput) {
+                    searchInput.value = selectedWord;
+                    searchInput.focus(); // 優化：讓游標自動跳至搜尋框
+                    filterWordsInDetails(); // 觸發搜尋函式以顯示結果
+                }
+                // ▲▲▲【修改結束】▲▲▲
+
             })
             .catch(err => {
                 console.error('❌ 複製失敗:', err);
