@@ -765,6 +765,20 @@ function showDetails(word) {
     document.getElementById("wordTitle").textContent = word.Words;
     displayNote();
     updateBackButton();
+    
+    // ▼▼▼ 【新增】句子按鈕事件監聽 ▼▼▼
+    const sentenceLinkBtn = document.getElementById("sentenceLinkBtn");
+    if (sentenceLinkBtn) {
+        sentenceLinkBtn.onclick = () => {
+            const wordText = word.Words || word.word || word["單字"];
+            if (wordText) {
+                // 導航到句子頁面，並傳遞當前單字和來源頁面
+                window.location.href = `sentence.html?showSentencesForWord=${encodeURIComponent(wordText)}&from=index`;
+            }
+        };
+    }
+    // ▲▲▲ 新增結束 ▲▲▲
+
     if (isAutoPlaying && !isPaused) playAudioSequentially(word);
 }
 

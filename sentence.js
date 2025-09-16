@@ -119,8 +119,32 @@ document.addEventListener("DOMContentLoaded", function () {
         const sentenceParam = urlParams.get('sentence');
         const fromParam = urlParams.get('from');
         const layerParam = urlParams.get('layer');
+        const wordToShowSentencesFor = urlParams.get('showSentencesForWord');
 
-        if (sentenceParam && layerParam === '4') {
+        // ▼▼▼ 【新增】處理從 index.html 跳轉過來的請求 ▼▼▼
+        if (wordToShowSentencesFor && fromParam === 'index') {
+            isQuizMode = false;
+            const relatedSentences = sentenceData.filter(s =>
+                s.Words && s.Words.startsWith(wordToShowSentencesFor + "-")
+            );
+
+            if (relatedSentences.length > 0) {
+                currentSentenceList = sortSentencesByWordAndNumber(relatedSentences);
+                displaySentenceList(currentSentenceList, `${wordToShowSentencesFor} 的句子`);
+
+                // 修改返回按鈕的行為，使其能返回到來源的單字內文頁面
+                const backButton = document.querySelector('#sentenceList .back-button');
+                if (backButton) {
+                    backButton.onclick = () => {
+                        window.location.href = `index.html?word=${encodeURIComponent(wordToShowSentencesFor)}`;
+                    };
+                }
+            } else {
+                showNotification(`⚠️ 找不到單字 "${wordToShowSentencesFor}" 的相關句子。`, 'error');
+                backToFirstLayer(); // 如果沒有句子，返回主頁
+            }
+        } // ▲▲▲ 新增結束 ▲▲▲
+        else if (sentenceParam && layerParam === '4') {
             if (fromParam === 'quiz') {
                 isQuizMode = true;
                 const quizSentences = JSON.parse(localStorage.getItem("currentQuizSentences")) || [];
@@ -460,7 +484,12 @@ function displaySentenceList(sentences, title = "句子列表") {
     // ▼▼▼【修改】返回按鈕的行為 ▼▼▼
     const backButton = document.querySelector('#sentenceList .back-button');
     backButton.style.display = "block";
-    backButton.onclick = backToWordSelectionList; // 指向新的返回函式
+    // 根據來源決定返回行為，如果不是從 index.html 來，則使用預設行為
+    const fromIndex = new URLSearchParams(window.location.search).get('from') === 'index';
+    if (!fromIndex) {
+        backButton.onclick = backToWordSelectionList; // 指向舊的返回函式
+    }
+    // 從 index.html 過來的返回行為已在 DOMContentLoaded 中設定
     // ▲▲▲ 修改結束 ▲▲▲
 
     const sentenceItems = document.getElementById('sentenceItems');
