@@ -162,13 +162,14 @@ function handleQuizSubcategoryClick(subcatBtn, primaryBtnId) {
     updateCollapsibleHeaderState(primaryBtn);
 }
 
-//整合特殊分類按鈕的點擊與標題更新
-
-
 function handleQuizPrimaryCategoryClick(btn, categoryName) {
-    // 主分類按鈕的點擊只負責展開/收合，不處理自身選中狀態
+    // 這個函式只負責處理展開/收合次分類列表，不處理按鈕自身的選取狀態。
+    // 選取狀態由次分類的點擊事件 handleQuizSubcategoryClick 來管理。
+
     let subcategoryWrapper = document.getElementById(`sub-for-quiz-${categoryName.replace(/\s/g, '-')}`);
+
     if (!subcategoryWrapper) {
+        // 如果次分類容器不存在，則創建它
         subcategoryWrapper = document.createElement('div');
         subcategoryWrapper.className = 'subcategory-wrapper';
         subcategoryWrapper.id = `sub-for-quiz-${categoryName.replace(/\s/g, '-')}`;
@@ -188,8 +189,8 @@ function handleQuizPrimaryCategoryClick(btn, categoryName) {
         }
         
         if (secondaryCategories.length > 0) {
-            // 注意 onclick 已改為新的 handleQuizSubcategoryClick
             subcategoryWrapper.innerHTML = secondaryCategories.map(subCat => 
+                // 將主分類按鈕的 ID (btn.id) 傳遞給次分類的點擊處理函式
                 `<button class="category-button" onclick="handleQuizSubcategoryClick(this, '${btn.id}')">${subCat}</button>`
             ).join('');
         }
@@ -197,20 +198,25 @@ function handleQuizPrimaryCategoryClick(btn, categoryName) {
         btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
     }
 
-    if (subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px') {
+    // --- 正確的收合/展開邏輯 ---
+    // 檢查次分類容器是否已展開
+    const isExpanded = subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px';
+    if (isExpanded) {
+        // 如果已展開，則收合
         subcategoryWrapper.style.maxHeight = '0px';
     } else {
+        // 如果已收合，則展開
         subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
     }
 
+    // 為了讓動畫平順，延遲一小段時間後再重新計算父容器的高度
     setTimeout(() => {
         const mainCollapsibleContent = btn.closest('.collapsible-content');
-        if (mainCollapsibleContent.style.maxHeight !== '0px') {
+        if (mainCollapsibleContent && mainCollapsibleContent.style.maxHeight !== '0px') {
              mainCollapsibleContent.style.maxHeight = mainCollapsibleContent.scrollHeight + "px";
         }
     }, 310);
 }
-
 
 function toggleSpecialFilterAndCheckHeader(btn, filterType) {
     selectedFilters[filterType] = !selectedFilters[filterType];

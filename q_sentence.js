@@ -126,64 +126,91 @@ function showSentenceQuizCategories() {
     }
 });
 }
+function handleSentenceSubcategoryClick(subcatBtn, primaryBtnId) {
+    // 這個新函式處理次分類按鈕的點擊。
+    // 它負責切換次分類的選取狀態，並根據結果更新主分類按鈕的高亮狀態。
+
+    // 1. 切換次分類自身的篩選狀態和高亮
+    toggleSentenceSelection('secondaryCategories', subcatBtn.textContent, subcatBtn);
+
+    // 2. 找到對應的主分類按鈕
+    const primaryBtn = document.getElementById(primaryBtnId);
+    if (!primaryBtn) return;
+
+    // 3. 檢查這個群組內是否還有其他被選中的次分類
+    const subcategoryWrapper = subcatBtn.closest('.subcategory-wrapper');
+    if (!subcategoryWrapper) return;
+    const hasSelectedSubcategories = subcategoryWrapper.querySelector('.category-button.selected') !== null;
+
+    // 4. 根據是否有次分類被選中，來決定主分類按鈕是否要高亮
+    if (hasSelectedSubcategories) {
+        primaryBtn.classList.add('selected');
+    } else {
+        primaryBtn.classList.remove('selected');
+    }
+
+    // 5. 更新最外層可折疊區塊的標題高亮
+    updateCollapsibleHeaderState(primaryBtn);
+}
+
 
 function handleSentencePrimaryCategoryClick(btn, categoryName) {
-    toggleSentenceSelection('primaryCategories', categoryName, btn);
+    // 這個函式只負責處理展開/收合次分類列表，不處理按鈕自身的選取狀態。
+    // 選取狀態由新的 handleSentenceSubcategoryClick 函式來管理。
 
-    // 尋找或創建次分類容器
     let subcategoryWrapperId = `sub-for-sentence-${categoryName.replace(/\s/g, '-')}`;
     let subcategoryWrapper = document.getElementById(subcategoryWrapperId);
 
     if (!subcategoryWrapper) {
+        // 如果次分類容器不存在，則創建它
         subcategoryWrapper = document.createElement('div');
-        // 使用與 sentence.css 和 quiz.css 相同的 class 以保持樣式一致
         subcategoryWrapper.className = 'subcategory-wrapper'; 
         subcategoryWrapper.id = subcategoryWrapperId;
 
-        // 找出此主分類下的所有次分類
         const secondaryCategories = [...new Set(
             sentenceData
                 .filter(s => s.primaryCategory === categoryName && s.secondaryCategories && s.secondaryCategories.length > 0)
                 .flatMap(s => s.secondaryCategories)
         )];
 
-        // 檢查是否存在沒有次分類的項目
         const hasUncategorized = sentenceData.some(s =>
             s.primaryCategory === categoryName && (!s.secondaryCategories || s.secondaryCategories.length === 0)
         );
 
         if (hasUncategorized) {
-            secondaryCategories.unshift("未分類"); // 將「未分類」加到最前面
+            secondaryCategories.unshift("未分類");
         }
 
-        // 如果有次分類，則生成按鈕
         if (secondaryCategories.length > 0) {
+            // --- 修改部分 ---
+            // 生成次分類按鈕，使其 onclick 調用新的處理函式，並傳入主按鈕 ID (btn.id)
             subcategoryWrapper.innerHTML = secondaryCategories.map(subCat =>
-                `<button class="category-button" onclick="toggleSentenceSelection('secondaryCategories', '${subCat}', this)">${subCat}</button>`
+                `<button class="category-button" onclick="handleSentenceSubcategoryClick(this, '${btn.id}')">${subCat}</button>`
             ).join('');
         }
         
-        // 將次分類容器插入到主分類按鈕之後
         btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
     }
 
-    // 透過控制 maxHeight 來實現展開/收合的動畫效果
-    if (subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px') {
+    // --- 正確的收合/展開邏輯 ---
+    // 檢查次分類容器是否已展開
+    const isExpanded = subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px';
+    if (isExpanded) {
+        // 如果已展開，則收合
         subcategoryWrapper.style.maxHeight = '0px';
     } else {
+        // 如果已收合，則展開
         subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
     }
 
-    // 延遲後重新計算父容器的高度，以確保能容納展開的次分類
+    // 為了讓動畫平順，延遲一小段時間後再重新計算父容器的高度
     setTimeout(() => {
         const mainCollapsibleContent = btn.closest('.collapsible-content');
         if (mainCollapsibleContent && mainCollapsibleContent.style.maxHeight !== '0px') {
              mainCollapsibleContent.style.maxHeight = mainCollapsibleContent.scrollHeight + "px";
         }
-    }, 310); // 延遲時間略大於 CSS transition 時間 (0.3s)
+    }, 310);
 }
-
-
 
 function generateSentenceCategories(data) {
     const alphabetContainer = document.getElementById("sentenceAlphabetButtons");
@@ -197,7 +224,6 @@ function generateSentenceCategories(data) {
         return;
     }
 
-    // 提取所有分類
     const levels = new Set();
     const primaryCategories = new Set();
     const alphabetSet = new Set();
@@ -213,27 +239,25 @@ function generateSentenceCategories(data) {
         }
     });
 
-    // 修改等級部分：使用固定順序並過濾重複
     const allLevels = new Set(Array.from(levels));
     const standardLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', '未分類'].filter(l => allLevels.has(l));
 
-    // 渲染字母按鈕
     alphabetContainer.innerHTML = [...alphabetSet].sort().map(letter => 
         `<button class="category-button" onclick="toggleSentenceSelection('alphabet', '${letter}', this)">${letter}</button>`
     ).join("");
 
-    // 渲染主分類按鈕，並將 onclick 事件指向新的處理函式
-    primaryContainer.innerHTML = [...primaryCategories].map(c =>
-        `<button class="category-button" onclick="handleSentencePrimaryCategoryClick(this, '${c}')">${c}</button>`
-    ).join("");
+    // --- 修改部分 ---
+    // 渲染主分類按鈕，並為每個按鈕加上唯一的 ID
+    primaryContainer.innerHTML = [...primaryCategories].map(c => {
+        const btnId = `sentence-primary-btn-${c.replace(/\s/g, '-')}`;
+        return `<button id="${btnId}" class="category-button" onclick="handleSentencePrimaryCategoryClick(this, '${c}')">${c}</button>`;
+    }).join("");
 
-    // 清空並隱藏舊的次分類容器
     if (secondaryContainer) {
         secondaryContainer.innerHTML = "";
         secondaryContainer.closest('.collapsible-section').style.display = 'none';
     }
     
-    // 渲染特殊分類按鈕 (新增 Checked 單字)
     specialContainer.innerHTML = `
         <button class="category-button" onclick="toggleSentenceSelection('special', 'important', this)">重要句子</button>
         <button class="category-button" onclick="toggleSentenceSelection('special', 'incorrect', this)">錯誤句子</button>
@@ -241,7 +265,6 @@ function generateSentenceCategories(data) {
         <button class="category-button" onclick="toggleSentenceSelection('special', 'word_checked', this)">Checked 單字</button>
     `;
 
-    // 渲染等級分類按鈕：使用標準順序
     levelContainer.innerHTML = standardLevels.map(l =>
         `<button class="category-button" onclick="toggleSentenceSelection('levels', '${l}', this)">${l}</button>`
     ).join("");
