@@ -96,6 +96,11 @@ h1 {
 }
 /* Collapsible Section Styles End */
 
+.collapsible-header.header-highlight {
+    background-color: #0056b3; /* 使用一個較深的藍色以作區別 */
+    color: white;
+    font-weight: bold;
+}
 
 /* 按鈕容器 */
 .button-container {

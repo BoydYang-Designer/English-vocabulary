@@ -48,6 +48,20 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
 });
 
+function updateCollapsibleHeaderState(btn) {
+    const contentWrapper = btn.closest('.collapsible-content');
+    if (!contentWrapper) return;
+    const header = contentWrapper.previousElementSibling;
+    if (!header || !header.classList.contains('collapsible-header')) return;
+    const hasSelectedChildren = contentWrapper.querySelector('.category-button.selected') !== null;
+    if (hasSelectedChildren) {
+        header.classList.add('header-highlight');
+    } else {
+        header.classList.remove('header-highlight');
+    }
+}
+
+
 // 📌 進入 Q Sentence 測驗分類頁面
 function showSentenceQuizCategories() {
     document.querySelector("h1").textContent = "句子測驗區";
@@ -239,7 +253,6 @@ function toggleSentenceSelection(type, value, button) {
     let filterSet = selectedSentenceFilters[type];
     
     if (!button) {
-        // 如果 button 未傳入，嘗試從 DOM 中尋找
         button = document.querySelector(`button[onclick*="'${type}', '${value}'"]`);
     }
 
@@ -251,6 +264,9 @@ function toggleSentenceSelection(type, value, button) {
         if(button) button.classList.add("selected");
     }
     console.log(`✅ ${type} 篩選更新:`, [...filterSet]);
+
+    // ▼▼▼【新增此行】觸發區塊標題更新 ▼▼▼
+    if (button) updateCollapsibleHeaderState(button);
 }
 
 function startSentenceQuiz() {

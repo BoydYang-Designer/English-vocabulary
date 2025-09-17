@@ -175,9 +175,11 @@ h1, h2 {
 }
 
 .category-button.selected {
-    background-color: #90EE90;
-    color: #000;
-    border: 2px solid #4CAF50;
+    /* ▼▼▼【修改】將背景色改為藍色，與 index.html 統一 ▼▼▼ */
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #0056b3;
+    transform: scale(1.05);
 }
 
 .button-group {
@@ -189,6 +191,12 @@ h1, h2 {
     margin-left: auto; /* 加入這行 */
     margin-right: auto; /* 加入這行 */
     flex-wrap: wrap; /* 允許換行 */
+}
+
+.collapsible-header.header-highlight {
+    background-color: #0056b3; /* 使用一個較深的藍色以作區別 */
+    color: white;
+    font-weight: bold;
 }
 
 .collapsible-section-wrapper {

@@ -181,6 +181,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+function updateCollapsibleHeaderState(btn) {
+    const contentWrapper = btn.closest('.collapsible-content');
+    if (!contentWrapper) return;
+    const header = contentWrapper.previousElementSibling;
+    if (!header || !header.classList.contains('collapsible-header')) return;
+    const hasSelectedChildren = contentWrapper.querySelector('.letter-btn.selected') !== null;
+    if (hasSelectedChildren) {
+        header.classList.add('header-highlight');
+    } else {
+        header.classList.remove('header-highlight');
+    }
+}
+
+function toggleAndCheckHeader(btn) {
+    toggleSelection(btn);
+    updateCollapsibleHeaderState(btn);
+}
+
+function handleSentenceSubcategoryClick(subcatBtn, primaryBtnId) {
+    toggleSelection(subcatBtn);
+    const primaryBtn = document.getElementById(primaryBtnId);
+    if (!primaryBtn) return;
+    const subcategoryWrapper = subcatBtn.closest('.subcategory-wrapper');
+    if (!subcategoryWrapper) return;
+    const hasSelectedSubcategories = subcategoryWrapper.querySelector('.letter-btn.selected') !== null;
+    if (hasSelectedSubcategories) {
+        primaryBtn.classList.add('selected');
+    } else {
+        primaryBtn.classList.remove('selected');
+    }
+    updateCollapsibleHeaderState(primaryBtn);
+}
+
+
 function toggleSelection(btn) {
     btn.classList.toggle('selected');
 }
@@ -214,11 +248,10 @@ function handlePrimaryCategoryClick(btn, categoryName) {
             const subWrapper = document.createElement('div');
             subWrapper.className = 'button-wrapper';
             subWrapper.innerHTML = secondaryCategories.map(subCat => 
-                `<button class="letter-btn" data-value='${subCat}' onclick="toggleSelection(this)">${subCat}</button>`
+                `<button class="letter-btn" data-value='${subCat}' onclick="handleSentenceSubcategoryClick(this, '${btn.id}')">${subCat}</button>`
             ).join(' ');
             subcategoryWrapper.appendChild(subWrapper);
         }
-        
         btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
     }
 
@@ -403,6 +436,8 @@ function createCategoryButtons() {
             btn.className = 'letter-btn';
             btn.textContent = category;
             btn.dataset.value = category;
+            // ▼▼▼【新增】為按鈕加上唯一 ID ▼▼▼
+            btn.id = `sentence-primary-btn-${category.replace(/\s/g, '-')}`;
             btn.onclick = () => handlePrimaryCategoryClick(btn, category);
             wrapper.appendChild(btn);
         });
@@ -420,8 +455,9 @@ function createCategoryButtons() {
     if (specialContainer) {
         const wrapper = document.createElement('div');
         wrapper.className = 'button-wrapper';
+        // ▼▼▼【修改】更改 onclick 事件 ▼▼▼
         wrapper.innerHTML = specialCategories.map(c => 
-           `<button class='letter-btn' data-value='${c.value}' onclick='toggleSelection(this)'>${c.name}</button>`
+           `<button class='letter-btn' data-value='${c.value}' onclick='toggleAndCheckHeader(this)'>${c.name}</button>`
         ).join(" ");
         specialContainer.appendChild(wrapper);
     }
@@ -437,8 +473,9 @@ function createLevelButtons() {
     if(levelContainer){
         const wrapper = document.createElement('div');
         wrapper.className = 'button-wrapper';
+        // ▼▼▼【修改】更改 onclick 事件 ▼▼▼
         wrapper.innerHTML = standardLevels
-            .map(l => `<button class='letter-btn' data-value='${l}' onclick='toggleSelection(this)'>${l}</button>`).join(" ");
+            .map(l => `<button class='letter-btn' data-value='${l}' onclick='toggleAndCheckHeader(this)'>${l}</button>`).join(" ");
         levelContainer.appendChild(wrapper);
     }
 }
@@ -449,8 +486,9 @@ function renderAlphabetButtons() {
 
     const wrapper = document.createElement('div');
     wrapper.className = 'button-wrapper';
+    // ▼▼▼【修改】更改 onclick 事件 ▼▼▼
     wrapper.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
-        .map(letter => `<button class='letter-btn' data-value='${letter.toLowerCase()}' onclick='toggleSelection(this)'>${letter}</button>`)
+        .map(letter => `<button class='letter-btn' data-value='${letter.toLowerCase()}' onclick='toggleAndCheckHeader(this)'>${letter}</button>`)
         .join(" ");
     alphabetContainer.appendChild(wrapper);
 }

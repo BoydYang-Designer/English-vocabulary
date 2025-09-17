@@ -102,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     initializeStartQuizButton();
 
-    // ▼▼▼ [修改] 全域鍵盤監聽事件，增加 Enter 鍵功能 ▼▼▼
     document.addEventListener("keydown", function(event) {
         // 播放音檔 (空白鍵)
         if (event.key === " " || event.key === "Spacebar") {
@@ -127,18 +126,51 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
-    // ▲▲▲ [修改] 結束 ▲▲▲
+
 });
 
-// ▼▼▼ [新增] 處理主分類點擊的函式 ▼▼▼
+//更新可折疊區塊標題的高亮狀態
+function updateCollapsibleHeaderState(btn) {
+    const contentWrapper = btn.closest('.collapsible-content');
+    if (!contentWrapper) return;
+    const header = contentWrapper.previousElementSibling;
+    if (!header || !header.classList.contains('collapsible-header')) return;
+    const hasSelectedChildren = contentWrapper.querySelector('.category-button.selected') !== null;
+    if (hasSelectedChildren) {
+        header.classList.add('header-highlight');
+    } else {
+        header.classList.remove('header-highlight');
+    }
+}
+
+//處理次分類按鈕點擊，更新主分類按鈕及區塊標題狀態
+function handleQuizSubcategoryClick(subcatBtn, primaryBtnId) {
+    toggleSelection(subcatBtn, 'secondaryCategories', subcatBtn.textContent);
+
+    const primaryBtn = document.getElementById(primaryBtnId);
+    if (!primaryBtn) return;
+
+    const subcategoryWrapper = subcatBtn.closest('.subcategory-wrapper');
+    if (!subcategoryWrapper) return;
+
+    const hasSelectedSubcategories = subcategoryWrapper.querySelector('.category-button.selected') !== null;
+    if (hasSelectedSubcategories) {
+        primaryBtn.classList.add('selected');
+    } else {
+        primaryBtn.classList.remove('selected');
+    }
+    updateCollapsibleHeaderState(primaryBtn);
+}
+
+//整合特殊分類按鈕的點擊與標題更新
+
+
 function handleQuizPrimaryCategoryClick(btn, categoryName) {
-    toggleSelection('primaryCategories', categoryName);
-    
-    // 尋找或創建次分類容器
+    // 主分類按鈕的點擊只負責展開/收合，不處理自身選中狀態
     let subcategoryWrapper = document.getElementById(`sub-for-quiz-${categoryName.replace(/\s/g, '-')}`);
     if (!subcategoryWrapper) {
         subcategoryWrapper = document.createElement('div');
-        subcategoryWrapper.className = 'subcategory-wrapper'; // 確保使用與 index/sentence 頁面相同的 class
+        subcategoryWrapper.className = 'subcategory-wrapper';
         subcategoryWrapper.id = `sub-for-quiz-${categoryName.replace(/\s/g, '-')}`;
 
         const secondaryCategories = [...new Set(
@@ -156,22 +188,21 @@ function handleQuizPrimaryCategoryClick(btn, categoryName) {
         }
         
         if (secondaryCategories.length > 0) {
+            // 注意 onclick 已改為新的 handleQuizSubcategoryClick
             subcategoryWrapper.innerHTML = secondaryCategories.map(subCat => 
-                `<button class="category-button" onclick="toggleSelection('secondaryCategories', '${subCat}')">${subCat}</button>`
+                `<button class="category-button" onclick="handleQuizSubcategoryClick(this, '${btn.id}')">${subCat}</button>`
             ).join('');
         }
         
         btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
     }
 
-    // 控制次分類的顯示/隱藏
     if (subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px') {
         subcategoryWrapper.style.maxHeight = '0px';
     } else {
         subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
     }
 
-    // 重新計算父容器高度
     setTimeout(() => {
         const mainCollapsibleContent = btn.closest('.collapsible-content');
         if (mainCollapsibleContent.style.maxHeight !== '0px') {
@@ -179,35 +210,42 @@ function handleQuizPrimaryCategoryClick(btn, categoryName) {
         }
     }, 310);
 }
-// ▲▲▲ [新增] 結束 ▲▲▲
 
-// ▼▼▼ [修改] 按鈕生成函式 ▼▼▼
+
+function toggleSpecialFilterAndCheckHeader(btn, filterType) {
+    selectedFilters[filterType] = !selectedFilters[filterType];
+    btn.classList.toggle('selected');
+    updateCollapsibleHeaderState(btn);
+}
+
 function generateMultiSelectButtons() {
     let alphabetContainer = document.getElementById("alphabetButtons");
     if(alphabetContainer) {
         alphabetContainer.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter =>
-            `<button class='category-button' onclick='toggleSelection("letters", "${letter}")'>${letter}</button>`
+            // 注意 onclick 已修改，並傳入 this
+            `<button class='category-button' onclick='toggleSelection(this, "letters", "${letter}")'>${letter}</button>`
         ).join("");
     }
 
-    let primaryCategories = [...new Set(wordsData.map(w => w["分類"][0] || "未分類").filter(c => c))];
+    let primaryCategories = [...new Set(wordsData.map(w => (w["分類"] && w["分類"][0]) || "未分類").filter(c => c))];
     let primaryContainer = document.getElementById("primaryCategoryButtons");
     if(primaryContainer) {
-        primaryContainer.innerHTML = primaryCategories.map(c =>
-            `<button class='category-button' onclick='handleQuizPrimaryCategoryClick(this, "${c}")'>${c}</button>`
-        ).join(" ");
+        primaryContainer.innerHTML = primaryCategories.map(c => {
+            const btnId = `quiz-primary-btn-${c.replace(/\s/g, '-')}`;
+            return `<button id="${btnId}" class='category-button' onclick='handleQuizPrimaryCategoryClick(this, "${c}")'>${c}</button>`;
+        }).join(" ");
     }
     
     let specialContainer = document.getElementById("specialCategoryButtons");
     if(specialContainer) {
+        // 注意 onclick 已改為新的 toggleSpecialFilterAndCheckHeader
         specialContainer.innerHTML = `
-            <button class='category-button' onclick='toggleCheckedSelection()'>Checked 單字</button>
-            <button class='category-button' onclick='toggleImportantFilter()'>重要單字</button>
-            <button class='category-button' onclick='toggleWrongFilter()'>錯誤單字</button>
+            <button class='category-button' onclick="toggleSpecialFilterAndCheckHeader(this, 'checked')">Checked 單字</button>
+            <button class='category-button' onclick="toggleSpecialFilterAndCheckHeader(this, 'important')">重要單字</button>
+            <button class='category-button' onclick="toggleSpecialFilterAndCheckHeader(this, 'wrong')">錯誤單字</button>
         `;
     }
 
-    // 修改等級部分：使用固定順序並過濾重複
     if (!wordsData || !Array.isArray(wordsData)) return;
     const allLevels = new Set(wordsData.map(w => w["等級"] || "未分類"));
     const standardLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', '未分類'].filter(l => allLevels.has(l));
@@ -215,11 +253,12 @@ function generateMultiSelectButtons() {
     let levelContainer = document.getElementById("levelButtons");
     if(levelContainer) {
         levelContainer.innerHTML = standardLevels.map(l => 
-            `<button class='category-button' onclick='toggleSelection("levels", "${l}")'>${l}</button>`
+            // 注意 onclick 已修改，並傳入 this
+            `<button class='category-button' onclick='toggleSelection(this, "levels", "${l}")'>${l}</button>`
         ).join("");
     }
 }
-// ▲▲▲ [修改] 結束 ▲▲▲
+
 
 // (此處省略其他未變更的函式，以節省篇幅，請保留您原有的其他函式)
 function playAudioForWord(word) {
@@ -270,15 +309,19 @@ function toggleCheckedSelection() {
         checkedButton.classList.remove("selected");
     }
 }
-function updateButtonSelectionState(type, value) {
-    document.querySelectorAll(`.category-button[onclick*="'${value}'"]`).forEach(button => {
-        if (selectedFilters[type].has(value)) {
-            button.classList.add("selected");
-        } else {
-            button.classList.remove("selected");
-        }
-    });
+
+function toggleSelection(btn, type, value) {
+    if (selectedFilters[type].has(value)) {
+        selectedFilters[type].delete(value);
+        btn.classList.remove("selected");
+    } else {
+        selectedFilters[type].add(value);
+        btn.classList.add("selected");
+    }
+    // 新增呼叫，更新區塊標題
+    updateCollapsibleHeaderState(btn);
 }
+
 function filterQuizWords(event) {
     let filteredWords = wordsData.filter(word => {
         let wordText = word.Words || word.word || word["單字"];
