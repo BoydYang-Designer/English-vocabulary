@@ -981,9 +981,12 @@ document.addEventListener("keydown", function (event) {
 
 function exportAllData() {
     try {
-        const structuredData = { progress: {}, userContent: {}, quizHistory: {}, uncategorized: {} };
-        // ... (這裡應有您完整的匯出邏輯)
-        const jsonString = JSON.stringify(structuredData, null, 2);
+        const data = {};
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            data[key] = localStorage.getItem(key);
+        }
+        const jsonString = JSON.stringify(data, null, 2);
         const blob = new Blob([jsonString], { type: 'application/json;charset=utf-8' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
@@ -1009,7 +1012,9 @@ function importAllData() {
             try {
                 const data = JSON.parse(event.target.result);
                 localStorage.clear();
-                // ... (這裡應有您完整的匯入邏輯)
+                Object.keys(data).forEach(key => {
+                    localStorage.setItem(key, data[key]);
+                });
                 showNotification("✅ 學習資料已成功匯入！", "success");
                 setTimeout(() => location.reload(), 1000);
             } catch (error) {
