@@ -690,6 +690,7 @@ function toggleCheck(word, button) {
     }
 }
 
+// 高亮單字變體
 function createWordVariationsRegex(baseWord) {
     let stem = baseWord.toLowerCase();
     let pattern;
@@ -699,11 +700,23 @@ function createWordVariationsRegex(baseWord) {
     } else if (stem.endsWith('y')) {
         stem = stem.slice(0, -1);
         pattern = `\\b${stem}(y|ies|ied|ier|iest|ying)\\b`;
+    } else if (stem.endsWith('l')) {  // 新增处理如 expel -> expelled 的双写辅音规则
+        pattern = `\\b${stem}(s|led|ling)?\\b`;
     } else {
         pattern = `\\b${stem}(s|es|ed|ing)?\\b`;
     }
     return new RegExp(pattern, 'gi');
 }
+
+let meaning = wordData["traditional Chinese"] || wordData.meaning || "無中文解釋";
+const baseWord = wordData.Words || wordData.word || wordData["單字"];
+const variationsRegex = createWordVariationsRegex(baseWord);
+
+meaning = meaning.replace(variationsRegex, match => `<span style="color: blue; font-weight: bold;">${match}</span>`);
+
+document.getElementById("meaningContainer").innerHTML = meaning;
+
+
 
 function showDetails(word) {
     let bButton = document.getElementById("bButton");
