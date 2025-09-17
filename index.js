@@ -71,6 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("autoPlayBtn").style.display = "none";
     document.querySelector('.start-learning-container').style.display = "none";
 
+    enableWordCopyOnClick();
+
     const sentenceButton = document.getElementById("sentencePageBtn");
     if (sentenceButton) {
         sentenceButton.addEventListener("click", () => window.location.href = "sentence.html");
@@ -845,14 +847,10 @@ function showDetails(word) {
             }
         };
     }
-    // ▲▲▲ 新增結束 ▲▲▲
+
 
     if (isAutoPlaying && !isPaused) playAudioSequentially(word);
     
-    // 在 showDetails 函式中調用
-    // ... (你的 showDetails 代碼)
-    // document.getElementById("meaningContainer").innerHTML = meaning;
-    enableWordCopyOnClick();
 }
 
 function playAudioSequentially(word) {
