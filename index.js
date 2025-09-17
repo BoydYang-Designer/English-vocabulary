@@ -853,7 +853,12 @@ function showDetails(word) {
 function playAudioSequentially(word) {
     let phoneticAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word.Words)}.mp3`);
     sentenceAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word.Words)} - sentence.mp3`);
-    document.getElementById('meaningContainer').scrollTop = 0;
+    
+    // ▼▼▼【需求修改處】▼▼▼
+    // 修改此處，對焦整個頁面到 meaningContainer
+    document.getElementById('meaningContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // ▲▲▲【修改結束】▲▲▲
+
     let playBtn = document.getElementById("playAudioBtn");
     let pauseBtn = document.getElementById("pauseResumeBtn");
     if (playBtn) playBtn.classList.add("playing");
@@ -947,7 +952,12 @@ function playSentenceAudio(audioFile) {
         sentenceAudio.currentTime = 0;
         sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
     }
-    document.getElementById('meaningContainer').scrollTop = 0;
+
+    // ▼▼▼【需求修改處】▼▼▼
+    // 修改此處，對焦整個頁面到 meaningContainer
+    document.getElementById('meaningContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // ▲▲▲【修改結束】▲▲▲
+    
     sentenceAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`);
     sentenceAudio.play().then(() => {
         sentenceAudio.addEventListener('timeupdate', handleAutoScroll);
@@ -973,6 +983,12 @@ function togglePauseAudio(button) {
     const playBtn = document.getElementById("playAudioBtn");
     const pauseBtn = button;
     if (sentenceAudio.paused || sentenceAudio.ended) {
+
+        // ▼▼▼【需求修改處】▼▼▼
+        // 在此處新增捲動功能，當從暫停狀態恢復播放時觸發
+        document.getElementById('meaningContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // ▲▲▲【修改結束】▲▲▲
+
         sentenceAudio.play().then(() => {
             if (playBtn) playBtn.classList.add("playing");
             if (pauseBtn) pauseBtn.classList.remove("playing");
@@ -1192,4 +1208,4 @@ function enableWordCopyOnClick() {
 // 在 showDetails 函式中調用
 // ... (你的 showDetails 代碼)
 // document.getElementById("meaningContainer").innerHTML = meaning;
-enableWordCopyOnClick();  // 添加這行
+enableWordCopyOnClick();
