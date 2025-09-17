@@ -24,6 +24,39 @@ function showNotification(message, type = 'success') {
     }, 4000);
 }
 
+/**
+ * 新增函式：更新可折疊區塊標題的高亮狀態
+ * @param {HTMLElement} btn - 內容區域中被點擊的任何一個按鈕
+ */
+function updateCollapsibleHeaderState(btn) {
+    // 1. 從被點擊的按鈕往上找到 '.collapsible-content' 容器
+    const contentWrapper = btn.closest('.collapsible-content');
+    if (!contentWrapper) return;
+
+    // 2. 找到該容器對應的標題 (header)，它通常是 content 的前一個兄弟元素
+    const header = contentWrapper.previousElementSibling;
+    if (!header || !header.classList.contains('collapsible-header')) return;
+
+    // 3. 檢查內容容器中，是否還有任何一個按鈕處於 '.selected' 狀態
+    const hasSelectedChildren = contentWrapper.querySelector('.letter-btn.selected') !== null;
+
+    // 4. 根據檢查結果，為標題加上或移除高亮 class
+    if (hasSelectedChildren) {
+        header.classList.add('header-highlight');
+    } else {
+        header.classList.remove('header-highlight');
+    }
+}
+
+/**
+ * 新增函式：一個新的 onclick 處理器，整合了按鈕點擊和標題更新
+ * @param {HTMLElement} btn - 被點擊的按鈕
+ */
+function toggleAndCheckHeader(btn) {
+    toggleSelection(btn); // 執行原本的選取/取消選取功能
+    updateCollapsibleHeaderState(btn); // 更新對應的區塊標題狀態
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const loadingOverlay = document.getElementById('loading-overlay');
 
@@ -116,9 +149,8 @@ function toggleSelection(btn) {
     btn.classList.toggle('selected');
 }
 
-// ▼▼▼ 修改此函式 ▼▼▼
+
 function handlePrimaryCategoryClick(btn, categoryName) {
-    toggleSelection(btn);
 
     let parentContainer = btn.closest('.collapsible-content');
     let subcategoryWrapper = document.getElementById(`sub-for-${categoryName.replace(/\s/g, '-')}`);
@@ -128,61 +160,84 @@ function handlePrimaryCategoryClick(btn, categoryName) {
         subcategoryWrapper.className = 'subcategory-wrapper';
         subcategoryWrapper.id = `sub-for-${categoryName.replace(/\s/g, '-')}`;
 
-        // 提取所有明確的次分類
         const secondaryCategories = [...new Set(
             wordsData
                 .filter(w => w["分類"] && w["分類"][0] === categoryName && w["分類"][1])
                 .map(w => w["分類"][1])
         )];
 
-        // 檢查是否存在沒有次分類的單字
         const hasUncategorized = wordsData.some(w => 
             w["分類"] && w["分類"][0] === categoryName && (!w["分類"][1] || w["分類"][1].trim() === '')
         );
 
         if (hasUncategorized) {
-            secondaryCategories.unshift("未分類"); // 將「未分類」選項放在最前面
+            secondaryCategories.unshift("未分類");
         }
         
         if (secondaryCategories.length > 0) {
             const subWrapper = document.createElement('div');
             subWrapper.className = 'button-wrapper';
+            // ▼▼▼【修改處】更改次分類按鈕的 onclick 事件 ▼▼▼
             subWrapper.innerHTML = secondaryCategories.map(subCat => 
-                `<button class="letter-btn" data-value='${subCat}' onclick="toggleSelection(this)">${subCat}</button>`
+                `<button class="letter-btn" data-value='${subCat}' onclick="handleSubcategoryClick(this, '${btn.id}')">${subCat}</button>`
             ).join(' ');
+            // ▲▲▲ 修改結束 ▲▲▲
             subcategoryWrapper.appendChild(subWrapper);
         }
         
-        // 將次分類容器插入到主分類按鈕的後面
         btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
     }
 
     const mainCollapsibleContent = btn.closest('.collapsible-content');
 
-    // 切換次分類容器的顯示/隱藏
     if (subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px') {
         subcategoryWrapper.style.maxHeight = '0px';
     } else {
         subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
     }
 
-    // 重新計算並設定主分類容器的高度以容納次分類容器
     setTimeout(() => {
         if (mainCollapsibleContent.style.maxHeight !== '0px') {
              mainCollapsibleContent.style.maxHeight = mainCollapsibleContent.scrollHeight + "px";
         }
-    }, 310); // 等待次分類動畫完成
+    }, 310);
 }
-// ▲▲▲ 修改結束 ▲▲▲
+
+
+function handleSubcategoryClick(subcatBtn, primaryBtnId) {
+    // 步驟 1：切換次分類按鈕自身的高亮狀態
+    toggleSelection(subcatBtn);
+
+    // 步驟 2：找到主分類按鈕
+    const primaryBtn = document.getElementById(primaryBtnId);
+    if (!primaryBtn) return;
+
+    // 步驟 3：找到這個主分類下的所有次分類按鈕容器
+    const subcategoryWrapper = subcatBtn.closest('.subcategory-wrapper');
+    if (!subcategoryWrapper) return;
+
+    // 步驟 4：檢查容器內是否還有任何一個按鈕被選中
+    const hasSelectedSubcategories = subcategoryWrapper.querySelector('.letter-btn.selected') !== null;
+
+    // 步驟 5：根據檢查結果，更新主分類按鈕的高亮狀態
+    if (hasSelectedSubcategories) {
+        primaryBtn.classList.add('selected'); // 如果有，確保主分類是高亮的
+    } else {
+        primaryBtn.classList.remove('selected'); // 如果都沒有，移除主分類的高亮
+    }
+        updateCollapsibleHeaderState(primaryBtn);
+}
 
 function createAlphabetButtons() {
     const container = document.getElementById("alphabetButtons");
     if (container) {
         const wrapper = document.createElement('div');
         wrapper.className = 'button-wrapper';
+        // ▼▼▼【修改處】更改 onclick 事件 ▼▼▼
         wrapper.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l =>
-            `<button class='letter-btn' data-value='${l.toLowerCase()}' onclick='toggleSelection(this)'>${l}</button>`
+            `<button class='letter-btn' data-value='${l.toLowerCase()}' onclick='toggleAndCheckHeader(this)'>${l}</button>`
         ).join(" ");
+        // ▲▲▲ 修改結束 ▲▲▲
         container.appendChild(wrapper);
     }
 }
@@ -203,7 +258,7 @@ function createCategoryButtons() {
             btn.className = 'letter-btn';
             btn.textContent = category;
             btn.dataset.value = category;
-            // ▼▼▼ 修改 onclick 事件 ▼▼▼
+            btn.id = `primary-btn-${category.replace(/\s/g, '-')}`;
             btn.onclick = () => handlePrimaryCategoryClick(btn, category);
             wrapper.appendChild(btn);
         });
@@ -223,8 +278,9 @@ function createCategoryButtons() {
          const wrapper = document.createElement('div');
          wrapper.className = 'button-wrapper';
          wrapper.innerHTML = specialCategories.map(c => 
-            `<button class='letter-btn' data-value='${c.value}' onclick='toggleSelection(this)'>${c.name}</button>`
+            `<button class='letter-btn' data-value='${c.value}' onclick='toggleAndCheckHeader(this)'>${c.name}</button>`
          ).join(" ");
+
         specialContainer.appendChild(wrapper);
     }
 }
@@ -236,7 +292,6 @@ function createLevelButtons() {
         wordsData.map(w => (w["等級"] || "未分類").toUpperCase().trim())
     )];
 
-    // 自訂排序規則
     const levelOrder = ["A1", "A2", "B1", "B2", "C1", "C2", "未分類"];
     levels.sort((a, b) => {
         const indexA = levelOrder.indexOf(a);
@@ -246,18 +301,19 @@ function createLevelButtons() {
 
     const container = document.getElementById("levelButtonsContent");
     if (container) {
-        container.innerHTML = ""; // ← 先清空，避免重複
+        container.innerHTML = "";
         const wrapper = document.createElement('div');
         wrapper.className = 'button-wrapper';
+        // ▼▼▼【修改處】更改 onclick 事件 ▼▼▼
         wrapper.innerHTML = levels
-            .map(l => `<button class='letter-btn' data-value='${l}' onclick='toggleSelection(this)'>${l}</button>`)
+            .map(l => `<button class='letter-btn' data-value='${l}' onclick='toggleAndCheckHeader(this)'>${l}</button>`)
             .join(" ");
+        // ▲▲▲ 修改結束 ▲▲▲
         container.appendChild(wrapper);
     }
 }
 
 
-// ▼▼▼ 修改此函式以處理「未分類」的篩選 ▼▼▼
 function startLearning() {
     const selectedLetters = Array.from(document.querySelectorAll('#alphabetButtons .letter-btn.selected')).map(btn => btn.dataset.value);
     const selectedPrimaries = Array.from(document.querySelectorAll('#primaryCategoryButtons > .button-wrapper > .letter-btn.selected')).map(btn => btn.dataset.value);
@@ -283,8 +339,7 @@ function startLearning() {
 
     if (selectedSecondaries.length > 0) {
         filteredWords = filteredWords.filter(w => {
-            // 如果一個單字的主分類沒有被選中，那麼它的次分類也不應該被匹配
-            // （除非使用者根本沒有篩選主分類）
+
             const primaryCat = (w["分類"] && w["分類"][0]) || "未分類";
             if (selectedPrimaries.length > 0 && !selectedPrimaries.includes(primaryCat)) {
                 return false;
@@ -342,7 +397,7 @@ function startLearning() {
 
     displayWordList(filteredWords, "學習列表");
 }
-// ▲▲▲ 修改結束 ▲▲▲
+
 
 function displayWordList(words, title) {
     document.getElementById("wordListTitle").innerText = title;

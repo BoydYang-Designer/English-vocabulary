@@ -776,3 +776,12 @@ font-style: italic; /* 讓範例文字變斜體 (可選) */
     /* 這裡不需要特別設定，JS會動態添加 maxHeight */
     /* CSS 的 max-height: 250px 會作為上限 */
 }
+
+/* index.css - 請在檔案末尾新增以下樣式 */
+
+/* 當分類標題下的內容有被選中項目時的樣式 */
+.collapsible-header.header-highlight {
+    background-color: #0056b3; /* 使用一個較深的藍色以作區別 */
+    color: white;
+    font-weight: bold;
+}
