@@ -848,6 +848,11 @@ function showDetails(word) {
     // ▲▲▲ 新增結束 ▲▲▲
 
     if (isAutoPlaying && !isPaused) playAudioSequentially(word);
+    
+    // 在 showDetails 函式中調用
+    // ... (你的 showDetails 代碼)
+    // document.getElementById("meaningContainer").innerHTML = meaning;
+    enableWordCopyOnClick();
 }
 
 function playAudioSequentially(word) {
@@ -1127,18 +1132,18 @@ function handleAutoScroll() {
     container.scrollTo({ top: scrollPosition, behavior: 'smooth' });
 }
 
-// 在 showDetails 函式的最後添加這個監聽器（或在 DOMContentLoaded 中全局添加）
+// ▼▼▼【功能修改處】▼▼▼
+// 修改此函式以新增點擊單字時的特效、複製與搜尋功能
 function enableWordCopyOnClick() {
     const meaningContainer = document.getElementById("meaningContainer");
     if (!meaningContainer) return;
 
     meaningContainer.addEventListener('click', function(event) {
-        // 確保點擊的是文字節點（忽略其他元素如按鈕）
+        // 確保點擊的是可處理的文字區域
         if (event.target.tagName !== 'P' && event.target.tagName !== 'DIV' && event.target.tagName !== 'SPAN') {
-            return; // 如果點擊的是其他元素（如 highlight-word），忽略
+            return;
         }
 
-        // 獲取點擊位置的範圍
         const range = document.caretRangeFromPoint(event.clientX, event.clientY);
         if (!range) return; // 不支援的瀏覽器
 
@@ -1148,64 +1153,67 @@ function enableWordCopyOnClick() {
         const text = textNode.textContent;
         const offset = range.startOffset;
 
-        // 找到單字邊界（向左/右擴展，直到非單字字符）
+        // 找到單字邊界
         let start = offset;
         let end = offset;
-        const wordRegex = /\w/; // 單字字符：字母、數字、下劃線（可調整為 /[a-zA-Z0-9]/）
+        const wordRegex = /\w/; 
 
-        // 向左擴展
         while (start > 0 && wordRegex.test(text[start - 1])) {
             start--;
         }
-        // 向右擴展
         while (end < text.length && wordRegex.test(text[end])) {
             end++;
         }
 
-        // 如果沒有找到單字，忽略
-        if (start === end) return;
+        if (start === end) return; // 沒有找到單字
 
-        // 創建範圍並選取單字
+        // 創建範圍以標示單字
         const wordRange = document.createRange();
         wordRange.setStart(textNode, start);
         wordRange.setEnd(textNode, end);
+        
+        // 取得單字文字
+        const selectedWord = wordRange.toString();
 
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(wordRange);
+        // --- 新增功能：特效 ---
+        const highlightSpan = document.createElement('span');
+        highlightSpan.className = 'word-click-highlight';
+        
+        try {
+            // 將單字用 span 包起來以應用 CSS 特效
+            wordRange.surroundContents(highlightSpan);
 
-        // 複製選取的文字到剪貼簿
-        const selectedWord = selection.toString();
+            // 在動畫結束後，移除 span 並還原 DOM 結構
+            setTimeout(() => {
+                if (highlightSpan.parentNode) {
+                    const parent = highlightSpan.parentNode;
+                    while (highlightSpan.firstChild) {
+                        parent.insertBefore(highlightSpan.firstChild, highlightSpan);
+                    }
+                    parent.removeChild(highlightSpan);
+                    parent.normalize(); // 合併相鄰的文字節點
+                }
+            }, 600); // 此時間需與 CSS 動畫時間對應
+        } catch (e) {
+            console.error("Highlight effect failed:", e);
+            // 如果特效失敗，仍繼續執行複製功能
+        }
+
+        // --- 現有功能：複製與貼上搜尋 ---
         navigator.clipboard.writeText(selectedWord)
             .then(() => {
                 showNotification(`✅ 已複製單字：${selectedWord}`, 'success');
                 
-                // ▼▼▼【請求修改處】▼▼▼
-                // 2. 自動貼到 searchInputDetails 的搜尋框
                 const searchInput = document.getElementById('searchInputDetails');
                 if (searchInput) {
                     searchInput.value = selectedWord;
-                    searchInput.focus(); // 優化：讓游標自動跳至搜尋框
-                    filterWordsInDetails(); // 觸發搜尋函式以顯示結果
+                    searchInput.focus(); // 讓游標自動跳至搜尋框
+                    filterWordsInDetails(); // 觸發搜尋函式
                 }
-                // ▲▲▲【修改結束】▲▲▲
-
             })
             .catch(err => {
                 console.error('❌ 複製失敗:', err);
-                showNotification('⚠️ 複製失敗，請手動複製（檢查瀏覽器權限）', 'error');
-                // Fallback: 使用舊的 execCommand (但不推薦)
-                try {
-                    document.execCommand('copy');
-                    showNotification(`✅ 已複製單字：${selectedWord}（使用 fallback）`, 'success');
-                } catch (fallbackErr) {
-                    showNotification('⚠️ 複製失敗，請手動複製', 'error');
-                }
+                showNotification('⚠️ 複製失敗，請手動複製', 'error');
             });
     });
 }
-
-// 在 showDetails 函式中調用
-// ... (你的 showDetails 代碼)
-// document.getElementById("meaningContainer").innerHTML = meaning;
-enableWordCopyOnClick();

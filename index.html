@@ -10,6 +10,14 @@
             overflow-x: hidden;
             width: 100%;
         }
+        /* --- 新增的 CSS 動畫效果 --- */
+        @keyframes highlight-and-fade {
+            from { background-color: lightgreen; }
+            to { background-color: transparent; }
+        }
+        .word-click-highlight {
+            animation: highlight-and-fade 0.6s ease-out;
+        }
     </style>
     </head>
 <body>
