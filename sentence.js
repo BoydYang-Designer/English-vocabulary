@@ -727,16 +727,74 @@ function getAutoPlayBtn() {
     return btn1 || btn2;
 }
 
+
+
+/*** [新增] 暫停自動播放的函式*/
+function pauseAutoPlay() {
+    isPaused = true;
+    sentenceAudio.pause(); // 暫停當前正在播放的音訊
+    updateAutoPlayButton(); // 更新按鈕狀態
+}
+
+/*** [新增] 繼續自動播放的函式*/
+function resumeAutoPlay() {
+    isPaused = false;
+    // 如果音訊物件存在且處於暫停狀態，則繼續播放
+    if (sentenceAudio && sentenceAudio.paused) {
+        sentenceAudio.play().catch(e => {
+            console.error("從暫停狀態恢復播放失敗:", e);
+            // 如果播放失敗，嘗試播放下一個句子
+            currentSentenceIndex++;
+            playNextSentenceInList();
+        });
+    }
+    updateAutoPlayButton(); // 更新按鈕狀態
+}
+
+
+/*** [修改] 切換自動播放狀態的核心函式* 現在它能處理三種狀態：播放、暫停、繼續*/
 function toggleAutoPlay() {
-    const autoPlayBtn = getAutoPlayBtn();
-    if (!autoPlayBtn) return;
-    
-    if (isAutoPlaying) {
-        stopAutoPlay();
+    // 檢查目前是否在句子列表頁面
+    if (document.getElementById("sentenceList").style.display === "block") {
+        if (!isAutoPlaying) {
+            // 如果尚未開始，則啟動自動播放
+            startAutoPlay();
+        } else if (!isPaused) {
+            // 如果正在播放，則暫停
+            pauseAutoPlay();
+        } else {
+            // 如果已暫停，則繼續播放
+            resumeAutoPlay();
+        }
     } else {
-        startAutoPlay();
+        // 對於其他頁面（如詳情頁），保持原有的開/關邏輯
+        if (isAutoPlaying) {
+            stopAutoPlay();
+        } else {
+            startAutoPlay();
+        }
     }
 }
+
+/**
+ * [修改] 停止自動播放函式
+ * 確保 isPaused 狀態也被重置
+ */
+function stopAutoPlay() {
+    isAutoPlaying = false;
+    isPaused = false; // 確保暫停狀態也被清除
+    sentenceAudio.pause();
+    
+    // 取消高亮
+    const playingItem = document.querySelector('.word-item-container.playing');
+    if (playingItem) {
+        playingItem.classList.remove('playing');
+    }
+
+    updateAutoPlayButton();
+}
+
+
 
 function startAutoPlay() {
     const autoPlayBtn = getAutoPlayBtn();
@@ -761,12 +819,6 @@ function startAutoPlay() {
     updateAutoPlayButton();
 }
 
-function stopAutoPlay() {
-    isAutoPlaying = false;
-    isPaused = false;
-    sentenceAudio.pause();
-    updateAutoPlayButton();
-}
 
 
 function playNextSentenceInList() {
@@ -809,9 +861,26 @@ function playCurrentSentence() {
 function updateAutoPlayButton() {
     const autoPlayBtn = getAutoPlayBtn();
     if (!autoPlayBtn) return;
-    
-    autoPlayBtn.textContent = isAutoPlaying ? "取消播放" : "自動播放";
-    autoPlayBtn.classList.toggle("auto-playing", isAutoPlaying);
+
+    // 判斷是否在句子列表頁面，以應用新的按鈕文字邏輯
+    if (document.getElementById("sentenceList").style.display === "block") {
+        if (!isAutoPlaying) {
+            autoPlayBtn.textContent = "自動播放";
+            autoPlayBtn.classList.remove("auto-playing");
+        } else {
+            if (isPaused) {
+                autoPlayBtn.textContent = "繼續播放";
+                autoPlayBtn.classList.remove("auto-playing"); // 暫停時不高亮
+            } else {
+                autoPlayBtn.textContent = "暫停播放";
+                autoPlayBtn.classList.add("auto-playing");
+            }
+        }
+    } else {
+        // 其他頁面（如詳情頁）的按鈕文字邏輯保持不變
+        autoPlayBtn.textContent = isAutoPlaying ? "取消播放" : "自動播放";
+        autoPlayBtn.classList.toggle("auto-playing", isAutoPlaying);
+    }
 }
 
 function toggleCheckSentence(sentenceId, button) {
@@ -949,7 +1018,6 @@ function playSentenceAudio(filename) {
     const playButtons = document.querySelectorAll(`.audio-btn[onclick*="'${filename}'"]`);
     const playBtn = playButtons[playButtons.length - 1] || document.getElementById("playAudioBtn");
     
-    // Stop any currently playing audio
     if (sentenceAudio && !sentenceAudio.paused) {
         sentenceAudio.pause();
         if(lastPlayBtn) lastPlayBtn.classList.remove("playing");
@@ -960,11 +1028,13 @@ function playSentenceAudio(filename) {
         playBtn.classList.add("playing");
         lastPlayBtn = playBtn;
     }
+
     sentenceAudio.play()
         .then(() => console.log(`✅ 播放 ${filename} 成功`))
         .catch(error => {
             console.error(`🔊 播放 ${filename} 失敗:`, error);
             if (playBtn) playBtn.classList.remove("playing");
+            // 【關鍵修改】如果播放失敗且處於自動播放模式，直接跳到下一個
             if (isAutoPlaying && !isPaused) {
                 if (document.getElementById("sentenceDetails").style.display === 'block') {
                     switchToNextSentence();
@@ -974,9 +1044,11 @@ function playSentenceAudio(filename) {
                 }
             }
         });
+
     sentenceAudio.onended = () => {
         if (playBtn) playBtn.classList.remove("playing");
         console.log(`✅ ${filename} 播放結束`);
+        // 播放結束後，如果處於自動播放模式，則播放下一個
         if (isAutoPlaying && !isPaused) {
              if (document.getElementById("sentenceDetails").style.display === 'block') {
                 switchToNextSentence();
@@ -986,6 +1058,7 @@ function playSentenceAudio(filename) {
             }
         }
     };
+    
     document.querySelectorAll(".audio-btn.playing").forEach(btn => {
         if (btn !== playBtn) btn.classList.remove("playing");
     });

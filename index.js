@@ -1200,7 +1200,7 @@ function enableWordCopyOnClick() {
         // --- 現有功能：複製與貼上搜尋 ---
         navigator.clipboard.writeText(selectedWord)
             .then(() => {
-                showNotification(`✅ 已複製單字：${selectedWord}`, 'success');
+                //showNotification(`✅ 已複製單字：${selectedWord}`, 'success');
                 
                 const searchInput = document.getElementById('searchInputDetails');
                 if (searchInput) {
