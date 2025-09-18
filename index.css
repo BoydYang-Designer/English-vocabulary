@@ -190,7 +190,7 @@ margin-right: 8px;
 
 /* 中文解釋容器 */
 #chineseContainer {
-font-size: 15px;
+font-size: 16px;
 margin-left: 10px;
 }
 
@@ -745,7 +745,7 @@ font-style: italic; /* 讓範例文字變斜體 (可選) */
 #startLearningBtn {
     width: 80%;
     max-width: 300px;
-    padding: 15px;
+    padding: 10px;
     font-size: 20px;
     background-color: #28a745; /* 使用醒目的綠色 */
     color: white;
