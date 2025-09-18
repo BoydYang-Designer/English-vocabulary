@@ -497,8 +497,8 @@ transition: all 0.2s ease-in-out;
 }
 
 .important-checkbox:checked {
-background-color: #bd1438;
-border-color: #ff002b;
+    background-color: #ffc107;
+    border-color: #e0a800;
 }
 
 /* 媒體查詢 */

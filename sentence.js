@@ -351,7 +351,7 @@ function startLearning() {
 
 function displayWordSelectionList(words) {
     document.getElementById("mainPageContainer").style.display = "none";
-    document.getElementById("wordListTitle").textContent = `請選擇單字 (${words.length}個)`;
+    document.getElementById("wordListTitle").textContent = `勾選單字 (${words.length}個)`;
     document.getElementById("wordListTitle").style.display = "block";
 
     const wordListContainer = document.getElementById('wordList');
@@ -375,7 +375,7 @@ function displayWordSelectionList(words) {
         item.className = `word-item-container ${checkedClass}`;
         // 加入 check-button
         item.innerHTML = `
-            <input type="checkbox" class="word-select-checkbox" data-word="${wordText}" style="transform: scale(1.5); margin-right: 15px;">
+            <input type="checkbox" class="word-select-checkbox" data-word="${wordText}" style="transform: scale(2.2); margin-right: 15px;">
             <p class='word-item' style="color: #333; cursor: default; flex-grow: 1;">${wordText}</p>
             <button class='check-button' onclick='toggleSentenceWordChecked("${wordText}", this)'>
                 <img src="${checkIconSrc}" class="check-icon" alt="Check" width="24" height="24">
