@@ -427,7 +427,7 @@ function processWordSelection() {
     }
 
     currentSentenceList = sortSentencesByWordAndNumber(finalSentences);
-    displaySentenceList(currentSentenceList, "學習列表");
+    displaySentenceList(currentSentenceList, "句子列表");
 }
 
 
@@ -591,7 +591,7 @@ function displaySentenceList(sentences, title = "句子列表") {
 function backToWordSelectionList() {
     document.getElementById('sentenceList').style.display = 'none';
     document.getElementById('wordList').style.display = 'block';
-    document.getElementById("wordListTitle").textContent = `請選擇單字 (${currentWordList.length}個)`;
+    document.getElementById("wordListTitle").textContent = `勾選單字 (${currentWordList.length}個)`;
     document.getElementById("wordListTitle").style.display = 'block';
 }
 // ▲▲▲ 新增結束 ▲▲▲
