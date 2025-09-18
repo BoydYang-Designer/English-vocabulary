@@ -177,7 +177,8 @@
             "Unnamed: 10": "acute",
             "Unnamed: 11": "acute",
             "分類": [
-                "醫學與健康"
+                "醫學與健康",
+                "衛生"
             ]
         },
         {
@@ -9474,7 +9475,9 @@
             "English meaning": "\"Impurity\" is a noun with the following meanings:\n1. The state of being impure; the presence of foreign substances or elements that contaminate or adulterate a pure substance.\nE.g. The water sample showed signs of impurity, prompting further testing.\nE.g. The chemist identified the impurity in the solution that affected the reaction.\nE.g. The laboratory ensured that all equipment was free of impurities before conducting the experiment.\n2. A quality of being morally or ethically unclean; a lack of integrity or purity in character or intention.\nE.g. The scandal revealed the impurity in the politician's actions.\nE.g. They sought to eliminate any impurity from their motives in the charitable work they did.\nSummary: \"Impurity\" refers to the condition of being mixed with foreign substances, either in a physical sense or in terms of moral character.\nRelated Words: contamination, adulteration, taint, corruption\nAntonyms: purity, clarity, integrity, wholeness",
             "Unnamed: 10": "impurity",
             "Unnamed: 11": "impurity",
-            "分類": []
+            "分類": [
+                "醫學與健康"
+            ]
         },
         {
             "等級": "B2",
@@ -9484,7 +9487,10 @@
             "English meaning": "Inactive is an adjective with the following meanings:\n1. Not in use or not working: Describes something that is not currently operating or being used.\nE.g. The machine remained inactive due to the power outage.\nE.g. His account was inactive for several months before he logged in again.\n2. Lacking physical movement or energy: Refers to a person or thing not engaging in physical activity or remaining motionless.\nE.g. The inactive lifestyle can lead to health problems over time.\nE.g. The dog was unusually inactive after the long walk.\n3. Not participating or involved in a particular activity or organization: Describes someone who is not involved in a task, event, or group.\nE.g. She became inactive in the club after she moved to a new city.\nE.g. The project remained inactive while the team waited for further instructions.\nSummary: \"Inactive\" refers to something or someone not in use, not moving, or not participating in an activity.\nRelated Words: idle, dormant, passive, motionless.\nAntonyms: active, operational, engaged, energetic.",
             "Unnamed: 10": "inactive",
             "Unnamed: 11": "inactive",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "情緒"
+            ]
         },
         {
             "等級": "C1",
@@ -9494,7 +9500,10 @@
             "English meaning": "Inanimate is an adjective that describes something that is not alive, lacking the qualities associated with living organisms such as movement, growth, or reproduction.\nE.g. The inanimate objects in the room, like the chair and table, did not move during the earthquake.\nE.g. The artist created a beautiful sculpture from inanimate materials like stone and metal.\nE.g. Inanimate things can still have significance, as seen in how cherished toys hold sentimental value.\nSummary:\n\"Inanimate\" refers to objects or things that do not possess life or the characteristics of living beings, often used to distinguish between the living and non-living.\nRelated Words : Non-living, Lifeless, Unmoving\nAntonyms : Living, Animate, Alive",
             "Unnamed: 10": "inanimate",
             "Unnamed: 11": "inanimate",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "情緒"
+            ]
         },
         {
             "等級": "C2",
@@ -9504,7 +9513,10 @@
             "English meaning": "\"Inauthentic\" is an adjective used to describe something or someone that is not genuine, real, or true. It often implies that something is fake, insincere, or lacking in authenticity.\nE.g. The inauthentic nature of his apology was evident to everyone, as it seemed insincere.\nE.g. The movie's portrayal of historical events felt inauthentic and misleading.\nE.g. She was disappointed by the inauthentic decor at the so-called vintage café.\nRelated Words: fake, insincere, artificial, phony.\nAntonyms: authentic, genuine, real, sincere.",
             "Unnamed: 10": "inauthentic",
             "Unnamed: 11": "inauthentic",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "情緒"
+            ]
         },
         {
             "等級": "C2",
@@ -9514,7 +9526,10 @@
             "English meaning": "\nIncantation is a noun that means a set of words spoken like a magic spell, often used to bring about a supernatural effect.\nE.g. The wizard whispered an incantation to cast a spell.\nE.g. The monks chanted their incantation during the ceremony.\nSummary: An incantation is a magical phrase meant to create a special effect.\nRelated Words: Spell, chant, mantra.\nAntonyms: Silence, ordinary speech.",
             "Unnamed: 10": "incantation",
             "Unnamed: 11": "incantation",
-            "分類": []
+            "分類": [
+                "幻想與神話",
+                "魔法"
+            ]
         },
         {
             "等級": "B2",
@@ -9524,7 +9539,10 @@
             "English meaning": "An \"incident\" refers to an event or occurrence, especially one that is noteworthy, significant, or unusual in some way. It can range from minor occurrences to major events, but the term generally implies that something of interest or concern has happened.\nE.g. The police responded quickly to the incident at the bank and managed to apprehend the suspect.\nE.g. After the incident on the highway, both drivers exchanged insurance information and waited for the police to arrive.\nE.g. He resolved never to tell anyone about the incident. \nE.g. An incident response team was quickly assembled to address the security incident.",
             "Unnamed: 10": "incident",
             "Unnamed: 11": "incident",
-            "分類": []
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
         },
         {
             "等級": "C2",
@@ -9546,7 +9564,10 @@
             "English meaning": "Inconsistency as a Noun:\n1. A lack of uniformity or stability; something that changes or does not stay the same.\nE.g. The team's inconsistency in performance made it difficult to predict their success.\nE.g. His story had several inconsistencies, making it hard to believe.\n2. A contradiction or conflict between two or more things.\nE.g. There was an inconsistency between his words and actions.\nE.g. The report contained inconsistencies that needed clarification.\nSummary:\nInconsistency refers to a lack of stability, uniformity, or logical agreement, often leading to confusion or unpredictability.\nRelated Words: contradiction, irregularity, discrepancy, instability, variation.\nAntonyms: consistency, uniformity, reliability, stability, coherence.",
             "Unnamed: 10": "inconsistency",
             "Unnamed: 11": "inconsistency",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "C1",
@@ -9556,7 +9577,10 @@
             "English meaning": "1. Incorporated as an Adjective:\nFormed into a legal corporation (used in business contexts).\nE.g. The company was officially incorporated in 1995.\nE.g. Smith & Co. is an incorporated business operating worldwide.\n2. Included as part of something larger.\nE.g. The new design incorporated several customer suggestions.\nE.g. Traditional elements were incorporated into the modern architecture.\nE.g. Ideally, wood would be incorporated into the bouncer floor module in a way that visually connects it with the high chair.\nSummary:\n\"Incorporated\" can mean legally registered as a corporation or included as a part of something larger.\nRelated Words: included, merged, combined, registered, established.\nAntonyms: excluded, separated, unregistered, independent.",
             "Unnamed: 10": "incorporated",
             "Unnamed: 11": "incorporated",
-            "分類": []
+            "分類": [
+                "商業與經濟",
+                "公司"
+            ]
         },
         {
             "等級": "C1",
@@ -9566,7 +9590,10 @@
             "English meaning": "incumbent as a noun means a person who holds a particular office or position\nE.g. The incumbent has announced plans to run for re-election next year.\nE.g. Incumbents often have an advantage in elections.\nincumbent as an adjuctive \n1.obligatory or required - Something that is necessary or obligatory for someone to do.\nE.g. It is incumbent upon all employees to adhere to the company’s code of conduct.\nE.g. It's incumbent on you to warn them.\n2.Currently holding a particular position - Referring to the person who currently holds an office or position.\nE.g. The incumbent president will face several challengers in the upcoming election.",
             "Unnamed: 10": "incumbent",
             "Unnamed: 11": "incumbent",
-            "分類": []
+            "分類": [
+                "社會與法律",
+                "法政"
+            ]
         },
         {
             "等級": "C1",
@@ -9576,7 +9603,10 @@
             "English meaning": "Indecision is a noun with the following meanings:\n1. The state of being unable to make a decision or having difficulty choosing between options: It describes a lack of resolution or certainty in making a choice.\nE.g. Her indecision about which job offer to accept led to a lot of stress and anxiety.\nE.g. The team's indecision over the project’s direction caused delays in the development process.\nE.g. His indecision was evident as he wavered between two different vacation destinations.\nSummary: \"Indecision\" refers to the inability or difficulty in making a decision, often resulting in uncertainty or hesitation.\nRelated Words: hesitation, uncertainty, vacillation, doubt.\nAntonyms: decisiveness, resolution, certainty, determination.",
             "Unnamed: 10": "indecision",
             "Unnamed: 11": "indecision",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "情緒"
+            ]
         },
         {
             "等級": "C2",
@@ -15788,6 +15818,7 @@
             ]
         },
         {
+            "等級": "C1",
             "Words": "sloping",
             "pronunciation-1": "[ˋslopɪŋ]",
             "traditional Chinese": "adj.傾斜的；有坡度的；(slope的動詞現在分詞、動名詞)",

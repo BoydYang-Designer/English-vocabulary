@@ -24,22 +24,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     wordQuizHistory = JSON.parse(localStorage.getItem('wordQuizHistory')) || {};
 
-    // ▼▼▼ [新增] 確保所有分類預設收合，並修復無法重開的 bug ▼▼▼
+ 
     document.querySelectorAll('.collapsible-content').forEach(content => {
         content.style.maxHeight = '0px';
     });
-    document.querySelectorAll(".collapsible-header").forEach(button => {
-        button.addEventListener("click", function() {
-            this.classList.toggle("active");
-            const content = this.nextElementSibling;
-            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                content.style.maxHeight = '0px';
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
+document.querySelectorAll(".collapsible-header").forEach(button => {
+    button.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+            content.style.maxHeight = '0px';
+            
+            // ▼▼▼【新增邏輯】▼▼▼
+            // 當主分類收合時，尋找並收合所有次分類
+            const subcategoryWrappers = content.querySelectorAll('.subcategory-wrapper');
+            subcategoryWrappers.forEach(wrapper => {
+                wrapper.style.maxHeight = '0px';
+            });
+            // ▲▲▲【新增結束】▲▲▲
+
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
     });
-    // ▲▲▲ [新增] 結束 ▲▲▲
+});
+
 
     const sentenceButton = document.getElementById("sentencePageBtn");
     if (sentenceButton) {

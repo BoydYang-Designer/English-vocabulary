@@ -490,15 +490,20 @@ h1, h2 {
     max-width: 90%;
 }
 
-/* ▼▼▼ 【**新增此段**】 修正次分類無法收合的問題 ▼▼▼ */
+
 .subcategory-wrapper {
     max-height: 0; /* 預設收合 */
     overflow: hidden; /* 隱藏超出的內容 */
     transition: max-height 0.3s ease-out; /* 關鍵：加上高度變化的過渡動畫 */
     padding-left: 20px; /* (可選) 增加一些縮排，讓層級更明顯 */
     box-sizing: border-box;
-}
-/* ▲▲▲ 新增結束 ▲▲▲ */
+    margin-top: 8px;
+    margin-bottom: 5px;
+    background-color: #f0f4f8; /* 淺藍灰色背景，與其他頁面統一 */
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
 
 .word-block {
     padding: 10px 15px; /* 調整內距，適中大小 */
