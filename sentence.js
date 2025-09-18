@@ -561,8 +561,8 @@ function displaySentenceList(sentences, title = "句子列表") {
         container.className = `word-item-container ${isChecked ? "checked" : ""}`;
 
         const sentenceDisplay = isChecked 
-            ? sentenceId 
-            : `${sentenceId}: ${sentence.句子}`;
+    ? sentenceId 
+    : `${sentenceId}:<br>${sentence.句子}`;
 
         container.innerHTML = `
             <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>

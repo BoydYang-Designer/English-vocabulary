@@ -176,10 +176,10 @@ transform: scale(1.05);
 #meaningContainer {
 max-height: 400px;
 overflow-y: auto;
-padding-top: 30px;
+padding-top: 50px;
 padding-left: 15px;
 padding-right: 15px;
-padding-bottom: 30px;
+padding-bottom: 50px;
 border: 1px solid #ddd;
 background: #e9eef1;
 border-radius: 15px;
