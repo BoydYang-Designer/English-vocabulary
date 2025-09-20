@@ -1,0 +1,1 @@
+pip install openpyxl requests beautifulsoup4
