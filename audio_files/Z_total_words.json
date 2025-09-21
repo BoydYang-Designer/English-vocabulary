@@ -1068,7 +1068,7 @@
             "等級": "C1",
             "Words": "apathetic",
             "pronunciation-1": "[͵æpəˋθɛtɪk]",
-            "traditional Chinese": "adj.adj.冷淡的；無感情的；無動於衷的",
+            "traditional Chinese": "adj.冷淡的；無感情的；無動於衷的",
             "English meaning": "Apathetic is an adjective that describes a state of indifference or lack of interest and emotion towards something. It indicates a lack of enthusiasm or concern.\nE.g. The student's apathetic response to the teacher's question showed that he was not engaged with the lesson.\nE.g. Despite the urgency of the situation, her apathetic attitude suggested that she did not care about the outcome.\nE.g. The community's apathetic reaction to the proposed changes in local policy made it clear that they were not invested in the discussion.",
             "Unnamed: 10": "apathetic",
             "Unnamed: 11": "apathetic",
@@ -8926,7 +8926,6 @@
             "等級": "C1",
             "Words": "hospitable",
             "pronunciation-1": "[ˋhɑspɪtəb!]",
-            "pronunciation-2": " ",
             "traditional Chinese": "adj.1.好客的，招待周到的\n    2.（氣候、環境等）宜人的；適宜的",
             "English meaning": "hospitable As an Adjective:\n1. Welcoming and Friendly: Showing kindness, generosity, and warmth toward guests or visitors.\nE.g. The host was very hospitable, offering us food and drinks as soon as we arrived.\nE.g. They were hospitable to travelers, always providing a place to rest.\n2. Favorable or Suitable for Living or Growth: Providing a pleasant or suitable environment for people, animals, or plants.\nE.g. The island’s warm climate makes it hospitable for a variety of plants and animals.\nE.g.  Scientists are searching for hospitable planets that could support life.\nSummary:\n\"Hospitable\" describes a person, place, or environment that is welcoming, friendly, or suitable for living and growth.\nRelated Words: welcoming, friendly, kind, generous, accommodating, cordial, inviting.\nAntonyms: unwelcoming, unfriendly, inhospitable, cold, hostile.",
             "Unnamed: 10": "hospitable",
@@ -15833,11 +15832,18 @@
         {
             "等級": "B1",
             "Words": "shed",
+            "pronunciation-1": "[ʃɛd]",
+            "traditional Chinese": "n. 1. 小屋；儲藏棚\n\nv. 1. 脫落；自然掉落 \n2. 擺脫；去除不需要的事物 \n3. 散發；釋放",
+            "English meaning": "Shed can be a verb or a noun.\nAs a verb: shed / shed / shedding\n1.To lose or let something fall off naturally. \nExample: Trees shed their leaves in autumn. \nExample: Snakes shed their old skin periodically.\n Example: The old building shed bricks during the storm.\n2.To get rid of or discard something unwanted. \nExample: She shed a tear during the sad movie. \nExample: He shed his old habits to start a healthier lifestyle.\nExample: The company shed unnecessary expenses to improve efficiency.\n3.To release, emit, or give off something. \nExample: The lamp shed a warm light across the room. \nExample: The cat sheds fur all over the couch. \nExample: The mattress absorbed and shed most of the impact when the child fell.\n\nAs a noun: shed / sheds\nA small building used for storage or shelter. \nExample: The gardener kept his tools in the shed. \nExample: There was a small shed at the back of the farm for storing hay. \nExample: The factory workers built a shed to protect their equipment from rain.\nSummary: As a verb, “shed” can mean to let something fall off naturally, to discard something unwanted, or to release/emmit something. As a noun, it refers to a small, simple building for storage or shelter.\nSynonyms: Discard, release, drop, outbuilding, storehouse\nAntonyms: Retain, keep, hold, acquire, collect",
             "Unnamed: 10": "shed",
             "Unnamed: 11": "shed",
-            "分類": []
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "shedding-light",
             "Unnamed: 10": "shedding-light",
@@ -15871,10 +15877,11 @@
             ]
         },
         {
+            "複習": "失敗",
             "等級": "B2",
-            "Words": "shelved",
-            "Unnamed: 10": "shelved",
-            "Unnamed: 11": "shelved",
+            "Words": "shelve",
+            "Unnamed: 10": "shelve",
+            "Unnamed: 11": "shelve",
             "分類": []
         },
         {
@@ -16006,9 +16013,15 @@
         {
             "等級": "B2",
             "Words": "skeleton",
+            "pronunciation-1": "[ˋskɛlətn]",
+            "traditional Chinese": "n. 1. 骨骼；骸骨　\n2. 骨架；支撐結構　\n3. 基本結構；雛形；縮編　\n4. 醜事；隱藏的祕密\nadj. 簡略的；縮編的；骨瘦如柴的",
+            "English meaning": "Skeleton can be a noun and an adjective.\n\nAs a noun: skeleton / skeletons, With the following meanings:\n\n1. The internal framework of bones in a human or animal body.\nE.g. The archaeologists discovered a human skeleton buried under the ruins.\nE.g. The skeleton protects vital organs such as the heart and lungs.\n\n2. A supporting framework or structure of something.\nE.g. The steel skeleton of the skyscraper was visible during construction.\nE.g. The barn was reduced to a charred skeleton after the fire.\n\n3. A reduced or minimal form of something.\nE.g. During the holidays, the office is run by a skeleton staff.\nE.g. Only the skeleton of the plan was completed before the deadline.\n\n4. A hidden or shameful secret (usually phrased as “skeleton in the closet/cupboard”).\nE.g. Every family has its skeletons in the closet.\nE.g. The politician was afraid his skeletons might be revealed to the public.\n\nSkeleton as an adjective.\nDescribing something reduced to its most basic or essential components; minimal in form or structure.E.g. They provided only a skeleton outline of the proposal.\nE.g. The hospital was operating with a skeleton crew during the storm.\n\nSummary\n“Skeleton” literally refers to the framework of bones in a body, but figuratively it extends to mean any supporting structure, minimal version of something, or hidden secret. As an adjective, it means bare, minimal, or stripped down to essentials.\n\nSynonyms\n\nFramework, structure, outline, remains, secret\n\nAntonyms\n\nWhole, entirety, fullness, abundance, openness",
             "Unnamed: 10": "skeleton",
             "Unnamed: 11": "skeleton",
-            "分類": []
+            "分類": [
+                "醫學與健康",
+                "人體"
+            ]
         },
         {
             "等級": "C1",
@@ -16074,6 +16087,7 @@
             ]
         },
         {
+            "複習": "失敗",
             "等級": "B1",
             "Words": "sleigh",
             "Unnamed: 10": "sleigh",
@@ -16081,6 +16095,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "B1",
             "Words": "sleuth",
             "Unnamed: 10": "sleuth",
@@ -16100,9 +16115,15 @@
         {
             "等級": "B2",
             "Words": "slumber",
+            "pronunciation-1": "[ˋslʌmbɚ]",
+            "traditional Chinese": "n.睡眠；安眠\n 不活動或休眠的狀態\nv.睡覺；進入安睡\n   不活躍或休眠\n  ",
+            "English meaning": "Slumber can be a noun and a verb.\n\nAs a noun: slumber / slumbers\n\nIt refers to sleep, especially light or peaceful sleep.\nE.g. After a long day’s work, she fell into a deep slumber.\nE.g. The child stirred from his slumbers when the thunder roared.\nFiguratively, it can also mean a state of inactivity or dormancy.\nE.g. The old factory had been in slumber for decades before reopening.\nE.g. The town’s economy awoke from its long slumber with the new project.\n\nAs a verb: slumber / slumbered / slumbering\nIt means to sleep, especially lightly or peacefully.\nE.g. He slumbered quietly on the couch while the TV was still on.\nE.g. The baby slumbered in her crib throughout the night.\nFiguratively, it can also mean to be inactive or dormant.\nE.g. Ideas slumber in the mind until the right moment awakens them.\nE.g. The volcano slumbered for centuries before erupting again.\n\nSummary\n“Slumber” mainly means sleep (often peaceful, light, or poetic in tone). Figuratively, it refers to a state of inactivity or dormancy, whether for people, places, or things. It is often more literary or poetic than the everyday word sleep.\nSynonyms : Sleep / Rest / Nap / Doze / Repose\nAntonyms : Wakefulness / Vigilance / Activity / Energy / Alertness",
             "Unnamed: 10": "slumber",
             "Unnamed: 11": "slumber",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
         },
         {
             "等級": "B1",
@@ -16284,9 +16305,15 @@
         {
             "等級": "B1",
             "Words": "sorrow",
+            "pronunciation-1": "[ˋsɑro]",
+            "traditional Chinese": "n.悲傷\n1. 悲傷的情緒或狀態。\n2. 令人悲傷的事件或情況。",
+            "English meaning": "sorrow is a noun : forms : with the following meanings:\n1. A feeling of deep distress caused by loss, disappointment, or other misfortune.\n   E.g. She felt a profound sorrow after her friend moved away.\n   E.g. The sorrow of losing a loved one can be overwhelming.\n2. An event or situation that causes sadness.\n   E.g. The news of the tragedy filled the community with sorrow.\n   E.g. His life was marked by sorrow and hardship.\n\nSummary: Sorrow is a deep emotional pain often associated with loss or disappointment. It can manifest as a personal feeling or be a response to external events.\nRelated Words: grief, sadness, anguish.\nAntonyms: joy, happiness, delight.",
             "Unnamed: 10": "sorrow",
             "Unnamed: 11": "sorrow",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "情緒"
+            ]
         },
         {
             "等級": "C2",
@@ -16339,6 +16366,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "B1",
             "Words": "specificity",
             "Unnamed: 10": "specificity",
@@ -16484,10 +16512,11 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "B1",
-            "Words": "spores",
-            "Unnamed: 10": "spores",
-            "Unnamed: 11": "spores",
+            "Words": "spore",
+            "Unnamed: 10": "spore",
+            "Unnamed: 11": "spore",
             "分類": []
         },
         {
@@ -16560,6 +16589,7 @@
             ]
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "stained-glass",
             "Unnamed: 10": "stained-glass",
@@ -16587,6 +16617,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "B1",
             "Words": "stance",
             "Unnamed: 10": "stance",
@@ -16627,8 +16658,10 @@
             ]
         },
         {
+            "複習": "成功",
             "等級": "C2",
             "Words": "statistical",
+            "pronunciation-1": "[stəˋtɪstɪk!]",
             "Unnamed: 10": "statistical",
             "Unnamed: 11": "statistical",
             "分類": []
@@ -16667,14 +16700,16 @@
             ]
         },
         {
+            "複習": "失敗",
             "等級": "B2",
-            "Words": "stimulus",
+            "Words": "stimulu",
             "English meaning": "stimuli",
-            "Unnamed: 10": "stimulus",
-            "Unnamed: 11": "stimulus",
+            "Unnamed: 10": "stimulu",
+            "Unnamed: 11": "stimulu",
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "stipulation",
             "Unnamed: 10": "stipulation",
@@ -16692,8 +16727,10 @@
             "分類": []
         },
         {
+            "複習": "成功",
             "等級": "B1",
             "Words": "stitch",
+            "pronunciation-1": "[stɪtʃ]",
             "Unnamed: 10": "stitch",
             "Unnamed: 11": "stitch",
             "分類": []
@@ -16861,6 +16898,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "stumble-upon",
             "traditional Chinese": "v.偶然碰見",
@@ -16900,6 +16938,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C1",
             "Words": "subjective",
             "Unnamed: 10": "subjective",
@@ -17050,8 +17089,10 @@
             "分類": []
         },
         {
+            "複習": "成功",
             "等級": "B1",
             "Words": "summon",
+            "pronunciation-1": "[ˋsʌmən]",
             "Unnamed: 10": "summon",
             "Unnamed: 11": "summon",
             "分類": []
@@ -17188,8 +17229,10 @@
             ]
         },
         {
+            "複習": "成功",
             "等級": "B1",
             "Words": "sway",
+            "pronunciation-1": "[swe]",
             "Unnamed: 10": "sway",
             "Unnamed: 11": "sway",
             "分類": []
@@ -17238,8 +17281,10 @@
             ]
         },
         {
+            "複習": "成功",
             "等級": "B1",
             "Words": "swift",
+            "pronunciation-1": "[swɪft]",
             "Unnamed: 10": "swift",
             "Unnamed: 11": "swift",
             "分類": []
@@ -17278,6 +17323,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "symbolically",
             "Unnamed: 10": "symbolically",
@@ -17285,6 +17331,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "synchronize",
             "Unnamed: 10": "synchronize",
@@ -17351,6 +17398,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "B1",
             "Words": "tacitly",
             "Unnamed: 10": "tacitly",
@@ -17414,20 +17462,13 @@
             "分類": []
         },
         {
-            "等級": "B1",
+            "等級": "B2",
             "Words": "tangle",
             "pronunciation-1": "[ˋtæŋg!]",
             "traditional Chinese": "n.糾結；紛亂；亂糟糟的一團\nv.1.使糾結，使糾纏(+up)\n   2.使捲入；使陷入",
             "English meaning": "Tangle can be used as both a noun and a verb, referring to the state of being twisted or knotted in a way that makes it difficult to separate or manage.\nAs a Noun : A twisted mass of something:\nThis refers to a situation where something, such as string, hair, or wires, has become twisted or knotted in a complicated way.\nE.g. There was a tangle of fishing lines in the boat.\nE.g. She had to work through the tangle of cables under her desk.\nAs a Verb: tangle / tangled / tangling\n1. To twist or knot something in a way that makes it difficult to separate:\nThis describes the act of causing something to become twisted or knotted.\nE.g. He tangled his headphones while trying to put them in his pocket.\nE.g. The dog tangled its leash around the tree.\n2. To become involved in a complicated or confusing situation:\nThis refers to getting caught up in a problem, confusion, or conflict.\nE.g. She got tangled in a web of lies when trying to explain her actions.\nE.g. The two companies got tangled in a legal dispute over the contract.\nSummary:\n\"Tangle\" refers to a twisted or knotted situation, whether physical or metaphorical, where things are difficult to separate or manage.\nRelated Words : knot, twist, mess, entangle, complication\nAntonyms : untangle, straighten, clear, simplify",
             "Unnamed: 10": "tangle",
             "Unnamed: 11": "tangle",
-            "分類": []
-        },
-        {
-            "等級": "B2",
-            "Words": "tangled",
-            "Unnamed: 10": "tangled",
-            "Unnamed: 11": "tangled",
             "分類": []
         },
         {
@@ -17531,6 +17572,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "tasty-treats",
             "traditional Chinese": "美味佳餚",
@@ -17620,10 +17662,11 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "B2",
-            "Words": "termites",
-            "Unnamed: 10": "termites",
-            "Unnamed: 11": "termites",
+            "Words": "termite",
+            "Unnamed: 10": "termite",
+            "Unnamed: 11": "termite",
             "分類": []
         },
         {
@@ -17755,8 +17798,10 @@
             "分類": []
         },
         {
+            "複習": "成功",
             "等級": "B1",
             "Words": "thorn",
+            "pronunciation-1": "[θɔrn]",
             "Unnamed: 10": "thorn",
             "Unnamed: 11": "thorn",
             "分類": []
@@ -17772,6 +17817,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "thoroughness",
             "Unnamed: 10": "thoroughness",
@@ -17809,15 +17855,10 @@
             "分類": []
         },
         {
-            "等級": "B2",
-            "Words": "thrives",
-            "Unnamed: 10": "thrives",
-            "Unnamed: 11": "thrives",
-            "分類": []
-        },
-        {
+            "複習": "成功",
             "等級": "B1",
             "Words": "tidy",
+            "pronunciation-1": "[ˋtaɪdɪ]",
             "Unnamed: 10": "tidy",
             "Unnamed: 11": "tidy",
             "分類": []
@@ -17915,6 +17956,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "to-put-out-some-feelers",
             "Unnamed: 10": "to-put-out-some-feelers",
@@ -17960,6 +18002,7 @@
             ]
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "to-test-the-waters",
             "Unnamed: 10": "to-test-the-waters",
@@ -18326,8 +18369,10 @@
             "分類": []
         },
         {
+            "複習": "成功",
             "等級": "B2",
             "Words": "ultimate",
+            "pronunciation-1": "[ˋʌltəmɪt]",
             "English meaning": "ultimate privacy",
             "Unnamed: 10": "ultimate",
             "Unnamed: 11": "ultimate",
@@ -18420,6 +18465,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "B1",
             "Words": "undone",
             "Unnamed: 10": "undone",
@@ -18490,6 +18536,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "B1",
             "Words": "upheld",
             "Unnamed: 10": "upheld",
@@ -18527,8 +18574,10 @@
             "分類": []
         },
         {
+            "複習": "成功",
             "等級": "B2",
             "Words": "utility",
+            "pronunciation-1": "[juˋtɪlətɪ]",
             "Unnamed: 10": "utility",
             "Unnamed: 11": "utility",
             "分類": []
@@ -18654,6 +18703,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "B1",
             "Words": "veer",
             "Unnamed: 10": "veer",
@@ -18661,6 +18711,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C1",
             "Words": "vegetation",
             "Unnamed: 10": "vegetation",
@@ -18694,6 +18745,7 @@
             ]
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "venomous-bite",
             "Unnamed: 10": "venomous-bite",
@@ -18711,6 +18763,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C1",
             "Words": "verbalize",
             "Unnamed: 10": "verbalize",
@@ -18718,6 +18771,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "B1",
             "Words": "verbatim",
             "Unnamed: 10": "verbatim",
@@ -18884,8 +18938,10 @@
             "分類": []
         },
         {
+            "複習": "成功",
             "等級": "B1",
             "Words": "vital",
+            "pronunciation-1": "[ˋvaɪt!]",
             "Unnamed: 10": "vital",
             "Unnamed: 11": "vital",
             "分類": []
@@ -18941,6 +18997,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "vulnerability",
             "Unnamed: 10": "vulnerability",
@@ -18988,8 +19045,10 @@
             "分類": []
         },
         {
+            "複習": "成功",
             "等級": "B2",
             "Words": "wardrobe",
+            "pronunciation-1": "[ˋwɔrd͵rob]",
             "Unnamed: 10": "wardrobe",
             "Unnamed: 11": "wardrobe",
             "分類": []
@@ -19120,13 +19179,16 @@
             "分類": []
         },
         {
+            "複習": "成功",
             "等級": "C1",
             "Words": "wholesome",
+            "pronunciation-1": "[ˋholsəm]",
             "Unnamed: 10": "wholesome",
             "Unnamed: 11": "wholesome",
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "wild-swimming",
             "Unnamed: 10": "wild-swimming",
@@ -19134,6 +19196,7 @@
             "分類": []
         },
         {
+            "複習": "失敗",
             "等級": "C2",
             "Words": "wind-chimes",
             "Unnamed: 10": "wind-chimes",
@@ -19161,7 +19224,6 @@
             "分類": []
         },
         {
-            "複習": 1.0,
             "等級": "B1",
             "Words": "wind-N",
             "pronunciation-1": "[wɪnd]",
@@ -19192,7 +19254,6 @@
             "分類": []
         },
         {
-            "複習": 1.0,
             "等級": "B1",
             "Words": "wind-V",
             "pronunciation-1": "[waɪnd]",
@@ -19240,6 +19301,7 @@
             ]
         },
         {
+            "複習": "失敗",
             "等級": "B1",
             "Words": "wokeness",
             "Unnamed: 10": "wokeness",
@@ -19593,6 +19655,127 @@
                 "藝術與美學",
                 "Design"
             ]
+        },
+        {
+            "複習": "成功",
+            "等級": "C2",
+            "Words": "incorporate",
+            "pronunciation-1": "[ɪnˋkɔrpə͵ret]",
+            "Unnamed: 10": "incorporate",
+            "Unnamed: 11": "incorporate",
+            "分類": []
+        },
+        {
+            "複習": "成功",
+            "等級": "C1",
+            "Words": "diminish",
+            "pronunciation-1": "[dəˋmɪnɪʃ]",
+            "Unnamed: 10": "diminish",
+            "Unnamed: 11": "diminish",
+            "分類": []
+        },
+        {
+            "複習": "成功",
+            "Words": "expel",
+            "pronunciation-1": "[ɪkˋspɛl]",
+            "Unnamed: 10": "expel",
+            "Unnamed: 11": "expel",
+            "分類": []
+        },
+        {
+            "複習": "成功",
+            "等級": "B1",
+            "Words": "enormous",
+            "pronunciation-1": "[ɪˋnɔrməs]",
+            "Unnamed: 10": "enormous",
+            "Unnamed: 11": "enormous",
+            "分類": []
+        },
+        {
+            "複習": "失敗",
+            "Words": "obedeient",
+            "Unnamed: 10": "obedeient",
+            "Unnamed: 11": "obedeient",
+            "分類": []
+        },
+        {
+            "複習": "失敗",
+            "Words": "ressist",
+            "Unnamed: 10": "ressist",
+            "Unnamed: 11": "ressist",
+            "分類": []
+        },
+        {
+            "複習": "失敗",
+            "Words": "mutrient",
+            "Unnamed: 10": "mutrient",
+            "Unnamed: 11": "mutrient",
+            "分類": []
+        },
+        {
+            "複習": "成功",
+            "等級": "B1",
+            "Words": "brief",
+            "pronunciation-1": "[brif]",
+            "Unnamed: 10": "brief",
+            "Unnamed: 11": "brief",
+            "分類": []
+        },
+        {
+            "複習": "失敗",
+            "等級": "C1",
+            "Words": "overview",
+            "Unnamed: 10": "overview",
+            "Unnamed: 11": "overview",
+            "分類": []
+        },
+        {
+            "複習": "失敗",
+            "Words": "recognizeable",
+            "Unnamed: 10": "recognizeable",
+            "Unnamed: 11": "recognizeable",
+            "分類": []
+        },
+        {
+            "複習": "成功",
+            "等級": "B1",
+            "Words": "scene",
+            "pronunciation-1": "[sin]",
+            "Unnamed: 10": "scene",
+            "Unnamed: 11": "scene",
+            "分類": []
+        },
+        {
+            "複習": "成功",
+            "等級": "B1",
+            "Words": "gallery",
+            "pronunciation-1": "[ˋgælərɪ]",
+            "Unnamed: 10": "gallery",
+            "Unnamed: 11": "gallery",
+            "分類": []
+        },
+        {
+            "複習": "成功",
+            "等級": "B2",
+            "Words": "feature",
+            "pronunciation-1": "[fitʃɚ]",
+            "Unnamed: 10": "feature",
+            "Unnamed: 11": "feature",
+            "分類": []
+        },
+        {
+            "複習": "失敗",
+            "Words": "surveillance",
+            "Unnamed: 10": "surveillance",
+            "Unnamed: 11": "surveillance",
+            "分類": []
+        },
+        {
+            "複習": "失敗",
+            "Words": "surveil",
+            "Unnamed: 10": "surveil",
+            "Unnamed: 11": "surveil",
+            "分類": []
         }
     ]
 }

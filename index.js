@@ -835,6 +835,7 @@ function showDetails(word) {
     let chinese = `${finalDisplayHTML}<div>${formattedChinese}</div>`;
     let rawMeaning = word["English meaning"];
     let formattedMeaning = rawMeaning.replace(/^Summary:?/gim, "<h3>Summary</h3>").replace(/Related Words:/gi, "<h3>Related Words:</h3>").replace(/Antonyms:/gi, "<h3>Antonyms:</h3>").replace(/Synonyms:/gi, "<h3>Synonyms:</h3>");
+    formattedMeaning = formattedMeaning.replace(/(\s*\/?\s*As a \w+\s*:?)/gi, "<br><br>$&");
     formattedMeaning = formattedMeaning.replace(/\n(\d+\.)/g, '</p><h4 class="meaning-number">$1</h4><p>');
     formattedMeaning = formattedMeaning.replace(/\n(E\.g\.|Example):/gi, '</p><p class="example"><strong>$1:</strong>');
     formattedMeaning = formattedMeaning.replace(/\n/g, "<br>");
@@ -849,13 +850,12 @@ function showDetails(word) {
     displayNote();
     updateBackButton();
     
-    // ▼▼▼ 【新增】句子按鈕事件監聽 ▼▼▼
+    // ▼▼▼ 句子按鈕事件監聽 ▼▼▼
     const sentenceLinkBtn = document.getElementById("sentenceLinkBtn");
     if (sentenceLinkBtn) {
         sentenceLinkBtn.onclick = () => {
             const wordText = word.Words || word.word || word["單字"];
             if (wordText) {
-                // 導航到句子頁面，並傳遞當前單字和來源頁面
                 window.location.href = `sentence.html?showSentencesForWord=${encodeURIComponent(wordText)}&from=index`;
             }
         };

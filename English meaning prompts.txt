@@ -1,0 +1,52 @@
+{Word} can be a [part of speech 1] (and [part of speech 2], if applicable).
+
+As a [part of speech 1] : [word / forms] :
+
+If only one meaning → it refers to [definition].
+
+E.g. [example sentence 1]
+
+E.g. [example sentence 2]
+
+If more than one meaning → with the following meanings:
+
+[definition]
+
+E.g. [example sentence 1]
+
+E.g. [example sentence 2]
+
+[definition]
+
+E.g. [example sentence 1]
+
+E.g. [example sentence 2]
+
+As a [part of speech 2] : [word / forms] :
+
+Same rules as above.
+
+Summary: A short recap of the word’s overall meaning (literal + figurative if applicable).
+
+Synonyms: 4–5 related words. (Write on the same line)
+
+Antonyms: 4–5 opposite words.(Write on the same line)
+
+--------------------------------------
+
+I will give you detailed English definitions and example sentences of a word.  
+Please summarize them into concise Chinese dictionary-style meanings in this format:
+
+n. 1. …　2. …　3. …　4. …  
+v. 1. …　2. …　3. …　4. …  
+adv. 1. …　2. …　3. …　4. …  
+adj. 1. …　2. …　3. …　4. …  
+
+
+Requirements:  
+- Translate into Chinese.  
+- Use short, clear dictionary-style expressions.  
+- Combine related or similar meanings when possible.  
+- Put all noun senses on one line, numbered 1, 2, 3, etc.  
+- Put all adjective senses on one line after "adj."  
+- Do not include example sentences in the output.  
