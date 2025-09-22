@@ -15834,7 +15834,7 @@
             "Words": "shed",
             "pronunciation-1": "[ʃɛd]",
             "traditional Chinese": "n. 1. 小屋；儲藏棚\n\nv. 1. 脫落；自然掉落 \n2. 擺脫；去除不需要的事物 \n3. 散發；釋放",
-            "English meaning": "Shed can be a verb or a noun.\nAs a verb: shed / shed / shedding\n1.To lose or let something fall off naturally. \nExample: Trees shed their leaves in autumn. \nExample: Snakes shed their old skin periodically.\n Example: The old building shed bricks during the storm.\n2.To get rid of or discard something unwanted. \nExample: She shed a tear during the sad movie. \nExample: He shed his old habits to start a healthier lifestyle.\nExample: The company shed unnecessary expenses to improve efficiency.\n3.To release, emit, or give off something. \nExample: The lamp shed a warm light across the room. \nExample: The cat sheds fur all over the couch. \nExample: The mattress absorbed and shed most of the impact when the child fell.\n\nAs a noun: shed / sheds\nA small building used for storage or shelter. \nExample: The gardener kept his tools in the shed. \nExample: There was a small shed at the back of the farm for storing hay. \nExample: The factory workers built a shed to protect their equipment from rain.\nSummary: As a verb, “shed” can mean to let something fall off naturally, to discard something unwanted, or to release/emmit something. As a noun, it refers to a small, simple building for storage or shelter.\nSynonyms: Discard, release, drop, outbuilding, storehouse\nAntonyms: Retain, keep, hold, acquire, collect",
+            "English meaning": "Shed can be a verb or a noun.\nAs a verb: shed / shed / shedding\n1.To lose or let something fall off naturally. \nE.g. Trees shed their leaves in autumn. \nE.g. Snakes shed their old skin periodically.\n E.g. The old building shed bricks during the storm.\n2.To get rid of or discard something unwanted. \nE.g. She shed a tear during the sad movie. \nE.g. He shed his old habits to start a healthier lifestyle.\nE.g. The company shed unnecessary expenses to improve efficiency.\n3.To release, emit, or give off something. \nE.g. The lamp shed a warm light across the room. \nE.g. The cat sheds fur all over the couch. \nE.g. The mattress absorbed and shed most of the impact when the child fell.\n\nAs a noun: shed / sheds\nA small building used for storage or shelter. \nE.g. The gardener kept his tools in the shed. \nE.g. There was a small shed at the back of the farm for storing hay. \nE.g. The factory workers built a shed to protect their equipment from rain.\nSummary: As a verb, “shed” can mean to let something fall off naturally, to discard something unwanted, or to release/emmit something. As a noun, it refers to a small, simple building for storage or shelter.\nSynonyms: Discard, release, drop, outbuilding, storehouse\nAntonyms: Retain, keep, hold, acquire, collect",
             "Unnamed: 10": "shed",
             "Unnamed: 11": "shed",
             "分類": [
@@ -16662,6 +16662,7 @@
             "等級": "C2",
             "Words": "statistical",
             "pronunciation-1": "[stəˋtɪstɪk!]",
+            "English meaning": "Statistical is an adjective.\n\nRelating to statistics (the science of collecting, analyzing, and interpreting numerical data).\nE.g. The researcher presented the statistical results of the survey.\nE.g. Statistical data shows that unemployment has decreased this year.\nE.g. The book explains statistical methods in simple language.\n\nBased on numbers, probabilities, or measurable information rather than personal opinion.\nE.g. The doctor made a statistical prediction about the patient’s recovery chances.\nE.g. Statistical evidence suggests that regular exercise improves health.\nE.g. There is a statistical difference between the two groups in the experiment.\n\nSummary:\n“Statistical” describes anything that relates to or is derived from statistics, numerical data, or probability. It is often used in research, science, and data analysis to emphasize fact-based results.\n\nSynonyms:\nNumerical, data-based, quantitative, empirical\n\nAntonyms:\nAnecdotal, subjective, qualitative, guesswork",
             "Unnamed: 10": "statistical",
             "Unnamed: 11": "statistical",
             "分類": []
@@ -19676,6 +19677,7 @@
         },
         {
             "複習": "成功",
+            "等級": "C1",
             "Words": "expel",
             "pronunciation-1": "[ɪkˋspɛl]",
             "Unnamed: 10": "expel",
@@ -19692,24 +19694,30 @@
             "分類": []
         },
         {
-            "複習": "失敗",
-            "Words": "obedeient",
-            "Unnamed: 10": "obedeient",
-            "Unnamed: 11": "obedeient",
+            "複習": "成功",
+            "等級": "B2",
+            "Words": "obedient",
+            "pronunciation-1": "[əˋbidjənt]",
+            "Unnamed: 10": "obedient",
+            "Unnamed: 11": "obedient",
             "分類": []
         },
         {
-            "複習": "失敗",
-            "Words": "ressist",
-            "Unnamed: 10": "ressist",
-            "Unnamed: 11": "ressist",
+            "複習": "成功",
+            "等級": "B2",
+            "Words": "resist",
+            "pronunciation-1": "[rɪˋzɪst]",
+            "Unnamed: 10": "resist",
+            "Unnamed: 11": "resist",
             "分類": []
         },
         {
-            "複習": "失敗",
-            "Words": "mutrient",
-            "Unnamed: 10": "mutrient",
-            "Unnamed: 11": "mutrient",
+            "複習": "成功",
+            "等級": "B2",
+            "Words": "nutrient",
+            "pronunciation-1": "[ˋnjutrɪənt]",
+            "Unnamed: 10": "nutrient",
+            "Unnamed: 11": "nutrient",
             "分類": []
         },
         {
@@ -19730,10 +19738,12 @@
             "分類": []
         },
         {
-            "複習": "失敗",
-            "Words": "recognizeable",
-            "Unnamed: 10": "recognizeable",
-            "Unnamed: 11": "recognizeable",
+            "複習": "成功",
+            "等級": "A2",
+            "Words": "recognizable",
+            "pronunciation-1": "[ˋrɛkəg͵naɪzəb!]",
+            "Unnamed: 10": "recognizable",
+            "Unnamed: 11": "recognizable",
             "分類": []
         },
         {
@@ -19764,15 +19774,19 @@
             "分類": []
         },
         {
-            "複習": "失敗",
+            "複習": "成功",
+            "等級": "C1",
             "Words": "surveillance",
+            "pronunciation-1": "[sɚˋveləns]",
             "Unnamed: 10": "surveillance",
             "Unnamed: 11": "surveillance",
             "分類": []
         },
         {
-            "複習": "失敗",
+            "複習": "成功",
+            "等級": "C2",
             "Words": "surveil",
+            "pronunciation-1": "[sərˈvāl]",
             "Unnamed: 10": "surveil",
             "Unnamed: 11": "surveil",
             "分類": []
