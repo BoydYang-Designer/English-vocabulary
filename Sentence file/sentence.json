@@ -44706,97 +44706,145 @@
             "等級": "C2",
             "Words": "indentation-1",
             "句子": "The indentation on the paper indicated where to fold",
-            "分類": []
+            "分類": [
+                "藝術與美學",
+                "形狀"
+            ]
         },
         {
             "等級": "C2",
             "Words": "indentation-2",
             "句子": "The indentation left by the heavy object was still visible on the soft ground",
-            "分類": []
+            "分類": [
+                "藝術與美學",
+                "形狀"
+            ]
         },
         {
             "等級": "C2",
             "Words": "indentation-3",
             "句子": "Proper indentation is essential for readability in programming code",
-            "分類": []
+            "分類": [
+                "藝術與美學",
+                "形狀"
+            ]
         },
         {
             "等級": "C2",
             "Words": "indifferent-1",
             "句子": "She seemed indifferent to his proposal, neither accepting nor rejecting it",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "C2",
             "Words": "indifferent-2",
             "句子": "I was concentrating so hard that I was indifferent to the noise outside",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "C2",
             "Words": "indifferent-3",
             "句子": "He seemed indifferent about the outcome of the game",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "C2",
             "Words": "indifferent-4",
             "句子": "When asked where to eat, he was indifferent and said he didn't mind",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "C2",
             "Words": "indifferent-5",
             "句子": "Remain indifferent in a dispute avoids bias and ensures fairness",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "C2",
             "Words": "indifferent-6",
             "句子": "It's quite indifferent to me whether you go or stay",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "C1",
             "Words": "indistinct-1",
             "句子": "The painting was so abstract that the shapes and colors appear indistinct, leaving viewers to interpret its meaning for themselves",
-            "分類": []
+            "分類": [
+                "藝術與美學",
+                "形狀"
+            ]
         },
         {
             "等級": "C1",
             "Words": "indistinct-2",
             "句子": "Your voice was indistinct, could you please repeat that again?",
-            "分類": []
+            "分類": [
+                "藝術與美學",
+                "形狀"
+            ]
         },
         {
             "等級": "C1",
             "Words": "indistinct-3",
             "句子": "The presenter's slides were poorly organized, and their explanations were often indistinct, leaving the audience confused about the main points of the presentation",
-            "分類": []
+            "分類": [
+                "藝術與美學",
+                "形狀"
+            ]
         },
         {
             "等級": "C2",
             "Words": "indomitable-1",
             "句子": "Her indomitable spirit helped her overcome many hardships",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "C2",
             "Words": "indomitable-2",
             "句子": "Despite numerous setbacks, his indomitable will kept him moving forward",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "C2",
             "Words": "indomitable-3",
             "句子": "The team's indomitable determination led them to victory",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "C2",
             "Words": "indomitable-4",
             "句子": "His indomitable courage inspired everyone around him",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "B2",
@@ -64036,6 +64084,1824 @@
             "分類": [
                 "自然與環境",
                 "植物"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "shedding-light-1",
+            "句子": "The scientist’s research is shedding light on climate change",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "shedding-light-2",
+            "句子": "The teacher is shedding light on difficult grammar rules",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "shedding-light-3",
+            "句子": "New evidence is shedding light on the mystery",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "shedding-light-4",
+            "句子": "The investigation is shedding light on corruption in the company",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "shedding-light-5",
+            "句子": "The report sheds light on the causes of the accident",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "shedding-light-6",
+            "句子": "The documentary sheds light on life in remote villages",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "shelve-1",
+            "句子": "She shelved the books after reading them",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "shelve-2",
+            "句子": "The store shelved the new products in the display area",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "shelve-3",
+            "句子": "He shelved the files carefully in the cabinet",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "shelve-4",
+            "句子": "The company shelved the project due to budget constraints",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "shelve-5",
+            "句子": "They shelved the proposal until further research could be done",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "shelve-6",
+            "句子": "His suggestion was shelved by the committee for the time being",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "sleuth-1",
+            "句子": "The sleuth solved the case before the police arrived",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "sleuth-2",
+            "句子": "She acted like a sleuth to find out who was responsible",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "sleuth-3",
+            "句子": "The famous sleuth tracked down the missing jewels",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "sleuth-4",
+            "句子": "He sleuthed around the office to discover the source of the leak",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "sleuth-5",
+            "句子": "The journalist sleuthed through archives to find evidence",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "sleuth-6",
+            "句子": "She spent the weekend sleuthing for clues in the old letters",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "specificity-1",
+            "句子": "The specificity of her instructions made the task easy to follow",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "specificity-2",
+            "句子": "Scientific experiments require high specificity to obtain accurate results",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "specificity-3",
+            "句子": "The lawyer emphasized the specificity of the contract terms",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "specificity-4",
+            "句子": "The teacher praised the student for the specificity in her essay",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "specificity-5",
+            "句子": "The report lacks specificity and needs more concrete examples",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "specificity-6",
+            "句子": "Specificity in communication helps avoid misunderstandings",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "specificity-7",
+            "句子": "The test’s specificity ensures it detects only the intended virus",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "specificity-8",
+            "句子": "High specificity in drugs reduces side effects",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "specificity-9",
+            "句子": "Researchers are working to improve the specificity of the antibodies",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "tidy-1",
+            "句子": "Her desk is always tidy and free of clutter",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "tidy-2",
+            "句子": "Please keep your room tidy",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "tidy-3",
+            "句子": "He stacked the books in a tidy pile",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "tidy-4",
+            "句子": "She looked tidy in her freshly ironed uniform",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "tidy-5",
+            "句子": "His tidy haircut made him look professional",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "tidy-6",
+            "句子": "The children were tidy after changing into clean clothes",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "tidy-7",
+            "句子": "He earned a tidy profit from selling his business",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "tidy-8",
+            "句子": "They spent a tidy sum on their new house",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "tidy-9",
+            "句子": "Winning the competition brought her a tidy amount of money",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "tidy-10",
+            "句子": "She tidied her room before the guests arrived",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "tidy-11",
+            "句子": "Please tidy your desk after class",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "tidy-12",
+            "句子": "He tidied the garden by pulling out the weeds",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "ultimate-1",
+            "句子": "The ultimate decision rests with the manager",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "ultimate-2",
+            "句子": "After months of testing, they reached the ultimate result",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "ultimate-3",
+            "句子": "Death is often considered the ultimate stage of life",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "ultimate-4",
+            "句子": "Climbing Mount Everest was his ultimate challenge",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "ultimate-5",
+            "句子": "Winning the gold medal was the ultimate achievement",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "ultimate-6",
+            "句子": "The ultimate luxury is having time to relax",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "ultimate-7",
+            "句子": "The ultimate goal of education is to foster critical thinking",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "ultimate-8",
+            "句子": "Freedom is the ultimate right of every human being",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "ultimate-9",
+            "句子": "The ultimate reason for his choice was personal happiness",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "ultimate-10",
+            "句子": "This dessert is the ultimate in chocolate indulgence",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "ultimate-11",
+            "句子": "To her, Paris was the ultimate in romance",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "ultimate-12",
+            "句子": "The sports car is his idea of the ultimate",
+            "分類": [
+                "學術與教育",
+                "語言"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "utility-1",
+            "句子": "The new software has great utility for designers",
+            "分類": [
+                "商業與經濟",
+                "經濟"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "utility-2",
+            "句子": "He questioned the utility of the extra features",
+            "分類": [
+                "商業與經濟",
+                "經濟"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "utility-3",
+            "句子": "The tool’s utility lies in its versatility",
+            "分類": [
+                "商業與經濟",
+                "經濟"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "utility-4",
+            "句子": "The storm disrupted basic utilities like electricity and water",
+            "分類": [
+                "商業與經濟",
+                "經濟"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "utility-5",
+            "句子": "Utility bills must be paid every month",
+            "分類": [
+                "商業與經濟",
+                "經濟"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "utility-6",
+            "句子": "The city is responsible for maintaining public utilities",
+            "分類": [
+                "商業與經濟",
+                "經濟"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "utility-7",
+            "句子": "Economists measure utility to understand consumer choices",
+            "分類": [
+                "商業與經濟",
+                "經濟"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "utility-8",
+            "句子": "Eating when hungry provides high utility",
+            "分類": [
+                "商業與經濟",
+                "經濟"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "utility-9",
+            "句子": "The utility of luxury goods depends on personal preference",
+            "分類": [
+                "商業與經濟",
+                "經濟"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "utility-10",
+            "句子": "He wore utility clothing suitable for outdoor work",
+            "分類": [
+                "商業與經濟",
+                "經濟"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "utility-11",
+            "句子": "The utility room was used for laundry and storage",
+            "分類": [
+                "商業與經濟",
+                "經濟"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "utility-12",
+            "句子": "The truck was built for utility rather than style",
+            "分類": [
+                "商業與經濟",
+                "經濟"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "vital-1",
+            "句子": "Water is vital for all forms of life",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "vital-2",
+            "句子": "It is vital to follow the instructions carefully",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "vital-3",
+            "句子": "Exercise plays a vital role in maintaining good health",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "vital-4",
+            "句子": "The team’s captain was a vital part of their success",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "vital-5",
+            "句子": "Education is vital for the development of a society",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "vital-6",
+            "句子": "His advice proved vital in solving the problem",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "vital-7",
+            "句子": "She has a vital spirit that inspires everyone around her",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "vital-8",
+            "句子": "The vital forces of nature are often unpredictable",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "vital-9",
+            "句子": "The doctor checked the patient’s vitals before surgery",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "vital-10",
+            "句子": "The nurse monitored the vitals every hour",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "vital-11",
+            "句子": "Protecting the vitals is crucial in combat situations",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "wardrobe-1",
+            "句子": "She hung her dresses neatly in the wardrobe",
+            "分類": [
+                "日常生活",
+                "衣物"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "wardrobe-2",
+            "句子": "The bedroom has a large wooden wardrobe",
+            "分類": [
+                "日常生活",
+                "衣物"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "wardrobe-3",
+            "句子": "He bought a new wardrobe to store his suits",
+            "分類": [
+                "日常生活",
+                "衣物"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "wardrobe-4",
+            "句子": "Her wardrobe consists mostly of casual clothes",
+            "分類": [
+                "日常生活",
+                "衣物"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "wardrobe-5",
+            "句子": "He updated his wardrobe with winter jackets",
+            "分類": [
+                "日常生活",
+                "衣物"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "wardrobe-6",
+            "句子": "The actor’s wardrobe for the film included several period costumes",
+            "分類": [
+                "日常生活",
+                "衣物"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "wardrobe-7",
+            "句子": "The chef’s wardrobe of spices included many rare ingredients",
+            "分類": [
+                "日常生活",
+                "衣物"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "wardrobe-8",
+            "句子": "The school offers a wardrobe of extracurricular activities",
+            "分類": [
+                "日常生活",
+                "衣物"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "wholesome-1",
+            "句子": "Eating fruits and vegetables is wholesome for the body",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "wholesome-2",
+            "句子": "Regular exercise has a wholesome effect on mental health",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "wholesome-3",
+            "句子": "The school encourages wholesome habits among students",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "wholesome-4",
+            "句子": "The movie has a wholesome message about friendship",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "wholesome-5",
+            "句子": "He enjoys wholesome activities like hiking and reading",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "wholesome-6",
+            "句子": "The community program aims to provide wholesome entertainment",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "wholesome-7",
+            "句子": "They spent a wholesome afternoon together at the park",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "wholesome-8",
+            "句子": "The book is wholesome and heartwarming for children",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "wholesome-9",
+            "句子": "A wholesome environment can foster creativity and positivity",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "incorporate-1",
+            "句子": "The designer incorporated modern elements into the traditional dress",
+            "分類": [
+                "商業與經濟",
+                "商業"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "incorporate-2",
+            "句子": "The recipe incorporates several exotic spices",
+            "分類": [
+                "商業與經濟",
+                "商業"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "incorporate-3",
+            "句子": "She incorporated the feedback into her final report",
+            "分類": [
+                "商業與經濟",
+                "商業"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "incorporate-4",
+            "句子": "The small business was incorporated last year",
+            "分類": [
+                "商業與經濟",
+                "商業"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "incorporate-5",
+            "句子": "They incorporated the startup to expand internationally",
+            "分類": [
+                "商業與經濟",
+                "商業"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "incorporate-6",
+            "句子": "Once incorporated, the company could issue shares to investors",
+            "分類": [
+                "商業與經濟",
+                "商業"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "incorporate-7",
+            "句子": "The monument incorporates symbols of peace and freedom",
+            "分類": [
+                "商業與經濟",
+                "商業"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "incorporate-8",
+            "句子": "His art incorporates cultural traditions from his homeland",
+            "分類": [
+                "商業與經濟",
+                "商業"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "incorporate-9",
+            "句子": "The curriculum incorporates lessons on environmental awareness",
+            "分類": [
+                "商業與經濟",
+                "商業"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "diminish-1",
+            "句子": "The medicine helped diminish the pain",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "diminish-2",
+            "句子": "Over time, the excitement of the trip began to diminish",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "diminish-3",
+            "句子": "His influence in the company has diminished since the restructuring",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "diminish-4",
+            "句子": "Poor maintenance can diminish the lifespan of the equipment",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "diminish-5",
+            "句子": "The scandal diminished the politician’s reputation",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "diminish-6",
+            "句子": "Frequent exposure to sunlight can diminish the color of fabrics",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "diminish-7",
+            "句子": "Don’t diminish her achievements; she worked very hard",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "diminish-8",
+            "句子": "He tried to diminish the importance of the issue",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "diminish-9",
+            "句子": "Criticism should never be used to diminish someone’s confidence",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "enormous-1",
+            "句子": "The elephant is an enormous animal",
+            "分類": [
+                "藝術與美學",
+                "形狀"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "enormous-2",
+            "句子": "They faced an enormous challenge in completing the project on time",
+            "分類": [
+                "藝術與美學",
+                "形狀"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "enormous-3",
+            "句子": "The company made an enormous profit last year",
+            "分類": [
+                "藝術與美學",
+                "形狀"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "enormous-4",
+            "句子": "The discovery had an enormous impact on science",
+            "分類": [
+                "藝術與美學",
+                "形狀"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "enormous-5",
+            "句子": "She felt an enormous sense of relief after the exam",
+            "分類": [
+                "藝術與美學",
+                "形狀"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "enormous-6",
+            "句子": "His contribution to the team was enormous",
+            "分類": [
+                "藝術與美學",
+                "形狀"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "obedient-1",
+            "句子": "The dog is very obedient and comes when called",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "obedient-2",
+            "句子": "Children should be obedient to their parents and teachers",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "obedient-3",
+            "句子": "He was obedient to all the safety regulations at work",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "obedient-4",
+            "句子": "She remained obedient even under strict supervision",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "obedient-5",
+            "句子": "The employees were obedient to the company’s policies",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "obedient-6",
+            "句子": "An obedient student listens carefully in class",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "resist-1",
+            "句子": "She resisted the temptation to eat chocolate",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "resist-2",
+            "句子": "The soldiers resisted the enemy attack bravely",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "resist-3",
+            "句子": "He resisted the urge to check his phone during the meeting",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "resist-4",
+            "句子": "The community resisted the new construction project",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "resist-5",
+            "句子": "He resisted the changes in company policy",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "resist-6",
+            "句子": "Many citizens resisted the unfair law",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "resist-7",
+            "句子": "Some fabrics resist water and stains",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "resist-8",
+            "句子": "The patient resisted the effects of the disease for many years",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "resist-9",
+            "句子": "He resisted peer pressure and made his own choices",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "nutrient-1",
+            "句子": "Fruits and vegetables are rich in essential nutrients",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "nutrient-2",
+            "句子": "The soil provides nutrients that help plants grow",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "nutrient-3",
+            "句子": "Proteins, vitamins, and minerals are important nutrients for the body",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "nutrient-4",
+            "句子": "Nutrients in food supply energy and help repair tissues",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "nutrient-5",
+            "句子": "The fish absorb nutrients directly from the water",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "nutrient-6",
+            "句子": "Balanced meals ensure that the body receives all necessary nutrients",
+            "分類": [
+                "醫學與健康",
+                "健康"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "brief-1",
+            "句子": "They had a brief meeting before lunch",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "brief-2",
+            "句子": "The movie was brief but very entertaining",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "brief-3",
+            "句子": "He gave a brief explanation of the rules",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "brief-4",
+            "句子": "Please keep your answers brief",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "brief-5",
+            "句子": "She wrote a brief summary of the report",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "brief-6",
+            "句子": "The teacher gave a brief instruction before starting the experiment",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "brief-7",
+            "句子": "There was a brief pause in the conversation",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "brief-8",
+            "句子": "The storm was brief but intense",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "brief-9",
+            "句子": "His stay in the city was brief",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "brief-10",
+            "句子": "The lawyer prepared a brief for the court",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "brief-11",
+            "句子": "The student submitted a brief of the research article",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "brief-12",
+            "句子": "The CEO read the brief before the meeting",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "A2",
+            "Words": "recognizable-1",
+            "句子": "Her face was easily recognizable from the photograph",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "A2",
+            "Words": "recognizable-2",
+            "句子": "The logo is recognizable around the world",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "A2",
+            "Words": "recognizable-3",
+            "句子": "The building is recognizable by its unique architecture",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "A2",
+            "Words": "recognizable-4",
+            "句子": "That tune is recognizable from many old movies",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "A2",
+            "Words": "recognizable-5",
+            "句子": "The actor has a recognizable voice that people remember immediately",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "A2",
+            "Words": "recognizable-6",
+            "句子": "His style of writing is recognizable in all his books",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "scene-1",
+            "句子": "The accident scene was cordoned off by the police",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "scene-2",
+            "句子": "He returned to the scene of his childhood memories",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "scene-3",
+            "句子": "The film crew arrived at the scene to start shooting",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "scene-4",
+            "句子": "The first scene of the play introduced the main characters",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "scene-5",
+            "句子": "That scene in the movie was very emotional",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "scene-6",
+            "句子": "The director decided to cut a few scenes from the film",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "scene-7",
+            "句子": "She made a scene when she found out about the mistake",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "scene-8",
+            "句子": "There was quite a scene at the wedding",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "scene-9",
+            "句子": "He tends to make a scene over small issues",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "scene-10",
+            "句子": "The mountain scene was breathtaking",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "scene-11",
+            "句子": "He painted a peaceful countryside scene",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "scene-12",
+            "句子": "The artist captured a street scene in vibrant colors",
+            "分類": [
+                "日常生活",
+                "居家"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "gallery-1",
+            "句子": "The gallery features paintings by contemporary artists",
+            "分類": [
+                "藝術與美學",
+                "藝術"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "gallery-2",
+            "句子": "They visited the art gallery on their field trip",
+            "分類": [
+                "藝術與美學",
+                "藝術"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "gallery-3",
+            "句子": "The museum’s gallery was filled with sculptures and photographs",
+            "分類": [
+                "藝術與美學",
+                "藝術"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "gallery-4",
+            "句子": "The castle had a gallery overlooking the courtyard",
+            "分類": [
+                "藝術與美學",
+                "藝術"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "gallery-5",
+            "句子": "She walked down the gallery connecting the two wings of the building",
+            "分類": [
+                "藝術與美學",
+                "藝術"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "gallery-6",
+            "句子": "The shopping gallery was crowded with weekend shoppers",
+            "分類": [
+                "藝術與美學",
+                "藝術"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "gallery-7",
+            "句子": "The upper gallery was reserved for students",
+            "分類": [
+                "藝術與美學",
+                "藝術"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "gallery-8",
+            "句子": "He got tickets in the balcony gallery",
+            "分類": [
+                "藝術與美學",
+                "藝術"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "gallery-9",
+            "句子": "The gallery provided a good view of the stage",
+            "分類": [
+                "藝術與美學",
+                "藝術"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "feature-1",
+            "句子": "The car has several new safety features",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "feature-2",
+            "句子": "Her eyes are her most striking feature",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "feature-3",
+            "句子": "The phone’s best feature is its long battery life",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "feature-4",
+            "句子": "The magazine published a feature on climate change",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "feature-5",
+            "句子": "The news channel aired a feature about local artists",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "feature-6",
+            "句子": "The newspaper ran a feature on healthy eating habits",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "feature-7",
+            "句子": "The mountain’s features were visible even from a distance",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "feature-8",
+            "句子": "The river is a key feature of the national park",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "feature-9",
+            "句子": "Architectural features of the building include tall columns and arched windows",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "feature-10",
+            "句子": "The festival will feature local musicians",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "feature-11",
+            "句子": "The exhibition features works by young artists",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "feature-12",
+            "句子": "The movie features several award-winning actors",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "surveillance-1",
+            "句子": "The police kept the suspect under surveillance",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "surveillance-2",
+            "句子": "The store uses cameras for surveillance to prevent theft",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "surveillance-3",
+            "句子": "Surveillance of the border has increased in recent months",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "surveillance-4",
+            "句子": "The patient was under constant medical surveillance",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "surveillance-5",
+            "句子": "The experiment required surveillance to ensure accurate results",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "surveillance-6",
+            "句子": "Children in the playground were under teacher surveillance",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "surveillance-7",
+            "句子": "The company’s actions were under public surveillance",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "surveillance-8",
+            "句子": "The new policy is under surveillance to measure its effectiveness",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "surveillance-9",
+            "句子": "Financial transactions are often subject to surveillance by regulators",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "surveil-1",
+            "句子": "The authorities surveilled the suspect for several weeks",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "surveil-2",
+            "句子": "The park was surveilled by security cameras",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "surveil-3",
+            "句子": "He was careful not to be surveilled while carrying out the investigation",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "surveil-4",
+            "句子": "The patients were surveilled for any signs of complications",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "surveil-5",
+            "句子": "The experiment was carefully surveilled to ensure accurate results",
+            "分類": [
+                "社會與法律",
+                "社會"
+            ]
+        },
+        {
+            "等級": "C2",
+            "Words": "surveil-6",
+            "句子": "Employees felt they were being surveilled during working hours",
+            "分類": [
+                "社會與法律",
+                "社會"
             ]
         }
     ]
