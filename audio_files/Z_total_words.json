@@ -16536,12 +16536,17 @@
             "分類": []
         },
         {
-            "複習": "失敗",
             "等級": "B1",
             "Words": "spore",
+            "pronunciation-1": "[spor]",
+            "traditional Chinese": "n. 1. 孢子；由真菌、植物、藻類或某些細菌產生的微小繁殖細胞\n2. （細菌的）抗逆孢子，用以在極端環境下存活\n\nv. 1. 產生或釋放孢子（罕用）",
+            "English meaning": "Spore can be a noun or, less commonly, a verb.\n\nAs a Noun: spore / spores\n\n1. A tiny reproductive cell that can grow into a new organism, produced by fungi, plants, algae, and some bacteria.\nSpores help these organisms reproduce and survive harsh conditions without needing seeds.\nE.g. Ferns reproduce through spores instead of seeds.\nE.g. Mushroom spores can be seen under a microscope.\nE.g. The air was filled with pollen and spores during spring.\n\n2. A resistant form of certain bacteria that helps them survive extreme conditions such as heat or dryness.\nE.g. The scientist studied bacterial spores to understand how infections spread.\nE.g. Some spores can survive for years before growing again in the right environment.\n\nAs a Verb (rare): spore / spored / sporing\n\nTo produce or release spores.\nE.g. The fungus is sporing rapidly in the damp forest.\nE.g. Algae spored across the surface of the pond after the rain.\n\nSummary:\nAs a noun, “spore” refers to a tiny reproductive or survival cell produced by fungi, plants, or bacteria. As a verb, it means to produce or release such spores.\n\nSynonyms: germ, seed, cell, microorganism, particle\nAntonyms: seedling, organism, adult plant, nonreproductive cell",
             "Unnamed: 10": "spore",
             "Unnamed: 11": "spore",
-            "分類": []
+            "分類": [
+                "科學與工程",
+                "生物"
+            ]
         },
         {
             "等級": "B1",
@@ -16613,12 +16618,17 @@
             ]
         },
         {
-            "複習": "失敗",
             "等級": "C2",
             "Words": "stained-glass",
+            "pronunciation-1": "/ˈsteɪndˌɡlæs/",
+            "traditional Chinese": "n. 1. 彩色玻璃；裝飾玻璃窗 2. 彩色玻璃板或裝飾片\n\nadj. 1. 彩色玻璃製的；與彩色玻璃有關的",
+            "English meaning": "Stained glass can be a noun or an adjective.\n\nAs a Noun (uncountable, singular): stained glass\n\n1. Colored glass used to create decorative windows or artwork, often in churches or historic buildings.\nE.g. The cathedral is famous for its beautiful stained-glass windows.\nE.g. She admired the stained glass depicting scenes from history.\nE.g. The sunlight shone through the stained glass, filling the room with colors.\n\n2. A piece or panel of stained glass used as decoration.\nE.g. The museum displayed a stained-glass panel from the 16th century.\nE.g. He restored the old stained glass in his home’s hallway.\nE.g. Stained-glass lamps add a warm, colorful glow to a room.\n\nAs an Adjective: stained-glass\n\nMade of or relating to stained glass.\nE.g. The church has a stained-glass window above the altar.\nE.g. Stained-glass art often tells stories through imagery.\nE.g. They installed a stained-glass door panel in the entrance.\n\nSummary:\n“Stained glass” is uncountable and used as a singular noun to refer to colored glass for decoration, typically in windows or artistic panels. As an adjective, “stained-glass” describes something made from or related to this type of glass.\n\nSynonyms: colored glass, decorative glass, art glass, glass panel\nAntonyms: clear glass, plain glass, transparent glass",
             "Unnamed: 10": "stained-glass",
             "Unnamed: 11": "stained-glass",
-            "分類": []
+            "分類": [
+                "藝術與美學",
+                "工藝"
+            ]
         },
         {
             "等級": "B1",
@@ -16641,12 +16651,17 @@
             "分類": []
         },
         {
-            "複習": "失敗",
             "等級": "B1",
             "Words": "stance",
+            "pronunciation-1": "[stæns]",
+            "traditional Chinese": "n. 1. 姿勢；站立方式 \n    2. 立場；態度\n     3. （比喻）處理事物的方法或方式",
+            "English meaning": "As a Noun: stance / stances\n\n1. A way of standing or positioning the body.\nE.g. His stance on the stage showed confidence and readiness.\nE.g. The athlete adjusted her stance before taking the shot.\nE.g. A good golf stance can improve your swing.\n\n2. An attitude, viewpoint, or position on a particular issue.\nE.g. The politician’s stance on healthcare attracted many voters.\nE.g. She took a firm stance against workplace discrimination.\nE.g. The company’s stance on environmental issues is widely praised.\n\n3. (Figurative) A way of approaching or dealing with something.\nE.g. His stance toward the problem was cautious and thoughtful.\nE.g. Teachers often adopt a supportive stance to encourage learning.\nE.g. The report outlines the firm’s stance on corporate responsibility.\n\nSummary:\n“Stance” refers to a physical way of standing, a viewpoint or position on an issue, or a figurative approach to handling situations.\n\nSynonyms: posture, position, viewpoint, attitude, approach\nAntonyms: indecision, uncertainty, inaction, neutrality",
             "Unnamed: 10": "stance",
             "Unnamed: 11": "stance",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "態度"
+            ]
         },
         {
             "等級": "C2",
@@ -16728,21 +16743,31 @@
             ]
         },
         {
-            "複習": "失敗",
             "等級": "B2",
-            "Words": "stimulu",
-            "English meaning": "stimuli",
-            "Unnamed: 10": "stimulu",
-            "Unnamed: 11": "stimulu",
-            "分類": []
+            "Words": "stimulus",
+            "pronunciation-1": "[ˋstɪmjələs]",
+            "pronunciation-2": "/ˈstɪm.jə.laɪ/",
+            "traditional Chinese": "\nn. 1. 刺激物；引起反應或活動的因素 \n2. 促進因素；激勵物",
+            "English meaning": "Stimulus as a Noun: stimulus / stimuli\n\n1. Something that causes a reaction, response, or activity in a living organism.\nE.g. Light is a stimulus that makes plants grow toward it.\nE.g. Loud noises act as a stimulus for the baby to wake up.\nE.g. The teacher used colorful pictures as a stimulus to engage the students.\nE.g. Bright lights and loud sounds are common stimuli in a sensory experiment.\nE.g. The students responded differently to various stimuli presented during the test.\n\n2. Something that encourages or motivates action, growth, or development.\nE.g. Tax cuts can act as a stimulus for economic growth.\nE.g. The new policies provided a stimulus to innovation in the company.\nE.g. Exercise is a stimulus for better health and energy.\n\nSummary:\nA “stimulus” is anything that provokes a response, reaction, or activity, whether in biology, psychology, or broader contexts like economics or motivation.\n\nSynonyms: incentive, trigger, motivator, prompt, encouragement\nAntonyms: deterrent, hindrance, obstacle, discouragement",
+            "Unnamed: 10": "stimulus",
+            "Unnamed: 11": "stimulus",
+            "分類": [
+                "行為與心理",
+                "生理反應"
+            ]
         },
         {
-            "複習": "失敗",
             "等級": "C2",
             "Words": "stipulation",
+            "pronunciation-1": "[͵stɪpjəˋleʃən]",
+            "traditional Chinese": "n. 1. 條款；規定\n 2. （協議、合約或法律中的）特定要求或約定",
+            "English meaning": "Stipulation as a Noun: stipulation / stipulations\n1. A condition, requirement, or term that is specified as part of an agreement, contract, or law.\nE.g. The contract includes a stipulation that all work must be completed by the end of the month.\nE.g. One stipulation of the scholarship is that students must maintain a high GPA.\nE.g. The lease has several stipulations regarding pets and maintenance.\n\n2. A specific provision or demand made in an arrangement.\nE.g. The agreement was signed with the stipulation that no parties would share confidential information.\nE.g. The offer came with the stipulation that the project would be completed on time.\nE.g. Many legal documents include stipulations that protect both parties.\n\nSummary:\nA “stipulation” is a specific requirement, condition, or provision in an agreement, contract, or law.\n\nSynonyms: condition, term, requirement, provision, clause\nAntonyms: freedom, flexibility, option, discretion",
             "Unnamed: 10": "stipulation",
             "Unnamed: 11": "stipulation",
-            "分類": []
+            "分類": [
+                "社會與法律",
+                "規範與制度"
+            ]
         },
         {
             "等級": "B1",
@@ -16930,14 +16955,17 @@
             "分類": []
         },
         {
-            "複習": "失敗",
             "等級": "C2",
             "Words": "stumble-upon",
-            "traditional Chinese": "v.偶然碰見",
-            "English meaning": " is a phrasal verb that means to unexpectedly discover or encounter something by chance or accident. It implies that the discovery was not planned or anticipated, but rather happened unexpectedly while engaged in some other activity.\nE.g.While hiking in the woods, we stumbled upon an old abandoned cabin hidden among the trees.",
+            "pronunciation-1": "/ˈstʌm.bəl əˈpɒn/",
+            "traditional Chinese": "v. phr. \n1. 偶然發現；無意中找到 \n2. 偶遇某人或某事",
+            "English meaning": "Stumble upon as a Phrasal Verb: stumble upon / stumbled upon / stumbling upon\n1.To find or discover something by chance, without planning or expecting to.\nE.g. She stumbled upon an old photograph while cleaning the attic.\nE.g. The scientist stumbled upon a new method during an unrelated experiment.\nE.g. We stumbled upon a charming café hidden in a quiet alley.\n\n2. To come across a person or idea unexpectedly.\nE.g. He stumbled upon a talented artist at the street fair.\nE.g. They stumbled upon an opportunity that changed their careers.\nE.g. While browsing online, I stumbled upon a useful resource for language learners.\n\nSummary:\n“To stumble upon” means to accidentally find or discover something or someone unexpectedly.\n\nSynonyms: come across, discover, find by chance, encounter, happen upon\nAntonyms: search for, plan, pursue, aim for",
             "Unnamed: 10": "stumble-upon",
             "Unnamed: 11": "stumble-upon",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
         },
         {
             "等級": "C1",
@@ -16970,12 +16998,17 @@
             "分類": []
         },
         {
-            "複習": "失敗",
             "等級": "C1",
             "Words": "subjective",
+            "pronunciation-1": "[səbˋdʒɛktɪv]",
+            "traditional Chinese": "adj. 1. 主觀的；\n     (以個人感受或觀點為依據的 )\n2. 受個人經驗或情感影響的",
+            "English meaning": "As an Adjective: subjective / more subjective / most subjective\n1. Based on personal feelings, opinions, or perspectives rather than facts.\nE.g. Her review of the movie was highly subjective.\nE.g. People’s taste in music is often subjective.\nE.g. The evaluation was subjective and depended on the teacher’s personal judgment.\n\n2. Influenced by individual experience or emotions rather than objective reality.\nE.g. Happiness is a subjective experience that differs from person to person.\nE.g. His interpretation of the poem was subjective and open to debate.\nE.g. The perception of beauty is largely subjective.\n\nSummary:\n“Subjective” describes something influenced by personal feelings, opinions, or experiences, rather than being purely objective or factual.\n\nSynonyms: personal, biased, opinion-based, individual, emotional\nAntonyms: objective, factual, impartial, unbiased, neutral",
             "Unnamed: 10": "subjective",
             "Unnamed: 11": "subjective",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "態度"
+            ]
         },
         {
             "等級": "B1",
@@ -17367,20 +17400,30 @@
             "分類": []
         },
         {
-            "複習": "失敗",
             "等級": "C2",
             "Words": "symbolically",
+            "pronunciation-1": "[sɪmˋbɑlɪk!ɪ]",
+            "traditional Chinese": "adv. 1. 象徵性地；以象徵方式表示 \n       2. 用符號或象徵行為而非字面意義",
+            "English meaning": "Symbolically as an Adverb: symbolically\n\n1. In a way that represents or stands for something else, often an idea, quality, or concept.\nE.g. The dove flew across the sky symbolically representing peace.\nE.g. He placed a single flower on the grave symbolically to honor the deceased.\nE.g. The ceremony was held symbolically at sunrise to signify new beginnings.\n\n2. Using symbols or symbolic actions rather than literal ones.\nE.g. The statue was erected symbolically to commemorate freedom.\nE.g. She nodded symbolically to indicate agreement.\nE.g. The colors on the flag were chosen symbolically to reflect the country’s history.\n\nSummary:\n“Symbolically” describes an action, gesture, or object that represents or signifies something beyond its literal meaning.\n\nSynonyms: representatively, metaphorically, figuratively, emblematically\nAntonyms: literally, factually, realistically, concretely",
             "Unnamed: 10": "symbolically",
             "Unnamed: 11": "symbolically",
-            "分類": []
+            "分類": [
+                "學術與教育",
+                "文學"
+            ]
         },
         {
-            "複習": "失敗",
             "等級": "C2",
             "Words": "synchronize",
+            "pronunciation-1": "[ˋsɪŋkrənaɪz]",
+            "traditional Chinese": "v. 1. 使同步；使同時發生\n    2. 協調；匹配事件、行動或流程",
+            "English meaning": "Synchronize as a Verb: synchronize / synchronized / synchronizing\n1. To cause two or more things to happen at the same time or operate in unison.\nE.g. The dancers synchronized their movements perfectly with the music.\nE.g. The clocks in the building are synchronized every night.\nE.g. They synchronized their watches before the race started.\n\n2. To coordinate or match events, actions, or processes.\nE.g. The team synchronized their schedules to meet for the project.\nE.g. Software can synchronize data across multiple devices.\nE.g. The director synchronized the video and audio tracks for the film.\n\nSummary:\n“To synchronize” means to make events, actions, or objects happen at the same time or operate in harmony.\n\nSynonyms: coordinate, harmonize, align, match, time\nAntonyms: desynchronize, misalign, disrupt, scatter, unsynchronize",
             "Unnamed: 10": "synchronize",
             "Unnamed: 11": "synchronize",
-            "分類": []
+            "分類": [
+                "科學與工程",
+                "技術"
+            ]
         },
         {
             "等級": "B2",
@@ -17442,12 +17485,17 @@
             "分類": []
         },
         {
-            "複習": "失敗",
             "等級": "B1",
             "Words": "tacitly",
+            "pronunciation-1": "[ˋtæsɪtlɪ]",
+            "traditional Chinese": "adv.肅靜地；沉默地；緘默地；心照不宣地",
+            "English meaning": "Tacitly as an Adverb: tacitly\nIn a way that is understood or implied without being stated directly.\nE.g. She tacitly agreed to the plan by nodding.\nE.g. He tacitly accepted the decision without protest.\nE.g. The two countries tacitly understood the terms of the agreement.\n\nSummary:\n“Tacitly” describes doing or agreeing to something in an implied or unspoken manner.\n\nSynonyms: implicitly, silently, unspokenly, indirectly, understood\nAntonyms: explicitly, openly, directly, verbally, stated",
             "Unnamed: 10": "tacitly",
             "Unnamed: 11": "tacitly",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "社交行為"
+            ]
         },
         {
             "等級": "B1",
@@ -17616,14 +17664,17 @@
             "分類": []
         },
         {
-            "複習": "失敗",
             "等級": "C2",
             "Words": "tasty-treats",
-            "traditional Chinese": "美味佳餚",
-            "English meaning": "E.g.The bakery down the street sells all sorts of tasty treats, from cookies to cupcakes.\"",
+            "pronunciation-1": "/ˈteɪ.sti triːts/",
+            "traditional Chinese": "n. phr. 美味點心；可口零食",
+            "English meaning": "Tasty treats as a Noun Phrase: tasty treats\nDelicious or enjoyable food items, often small snacks or sweets.\nE.g. The bakery is famous for its tasty treats.\nE.g. Children were excited to see the table full of tasty treats at the party.\nE.g. She prepared some tasty treats to share with her friends.\n\nSummary:\n“Tasty treats” refers to small, delicious foods or snacks that are enjoyable to eat.\n\nSynonyms: snacks, goodies, delicacies, sweets, desserts\nAntonyms: bland food, plain food, unappetizing items",
             "Unnamed: 10": "tasty-treats",
             "Unnamed: 11": "tasty-treats",
-            "分類": []
+            "分類": [
+                "日常生活",
+                "食物"
+            ]
         },
         {
             "等級": "B2",
@@ -17706,12 +17757,17 @@
             "分類": []
         },
         {
-            "複習": "失敗",
             "等級": "B2",
             "Words": "termite",
+            "pronunciation-1": "[ˋtɝmaɪt]",
+            "traditional Chinese": "n.白蟻",
+            "English meaning": "Termite as a Noun: termite / termites\nA small, pale-colored insect that feeds on wood and can cause damage to buildings and furniture.\nE.g. The old house was infested with termites.\nE.g. Termites can destroy wooden structures if left untreated.\nE.g. The farmer inspected the wooden fence for termite damage.\n\nSummary:\nA “termite” is an insect that feeds on wood and plant material, often causing structural damage.\n\nSynonyms: white ant, wood-eating insect, pest\nAntonyms: none specific (opposite would just be “non-destructive insects”)",
             "Unnamed: 10": "termite",
             "Unnamed: 11": "termite",
-            "分類": []
+            "分類": [
+                "自然與環境",
+                "昆蟲"
+            ]
         },
         {
             "等級": "C1",
@@ -17865,12 +17921,17 @@
             "分類": []
         },
         {
-            "複習": "失敗",
             "等級": "C2",
             "Words": "thoroughness",
+            "pronunciation-1": "[ˋθɝonɪs]",
+            "traditional Chinese": "n. 1. 細心；周密 \n    2. 完整；徹底",
+            "English meaning": "Thoroughness as a Noun: thoroughness\n\nThe quality of being complete, careful, and attentive to detail.\nE.g. She checked the report with great thoroughness.\nE.g. The scientist’s thoroughness ensured the experiment was accurate.\nE.g. His thoroughness in preparing for the presentation impressed everyone.\n\nSummary:\n“Thoroughness” refers to the state or quality of being meticulous, careful, and complete in doing something.\n\nSynonyms: meticulousness, carefulness, attention to detail, completeness, precision\nAntonyms: carelessness, negligence, sloppiness, incompleteness, oversight",
             "Unnamed: 10": "thoroughness",
             "Unnamed: 11": "thoroughness",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
         },
         {
             "等級": "B1",
