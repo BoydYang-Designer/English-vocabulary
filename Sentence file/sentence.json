@@ -28265,6 +28265,8 @@
             "等級": "B1",
             "Words": "entity-11",
             "句子": "The artist's vision of the sculpture was brought to life as a tangible entity in the gallery",
+            "中文": "藝術家對雕塑的設想在畫廊中變成了一個有形的實體",
+            "記錄": 92.0,
             "分類": [
                 "商業與經濟",
                 "商業"
@@ -28275,6 +28277,8 @@
             "等級": "B1",
             "Words": "entity-12",
             "句子": "The family business was incorporated as a legal entity to protect personal assets",
+            "中文": "家族企業註冊為法人實體，以保護個人資產",
+            "記錄": 81.0,
             "分類": [
                 "商業與經濟",
                 "商業"
@@ -28318,6 +28322,8 @@
             "等級": "B1",
             "Words": "entity-5",
             "句子": "The university is an academic entity with its own policies and governance",
+            "中文": "大學是一個學術實體，有自己的政策和治理",
+            "記錄": 93.0,
             "分類": [
                 "商業與經濟",
                 "商業"
@@ -28328,6 +28334,8 @@
             "等級": "B1",
             "Words": "entity-6",
             "句子": "The non-profit organization operates as a charitable entity, providing services to those in need",
+            "中文": "該非營利組織以慈善實體的形式運營，為有需要的人提供服務",
+            "記錄": 96.0,
             "分類": [
                 "商業與經濟",
                 "商業"
@@ -28338,6 +28346,8 @@
             "等級": "B1",
             "Words": "entity-7",
             "句子": "The idea of artificial intelligence has become an entity in itself, influencing various fields of research",
+            "中文": "人工智慧的概念本身已經成為一個實體，影響著各個研究領域",
+            "記錄": 106.0,
             "分類": [
                 "商業與經濟",
                 "商業"
@@ -28348,6 +28358,8 @@
             "等級": "B1",
             "Words": "entity-8",
             "句子": "Each department in the company is a separate entity, with its own budget and goals",
+            "中文": "公司的每個部門都是獨立的實體，有自己的預算和目標",
+            "記錄": 82.0,
             "分類": [
                 "商業與經濟",
                 "商業"
@@ -28358,6 +28370,8 @@
             "等級": "B1",
             "Words": "entity-9",
             "句子": "The contract was signed by two entities: the service provider and the client",
+            "中文": "合約由兩個實體簽署：服務提供者和客戶",
+            "記錄": 76.0,
             "分類": [
                 "商業與經濟",
                 "商業"
@@ -28429,7 +28443,6 @@
             ]
         },
         {
-            "音檔": "音檔 - envelope-2",
             "等級": "B2",
             "Words": "envelope-2",
             "句子": "The envelope was beautifully decorated with a floral design",
@@ -28438,7 +28451,6 @@
             ]
         },
         {
-            "音檔": "音檔 - envelope-3",
             "等級": "B2",
             "Words": "envelope-3",
             "句子": "He opened the envelope with anticipation, eager to read the news inside",
@@ -28447,7 +28459,6 @@
             ]
         },
         {
-            "音檔": "音檔 - envelope-4",
             "等級": "B2",
             "Words": "envelope-4",
             "句子": "She received a red envelope for Chinese New Year, symbolizing good luck and prosperity",
@@ -28456,7 +28467,6 @@
             ]
         },
         {
-            "音檔": "音檔 - envelope-5",
             "等級": "B2",
             "Words": "envelope-5",
             "句子": "The thick fog formed an envelope around the city, making it hard to see",
@@ -28465,7 +28475,6 @@
             ]
         },
         {
-            "音檔": "音檔 - envelope-6",
             "等級": "B2",
             "Words": "envelope-6",
             "句子": "The protective envelope of the spacecraft shielded it from the harsh elements of space",
@@ -28925,7 +28934,6 @@
             ]
         },
         {
-            "音檔": "音檔 - erupt-2",
             "等級": "B1",
             "Words": "erupt-2",
             "句子": "Lava erupted from the crater, flowing down the mountainside",
@@ -28935,7 +28943,6 @@
             ]
         },
         {
-            "音檔": "音檔 - erupt-3",
             "等級": "B1",
             "Words": "erupt-3",
             "句子": "The argument between the two colleagues erupted into a shouting match in the middle of the office",
@@ -28945,7 +28952,6 @@
             ]
         },
         {
-            "音檔": "音檔 - erupt-4",
             "等級": "B1",
             "Words": "erupt-4",
             "句子": "Her frustration erupted when she found out about the last-minute changes to the project",
@@ -30453,7 +30459,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extract-1",
             "等級": "B2",
             "Words": "extract-1",
             "句子": "The dentist extracted the wisdom tooth carefully",
@@ -30463,7 +30468,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extract-10",
             "等級": "B2",
             "Words": "extract-10",
             "句子": "The article included extracts from her interviews",
@@ -30473,7 +30477,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extract-2",
             "等級": "B2",
             "Words": "extract-2",
             "句子": "He managed to extract the key from the locked door",
@@ -30483,7 +30486,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extract-3",
             "等級": "B2",
             "Words": "extract-3",
             "句子": "Scientists extracted DNA from the samples",
@@ -30493,7 +30495,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extract-4",
             "等級": "B2",
             "Words": "extract-4",
             "句子": "The company extracts oil from deep underground",
@@ -30503,7 +30504,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extract-5",
             "等級": "B2",
             "Words": "extract-5",
             "句子": "She extracted valuable insights from the research data",
@@ -30513,7 +30513,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extract-6",
             "等級": "B2",
             "Words": "extract-6",
             "句子": "He extracted a quote from the speech for his article",
@@ -30523,7 +30522,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extract-7",
             "等級": "B2",
             "Words": "extract-7",
             "句子": "Vanilla extract is commonly used in baking",
@@ -30533,7 +30531,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extract-8",
             "等級": "B2",
             "Words": "extract-8",
             "句子": "The herbal extract is known for its medicinal properties",
@@ -30543,7 +30540,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extract-9",
             "等級": "B2",
             "Words": "extract-9",
             "句子": "He read an extract from his favorite novel",
@@ -30553,7 +30549,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extraction-1",
             "等級": "C1",
             "Words": "extraction-1",
             "句子": "The extraction of oil from the ground can have environmental impacts",
@@ -30563,7 +30558,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extraction-2",
             "等級": "C1",
             "Words": "extraction-2",
             "句子": "The dentist performed a tooth extraction to alleviate pain",
@@ -30573,7 +30567,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extraction-3",
             "等級": "C1",
             "Words": "extraction-3",
             "句子": "The extraction of DNA from biological samples is crucial for genetic testing",
@@ -30583,7 +30576,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extraction-4",
             "等級": "C1",
             "Words": "extraction-4",
             "句子": "Information extraction from the data set helped the researchers draw valuable conclusions",
@@ -30593,7 +30585,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extraction-5",
             "等級": "C1",
             "Words": "extraction-5",
             "句子": "The extraction of important insights from the report was essential for decision-making",
@@ -30603,7 +30594,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extractive-1",
             "等級": "C1",
             "Words": "extractive-1",
             "句子": "The extractive industry includes mining, oil drilling, and gas extraction",
@@ -30613,7 +30603,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extractive-2",
             "等級": "C1",
             "Words": "extractive-2",
             "句子": "Extractive methods are often used to obtain minerals from deep within the earth",
@@ -30623,7 +30612,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extractive-3",
             "等級": "C1",
             "Words": "extractive-3",
             "句子": "Certain chemicals have extractive properties that remove impurities from liquids",
@@ -30633,7 +30621,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extractive-4",
             "等級": "C1",
             "Words": "extractive-4",
             "句子": "Plant extractives are commonly used in herbal medicine and cosmetics",
@@ -30643,7 +30630,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extractive-5",
             "等級": "C1",
             "Words": "extractive-5",
             "句子": "The report studied the economic impact of extractives like crude oil and metals",
@@ -30653,7 +30639,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extraterrestrial-1",
             "等級": "C2",
             "Words": "extraterrestrial-1",
             "句子": "The scientists are researching extraterrestrial life forms that might exist on other planets",
@@ -30663,7 +30648,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extraterrestrial-2",
             "等級": "C2",
             "Words": "extraterrestrial-2",
             "句子": "The film depicted an extraterrestrial invasion of Earth",
@@ -30673,7 +30657,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extraterrestrial-3",
             "等級": "C2",
             "Words": "extraterrestrial-3",
             "句子": "The discovery of a mysterious object in space was thought to be of extraterrestrial origin",
@@ -30683,7 +30666,6 @@
             ]
         },
         {
-            "音檔": "音檔 - extraterrestrial-4",
             "等級": "C2",
             "Words": "extraterrestrial-4",
             "句子": "Some people believe that extraterrestrials have visited Earth in the past",
@@ -30693,7 +30675,6 @@
             ]
         },
         {
-            "音檔": "音檔 - exude-1",
             "等級": "B1",
             "Words": "exude-1",
             "句子": "He was exuding with confidence when he took the podium",
@@ -30703,7 +30684,6 @@
             ]
         },
         {
-            "音檔": "音檔 - exude-2",
             "等級": "B1",
             "Words": "exude-2",
             "句子": "Even in challenging situations, Sarah always seemed to exude calmness and composure, which had a calming effect on those around her",
@@ -30713,7 +30693,6 @@
             ]
         },
         {
-            "音檔": "音檔 - exude-3",
             "等級": "B1",
             "Words": "exude-3",
             "句子": "He was exuding confidence when he took the podium",
@@ -30723,7 +30702,6 @@
             ]
         },
         {
-            "音檔": "音檔 - exude-4",
             "等級": "B1",
             "Words": "exude-4",
             "句子": "The tree exuded a sticky sap from its bark after being damaged",
@@ -30733,7 +30711,6 @@
             ]
         },
         {
-            "音檔": "音檔 - exude-5",
             "等級": "B1",
             "Words": "exude-5",
             "句子": "His speech exuded warmth and sincerity, making everyone feel welcomed",
@@ -30743,7 +30720,6 @@
             ]
         },
         {
-            "音檔": "音檔 - facilitate-1",
             "等級": "C1",
             "Words": "facilitate-1",
             "句子": "The new software will facilitate communication between team members",
@@ -30753,7 +30729,6 @@
             ]
         },
         {
-            "音檔": "音檔 - facilitate-2",
             "等級": "C1",
             "Words": "facilitate-2",
             "句子": "The teacher's role is to facilitate discussions among students",
@@ -30763,7 +30738,6 @@
             ]
         },
         {
-            "音檔": "音檔 - facilitate-3",
             "等級": "C1",
             "Words": "facilitate-3",
             "句子": "The new product design was developed to facilitate easier use by consumers",
@@ -30773,7 +30747,6 @@
             ]
         },
         {
-            "音檔": "音檔 - facilitate-4",
             "等級": "C1",
             "Words": "facilitate-4",
             "句子": "Cutting taxes may facilitate economic recovery",
@@ -30783,7 +30756,6 @@
             ]
         },
         {
-            "音檔": "音檔 - facilitate-5",
             "等級": "C1",
             "Words": "facilitate-5",
             "句子": "The partnership was formed to facilitate the exchange of ideas between the two organizations",
@@ -30793,7 +30765,6 @@
             ]
         },
         {
-            "音檔": "音檔 - facilitate-6",
             "等級": "C1",
             "Words": "facilitate-6",
             "句子": "The mediator's goal is to facilitate a resolution to the dispute",
@@ -30847,7 +30818,6 @@
             ]
         },
         {
-            "音檔": "音檔 - falsify-1",
             "等級": "B2",
             "Words": "falsify-1",
             "句子": "The accountant was caught falsifying the company's financial records to hide losses",
@@ -30857,7 +30827,6 @@
             ]
         },
         {
-            "音檔": "音檔 - falsify-2",
             "等級": "B2",
             "Words": "falsify-2",
             "句子": "He tried to falsify the data to make the experiment seem more successful",
@@ -30867,7 +30836,6 @@
             ]
         },
         {
-            "音檔": "音檔 - falsify-3",
             "等級": "B2",
             "Words": "falsify-3",
             "句子": "The witness was accused of falsifying his testimony under oath",
@@ -30877,7 +30845,6 @@
             ]
         },
         {
-            "音檔": "音檔 - falsify-4",
             "等級": "B2",
             "Words": "falsify-4",
             "句子": "Officials were arrested for falsifying documents to approve illegal activities",
@@ -30920,7 +30887,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fascinate-1",
             "等級": "C1",
             "Words": "fascinate-1",
             "句子": "The magician's tricks fascinated the audience",
@@ -30930,7 +30896,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fascinate-2",
             "等級": "C1",
             "Words": "fascinate-2",
             "句子": "She is fascinated by ancient history and loves reading about it",
@@ -30940,7 +30905,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fascinate-3",
             "等級": "C1",
             "Words": "fascinate-3",
             "句子": "The intricate details of the painting were fascinating to everyone at the gallery",
@@ -30950,7 +30914,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fascinate-4",
             "等級": "C1",
             "Words": "fascinate-4",
             "句子": "His stories about his travels to remote places never fail to fascinate his listeners",
@@ -30960,7 +30923,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fascinate-5",
             "等級": "C1",
             "Words": "fascinate-5",
             "句子": "The documentary about deep-sea creatures was absolutely fascinating",
@@ -32876,7 +32838,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fond-1",
             "等級": "B1",
             "Words": "fond-1",
             "句子": "As they sat together reminiscing, they shared fond memories of their childhood adventures and family vacations",
@@ -32886,7 +32847,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fondness-1",
             "等級": "B2",
             "Words": "fondness-1",
             "句子": "She developed a fondness for the small town she grew up in, cherishing its familiar streets and friendly neighbors",
@@ -32896,7 +32856,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fondness-2",
             "等級": "B2",
             "Words": "fondness-2",
             "句子": "She has a fondness for red wine",
@@ -33017,7 +32976,6 @@
             ]
         },
         {
-            "音檔": "音檔 - forebode-1",
             "等級": "B2",
             "Words": "forebode-1",
             "句子": "The sudden drop in stock prices seemed to forebode an economic downturn, causing investors to become increasingly cautious",
@@ -33026,7 +32984,6 @@
             ]
         },
         {
-            "音檔": "音檔 - foreboding-1",
             "等級": "C1",
             "Words": "foreboding-1",
             "句子": "As the storm clouds gathered overhead, a sense of foreboding settled over the town, hinting at the impending danger of the approaching hurricane",
@@ -33035,7 +32992,6 @@
             ]
         },
         {
-            "音檔": "音檔 - foreboding-2",
             "等級": "C1",
             "Words": "foreboding-2",
             "句子": "Her sudden silence and downcast eyes filled the room with a heavy sense of foreboding, leaving everyone wondering what troubling news she might reveal",
@@ -33044,7 +33000,6 @@
             ]
         },
         {
-            "音檔": "音檔 - forefront-1",
             "等級": "C1",
             "Words": "forefront-1",
             "句子": "The company has been at the forefront of renewable energy technology for years",
@@ -33053,7 +33008,6 @@
             ]
         },
         {
-            "音檔": "音檔 - forefront-2",
             "等級": "C1",
             "Words": "forefront-2",
             "句子": "He was at the forefront of the movement to improve public education",
@@ -33062,7 +33016,6 @@
             ]
         },
         {
-            "音檔": "音檔 - forefront-3",
             "等級": "C1",
             "Words": "forefront-3",
             "句子": "The new product places the brand at the forefront of the tech industry",
@@ -33071,7 +33024,6 @@
             ]
         },
         {
-            "音檔": "音檔 - forefront-4",
             "等級": "C1",
             "Words": "forefront-4",
             "句子": "The discussion has brought the issue of health care to the forefront",
@@ -33179,7 +33131,6 @@
             ]
         },
         {
-            "音檔": "音檔 - forest-fire-1",
             "等級": "C2",
             "Words": "forest-fire-1",
             "句子": "The forest fire consumed thousands of acres of woodland and displaced many animals",
@@ -33189,7 +33140,6 @@
             ]
         },
         {
-            "音檔": "音檔 - forest-fire-2",
             "等級": "C2",
             "Words": "forest-fire-2",
             "句子": "Firefighters worked tirelessly to contain the forest fire before it reached nearby homes",
@@ -33199,7 +33149,6 @@
             ]
         },
         {
-            "音檔": "音檔 - forest-fire-3",
             "等級": "C2",
             "Words": "forest-fire-3",
             "句子": "The smoke from the forest fire was visible from miles away, affecting air quality in surrounding areas",
@@ -33209,7 +33158,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossil-1",
             "等級": "B1",
             "Words": "fossil-1",
             "句子": "The archaeologist uncovered a fossil of a leaf that dates back millions of years",
@@ -33219,7 +33167,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossil-2",
             "等級": "B1",
             "Words": "fossil-2",
             "句子": "A well-preserved dinosaur fossil was displayed in the museum",
@@ -33229,7 +33176,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossil-3",
             "等級": "B1",
             "Words": "fossil-3",
             "句子": "My grandfather is a bit of a fossil; he still thinks we should use typewriters instead of computers",
@@ -33239,7 +33185,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossil-4",
             "等級": "B1",
             "Words": "fossil-4",
             "句子": "The professor’s views on technology felt fossilized compared to the more modern perspectives of his students",
@@ -33249,7 +33194,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossilization-1",
             "等級": "C2",
             "Words": "fossilization-1",
             "句子": "Fossilization can take thousands to millions of years, depending on the conditions present",
@@ -33259,7 +33203,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossilization-2",
             "等級": "C2",
             "Words": "fossilization-2",
             "句子": "The fossilization of ancient fish provided valuable insights into prehistoric marine life",
@@ -33269,7 +33212,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossilization-3",
             "等級": "C2",
             "Words": "fossilization-3",
             "句子": "The fossilization of outdated policies can hinder an organization’s ability to innovate",
@@ -33279,7 +33221,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossilization-4",
             "等級": "C2",
             "Words": "fossilization-4",
             "句子": "If educational methods undergo fossilization, they may no longer meet the needs of modern students",
@@ -33289,7 +33230,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossilize-1",
             "等級": "C1",
             "Words": "fossilize-1",
             "句子": "The tree was fossilized over millions of years, allowing scientists to study its ancient structure",
@@ -33299,7 +33239,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossilize-2",
             "等級": "C1",
             "Words": "fossilize-2",
             "句子": "Fossilized remains of dinosaurs have been found in many parts of the world",
@@ -33309,7 +33248,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossilize-3",
             "等級": "C1",
             "Words": "fossilize-3",
             "句子": "The mud helped to preserve and fossilize the wood",
@@ -33319,7 +33257,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossilize-4",
             "等級": "C1",
             "Words": "fossilize-4",
             "句子": "The company’s practices began to fossilize, making it unable to adapt to new market trends",
@@ -33329,7 +33266,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fossilize-5",
             "等級": "C1",
             "Words": "fossilize-5",
             "句子": "His rigid beliefs had fossilized over the years, preventing him from considering new ideas",
@@ -33339,7 +33275,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fountain-1",
             "等級": "B2",
             "Words": "fountain-1",
             "句子": "A beautiful stone fountain was set in the middle of the garden",
@@ -33349,7 +33284,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fountain-2",
             "等級": "B2",
             "Words": "fountain-2",
             "句子": "In the restaurant, the soda fountain offers a variety of refreshing beverages",
@@ -33359,7 +33293,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fountain-3",
             "等級": "B2",
             "Words": "fountain-3",
             "句子": "The city is famous for its historical fountains",
@@ -33369,7 +33302,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fountain-4",
             "等級": "B2",
             "Words": "fountain-4",
             "句子": "Her mind was a fountain of creativity, constantly generating new ideas",
@@ -33379,7 +33311,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fragrance-1",
             "等級": "C1",
             "Words": "fragrance-1",
             "句子": "The flowers spread their fragrance far and wide",
@@ -33388,7 +33319,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fragrant-1",
             "等級": "B2",
             "Words": "fragrant-1",
             "句子": "The café was filled with the fragrant aroma of freshly brewed coffee, inviting passersby to step inside and enjoy a warm cup on a chilly morning",
@@ -33397,7 +33327,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fraud-1",
             "等級": "B1",
             "Words": "fraud-1",
             "句子": "He was found guilty of fraud",
@@ -33407,7 +33336,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fraud-2",
             "等級": "B1",
             "Words": "fraud-2",
             "句子": "That man was a fraud",
@@ -33417,7 +33345,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fraudulent-1",
             "等級": "C1",
             "Words": "fraudulent-1",
             "句子": "The company was accused of making fraudulent claims about the safety of its products",
@@ -33427,7 +33354,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fraudulent-2",
             "等級": "C1",
             "Words": "fraudulent-2",
             "句子": "The salesman was arrested for selling fraudulent investment schemes to unsuspecting clients, promising unrealistic returns on their money",
@@ -33437,7 +33363,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fraught-1",
             "等級": "B2",
             "Words": "fraught-1",
             "句子": "Their relationship was fraught with tension and disagreements, making communication difficult",
@@ -33447,7 +33372,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fraught-2",
             "等級": "B2",
             "Words": "fraught-2",
             "句子": "The speech was fraught with emotion as the speaker recounted her personal struggles",
@@ -33457,7 +33381,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fraught-3",
             "等級": "B2",
             "Words": "fraught-3",
             "句子": "The meeting was fraught with tension as the team debated the new policy",
@@ -33467,7 +33390,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fraught-4",
             "等級": "B2",
             "Words": "fraught-4",
             "句子": "The journey was fraught with difficulties, from bad weather to technical issues",
@@ -33477,7 +33399,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fraught-5",
             "等級": "B2",
             "Words": "fraught-5",
             "句子": "The negotiation process was fraught with challenges, requiring patience and diplomacy",
@@ -33487,7 +33408,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fraught-6",
             "等級": "B2",
             "Words": "fraught-6",
             "句子": "She was fraught with worry about her upcoming exam",
@@ -33497,7 +33417,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fraught-7",
             "等級": "B2",
             "Words": "fraught-7",
             "句子": "He felt fraught with guilt after the argument with his friend",
@@ -33507,7 +33426,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fraught-8",
             "等級": "B2",
             "Words": "fraught-8",
             "句子": "The parents were fraught with concern when their child didn't return home on time",
@@ -33517,7 +33435,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fray-1",
             "等級": "B1",
             "Words": "fray-1",
             "句子": "The fabric on the sofa began to fray after years of use",
@@ -33526,7 +33443,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fray-10",
             "等級": "B1",
             "Words": "fray-10",
             "句子": "The CEO stayed above the fray, allowing the managers to handle the internal conflicts",
@@ -33535,7 +33451,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fray-2",
             "等級": "B1",
             "Words": "fray-2",
             "句子": "As the debate heated up, their patience started to fray",
@@ -33544,7 +33459,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fray-3",
             "等級": "B1",
             "Words": "fray-3",
             "句子": "The rope frayed and eventually snapped under pressure",
@@ -33553,7 +33467,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fray-4",
             "等級": "B1",
             "Words": "fray-4",
             "句子": "His nerves were frayed after the long, stressful week",
@@ -33562,7 +33475,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fray-5",
             "等級": "B1",
             "Words": "fray-5",
             "句子": "The tension in the room was evident as tempers started fraying",
@@ -33571,7 +33483,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fray-6",
             "等級": "B1",
             "Words": "fray-6",
             "句子": "He jumped into the fray, eager to defend his position",
@@ -33580,7 +33491,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fray-7",
             "等級": "B1",
             "Words": "fray-7",
             "句子": "After a few moments of argument, the fray escalated into a full-blown dispute",
@@ -33589,7 +33499,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fray-8",
             "等級": "B1",
             "Words": "fray-8",
             "句子": "Many companies are joining the fray in the race for new technology",
@@ -33598,7 +33507,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fray-9",
             "等級": "B1",
             "Words": "fray-9",
             "句子": "His political aides handled the controversy while he remained above the fray",
@@ -33607,7 +33515,6 @@
             ]
         },
         {
-            "音檔": "音檔 - front-crawl-1",
             "等級": "C2",
             "Words": "front-crawl-1",
             "句子": "She practiced the front crawl to improve her speed for the upcoming race",
@@ -33617,7 +33524,6 @@
             ]
         },
         {
-            "音檔": "音檔 - front-crawl-2",
             "等級": "C2",
             "Words": "front-crawl-2",
             "句子": "The front crawl is commonly used in triathlons due to its efficiency",
@@ -33627,7 +33533,6 @@
             ]
         },
         {
-            "音檔": "音檔 - front-crawl-3",
             "等級": "C2",
             "Words": "front-crawl-3",
             "句子": "Coaches often recommend the front crawl for beginners to build endurance",
@@ -33637,7 +33542,6 @@
             ]
         },
         {
-            "音檔": "音檔 - front-crawl-4",
             "等級": "C2",
             "Words": "front-crawl-4",
             "句子": "He mastered the front crawl after weeks of practice in the pool",
@@ -33735,7 +33639,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fuel-1",
             "等級": "B1",
             "Words": "fuel-1",
             "句子": "Gasoline is a common fuel used in automobiles",
@@ -33745,7 +33648,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fuel-2",
             "等級": "B1",
             "Words": "fuel-2",
             "句子": "The company fueled its growth by investing in innovative technology",
@@ -33755,7 +33657,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fuel-3",
             "等級": "B1",
             "Words": "fuel-3",
             "句子": "The factory uses coal as a primary fuel for its machinery",
@@ -33765,7 +33666,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fuel-4",
             "等級": "B1",
             "Words": "fuel-4",
             "句子": "His passion for the project fueled the team's motivation to work harder",
@@ -33775,7 +33675,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fungal-1",
             "等級": "B1",
             "Words": "fungal-1",
             "句子": "Fungal spores can spread quickly in damp environments",
@@ -33785,7 +33684,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fungal-2",
             "等級": "B1",
             "Words": "fungal-2",
             "句子": "The fungal growth on the tree trunk was identified as a type of mold",
@@ -33795,7 +33693,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fungal-3",
             "等級": "B1",
             "Words": "fungal-3",
             "句子": "The athlete's foot infection was diagnosed as a fungal condition",
@@ -33805,7 +33702,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fungal-4",
             "等級": "B1",
             "Words": "fungal-4",
             "句子": "Doctors often treat fungal infections with antifungal creams or medications",
@@ -33815,7 +33711,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fungus-1",
             "等級": "B1",
             "Words": "fungus-1",
             "句子": "A mushroom is a type of fungus that grows in damp environments",
@@ -33825,7 +33720,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fungus-2",
             "等級": "B1",
             "Words": "fungus-2",
             "句子": "Mildew is a common household fungus that can appear in moist areas",
@@ -33835,7 +33729,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fungus-3",
             "等級": "B1",
             "Words": "fungus-3",
             "句子": "Athlete’s foot is a type of fungus that commonly affects the feet",
@@ -33845,7 +33738,6 @@
             ]
         },
         {
-            "音檔": "音檔 - fungus-4",
             "等級": "B1",
             "Words": "fungus-4",
             "句子": "The doctor prescribed an ointment to treat the fungal infection",
@@ -33981,7 +33873,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gala-1",
             "等級": "B1",
             "Words": "gala-1",
             "句子": "The charity gala raised a significant amount of money for the cause",
@@ -33991,7 +33882,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gala-2",
             "等級": "B1",
             "Words": "gala-2",
             "句子": "She attended a gala at the art museum, where elegant dresses and suits were the norm",
@@ -34001,7 +33891,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gala-3",
             "等級": "B1",
             "Words": "gala-3",
             "句子": "The annual gala featured performances by renowned musicians",
@@ -34011,7 +33900,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gala-4",
             "等級": "B1",
             "Words": "gala-4",
             "句子": "The company hosted a gala to celebrate its anniversary, inviting all employees and their families",
@@ -34021,7 +33909,6 @@
             ]
         },
         {
-            "音檔": "音檔 - garment-1",
             "等級": "B2",
             "Words": "garment-1",
             "句子": "She carefully selected a flowing garment for the summer weather, ensuring both comfort and style for her outdoor adventure",
@@ -34030,7 +33917,6 @@
             ]
         },
         {
-            "音檔": "音檔 - garment-2",
             "等級": "B2",
             "Words": "garment-2",
             "句子": "The fashion designer showcased her latest collection, featuring a diverse range of garments, from elegant evening gowns to casual everyday wear",
@@ -34039,7 +33925,6 @@
             ]
         },
         {
-            "音檔": "音檔 - garment-3",
             "等級": "B2",
             "Words": "garment-3",
             "句子": "She garmented herself in layers to brave the chilly weather, wrapping a cozy scarf around her neck before heading out",
@@ -34048,7 +33933,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gasp-one's-last-breath-1",
             "等級": "C2",
             "Words": "gasp-one's-last-breath-1",
             "句子": "The old man gasped his last breath, surrounded by his family who had gathered to say their goodbyes",
@@ -34057,7 +33941,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gasp-one's-last-breath-2",
             "等級": "C2",
             "Words": "gasp-one's-last-breath-2",
             "句子": "The injured soldier lay on the battlefield, gasping his last breath as the medics tried in vain to save him",
@@ -34099,7 +33982,6 @@
             ]
         },
         {
-            "音檔": "音檔 - generosity-1",
             "等級": "C1",
             "Words": "generosity-1",
             "句子": "Many people benefited from his countless generosities",
@@ -34109,7 +33991,6 @@
             ]
         },
         {
-            "音檔": "音檔 - generosity-2",
             "等級": "C1",
             "Words": "generosity-2",
             "句子": "We were overwhelmed by the generosity of strangers who offered assistance during our time of need",
@@ -34119,7 +34000,6 @@
             ]
         },
         {
-            "音檔": "音檔 - generosity-3",
             "等級": "C1",
             "Words": "generosity-3",
             "句子": "Her generosity knew no bounds, always helping those in need",
@@ -34129,7 +34009,6 @@
             ]
         },
         {
-            "音檔": "音檔 - generosity-4",
             "等級": "C1",
             "Words": "generosity-4",
             "句子": "He was known for his generosity, often donating to various charities",
@@ -34139,7 +34018,6 @@
             ]
         },
         {
-            "音檔": "音檔 - geologic-1",
             "等級": "B2",
             "Words": "geologic-1",
             "句子": "The geologic formations in the area reveal a rich history of volcanic activity",
@@ -34149,7 +34027,6 @@
             ]
         },
         {
-            "音檔": "音檔 - geologic-2",
             "等級": "B2",
             "Words": "geologic-2",
             "句子": "Understanding geologic processes helps scientists predict natural disasters like earthquakes",
@@ -34247,7 +34124,6 @@
             ]
         },
         {
-            "音檔": "音檔 - glamorous-1",
             "等級": "C1",
             "Words": "glamorous-1",
             "句子": "The glamorous actress captivated the audience with her stunning performance",
@@ -34257,7 +34133,6 @@
             ]
         },
         {
-            "音檔": "音檔 - glamorous-2",
             "等級": "C1",
             "Words": "glamorous-2",
             "句子": "She wore a glamorous dress that turned heads at the gala",
@@ -34267,7 +34142,6 @@
             ]
         },
         {
-            "音檔": "音檔 - glamorous-3",
             "等級": "C1",
             "Words": "glamorous-3",
             "句子": "Living in a glamorous world often comes with its own set of challenges",
@@ -34277,7 +34151,6 @@
             ]
         },
         {
-            "音檔": "音檔 - glamorous-4",
             "等級": "C1",
             "Words": "glamorous-4",
             "句子": "The city is known for its glamorous nightlife and vibrant culture",
@@ -34543,7 +34416,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gown-1",
             "等級": "B1",
             "Words": "gown-1",
             "句子": "As the bride twirled in her satin gown, she couldn't help but feel like a princess on her wedding day, surrounded by love and joy",
@@ -34553,7 +34425,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gown-2",
             "等級": "B1",
             "Words": "gown-2",
             "句子": "After a long day at work, she slipped into her soft, cozy gown and drifted off to sleep, feeling warm and content",
@@ -34563,7 +34434,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gown-3",
             "等級": "B1",
             "Words": "gown-3",
             "句子": "The patient was assisted into a hospital gown before undergoing medical tests to ensure proper access and comfort during the procedure",
@@ -34573,7 +34443,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grand-1",
             "等級": "B1",
             "Words": "grand-1",
             "句子": "The grand hall was decorated with crystal chandeliers and velvet drapes",
@@ -34583,7 +34452,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grand-2",
             "等級": "B1",
             "Words": "grand-2",
             "句子": "Despite its grand name, the hotel is small and somewhat seedy",
@@ -34593,7 +34461,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grand-3",
             "等級": "B1",
             "Words": "grand-3",
             "句子": "The architect presented a grand vision for the new city park",
@@ -34603,7 +34470,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grand-4",
             "等級": "B1",
             "Words": "grand-4",
             "句子": "He thinks everything the government does is part of some grand conspiracy",
@@ -34613,7 +34479,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grand-5",
             "等級": "B1",
             "Words": "grand-5",
             "句子": "He made a grand gesture by donating a significant amount to charity",
@@ -34623,7 +34488,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grand-6",
             "等級": "B1",
             "Words": "grand-6",
             "句子": "Her grandfather was a grand old man whom everyone admired",
@@ -34633,7 +34497,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grand-7",
             "等級": "B1",
             "Words": "grand-7",
             "句子": "He bought a used car for about five grand",
@@ -34643,7 +34506,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grand-8",
             "等級": "B1",
             "Words": "grand-8",
             "句子": "She saved up ten grand for the down payment on her new home",
@@ -34653,7 +34515,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grand-gesture-1",
             "等級": "C2",
             "Words": "grand-gesture-1",
             "句子": "As a grand gesture of forgiveness, she paid off his debts without telling him",
@@ -34662,7 +34523,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grand-gesture-2",
             "等級": "C2",
             "Words": "grand-gesture-2",
             "句子": "He surprised her with a grand gesture, arranging an elaborate dinner to celebrate their anniversary",
@@ -34671,7 +34531,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grand-gesture-3",
             "等級": "C2",
             "Words": "grand-gesture-3",
             "句子": "To win back her trust, he made a grand gesture by volunteering for her favorite charity",
@@ -34680,7 +34539,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grand-gesture-4",
             "等級": "C2",
             "Words": "grand-gesture-4",
             "句子": "The elaborate fireworks display was a grand gesture to celebrate the city's anniversary",
@@ -34722,7 +34580,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grant-1",
             "等級": "B1",
             "Words": "grant-1",
             "句子": "The government granted her citizenship",
@@ -34732,7 +34589,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grant-10",
             "等級": "B1",
             "Words": "grant-10",
             "句子": "He granted that his decision may not have been the best one",
@@ -34742,7 +34598,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grant-11",
             "等級": "B1",
             "Words": "grant-11",
             "句子": "She granted that there was a possibility of error in the report",
@@ -34752,7 +34607,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grant-2",
             "等級": "B1",
             "Words": "grant-2",
             "句子": "They granted his request for an extension",
@@ -34762,7 +34616,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grant-3",
             "等級": "B1",
             "Words": "grant-3",
             "句子": "The university received a research grant to study renewable energy technologies",
@@ -34772,7 +34625,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grant-4",
             "等級": "B1",
             "Words": "grant-4",
             "句子": "She applied for a grant to help fund her community outreach program",
@@ -34782,7 +34634,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grant-5",
             "等級": "B1",
             "Words": "grant-5",
             "句子": "The government offered grants to small businesses affected by the pandemic",
@@ -34792,7 +34643,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grant-6",
             "等級": "B1",
             "Words": "grant-6",
             "句子": "The committee granted her permission to travel abroad for the conference",
@@ -34802,7 +34652,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grant-7",
             "等級": "B1",
             "Words": "grant-7",
             "句子": "He granted her request for additional funding to complete the project",
@@ -34812,7 +34661,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grant-8",
             "等級": "B1",
             "Words": "grant-8",
             "句子": "The school granted an extension on the assignment deadline",
@@ -34822,7 +34670,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grant-9",
             "等級": "B1",
             "Words": "grant-9",
             "句子": "The judge granted the defendant's appeal",
@@ -34832,7 +34679,6 @@
             ]
         },
         {
-            "音檔": "音檔 - graphite-1",
             "等級": "B2",
             "Words": "graphite-1",
             "句子": "Graphite is used as the \"lead\" in pencils because it leaves a dark mark on paper",
@@ -34842,7 +34688,6 @@
             ]
         },
         {
-            "音檔": "音檔 - graphite-2",
             "等級": "B2",
             "Words": "graphite-2",
             "句子": "The graphite in lithium-ion batteries helps conduct electricity efficiently",
@@ -34852,7 +34697,6 @@
             ]
         },
         {
-            "音檔": "音檔 - graphite-3",
             "等級": "B2",
             "Words": "graphite-3",
             "句子": "Due to its high melting point and conductivity, graphite is used in many industrial processes",
@@ -34862,7 +34706,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grasp-1",
             "等級": "B1",
             "Words": "grasp-1",
             "句子": "He grasped the rope tightly to avoid falling",
@@ -34871,7 +34714,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grasp-2",
             "等級": "B1",
             "Words": "grasp-2",
             "句子": "She grasped the handlebars as she navigated the rough trail",
@@ -34880,7 +34722,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grasp-3",
             "等級": "B1",
             "Words": "grasp-3",
             "句子": "She quickly grasped the concept and explained it to the rest of the class",
@@ -34889,7 +34730,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grasp-4",
             "等級": "B1",
             "Words": "grasp-4",
             "句子": "He struggled to grasp the full meaning of the lecture",
@@ -34898,7 +34738,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grasp-5",
             "等級": "B1",
             "Words": "grasp-5",
             "句子": "His grasp on the steering wheel was firm as he drove through the storm",
@@ -34907,7 +34746,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grasp-6",
             "等級": "B1",
             "Words": "grasp-6",
             "句子": "The climber's grasp slipped, but she managed to catch herself",
@@ -34916,7 +34754,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grasp-7",
             "等級": "B1",
             "Words": "grasp-7",
             "句子": "Her grasp of advanced mathematics impressed her professors",
@@ -34925,7 +34762,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grasp-8",
             "等級": "B1",
             "Words": "grasp-8",
             "句子": "They wanted to ensure everyone had a good grasp of the new procedures",
@@ -34934,7 +34770,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gratification-1",
             "等級": "C2",
             "Words": "gratification-1",
             "句子": "Winning the championship was a moment of immense gratification for the team after months of hard work and dedication",
@@ -34944,7 +34779,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gratification-2",
             "等級": "C2",
             "Words": "gratification-2",
             "句子": "His son's success was a great gratification to him",
@@ -34954,7 +34788,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gratification-3",
             "等級": "C2",
             "Words": "gratification-3",
             "句子": "She experienced deep gratification after completing the challenging project successfully",
@@ -34964,7 +34797,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gratification-4",
             "等級": "C2",
             "Words": "gratification-4",
             "句子": "The gratification of helping others was what kept him volunteering year after year",
@@ -34974,7 +34806,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gratify-1",
             "等級": "B2",
             "Words": "gratify-1",
             "句子": "The chef's delicious meal gratified the guests, leaving them satisfied and content",
@@ -34984,7 +34815,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gratify-2",
             "等級": "B2",
             "Words": "gratify-2",
             "句子": "Receiving praise for her hard work gratified Sarah, affirming her efforts and boosting her confidence",
@@ -34994,7 +34824,6 @@
             ]
         },
         {
-            "音檔": "音檔 - gratifying-1",
             "等級": "C1",
             "Words": "gratifying-1",
             "句子": "Seeing her students' progress throughout the semester was a gratifying experience for the teacher, affirming the effectiveness of her teaching methods",
@@ -35004,7 +34833,6 @@
             ]
         },
         {
-            "音檔": "音檔 - greedy-1",
             "等級": "B1",
             "Words": "greedy-1",
             "句子": "The greedy businessman cared only about maximizing profits, regardless of the impact on others",
@@ -35014,7 +34842,6 @@
             ]
         },
         {
-            "音檔": "音檔 - greedy-2",
             "等級": "B1",
             "Words": "greedy-2",
             "句子": "He was so greedy that he wanted to take all the credit for the team's success",
@@ -35024,7 +34851,6 @@
             ]
         },
         {
-            "音檔": "音檔 - greedy-3",
             "等級": "B1",
             "Words": "greedy-3",
             "句子": "The greedy child refused to share his toys with anyone",
@@ -35034,7 +34860,6 @@
             ]
         },
         {
-            "音檔": "音檔 - greedy-4",
             "等級": "B1",
             "Words": "greedy-4",
             "句子": "Greedy individuals may harm relationships by always seeking more for themselves",
@@ -35044,7 +34869,6 @@
             ]
         },
         {
-            "音檔": "音檔 - greedy-5",
             "等級": "B1",
             "Words": "greedy-5",
             "句子": "Her greedy desire for fame led her to make unethical decisions",
@@ -35054,7 +34878,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grief-1",
             "等級": "B1",
             "Words": "grief-1",
             "句子": "She was overwhelmed by grief after the sudden death of her best friend",
@@ -35064,7 +34887,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grief-2",
             "等級": "B1",
             "Words": "grief-2",
             "句子": "The family found solace in sharing their grief with one another during the funeral service",
@@ -35074,7 +34896,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grief-3",
             "等級": "B1",
             "Words": "grief-3",
             "句子": "Despite the passage of time, the grief of losing her parents never fully subsided",
@@ -35084,7 +34905,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grief-4",
             "等級": "B1",
             "Words": "grief-4",
             "句子": "The community came together to support each other through their collective grief after the tragic accident",
@@ -35094,7 +34914,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grief-5",
             "等級": "B1",
             "Words": "grief-5",
             "句子": "The grief of losing her parents remained with her for many years, even as time passed",
@@ -35104,7 +34923,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grievance-1",
             "等級": "C1",
             "Words": "grievance-1",
             "句子": "She filed a grievance with the company over unfair treatment by her supervisor",
@@ -35114,7 +34932,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grievance-2",
             "等級": "C1",
             "Words": "grievance-2",
             "句子": "The workers expressed their grievances regarding unsafe working conditions",
@@ -35124,7 +34941,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grievance-3",
             "等級": "C1",
             "Words": "grievance-3",
             "句子": "The union filed a grievance against the management for violating the terms of the contract",
@@ -35134,7 +34950,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grievance-4",
             "等級": "C1",
             "Words": "grievance-4",
             "句子": "The student's grievance about the grading policy was reviewed by the academic committee",
@@ -35144,7 +34959,6 @@
             ]
         },
         {
-            "音檔": "音檔 - grievance-5",
             "等級": "C1",
             "Words": "grievance-5",
             "句子": "He has a deep sense of grievance against his former employer",
@@ -35187,7 +35001,6 @@
             ]
         },
         {
-            "音檔": "音檔 - groundbreaking-1",
             "等級": "C2",
             "Words": "groundbreaking-1",
             "句子": "The groundbreaking technology developed by the startup company revolutionized the way we communicate, making instant messaging accessible to billions of people worldwide",
@@ -35197,7 +35010,6 @@
             ]
         },
         {
-            "音檔": "音檔 - groundbreaking-2",
             "等級": "C2",
             "Words": "groundbreaking-2",
             "句子": "The video could mark the beginning of a potentially groundbreaking trend of using AI in video production",
@@ -35207,7 +35019,6 @@
             ]
         },
         {
-            "音檔": "音檔 - groundbreaking-3",
             "等級": "C2",
             "Words": "groundbreaking-3",
             "句子": "The groundbreaking ceremony for the new hospital took place yesterday, marking the start of an exciting new chapter for the community",
@@ -35250,7 +35061,6 @@
             ]
         },
         {
-            "音檔": "音檔 - habitat-1",
             "等級": "B2",
             "Words": "habitat-1",
             "句子": "The rainforest is the natural habitat for many endangered animals",
@@ -35260,7 +35070,6 @@
             ]
         },
         {
-            "音檔": "音檔 - habitat-2",
             "等級": "B2",
             "Words": "habitat-2",
             "句子": "Polar bears are losing their habitat because of climate change",
@@ -35270,7 +35079,6 @@
             ]
         },
         {
-            "音檔": "音檔 - habitat-3",
             "等級": "B2",
             "Words": "habitat-3",
             "句子": "I like to see animals in their natural habitat, instead of in zoos",
@@ -35280,7 +35088,6 @@
             ]
         },
         {
-            "音檔": "音檔 - habitat-4",
             "等級": "B2",
             "Words": "habitat-4",
             "句子": "The desert is a tough habitat for most plants",
@@ -35290,7 +35097,6 @@
             ]
         },
         {
-            "音檔": "音檔 - halt-1",
             "等級": "B1",
             "Words": "halt-1",
             "句子": "The soldiers halted at the edge of the forest",
@@ -35299,7 +35105,6 @@
             ]
         },
         {
-            "音檔": "音檔 - halt-10",
             "等級": "B1",
             "Words": "halt-10",
             "句子": "We took a short halt for lunch during our hike",
@@ -35308,7 +35113,6 @@
             ]
         },
         {
-            "音檔": "音檔 - halt-2",
             "等級": "B1",
             "Words": "halt-2",
             "句子": "We need to halt the project due to a shortage of manpower resources",
@@ -35317,7 +35121,6 @@
             ]
         },
         {
-            "音檔": "音檔 - halt-3",
             "等級": "B1",
             "Words": "halt-3",
             "句子": "The construction project came to a halt due to funding issues",
@@ -35326,7 +35129,6 @@
             ]
         },
         {
-            "音檔": "音檔 - halt-4",
             "等級": "B1",
             "Words": "halt-4",
             "句子": "The traffic was halted due to the accident",
@@ -35335,7 +35137,6 @@
             ]
         },
         {
-            "音檔": "音檔 - halt-5",
             "等級": "B1",
             "Words": "halt-5",
             "句子": "She halted in front of the door to catch her breath",
@@ -35344,7 +35145,6 @@
             ]
         },
         {
-            "音檔": "音檔 - halt-6",
             "等級": "B1",
             "Words": "halt-6",
             "句子": "The bus halted at the red light",
@@ -35353,7 +35153,6 @@
             ]
         },
         {
-            "音檔": "音檔 - halt-7",
             "等級": "B1",
             "Words": "halt-7",
             "句子": "They halted their work after hearing the announcement",
@@ -35362,7 +35161,6 @@
             ]
         },
         {
-            "音檔": "音檔 - halt-8",
             "等級": "B1",
             "Words": "halt-8",
             "句子": "The negotiations were halted when both sides could not agree",
@@ -35371,7 +35169,6 @@
             ]
         },
         {
-            "音檔": "音檔 - halt-9",
             "等級": "B1",
             "Words": "halt-9",
             "句子": "The train made a halt at the station before continuing its journey",
@@ -35413,7 +35210,6 @@
             ]
         },
         {
-            "音檔": "音檔 - handicraft-1",
             "等級": "C2",
             "Words": "handicraft-1",
             "句子": "The local market is known for its beautiful handicrafts, including pottery and woven textiles",
@@ -35423,7 +35219,6 @@
             ]
         },
         {
-            "音檔": "音檔 - handicraft-2",
             "等級": "C2",
             "Words": "handicraft-2",
             "句子": "The school organized a workshop on traditional handicrafts to teach students about cultural heritage",
@@ -35433,7 +35228,6 @@
             ]
         },
         {
-            "音檔": "音檔 - handicraft-3",
             "等級": "C2",
             "Words": "handicraft-3",
             "句子": "Artisans in the region specialize in producing intricate handicrafts that reflect their cultural traditions",
@@ -35443,7 +35237,6 @@
             ]
         },
         {
-            "音檔": "音檔 - handicraft-4",
             "等級": "C2",
             "Words": "handicraft-4",
             "句子": "Online platforms have made it easier for artisans to sell their handmade handicrafts to a global audience",
@@ -35453,7 +35246,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-1",
             "等級": "B1",
             "Words": "harbor-1",
             "句子": "The fishermen returned to the harbor with their catch at sunset",
@@ -35462,7 +35254,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-10",
             "等級": "B1",
             "Words": "harbor-10",
             "句子": "The family harbored the refugees until they could find a safe place to go",
@@ -35471,7 +35262,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-11",
             "等級": "B1",
             "Words": "harbor-11",
             "句子": "She harbored feelings of anger after the incident",
@@ -35480,7 +35270,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-12",
             "等級": "B1",
             "Words": "harbor-12",
             "句子": "She harbored hopes of becoming a famous artist one day",
@@ -35489,7 +35278,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-13",
             "等級": "B1",
             "Words": "harbor-13",
             "句子": "He harbored resentment towards his colleague for taking credit for his work",
@@ -35498,7 +35286,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-2",
             "等級": "B1",
             "Words": "harbor-2",
             "句子": "The small village harbored refugees during the war",
@@ -35507,7 +35294,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-3",
             "等級": "B1",
             "Words": "harbor-3",
             "句子": "He harbored suspicious about his coworkers motives",
@@ -35516,7 +35302,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-4",
             "等級": "B1",
             "Words": "harbor-4",
             "句子": "The ship docked in the harbor after a long journey across the ocean",
@@ -35525,7 +35310,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-5",
             "等級": "B1",
             "Words": "harbor-5",
             "句子": "Fishermen often seek shelter in the harbor during a storm",
@@ -35534,7 +35318,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-6",
             "等級": "B1",
             "Words": "harbor-6",
             "句子": "The city’s harbor is one of the busiest in the country",
@@ -35543,7 +35326,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-7",
             "等級": "B1",
             "Words": "harbor-7",
             "句子": "The criminal was found hiding in the harbor, trying to escape from the authorities",
@@ -35552,7 +35334,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-8",
             "等級": "B1",
             "Words": "harbor-8",
             "句子": "She harbored the fugitive in her house for several weeks",
@@ -35561,7 +35342,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harbor-9",
             "等級": "B1",
             "Words": "harbor-9",
             "句子": "He harbored a deep secret for years",
@@ -35570,7 +35350,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hard-and-fast-1",
             "等級": "C2",
             "Words": "hard-and-fast-1",
             "句子": "There are no hard and fast rules when it comes to creativity",
@@ -35579,7 +35358,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hard-and-fast-2",
             "等級": "C2",
             "Words": "hard-and-fast-2",
             "句子": "The manager laid down some hard and fast guidelines for the project",
@@ -35588,7 +35366,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hard-and-fast-3",
             "等級": "C2",
             "Words": "hard-and-fast-3",
             "句子": "He believed in following hard and fast principles when it came to his work ethics",
@@ -35597,7 +35374,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hardship-1",
             "等級": "B2",
             "Words": "hardship-1",
             "句子": "Despite facing financial hardships, she remained determined to pursue her education and build a better future for herself",
@@ -35606,7 +35382,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hardship-2",
             "等級": "B2",
             "Words": "hardship-2",
             "句子": "He never feared hardship",
@@ -35850,7 +35625,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harvest-1",
             "等級": "B2",
             "Words": "harvest-1",
             "句子": "The apple harvest was particularly good this year, yielding a large crop",
@@ -35859,7 +35633,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harvest-2",
             "等級": "B2",
             "Words": "harvest-2",
             "句子": "The harvest of wheat took several weeks due to the size of the field",
@@ -35868,7 +35641,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harvest-3",
             "等級": "B2",
             "Words": "harvest-3",
             "句子": "In ancient times, the harvest season was celebrated with festivals and feasts",
@@ -35877,7 +35649,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harvest-4",
             "等級": "B2",
             "Words": "harvest-4",
             "句子": "Farmers harvest the corn in late summer when it's fully ripe",
@@ -35886,7 +35657,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harvest-5",
             "等級": "B2",
             "Words": "harvest-5",
             "句子": "The team harvested data from the experiment to analyze the results",
@@ -35895,7 +35665,6 @@
             ]
         },
         {
-            "音檔": "音檔 - harvest-6",
             "等級": "B2",
             "Words": "harvest-6",
             "句子": "They will harvest the grapes in early autumn to make wine",
@@ -35904,7 +35673,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hasten-1",
             "等級": "B1",
             "Words": "hasten-1",
             "句子": "1",
@@ -35914,7 +35682,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hasten-2",
             "等級": "B1",
             "Words": "hasten-2",
             "句子": "2",
@@ -35924,7 +35691,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hasten-3",
             "等級": "B1",
             "Words": "hasten-3",
             "句子": "3",
@@ -35934,7 +35700,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hatch-1",
             "等級": "B1",
             "Words": "hatch-1",
             "句子": "The ship's hatch was secured to prevent water from entering during the storm",
@@ -35944,7 +35709,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hatch-2",
             "等級": "B1",
             "Words": "hatch-2",
             "句子": "She climbed through the hatch to access the roof of the building",
@@ -35954,7 +35718,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hatch-3",
             "等級": "B1",
             "Words": "hatch-3",
             "句子": "The attic hatch was small but provided enough space for storage",
@@ -35964,7 +35727,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hatch-4",
             "等級": "B1",
             "Words": "hatch-4",
             "句子": "He opened the hatch to let in some fresh air",
@@ -35974,7 +35736,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hatch-5",
             "等級": "B1",
             "Words": "hatch-5",
             "句子": "The chicks began to hatch after about three weeks of incubation",
@@ -35984,7 +35745,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hatch-6",
             "等級": "B1",
             "Words": "hatch-6",
             "句子": "The turtle eggs will hatch in about two months",
@@ -35994,7 +35754,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hatch-7",
             "等級": "B1",
             "Words": "hatch-7",
             "句子": "They hatched a plan to surprise their friend on her birthday",
@@ -36004,7 +35763,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hatch-8",
             "等級": "B1",
             "Words": "hatch-8",
             "句子": "The committee hatched several new ideas for the community project",
@@ -36014,7 +35772,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hazardous-1",
             "等級": "C1",
             "Words": "hazardous-1",
             "句子": "The chemical spill created a hazardous environment for the workers, requiring an immediate evacuation",
@@ -36023,7 +35780,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hazardous-2",
             "等級": "C1",
             "Words": "hazardous-2",
             "句子": "Driving in the snowstorm was extremely hazardous due to the poor visibility and slippery roads",
@@ -36095,7 +35851,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hectic-1",
             "等級": "B2",
             "Words": "hectic-1",
             "句子": "The office was hectic as everyone prepared for the big presentation",
@@ -36104,7 +35859,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hectic-2",
             "等級": "B2",
             "Words": "hectic-2",
             "句子": "After a hectic week, she looked forward to a relaxing weekend",
@@ -36113,7 +35867,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hectic-3",
             "等級": "B2",
             "Words": "hectic-3",
             "句子": "The hectic schedule left little time for breaks",
@@ -36122,7 +35875,6 @@
             ]
         },
         {
-            "音檔": "音檔 - heftily-1",
             "等級": "B2",
             "Words": "heftily-1",
             "句子": "He lifted the box heftily to place it on the shelf",
@@ -36131,7 +35883,6 @@
             ]
         },
         {
-            "音檔": "音檔 - heftily-2",
             "等級": "B2",
             "Words": "heftily-2",
             "句子": "The coach heftily criticized the team for their poor performance",
@@ -36140,7 +35891,6 @@
             ]
         },
         {
-            "音檔": "音檔 - heftily-3",
             "等級": "B2",
             "Words": "heftily-3",
             "句子": "She heftily invested in the new startup, showing her strong commitment to its success",
@@ -36149,7 +35899,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hefty-1",
             "等級": "B1",
             "Words": "hefty-1",
             "句子": "The company faced a hefty penalty for failing to comply with environmental regulations",
@@ -36158,7 +35907,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hefty-2",
             "等級": "B1",
             "Words": "hefty-2",
             "句子": "She received a hefty paycheck after completing the project",
@@ -36167,7 +35915,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hefty-3",
             "等級": "B1",
             "Words": "hefty-3",
             "句子": "The movers struggled with the hefty furniture as they carried it up the stairs",
@@ -36176,7 +35923,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hefty-4",
             "等級": "B1",
             "Words": "hefty-4",
             "句子": "He was thrilled to get a hefty raise at work",
@@ -36185,7 +35931,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hefty-5",
             "等級": "B1",
             "Words": "hefty-5",
             "句子": "The soccer player delivered a hefty kick that sent the ball flying across the field",
@@ -36194,7 +35939,6 @@
             ]
         },
         {
-            "音檔": "音檔 - herbal-1",
             "等級": "B1",
             "Words": "herbal-1",
             "句子": "She enjoys drinking herbal tea for its calming effects",
@@ -36204,7 +35948,6 @@
             ]
         },
         {
-            "音檔": "音檔 - herbal-2",
             "等級": "B1",
             "Words": "herbal-2",
             "句子": "The herbal remedy is known for helping with digestive issues",
@@ -36214,7 +35957,6 @@
             ]
         },
         {
-            "音檔": "音檔 - herbal-3",
             "等級": "B1",
             "Words": "herbal-3",
             "句子": "The garden was filled with a variety of herbal plants, including basil and rosemary",
@@ -36224,7 +35966,6 @@
             ]
         },
         {
-            "音檔": "音檔 - herbivore-1",
             "等級": "C1",
             "Words": "herbivore-1",
             "句子": "Elephants are large herbivores that feed on a variety of plants, including leaves, fruits, and bark",
@@ -36267,7 +36008,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hexagonal-1",
             "等級": "C1",
             "Words": "hexagonal-1",
             "句子": "The honeycomb is composed of hexagonal cells",
@@ -36277,7 +36017,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hexagonal-2",
             "等級": "C1",
             "Words": "hexagonal-2",
             "句子": "The artist created a striking hexagonal pattern for the floor tiles",
@@ -36287,7 +36026,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hexagonal-3",
             "等級": "C1",
             "Words": "hexagonal-3",
             "句子": "The building’s hexagonal roof design was both functional and aesthetic",
@@ -36297,7 +36035,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hexagonal-4",
             "等級": "C1",
             "Words": "hexagonal-4",
             "句子": "The game board featured hexagonal spaces for the players to move their pieces",
@@ -36307,7 +36044,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hideout-1",
             "等級": "B2",
             "Words": "hideout-1",
             "句子": "The rebels have a secret hideout on top of the mountain",
@@ -36316,7 +36052,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hideout-2",
             "等級": "B2",
             "Words": "hideout-2",
             "句子": "The fugitive sought refuge in a hideout deep in the forest",
@@ -36325,7 +36060,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hideout-3",
             "等級": "B2",
             "Words": "hideout-3",
             "句子": "After the robbery, the thieves hid in an abandoned warehouse, which became their temporary hideout",
@@ -36334,7 +36068,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hierarchical-1",
             "等級": "C2",
             "Words": "hierarchical-1",
             "句子": "The company has a hierarchical structure, with clear levels of management and authority",
@@ -36344,7 +36077,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hierarchical-2",
             "等級": "C2",
             "Words": "hierarchical-2",
             "句子": "In a hierarchical society, individuals are often ranked according to their wealth, occupation, or social status",
@@ -36354,7 +36086,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hierarchical-3",
             "等級": "C2",
             "Words": "hierarchical-3",
             "句子": "The military is one of the most hierarchical institutions, with a strict chain of command",
@@ -36364,7 +36095,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hierarchical-4",
             "等級": "C2",
             "Words": "hierarchical-4",
             "句子": "A hierarchical approach to decision-making can sometimes slow down innovation, as all ideas must be approved by higher levels of management",
@@ -36374,7 +36104,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hierarchy-1",
             "等級": "C1",
             "Words": "hierarchy-1",
             "句子": "The company's hierarchy places the CEO at the top, followed by senior executives, managers, and then regular employees",
@@ -36384,7 +36113,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hierarchy-2",
             "等級": "C1",
             "Words": "hierarchy-2",
             "句子": "In the social hierarchy of the medieval period, kings and nobles were at the top, while peasants were at the bottom",
@@ -36394,7 +36122,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hierarchy-3",
             "等級": "C1",
             "Words": "hierarchy-3",
             "句子": "The hierarchy in the organization was so rigid that employees found it difficult to communicate their ideas directly to the upper management",
@@ -36404,7 +36131,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hierarchy-4",
             "等級": "C1",
             "Words": "hierarchy-4",
             "句子": "Different species often establish a social hierarchy, with the dominant individuals controlling access to resources",
@@ -36414,7 +36140,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hinder-1",
             "等級": "B1",
             "Words": "hinder-1",
             "句子": "The heavy rain hindered the construction workers from completing the project on time",
@@ -36423,7 +36148,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hinder-2",
             "等級": "B1",
             "Words": "hinder-2",
             "句子": "His lack of experience hindered his chances of getting the job",
@@ -36432,7 +36156,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hinder-3",
             "等級": "B1",
             "Words": "hinder-3",
             "句子": "Traffic congestion hindered their ability to arrive on schedule",
@@ -36441,7 +36164,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hinder-4",
             "等級": "B1",
             "Words": "hinder-4",
             "句子": "The new regulations may hinder business growth in the region",
@@ -36450,7 +36172,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hindrance-1",
             "等級": "C1",
             "Words": "hindrance-1",
             "句子": "The lack of funding proved to be a significant hindrance to the completion of the project",
@@ -36459,7 +36180,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hindrance-2",
             "等級": "C1",
             "Words": "hindrance-2",
             "句子": "His poor communication skills were a hindrance to his career advancement",
@@ -36468,7 +36188,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hindrance-3",
             "等級": "C1",
             "Words": "hindrance-3",
             "句子": "The road construction was a major hindrance to traffic flow",
@@ -36477,7 +36196,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hindrance-4",
             "等級": "C1",
             "Words": "hindrance-4",
             "句子": "Fear of failure can be a psychological hindrance to success",
@@ -36486,7 +36204,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hint-1",
             "等級": "B1",
             "Words": "hint-1",
             "句子": "She hinted that she wanted to leave early",
@@ -36495,7 +36212,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hint-2",
             "等級": "B1",
             "Words": "hint-2",
             "句子": "He dropped several hints about his upcoming proposal",
@@ -36504,7 +36220,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hint-3",
             "等級": "B1",
             "Words": "hint-3",
             "句子": "She gave me a hint about the surprise party",
@@ -36513,7 +36228,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hint-4",
             "等級": "B1",
             "Words": "hint-4",
             "句子": "The detective followed every hint to solve the case",
@@ -36576,7 +36290,6 @@
             ]
         },
         {
-            "音檔": "音檔 - honeycomb-1",
             "等級": "C1",
             "Words": "honeycomb-1",
             "句子": "The beekeeper carefully removed the honeycomb from the hive",
@@ -36586,7 +36299,6 @@
             ]
         },
         {
-            "音檔": "音檔 - honeycomb-2",
             "等級": "C1",
             "Words": "honeycomb-2",
             "句子": "The building's facade was designed with a honeycomb pattern for aesthetic appeal",
@@ -36596,7 +36308,6 @@
             ]
         },
         {
-            "音檔": "音檔 - honeycomb-3",
             "等級": "C1",
             "Words": "honeycomb-3",
             "句子": "The honeycomb structure of the material makes it lightweight yet strong",
@@ -36606,7 +36317,6 @@
             ]
         },
         {
-            "音檔": "音檔 - honeycomb-4",
             "等級": "C1",
             "Words": "honeycomb-4",
             "句子": "The tunnels honeycombed the mountain, creating a network of hidden paths",
@@ -36616,7 +36326,6 @@
             ]
         },
         {
-            "音檔": "音檔 - honeycomb-5",
             "等級": "C1",
             "Words": "honeycomb-5",
             "句子": "The old wood was honeycombed with holes made by termites",
@@ -36626,7 +36335,6 @@
             ]
         },
         {
-            "音檔": "音檔 - honorary-1",
             "等級": "B2",
             "Words": "honorary-1",
             "句子": "She received an honorary degree for her outstanding contributions to the field of education",
@@ -36636,7 +36344,6 @@
             ]
         },
         {
-            "音檔": "音檔 - honorary-2",
             "等級": "B2",
             "Words": "honorary-2",
             "句子": "The city granted him honorary citizenship in recognition of his philanthropic efforts",
@@ -36646,7 +36353,6 @@
             ]
         },
         {
-            "音檔": "音檔 - honorary-3",
             "等級": "B2",
             "Words": "honorary-3",
             "句子": "The professor was awarded an honorary doctorate for his lifelong commitment to research",
@@ -36656,7 +36362,6 @@
             ]
         },
         {
-            "音檔": "音檔 - honorary-4",
             "等級": "B2",
             "Words": "honorary-4",
             "句子": "He is the honorary president/chairman of the commission",
@@ -36666,7 +36371,6 @@
             ]
         },
         {
-            "音檔": "音檔 - honorary-5",
             "等級": "B2",
             "Words": "honorary-5",
             "句子": "She serves as the honorary director of the charity",
@@ -36676,7 +36380,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hospitable-1",
             "等級": "C1",
             "Words": "hospitable-1",
             "句子": "The host was very hospitable, offering us food and drinks as soon as we arrived",
@@ -36685,7 +36388,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hospitable-2",
             "等級": "C1",
             "Words": "hospitable-2",
             "句子": "They were hospitable to travelers, always providing a place to rest",
@@ -36694,7 +36396,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hospitable-3",
             "等級": "C1",
             "Words": "hospitable-3",
             "句子": "The island’s warm climate makes it hospitable for a variety of plants and animals",
@@ -36703,7 +36404,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hospitable-4",
             "等級": "C1",
             "Words": "hospitable-4",
             "句子": "Scientists are searching for hospitable planets that could support life",
@@ -36712,7 +36412,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hostile-1",
             "等級": "B2",
             "Words": "hostile-1",
             "句子": "1",
@@ -36722,7 +36421,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hostile-2",
             "等級": "B2",
             "Words": "hostile-2",
             "句子": "2",
@@ -36732,7 +36430,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hostile-3",
             "等級": "B2",
             "Words": "hostile-3",
             "句子": "3",
@@ -36742,7 +36439,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hostility-1",
             "等級": "C1",
             "Words": "hostility-1",
             "句子": "The hostility between the two rival groups was evident during the debate",
@@ -36752,7 +36448,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hostility-2",
             "等級": "C1",
             "Words": "hostility-2",
             "句子": "There was palpable hostility in his tone when he spoke about the decision",
@@ -36762,7 +36457,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hostility-3",
             "等級": "C1",
             "Words": "hostility-3",
             "句子": "The region has experienced years of hostility due to political disputes",
@@ -36772,7 +36466,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hostility-4",
             "等級": "C1",
             "Words": "hostility-4",
             "句子": "Hostility in the workplace can lead to a toxic environment and decreased productivity",
@@ -36782,7 +36475,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hue-1",
             "等級": "B1",
             "Words": "hue-1",
             "句子": "The artist carefully selected the perfect hue of blue for the sky in her painting",
@@ -36792,7 +36484,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hue-2",
             "等級": "B1",
             "Words": "hue-2",
             "句子": "The sunset painted the sky with hues of orange, pink, and purple, creating a breathtaking scene",
@@ -36802,7 +36493,6 @@
             ]
         },
         {
-            "音檔": "音檔 - humanitarian-1",
             "等級": "C2",
             "Words": "humanitarian-1",
             "句子": "The humanitarian dedicated her life to providing aid in disaster-stricken areas around the world",
@@ -36812,7 +36502,6 @@
             ]
         },
         {
-            "音檔": "音檔 - humanitarian-2",
             "等級": "C2",
             "Words": "humanitarian-2",
             "句子": "The organization is known for its humanitarian efforts in providing clean water and medical care to underserved communities",
@@ -36822,7 +36511,6 @@
             ]
         },
         {
-            "音檔": "音檔 - humanitarian-3",
             "等級": "C2",
             "Words": "humanitarian-3",
             "句子": "Out of humanitarian concerns, Germany accepted a large number of refugees",
@@ -36832,7 +36520,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hustle-1",
             "等級": "B1",
             "Words": "hustle-1",
             "句子": ": She had to hustle to catch the last bus home",
@@ -36842,7 +36529,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hustle-2",
             "等級": "B1",
             "Words": "hustle-2",
             "句子": "He tried to hustle along through the crowd, but in vain",
@@ -36852,7 +36538,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hustle-3",
             "等級": "B1",
             "Words": "hustle-3",
             "句子": "John had to hustle to make enough money to support his large family",
@@ -36862,7 +36547,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hustle-4",
             "等級": "B1",
             "Words": "hustle-4",
             "句子": "After losing his job, he had to hustle to find freelance work to pay his bills",
@@ -36872,7 +36556,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hustle-5",
             "等級": "B1",
             "Words": "hustle-5",
             "句子": "Watch out for street vendors trying to hustle tourists with fake merchandise",
@@ -36882,7 +36565,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hustle-6",
             "等級": "B1",
             "Words": "hustle-6",
             "句子": "I like the hustle and bustle of market",
@@ -36892,7 +36574,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hygiene-1",
             "等級": "B2",
             "Words": "hygiene-1",
             "句子": "Maintaining good hygiene by washing your hands frequently can help prevent the spread of germs and reduce the risk of illness",
@@ -36902,7 +36583,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hygiene-2",
             "等級": "B2",
             "Words": "hygiene-2",
             "句子": "The clinic provided hygiene tips to help people avoid infections",
@@ -36912,7 +36592,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hygiene-3",
             "等級": "B2",
             "Words": "hygiene-3",
             "句子": "Personal hygiene, such as brushing your teeth regularly, is essential for overall health",
@@ -36922,7 +36601,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-1",
             "等級": "B2",
             "Words": "hype-1",
             "句子": "The hype around the new movie made everyone eager to see it",
@@ -36932,7 +36610,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-2",
             "等級": "B2",
             "Words": "hype-2",
             "句子": "The product's success was largely due to the marketing hype",
@@ -36942,7 +36619,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-3",
             "等級": "B2",
             "Words": "hype-3",
             "句子": "Despite the hype, the restaurant didn’t live up to its reputation",
@@ -36952,7 +36628,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-4",
             "等級": "B2",
             "Words": "hype-4",
             "句子": "The company hyped their new product with flashy ads and celebrity endorsements",
@@ -36962,7 +36637,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-5",
             "等級": "B2",
             "Words": "hype-5",
             "句子": "The media hyped the concert, building great anticipation among fans",
@@ -36972,7 +36646,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-6",
             "等級": "B2",
             "Words": "hype-6",
             "句子": "The event was hyped as the biggest music festival of the year, drawing huge crowds",
@@ -36982,7 +36655,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-up-1",
             "等級": "B2",
             "Words": "hype-up-1",
             "句子": "The event organizers hyped up the concert with social media posts and interviews",
@@ -36992,7 +36664,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-up-2",
             "等級": "B2",
             "Words": "hype-up-2",
             "句子": "They hyped up the new video game with trailers that made it look incredible",
@@ -37002,7 +36673,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-up-3",
             "等級": "B2",
             "Words": "hype-up-3",
             "句子": "The coach hyped up the team before the big match to boost their confidence",
@@ -37012,7 +36682,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-up-4",
             "等級": "B2",
             "Words": "hype-up-4",
             "句子": "The announcer was trying to hype the crowd up before the show started",
@@ -37022,7 +36691,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-up-5",
             "等級": "B2",
             "Words": "hype-up-5",
             "句子": "The kids were hyped up on candy after the party",
@@ -37032,7 +36700,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-up-6",
             "等級": "B2",
             "Words": "hype-up-6",
             "句子": "The coach hyped up the players by giving an inspiring speech",
@@ -37042,7 +36709,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hype-up-7",
             "等級": "B2",
             "Words": "hype-up-7",
             "句子": "I was so hyped up, I couldn't sleep",
@@ -37052,7 +36718,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hypnotism-1",
             "等級": "C1",
             "Words": "hypnotism-1",
             "句子": "The stage magician used hypnotism to make the volunteer forget their own name during the performance",
@@ -37106,7 +36771,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hypnotize-1",
             "等級": "C1",
             "Words": "hypnotize-1",
             "句子": "I was hypnotized by her lovely singing",
@@ -37116,7 +36780,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hypothesis-1",
             "等級": "C1",
             "Words": "hypothesis-1",
             "句子": "The scientist formulated a hypothesis to explain the unusual results of the experiment",
@@ -37126,7 +36789,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hypothesis-2",
             "等級": "C1",
             "Words": "hypothesis-2",
             "句子": "Her hypothesis was that increased study time would lead to better test scores",
@@ -37136,7 +36798,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hypothesis-3",
             "等級": "C1",
             "Words": "hypothesis-3",
             "句子": "The research team is working to test the hypothesis that diet affects mental health",
@@ -37146,7 +36807,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hypothesis-4",
             "等級": "C1",
             "Words": "hypothesis-4",
             "句子": "As a hypothesis, he suggested that the decline in sales was due to seasonal trends",
@@ -37156,7 +36816,6 @@
             ]
         },
         {
-            "音檔": "音檔 - hypothesis-5",
             "等級": "C1",
             "Words": "hypothesis-5",
             "句子": "The hypothesis that life exists on other planets has yet to be proven or disproven",
@@ -37206,7 +36865,6 @@
             ]
         },
         {
-            "音檔": "音檔 - immerse-1",
             "等級": "B2",
             "Words": "immerse-1",
             "句子": "She immersed the brush into the paint and began her work",
@@ -37216,7 +36874,6 @@
             ]
         },
         {
-            "音檔": "音檔 - immerse-2",
             "等級": "B2",
             "Words": "immerse-2",
             "句子": "The diver immersed himself into the deep blue ocean",
@@ -37226,7 +36883,6 @@
             ]
         },
         {
-            "音檔": "音檔 - immerse-3",
             "等級": "B2",
             "Words": "immerse-3",
             "句子": "He immersed himself in his studies to prepare for the final exams",
@@ -37236,7 +36892,6 @@
             ]
         },
         {
-            "音檔": "音檔 - immerse-4",
             "等級": "B2",
             "Words": "immerse-4",
             "句子": "The artist was so immersed in his painting that he lost track of time",
@@ -37323,7 +36978,6 @@
             ]
         },
         {
-            "音檔": "音檔 - implementation-1",
             "等級": "B2",
             "Words": "implementation-1",
             "句子": "The successful implementation of the new software boosted productivity across the company",
@@ -37333,7 +36987,6 @@
             ]
         },
         {
-            "音檔": "音檔 - implementation-2",
             "等級": "B2",
             "Words": "implementation-2",
             "句子": "The team is focusing on the implementation of a streamlined design to enhance user experience",
@@ -37343,7 +36996,6 @@
             ]
         },
         {
-            "音檔": "音檔 - implementation-3",
             "等級": "B2",
             "Words": "implementation-3",
             "句子": "The government announced the implementation of new policies aimed at reducing carbon emissions",
@@ -37989,7 +37641,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jag-1",
             "等級": "B2",
             "Words": "jag-1",
             "句子": "The car tire had a jag from running over a sharp object",
@@ -37998,7 +37649,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jag-2",
             "等級": "B2",
             "Words": "jag-2",
             "句子": "There was a jag in the rock that made climbing difficult",
@@ -38007,7 +37657,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jag-3",
             "等級": "B2",
             "Words": "jag-3",
             "句子": "She went on a shopping jag, buying everything she could find",
@@ -38016,7 +37665,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jag-4",
             "等級": "B2",
             "Words": "jag-4",
             "句子": "The musician went on a creative jag, producing a new song every day",
@@ -38025,7 +37673,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jag-5",
             "等級": "B2",
             "Words": "jag-5",
             "句子": "He jagged the paper with a pair of scissors for a rough look",
@@ -38034,7 +37681,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jag-6",
             "等級": "B2",
             "Words": "jag-6",
             "句子": "The rock jags outward, making it difficult to navigate",
@@ -38043,7 +37689,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jag-7",
             "等級": "B2",
             "Words": "jag-7",
             "句子": "He jagged on junk food all weekend during the party",
@@ -38052,7 +37697,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jag-8",
             "等級": "B2",
             "Words": "jag-8",
             "句子": "She jagged through the project, staying up all night to finish it",
@@ -38061,7 +37705,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jagged-1",
             "等級": "B2",
             "Words": "jagged-1",
             "句子": "The mountain peak had jagged rocks that made it dangerous to climb",
@@ -38071,7 +37714,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jagged-2",
             "等級": "B2",
             "Words": "jagged-2",
             "句子": "The glass broke into jagged pieces, scattered all over the floor",
@@ -38081,7 +37723,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jagged-3",
             "等級": "B2",
             "Words": "jagged-3",
             "句子": "The jagged edges of the torn paper made it hard to handle",
@@ -38091,7 +37732,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jagged-4",
             "等級": "B2",
             "Words": "jagged-4",
             "句子": "The jagged lines of the coastline created dramatic cliffs",
@@ -38101,7 +37741,6 @@
             ]
         },
         {
-            "音檔": "音檔 - jagged-5",
             "等級": "B2",
             "Words": "jagged-5",
             "句子": "The jagged scars on his face told a story of years of hardship",
@@ -38177,7 +37816,6 @@
             ]
         },
         {
-            "音檔": "音檔 - juxtapose-1",
             "等級": "C1",
             "Words": "juxtapose-1",
             "句子": "The magazine article juxtaposes before-and-after photos to demonstrate the effectiveness of the fitness program",
@@ -38187,7 +37825,6 @@
             ]
         },
         {
-            "音檔": "音檔 - juxtapose-2",
             "等級": "C1",
             "Words": "juxtapose-2",
             "句子": "The exhibit juxtaposes ancient artifacts with modern technology to illustrate the evolution of communication over time",
@@ -38197,7 +37834,6 @@
             ]
         },
         {
-            "音檔": "音檔 - juxtapose-3",
             "等級": "C1",
             "Words": "juxtapose-3",
             "句子": "An industrial designer might juxtapose sleek, minimalist form with highly functional features in a new smartphone design",
@@ -38207,7 +37843,6 @@
             ]
         },
         {
-            "音檔": "音檔 - juxtapose-4",
             "等級": "C1",
             "Words": "juxtapose-4",
             "句子": "The photographer decided to juxtapose the bright colors of the flowers against the dark background to create a striking image",
@@ -38217,7 +37852,6 @@
             ]
         },
         {
-            "音檔": "音檔 - juxtaposition-1",
             "等級": "C1",
             "Words": "juxtaposition-1",
             "句子": "The juxtaposition of the old and new buildings created an interesting visual contrast in the city",
@@ -38227,7 +37861,6 @@
             ]
         },
         {
-            "音檔": "音檔 - juxtaposition-2",
             "等級": "C1",
             "Words": "juxtaposition-2",
             "句子": "The artist used the juxtaposition of light and dark colors to convey the theme of duality in the painting",
@@ -38949,7 +38582,6 @@
             ]
         },
         {
-            "音檔": "音檔 - maneuver-1",
             "等級": "B2",
             "Words": "maneuver-1",
             "句子": "The driver executed a difficult maneuver to avoid hitting the curb",
@@ -38959,7 +38591,6 @@
             ]
         },
         {
-            "音檔": "音檔 - maneuver-10",
             "等級": "B2",
             "Words": "maneuver-10",
             "句子": "We maneuvered our troops to the south",
@@ -38969,7 +38600,6 @@
             ]
         },
         {
-            "音檔": "音檔 - maneuver-2",
             "等級": "B2",
             "Words": "maneuver-2",
             "句子": "The aircraft performed a series of maneuvers to demonstrate its agility",
@@ -38979,7 +38609,6 @@
             ]
         },
         {
-            "音檔": "音檔 - maneuver-3",
             "等級": "B2",
             "Words": "maneuver-3",
             "句子": "The company's merger was part of a larger financial maneuver to dominate the market",
@@ -38989,7 +38618,6 @@
             ]
         },
         {
-            "音檔": "音檔 - maneuver-4",
             "等級": "B2",
             "Words": "maneuver-4",
             "句子": "The chess player made a brilliant maneuver that led to a quick checkmate",
@@ -38999,7 +38627,6 @@
             ]
         },
         {
-            "音檔": "音檔 - maneuver-5",
             "等級": "B2",
             "Words": "maneuver-5",
             "句子": "To prepare for war, the army is performing maneuvers off the coast",
@@ -39009,7 +38636,6 @@
             ]
         },
         {
-            "音檔": "音檔 - maneuver-6",
             "等級": "B2",
             "Words": "maneuver-6",
             "句子": "He maneuvered the stroller around the tight corners of the park",
@@ -39019,7 +38645,6 @@
             ]
         },
         {
-            "音檔": "音檔 - maneuver-7",
             "等級": "B2",
             "Words": "maneuver-7",
             "句子": "The pilot carefully maneuvered the plane through the stormy weather",
@@ -39029,7 +38654,6 @@
             ]
         },
         {
-            "音檔": "音檔 - maneuver-8",
             "等級": "B2",
             "Words": "maneuver-8",
             "句子": "The politician maneuvered through the debate, carefully avoiding controversial topics",
@@ -39039,7 +38663,6 @@
             ]
         },
         {
-            "音檔": "音檔 - maneuver-9",
             "等級": "B2",
             "Words": "maneuver-9",
             "句子": "She maneuvered her way into a higher position within the company",
@@ -39049,7 +38672,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacture-1",
             "等級": "B2",
             "Words": "manufacture-1",
             "句子": "The company manufactures high-quality strollers in a state-of-the-art factory",
@@ -39059,7 +38681,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacture-2",
             "等級": "B2",
             "Words": "manufacture-2",
             "句子": "They manufacture electronics at the factory using automated processes",
@@ -39069,7 +38690,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacture-3",
             "等級": "B2",
             "Words": "manufacture-3",
             "句子": "The team is working hard to manufacture the new stroller model for the upcoming launch",
@@ -39079,7 +38699,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacture-4",
             "等級": "B2",
             "Words": "manufacture-4",
             "句子": "The story about the accident was manufactured to divert attention from the real issue",
@@ -39089,7 +38708,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacture-5",
             "等級": "B2",
             "Words": "manufacture-5",
             "句子": "He felt the company was manufacturing its success through misleading advertisements",
@@ -39099,7 +38717,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacture-6",
             "等級": "B2",
             "Words": "manufacture-6",
             "句子": "The country has seen a significant rise in the manufacture of electric vehicles",
@@ -39109,7 +38726,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacture-7",
             "等級": "B2",
             "Words": "manufacture-7",
             "句子": "The manufacture of clothing in the region provides thousands of jobs",
@@ -39119,7 +38735,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacture-8",
             "等級": "B2",
             "Words": "manufacture-8",
             "句子": "Advances in the manufacture of materials have led to more durable and eco-friendly products",
@@ -39129,7 +38744,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacturing-1",
             "等級": "B2",
             "Words": "manufacturing-1",
             "句子": "The manufacturing of electric vehicles has rapidly increased over the past decade",
@@ -39139,7 +38753,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacturing-2",
             "等級": "B2",
             "Words": "manufacturing-2",
             "句子": "The city is known for its high-tech manufacturing industry, producing advanced electronics",
@@ -39149,7 +38762,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacturing-3",
             "等級": "B2",
             "Words": "manufacturing-3",
             "句子": "Sustainable manufacturing practices are essential for reducing environmental impact",
@@ -39159,7 +38771,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacturing-4",
             "等級": "B2",
             "Words": "manufacturing-4",
             "句子": "The manufacturing sector contributes significantly to the country's GDP",
@@ -39169,7 +38780,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacturing-5",
             "等級": "B2",
             "Words": "manufacturing-5",
             "句子": "Many workers are employed in the manufacturing of consumer goods",
@@ -39179,7 +38789,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacturing-6",
             "等級": "B2",
             "Words": "manufacturing-6",
             "句子": "The company invested in manufacturing technology to improve efficiency",
@@ -39189,7 +38798,6 @@
             ]
         },
         {
-            "音檔": "音檔 - manufacturing-7",
             "等級": "B2",
             "Words": "manufacturing-7",
             "句子": "Manufacturing companies are adopting automation to reduce costs and increase production",
