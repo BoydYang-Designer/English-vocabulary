@@ -24,23 +24,12 @@ function showNotification(message, type = 'success') {
     }, 4000);
 }
 
-/**
- * 新增函式：更新可折疊區塊標題的高亮狀態
- * @param {HTMLElement} btn - 內容區域中被點擊的任何一個按鈕
- */
 function updateCollapsibleHeaderState(btn) {
-    // 1. 從被點擊的按鈕往上找到 '.collapsible-content' 容器
     const contentWrapper = btn.closest('.collapsible-content');
     if (!contentWrapper) return;
-
-    // 2. 找到該容器對應的標題 (header)，它通常是 content 的前一個兄弟元素
     const header = contentWrapper.previousElementSibling;
     if (!header || !header.classList.contains('collapsible-header')) return;
-
-    // 3. 檢查內容容器中，是否還有任何一個按鈕處於 '.selected' 狀態
     const hasSelectedChildren = contentWrapper.querySelector('.letter-btn.selected') !== null;
-
-    // 4. 根據檢查結果，為標題加上或移除高亮 class
     if (hasSelectedChildren) {
         header.classList.add('header-highlight');
     } else {
@@ -48,14 +37,118 @@ function updateCollapsibleHeaderState(btn) {
     }
 }
 
-/**
- * 新增函式：一個新的 onclick 處理器，整合了按鈕點擊和標題更新
- * @param {HTMLElement} btn - 被點擊的按鈕
- */
-function toggleAndCheckHeader(btn) {
-    toggleSelection(btn); // 執行原本的選取/取消選取功能
-    updateCollapsibleHeaderState(btn); // 更新對應的區塊標題狀態
+function toggleSelection(btn) {
+    btn.classList.toggle('selected');
 }
+
+function toggleAndCheckHeader(btn) {
+    toggleSelection(btn);
+    updateCollapsibleHeaderState(btn);
+}
+
+// ▼▼▼ 【新增】處理全域「主題」按鈕點擊的函式 ▼▼▼
+function handleGlobalTopicClick(btn) {
+    // 1. 切換自身狀態
+    toggleSelection(btn);
+    updateCollapsibleHeaderState(btn);
+
+    // 2. 同步更新所有巢狀「主題」按鈕的狀態
+    const topicValue = btn.dataset.value;
+    const isSelected = btn.classList.contains('selected');
+    const nestedTopicBtns = document.querySelectorAll(`.subcategory-wrapper .letter-btn[data-value="${topicValue}"]`);
+    
+    nestedTopicBtns.forEach(nestedBtn => {
+        nestedBtn.classList.toggle('selected', isSelected);
+        // 更新其所屬的「領域」按鈕狀態
+        updateDomainButtonState(nestedBtn);
+    });
+}
+
+// ▼▼▼ 【新增】處理巢狀「主題」按鈕點擊的函式 ▼▼▼
+function handleNestedTopicClick(btn) {
+    // 1. 切換自身狀態
+    toggleSelection(btn);
+    
+    // 2. 更新所屬的「領域」按鈕狀態
+    updateDomainButtonState(btn);
+
+    // 3. 同步更新全域「主題」按鈕的狀態
+    const topicValue = btn.dataset.value;
+    const isSelected = btn.classList.contains('selected');
+    const globalTopicBtn = document.querySelector(`#topicCategoryButtons .letter-btn[data-value="${topicValue}"]`);
+    
+    if (globalTopicBtn) {
+        globalTopicBtn.classList.toggle('selected', isSelected);
+        updateCollapsibleHeaderState(globalTopicBtn);
+    }
+}
+
+
+// ▼▼▼ 【新增】更新「領域」按鈕狀態的輔助函式 ▼▼▼
+function updateDomainButtonState(nestedBtn) {
+    const subcategoryWrapper = nestedBtn.closest('.subcategory-wrapper');
+    if (!subcategoryWrapper) return;
+
+    const domainBtn = subcategoryWrapper.previousElementSibling;
+    if (!domainBtn || !domainBtn.classList.contains('letter-btn')) return;
+
+    const hasSelectedSubcategories = subcategoryWrapper.querySelector('.letter-btn.selected') !== null;
+
+    if (hasSelectedSubcategories) {
+        domainBtn.classList.add('selected');
+    } else {
+        domainBtn.classList.remove('selected');
+    }
+    updateCollapsibleHeaderState(domainBtn);
+}
+
+
+// ▼▼▼ 【修改】處理「領域」按鈕點擊的函式 ▼▼▼
+function handleDomainClick(btn, domainName) {
+    let parentContainer = btn.closest('.collapsible-content');
+    let subcategoryWrapper = document.getElementById(`sub-for-${domainName.replace(/\s/g, '-')}`);
+
+    if (!subcategoryWrapper) {
+        subcategoryWrapper = document.createElement('div');
+        subcategoryWrapper.className = 'subcategory-wrapper';
+        subcategoryWrapper.id = `sub-for-${domainName.replace(/\s/g, '-')}`;
+
+        const topics = [...new Set(
+            wordsData
+                .filter(w => w["分類"] && w["分類"][0] === domainName && w["分類"][1])
+                .map(w => w["分類"][1])
+        )];
+
+        if (topics.length > 0) {
+            const subWrapper = document.createElement('div');
+            subWrapper.className = 'button-wrapper';
+            subWrapper.innerHTML = topics.map(topic => {
+                // 檢查全域主題按鈕是否已被選中
+                const globalTopicBtn = document.querySelector(`#topicCategoryButtons .letter-btn[data-value="${topic}"]`);
+                const isSelectedClass = globalTopicBtn && globalTopicBtn.classList.contains('selected') ? 'selected' : '';
+                return `<button class="letter-btn ${isSelectedClass}" data-value='${topic}' onclick="handleNestedTopicClick(this)">${topic}</button>`;
+            }).join(' ');
+            subcategoryWrapper.appendChild(subWrapper);
+        }
+        
+        btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
+    }
+
+    const mainCollapsibleContent = btn.closest('.collapsible-content');
+
+    if (subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px') {
+        subcategoryWrapper.style.maxHeight = '0px';
+    } else {
+        subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
+    }
+
+    setTimeout(() => {
+        if (mainCollapsibleContent.style.maxHeight !== '0px') {
+             mainCollapsibleContent.style.maxHeight = mainCollapsibleContent.scrollHeight + "px";
+        }
+    }, 310);
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const loadingOverlay = document.getElementById('loading-overlay');
@@ -94,20 +187,13 @@ document.querySelectorAll(".collapsible-header").forEach(button => {
         const content = this.nextElementSibling;
         
         if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-            // --- 這是原本關閉主分類的程式碼 ---
             content.style.maxHeight = '0px';
-            
-            // ▼▼▼【新增邏輯】▼▼▼
-            // 當主分類收合時，尋找其內部所有的次分類容器
             const subcategoryWrappers = content.querySelectorAll('.subcategory-wrapper');
-            // 將所有找到的次分類容器也一併收合
             subcategoryWrappers.forEach(wrapper => {
                 wrapper.style.maxHeight = '0px';
             });
-            // ▲▲▲【新增結束】▲▲▲
 
         } else {
-            // --- 這是原本展開主分類的程式碼 (此處不變) ---
             content.style.maxHeight = content.scrollHeight + "px";
         }
     });
@@ -132,7 +218,7 @@ document.querySelectorAll(".collapsible-header").forEach(button => {
             setTimeout(() => {
                 createAlphabetButtons();
                 createDomainButtons();
-                createTopicButtons();
+                createTopicButtons(); // 仍然創建獨立的主題按鈕
                 createSourceButtons();
                 createSpecialCategoryButtons();
                 createLevelButtons();
@@ -163,10 +249,6 @@ document.querySelectorAll(".collapsible-header").forEach(button => {
         });
 });
 
-function toggleSelection(btn) {
-    btn.classList.toggle('selected');
-}
-
 function createAlphabetButtons() {
     const container = document.getElementById("alphabetButtons");
     if (container) {
@@ -179,6 +261,7 @@ function createAlphabetButtons() {
     }
 }
 
+// ▼▼▼ 【修改】「領域」按鈕的創建邏輯 ▼▼▼
 function createDomainButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
     let domains = [...new Set(wordsData.map(w => (w["分類"] && w["分類"][0]) || null).filter(Boolean))];
@@ -188,12 +271,14 @@ function createDomainButtons() {
         const wrapper = document.createElement('div');
         wrapper.className = 'button-wrapper';
         wrapper.innerHTML = domains.map(d => 
-            `<button class='letter-btn' data-value='${d}' onclick='toggleAndCheckHeader(this)'>${d}</button>`
+            `<button class='letter-btn' data-value='${d}' onclick="handleDomainClick(this, '${d}')">${d}</button>`
         ).join(" ");
         container.appendChild(wrapper);
     }
 }
 
+
+// ▼▼▼ 【修改】獨立「主題」按鈕的創建邏輯 ▼▼▼
 function createTopicButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
     let topics = [...new Set(wordsData.map(w => (w["分類"] && w["分類"][1]) || null).filter(Boolean))];
@@ -203,7 +288,7 @@ function createTopicButtons() {
         const wrapper = document.createElement('div');
         wrapper.className = 'button-wrapper';
         wrapper.innerHTML = topics.map(t => 
-            `<button class='letter-btn' data-value='${t}' onclick='toggleAndCheckHeader(this)'>${t}</button>`
+            `<button class='letter-btn' data-value='${t}' onclick='handleGlobalTopicClick(this)'>${t}</button>`
         ).join(" ");
         container.appendChild(wrapper);
     }
@@ -266,10 +351,17 @@ function createLevelButtons() {
     }
 }
 
+
+// ▼▼▼ 【修改】學習篩選邏輯 ▼▼▼
 function startLearning() {
     const selectedLetters = Array.from(document.querySelectorAll('#alphabetButtons .letter-btn.selected')).map(btn => btn.dataset.value);
-    const selectedDomains = Array.from(document.querySelectorAll('#domainCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
+    
+    // 篩選「領域」時，包含那些僅選中「領域」但未選中其下「主題」的情況
+    const selectedDomains = Array.from(document.querySelectorAll('#domainCategoryButtons > .button-wrapper > .letter-btn.selected')).map(btn => btn.dataset.value);
+    
+    // 篩選「主題」時，只需從一個地方（例如全域列表）獲取即可，因為是同步的
     const selectedTopics = Array.from(document.querySelectorAll('#topicCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
+
     const selectedSources = Array.from(document.querySelectorAll('#sourceCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
     const selectedLevels = Array.from(document.querySelectorAll('#levelButtonsContent .letter-btn.selected')).map(btn => btn.dataset.value);
     const selectedSpecials = Array.from(document.querySelectorAll('#specialCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
@@ -283,15 +375,23 @@ function startLearning() {
         });
     }
     
+    // 新的領域和主題篩選邏輯
     if (selectedDomains.length > 0) {
         filteredWords = filteredWords.filter(w => {
             const domain = (w["分類"] && w["分類"][0]) || null;
-            return selectedDomains.includes(domain);
-        });
-    }
+            const topic = (w["分類"] && w["分類"][1]) || null;
 
-    if (selectedTopics.length > 0) {
-        filteredWords = filteredWords.filter(w => {
+            // 如果沒有選擇任何主題，則只匹配領域
+            if (selectedTopics.length === 0) {
+                return selectedDomains.includes(domain);
+            }
+            
+            // 如果同時選擇了領域和主題，則單字必須兩者都匹配
+            return selectedDomains.includes(domain) && selectedTopics.includes(topic);
+        });
+    } else if (selectedTopics.length > 0) {
+        // 如果只選擇了主題而沒有選擇領域
+         filteredWords = filteredWords.filter(w => {
             const topic = (w["分類"] && w["分類"][1]) || null;
             return selectedTopics.includes(topic);
         });
@@ -406,6 +506,7 @@ function displayWordList(words, title) {
     lastWordListType = "custom_selection";
 }
 
+/* ... 之後的程式碼與前一版相同，保持不變 ... */
 // ... (The rest of the unchanged functions remain the same) ...
 
 function backToFirstLayer() {
@@ -697,7 +798,6 @@ function toggleCheck(word, button) {
     }
 }
 
-// 高亮單字變體
 function createWordVariationsRegex(baseWord) {
     let stem = baseWord.toLowerCase();
     let pattern;
@@ -707,23 +807,13 @@ function createWordVariationsRegex(baseWord) {
     } else if (stem.endsWith('y')) {
         stem = stem.slice(0, -1);
         pattern = `\\b${stem}(y|ies|ied|ier|iest|ying)\\b`;
-    } else if (stem.endsWith('l')) {  // 新增处理如 expel -> expelled 的双写辅音规则
+    } else if (stem.endsWith('l')) {
         pattern = `\\b${stem}(s|led|ling)?\\b`;
     } else {
         pattern = `\\b${stem}(s|es|ed|ing)?\\b`;
     }
     return new RegExp(pattern, 'gi');
 }
-
-let meaning = wordData["traditional Chinese"] || wordData.meaning || "無中文解釋";
-const baseWord = wordData.Words || wordData.word || wordData["單字"];
-const variationsRegex = createWordVariationsRegex(baseWord);
-
-meaning = meaning.replace(variationsRegex, match => `<span style="color: blue; font-weight: bold;">${match}</span>`);
-
-document.getElementById("meaningContainer").innerHTML = meaning;
-
-
 
 function showDetails(word) {
     let bButton = document.getElementById("bButton");
@@ -768,11 +858,11 @@ function showDetails(word) {
         displayTagsHTML += categories.map(cat => `<span class="category-tag">${cat}</span>`).join('');
     }
     let finalDisplayHTML = displayTagsHTML ? `<div class="category-display">${displayTagsHTML}</div>` : '';
-    let formattedChinese = word["traditional Chinese"].replace(/(\d+)\./g, "<br><strong>$1.</strong> ").replace(/\s*([nN]\.|[vV]\.|[aA][dD][jJ]\.|[aA][dD][vV]\.|[pP][rR][eE][pP]\.|[cC][oO][nN][jJ]\.|[pP][rR][oO][nN]\.|[iI][nN][tT]\.)/g, "<br>$1 ").replace(/^<br>/, "");
+    let formattedChinese = (word["traditional Chinese"] || "").replace(/(\d+)\./g, "<br><strong>$1.</strong> ").replace(/\s*([nN]\.|[vV]\.|[aA][dD][jJ]\.|[aA][dD][vV]\.|[pP][rR][eE][pP]\.|[cC][oO][nN][jJ]\.|[pP][rR][oO][nN]\.|[iI][nN][tT]\.)/g, "<br>$1 ").replace(/^<br>/, "");
     let chinese = `${finalDisplayHTML}<div>${formattedChinese}</div>`;
-    let rawMeaning = word["English meaning"];
+    let rawMeaning = word["English meaning"] || "";
     let formattedMeaning = rawMeaning.replace(/^Summary:?/gim, "<h3>Summary</h3>").replace(/Related Words:/gi, "<h3>Related Words:</h3>").replace(/Antonyms:/gi, "<h3>Antonyms:</h3>").replace(/Synonyms:/gi, "<h3>Synonyms:</h3>");
-formattedMeaning = formattedMeaning.replace(/(\s*\/?\s*As a (?:verb|noun|adjective|adverb|preposition|conjunction)\s*:?)/gi, "<br><br>$&");
+    formattedMeaning = formattedMeaning.replace(/(\s*\/?\s*As a (?:verb|noun|adjective|adverb|preposition|conjunction)\s*:?)/gi, "<br><br>$&");
     formattedMeaning = formattedMeaning.replace(/\n(\d+\.)/g, '</p><h4 class="meaning-number">$1</h4><p>');
     formattedMeaning = formattedMeaning.replace(/\n(E\.g\.|Example):/gi, '</p><p class="example"><strong>$1:</strong>');
     formattedMeaning = formattedMeaning.replace(/\n/g, "<br>");
@@ -787,7 +877,6 @@ formattedMeaning = formattedMeaning.replace(/(\s*\/?\s*As a (?:verb|noun|adjecti
     displayNote();
     updateBackButton();
     
-    // ▼▼▼ 句子按鈕事件監聽 ▼▼▼
     const sentenceLinkBtn = document.getElementById("sentenceLinkBtn");
     if (sentenceLinkBtn) {
         sentenceLinkBtn.onclick = () => {
@@ -798,19 +887,14 @@ formattedMeaning = formattedMeaning.replace(/(\s*\/?\s*As a (?:verb|noun|adjecti
         };
     }
 
-
     if (isAutoPlaying && !isPaused) playAudioSequentially(word);
-    
 }
 
 function playAudioSequentially(word) {
     let phoneticAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word.Words)}.mp3`);
     sentenceAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word.Words)} - sentence.mp3`);
     
-    // ▼▼▼【需求修改處】▼▼▼
-    // 修改此處，對焦整個頁面到 meaningContainer
     document.getElementById('meaningContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // ▲▲▲【修改結束】▲▲▲
 
     let playBtn = document.getElementById("playAudioBtn");
     let pauseBtn = document.getElementById("pauseResumeBtn");
@@ -906,10 +990,7 @@ function playSentenceAudio(audioFile) {
         sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
     }
 
-    // ▼▼▼【需求修改處】▼▼▼
-    // 修改此處，對焦整個頁面到 meaningContainer
     document.getElementById('meaningContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // ▲▲▲【修改結束】▲▲▲
     
     sentenceAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`);
     sentenceAudio.play().then(() => {
@@ -936,12 +1017,7 @@ function togglePauseAudio(button) {
     const playBtn = document.getElementById("playAudioBtn");
     const pauseBtn = button;
     if (sentenceAudio.paused || sentenceAudio.ended) {
-
-        // ▼▼▼【需求修改處】▼▼▼
-        // 在此處新增捲動功能，當從暫停狀態恢復播放時觸發
         document.getElementById('meaningContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // ▲▲▲【修改結束】▲▲▲
-
         sentenceAudio.play().then(() => {
             if (playBtn) playBtn.classList.add("playing");
             if (pauseBtn) pauseBtn.classList.remove("playing");
@@ -1080,28 +1156,23 @@ function handleAutoScroll() {
     container.scrollTo({ top: scrollPosition, behavior: 'smooth' });
 }
 
-// ▼▼▼【功能修改處】▼▼▼
-// 修改此函式以新增點擊單字時的特效、複製與搜尋功能
 function enableWordCopyOnClick() {
     const meaningContainer = document.getElementById("meaningContainer");
     if (!meaningContainer) return;
 
     meaningContainer.addEventListener('click', function(event) {
-        // 確保點擊的是可處理的文字區域
         if (event.target.tagName !== 'P' && event.target.tagName !== 'DIV' && event.target.tagName !== 'SPAN') {
             return;
         }
 
         const range = document.caretRangeFromPoint(event.clientX, event.clientY);
-        if (!range) return; // 不支援的瀏覽器
-
+        if (!range) return; 
         const textNode = range.startContainer;
-        if (textNode.nodeType !== Node.TEXT_NODE) return; // 確保是文字節點
+        if (textNode.nodeType !== Node.TEXT_NODE) return; 
 
         const text = textNode.textContent;
         const offset = range.startOffset;
 
-        // 找到單字邊界
         let start = offset;
         let end = offset;
         const wordRegex = /\w/; 
@@ -1113,25 +1184,17 @@ function enableWordCopyOnClick() {
             end++;
         }
 
-        if (start === end) return; // 沒有找到單字
-
-        // 創建範圍以標示單字
+        if (start === end) return; 
         const wordRange = document.createRange();
         wordRange.setStart(textNode, start);
         wordRange.setEnd(textNode, end);
         
-        // 取得單字文字
         const selectedWord = wordRange.toString();
-
-        // --- 新增功能：特效 ---
         const highlightSpan = document.createElement('span');
         highlightSpan.className = 'word-click-highlight';
         
         try {
-            // 將單字用 span 包起來以應用 CSS 特效
             wordRange.surroundContents(highlightSpan);
-
-            // 在動畫結束後，移除 span 並還原 DOM 結構
             setTimeout(() => {
                 if (highlightSpan.parentNode) {
                     const parent = highlightSpan.parentNode;
@@ -1139,24 +1202,20 @@ function enableWordCopyOnClick() {
                         parent.insertBefore(highlightSpan.firstChild, highlightSpan);
                     }
                     parent.removeChild(highlightSpan);
-                    parent.normalize(); // 合併相鄰的文字節點
+                    parent.normalize(); 
                 }
-            }, 600); // 此時間需與 CSS 動畫時間對應
+            }, 600); 
         } catch (e) {
             console.error("Highlight effect failed:", e);
-            // 如果特效失敗，仍繼續執行複製功能
         }
 
-        // --- 現有功能：複製與貼上搜尋 ---
         navigator.clipboard.writeText(selectedWord)
             .then(() => {
-                //showNotification(`✅ 已複製單字：${selectedWord}`, 'success');
-                
                 const searchInput = document.getElementById('searchInputDetails');
                 if (searchInput) {
                     searchInput.value = selectedWord;
-                    searchInput.focus(); // 讓游標自動跳至搜尋框
-                    filterWordsInDetails(); // 觸發搜尋函式
+                    searchInput.focus(); 
+                    filterWordsInDetails(); 
                 }
             })
             .catch(err => {
