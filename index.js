@@ -131,7 +131,10 @@ document.querySelectorAll(".collapsible-header").forEach(button => {
 
             setTimeout(() => {
                 createAlphabetButtons();
-                createCategoryButtons();
+                createDomainButtons();
+                createTopicButtons();
+                createSourceButtons();
+                createSpecialCategoryButtons();
                 createLevelButtons();
                 document.querySelector('.start-learning-container').style.display = "block";
             }, 500);
@@ -164,123 +167,64 @@ function toggleSelection(btn) {
     btn.classList.toggle('selected');
 }
 
-
-function handlePrimaryCategoryClick(btn, categoryName) {
-
-    let parentContainer = btn.closest('.collapsible-content');
-    let subcategoryWrapper = document.getElementById(`sub-for-${categoryName.replace(/\s/g, '-')}`);
-
-    if (!subcategoryWrapper) {
-        subcategoryWrapper = document.createElement('div');
-        subcategoryWrapper.className = 'subcategory-wrapper';
-        subcategoryWrapper.id = `sub-for-${categoryName.replace(/\s/g, '-')}`;
-
-        const secondaryCategories = [...new Set(
-            wordsData
-                .filter(w => w["分類"] && w["分類"][0] === categoryName && w["分類"][1])
-                .map(w => w["分類"][1])
-        )];
-
-        const hasUncategorized = wordsData.some(w => 
-            w["分類"] && w["分類"][0] === categoryName && (!w["分類"][1] || w["分類"][1].trim() === '')
-        );
-
-        if (hasUncategorized) {
-            secondaryCategories.unshift("未分類");
-        }
-        
-        if (secondaryCategories.length > 0) {
-            const subWrapper = document.createElement('div');
-            subWrapper.className = 'button-wrapper';
-            // ▼▼▼【修改處】更改次分類按鈕的 onclick 事件 ▼▼▼
-            subWrapper.innerHTML = secondaryCategories.map(subCat => 
-                `<button class="letter-btn" data-value='${subCat}' onclick="handleSubcategoryClick(this, '${btn.id}')">${subCat}</button>`
-            ).join(' ');
-            // ▲▲▲ 修改結束 ▲▲▲
-            subcategoryWrapper.appendChild(subWrapper);
-        }
-        
-        btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
-    }
-
-    const mainCollapsibleContent = btn.closest('.collapsible-content');
-
-    if (subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px') {
-        subcategoryWrapper.style.maxHeight = '0px';
-    } else {
-        subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
-    }
-
-    setTimeout(() => {
-        if (mainCollapsibleContent.style.maxHeight !== '0px') {
-             mainCollapsibleContent.style.maxHeight = mainCollapsibleContent.scrollHeight + "px";
-        }
-    }, 310);
-}
-
-
-function handleSubcategoryClick(subcatBtn, primaryBtnId) {
-    // 步驟 1：切換次分類按鈕自身的高亮狀態
-    toggleSelection(subcatBtn);
-
-    // 步驟 2：找到主分類按鈕
-    const primaryBtn = document.getElementById(primaryBtnId);
-    if (!primaryBtn) return;
-
-    // 步驟 3：找到這個主分類下的所有次分類按鈕容器
-    const subcategoryWrapper = subcatBtn.closest('.subcategory-wrapper');
-    if (!subcategoryWrapper) return;
-
-    // 步驟 4：檢查容器內是否還有任何一個按鈕被選中
-    const hasSelectedSubcategories = subcategoryWrapper.querySelector('.letter-btn.selected') !== null;
-
-    // 步驟 5：根據檢查結果，更新主分類按鈕的高亮狀態
-    if (hasSelectedSubcategories) {
-        primaryBtn.classList.add('selected'); // 如果有，確保主分類是高亮的
-    } else {
-        primaryBtn.classList.remove('selected'); // 如果都沒有，移除主分類的高亮
-    }
-        updateCollapsibleHeaderState(primaryBtn);
-}
-
 function createAlphabetButtons() {
     const container = document.getElementById("alphabetButtons");
     if (container) {
         const wrapper = document.createElement('div');
         wrapper.className = 'button-wrapper';
-        // ▼▼▼【修改處】更改 onclick 事件 ▼▼▼
         wrapper.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l =>
             `<button class='letter-btn' data-value='${l.toLowerCase()}' onclick='toggleAndCheckHeader(this)'>${l}</button>`
         ).join(" ");
-        // ▲▲▲ 修改結束 ▲▲▲
         container.appendChild(wrapper);
     }
 }
 
-function createCategoryButtons() {
+function createDomainButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
-
-    let primaryCategories = [...new Set(wordsData.map(w => (w["分類"] && w["分類"][0]) || "未分類"))];
-    
-    const primaryContainer = document.getElementById("primaryCategoryButtons");
-    if (primaryContainer) {
-        primaryContainer.innerHTML = '';
+    let domains = [...new Set(wordsData.map(w => (w["分類"] && w["分類"][0]) || null).filter(Boolean))];
+    const container = document.getElementById("domainCategoryButtons");
+    if (container) {
+        container.innerHTML = '';
         const wrapper = document.createElement('div');
         wrapper.className = 'button-wrapper';
-        
-        primaryCategories.forEach(category => {
-            const btn = document.createElement('button');
-            btn.className = 'letter-btn';
-            btn.textContent = category;
-            btn.dataset.value = category;
-            btn.id = `primary-btn-${category.replace(/\s/g, '-')}`;
-            btn.onclick = () => handlePrimaryCategoryClick(btn, category);
-            wrapper.appendChild(btn);
-        });
-        
-        primaryContainer.appendChild(wrapper);
+        wrapper.innerHTML = domains.map(d => 
+            `<button class='letter-btn' data-value='${d}' onclick='toggleAndCheckHeader(this)'>${d}</button>`
+        ).join(" ");
+        container.appendChild(wrapper);
     }
+}
 
+function createTopicButtons() {
+    if (!wordsData || !Array.isArray(wordsData)) return;
+    let topics = [...new Set(wordsData.map(w => (w["分類"] && w["分類"][1]) || null).filter(Boolean))];
+    const container = document.getElementById("topicCategoryButtons");
+    if (container) {
+        container.innerHTML = '';
+        const wrapper = document.createElement('div');
+        wrapper.className = 'button-wrapper';
+        wrapper.innerHTML = topics.map(t => 
+            `<button class='letter-btn' data-value='${t}' onclick='toggleAndCheckHeader(this)'>${t}</button>`
+        ).join(" ");
+        container.appendChild(wrapper);
+    }
+}
+
+function createSourceButtons() {
+    if (!wordsData || !Array.isArray(wordsData)) return;
+    let sources = [...new Set(wordsData.map(w => (w["分類"] && w["分類"][2]) || null).filter(Boolean))];
+    const container = document.getElementById("sourceCategoryButtons");
+    if (container) {
+        container.innerHTML = '';
+        const wrapper = document.createElement('div');
+        wrapper.className = 'button-wrapper';
+        wrapper.innerHTML = sources.map(s => 
+            `<button class='letter-btn' data-value='${s}' onclick='toggleAndCheckHeader(this)'>${s}</button>`
+        ).join(" ");
+        container.appendChild(wrapper);
+    }
+}
+
+function createSpecialCategoryButtons() {
     const specialCategories = [
         { name: "Checked 單字", value: "checked" },
         { name: "重要單字", value: "important" },
@@ -295,44 +239,38 @@ function createCategoryButtons() {
          wrapper.innerHTML = specialCategories.map(c => 
             `<button class='letter-btn' data-value='${c.value}' onclick='toggleAndCheckHeader(this)'>${c.name}</button>`
          ).join(" ");
-
         specialContainer.appendChild(wrapper);
     }
 }
 
 function createLevelButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
-
     let levels = [...new Set(
         wordsData.map(w => (w["等級"] || "未分類").toUpperCase().trim())
     )];
-
     const levelOrder = ["A1", "A2", "B1", "B2", "C1", "C2", "未分類"];
     levels.sort((a, b) => {
         const indexA = levelOrder.indexOf(a);
         const indexB = levelOrder.indexOf(b);
         return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
     });
-
     const container = document.getElementById("levelButtonsContent");
     if (container) {
         container.innerHTML = "";
         const wrapper = document.createElement('div');
         wrapper.className = 'button-wrapper';
-        // ▼▼▼【修改處】更改 onclick 事件 ▼▼▼
         wrapper.innerHTML = levels
             .map(l => `<button class='letter-btn' data-value='${l}' onclick='toggleAndCheckHeader(this)'>${l}</button>`)
             .join(" ");
-        // ▲▲▲ 修改結束 ▲▲▲
         container.appendChild(wrapper);
     }
 }
 
-
 function startLearning() {
     const selectedLetters = Array.from(document.querySelectorAll('#alphabetButtons .letter-btn.selected')).map(btn => btn.dataset.value);
-    const selectedPrimaries = Array.from(document.querySelectorAll('#primaryCategoryButtons > .button-wrapper > .letter-btn.selected')).map(btn => btn.dataset.value);
-    const selectedSecondaries = Array.from(document.querySelectorAll('.subcategory-wrapper .letter-btn.selected')).map(btn => btn.dataset.value);
+    const selectedDomains = Array.from(document.querySelectorAll('#domainCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
+    const selectedTopics = Array.from(document.querySelectorAll('#topicCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
+    const selectedSources = Array.from(document.querySelectorAll('#sourceCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
     const selectedLevels = Array.from(document.querySelectorAll('#levelButtonsContent .letter-btn.selected')).map(btn => btn.dataset.value);
     const selectedSpecials = Array.from(document.querySelectorAll('#specialCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
     
@@ -345,23 +283,24 @@ function startLearning() {
         });
     }
     
-    if (selectedPrimaries.length > 0) {
+    if (selectedDomains.length > 0) {
         filteredWords = filteredWords.filter(w => {
-            const primaryCat = (w["分類"] && w["分類"][0]) || "未分類";
-            return selectedPrimaries.includes(primaryCat);
+            const domain = (w["分類"] && w["分類"][0]) || null;
+            return selectedDomains.includes(domain);
         });
     }
 
-    if (selectedSecondaries.length > 0) {
+    if (selectedTopics.length > 0) {
         filteredWords = filteredWords.filter(w => {
-
-            const primaryCat = (w["分類"] && w["分類"][0]) || "未分類";
-            if (selectedPrimaries.length > 0 && !selectedPrimaries.includes(primaryCat)) {
-                return false;
-            }
-            
-            const secondaryCat = (w["分類"] && w["分類"][1]) || "未分類"; // 將空次分類視為 "未分類"
-            return selectedSecondaries.includes(secondaryCat);
+            const topic = (w["分類"] && w["分類"][1]) || null;
+            return selectedTopics.includes(topic);
+        });
+    }
+    
+    if (selectedSources.length > 0) {
+        filteredWords = filteredWords.filter(w => {
+            const source = (w["分類"] && w["分類"][2]) || null;
+            return selectedSources.includes(source);
         });
     }
     
@@ -374,7 +313,6 @@ function startLearning() {
     
     if (selectedSpecials.length > 0) {
         const specialWordsSet = new Set();
-
         selectedSpecials.forEach(specialType => {
             switch (specialType) {
                 case 'checked':
@@ -398,7 +336,6 @@ function startLearning() {
                     break;
             }
         });
-
         filteredWords = filteredWords.filter(w => {
             const wordText = w.Words || w.word || w["單字"] || "";
             return specialWordsSet.has(wordText);
@@ -409,7 +346,6 @@ function startLearning() {
         showNotification("⚠️ 找不到符合條件的單字。", "error");
         return;
     }
-
     displayWordList(filteredWords, "學習列表");
 }
 
@@ -470,7 +406,8 @@ function displayWordList(words, title) {
     lastWordListType = "custom_selection";
 }
 
-// ... (其他函式保持不變) ...
+// ... (The rest of the unchanged functions remain the same) ...
+
 function backToFirstLayer() {
     document.getElementById("mainPageContainer").style.display = "block";
     document.getElementById("wordList").style.display = "none";
