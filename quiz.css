@@ -38,7 +38,7 @@ h1, h2 {
 
 /* word-link 按鈕樣式 */
 .word-link {
-    background-color: #9babc4; /* 藍色背景 */
+    background-color: transparent; 
     color: white; /* 白色文字 */
     padding: 5px 10px; /* 內距 */
     border-radius: 15px; /* 圓角 */
@@ -48,6 +48,7 @@ h1, h2 {
     font-size: 18px; /* 字體大小與其他按鈕一致 */
     transition: background-color 0.3s ease; /* 背景顏色平滑過渡 */
     margin-right: 5px; /* 右側間距，與其他元素分隔 */
+    border: #d8dfe6;
 }
 
 .word-link:hover {
