@@ -1,13 +1,49 @@
-let historyStack = []; // 記錄所有歷史狀態
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDbGZT_q1zNQqdDtUNYy1sC63wHZtD6KAE",
+  authDomain: "my-reading-challenge-app.firebaseapp.com",
+  projectId: "my-reading-challenge-app",
+  storageBucket: "my-reading-challenge-app.firebasestorage.app",
+  messagingSenderId: "650410268845",
+  appId: "1:650410268845:web:f23af9ea10dc04d7adce24",
+  measurementId: "G-HRMT77J4Z2"
+};
+
+// 初始化 Firebase
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+// --- 全域變數 ---
+let currentUser = null; // 用來儲存登入的使用者
+let localUserData = {}; // 用來快取訪客或已登入使用者的資料
+
+let historyStack = [];
 let wordsData = [];
 let sentenceAudio = new Audio();
-let lastWordListType = ""; // 記錄進入單字列表的方式
-let lastWordListValue = ""; // 記錄字母或分類值
+let lastWordListType = "";
+let lastWordListValue = "";
 let lastSentenceListWord = "";
 let isAutoPlaying = false;
 let isPaused = false;
 let currentAudio = new Audio();
 window.currentWordList = [];
+
+// --- UI 元素 ---
+const loginView = document.getElementById('login-view');
+const appContainer = document.getElementById('app-container');
+const googleSigninBtn = document.getElementById('google-signin-btn');
+const guestModeBtn = document.getElementById('guest-mode-btn');
+const userInfo = document.getElementById('user-info');
+const signOutBtn = document.getElementById('sign-out-btn');
+
 
 function showNotification(message, type = 'success') {
     const container = document.getElementById('notification-container');
@@ -22,6 +58,138 @@ function showNotification(message, type = 'success') {
     setTimeout(() => {
         toast.remove();
     }, 4000);
+}
+
+function showLoginView() {
+    loginView.classList.remove('is-hidden');
+    appContainer.classList.add('is-hidden');
+}
+
+async function showAppView(user) {
+    currentUser = user;
+    loginView.classList.add('is-hidden');
+    appContainer.classList.remove('is-hidden');
+
+    if (user) {
+        userInfo.textContent = `Signed in as ${user.displayName}`;
+        signOutBtn.hidden = false;
+    } else {
+        userInfo.textContent = 'Guest Mode';
+        signOutBtn.hidden = true;
+    }
+}
+
+function signIn() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider).catch(error => {
+        console.error("Sign-in error", error);
+        showNotification(`登入失敗: ${error.message}`, 'error');
+    });
+}
+
+function signOutUser() {
+    auth.signOut();
+}
+
+async function enterGuestMode() {
+    await loadUserData(); // 從 localStorage 載入訪客資料
+    await showAppView(null);
+}
+
+
+// ==========================================
+// 資料儲存 (核心修改)
+// ==========================================
+
+async function loadUserData() {
+    localUserData = {}; // 重置快取
+    if (currentUser) {
+        // --- 從 Firestore 讀取 ---
+        try {
+            const docRef = db.collection('userNotes').doc(currentUser.uid);
+            const doc = await docRef.get();
+            if (doc.exists) {
+                localUserData = doc.data();
+                console.log("✅ 從 Firestore 載入使用者資料成功");
+            } else {
+                console.log("ℹ️ Firestore 中尚無此使用者的資料");
+            }
+        } catch (error) {
+            console.error("❌ 從 Firestore 讀取資料失敗:", error);
+            showNotification('讀取雲端資料失敗', 'error');
+        }
+    } else {
+        // --- 從 LocalStorage 讀取 ---
+        const data = {};
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key.startsWith('note_') || key.startsWith('checked_') || key.startsWith('important_') || key === 'wrongWords') {
+                 data[key] = localStorage.getItem(key);
+            }
+        }
+        localUserData = data;
+        console.log("✅ 從 LocalStorage 載入訪客資料成功");
+    }
+}
+
+async function persistUserData() {
+    if (currentUser) {
+        // --- 寫入 Firestore ---
+        try {
+            const docRef = db.collection('userNotes').doc(currentUser.uid);
+            await docRef.set(localUserData, { merge: true }); // 使用 merge 避免覆蓋
+            console.log("✅ 資料已同步至 Firestore");
+        } catch (error) {
+            console.error("❌ 寫入 Firestore 失敗:", error);
+            showNotification('同步雲端資料失敗', 'error');
+        }
+    } else {
+        // --- 寫入 LocalStorage ---
+        Object.keys(localUserData).forEach(key => {
+            localStorage.setItem(key, localUserData[key]);
+        });
+        console.log("✅ 資料已儲存至 LocalStorage");
+    }
+}
+
+// 輔助函式，用來讀取特定 key 的值
+function getData(key) {
+    // Firestore 的 wrongWords 是 JSON 字串，需要解析
+    if (currentUser && key === 'wrongWords' && typeof localUserData[key] === 'string') {
+        try {
+            return JSON.parse(localUserData[key]);
+        } catch {
+            return [];
+        }
+    }
+    // localStorage 的情況
+    if (!currentUser && key === 'wrongWords') {
+         try {
+            return JSON.parse(localUserData[key] || '[]');
+        } catch {
+            return [];
+        }
+    }
+    return localUserData[key];
+}
+
+// 輔助函式，用來設定特定 key 的值
+function setData(key, value) {
+    if (typeof value === 'object') {
+        localUserData[key] = JSON.stringify(value);
+    } else {
+        localUserData[key] = value;
+    }
+    persistUserData(); // 每次設定後自動儲存
+}
+
+// 輔助函式，用來移除特定 key
+function removeData(key) {
+    delete localUserData[key];
+    if (!currentUser) { // 同時從 localStorage 刪除
+        localStorage.removeItem(key);
+    }
+    persistUserData();
 }
 
 function updateCollapsibleHeaderState(btn) {
@@ -784,15 +952,17 @@ function resumeAutoPlay() {
 }
 
 function toggleCheck(word, button) {
-    let isChecked = localStorage.getItem(`checked_${word}`) === "true";
+    const key = `checked_${word}`;
+    let isChecked = getData(key) === "true"; // 使用新的 getData 函式
     let icon = button.querySelector("img");
     let wordItemContainer = button.closest(".word-item-container");
+
     if (isChecked) {
-        localStorage.removeItem(`checked_${word}`);
+        removeData(key);
         icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
         wordItemContainer.classList.remove("checked");
     } else {
-        localStorage.setItem(`checked_${word}`, "true");
+        setData(key, "true");
         icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg";
         wordItemContainer.classList.add("checked");
     }
@@ -844,8 +1014,9 @@ function showDetails(word) {
         pauseButton.classList.remove("playing");
         pauseButton.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
     }
+    const isImportant = getData(`important_${word.Words}`) === "true"; // 使用新的 getData
     let phonetics = `<div class="phonetics-container" style="display: flex; align-items: center; gap: 10px;">
-        <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${word.Words}", this)' ${localStorage.getItem(`important_${word.Words}`) === "true" ? "checked" : ""}>
+        <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${word.Words}", this)' ${isImportant ? "checked" : ""}>
         <div id="wordTitle" style="font-size: 20px; font-weight: bold;">${word.Words}</div>`;
     if (word["pronunciation-1"]) phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word["pronunciation-1"]}</button>`;
     if (word["pronunciation-2"]) phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}-2.mp3")'>${word["pronunciation-2"]}</button>`;
@@ -1052,8 +1223,12 @@ function backToPrevious() {
 }
 
 function toggleImportant(word, checkbox) {
-    if (checkbox.checked) localStorage.setItem(`important_${word}`, "true");
-    else localStorage.removeItem(`important_${word}`);
+    const key = `important_${word}`;
+    if (checkbox.checked) {
+        setData(key, "true");
+    } else {
+        removeData(key);
+    }
 }
 
 function saveNote() {
@@ -1061,8 +1236,12 @@ function saveNote() {
     let noteTextArea = document.getElementById("wordNote");
     let note = noteTextArea.value.trim();
     if (word) {
-        if (note.length > 0) localStorage.setItem(`note_${word}`, note);
-        else localStorage.removeItem(`note_${word}`);
+        const key = `note_${word}`;
+        if (note.length > 0) {
+            setData(key, note); // 使用新的 setData 函式
+        } else {
+            removeData(key); // 使用新的 removeData 函式
+        }
         showNotification(note.length > 0 ? "✅ 筆記已儲存！" : "🗑️ 筆記已刪除！", 'success');
         if (lastWordListType === "noteWords") showNoteWords();
     }
@@ -1071,7 +1250,8 @@ function saveNote() {
 function displayNote() {
     let word = document.getElementById("wordTitle")?.textContent.trim();
     if (word) {
-        document.getElementById("wordNote").value = localStorage.getItem(`note_${word}`) || "";
+        const key = `note_${word}`;
+        document.getElementById("wordNote").value = getData(key) || ""; // 使用新的 getData 函式
     }
 }
 
@@ -1094,17 +1274,13 @@ document.addEventListener("keydown", function (event) {
 
 function exportAllData() {
     try {
-        const data = {};
-        for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            data[key] = localStorage.getItem(key);
-        }
-        const jsonString = JSON.stringify(data, null, 2);
+        // localUserData 永遠保持最新狀態，直接匯出即可
+        const jsonString = JSON.stringify(localUserData, null, 2);
         const blob = new Blob([jsonString], { type: 'application/json;charset=utf-8' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
-        a.download = "my_english_learning_backup.json";
+        a.download = "my_vocabulary_backup.json";
         a.click();
         URL.revokeObjectURL(url);
         showNotification("✅ 學習資料已成功匯出！", "success");
@@ -1124,12 +1300,11 @@ function importAllData() {
         reader.onload = event => {
             try {
                 const data = JSON.parse(event.target.result);
-                localStorage.clear();
-                Object.keys(data).forEach(key => {
-                    localStorage.setItem(key, data[key]);
+                localUserData = data; // 直接更新到 localUserData
+                persistUserData().then(() => { // 觸發儲存
+                    showNotification("✅ 學習資料已成功匯入！", "success");
+                    setTimeout(() => location.reload(), 1000);
                 });
-                showNotification("✅ 學習資料已成功匯入！", "success");
-                setTimeout(() => location.reload(), 1000);
             } catch (error) {
                 showNotification("❌ 檔案匯入失敗，格式不正確。", "error");
             }
@@ -1138,6 +1313,39 @@ function importAllData() {
     };
     input.click();
 }
+
+functioninitializeApp() {
+    // --- 綁定登入/登出按鈕事件 ---
+    googleSigninBtn.addEventListener('click', signIn);
+    signOutBtn.addEventListener('click', signOutUser);
+    guestModeBtn.addEventListener('click', enterGuestMode);
+    
+    // --- 原有的 DOMContentLoaded 邏輯 ---
+    const loadingOverlay = document.getElementById('loading-overlay');
+    // ... (除了 fetch 和按鈕事件綁定之外，你原本 DOMContentLoaded 裡的其他程式碼)
+     fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
+        .then(res => res.json())
+        .then(data => {
+             // ... (你原本 fetch 成功後的處理邏輯)
+        });
+}
+
+// --- Firebase Auth 狀態監聽 (App 的進入點) ---
+auth.onAuthStateChanged(async (user) => {
+    if (user) {
+        // 使用者已登入
+        console.log("Auth state: Logged in", user);
+        currentUser = user;
+        await loadUserData(); // 從 Firestore 載入
+        await showAppView(user);
+    } else {
+        // 使用者已登出或從未登入
+        console.log("Auth state: Logged out");
+        currentUser = null;
+        localUserData = {}; // 清空資料
+        showLoginView();
+    }
+});
 
 function displayWordDetailsFromURL() {
     let wordName = new URLSearchParams(window.location.search).get('word');
