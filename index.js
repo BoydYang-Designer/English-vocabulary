@@ -1366,40 +1366,48 @@ function enableWordCopyOnClick() {
     if (!meaningContainer) return;
 
     meaningContainer.addEventListener('click', function(event) {
+        // 確保點擊的是文字區域，而不是按鈕等其他元素
         if (event.target.tagName !== 'P' && event.target.tagName !== 'DIV' && event.target.tagName !== 'SPAN') {
             return;
         }
 
         const range = document.caretRangeFromPoint(event.clientX, event.clientY);
-        if (!range) return; 
+        if (!range) return;
+        
         const textNode = range.startContainer;
-        if (textNode.nodeType !== Node.TEXT_NODE) return; 
+        if (textNode.nodeType !== Node.TEXT_NODE) return;
 
         const text = textNode.textContent;
         const offset = range.startOffset;
 
         let start = offset;
         let end = offset;
-        const wordRegex = /\w/; 
+        // 使用正則表達式來判斷是否為單字字元
+        const wordRegex = /\w/;
 
+        // 向前找到單字開頭
         while (start > 0 && wordRegex.test(text[start - 1])) {
             start--;
         }
+        // 向後找到單字結尾
         while (end < text.length && wordRegex.test(text[end])) {
             end++;
         }
 
-        if (start === end) return; 
+        if (start === end) return;
+
         const wordRange = document.createRange();
         wordRange.setStart(textNode, start);
         wordRange.setEnd(textNode, end);
-        
+
         const selectedWord = wordRange.toString();
         const highlightSpan = document.createElement('span');
         highlightSpan.className = 'word-click-highlight';
-        
+
+        // 嘗試包裹單字以產生高亮效果
         try {
             wordRange.surroundContents(highlightSpan);
+            // 600毫秒後移除高亮效果
             setTimeout(() => {
                 if (highlightSpan.parentNode) {
                     const parent = highlightSpan.parentNode;
@@ -1407,20 +1415,22 @@ function enableWordCopyOnClick() {
                         parent.insertBefore(highlightSpan.firstChild, highlightSpan);
                     }
                     parent.removeChild(highlightSpan);
-                    parent.normalize(); 
+                    parent.normalize();
                 }
-            }, 600); 
+            }, 600);
         } catch (e) {
             console.error("Highlight effect failed:", e);
         }
 
+        // 將選中的單字複製到剪貼簿
         navigator.clipboard.writeText(selectedWord)
             .then(() => {
                 const searchInput = document.getElementById('searchInputDetails');
                 if (searchInput) {
+                    // 成功後，將單字填入搜尋框並觸發搜尋
                     searchInput.value = selectedWord;
-                    searchInput.focus(); 
-                    filterWordsInDetails(); 
+                    searchInput.focus();
+                    filterWordsInDetails();
                 }
             })
             .catch(err => {
