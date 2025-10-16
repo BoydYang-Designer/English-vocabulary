@@ -24,28 +24,6 @@
     <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js" defer></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js" defer></script>
 
-    <script defer>
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyDbGZT_q1zNQqdDtUNYy1sC63wHZtD6KAE",
-        authDomain: "my-reading-challenge-app.firebaseapp.com",
-        projectId: "my-reading-challenge-app",
-        storageBucket: "my-reading-challenge-app.firebasestorage.app",
-        messagingSenderId: "650410268845",
-        appId: "1:650410268845:web:6752fe76b20e14a8adce24",
-        measurementId: "G-TBVCTLJQMX"
-      };
-
-      // Initialize Firebase
-      // 這個判斷是為了防止重複初始化，是一個好習慣
-      if (typeof firebase !== 'undefined' && !firebase.apps.length) {
-          firebase.initializeApp(firebaseConfig);
-          // 【關鍵修復】在這裡初始化 Firestore 服務
-          const db = firebase.firestore();
-          console.log("Firebase and Firestore Initialized!");
-      }
-    </script>
-
     <script src="index.js" defer></script>
 </head>
 <body>

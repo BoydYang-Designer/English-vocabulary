@@ -1,5 +1,22 @@
 
 
+const firebaseConfig = {
+    apiKey: "AIzaSyDbGZT_q1zNQqdDtUNYy1sC63wHZtD6KAE",
+    authDomain: "my-reading-challenge-app.firebaseapp.com",
+    projectId: "my-reading-challenge-app",
+    storageBucket: "my-reading-challenge-app.firebasestorage.app",
+    messagingSenderId: "650410268845",
+    appId: "1:650410268845:web:6752fe76b20e14a8adce24",
+    measurementId: "G-TBVCTLJQMX"
+};
+
+// 初始化 Firebase
+firebase.initializeApp(firebaseConfig);
+
+// 初始化 Firestore 服務
+const db = firebase.firestore();
+console.log("Firebase and Firestore Initialized from index.js!");
+
 let currentUser = null; // 用於儲存當前登入的使用者
 let vocabularyData = {}; // 全域物件，取代多個 localStorage key
 const LOCAL_STORAGE_KEY = 'vocabularyGuestData'; // 訪客模式的本地儲存 key
@@ -41,7 +58,7 @@ window.setCheckedSentenceWords = function(newChecked) {
     vocabularyData.checkedSentenceWords = newChecked;
 }
 
-// index.js
+
 
 function initializeAppLogic() {
     // 顯示載入畫面 (以防萬一它被隱藏了)
