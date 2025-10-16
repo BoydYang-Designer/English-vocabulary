@@ -1,74 +1,49 @@
+// index.js
 
-
-const firebaseConfig = {
-    apiKey: "AIzaSyDbGZT_q1zNQqdDtUNYy1sC63wHZtD6KAE",
-    authDomain: "my-reading-challenge-app.firebaseapp.com",
-    projectId: "my-reading-challenge-app",
-    storageBucket: "my-reading-challenge-app.firebasestorage.app",
-    messagingSenderId: "650410268845",
-    appId: "1:650410268845:web:6752fe76b20e14a8adce24",
-    measurementId: "G-TBVCTLJQMX"
-};
-
-// 初始化 Firebase
-firebase.initializeApp(firebaseConfig);
-
-// 初始化 Firestore 服務
-const db = firebase.firestore();
-console.log("Firebase and Firestore Initialized from index.js!");
-
-let currentUser = null; // 用於儲存當前登入的使用者
-let vocabularyData = {}; // 全域物件，取代多個 localStorage key
-const LOCAL_STORAGE_KEY = 'vocabularyGuestData'; // 訪客模式的本地儲存 key
-let historyStack = []; // 記錄所有歷史狀態
+// These variables are specific to the index page logic
 let wordsData = [];
 let sentenceAudio = new Audio();
-let lastWordListType = ""; // 記錄進入單字列表的方式
-let lastWordListValue = ""; // 記錄字母或分類值
+let lastWordListType = "";
+let lastWordListValue = "";
 let lastSentenceListWord = "";
 let isAutoPlaying = false;
 let isPaused = false;
 let currentAudio = new Audio();
 window.currentWordList = [];
-window.getVocabularyData = () => vocabularyData;
-window.persistVocabularyData = persistData;
-window.setWrongWords = function(newWrongWords) {
-    vocabularyData.wrongWords = newWrongWords;
-}
-window.setCheckedWords = function(newCheckedWords) {
-    vocabularyData.checkedWords = newCheckedWords;
-}
-window.setImportantWords = function(newImportantWords) {
-    vocabularyData.importantWords = newImportantWords;
-}
-window.setNotes = function(newNotes) {
-    vocabularyData.notes = newNotes;
-}
-// ... 為 sentence.js 新增的部分
-window.setCheckedSentences = function(newChecked) {
-    vocabularyData.checkedSentences = newChecked;
-}
-window.setImportantSentences = function(newImportant) {
-    vocabularyData.importantSentences = newImportant;
-}
-window.setNoteSentences = function(newNotes) {
-    vocabularyData.noteSentences = newNotes;
-}
-window.setCheckedSentenceWords = function(newChecked) {
-    vocabularyData.checkedSentenceWords = newChecked;
+let historyStack = [];
+
+// This function shows the main app view
+function showAppView(user) {
+    const loginView = document.getElementById('login-view');
+    const appContainer = document.getElementById('app-container');
+    if (loginView) loginView.classList.add('is-hidden');
+    if (appContainer) appContainer.classList.remove('is-hidden');
+
+    const isGuest = !user;
+    const userInfoEl = document.getElementById('user-info');
+    const signOutBtn = document.getElementById('sign-out-btn');
+    const signInFromGuestBtn = document.getElementById('sign-in-from-guest-btn');
+
+    if (!isGuest) {
+        userInfoEl.textContent = `Welcome, ${user.displayName || user.email}`;
+        signOutBtn.classList.remove('is-hidden');
+        signInFromGuestBtn.classList.add('is-hidden');
+    } else {
+        userInfoEl.textContent = 'Guest Mode';
+        signOutBtn.classList.add('is-hidden');
+        signInFromGuestBtn.classList.remove('is-hidden');
+    }
+    backToFirstLayer();
 }
 
-
-
+// Main app logic for the index page
 function initializeAppLogic() {
-    // 顯示載入畫面 (以防萬一它被隱藏了)
     const loadingOverlay = document.getElementById('loading-overlay');
     if (loadingOverlay) {
         loadingOverlay.style.display = 'flex';
         loadingOverlay.style.opacity = '1';
     }
 
-    // 使用 Promise.all 來同時載入必要的 JSON 檔案
     return Promise.all([
         fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
             .then(res => {
@@ -78,18 +53,13 @@ function initializeAppLogic() {
     ])
     .then(([wordsJsonData]) => {
         wordsData = wordsJsonData["New Words"] || [];
-        console.log("✅ Z_total_words.json 載入成功");
+        console.log("✅ Z_total_words.json loaded successfully");
 
-        // 處理分類資料，確保格式正確
         wordsData.forEach(w => {
-            if (typeof w["分類"] === "string") {
-                w["分類"] = [w["分類"]];
-            } else if (!Array.isArray(w["分類"])) {
-                w["分類"] = [];
-            }
+            if (typeof w["分類"] === "string") w["分類"] = [w["分類"]];
+            else if (!Array.isArray(w["分類"])) w["分類"] = [];
         });
 
-        // 成功載入資料後，才建立頁面上的按鈕
         createAlphabetButtons();
         createDomainButtons();
         createTopicButtons();
@@ -97,28 +67,73 @@ function initializeAppLogic() {
         createSpecialCategoryButtons();
         createLevelButtons();
         
-        console.log("✅ 按鈕建立完成");
-        showNotification('✅ 單字資料載入完成！', 'success');
-
-        // 處理從其他頁面跳轉過來的邏輯
+        console.log("✅ Buttons created successfully");
+        showNotification('✅ Word data loaded!', 'success');
         displayWordDetailsFromURL();
-
     })
     .catch(err => {
-        console.error("❌ 資料載入過程中發生錯誤:", err);
-        showNotification('❌ 資料載入失敗，請檢查網路或檔案路徑。', 'error');
+        console.error("❌ Error during data loading:", err);
+        showNotification('❌ Failed to load data. Please check network or file path.', 'error');
     })
     .finally(() => {
-        // 無論成功或失敗，最後都要隱藏載入畫面
         if (loadingOverlay) {
             loadingOverlay.style.opacity = '0';
-            setTimeout(() => {
-                loadingOverlay.style.display = 'none';
-            }, 500); // 等待淡出動畫結束
+            setTimeout(() => { loadingOverlay.style.display = 'none'; }, 500);
         }
     });
 }
 
+// Listen for the 'auth-ready' event from auth-manager.js
+document.addEventListener('auth-ready', function(event) {
+    console.log('Auth is ready on index.html. User:', event.detail.user);
+    const { user } = event.detail;
+    
+    // Show the correct view (app or login)
+    showAppView(user);
+    
+    // Initialize the main application logic
+    initializeAppLogic();
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // --- Bind login/logout button events ---
+    const googleSigninBtn = document.getElementById('google-signin-btn');
+    const guestModeBtn = document.getElementById('guest-mode-btn');
+    const signOutBtn = document.getElementById('sign-out-btn');
+    const signInFromGuestBtn = document.getElementById('sign-in-from-guest-btn');
+
+    if (googleSigninBtn) googleSigninBtn.addEventListener('click', signIn);
+    if (guestModeBtn) guestModeBtn.addEventListener('click', enterGuestMode);
+    if (signOutBtn) signOutBtn.addEventListener('click', signOutUser);
+    if (signInFromGuestBtn) signInFromGuestBtn.addEventListener('click', signIn);
+
+    // --- Other page-specific event bindings ---
+    enableWordCopyOnClick();
+
+    const sentenceButton = document.getElementById("sentencePageBtn");
+    if (sentenceButton) sentenceButton.addEventListener("click", () => window.location.href = "sentence.html");
+
+    const quizButton = document.getElementById("startQuizBtn");
+    if (quizButton) quizButton.addEventListener("click", () => window.location.href = "quiz.html?show=sentenceCategories&from=index");
+
+    const startLearningButton = document.getElementById("startLearningBtn");
+    if (startLearningButton) startLearningButton.addEventListener("click", startLearning);
+    
+    document.querySelectorAll(".collapsible-header").forEach(button => {
+        button.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+});
+
+// --- ALL THE OTHER FUNCTIONS from your original index.js go here ---
 
 function showNotification(message, type = 'success') {
     const container = document.getElementById('notification-container');
@@ -157,54 +172,36 @@ function toggleAndCheckHeader(btn) {
     updateCollapsibleHeaderState(btn);
 }
 
-// ▼▼▼ 【新增】處理全域「主題」按鈕點擊的函式 ▼▼▼
 function handleGlobalTopicClick(btn) {
-    // 1. 切換自身狀態
     toggleSelection(btn);
     updateCollapsibleHeaderState(btn);
-
-    // 2. 同步更新所有巢狀「主題」按鈕的狀態
     const topicValue = btn.dataset.value;
     const isSelected = btn.classList.contains('selected');
     const nestedTopicBtns = document.querySelectorAll(`.subcategory-wrapper .letter-btn[data-value="${topicValue}"]`);
-    
     nestedTopicBtns.forEach(nestedBtn => {
         nestedBtn.classList.toggle('selected', isSelected);
-        // 更新其所屬的「領域」按鈕狀態
         updateDomainButtonState(nestedBtn);
     });
 }
 
-// ▼▼▼ 【新增】處理巢狀「主題」按鈕點擊的函式 ▼▼▼
 function handleNestedTopicClick(btn) {
-    // 1. 切換自身狀態
     toggleSelection(btn);
-    
-    // 2. 更新所屬的「領域」按鈕狀態
     updateDomainButtonState(btn);
-
-    // 3. 同步更新全域「主題」按鈕的狀態
     const topicValue = btn.dataset.value;
     const isSelected = btn.classList.contains('selected');
     const globalTopicBtn = document.querySelector(`#topicCategoryButtons .letter-btn[data-value="${topicValue}"]`);
-    
     if (globalTopicBtn) {
         globalTopicBtn.classList.toggle('selected', isSelected);
         updateCollapsibleHeaderState(globalTopicBtn);
     }
 }
 
-
-// ▼▼▼ 【新增】更新「領域」按鈕狀態的輔助函式 ▼▼▼
 function updateDomainButtonState(nestedBtn) {
     const subcategoryWrapper = nestedBtn.closest('.subcategory-wrapper');
     if (!subcategoryWrapper) return;
-
     const domainBtn = subcategoryWrapper.previousElementSibling;
     if (!domainBtn || !domainBtn.classList.contains('letter-btn')) return;
-
     const hasSelectedSubcategories = subcategoryWrapper.querySelector('.letter-btn.selected') !== null;
-
     if (hasSelectedSubcategories) {
         domainBtn.classList.add('selected');
     } else {
@@ -213,108 +210,42 @@ function updateDomainButtonState(nestedBtn) {
     updateCollapsibleHeaderState(domainBtn);
 }
 
-
-// ▼▼▼ 【修改】處理「領域」按鈕點擊的函式 ▼▼▼
 function handleDomainClick(btn, domainName) {
     let parentContainer = btn.closest('.collapsible-content');
     let subcategoryWrapper = document.getElementById(`sub-for-${domainName.replace(/\s/g, '-')}`);
-
     if (!subcategoryWrapper) {
         subcategoryWrapper = document.createElement('div');
         subcategoryWrapper.className = 'subcategory-wrapper';
         subcategoryWrapper.id = `sub-for-${domainName.replace(/\s/g, '-')}`;
-
         const topics = [...new Set(
             wordsData
                 .filter(w => w["分類"] && w["分類"][0] === domainName && w["分類"][1])
                 .map(w => w["分類"][1])
         )];
-
         if (topics.length > 0) {
             const subWrapper = document.createElement('div');
             subWrapper.className = 'button-wrapper';
             subWrapper.innerHTML = topics.map(topic => {
-                // 檢查全域主題按鈕是否已被選中
                 const globalTopicBtn = document.querySelector(`#topicCategoryButtons .letter-btn[data-value="${topic}"]`);
                 const isSelectedClass = globalTopicBtn && globalTopicBtn.classList.contains('selected') ? 'selected' : '';
                 return `<button class="letter-btn ${isSelectedClass}" data-value='${topic}' onclick="handleNestedTopicClick(this)">${topic}</button>`;
             }).join(' ');
             subcategoryWrapper.appendChild(subWrapper);
         }
-        
         btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
     }
-
     const mainCollapsibleContent = btn.closest('.collapsible-content');
-
     if (subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px') {
         subcategoryWrapper.style.maxHeight = '0px';
     } else {
         subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
     }
-
     setTimeout(() => {
         if (mainCollapsibleContent.style.maxHeight !== '0px') {
              mainCollapsibleContent.style.maxHeight = mainCollapsibleContent.scrollHeight + "px";
         }
     }, 310);
 }
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    // --- 綁定新的登入/登出按鈕事件 ---
-    const googleSigninBtn = document.getElementById('google-signin-btn');
-    const guestModeBtn = document.getElementById('guest-mode-btn');
-    const signOutBtn = document.getElementById('sign-out-btn');
-    const signInFromGuestBtn = document.getElementById('sign-in-from-guest-btn');
-
-    if (googleSigninBtn) googleSigninBtn.addEventListener('click', signIn);
-    if (guestModeBtn) guestModeBtn.addEventListener('click', enterGuestMode);
-    if (signOutBtn) signOutBtn.addEventListener('click', signOutUser);
-    if (signInFromGuestBtn) signInFromGuestBtn.addEventListener('click', signIn);
-    // --- 舊有事件綁定 (保持不變) ---
-    const loadingOverlay = document.getElementById('loading-overlay');
-
-    document.querySelectorAll('.collapsible-content').forEach(content => {
-        content.style.maxHeight = '0px';
-    });
-
-    // 移除這裡的 display 設定，交由 showAppView/showLoginView 控制
-    // document.getElementById("mainPageContainer").style.display = "block";
-    
-    enableWordCopyOnClick();
-
-    const sentenceButton = document.getElementById("sentencePageBtn");
-    if (sentenceButton) {
-        sentenceButton.addEventListener("click", () => window.location.href = "sentence.html");
-    }
-
-    const quizButton = document.getElementById("startQuizBtn");
-    if (quizButton) {
-        quizButton.addEventListener("click", () => window.location.href = "quiz.html?show=sentenceCategories&from=index");
-    }
-
-    const startLearningButton = document.getElementById("startLearningBtn");
-    if (startLearningButton) {
-        startLearningButton.addEventListener("click", startLearning);
-    }
-    
-    document.querySelectorAll(".collapsible-header").forEach(button => {
-        button.addEventListener("click", function() {
-            this.classList.toggle("active");
-            const content = this.nextElementSibling;
-            
-            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                content.style.maxHeight = '0px';
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    });
-
-    // 移除 fetch 邏輯，因為 Firebase auth listener 才是新的入口點
-    // fetch(...)
-});
 
 function createAlphabetButtons() {
     const container = document.getElementById("alphabetButtons");
@@ -328,7 +259,6 @@ function createAlphabetButtons() {
     }
 }
 
-// ▼▼▼ 【修改】「領域」按鈕的創建邏輯 ▼▼▼
 function createDomainButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
     let domains = [...new Set(wordsData.map(w => (w["分類"] && w["分類"][0]) || null).filter(Boolean))];
@@ -344,8 +274,6 @@ function createDomainButtons() {
     }
 }
 
-
-// ▼▼▼ 【修改】獨立「主題」按鈕的創建邏輯 ▼▼▼
 function createTopicButtons() {
     if (!wordsData || !Array.isArray(wordsData)) return;
     let topics = [...new Set(wordsData.map(w => (w["分類"] && w["分類"][1]) || null).filter(Boolean))];
@@ -418,17 +346,10 @@ function createLevelButtons() {
     }
 }
 
-
-// ▼▼▼ 【修改】學習篩選邏輯 ▼▼▼
 function startLearning() {
     const selectedLetters = Array.from(document.querySelectorAll('#alphabetButtons .letter-btn.selected')).map(btn => btn.dataset.value);
-    
-    // 篩選「領域」時，包含那些僅選中「領域」但未選中其下「主題」的情況
     const selectedDomains = Array.from(document.querySelectorAll('#domainCategoryButtons > .button-wrapper > .letter-btn.selected')).map(btn => btn.dataset.value);
-    
-    // 篩選「主題」時，只需從一個地方（例如全域列表）獲取即可，因為是同步的
     const selectedTopics = Array.from(document.querySelectorAll('#topicCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
-
     const selectedSources = Array.from(document.querySelectorAll('#sourceCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
     const selectedLevels = Array.from(document.querySelectorAll('#levelButtonsContent .letter-btn.selected')).map(btn => btn.dataset.value);
     const selectedSpecials = Array.from(document.querySelectorAll('#specialCategoryButtons .letter-btn.selected')).map(btn => btn.dataset.value);
@@ -442,22 +363,16 @@ function startLearning() {
         });
     }
     
-    // 新的領域和主題篩選邏輯
     if (selectedDomains.length > 0) {
         filteredWords = filteredWords.filter(w => {
             const domain = (w["分類"] && w["分類"][0]) || null;
             const topic = (w["分類"] && w["分類"][1]) || null;
-
-            // 如果沒有選擇任何主題，則只匹配領域
             if (selectedTopics.length === 0) {
                 return selectedDomains.includes(domain);
             }
-            
-            // 如果同時選擇了領域和主題，則單字必須兩者都匹配
             return selectedDomains.includes(domain) && selectedTopics.includes(topic);
         });
     } else if (selectedTopics.length > 0) {
-        // 如果只選擇了主題而沒有選擇領域
          filteredWords = filteredWords.filter(w => {
             const topic = (w["分類"] && w["分類"][1]) || null;
             return selectedTopics.includes(topic);
@@ -480,26 +395,20 @@ function startLearning() {
     
     if (selectedSpecials.length > 0) {
         const specialWordsSet = new Set();
+        const vocabularyData = window.getVocabularyData(); // Get data from auth-manager
         selectedSpecials.forEach(specialType => {
             switch (specialType) {
                 case 'checked':
-                    Object.keys(localStorage)
-                        .filter(key => key.startsWith("checked_") && !key.startsWith("checked_sentence_"))
-                        .forEach(key => specialWordsSet.add(key.replace("checked_", "")));
+                    (vocabularyData.checkedWords || []).forEach(word => specialWordsSet.add(word));
                     break;
                 case 'important':
-                     Object.keys(localStorage)
-                        .filter(key => key.startsWith("important_") && !key.startsWith("important_sentence_"))
-                        .forEach(key => specialWordsSet.add(key.replace("important_", "")));
+                    (vocabularyData.importantWords || []).forEach(word => specialWordsSet.add(word));
                     break;
                 case 'wrong':
-                    (JSON.parse(localStorage.getItem("wrongWords")) || [])
-                        .forEach(word => specialWordsSet.add(word));
+                    (vocabularyData.wrongWords || []).forEach(word => specialWordsSet.add(word));
                     break;
                 case 'note':
-                    Object.keys(localStorage)
-                        .filter(key => key.startsWith("note_") && !key.startsWith("note_sentence_") && localStorage.getItem(key)?.trim() !== "")
-                        .forEach(key => specialWordsSet.add(key.replace("note_", "")));
+                    Object.keys(vocabularyData.notes || {}).forEach(word => specialWordsSet.add(word));
                     break;
             }
         });
@@ -510,17 +419,15 @@ function startLearning() {
     }
 
     if (filteredWords.length === 0) {
-        showNotification("⚠️ 找不到符合條件的單字。", "error");
+        showNotification("⚠️ No matching words found.", "error");
         return;
     }
-    displayWordList(filteredWords, "學習列表");
+    displayWordList(filteredWords, "Learning List");
 }
-
 
 function displayWordList(words, title) {
     document.getElementById("wordListTitle").innerText = title;
     document.getElementById("wordListTitle").style.display = "block";
-    
     document.getElementById("mainPageContainer").style.display = "none";
     document.getElementById("autoPlayBtn").style.display = "block";
     
@@ -529,14 +436,15 @@ function displayWordList(words, title) {
     wordItems.innerHTML = "";
 
     window.currentWordList = words;
+    const vocabularyData = window.getVocabularyData(); // Get data from auth-manager
     
     if (words.length === 0) {
-        wordItems.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
+        wordItems.innerHTML = "<p>⚠️ No matching words</p>";
     } else {
         words.forEach(word => {
             let wordText = word.Words || word.word || word["單字"];
-            let isChecked = localStorage.getItem(`checked_${wordText}`) === "true";
-            let isImportant = localStorage.getItem(`important_${wordText}`) === "true";
+            let isChecked = (vocabularyData.checkedWords || []).includes(wordText);
+            let isImportant = (vocabularyData.importantWords || []).includes(wordText);
             let iconSrc = isChecked ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
 
             let item = document.createElement('div');
@@ -573,9 +481,6 @@ function displayWordList(words, title) {
     lastWordListType = "custom_selection";
 }
 
-/* ... 之後的程式碼與前一版相同，保持不變 ... */
-// ... (The rest of the unchanged functions remain the same) ...
-
 function backToFirstLayer() {
     document.getElementById("mainPageContainer").style.display = "block";
     document.getElementById("wordList").style.display = "none";
@@ -597,7 +502,6 @@ function backToFirstLayer() {
 }
 
 function backToWordList() {
-    // 停止單字細節頁面可能正在播放的音訊
     if (isAutoPlaying) {
         isAutoPlaying = false;
         isPaused = false;
@@ -608,15 +512,10 @@ function backToWordList() {
         sentenceAudio.currentTime = 0;
     }
 
-    // 隱藏單字細節區塊
     document.getElementById("wordDetails").style.display = "none";
-
-    // 顯示單字列表區塊及相關按鈕
     document.getElementById("wordList").style.display = "block";
     document.getElementById("wordListTitle").style.display = "block";
     document.getElementById("autoPlayBtn").style.display = "block";
-    
-    // 確保主頁面仍然是隱藏的
     document.getElementById("mainPageContainer").style.display = "none";
 }
 
@@ -627,13 +526,13 @@ function navigateTo(state) {
     if (historyStack.length > 10) {
         historyStack.shift();
     }
-    console.log("📌 新增到歷史紀錄：", historyStack);
+    console.log("📌 Added to history:", historyStack);
 }
 
 function filterWords() {
     let input = document.getElementById("searchInput").value.toLowerCase();
     if (!wordsData || wordsData.length === 0) {
-        console.error("❌ wordsData 為空，請確認 JSON 是否成功載入");
+        console.error("❌ wordsData is empty, please check if JSON loaded successfully");
         return;
     }
 
@@ -659,7 +558,7 @@ function filterWords() {
             let word = w.Words || w.word || w["單字"] || "";
             return `<p class='word-item' data-index='${index}'>${word}</p>`;
         }).join("")
-        : "<p>⚠️ 沒有符合的單字</p>";
+        : "<p>⚠️ No matching words</p>";
 
     document.querySelectorAll('.word-item').forEach((item, index) => {
         item.addEventListener("click", function () {
@@ -674,7 +573,7 @@ function filterWordsInDetails() {
     let bButton = document.getElementById("bButton");
 
     if (!wordsData || wordsData.length === 0) {
-        console.error("❌ wordsData 未加載");
+        console.error("❌ wordsData not loaded");
         return;
     }
 
@@ -697,7 +596,7 @@ function filterWordsInDetails() {
 
     searchResults.innerHTML = "";
     if (filtered.length === 0) {
-        searchResults.innerHTML = "<p>⚠️ 沒有符合的單字</p>";
+        searchResults.innerHTML = "<p>⚠️ No matching words</p>";
     } else {
         filtered.forEach((wordObj, index) => {
             let word = wordObj.Words || wordObj.word || wordObj["單字"] || "";
@@ -727,7 +626,7 @@ function toggleAutoPlay() {
 
 function startListAutoPlay() {
     if (!window.currentWordList || window.currentWordList.length === 0) {
-        alert("單字列表為空，無法播放！");
+        alert("Word list is empty, cannot play!");
         return;
     }
     isAutoPlaying = true;
@@ -737,7 +636,7 @@ function startListAutoPlay() {
     }
     let testAudio = new Audio();
     testAudio.play().catch(() => {
-        alert("請先手動點擊頁面以啟用自動播放（瀏覽器限制）");
+        alert("Please click the page manually to enable autoplay (browser restriction)");
         isAutoPlaying = false;
         updateAutoPlayButton();
     });
@@ -812,7 +711,7 @@ function removeHighlight(wordText) {
 
 function startAutoPlay() {
     if (!window.currentWordList || window.currentWordList.length === 0) {
-        alert("請先選擇一個單字列表再啟動自動播放！");
+        alert("Please select a word list before starting autoplay!");
         return;
     }
     if (window.currentIndex >= 0 && window.currentIndex < window.currentWordList.length) {
@@ -845,12 +744,13 @@ function resumeAutoPlay() {
     if (document.getElementById("wordList").style.display === "block") {
         playNextWord();
     } else if (sentenceAudio && sentenceAudio.readyState >= 2) {
-        sentenceAudio.play().catch(err => console.error("🔊 播放失敗:", err));
+        sentenceAudio.play().catch(err => console.error("🔊 Playback failed:", err));
     }
     updateAutoPlayButton();
 }
 
 function toggleCheck(word, button) {
+    const vocabularyData = window.getVocabularyData();
     if (!vocabularyData.checkedWords) vocabularyData.checkedWords = [];
 
     const isChecked = vocabularyData.checkedWords.includes(word);
@@ -866,7 +766,8 @@ function toggleCheck(word, button) {
         icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg";
         wordItemContainer.classList.add("checked");
     }
-    persistData(); // 呼叫統一儲存函式
+    window.setCheckedWords(vocabularyData.checkedWords);
+    window.persistVocabularyData();
 }
 
 function createWordVariationsRegex(baseWord) {
@@ -915,12 +816,17 @@ function showDetails(word) {
         pauseButton.classList.remove("playing");
         pauseButton.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
     }
+    
+    const vocabularyData = window.getVocabularyData();
+    const isImportant = (vocabularyData.importantWords || []).includes(word.Words);
+    
     let phonetics = `<div class="phonetics-container" style="display: flex; align-items: center; gap: 10px;">
-        <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${word.Words}", this)' ${localStorage.getItem(`important_${word.Words}`) === "true" ? "checked" : ""}>
+        <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${word.Words}", this)' ${isImportant ? "checked" : ""}>
         <div id="wordTitle" style="font-size: 20px; font-weight: bold;">${word.Words}</div>`;
     if (word["pronunciation-1"]) phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word["pronunciation-1"]}</button>`;
     if (word["pronunciation-2"]) phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}-2.mp3")'>${word["pronunciation-2"]}</button>`;
     phonetics += `</div>`;
+    
     let displayTagsHTML = '';
     const level = word["等級"];
     const categories = word["分類"];
@@ -928,6 +834,7 @@ function showDetails(word) {
     if (categories && Array.isArray(categories) && categories.length > 0) {
         displayTagsHTML += categories.map(cat => `<span class="category-tag">${cat}</span>`).join('');
     }
+    
     let finalDisplayHTML = displayTagsHTML ? `<div class="category-display">${displayTagsHTML}</div>` : '';
     let formattedChinese = (word["traditional Chinese"] || "").replace(/(\d+)\./g, "<br><strong>$1.</strong> ").replace(/\s*([nN]\.|[vV]\.|[aA][dD][jJ]\.|[aA][dD][vV]\.|[pP][rR][eE][pP]\.|[cC][oO][nN][jJ]\.|[pP][rR][oO][nN]\.|[iI][nN][tT]\.)/g, "<br>$1 ").replace(/^<br>/, "");
     let chinese = `${finalDisplayHTML}<div>${formattedChinese}</div>`;
@@ -941,6 +848,7 @@ function showDetails(word) {
     meaning = meaning.replace(/<p><\/p>/g, '');
     const highlightRegex = createWordVariationsRegex(word.Words);
     meaning = meaning.replace(highlightRegex, match => `<span class="highlight-word">${match}</span>`);
+    
     document.getElementById("phoneticContainer").innerHTML = phonetics;
     document.getElementById("chineseContainer").innerHTML = chinese;
     document.getElementById("meaningContainer").innerHTML = meaning;
@@ -1023,12 +931,12 @@ function updateAutoPlayButton() {
     let autoPlayDetailsBtn = document.getElementById("autoPlayDetailsBtn");
     if (document.getElementById("wordList").style.display === "block") {
         if (autoPlayBtn) {
-            autoPlayBtn.textContent = isAutoPlaying ? (isPaused ? "繼續播放" : "停止播放") : "單字自動播放";
+            autoPlayBtn.textContent = isAutoPlaying ? (isPaused ? "Resume Play" : "Stop Play") : "Autoplay Words";
             autoPlayBtn.classList.toggle("playing", isAutoPlaying);
         }
     } else if (document.getElementById("wordDetails").style.display === "block") {
         if (autoPlayDetailsBtn) {
-            autoPlayDetailsBtn.textContent = isAutoPlaying ? (isPaused ? "繼續自動撥放內文" : "暫停撥放") : "內文自動播放";
+            autoPlayDetailsBtn.textContent = isAutoPlaying ? (isPaused ? "Resume Autoplay" : "Pause Autoplay") : "Autoplay Content";
             autoPlayDetailsBtn.classList.toggle("playing", isAutoPlaying);
         }
     }
@@ -1081,7 +989,7 @@ function playSentenceAudio(audioFile) {
                 pauseBtn.classList.add("playing");
             }
         };
-    }).catch(err => console.error("❌ 音檔播放失敗:", err));
+    }).catch(err => console.error("❌ Audio playback failed:", err));
 }
 
 function togglePauseAudio(button) {
@@ -1123,6 +1031,7 @@ function backToPrevious() {
 }
 
 function toggleImportant(word, checkbox) {
+    const vocabularyData = window.getVocabularyData();
     if (!vocabularyData.importantWords) vocabularyData.importantWords = [];
 
     if (checkbox.checked) {
@@ -1132,7 +1041,8 @@ function toggleImportant(word, checkbox) {
     } else {
         vocabularyData.importantWords = vocabularyData.importantWords.filter(w => w !== word);
     }
-    persistData(); // 呼叫統一儲存函式
+    window.setImportantWords(vocabularyData.importantWords);
+    window.persistVocabularyData();
 }
 
 function saveNote() {
@@ -1141,16 +1051,18 @@ function saveNote() {
     let note = noteTextArea.value.trim();
 
     if (word) {
+        const vocabularyData = window.getVocabularyData();
         if (!vocabularyData.notes) vocabularyData.notes = {};
 
         if (note.length > 0) {
             vocabularyData.notes[word] = note;
-            showNotification("✅ 筆記已儲存！", 'success');
+            showNotification("✅ Note saved!", 'success');
         } else {
             delete vocabularyData.notes[word];
-            showNotification("🗑️ 筆記已刪除！", 'success');
+            showNotification("🗑️ Note deleted!", 'success');
         }
-        persistData(); // 呼叫統一儲存函式
+        window.setNotes(vocabularyData.notes);
+        window.persistVocabularyData();
 
         if (lastWordListType === "noteWords") showNoteWords();
     }
@@ -1159,7 +1071,8 @@ function saveNote() {
 function displayNote() {
     let word = document.getElementById("wordTitle")?.textContent.trim();
     if (word) {
-        document.getElementById("wordNote").value = localStorage.getItem(`note_${word}`) || "";
+        const vocabularyData = window.getVocabularyData();
+        document.getElementById("wordNote").value = (vocabularyData.notes && vocabularyData.notes[word]) || "";
     }
 }
 
@@ -1182,11 +1095,7 @@ document.addEventListener("keydown", function (event) {
 
 function exportAllData() {
     try {
-        const data = {};
-        for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            data[key] = localStorage.getItem(key);
-        }
+        const data = window.getVocabularyData();
         const jsonString = JSON.stringify(data, null, 2);
         const blob = new Blob([jsonString], { type: 'application/json;charset=utf-8' });
         const url = URL.createObjectURL(blob);
@@ -1195,9 +1104,9 @@ function exportAllData() {
         a.download = "my_english_learning_backup.json";
         a.click();
         URL.revokeObjectURL(url);
-        showNotification("✅ 學習資料已成功匯出！", "success");
+        showNotification("✅ Learning data exported successfully!", "success");
     } catch (error) {
-        showNotification("❌ 資料匯出失敗！", "error");
+        showNotification("❌ Data export failed!", "error");
     }
 }
 
@@ -1212,14 +1121,18 @@ function importAllData() {
         reader.onload = event => {
             try {
                 const data = JSON.parse(event.target.result);
-                localStorage.clear();
-                Object.keys(data).forEach(key => {
-                    localStorage.setItem(key, data[key]);
-                });
-                showNotification("✅ 學習資料已成功匯入！", "success");
+                // Here, you should use the functions from auth-manager to update the data
+                if(data.checkedWords) window.setCheckedWords(data.checkedWords);
+                if(data.importantWords) window.setImportantWords(data.importantWords);
+                if(data.wrongWords) window.setWrongWords(data.wrongWords);
+                if(data.notes) window.setNotes(data.notes);
+                // ...and so on for other data types
+                window.persistVocabularyData(); // Save the newly imported data
+                
+                showNotification("✅ Learning data imported successfully!", "success");
                 setTimeout(() => location.reload(), 1000);
             } catch (error) {
-                showNotification("❌ 檔案匯入失敗，格式不正確。", "error");
+                showNotification("❌ File import failed, incorrect format.", "error");
             }
         };
         reader.readAsText(file);
@@ -1307,216 +1220,8 @@ function enableWordCopyOnClick() {
                 }
             })
             .catch(err => {
-                console.error('❌ 複製失敗:', err);
-                showNotification('⚠️ 複製失敗，請手動複製', 'error');
+                console.error('❌ Copy failed:', err);
+                showNotification('⚠️ Copy failed, please copy manually', 'error');
             });
     });
-}
-
-// =================================================================
-// ===== 雲端同步與認證核心邏輯 (貼到 index.js 末尾) =====
-// =================================================================
-
-// --- 應用程式入口：監聽認證狀態變化 ---
-firebase.auth().onAuthStateChanged(async (user) => {
-    if (user) {
-        // --- 使用者已登入 ---
-        console.log("Auth state changed: User is logged in.", user);
-        currentUser = user;
-
-        // 1. 從雲端載入使用者資料
-        await loadDataFromFirestore();
-
-        // 2. 檢查本地是否有訪客資料需要合併
-        const guestDataRaw = localStorage.getItem(LOCAL_STORAGE_KEY);
-        if (guestDataRaw) {
-            console.log("發現訪客資料，開始合併...");
-            try {
-                const guestData = JSON.parse(guestDataRaw);
-                vocabularyData = mergeVocabularyData(guestData, vocabularyData);
-                await saveDataToFirestore();
-                localStorage.removeItem(LOCAL_STORAGE_KEY);
-                showNotification("✅ 已成功將訪客筆記合併至您的帳號！", "success");
-            } catch (error) {
-                console.error("合併訪客資料失敗:", error);
-                showNotification("⚠️ 合併訪客資料時發生錯誤。", "error");
-            }
-        }
-        
-        // 3. 顯示主應用程式介面
-        showAppView(user);
-        
-        // 4. 【關鍵新增】載入核心單字資料並初始化介面
-        await initializeAppLogic();
-
-    } else {
-        // --- 使用者未登入或已登出 ---
-        console.log("Auth state changed: User is logged out.");
-        currentUser = null;
-        vocabularyData = {}; // 清空記憶體中的資料
-        
-        // 隱藏載入畫面，顯示登入選項
-        const loadingOverlay = document.getElementById('loading-overlay');
-        if (loadingOverlay) {
-             loadingOverlay.style.display = 'none';
-        }
-        showLoginView(); // 顯示登入畫面
-    }
-});
-
-// --- UI 管理 ---
-function showLoginView() {
-    const loginView = document.getElementById('login-view');
-    const appContainer = document.getElementById('app-container');
-    if (loginView) loginView.classList.remove('is-hidden');
-    if (appContainer) appContainer.classList.add('is-hidden');
-}
-
-function showAppView(user) {
-    const loginView = document.getElementById('login-view');
-    const appContainer = document.getElementById('app-container');
-    if (loginView) loginView.classList.add('is-hidden');
-    if (appContainer) appContainer.classList.remove('is-hidden');
-
-    const isGuest = !user; // 簡化判斷
-
-    const userInfoEl = document.getElementById('user-info');
-    const signOutBtn = document.getElementById('sign-out-btn');
-    const signInFromGuestBtn = document.getElementById('sign-in-from-guest-btn');
-
-    if (!isGuest) {
-        // 已登入模式
-        userInfoEl.textContent = `歡迎, ${user.displayName || user.email}`;
-        signOutBtn.classList.remove('is-hidden');
-        signInFromGuestBtn.classList.add('is-hidden');
-    } else {
-        // 訪客模式
-        userInfoEl.textContent = '訪客模式';
-        signOutBtn.classList.add('is-hidden');
-        signInFromGuestBtn.classList.remove('is-hidden');
-    }
-    
-    // 重新渲染畫面以反映載入的資料
-    // (注意：您可能需要根據您的應用程式邏輯調整這裡)
-    backToFirstLayer(); // 返回主畫面，讓資料生效
-}
-
-// --- 認證流程 ---
-function signIn() {
-    if (typeof firebase === 'undefined' || !firebase.auth) {
-        console.error("Firebase SDK 未載入或未初始化");
-        showNotification("⚠️ 系統尚未準備好，請稍後再試", "error");
-        return;
-    }
-    const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider).catch((error) => {
-        console.error("登入失敗:", error);
-        showNotification(`登入失敗: ${error.message}`, "error");
-    });
-}
-
-function signOutUser() {
-    firebase.auth().signOut().catch((error) => {
-        console.error("登出失敗:", error);
-    });
-}
-
-
-async function enterGuestMode() {
-    console.log("Entering Guest Mode...");
-    loadDataFromLocalStorage(); // 從本地載入訪客資料
-    
-    // 【關鍵修改】先載入核心單字資料
-    await initializeAppLogic();
-    
-    // 然後才顯示主畫面
-    showAppView(null); // 以 null (代表訪客) 顯示主畫面
-}
-
-// --- 資料合併邏輯 (專為 Vocabulary App 客製化) ---
-function mergeVocabularyData(guestData, userData) {
-    const merged = { ...userData }; // 從使用者雲端資料開始
-
-    // 合併 checked, important, notes, wrongWords, quizHistory
-    // 使用 Set 來確保合併時不重複
-    const mergeSet = (key) => {
-        const guestSet = new Set(guestData[key] || []);
-        const userSet = new Set(userData[key] || []);
-        guestSet.forEach(item => userSet.add(item));
-        merged[key] = Array.from(userSet);
-    };
-    
-    mergeSet('checkedWords');
-    mergeSet('importantWords');
-    mergeSet('wrongWords');
-
-    // 合併筆記 (以訪客的為優先)
-    merged.notes = { ...(userData.notes || {}), ...(guestData.notes || {}) };
-    
-    // 合併測驗歷史 (簡單合併，實際應用可能需要更複雜的邏輯)
-    merged.quizHistory = { ...(userData.quizHistory || {}), ...(guestData.quizHistory || {}) };
-
-    console.log("合併完成:", merged);
-    return merged;
-}
-
-
-// --- 資料持久化核心 (統一儲存點) ---
-async function persistData() {
-    if (currentUser) {
-        await saveDataToFirestore();
-    } else {
-        saveDataToLocalStorage();
-    }
-}
-
-async function loadDataFromFirestore() {
-    if (!currentUser) return;
-    try {
-        const docRef = db.collection('userVocabulary').doc(currentUser.uid);
-        const doc = await docRef.get();
-        if (doc.exists) {
-            vocabularyData = doc.data() || {};
-            console.log("成功從 Firestore 載入資料");
-        } else {
-            vocabularyData = {}; // 新使用者，無資料
-            console.log("此使用者在 Firestore 中尚無資料");
-        }
-    } catch (error) {
-        console.error("從 Firestore 載入資料失敗:", error);
-        showNotification("⚠️ 無法從雲端載入您的資料", "error");
-        vocabularyData = {}; // 發生錯誤時，重置為空
-    }
-}
-
-async function saveDataToFirestore() {
-    if (!currentUser) return;
-    try {
-        const docRef = db.collection('userVocabulary').doc(currentUser.uid);
-        await docRef.set(vocabularyData);
-        console.log("成功儲存資料到 Firestore");
-    } catch (error) {
-        console.error("儲存資料到 Firestore 失敗:", error);
-        showNotification("⚠️ 雲端同步失敗，您的變更可能未儲存", "error");
-    }
-}
-
-function loadDataFromLocalStorage() {
-    try {
-        const data = localStorage.getItem(LOCAL_STORAGE_KEY);
-        vocabularyData = data ? JSON.parse(data) : {};
-        console.log("成功從 Local Storage 載入訪客資料");
-    } catch (e) {
-        console.error("從 Local Storage 載入資料失敗:", e);
-        vocabularyData = {};
-    }
-}
-
-function saveDataToLocalStorage() {
-    try {
-        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(vocabularyData));
-        console.log("成功儲存訪客資料到 Local Storage");
-    } catch (e) {
-        console.error("儲存資料到 Local Storage 失敗:", e);
-    }
 }

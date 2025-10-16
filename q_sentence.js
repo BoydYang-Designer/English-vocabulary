@@ -1,19 +1,17 @@
-console.log("✅ q_sentence.js 已載入");
+console.log("✅ q_sentence.js loaded");
 
+// All variable definitions remain at the top level
 const GITHUB_JSON_URL = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/sentence.json";
 const GITHUB_MP3_BASE_URL = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/";
 
-// 初始化變數，但不直接從 localStorage 讀取
-let sentenceData = []; // 延遲到 DOMContentLoaded 時載入
+let sentenceData = [];
 let currentSentenceIndex = 0;
-let userAnswers = []; // 延遲到 DOMContentLoaded 時載入
-let incorrectSentences = []; // 設為空陣列，稍後動態載入
-let importantSentences = []; // 延遲到 DOMContentLoaded 時載入
-let currentQuizSentences = []; // 新增變數來儲存本次測驗的句子
+let userAnswers = [];
+let incorrectSentences = [];
+let importantSentences = [];
+let currentQuizSentences = [];
 let userConstructedSentences = [];
-
 let sentenceQuizHistory = {};
-
 let selectedSentenceFilters = {
     levels: new Set(),
     primaryCategories: new Set(),
@@ -22,22 +20,32 @@ let selectedSentenceFilters = {
     special: new Set()
 };
 
+// This function can be defined outside
 function getUserAnswer(index) {
     return userAnswers[index] || "";
 }
 window.getUserAnswer = getUserAnswer;
 
-document.addEventListener("DOMContentLoaded", function () {
-    // 從全域資料物件取得句子測驗相關的歷史紀錄
-    sentenceQuizHistory = window.getVocabularyData().sentenceQuizHistory || {};
-
-    // 移除所有 localStorage.getItem 的呼叫
-    // sentenceData, userAnswers, incorrectSentences 等變數會在需要時從 vocabularyData 取得
-
-    console.log("📖 已載入句子測驗歷史:", Object.keys(sentenceQuizHistory).length, "筆");
-
-    document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
+// Listen for the 'auth-ready' event from auth-manager.js
+document.addEventListener('auth-ready', function() {
+    console.log("Auth is ready on quiz page.");
+    // Now it's safe to get the vocabulary data
+    const vocabulary = window.getVocabularyData();
+    sentenceQuizHistory = vocabulary.sentenceQuizHistory || {};
+    incorrectSentences = vocabulary.wrongQS || [];
+    console.log("📖 Loaded sentence quiz history:", Object.keys(sentenceQuizHistory).length, "records");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Event listeners that don't depend on data can stay here
+    const startBtn = document.getElementById("startSentenceQuizBtn");
+    if (startBtn) {
+        startBtn.addEventListener("click", startSentenceQuiz);
+    } else {
+        console.warn("Could not find startSentenceQuizBtn");
+    }
+});
+
 
 function updateCollapsibleHeaderState(btn) {
     const contentWrapper = btn.closest('.collapsible-content');
@@ -348,10 +356,6 @@ if (selectedSentenceFilters.special.size > 0) {
     }, 100);
 }
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
-});
 
 let currentAudio = null;
 

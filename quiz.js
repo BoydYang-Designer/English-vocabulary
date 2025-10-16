@@ -17,11 +17,21 @@ const baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/mai
 
 let wordQuizHistory = {};
 
+// Listen for the 'auth-ready' event from auth-manager.js
+document.addEventListener('auth-ready', function() {
+    console.log("Auth is ready on quiz page.");
+    // Now it's safe to get the vocabulary data
+    const vocabulary = window.getVocabularyData();
+    wordQuizHistory = vocabulary.wordQuizHistory || {};
+    console.log("📖 Loaded word quiz history:", Object.keys(wordQuizHistory).length, "records");
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const loadingOverlay = document.getElementById('loading-overlay');
     const params = new URLSearchParams(window.location.search);
     const show = params.get("show");
-wordQuizHistory = window.getVocabularyData().wordQuizHistory || {};
+    // wordQuizHistory is now initialized in the 'auth-ready' listener
 
  
     document.querySelectorAll('.collapsible-content').forEach(content => {
@@ -74,7 +84,6 @@ document.querySelectorAll(".collapsible-header").forEach(button => {
             });
             isDataLoaded = true;
             console.log("✅ 單字資料已載入");
-            console.log("📖 已載入單字測驗歷史:", Object.keys(wordQuizHistory).length, "筆");
             
             showToast("✅ 資料載入成功！", "success");
 
