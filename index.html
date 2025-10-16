@@ -19,6 +19,32 @@
             animation: highlight-and-fade 0.6s ease-out;
         }
     </style>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore-compat.js" defer></script>
+
+    <script defer>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDbGZT_q1zNQqdDtUNYy1sC63wHZtD6KAE",
+        authDomain: "my-reading-challenge-app.firebaseapp.com",
+        projectId: "my-reading-challenge-app",
+        storageBucket: "my-reading-challenge-app.firebasestorage.app",
+        messagingSenderId: "650410268845",
+        appId: "1:650410268845:web:6752fe76b20e14a8adce24",
+        measurementId: "G-TBVCTLJQMX"
+      };
+
+      // Initialize Firebase
+      // 這個判斷是為了防止重複初始化，是一個好習慣
+      if (typeof firebase !== 'undefined' && !firebase.apps.length) {
+          firebase.initializeApp(firebaseConfig);
+          console.log("Firebase Initialized!");
+      }
+    </script>
+
+    <script src="index.js" defer></script>
 </head>
 <body>
     <div id="login-view" style="padding: 20px; text-align: center; margin-top: 20vh;">
@@ -164,30 +190,5 @@
             </div>
         </div>
     </div>
-    
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore-compat.js"></script>
-
-    <script>
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyDbGZT_q1zNQqdDtUNYy1sC63wHZtD6KAE",
-        authDomain: "my-reading-challenge-app.firebaseapp.com",
-        projectId: "my-reading-challenge-app",
-        storageBucket: "my-reading-challenge-app.firebasestorage.app",
-        messagingSenderId: "650410268845",
-        appId: "1:650410268845:web:6752fe76b20e14a8adce24",
-        measurementId: "G-TBVCTLJQMX"
-      };
-
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      const auth = firebase.auth();
-      const db = firebase.firestore();
-      console.log("Firebase Initialized!");
-    </script>
-
-    <script src="index.js" defer></script>
 </body>
 </html>
