@@ -48,7 +48,7 @@ function showNotification(message, type = 'success') {
 document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const show = params.get("show");
-    const loadingOverlay = document.getElementById('loadingOverlay');
+const loadingOverlay = document.getElementById('loading-overlay');
     document.querySelectorAll('.collapsible-content').forEach(content => {
         content.style.maxHeight = '0px';
     });

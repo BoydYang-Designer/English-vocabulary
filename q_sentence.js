@@ -298,19 +298,19 @@ function startSentenceQuiz() {
         let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
         
         let specialMatch = true;
-        if (selectedSentenceFilters.special.size > 0) {
-
-            specialMatch = [...selectedSentenceFilters.special].every(filter => {
-                 if (filter === 'important') return localStorage.getItem(`important_sentence_${item.Words}`) === "true";
-                 if (filter === 'incorrect') return (JSON.parse(localStorage.getItem("wrongQS")) || []).includes(item.Words);
-                 if (filter === 'checked') return localStorage.getItem(`checked_sentence_${item.Words}`) === "true";
-                 if (filter === 'word_checked') {
-                     const baseWord = item.Words.split('-')[0];
-                     return localStorage.getItem(`checked_${baseWord}`) === "true";
-                 }
-                 return true;
-            });
-        }
+if (selectedSentenceFilters.special.size > 0) {
+    const vocabularyData = window.getVocabularyData();
+    specialMatch = [...selectedSentenceFilters.special].every(filter => {
+         if (filter === 'important') return (vocabularyData.importantSentences || {})[item.Words] === "true";
+         if (filter === 'incorrect') return (vocabularyData.wrongQS || []).includes(item.Words);
+         if (filter === 'checked') return (vocabularyData.checkedSentences || {})[item.Words] === "true";
+         if (filter === 'word_checked') {
+             const baseWord = item.Words.split('-')[0];
+             return (vocabularyData.checkedWords || []).includes(baseWord);
+         }
+         return true;
+    });
+}
         
         return levelMatch && primaryCategoryMatch && secondaryCategoryMatch && alphabetMatch && specialMatch;
     });
@@ -943,7 +943,6 @@ function submitSentenceAnswer() {
         incorrectSentences = incorrectSentences.filter(w => w !== sentenceObj.Words);
     }
 
-    localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
     console.log("✅ submitSentenceAnswer 後更新 incorrectSentences:", incorrectSentences);
 
     updateSentenceHint(correctSentence, userAnswer);
@@ -1181,16 +1180,14 @@ function returnToSentenceCategorySelection() {
 function toggleImportantSentence(word, checkbox) {
     let vocabularyData = window.getVocabularyData();
     if (!vocabularyData.importantSentences) {
-        vocabularyData.importantSentences = [];
+        vocabularyData.importantSentences = {}; // 正確：初始化為物件
     }
 
     if (checkbox.checked) {
-        if (!vocabularyData.importantSentences.includes(word)) {
-            vocabularyData.importantSentences.push(word);
-        }
+        vocabularyData.importantSentences[word] = "true"; // 正確：設定物件屬性
         console.log(`⭐ 句子 ${word} 標記為重要`);
     } else {
-        vocabularyData.importantSentences = vocabularyData.importantSentences.filter(s => s !== word);
+        delete vocabularyData.importantSentences[word]; // 正確：刪除物件屬性
         console.log(`❌ 句子 ${word} 取消重要標記`);
     }
     window.persistVocabularyData();

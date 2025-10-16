@@ -18,6 +18,7 @@ const baseURL = "https://github.com/BoydYang-Designer/English-vocabulary/raw/mai
 let wordQuizHistory = {};
 
 document.addEventListener("DOMContentLoaded", function () {
+    const loadingOverlay = document.getElementById('loading-overlay');
     const params = new URLSearchParams(window.location.search);
     const show = params.get("show");
 wordQuizHistory = window.getVocabularyData().wordQuizHistory || {};
@@ -413,9 +414,10 @@ function startQuiz() {
         let word = w.Words || w.word || w["單字"];
         let category = w["分類"] || [];
         let level = w["等級"] || "未分類";
-let isChecked = window.getVocabularyData().checkedWords?.[word] === "true";
-let isImportant = window.getVocabularyData().importantWords?.[word] === "true";
-let isWrong = (window.getVocabularyData().wrongWords || []).includes(word);
+let vocabularyData = window.getVocabularyData();
+let isChecked = (vocabularyData.checkedWords || []).includes(word);
+let isImportant = (vocabularyData.importantWords || []).includes(word);
+let isWrong = (vocabularyData.wrongWords || []).includes(word);
 
         if (selectedFilters.letters.size > 0 && ![...selectedFilters.letters].some(letter => word.toLowerCase().startsWith(letter.toLowerCase()))) return false;
         let primary = category[0] || "未分類";
