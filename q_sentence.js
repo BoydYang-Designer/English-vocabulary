@@ -28,21 +28,12 @@ function getUserAnswer(index) {
 window.getUserAnswer = getUserAnswer;
 
 document.addEventListener("DOMContentLoaded", function () {
-    sentenceQuizHistory = JSON.parse(localStorage.getItem('sentenceQuizHistory')) || {};
+    // 從全域資料物件取得句子測驗相關的歷史紀錄
+    sentenceQuizHistory = window.getVocabularyData().sentenceQuizHistory || {};
 
-    sentenceData = JSON.parse(localStorage.getItem("sentenceData")) || [];
-    userAnswers = JSON.parse(localStorage.getItem("userAnswers")) || [];
-    incorrectSentences = JSON.parse(localStorage.getItem("wrongQS")) || [];
-    importantSentences = JSON.parse(localStorage.getItem("importantSentences")) || [];
-    currentQuizSentences = JSON.parse(localStorage.getItem("currentQuizSentences")) || [];
+    // 移除所有 localStorage.getItem 的呼叫
+    // sentenceData, userAnswers, incorrectSentences 等變數會在需要時從 vocabularyData 取得
 
-    console.log("✅ 頁面載入時恢復的資料：", {
-        sentenceDataLength: sentenceData.length,
-        userAnswersLength: userAnswers.length,
-        incorrectSentences: incorrectSentences,
-        importantSentences: importantSentences,
-        currentQuizSentencesLength: currentQuizSentences.length
-    });
     console.log("📖 已載入句子測驗歷史:", Object.keys(sentenceQuizHistory).length, "筆");
 
     document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
@@ -1103,8 +1094,12 @@ function finishSentenceQuiz() {
 }
 
 function saveQSResults() {
-    localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
-    console.log("✅ 錯誤句子已儲存到 localStorage['wrongQS']:", incorrectSentences);
+    let vocabularyData = window.getVocabularyData();
+    // 直接更新全域資料物件中的 wrongQS
+    vocabularyData.wrongQS = incorrectSentences;
+    window.persistVocabularyData(); // 觸發雲端/本地儲存
+
+    console.log("✅ 錯誤句子已儲存:", vocabularyData.wrongQS);
     alert("測驗結果中的錯誤句子已儲存！");
 }
 
@@ -1184,14 +1179,21 @@ function returnToSentenceCategorySelection() {
 }
 
 function toggleImportantSentence(word, checkbox) {
-    let lowerWord = word.toLowerCase();
+    let vocabularyData = window.getVocabularyData();
+    if (!vocabularyData.importantSentences) {
+        vocabularyData.importantSentences = [];
+    }
+
     if (checkbox.checked) {
-        localStorage.setItem(`important_sentence_${lowerWord}`, "true");
+        if (!vocabularyData.importantSentences.includes(word)) {
+            vocabularyData.importantSentences.push(word);
+        }
         console.log(`⭐ 句子 ${word} 標記為重要`);
     } else {
-        localStorage.removeItem(`important_sentence_${lowerWord}`);
+        vocabularyData.importantSentences = vocabularyData.importantSentences.filter(s => s !== word);
         console.log(`❌ 句子 ${word} 取消重要標記`);
     }
+    window.persistVocabularyData();
 }
 
 function returnToMainMenu() {

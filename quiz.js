@@ -20,9 +20,7 @@ let wordQuizHistory = {};
 document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const show = params.get("show");
-    const loadingOverlay = document.getElementById('loadingOverlay');
-
-    wordQuizHistory = JSON.parse(localStorage.getItem('wordQuizHistory')) || {};
+wordQuizHistory = window.getVocabularyData().wordQuizHistory || {};
 
  
     document.querySelectorAll('.collapsible-content').forEach(content => {
@@ -349,10 +347,10 @@ function filterQuizWords(event) {
         let secondaryMatch = selectedFilters.secondaryCategories.size === 0 || secondary.some(c => selectedFilters.secondaryCategories.has(c)) || (selectedFilters.secondaryCategories.has("未分類") && secondary.length === 0);
         let level = word["等級"] || "未分類";
         let levelMatch = selectedFilters.levels.size === 0 || selectedFilters.levels.has(level);
-        let checkedMatch = !selectedFilters.checked || localStorage.getItem(`checked_${wordText}`) === "true";
-        let importantMatch = !selectedFilters.important || localStorage.getItem(`important_${wordText}`) === "true";
-        let wrongWords = JSON.parse(localStorage.getItem("wrongWords") || "[]");
-        let wrongMatch = !selectedFilters.wrong || wrongWords.includes(wordText);
+let checkedMatch = !selectedFilters.checked || window.getVocabularyData().checkedWords?.[wordText] === "true";
+let importantMatch = !selectedFilters.important || window.getVocabularyData().importantWords?.[wordText] === "true";
+let wrongWords = window.getVocabularyData().wrongWords || [];
+let wrongMatch = !selectedFilters.wrong || wrongWords.includes(wordText);
         return letterMatch && primaryMatch && secondaryMatch && levelMatch && checkedMatch && importantMatch && wrongMatch;
     });
 
@@ -415,9 +413,9 @@ function startQuiz() {
         let word = w.Words || w.word || w["單字"];
         let category = w["分類"] || [];
         let level = w["等級"] || "未分類";
-        let isChecked = localStorage.getItem(`checked_${word}`) === "true";
-        let isImportant = localStorage.getItem(`important_${word}`) === "true";
-        let isWrong = JSON.parse(localStorage.getItem("wrongWords") || "[]").includes(word);
+let isChecked = window.getVocabularyData().checkedWords?.[word] === "true";
+let isImportant = window.getVocabularyData().importantWords?.[word] === "true";
+let isWrong = (window.getVocabularyData().wrongWords || []).includes(word);
 
         if (selectedFilters.letters.size > 0 && ![...selectedFilters.letters].some(letter => word.toLowerCase().startsWith(letter.toLowerCase()))) return false;
         let primary = category[0] || "未分類";
@@ -563,15 +561,20 @@ function submitAnswer() {
         result: result,
         timestamp: new Date().toLocaleString()
     });
-    let storedWrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
+    
+    // === 修改開始 ===
+    let wrongWords = window.getVocabularyData().wrongWords || [];
     if (result === '錯誤') {
-        if (!storedWrongWords.includes(currentWord)) {
-            storedWrongWords.push(currentWord);
+        if (!wrongWords.includes(currentWord)) {
+            wrongWords.push(currentWord);
         }
     } else if (result === '正確') {
-        storedWrongWords = storedWrongWords.filter(word => word !== currentWord);
+        wrongWords = wrongWords.filter(word => word !== currentWord);
     }
-    localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
+    window.setWrongWords(wrongWords); // 更新全域資料
+    window.persistVocabularyData(); // 觸發儲存
+    // === 修改結束 ===
+    
     let wordData = wordsData.find(w => w.Words === currentWord);
     let chineseExplanation = wordData && wordData["traditional Chinese"] ? wordData["traditional Chinese"].replace(/\n/g, "<br>") : "無中文解釋";
     let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
@@ -585,11 +588,13 @@ function submitAnswer() {
     document.getElementById("submitBtn").style.display = "none";
     document.getElementById("nextBtn").style.display = "inline-block";
 }
+
 function goToNextWord() {
     loadNextWord();
     document.getElementById("submitBtn").style.display = "inline-block";
     document.getElementById("nextBtn").style.display = "none";
 }
+
 function finishQuiz() {
     document.getElementById("quizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "block";
@@ -615,7 +620,7 @@ function finishQuiz() {
         } else {
             resultClass = 'unanswered';
         }
-        return `<div class='result-item ${resultClass}'><label class='important-word'><input type='checkbox' class='important-checkbox' data-word='${result.word}' ${localStorage.getItem(`important_${result.word}`) === "true" ? "checked" : ""} onchange='toggleImportant("${result.word}", this)'></label><button class='word-link' onclick="goToWordDetail('${result.word}')">${result.word}</button><button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button></div>`;
+        return `<div class='result-item ${resultClass}'><label class='important-word'><input type='checkbox' class='important-checkbox' data-word='${result.word}' ${window.getVocabularyData().importantWords?.[result.word] === "true" ? "checked" : ""} onchange='toggleImportant("${result.word}", this)'></label><button class='word-link' onclick="goToWordDetail('${result.word}')">${result.word}</button><button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button></div>`;
     }).join("");
     resultContainer.innerHTML += `<div>${resultList}</div><div class="button-group"><button class="button" onclick="returnToMainMenu()">返回主頁</button></div>`;
     if (existingNotification) {
@@ -624,6 +629,7 @@ function finishQuiz() {
         }, 500);
     }
 }
+
 function goToWordDetail(word) {
     let resultContainer = document.getElementById("quizResult");
     let scrollPosition = resultContainer ? resultContainer.scrollTop : 0;
@@ -644,10 +650,10 @@ function startRewordQuiz() {
             let secondaryMatch = selectedFilters.secondaryCategories.size === 0 || secondary.some(c => selectedFilters.secondaryCategories.has(c));
             let wordLevel = word["等級"] || "未分類(等級)";
             let levelMatch = selectedFilters.levels.size === 0 || selectedFilters.levels.has(wordLevel);
-            let checkedMatch = !selectedFilters.checked || localStorage.getItem(`checked_${wordText}`) === "true";
-            let importantMatch = !selectedFilters.important || localStorage.getItem(`important_${wordText}`) === "true";
-            let wrongWords = JSON.parse(localStorage.getItem("wrongWords") || "[]");
-            let wrongMatch = !selectedFilters.wrong || wrongWords.includes(wordText);
+let checkedMatch = !selectedFilters.checked || window.getVocabularyData().checkedWords?.[wordText] === "true";
+let importantMatch = !selectedFilters.important || window.getVocabularyData().importantWords?.[wordText] === "true";
+let wrongWords = window.getVocabularyData().wrongWords || [];
+let wrongMatch = !selectedFilters.wrong || wrongWords.includes(wordText);
             return letterMatch && primaryMatch && secondaryMatch && levelMatch && checkedMatch && importantMatch && wrongMatch;
         });
         if (quizWords.length === 0) {
@@ -701,6 +707,7 @@ function selectLetterBlock(block) {
         constructionArea.appendChild(block);
     }
 }
+
 function submitRewordAnswer() {
     let constructionArea = document.getElementById("rewordConstructionArea");
     let userAnswer = Array.from(constructionArea.children).map(b => b.dataset.value).join("");
@@ -711,15 +718,20 @@ function submitRewordAnswer() {
         result: result,
         timestamp: new Date().toLocaleString()
     });
-    let storedWrongWords = JSON.parse(localStorage.getItem('wrongWords')) || [];
+    
+    // === 修改開始 ===
+    let wrongWords = window.getVocabularyData().wrongWords || [];
     if (result === "錯誤") {
-        if (!storedWrongWords.includes(currentWord)) {
-            storedWrongWords.push(currentWord);
+        if (!wrongWords.includes(currentWord)) {
+            wrongWords.push(currentWord);
         }
     } else if (result === "正確") {
-        storedWrongWords = storedWrongWords.filter(word => word !== currentWord);
+        wrongWords = wrongWords.filter(word => word !== currentWord);
     }
-    localStorage.setItem('wrongWords', JSON.stringify(storedWrongWords));
+    window.setWrongWords(wrongWords); // 更新全域資料
+    window.persistVocabularyData(); // 觸發儲存
+    // === 修改結束 ===
+    
     let wordData = wordsData.find(w => w.Words === currentWord);
     let chineseExplanation = wordData && wordData["traditional Chinese"] ? wordData["traditional Chinese"].replace(/\n/g, "<br>") : "無中文解釋";
     let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
@@ -737,6 +749,8 @@ function submitRewordAnswer() {
     document.getElementById("submitRewordBtn").style.display = "none";
     document.getElementById("nextRewordBtn").style.display = "inline-block";
 }
+
+
 function goToNextReword() {
     loadNextReword();
 }
@@ -760,14 +774,25 @@ document.addEventListener("keydown", function(event) {
     }
 });
 function toggleImportant(word, checkbox) {
-    if (checkbox.checked) {
-        localStorage.setItem(`important_${word}`, "true");
-        console.log(`⭐ 單字 ${word} 標記為重要 (quiz)`);
-    } else {
-        localStorage.removeItem(`important_${word}`);
-        console.log(`❌ 單字 ${word} 取消重要標記 (quiz)`);
+    // 從 window 取得全域資料物件
+    let vocabularyData = window.getVocabularyData();
+    // 確保 importantWords 陣列存在
+    if (!vocabularyData.importantWords) {
+        vocabularyData.importantWords = [];
     }
+
+    if (checkbox.checked) {
+        if (!vocabularyData.importantWords.includes(word)) {
+            vocabularyData.importantWords.push(word);
+        }
+    } else {
+        vocabularyData.importantWords = vocabularyData.importantWords.filter(w => w !== word);
+    }
+
+    // 透過 window 呼叫統一的儲存函式
+    window.persistVocabularyData();
 }
+
 function showQuizTypeSelection() {
     document.getElementById("quizCategories").style.display = "none";
     let quizTypeSelection = document.getElementById("quizTypeSelection");
@@ -779,17 +804,21 @@ function showQuizTypeSelection() {
     }
     quizTypeSelection.style.display = "block";
 }
+
 function returnToMainMenu() {
     window.location.href = 'index.html';
-    localStorage.removeItem("currentQuizResults");
-    localStorage.removeItem("quizScrollPosition");
+    quizResults = [];  // 清空全域 quizResults，如果需要
+    localStorage.removeItem("quizScrollPosition");  // 保留，因為非 vocabulary
     console.log("✅ 返回首頁並重置狀態");
 }
+
+
 document.getElementById("playAudioCenterBtn").addEventListener("click", function() {
     if (currentWord) {
         playAudioForWord(currentWord);
     }
 });
+
 function restoreQuizResults() {
     let resultContainer = document.getElementById("quizResult");
     resultContainer.innerHTML = `<h2>測驗結果</h2>`;
@@ -809,7 +838,7 @@ function restoreQuizResults() {
         } else {
             resultClass = 'unanswered';
         }
-        return `<div class='result-item ${resultClass}'><label class='important-word'><input type='checkbox' class='important-checkbox' data-word='${result.word}' ${localStorage.getItem(`important_${result.word}`) === "true" ? "checked" : ""} onchange='toggleImportant("${result.word}", this)'></label><button class='word-link' onclick="goToWordDetail('${result.word}')">${result.word}</button><button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button></div>`;
+        return `<div class='result-item ${resultClass}'><label class='important-word'><input type='checkbox' class='important-checkbox' data-word='${result.word}' ${window.getVocabularyData().importantWords?.[result.word] === "true" ? "checked" : ""} onchange='toggleImportant("${result.word}", this)'></label><button class='word-link' onclick="goToWordDetail('${result.word}')">${result.word}</button><button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button></div>`;
     }).join("");
     resultContainer.innerHTML += `<div>${resultList}</div><div class="button-group"><button class="button" onclick="returnToMainMenu()">返回主頁</button></div>`;
     let savedScrollPosition = localStorage.getItem("quizScrollPosition");
@@ -817,6 +846,7 @@ function restoreQuizResults() {
         resultContainer.scrollTop = parseInt(savedScrollPosition);
     }
 }
+
 document.getElementById("cancelBtn").addEventListener("click", returnToCategorySelection);
 function showToast(message, type = 'success') {
     const toast = document.getElementById('toastNotification');

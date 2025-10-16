@@ -46,9 +46,9 @@ function showNotification(message, type = 'success') {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const loadingOverlay = document.getElementById('loading-overlay');
-    console.log("開始載入資料...");
-
+    const params = new URLSearchParams(window.location.search);
+    const show = params.get("show");
+    const loadingOverlay = document.getElementById('loadingOverlay');
     document.querySelectorAll('.collapsible-content').forEach(content => {
         content.style.maxHeight = '0px';
     });
@@ -57,7 +57,6 @@ document.querySelectorAll(".collapsible-header").forEach(button => {
     button.addEventListener("click", function() {
         this.classList.toggle("active");
         const content = this.nextElementSibling;
-        
         if (content.style.maxHeight && content.style.maxHeight !== '0px') {
             content.style.maxHeight = '0px';
             
@@ -309,7 +308,7 @@ function startLearning() {
         filteredWords = filteredWords.filter(w => selectedLevels.includes(w["等級"] || "未分類"));
     }
     if (selectedSpecials.includes('checked_word')) {
-        filteredWords = filteredWords.filter(w => localStorage.getItem(`checked_${w.Words}`) === "true");
+        filteredWords = filteredWords.filter(w => window.getVocabularyData().checkedWords?.[w.Words] === "true");
     }
 
     // 步驟 2: 根據這些單字，找出所有相關的句子
@@ -321,19 +320,21 @@ function startLearning() {
 
     // 步驟 3: 根據「句子相關」的特殊分類，進一步篩選這些句子
     const sentenceSpecialFilters = selectedSpecials.filter(s => s !== 'checked_word');
-    if (sentenceSpecialFilters.length > 0) {
-        relatedSentences = relatedSentences.filter(s => {
-            return sentenceSpecialFilters.some(specialType => {
-                switch (specialType) {
-                    case 'checked': return localStorage.getItem(`checked_sentence_${s.Words}`) === "true";
-                    case 'important': return localStorage.getItem(`important_sentence_${s.Words}`) === "true";
-                    case 'wrong': return (JSON.parse(localStorage.getItem("wrongQS")) || []).includes(s.Words);
-                    case 'note': const note = localStorage.getItem(`note_sentence_${s.Words}`); return note && note.trim() !== "";
-                    default: return false;
-                }
-            });
+// 新的程式碼
+if (sentenceSpecialFilters.length > 0) {
+    const vocabData = window.getVocabularyData();
+    relatedSentences = relatedSentences.filter(s => {
+        return sentenceSpecialFilters.some(specialType => {
+            switch (specialType) {
+                case 'checked': return (vocabData.checkedSentences || {})[s.Words] === "true";
+                case 'important': return (vocabData.importantSentences || {})[s.Words] === "true";
+                case 'wrong': return (vocabData.wrongQS || []).includes(s.Words);
+                case 'note': const note = (vocabData.noteSentences || {})[s.Words]; return note && note.trim() !== "";
+                default: return false;
+            }
         });
-    }
+    });
+}
 
     // 步驟 4: 從最終的句子列表中，反向找出所有涉及的「單字」，並確保不重複
     const finalWordNames = [...new Set(relatedSentences.map(s => s.Words.split('-').slice(0, -1).join('-')))];
@@ -365,7 +366,7 @@ function displayWordSelectionList(words) {
     words.forEach(word => {
         const wordText = word.Words;
         // 檢查此單字是否已被勾選
-        const isChecked = localStorage.getItem(`checked_sentence_word_${wordText}`) === "true";
+        const isChecked = window.getVocabularyData().checkedSentenceWords?.[wordText] === "true";
         const checkedClass = isChecked ? "checked" : "";
         const checkIconSrc = isChecked 
             ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" 
@@ -390,20 +391,19 @@ function displayWordSelectionList(words) {
 }
 
 function toggleSentenceWordChecked(word, button) {
-    const key = `checked_sentence_word_${word}`;
-    const isChecked = localStorage.getItem(key) === "true";
-    const container = button.closest('.word-item-container');
-    const icon = button.querySelector('img');
-
-    if (isChecked) {
-        localStorage.removeItem(key);
-        container.classList.remove('checked');
-        icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
+    let vocabularyData = window.getVocabularyData();
+    let checkedSentenceWords = vocabularyData.checkedSentenceWords || {};
+    const key = word;
+    const isChecked = checkedSentenceWords[key] === "true";
+    const newState = !isChecked;
+    if (newState) {
+        checkedSentenceWords[key] = "true";
     } else {
-        localStorage.setItem(key, "true");
-        container.classList.add('checked');
-        icon.src = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg";
+        delete checkedSentenceWords[key];
     }
+    window.setCheckedSentenceWords(checkedSentenceWords);
+    window.persistVocabularyData();
+    // ... (UI 更新)
 }
 
 
@@ -893,36 +893,30 @@ function updateAutoPlayButton() {
 }
 
 function toggleCheckSentence(sentenceId, button) {
-    const isChecked = localStorage.getItem(`checked_sentence_${sentenceId}`) === "true";
+    let vocabularyData = window.getVocabularyData();
+    let checkedSentences = vocabularyData.checkedSentences || {};
+    const isChecked = checkedSentences[sentenceId] === "true";
     const newState = !isChecked;
-
-    if(newState) {
-        localStorage.setItem(`checked_sentence_${sentenceId}`, "true");
-    } else {
-        localStorage.removeItem(`checked_sentence_${sentenceId}`);
-    }
-
-    const icon = button.querySelector('img');
-    icon.src = newState 
-        ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" 
-        : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
-
-    const container = button.parentElement;
-    const wordItem = container.querySelector('.word-item');
-    const sentenceObj = sentenceData.find(s => s.Words === sentenceId);
-
     if (newState) {
-        container.classList.add('checked');
-        wordItem.textContent = sentenceId;
+        checkedSentences[sentenceId] = "true";
     } else {
-        container.classList.remove('checked');
-        wordItem.textContent = `${sentenceId}: ${sentenceObj.句子}`;
+        delete checkedSentences[sentenceId];
     }
+    window.setCheckedSentences(checkedSentences); // 使用新的 setter
+    window.persistVocabularyData(); // 觸發儲存
+    // ... 後續的 UI 更新邏輯 ...
 }
 
 function toggleImportantSentence(sentenceId, checkbox) {
-    if (checkbox.checked) localStorage.setItem(`important_sentence_${sentenceId}`, "true");
-    else localStorage.removeItem(`important_sentence_${sentenceId}`);
+    let vocabularyData = window.getVocabularyData();
+    let importantSentences = vocabularyData.importantSentences || {};
+    if (checkbox.checked) {
+        importantSentences[sentenceId] = "true";
+    } else {
+        delete importantSentences[sentenceId];
+    }
+    window.setImportantSentences(importantSentences); // 使用新的 setter
+    window.persistVocabularyData(); // 觸發儲存
 }
 
 function showSentenceDetails(sentenceId, index = -1, direction = null) {
@@ -954,7 +948,7 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     let wordObj = wordsData.find(w => w.Words === word);
     let header = `
     <div class="phonetics-container">
-        <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${localStorage.getItem(`important_sentence_${sentenceId}`) === "true" ? "checked" : ""}>
+        <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${window.getVocabularyData().importantSentences?.[sentenceId] === "true" ? "checked" : ""}>
         <div id="sentenceTitle" style="font-size: 20px; font-weight: bold;">${sentenceId}</div>
         <button id="autoPlayBtnDetails" onclick="toggleAutoPlay()">自動播放</button>
     </div>`;
@@ -1138,21 +1132,27 @@ function filterSentencesInDetails() {
 function saveNote() {
     let sentenceId = document.getElementById("sentenceTitle")?.textContent.trim();
     let note = document.getElementById("sentenceNote").value.trim();
-    
+
     if (!sentenceId) return;
 
+    let vocabularyData = window.getVocabularyData();
+    let noteSentences = vocabularyData.noteSentences || {};
+
     if (note.length > 0) {
-        localStorage.setItem(`note_sentence_${sentenceId}`, note);
+        noteSentences[sentenceId] = note;
         showNotification("✅ 筆記已儲存！", "success");
     } else {
-        localStorage.removeItem(`note_sentence_${sentenceId}`);
+        delete noteSentences[sentenceId];
         showNotification("🗑️ 筆記已刪除。", "success");
     }
+
+    window.setNoteSentences(noteSentences); // 使用新的 setter
+    window.persistVocabularyData(); // 觸發儲存
     updateCheckbox();
 }
 
 function displayNote(sentenceId) {
-    let note = localStorage.getItem(`note_sentence_${sentenceId}`) || "";
+    let note = window.getVocabularyData().noteSentences?.[sentenceId] || "";
     document.getElementById("sentenceNote").value = note;
     updateCheckbox();
 }
@@ -1167,7 +1167,11 @@ function handleCheckboxClick() {
     if (!checkbox.checked) {
        let sentenceId = document.getElementById("sentenceTitle")?.textContent.trim();
        if(sentenceId) {
-           localStorage.removeItem(`note_sentence_${sentenceId}`);
+           let vocabularyData = window.getVocabularyData();
+           let noteSentences = vocabularyData.noteSentences || {};
+           delete noteSentences[sentenceId];
+           window.setNoteSentences(noteSentences);
+           window.persistVocabularyData();
            document.getElementById("sentenceNote").value = "";
            showNotification("🗑️ 筆記已刪除。", "success");
        }
@@ -1176,12 +1180,8 @@ function handleCheckboxClick() {
 
 function exportAllData() {
     try {
-        const data = {};
-        for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            data[key] = localStorage.getItem(key);
-        }
-        const jsonString = JSON.stringify(data, null, 2);
+        const vocabularyData = window.getVocabularyData();
+        const jsonString = JSON.stringify(vocabularyData, null, 2);
         const blob = new Blob([jsonString], { type: "application/json" });
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
@@ -1210,8 +1210,9 @@ function importAllData() {
         reader.onload = function (e) {
             try {
                 let importedData = JSON.parse(e.target.result);
-                localStorage.clear();
-                Object.keys(importedData).forEach(key => localStorage.setItem(key, importedData[key]));
+                // 更新全域 vocabularyData
+                Object.assign(window.getVocabularyData(), importedData);
+                window.persistVocabularyData();  // 立即持久化
                 showNotification("✅ 資料匯入成功！頁面將會重整。", "success");
                 setTimeout(() => location.reload(), 1500);
             } catch (error) {

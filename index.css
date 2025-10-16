@@ -803,3 +803,7 @@ font-style: italic; /* 讓範例文字變斜體 (可選) */
     background: #007bff;
     border-color: #0056b3;
 }
+
+.is-hidden {
+    display: none !important;
+}
