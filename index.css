@@ -770,7 +770,6 @@ font-style: italic; /* 讓範例文字變斜體 (可選) */
     background-color: #f1f1f1;
     
     /* ▼▼▼ 新增這兩行 ▼▼▼ */
-    max-height: 250px; /* 設定一個最大高度 */
     overflow-y: auto;  /* 當內容超出時，顯示垂直捲動條 */
 }
 
