@@ -4,9 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Boyd Vocabulary</title>
     <link rel="stylesheet" href="index.css">
-    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
+    
     <style>
         html, body {
             overflow-x: hidden;
@@ -20,44 +18,8 @@
         .word-click-highlight {
             animation: highlight-and-fade 0.6s ease-out;
         }
-
-        /* 為了讓登入介面可以正確隱藏/顯示，新增基本樣式 */
-        .is-hidden {
-            display: none !important;
-        }
-
-        /* 登入介面的基本佈局（如果您的 index.css 中沒有）*/
-        #login-view {
-            text-align: center;
-            padding: 50px 20px;
-        }
-        .subtitle {
-            margin-bottom: 30px;
-            color: #666;
-        }
-        .login-actions button {
-            display: block;
-            width: 80%;
-            max-width: 300px;
-            margin: 10px auto;
-            padding: 10px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-        .user-status-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        #app-container > h1 {
-            /* 調整標題，避免與 header 衝突 */
-            margin-top: 0;
-        }
     </style>
-</head>
+    </head>
 <body>
     <div id="loading-overlay">
         <div class="loading-spinner"></div>
@@ -65,137 +27,122 @@
     </div>
 
     <div id="notification-container"></div>
-
-    <div id="login-view">
-        <h1>Boyd Vocabulary</h1>
-        <p class="subtitle">單字與句子學習工具</p>
-        <div class="login-actions">
-            <button id="google-signin-btn" class="button">Sign in with Google</button>
-            <button id="guest-mode-btn" class="button">Enter as Guest</button>
+    
+    <h1>Boyd Vocabulary</h1>
+    <div id="mainPageContainer">
+        <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
+            <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterWords()" style="padding: 8px; width: 200px;">
         </div>
-    </div>
+        <div class="button-container" style="text-align: center; margin-top: 20px;">
+            <button id="wordPageBtn" class="button" style="background-color: #28a745;">單字頁面</button>
+            <button id="wordQuizBtn" class="button" onclick="window.location.href='quiz.html?show=categories&from=index'">單字測驗</button>
+            <button id="sentencePageBtn" class="button">句子頁面</button>
+            <button id="startQuizBtn" class="button">句子測驗</button>
+        </div>
 
-    <div id="app-container" class="is-hidden">
-        <div class="user-status-header">
-            <span id="user-info"></span>
-            <button id="sign-out-btn" class="button" hidden>Sign Out</button>
+        <div class="start-learning-container">
+            <button id="startLearningBtn" class="button">開始學習</button>
+        </div>
+        <div class="collapsible-section-wrapper">
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">字母分類</button>
+                <div class="collapsible-content" id="alphabetButtons">
+                </div>
+            </div>
+
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">領域</button>
+                <div class="collapsible-content" id="domainCategoryButtons">
+                </div>
+            </div>
+
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">主題</button>
+                <div class="collapsible-content" id="topicCategoryButtons">
+                </div>
+            </div>
+
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">來源</button>
+                <div class="collapsible-content" id="sourceCategoryButtons">
+                </div>
+            </div>
+
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">特殊分類</button>
+                <div class="collapsible-content" id="specialCategoryButtons">
+                </div>
+            </div>
+
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">等級分類</button>
+                <div class="collapsible-content" id="levelButtonsContent">
+                </div>
+            </div>
         </div>
         
-        <h1>Boyd Vocabulary</h1>
-        <div id="mainPageContainer">
-            <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
-                <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterWords()" style="padding: 8px; width: 200px;">
-            </div>
-            <div class="button-container" style="text-align: center; margin-top: 20px;">
-                <button id="wordPageBtn" class="button" style="background-color: #28a745;">單字頁面</button>
-                <button id="wordQuizBtn" class="button" onclick="window.location.href='quiz.html?show=categories&from=index'">單字測驗</button>
-                <button id="sentencePageBtn" class="button">句子頁面</button>
-                <button id="startQuizBtn" class="button">句子測驗</button>
-            </div>
-
-            <div class="start-learning-container">
-                <button id="startLearningBtn" class="button">開始學習</button>
-            </div>
-            <div class="collapsible-section-wrapper">
-                <div class="collapsible-section">
-                    <button type="button" class="collapsible-header">字母分類</button>
-                    <div class="collapsible-content" id="alphabetButtons">
-                    </div>
-                </div>
-
-                <div class="collapsible-section">
-                    <button type="button" class="collapsible-header">領域</button>
-                    <div class="collapsible-content" id="domainCategoryButtons">
-                    </div>
-                </div>
-
-                <div class="collapsible-section">
-                    <button type="button" class="collapsible-header">主題</button>
-                    <div class="collapsible-content" id="topicCategoryButtons">
-                    </div>
-                </div>
-
-                <div class="collapsible-section">
-                    <button type="button" class="collapsible-header">來源</button>
-                    <div class="collapsible-content" id="sourceCategoryButtons">
-                    </div>
-                </div>
-
-                <div class="collapsible-section">
-                    <button type="button" class="collapsible-header">特殊分類</button>
-                    <div class="collapsible-content" id="specialCategoryButtons">
-                    </div>
-                </div>
-
-                <div class="collapsible-section">
-                    <button type="button" class="collapsible-header">等級分類</button>
-                    <div class="collapsible-content" id="levelButtonsContent">
-                    </div>
-                </div>
-            </div>
         </div>
 
-        <h2 id="wordListTitle" style="text-align: center; margin-bottom: 10px; display: none;"></h2>
-        <button id="autoPlayBtn" class="button" onclick="toggleAutoPlay()">單字自動播放</button>
+    <h2 id="wordListTitle" style="text-align: center; margin-bottom: 10px; display: none;"></h2>
+    <button id="autoPlayBtn" class="button" onclick="toggleAutoPlay()">單字自動播放</button>
 
-        <div class="container">
-            <div id="wordList" class="word-list">
-                <button class="button back-button" onclick="backToFirstLayer()">Back</button>
-                <div id="wordItems"></div>
+    <div class="container">
+        <div id="wordList" class="word-list">
+            <button class="button back-button" onclick="backToFirstLayer()">Back</button>
+            <div id="wordItems"></div>
+        </div>
+
+        <div id="wordDetails" class="details">
+            <div class="button-group">
+                <button class="button" onclick="backToWordList()">Back</button>
+                <button id="autoPlayDetailsBtn" class="button" onclick="toggleAutoPlay()">內文自動播放</button>
             </div>
 
-            <div id="wordDetails" class="details">
-                <div class="button-group">
-                    <button class="button" onclick="backToWordList()">Back</button>
-                    <button id="autoPlayDetailsBtn" class="button" onclick="toggleAutoPlay()">內文自動播放</button>
+            <div id="phoneticContainer"></div>
+            <div id="chineseContainer"></div>
+            <div id="meaningContainer"></div>
+
+            <div class="audio-controls-wrapper">
+                <div class="audio-controls">
+                    <button class="audio-btn" id="playAudioBtn">
+                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" 
+                             alt="Play" width="24" height="24" />
+                    </button>
+                    <button class="audio-btn" onclick="adjustAudioTime(-5)">
+                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg" 
+                             alt="Rewind" width="24" height="24" />
+                    </button>
+                    <button class="audio-btn" id="pauseResumeBtn" onclick="togglePauseAudio(this)">
+                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" 
+                             alt="Pause" width="24" height="24" />
+                    </button>
+                    <button class="audio-btn" onclick="adjustAudioTime(5)">
+                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/fast-forward.svg" 
+                             alt="Fast Forward" width="24" height="24" />
+                    </button>
                 </div>
+            </div>
 
-                <div id="phoneticContainer"></div>
-                <div id="chineseContainer"></div>
-                <div id="meaningContainer"></div>
+            <div class="button-container" style="margin-top: 15px; margin-bottom: 5px;">
+                <button id="sentenceLinkBtn" class="button">句子</button>
+            </div>
+            <div id="searchInDetails" style="text-align: center; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." oninput="filterWordsInDetails()" style="font-size: 16px; padding: 5px; width: 200px;">
+                <button id="bButton" class="button">B</button>
+            </div>
 
-                <div class="audio-controls-wrapper">
-                    <div class="audio-controls">
-                        <button class="audio-btn" id="playAudioBtn">
-                            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" 
-                                 alt="Play" width="24" height="24" />
-                        </button>
-                        <button class="audio-btn" onclick="adjustAudioTime(-5)">
-                            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg" 
-                                 alt="Rewind" width="24" height="24" />
-                        </button>
-                        <button class="audio-btn" id="pauseResumeBtn" onclick="togglePauseAudio(this)">
-                            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" 
-                                 alt="Pause" width="24" height="24" />
-                        </button>
-                        <button class="audio-btn" onclick="adjustAudioTime(5)">
-                            <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/fast-forward.svg" 
-                                 alt="Fast Forward" width="24" height="24" />
-                        </button>
-                    </div>
-                </div>
+            <div id="searchResultsDetails" style="max-height: 200px; overflow-y: auto; text-align: left;"></div>
 
-                <div class="button-container" style="margin-top: 15px; margin-bottom: 5px;">
-                    <button id="sentenceLinkBtn" class="button">句子</button>
-                </div>
-                <div id="searchInDetails" style="text-align: center; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                    <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." oninput="filterWordsInDetails()" style="font-size: 16px; padding: 5px; width: 200px;">
-                    <button id="bButton" class="button">B</button>
-                </div>
+            <div id="noteContainer">
+                <textarea id="wordNote" placeholder="輸入筆記..." style="width: 100%; height: 60px;" oninput="updateCheckbox()"></textarea>
+                <p id="savedNote"></p>
+            </div>
 
-                <div id="searchResultsDetails" style="max-height: 200px; overflow-y: auto; text-align: left;"></div>
-
-                <div id="noteContainer">
-                    <textarea id="wordNote" placeholder="輸入筆記..." style="width: 100%; height: 60px;" oninput="updateCheckbox()"></textarea>
-                    <p id="savedNote"></p>
-                </div>
-
-                <div id="storageButtons">
-                    <div class="note-buttons-inner">
-                        <button onclick="saveNote()" id="saveNoteButton" class="note-button">Save Note</button>
-                        <button onclick="exportAllData()" id="exportButton" class="note-button">Export</button>
-                        <button onclick="importAllData()" id="importButton" class="note-button">Import</button>
-                    </div>
+            <div id="storageButtons">
+                <div class="note-buttons-inner">
+                    <button onclick="saveNote()" id="saveNoteButton" class="note-button">Save Note</button>
+                    <button onclick="exportAllData()" id="exportButton" class="note-button">Export</button>
+                    <button onclick="importAllData()" id="importButton" class="note-button">Import</button>
                 </div>
             </div>
         </div>
