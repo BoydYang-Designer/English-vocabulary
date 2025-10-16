@@ -20,9 +20,9 @@
         }
     </style>
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app-compat.js" defer></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth-compat.js" defer></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js" defer></script>
 
     <script defer>
       // Your web app's Firebase configuration
@@ -40,7 +40,9 @@
       // 這個判斷是為了防止重複初始化，是一個好習慣
       if (typeof firebase !== 'undefined' && !firebase.apps.length) {
           firebase.initializeApp(firebaseConfig);
-          console.log("Firebase Initialized!");
+          // 【關鍵修復】在這裡初始化 Firestore 服務
+          const db = firebase.firestore();
+          console.log("Firebase and Firestore Initialized!");
       }
     </script>
 

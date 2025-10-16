@@ -1386,6 +1386,11 @@ function showAppView(user) {
 
 // --- 認證流程 ---
 function signIn() {
+    if (typeof firebase === 'undefined' || !firebase.auth) {
+        console.error("Firebase SDK 未載入或未初始化");
+        showNotification("⚠️ 系統尚未準備好，請稍後再試", "error");
+        return;
+    }
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).catch((error) => {
         console.error("登入失敗:", error);
