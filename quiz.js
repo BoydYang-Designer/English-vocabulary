@@ -28,7 +28,7 @@ document.addEventListener('auth-ready', function() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const loadingOverlay = document.getElementById('loading-overlay');
+    const loadingOverlay = document.getElementById('loadingOverlay');
     const params = new URLSearchParams(window.location.search);
     const show = params.get("show");
     // wordQuizHistory is now initialized in the 'auth-ready' listener
