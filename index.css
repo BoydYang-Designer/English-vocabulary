@@ -2,31 +2,31 @@
 
 /* 基本樣式 */
 body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-background: #f9f9f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
 }
 
 h1 {
-text-align: center;
-background: #333;
-color: white;
-padding: 15px 0;
-margin: 0;
-font-size: 24px;
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    margin: 0;
+    font-size: 24px;
 }
 
 /* 容器 */
 .container {
-max-width: 414px;
-width: 100%;
-margin: 0 auto;
-overflow-x: hidden;
-box-sizing: border-box;
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-/* Collapsible Section Styles Start */
+/* --- Collapsible Section Styles Start --- */
 .collapsible-section-wrapper {
     max-width: 414px;
     margin: 15px auto;
@@ -59,7 +59,6 @@ box-sizing: border-box;
 }
 
 /* Arrow icon using pseudo-element */
-/* Arrow icon using pseudo-element */
 .collapsible-header::after {
     content: '\002B'; /* Plus sign */
     color: white;
@@ -73,356 +72,344 @@ box-sizing: border-box;
     content: '\2212'; /* Minus sign */
 }
 
+/* [核心修改] 分類內容的預設狀態 (收合) */
 .collapsible-content {
     padding: 0 10px;
-    max-height: 0;
-    overflow: hidden;
+    max-height: 0; /* 預設高度為 0，使其收合 */
+    overflow: hidden; /* 隱藏超出的內容 */
     transition: max-height 0.3s ease-out;
     background-color: #f1f1f1;
     border-radius: 0 0 5px 5px;
 }
 
+/* [核心修改] 當分類展開時，限制其最大高度並提供捲動條 */
+.collapsible-header.active + .collapsible-content {
+    max-height: 250px; /* 展開後的最大高度 */
+    overflow-y: auto;  /* 內容過多時，顯示垂直捲動條 */
+}
+
+
 .collapsible-content .button-wrapper {
     padding: 10px 0;
     text-align: center;
 }
-/* Collapsible Section Styles End */
+/* --- Collapsible Section Styles End --- */
 
 
 /* 字母按鈕區域 */
 .letter-btn {
-padding: 10px 15px;
-margin: 5px;
-cursor: pointer;
-border: none;
-background: #555;
-color: white;
-font-size: 18px;
-border-radius: 25px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background: #555;
+    color: white;
+    font-size: 18px;
+    border-radius: 25px;
 }
 
 .letter-btn:hover {
-background: #777;
+    background: #777;
 }
 
 /* 單字列表標題 */
 #wordListTitle {
-text-align: center;
-font-size: 24px;
-font-weight: bold;
-color: #375c85;
-margin-bottom: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #375c85;
+    margin-bottom: 15px;
 }
 
 /* 單字列表 */
 .word-list {
-display: none;
-max-width: 414px;
-margin: 10px 0;
-max-height: 80vh;
-overflow-y: auto;
-background: white;
-padding: 15px;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    max-width: 414px;
+    margin: 10px 0;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 單字項目 */
 .word-item {
-flex-grow: 1;
-font-size: 20px;
-font-weight: bold;
-cursor: pointer;
-padding: 8px;
-border-bottom: 1px solid #ddd;
-color: #007bff;
+    flex-grow: 1;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    color: #007bff;
 }
 
 .word-item:hover {
-background: #f0f0f0;
+    background: #f0f0f0;
 }
 
 /* 音標容器 */
 .phonetics-container {
-margin-left: 10px;
-display: flex;
-align-items: center;
-gap: 5px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .phonetics-container button {
-background-color: #647f91;
-color: #fff;
-font-size: 18px;
-text-align: left;
-padding: 5px 10px;
-min-width: 100px;
-min-height: 40px;
-width: auto;
-height: auto;
-white-space: nowrap;
-display: inline-block;
-border: none;
-border-radius: 18px;
-transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #647f91;
+    color: #fff;
+    font-size: 18px;
+    text-align: left;
+    padding: 5px 10px;
+    min-width: 100px;
+    min-height: 40px;
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    display: inline-block;
+    border: none;
+    border-radius: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .phonetics-container button:hover {
-background-color: #647f91;
-transform: scale(1.05);
+    background-color: #647f91;
+    transform: scale(1.05);
 }
 
 /* 英文解釋容器 */
 #meaningContainer {
-max-height: 400px;
-overflow-y: auto;
-padding-top: 50px;
-padding-left: 15px;
-padding-right: 15px;
-padding-bottom: 50px;
-border: 1px solid #ddd;
-background: #e9eef1;
-border-radius: 15px;
-font-size: 25px;
-margin-left: 8px;
-margin-right: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
+    border: 1px solid #ddd;
+    background: #e9eef1;
+    border-radius: 15px;
+    font-size: 25px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 /* 中文解釋容器 */
 #chineseContainer {
-font-size: 16px;
-margin-left: 10px;
+    font-size: 16px;
+    margin-left: 10px;
 }
 
 /* 搜尋輸入框 */
 #searchInput {
-font-size: 16px;
-padding: 10px;
+    font-size: 16px;
+    padding: 10px;
 }
 
 /* 在 index.css 中新增 */
 .button-group {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 /* 按鈕 */
 .button {
-font-size: 18px;
-border-radius: 25px;
-display: block;
-width: 150px;
-height: 50px;
-background-color: #647f91;
-color: white;
-border: none;
-cursor: pointer;
-text-align: center;
-margin: 10px auto;
-font-weight: bold;
+    font-size: 18px;
+    border-radius: 25px;
+    display: block;
+    width: 150px;
+    height: 50px;
+    background-color: #647f91;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px auto;
+    font-weight: bold;
 }
 
 .button:hover {
-background-color: #6e8191;
+    background-color: #6e8191;
 }
 
 .button-container {
-display: flex;
-justify-content: center; /* 水平居中 */
-gap: 10px; /* 按鈕之間的間距 */
-flex-wrap: wrap; /* 如果空間不足，允許換行 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    gap: 10px; /* 按鈕之間的間距 */
+    flex-wrap: wrap; /* 如果空間不足，允許換行 */
 }
 
 /* 返回按鈕 */
 .back-button {
-position: sticky;
-top: 0;
-width: 100%;
-background-color: #647f91;
-color: white;
-font-size: 18px;
-border: none;
-padding: 8px 0;
-margin: 0;
-text-align: center;
-font-weight: bold;
-cursor: pointer;
-z-index: 10;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #647f91;
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 8px 0;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .back-button:hover {
-background-color: #6e8191;
+    background-color: #6e8191;
 }
 
 /* 音訊控制按鈕 */
 .audio-controls {
-display: flex;
-justify-content: center;
-gap: 12px;
-padding-top: 10px;
-margin: 0 auto;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 10px;
+    margin: 0 auto;
+    align-items: center;
 }
 
 .audio-btn {
-background-color: #647f91;
-color: #fff;
-font-size: 16px;
-padding: 15px;
-min-width: 80px;
-height: auto;
-display: flex;
-align-items: center;
-justify-content: center;
-border: none;
-border-radius: 25px;
-cursor: pointer;
-transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #647f91;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px;
+    min-width: 80px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .audio-btn.playing {
-background-color: #00BFFF !important;
-color: white !important;
+    background-color: #00BFFF !important;
+    color: white !important;
 }
 
 .audio-btn:hover {
-background-color: #4a6375;
-transform: scale(1.05);
+    background-color: #4a6375;
+    transform: scale(1.05);
 }
 
 .audio-btn img {
-width: 24px;
-height: 24px;
+    width: 24px;
+    height: 24px;
 }
 
 /* 筆記按鈕 */
 .note-button {
-padding: 8px 16px;
-font-size: 14px;
-border: none;
-border-radius: 5px;
-color: white;
-cursor: pointer;
-transition: background 0.3s ease, transform 0.2s ease;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #saveNoteButton {
-background: #6e93ba;
+    background: #6e93ba;
 }
 
 #saveNoteButton:hover {
-background: #475f78;
-transform: scale(1.05);
+    background: #475f78;
+    transform: scale(1.05);
 }
 
 #clearNoteButton {
-background: #a8454f;
+    background: #a8454f;
 }
 
 #clearNoteButton:hover {
-background: #7a3a40;
-transform: scale(1.05);
+    background: #7a3a40;
+    transform: scale(1.05);
 }
 
 /* B 按鈕 */
 #bButton {
-background-color: #647f91;
-color: white;
-border: none;
-height: auto;
-padding: 5px 10px;
-font-size: 16px;
-font-weight: bold;
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s, transform 0.2s;
+    background-color: #647f91;
+    color: white;
+    border: none;
+    height: auto;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 #bButton:hover {
-background-color: #597d96;
-transform: scale(1.1);
+    background-color: #597d96;
+    transform: scale(1.1);
 }
 
 /* 筆記容器 */
 #noteContainer {
-width: 360px;
-background: #e7e7e7;
-padding: 10px;
-border-radius: 8px;
-margin-top: 5px;
-max-height: 90px;
-overflow: hidden;
-margin-left: -5px;
+    width: 360px;
+    background: #e7e7e7;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+    max-height: 90px;
+    overflow: hidden;
+    margin-left: -5px;
 }
 
 #wordNote {
-background: transparent;
-font-size: 16px;
-line-height: 1.2em;
-padding: 5px;
-border: none;
-resize: none;
+    background: transparent;
+    font-size: 16px;
+    line-height: 1.2em;
+    padding: 5px;
+    border: none;
+    resize: none;
 }
 
 #wordNote:focus {
-border: none;
-outline: none;
+    border: none;
+    outline: none;
 }
 
 /* 儲存按鈕區域 */
 #storageButtons {
-display: flex;
-justify-content: flex-start;
-margin-top: 10px;
-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    width: 100%;
 }
 
 .note-buttons-inner {
-display: flex;
-align-items: center;
-gap: 10px; /* 按鈕間距 */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 按鈕間距 */
 }
 
 
 #storageButtons button {
-padding: 6px 12px;
-font-size: 14px;
-border: none;
-border-radius: 5px;
-background: #6e93ba;
-color: white;
-cursor: pointer;
-transition: 0.2s;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background: #6e93ba;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 #storageButtons button:hover {
-background: #475f78;
-transform: scale(1.05);
+    background: #475f78;
+    transform: scale(1.05);
 }
 
 /* 單字項目容器 */
-.word-item-container {
-display: flex;
-width: 100%;
-margin: 5px;
-justify-content: space-between;
-align-items: center;
-padding: 5px;
-border-bottom: 1px solid #ddd;
-transition: all 0.3s ease;
-}
-
-.word-item-container.checked {
-font-size: 66.7%;
-padding: 2px 5px;
-color: #888;
-opacity: 0.7;
-height: 28px;
-line-height: 28px;
-}
-
 .word-item-container {
     display: flex;
     width: 100%;
@@ -432,6 +419,15 @@ line-height: 28px;
     padding: 5px;
     border-bottom: 1px solid #ddd;
     transition: all 0.3s ease;
+}
+
+.word-item-container.checked {
+    font-size: 66.7%;
+    padding: 2px 5px;
+    color: #888;
+    opacity: 0.7;
+    height: 28px;
+    line-height: 28px;
 }
 
 .play-word-btn {
@@ -459,41 +455,38 @@ line-height: 28px;
     filter: brightness(0) invert(0.5); /* 滑鼠懸停時，變成深一點的灰色 */
 }
 
-
-
-
 /* 勾選按鈕 */
 .check-button {
-background: none;
-border: none;
-cursor: pointer;
-padding: 10px;
-width: 45px;
-height: 45px;
-margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
 }
 
 .check-button img {
-width: 45px;
-height: 45px;
-transition: 0.2s;
+    width: 45px;
+    height: 45px;
+    transition: 0.2s;
 }
 
 .check-button:hover {
-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 /* 重要單字標記 */
 .important-checkbox {
-width: 20px;
-height: 20px;
-transform: scale(1.3);
-cursor: pointer;
-border-radius: 6px;
-border: 2px solid #5c5c5c;
-appearance: none;
-background-color: white;
-transition: all 0.2s ease-in-out;
+    width: 20px;
+    height: 20px;
+    transform: scale(1.3);
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid #5c5c5c;
+    appearance: none;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
 }
 
 .important-checkbox:checked {
@@ -503,54 +496,54 @@ transition: all 0.2s ease-in-out;
 
 /* 媒體查詢 */
 @media (max-width: 414px) {
-h1 {
-font-size: 20px;
-}
-.category-title {
-font-size: 16px;
-margin: 8px 0;
-}
+    h1 {
+        font-size: 20px;
+    }
+    .category-title {
+        font-size: 16px;
+        margin: 8px 0;
+    }
 }
 
 /* 在 index.css 底部添加 */
 .playing {
-background-color: #00BFFF !important; /* 亮藍色 */
-color: white !important; /* 確保文字可見 */
+    background-color: #00BFFF !important; /* 亮藍色 */
+    color: white !important; /* 確保文字可見 */
 }
 
 #autoPlayBtn {
-padding: 5px 10px;
-font-size: 16px;
-background-color: #647f91;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s ease;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #647f91;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #autoPlayBtnDetails {
-margin-left: 10px;
-padding: 5px 10px;
-font-size: 16px;
-background-color: #647f91;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #647f91;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 #autoPlayBtnDetails:hover {
-background-color: #4a6375;
+    background-color: #4a6375;
 }
 
 #autoPlayBtn.active {
-background-color: #00BFFF !important;
+    background-color: #00BFFF !important;
 }
 
 .word-item-container.playing {
-background-color: #00BFFF; /* 亮藍色 */
-color: white; /* 確保文字可見 */
+    background-color: #00BFFF; /* 亮藍色 */
+    color: white; /* 確保文字可見 */
 }
 
 .word-item-container.playing .word-item {
@@ -559,27 +552,27 @@ color: white; /* 確保文字可見 */
 
 /* 分類標題 */
 .category-title {
-text-align: center;
-font-size: 20px;
-font-weight: bold;
-color: #375c85;
-margin: 10px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #375c85;
+    margin: 10px 0;
 }
 
 .category-display {
-margin-bottom: 12px; /* 與下方的中文解釋保持間距 */
-font-size: 16px;
+    margin-bottom: 12px; /* 與下方的中文解釋保持間距 */
+    font-size: 16px;
 }
 
 .category-tag {
-display: inline-block; /* 讓標籤並排顯示 */
-background-color: #e4e4e4; /* 與主題顏色匹配 */
-color: rgb(0, 0, 0);
-padding: 4px 10px;
-border-radius: 15px; /* 圓角效果 */
-font-size: 15px;
-margin-right: 8px; /* 標籤之間的右間距 */
-margin-top: 5px; /* 避免與上方元素太近 */
+    display: inline-block; /* 讓標籤並排顯示 */
+    background-color: #e4e4e4; /* 與主題顏色匹配 */
+    color: rgb(0, 0, 0);
+    padding: 4px 10px;
+    border-radius: 15px; /* 圓角效果 */
+    font-size: 15px;
+    margin-right: 8px; /* 標籤之間的右間距 */
+    margin-top: 5px; /* 避免與上方元素太近 */
 }
 
 .level-tag {
@@ -595,32 +588,27 @@ margin-top: 5px; /* 避免與上方元素太近 */
 
 
 #meaningContainer h4 {
-margin-top: 1.5em; /* Add more space above each numbered heading */
-margin-bottom: 0.5em; /* Reduce space between the number and its text */
+    margin-top: 1.5em; /* Add more space above each numbered heading */
+    margin-bottom: 0.5em; /* Reduce space between the number and its text */
 }
 
 #meaningContainer p {
-margin-top: 0; /* Remove extra space at the start of a paragraph */
-line-height: 1.6; /* Improve readability of the text itself */
+    margin-top: 0; /* Remove extra space at the start of a paragraph */
+    line-height: 1.6; /* Improve readability of the text itself */
 }
 
 #meaningContainer p.example {
-margin-left: 20px; /* 讓範例向右縮排 20px */
-font-style: italic; /* 讓範例文字變斜體 (可選) */
+    margin-left: 20px; /* 讓範例向右縮排 20px */
+    font-style: italic; /* 讓範例文字變斜體 (可選) */
 }
-
-/* index.css */
-
-/* index.css */
 
 /* 讓例句中的目標單字粗體 */
 .highlight-word {
   font-weight: bold;
   color: #007bff; /* 可以選擇一個你喜歡的顏色，例如藍色 */
-  /* color: #e60023; */ /* 或是稍紅的顏色 */
 }
 
-/* ▼▼▼ 新增的載入指示器與通知系統樣式 ▼▼▼ */
+/* ▼▼▼ 載入指示器與通知系統樣式 ▼▼▼ */
 
 /* 載入指示器 - 遮罩層 */
 #loading-overlay {
@@ -710,8 +698,6 @@ font-style: italic; /* 讓範例文字變斜體 (可選) */
     }
 }
 
-/* index.css - 請在檔案末尾新增以下樣式 */
-
 /* 按鈕被選中時的樣式 */
 .letter-btn.selected {
     background: #007bff;
@@ -760,26 +746,6 @@ font-style: italic; /* 讓範例文字變斜體 (可選) */
     background-color: #218838;
     transform: scale(1.05);
 }
-
-/* 修正分類容器過長的問題 */
-.collapsible-content {
-    /* ... 保留您原有的樣式 ... */
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    background-color: #f1f1f1;
-    
-    /* ▼▼▼ 新增這兩行 ▼▼▼ */
-    overflow-y: auto;  /* 當內容超出時，顯示垂直捲動條 */
-}
-
-/* 當區塊展開時，確保JS設定的高度不會被覆蓋 */
-.collapsible-header.active + .collapsible-content {
-    /* 這裡不需要特別設定，JS會動態添加 maxHeight */
-    /* CSS 的 max-height: 250px 會作為上限 */
-}
-
-/* index.css - 請在檔案末尾新增以下樣式 */
 
 /* 當分類標題下的內容有被選中項目時的樣式 */
 .collapsible-header.header-highlight {

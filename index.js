@@ -120,17 +120,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const startLearningButton = document.getElementById("startLearningBtn");
     if (startLearningButton) startLearningButton.addEventListener("click", startLearning);
     
-    document.querySelectorAll(".collapsible-header").forEach(button => {
-        button.addEventListener("click", function() {
-            this.classList.toggle("active");
-            const content = this.nextElementSibling;
-            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                content.style.maxHeight = '0px';
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
+document.querySelectorAll(".collapsible-header").forEach(button => {
+    button.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+
+        // 檢查是否正在展開
+        if (this.classList.contains('active')) {
+            // 如果是展開，設定 max-height 以觸發 CSS transition 動畫
+            content.style.maxHeight = content.scrollHeight + "px";
+
+            // 檢查內容實際高度是否超過 CSS 設定的 250px
+            if (content.scrollHeight > 250) {
+                // 如果超過，短暫延遲後讓 CSS 的 max-height: 250px 生效
+                setTimeout(() => {
+                    content.style.maxHeight = '250px'; 
+                }, 10); // 延遲時間很短，使用者幾乎無感
             }
-        });
+        } else {
+            // 如果是收合，清除 max-height
+            content.style.maxHeight = null;
+        }
     });
+});
 });
 
 // --- ALL THE OTHER FUNCTIONS from your original index.js go here ---
