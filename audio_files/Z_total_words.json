@@ -20250,6 +20250,7 @@
             ]
         },
         {
+            "等級": "C1",
             "Words": "Rush-Limbaugh",
             "pronunciation-1": "/rʌʃ ˈlɪm.bɑː/",
             "traditional Chinese": "n.\n拉什·林博\n美國廣播員、保守派政治評論員及作家 (1951–2021)",
@@ -20263,6 +20264,7 @@
             ]
         },
         {
+            "等級": "B2",
             "Words": "set-out",
             "pronunciation-1": "/ˈset ˌaʊt/",
             "traditional Chinese": "phrasal v.\n\n出發；開始旅程或任務，帶著特定目標或目的",
@@ -20271,6 +20273,34 @@
             "Unnamed: 11": "set-out",
             "分類": [
                 "Human & Society（人與社會）",
+                "動作",
+                "The Alchemist"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "shepherd",
+            "pronunciation-1": "[ˋʃɛpɚd]",
+            "traditional Chinese": "\n\nn.\n1. 牧羊人；看管羊群的人\n2.（喻）引導者；精神導師\n\nv.\n帶領、引導、護送（人或動物）",
+            "English meaning": "Shepherd can be a noun or a verb.\n\nAs a Noun: shepherd / shepherds\n\n1. A person who tends, guards, or herds sheep.\nE.g. The shepherd guided his flock through the mountains.\nE.g. A shepherd’s dog helps keep the sheep together.\nE.g. The shepherd rested under a tree after a long day in the fields.\nE.g. Ancient shepherds often traveled great distances in search of pasture.\n\n2. (Figurative) A person who guides or leads others, especially in a moral, spiritual, or protective way.\nE.g. The teacher acted as a shepherd to her students.\nE.g. The pastor served as a shepherd to his congregation.\nE.g. She became a shepherd for young artists finding their voice.\n\nAs a Verb: shepherd / shepherded / shepherding\n\nTo guide, lead, or direct people or animals carefully or protectively.\nE.g. The farmer shepherded the sheep into the barn before nightfall.\nE.g. The tour guide shepherded the visitors through the museum.\nE.g. She shepherded the children safely across the street.\nE.g. He shepherded the project from start to completion.\n\nSummary:\n“Shepherd” as a noun refers to a person who takes care of sheep or, figuratively, someone who guides others. As a verb, it means to lead, guide, or protect people or animals.\n\nRelated Words: guide, leader, caretaker, protector, guardian\nSynonyms: tend, lead, direct, escort, manage\nAntonyms: abandon, neglect, mislead, ignore, desert",
+            "Unnamed: 10": "shepherd",
+            "Unnamed: 11": "shepherd",
+            "分類": [
+                "自然與環境",
+                "動物",
+                "The Alchemist"
+            ]
+        },
+        {
+            "等級": "A2",
+            "Words": "wipe",
+            "pronunciation-1": "[waɪp]",
+            "traditional Chinese": "n.\n\n1.擦拭；擦拭的動作\n2.（可數）濕紙巾、擦拭布\n\nv.\n\n1.擦拭、清除（表面上的東西）\n\n2.消除、抹去、徹底清除\n\n3.打擊、揮動（迅速或用力地）",
+            "English meaning": "Wipe can be a noun or a verb.\n\nAs a Noun (countable): wipe / wipes\n\n1. An act of cleaning or removing something by rubbing a surface.\nE.g. He gave the counter a quick wipe.\nE.g. She gave the table a thorough wipe before dinner.\n\n2. A disposable cloth, tissue, or similar item used for cleaning.\nE.g. She used a baby wipe to clean her hands.\nE.g. The nurse handed him an antiseptic wipe.\n\nAs a Verb: wipe / wiped / wiping\n\n1. To clean, dry, or remove something from a surface by rubbing or brushing.\nE.g. She wiped the table after breakfast.\nE.g. He wiped the dust off the bookshelf.\nE.g. The child wiped his hands on a napkin.\nE.g. They wiped the window until it was sparkling clean.\n\n2. To remove, erase, or eliminate something completely.\nE.g. The new software update wiped all the old files.\nE.g. The accident wiped out their savings.\nE.g. The storm wiped entire villages off the map.\nE.g. He wiped the error from his memory and moved on.\n\n3. To strike or hit, often quickly or forcefully.\nE.g. She wiped the tears from her eyes.\nE.g. The cat wiped its paw across the floor.\nE.g. He wiped the sweat from his forehead after the run.\nE.g. The player wiped the ball off the line to score a goal.\n\nSummary:\n“Wipe” as a noun refers to an act of cleaning or a cleaning cloth, while as a verb it generally means to clean, remove, erase, or strike by rubbing or brushing.\n\nRelated Words: clean, erase, remove, swipe, strike\nSynonyms: rub, mop, clear, obliterate, brush\nAntonyms: dirty, smear, retain, keep, preserve",
+            "Unnamed: 10": "wipe",
+            "Unnamed: 11": "wipe",
+            "分類": [
+                "行為與心理",
                 "動作",
                 "The Alchemist"
             ]
