@@ -3,6 +3,7 @@
 // These variables are specific to the index page logic
 let wordsData = [];
 let sentenceAudio = new Audio();
+let sentenceData = [];
 let lastWordListType = "";
 let lastWordListValue = "";
 let lastSentenceListWord = "";
@@ -44,16 +45,25 @@ function initializeAppLogic() {
         loadingOverlay.style.opacity = '1';
     }
 
+    // 在 Promise.all 中增加一個 fetch 來獲取 sentence.json
     return Promise.all([
         fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
                 return res.json();
+            }),
+        // 新增的 fetch
+        fetch("https://boydyang-designer.github.io/English-vocabulary/Sentence%20file/sentence.json")
+            .then(res => {
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                return res.json();
             })
     ])
-    .then(([wordsJsonData]) => {
+    .then(([wordsJsonData, sentenceJsonData]) => { // 接收兩個 JSON 資料
         wordsData = wordsJsonData["New Words"] || [];
+        sentenceData = sentenceJsonData["New Words"] || []; // 將句子資料存入變數
         console.log("✅ Z_total_words.json loaded successfully");
+        console.log("✅ sentence.json loaded successfully"); // 確認句子資料已載入
 
         wordsData.forEach(w => {
             if (typeof w["分類"] === "string") w["分類"] = [w["分類"]];
@@ -870,10 +880,22 @@ function showDetails(word) {
     
     const sentenceLinkBtn = document.getElementById("sentenceLinkBtn");
     if (sentenceLinkBtn) {
+        // --- 這是本次修改的核心邏輯 ---
         sentenceLinkBtn.onclick = () => {
             const wordText = word.Words || word.word || word["單字"];
             if (wordText) {
-                window.location.href = `sentence.html?showSentencesForWord=${encodeURIComponent(wordText)}&from=index`;
+                // 檢查是否有對應的句子
+                const relatedSentences = sentenceData.filter(s =>
+                    s.Words && s.Words.startsWith(wordText + "-")
+                );
+
+                if (relatedSentences.length > 0) {
+                    // 如果找到句子，則跳轉
+                    window.location.href = `sentence.html?showSentencesForWord=${encodeURIComponent(wordText)}&from=index`;
+                } else {
+                    // 如果沒找到，顯示提示框且不跳轉
+                    showNotification(`⚠️ 找不到單字 "${wordText}" 的相關句子。`, 'error');
+                }
             }
         };
     }
