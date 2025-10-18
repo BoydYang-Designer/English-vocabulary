@@ -1178,11 +1178,9 @@ function updateAutoPlayButton() {
 
     if (document.getElementById("wordList").style.display === "block" && autoPlayBtn) {
         autoPlayBtn.textContent = isAutoPlaying ? (isPaused ? "繼續播放" : "停止播放") : "自動播放單字";
-        // [修改] 將 'active' class 改為 'playing'，並確保暫停時不顯示播放狀態
         autoPlayBtn.classList.toggle("playing", isAutoPlaying && !isPaused);
     } else if (document.getElementById("wordDetails").style.display === "block" && autoPlayDetailsBtn) {
         autoPlayDetailsBtn.textContent = isAutoPlaying ? (isPaused ? "繼續自動播放" : "暫停自動播放") : "自動播放內容";
-        // [修改] 將 'active' class 改為 'playing'，並確保暫停時不顯示播放狀態
         autoPlayDetailsBtn.classList.toggle("playing", isAutoPlaying && !isPaused);
     }
 }
@@ -1511,3 +1509,4 @@ function enableWordCopyOnClick() {
             });
     });
 }
+

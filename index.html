@@ -12,7 +12,7 @@
         }
         /* --- 新增的 CSS 動畫效果 --- */
         @keyframes highlight-and-fade {
-            from { background-color: lightgreen; }
+            from { background-color: #D7CCC8; }
             to { background-color: transparent; }
         }
         .word-click-highlight {
@@ -56,7 +56,8 @@
                 <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterWords()" style="padding: 8px; width: 200px;">
             </div>
             <div class="button-container" style="text-align: center; margin-top: 20px;">
-                <button id="wordPageBtn" class="button" style="background-color: #28a745;">單字頁面</button>
+                <!-- [修改] 移除了行內綠色樣式，讓它遵循CSS的大地色風格 -->
+                <button id="wordPageBtn" class="button">單字頁面</button>
                 <button id="wordQuizBtn" class="button" onclick="window.location.href='quiz.html?show=categories&from=index'">單字測驗</button>
                 <button id="sentencePageBtn" class="button">句子頁面</button>
                 <button id="startQuizBtn" class="button">句子測驗</button>
@@ -147,7 +148,6 @@
 
                 <div class="button-container" style="margin-top: 15px; margin-bottom: 5px;">
                     <button id="sentenceLinkBtn" class="button">句子</button>
-                    <!-- 2.1: Timestamp toggle button added here -->
                     <button id="toggle-timestamp-btn" class="button" style="display: none;">
                         <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/history.svg" alt="Timestamp" width="24" height="24">
                     </button>
@@ -176,3 +176,4 @@
     </div>
 </body>
 </html>
+

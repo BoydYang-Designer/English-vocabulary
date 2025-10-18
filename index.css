@@ -1,17 +1,17 @@
-/* index.css (Revised Professional Palette) */
+/* index.css (Light Earth Tone Palette) */
 
 /* 基本樣式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #F8F9FA; /* [修改] 使用更柔和的背景色 */
-    color: #212529; /* [修改] 設定基礎文字顏色 */
+    background: #FDFBF6; /* [大地色] 溫暖的米白背景 */
+    color: #5D4037; /* [大地色] 柔和的棕色文字 */
 }
 
 h1 {
     text-align: center;
-    background: linear-gradient(to right, #5D8AA8, #4F7793); /* [修改] 使用漸層，增加現代感 */
+    background: linear-gradient(to right, #A1887F, #8D6E63); /* [大地色] 較淺的暖棕色漸層 */
     color: white;
     padding: 15px 0;
     margin: 0;
@@ -40,30 +40,30 @@ h1 {
 }
 
 .collapsible-header {
-    background-color: #FFFFFF; /* [修改] 改為白色背景 */
-    color: #333; /* [修改] 文字改為深色 */
+    background-color: #FFFFFF; 
+    color: #5D4037; 
     cursor: pointer;
     padding: 12px 20px;
     width: 100%;
-    border: 1px solid #DEE2E6; /* [新增] 增加細緻邊框 */
+    border: 1px solid #EFEBE9; /* [大地色] 更淺的褐色邊框 */
     text-align: left;
     outline: none;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 8px; /* [修改] 圓角調整 */
+    border-radius: 8px; 
     transition: all 0.3s ease;
     position: relative;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* [新增] 加上細微陰影 */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .collapsible-header:hover {
-    background-color: #F8F9FA; /* [修改] Hover 效果 */
-    border-color: #CED4DA;
+    background-color: #F5F5F5;
+    border-color: #BCAAA4;
 }
 
 .collapsible-header::after {
     content: '\002B';
-    color: #5D8AA8; /* [修改] 圖示顏色使用主色調 */
+    color: #A1887F; /* [大地色] 較淺的主色調 */
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -79,9 +79,9 @@ h1 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    background-color: #F0F4F8; /* [修改] 內容區塊使用淡藍灰色，與主色調呼應 */
+    background-color: #FAFAFA; /* [大地色] 更淺的暖灰 */
     border-radius: 0 0 8px 8px;
-    border: 1px solid #DEE2E6;
+    border: 1px solid #EFEBE9;
     border-top: none;
 }
 
@@ -98,26 +98,26 @@ h1 {
 
 /* 字母/分類按鈕 */
 .letter-btn {
-    padding: 8px 15px; /* [修改] 微調 padding */
+    padding: 8px 15px;
     margin: 5px;
     cursor: pointer;
-    border: 1px solid #CED4DA; /* [修改] 使用邊框而非實色背景 */
-    background: #FFFFFF; /* [修改] 預設白色 */
-    color: #5D8AA8; /* [修改] 文字使用主色調 */
-    font-size: 16px; /* [修改] 字體微調 */
+    border: 1px solid #EFEBE9; 
+    background: #FFFFFF;
+    color: #A1887F; /* [大地色] 較淺的主色調 */
+    font-size: 16px; 
     border-radius: 20px;
     transition: all 0.2s ease;
 }
 
 .letter-btn:hover {
-    background: #F0F4F8;
-    border-color: #5D8AA8;
+    background: #FAFAFA;
+    border-color: #A1887F;
 }
 
 .letter-btn.selected {
-    background: #5D8AA8; /* [修改] 選中狀態使用主色調 */
+    background: #A1887F; /* [大地色] 較淺的主色調 */
     color: white;
-    border-color: #5D8AA8;
+    border-color: #A1887F;
     transform: scale(1.05);
 }
 
@@ -127,7 +127,7 @@ h1 {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    color: #212529; /* [修改] */
+    color: #5D4037;
     margin-bottom: 15px;
 }
 
@@ -141,7 +141,7 @@ h1 {
     background: white;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* [修改] */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* 單字項目 */
@@ -152,7 +152,7 @@ h1 {
     cursor: pointer;
     padding: 8px;
     border-bottom: 1px solid #eee;
-    color: #0056b3; /* [修改] 使用更沉穩的藍色 */
+    color: #795548; /* [大地色] 較淺的暖棕 */
 }
 
 .word-item:hover {
@@ -161,7 +161,7 @@ h1 {
 
 /* 音標容器 */
 .phonetics-container button {
-    background-color: #5D8AA8; /* [修改] 主色調 */
+    background-color: #A1887F; /* [大地色] 較淺的主色調 */
     color: #fff;
     font-size: 18px;
     text-align: left;
@@ -178,7 +178,7 @@ h1 {
 }
 
 .phonetics-container button:hover {
-    background-color: #4F7793; /* [修改] Hover 顏色加深 */
+    background-color: #8D6E63; /* [大地色] Hover 加深 */
     transform: scale(1.05);
 }
 
@@ -187,12 +187,12 @@ h1 {
     position: relative;
     max-height: 400px;
     overflow-y: auto;
-    padding: 20px; /* [修改] 增加內邊距 */
-    border: 1px solid #DEE2E6; /* [修改] */
-    background: #FFFFFF; /* [修改] */
+    padding: 20px; 
+    border: 1px solid #EFEBE9;
+    background: #FFFFFF;
     border-radius: 15px;
-    font-size: 18px; /* [修改] */
-    line-height: 1.6; /* [新增] 增加行高提升可讀性 */
+    font-size: 18px; 
+    line-height: 1.6; 
     margin: 0 8px;
 }
 
@@ -200,14 +200,14 @@ h1 {
 #chineseContainer {
     font-size: 16px;
     margin-left: 10px;
-    color: #555; /* [新增] */
+    color: #555;
 }
 
 /* 搜尋輸入框 */
 #searchInput {
     font-size: 16px;
     padding: 10px;
-    border: 1px solid #CED4DA;
+    border: 1px solid #EFEBE9;
     border-radius: 8px;
 }
 
@@ -225,7 +225,7 @@ h1 {
     display: block;
     width: 150px;
     height: 50px;
-    background-color: #5D8AA8; /* [修改] 主色調 */
+    background-color: #A1887F; /* [大地色] 較淺的主色調 */
     color: white;
     border: none;
     cursor: pointer;
@@ -233,11 +233,11 @@ h1 {
     margin: 10px auto;
     font-weight: bold;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* [新增] */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .button:hover {
-    background-color: #4F7793; /* [修改] Hover 加深 */
+    background-color: #8D6E63; /* [大地色] Hover 加深 */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -253,7 +253,7 @@ h1 {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: #5D8AA8; /* [修改] */
+    background-color: #A1887F;
     color: white;
     font-size: 18px;
     border: none;
@@ -266,7 +266,7 @@ h1 {
 }
 
 .back-button:hover {
-    background-color: #4F7793; /* [修改] */
+    background-color: #8D6E63;
 }
 
 /* 音訊控制按鈕 */
@@ -280,7 +280,7 @@ h1 {
 }
 
 .audio-btn {
-    background-color: #5D8AA8; /* [修改] 主色調 */
+    background-color: #A1887F; /* [大地色] 較淺的主色調 */
     color: #fff;
     font-size: 16px;
     padding: 15px;
@@ -296,18 +296,17 @@ h1 {
 }
 
 .audio-btn:hover {
-    background-color: #4F7793; /* [修改] */
+    background-color: #8D6E63;
     transform: scale(1.05);
 }
 
-/* [修改] 播放狀態、啟動按鈕和正在播放的項目，全部改用更和諧的青色 */
+/* [大地色] 播放狀態改為更柔和的淺棕色 */
 .audio-btn.playing,
 #autoPlayBtn.playing,
 .word-item-container.playing,
 #autoPlayDetailsBtn.playing {
-    background-color: #20c997 !important; /* 使用專業的青色代替綠色 */
+    background-color: #BCAAA4 !important;
     color: white !important;
-    box-shadow: 0 0 10px rgba(32, 201, 151, 0.5); /* 新增光暈效果，增加動感 */
 }
 
 .word-item-container.playing .word-item {
@@ -320,9 +319,9 @@ h1 {
     height: 24px;
 }
 
-/* B 按鈕 */
+/* B 按鈕 (維持中性灰色) */
 #bButton {
-    background-color: #6c757d; /* [修改] 維持中性灰色 */
+    background-color: #6c757d; 
     color: white;
     border: none;
     height: auto;
@@ -342,57 +341,56 @@ h1 {
 /* 筆記容器 */
 #noteContainer {
     width: 360px;
-    background: #F0F4F8; /* [修改] */
+    background: #FAFAFA;
     padding: 10px;
     border-radius: 8px;
     margin-top: 5px;
     max-height: 90px;
     overflow: hidden;
     margin-left: -5px;
-    border: 1px solid #DEE2E6; /* [新增] */
+    border: 1px solid #EFEBE9;
 }
 
 /* 其他按鈕也統一風格 */
 #saveNoteButton, #storageButtons button {
-    background: #5D8AA8;
+    background: #A1887F;
 }
 
 #saveNoteButton:hover, #storageButtons button:hover {
-    background: #4F7793;
+    background: #8D6E63;
 }
 
 
-/* [修改] 開始學習按鈕使用同樣的青色，作為主要的號召性按鈕 (Call to Action) */
+/* [大地色] 開始學習按鈕使用主色調 */
 #startLearningBtn {
     width: 80%;
     max-width: 300px;
     padding: 10px;
     font-size: 20px;
-    background-color: #20c997; /* [修改] 使用青色 */
+    background-color: #A1887F;
     color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* 新增 box-shadow 過渡 */
+    transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
 #startLearningBtn:hover {
-    background-color: #1baa80; /* [修改] 加深的青色 */
+    background-color: #8D6E63;
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* [新增] 增強 Hover 效果 */
 }
 
-/* [修改] Collapsible header 強調樣式 */
+/* [大地色] Collapsible header 強調樣式 */
 .collapsible-header.header-highlight {
-    background-color: #E6F2FF;
-    color: #0056b3;
+    background-color: #FAFAFA;
+    color: #795548;
     font-weight: bold;
-    border-color: #5D8AA8;
+    border-color: #A1887F;
 }
 
-/* [修改] 自動播放按鈕樣式 */
+/* [大地色] 自動播放按鈕樣式 */
 #autoPlayBtn {
     padding: 5px 10px;
     font-size: 16px;
@@ -401,20 +399,18 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* [新增] 過渡效果 */
+    transition: background-color 0.3s ease;
 }
 
 #autoPlayBtn:hover {
     background-color: #5a6268;
 }
 
-/* 以下為既有樣式，僅微調以符合新色盤 */
 .highlight-word {
   font-weight: bold;
-  color: #5D8AA8; /* [修改] */
+  color: #A1887F;
 }
 
-/* ... 其他未列出的 CSS 規則 ... */
 /* 筆記按鈕 */
 .note-button {
     padding: 8px 16px;
@@ -442,7 +438,7 @@ h1 {
     padding: 5px;
     border: none;
     resize: none;
-    color: #212529; /* [新增] */
+    color: #5D4037;
 }
 
 #wordNote:focus {
@@ -484,7 +480,7 @@ h1 {
     align-items: center;
     padding: 5px;
     border-bottom: 1px solid #ddd;
-    border-radius: 5px; /* [新增] 增加圓角，使邊界更柔和 */
+    border-radius: 5px;
     transition: all 0.3s ease;
 }
 
@@ -513,13 +509,13 @@ h1 {
     height: 22px;
     opacity: 1;
     transition: opacity 0.2s, transform 0.2s, filter 0.2s;
-    filter: brightness(0) invert(0.6); /* [修改] 調整圖示顏色 */
+    filter: brightness(0) invert(0.6);
 }
 
 .play-word-btn:hover img {
     opacity: 1; 
     transform: scale(1.15); 
-    filter: brightness(0) invert(0.4); /* [修改] */
+    filter: brightness(0) invert(0.4);
 }
 
 /* 勾選按鈕 */
@@ -550,15 +546,15 @@ h1 {
     transform: scale(1.3);
     cursor: pointer;
     border-radius: 6px;
-    border: 2px solid #adb5bd; /* [修改] */
+    border: 2px solid #BCAAA4;
     appearance: none;
     background-color: white;
     transition: all 0.2s ease-in-out;
 }
 
 .important-checkbox:checked {
-    background-color: #ffc107;
-    border-color: #f5b700; /* [修改] */
+    background-color: #FFCC80; /* [大地色] 使用更溫和的赭色 */
+    border-color: #FFA726;
 }
 
 /* 媒體查詢 */
@@ -581,7 +577,6 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* [新增] 過渡效果 */
 }
 
 #autoPlayDetailsBtn:hover {
@@ -593,7 +588,7 @@ h1 {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    color: #343a40; /* [修改] */
+    color: #5D4037;
     margin: 10px 0;
 }
 
@@ -604,20 +599,20 @@ h1 {
 
 .category-tag, .level-tag {
     display: inline-block;
-    background-color: #e9ecef; /* [修改] */
-    color: #495057; /* [修改] */
+    background-color: #FAFAFA;
+    color: #795548;
     padding: 4px 10px;
     border-radius: 15px;
     font-size: 15px;
     margin-right: 8px;
     margin-top: 5px;
-    border: 1px solid #dee2e6; /* [新增] */
+    border: 1px solid #EFEBE9;
 }
 
 #meaningContainer h4 {
     margin-top: 1.5em;
     margin-bottom: 0.5em;
-    color: #212529; /* [新增] */
+    color: #5D4037;
 }
 
 #meaningContainer p {
@@ -628,10 +623,10 @@ h1 {
 #meaningContainer p.example {
     margin-left: 20px;
     font-style: italic;
-    color: #495057; /* [修改] */
+    color: #795548;
 }
 
-/* ▼▼▼ 載入指示器與通知系統樣式 (維持不變) ▼▼▼ */
+/* ▼▼▼ 載入指示器與通知系統樣式 ▼▼▼ */
 #loading-overlay {
     position: fixed;
     top: 0;
@@ -650,7 +645,7 @@ h1 {
 
 .loading-spinner {
     border: 5px solid #f3f3f3;
-    border-top: 5px solid #5D8AA8; /* [修改] 使用主色調 */
+    border-top: 5px solid #A1887F; /* [大地色] 較淺的主色調 */
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -691,11 +686,11 @@ h1 {
 }
 
 .toast.success {
-    background-color: #20c997; /* [修改] 使用和諧的青色 */
+    background-color: #AED581; /* [大地色] 更和諧的橄欖綠 */
 }
 
 .toast.error {
-    background-color: #dc3545;
+    background-color: #EF9A9A; /* [大地色] 更柔和的紅色 */
 }
 
 @keyframes slideIn {
@@ -722,7 +717,7 @@ h1 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    background-color: #f0f4f8;
+    background-color: #FAFAFA;
     border-radius: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -730,7 +725,7 @@ h1 {
 
 .start-learning-container {
     padding: 20px 15px;
-    background-color: transparent; /* [修改] */
+    background-color: transparent;
     text-align: center;
 }
 
@@ -745,8 +740,8 @@ h1 {
 }
 
 .subcategory-wrapper .letter-btn.selected {
-    background: #5D8AA8;
-    border-color: #5D8AA8;
+    background: #A1887F;
+    border-color: #A1887F;
     color: #fff;
 }
 
@@ -771,7 +766,7 @@ h1 {
 }
 
 #toggle-timestamp-btn.is-active {
-    background-color: #5D8AA8; /* [修改] */
+    background-color: #A1887F;
 }
 
 #toggle-timestamp-btn:hover {
@@ -789,11 +784,11 @@ h1 {
 }
 
 .timestamp-sentence:hover {
-    background-color: #f0f4f8; /* [修改] */
+    background-color: #FAFAFA;
 }
 
 .timestamp-sentence.is-current {
-    background-color: #D6EAF8; /* [修改] */
+    background-color: #EFEBE9; /* [大地色] 更淺的褐色高亮 */
     font-weight: bold;
-    color: #1A5276; /* [修改] */
+    color: #5D4037;
 }
