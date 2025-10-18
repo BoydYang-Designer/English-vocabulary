@@ -758,8 +758,8 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-#toggle-timestamp-btn img {
-    filter: invert(1);
+#toggle-timestamp-btn svg {
+    /* filter: invert(1);  <-- 這行不再需要 */
     width: 24px;
     height: 24px;
     vertical-align: middle;

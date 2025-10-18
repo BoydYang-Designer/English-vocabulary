@@ -148,9 +148,11 @@
 
                 <div class="button-container" style="margin-top: 15px; margin-bottom: 5px;">
                     <button id="sentenceLinkBtn" class="button">句子</button>
-                    <button id="toggle-timestamp-btn" class="button" style="display: none;">
-                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/history.svg" alt="Timestamp" width="24" height="24">
-                    </button>
+<button id="toggle-timestamp-btn" class="button" style="display: none;" title="Toggle Timestamp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-toggle-ts">
+                        <path d="M3 15h18M4 10h16M10 3v4M14 3v4M8 21v-4M12 21v-4M16 21v-4"/>
+                    </svg>
+                </button>
                 </div>
                 <div id="searchInDetails" style="text-align: center; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
                     <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." oninput="filterWordsInDetails()" style="font-size: 16px; padding: 5px; width: 200px;">
