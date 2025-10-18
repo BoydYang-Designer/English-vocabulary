@@ -147,6 +147,10 @@
 
                 <div class="button-container" style="margin-top: 15px; margin-bottom: 5px;">
                     <button id="sentenceLinkBtn" class="button">句子</button>
+                    <!-- 2.1: Timestamp toggle button added here -->
+                    <button id="toggle-timestamp-btn" class="button" style="display: none;">
+                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/history.svg" alt="Timestamp" width="24" height="24">
+                    </button>
                 </div>
                 <div id="searchInDetails" style="text-align: center; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
                     <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." oninput="filterWordsInDetails()" style="font-size: 16px; padding: 5px; width: 200px;">
@@ -156,7 +160,7 @@
                 <div id="searchResultsDetails" style="max-height: 200px; overflow-y: auto; text-align: left;"></div>
 
                 <div id="noteContainer">
-                    <textarea id="wordNote" placeholder="輸入筆記..." style="width: 100%; height: 60px;" oninput="updateCheckbox()"></textarea>
+                    <textarea id="wordNote" placeholder="輸入筆記..." style="width: 100%; height: 60px;"></textarea>
                     <p id="savedNote"></p>
                 </div>
 

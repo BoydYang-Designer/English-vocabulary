@@ -1,6 +1,6 @@
 // index.js
 
-// These variables are specific to the index page logic
+// 這些是索引頁面邏輯特有的變數
 let wordsData = [];
 let sentenceAudio = new Audio();
 let sentenceData = [];
@@ -13,7 +13,15 @@ let currentAudio = new Audio();
 window.currentWordList = [];
 let historyStack = [];
 
-// This function shows the main app view
+// --- 時間戳模式狀態變數 ---
+let isTimestampMode = false;
+let timestampData = [];
+let hasTimestampFile = false;
+let lastHighlightedSentence = null;
+let timestampUpdateRafId = null;
+let originalMeaningContent = ""; // 用於儲存 JSON 內容
+
+// 此函數顯示主應用程式視圖
 function showAppView(user) {
     const loginView = document.getElementById('login-view');
     const appContainer = document.getElementById('app-container');
@@ -26,18 +34,18 @@ function showAppView(user) {
     const signInFromGuestBtn = document.getElementById('sign-in-from-guest-btn');
 
     if (!isGuest) {
-        userInfoEl.textContent = `Welcome, ${user.displayName || user.email}`;
+        userInfoEl.textContent = `歡迎, ${user.displayName || user.email}`;
         signOutBtn.classList.remove('is-hidden');
         signInFromGuestBtn.classList.add('is-hidden');
     } else {
-        userInfoEl.textContent = 'Guest Mode';
+        userInfoEl.textContent = '訪客模式';
         signOutBtn.classList.add('is-hidden');
         signInFromGuestBtn.classList.remove('is-hidden');
     }
     backToFirstLayer();
 }
 
-// Main app logic for the index page
+// 索引頁面的主要應用程式邏輯
 function initializeAppLogic() {
     const loadingOverlay = document.getElementById('loading-overlay');
     if (loadingOverlay) {
@@ -49,21 +57,21 @@ function initializeAppLogic() {
     return Promise.all([
         fetch("https://boydyang-designer.github.io/English-vocabulary/audio_files/Z_total_words.json")
             .then(res => {
-                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                if (!res.ok) throw new Error(`HTTP 錯誤! 狀態: ${res.status}`);
                 return res.json();
             }),
         // 新增的 fetch
         fetch("https://boydyang-designer.github.io/English-vocabulary/Sentence%20file/sentence.json")
             .then(res => {
-                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                if (!res.ok) throw new Error(`HTTP 錯誤! 狀態: ${res.status}`);
                 return res.json();
             })
     ])
     .then(([wordsJsonData, sentenceJsonData]) => { // 接收兩個 JSON 資料
         wordsData = wordsJsonData["New Words"] || [];
         sentenceData = sentenceJsonData["New Words"] || []; // 將句子資料存入變數
-        console.log("✅ Z_total_words.json loaded successfully");
-        console.log("✅ sentence.json loaded successfully"); // 確認句子資料已載入
+        console.log("✅ Z_total_words.json 成功載入");
+        console.log("✅ sentence.json 成功載入"); // 確認句子資料已載入
 
         wordsData.forEach(w => {
             if (typeof w["分類"] === "string") w["分類"] = [w["分類"]];
@@ -77,13 +85,13 @@ function initializeAppLogic() {
         createSpecialCategoryButtons();
         createLevelButtons();
         
-        console.log("✅ Buttons created successfully");
-        showNotification('✅ Word data loaded!', 'success');
+        console.log("✅ 按鈕成功建立");
+        showNotification('✅ 單字資料已載入!', 'success');
         displayWordDetailsFromURL();
     })
     .catch(err => {
-        console.error("❌ Error during data loading:", err);
-        showNotification('❌ Failed to load data. Please check network or file path.', 'error');
+        console.error("❌ 資料載入期間發生錯誤:", err);
+        showNotification('❌ 載入資料失敗。請檢查網路或檔案路徑。', 'error');
     })
     .finally(() => {
         if (loadingOverlay) {
@@ -93,21 +101,21 @@ function initializeAppLogic() {
     });
 }
 
-// Listen for the 'auth-ready' event from auth-manager.js
+// 監聽來自 auth-manager.js 的 'auth-ready' 事件
 document.addEventListener('auth-ready', function(event) {
-    console.log('Auth is ready on index.html. User:', event.detail.user);
+    console.log('index.html 上的認證已準備就緒。使用者:', event.detail.user);
     const { user } = event.detail;
     
-    // Show the correct view (app or login)
+    // 顯示正確的視圖 (應用程式或登入)
     showAppView(user);
     
-    // Initialize the main application logic
+    // 初始化主要應用程式邏輯
     initializeAppLogic();
 });
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    // --- Bind login/logout button events ---
+    // --- 綁定登入/登出按鈕事件 ---
     const googleSigninBtn = document.getElementById('google-signin-btn');
     const guestModeBtn = document.getElementById('guest-mode-btn');
     const signOutBtn = document.getElementById('sign-out-btn');
@@ -118,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (signOutBtn) signOutBtn.addEventListener('click', signOutUser);
     if (signInFromGuestBtn) signInFromGuestBtn.addEventListener('click', signIn);
 
-    // --- Other page-specific event bindings ---
+    // --- 其他頁面特定的事件綁定 ---
     enableWordCopyOnClick();
 
     const sentenceButton = document.getElementById("sentencePageBtn");
@@ -130,32 +138,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const startLearningButton = document.getElementById("startLearningBtn");
     if (startLearningButton) startLearningButton.addEventListener("click", startLearning);
     
-document.querySelectorAll(".collapsible-header").forEach(button => {
-    button.addEventListener("click", function() {
-        this.classList.toggle("active");
-        const content = this.nextElementSibling;
+    document.querySelectorAll(".collapsible-header").forEach(button => {
+        button.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
 
-        // 檢查是否正在展開
-        if (this.classList.contains('active')) {
-            // 如果是展開，設定 max-height 以觸發 CSS transition 動畫
-            content.style.maxHeight = content.scrollHeight + "px";
-
-            // 檢查內容實際高度是否超過 CSS 設定的 250px
-            if (content.scrollHeight > 250) {
-                // 如果超過，短暫延遲後讓 CSS 的 max-height: 250px 生效
-                setTimeout(() => {
-                    content.style.maxHeight = '250px'; 
-                }, 10); // 延遲時間很短，使用者幾乎無感
+            if (this.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + "px";
+                if (content.scrollHeight > 250) {
+                    setTimeout(() => {
+                        content.style.maxHeight = '250px'; 
+                    }, 10); 
+                }
+            } else {
+                content.style.maxHeight = null;
             }
-        } else {
-            // 如果是收合，清除 max-height
-            content.style.maxHeight = null;
-        }
+        });
     });
-});
+
+    const toggleTimestampBtn = document.getElementById("toggle-timestamp-btn");
+    if (toggleTimestampBtn) {
+        toggleTimestampBtn.onclick = toggleTimestampMode;
+    }
 });
 
-// --- ALL THE OTHER FUNCTIONS from your original index.js go here ---
+// --- 所有其他來自原始 index.js 的函數都在這裡 ---
 
 function showNotification(message, type = 'success') {
     const container = document.getElementById('notification-container');
@@ -417,7 +424,7 @@ function startLearning() {
     
     if (selectedSpecials.length > 0) {
         const specialWordsSet = new Set();
-        const vocabularyData = window.getVocabularyData(); // Get data from auth-manager
+        const vocabularyData = window.getVocabularyData(); // 從 auth-manager 獲取資料
         selectedSpecials.forEach(specialType => {
             switch (specialType) {
                 case 'checked':
@@ -441,10 +448,10 @@ function startLearning() {
     }
 
     if (filteredWords.length === 0) {
-        showNotification("⚠️ No matching words found.", "error");
+        showNotification("⚠️ 找不到符合的單字。", "error");
         return;
     }
-    displayWordList(filteredWords, "Learning List");
+    displayWordList(filteredWords, "學習列表");
 }
 
 function displayWordList(words, title) {
@@ -458,10 +465,10 @@ function displayWordList(words, title) {
     wordItems.innerHTML = "";
 
     window.currentWordList = words;
-    const vocabularyData = window.getVocabularyData(); // Get data from auth-manager
+    const vocabularyData = window.getVocabularyData(); // 從 auth-manager 獲取資料
     
     if (words.length === 0) {
-        wordItems.innerHTML = "<p>⚠️ No matching words</p>";
+        wordItems.innerHTML = "<p>⚠️ 找不到符合的單字</p>";
     } else {
         words.forEach(word => {
             let wordText = word.Words || word.word || word["單字"];
@@ -534,6 +541,11 @@ function backToWordList() {
         sentenceAudio.currentTime = 0;
     }
 
+    if (timestampUpdateRafId) {
+        cancelAnimationFrame(timestampUpdateRafId);
+        timestampUpdateRafId = null;
+    }
+
     document.getElementById("wordDetails").style.display = "none";
     document.getElementById("wordList").style.display = "block";
     document.getElementById("wordListTitle").style.display = "block";
@@ -548,13 +560,13 @@ function navigateTo(state) {
     if (historyStack.length > 10) {
         historyStack.shift();
     }
-    console.log("📌 Added to history:", historyStack);
+    console.log("📌 已新增至歷史紀錄:", historyStack);
 }
 
 function filterWords() {
     let input = document.getElementById("searchInput").value.toLowerCase();
     if (!wordsData || wordsData.length === 0) {
-        console.error("❌ wordsData is empty, please check if JSON loaded successfully");
+        console.error("❌ wordsData 為空，請檢查 JSON 是否成功載入");
         return;
     }
 
@@ -580,7 +592,7 @@ function filterWords() {
             let word = w.Words || w.word || w["單字"] || "";
             return `<p class='word-item' data-index='${index}'>${word}</p>`;
         }).join("")
-        : "<p>⚠️ No matching words</p>";
+        : "<p>⚠️ 找不到符合的單字</p>";
 
     document.querySelectorAll('.word-item').forEach((item, index) => {
         item.addEventListener("click", function () {
@@ -595,7 +607,7 @@ function filterWordsInDetails() {
     let bButton = document.getElementById("bButton");
 
     if (!wordsData || wordsData.length === 0) {
-        console.error("❌ wordsData not loaded");
+        console.error("❌ wordsData 未載入");
         return;
     }
 
@@ -618,10 +630,10 @@ function filterWordsInDetails() {
 
     searchResults.innerHTML = "";
     if (filtered.length === 0) {
-        searchResults.innerHTML = "<p>⚠️ No matching words</p>";
+        searchResults.innerHTML = "<p>⚠️ 找不到符合的單字</p>";
     } else {
         filtered.forEach((wordObj, index) => {
-            let word = wordObj.Words || wordObj.word || wordObj["單字"] || "";
+            let word = wordObj.Words || wordObj.word || word["單字"] || "";
             let item = document.createElement("p");
             item.className = "word-item";
             item.textContent = word;
@@ -648,7 +660,7 @@ function toggleAutoPlay() {
 
 function startListAutoPlay() {
     if (!window.currentWordList || window.currentWordList.length === 0) {
-        alert("Word list is empty, cannot play!");
+        alert("單字列表為空，無法播放！");
         return;
     }
     isAutoPlaying = true;
@@ -658,7 +670,7 @@ function startListAutoPlay() {
     }
     let testAudio = new Audio();
     testAudio.play().catch(() => {
-        alert("Please click the page manually to enable autoplay (browser restriction)");
+        alert("請手動點擊頁面以啟用自動播放 (瀏覽器限制)");
         isAutoPlaying = false;
         updateAutoPlayButton();
     });
@@ -733,7 +745,7 @@ function removeHighlight(wordText) {
 
 function startAutoPlay() {
     if (!window.currentWordList || window.currentWordList.length === 0) {
-        alert("Please select a word list before starting autoplay!");
+        alert("開始自動播放前請先選擇一個單字列表！");
         return;
     }
     if (window.currentIndex >= 0 && window.currentIndex < window.currentWordList.length) {
@@ -766,7 +778,7 @@ function resumeAutoPlay() {
     if (document.getElementById("wordList").style.display === "block") {
         playNextWord();
     } else if (sentenceAudio && sentenceAudio.readyState >= 2) {
-        sentenceAudio.play().catch(err => console.error("🔊 Playback failed:", err));
+        sentenceAudio.play().catch(err => console.error("🔊 播放失敗:", err));
     }
     updateAutoPlayButton();
 }
@@ -809,7 +821,174 @@ function createWordVariationsRegex(baseWord) {
     return new RegExp(pattern, 'gi');
 }
 
+// 將時間字串 (hh:mm:ss.sss 或 mm:ss.sss) 轉換為秒的輔助函數
+function timeToSeconds(timeStr) {
+    if (!timeStr) return 0;
+    const parts = timeStr.split(':').reverse();
+    let seconds = 0;
+    if (parts[0]) seconds += parseFloat(parts[0]);
+    if (parts[1]) seconds += parseInt(parts[1], 10) * 60;
+    if (parts[2]) seconds += parseInt(parts[2], 10) * 3600;
+    return seconds;
+}
+
+// 解析時間戳 TXT 內容的輔助函數
+function parseTimestampText(text) {
+    const lines = text.split('\n').filter(line => line.trim() !== '');
+    const data = [];
+    const regex = /\[((?:\d{1,2}:)?\d{1,2}:\d{2}\.\d{3})\s*-->\s*((?:\d{1,2}:)?\d{1,2}:\d{2}\.\d{3})\]\s*(.*)/;
+    
+    for (const line of lines) {
+        const match = line.match(regex);
+        if (match) {
+            data.push({
+                start: timeToSeconds(match[1]),
+                end: timeToSeconds(match[2]),
+                sentence: match[3].trim()
+            });
+        } else {
+            console.warn("無法解析的時間戳行:", line);
+        }
+    }
+    return data;
+}
+
+// 時間戳模式的更新循環 (高亮和滾動)
+function timestampUpdateLoop() {
+    if (!isTimestampMode || sentenceAudio.paused || !sentenceAudio.duration) {
+        if (timestampUpdateRafId) {
+            cancelAnimationFrame(timestampUpdateRafId);
+            timestampUpdateRafId = null;
+        }
+        return;
+    }
+
+    const currentTime = sentenceAudio.currentTime;
+    const container = document.getElementById('meaningContainer');
+    if (!container) return;
+
+    // --- 1. 高亮邏輯 ---
+    const currentSentenceData = timestampData.find(
+        (item) => currentTime >= item.start && currentTime < item.end
+    );
+    
+    let currentSentenceEl = null;
+    if (currentSentenceData) {
+        currentSentenceEl = container.querySelector(`.timestamp-sentence[data-start="${currentSentenceData.start}"]`);
+    }
+
+    if (currentSentenceEl !== lastHighlightedSentence) {
+        if (lastHighlightedSentence) {
+            lastHighlightedSentence.classList.remove('is-current');
+        }
+        if (currentSentenceEl) {
+            currentSentenceEl.classList.add('is-current');
+        }
+        lastHighlightedSentence = currentSentenceEl;
+    }
+
+    // --- 2. 滾動邏輯 ---
+    const scrollableHeight = container.scrollHeight - container.clientHeight;
+    if (scrollableHeight > 0 && lastHighlightedSentence) {
+        const sentenceTop = lastHighlightedSentence.offsetTop;
+        const sentenceHeight = lastHighlightedSentence.offsetHeight;
+        const containerHeight = container.clientHeight;
+        
+        let targetScrollTop = sentenceTop - (containerHeight / 2) + (sentenceHeight / 2);
+        targetScrollTop = Math.max(0, Math.min(targetScrollTop, scrollableHeight));
+        
+        const currentScrollTop = container.scrollTop;
+        const scrollDiff = targetScrollTop - currentScrollTop;
+        const easingFactor = 0.1; 
+        
+        if (Math.abs(scrollDiff) > 1) {
+            container.scrollTop += scrollDiff * easingFactor;
+        }
+    }
+
+    timestampUpdateRafId = requestAnimationFrame(timestampUpdateLoop);
+}
+
+
+// [已修改] 渲染時間戳模式的內容
+function renderTimestampContent() {
+    const container = document.getElementById('meaningContainer');
+    if (!container) return;
+
+    // 將每個句子包在 <p> 標籤中以改善間距
+    container.innerHTML = timestampData.map(item => 
+        `<p class="timestamp-sentence" data-start="${item.start}">${item.sentence}</p>`
+    ).join(''); // 直接連接段落，不需 <br>
+
+    container.querySelectorAll('.timestamp-sentence').forEach(p => {
+        p.addEventListener('click', function() {
+            const startTime = parseFloat(this.dataset.start);
+            if (!isNaN(startTime)) {
+                sentenceAudio.currentTime = startTime;
+                if (sentenceAudio.paused) {
+                    sentenceAudio.play().catch(e => console.error("點擊播放音訊失敗", e));
+                }
+            }
+
+            const sentenceText = this.textContent.trim();
+            const word = document.getElementById("wordTitle")?.textContent.trim();
+            if (word && sentenceText) {
+                saveNote(word, sentenceText, true);
+                showNotification('句子已新增至筆記!', 'success');
+            }
+        });
+    });
+}
+
+// 在 JSON 和時間戳模式之間切換
+function toggleTimestampMode() {
+    const toggleBtn = document.getElementById('toggle-timestamp-btn');
+    if (!hasTimestampFile) {
+        alert('無 Timestamp 檔案');
+        return;
+    }
+
+    isTimestampMode = !isTimestampMode;
+    toggleBtn.classList.toggle('is-active', isTimestampMode);
+
+    const container = document.getElementById('meaningContainer');
+    if (!container) return;
+
+    if (isTimestampMode) {
+        renderTimestampContent();
+        sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
+        if (!sentenceAudio.paused) {
+            if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+            timestampUpdateLoop();
+        }
+    } else {
+        container.innerHTML = originalMeaningContent;
+        if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+        timestampUpdateRafId = null;
+        if (lastHighlightedSentence) {
+            lastHighlightedSentence.classList.remove('is-current');
+            lastHighlightedSentence = null;
+        }
+        sentenceAudio.addEventListener('timeupdate', handleAutoScroll);
+    }
+}
+
 function showDetails(word) {
+    // 在顯示新單字時重置時間戳模式狀態
+    isTimestampMode = false;
+    hasTimestampFile = false;
+    timestampData = [];
+    if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+    timestampUpdateRafId = null;
+    lastHighlightedSentence = null;
+    originalMeaningContent = "";
+    
+    const toggleBtn = document.getElementById('toggle-timestamp-btn');
+    if (toggleBtn) {
+        toggleBtn.style.display = 'none';
+        toggleBtn.classList.remove('is-active');
+    }
+
     let bButton = document.getElementById("bButton");
     let params = new URLSearchParams(window.location.search);
     lastSentenceListWord = word.Words;
@@ -873,27 +1052,51 @@ function showDetails(word) {
     
     document.getElementById("phoneticContainer").innerHTML = phonetics;
     document.getElementById("chineseContainer").innerHTML = chinese;
+    
+    originalMeaningContent = meaning;
     document.getElementById("meaningContainer").innerHTML = meaning;
+
+    const timestampUrl = `https://boydyang-designer.github.io/English-vocabulary/audio_files/${encodeURIComponent(word.Words)} - sentence Timestamp.txt`;
+    
+    fetch(timestampUrl)
+        .then(response => {
+            if (!response.ok) {
+                if (response.status === 404) console.warn(`找不到 ${word.Words} 的時間戳檔案`);
+                throw new Error('時間戳檔案不可用');
+            }
+            return response.text();
+        })
+        .then(text => {
+            timestampData = parseTimestampText(text);
+            if (timestampData.length > 0) {
+                hasTimestampFile = true;
+                if (toggleBtn) toggleBtn.style.display = 'inline-block';
+            } else {
+                console.warn(`${word.Words} 的時間戳檔案為空或無法解析。`);
+            }
+        })
+        .catch(error => {
+            hasTimestampFile = false; 
+            if (toggleBtn) toggleBtn.style.display = 'none';
+            console.error('載入時間戳檔案時出錯:', error.message);
+        });
+
     document.getElementById("wordTitle").textContent = word.Words;
     displayNote();
     updateBackButton();
     
     const sentenceLinkBtn = document.getElementById("sentenceLinkBtn");
     if (sentenceLinkBtn) {
-        // --- 這是本次修改的核心邏輯 ---
         sentenceLinkBtn.onclick = () => {
             const wordText = word.Words || word.word || word["單字"];
             if (wordText) {
-                // 檢查是否有對應的句子
                 const relatedSentences = sentenceData.filter(s =>
                     s.Words && s.Words.startsWith(wordText + "-")
                 );
 
                 if (relatedSentences.length > 0) {
-                    // 如果找到句子，則跳轉
                     window.location.href = `sentence.html?showSentencesForWord=${encodeURIComponent(wordText)}&from=index`;
                 } else {
-                    // 如果沒找到，顯示提示框且不跳轉
                     showNotification(`⚠️ 找不到單字 "${wordText}" 的相關句子。`, 'error');
                 }
             }
@@ -922,9 +1125,17 @@ function playAudioSequentially(word) {
     })).then(() => {
         if (!isPaused) {
             sentenceAudio.play().then(() => new Promise(resolve => {
-                sentenceAudio.addEventListener('timeupdate', handleAutoScroll);
+                if (isTimestampMode) {
+                    if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+                    timestampUpdateLoop();
+                } else {
+                    sentenceAudio.addEventListener('timeupdate', handleAutoScroll);
+                }
+
                 sentenceAudio.onended = () => {
                     sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
+                    if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+
                     if (playBtn) playBtn.classList.remove("playing");
                     if (pauseBtn) {
                         pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
@@ -935,6 +1146,7 @@ function playAudioSequentially(word) {
                 if (isPaused) {
                     sentenceAudio.pause();
                     sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
+                    if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
                     resolve();
                 }
             })).then(() => {
@@ -965,12 +1177,12 @@ function updateAutoPlayButton() {
     let autoPlayDetailsBtn = document.getElementById("autoPlayDetailsBtn");
     if (document.getElementById("wordList").style.display === "block") {
         if (autoPlayBtn) {
-            autoPlayBtn.textContent = isAutoPlaying ? (isPaused ? "Resume Play" : "Stop Play") : "Autoplay Words";
+            autoPlayBtn.textContent = isAutoPlaying ? (isPaused ? "繼續播放" : "停止播放") : "自動播放單字";
             autoPlayBtn.classList.toggle("playing", isAutoPlaying);
         }
     } else if (document.getElementById("wordDetails").style.display === "block") {
         if (autoPlayDetailsBtn) {
-            autoPlayDetailsBtn.textContent = isAutoPlaying ? (isPaused ? "Resume Autoplay" : "Pause Autoplay") : "Autoplay Content";
+            autoPlayDetailsBtn.textContent = isAutoPlaying ? (isPaused ? "繼續自動播放" : "暫停自動播放") : "自動播放內容";
             autoPlayDetailsBtn.classList.toggle("playing", isAutoPlaying);
         }
     }
@@ -1001,13 +1213,38 @@ function playSentenceAudio(audioFile) {
         sentenceAudio.pause();
         sentenceAudio.currentTime = 0;
         sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
+        if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+        timestampUpdateRafId = null;
     }
 
     document.getElementById('meaningContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
     
     sentenceAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`);
+    
+    sentenceAudio.addEventListener('play', () => {
+        if (isTimestampMode) {
+            if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+            timestampUpdateLoop();
+        }
+    });
+    sentenceAudio.addEventListener('pause', () => {
+        if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+        timestampUpdateRafId = null;
+    });
+    sentenceAudio.addEventListener('ended', () => {
+        if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+        timestampUpdateRafId = null;
+        if (lastHighlightedSentence) {
+            lastHighlightedSentence.classList.remove('is-current');
+            lastHighlightedSentence = null;
+        }
+    });
+
     sentenceAudio.play().then(() => {
-        sentenceAudio.addEventListener('timeupdate', handleAutoScroll);
+        if (!isTimestampMode) {
+            sentenceAudio.addEventListener('timeupdate', handleAutoScroll);
+        }
+
         let playBtn = document.getElementById("playAudioBtn");
         let pauseBtn = document.getElementById("pauseResumeBtn");
         if (playBtn) playBtn.classList.add("playing");
@@ -1023,7 +1260,7 @@ function playSentenceAudio(audioFile) {
                 pauseBtn.classList.add("playing");
             }
         };
-    }).catch(err => console.error("❌ Audio playback failed:", err));
+    }).catch(err => console.error("❌ 音訊播放失敗:", err));
 }
 
 function togglePauseAudio(button) {
@@ -1045,7 +1282,9 @@ function togglePauseAudio(button) {
 }
 
 function adjustAudioTime(seconds) {
-    sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime + seconds);
+    if (sentenceAudio && !isNaN(sentenceAudio.duration)) {
+       sentenceAudio.currentTime = Math.max(0, Math.min(sentenceAudio.duration, sentenceAudio.currentTime + seconds));
+    }
 }
 
 function backToPrevious() {
@@ -1079,27 +1318,39 @@ function toggleImportant(word, checkbox) {
     window.persistVocabularyData();
 }
 
-function saveNote() {
-    let word = document.getElementById("wordTitle")?.textContent.trim();
-    let noteTextArea = document.getElementById("wordNote");
-    let note = noteTextArea.value.trim();
+function saveNote(word = null, note = null, isTimestampAdd = false) {
+    const currentWord = word || document.getElementById("wordTitle")?.textContent.trim();
+    let noteToSave;
 
-    if (word) {
-        const vocabularyData = window.getVocabularyData();
-        if (!vocabularyData.notes) vocabularyData.notes = {};
+    if (!currentWord) return;
 
-        if (note.length > 0) {
-            vocabularyData.notes[word] = note;
-            showNotification("✅ Note saved!", 'success');
+    const vocabularyData = window.getVocabularyData();
+    if (!vocabularyData.notes) vocabularyData.notes = {};
+    const existingNote = vocabularyData.notes[currentWord] || "";
+
+    if (isTimestampAdd) {
+        if (note && !existingNote.includes(note)) {
+            noteToSave = existingNote + (existingNote ? "\n" : "") + note;
         } else {
-            delete vocabularyData.notes[word];
-            showNotification("🗑️ Note deleted!", 'success');
+            return; // 不重複添加
         }
-        window.setNotes(vocabularyData.notes);
-        window.persistVocabularyData();
-
-        if (lastWordListType === "noteWords") showNoteWords();
+    } else {
+        noteToSave = document.getElementById("wordNote").value.trim();
     }
+    
+    if (noteToSave && noteToSave.length > 0) {
+        vocabularyData.notes[currentWord] = noteToSave;
+        if (!isTimestampAdd) showNotification("✅ 筆記已儲存!", 'success');
+    } else {
+        delete vocabularyData.notes[currentWord];
+        if (!isTimestampAdd) showNotification("🗑️ 筆記已刪除!", 'success');
+    }
+    
+    window.setNotes(vocabularyData.notes);
+    window.persistVocabularyData();
+    document.getElementById("wordNote").value = vocabularyData.notes[currentWord] || "";
+
+    if (lastWordListType === "noteWords") showNoteWords();
 }
 
 function displayNote() {
@@ -1115,14 +1366,13 @@ document.addEventListener("keydown", function (event) {
     switch (event.code) {
         case "Space":
             event.preventDefault();
-            if (sentenceAudio.paused || sentenceAudio.ended) sentenceAudio.play();
-            else sentenceAudio.pause();
+            togglePauseAudio(document.getElementById('pauseResumeBtn'));
             break;
         case "ArrowRight":
-            sentenceAudio.currentTime = Math.min(sentenceAudio.duration, sentenceAudio.currentTime + 5);
+            adjustAudioTime(5);
             break;
         case "ArrowLeft":
-            sentenceAudio.currentTime = Math.max(0, sentenceAudio.currentTime - 5);
+            adjustAudioTime(-5);
             break;
     }
 });
@@ -1138,9 +1388,9 @@ function exportAllData() {
         a.download = "my_english_learning_backup.json";
         a.click();
         URL.revokeObjectURL(url);
-        showNotification("✅ Learning data exported successfully!", "success");
+        showNotification("✅ 學習資料匯出成功!", "success");
     } catch (error) {
-        showNotification("❌ Data export failed!", "error");
+        showNotification("❌ 資料匯出失敗!", "error");
     }
 }
 
@@ -1155,18 +1405,16 @@ function importAllData() {
         reader.onload = event => {
             try {
                 const data = JSON.parse(event.target.result);
-                // Here, you should use the functions from auth-manager to update the data
                 if(data.checkedWords) window.setCheckedWords(data.checkedWords);
                 if(data.importantWords) window.setImportantWords(data.importantWords);
                 if(data.wrongWords) window.setWrongWords(data.wrongWords);
                 if(data.notes) window.setNotes(data.notes);
-                // ...and so on for other data types
-                window.persistVocabularyData(); // Save the newly imported data
+                window.persistVocabularyData();
                 
-                showNotification("✅ Learning data imported successfully!", "success");
+                showNotification("✅ 學習資料匯入成功!", "success");
                 setTimeout(() => location.reload(), 1000);
             } catch (error) {
-                showNotification("❌ File import failed, incorrect format.", "error");
+                showNotification("❌ 檔案匯入失敗，格式不正確。", "error");
             }
         };
         reader.readAsText(file);
@@ -1185,17 +1433,21 @@ function displayWordDetailsFromURL() {
 
 function handleAutoScroll() {
     const container = document.getElementById('meaningContainer');
-    if (!sentenceAudio || isNaN(sentenceAudio.duration) || sentenceAudio.duration === 0) return;
+    if (!container || !sentenceAudio || isNaN(sentenceAudio.duration) || sentenceAudio.duration === 0) return;
     const scrollableHeight = container.scrollHeight - container.clientHeight;
+    if (scrollableHeight <= 0) return;
     const scrollPosition = (sentenceAudio.currentTime / sentenceAudio.duration) * scrollableHeight;
     container.scrollTo({ top: scrollPosition, behavior: 'smooth' });
 }
+
 
 function enableWordCopyOnClick() {
     const meaningContainer = document.getElementById("meaningContainer");
     if (!meaningContainer) return;
 
     meaningContainer.addEventListener('click', function(event) {
+        if (isTimestampMode) return;
+
         if (event.target.tagName !== 'P' && event.target.tagName !== 'DIV' && event.target.tagName !== 'SPAN') {
             return;
         }
@@ -1210,7 +1462,7 @@ function enableWordCopyOnClick() {
 
         let start = offset;
         let end = offset;
-        const wordRegex = /\w/; 
+        const wordRegex = /[a-zA-Z]/; 
 
         while (start > 0 && wordRegex.test(text[start - 1])) {
             start--;
@@ -1241,7 +1493,7 @@ function enableWordCopyOnClick() {
                 }
             }, 600); 
         } catch (e) {
-            console.error("Highlight effect failed:", e);
+            console.error("高亮效果失敗:", e);
         }
 
         navigator.clipboard.writeText(selectedWord)
@@ -1254,8 +1506,9 @@ function enableWordCopyOnClick() {
                 }
             })
             .catch(err => {
-                console.error('❌ Copy failed:', err);
-                showNotification('⚠️ Copy failed, please copy manually', 'error');
+                console.error('❌ 複製失敗:', err);
+                showNotification('⚠️ 複製失敗，請手動複製', 'error');
             });
     });
 }
+

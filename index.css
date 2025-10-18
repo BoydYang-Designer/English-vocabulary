@@ -72,20 +72,18 @@ h1 {
     content: '\2212'; /* Minus sign */
 }
 
-/* [核心修改] 分類內容的預設狀態 (收合) */
 .collapsible-content {
     padding: 0 10px;
-    max-height: 0; /* 預設高度為 0，使其收合 */
-    overflow: hidden; /* 隱藏超出的內容 */
+    max-height: 0;
+    overflow: hidden;
     transition: max-height 0.3s ease-out;
     background-color: #f1f1f1;
     border-radius: 0 0 5px 5px;
 }
 
-/* [核心修改] 當分類展開時，限制其最大高度並提供捲動條 */
 .collapsible-header.active + .collapsible-content {
-    max-height: 250px; /* 展開後的最大高度 */
-    overflow-y: auto;  /* 內容過多時，顯示垂直捲動條 */
+    max-height: 250px;
+    overflow-y: auto;
 }
 
 
@@ -181,12 +179,10 @@ h1 {
 
 /* 英文解釋容器 */
 #meaningContainer {
+    position: relative;
     max-height: 400px;
     overflow-y: auto;
-    padding-top: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 50px;
+    padding: 15px; /* 統一的內邊距 */
     border: 1px solid #ddd;
     background: #e9eef1;
     border-radius: 15px;
@@ -207,7 +203,6 @@ h1 {
     padding: 10px;
 }
 
-/* 在 index.css 中新增 */
 .button-group {
     display: flex;
     align-items: center;
@@ -237,9 +232,9 @@ h1 {
 
 .button-container {
     display: flex;
-    justify-content: center; /* 水平居中 */
-    gap: 10px; /* 按鈕之間的間距 */
-    flex-wrap: wrap; /* 如果空間不足，允許換行 */
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 /* 返回按鈕 */
@@ -389,7 +384,7 @@ h1 {
 .note-buttons-inner {
     display: flex;
     align-items: center;
-    gap: 10px; /* 按鈕間距 */
+    gap: 10px;
 }
 
 
@@ -435,7 +430,7 @@ h1 {
     border: none;
     cursor: pointer;
     padding: 5px;
-    margin: 0 5px; /* 與旁邊元素保持間距 */
+    margin: 0 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -444,15 +439,15 @@ h1 {
 .play-word-btn img {
     width: 22px;
     height: 22px;
-    opacity: 1; /* 顏色變淺後，可以把透明度設回 1，讓它更清晰 */
-    transition: opacity 0.2s, transform 0.2s, filter 0.2s; /* 加入 filter 的過渡動畫 */
-    filter: brightness(0) invert(0.8); /* 將圖示改為淺灰色 */
+    opacity: 1;
+    transition: opacity 0.2s, transform 0.2s, filter 0.2s;
+    filter: brightness(0) invert(0.8);
 }
 
 .play-word-btn:hover img {
     opacity: 1; 
     transform: scale(1.15); 
-    filter: brightness(0) invert(0.5); /* 滑鼠懸停時，變成深一點的灰色 */
+    filter: brightness(0) invert(0.5);
 }
 
 /* 勾選按鈕 */
@@ -505,10 +500,9 @@ h1 {
     }
 }
 
-/* 在 index.css 底部添加 */
 .playing {
-    background-color: #00BFFF !important; /* 亮藍色 */
-    color: white !important; /* 確保文字可見 */
+    background-color: #00BFFF !important;
+    color: white !important;
 }
 
 #autoPlayBtn {
@@ -542,8 +536,8 @@ h1 {
 }
 
 .word-item-container.playing {
-    background-color: #00BFFF; /* 亮藍色 */
-    color: white; /* 確保文字可見 */
+    background-color: #00BFFF;
+    color: white;
 }
 
 .word-item-container.playing .word-item {
@@ -560,57 +554,54 @@ h1 {
 }
 
 .category-display {
-    margin-bottom: 12px; /* 與下方的中文解釋保持間距 */
+    margin-bottom: 12px;
     font-size: 16px;
 }
 
 .category-tag {
-    display: inline-block; /* 讓標籤並排顯示 */
-    background-color: #e4e4e4; /* 與主題顏色匹配 */
+    display: inline-block;
+    background-color: #e4e4e4;
     color: rgb(0, 0, 0);
     padding: 4px 10px;
-    border-radius: 15px; /* 圓角效果 */
+    border-radius: 15px;
     font-size: 15px;
-    margin-right: 8px; /* 標籤之間的右間距 */
-    margin-top: 5px; /* 避免與上方元素太近 */
+    margin-right: 8px;
+    margin-top: 5px;
 }
 
 .level-tag {
-  display: inline-block; /* 讓標籤並排顯示 */
-  background-color: #e4e4e4; /* 選擇一個不同的顏色，例如深綠色 */
+  display: inline-block;
+  background-color: #e4e4e4;
   color: rgb(0, 0, 0);
   padding: 4px 10px;
-  border-radius: 15px; /* 圓角效果 */
+  border-radius: 15px;
   font-size: 15px;
-  margin-right: 8px; /* 標籤之間的右間距 */
-  margin-top: 5px; /* 避免與上方元素太近 */
+  margin-right: 8px;
+  margin-top: 5px;
 }
 
 
 #meaningContainer h4 {
-    margin-top: 1.5em; /* Add more space above each numbered heading */
-    margin-bottom: 0.5em; /* Reduce space between the number and its text */
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 #meaningContainer p {
-    margin-top: 0; /* Remove extra space at the start of a paragraph */
-    line-height: 1.6; /* Improve readability of the text itself */
+    margin-top: 0;
+    line-height: 1.6;
 }
 
 #meaningContainer p.example {
-    margin-left: 20px; /* 讓範例向右縮排 20px */
-    font-style: italic; /* 讓範例文字變斜體 (可選) */
+    margin-left: 20px;
+    font-style: italic;
 }
 
-/* 讓例句中的目標單字粗體 */
 .highlight-word {
   font-weight: bold;
-  color: #007bff; /* 可以選擇一個你喜歡的顏色，例如藍色 */
+  color: #007bff;
 }
 
 /* ▼▼▼ 載入指示器與通知系統樣式 ▼▼▼ */
-
-/* 載入指示器 - 遮罩層 */
 #loading-overlay {
     position: fixed;
     top: 0;
@@ -618,26 +609,24 @@ h1 {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.75);
-    display: flex; /* 使用 flexbox 垂直和水平居中 */
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* 讓 spinner 和文字垂直排列 */
+    flex-direction: column;
     z-index: 9999;
     transition: opacity 0.3s ease;
-    opacity: 1; /* 預設可見 */
+    opacity: 1;
 }
 
-/* 載入指示器 - 旋轉動畫 */
 .loading-spinner {
-    border: 5px solid #f3f3f3; /* 淺灰色軌道 */
-    border-top: 5px solid #3498db; /* 藍色旋轉部分 */
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     animation: spin 1.5s linear infinite;
 }
 
-/* 載入指示器 - 提示文字 */
 .loading-text {
     color: white;
     margin-top: 20px;
@@ -650,7 +639,6 @@ h1 {
     100% { transform: rotate(360deg); }
 }
 
-/* 通知系統 - 容器 */
 #notification-container {
     position: fixed;
     top: 20px;
@@ -660,7 +648,6 @@ h1 {
     max-width: 350px;
 }
 
-/* 通知系統 - 提示框 (Toast) */
 .toast {
     color: white;
     padding: 16px;
@@ -674,11 +661,11 @@ h1 {
 }
 
 .toast.success {
-    background-color: #28a745; /* 綠色 */
+    background-color: #28a745;
 }
 
 .toast.error {
-    background-color: #dc3545; /* 紅色 */
+    background-color: #dc3545;
 }
 
 @keyframes slideIn {
@@ -698,7 +685,6 @@ h1 {
     }
 }
 
-/* 按鈕被選中時的樣式 */
 .letter-btn.selected {
     background: #007bff;
     color: white;
@@ -706,34 +692,31 @@ h1 {
     transform: scale(1.05);
 }
 
-/* 次分類容器的樣式 */
 .subcategory-wrapper {
-    padding-left: 20px; /* 讓次分類向內縮排 */
+    padding-left: 20px;
     margin-top: 8px;
     margin-bottom: 5px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    background-color: #f0f4f8; /* 給次分類一個淺色背景以作區分 */
+    background-color: #f0f4f8;
     border-radius: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-/* 「開始學習」按鈕的容器樣式 */
 .start-learning-container {
     padding: 20px 15px;
     background-color: #f9f9f9;
     text-align: center;
 }
 
-/* 「開始學習」按鈕的樣式 */
 #startLearningBtn {
     width: 80%;
     max-width: 300px;
     padding: 10px;
     font-size: 20px;
-    background-color: #28a745; /* 使用醒目的綠色 */
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 25px;
@@ -747,23 +730,20 @@ h1 {
     transform: scale(1.05);
 }
 
-/* 當分類標題下的內容有被選中項目時的樣式 */
 .collapsible-header.header-highlight {
-    background-color: #0056b3; /* 使用一個較深的藍色以作區別 */
+    background-color: #0056b3;
     color: white;
     font-weight: bold;
 }
 
-/* --- 新增：次分類按鈕樣式 --- */
 .subcategory-wrapper .letter-btn {
-    background-color: #888; /* 淺灰色，用於區分主分類 */
+    background-color: #888;
 }
 
 .subcategory-wrapper .letter-btn:hover {
-    background-color: #a0a0a0; /* 滑鼠懸停時的顏色 */
+    background-color: #a0a0a0;
 }
 
-/* 當次分類按鈕被選中時，恢復為藍色高亮 */
 .subcategory-wrapper .letter-btn.selected {
     background: #007bff;
     border-color: #0056b3;
@@ -772,3 +752,49 @@ h1 {
 .is-hidden {
     display: none !important;
 }
+
+/* --- Timestamp Styles --- */
+#toggle-timestamp-btn {
+    width: auto;
+    height: 50px;
+    padding: 0 15px;
+    background-color: #6c757d;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-timestamp-btn img {
+    filter: invert(1);
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+#toggle-timestamp-btn.is-active {
+    background-color: #647f91;
+}
+
+#toggle-timestamp-btn:hover {
+    opacity: 0.8;
+}
+
+/* [已修改] Timestamp 句子樣式 */
+.timestamp-sentence {
+    cursor: pointer;
+    padding: 8px 12px; /* 增加內邊距 */
+    margin: 0 0 8px 0; /* 增加底部間距 */
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+    line-height: 1.5; /* 改善行高 */
+    display: block; /* 確保 margin 生效 */
+}
+
+.timestamp-sentence:hover {
+    background-color: #f0f0f0; 
+}
+
+.timestamp-sentence.is-current {
+    background-color: #cce7ff;
+    font-weight: bold;
+    color: #004085;
+}
+
