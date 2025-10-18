@@ -915,30 +915,32 @@ function renderTimestampContent() {
     const container = document.getElementById('meaningContainer');
     if (!container) return;
 
-    // 將每個句子包在 <p> 標籤中以改善間距
-    container.innerHTML = timestampData.map(item => 
-        `<p class="timestamp-sentence" data-start="${item.start}">${item.sentence}</p>`
-    ).join(''); // 直接連接段落，不需 <br>
+    container.innerHTML = '';
+    const frag = document.createDocumentFragment();
 
-    container.querySelectorAll('.timestamp-sentence').forEach(p => {
-        p.addEventListener('click', function() {
-            const startTime = parseFloat(this.dataset.start);
-            if (!isNaN(startTime)) {
-                sentenceAudio.currentTime = startTime;
-                if (sentenceAudio.paused) {
-                    sentenceAudio.play().catch(e => console.error("點擊播放音訊失敗", e));
-                }
-            }
+    timestampData.forEach(item => {
+        const p = document.createElement('p');
+        p.className = 'timestamp-sentence';
+        p.dataset.start = item.start;
 
-            const sentenceText = this.textContent.trim();
-            const word = document.getElementById("wordTitle")?.textContent.trim();
-            if (word && sentenceText) {
-                saveNote(word, sentenceText, true);
-                showNotification('句子已新增至筆記!', 'success');
+        // 將句子拆分為單字和空白，然後將單字包裹在 span 中
+        item.sentence.split(/(\s+)/).forEach(part => {
+            if (part.trim() !== '') {
+                const span = document.createElement('span');
+                span.className = 'clickable-word';
+                span.textContent = part;
+                p.appendChild(span);
+            } else {
+                // 將空白作為文字節點附加以保持間距
+                p.appendChild(document.createTextNode(part));
             }
         });
+        frag.appendChild(p);
     });
+
+    container.appendChild(frag);
 }
+
 
 // 在 JSON 和時間戳模式之間切換
 function toggleTimestampMode() {
@@ -1438,75 +1440,118 @@ function handleAutoScroll() {
     container.scrollTo({ top: scrollPosition, behavior: 'smooth' });
 }
 
-
+// [已修改] 處理內文點擊的核心函數
 function enableWordCopyOnClick() {
     const meaningContainer = document.getElementById("meaningContainer");
     if (!meaningContainer) return;
 
     meaningContainer.addEventListener('click', function(event) {
-        if (isTimestampMode) return;
+        // 總是在使用者用滑鼠選取文字時忽略點擊
+        if (window.getSelection().toString().length > 0) return;
 
-        if (event.target.tagName !== 'P' && event.target.tagName !== 'DIV' && event.target.tagName !== 'SPAN') {
-            return;
-        }
-
-        const range = document.caretRangeFromPoint(event.clientX, event.clientY);
-        if (!range) return; 
-        const textNode = range.startContainer;
-        if (textNode.nodeType !== Node.TEXT_NODE) return; 
-
-        const text = textNode.textContent;
-        const offset = range.startOffset;
-
-        let start = offset;
-        let end = offset;
-        const wordRegex = /[a-zA-Z]/; 
-
-        while (start > 0 && wordRegex.test(text[start - 1])) {
-            start--;
-        }
-        while (end < text.length && wordRegex.test(text[end])) {
-            end++;
-        }
-
-        if (start === end) return; 
-        const wordRange = document.createRange();
-        wordRange.setStart(textNode, start);
-        wordRange.setEnd(textNode, end);
-        
-        const selectedWord = wordRange.toString();
-        const highlightSpan = document.createElement('span');
-        highlightSpan.className = 'word-click-highlight';
-        
-        try {
-            wordRange.surroundContents(highlightSpan);
-            setTimeout(() => {
-                if (highlightSpan.parentNode) {
-                    const parent = highlightSpan.parentNode;
-                    while (highlightSpan.firstChild) {
-                        parent.insertBefore(highlightSpan.firstChild, highlightSpan);
+        if (isTimestampMode) {
+            // --- TIMESTAMP 模式邏輯 ---
+            if (sentenceAudio && !sentenceAudio.paused) {
+                // 播放中：點擊句子以跳轉音訊，不做其他事。
+                const sentenceEl = event.target.closest('.timestamp-sentence');
+                if (sentenceEl) {
+                    const startTime = parseFloat(sentenceEl.dataset.start);
+                    if (!isNaN(startTime)) {
+                        sentenceAudio.currentTime = startTime;
                     }
-                    parent.removeChild(highlightSpan);
-                    parent.normalize(); 
                 }
-            }, 600); 
-        } catch (e) {
-            console.error("高亮效果失敗:", e);
-        }
+            } else {
+                // 暫停中：點擊單字以複製到搜尋框。
+                const wordEl = event.target.closest('.clickable-word');
+                if (wordEl) {
+                    const selectedWord = (wordEl.textContent || "").replace(/^[.,?!:;'"`“”‘’()[\]{}\-/*]+|[.,?!:;'"`“”‘’()[\]{}\-/*]+$/g, ''); // 清理單字
+                    if (!selectedWord) return;
 
-        navigator.clipboard.writeText(selectedWord)
-            .then(() => {
-                const searchInput = document.getElementById('searchInputDetails');
-                if (searchInput) {
-                    searchInput.value = selectedWord;
-                    searchInput.focus(); 
-                    filterWordsInDetails(); 
+                    // 點擊高亮效果
+                    wordEl.classList.add('word-click-highlight');
+                    setTimeout(() => {
+                        wordEl.classList.remove('word-click-highlight');
+                    }, 600);
+                    
+                    // 將單字複製到剪貼簿並貼到搜尋框
+                    navigator.clipboard.writeText(selectedWord)
+                        .then(() => {
+                            const searchInput = document.getElementById('searchInputDetails');
+                            if (searchInput) {
+                                searchInput.value = selectedWord;
+                                searchInput.focus(); 
+                                filterWordsInDetails(); 
+                            }
+                        })
+                        .catch(err => {
+                            console.error('❌ 複製失敗:', err);
+                            showNotification('⚠️ 複製失敗，請手動複製', 'error');
+                        });
                 }
-            })
-            .catch(err => {
-                console.error('❌ 複製失敗:', err);
-                showNotification('⚠️ 複製失敗，請手動複製', 'error');
-            });
+            }
+        } else {
+            // --- 原始 JSON 模式邏輯 ---
+            if (event.target.tagName !== 'P' && event.target.tagName !== 'DIV' && event.target.tagName !== 'SPAN') {
+                return;
+            }
+
+            const range = document.caretRangeFromPoint(event.clientX, event.clientY);
+            if (!range) return; 
+            const textNode = range.startContainer;
+            if (textNode.nodeType !== Node.TEXT_NODE) return; 
+
+            const text = textNode.textContent;
+            const offset = range.startOffset;
+
+            let start = offset;
+            let end = offset;
+            const wordRegex = /[a-zA-Z]/; 
+
+            while (start > 0 && wordRegex.test(text[start - 1])) {
+                start--;
+            }
+            while (end < text.length && wordRegex.test(text[end])) {
+                end++;
+            }
+
+            if (start === end) return; 
+            const wordRange = document.createRange();
+            wordRange.setStart(textNode, start);
+            wordRange.setEnd(textNode, end);
+            
+            const selectedWord = wordRange.toString();
+            const highlightSpan = document.createElement('span');
+            highlightSpan.className = 'word-click-highlight';
+            
+            try {
+                wordRange.surroundContents(highlightSpan);
+                setTimeout(() => {
+                    if (highlightSpan.parentNode) {
+                        const parent = highlightSpan.parentNode;
+                        while (highlightSpan.firstChild) {
+                            parent.insertBefore(highlightSpan.firstChild, highlightSpan);
+                        }
+                        parent.removeChild(highlightSpan);
+                        parent.normalize(); 
+                    }
+                }, 600); 
+            } catch (e) {
+                console.error("高亮效果失敗:", e);
+            }
+
+            navigator.clipboard.writeText(selectedWord)
+                .then(() => {
+                    const searchInput = document.getElementById('searchInputDetails');
+                    if (searchInput) {
+                        searchInput.value = selectedWord;
+                        searchInput.focus(); 
+                        filterWordsInDetails(); 
+                    }
+                })
+                .catch(err => {
+                    console.error('❌ 複製失敗:', err);
+                    showNotification('⚠️ 複製失敗，請手動複製', 'error');
+                });
+        }
     });
 }
-
