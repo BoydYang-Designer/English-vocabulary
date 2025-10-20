@@ -1,0 +1,9 @@
+[00:00:00.000 --> 00:00:04.720] Occurrence refers to an event or instance of something happening or existing.
+[00:00:04.720 --> 00:00:07.640] It denotes the act or fact of taking place.
+[00:00:07.640 --> 00:00:12.840] For example, the occurrence of a thunderstorm refers to the event of the storm happening.
+[00:00:12.840 --> 00:00:14.360] Example 1.
+[00:00:14.360 --> 00:00:18.480] The occurrence of the rare comet was a once in a lifetime event that captured the attention
+[00:00:18.480 --> 00:00:21.160] of astronomers worldwide.
+[00:00:21.160 --> 00:00:22.480] Example 2.
+[00:00:22.480 --> 00:00:27.680] The unexpected occurrence of heavy snowfall in April caught the city by surprise, leading
+[00:00:27.680 --> 00:00:30.400] to traffic disruptions and school closures.

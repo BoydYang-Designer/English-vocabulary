@@ -1,0 +1,10 @@
+[00:00:00.000 --> 00:00:03.000] Aerial Survey as a noun.
+[00:00:03.000 --> 00:00:06.000] The process of collecting information or images from the air,
+[00:00:06.000 --> 00:00:12.000] typically using aircraft, drones, or satellites to study or map land, structures, or features.
+[00:00:12.000 --> 00:00:18.000] Example. The government conducted an aerial survey to assess the damage caused by the flood.
+[00:00:18.000 --> 00:00:22.000] Example. An aerial survey of the forest revealed signs of illegal logging.
+[00:00:22.000 --> 00:00:28.000] Example. The construction team used an aerial survey to map out the site before beginning work.
+[00:00:28.000 --> 00:00:34.000] Example. Scientists performed an aerial survey to monitor wildlife populations in the national park.
+[00:00:34.000 --> 00:00:43.000] Summary. An aerial survey is the collection of data or images from the air to study, map, or monitor land, structures, or natural features.
+[00:00:43.000 --> 00:00:49.000] Related words. Aerial photography, mapping, observation, remote sensing, surveillance.
+[00:00:49.000 --> 00:00:54.000] Antonyms, ground survey, on-site inspection, land-based survey.

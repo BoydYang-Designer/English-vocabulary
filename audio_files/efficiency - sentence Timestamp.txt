@@ -1,0 +1,10 @@
+[00:00:00.000 --> 00:00:02.000] Efficiency as a noun.
+[00:00:02.000 --> 00:00:08.000] One, the ability to accomplish a task with the least amount of wasted time, effort, or resources.
+[00:00:08.000 --> 00:00:14.000] It refers to achieving the desired result using the most effective means with minimal input.
+[00:00:14.000 --> 00:00:20.000] Example, the new software improved the efficiency of the office by automating routine tasks.
+[00:00:20.000 --> 00:00:24.000] Example, she is known for her efficiency in managing multiple projects at once.
+[00:00:24.000 --> 00:00:34.000] To the ratio of useful output to total input, in technical contexts, it refers to the effectiveness of a process or machine in converting inputs into useful outputs.
+[00:00:34.000 --> 00:00:42.000] Example, the efficiency of the engine was increased by reducing friction and improving fuel consumption.
+[00:00:42.000 --> 00:00:46.000] Solar panels have become more efficient, capturing more energy from the sun.
+[00:00:46.000 --> 00:00:56.000] Summary, efficiency refers to the ability to achieve a goal with minimal effort, time, or resources or to the ratio of useful output to input in a process.
+[00:00:56.000 --> 00:01:06.000] Related words, productivity effectiveness, competence, proficiency, economy, and NIMS inefficiency, wastefulness, ineffectiveness, slowness.

@@ -1,0 +1,18 @@
+[00:00:00.000 --> 00:00:02.800] Column is a noun with the following meanings.
+[00:00:02.800 --> 00:00:06.800] One, a vertical structure that supports or decorates a building.
+[00:00:06.800 --> 00:00:09.300] Often made of stone, wood, or metal,
+[00:00:09.300 --> 00:00:13.100] columns are used in architecture to bear weight or as aesthetic features.
+[00:00:13.100 --> 00:00:16.800] Example, the ancient temple was supported by marble columns.
+[00:00:16.800 --> 00:00:21.300] Example, the building's grand entrance features two tall columns.
+[00:00:21.300 --> 00:00:27.300] Two, a vertical arrangement of text, numbers, or data in tables or printed materials.
+[00:00:27.400 --> 00:00:34.000] In writing and data organization, columns are used to align information for easy reading and analysis.
+[00:00:34.000 --> 00:00:39.000] Example, the spreadsheet has separate columns for each month's expenses.
+[00:00:39.000 --> 00:00:43.100] Example, he wrote his response in the newspaper's opinion column.
+[00:00:43.100 --> 00:00:48.300] Three, a line or formation of people or vehicles often organized in a straight row.
+[00:00:48.300 --> 00:00:52.200] Used in military or group settings, it refers to an orderly arrangement.
+[00:00:52.200 --> 00:00:56.200] Example, the soldiers marched in a single column down the road.
+[00:00:56.300 --> 00:01:00.300] Example, a long column of cars formed on the highway due to the traffic jam.
+[00:01:00.300 --> 00:01:04.500] Summary, column refers to a vertical support structure in buildings
+[00:01:04.500 --> 00:01:09.800] an organized set of information in writing or data or a line of people or vehicles arranged in a row.
+[00:01:09.800 --> 00:01:14.200] Related words, pillar, row, formation, line up,
+[00:01:14.200 --> 00:01:19.500] Antonims, row, horizontal arrangement, scatter, disorganization.

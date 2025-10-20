@@ -1,0 +1,12 @@
+[00:00:00.000 --> 00:00:02.260] Photosynthesis as a noun.
+[00:00:02.260 --> 00:00:07.260] The biological process by which green plants, algae and some bacteria convert sunlight,
+[00:00:07.260 --> 00:00:12.040] carbon dioxide and water into glucose, a form of energy and oxygen.
+[00:00:12.040 --> 00:00:17.500] This process primarily occurs in the chloroplasts of plant cells using chlorophyll to capture sunlight.
+[00:00:17.500 --> 00:00:22.400] Example, plants rely on photosynthesis to produce the energy they need to grow.
+[00:00:22.400 --> 00:00:27.000] Example, during photosynthesis, plants release oxygen as a byproduct.
+[00:00:27.000 --> 00:00:33.000] Example, algae play a significant role in global photosynthesis, contributing to oxygen production.
+[00:00:33.000 --> 00:00:39.800] Example, without photosynthesis, life on Earth would not have access to the oxygen necessary for survival.
+[00:00:39.800 --> 00:00:45.200] Summary, photosynthesis is the process by which plants, algae and some bacteria use sunlight
+[00:00:45.200 --> 00:00:50.000] to convert carbon dioxide and water into energy and oxygen, related words.
+[00:00:50.000 --> 00:00:56.200] Chlorophyll, respiration, energy conversion, carbon fixation, light reaction, antinims.
+[00:00:56.200 --> 00:01:01.200] Respiration in the sense of energy release, decomposition, fermentation.

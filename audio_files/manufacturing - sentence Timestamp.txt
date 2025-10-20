@@ -1,0 +1,17 @@
+[00:00:00.000 --> 00:00:04.600] Manufacturing is a noun and an adjective with the following meanings.
+[00:00:04.600 --> 00:00:09.380] As a noun, one, the process of producing goods in large quantities,
+[00:00:09.380 --> 00:00:12.460] typically in factories using machinery and labor.
+[00:00:12.460 --> 00:00:18.600] Example, the manufacturing of electric vehicles has rapidly increased over the past decade.
+[00:00:18.600 --> 00:00:24.440] Example, the city is known for its high-tech manufacturing industry, producing advanced electronics.
+[00:00:24.600 --> 00:00:30.360] Example, sustainable manufacturing practices are essential for reducing environmental impact.
+[00:00:30.360 --> 00:00:34.480] Of two, the industry or sector involved in the production of goods.
+[00:00:34.480 --> 00:00:39.520] Example, the manufacturing sector contributes significantly to the country's GDP.
+[00:00:39.520 --> 00:00:43.640] Example, many workers are employed in the manufacturing of consumer goods.
+[00:00:43.640 --> 00:00:48.520] As an adjective, one, relating to the process or industry of manufacturing.
+[00:00:48.520 --> 00:00:54.320] Example, the company invested in manufacturing technology to improve efficiency.
+[00:00:54.320 --> 00:00:59.640] Example, manufacturing companies are adopting automation to reduce costs and increase production.
+[00:00:59.640 --> 00:01:04.120] Summary, manufacturing refers to the process of making products in large quantities,
+[00:01:04.120 --> 00:01:06.400] often using machines and labor.
+[00:01:06.400 --> 00:01:11.120] It can also refer to the industry focused on production and the technologies involved.
+[00:01:11.120 --> 00:01:16.240] Related words, production, fabrication, assembly, processing,
+[00:01:16.240 --> 00:01:20.880] Antonim's disassembly, destruction, de-manufacturing.

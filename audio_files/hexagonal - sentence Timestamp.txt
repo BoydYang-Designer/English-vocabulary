@@ -1,0 +1,10 @@
+[00:00:00.000 --> 00:00:05.000] Hexagonal is an adjective that refers to having six sides and six angles,
+[00:00:05.000 --> 00:00:11.000] typically describing a geometric shape or structure, often found in natural or man-made designs.
+[00:00:11.000 --> 00:00:15.000] Example, the honeycomb is composed of hexagonal cells.
+[00:00:15.000 --> 00:00:19.000] The artist created a striking hexagonal pattern for the floor tiles.
+[00:00:19.000 --> 00:00:24.000] Example, the building's hexagonal roof design was both functional and aesthetic.
+[00:00:24.000 --> 00:00:28.000] The game board featured hexagonal spaces for the players to move their pieces.
+[00:00:28.000 --> 00:00:33.000] Summary, hexagonal, describe shapes or structures that have six sides and six angles,
+[00:00:33.000 --> 00:00:36.000] commonly seen in geometry, design, and nature.
+[00:00:36.000 --> 00:00:40.000] Related words, six-sided geometric, angular, polygonal.
+[00:00:40.000 --> 00:00:44.000] Antonyms, circular, triangular, square, irregular.

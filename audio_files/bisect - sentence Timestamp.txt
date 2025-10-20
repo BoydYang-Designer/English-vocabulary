@@ -1,0 +1,14 @@
+[00:00:00.000 --> 00:00:05.000] Bisekt is a verb, bisekt, bisected, bisecting, one.
+[00:00:05.000 --> 00:00:07.000] To divide something into two equal parts,
+[00:00:07.000 --> 00:00:10.000] this means to cut or split something into two halves
+[00:00:10.000 --> 00:00:13.000] of the same size, typically through its center.
+[00:00:13.000 --> 00:00:18.000] Example, the teacher asks the students to bisect the angle using a protractor.
+[00:00:18.000 --> 00:00:23.000] Example, the road bisex the town, separating the residential area from the commercial district.
+[00:00:23.000 --> 00:00:29.000] Two, to intersect or divide something, such as an angle or a line, into two parts.
+[00:00:29.000 --> 00:00:35.000] In geometry, this refers to the action of splitting an angle or line segment into two equal parts.
+[00:00:35.000 --> 00:00:39.000] Example, the diagonal of a rectangle bisex it into two congruent triangles.
+[00:00:39.000 --> 00:00:43.000] Example, the line bisecting the circle goes through its center.
+[00:00:43.000 --> 00:00:47.000] Summary, to bisect means to divide something into two equal parts
+[00:00:47.000 --> 00:00:50.000] or to intersect it in such a way that it creates two equal segments.
+[00:00:50.000 --> 00:00:55.000] Related words, divide, split, intersect, have.
+[00:00:55.000 --> 00:00:58.000] Antonyms, combine, unite, merge.

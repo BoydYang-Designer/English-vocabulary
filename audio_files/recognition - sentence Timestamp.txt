@@ -1,0 +1,13 @@
+[00:00:00.000 --> 00:00:05.000] Recognition is a noun with the following meanings.
+[00:00:05.000 --> 00:00:11.000] One, acknowledgement or appreciation for someone's achievements, efforts or qualities.
+[00:00:11.000 --> 00:00:15.000] Example, she received public recognition for her volunteer work.
+[00:00:15.000 --> 00:00:19.000] Example, his contributions to the project earned him special recognition.
+[00:00:19.000 --> 00:00:23.000] Example, the team was given a certificate in recognition of their hard work.
+[00:00:23.000 --> 00:00:28.000] Two, the act of identifying or remembering someone or something.
+[00:00:28.000 --> 00:00:32.000] Example, he nodded in recognition when he saw his old friend.
+[00:00:32.000 --> 00:00:36.000] Example, the software uses facial recognition to unlock the device.
+[00:00:36.000 --> 00:00:41.000] Example, she had no recognition of the place she visited as a child.
+[00:00:41.000 --> 00:00:47.000] Summary, recognition refers to the act of acknowledging or appreciating someone's efforts
+[00:00:47.000 --> 00:00:50.000] or identifying something or someone as familiar.
+[00:00:50.000 --> 00:00:56.000] Related words, acknowledgement, appreciation, identification, remembrance,
+[00:00:56.000 --> 00:01:01.000] ignorance, neglect, forgetfulness, oversight.

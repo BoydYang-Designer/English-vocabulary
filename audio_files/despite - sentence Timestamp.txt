@@ -1,0 +1,5 @@
+[00:00:00.000 --> 00:00:05.000] 1. Despite the rain, we went for a walk in the park. Strong and firm.
+[00:00:05.000 --> 00:00:09.000] 2. Even though it was raining, we went for a walk in the park. Strong.
+[00:00:09.000 --> 00:00:12.000] 3. She went out for a walk, though it was raining.
+[00:00:12.000 --> 00:00:16.000] Neutral. 4. Although it was raining, we went for a walk in the park.
+[00:00:16.000 --> 00:00:17.000] Neutral.

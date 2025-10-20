@@ -1,0 +1,16 @@
+[00:00:00.000 --> 00:00:03.040] Orbit is a noun and verb with the following meanings.
+[00:00:03.040 --> 00:00:10.480] As a noun, the curved path followed by an object around a planet, star, or moon, due to gravitational forces.
+[00:00:10.480 --> 00:00:13.920] Example, the earth orbits around the sun once every year.
+[00:00:13.920 --> 00:00:18.960] Example, satellites are placed in orbit around the earth to provide communication services.
+[00:00:18.960 --> 00:00:23.440] Example, the moon's orbit around the earth takes about 27 days.
+[00:00:23.440 --> 00:00:27.040] A particular area or range of influence activity or existence,
+[00:00:27.040 --> 00:00:33.280] example, his influence now extends beyond his local orbit, reaching international markets.
+[00:00:33.280 --> 00:00:37.600] Example, she operates within a specific orbit of high-level corporate management.
+[00:00:37.600 --> 00:00:43.520] As a verb, orbit, orbited, orbiting to move around a central object or point in a circular
+[00:00:43.520 --> 00:00:49.120] or elliptical path, especially in space. Example, the spacecraft orbits the planet every few hours.
+[00:00:50.640 --> 00:00:55.520] Example, the earth is orbiting the sun at a speed of around 30 kilometers per second.
+[00:00:55.520 --> 00:01:00.000] Example, the satellite is currently orbiting the earth at an altitude of 500 kilometers.
+[00:01:01.200 --> 00:01:05.680] Summary, orbit refers to the path that an object takes around a larger object,
+[00:01:05.680 --> 00:01:10.080] typically due to gravity, and can also refer to a range of influence or activity.
+[00:01:10.080 --> 00:01:14.720] Related words revolve, circle, trajectory, path, revolution.
+[00:01:14.720 --> 00:01:18.880] Antonyms, stationary, rest, still, halt.

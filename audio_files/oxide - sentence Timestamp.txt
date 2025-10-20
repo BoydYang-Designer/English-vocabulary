@@ -1,0 +1,8 @@
+[00:00:00.000 --> 00:00:03.640] Oxide is a noun with the following meaning.
+[00:00:03.640 --> 00:00:08.840] A chemical compound refers to a compound consisting of oxygen and another element.
+[00:00:08.840 --> 00:00:14.360] Oxides can form when elements react with oxygen, and they can be either metals or non-metals.
+[00:00:14.360 --> 00:00:21.680] Example, rust is a common example of iron oxide, which forms when iron reacts with oxygen and moisture.
+[00:00:21.680 --> 00:00:26.480] Summary, oxide refers to a compound made of oxygen and another element,
+[00:00:26.480 --> 00:00:29.420] often formed through a chemical reaction involving oxygen.
+[00:00:29.420 --> 00:00:32.360] Related words compound, rust, corrosion, oxidation,
+[00:00:32.360 --> 00:00:34.800] andtonyms, pure element, non-oxide.

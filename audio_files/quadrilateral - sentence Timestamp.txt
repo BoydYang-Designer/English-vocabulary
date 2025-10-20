@@ -1,0 +1,7 @@
+[00:00:00.000 --> 00:00:06.000] Quadrilateral is a noun with the following meaning, a flat closed geometric figure with four straight sides.
+[00:00:06.000 --> 00:00:10.000] A quadrilateral is a two-dimensional shape made up of four straight sides.
+[00:00:10.000 --> 00:00:21.000] It can take various forms such as squares, rectangles, parallelograms, rompuses, and trapezozoids, depending on the length of the sides and the angles between them.
+[00:00:21.000 --> 00:00:26.000] Example, a square is a quadrilateral with four equal sides and right angles.
+[00:00:26.000 --> 00:00:38.000] Example, a rectangle is a quadrilateral where opposite sides are equal and all angles are right angles. Example, the teacher asked the students to draw different types of quadrilaterals in their geometry exercise.
+[00:00:38.000 --> 00:00:44.000] Summary, a quadrilateral is a flat, four-sided shape with straight sides forming a closed figure.
+[00:00:44.000 --> 00:00:53.000] Related words, square, rectangle, trapezoid, rhombus, parallelogram, antinims, triangle, pentagon, hexagon, shapes with different numbers of sides.

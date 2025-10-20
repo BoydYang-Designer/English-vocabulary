@@ -1,0 +1,3 @@
+[00:00:00.000 --> 00:00:07.000] Caliper is a tool that has two narrow legs which can be adjusted to measure the thickness or width of something, usually plural.
+[00:00:07.000 --> 00:00:10.000] For example, a pair of calipers.
+[00:00:10.000 --> 00:00:16.000] Another example is the engineer used a caliper to measure the diameter of the machine part with precision.

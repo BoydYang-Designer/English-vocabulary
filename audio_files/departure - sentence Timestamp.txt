@@ -1,0 +1,16 @@
+[00:00:00.000 --> 00:00:02.900] Departure is a noun with the following meanings.
+[00:00:02.900 --> 00:00:06.540] One, the act of leaving or going away from a place.
+[00:00:06.540 --> 00:00:10.940] Example, her departure from the company surprised her colleagues.
+[00:00:10.940 --> 00:00:14.880] Example, the trains departure is scheduled for 9 a.m.
+[00:00:14.880 --> 00:00:18.980] Example, his sudden departure from the event raised many questions.
+[00:00:18.980 --> 00:00:24.180] Two, a variation or change from an established course, plan, or standard.
+[00:00:24.180 --> 00:00:29.060] Example, the artist's new style was a departure from his earlier, more traditional work.
+[00:00:29.160 --> 00:00:33.460] Example, the policy marked a departure from previous government approaches.
+[00:00:33.460 --> 00:00:39.540] Example, this innovative design represents a significant departure from conventional architecture.
+[00:00:39.540 --> 00:00:44.040] Three, a specific point in a journey when someone leaves.
+[00:00:44.040 --> 00:00:48.680] Example, the airport announced the departure of flight 303.
+[00:00:48.680 --> 00:00:52.920] Example, we all gathered at the gate to bid him farewell before his departure.
+[00:00:52.920 --> 00:00:57.780] Example, the departure of the cruise ship was delayed due to weather conditions.
+[00:00:57.880 --> 00:01:02.380] Summary, departure refers to the act of leaving a place or the start of a journey.
+[00:01:02.380 --> 00:01:06.180] It can also mean a change from a traditional or standard approach.
+[00:01:06.180 --> 00:01:13.180] Related words, exit, leaving, withdrawal, change, shift, arrival, return, continuation.

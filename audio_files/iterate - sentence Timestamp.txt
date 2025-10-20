@@ -1,0 +1,8 @@
+[00:00:00.000 --> 00:00:07.120] Iterate is a verb. Iterate, iterated, iterating, meaning to repeat a process, action, or set of
+[00:00:07.120 --> 00:00:13.600] instructions, or to say or perform something repeatedly, often to improve or refine it each time.
+[00:00:14.160 --> 00:00:19.040] Examples. The designer iterated the stroller prototype several times before finalizing the shape.
+[00:00:19.600 --> 00:00:24.080] In software development, engineers iterate on the code to fix bugs and improve performance.
+[00:00:24.640 --> 00:00:29.040] She iterated her explanation until everyone understood the concept. The teacher asked the students
+[00:00:29.040 --> 00:00:31.600] to iterate the steps in the experiment to ensure accuracy.
+[00:00:32.640 --> 00:00:38.080] Summary, iterate means to repeat an action, process, or statement, usually to improve or perfect it.
+[00:00:38.080 --> 00:00:44.560] Related words, repeat, revise, refine, redo. Antonyms, stop, halt, finish, conclude.

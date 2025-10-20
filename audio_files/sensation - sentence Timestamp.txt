@@ -1,0 +1,15 @@
+[00:00:00.000 --> 00:00:03.400] Sensation, part of speech, noun.
+[00:00:03.400 --> 00:00:12.240] One, the physical feeling or perception resulting from stimulation of the body's sensory organs, such as touch, taste, smell, sight, or hearing.
+[00:00:12.240 --> 00:00:16.160] Example, the cold water created a tingling sensation on her skin.
+[00:00:16.160 --> 00:00:19.520] Example, she felt a sharp sensation when the needle pricked her arm.
+[00:00:19.520 --> 00:00:22.200] Example, a dead body is without sensation.
+[00:00:22.200 --> 00:00:27.600] Two, a general feeling or awareness caused by a particular stimulus or event.
+[00:00:27.680 --> 00:00:31.760] Example, he had a sensation of dizziness after spinning around quickly.
+[00:00:31.760 --> 00:00:36.240] Example, there was a strange sensation of heat rising through his body.
+[00:00:36.240 --> 00:00:40.800] Three, a widespread feeling of excitement or interest among people about something.
+[00:00:40.800 --> 00:00:45.040] Example, the news of the discovery caused a sensation in the scientific community.
+[00:00:45.040 --> 00:00:49.520] Example, the singer's new album became an overnight sensation.
+[00:00:49.520 --> 00:00:56.240] Summary, sensation is a physical or emotional feeling experienced through the senses or as a response to stimuli,
+[00:00:56.240 --> 00:01:00.160] and can also describe strong public excitement about an event or discovery.
+[00:01:00.160 --> 00:01:05.360] Related words, feeling, perception, impression, excitement, awareness.
+[00:01:05.360 --> 00:01:09.600] Antonyms, numbness, insensitivity, dullness, indifference.

@@ -1,0 +1,14 @@
+[00:00:00.000 --> 00:00:05.360] Album is a noun that refers to a collection of items, typically music recordings,
+[00:00:05.360 --> 00:00:09.000] photographs, or related works compiled into a single volume.
+[00:00:09.000 --> 00:00:12.800] Meanings, one, a collection of music recordings.
+[00:00:12.800 --> 00:00:17.200] This refers to a set of songs or instrumental tracks released together as a single work,
+[00:00:17.200 --> 00:00:19.000] often by an artist or band.
+[00:00:19.000 --> 00:00:23.400] Example, the artist released a new album featuring 10 original songs.
+[00:00:23.400 --> 00:00:27.400] Example, their latest album topped the charts for several weeks.
+[00:00:27.600 --> 00:00:31.800] 2. A book or folder for holding photographs, stamps, or other items.
+[00:00:31.800 --> 00:00:37.000] This refers to a physical or digital collection where various items are organized and stored.
+[00:00:37.000 --> 00:00:41.000] Example, she created a photo album to document her travels.
+[00:00:41.000 --> 00:00:45.200] Example, he collected stamps and kept them in a special album.
+[00:00:45.200 --> 00:00:51.600] Summary, album refers to a collection of music recordings or a book for organizing photographs and other items.
+[00:00:51.600 --> 00:00:56.000] Related words, compilation, collection, anthology, folder.
+[00:00:56.000 --> 00:01:02.200] Antonyms, single in music context, disorganization in context of photographs or items.

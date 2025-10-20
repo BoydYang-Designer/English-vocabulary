@@ -1,0 +1,14 @@
+[00:00:00.000 --> 00:00:04.080] Chrome is a noun and can also be used as a verb with the following meanings.
+[00:00:04.080 --> 00:00:10.180] One, as a noun, a shiny metallic finish typically applied to a surface for a decorative effect
+[00:00:10.180 --> 00:00:15.540] or to prevent rusting, often associated with car parts, household fixtures and design.
+[00:00:15.540 --> 00:00:19.440] Example, the car's chrome bumper gleamed in the sunlight.
+[00:00:19.440 --> 00:00:24.000] Example, the bathroom faucet has a sleek chrome finish for a modern look.
+[00:00:25.000 --> 00:00:30.800] B, computing, the visual design and interface of an application often referring to buttons,
+[00:00:30.800 --> 00:00:33.680] borders and other elements that frame content.
+[00:00:33.680 --> 00:00:39.920] Example, the software update focused on reducing the chrome to create a cleaner look for the interface.
+[00:00:39.920 --> 00:00:44.800] Two, as a verb to apply a chrome coating or finish to a surface.
+[00:00:44.800 --> 00:00:50.400] Example, the manufacturer decided to chrome the metal parts to improve their durability and style.
+[00:00:50.560 --> 00:00:57.600] Summary, chrome primarily refers to a shiny metallic finish or coating used for decoration and protection.
+[00:00:57.600 --> 00:01:01.520] In computing, it refers to visual interface elements around content.
+[00:01:01.520 --> 00:01:04.720] Related words, metallic shiny plating interface computing,
+[00:01:04.720 --> 00:01:07.840] Antonim's Matt Dull Non-Metallic.

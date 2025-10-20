@@ -1,0 +1,12 @@
+[00:00:00.000 --> 00:00:05.240] Centigrade is a noun and an adjective that refers to the Celsius temperature scale,
+[00:00:05.240 --> 00:00:13.240] where zero grease is the freezing point of water and 100 degrees cells is the boiling point of water at standard atmospheric pressure.
+[00:00:13.240 --> 00:00:17.520] The term centigrade was used historically to describe the Celsius scale,
+[00:00:17.520 --> 00:00:24.120] but has now been largely replaced by Celsius, though it is still used in some contexts.
+[00:00:24.520 --> 00:00:29.760] Example, the thermometer read 20 degrees centigrade, indicating a mild spring day.
+[00:00:29.760 --> 00:00:33.520] Example, water boils at 100 degrees centigrade at sea level.
+[00:00:33.520 --> 00:00:38.840] Example, the temperature dropped to minus 5 degrees centigrade overnight, causing frost on the ground.
+[00:00:39.840 --> 00:00:45.120] Summary, centigrade refers to the temperature scale where the freezing and boiling points of water
+[00:00:45.120 --> 00:00:48.400] are defined as zero-degree and 100 degrees, respectively.
+[00:00:48.400 --> 00:00:53.560] It is now largely replaced by the term Celsius, but is still used in some regions.
+[00:00:54.120 --> 00:00:59.440] Related words, Celsius, temperature, thermometer, degree,
+[00:00:59.440 --> 00:01:02.440] Antonim's Fahrenheit, a different temperature scale.

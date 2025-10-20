@@ -1,0 +1,17 @@
+[00:00:00.000 --> 00:00:04.080] Violation is a noun with the following meanings.
+[00:00:04.080 --> 00:00:08.660] 1. The act of breaking or disregarding a rule, law, or agreement.
+[00:00:08.660 --> 00:00:13.920] This refers to an instance where a law, regulation, or set of guidelines is not followed,
+[00:00:13.920 --> 00:00:16.160] resulting in an offense or breach.
+[00:00:16.160 --> 00:00:17.560] Example sentences.
+[00:00:17.560 --> 00:00:20.920] The company was fined for a violation of environmental regulations.
+[00:00:20.920 --> 00:00:25.280] Parking in a no parking zone is a clear violation of traffic laws.
+[00:00:25.280 --> 00:00:29.520] The athlete was suspended for a violation of the league's anti-doping policy.
+[00:00:29.760 --> 00:00:34.320] The organization is dedicated to preventing the violation of human rights worldwide.
+[00:00:34.320 --> 00:00:39.040] 2. An infringement on someone's rights or privacy.
+[00:00:39.040 --> 00:00:45.280] This usage pertains to actions that disrespect or encroach upon the rights privacy or personal space of others.
+[00:00:45.280 --> 00:00:47.040] Example sentences.
+[00:00:47.040 --> 00:00:52.280] The unauthorized use of personal data was considered a violation of privacy.
+[00:00:52.280 --> 00:00:56.880] The protesters claim that the new policy was a violation of their civil rights.
+[00:00:56.880 --> 00:01:04.320] Summary. A violation refers to the act of breaking a rule, law, or agreement or an infringement on someone's rights or privacy.
+[00:01:04.320 --> 00:01:08.400] Related words. Breach infringement, offense, transgression.
+[00:01:08.400 --> 00:01:12.800] Antonyms, compliance, observance, respect, adherence.

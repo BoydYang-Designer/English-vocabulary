@@ -1,0 +1,11 @@
+[00:00:00.000 --> 00:00:05.600] Likelihood refers to the probability or chance that something will occur or is true.
+[00:00:05.600 --> 00:00:11.300] It indicates the degree of probability that a particular event, outcome or circumstance,
+[00:00:11.300 --> 00:00:14.800] will happen based on available information or evidence.
+[00:00:14.800 --> 00:00:19.100] The higher the likelihood, the greater the probability that the event will occur,
+[00:00:19.100 --> 00:00:22.800] while a lower likelihood suggests a lesser chance of occurrence.
+[00:00:22.800 --> 00:00:27.600] For example, if weather forecasts indicate a high likelihood of rain,
+[00:00:27.700 --> 00:00:31.200] it means there is a strong probability that it will rain.
+[00:00:31.200 --> 00:00:34.200] Conversely, if there is a low likelihood of winning the lottery,
+[00:00:34.200 --> 00:00:37.700] it means there is little chance of winning based on statistical probabilities.
+[00:00:37.700 --> 00:00:40.700] Example 1. There is every likelihood that she'll come.
+[00:00:40.700 --> 00:00:44.700] Example 2. Do you think there is any likelihood of his agreeing to it?

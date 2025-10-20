@@ -1,0 +1,9 @@
+[00:00:00.000 --> 00:00:06.160] Circadian is an adjective that describes biological processes that follow a roughly 24-hour cycle,
+[00:00:06.160 --> 00:00:09.160] influencing functions such as sleep and wakefulness.
+[00:00:09.160 --> 00:00:14.400] Example, circadian rhythms help regulate our sleep patterns and daily activities.
+[00:00:14.400 --> 00:00:18.480] Example, circadian rhythms in activity can vary from person to person.
+[00:00:18.480 --> 00:00:24.880] Example, a man's circadian rhythm shouldn't be too intensive, otherwise he may die of over exhaustion.
+[00:00:25.880 --> 00:00:27.360] Summary
+[00:00:27.520 --> 00:00:32.960] Circadian refers to natural processes that occur in a 24-hour cycle affecting sleep and behavior,
+[00:00:32.960 --> 00:00:36.560] related words daily, diurnal, bio-rhythm,
+[00:00:36.560 --> 00:00:40.160] antinims, nocturnal, referring to night activities.

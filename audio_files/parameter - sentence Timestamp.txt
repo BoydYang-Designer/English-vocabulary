@@ -1,0 +1,10 @@
+[00:00:00.000 --> 00:00:09.000] Parameter as a noun typically refers to one a limit or boundary that defines the scope of a particular process, situation or system.
+[00:00:09.000 --> 00:00:14.000] Example, the study was conducted within the parameters of the research guidelines.
+[00:00:14.000 --> 00:00:19.000] Example, the project's success was measured by specific performance parameters.
+[00:00:19.000 --> 00:00:27.000] Two, a characteristic or factor that can be adjusted or used to define a particular situation or condition.
+[00:00:27.000 --> 00:00:32.000] Example, the weather parameters are being monitored to predict the storm's path.
+[00:00:32.000 --> 00:00:38.000] Example, the software allows users to adjust the parameters for a custom experience.
+[00:00:38.000 --> 00:00:44.000] Three, in mathematics, a variable that defines a system or sets the conditions for a function or equation.
+[00:00:44.000 --> 00:00:49.000] Example, the parameter of the curve determines its shape and direction.
+[00:00:49.000 --> 00:00:54.000] Example, in mode parameter, the input settings determine the function's behavior.
+[00:00:54.000 --> 00:01:02.000] Related words, boundary, limit, factor, condition, specification, antinems, variable in some context, unpredictability.

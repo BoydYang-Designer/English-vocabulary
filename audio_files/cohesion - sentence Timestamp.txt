@@ -1,0 +1,23 @@
+[00:00:00.000 --> 00:00:06.000] Cohesion, noun, refers to the quality of being logically and grammatically connected
+[00:00:06.000 --> 00:00:10.800] within a text or speech, ensuring that different parts work together effectively to create
+[00:00:10.800 --> 00:00:13.760] a unified whole.
+[00:00:13.760 --> 00:00:16.320] Example sentences 1.
+[00:00:16.320 --> 00:00:21.000] The use of transitional phrases, such as however, and, for example, contributes to the
+[00:00:21.000 --> 00:00:23.720] cohesion of the essay, making it easier to follow.
+[00:00:23.720 --> 00:00:24.720] 2.
+[00:00:24.720 --> 00:00:29.000] The report lacked cohesion because the ideas were scattered and not well linked.
+[00:00:29.000 --> 00:00:33.500] In the third, effective cohesion in a team involves members working together seamlessly
+[00:00:33.500 --> 00:00:36.200] to achieve a common goal.
+[00:00:36.200 --> 00:00:40.400] Summary cohesion denotes the aspect of writing or speech that ensures different parts
+[00:00:40.400 --> 00:00:45.240] are well connected through grammatical and lexical means, such as transitions, pronouns, and linking
+[00:00:45.240 --> 00:00:49.200] words to create a smooth and unified flow.
+[00:00:49.200 --> 00:00:54.440] Synonyms unity, connection, linkage, integration.
+[00:00:54.440 --> 00:01:00.000] Disconnection, fragmentation, disunity in coherence.
+[00:01:00.000 --> 00:01:02.880] Difference between cohesion and coherence.
+[00:01:02.880 --> 00:01:08.360] Cohesion deals with how sentences and paragraphs are linked together using words and phrases.
+[00:01:08.360 --> 00:01:11.680] It focuses on the smooth flow of text.
+[00:01:11.680 --> 00:01:15.440] Coherence deals with the logical structure and clarity of ideas.
+[00:01:15.440 --> 00:01:20.400] It ensures that the text makes sense as a whole and that the ideas are clearly connected.
+[00:01:20.400 --> 00:01:22.440] Summary of differences.
+[00:01:22.440 --> 00:01:27.200] Cohesion is about how parts of a text are connected grammatically and lexically.
+[00:01:27.200 --> 00:01:31.800] Coherence is about how well the ideas in a text are logically organized and clear.

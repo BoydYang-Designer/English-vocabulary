@@ -1,0 +1,15 @@
+[00:00:00.000 --> 00:00:03.600] Fatigue is a noun and a verb with the following meanings.
+[00:00:03.600 --> 00:00:10.000] One, as a noun, a state of physical or mental weariness resulting from exertion, stress, or lack of rest.
+[00:00:10.000 --> 00:00:16.000] Example, after a long day of work, he was overcome by fatigue and went straight to bed.
+[00:00:16.000 --> 00:00:20.000] Example, the marathon runner experienced fatigue near the end of the race.
+[00:00:20.000 --> 00:00:24.000] Example, chronic fatigue can be a symptom of various health conditions.
+[00:00:24.800 --> 00:00:32.000] B, technical, the tendency of a material such as metal to break after being bent or moved many times.
+[00:00:32.000 --> 00:00:38.000] Example, engineers checked for metal fatigue in the bridge's supports to ensure its safety under heavy loads.
+[00:00:38.000 --> 00:00:45.000] Example, the strollers frame showed signs of fatigue after undergoing several stress tests raising concerns about its durability.
+[00:00:45.800 --> 00:00:55.000] Two, as a verb, fatigue, fatigued, fatiguing to cause someone to feel extremely tired or exhausted, often due to exertion or stress.
+[00:00:55.000 --> 00:00:59.000] Example, the long hours at the construction site fatigue the workers.
+[00:00:59.000 --> 00:01:04.000] Example, the demanding schedule will fatigue even the most energetic employees.
+[00:01:04.000 --> 00:01:10.000] Summary, fatigue refers to the state of being very tired or exhausted either physically or mentally,
+[00:01:10.000 --> 00:01:15.000] and can also describe the weakening or failure of materials like metal due to repeated stress.
+[00:01:15.000 --> 00:01:21.000] Related words exhaustion, tiredness, weariness, overwork, material degradation.
+[00:01:21.000 --> 00:01:25.000] Antonyms energy, vigor, vitality, refreshment.

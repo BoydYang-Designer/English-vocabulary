@@ -1,0 +1,9 @@
+[00:00:00.000 --> 00:00:06.800] Technician is a noun with the following meaning, a person who is skilled in a particular technical field,
+[00:00:06.800 --> 00:00:11.600] especially one who maintains repairs or operates specialized equipment or systems.
+[00:00:11.600 --> 00:00:16.800] Example, the technician fix the air conditioning unit within an hour.
+[00:00:16.800 --> 00:00:20.320] Example, a lab technician prepared the samples for testing.
+[00:00:20.320 --> 00:00:23.840] Example, the computer technician upgraded the company's network security.
+[00:00:23.840 --> 00:00:27.920] Summary, technician refers to a skilled worker who specializes in maintaining,
+[00:00:27.920 --> 00:00:30.880] repairing or operating technical systems or equipment.
+[00:00:30.880 --> 00:00:35.760] Related words, engineer, mechanic, specialist, operator, expert,
+[00:00:35.760 --> 00:00:40.000] Antonimzer, novice, layperson, non-specialist.

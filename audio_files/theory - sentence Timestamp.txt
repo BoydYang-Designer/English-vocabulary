@@ -1,0 +1,15 @@
+[00:00:00.000 --> 00:00:06.000] Theory is a noun that refers to a set of ideas or principles intended to explain something,
+[00:00:06.000 --> 00:00:11.000] often based on general assumptions or established principles, but not always proven.
+[00:00:11.000 --> 00:00:16.000] 1. A system of ideas explaining something, especially one based on general principles,
+[00:00:16.000 --> 00:00:19.000] independent of the thing to be explained.
+[00:00:19.000 --> 00:00:25.000] Example. The theory of evolution offers an explanation for the diversity of species on Earth.
+[00:00:25.000 --> 00:00:29.000] Example. He proposed a new theory about the causes of climate change.
+[00:00:29.000 --> 00:00:34.000] Example. There are several different theories about the cause of the disease.
+[00:00:34.000 --> 00:00:42.000] 2. A supposition or idea used to explain something often speculative or hypothetical.
+[00:00:42.000 --> 00:00:47.000] Example. She has a theory about why her team is not performing well.
+[00:00:47.000 --> 00:00:51.000] Example. In theory, the plan sounds good, but it might not work in practice.
+[00:00:51.000 --> 00:00:56.000] Example. I agree with you in theory, but realistically, I don't think we have the time to do that.
+[00:00:56.000 --> 00:01:02.000] Summary. Theory refers to a structured set of ideas or explanations, sometimes abstract or hypothetical,
+[00:01:02.000 --> 00:01:05.000] that aims to describe how something works or why it happens.
+[00:01:05.000 --> 00:01:10.000] Related words. Hypothesis, concept, model, explanation.
+[00:01:10.000 --> 00:01:14.000] Antonyms. Fact. Proof. Certainty. Reality.

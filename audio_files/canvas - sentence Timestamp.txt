@@ -1,0 +1,8 @@
+[00:00:00.000 --> 00:00:07.000] Canvas can refer to both a material and a type of artwork, with different meanings depending on the context.
+[00:00:07.000 --> 00:00:16.000] As a noun, material, a strong durable fabric typically made from cotton or linen, often used for painting or making tents, sales, and other items.
+[00:00:16.000 --> 00:00:21.000] Example, the artists stretch the canvas on a wooden frame before starting to paint.
+[00:00:21.000 --> 00:00:27.000] As a noun, artwork, canvas canvases, a painting or work of art created on a canvas.
+[00:00:28.000 --> 00:00:34.000] Example, the gallery showcased a collection of modern canvases each with unique abstract designs.
+[00:00:34.000 --> 00:00:40.000] As a verb, canvas canvased canvassing to cover or provide something with a layer of canvas.
+[00:00:40.000 --> 00:00:45.000] Example, the old boat was canvas to protect it from the harsh weather conditions.
+[00:00:45.000 --> 00:00:55.000] Summary, canvas refers to both the type of durable fabric used for various purposes and the surface used for painting, as well as the artwork created on it.

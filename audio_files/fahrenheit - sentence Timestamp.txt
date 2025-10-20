@@ -1,0 +1,13 @@
+[00:00:00.000 --> 00:00:03.340] Fahrenheit is a noun and an adjective with the following meanings.
+[00:00:03.340 --> 00:00:07.440] As a noun, a temperature scale where the freezing point of water is 32 degrees
+[00:00:07.440 --> 00:00:13.680] ferries and the boiling point is 212 degrees ferries at standard atmospheric pressure.
+[00:00:13.680 --> 00:00:18.040] This scale is commonly used in the United States and some other countries.
+[00:00:18.040 --> 00:00:22.600] Example, the temperature outside was 85 degrees Fahrenheit.
+[00:00:22.600 --> 00:00:26.960] Example, the weather report showed it would be 30 degrees ferries tonight.
+[00:00:27.040 --> 00:00:32.280] As an adjective, relating to or measured by the Fahrenheit temperature scale.
+[00:00:32.280 --> 00:00:37.280] Example, the room was heated to a comfortable Fahrenheit level.
+[00:00:37.280 --> 00:00:41.960] Example, you can convert Celsius temperatures to Fahrenheit using a simple formula.
+[00:00:41.960 --> 00:00:47.520] Suburn height refers to a temperature scale widely used in the United States and a few other places,
+[00:00:47.520 --> 00:00:52.320] where water freezes at 32 degrees here and boils at 212 degrees ferries.
+[00:00:52.320 --> 00:00:56.640] As an adjective, it describes anything related to this temperature scale.
+[00:00:56.640 --> 00:01:02.560] Related word Celsius, temperature, thermometers, scale, antinums, Celsius, centigrade.

@@ -1,0 +1,8 @@
+[00:00:00.000 --> 00:00:06.640] Polygon is a noun with a following meaning, a flat, closed geometric figure with three or more straight sides.
+[00:00:06.960 --> 00:00:12.720] A polygon is a two-dimensional shape made up of straight lines that connect to form a closed figure.
+[00:00:12.720 --> 00:00:20.240] The sides and angles can vary, creating different types of polygons like triangles, rectangles, pentagons, and hexagons.
+[00:00:20.480 --> 00:00:24.520] Example, a triangle is the simplest polygon having three sides.
+[00:00:24.800 --> 00:00:27.760] Example, a pentagon is a polygon with five sides.
+[00:00:27.760 --> 00:00:34.000] Example, the students were tasked with identifying polygons such as squares and hexagons in their geometry lesson.
+[00:00:34.000 --> 00:00:40.000] Summary, a polygon is a flat shape with three or more straight sides and angles forming a closed figure.
+[00:00:40.400 --> 00:00:48.800] Related words, triangle, quadrilateral, pentagon, hexagon, octagon, anonyms, circle, oval, shapes without straight sides.

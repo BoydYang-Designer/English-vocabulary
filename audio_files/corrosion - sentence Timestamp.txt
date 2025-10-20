@@ -1,0 +1,8 @@
+[00:00:00.000 --> 00:00:06.000] Corrosion refers to the gradual destruction or deterioration of materials, usually metals,
+[00:00:06.000 --> 00:00:11.520] by chemical or electrochemical reactions with their environment. It often results in rust or other
+[00:00:11.520 --> 00:00:18.800] forms of oxidation on metal surfaces. Example sentences. The metal fence showed signs of corrosion
+[00:00:18.800 --> 00:00:24.480] due to exposure to saltwater. The company developed a new coating to protect against corrosion on
+[00:00:24.480 --> 00:00:29.360] its automotive parts, using stainless steel helps reduce the risk of corrosion in marine
+[00:00:29.360 --> 00:00:35.840] environments. Summary, corrosion refers to both the process of gradual destruction or deterioration
+[00:00:35.840 --> 00:00:40.960] of materials, especially metals through chemical reactions and the resulting damage or wear.
+[00:00:40.960 --> 00:00:48.400] Related words, rust, decay, degradation, erosion. Antonyms, preservation, protection, maintenance.

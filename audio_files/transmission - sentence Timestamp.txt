@@ -1,0 +1,14 @@
+[00:00:00.000 --> 00:00:03.040] Transmission is a noun with the following meanings.
+[00:00:03.040 --> 00:00:09.680] One, the actor process of sending or transferring something from one place, person, or thing to another,
+[00:00:09.680 --> 00:00:13.020] such as information, signals, or diseases.
+[00:00:13.020 --> 00:00:17.660] Example, the transmission of the message was delayed due to network issues.
+[00:00:17.660 --> 00:00:21.040] Example, the flu virus spreads through airborne transmission.
+[00:00:21.040 --> 00:00:26.100] Example, radio transmission allows communication over long distances.
+[00:00:26.340 --> 00:00:32.540] Two, a system in a vehicle that transmits power from the engine to the wheels, allowing movement and speed control.
+[00:00:32.540 --> 00:00:38.440] Example, the car's transmission needed repair after years of use.
+[00:00:38.440 --> 00:00:43.020] Example, manual transmission requires the driver to shift gears manually.
+[00:00:43.020 --> 00:00:47.780] Example, a mechanic checked the automatic transmission for any faults.
+[00:00:47.780 --> 00:00:53.460] Summary, transmission refers to the act of sending or transferring something,
+[00:00:53.460 --> 00:01:00.280] such as information, signals, or diseases, as well as the system in a vehicle that transfers power from the engine to the wheels.
+[00:01:00.280 --> 00:01:06.740] Related words, transfer, conveyance, broadcasting, communication, gearbox, drivetrain.
+[00:01:06.740 --> 00:01:10.500] Antonyms, interruption, blockage, failure, suppression.

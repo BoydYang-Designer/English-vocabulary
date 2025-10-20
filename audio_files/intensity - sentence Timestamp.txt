@@ -1,0 +1,21 @@
+[00:00:00.000 --> 00:00:03.180] Intensity is a noun with the following meanings.
+[00:00:03.180 --> 00:00:07.800] 1. The quality of being intense or extreme in degree or strength
+[00:00:07.800 --> 00:00:11.560] refers to a high level of force, energy, or feeling.
+[00:00:11.560 --> 00:00:14.000] Example. The intensity of the storm
+[00:00:14.000 --> 00:00:16.180] caused significant damage to the town.
+[00:00:16.180 --> 00:00:18.240] Example. The intensity of her emotions
+[00:00:18.240 --> 00:00:20.460] was evident in her voice.
+[00:00:20.460 --> 00:00:22.880] 2. The measurable amount of a property,
+[00:00:22.880 --> 00:00:25.360] such as light, sound, or energy,
+[00:00:25.360 --> 00:00:29.040] refers to the degree or magnitude of a physical quantity.
+[00:00:29.040 --> 00:00:33.440] Example. The light's intensity was too bright for direct viewing.
+[00:00:33.440 --> 00:00:38.240] Example. They measured the intensity of the earthquake to understand its strength.
+[00:00:38.240 --> 00:00:42.400] 3. Great focus or concentration in effort or attention
+[00:00:42.400 --> 00:00:47.280] refers to the level of dedication or seriousness applied to an activity or goal.
+[00:00:47.280 --> 00:00:52.720] Example. He trained with great intensity to prepare for the marathon.
+[00:00:52.720 --> 00:00:56.400] The artist worked on her painting with an intensity that impressed her peers.
+[00:00:56.400 --> 00:01:01.760] Summary. Intensity refers to the degree of strength, energy, or concentration in various contexts,
+[00:01:01.760 --> 00:01:05.200] whether physical, emotional, or focused effort.
+[00:01:05.200 --> 00:01:08.400] Related words. Force, strength, magnitude,
+[00:01:08.400 --> 00:01:10.720] fervor, concentration, extremity,
+[00:01:10.720 --> 00:01:15.520] antinim, mildness, weakness, gentleness, calmness, indifference.

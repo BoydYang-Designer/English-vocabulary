@@ -1,0 +1,10 @@
+[00:00:00.000 --> 00:00:02.000] Workaround as a noun.
+[00:00:02.000 --> 00:00:08.000] One, a method or solution used to bypass a problem or limitation often as a temporary fix.
+[00:00:08.000 --> 00:00:12.000] Example, the IT team found a workaround to fix the software bug.
+[00:00:12.000 --> 00:00:17.000] Example, since the printer was broken, she used a workaround by sending the document to another office.
+[00:00:17.000 --> 00:00:24.000] Two, an alternative approach to achieving a goal when the usual method is unavailable or impractical.
+[00:00:24.000 --> 00:00:29.000] Example, the engineers developed a workaround to meet the deadline despite the missing parts.
+[00:00:30.000 --> 00:00:34.000] Example, there's no official way to do it, but I found a simple workaround.
+[00:00:34.000 --> 00:00:42.000] Summary, workaround is a temporary or alternative solution to bypass a problem or restriction when the usual method does not work.
+[00:00:42.000 --> 00:00:48.000] Related words, solution, bypass, alternative, fix, improvisation.
+[00:00:48.000 --> 00:00:52.000] Antonyms, obstacle, hindrance, deadlock, limitation.

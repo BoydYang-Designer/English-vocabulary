@@ -1,0 +1,11 @@
+[00:00:00.000 --> 00:00:02.000] Photography as a noun.
+[00:00:02.000 --> 00:00:05.000] One, the art and practice of taking photographs.
+[00:00:05.000 --> 00:00:08.000] The process of capturing images using a camera,
+[00:00:08.000 --> 00:00:12.000] focusing on technical skills and creativity in composition and lighting.
+[00:00:12.000 --> 00:00:16.000] Example, she studied photography to learn how to capture beautiful landscapes.
+[00:00:16.000 --> 00:00:22.000] Example, photography is a popular hobby for people who enjoy documenting their lives.
+[00:00:22.000 --> 00:00:28.000] Two, the photographs or images produced, the pictures or visual representations created through the act of photography.
+[00:00:28.000 --> 00:00:32.000] Example, the gallery displayed her stunning black and white photography.
+[00:00:32.000 --> 00:00:36.000] Example, his photography of wildlife won several awards.
+[00:00:36.000 --> 00:00:43.000] Summary, photography refers to both the practice of capturing images and the resulting photographs or images created.
+[00:00:43.000 --> 00:00:53.000] Related words, imaging, picture taking, camera work, snapshot, visual art, antinim's non-visual art abstraction.

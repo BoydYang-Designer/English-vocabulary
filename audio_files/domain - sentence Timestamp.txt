@@ -1,0 +1,15 @@
+[00:00:00.000 --> 00:00:03.040] Domain, as a noun, has the following meanings.
+[00:00:03.040 --> 00:00:08.840] One, a specific area of knowledge, activity, or interest.
+[00:00:08.840 --> 00:00:12.840] Example, the professor is an expert in the domain of artificial intelligence.
+[00:00:12.840 --> 00:00:16.720] Example, music falls within her domain of expertise.
+[00:00:16.720 --> 00:00:19.840] Two, a territory or area under someone's control or ownership.
+[00:00:19.840 --> 00:00:22.800] Example, the castle was located within the king's domain.
+[00:00:22.800 --> 00:00:27.360] Example, the park is considered public domain and accessible to everyone.
+[00:00:27.360 --> 00:00:31.720] Three, in computing a unique name, identifying a website or network.
+[00:00:31.720 --> 00:00:35.920] Example, the company registered a new domain for its website.
+[00:00:35.920 --> 00:00:40.000] Example, the domain name for the website ends in org.
+[00:00:40.000 --> 00:00:43.200] Domain refers to an area of knowledge, control, or activity.
+[00:00:43.200 --> 00:00:46.840] A specific internet address or the range of values and mathematics.
+[00:00:46.840 --> 00:00:49.800] It's meaning varies based on context.
+[00:00:49.800 --> 00:00:54.320] Related words, realm field, territory, sphere, area, scope.
+[00:00:54.320 --> 00:00:57.600] Antonyms periphery, boundary, margin, outside.

@@ -1,0 +1,8 @@
+[00:00:00.000 --> 00:00:12.400] Cohesive design refers to a unified and harmonious approach to creating a product, structure, or visual element where all components work together seamlessly to convey a consistent message, style, or purpose.
+[00:00:12.400 --> 00:00:23.000] It emphasizes the integration of elements such as colors, shapes, materials, and functionality to ensure they complement one another and enhance the overall user experience.
+[00:00:23.400 --> 00:00:33.000] Example, the website's cohesive design with consistent fonts, colors, and layouts made navigation intuitive and visually appealing.
+[00:00:33.000 --> 00:00:40.800] A cohesive design and architecture ensures that the exterior, interior, and landscaping align with the same aesthetic theme.
+[00:00:40.800 --> 00:00:48.800] The new smartphone features a cohesive design with its hardware and software blending perfectly for a seamless user experience.
+[00:00:48.800 --> 00:00:54.800] A cohesive design in a marketing campaign helps reinforce the brand identity across different platforms.
+[00:00:54.800 --> 00:01:05.800] Summary, cohesive design is about creating a unified and consistent look, feel, or functionality across all aspects of a project ensuring that every part contributes to the overall harmony.
+[00:01:05.800 --> 00:01:16.800] Related words, unified design, consistent design, harmonious design, integrated design, antinem's fragmented design, inconsistent design, disjointed design.

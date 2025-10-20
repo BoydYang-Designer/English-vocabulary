@@ -1,0 +1,12 @@
+[00:00:00.000 --> 00:00:06.060] Constraint is a noun, meaning a limitation, restriction, or condition that controls or restricts
+[00:00:06.060 --> 00:00:07.580] what can be done.
+[00:00:07.580 --> 00:00:11.920] It can be physical, legal, social, or situational.
+[00:00:11.920 --> 00:00:12.920] Examples.
+[00:00:12.920 --> 00:00:16.140] Budget constraints force the team to reduce the project scope.
+[00:00:16.140 --> 00:00:19.680] Time constraints made it difficult to finish the work on schedule.
+[00:00:19.680 --> 00:00:24.160] The engineer designed the machine within the constraints of safety regulations.
+[00:00:24.160 --> 00:00:28.720] Social constraints sometimes influence people's behavior more than laws do.
+[00:00:28.720 --> 00:00:33.180] Calumary constraint refers to a restriction or limitation that affects actions, decisions,
+[00:00:33.180 --> 00:00:34.680] or possibilities.
+[00:00:34.680 --> 00:00:40.320] Related words, limitation, restriction, control, boundary, antinims, freedom, flexibility,
+[00:00:40.320 --> 00:00:41.320] liberty, allowance.
