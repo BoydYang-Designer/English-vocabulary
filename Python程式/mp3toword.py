@@ -55,6 +55,9 @@ if not save_plain and not save_timestamp:
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using device: {device}")
 
+# 定義 Whisper 使用的取樣率 (16kHz)
+WHISPER_SAMPLE_RATE = 16000
+
 print("正在載入 'base' 模型...")
 model = whisper.load_model("base", device=device)
 print("模型載入完成。")
@@ -64,12 +67,47 @@ for i, file_path in enumerate(file_paths):
     print(f"\n--- 正在處理檔案 {i + 1} / {len(file_paths)} ---")
     print(f"檔案: {file_path}")
 
-    # 轉錄
     try:
-        result = model.transcribe(file_path, language="en", verbose=False)
+        # --- 新增: 檢查 1 (檔案是否已存在) ---
+        base_path = os.path.splitext(file_path)[0]
+        files_to_check = []
+        
+        if save_plain:
+            files_to_check.append(base_path + ".txt")
+        if save_timestamp:
+            files_to_check.append(base_path + " Timestamp.txt")
+        
+        # 檢查所有 *被要求的* 檔案是否都已存在
+        all_exist = False
+        if files_to_check: # 只有在使用者有要求儲存格式時才檢查
+            all_exist = True # 假設都存在
+            for f in files_to_check:
+                if not os.path.exists(f):
+                    all_exist = False # 發現有缺, 設為 False
+                    break # 不用再檢查了
+
+        if all_exist:
+            print(f"  [跳過] 偵測到所有要求的輸出檔案均已存在。")
+            continue # 處理下一個檔案
+
+        # --- 新增: 檢查 2 (檔案長度) ---
+        # 我們需要先載入音訊來檢查長度
+        audio = whisper.load_audio(file_path)
+        # 音訊陣列的長度 / 取樣率 = 秒數
+        duration = audio.shape[0] / WHISPER_SAMPLE_RATE 
+        
+        if duration < 10:
+            print(f"  [跳過] 檔案長度 ({duration:.2f} 秒) 小於 10 秒。")
+            continue # 處理下一個檔案
+        
+        print(f"檔案長度: {duration:.2f} 秒。開始轉錄...")
+
+        # --- 轉錄 (修改) ---
+        # 使用已經載入的 'audio' 物件，避免重複載入
+        result = model.transcribe(audio, language="en", verbose=False)
         print("轉錄完成。")
         
-        base_path = os.path.splitext(file_path)[0]
+        # (base_path 已在上面定義過)
 
         # 根據選擇儲存檔案
         if save_plain:
