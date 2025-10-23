@@ -2,9 +2,7 @@
 
 // 這些是索引頁面邏輯特有的變數
 let wordsData = [];
-// let sentenceAudio = new Audio(); // [優化] 由 detailsSentencePlayer 取代
-let detailsWordPlayer = new Audio(); // [新增] 專用於內文的單字播放器
-let detailsSentencePlayer = new Audio(); // [新增] 專用於內文的句子播放器
+let sentenceAudio = new Audio();
 let sentenceData = [];
 let lastWordListType = "";
 let lastWordListValue = "";
@@ -538,10 +536,9 @@ function backToWordList() {
         isPaused = false;
         updateAutoPlayButton();
     }
-    // [優化] 使用 detailsSentencePlayer
-    if (detailsSentencePlayer && !detailsSentencePlayer.paused) {
-        detailsSentencePlayer.pause();
-        detailsSentencePlayer.currentTime = 0;
+    if (sentenceAudio && !sentenceAudio.paused) {
+        sentenceAudio.pause();
+        sentenceAudio.currentTime = 0;
     }
 
     if (timestampUpdateRafId) {
@@ -746,163 +743,22 @@ function removeHighlight(wordText) {
     if (item) item.classList.remove('playing');
 }
 
-// --- [優化] 新增的輔助函數 ---
-
-/**
- * [新增] 異步播放音訊的輔助函數
- * 它會回傳一個 Promise，在音訊播放結束、被暫停或出錯時解析 (resolve)。
- */
-function playAudioAsync(audioPlayer) {
-    return new Promise((resolve) => {
-        // 檢查是否已經載入並可以播放
-        audioPlayer.play().then(() => {
-            // 正常結束
-            audioPlayer.onended = () => {
-                audioPlayer.onended = null;
-                audioPlayer.onpause = null;
-                audioPlayer.onerror = null;
-                resolve();
-            };
-            
-            // 被 'pauseAutoPlay' 呼叫暫停
-            audioPlayer.onpause = () => {
-                if (isPaused) { // 只有在 'isPaused' 標記為 true 時才視為暫停
-                    audioPlayer.onended = null;
-                    audioPlayer.onpause = null;
-                    audioPlayer.onerror = null;
-                    resolve();
-                }
-                // 否則，這可能是其他原因的暫停 (例如切換標籤頁)，播放器將保持暫停狀態
-            };
-
-            // 播放失敗
-            audioPlayer.onerror = (e) => {
-                console.warn(`音訊播放錯誤: ${audioPlayer.src}`, e);
-                audioPlayer.onended = null;
-                audioPlayer.onpause = null;
-                audioPlayer.onerror = null;
-                resolve(); // 出錯也 resolve，讓循環繼續
-            };
-
-        }).catch(e => {
-            // 'play()' 呼叫本身失敗 (例如，音訊尚未載入完成)
-             console.warn(`audio.play() 失敗: ${audioPlayer.src}`, e);
-             resolve(); // 同樣 resolve 讓循環繼續
-        });
-    });
-}
-
-/**
- * [新增] 依序播放單字和句子的新函數
- * 這取代了 'playAudioSequentially' 的核心邏輯
- */
-async function playWordAndSentenceSequence(word) {
-    // 檢查是否在開始前就已經被暫停
-    if (isPaused || !isAutoPlaying) return;
-
-    // --- 1. UI 設置 ---
-    const playBtn = document.getElementById("playAudioBtn");
-    const pauseBtn = document.getElementById("pauseResumeBtn");
-    if (playBtn) playBtn.classList.add("playing");
-    if (pauseBtn) {
-        pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />`;
-        pauseBtn.classList.remove("playing");
-    }
-    document.getElementById('meaningContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // --- 2. 播放單字 ---
-    detailsWordPlayer.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word.Words)}.mp3`;
-    await playAudioAsync(detailsWordPlayer);
-
-    // --- 檢查是否在播放單字時被暫停 ---
-    if (isPaused || !isAutoPlaying) {
-         if (playBtn) playBtn.classList.remove("playing"); // 重置UI
-         return; 
-    }
-
-    // --- 3. 播放句子 ---
-    detailsSentencePlayer.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word.Words)} - sentence.mp3`;
-    
-    // 播放前附加監聽器
-    if (isTimestampMode) {
-        if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
-        timestampUpdateLoop(); // 此函數會自我管理（檢查 paused 狀態）
-    } else {
-        detailsSentencePlayer.addEventListener('timeupdate', handleAutoScroll);
-    }
-    
-    // 等待句子播放完畢
-    await playAudioAsync(detailsSentencePlayer);
-
-    // --- 4. 清理 ---
-    detailsSentencePlayer.removeEventListener('timeupdate', handleAutoScroll);
-    if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
-    timestampUpdateRafId = null;
-
-    if (playBtn) playBtn.classList.remove("playing");
-    if (pauseBtn) {
-        pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
-        pauseBtn.classList.add("playing");
-    }
-}
-
-/**
- * [新增] 內文自動播放的主循環 (Loop)
- */
-async function runDetailsAutoPlayLoop() {
-    // 循環條件：自動播放開啟且未暫停
-    while (isAutoPlaying && !isPaused) {
-        
-        // 檢查是否播完列表
-        if (window.currentIndex >= window.currentWordList.length) {
-            isAutoPlaying = false;
-            updateAutoPlayButton();
-            break; // 結束循環
-        }
-
-        const currentWord = window.currentWordList[window.currentIndex];
-        
-        // 1. 顯示UI (只顯示，不觸發播放)
-        showDetails(currentWord);
-
-        // 2. 播放音訊 (等待播放完畢)
-        await playWordAndSentenceSequence(currentWord);
-
-        // 3. 檢查是否在播放過程中被暫停或停止
-        if (isPaused || !isAutoPlaying) {
-            break; // 退出循環
-        }
-
-        // 4. 播放完畢，準備下一個
-        window.currentIndex++;
-        
-        // 在單字之間加入短暫延遲 (例如 0.5 秒)
-        // 再次檢查狀態，防止在 setTimeout 期間被暫停
-        if (isAutoPlaying && !isPaused) {
-            await new Promise(resolve => setTimeout(resolve, 500));
-        }
-    }
-}
-
-// --- [優化] 修改過的控制函數 ---
-
 function startAutoPlay() {
     if (!window.currentWordList || window.currentWordList.length === 0) {
         alert("開始自動播放前請先選擇一個單字列表！");
         return;
     }
-    
-    // 設置起始索引
-    if (window.currentIndex < 0 || window.currentIndex >= window.currentWordList.length) {
+    if (window.currentIndex >= 0 && window.currentIndex < window.currentWordList.length) {
+        isAutoPlaying = true;
+        isPaused = false;
+        showDetails(window.currentWordList[window.currentIndex]);
+    } else {
         window.currentIndex = 0;
+        isAutoPlaying = true;
+        isPaused = false;
+        showDetails(window.currentWordList[window.currentIndex]);
     }
-
-    isAutoPlaying = true;
-    isPaused = false;
     updateAutoPlayButton();
-
-    // [修改] 呼叫新的循環函數
-    runDetailsAutoPlayLoop();
 }
 
 function pauseAutoPlay() {
@@ -911,29 +767,20 @@ function pauseAutoPlay() {
         if (currentAudio && !currentAudio.paused) {
             currentAudio.pause();
         }
-    } else if (document.getElementById("wordDetails").style.display === "block") {
-        // [修改] 暫停兩個全域播放器
-        if (detailsWordPlayer && !detailsWordPlayer.paused) {
-            detailsWordPlayer.pause();
-        }
-        if (detailsSentencePlayer && !detailsSentencePlayer.paused) {
-            detailsSentencePlayer.pause();
-        }
+    } else if (sentenceAudio && sentenceAudio.readyState >= 2) {
+        sentenceAudio.pause();
     }
     updateAutoPlayButton();
 }
 
 function resumeAutoPlay() {
     isPaused = false;
-    updateAutoPlayButton(); // 先更新UI
-
     if (document.getElementById("wordList").style.display === "block") {
-        playNextWord(); // 列表頁邏輯不變
-    } else if (document.getElementById("wordDetails").style.display === "block") {
-        // [修改] 重新啟動主循環
-        // 循環會自動從 'window.currentIndex' 繼續
-        runDetailsAutoPlayLoop();
+        playNextWord();
+    } else if (sentenceAudio && sentenceAudio.readyState >= 2) {
+        sentenceAudio.play().catch(err => console.error("🔊 播放失敗:", err));
     }
+    updateAutoPlayButton();
 }
 
 function toggleCheck(word, button) {
@@ -1008,8 +855,7 @@ function parseTimestampText(text) {
 
 // 時間戳模式的更新循環 (高亮和滾動)
 function timestampUpdateLoop() {
-    // [優化] 使用 detailsSentencePlayer
-    if (!isTimestampMode || detailsSentencePlayer.paused || !detailsSentencePlayer.duration) {
+    if (!isTimestampMode || sentenceAudio.paused || !sentenceAudio.duration) {
         if (timestampUpdateRafId) {
             cancelAnimationFrame(timestampUpdateRafId);
             timestampUpdateRafId = null;
@@ -1017,7 +863,7 @@ function timestampUpdateLoop() {
         return;
     }
 
-    const currentTime = detailsSentencePlayer.currentTime; // [優化]
+    const currentTime = sentenceAudio.currentTime;
     const container = document.getElementById('meaningContainer');
     if (!container) return;
 
@@ -1112,8 +958,8 @@ function toggleTimestampMode() {
 
     if (isTimestampMode) {
         renderTimestampContent();
-        detailsSentencePlayer.removeEventListener('timeupdate', handleAutoScroll); // [優化]
-        if (!detailsSentencePlayer.paused) { // [優化]
+        sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
+        if (!sentenceAudio.paused) {
             if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
             timestampUpdateLoop();
         }
@@ -1125,7 +971,7 @@ function toggleTimestampMode() {
             lastHighlightedSentence.classList.remove('is-current');
             lastHighlightedSentence = null;
         }
-        detailsSentencePlayer.addEventListener('timeupdate', handleAutoScroll); // [優化]
+        sentenceAudio.addEventListener('timeupdate', handleAutoScroll);
     }
 }
 
@@ -1259,17 +1105,70 @@ function showDetails(word) {
         };
     }
 
-    // [優化] 刪除: if (isAutoPlaying && !isPaused) playAudioSequentially(word);
-    // 播放邏輯現在由 runDetailsAutoPlayLoop 集中管理
+    if (isAutoPlaying && !isPaused) playAudioSequentially(word);
 }
 
-// [優化] 刪除舊的 playAudioSequentially 函數
-/*
 function playAudioSequentially(word) {
-    // ... 此函數已被刪除並由 playWordAndSentenceSequence 取代 ...
-}
-*/
+    let phoneticAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word.Words)}.mp3`);
+    sentenceAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word.Words)} - sentence.mp3`);
+    
+    document.getElementById('meaningContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
 
+    let playBtn = document.getElementById("playAudioBtn");
+    let pauseBtn = document.getElementById("pauseResumeBtn");
+    if (playBtn) playBtn.classList.add("playing");
+    if (pauseBtn) {
+        pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />`;
+        pauseBtn.classList.remove("playing");
+    }
+    phoneticAudio.play().then(() => new Promise(resolve => {
+        phoneticAudio.onended = resolve;
+        if (isPaused) { phoneticAudio.pause(); resolve(); }
+    })).then(() => {
+        if (!isPaused) {
+            sentenceAudio.play().then(() => new Promise(resolve => {
+                if (isTimestampMode) {
+                    if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+                    timestampUpdateLoop();
+                } else {
+                    sentenceAudio.addEventListener('timeupdate', handleAutoScroll);
+                }
+
+                sentenceAudio.onended = () => {
+                    sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
+                    if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+
+                    if (playBtn) playBtn.classList.remove("playing");
+                    if (pauseBtn) {
+                        pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
+                        pauseBtn.classList.add("playing");
+                    }
+                    resolve();
+                };
+                if (isPaused) {
+                    sentenceAudio.pause();
+                    sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
+                    if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+                    resolve();
+                }
+            })).then(() => {
+                if (isAutoPlaying && !isPaused) {
+                    window.currentIndex++;
+                    if (window.currentIndex < window.currentWordList.length) showDetails(window.currentWordList[window.currentIndex]);
+                    else isAutoPlaying = false;
+                    updateAutoPlayButton();
+                }
+            });
+        }
+    }).catch(err => {
+        if (isAutoPlaying && !isPaused) {
+            window.currentIndex++;
+            if (window.currentIndex < window.currentWordList.length) showDetails(window.currentWordList[window.currentIndex]);
+            else isAutoPlaying = false;
+            updateAutoPlayButton();
+        }
+    });
+}
 
 function getFromPage() {
     return new URLSearchParams(window.location.search).get('from');
@@ -1310,30 +1209,29 @@ function playSentenceAudio(audioFile) {
     isAutoPlaying = false;
     isPaused = false;
     updateAutoPlayButton();
-    // [優化] 使用 detailsSentencePlayer
-    if (detailsSentencePlayer && !detailsSentencePlayer.paused) {
-        detailsSentencePlayer.pause();
-        detailsSentencePlayer.currentTime = 0;
-        detailsSentencePlayer.removeEventListener('timeupdate', handleAutoScroll);
+    if (sentenceAudio && !sentenceAudio.paused) {
+        sentenceAudio.pause();
+        sentenceAudio.currentTime = 0;
+        sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
         if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
         timestampUpdateRafId = null;
     }
 
     document.getElementById('meaningContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
     
-    detailsSentencePlayer.src = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`; // [優化]
+    sentenceAudio = new Audio(`https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${audioFile}`);
     
-    detailsSentencePlayer.addEventListener('play', () => { // [優化]
+    sentenceAudio.addEventListener('play', () => {
         if (isTimestampMode) {
             if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
             timestampUpdateLoop();
         }
     });
-    detailsSentencePlayer.addEventListener('pause', () => { // [優化]
+    sentenceAudio.addEventListener('pause', () => {
         if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
         timestampUpdateRafId = null;
     });
-    detailsSentencePlayer.addEventListener('ended', () => { // [優化]
+    sentenceAudio.addEventListener('ended', () => {
         if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
         timestampUpdateRafId = null;
         if (lastHighlightedSentence) {
@@ -1342,9 +1240,9 @@ function playSentenceAudio(audioFile) {
         }
     });
 
-    detailsSentencePlayer.play().then(() => { // [優化]
+    sentenceAudio.play().then(() => {
         if (!isTimestampMode) {
-            detailsSentencePlayer.addEventListener('timeupdate', handleAutoScroll); // [優化]
+            sentenceAudio.addEventListener('timeupdate', handleAutoScroll);
         }
 
         let playBtn = document.getElementById("playAudioBtn");
@@ -1354,8 +1252,8 @@ function playSentenceAudio(audioFile) {
             pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />`;
             pauseBtn.classList.remove("playing");
         }
-        detailsSentencePlayer.onended = () => { // [優化]
-            detailsSentencePlayer.removeEventListener('timeupdate', handleAutoScroll); // [優化]
+        sentenceAudio.onended = () => {
+            sentenceAudio.removeEventListener('timeupdate', handleAutoScroll);
             if (playBtn) playBtn.classList.remove("playing");
             if (pauseBtn) {
                 pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
@@ -1368,16 +1266,15 @@ function playSentenceAudio(audioFile) {
 function togglePauseAudio(button) {
     const playBtn = document.getElementById("playAudioBtn");
     const pauseBtn = button;
-    // [優化] 使用 detailsSentencePlayer
-    if (detailsSentencePlayer.paused || detailsSentencePlayer.ended) {
+    if (sentenceAudio.paused || sentenceAudio.ended) {
         document.getElementById('meaningContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        detailsSentencePlayer.play().then(() => {
+        sentenceAudio.play().then(() => {
             if (playBtn) playBtn.classList.add("playing");
             if (pauseBtn) pauseBtn.classList.remove("playing");
             pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />`;
         });
     } else {
-        detailsSentencePlayer.pause();
+        sentenceAudio.pause();
         if (playBtn) playBtn.classList.remove("playing");
         if (pauseBtn) pauseBtn.classList.add("playing");
         pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
@@ -1385,9 +1282,8 @@ function togglePauseAudio(button) {
 }
 
 function adjustAudioTime(seconds) {
-    // [優化] 使用 detailsSentencePlayer
-    if (detailsSentencePlayer && !isNaN(detailsSentencePlayer.duration)) {
-       detailsSentencePlayer.currentTime = Math.max(0, Math.min(detailsSentencePlayer.duration, detailsSentencePlayer.currentTime + seconds));
+    if (sentenceAudio && !isNaN(sentenceAudio.duration)) {
+       sentenceAudio.currentTime = Math.max(0, Math.min(sentenceAudio.duration, sentenceAudio.currentTime + seconds));
     }
 }
 
@@ -1466,8 +1362,7 @@ function displayNote() {
 }
 
 document.addEventListener("keydown", function (event) {
-    // [優化] 使用 detailsSentencePlayer
-    if (!detailsSentencePlayer || isNaN(detailsSentencePlayer.duration) || document.activeElement === document.getElementById("wordNote")) return;
+    if (!sentenceAudio || isNaN(sentenceAudio.duration) || document.activeElement === document.getElementById("wordNote")) return;
     switch (event.code) {
         case "Space":
             event.preventDefault();
@@ -1538,11 +1433,10 @@ function displayWordDetailsFromURL() {
 
 function handleAutoScroll() {
     const container = document.getElementById('meaningContainer');
-    // [優化] 使用 detailsSentencePlayer
-    if (!container || !detailsSentencePlayer || isNaN(detailsSentencePlayer.duration) || detailsSentencePlayer.duration === 0) return;
+    if (!container || !sentenceAudio || isNaN(sentenceAudio.duration) || sentenceAudio.duration === 0) return;
     const scrollableHeight = container.scrollHeight - container.clientHeight;
     if (scrollableHeight <= 0) return;
-    const scrollPosition = (detailsSentencePlayer.currentTime / detailsSentencePlayer.duration) * scrollableHeight;
+    const scrollPosition = (sentenceAudio.currentTime / sentenceAudio.duration) * scrollableHeight;
     container.scrollTo({ top: scrollPosition, behavior: 'smooth' });
 }
 
@@ -1557,13 +1451,13 @@ function enableWordCopyOnClick() {
 
         if (isTimestampMode) {
             // --- TIMESTAMP 模式邏輯 ---
-            if (detailsSentencePlayer && !detailsSentencePlayer.paused) { // [優化]
+            if (sentenceAudio && !sentenceAudio.paused) {
                 // 播放中：點擊句子以跳轉音訊，不做其他事。
                 const sentenceEl = event.target.closest('.timestamp-sentence');
                 if (sentenceEl) {
                     const startTime = parseFloat(sentenceEl.dataset.start);
                     if (!isNaN(startTime)) {
-                        detailsSentencePlayer.currentTime = startTime; // [優化]
+                        sentenceAudio.currentTime = startTime;
                     }
                 }
             } else {
