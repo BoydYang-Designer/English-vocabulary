@@ -5,7 +5,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f9f9f9;
+    background: #FDFBF6; /* [大地色] 溫暖米白 */
 }
 
 /* ▼▼▼ 新增這段 CSS ▼▼▼ */
@@ -18,9 +18,8 @@ html, body {
 /* ▲▲▲ 新增結束 ▲▲▲ */
 
 h1 {
-
     text-align: center;
-    background: #333;
+    background: linear-gradient(to right, #A1887F, #8D6E63); /* [大地色] 較淺的暖棕色漸層 */
     color: white;
     padding: 15px 0;
     margin: 0;
@@ -49,28 +48,30 @@ h1 {
 }
 
 .collapsible-header {
-    background-color: #647f91; /* Match button theme */
-    color: white;
+    background-color: #FFFFFF; 
+    color: #5D4037; /* [大地色] */
     cursor: pointer;
     padding: 12px 20px;
     width: 100%;
-    border: none;
+    border: 1px solid #EFEBE9; /* [大地色] */
     text-align: left;
     outline: none;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 8px; /* [大地色] 統一圓角 */
+    transition: all 0.3s ease; /* [大地色] 統一樣式 */
     position: relative; /* For the arrow icon */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* [大地色] 統一樣式 */
 }
 
 .collapsible-header:hover {
-    background-color: #597d96;
+    background-color: #F5F5F5; /* [大地色] */
+    border-color: #BCAAA4; /* [大地色] */
 }
 
 .collapsible-header::after {
     content: '\002B'; /* Plus sign */
-    color: white;
+    color: #A1887F; /* [大地色] */
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -86,8 +87,14 @@ h1 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    background-color: #f1f1f1;
-    border-radius: 0 0 5px 5px;
+    background-color: #FAFAFA; /* [大地色] */
+    border-radius: 0 0 8px 8px; /* [大地色] */
+    border: 1px solid #EFEBE9; /* [大地色] */
+    border-top: none; /* [大地色] */
+    
+    /* ▼▼▼ 修正：從 index.css 引入捲動條樣式 ▼▼▼ */
+    max-height: 250px; /* 設定一個最大高度 */
+    overflow-y: auto;  /* 當內容超出時，顯示垂直捲動條 */
 }
 
 .collapsible-content .button-wrapper {
@@ -97,9 +104,10 @@ h1 {
 /* Collapsible Section Styles End */
 
 .collapsible-header.header-highlight {
-    background-color: #0056b3; /* 使用一個較深的藍色以作區別 */
-    color: white;
+    background-color: #FAFAFA; /* [大地色] */
+    color: #795548; /* [大地色] */
     font-weight: bold;
+    border-color: #A1887F; /* [大地色] */
 }
 
 /* 按鈕容器 */
@@ -112,18 +120,20 @@ h1 {
 }
 
 .letter-btn {
-    padding: 10px 15px;
+    padding: 8px 15px; /* [大地色] 統一樣式 */
     margin: 5px;
     cursor: pointer;
-    border: none;
-    background: #555;
-    color: white;
-    font-size: 18px;
-    border-radius: 25px;
+    border: 1px solid #EFEBE9; /* [大地色] 統一樣式 */
+    background: #FFFFFF; /* [大地色] 統一樣式 */
+    color: #A1887F; /* [大地色] 統一樣式 */
+    font-size: 16px; /* [大地色] 統一樣式 */
+    border-radius: 20px; /* [大地色] 統一樣式 */
+    transition: all 0.2s ease; /* [大地色] 統一樣式 */
 }
 
 .letter-btn:hover {
-    background: #777;
+    background: #FAFAFA; /* [大地色] 統一樣式 */
+    border-color: #A1887F; /* [大地色] 統一樣式 */
 }
 
 
@@ -132,7 +142,7 @@ h1 {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    color: #375c85;
+    color: #5D4037; /* [大地色] */
     margin-bottom: 15px;
 }
 
@@ -146,7 +156,7 @@ h1 {
     background: white;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* [大地色] */
 }
 
 /* 單字/句子項目 */
@@ -157,11 +167,11 @@ h1 {
     cursor: pointer;
     padding: 8px;
     border-bottom: 1px solid #ddd;
-    color: #007bff;
+    color: #795548; /* [大地色] */
 }
 
 .word-item:hover {
-    background: #f0f0f0;
+    background: #f8f9fa; /* [大地色] */
 }
 
 /* 音標容器 */
@@ -172,7 +182,7 @@ h1 {
 }
 
 .phonetics-container button {
-    background-color: #647f91;
+    background-color: #A1887F; /* [大地色] */
     color: #fff;
     font-size: 16px;
     text-align: left;
@@ -184,12 +194,12 @@ h1 {
     white-space: nowrap;
     display: inline-block;
     border: none;
-    border-radius: 20px;
+    border-radius: 18px; /* [大地色] 統一樣式 */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .phonetics-container button:hover {
-    background-color: #4a6375;
+    background-color: #8D6E63; /* [大地色] */
     transform: scale(1.05);
 }
 
@@ -198,8 +208,9 @@ h1 {
     width: 400px;
     background: white;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #EFEBE9; /* [大地色] */
+    border-radius: 15px; /* [大地色] */
+    box-shadow: none; /* [大地色] 移除舊陰影，使用邊框 */
     display: none;
     position: relative;
     font-size: 18px;
@@ -212,7 +223,7 @@ h1 {
     display: block;
     width: 150px;
     height: 50px;
-    background-color: #647f91;
+    background-color: #A1887F; /* [大地色] */
     color: white;
     border: none;
     cursor: pointer;
@@ -222,7 +233,7 @@ h1 {
 }
 
 .button:hover {
-    background-color: #6e8191;
+    background-color: #8D6E63; /* [大地色] */
 }
 
 /* 返回按鈕 */
@@ -230,7 +241,7 @@ h1 {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: #647f91;
+    background-color: #A1887F; /* [大地色] */
     color: white;
     font-size: 18px;
     border: none;
@@ -243,7 +254,7 @@ h1 {
 }
 
 .back-button:hover {
-    background-color: #6e8191;
+    background-color: #8D6E63; /* [大地色] */
 }
 
 /* 音訊控制按鈕 */
@@ -257,7 +268,7 @@ h1 {
 }
 
 .audio-btn {
-    background-color: #647f91;
+    background-color: #A1887F; /* [大地色] */
     color: #fff;
     font-size: 16px;
     padding: 15px;
@@ -273,7 +284,7 @@ h1 {
 }
 
 .audio-btn:hover {
-    background-color: #4a6375;
+    background-color: #8D6E63; /* [大地色] */
     transform: scale(1.05);
 }
 
@@ -306,20 +317,20 @@ h1 {
 }
 
 #saveNoteButton {
-    background: #6e93ba;
+    background: #A1887F; /* [大地色] */
 }
 
 #saveNoteButton:hover {
-    background: #475f78;
+    background: #8D6E63; /* [大地色] */
     transform: scale(1.05);
 }
 
 #clearNoteButton {
-    background: #a8454f;
+    background: #a8454f; /* [大地色] Destructive (保留) */
 }
 
 #clearNoteButton:hover {
-    background: #7a3a40;
+    background: #7a3a40; /* [大地色] Destructive (保留) */
     transform: scale(1.05);
 }
 
@@ -332,13 +343,14 @@ h1 {
 /* 筆記容器 */
 #noteContainer {
     width: 360px;
-    background: #e7e7e7;
+    background: #FAFAFA; /* [大地色] */
     padding: 10px;
     border-radius: 8px;
     margin-top: 5px;
     max-height: 90px;
     overflow: hidden;
     margin-left: -5px;
+    border: 1px solid #EFEBE9; /* [大地色] */
 }
 
 #sentenceNote {
@@ -348,6 +360,7 @@ h1 {
     padding: 5px;
     border: none;
     resize: none;
+    color: #5D4037; /* [大地色] */
 }
 
 #sentenceNote:focus {
@@ -368,14 +381,14 @@ h1 {
     font-size: 14px;
     border: none;
     border-radius: 5px;
-    background: #6e93ba;
+    background: #A1887F; /* [大地色] */
     color: white;
     cursor: pointer;
     transition: 0.2s;
 }
 
 #storageButtons button:hover {
-    background: #475f78;
+    background: #8D6E63; /* [大地色] */
     transform: scale(1.05);
 }
 
@@ -432,7 +445,7 @@ h1 {
     transform: scale(1.3);
     cursor: pointer;
     border-radius: 6px;
-    border: 2px solid #5c5c5c;
+    border: 2px solid #BCAAA4; /* [大地色] */
     appearance: none;
     background-color: white;
     transition: all 0.2s ease-in-out;
@@ -440,8 +453,8 @@ h1 {
 }
 
 .important-checkbox:checked {
-    background-color: #ffc107;
-    border-color: #e0a800;
+    background-color: #FFCC80; /* [大地色] Important */
+    border-color: #FFA726; /* [大地色] Important */
 }
 
 /* 媒體查詢 */
@@ -487,7 +500,7 @@ h1 {
         left: 50%;
         transform: translateX(-50%);
         padding: 10px;
-        background-color: #647f91;
+        background-color: #A1887F; /* [大地色] */
         border: none;
         cursor: pointer;
     }
@@ -495,7 +508,7 @@ h1 {
 
 /* 在現有 CSS 文件底部添加 */
 .playing {
-    background-color: #00BFFF !important; /* 亮藍色 */
+    background-color: #BCAAA4 !important; /* [大地色] Playing */
     color: white !important; /* 確保文字可見 */
 }
 
@@ -555,7 +568,7 @@ h1 {
     margin-left: 10px;
     padding: 5px 10px;
     font-size: 18px;
-    background-color: #647f91;
+    background-color: #6c757d; /* [大地色] Neutral */
     color: white;
     border: none;
     border-radius: 5px;
@@ -564,14 +577,14 @@ h1 {
 }
 
 #autoPlayBtn:hover {
-    background-color: #4a6375;
+    background-color: #5a6268; /* [大地色] Neutral hover */
 }
 
 #autoPlayBtnDetails {
     margin-left: 10px;
     padding: 5px 10px;
     font-size: 16px;
-    background-color: #647f91; /* 原始顏色 */
+    background-color: #6c757d; /* [大地色] Neutral */
     color: white;
     border: none;
     border-radius: 5px;
@@ -580,24 +593,30 @@ h1 {
 }
 
 #autoPlayBtnDetails:hover {
-    background-color: #4a6375;
+    background-color: #5a6268; /* [大地色] Neutral hover */
 }
 
 #autoPlayBtn.active {
-    background-color: #00BFFF !important;
+    background-color: #BCAAA4 !important; /* [大地色] Playing */
 }
 
 /* 自動播放按鈕激活狀態 */
 .auto-playing {
-    background-color: #00BFFF !important; /* 亮藍色 */
+    background-color: #BCAAA4 !important; /* [大地色] Playing */
     color: white !important; /* 白色文字 */
 }
 
 /* 高亮當前播放的句子 */
 .word-item-container.playing {
-    background-color: #e0f7fa; /* 清淡的藍色背景 */
-    border-left: 4px solid #00BFFF; /* 左邊亮藍色邊框 */
+    background-color: #BCAAA4 !important; /* [大地色] Playing */
+    color: white !important;
+    border-left: none; /* [大地色] 移除藍色邊框 */
     transition: background-color 0.3s ease, border-left 0.3s ease; /* 平滑過渡 */
+}
+
+/* [大地色] 確保播放中的 .word-item 也是白色 */
+.word-item-container.playing .word-item {
+    color: white;
 }
 
 
@@ -616,7 +635,7 @@ h1 {
 /* 讓句子中的目標單字粗體 */
 .highlight-word {
   font-weight: bold;
-  color: #007bff; /* 也可以換成您喜歡的其他顏色，例如 #e60023 (紅色系) */
+  color: #A1887F; /* [大地色] */
 }
 
 /* ▼▼▼ 新增的載入指示器與通知系統樣式 ▼▼▼ */
@@ -641,7 +660,7 @@ h1 {
 /* 載入指示器 - 旋轉動畫 */
 .loading-spinner {
     border: 5px solid #f3f3f3; /* 淺灰色軌道 */
-    border-top: 5px solid #3498db; /* 藍色旋轉部分 */
+    border-top: 5px solid #A1887F; /* [大地色] */
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -685,11 +704,11 @@ h1 {
 }
 
 .toast.success {
-    background-color: #28a745; /* 綠色 */
+    background-color: #AED581; /* [大地色] 成功綠 */
 }
 
 .toast.error {
-    background-color: #dc3545; /* 紅色 */
+    background-color: #EF9A9A; /* [大地色] 錯誤紅 */
 }
 
 @keyframes slideIn {
@@ -714,9 +733,9 @@ h1 {
 
 /* 按鈕被選中時的樣式 */
 .letter-btn.selected {
-    background: #007bff;
+    background: #A1887F; /* [大地色] */
     color: white;
-    border: 1px solid #0056b3;
+    border-color: #A1887F; /* [大地色] */
     transform: scale(1.05);
 }
 
@@ -728,7 +747,7 @@ h1 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    background-color: #f0f4f8; /* 給次分類一個淺色背景以作區分 */
+    background-color: #FAFAFA; /* [大地色] */
     border-radius: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -737,7 +756,7 @@ h1 {
 /* 「開始學習」按鈕的容器樣式 */
 .start-learning-container {
     padding: 20px 15px;
-    background-color: #f9f9f9;
+    background-color: transparent; /* [大地色] */
     text-align: center;
 }
 
@@ -745,42 +764,37 @@ h1 {
 #startLearningBtn {
     width: 80%;
     max-width: 300px;
-    padding: 15px;
+    padding: 15px; /* [大地色] 增加 padding 匹配 index */
     font-size: 20px;
-    background-color: #28a745; /* 使用醒目的綠色 */
+    background-color: #A1887F; /* [大地色] */
     color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* [大地色] 增加陰影 */
 }
 
 #startLearningBtn:hover {
-    background-color: #218838;
+    background-color: #8D6E63; /* [大地色] */
     transform: scale(1.05);
-}
-
-
-.collapsible-content {
-    /* ... 保留您原有的樣式 ... */
-    
-    /* ▼▼▼ 新增或修改這兩行 ▼▼▼ */
-    max-height: 250px; /* 設定一個最大高度 */
-    overflow-y: auto;  /* 當內容超出時，顯示垂直捲動條 */
 }
 
 /* --- 新增：次分類按鈕樣式 --- */
 .subcategory-wrapper .letter-btn {
-    background-color: #888; /* 淺灰色，用於區分主分類 */
+    background-color: #fff; /* [大地色] */
+    border-color: #ccc; /* [大地色] */
+    color: #555; /* [大地色] */
 }
 
 .subcategory-wrapper .letter-btn:hover {
-    background-color: #a0a0a0; /* 滑鼠懸停時的顏色 */
+    background-color: #f0f0f0; /* [大地色] */
 }
 
 /* 當次分類按鈕被選中時，恢復為藍色高亮 */
 .subcategory-wrapper .letter-btn.selected {
-    background: #007bff;
-    border-color: #0056b3;
+    background: #A1887F; /* [大地色] */
+    border-color: #A1887F; /* [大地色] */
+    color: #fff;
 }

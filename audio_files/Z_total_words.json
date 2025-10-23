@@ -20542,10 +20542,200 @@
             ]
         },
         {
+            "等級": "B2",
             "Words": "suffocate",
+            "pronunciation-1": "[ˋsʌfə͵ket]",
+            "traditional Chinese": "v.\n1. 使窒息；因缺氧而死亡\n2. 感到受束縛；被壓抑\n",
+            "English meaning": "Suffocate as a Verb: suffocate / suffocated / suffocating\n\n1. To die or cause someone to die from lack of air or inability to breathe.\nE.g. The child nearly suffocated after getting trapped under the blanket.\nE.g. Smoke from the fire suffocated several people inside the building.\nE.g. The victim was suffocated by toxic gas.\nE.g. He felt like he was suffocating in the crowded room.\n\n2. To feel trapped, restricted, or unable to express oneself freely.\nE.g. She felt suffocated by her parents’ strict rules.\nE.g. He suffocates under the pressure of constant expectations.\nE.g. The city’s noise and traffic made him feel suffocated.\nE.g. Their relationship became stifling, and she felt emotionally suffocated.\n\nSummary:\n“Suffocate” means to die from lack of air or to feel emotionally or mentally restricted.\n\nRelated Words: choke, smother, stifle, restrain, overwhelm\nSynonyms: smother, choke, stifle, asphyxiate, repress\nAntonyms: breathe, liberate, free, release, ventilate",
             "Unnamed: 10": "suffocate",
             "Unnamed: 11": "suffocate",
-            "分類": []
+            "分類": [
+                "危險與事故",
+                "人體危險"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "alchemy",
+            "pronunciation-1": "[ˋælkəmɪ]",
+            "traditional Chinese": "n.\n1. 煉金術（將普通金屬轉變為黃金或尋找長生不老藥的古代學問）\n2. 神秘的轉化或創造過程\n",
+            "English meaning": "Alchemy as a Noun (uncountable): alchemy\n\n1. A medieval practice that combined science, philosophy, and mysticism, aiming to transform ordinary metals into gold or discover a universal elixir for immortality.\nE.g. In ancient times, alchemy was seen as both a science and a spiritual pursuit.\nE.g.  Many alchemists spent their lives trying to turn lead into gold.\nE.g. Alchemy laid the groundwork for modern chemistry through its experiments and symbolism.\nE.g. Medieval scholars studied alchemy in hopes of unlocking the secrets of eternal life.\n\n2. A mysterious or magical process of transformation, creation, or combination.\nE.g. The chef’s ability to mix flavors was pure alchemy.\nE.g. There’s a certain alchemy between the actors that makes the film work beautifully.\nE.g. Music can create an emotional alchemy that transforms sadness into beauty.\nE.g. The artist’s work captures the alchemy of light and color.\n\nSummary:\n“Alchemy” refers both to the ancient practice of transforming substances, like turning base metals into gold, and to any magical or creative process of transformation.\n\nRelated Words: transformation, mysticism, chemistry, magic, art\nSynonyms: transmutation, transformation, enchantment, sorcery, magic\nAntonyms: science, realism, stagnation, immutability",
+            "Unnamed: 10": "alchemy",
+            "Unnamed: 11": "alchemy",
+            "分類": [
+                "幻想與神話",
+                "魔法",
+                "The Alchemist"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "elixir",
+            "pronunciation-1": "[ɪˋlɪksɚ]",
+            "traditional Chinese": "n.\n1. 長生不老藥；藥水（傳說中可治病或延年益壽）\n2. （比喻）能振奮精神、帶來益處的事物\n",
+            "English meaning": "Elixir as a Noun (countable): elixir / elixirs\n\n1. A liquid, usually medicinal, believed to cure illnesses or prolong life; often associated with magical or miraculous properties.\nE.g. The ancient recipe claimed to be an elixir that could heal any disease.\nE.g. He drank a mysterious elixir to regain his strength.\nE.g. Alchemists sought the elixir of life for immortality.\nE.g. Some herbal teas are considered natural elixirs for health.\n\n2. Something regarded as a magical or life-giving solution in a figurative sense.\nE.g. Music is an elixir for the soul.\nE.g. Laughter can be an elixir that lifts the spirit during tough times.\nE.g. Travel became her elixir for stress relief.\nE.g. Friendship is an elixir that makes life more joyful.\n\nSummary:\n“Elixir” originally refers to a medicinal or magical potion, but can also mean any substance or experience that rejuvenates, heals, or brings positive effects.\n\nRelated Words: potion, remedy, tonic, cure, medicine\nSynonyms: potion, panacea, remedy, cure, tonic\nAntonyms: poison, toxin, harmful substance, disease",
+            "Unnamed: 10": "elixir",
+            "Unnamed: 11": "elixir",
+            "分類": [
+                "幻想與神話",
+                "魔法"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "spiritual",
+            "pronunciation-1": "[ˋspɪrɪtʃʊəl]",
+            "traditional Chinese": "adj.\n1. 與靈魂或心靈相關的；非物質的\n2. 宗教的；與信仰或宗教實踐相關的\n",
+            "English meaning": "Spiritual as an Adjective: spiritual\n\n1. Relating to the human spirit or soul, rather than physical or material things.\nE.g. She sought spiritual guidance through meditation.\nE.g. The retreat offered spiritual healing and reflection.\nE.g. His journey was both physical and spiritual.\nE.g. They attended a spiritual seminar to find inner peace.\n\n2. Connected with religion or religious practices.\nE.g. Many people find comfort in spiritual rituals.\nE.g. The temple was a center for spiritual learning.\nE.g. He devoted his life to spiritual study and prayer.\nE.g. Spiritual leaders often guide their communities through ceremonies.\n\nSummary:\n“Spiritual” refers to matters of the soul, inner life, or religious belief, as opposed to the material or physical world.\n\nRelated Words: soulful, religious, sacred, transcendent, inner\nSynonyms: soulful, sacred, religious, ethereal, divine\nAntonyms: material, physical, worldly, secular, fleshly",
+            "Unnamed: 10": "spiritual",
+            "Unnamed: 11": "spiritual",
+            "分類": [
+                "宗教與哲學",
+                "宗教"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "transformation",
+            "pronunciation-1": "[͵trænsfɚˋmeʃən]",
+            "traditional Chinese": "n.\n1. 形態、外觀、本質或性格的改變；變化過程\n2. 個人或情況的徹底或劇烈改變\n",
+            "English meaning": "Transformation as a Noun (uncountable): transformation\n\n1. The process of changing in form, appearance, nature, or character.\nE.g. The caterpillar undergoes a transformation into a butterfly.\nE.g. Urban areas have seen a dramatic transformation over the last decade.\nE.g. Her hair transformation gave her a completely new look.\nE.g. The company went through a digital transformation to improve efficiency.\n\n2. A thorough or dramatic change in someone’s circumstances, habits, or personality.\nE.g. Meditation led to a transformation in his outlook on life.\nE.g. The coach’s guidance caused a transformation in the team’s performance.\nE.g. Traveling abroad sparked a transformation in her perspective.\nE.g. The program aims to support personal transformation through skill-building.\n\nSummary:\n“Transformation” refers to a significant change in form, appearance, nature, or character, whether physical, situational, or personal.\n\nRelated Words: change, conversion, metamorphosis, alteration, evolution\nSynonyms: change, metamorphosis, conversion, overhaul, renewal\nAntonyms: stagnation, permanence, stability, sameness, constancy",
+            "Unnamed: 10": "transformation",
+            "Unnamed: 11": "transformation",
+            "分類": [
+                "幻想與神話",
+                "魔法"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "immortality",
+            "pronunciation-1": "[ˌɪmɔːˈtæləti]",
+            "traditional Chinese": "n.\n1. 永生；不會死亡的狀態\n2. 永存的名聲或影響力；不朽\n",
+            "English meaning": "Immortality as a Noun (uncountable): immortality\n\n1. The state of living forever or having an unending life; not subject to death.\nE.g. Legends often tell of heroes who achieved immortality.\nE.g. Many myths revolve around the quest for immortality.\nE.g. Some believe the soul attains immortality after death.\nE.g. Alchemists searched for a potion that could grant immortality.\n\n2. The quality of being remembered or having lasting fame; enduring influence or legacy.\nE.g. The artist achieved immortality through his timeless paintings.\nE.g. Her words granted her a kind of immortality in literature.\nE.g. Scientific discoveries can bring immortality to one’s name.\nE.g. Musicians hope for immortality through their songs.\n\nSummary:\n“Immortality” refers to either living forever or achieving enduring fame and remembrance.\n\nRelated Words: eternity, perpetuity, everlasting life, legacy, fame\nSynonyms: everlastingness, perpetuity, eternal life, legacy, renown\nAntonyms: mortality, death, impermanence, oblivion, forgetfulness",
+            "Unnamed: 10": "immortality",
+            "Unnamed: 11": "immortality",
+            "分類": [
+                "幻想與神話",
+                "魔法"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "mortality",
+            "pronunciation-1": "[mɔrˋtælətɪ]",
+            "traditional Chinese": "n.\n1. 必死；會死亡的狀態\n2. 死亡率；人口中死亡的統計比例\n",
+            "English meaning": "Mortality as a Noun (uncountable): mortality\n\n1. The state of being subject to death; the fact that all living beings eventually die.\nE.g. Humans must face their own mortality.\nE.g. The pandemic reminded people of their mortality.\nE.g. Soldiers are constantly aware of the mortality risks in battle.\nE.g. Ancient texts often reflect on the inevitability of mortality.\n\n2. The rate of death within a population, often used in statistics or medicine.\nE.g. Infant mortality has decreased significantly due to modern medicine.\nE.g. The country has one of the highest mortality rates in the region.\nE.g. Researchers study mortality trends to improve public health.\nE.g. Reducing mortality from preventable diseases is a global priority.\n\nSummary:\n“Mortality” refers to either the condition of being mortal (subject to death) or the statistical rate of death in a population.\n\nRelated Words: death, perishability, fatality, impermanence, demise\nSynonyms: death rate, perishability, fatality, transience, finiteness\nAntonyms: immortality, eternal life, survival, perpetuity, endurance",
+            "Unnamed: 10": "mortality",
+            "Unnamed: 11": "mortality",
+            "分類": [
+                "醫學與健康",
+                "人體"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "legacy",
+            "pronunciation-1": "[ˋlɛgəsɪ]",
+            "traditional Chinese": "n.\n1. 遺產；從過去繼承下來的財產或成就\n2. 遺留影響；某人生活、工作或思想留下的影響或貢獻\n",
+            "English meaning": "Legacy as a Noun (countable / uncountable): legacy / legacies\n\n1. Something handed down from the past, such as property, money, or personal achievements.\nE.g. She inherited a generous legacy from her grandmother.\nE.g. The philanthropist left a legacy that funded schools for decades.\nE.g. His artistic legacy continues to inspire new generations.\nE.g. They received a small legacy from a distant relative.\n\n2. Anything that is handed down or remains from someone’s influence, work, or life, including ideas, reputation, or cultural contributions.\nE.g. The writer’s legacy lives on through his novels.\nE.g. Civil rights leaders left a legacy of justice and equality.\nE.g. The architecture of the city is a legacy of its historical rulers.\nE.g. Her legacy in education is evident in the many students she mentored.\n\nSummary:\n“Legacy” refers to something passed down from the past, whether material possessions, achievements, ideas, or influence.\n\nRelated Words: inheritance, heritage, tradition, contribution, memory\nSynonyms: heritage, inheritance, bequest, endowment, influence\nAntonyms: loss, neglect, dispossession, oblivion, erasure",
+            "Unnamed: 10": "legacy",
+            "Unnamed: 11": "legacy",
+            "分類": [
+                "社會與法律",
+                "法律"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "sought",
+            "pronunciation-1": "[sɔt]",
+            "traditional Chinese": "v.\n1. 尋找；尋求\n2. 追求；力求獲得（目標、品質或地位）\n",
+            "English meaning": "Sought as a Verb (past tense of seek): sought\n\n1. To look for, search for, or try to obtain something.\nE.g. She sought advice from her mentor before making a decision.\nE.g. The researchers sought a solution to the complex problem.\nE.g. He sought shelter from the storm under a tree.\nE.g. They sought permission to enter the restricted area.\n\n2. To try to achieve or attain something, often a goal, quality, or position.\nE.g. The company sought to improve its reputation through community work.\nE.g. She sought recognition for her contributions to science.\nE.g. He sought happiness through a simpler lifestyle.\nE.g. They sought justice for the victims of the accident.\n\nSummary:\n“Sought” is the past tense of “seek” and means to look for, pursue, or try to achieve something.\n\nRelated Words: search, pursue, aim for, strive, attempt\nSynonyms: look for, pursue, aim for, request, desire\nAntonyms: ignore, abandon, avoid, neglect, disregard",
+            "Unnamed: 10": "sought",
+            "Unnamed: 11": "sought",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "chemist",
+            "pronunciation-1": "[ˋkɛmɪst]",
+            "traditional Chinese": "n.\n1. 化學家；研究或從事化學的人\n2. （英）藥劑師；藥房\n",
+            "English meaning": "Chemist as a Noun (countable): chemist / chemists\n\n1. A scientist who studies or works with chemicals, chemical reactions, and substances.\nE.g. The chemist conducted experiments to develop a new medicine.\nE.g. She became a chemist specializing in organic compounds.\nE.g. Chemists are working on sustainable solutions for energy production.\nE.g. The chemist analyzed the sample in the laboratory.\n\n2. (British English) A pharmacist or a shop that sells medicines and medical supplies.\nE.g. I went to the chemist to buy some cough syrup.\nE.g. The local chemist carries a wide range of health products.\nE.g. She asked the chemist for advice on over-the-counter medication.\nE.g. The chemist opened early to serve customers before work.\n\nSummary:\nA “chemist” can refer to a scientist specializing in chemistry or, in British English, a pharmacist/shop selling medicines.\n\nRelated Words: scientist, pharmacologist, drugstore, apothecary, laboratory worker\nSynonyms: scientist, pharmacist, druggist, researcher, laboratory specialist\nAntonyms: patient, layperson, non-expert",
+            "Unnamed: 10": "chemist",
+            "Unnamed: 11": "chemist",
+            "分類": [
+                "科學與工程",
+                "科學"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "visionary",
+            "pronunciation-1": "[ˋvɪʒə͵nɛrɪ]",
+            "traditional Chinese": "n.\n1. 有遠見的人；具前瞻性與創意的人\n\nadj.\n1. 有遠見的；具創造力或前瞻性的\n",
+            "English meaning": "Visionary as a Noun or Adjective:\n\nAs a Noun: visionary / visionaries\nA person who has strong, imaginative, or forward-looking ideas about the future; someone who can see possibilities that others cannot.\nE.g. Steve Jobs was a visionary who changed the technology industry.\nE.g. The politician was regarded as a visionary with bold plans for the city.\nE.g. She is a visionary in environmental conservation.\nE.g. Visionaries often inspire others to pursue ambitious goals.\n\nAs an Adjective: visionary\nDescribes someone who has clear, creative, and imaginative ideas about what the future could be like, often with the ability to inspire or bring change.\nE.g. The team presented a visionary plan for sustainable urban development.\nE.g. His visionary ideas shaped the future of renewable energy.\nE.g. The company adopted a visionary approach to innovation.\nE.g. She had a visionary perspective on education reform.\n\nSummary:\nVisionary describes someone or something that shows imagination, foresight, and originality in thinking about the future. It highlights creativity and the power to see beyond the present.\n\nRelated Words: innovative, imaginative, foresighted, prophetic, creative\n\nAntonyms: practical, shortsighted, unimaginative, conventional",
+            "Unnamed: 10": "visionary",
+            "Unnamed: 11": "visionary",
+            "分類": [
+                "行為與心理",
+                "人物特性"
+            ]
+        },
+        {
+            "等級": "A2",
+            "Words": "ingredient",
+            "pronunciation-1": "[ɪnˋgridɪənt]",
+            "traditional Chinese": "n.\n1. 成分；原料；配料\n2. （比喻）構成要素；必要因素\n",
+            "English meaning": "Ingredient as a Noun (countable): ingredient / ingredients\nA substance that is part of a mixture or combination, especially in cooking or recipes.\nE.g. Sugar is a key ingredient in most cakes.\nE.g. The soup contains several fresh ingredients, including carrots and herbs.\nE.g. Vanilla extract is an essential ingredient in many desserts.\nE.g. Honesty is an important ingredient in any strong friendship.\n\nSummary:\n“Ingredient” refers to any component or element that is part of a mixture, combination, or recipe.\n\nSynonyms: component, element, part, constituent, factor\nAntonyms: whole, entirety",
+            "Unnamed: 10": "ingredient",
+            "Unnamed: 11": "ingredient",
+            "分類": [
+                "日常生活",
+                "食物"
+            ]
+        },
+        {
+            "等級": "B2",
+            "Words": "dismantle",
+            "pronunciation-1": "[dɪsˋmænt!]",
+            "traditional Chinese": "v.\n1. 拆解；拆毀；拆除\n2.（比喻）分解；廢止；取消\n",
+            "English meaning": "Dismantle as a Verb: dismantle / dismantled / dismantling\nTo take apart a machine, structure, or system into its separate pieces, often for repair, replacement, or disposal. It can also mean to end or destroy an organized system or institution.\n\n1. To take apart a machine, structure, or system into its separate pieces, often for repair, replacement, or disposal.\n   E.g. The workers dismantled the old factory machinery.\n   E.g. He dismantled the engine to find the source of the problem.\n   E.g. They dismantled the set after the play ended.\n\n2. To end or destroy an organized system or institution.\n   E.g. The government dismantled the outdated bureaucracy.\n   E.g. New management dismantled the company’s inefficient processes.\n   E.g. The treaty aimed to dismantle the military alliance.\n\nSummary:\n“Dismantle” means to take something apart physically or to end/destroy a system or organization.\n\nSynonyms: take apart, disassemble, deconstruct, break down, strip\nAntonyms: assemble, build, construct, put together\n",
+            "Unnamed: 10": "dismantle",
+            "Unnamed: 11": "dismantle",
+            "分類": [
+                "科學與工程",
+                "技術"
+            ]
+        },
+        {
+            "Words": "innovator",
+            "pronunciation-1": "[ˈɪnəveɪtə(r)]",
+            "traditional Chinese": "n.\n創新者；革新者；改革者\n",
+            "English meaning": "Innovator as a Noun: innovator / innovators\nA person who introduces new ideas, methods, or products; someone who brings innovation to a field, organization, or society.\n\nE.g. Steve Jobs was a famous innovator in technology.\nE.g. The young innovator developed a new app that changed the way people learn languages.\nE.g. Innovators often face challenges when introducing groundbreaking ideas.\nE.g. The company hired several innovators to improve their product line.\n\nSummary:\n“Innovator” refers to someone who creates or implements new ideas, methods, or inventions.\n\nSynonyms: creator, pioneer, inventor, trailblazer, visionary\nAntonyms: imitator, follower, traditionalist, conservative\nRelated Words (optional): entrepreneur, designer, developer, originator\n",
+            "Unnamed: 10": "innovator",
+            "Unnamed: 11": "innovator",
+            "分類": [
+                "Arts, Design & Aesthetics（藝術與設計）",
+                "Design"
+            ]
+        },
+        {
+            "等級": "B1",
+            "Words": "lead",
+            "pronunciation-1": "[lid]",
+            "pronunciation-2": "/led/",
+            "traditional Chinese": "\n\nv.\n1. 引導、帶領、指引 /liːd/\n2. 管理、指揮、掌管 /liːd/\n3. 導致、引起 /liːd/\n\n\nn.\n1. 鉛（金屬元素）/led/\n2. 領先、優勢 /liːd/\n3. 線索 /liːd/",
+            "English meaning": "Lead can be a Verb or a Noun\n\nAs a Verb: lead / led / leading\n\n1. To guide, direct, or show the way.\n   E.g. She will lead the team on the project.\n   E.g. The tour guide led the visitors through the museum.\n   E.g. He led the students to the classroom.\n\n2. To be in charge or command.\n   E.g. The manager leads the department efficiently.\n   E.g. She led the company through a difficult transition.\n   E.g. He led the committee’s discussion.\n\n3. To result in a particular outcome or effect.\n   E.g. Poor planning can lead to mistakes.\n   E.g. Hard work often leads to success.\n   E.g. This decision will lead to unforeseen consequences.\n\nSummary:\n“Lead” as a verb primarily means to guide, direct, or cause a result; it can also refer to being in charge of a group or situation.\n\nSynonyms: guide, direct, manage, cause, result in\nAntonyms: follow, misguide, neglect\nRelated Words (optional): leadership, leader, leading\n\nAs a Noun: lead (uncountable / countable depending on context)\n\n1. A heavy metal element (Pb)\n   E.g. The pipes were made of lead.\n   E.g. Lead is toxic if ingested.\n   E.g. The solder contains lead.\n\n2. An advantage or first position in a competition\n   E.g. She has a lead of three points in the game.\n   E.g. The candidate took the lead in the polls.\n   E.g. He maintained a comfortable lead throughout the race.\n\n3. A clue or piece of information that helps solve a problem\n   E.g. The detective followed a promising lead.\n   E.g. They got a lead from an anonymous source.\n   E.g. This lead might help solve the case.\n\nSummary:\n“Lead” as a noun can refer to a metallic element, a position of advantage, or a clue in an investigation.\n\nSynonyms: advantage, clue, guidance, metal\nAntonyms: lag, follow, misdirection\nRelated Words (optional): leaderboard, leading, leadership\n",
+            "Unnamed: 10": "lead",
+            "Unnamed: 11": "lead",
+            "分類": [
+                "行為與心理",
+                "動作"
+            ]
         }
     ]
 }
