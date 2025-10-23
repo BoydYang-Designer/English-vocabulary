@@ -127,7 +127,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (guestModeBtn) guestModeBtn.addEventListener('click', enterGuestMode);
     if (signOutBtn) signOutBtn.addEventListener('click', signOutUser);
     if (signInFromGuestBtn) signInFromGuestBtn.addEventListener('click', signIn);
-
+const bButton = document.getElementById('bButton');
+    if (bButton) {
+        bButton.addEventListener('click', backToPrevious);
+        // 設置初始狀態為禁用
+        bButton.disabled = true;
+        bButton.style.backgroundColor = "#ccc";
+    }
     // --- 其他頁面特定的事件綁定 ---
     enableWordCopyOnClick();
 
