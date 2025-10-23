@@ -1289,14 +1289,42 @@ function updateAutoPlayButton() {
 }
 
 
+// --- 這裡是唯一的修改 ---
+/**
+ * [已修改] 更新 "Back" 按鈕的行為
+ * - 來自 'quiz'：返回 quiz.html
+ * - 來自 'story'：返回詞彙庫主頁 (backToFirstLayer)
+ * - 預設 (來自詞彙庫內部)：返回單字列表 (backToWordList)
+ */
 function updateBackButton() {
-    let fromPage = getFromPage();
+    let fromPage = getFromPage(); //
+    let backButton = null;
+
+    // 尋找 "Back" 按鈕
     document.querySelectorAll('#wordDetails .button').forEach(button => {
         if (button.textContent.trim() === 'Back') {
-            button.onclick = fromPage === 'quiz' ? returnToQuiz : backToWordList;
+            backButton = button;
         }
     });
+
+    if (!backButton) return; // 沒找到按鈕就退出
+
+    // 根據 'from' 參數設置不同的點擊行為
+    if (fromPage === 'quiz') {
+        backButton.onclick = returnToQuiz; //
+        backButton.style.display = 'inline-block';
+    } else if (fromPage === 'story') {
+        // [方案一] 如果來自 story.js，"Back" 按鈕返回詞彙庫的主頁
+        backButton.onclick = backToFirstLayer; //
+        backButton.style.display = 'inline-block';
+    } else {
+        // 預設行為：返回單字列表
+        backButton.onclick = backToWordList; //
+        backButton.style.display = 'inline-block';
+    }
 }
+// --- 修改結束 ---
+
 
 function returnToQuiz() {
     window.location.href = 'quiz.html?returning=true';
