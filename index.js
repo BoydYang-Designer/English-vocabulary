@@ -1601,36 +1601,32 @@ function enableWordCopyOnClick() {
                     }
                 }
             } else {
-                // 暫停中：點擊單字以複製到搜尋框。
-                const wordEl = event.target.closest('.clickable-word');
-                if (wordEl) {
-                    const selectedWord = (wordEl.textContent || "").replace(/^[.,?!:;'"`“”‘’()[\]{}\-/*]+|[.,?!:;'"`“”‘’()[\]{}\-/*]+$/g, ''); // 清理單字
-                    if (!selectedWord) return;
+                // [修改] 暫停中：點擊句子以複製句子內容。
+                const sentenceEl = event.target.closest('.timestamp-sentence');
+                if (sentenceEl) {
+                    const sentenceText = sentenceEl.textContent.trim();
+                    if (!sentenceText) return;
 
-                    // 點擊高亮效果
-                    wordEl.classList.add('word-click-highlight');
-                    setTimeout(() => {
-                        wordEl.classList.remove('word-click-highlight');
-                    }, 600);
-                    
-                    // 將單字複製到剪貼簿並貼到搜尋框
-                    navigator.clipboard.writeText(selectedWord)
+                    // 1. 複製到剪貼簿
+                    navigator.clipboard.writeText(sentenceText)
                         .then(() => {
-                            const searchInput = document.getElementById('searchInputDetails');
-                            if (searchInput) {
-                                searchInput.value = selectedWord;
-                                searchInput.focus(); 
-                                filterWordsInDetails(); 
-                            }
+                            // 顯示成功通知
+                            showNotification('✅ 句子已複製!', 'success');
                         })
                         .catch(err => {
                             console.error('❌ 複製失敗:', err);
                             showNotification('⚠️ 複製失敗，請手動複製', 'error');
                         });
+                    
+                    // 2. 點擊高亮效果 (使用現有的 CSS class)
+                    sentenceEl.classList.add('word-click-highlight');
+                    setTimeout(() => {
+                        sentenceEl.classList.remove('word-click-highlight');
+                    }, 600);
                 }
             }
         } else {
-            // --- 原始 JSON 模式邏輯 ---
+            // --- 原始 JSON 模式邏輯 (保持不變) ---
             if (event.target.tagName !== 'P' && event.target.tagName !== 'DIV' && event.target.tagName !== 'SPAN') {
                 return;
             }
@@ -1679,6 +1675,7 @@ function enableWordCopyOnClick() {
                 console.error("高亮效果失敗:", e);
             }
 
+            // 複製單字到搜尋框
             navigator.clipboard.writeText(selectedWord)
                 .then(() => {
                     const searchInput = document.getElementById('searchInputDetails');
