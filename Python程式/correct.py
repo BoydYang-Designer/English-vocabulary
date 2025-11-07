@@ -237,64 +237,118 @@ def correct_transcript():
         print(f"TXT 總字詞數 (STT): {len(stt_words)}")
         print(f"JSON 總字詞數 (Ground Truth): {len(json_words)}")
         
+        # --- 變更開始 (步驟 7 和 8) ---
+
         # 7. 核心對齊 (A - Align)
+        # 我們不再建立 stt_to_json_word_map。
+        # 我們只需要 opcodes。
+        print("正在執行 difflib 序列對齊...")
         matcher = difflib.SequenceMatcher(None, stt_norm_words, json_norm_words, autojunk=False)
         opcodes = matcher.get_opcodes()
-
-        stt_to_json_word_map = {}
-        
-        for tag, i1, i2, j1, j2 in opcodes:
-            stt_len = i2 - i1
-            json_len = j2 - j1
-
-            if tag == 'equal':
-                for k in range(stt_len):
-                    stt_index = i1 + k
-                    json_index = j1 + k
-                    stt_to_json_word_map[stt_index] = json_words[json_index]
-                    
-            if tag == 'replace':
-                if stt_len == json_len:
-                    for k in range(stt_len):
-                        stt_index = i1 + k
-                        json_index = j1 + k
-                        stt_to_json_word_map[stt_index] = json_words[json_index]
-                else:
-                    print(f"  [警告] 偵測到 'replace' 區塊長度不匹配 (STT: {stt_len} vs JSON: {json_len}).")
-                    print(f"    STT 內容: {' '.join(stt_norm_words[i1:i2])}")
-                    print(f"   JSON 內容: {' '.join(json_norm_words[j1:j2])}")
-                    print("    此區塊可能無法完美訂正，將暫時保留 STT 原文。")
-                    for k in range(stt_len):
-                        stt_index = i1 + k
-                        if stt_index < len(stt_words):
-                            stt_to_json_word_map[stt_index] = stt_words[stt_index]
-
-            if tag == 'delete':
-                 for k in range(stt_len):
-                    stt_index = i1 + k
-                    if stt_index < len(stt_words):
-                        stt_to_json_word_map[stt_index] = stt_words[stt_index]
+        print("對齊完成。")
 
         # 8. 重建 (R - Rebuild)
-        new_txt_lines = []
+        
+        # 8a. 建立 STT "flat index" -> "line metadata" 的對應
+        # 此 map 告訴我們 STT 中每個單字 (依序) 屬於哪一行的 (source, timestamp)
+        stt_index_to_meta_map = {}
         stt_word_counter = 0
         
-        for line in parsed_lines:
+        for line_index, line in enumerate(parsed_lines):
+            # 為此行建立元數據
+            line_meta = {
+                'source': line['source'],
+                'timestamp': line['timestamp'],
+                'original_line_index': line_index # 追蹤它來自第幾行
+            }
+            
+            words_on_this_line = line['text'].split()
+            
+            # 將此行上的所有單字都映射到相同的元數據
+            for _ in words_on_this_line:
+                stt_index_to_meta_map[stt_word_counter] = line_meta
+                stt_word_counter += 1
+        
+        # 8b. 根據 Opcodes 建立 "新的" (已訂正的) word 串流
+        # 這個串流將包含 *來自 JSON 的正確單字*，
+        # 並被 "標記" 上它們應歸屬的 STT 元數據。
+        
+        new_word_stream = [] # 格式: [{'word': '...', 'meta': ...}, ...]
+        
+        for tag, i1, i2, j1, j2 in opcodes:
+            if tag == 'equal':
+                # STT[i1:i2] == JSON[j1:j2]
+                # 我們使用 JSON 的單字 (保留大小寫) 和 STT 的元數據
+                for i, j in zip(range(i1, i2), range(j1, j2)):
+                    new_word_stream.append({
+                        'word': json_words[j], 
+                        'meta': stt_index_to_meta_map.get(i)
+                    })
+
+            if tag == 'replace':
+                # STT[i1:i2] (N 個字) 應被替換為 JSON[j1:j2] (M 個字)
+                # 輸出 *所有* JSON 單字
+                # 並將它們 *全部* 關聯到 *第一個被替換的 STT 單字 (i1)* 的元數據
+                meta_to_use = stt_index_to_meta_map.get(i1)
+                
+                for j in range(j1, j2):
+                    new_word_stream.append({
+                        'word': json_words[j],
+                        'meta': meta_to_use
+                    })
+
+            if tag == 'delete':
+                # STT[i1:i2] 在 JSON 中不存在。
+                # 我們 *什麼都不輸出* 到 new_word_stream，即刪除它們。
+                pass
+
+            if tag == 'insert':
+                # JSON[j1:j2] 在 STT 中不存在。
+                # 它們應該被 *插入* 在 STT 索引 i1 之前。
+                # 我們將它們關聯到 STT[i1] 的元數據。
+                meta_to_use = stt_index_to_meta_map.get(i1)
+                if meta_to_use is None and i1 > 0:
+                    # 如果插入點在最末尾，則使用前一個單字的元數據
+                    meta_to_use = stt_index_to_meta_map.get(i1 - 1)
+                
+                for j in range(j1, j2):
+                    new_word_stream.append({
+                        'word': json_words[j],
+                        'meta': meta_to_use
+                    })
+
+        # 8c. 將 "新的" word 串流重組回 TXT 行
+        new_txt_lines = []
+        word_stream_index = 0 # 我們在 new_word_stream 中的位置
+        
+        # 遍歷 *原始的* parsed_lines 以保留結構 (例如空行)
+        for line_index, line in enumerate(parsed_lines):
+            
             if not line['text']:
+                # 這是一個非文字行 (例如空行)。按原樣保留。
                 new_txt_lines.append(line['original_line'])
                 continue
                 
-            words_on_this_line = line['text'].split()
+            # 這是一個 *原本* 包含文字的行。
+            # 我們從 new_word_stream 中提取屬於它的所有單字。
+            
             new_text_for_line = []
             
-            for word in words_on_this_line:
-                if stt_word_counter in stt_to_json_word_map:
-                    new_text_for_line.append(stt_to_json_word_map[stt_word_counter])
-                else:
-                    new_text_for_line.append(word)
-                    
-                stt_word_counter += 1
+            # 檢查 new_word_stream，看單字是否屬於 'line_index'
+            while word_stream_index < len(new_word_stream):
+                word_data = new_word_stream[word_stream_index]
+                meta = word_data.get('meta')
                 
+                # 檢查元數據中的 original_line_index
+                if meta and meta['original_line_index'] == line_index:
+                    # 這個單字屬於目前行
+                    new_text_for_line.append(word_data['word'])
+                    word_stream_index += 1
+                else:
+                    # 這個單字屬於 *未來* 的行。停止處理此行。
+                    break
+            
+            # 用原始標籤 (source, timestamp) 重新組裝行
             new_text = " ".join(new_text_for_line)
             
             parts = []
@@ -305,8 +359,16 @@ def correct_transcript():
             if new_text:
                 parts.append(new_text)
                 
-            new_line = " ".join(parts)
-            new_txt_lines.append(new_line)
+            if parts:
+                # 正常情況：有標籤和/或有文字
+                new_line = " ".join(parts)
+                new_txt_lines.append(new_line)
+            else:
+                # 邊緣情況：原始行有文字，但全被 'delete' 了，
+                # 且原始行沒有標籤。輸出一個空行。
+                new_txt_lines.append("")
+
+        # --- 變更結束 ---
 
         # 9. 寫入檔案並回報 (仍在迴圈內)
         try:
