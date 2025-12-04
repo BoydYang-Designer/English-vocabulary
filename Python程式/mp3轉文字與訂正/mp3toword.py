@@ -36,7 +36,6 @@ if not file_paths:
 print(f"已選擇 {len(file_paths)} 個檔案。")
 
 # --- 步驟 2: 選擇儲存格式 ---
-# 跳出詢問框
 save_plain = messagebox.askyesno(
     "儲存選項", 
     "您是否要儲存「純文字」版本？\n(例如: MyAudio.txt)"
@@ -65,57 +64,69 @@ print("模型載入完成。")
 # --- 步驟 4: 遍歷並處理所有檔案 ---
 for i, file_path in enumerate(file_paths):
     print(f"\n--- 正在處理檔案 {i + 1} / {len(file_paths)} ---")
-    print(f"檔案: {file_path}")
+    print(f"原始路徑: {file_path}")
 
     try:
-        # --- 新增: 檢查 1 (檔案是否已存在) ---
-        base_path = os.path.splitext(file_path)[0]
-        files_to_check = []
+        # ==========================================
+        # === 修改重點：強行修剪檔名空格 ===
+        # ==========================================
         
+        # 1. 分離路徑與檔名
+        directory = os.path.dirname(file_path)
+        filename_with_ext = os.path.basename(file_path)
+        
+        # 2. 去除副檔名
+        filename_no_ext = os.path.splitext(filename_with_ext)[0]
+        
+        # 3. 【關鍵修正】去除檔名頭尾的空格 (例如 "Story .mp3" 變成 "Story")
+        clean_filename = filename_no_ext.strip()
+        
+        # 4. 重新組合成乾淨的基礎路徑
+        base_path = os.path.join(directory, clean_filename)
+        
+        # ==========================================
+        
+        files_to_check = []
         if save_plain:
             files_to_check.append(base_path + ".txt")
         if save_timestamp:
+            # 這裡只加一個空格，因為前面的 clean_filename 已經保證沒有尾部空格了
             files_to_check.append(base_path + " Timestamp.txt")
         
-        # 檢查所有 *被要求的* 檔案是否都已存在
+        # 檢查是否已存在
         all_exist = False
-        if files_to_check: # 只有在使用者有要求儲存格式時才檢查
-            all_exist = True # 假設都存在
+        if files_to_check: 
+            all_exist = True
             for f in files_to_check:
                 if not os.path.exists(f):
-                    all_exist = False # 發現有缺, 設為 False
-                    break # 不用再檢查了
+                    all_exist = False 
+                    break 
 
         if all_exist:
-            print(f"  [跳過] 偵測到所有要求的輸出檔案均已存在。")
-            continue # 處理下一個檔案
+            print(f"  [跳過] 檔案已存在 (檔名已修正): {clean_filename}")
+            continue 
 
-        # --- 新增: 檢查 2 (檔案長度) ---
-        # 我們需要先載入音訊來檢查長度
+        # 檢查長度
         audio = whisper.load_audio(file_path)
-        # 音訊陣列的長度 / 取樣率 = 秒數
         duration = audio.shape[0] / WHISPER_SAMPLE_RATE 
         
         if duration < 10:
             print(f"  [跳過] 檔案長度 ({duration:.2f} 秒) 小於 10 秒。")
-            continue # 處理下一個檔案
+            continue 
         
         print(f"檔案長度: {duration:.2f} 秒。開始轉錄...")
 
-        # --- 轉錄 (修改) ---
-        # 使用已經載入的 'audio' 物件，避免重複載入
+        # 轉錄
         result = model.transcribe(audio, language="en", verbose=False)
         print("轉錄完成。")
         
-        # (base_path 已在上面定義過)
-
-        # 根據選擇儲存檔案
+        # 儲存檔案
         if save_plain:
             txt_path = base_path + ".txt"
             try:
                 with open(txt_path, "w", encoding="utf-8") as f:
                     f.write(result["text"])
-                print(f"  [成功] 已儲存純文字檔: {txt_path}")
+                print(f"  [成功] 已儲存純文字檔: {os.path.basename(txt_path)}")
             except Exception as e:
                 print(f"  [失敗] 儲存純文字檔失敗: {e}")
 
@@ -128,13 +139,12 @@ for i, file_path in enumerate(file_paths):
                         end_time = format_timestamp(segment['end'])
                         text = segment['text'].strip()
                         ts_file.write(f"[{start_time} --> {end_time}] {text}\n")
-                print(f"  [成功] 已儲存時間戳記檔: {timestamp_txt_path}")
+                print(f"  [成功] 已儲存時間戳記檔: {os.path.basename(timestamp_txt_path)}")
             except Exception as e:
                 print(f"  [失敗] 儲存時間戳記檔失敗: {e}")
 
     except Exception as e:
         print(f"[錯誤] 處理檔案 {file_path} 時發生錯誤: {e}")
-        # 發生錯誤時繼續處理下一個檔案
         continue 
 
 print("\n--- 所有檔案處理完畢 ---")
