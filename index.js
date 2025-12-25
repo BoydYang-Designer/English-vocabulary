@@ -1418,10 +1418,76 @@ function togglePauseAudio(button) {
     }
 }
 
+// --- [新增] Timestamp 模式跳轉輔助函數 ---
+
+function skipToNextSentence() {
+    // 使用 detailsSentencePlayer 作為播放器
+    if (!timestampData || timestampData.length === 0 || !detailsSentencePlayer) return;
+    
+    const currentTime = detailsSentencePlayer.currentTime;
+    // 找到第一個 "開始時間" 晚於當前時間的句子 (加 0.2s 緩衝)
+    const nextSent = timestampData.find(line => line.start > currentTime + 0.2);
+    
+    if (nextSent) {
+        detailsSentencePlayer.currentTime = nextSent.start;
+    } else {
+        // 找不到則跳到結束
+        detailsSentencePlayer.currentTime = detailsSentencePlayer.duration;
+    }
+}
+
+function skipToPrevSentence() {
+    if (!timestampData || timestampData.length === 0 || !detailsSentencePlayer) return;
+
+    const currentTime = detailsSentencePlayer.currentTime;
+    
+    // 1. 找出目前播放句子的索引
+    let currentIndex = -1;
+    for (let i = 0; i < timestampData.length; i++) {
+        if (timestampData[i].start <= currentTime + 0.2) {
+            currentIndex = i;
+        } else {
+            break; 
+        }
+    }
+
+    if (currentIndex === -1) {
+        detailsSentencePlayer.currentTime = 0;
+        return;
+    }
+
+    const currentSent = timestampData[currentIndex];
+
+    // 2. 判斷邏輯：
+    // 如果播放超過該句開頭 1.5 秒，按「倒轉」是重聽這一句
+    // 如果剛開始播不到 1.5 秒，按「倒轉」是跳到上一句
+    if (currentTime > currentSent.start + 1.5) {
+        detailsSentencePlayer.currentTime = currentSent.start;
+    } else {
+        if (currentIndex > 0) {
+            detailsSentencePlayer.currentTime = timestampData[currentIndex - 1].start;
+        } else {
+            detailsSentencePlayer.currentTime = 0;
+        }
+    }
+}
+
 function adjustAudioTime(seconds) {
-    // [優化] 使用 detailsSentencePlayer
-    if (detailsSentencePlayer && !isNaN(detailsSentencePlayer.duration)) {
-       detailsSentencePlayer.currentTime = Math.max(0, Math.min(detailsSentencePlayer.duration, detailsSentencePlayer.currentTime + seconds));
+    // 檢查播放器是否存在
+    if (!detailsSentencePlayer || isNaN(detailsSentencePlayer.duration)) return;
+
+    // [修改邏輯] 檢查是否為 Timestamp 模式且有資料
+    if (isTimestampMode && hasTimestampFile && timestampData.length > 0) {
+        if (seconds > 0) {
+            // 正數代表快轉按鈕 -> 下一句
+            skipToNextSentence();
+        } else {
+            // 負數代表倒轉按鈕 -> 上一句
+            skipToPrevSentence();
+        }
+    } else {
+        // [原始邏輯] 一般模式：增加或減少秒數
+        detailsSentencePlayer.currentTime = Math.max(0, Math.min(detailsSentencePlayer.duration, detailsSentencePlayer.currentTime + seconds));
     }
 }
 
