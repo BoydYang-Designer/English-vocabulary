@@ -70,9 +70,30 @@ function initializeAppLogic() {
             })
     ])
     .then(([wordsJsonData, sentenceJsonData]) => { // 接收兩個 JSON 資料
-        wordsData = wordsJsonData["New Words"] || [];
+        let rawWords = wordsJsonData["New Words"] || [];
         sentenceData = sentenceJsonData["New Words"] || []; // 將句子資料存入變數
-        console.log("✅ Z_total_words.json 成功載入");
+        
+        // --- [新增] 合併使用者自訂單字 ---
+        const userVocabulary = window.getVocabularyData(); // 從 auth-manager 獲取
+        const customWords = userVocabulary.customWords || {}; // 結構: { "Apple": { ...wordObj }, "Banana": { ... } }
+
+        // 將原始資料轉換為 Map 以便快速查找 (以單字文字當 key)
+        let wordsMap = new Map();
+        rawWords.forEach(w => {
+            let key = (w.Words || w.word || w["單字"]).trim();
+            wordsMap.set(key, w);
+        });
+
+        // 將使用者的自訂單字覆蓋或新增進去
+        Object.keys(customWords).forEach(key => {
+            wordsMap.set(key, customWords[key]);
+        });
+
+        // 轉回 Array 並賦值給全域變數 wordsData
+        wordsData = Array.from(wordsMap.values());
+        // -------------------------------
+        
+        console.log("✅ Z_total_words.json 與 使用者自訂單字 成功合併載入");
         console.log("✅ sentence.json 成功載入"); // 確認句子資料已載入
 
         wordsData.forEach(w => {
@@ -1185,7 +1206,8 @@ function showDetails(word) {
     
     let phonetics = `<div class="phonetics-container" style="display: flex; align-items: center; gap: 10px;">
         <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${word.Words}", this)' ${isImportant ? "checked" : ""}>
-        <div id="wordTitle" style="font-size: 20px; font-weight: bold;">${word.Words}</div>`;
+        <div id="wordTitle" style="font-size: 20px; font-weight: bold;">${word.Words}</div>
+        <button class="button" style="width: auto; height: 30px; font-size: 14px; padding: 0 10px; background-color: #A1887F;" onclick='openCurrentWordEdit()'>Edit</button>`;
     if (word["pronunciation-1"]) phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}.mp3")'>${word["pronunciation-1"]}</button>`;
     if (word["pronunciation-2"]) phonetics += `<button class='button' onclick='playAudio("${encodeURIComponent(word.Words)}-2.mp3")'>${word["pronunciation-2"]}</button>`;
     phonetics += `</div>`;
@@ -1614,6 +1636,11 @@ function importAllData() {
                 if(data.importantWords) window.setImportantWords(data.importantWords);
                 if(data.wrongWords) window.setWrongWords(data.wrongWords);
                 if(data.notes) window.setNotes(data.notes);
+                if(data.customWords) { // [新增] 匯入自訂單字
+                    const vocab = window.getVocabularyData();
+                    vocab.customWords = data.customWords;
+                    window.persistVocabularyData();
+                }
                 window.persistVocabularyData();
                 
                 showNotification("✅ 學習資料匯入成功!", "success");
@@ -1757,4 +1784,133 @@ function enableWordCopyOnClick() {
                 });
         }
     });
+}
+
+function openCurrentWordEdit() {
+    const wordTitle = document.getElementById("wordTitle").textContent.trim();
+    const wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]) === wordTitle);
+    if (wordObj) {
+        openEditModal(wordObj);
+    }
+}
+
+// --- 自訂/編輯單字功能 ---
+// 開啟編輯視窗
+function openEditModal(wordObj = null) {
+    const modal = document.getElementById('wordEditorModal');
+    const deleteBtn = document.getElementById('btn-delete-word');
+    const title = document.getElementById('modalTitle');
+    
+    // 清空或填入表單
+    if (wordObj) {
+        // 編輯模式
+        title.textContent = "編輯單字";
+        document.getElementById('edit-word').value = wordObj.Words || wordObj.word || wordObj["單字"];
+        document.getElementById('edit-word').disabled = true; // 單字本身通常作為 ID，不建議修改，或者修改視為刪除舊的建新的
+        
+        document.getElementById('edit-chinese').value = wordObj["traditional Chinese"] || "";
+        document.getElementById('edit-meaning').value = wordObj["English meaning"] || "";
+        
+        let cats = wordObj["分類"] || [];
+        document.getElementById('edit-domain').value = cats[0] || "";
+        document.getElementById('edit-topic').value = cats[1] || "";
+        
+        document.getElementById('edit-level').value = wordObj["等級"] || "未分類";
+        
+        // 如果是使用者自建的單字，才允許刪除 (這裡簡單判斷：只要在 customWords 裡有就可刪)
+        const vocabData = window.getVocabularyData();
+        const wordKey = (wordObj.Words || wordObj.word || wordObj["單字"]).trim();
+        if (vocabData.customWords && vocabData.customWords[wordKey]) {
+            deleteBtn.style.display = 'block';
+            deleteBtn.setAttribute('data-word', wordKey);
+        } else {
+            deleteBtn.style.display = 'none'; // 原始 JSON 單字暫不支援「物理刪除」，只能編輯覆蓋
+        }
+
+    } else {
+        // 新增模式
+        title.textContent = "新增單字";
+        document.getElementById('edit-word').value = "";
+        document.getElementById('edit-word').disabled = false;
+        document.getElementById('edit-chinese').value = "";
+        document.getElementById('edit-meaning').value = "";
+        document.getElementById('edit-domain').value = "";
+        document.getElementById('edit-topic').value = "";
+        document.getElementById('edit-level').value = "未分類";
+        deleteBtn.style.display = 'none';
+    }
+
+    modal.classList.remove('is-hidden');
+}
+
+function closeEditModal() {
+    document.getElementById('wordEditorModal').classList.add('is-hidden');
+}
+
+// 儲存單字
+function saveCustomWord() {
+    const wordText = document.getElementById('edit-word').value.trim();
+    if (!wordText) {
+        alert("請輸入單字！");
+        return;
+    }
+
+    const newWordObj = {
+        "Words": wordText,
+        "traditional Chinese": document.getElementById('edit-chinese').value.trim(),
+        "English meaning": document.getElementById('edit-meaning').value.trim(),
+        "分類": [
+            document.getElementById('edit-domain').value.trim(),
+            document.getElementById('edit-topic').value.trim(),
+            "UserCustom" // 標記來源
+        ],
+        "等級": document.getElementById('edit-level').value,
+        "lastModified": new Date().toISOString()
+    };
+
+    // 1. 更新 LocalStorage
+    const vocabData = window.getVocabularyData();
+    if (!vocabData.customWords) vocabData.customWords = {};
+    
+    vocabData.customWords[wordText] = newWordObj;
+    window.persistVocabularyData(); 
+
+    // 2. 更新記憶體中的 wordsData
+    const existingIndex = wordsData.findIndex(w => (w.Words || w.word || w["單字"]) === wordText);
+    if (existingIndex !== -1) {
+        wordsData[existingIndex] = newWordObj; // 更新
+    } else {
+        wordsData.push(newWordObj); // 新增
+    }
+
+    showNotification(`✅ 單字 ${wordText} 已儲存！`, 'success');
+    closeEditModal();
+
+    // 3. 刷新介面
+    // 如果在詳細頁，重新渲染詳細頁
+    if (document.getElementById('wordDetails').style.display === 'block') {
+        showDetails(newWordObj);
+    }
+    // 為了讓分類按鈕更新 (如果有新分類)，建議重新建立按鈕
+    createDomainButtons();
+    createTopicButtons();
+}
+
+// 刪除自訂單字 (回復原狀或刪除)
+function deleteCustomWord() {
+    const btn = document.getElementById('btn-delete-word');
+    const wordText = btn.getAttribute('data-word');
+    
+    if (!confirm(`確定要刪除自訂單字 "${wordText}" 嗎？\n如果這是系統原有單字，將會回復到預設值。`)) return;
+
+    const vocabData = window.getVocabularyData();
+    if (vocabData.customWords && vocabData.customWords[wordText]) {
+        delete vocabData.customWords[wordText];
+        window.persistVocabularyData();
+        
+        showNotification("🗑️ 已移除自訂內容，請重新整理頁面以載入原始資料 (如果有)。", "success");
+        closeEditModal();
+        
+        setTimeout(() => location.reload(), 1500);
+    }
 }

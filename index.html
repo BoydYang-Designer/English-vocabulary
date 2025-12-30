@@ -54,9 +54,9 @@
         <div id="mainPageContainer">
             <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
                 <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterWords()" style="padding: 8px; width: 200px;">
+                <button class="button" style="width:auto; display:inline-block; padding:8px 15px; margin-left: 5px;" onclick="openEditModal(null)">＋</button>
             </div>
             <div class="button-container" style="text-align: center; margin-top: 20px;">
-                <!-- [修改] 移除了行內綠色樣式，讓它遵循CSS的大地色風格 -->
                 <button id="wordPageBtn" class="button">單字頁面</button>
                 <button id="wordQuizBtn" class="button" onclick="window.location.href='quiz.html?show=categories&from=index'">單字測驗</button>
                 <button id="sentencePageBtn" class="button">句子頁面</button>
@@ -176,6 +176,58 @@
             </div>
         </div>
     </div>
+
+    <div id="wordEditorModal" class="modal is-hidden">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeEditModal()">&times;</span>
+            <h2 id="modalTitle">編輯單字</h2>
+            
+            <div class="form-group">
+                <label>單字 (Word)*</label>
+                <input type="text" id="edit-word" placeholder="例如: Apple">
+            </div>
+
+            <div class="form-group">
+                <label>中文解釋</label>
+                <input type="text" id="edit-chinese" placeholder="例如: n. 蘋果">
+            </div>
+
+            <div class="form-group">
+                <label>英文定義 (Meaning)</label>
+                <textarea id="edit-meaning" rows="4" placeholder="例如: A round fruit..."></textarea>
+            </div>
+
+            <div class="form-group-row">
+                <div>
+                    <label>詞性/分類 (Domain)</label>
+                    <input type="text" id="edit-domain" placeholder="例如: 生活">
+                </div>
+                <div>
+                    <label>主題 (Topic)</label>
+                    <input type="text" id="edit-topic" placeholder="例如: 水果">
+                </div>
+            </div>
+
+            <div class="form-group-row">
+                <div>
+                    <label>等級 (Level)</label>
+                    <select id="edit-level">
+                        <option value="未分類">未分類</option>
+                        <option value="A1">A1</option>
+                        <option value="A2">A2</option>
+                        <option value="B1">B1</option>
+                        <option value="B2">B2</option>
+                        <option value="C1">C1</option>
+                        <option value="C2">C2</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="button delete-btn" id="btn-delete-word" onclick="deleteCustomWord()" style="display:none; background-color: #ef9a9a;">刪除</button>
+                <button class="button" onclick="saveCustomWord()">儲存</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
-
