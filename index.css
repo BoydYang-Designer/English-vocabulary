@@ -844,14 +844,19 @@ h1 {
     margin-bottom: 15px;
 }
 
+/* index.css */
+
 .form-group-row {
     display: flex;
     gap: 10px;
     margin-bottom: 15px;
+    flex-wrap: wrap; /* [新增] 允許換行，以免手機版太擠 */
 }
 
+/* 讓裡面的 div 在空間不足時自動變寬 */
 .form-group-row > div {
     flex: 1;
+    min-width: 120px; /* [新增] 設定最小寬度，防止太窄 */
 }
 
 .modal-content label {

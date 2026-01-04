@@ -1795,7 +1795,7 @@ function openCurrentWordEdit() {
 }
 
 // --- 自訂/編輯單字功能 ---
-// 開啟編輯視窗
+
 function openEditModal(wordObj = null) {
     const modal = document.getElementById('wordEditorModal');
     const deleteBtn = document.getElementById('btn-delete-word');
@@ -1806,7 +1806,7 @@ function openEditModal(wordObj = null) {
         // 編輯模式
         title.textContent = "編輯單字";
         document.getElementById('edit-word').value = wordObj.Words || wordObj.word || wordObj["單字"];
-        document.getElementById('edit-word').disabled = true; // 單字本身通常作為 ID，不建議修改，或者修改視為刪除舊的建新的
+        document.getElementById('edit-word').disabled = true; 
         
         document.getElementById('edit-chinese').value = wordObj["traditional Chinese"] || "";
         document.getElementById('edit-meaning').value = wordObj["English meaning"] || "";
@@ -1814,17 +1814,19 @@ function openEditModal(wordObj = null) {
         let cats = wordObj["分類"] || [];
         document.getElementById('edit-domain').value = cats[0] || "";
         document.getElementById('edit-topic').value = cats[1] || "";
+        // [新增] 讀取第三個分類 (來源)
+        document.getElementById('edit-source').value = cats[2] || ""; 
         
         document.getElementById('edit-level').value = wordObj["等級"] || "未分類";
         
-        // 如果是使用者自建的單字，才允許刪除 (這裡簡單判斷：只要在 customWords 裡有就可刪)
+        // ... (刪除按鈕的邏輯保持不變) ...
         const vocabData = window.getVocabularyData();
         const wordKey = (wordObj.Words || wordObj.word || wordObj["單字"]).trim();
         if (vocabData.customWords && vocabData.customWords[wordKey]) {
             deleteBtn.style.display = 'block';
             deleteBtn.setAttribute('data-word', wordKey);
         } else {
-            deleteBtn.style.display = 'none'; // 原始 JSON 單字暫不支援「物理刪除」，只能編輯覆蓋
+            deleteBtn.style.display = 'none';
         }
 
     } else {
@@ -1836,13 +1838,14 @@ function openEditModal(wordObj = null) {
         document.getElementById('edit-meaning').value = "";
         document.getElementById('edit-domain').value = "";
         document.getElementById('edit-topic').value = "";
+        // [新增] 清空來源欄位
+        document.getElementById('edit-source').value = ""; 
         document.getElementById('edit-level').value = "未分類";
         deleteBtn.style.display = 'none';
     }
 
     modal.classList.remove('is-hidden');
 }
-
 function closeEditModal() {
     document.getElementById('wordEditorModal').classList.add('is-hidden');
 }
@@ -1855,6 +1858,9 @@ function saveCustomWord() {
         return;
     }
 
+    // [修改] 獲取來源輸入框的值，如果為空則預設為 "UserCustom" 或空字串
+    const sourceValue = document.getElementById('edit-source').value.trim();
+
     const newWordObj = {
         "Words": wordText,
         "traditional Chinese": document.getElementById('edit-chinese').value.trim(),
@@ -1862,7 +1868,7 @@ function saveCustomWord() {
         "分類": [
             document.getElementById('edit-domain').value.trim(),
             document.getElementById('edit-topic').value.trim(),
-            "UserCustom" // 標記來源
+            sourceValue || "UserCustom" // [修改] 使用輸入的值，若無輸入則標記為 UserCustom
         ],
         "等級": document.getElementById('edit-level').value,
         "lastModified": new Date().toISOString()
@@ -1887,13 +1893,13 @@ function saveCustomWord() {
     closeEditModal();
 
     // 3. 刷新介面
-    // 如果在詳細頁，重新渲染詳細頁
     if (document.getElementById('wordDetails').style.display === 'block') {
         showDetails(newWordObj);
     }
-    // 為了讓分類按鈕更新 (如果有新分類)，建議重新建立按鈕
+    // [修改] 重新建立所有分類按鈕，包含來源按鈕
     createDomainButtons();
     createTopicButtons();
+    createSourceButtons(); // [新增] 確保來源按鈕也會更新
 }
 
 // 刪除自訂單字 (回復原狀或刪除)
