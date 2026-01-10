@@ -20040,8 +20040,7 @@
                 "Arts, Design & Aesthetics（藝術與設計）",
                 "幻想",
                 "The Alchemist"
-            ],
-            "lastModified": "2026-01-04T13:14:15.205Z"
+            ]
         },
         {
             "等級": "C1",
@@ -21320,28 +21319,16 @@
             ]
         },
         {
-            "lastModified": "2025-12-31T11:32:29.026Z",
-            "traditional Chinese": "",
             "等級": "未分類",
-            "分類": [
-                "",
-                "",
-                "UserCustom"
-            ],
+            "Words": "zenith",
             "English meaning": "Zenith\n\nAs a Noun (countable & uncountable): zenith / zeniths\n\nA zenith is the highest point or peak of something. Literally, it refers to the point in the sky directly above an observer. Figuratively, it refers to the time when something — such as power, success, or influence — is at its greatest.\n\nE.g. At noon, the sun was near its zenith in the clear summer sky.\nE.g. The empire reached its zenith in the 16th century.\nE.g. She was at the zenith of her career when she won the international award.\nE.g. His popularity has passed its zenith and begun to decline.\n\nSummary\n\nZenith means the highest point, either physically (in the sky) or figuratively (in success, power, or achievement).\n\nRelated Words\n\npeak, apex, pinnacle, summit, height\n\nAntonyms\n\nnadir, low point, bottom",
-            "Words": "zenith"
+            "分類": []
         },
         {
-            "分類": [
-                "新增",
-                "",
-                "UserCustom"
-            ],
-            "lastModified": "2026-01-04T12:15:33.057Z",
-            "English meaning": "",
-            "traditional Chinese": "n.下降，降低；",
             "等級": "未分類",
-            "Words": "reduction"
+            "Words": "reduction",
+            "traditional Chinese": "n.下降，降低；",
+            "分類": []
         }
     ]
 }
