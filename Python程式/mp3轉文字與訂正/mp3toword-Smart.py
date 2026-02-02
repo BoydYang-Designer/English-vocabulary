@@ -21,6 +21,49 @@ def format_timestamp(seconds: float) -> str:
 
     return f"{hours:02}:{minutes:02}:{seconds_int:02}.{milliseconds_rem:03}"
 
+def format_plain_text_with_paragraphs(text, sentences_per_paragraph=3):
+    """
+    將純文字智能分段，提升可讀性
+    
+    參數:
+    - text: 原始文字
+    - sentences_per_paragraph: 每段包含的句子數（預設3句）
+    
+    返回:
+    - 分段後的文字
+    """
+    # 定義句子結束標點
+    sentence_endings = r'([.!?。!?]+)'
+    
+    # 用正則表達式分割句子，保留標點符號
+    sentences = re.split(sentence_endings, text)
+    
+    # 重新組合句子和標點
+    combined_sentences = []
+    i = 0
+    while i < len(sentences):
+        if i + 1 < len(sentences) and re.match(sentence_endings, sentences[i + 1]):
+            # 合併句子和其標點
+            combined_sentences.append(sentences[i] + sentences[i + 1])
+            i += 2
+        elif sentences[i].strip():
+            # 單獨的句子（沒有配對標點）
+            combined_sentences.append(sentences[i])
+            i += 1
+        else:
+            i += 1
+    
+    # 按照每段句子數分段
+    paragraphs = []
+    for i in range(0, len(combined_sentences), sentences_per_paragraph):
+        paragraph_sentences = combined_sentences[i:i + sentences_per_paragraph]
+        paragraph = ' '.join(s.strip() for s in paragraph_sentences if s.strip())
+        if paragraph:
+            paragraphs.append(paragraph)
+    
+    # 用雙換行符號連接段落
+    return '\n\n'.join(paragraphs)
+
 def smart_sentence_split(segments, max_gap=1.5, max_duration=10.0):
     """
     智能斷句:根據標點符號和時間間隔進行更精準的分段
@@ -233,9 +276,14 @@ for i, file_path in enumerate(file_paths):
         if save_plain:
             txt_path = base_path + ".txt"
             try:
+                # 使用智能分段功能處理文字
+                formatted_text = format_plain_text_with_paragraphs(
+                    result["text"],
+                    sentences_per_paragraph=3  # 每段3句，可根據需要調整
+                )
                 with open(txt_path, "w", encoding="utf-8") as f:
-                    f.write(result["text"])
-                print(f"  [成功] 已儲存純文字檔: {os.path.basename(txt_path)}")
+                    f.write(formatted_text)
+                print(f"  [成功] 已儲存純文字檔（含自動分段）: {os.path.basename(txt_path)}")
             except Exception as e:
                 print(f"  [失敗] 儲存純文字檔失敗: {e}")
 

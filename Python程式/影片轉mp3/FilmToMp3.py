@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox
-from moviepy.editor import VideoFileClip
+import subprocess
 import os
 
 def convert_videos_to_mp3():
@@ -31,19 +31,38 @@ def convert_videos_to_mp3():
 
             print(f"正在轉換: {video_path}...")
 
-            # 載入影片並提取音訊
-            video = VideoFileClip(video_path)
-            if video.audio is None:
-                print(f"跳過：{video_path} (此影片沒有音軌)")
+            # 使用 ffmpeg 進行轉換
+            command = [
+                'ffmpeg',
+                '-i', video_path,
+                '-vn',  # 不處理視訊
+                '-acodec', 'libmp3lame',  # 使用 MP3 編碼
+                '-q:a', '2',  # 音質設定 (0-9，數字越小品質越好)
+                '-y',  # 覆蓋已存在的檔案
+                output_path
+            ]
+            
+            # 執行轉換（隱藏命令列視窗）
+            result = subprocess.run(
+                command,
+                capture_output=True,
+                text=True,
+                creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+            )
+            
+            if result.returncode == 0:
+                print(f"✅ 轉換成功: {output_path}")
+                success_count += 1
+            else:
+                print(f"❌ 轉換失敗: {video_path}")
+                print(f"錯誤訊息: {result.stderr}")
                 error_count += 1
-                continue
-                
-            video.audio.write_audiofile(output_path)
             
-            # 關閉資源
-            video.close()
-            success_count += 1
-            
+        except FileNotFoundError:
+            print("❌ 錯誤：找不到 ffmpeg！")
+            print("請先安裝 ffmpeg: https://ffmpeg.org/download.html")
+            messagebox.showerror("錯誤", "找不到 ffmpeg！\n請先安裝 ffmpeg 才能使用此功能。")
+            return
         except Exception as e:
             print(f"轉換 {video_path} 時發生錯誤: {str(e)}")
             error_count += 1
