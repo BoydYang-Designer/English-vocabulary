@@ -251,21 +251,6 @@ function setupSearchEnhancements() {
     }
 }
 
-// ========== 優化功能：播放速度控制 ==========
-function initPlaybackSpeed() {
-    const speedControl = document.getElementById('playback-speed');
-    if (speedControl) {
-        speedControl.addEventListener('change', (e) => {
-            const speed = parseFloat(e.target.value);
-            if (window.detailsWordPlayer) window.detailsWordPlayer.playbackRate = speed;
-            if (window.detailsSentencePlayer) window.detailsSentencePlayer.playbackRate = speed;
-            if (window.currentAudio) window.currentAudio.playbackRate = speed;
-            if (typeof showNotification === 'function') {
-                showNotification(`播放速度已設為 ${speed}x`, 'success');
-            }
-        });
-    }
-}
 
 // ========== 優化功能：筆記自動儲存 ==========
 function setupNoteAutoSave() {
@@ -281,7 +266,7 @@ function initEnhancements() {
     initTheme();
     initKeyboardShortcuts();
     setupSearchEnhancements();
-    initPlaybackSpeed();
+    // initPlaybackSpeed(); // 已移除播放速度功能
     setupNoteAutoSave();
     window.addEventListener('beforeunload', cleanupAudioPlayers);
     console.log('✅ 優化功能初始化完成!');
@@ -456,6 +441,63 @@ const bButton = document.getElementById('bButton');
 
     const startLearningButton = document.getElementById("startLearningBtn");
     if (startLearningButton) startLearningButton.addEventListener("click", startLearning);
+    
+    // 畫重點模式按鈕
+    const highlightModeBtn = document.getElementById('highlight-mode-btn');
+    if (highlightModeBtn) {
+        highlightModeBtn.addEventListener('click', () => {
+            loadHighlightedWords();
+            enterHighlightModeEnhanced();
+        });
+    }
+    
+    const exitHighlightModeBtn = document.getElementById('exit-highlight-mode-btn');
+    if (exitHighlightModeBtn) {
+        exitHighlightModeBtn.addEventListener('click', exitHighlightMode);
+    }
+    
+    // 畫重點模式中的播放按鈕
+    const highlightPlayBtn = document.getElementById('highlight-play-btn');
+    if (highlightPlayBtn) {
+        highlightPlayBtn.addEventListener('click', () => {
+            const audioFile = document.getElementById("wordTitle")?.textContent.trim();
+            if (audioFile) {
+                playSentenceAudio(audioFile + " - sentence.mp3");
+            }
+        });
+    }
+    
+    // 畫重點模式中的 timestamp 按鈕
+    const highlightTimestampBtn = document.getElementById('highlight-timestamp-btn');
+    if (highlightTimestampBtn) {
+        highlightTimestampBtn.addEventListener('click', toggleTimestampModeInHighlight);
+    }
+    
+    // Storage 編輯器按鈕
+    const editStorageBtn = document.getElementById('edit-storage-btn');
+    if (editStorageBtn) {
+        editStorageBtn.addEventListener('click', openStorageEditor);
+    }
+    
+    const closeStorageEditorBtn = document.getElementById('close-storage-editor-btn');
+    if (closeStorageEditorBtn) {
+        closeStorageEditorBtn.addEventListener('click', closeStorageEditor);
+    }
+    
+    // Storage 編輯器標籤切換
+    document.querySelectorAll('.storage-tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            const tabName = this.dataset.tab;
+            
+            // 切換標籤活動狀態
+            document.querySelectorAll('.storage-tab').forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            
+            // 切換內容顯示
+            document.querySelectorAll('.storage-tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById(`tab-${tabName}`).classList.add('active');
+        });
+    });
     
     document.querySelectorAll(".collapsible-header").forEach(button => {
         button.addEventListener("click", function() {
@@ -668,7 +710,9 @@ function createSpecialCategoryButtons() {
         { name: "Checked 單字", value: "checked" },
         { name: "重要單字", value: "important" },
         { name: "錯誤單字", value: "wrong" },
-        { name: "Note單字", value: "note" }
+        { name: "備註單字", value: "note" },
+        { name: "自訂單字", value: "custom" } 
+        // --------------------
     ];
     const specialContainer = document.getElementById("specialCategoryButtons");
     if (specialContainer) {
@@ -752,7 +796,7 @@ function startLearning() {
         });
     }
     
-    if (selectedSpecials.length > 0) {
+if (selectedSpecials.length > 0) {
         const specialWordsSet = new Set();
         const vocabularyData = window.getVocabularyData(); // 從 auth-manager 獲取資料
         selectedSpecials.forEach(specialType => {
@@ -769,6 +813,14 @@ function startLearning() {
                 case 'note':
                     Object.keys(vocabularyData.notes || {}).forEach(word => specialWordsSet.add(word));
                     break;
+                
+
+                case 'custom': 
+                    // 獲取所有自訂單字的 Key (單字本身)
+                    const customWordsObj = vocabularyData.customWords || {};
+                    Object.keys(customWordsObj).forEach(word => specialWordsSet.add(word));
+                    break;
+
             }
         });
         filteredWords = filteredWords.filter(w => {
@@ -1351,7 +1403,12 @@ function timestampUpdateLoop() {
     }
 
     const currentTime = detailsSentencePlayer.currentTime; // [優化]
-    const container = document.getElementById('meaningContainer');
+    
+    // 根據當前模式選擇容器
+    const container = highlightModeActive 
+        ? document.getElementById('highlight-meaning-container')
+        : document.getElementById('meaningContainer');
+    
     if (!container) return;
 
     // --- 1. 高亮邏輯 ---
@@ -1431,6 +1488,9 @@ function renderTimestampContent() {
 
 // 在 JSON 和時間戳模式之間切換
 function toggleTimestampMode() {
+    // 同步畫重點模式的 timestamp 按鈕
+    const highlightTimestampBtn = document.getElementById('highlight-timestamp-btn');
+    
     const toggleBtn = document.getElementById('toggle-timestamp-btn');
     if (!hasTimestampFile) {
         alert('無 Timestamp 檔案');
@@ -1574,6 +1634,7 @@ function showDetails(word) {
     document.getElementById("wordTitle").textContent = word.Words;
     displayNote();
     updateBackButton();
+    loadHighlightedWords(); // 載入該單字的高亮標記
     
     const sentenceLinkBtn = document.getElementById("sentenceLinkBtn");
     if (sentenceLinkBtn) {
@@ -2231,5 +2292,619 @@ function deleteCustomWord() {
         closeEditModal();
         
         setTimeout(() => location.reload(), 1500);
+    }
+}
+// ========== 畫重點模式功能 ==========
+let highlightModeActive = false;
+let highlightedWords = new Set(); // 儲存被標記為重點的單字
+let wordLongPressTimer = null;
+let wordLongPressTarget = null;
+
+function enterHighlightModeEnhanced() {
+    highlightModeActive = true;
+    const container = document.getElementById('highlight-mode-container');
+    const meaningContainer = document.getElementById('meaningContainer');
+    const highlightMeaningContainer = document.getElementById('highlight-meaning-container');
+    
+    if (container && meaningContainer && highlightMeaningContainer) {
+        // 複製內容到畫重點模式容器
+        highlightMeaningContainer.innerHTML = meaningContainer.innerHTML;
+        
+        // 將所有單字包裝成可點擊和長按的元素
+        wrapWordsInHighlightMode(highlightMeaningContainer);
+        
+        // 恢復之前的高亮狀態
+        restoreHighlightedWords(highlightMeaningContainer);
+        
+        container.classList.add('active');
+        
+        // 同步 timestamp 按鈕狀態
+        const timestampBtn = document.getElementById('toggle-timestamp-btn');
+        const highlightTimestampBtn = document.getElementById('highlight-timestamp-btn');
+        if (timestampBtn && highlightTimestampBtn) {
+            highlightTimestampBtn.style.display = timestampBtn.style.display;
+            if (isTimestampMode) {
+                highlightTimestampBtn.classList.add('is-active');
+            }
+        }
+    }
+}
+
+function exitHighlightMode() {
+    highlightModeActive = false;
+    const container = document.getElementById('highlight-mode-container');
+    if (container) {
+        container.classList.remove('active');
+    }
+    
+    // 停止播放
+    if (detailsSentencePlayer && !detailsSentencePlayer.paused) {
+        detailsSentencePlayer.pause();
+    }
+}
+
+function wrapWordsInHighlightMode(container) {
+    if (isTimestampMode) {
+        // Timestamp 模式:只包裝可點擊的單字
+        const clickableWords = container.querySelectorAll('.clickable-word');
+        clickableWords.forEach(span => {
+            span.classList.add('highlight-mode-word');
+            setupWordInteraction(span);
+        });
+    } else {
+        // 一般模式:包裝所有單字
+        const walker = document.createTreeWalker(
+            container,
+            NodeFilter.SHOW_TEXT,
+            null,
+            false
+        );
+        
+        const textNodes = [];
+        let node;
+        while (node = walker.nextNode()) {
+            if (node.parentElement.tagName !== 'SCRIPT' && 
+                node.parentElement.tagName !== 'STYLE' &&
+                !node.parentElement.classList.contains('highlight-mode-word')) {
+                textNodes.push(node);
+            }
+        }
+        
+        textNodes.forEach(textNode => {
+            const text = textNode.textContent;
+            const words = text.split(/(\s+)/);
+            const fragment = document.createDocumentFragment();
+            
+            words.forEach(word => {
+                if (word.trim() && /[a-zA-Z]/.test(word)) {
+                    const span = document.createElement('span');
+                    span.className = 'highlight-mode-word';
+                    span.textContent = word;
+                    setupWordInteraction(span);
+                    fragment.appendChild(span);
+                } else {
+                    fragment.appendChild(document.createTextNode(word));
+                }
+            });
+            
+            textNode.parentNode.replaceChild(fragment, textNode);
+        });
+    }
+}
+
+function setupWordInteraction(wordElement) {
+    // 點擊事件
+    wordElement.addEventListener('click', (e) => {
+        e.stopPropagation();
+        handleWordClick(wordElement);
+    });
+    
+    // 長按事件
+    wordElement.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        wordLongPressTarget = wordElement;
+        wordLongPressTimer = setTimeout(() => {
+            handleWordLongPress(wordElement);
+        }, 500); // 500ms 為長按
+    });
+    
+    wordElement.addEventListener('mouseup', () => {
+        if (wordLongPressTimer) {
+            clearTimeout(wordLongPressTimer);
+            wordLongPressTimer = null;
+        }
+    });
+    
+    wordElement.addEventListener('mouseleave', () => {
+        if (wordLongPressTimer) {
+            clearTimeout(wordLongPressTimer);
+            wordLongPressTimer = null;
+        }
+    });
+    
+    // 觸控支援
+    wordElement.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        wordLongPressTarget = wordElement;
+        wordLongPressTimer = setTimeout(() => {
+            handleWordLongPress(wordElement);
+        }, 500);
+    });
+    
+    wordElement.addEventListener('touchend', () => {
+        if (wordLongPressTimer) {
+            clearTimeout(wordLongPressTimer);
+            wordLongPressTimer = null;
+            // 如果沒有觸發長按,視為點擊
+            if (wordLongPressTarget === wordElement) {
+                handleWordClick(wordElement);
+            }
+        }
+        wordLongPressTarget = null;
+    });
+}
+
+function handleWordClick(wordElement) {
+    // 只在暫停狀態下才播放單字發音
+    if (detailsSentencePlayer.paused) {
+        const word = wordElement.textContent.trim().replace(/[^a-zA-Z]/g, '');
+        if (word) {
+            playWordPronunciation(word);
+            copyToClipboard(word);
+        }
+    }
+}
+
+function handleWordLongPress(wordElement) {
+    // 切換高亮狀態
+    const word = wordElement.textContent.trim();
+    wordElement.classList.toggle('highlighted');
+    
+    if (wordElement.classList.contains('highlighted')) {
+        highlightedWords.add(word);
+        showNotification(`✨ 已標記重點: ${word}`, 'success');
+    } else {
+        highlightedWords.delete(word);
+        showNotification(`已取消重點: ${word}`, 'info');
+    }
+    
+    // 儲存到當前單字的備註中
+    saveHighlightedWords();
+}
+
+function restoreHighlightedWords(container) {
+    const words = container.querySelectorAll('.highlight-mode-word');
+    words.forEach(wordEl => {
+        const word = wordEl.textContent.trim();
+        if (highlightedWords.has(word)) {
+            wordEl.classList.add('highlighted');
+        }
+    });
+}
+
+function playWordPronunciation(word) {
+    const audioUrl = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word)}.mp3`;
+    const audio = new Audio(audioUrl);
+    
+    audio.play().catch(error => {
+        // 如果 MP3 不存在,使用瀏覽器的語音合成
+        console.log('MP3 not found, using Web Speech API');
+        useBrowserSpeech(word);
+    });
+}
+
+function useBrowserSpeech(word) {
+    if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(word);
+        utterance.lang = 'en-US';
+        utterance.rate = 1.0;
+        window.speechSynthesis.speak(utterance);
+    } else {
+        showNotification('⚠️ 此瀏覽器不支援語音功能', 'error');
+    }
+}
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        showNotification(`✅ 已複製: ${text}`, 'success');
+    }).catch(err => {
+        console.error('複製失敗:', err);
+    });
+}
+
+function saveHighlightedWords() {
+    const currentWord = document.getElementById("wordTitle")?.textContent.trim();
+    if (!currentWord) return;
+    
+    const vocabularyData = window.getVocabularyData();
+    if (!vocabularyData.highlightedWords) vocabularyData.highlightedWords = {};
+    
+    if (highlightedWords.size > 0) {
+        vocabularyData.highlightedWords[currentWord] = Array.from(highlightedWords);
+    } else {
+        delete vocabularyData.highlightedWords[currentWord];
+    }
+    
+    window.persistVocabularyData();
+}
+
+function loadHighlightedWords() {
+    const currentWord = document.getElementById("wordTitle")?.textContent.trim();
+    if (!currentWord) return;
+    
+    const vocabularyData = window.getVocabularyData();
+    if (vocabularyData.highlightedWords && vocabularyData.highlightedWords[currentWord]) {
+        highlightedWords = new Set(vocabularyData.highlightedWords[currentWord]);
+    } else {
+        highlightedWords = new Set();
+    }
+}
+
+// ========== LocalStorage 編輯器功能 ==========
+function openStorageEditor() {
+    const modal = document.getElementById('storage-editor-modal');
+    if (modal) {
+        modal.classList.add('active');
+        refreshStorageEditor();
+    }
+}
+
+function closeStorageEditor() {
+    const modal = document.getElementById('storage-editor-modal');
+    if (modal) {
+        modal.classList.remove('active');
+    }
+}
+
+function refreshStorageEditor() {
+    const vocabularyData = window.getVocabularyData();
+    
+    // 更新計數
+    document.getElementById('notes-count').textContent = Object.keys(vocabularyData.notes || {}).length;
+    document.getElementById('custom-count').textContent = Object.keys(vocabularyData.customWords || {}).length;
+    document.getElementById('highlighted-count').textContent = Object.keys(vocabularyData.highlightedWords || {}).length;
+    document.getElementById('checked-count').textContent = (vocabularyData.checkedWords || []).length;
+    document.getElementById('important-count').textContent = (vocabularyData.importantWords || []).length;
+    document.getElementById('wrong-count').textContent = (vocabularyData.wrongWords || []).length;
+    
+    // 渲染各個標籤頁內容
+    renderNotesTab(vocabularyData.notes || {});
+    renderCustomWordsTab(vocabularyData.customWords || {});
+    renderHighlightedWordsTab(vocabularyData.highlightedWords || {});
+    renderWordListTab('checked', vocabularyData.checkedWords || []);
+    renderWordListTab('important', vocabularyData.importantWords || []);
+    renderWordListTab('wrong', vocabularyData.wrongWords || []);
+}
+
+function renderNotesTab(notes) {
+    const container = document.getElementById('tab-notes');
+    container.innerHTML = '';
+    
+    if (Object.keys(notes).length === 0) {
+        container.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 20px;">目前沒有備註</p>';
+        return;
+    }
+    
+    Object.entries(notes).forEach(([word, note]) => {
+        const item = document.createElement('div');
+        item.className = 'storage-item';
+        item.innerHTML = `
+            <div class="storage-item-header">
+                <div class="storage-item-word">${word}</div>
+                <div class="storage-item-buttons">
+                    <button class="storage-item-btn btn-edit" onclick="editNote('${word}')">編輯</button>
+                    <button class="storage-item-btn btn-delete" onclick="deleteNote('${word}')">刪除</button>
+                </div>
+            </div>
+            <div style="margin-top: 10px; white-space: pre-wrap; color: var(--text-secondary);">${note}</div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderCustomWordsTab(customWords) {
+    const container = document.getElementById('tab-custom');
+    container.innerHTML = '';
+    
+    if (Object.keys(customWords).length === 0) {
+        container.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 20px;">目前沒有自訂單字</p>';
+        return;
+    }
+    
+    Object.entries(customWords).forEach(([word, wordObj]) => {
+        const item = document.createElement('div');
+        item.className = 'storage-item';
+        
+        const chinese = wordObj["traditional Chinese"] || '';
+        const meaning = wordObj["English meaning"] || '';
+        const preview = meaning.substring(0, 100) + (meaning.length > 100 ? '...' : '');
+        
+        item.innerHTML = `
+            <div class="storage-item-header">
+                <div class="storage-item-word">${word}</div>
+                <div class="storage-item-buttons">
+                    <button class="storage-item-btn btn-edit" onclick="editCustomWord('${word}')">編輯</button>
+                    <button class="storage-item-btn btn-delete" onclick="deleteCustomWordFromEditor('${word}')">刪除</button>
+                </div>
+            </div>
+            ${chinese ? `<div style="margin-top: 5px; color: var(--text-secondary);">${chinese}</div>` : ''}
+            ${preview ? `<div style="margin-top: 5px; color: var(--text-tertiary); font-size: 14px;">${preview}</div>` : ''}
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderHighlightedWordsTab(highlightedWords) {
+    const container = document.getElementById('tab-highlighted');
+    container.innerHTML = '';
+    
+    if (Object.keys(highlightedWords).length === 0) {
+        container.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 20px;">目前沒有畫重點的單字</p>';
+        return;
+    }
+    
+    Object.entries(highlightedWords).forEach(([mainWord, highlightedList]) => {
+        const item = document.createElement('div');
+        item.className = 'storage-item';
+        
+        // 創建高亮單字的標籤顯示
+        const highlightedTags = highlightedList.map(word => 
+            `<span style="background-color: #FFEB3B; color: #000; padding: 3px 8px; border-radius: 4px; margin: 2px; display: inline-block; font-size: 14px;">${word}</span>`
+        ).join(' ');
+        
+        item.innerHTML = `
+            <div class="storage-item-header">
+                <div class="storage-item-word">${mainWord}</div>
+                <div class="storage-item-buttons">
+                    <button class="storage-item-btn btn-edit" onclick="viewWordWithHighlights('${mainWord}')">查看</button>
+                    <button class="storage-item-btn btn-delete" onclick="deleteHighlightedWords('${mainWord}')">清除全部</button>
+                </div>
+            </div>
+            <div style="margin-top: 10px; padding: 10px; background: var(--bg-quaternary); border-radius: 5px;">
+                <div style="margin-bottom: 5px; color: var(--text-secondary); font-size: 12px;">已畫重點的單字 (${highlightedList.length}):</div>
+                <div>${highlightedTags}</div>
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderWordListTab(type, words) {
+    const container = document.getElementById(`tab-${type}`);
+    container.innerHTML = '';
+    
+    if (words.length === 0) {
+        container.innerHTML = `<p style="text-align: center; color: var(--text-secondary); padding: 20px;">目前沒有${type === 'checked' ? 'checked' : type === 'important' ? '重要' : '錯誤'}單字</p>`;
+        return;
+    }
+    
+    words.forEach(word => {
+        const item = document.createElement('div');
+        item.className = 'storage-item';
+        item.innerHTML = `
+            <div class="storage-item-header">
+                <div class="storage-item-word">${word}</div>
+                <div class="storage-item-buttons">
+                    <button class="storage-item-btn btn-delete" onclick="removeWordFrom('${type}', '${word}')">移除</button>
+                </div>
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function editNote(word) {
+    const vocabularyData = window.getVocabularyData();
+    const note = vocabularyData.notes[word] || '';
+    
+    const newNote = prompt(`編輯 "${word}" 的備註:`, note);
+    if (newNote !== null) {
+        if (newNote.trim()) {
+            vocabularyData.notes[word] = newNote.trim();
+        } else {
+            delete vocabularyData.notes[word];
+        }
+        window.persistVocabularyData();
+        refreshStorageEditor();
+        showNotification('✅ 備註已更新', 'success');
+    }
+}
+
+function deleteNote(word) {
+    if (confirm(`確定要刪除 "${word}" 的備註嗎?`)) {
+        const vocabularyData = window.getVocabularyData();
+        delete vocabularyData.notes[word];
+        window.persistVocabularyData();
+        refreshStorageEditor();
+        showNotification('🗑️ 備註已刪除', 'success');
+    }
+}
+
+function editCustomWord(word) {
+    const wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]) === word);
+    if (wordObj) {
+        closeStorageEditor();
+        openEditModal(wordObj);
+    }
+}
+
+function deleteCustomWordFromEditor(word) {
+    if (confirm(`確定要刪除自訂單字 "${word}" 嗎?`)) {
+        const vocabularyData = window.getVocabularyData();
+        if (vocabularyData.customWords) {
+            delete vocabularyData.customWords[word];
+            window.persistVocabularyData();
+            
+            // 從 wordsData 中移除
+            const index = wordsData.findIndex(w => (w.Words || w.word || w["單字"]) === word);
+            if (index !== -1) {
+                wordsData.splice(index, 1);
+            }
+            
+            refreshStorageEditor();
+            showNotification('🗑️ 自訂單字已刪除', 'success');
+        }
+    }
+}
+
+function removeWordFrom(type, word) {
+    if (confirm(`確定要從${type === 'checked' ? 'checked' : type === 'important' ? '重要' : '錯誤'}列表移除 "${word}" 嗎?`)) {
+        const vocabularyData = window.getVocabularyData();
+        const listName = type + 'Words';
+        
+        if (vocabularyData[listName]) {
+            vocabularyData[listName] = vocabularyData[listName].filter(w => w !== word);
+            window.persistVocabularyData();
+            refreshStorageEditor();
+            showNotification('✅ 已移除', 'success');
+        }
+    }
+}
+
+function clearAllStorageData() {
+    if (confirm('⚠️ 警告:這將清空所有學習資料,包括備註、自訂單字、重要標記等。此操作無法復原!\n\n確定要繼續嗎?')) {
+        if (confirm('再次確認:真的要清空所有資料嗎?')) {
+            localStorage.clear();
+            showNotification('🗑️ 所有資料已清空', 'success');
+            setTimeout(() => location.reload(), 1500);
+        }
+    }
+}
+
+// 在 renderTimestampContent 函數之後添加畫重點模式的渲染函數
+function renderTimestampContentInHighlightMode() {
+    const container = document.getElementById('highlight-meaning-container');
+    if (!container) return;
+
+    container.innerHTML = '';
+    const frag = document.createDocumentFragment();
+
+    timestampData.forEach(item => {
+        const p = document.createElement('p');
+        p.className = 'timestamp-sentence';
+        p.dataset.start = item.start;
+
+        // 將句子拆分為單字並包裝
+        item.sentence.split(/(\s+)/).forEach(part => {
+            if (part.trim() !== '') {
+                const span = document.createElement('span');
+                span.className = 'clickable-word highlight-mode-word';
+                span.textContent = part;
+                setupWordInteraction(span);
+                p.appendChild(span);
+            } else {
+                p.appendChild(document.createTextNode(part));
+            }
+        });
+        frag.appendChild(p);
+    });
+
+    container.appendChild(frag);
+    restoreHighlightedWords(container);
+}
+
+// 修改 enterHighlightMode 函數以正確處理 timestamp 模式
+function enterHighlightModeEnhanced() {
+    highlightModeActive = true;
+    const container = document.getElementById('highlight-mode-container');
+    const meaningContainer = document.getElementById('meaningContainer');
+    const highlightMeaningContainer = document.getElementById('highlight-meaning-container');
+    
+    if (container && meaningContainer && highlightMeaningContainer) {
+        // 根據當前模式渲染內容
+        if (isTimestampMode && hasTimestampFile) {
+            renderTimestampContentInHighlightMode();
+        } else {
+            // 複製內容到畫重點模式容器
+            highlightMeaningContainer.innerHTML = meaningContainer.innerHTML;
+            wrapWordsInHighlightMode(highlightMeaningContainer);
+            restoreHighlightedWords(highlightMeaningContainer);
+        }
+        
+        container.classList.add('active');
+        
+        // 同步 timestamp 按鈕狀態
+        const timestampBtn = document.getElementById('toggle-timestamp-btn');
+        const highlightTimestampBtn = document.getElementById('highlight-timestamp-btn');
+        if (timestampBtn && highlightTimestampBtn) {
+            highlightTimestampBtn.style.display = timestampBtn.style.display;
+            if (isTimestampMode) {
+                highlightTimestampBtn.classList.add('is-active');
+            } else {
+                highlightTimestampBtn.classList.remove('is-active');
+            }
+        }
+    }
+}
+
+// 修改畫重點模式中的 timestamp 切換
+function toggleTimestampModeInHighlight() {
+    if (!hasTimestampFile) {
+        alert('無 Timestamp 檔案');
+        return;
+    }
+
+    isTimestampMode = !isTimestampMode;
+    
+    const toggleBtn = document.getElementById('toggle-timestamp-btn');
+    const highlightTimestampBtn = document.getElementById('highlight-timestamp-btn');
+    
+    if (toggleBtn) toggleBtn.classList.toggle('is-active', isTimestampMode);
+    if (highlightTimestampBtn) highlightTimestampBtn.classList.toggle('is-active', isTimestampMode);
+
+    const container = document.getElementById('highlight-meaning-container');
+    if (!container) return;
+
+    if (isTimestampMode) {
+        renderTimestampContentInHighlightMode();
+        detailsSentencePlayer.removeEventListener('timeupdate', handleAutoScroll);
+        if (!detailsSentencePlayer.paused) {
+            if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+            timestampUpdateLoop();
+        }
+    } else {
+        // 恢復一般模式
+        container.innerHTML = originalMeaningContent;
+        wrapWordsInHighlightMode(container);
+        restoreHighlightedWords(container);
+        
+        if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+        timestampUpdateRafId = null;
+        if (lastHighlightedSentence) {
+            lastHighlightedSentence.classList.remove('is-current');
+            lastHighlightedSentence = null;
+        }
+        detailsSentencePlayer.addEventListener('timeupdate', handleAutoScroll);
+    }
+}
+
+// 高亮單字管理函數
+function viewWordWithHighlights(word) {
+    // 關閉編輯器
+    closeStorageEditor();
+    
+    // 查找並顯示該單字
+    const wordObj = wordsData.find(w => (w.Words || w.word || w["單字"]) === word);
+    if (wordObj) {
+        showDetails(wordObj);
+        // 自動進入畫重點模式
+        setTimeout(() => {
+            loadHighlightedWords();
+            enterHighlightModeEnhanced();
+        }, 300);
+    } else {
+        showNotification(`⚠️ 找不到單字 "${word}"`, 'error');
+    }
+}
+
+function deleteHighlightedWords(word) {
+    if (confirm(`確定要清除 "${word}" 的所有畫重點標記嗎?`)) {
+        const vocabularyData = window.getVocabularyData();
+        if (vocabularyData.highlightedWords) {
+            delete vocabularyData.highlightedWords[word];
+            window.persistVocabularyData();
+            refreshStorageEditor();
+            showNotification('🗑️ 畫重點標記已清除', 'success');
+        }
     }
 }

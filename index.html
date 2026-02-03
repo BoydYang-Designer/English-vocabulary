@@ -197,7 +197,8 @@
 
         #theme-toggle-btn,
         #sign-out-btn,
-        #sign-in-from-guest-btn {
+        #sign-in-from-guest-btn,
+        #edit-storage-btn {
             font-size: 12px !important;
             padding: 6px 12px !important;
             height: auto !important;
@@ -209,107 +210,260 @@
         #theme-toggle-btn {
             background-color: #6c757d !important;
             min-width: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 6px 10px !important;
         }
 
-        /* 播放速度控制 */
-        .playback-speed-control {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 10px 0;
-            justify-content: center;
+        #edit-storage-btn {
+            background-color: #7986CB !important;
         }
 
-        .playback-speed-control label {
-            font-size: 14px;
-            color: var(--text-secondary);
+        #edit-storage-btn:hover {
+            background-color: #5C6BC0 !important;
         }
 
-        .playback-speed-control select {
-            padding: 5px 10px;
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
+        /* 畫重點模式樣式 */
+        #highlight-mode-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-primary);
+            z-index: 9999;
+            overflow-y: auto;
+        }
+
+        #highlight-mode-container.active {
+            display: block;
+        }
+
+        .highlight-mode-header {
+            position: sticky;
+            top: 0;
             background: var(--bg-secondary);
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .highlight-mode-title {
+            font-size: 18px;
+            font-weight: bold;
             color: var(--text-primary);
+        }
+
+        #highlight-meaning-container {
+            max-height: calc(100vh - 180px);
+            overflow-y: auto;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            border-radius: 15px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* 畫重點模式中的單字樣式 */
+        .highlight-mode-word {
             cursor: pointer;
+            transition: background-color 0.2s;
+            padding: 2px 4px;
+            border-radius: 3px;
         }
 
-        /* 滾動平滑 */
-        html {
-            scroll-behavior: smooth;
+        .highlight-mode-word:hover {
+            background-color: var(--bg-tertiary);
         }
 
-        /* 分類區域標記 */
-        .collapsible-section[data-category] {
-            scroll-margin-top: 80px;
+        .highlight-mode-word.highlighted {
+            background-color: #FFEB3B;
+            font-weight: bold;
+            color: #000;
+        }
+
+        [data-theme="dark"] .highlight-mode-word.highlighted {
+            background-color: #F9A825;
+            color: #000;
+        }
+
+        /* Storage 編輯器樣式 */
+        #storage-editor-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10000;
+            overflow-y: auto;
+        }
+
+        #storage-editor-modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .storage-editor-content {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            margin-top: 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .storage-editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .storage-editor-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .storage-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            color: var(--text-secondary);
+            font-size: 16px;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .storage-tab.active {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .storage-tab-content {
+            display: none;
+        }
+
+        .storage-tab-content.active {
+            display: block;
+        }
+
+        .storage-item {
+            background: var(--bg-tertiary);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .storage-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .storage-item-word {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        .storage-item-buttons {
+            display: flex;
+            gap: 5px;
+        }
+
+        .storage-item-btn {
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-edit {
+            background-color: #7986CB;
+            color: white;
+        }
+
+        .btn-delete {
+            background-color: #EF5350;
+            color: white;
+        }
+
+        .btn-edit:hover {
+            background-color: #5C6BC0;
+        }
+
+        .btn-delete:hover {
+            background-color: #D32F2F;
         }
     </style>
-
-    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js" defer></script>
-    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js" defer></script>
-    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js" defer></script>
-    <script src="auth-manager.js" defer></script>
-    <script src="index.js" defer></script>
 </head>
 <body>
-    <!-- 進度條 -->
     <div id="progress-bar"></div>
+    <div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 10002;"></div>
+    <div id="auto-save-indicator" class="auto-save-indicator">已自動儲存</div>
+    <div id="keyboard-hint" class="keyboard-hint">按 ? 查看快捷鍵</div>
 
-    <!-- 自動儲存指示器 -->
-    <div class="auto-save-indicator" id="auto-save-indicator">
-        ✓ 已自動儲存
+    <div id="loading-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9998; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.5s;">
+        <div style="color: white; font-size: 24px; text-align: center;">
+            <p>載入中...</p>
+            <div style="border: 5px solid #f3f3f3; border-top: 5px solid #A1887F; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 20px auto;"></div>
+        </div>
     </div>
 
-    <!-- 鍵盤快捷鍵提示 -->
-    <div class="keyboard-hint" id="keyboard-hint">
-        按 <kbd>?</kbd> 查看快捷鍵
-    </div>
-
-    <div id="login-view" style="padding: 20px; text-align: center; margin-top: 20vh;">
+    <div id="login-view" class="is-hidden">
         <h1>Boyd Vocabulary</h1>
-        <p style="color: #666;">您的個人化單字學習助理</p>
-        <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 15px; align-items: center;">
-            <button id="google-signin-btn" class="button" style="width: 250px;">使用 Google 登入</button>
-            <button id="guest-mode-btn" class="button" style="width: 250px; background-color: #6c757d;">以訪客模式繼續</button>
+        <div style="text-align: center; margin-top: 100px;">
+            <button id="google-signin-btn" class="button" style="background-color: #4285F4;">Google 登入</button>
+            <button id="guest-mode-btn" class="button" style="background-color: #6c757d; margin-top: 20px;">訪客模式</button>
         </div>
     </div>
 
     <div id="app-container" class="is-hidden">
         <div id="user-status-header">
-            <span id="user-info"></span>
+            <span id="user-info">載入中...</span>
             <div class="header-buttons">
-                <button id="theme-toggle-btn" class="button" title="切換深色模式">🌙</button>
+                <button id="theme-toggle-btn" class="button">🌙</button>
+                <button id="edit-storage-btn" class="button">編輯</button>
                 <button id="sign-out-btn" class="button is-hidden">登出</button>
-                <button id="sign-in-from-guest-btn" class="button is-hidden">登入以同步資料</button>
+                <button id="sign-in-from-guest-btn" class="button is-hidden">登入</button>
             </div>
         </div>
 
-        <div id="loading-overlay">
-            <div class="loading-spinner"></div>
-            <p class="loading-text">資料載入中,請稍候...</p>
-        </div>
+        <h1>Boyd's Vocabulary Bank</h1>
+        <div id="breadcrumb-nav"></div>
 
-        <div id="notification-container"></div>
-        
-        <!-- 麵包屑導航 -->
-        <nav id="breadcrumb-nav"></nav>
-        
-        <h1>Boyd Vocabulary</h1>
         <div id="mainPageContainer">
-            <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
+            <div style="text-align: center; margin: 20px 0;">
                 <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="輸入單字搜尋..." style="padding: 8px; width: 200px;">
+                    <input type="text" id="searchInput" placeholder="輸入單字搜尋..." onkeyup="filterWords()" style="font-size: 16px; padding: 10px; width: 250px;">
                     <span class="search-count" id="search-count" style="display: none;"></span>
                     <button class="search-clear-btn" id="search-clear-btn" title="清除搜尋">×</button>
-                    <button class="button" style="width:auto; display:inline-block; padding:8px 15px; margin-left: 5px;" onclick="openEditModal(null)">+</button>
                 </div>
+                <div id="searchResults" style="max-height: 200px; overflow-y: auto; margin-top: 10px; text-align: left; margin-left: auto; margin-right: auto; max-width: 300px;"></div>
             </div>
-            <div class="button-container" style="text-align: center; margin-top: 20px;">
-                <button id="wordPageBtn" class="button">單字頁面</button>
-                <button id="wordQuizBtn" class="button" onclick="window.location.href='quiz.html?show=categories&from=index'">單字測驗</button>
+
+            <div style="text-align: center; margin: 20px 0;">
                 <button id="sentencePageBtn" class="button">句子頁面</button>
                 <button id="startQuizBtn" class="button">句子測驗</button>
             </div>
@@ -372,19 +526,6 @@
                     <button id="autoPlayDetailsBtn" class="button" onclick="toggleAutoPlay()">內文自動播放</button>
                 </div>
 
-                <!-- 播放速度控制 -->
-                <div class="playback-speed-control">
-                    <label for="playback-speed">播放速度:</label>
-                    <select id="playback-speed">
-                        <option value="0.5">0.5x</option>
-                        <option value="0.75">0.75x</option>
-                        <option value="1" selected>1x</option>
-                        <option value="1.25">1.25x</option>
-                        <option value="1.5">1.5x</option>
-                        <option value="2">2x</option>
-                    </select>
-                </div>
-
                 <div id="phoneticContainer"></div>
                 <div id="chineseContainer"></div>
                 <div id="meaningContainer"></div>
@@ -417,6 +558,12 @@
                             <path d="M3 15h18M4 10h16M10 3v4M14 3v4M8 21v-4M12 21v-4M16 21v-4"/>
                         </svg>
                     </button>
+                    <button id="highlight-mode-btn" class="button" title="畫重點模式">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 11-6 6v3h9l3-3"/>
+                            <path d="m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4"/>
+                        </svg>
+                    </button>
                 </div>
                 <div id="searchInDetails" style="text-align: center; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
                     <div class="search-container">
@@ -430,7 +577,7 @@
                 <div id="searchResultsDetails" style="max-height: 200px; overflow-y: auto; text-align: left;"></div>
 
                 <div id="noteContainer">
-                    <textarea id="wordNote" placeholder="輸入筆記..." style="width: 100%; height: 60px;"></textarea>
+                    <textarea id="wordNote" placeholder="輸入備註..." style="width: 100%; height: 60px;"></textarea>
                     <p id="savedNote"></p>
                 </div>
 
@@ -442,6 +589,78 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- 畫重點模式容器 -->
+    <div id="highlight-mode-container">
+        <div class="highlight-mode-header">
+            <div class="highlight-mode-title">畫重點模式</div>
+            <button class="button" id="exit-highlight-mode-btn" style="width: auto; height: 35px; padding: 0 15px;">返回</button>
+        </div>
+        
+        <div style="padding: 10px 15px;">
+            <div class="audio-controls-wrapper">
+                <div class="audio-controls">
+                    <button class="audio-btn" id="highlight-play-btn">
+                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" 
+                             alt="Play" width="24" height="24" />
+                    </button>
+                    <button class="audio-btn" onclick="adjustAudioTime(-5)">
+                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg" 
+                             alt="Rewind" width="24" height="24" />
+                    </button>
+                    <button class="audio-btn" id="highlight-pause-btn" onclick="togglePauseAudio(this)">
+                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" 
+                             alt="Pause" width="24" height="24" />
+                    </button>
+                    <button class="audio-btn" onclick="adjustAudioTime(5)">
+                        <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/fast-forward.svg" 
+                             alt="Fast Forward" width="24" height="24" />
+                    </button>
+                </div>
+            </div>
+
+            <div class="button-container" style="margin-top: 10px;">
+                <button id="highlight-timestamp-btn" class="button" style="display: none;" title="Toggle Timestamp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-toggle-ts">
+                        <path d="M3 15h18M4 10h16M10 3v4M14 3v4M8 21v-4M12 21v-4M16 21v-4"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="highlight-meaning-container"></div>
+    </div>
+
+    <!-- Storage 編輯器 Modal -->
+    <div id="storage-editor-modal">
+        <div class="storage-editor-content">
+            <div class="storage-editor-header">
+                <h2>LocalStorage 編輯器</h2>
+                <button class="button" id="close-storage-editor-btn" style="width: auto; height: 35px; padding: 0 15px;">關閉</button>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <button class="button" onclick="exportAllData()" style="width: auto; padding: 0 20px; margin: 5px;">完整匯出</button>
+                <button class="button" onclick="clearAllStorageData()" style="width: auto; padding: 0 20px; margin: 5px; background-color: #EF5350;">清空全部資料</button>
+            </div>
+
+            <div class="storage-editor-tabs">
+                <button class="storage-tab active" data-tab="notes">備註 (<span id="notes-count">0</span>)</button>
+                <button class="storage-tab" data-tab="custom">自訂單字 (<span id="custom-count">0</span>)</button>
+                <button class="storage-tab" data-tab="highlighted">畫重點 (<span id="highlighted-count">0</span>)</button>
+                <button class="storage-tab" data-tab="checked">Checked (<span id="checked-count">0</span>)</button>
+                <button class="storage-tab" data-tab="important">重要 (<span id="important-count">0</span>)</button>
+                <button class="storage-tab" data-tab="wrong">錯誤 (<span id="wrong-count">0</span>)</button>
+            </div>
+
+            <div id="tab-notes" class="storage-tab-content active"></div>
+            <div id="tab-custom" class="storage-tab-content"></div>
+            <div id="tab-highlighted" class="storage-tab-content"></div>
+            <div id="tab-checked" class="storage-tab-content"></div>
+            <div id="tab-important" class="storage-tab-content"></div>
+            <div id="tab-wrong" class="storage-tab-content"></div>
         </div>
     </div>
 
@@ -518,5 +737,12 @@
             </div>
         </div>
     </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <script src="auth-manager.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
