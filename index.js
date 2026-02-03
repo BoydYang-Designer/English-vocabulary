@@ -2210,10 +2210,45 @@ function openEditModal(wordObj = null) {
         document.getElementById('edit-meaning').value = wordObj["English meaning"] || "";
         
         let cats = wordObj["分類"] || [];
-        document.getElementById('edit-domain').value = cats[0] || "";
-        document.getElementById('edit-topic').value = cats[1] || "";
-        // [新增] 讀取第三個分類 (來源)
-        document.getElementById('edit-source').value = cats[2] || ""; 
+        
+        // 設定 domain
+        const domainSelect = document.getElementById('edit-domain-select');
+        const domainInput = document.getElementById('edit-domain');
+        if (cats[0]) {
+            domainSelect.value = cats[0];
+            domainInput.value = cats[0];
+            domainInput.style.display = 'none';
+        } else {
+            domainSelect.value = "";
+            domainInput.value = "";
+            domainInput.style.display = 'none';
+        }
+        
+        // 設定 topic
+        const topicSelect = document.getElementById('edit-topic-select');
+        const topicInput = document.getElementById('edit-topic');
+        if (cats[1]) {
+            topicSelect.value = cats[1];
+            topicInput.value = cats[1];
+            topicInput.style.display = 'none';
+        } else {
+            topicSelect.value = "";
+            topicInput.value = "";
+            topicInput.style.display = 'none';
+        }
+        
+        // 設定 source
+        const sourceSelect = document.getElementById('edit-source-select');
+        const sourceInput = document.getElementById('edit-source');
+        if (cats[2]) {
+            sourceSelect.value = cats[2];
+            sourceInput.value = cats[2];
+            sourceInput.style.display = 'none';
+        } else {
+            sourceSelect.value = "";
+            sourceInput.value = "";
+            sourceInput.style.display = 'none';
+        }
         
         document.getElementById('edit-level').value = wordObj["等級"] || "未分類";
         
@@ -2234,10 +2269,20 @@ function openEditModal(wordObj = null) {
         document.getElementById('edit-word').disabled = false;
         document.getElementById('edit-chinese').value = "";
         document.getElementById('edit-meaning').value = "";
+        
+        // 重置所有選單
+        document.getElementById('edit-domain-select').value = "";
         document.getElementById('edit-domain').value = "";
+        document.getElementById('edit-domain').style.display = 'none';
+        
+        document.getElementById('edit-topic-select').value = "";
         document.getElementById('edit-topic').value = "";
-        // [新增] 清空來源欄位
-        document.getElementById('edit-source').value = ""; 
+        document.getElementById('edit-topic').style.display = 'none';
+        
+        document.getElementById('edit-source-select').value = "";
+        document.getElementById('edit-source').value = "";
+        document.getElementById('edit-source').style.display = 'none';
+        
         document.getElementById('edit-level').value = "未分類";
         deleteBtn.style.display = 'none';
     }
@@ -2937,50 +2982,133 @@ function deleteHighlightedWords(word) {
 
 // 填充分類下拉選單
 function populateCategoryDataLists() {
-    if (!wordsData || wordsData.length === 0) return;
+    console.log('🔍 開始填充分類下拉選單...');
+    console.log('wordsData 長度:', wordsData ? wordsData.length : 0);
     
     // 獲取所有現有的分類
     const domains = new Set();
     const topics = new Set();
     const sources = new Set();
     
-    wordsData.forEach(word => {
-        const categories = word["分類"] || [];
-        if (categories[0]) domains.add(categories[0]);
-        if (categories[1]) topics.add(categories[1]);
-        if (categories[2]) sources.add(categories[2]);
-    });
+    // 從 JSON 檔案的 wordsData 中收集分類
+    if (wordsData && wordsData.length > 0) {
+        wordsData.forEach(word => {
+            const categories = word["分類"] || [];
+            if (categories[0]) domains.add(categories[0]);
+            if (categories[1]) topics.add(categories[1]);
+            if (categories[2]) sources.add(categories[2]);
+        });
+    }
     
-    // 填充 domain datalist
-    const domainList = document.getElementById('domain-list');
-    if (domainList) {
-        domainList.innerHTML = '';
+    console.log('從 wordsData 收集到的 domains:', Array.from(domains));
+    console.log('從 wordsData 收集到的 topics:', Array.from(topics));
+    console.log('從 wordsData 收集到的 sources:', Array.from(sources));
+    
+    // 從 localStorage 的自訂單字中收集分類
+    const vocabularyData = window.getVocabularyData();
+    if (vocabularyData && vocabularyData.customWords) {
+        console.log('customWords 數量:', Object.keys(vocabularyData.customWords).length);
+        // customWords 是物件格式: { "Apple": {...}, "Banana": {...} }
+        Object.values(vocabularyData.customWords).forEach(word => {
+            const categories = word["分類"] || [];
+            if (categories[0]) domains.add(categories[0]);
+            if (categories[1]) topics.add(categories[1]);
+            if (categories[2]) sources.add(categories[2]);
+        });
+    }
+    
+    console.log('合併後 domains 總數:', domains.size);
+    console.log('合併後 topics 總數:', topics.size);
+    console.log('合併後 sources 總數:', sources.size);
+    
+    // 填充 domain select
+    const domainSelect = document.getElementById('edit-domain-select');
+    if (domainSelect) {
+        domainSelect.innerHTML = '<option value="">-- 選擇分類 --</option><option value="__custom__">✏️ 手動輸入新分類</option>';
         Array.from(domains).sort().forEach(domain => {
             const option = document.createElement('option');
             option.value = domain;
-            domainList.appendChild(option);
+            option.textContent = domain;
+            domainSelect.appendChild(option);
         });
+        console.log('✅ domain-select 填充完成,選項數:', domainSelect.children.length);
     }
     
-    // 填充 topic datalist
-    const topicList = document.getElementById('topic-list');
-    if (topicList) {
-        topicList.innerHTML = '';
+    // 填充 topic select
+    const topicSelect = document.getElementById('edit-topic-select');
+    if (topicSelect) {
+        topicSelect.innerHTML = '<option value="">-- 選擇主題 --</option><option value="__custom__">✏️ 手動輸入新主題</option>';
         Array.from(topics).sort().forEach(topic => {
             const option = document.createElement('option');
             option.value = topic;
-            topicList.appendChild(option);
+            option.textContent = topic;
+            topicSelect.appendChild(option);
         });
+        console.log('✅ topic-select 填充完成,選項數:', topicSelect.children.length);
     }
     
-    // 填充 source datalist
-    const sourceList = document.getElementById('source-list');
-    if (sourceList) {
-        sourceList.innerHTML = '';
+    // 填充 source select
+    const sourceSelect = document.getElementById('edit-source-select');
+    if (sourceSelect) {
+        sourceSelect.innerHTML = '<option value="">-- 選擇來源 --</option><option value="__custom__">✏️ 手動輸入新來源</option>';
         Array.from(sources).sort().forEach(source => {
             const option = document.createElement('option');
             option.value = source;
-            sourceList.appendChild(option);
+            option.textContent = source;
+            sourceSelect.appendChild(option);
+        });
+        console.log('✅ source-select 填充完成,選項數:', sourceSelect.children.length);
+    }
+    
+    // 設置選單事件監聽器
+    setupCategorySelectListeners();
+}
+
+// 設置分類選單的事件監聽器
+function setupCategorySelectListeners() {
+    const domainSelect = document.getElementById('edit-domain-select');
+    const domainInput = document.getElementById('edit-domain');
+    const topicSelect = document.getElementById('edit-topic-select');
+    const topicInput = document.getElementById('edit-topic');
+    const sourceSelect = document.getElementById('edit-source-select');
+    const sourceInput = document.getElementById('edit-source');
+    
+    if (domainSelect && domainInput) {
+        domainSelect.addEventListener('change', function() {
+            if (this.value === '__custom__') {
+                domainInput.style.display = 'block';
+                domainInput.value = '';
+                domainInput.focus();
+            } else {
+                domainInput.style.display = 'none';
+                domainInput.value = this.value;
+            }
+        });
+    }
+    
+    if (topicSelect && topicInput) {
+        topicSelect.addEventListener('change', function() {
+            if (this.value === '__custom__') {
+                topicInput.style.display = 'block';
+                topicInput.value = '';
+                topicInput.focus();
+            } else {
+                topicInput.style.display = 'none';
+                topicInput.value = this.value;
+            }
+        });
+    }
+    
+    if (sourceSelect && sourceInput) {
+        sourceSelect.addEventListener('change', function() {
+            if (this.value === '__custom__') {
+                sourceInput.style.display = 'block';
+                sourceInput.value = '';
+                sourceInput.focus();
+            } else {
+                sourceInput.style.display = 'none';
+                sourceInput.value = this.value;
+            }
         });
     }
 }
@@ -2998,4 +3126,3 @@ function openAddWordModal(prefilledWord = '') {
         }
     }
 }
-
