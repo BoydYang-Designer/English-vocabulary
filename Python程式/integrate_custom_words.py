@@ -3,6 +3,7 @@
 """
 整合自訂單字到 Excel 和 JSON
 將匯出的 JSON 中的自訂單字整合到 Excel 檔案中,並更新對應的 JSON 檔案
+修復版: 支援多種 JSON 格式
 """
 
 import json
@@ -30,20 +31,52 @@ class WordIntegrator:
         return filename
     
     def load_json_export(self, json_path):
-        """載入匯出的 JSON 檔案"""
+        """載入匯出的 JSON 檔案 - 支援多種格式"""
         try:
             with open(json_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
-            custom_words = data.get('自訂單字 (11)', {})
+            # 嘗試多種可能的鍵名
+            custom_words = None
+            found_key = None
+            
+            # 可能的鍵名列表
+            possible_keys = [
+                'customWords',           # 新格式
+                '自訂單字 (11)',         # 舊格式
+                'custom_words',          # 底線格式
+                'Custom Words'           # 空格格式
+            ]
+            
+            # 嘗試找到自訂單字
+            for key in possible_keys:
+                if key in data:
+                    custom_words = data[key]
+                    found_key = key
+                    break
+            
+            # 如果都沒找到,檢查是否整個 JSON 就是單字字典
+            if custom_words is None:
+                # 檢查是否有單字物件的特徵
+                if isinstance(data, dict) and len(data) > 0:
+                    first_value = next(iter(data.values()))
+                    if isinstance(first_value, dict) and 'Words' in first_value:
+                        custom_words = data
+                        found_key = 'root'
+            
             if not custom_words:
-                messagebox.showwarning("警告", "JSON 檔案中沒有找到自訂單字!")
+                messagebox.showwarning(
+                    "警告", 
+                    f"JSON 檔案中沒有找到自訂單字!\n\n嘗試的鍵名: {', '.join(possible_keys)}\n\nJSON 結構: {list(data.keys())}"
+                )
                 return None
             
-            print(f"✅ 成功載入 JSON,找到 {len(custom_words)} 個自訂單字")
+            print(f"✅ 成功載入 JSON (鍵名: {found_key}),找到 {len(custom_words)} 個自訂單字")
             return custom_words
         except Exception as e:
             messagebox.showerror("錯誤", f"載入 JSON 失敗:\n{str(e)}")
+            import traceback
+            traceback.print_exc()
             return None
     
     def find_word_row(self, ws, word_text):
@@ -51,7 +84,7 @@ class WordIntegrator:
         # 單字在 F 欄
         for row in range(2, ws.max_row + 1):
             cell_value = ws[f'F{row}'].value
-            if cell_value and cell_value.strip() == word_text.strip():
+            if cell_value and cell_value.strip().lower() == word_text.strip().lower():
                 return row
         return None
     
@@ -125,7 +158,7 @@ class WordIntegrator:
         ws[f'D{row}'] = categories[1] if len(categories) > 1 else ''  # Topic
         ws[f'E{row}'] = categories[2] if len(categories) > 2 else ''  # Source
         
-        # 更新 HYPERLINK 公式 (K, L 欄) - 使用正確的 Excel 公式格式
+        # 更新 HYPERLINK 公式 (K, L 欄)
         word_text = word_obj.get('Words', word_obj.get('word', word_obj.get('單字', '')))
         if word_text:
             # K 欄: =HYPERLINK(F2 & " - sentence.mp3", F2)
@@ -156,6 +189,10 @@ class WordIntegrator:
             ws = wb.active
             
             for word_text, word_obj in custom_words.items():
+                # 確保 word_obj 有 Words 欄位
+                if 'Words' not in word_obj:
+                    word_obj['Words'] = word_text
+                
                 # 尋找單字是否已存在
                 existing_row = self.find_word_row(ws, word_text)
                 
@@ -177,6 +214,8 @@ class WordIntegrator:
             return True
         except Exception as e:
             messagebox.showerror("錯誤", f"更新 Excel 失敗:\n{str(e)}")
+            import traceback
+            traceback.print_exc()
             return False
     
     def excel_to_json(self, excel_path):
@@ -228,17 +267,21 @@ class WordIntegrator:
             return json_data
         except Exception as e:
             messagebox.showerror("錯誤", f"轉換 JSON 失敗:\n{str(e)}")
+            import traceback
+            traceback.print_exc()
             return None
     
     def save_json(self, json_data, output_path):
         """儲存 JSON 檔案"""
         try:
             with open(output_path, 'w', encoding='utf-8') as f:
-                json.dump(json_data, f, ensure_ascii=False, indent=4)
+                json.dump(json_data, f, ensure_ascii=False, indent=2)
             print(f"💾 JSON 已儲存: {output_path}")
             return True
         except Exception as e:
             messagebox.showerror("錯誤", f"儲存 JSON 失敗:\n{str(e)}")
+            import traceback
+            traceback.print_exc()
             return False
     
     def show_summary(self):
@@ -259,6 +302,9 @@ class WordIntegrator:
                 summary += f"  - {word}\n"
             summary += "\n"
         
+        if not self.modified_words and not self.new_words:
+            summary += "ℹ️  沒有任何變更\n\n"
+        
         summary += "=" * 50 + "\n"
         
         print(summary)
@@ -267,7 +313,7 @@ class WordIntegrator:
     def run(self):
         """執行主流程"""
         print("=" * 60)
-        print("🚀 單字整合工具")
+        print("🚀 單字整合工具 (修復版)")
         print("=" * 60)
         
         # 1. 選擇匯出的 JSON 檔案
