@@ -824,6 +824,32 @@ h1 {
 }
 
 /* 分類相關 */
+
+/* index.css */
+
+/* 已編輯/自訂單字的標籤樣式 */
+.category-tag.edited-tag {
+    background-color: #FFECB3; /* 淺琥珀色背景 */
+    color: #5D4037;           /* 深棕色文字 */
+    border: 1px solid #FFCA28; /* 深黃色邊框 */
+    font-weight: bold;
+}
+
+/* 深色模式適配 */
+[data-theme="dark"] .category-tag.edited-tag {
+    background-color: #5D4037;
+    color: #FFECB3;
+    border-color: #8D6E63;
+}
+
+/* 在列表顯示的小圖示樣式 */
+.edited-icon {
+    font-size: 14px;
+    color: var(--accent-color);
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
 .category-title {
     text-align: center;
     font-size: 20px;

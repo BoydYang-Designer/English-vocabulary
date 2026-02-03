@@ -866,6 +866,8 @@ function displayWordList(words, title) {
             let wordText = word.Words || word.word || word["單字"];
             let isChecked = (vocabularyData.checkedWords || []).includes(wordText);
             let isImportant = (vocabularyData.importantWords || []).includes(wordText);
+            let isCustom = vocabularyData.customWords && vocabularyData.customWords[wordText];
+            let editedIconHtml = isCustom ? `<span class="edited-icon" title="已編輯/自訂">✎</span>` : '';
             let iconSrc = isChecked ? "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/checked-icon.svg" : "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/check-icon.svg";
 
             let item = document.createElement('div');
@@ -874,7 +876,10 @@ function displayWordList(words, title) {
 
             item.innerHTML = `
                 <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${wordText}", this)' ${isImportant ? "checked" : ""}>
-                <p class='word-item' data-word="${wordText}">${wordText}</p>
+                <p class='word-item' data-word="${wordText}">
+                    ${wordText}
+                    ${editedIconHtml} 
+                </p>
                 <button class='play-word-btn' onclick='playSingleWord(event, "${wordText}")'>
                     <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg" alt="Play">
                 </button>
@@ -1580,6 +1585,8 @@ function showDetails(word) {
     const vocabularyData = window.getVocabularyData();
     const isImportant = (vocabularyData.importantWords || []).includes(word.Words);
     
+    const isCustomOrEdited = vocabularyData.customWords && vocabularyData.customWords[word.Words];
+
     let phonetics = `<div class="phonetics-container" style="display: flex; align-items: center; gap: 10px;">
         <input type='checkbox' class='important-checkbox' onchange='toggleImportant("${word.Words}", this)' ${isImportant ? "checked" : ""}>
         <div id="wordTitle" style="font-size: 20px; font-weight: bold;">${word.Words}</div>
@@ -1591,6 +1598,10 @@ function showDetails(word) {
     let displayTagsHTML = '';
     const level = word["等級"];
     const categories = word["分類"];
+
+    if (isCustomOrEdited) {
+        displayTagsHTML += `<span class="category-tag edited-tag">✎ 已編輯</span>`;
+    }
     if (level) displayTagsHTML += `<span class="level-tag">${level}</span>`;
     if (categories && Array.isArray(categories) && categories.length > 0) {
         displayTagsHTML += categories.map(cat => `<span class="category-tag">${cat}</span>`).join('');
