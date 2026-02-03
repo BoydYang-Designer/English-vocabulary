@@ -670,7 +670,11 @@
     <div id="wordEditorModal" class="modal is-hidden">
         <div class="modal-content">
             <span class="close-modal" onclick="closeEditModal()">&times;</span>
-            <h2 id="modalTitle">編輯單字</h2>
+            <h2 id="modalTitle">編輯單字
+                <span id="auto-fill-loader" style="display: none; font-size: 14px; color: #666; margin-left: 10px;">
+                    <span class="spinner-small"></span> 自動填充中...
+                </span>
+            </h2>
             
             <div class="form-group">
                 <label>單字 (Word)*</label>

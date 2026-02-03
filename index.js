@@ -2565,22 +2565,55 @@ function restoreHighlightedWords(container) {
 }
 
 function playWordPronunciation(word) {
-    const audioUrl = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word)}.mp3`;
-    const audio = new Audio(audioUrl);
+    // 先嘗試小寫的 MP3，如果失敗再嘗試原始大小寫
+    const lowerCaseWord = word.toLowerCase();
+    const audioUrlLower = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(lowerCaseWord)}.mp3`;
+    const audio = new Audio(audioUrlLower);
     
     audio.play().catch(error => {
-        // 如果 MP3 不存在,使用瀏覽器的語音合成
-        console.log('MP3 not found, using Web Speech API');
-        useBrowserSpeech(word);
+        // 如果小寫失敗，嘗試原始大小寫
+        console.log('Lowercase MP3 not found, trying original case');
+        const audioUrlOriginal = `https://github.com/BoydYang-Designer/English-vocabulary/raw/main/audio_files/${encodeURIComponent(word)}.mp3`;
+        const audioOriginal = new Audio(audioUrlOriginal);
+        
+        audioOriginal.play().catch(error2 => {
+            // 如果 MP3 都不存在,使用瀏覽器的語音合成
+            console.log('MP3 not found, using Web Speech API');
+            useBrowserSpeech(word);
+        });
     });
 }
 
 function useBrowserSpeech(word) {
     if ('speechSynthesis' in window) {
+        // 在手機上，需要用戶交互才能觸發 speechSynthesis
+        // 檢查是否已經有語音正在播放
+        if (window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        
         const utterance = new SpeechSynthesisUtterance(word);
         utterance.lang = 'en-US';
-        utterance.rate = 1.0;
-        window.speechSynthesis.speak(utterance);
+        utterance.rate = 0.9; // 稍微慢一點，更清楚
+        utterance.pitch = 1.0;
+        utterance.volume = 1.0;
+        
+        // 添加錯誤處理
+        utterance.onerror = function(event) {
+            console.error('Speech synthesis error:', event);
+            showNotification('⚠️ 語音播放失敗', 'error');
+        };
+        
+        // 確保在移動設備上也能工作
+        utterance.onend = function() {
+            console.log('Speech finished');
+        };
+        
+        // 使用 setTimeout 確保在用戶交互上下文中執行
+        setTimeout(() => {
+            window.speechSynthesis.speak(utterance);
+        }, 100);
+        
     } else {
         showNotification('⚠️ 此瀏覽器不支援語音功能', 'error');
     }
@@ -3130,15 +3163,388 @@ function setupCategorySelectListeners() {
 function openAddWordModal(prefilledWord = '') {
     openEditModal(null); // 開啟空白的編輯 Modal
     
-    // 如果有預填的單字,填入
+    // 如果有預填的單字,填入並自動獲取資訊
     if (prefilledWord) {
         const wordInput = document.getElementById('edit-word');
         if (wordInput) {
             wordInput.value = prefilledWord;
             wordInput.disabled = false; // 確保可以編輯
         }
+        
+        // 自動填充單字資訊
+        autoFillWordInformation(prefilledWord);
     }
 }
+
+// ========== 自動填充單字資訊 ==========
+
+/**
+ * 自動填充單字資訊
+ * 使用 Free Dictionary API 獲取英文定義
+ * 使用簡單的等級判斷邏輯
+ */
+async function autoFillWordInformation(word) {
+    if (!word || word.trim() === '') return;
+    
+    const cleanWord = word.trim().toLowerCase();
+    
+    // 顯示載入指示器
+    const loader = document.getElementById('auto-fill-loader');
+    if (loader) {
+        loader.style.display = 'inline-block';
+    }
+    
+    // 顯示載入提示
+    showNotification('🔍 正在查詢單字資訊...', 'info');
+    
+    try {
+        // 1. 獲取英文定義和詳細資訊
+        const wordData = await fetchWordDefinition(cleanWord);
+        
+        if (wordData) {
+            // 填入英文定義
+            if (wordData.meaning) {
+                document.getElementById('edit-meaning').value = wordData.meaning;
+            }
+            
+            // 填入中文翻譯
+            if (wordData.chineseTranslation) {
+                document.getElementById('edit-chinese').value = wordData.chineseTranslation;
+            }
+            
+            // 判斷並填入等級
+            const level = determineWordLevel(cleanWord, wordData);
+            document.getElementById('edit-level').value = level;
+            
+            // 嘗試自動分類
+            const category = categorizeWord(wordData);
+            if (category.domain) {
+                const domainSelect = document.getElementById('edit-domain-select');
+                const domainInput = document.getElementById('edit-domain');
+                
+                // 檢查是否存在於下拉選單中
+                const optionExists = Array.from(domainSelect.options).some(
+                    option => option.value === category.domain
+                );
+                
+                if (optionExists) {
+                    domainSelect.value = category.domain;
+                    domainInput.value = category.domain;
+                } else {
+                    // 如果不存在,使用自訂輸入
+                    domainSelect.value = "custom";
+                    domainInput.value = category.domain;
+                    domainInput.style.display = 'block';
+                }
+            }
+            
+            if (category.topic) {
+                const topicSelect = document.getElementById('edit-topic-select');
+                const topicInput = document.getElementById('edit-topic');
+                
+                const optionExists = Array.from(topicSelect.options).some(
+                    option => option.value === category.topic
+                );
+                
+                if (optionExists) {
+                    topicSelect.value = category.topic;
+                    topicInput.value = category.topic;
+                } else {
+                    topicSelect.value = "custom";
+                    topicInput.value = category.topic;
+                    topicInput.style.display = 'block';
+                }
+            }
+            
+            showNotification('✅ 已自動填入單字資訊！', 'success');
+        } else {
+            showNotification('⚠️ 無法找到此單字的資訊,請手動填寫', 'warning');
+        }
+    } catch (error) {
+        console.error('獲取單字資訊時發生錯誤:', error);
+        showNotification('❌ 查詢失敗,請手動填寫', 'error');
+    } finally {
+        // 隱藏載入指示器
+        if (loader) {
+            loader.style.display = 'none';
+        }
+    }
+}
+
+/**
+ * 從 Free Dictionary API 獲取單字定義
+ */
+async function fetchWordDefinition(word) {
+    try {
+        // 使用 Free Dictionary API
+        const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+        
+        if (!response.ok) {
+            return null;
+        }
+        
+        const data = await response.json();
+        
+        if (!data || data.length === 0) {
+            return null;
+        }
+        
+        const entry = data[0];
+        const meanings = entry.meanings || [];
+        
+        // 提取定義
+        let meaningText = '';
+        let partOfSpeech = '';
+        
+        if (meanings.length > 0) {
+            partOfSpeech = meanings[0].partOfSpeech || '';
+            const definitions = meanings[0].definitions || [];
+            
+            if (definitions.length > 0) {
+                // 格式化定義
+                meaningText = formatDefinition(word, partOfSpeech, meanings);
+            }
+        }
+        
+        // 獲取中文翻譯
+        const chineseTranslation = await fetchChineseTranslation(word, partOfSpeech);
+        
+        return {
+            word: word,
+            partOfSpeech: partOfSpeech,
+            meaning: meaningText,
+            chineseTranslation: chineseTranslation,
+            rawData: entry
+        };
+    } catch (error) {
+        console.error('API 查詢錯誤:', error);
+        return null;
+    }
+}
+
+/**
+ * 格式化英文定義
+ */
+function formatDefinition(word, partOfSpeech, meanings) {
+    let formatted = '';
+    
+    // 添加詞性說明
+    if (partOfSpeech) {
+        const posMap = {
+            'noun': 'Noun',
+            'verb': 'Verb',
+            'adjective': 'Adjective',
+            'adverb': 'Adverb',
+            'pronoun': 'Pronoun',
+            'preposition': 'Preposition',
+            'conjunction': 'Conjunction',
+            'interjection': 'Interjection'
+        };
+        const posText = posMap[partOfSpeech.toLowerCase()] || partOfSpeech;
+        formatted += `${word.charAt(0).toUpperCase() + word.slice(1)} as a ${posText}:\n\n`;
+    }
+    
+    // 添加定義 (最多3個)
+    meanings.slice(0, 2).forEach((meaning, index) => {
+        const pos = meaning.partOfSpeech;
+        const definitions = meaning.definitions.slice(0, 2); // 每個詞性最多2個定義
+        
+        if (meanings.length > 1) {
+            formatted += `${index + 1}. As a ${pos}:\n`;
+        }
+        
+        definitions.forEach((def, defIndex) => {
+            formatted += `${meanings.length > 1 ? '   ' : ''}${defIndex + 1}. ${def.definition}\n`;
+            
+            // 添加例句
+            if (def.example) {
+                formatted += `${meanings.length > 1 ? '   ' : ''}   E.g. ${def.example}\n`;
+            }
+        });
+        
+        formatted += '\n';
+    });
+    
+    return formatted.trim();
+}
+
+/**
+ * 獲取中文翻譯
+ * 使用 MyMemory Translation API (免費，無需 API key)
+ */
+async function fetchChineseTranslation(word, partOfSpeech) {
+    try {
+        const posMap = {
+            'noun': 'n.',
+            'verb': 'v.',
+            'adjective': 'adj.',
+            'adverb': 'adv.',
+            'pronoun': 'pron.',
+            'preposition': 'prep.',
+            'conjunction': 'conj.',
+            'interjection': 'interj.'
+        };
+        
+        const posAbbr = posMap[partOfSpeech.toLowerCase()] || '';
+        
+        // 使用 MyMemory Translation API 獲取中文翻譯
+        const apiUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en|zh-TW`;
+        
+        try {
+            const response = await fetch(apiUrl);
+            if (response.ok) {
+                const data = await response.json();
+                
+                if (data && data.responseData && data.responseData.translatedText) {
+                    const translation = data.responseData.translatedText;
+                    
+                    // 如果翻譯成功且不是原文，組合詞性和翻譯
+                    if (translation && translation !== word) {
+                        return posAbbr ? `${posAbbr} ${translation}` : translation;
+                    }
+                }
+            }
+        } catch (apiError) {
+            console.log('MyMemory API 失敗，嘗試使用 LibreTranslate');
+            
+            // 備用方案：使用 LibreTranslate (另一個免費API)
+            try {
+                const libreUrl = 'https://libretranslate.de/translate';
+                const libreResponse = await fetch(libreUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        q: word,
+                        source: 'en',
+                        target: 'zh',
+                        format: 'text'
+                    })
+                });
+                
+                if (libreResponse.ok) {
+                    const libreData = await libreResponse.json();
+                    if (libreData && libreData.translatedText) {
+                        const translation = libreData.translatedText;
+                        if (translation && translation !== word) {
+                            return posAbbr ? `${posAbbr} ${translation}` : translation;
+                        }
+                    }
+                }
+            } catch (libreError) {
+                console.error('LibreTranslate API 也失敗:', libreError);
+            }
+        }
+        
+        // 如果所有翻譯API都失敗，至少返回詞性
+        return posAbbr ? `${posAbbr} ` : '';
+        
+    } catch (error) {
+        console.error('翻譯查詢錯誤:', error);
+        return '';
+    }
+}
+
+/**
+ * 判斷單字等級
+ * 基於單字長度、複雜度等因素
+ */
+function determineWordLevel(word, wordData) {
+    const length = word.length;
+    
+    // 常見單字列表 (A1-A2)
+    const basicWords = ['the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'I',
+        'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at',
+        'this', 'but', 'his', 'by', 'from', 'they', 'we', 'say', 'her', 'she',
+        'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'what',
+        'so', 'up', 'out', 'if', 'about', 'who', 'get', 'which', 'go', 'me',
+        'when', 'make', 'can', 'like', 'time', 'no', 'just', 'him', 'know', 'take',
+        'people', 'into', 'year', 'your', 'good', 'some', 'could', 'them', 'see', 'other',
+        'than', 'then', 'now', 'look', 'only', 'come', 'its', 'over', 'think', 'also',
+        'back', 'after', 'use', 'two', 'how', 'our', 'work', 'first', 'well', 'way',
+        'even', 'new', 'want', 'because', 'any', 'these', 'give', 'day', 'most', 'us',
+        'cat', 'dog', 'house', 'school', 'book', 'water', 'food', 'family', 'friend', 'happy'];
+    
+    // 檢查是否為基礎單字
+    if (basicWords.includes(word.toLowerCase())) {
+        return 'A1';
+    }
+    
+    // 根據長度和複雜度判斷
+    if (length <= 4) {
+        return 'A2';
+    } else if (length <= 6) {
+        return 'B1';
+    } else if (length <= 8) {
+        return 'B2';
+    } else if (length <= 10) {
+        return 'C1';
+    } else {
+        return 'C2';
+    }
+}
+
+/**
+ * 嘗試自動分類單字
+ */
+function categorizeWord(wordData) {
+    const category = {
+        domain: '',
+        topic: ''
+    };
+    
+    if (!wordData || !wordData.rawData) {
+        return category;
+    }
+    
+    const meanings = wordData.rawData.meanings || [];
+    
+    // 根據詞性和定義內容進行簡單分類
+    for (const meaning of meanings) {
+        const partOfSpeech = meaning.partOfSpeech;
+        const definitions = meaning.definitions || [];
+        
+        for (const def of definitions) {
+            const text = (def.definition + ' ' + (def.example || '')).toLowerCase();
+            
+            // 科技相關
+            if (text.includes('computer') || text.includes('technology') || 
+                text.includes('software') || text.includes('digital')) {
+                category.domain = 'Technology & Innovation（科技與創新）';
+                category.topic = 'Computer Science';
+                return category;
+            }
+            
+            // 商業相關
+            if (text.includes('business') || text.includes('company') || 
+                text.includes('market') || text.includes('economy')) {
+                category.domain = 'Business & Economics（商業與經濟）';
+                category.topic = 'Business';
+                return category;
+            }
+            
+            // 科學相關
+            if (text.includes('science') || text.includes('research') || 
+                text.includes('experiment') || text.includes('theory')) {
+                category.domain = 'Science & Research（科學與研究）';
+                category.topic = 'General Science';
+                return category;
+            }
+            
+            // 藝術相關
+            if (text.includes('art') || text.includes('design') || 
+                text.includes('creative') || text.includes('aesthetic')) {
+                category.domain = 'Arts, Design & Aesthetics（藝術與設計）';
+                category.topic = 'Arts';
+                return category;
+            }
+        }
+    }
+    
+    return category;
+}
+
 
 // ========== 檢測已整合的單字 ==========
 
