@@ -1,4 +1,294 @@
-// index.js
+// index.js - 整合優化版本
+
+// ========== 優化功能：全域變數 ==========
+window.appEnhancements = {
+    searchDebounceTimer: null,
+    autoSaveTimer: null,
+    currentTheme: localStorage.getItem('theme') || 'light',
+    breadcrumbPath: [],
+    audioPlayers: new Set()
+};
+
+// ========== 優化功能：記憶體洩漏防護 ==========
+function registerAudioPlayer(audio) {
+    window.appEnhancements.audioPlayers.add(audio);
+    return audio;
+}
+
+function cleanupAudioPlayers() {
+    window.appEnhancements.audioPlayers.forEach(audio => {
+        try {
+            audio.pause();
+            audio.src = '';
+            audio.load();
+        } catch(e) {
+            console.warn('清理音訊播放器時發生錯誤:', e);
+        }
+    });
+    window.appEnhancements.audioPlayers.clear();
+}
+
+// ========== 優化功能：防抖函數 ==========
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// ========== 優化功能：深色模式 ==========
+function initTheme() {
+    document.documentElement.setAttribute('data-theme', window.appEnhancements.currentTheme);
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    if (themeBtn) {
+        themeBtn.textContent = window.appEnhancements.currentTheme === 'dark' ? '☀️' : '🌙';
+        themeBtn.addEventListener('click', toggleTheme);
+    }
+}
+
+function toggleTheme() {
+    window.appEnhancements.currentTheme = window.appEnhancements.currentTheme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', window.appEnhancements.currentTheme);
+    localStorage.setItem('theme', window.appEnhancements.currentTheme);
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    if (themeBtn) {
+        themeBtn.textContent = window.appEnhancements.currentTheme === 'dark' ? '☀️' : '🌙';
+    }
+    if (typeof showNotification === 'function') {
+        showNotification(`已切換至${window.appEnhancements.currentTheme === 'dark' ? '深色' : '淺色'}模式`, 'success');
+    }
+}
+
+// ========== 優化功能：麵包屑導航 ==========
+function updateBreadcrumb(path) {
+    if (path) {
+        window.appEnhancements.breadcrumbPath = path;
+    }
+    
+    const breadcrumbNav = document.getElementById('breadcrumb-nav');
+    if (!breadcrumbNav) return;
+    
+    if (window.appEnhancements.breadcrumbPath.length === 0) {
+        breadcrumbNav.classList.remove('show');
+        return;
+    }
+    
+    breadcrumbNav.classList.add('show');
+    breadcrumbNav.innerHTML = window.appEnhancements.breadcrumbPath.map((item, index) => {
+        const isLast = index === window.appEnhancements.breadcrumbPath.length - 1;
+        return `<span class="breadcrumb-item" onclick="navigateToBreadcrumb(${index})">${item}</span>${!isLast ? '<span class="breadcrumb-separator">›</span>' : ''}`;
+    }).join('');
+}
+
+function navigateToBreadcrumb(index) {
+    window.appEnhancements.breadcrumbPath = window.appEnhancements.breadcrumbPath.slice(0, index + 1);
+    if (index === 0) {
+        if (typeof backToFirstLayer === 'function') backToFirstLayer();
+    } else if (index === 1) {
+        if (typeof backToWordList === 'function') backToWordList();
+    }
+    updateBreadcrumb();
+}
+
+// ========== 優化功能：進度條 ==========
+function showProgress(percent) {
+    const progressBar = document.getElementById('progress-bar');
+    if (progressBar) {
+        progressBar.style.width = Math.min(100, Math.max(0, percent)) + '%';
+        if (percent >= 100) {
+            setTimeout(() => { progressBar.style.width = '0%'; }, 500);
+        }
+    }
+}
+
+// ========== 優化功能：自動儲存 ==========
+function showAutoSaveIndicator() {
+    const indicator = document.getElementById('auto-save-indicator');
+    if (!indicator) return;
+    
+    indicator.classList.add('show');
+    setTimeout(() => {
+        indicator.classList.remove('show');
+    }, 2000);
+}
+
+function autoSaveNote() {
+    if (window.appEnhancements.autoSaveTimer) {
+        clearTimeout(window.appEnhancements.autoSaveTimer);
+    }
+    window.appEnhancements.autoSaveTimer = setTimeout(() => {
+        if (typeof saveNote === 'function') {
+            saveNote();
+            showAutoSaveIndicator();
+        }
+    }, 2000);
+}
+
+// ========== 優化功能：鍵盤快捷鍵 ==========
+function initKeyboardShortcuts() {
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            e.preventDefault();
+            if (typeof saveNote === 'function') saveNote();
+            return;
+        }
+        if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+            e.preventDefault();
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput && !searchInput.closest('.is-hidden')) {
+                searchInput.focus();
+            }
+            return;
+        }
+        if (e.key === ' ' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+            e.preventDefault();
+            const playBtn = document.getElementById('playAudioBtn');
+            if (playBtn && playBtn.offsetParent !== null) {
+                playBtn.click();
+            }
+            return;
+        }
+        if (e.key === 'ArrowLeft' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+            e.preventDefault();
+            if (typeof adjustAudioTime === 'function') adjustAudioTime(-5);
+            return;
+        }
+        if (e.key === 'ArrowRight' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+            e.preventDefault();
+            if (typeof adjustAudioTime === 'function') adjustAudioTime(5);
+            return;
+        }
+        if (e.key === 'Escape') {
+            e.preventDefault();
+            const wordDetails = document.getElementById('wordDetails');
+            const wordList = document.getElementById('wordList');
+            if (wordDetails && wordDetails.style.display === 'block') {
+                if (typeof backToWordList === 'function') backToWordList();
+            } else if (wordList && wordList.style.display === 'block') {
+                if (typeof backToFirstLayer === 'function') backToFirstLayer();
+            }
+            return;
+        }
+        if (e.key === '?' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+            e.preventDefault();
+            showKeyboardShortcutsModal();
+            return;
+        }
+    });
+    
+    setTimeout(() => {
+        const hint = document.getElementById('keyboard-hint');
+        if (hint) {
+            hint.classList.add('show');
+            setTimeout(() => hint.classList.remove('show'), 3000);
+        }
+    }, 1000);
+}
+
+function showKeyboardShortcutsModal() {
+    const modal = document.getElementById('keyboard-shortcuts-modal');
+    if (modal) modal.classList.remove('is-hidden');
+}
+
+function closeKeyboardShortcutsModal() {
+    const modal = document.getElementById('keyboard-shortcuts-modal');
+    if (modal) modal.classList.add('is-hidden');
+}
+
+// ========== 優化功能：搜尋優化 ==========
+function setupSearchEnhancements() {
+    const searchInput = document.getElementById('searchInput');
+    const searchClearBtn = document.getElementById('search-clear-btn');
+    const searchCount = document.getElementById('search-count');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', () => {
+            if (searchInput.value.length > 0) {
+                if (searchClearBtn) searchClearBtn.style.display = 'block';
+            } else {
+                if (searchClearBtn) searchClearBtn.style.display = 'none';
+                if (searchCount) searchCount.style.display = 'none';
+            }
+        });
+    }
+    
+    if (searchClearBtn) {
+        searchClearBtn.addEventListener('click', () => {
+            if (searchInput) searchInput.value = '';
+            searchClearBtn.style.display = 'none';
+            if (searchCount) searchCount.style.display = 'none';
+            if (typeof filterWords === 'function') filterWords();
+        });
+    }
+    
+    const searchInputDetails = document.getElementById('searchInputDetails');
+    const searchClearBtnDetails = document.getElementById('search-clear-btn-details');
+    const searchCountDetails = document.getElementById('search-count-details');
+    
+    if (searchInputDetails) {
+        searchInputDetails.addEventListener('input', () => {
+            if (searchInputDetails.value.length > 0) {
+                if (searchClearBtnDetails) searchClearBtnDetails.style.display = 'block';
+            } else {
+                if (searchClearBtnDetails) searchClearBtnDetails.style.display = 'none';
+                if (searchCountDetails) searchCountDetails.style.display = 'none';
+            }
+        });
+    }
+    
+    if (searchClearBtnDetails) {
+        searchClearBtnDetails.addEventListener('click', () => {
+            if (searchInputDetails) searchInputDetails.value = '';
+            searchClearBtnDetails.style.display = 'none';
+            if (searchCountDetails) searchCountDetails.style.display = 'none';
+            if (typeof filterWordsInDetails === 'function') filterWordsInDetails();
+        });
+    }
+}
+
+// ========== 優化功能：播放速度控制 ==========
+function initPlaybackSpeed() {
+    const speedControl = document.getElementById('playback-speed');
+    if (speedControl) {
+        speedControl.addEventListener('change', (e) => {
+            const speed = parseFloat(e.target.value);
+            if (window.detailsWordPlayer) window.detailsWordPlayer.playbackRate = speed;
+            if (window.detailsSentencePlayer) window.detailsSentencePlayer.playbackRate = speed;
+            if (window.currentAudio) window.currentAudio.playbackRate = speed;
+            if (typeof showNotification === 'function') {
+                showNotification(`播放速度已設為 ${speed}x`, 'success');
+            }
+        });
+    }
+}
+
+// ========== 優化功能：筆記自動儲存 ==========
+function setupNoteAutoSave() {
+    const noteTextarea = document.getElementById('wordNote');
+    if (noteTextarea) {
+        noteTextarea.addEventListener('input', autoSaveNote);
+    }
+}
+
+// ========== 優化功能：初始化 ==========
+function initEnhancements() {
+    console.log('🚀 初始化優化功能...');
+    initTheme();
+    initKeyboardShortcuts();
+    setupSearchEnhancements();
+    initPlaybackSpeed();
+    setupNoteAutoSave();
+    window.addEventListener('beforeunload', cleanupAudioPlayers);
+    console.log('✅ 優化功能初始化完成!');
+}
+
+// ========== 原始程式碼開始 ==========
+
 
 // 這些是索引頁面邏輯特有的變數
 let wordsData = [];
@@ -171,8 +461,16 @@ const bButton = document.getElementById('bButton');
         button.addEventListener("click", function() {
             this.classList.toggle("active");
             const content = this.nextElementSibling;
+            const section = this.closest('.collapsible-section'); // 新增：獲取分類區域
 
             if (this.classList.contains('active')) {
+                // 新增：滾動到該分類區域
+                if (section) {
+                    setTimeout(() => {
+                        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+                
                 content.style.maxHeight = content.scrollHeight + "px";
                 if (content.scrollHeight > 250) {
                     setTimeout(() => {
@@ -189,6 +487,9 @@ const bButton = document.getElementById('bButton');
     if (toggleTimestampBtn) {
         toggleTimestampBtn.onclick = toggleTimestampMode;
     }
+    
+    // 初始化所有優化功能
+    initEnhancements();
 });
 
 // --- 所有其他來自原始 index.js 的函數都在這裡 ---
@@ -557,6 +858,11 @@ function backToFirstLayer() {
     historyStack = [];
     lastWordListType = "";
     lastWordListValue = "";
+    
+    // 新增：更新麵包屑
+    if (typeof updateBreadcrumb === 'function') {
+        updateBreadcrumb([]);
+    }
 }
 
 function backToWordList() {
@@ -1289,6 +1595,13 @@ function showDetails(word) {
 
     // [優化] 刪除: if (isAutoPlaying && !isPaused) playAudioSequentially(word);
     // 播放邏輯現在由 runDetailsAutoPlayLoop 集中管理
+    
+    // 新增：更新麵包屑
+    if (typeof updateBreadcrumb === 'function') {
+        const wordText = word.Words || word.word || word["單字"];
+        const categoryInfo = lastWordListValue || '單字';
+        updateBreadcrumb(['首頁', categoryInfo, wordText]);
+    }
 }
 
 // [優化] 刪除舊的 playAudioSequentially 函數

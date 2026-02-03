@@ -10,13 +10,241 @@
             overflow-x: hidden;
             width: 100%;
         }
-        /* --- 新增的 CSS 動畫效果 --- */
+        
+        /* 點擊高亮動畫 */
         @keyframes highlight-and-fade {
             from { background-color: #D7CCC8; }
             to { background-color: transparent; }
         }
         .word-click-highlight {
             animation: highlight-and-fade 0.6s ease-out;
+        }
+
+        /* 深色模式變數 */
+        :root {
+            --bg-primary: #FDFBF6;
+            --bg-secondary: #FFFFFF;
+            --bg-tertiary: #FAFAFA;
+            --text-primary: #5D4037;
+            --text-secondary: #795548;
+            --border-color: #EFEBE9;
+            --accent-color: #A1887F;
+            --accent-hover: #8D6E63;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --bg-tertiary: #242424;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --border-color: #404040;
+            --accent-color: #A1887F;
+            --accent-hover: #8D6E63;
+        }
+
+        /* 麵包屑導航 */
+        #breadcrumb-nav {
+            background: var(--bg-secondary);
+            padding: 8px 15px;
+            margin: 0 auto 10px;
+            max-width: 414px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: none;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        #breadcrumb-nav.show {
+            display: block;
+        }
+
+        .breadcrumb-item {
+            display: inline;
+            cursor: pointer;
+            color: var(--accent-color);
+            transition: color 0.2s;
+        }
+
+        .breadcrumb-item:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .breadcrumb-separator {
+            margin: 0 5px;
+            color: var(--text-secondary);
+        }
+
+        /* 進度條 */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(to right, #A1887F, #8D6E63);
+            width: 0%;
+            z-index: 10001;
+            transition: width 0.3s ease;
+        }
+
+        /* 鍵盤快捷鍵提示 */
+        .keyboard-hint {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--bg-secondary);
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            font-size: 12px;
+            color: var(--text-secondary);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+        }
+
+        .keyboard-hint.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 搜尋增強 */
+        .search-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .search-clear-btn {
+            position: absolute;
+            right: 45px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            color: #999;
+            font-size: 18px;
+            display: none;
+        }
+
+        .search-clear-btn:hover {
+            color: #666;
+        }
+
+        .search-count {
+            position: absolute;
+            right: 100px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            color: var(--text-secondary);
+            background: var(--bg-tertiary);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        /* 自動儲存指示器 */
+        .auto-save-indicator {
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            background: #AED581;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 10000;
+        }
+
+        .auto-save-indicator.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 優化的使用者資訊區域 */
+        #user-status-header {
+            background: var(--bg-secondary);
+            padding: 8px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        #user-info {
+            font-size: 13px;
+            color: var(--text-secondary);
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        #theme-toggle-btn,
+        #sign-out-btn,
+        #sign-in-from-guest-btn {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+            height: auto !important;
+            width: auto !important;
+            margin: 0 !important;
+            border-radius: 15px !important;
+        }
+
+        #theme-toggle-btn {
+            background-color: #6c757d !important;
+            min-width: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 播放速度控制 */
+        .playback-speed-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+            justify-content: center;
+        }
+
+        .playback-speed-control label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .playback-speed-control select {
+            padding: 5px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* 滾動平滑 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 分類區域標記 */
+        .collapsible-section[data-category] {
+            scroll-margin-top: 80px;
         }
     </style>
 
@@ -27,6 +255,19 @@
     <script src="index.js" defer></script>
 </head>
 <body>
+    <!-- 進度條 -->
+    <div id="progress-bar"></div>
+
+    <!-- 自動儲存指示器 -->
+    <div class="auto-save-indicator" id="auto-save-indicator">
+        ✓ 已自動儲存
+    </div>
+
+    <!-- 鍵盤快捷鍵提示 -->
+    <div class="keyboard-hint" id="keyboard-hint">
+        按 <kbd>?</kbd> 查看快捷鍵
+    </div>
+
     <div id="login-view" style="padding: 20px; text-align: center; margin-top: 20vh;">
         <h1>Boyd Vocabulary</h1>
         <p style="color: #666;">您的個人化單字學習助理</p>
@@ -37,24 +278,34 @@
     </div>
 
     <div id="app-container" class="is-hidden">
-        <div id="user-status-header" style="text-align: right; padding: 10px; color: #555;">
+        <div id="user-status-header">
             <span id="user-info"></span>
-            <button id="sign-out-btn" class="button is-hidden" style="width: auto; height: auto; padding: 5px 12px; font-size: 14px; margin-left: 10px;">登出</button>
-            <button id="sign-in-from-guest-btn" class="button is-hidden" style="width: auto; height: auto; padding: 5px 12px; font-size: 14px; margin-left: 10px;">登入以同步資料</button>
+            <div class="header-buttons">
+                <button id="theme-toggle-btn" class="button" title="切換深色模式">🌙</button>
+                <button id="sign-out-btn" class="button is-hidden">登出</button>
+                <button id="sign-in-from-guest-btn" class="button is-hidden">登入以同步資料</button>
+            </div>
         </div>
 
         <div id="loading-overlay">
             <div class="loading-spinner"></div>
-            <p class="loading-text">資料載入中，請稍候...</p>
+            <p class="loading-text">資料載入中,請稍候...</p>
         </div>
 
         <div id="notification-container"></div>
         
+        <!-- 麵包屑導航 -->
+        <nav id="breadcrumb-nav"></nav>
+        
         <h1>Boyd Vocabulary</h1>
         <div id="mainPageContainer">
             <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
-                <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterWords()" style="padding: 8px; width: 200px;">
-                <button class="button" style="width:auto; display:inline-block; padding:8px 15px; margin-left: 5px;" onclick="openEditModal(null)">＋</button>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="輸入單字搜尋..." style="padding: 8px; width: 200px;">
+                    <span class="search-count" id="search-count" style="display: none;"></span>
+                    <button class="search-clear-btn" id="search-clear-btn" title="清除搜尋">×</button>
+                    <button class="button" style="width:auto; display:inline-block; padding:8px 15px; margin-left: 5px;" onclick="openEditModal(null)">+</button>
+                </div>
             </div>
             <div class="button-container" style="text-align: center; margin-top: 20px;">
                 <button id="wordPageBtn" class="button">單字頁面</button>
@@ -67,37 +318,37 @@
                 <button id="startLearningBtn" class="button">開始學習</button>
             </div>
             <div class="collapsible-section-wrapper">
-                <div class="collapsible-section">
+                <div class="collapsible-section" data-category="alphabet">
                     <button type="button" class="collapsible-header">字母分類</button>
                     <div class="collapsible-content" id="alphabetButtons">
                     </div>
                 </div>
 
-                <div class="collapsible-section">
+                <div class="collapsible-section" data-category="domain">
                     <button type="button" class="collapsible-header">領域</button>
                     <div class="collapsible-content" id="domainCategoryButtons">
                     </div>
                 </div>
 
-                <div class="collapsible-section">
+                <div class="collapsible-section" data-category="topic">
                     <button type="button" class="collapsible-header">主題</button>
                     <div class="collapsible-content" id="topicCategoryButtons">
                     </div>
                 </div>
 
-                <div class="collapsible-section">
+                <div class="collapsible-section" data-category="source">
                     <button type="button" class="collapsible-header">來源</button>
                     <div class="collapsible-content" id="sourceCategoryButtons">
                     </div>
                 </div>
 
-                <div class="collapsible-section">
+                <div class="collapsible-section" data-category="special">
                     <button type="button" class="collapsible-header">特殊分類</button>
                     <div class="collapsible-content" id="specialCategoryButtons">
                     </div>
                 </div>
 
-                <div class="collapsible-section">
+                <div class="collapsible-section" data-category="level">
                     <button type="button" class="collapsible-header">等級分類</button>
                     <div class="collapsible-content" id="levelButtonsContent">
                     </div>
@@ -119,6 +370,19 @@
                 <div class="button-group">
                     <button class="button" onclick="backToWordList()">Back</button>
                     <button id="autoPlayDetailsBtn" class="button" onclick="toggleAutoPlay()">內文自動播放</button>
+                </div>
+
+                <!-- 播放速度控制 -->
+                <div class="playback-speed-control">
+                    <label for="playback-speed">播放速度:</label>
+                    <select id="playback-speed">
+                        <option value="0.5">0.5x</option>
+                        <option value="0.75">0.75x</option>
+                        <option value="1" selected>1x</option>
+                        <option value="1.25">1.25x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="2">2x</option>
+                    </select>
                 </div>
 
                 <div id="phoneticContainer"></div>
@@ -148,14 +412,18 @@
 
                 <div class="button-container" style="margin-top: 15px; margin-bottom: 5px;">
                     <button id="sentenceLinkBtn" class="button">句子</button>
-<button id="toggle-timestamp-btn" class="button" style="display: none;" title="Toggle Timestamp">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-toggle-ts">
-                        <path d="M3 15h18M4 10h16M10 3v4M14 3v4M8 21v-4M12 21v-4M16 21v-4"/>
-                    </svg>
-                </button>
+                    <button id="toggle-timestamp-btn" class="button" style="display: none;" title="Toggle Timestamp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-toggle-ts">
+                            <path d="M3 15h18M4 10h16M10 3v4M14 3v4M8 21v-4M12 21v-4M16 21v-4"/>
+                        </svg>
+                    </button>
                 </div>
                 <div id="searchInDetails" style="text-align: center; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                    <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." oninput="filterWordsInDetails()" style="font-size: 16px; padding: 5px; width: 200px;">
+                    <div class="search-container">
+                        <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." style="font-size: 16px; padding: 5px; width: 200px;">
+                        <span class="search-count" id="search-count-details" style="display: none;"></span>
+                        <button class="search-clear-btn" id="search-clear-btn-details" title="清除搜尋">×</button>
+                    </div>
                     <button id="bButton" class="button">B</button>
                 </div>
 
@@ -197,20 +465,20 @@
                 <textarea id="edit-meaning" rows="4" placeholder="例如: A round fruit..."></textarea>
             </div>
 
-<div class="form-group-row">
-    <div>
-        <label>詞性/分類 (Domain)</label>
-        <input type="text" id="edit-domain" placeholder="例如: 生活">
-    </div>
-    <div>
-        <label>主題 (Topic)</label>
-        <input type="text" id="edit-topic" placeholder="例如: 水果">
-    </div>
-    <div>
-        <label>來源 (Source)</label>
-        <input type="text" id="edit-source" placeholder="例如: The Alchemist">
-    </div>
-</div>
+            <div class="form-group-row">
+                <div>
+                    <label>詞性/分類 (Domain)</label>
+                    <input type="text" id="edit-domain" placeholder="例如: 生活">
+                </div>
+                <div>
+                    <label>主題 (Topic)</label>
+                    <input type="text" id="edit-topic" placeholder="例如: 水果">
+                </div>
+                <div>
+                    <label>來源 (Source)</label>
+                    <input type="text" id="edit-source" placeholder="例如: The Alchemist">
+                </div>
+            </div>
 
             <div class="form-group-row">
                 <div>
@@ -230,6 +498,23 @@
             <div class="modal-actions">
                 <button class="button delete-btn" id="btn-delete-word" onclick="deleteCustomWord()" style="display:none; background-color: #ef9a9a;">刪除</button>
                 <button class="button" onclick="saveCustomWord()">儲存</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 快捷鍵說明 Modal -->
+    <div id="keyboard-shortcuts-modal" class="modal is-hidden">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeKeyboardShortcutsModal()">&times;</span>
+            <h2>鍵盤快捷鍵</h2>
+            <div style="line-height: 2;">
+                <p><kbd>Space</kbd> - 播放/暫停</p>
+                <p><kbd>←</kbd> - 後退 5 秒</p>
+                <p><kbd>→</kbd> - 前進 5 秒</p>
+                <p><kbd>Ctrl/Cmd + S</kbd> - 儲存筆記</p>
+                <p><kbd>Ctrl/Cmd + F</kbd> - 搜尋</p>
+                <p><kbd>Esc</kbd> - 返回上一頁</p>
+                <p><kbd>?</kbd> - 顯示此說明</p>
             </div>
         </div>
     </div>

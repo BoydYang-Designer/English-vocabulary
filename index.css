@@ -1,17 +1,53 @@
-/* index.css (Light Earth Tone Palette) */
+/* index.css - 優化版本 (Light Earth Tone with Dark Mode Support) */
+
+/* ========== CSS 變數 - 支援深色模式 ========== */
+:root {
+    --bg-primary: #FDFBF6;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #FAFAFA;
+    --bg-quaternary: #F5F5F5;
+    --text-primary: #5D4037;
+    --text-secondary: #795548;
+    --text-tertiary: #555;
+    --border-color: #EFEBE9;
+    --border-color-hover: #BCAAA4;
+    --accent-color: #A1887F;
+    --accent-hover: #8D6E63;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+    --shadow-lg: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-tertiary: #242424;
+    --bg-quaternary: #333;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-tertiary: #999;
+    --border-color: #404040;
+    --border-color-hover: #555;
+    --accent-color: #A1887F;
+    --accent-hover: #8D6E63;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md: 0 2px 8px rgba(0,0,0,0.4);
+    --shadow-lg: 0 4px 12px rgba(0,0,0,0.5);
+}
 
 /* 基本樣式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #FDFBF6; /* [大地色] 溫暖的米白背景 */
-    color: #5D4037; /* [大地色] 柔和的棕色文字 */
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
     text-align: center;
-    background: linear-gradient(to right, #A1887F, #8D6E63); /* [大地色] 較淺的暖棕色漸層 */
+    background: linear-gradient(to right, var(--accent-color), var(--accent-hover));
     color: white;
     padding: 15px 0;
     margin: 0;
@@ -27,7 +63,7 @@ h1 {
     box-sizing: border-box;
 }
 
-/* --- Collapsible Section Styles Start --- */
+/* === Collapsible Section Styles === */
 .collapsible-section-wrapper {
     max-width: 414px;
     margin: 15px auto;
@@ -37,33 +73,34 @@ h1 {
 
 .collapsible-section {
     margin-bottom: 8px;
+    scroll-margin-top: 80px; /* 優化：支援滾動到分類 */
 }
 
 .collapsible-header {
-    background-color: #FFFFFF; 
-    color: #5D4037; 
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
     cursor: pointer;
     padding: 12px 20px;
     width: 100%;
-    border: 1px solid #EFEBE9; /* [大地色] 更淺的褐色邊框 */
+    border: 1px solid var(--border-color);
     text-align: left;
     outline: none;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 8px; 
+    border-radius: 8px;
     transition: all 0.3s ease;
     position: relative;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow-sm);
 }
 
 .collapsible-header:hover {
-    background-color: #F5F5F5;
-    border-color: #BCAAA4;
+    background-color: var(--bg-quaternary);
+    border-color: var(--border-color-hover);
 }
 
 .collapsible-header::after {
     content: '\002B';
-    color: #A1887F; /* [大地色] 較淺的主色調 */
+    color: var(--accent-color);
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -79,9 +116,9 @@ h1 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    background-color: #FAFAFA; /* [大地色] 更淺的暖灰 */
+    background-color: var(--bg-tertiary);
     border-radius: 0 0 8px 8px;
-    border: 1px solid #EFEBE9;
+    border: 1px solid var(--border-color);
     border-top: none;
 }
 
@@ -94,40 +131,38 @@ h1 {
     padding: 10px 0;
     text-align: center;
 }
-/* --- Collapsible Section Styles End --- */
 
 /* 字母/分類按鈕 */
 .letter-btn {
     padding: 8px 15px;
     margin: 5px;
     cursor: pointer;
-    border: 1px solid #EFEBE9; 
-    background: #FFFFFF;
-    color: #A1887F; /* [大地色] 較淺的主色調 */
-    font-size: 16px; 
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--accent-color);
+    font-size: 16px;
     border-radius: 20px;
     transition: all 0.2s ease;
 }
 
 .letter-btn:hover {
-    background: #FAFAFA;
-    border-color: #A1887F;
+    background: var(--bg-tertiary);
+    border-color: var(--accent-color);
 }
 
 .letter-btn.selected {
-    background: #A1887F; /* [大地色] 較淺的主色調 */
+    background: var(--accent-color);
     color: white;
-    border-color: #A1887F;
+    border-color: var(--accent-color);
     transform: scale(1.05);
 }
-
 
 /* 單字列表標題 */
 #wordListTitle {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    color: #5D4037;
+    color: var(--text-primary);
     margin-bottom: 15px;
 }
 
@@ -138,10 +173,10 @@ h1 {
     margin: 10px 0;
     max-height: 80vh;
     overflow-y: auto;
-    background: white;
+    background: var(--bg-secondary);
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-md);
 }
 
 /* 單字項目 */
@@ -151,17 +186,18 @@ h1 {
     font-weight: bold;
     cursor: pointer;
     padding: 8px;
-    border-bottom: 1px solid #eee;
-    color: #795548; /* [大地色] 較淺的暖棕 */
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    transition: background-color 0.2s ease;
 }
 
 .word-item:hover {
-    background: #f8f9fa;
+    background: var(--bg-tertiary);
 }
 
 /* 音標容器 */
 .phonetics-container button {
-    background-color: #A1887F; /* [大地色] 較淺的主色調 */
+    background-color: var(--accent-color);
     color: #fff;
     font-size: 18px;
     text-align: left;
@@ -178,7 +214,7 @@ h1 {
 }
 
 .phonetics-container button:hover {
-    background-color: #8D6E63; /* [大地色] Hover 加深 */
+    background-color: var(--accent-hover);
     transform: scale(1.05);
 }
 
@@ -187,12 +223,12 @@ h1 {
     position: relative;
     max-height: 400px;
     overflow-y: auto;
-    padding: 20px; 
-    border: 1px solid #EFEBE9;
-    background: #FFFFFF;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
     border-radius: 15px;
-    font-size: 18px; 
-    line-height: 1.6; 
+    font-size: 18px;
+    line-height: 1.6;
     margin: 0 8px;
 }
 
@@ -200,15 +236,17 @@ h1 {
 #chineseContainer {
     font-size: 16px;
     margin-left: 10px;
-    color: #555;
+    color: var(--text-tertiary);
 }
 
 /* 搜尋輸入框 */
-#searchInput {
+#searchInput, #searchInputDetails {
     font-size: 16px;
     padding: 10px;
-    border: 1px solid #EFEBE9;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
 }
 
 .button-group {
@@ -225,7 +263,7 @@ h1 {
     display: block;
     width: 150px;
     height: 50px;
-    background-color: #A1887F; /* [大地色] 較淺的主色調 */
+    background-color: var(--accent-color);
     color: white;
     border: none;
     cursor: pointer;
@@ -233,12 +271,17 @@ h1 {
     margin: 10px auto;
     font-weight: bold;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-sm);
 }
 
 .button:hover {
-    background-color: #8D6E63; /* [大地色] Hover 加深 */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: var(--accent-hover);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.button:active {
+    transform: translateY(0);
 }
 
 .button-container {
@@ -253,7 +296,7 @@ h1 {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: #A1887F;
+    background-color: var(--accent-color);
     color: white;
     font-size: 18px;
     border: none;
@@ -266,7 +309,7 @@ h1 {
 }
 
 .back-button:hover {
-    background-color: #8D6E63;
+    background-color: var(--accent-hover);
 }
 
 /* 音訊控制按鈕 */
@@ -280,7 +323,7 @@ h1 {
 }
 
 .audio-btn {
-    background-color: #A1887F; /* [大地色] 較淺的主色調 */
+    background-color: var(--accent-color);
     color: #fff;
     font-size: 16px;
     padding: 15px;
@@ -296,11 +339,10 @@ h1 {
 }
 
 .audio-btn:hover {
-    background-color: #8D6E63;
+    background-color: var(--accent-hover);
     transform: scale(1.05);
 }
 
-/* [大地色] 播放狀態改為更柔和的淺棕色 */
 .audio-btn.playing,
 #autoPlayBtn.playing,
 .word-item-container.playing,
@@ -313,15 +355,14 @@ h1 {
     color: white;
 }
 
-
 .audio-btn img {
     width: 24px;
     height: 24px;
 }
 
-/* B 按鈕 (維持中性灰色) */
+/* B 按鈕 */
 #bButton {
-    background-color: #6c757d; 
+    background-color: #6c757d;
     color: white;
     border: none;
     height: auto;
@@ -341,60 +382,64 @@ h1 {
 /* 筆記容器 */
 #noteContainer {
     width: 360px;
-    background: #FAFAFA;
+    background: var(--bg-tertiary);
     padding: 10px;
     border-radius: 8px;
     margin-top: 5px;
     max-height: 90px;
     overflow: hidden;
     margin-left: -5px;
-    border: 1px solid #EFEBE9;
+    border: 1px solid var(--border-color);
 }
 
-/* 其他按鈕也統一風格 */
+#noteContainer textarea {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
 #saveNoteButton, #storageButtons button {
-    background: #A1887F;
+    background: var(--accent-color);
 }
 
 #saveNoteButton:hover, #storageButtons button:hover {
-    background: #8D6E63;
+    background: var(--accent-hover);
 }
 
-
-/* [大地色] 開始學習按鈕使用主色調 */
+/* 開始學習按鈕 */
 #startLearningBtn {
     width: 80%;
     max-width: 300px;
     padding: 10px;
     font-size: 20px;
-    background-color: #A1887F;
+    background-color: var(--accent-color);
     color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-md);
 }
 
 #startLearningBtn:hover {
-    background-color: #8D6E63;
+    background-color: var(--accent-hover);
     transform: scale(1.05);
 }
 
-/* [大地色] Collapsible header 強調樣式 */
+/* Collapsible header 強調樣式 */
 .collapsible-header.header-highlight {
-    background-color: #FAFAFA;
-    color: #795548;
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
     font-weight: bold;
-    border-color: #A1887F;
+    border-color: var(--accent-color);
 }
 
-/* [大地色] 自動播放按鈕樣式 */
-#autoPlayBtn {
+/* 自動播放按鈕樣式 */
+#autoPlayBtn, #autoPlayDetailsBtn {
     padding: 5px 10px;
     font-size: 16px;
-    background-color: #6c757d; /* 中性色 */
+    background-color: #6c757d;
     color: white;
     border: none;
     border-radius: 5px;
@@ -402,84 +447,48 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-#autoPlayBtn:hover {
+#autoPlayBtn:hover, #autoPlayDetailsBtn:hover {
     background-color: #5a6268;
 }
 
-.highlight-word {
-  font-weight: bold;
-  color: #A1887F;
-}
-
-/* 筆記按鈕 */
-.note-button {
-    padding: 8px 16px;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-#clearNoteButton {
-    background: #a8454f;
-}
-
-#clearNoteButton:hover {
-    background: #7a3a40;
-    transform: scale(1.05);
-}
-
-#wordNote {
-    background: transparent;
-    font-size: 16px;
-    line-height: 1.2em;
-    padding: 5px;
-    border: none;
-    resize: none;
-    color: #5D4037;
-}
-
-#wordNote:focus {
-    border: none;
-    outline: none;
-}
-
-/* 儲存按鈕區域 */
-#storageButtons {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 10px;
-    width: 100%;
+.details {
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 414px;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
 }
 
 .note-buttons-inner {
     display: flex;
-    align-items: center;
     gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-
-#storageButtons button {
-    padding: 6px 12px;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
+.note-button {
+    background: var(--accent-color);
     color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
-    transition: 0.2s;
+    font-weight: bold;
+    transition: all 0.2s ease;
 }
 
-/* 單字項目容器 */
+.note-button:hover {
+    background: var(--accent-hover);
+    transform: scale(1.05);
+}
+
 .word-item-container {
     display: flex;
-    width: 100%;
-    margin: 5px;
-    justify-content: space-between;
     align-items: center;
     padding: 5px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-color);
     border-radius: 5px;
     transition: all 0.3s ease;
 }
@@ -487,7 +496,7 @@ h1 {
 .word-item-container.checked {
     font-size: 66.7%;
     padding: 2px 5px;
-    color: #888;
+    color: var(--text-tertiary);
     opacity: 0.7;
     height: 28px;
     line-height: 28px;
@@ -513,8 +522,8 @@ h1 {
 }
 
 .play-word-btn:hover img {
-    opacity: 1; 
-    transform: scale(1.15); 
+    opacity: 1;
+    transform: scale(1.15);
     filter: brightness(0) invert(0.4);
 }
 
@@ -546,87 +555,18 @@ h1 {
     transform: scale(1.3);
     cursor: pointer;
     border-radius: 6px;
-    border: 2px solid #BCAAA4;
+    border: 2px solid var(--border-color-hover);
     appearance: none;
-    background-color: white;
+    background-color: var(--bg-secondary);
     transition: all 0.2s ease-in-out;
 }
 
 .important-checkbox:checked {
-    background-color: #FFCC80; /* [大地色] 使用更溫和的赭色 */
+    background-color: #FFCC80;
     border-color: #FFA726;
 }
 
-/* 媒體查詢 */
-@media (max-width: 414px) {
-    h1 {
-        font-size: 20px;
-    }
-    .category-title {
-        font-size: 16px;
-        margin: 8px 0;
-    }
-}
-
-#autoPlayDetailsBtn {
-    margin-left: 10px;
-    padding: 5px 10px;
-    font-size: 16px;
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#autoPlayDetailsBtn:hover {
-    background-color: #5a6268;
-}
-
-/* 分類標題 */
-.category-title {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    color: #5D4037;
-    margin: 10px 0;
-}
-
-.category-display {
-    margin-bottom: 12px;
-    font-size: 16px;
-}
-
-.category-tag, .level-tag {
-    display: inline-block;
-    background-color: #FAFAFA;
-    color: #795548;
-    padding: 4px 10px;
-    border-radius: 15px;
-    font-size: 15px;
-    margin-right: 8px;
-    margin-top: 5px;
-    border: 1px solid #EFEBE9;
-}
-
-#meaningContainer h4 {
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    color: #5D4037;
-}
-
-#meaningContainer p {
-    margin-top: 0;
-    line-height: 1.6;
-}
-
-#meaningContainer p.example {
-    margin-left: 20px;
-    font-style: italic;
-    color: #795548;
-}
-
-/* ▼▼▼ 載入指示器與通知系統樣式 ▼▼▼ */
+/* 載入指示器與通知系統 */
 #loading-overlay {
     position: fixed;
     top: 0;
@@ -645,7 +585,7 @@ h1 {
 
 .loading-spinner {
     border: 5px solid #f3f3f3;
-    border-top: 5px solid #A1887F; /* [大地色] 較淺的主色調 */
+    border-top: 5px solid var(--accent-color);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -678,7 +618,7 @@ h1 {
     padding: 16px;
     margin-bottom: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-lg);
     opacity: 0;
     transform: translateX(100%);
     animation: slideIn 0.5s forwards, fadeOut 0.5s 3s forwards;
@@ -686,11 +626,11 @@ h1 {
 }
 
 .toast.success {
-    background-color: #AED581; /* [大地色] 更和諧的橄欖綠 */
+    background-color: #AED581;
 }
 
 .toast.error {
-    background-color: #EF9A9A; /* [大地色] 更柔和的紅色 */
+    background-color: #EF9A9A;
 }
 
 @keyframes slideIn {
@@ -717,7 +657,7 @@ h1 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    background-color: #FAFAFA;
+    background-color: var(--bg-tertiary);
     border-radius: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -730,18 +670,18 @@ h1 {
 }
 
 .subcategory-wrapper .letter-btn {
-    background-color: #fff;
-    border-color: #ccc;
-    color: #555;
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-tertiary);
 }
 
 .subcategory-wrapper .letter-btn:hover {
-    background-color: #f0f0f0;
+    background-color: var(--bg-tertiary);
 }
 
 .subcategory-wrapper .letter-btn.selected {
-    background: #A1887F;
-    border-color: #A1887F;
+    background: var(--accent-color);
+    border-color: var(--accent-color);
     color: #fff;
 }
 
@@ -749,7 +689,7 @@ h1 {
     display: none !important;
 }
 
-/* --- Timestamp Styles --- */
+/* Timestamp Styles */
 #toggle-timestamp-btn {
     width: auto;
     height: 50px;
@@ -759,14 +699,13 @@ h1 {
 }
 
 #toggle-timestamp-btn svg {
-    /* filter: invert(1);  <-- 這行不再需要 */
     width: 24px;
     height: 24px;
     vertical-align: middle;
 }
 
 #toggle-timestamp-btn.is-active {
-    background-color: #A1887F;
+    background-color: var(--accent-color);
 }
 
 #toggle-timestamp-btn:hover {
@@ -784,16 +723,16 @@ h1 {
 }
 
 .timestamp-sentence:hover {
-    background-color: #FAFAFA;
+    background-color: var(--bg-tertiary);
 }
 
 .timestamp-sentence.is-current {
-    background-color: #EFEBE9; /* [大地色] 更淺的褐色高亮 */
+    background-color: var(--border-color);
     font-weight: bold;
-    color: #5D4037;
+    color: var(--text-primary);
 }
 
-/* --- Modal Styles --- */
+/* Modal Styles */
 .modal {
     position: fixed;
     z-index: 20000;
@@ -802,7 +741,7 @@ h1 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5); /* 半透明黑底 */
+    background-color: rgba(0,0,0,0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -813,14 +752,14 @@ h1 {
 }
 
 .modal-content {
-    background-color: #FDFBF6; /* 配合背景色 */
+    background-color: var(--bg-primary);
     margin: auto;
     padding: 20px;
-    border: 1px solid #EFEBE9;
+    border: 1px solid var(--border-color);
     width: 90%;
     max-width: 500px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: var(--shadow-lg);
     position: relative;
     animation: slideIn 0.3s;
 }
@@ -835,7 +774,7 @@ h1 {
 
 .close-modal:hover,
 .close-modal:focus {
-    color: #5D4037;
+    color: var(--text-primary);
     text-decoration: none;
     cursor: pointer;
 }
@@ -844,38 +783,37 @@ h1 {
     margin-bottom: 15px;
 }
 
-/* index.css */
-
 .form-group-row {
     display: flex;
     gap: 10px;
     margin-bottom: 15px;
-    flex-wrap: wrap; /* [新增] 允許換行，以免手機版太擠 */
+    flex-wrap: wrap;
 }
 
-/* 讓裡面的 div 在空間不足時自動變寬 */
 .form-group-row > div {
     flex: 1;
-    min-width: 120px; /* [新增] 設定最小寬度，防止太窄 */
+    min-width: 120px;
 }
 
 .modal-content label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #5D4037;
+    color: var(--text-primary);
 }
 
-.modal-content input, 
+.modal-content input,
 .modal-content textarea,
 .modal-content select {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
     font-family: inherit;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
 }
 
 .modal-actions {
@@ -883,4 +821,98 @@ h1 {
     justify-content: flex-end;
     gap: 10px;
     margin-top: 20px;
+}
+
+/* 分類相關 */
+.category-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin: 10px 0;
+}
+
+.category-display {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.category-tag, .level-tag {
+    display: inline-block;
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    margin-right: 8px;
+    margin-top: 5px;
+    border: 1px solid var(--border-color);
+}
+
+#meaningContainer h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: var(--text-primary);
+}
+
+#meaningContainer p {
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+#meaningContainer p.example {
+    margin-left: 20px;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+/* ========== 媒體查詢 ========== */
+@media (max-width: 414px) {
+    h1 {
+        font-size: 20px;
+    }
+    .category-title {
+        font-size: 16px;
+        margin: 8px 0;
+    }
+    
+    .button {
+        font-size: 16px;
+        width: 130px;
+        height: 45px;
+    }
+}
+
+/* ========== 滾動條樣式 (深色模式適配) ========== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color-hover);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* ========== 鍵盤按鍵樣式 ========== */
+kbd {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    color: var(--text-primary);
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
 }
