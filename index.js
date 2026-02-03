@@ -862,6 +862,13 @@ function displayWordList(words, title) {
     let wordItems = document.getElementById("wordItems");
     wordItems.innerHTML = "";
 
+    // 按字母順序排序單字 (A-Z)
+    words = words.sort((a, b) => {
+        const wordA = (a.Words || a.word || a["單字"] || "").toLowerCase();
+        const wordB = (b.Words || b.word || b["單字"] || "").toLowerCase();
+        return wordA.localeCompare(wordB);
+    });
+
     window.currentWordList = words;
     const vocabularyData = window.getVocabularyData(); // 從 auth-manager 獲取資料
     
