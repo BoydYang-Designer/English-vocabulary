@@ -455,10 +455,13 @@
 
         <div id="mainPageContainer">
             <div style="text-align: center; margin: 20px 0;">
-                <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="輸入單字搜尋..." onkeyup="filterWords()" style="font-size: 16px; padding: 10px; width: 250px;">
-                    <span class="search-count" id="search-count" style="display: none;"></span>
-                    <button class="search-clear-btn" id="search-clear-btn" title="清除搜尋">×</button>
+                <div class="search-container" style="display: inline-flex; align-items: center; gap: 10px;">
+                    <div style="position: relative;">
+                        <input type="text" id="searchInput" placeholder="輸入單字搜尋..." onkeyup="filterWords()" style="font-size: 16px; padding: 10px; width: 250px;">
+                        <span class="search-count" id="search-count" style="display: none;"></span>
+                        <button class="search-clear-btn" id="search-clear-btn" title="清除搜尋">×</button>
+                    </div>
+                    <button id="add-word-btn" class="button" style="width: 45px; height: 45px; border-radius: 50%; padding: 0; font-size: 24px; line-height: 1; margin: 0;" title="新增單字">+</button>
                 </div>
                 <div id="searchResults" style="max-height: 200px; overflow-y: auto; margin-top: 10px; text-align: left; margin-left: auto; margin-right: auto; max-width: 300px;"></div>
             </div>
@@ -687,15 +690,24 @@
             <div class="form-group-row">
                 <div>
                     <label>詞性/分類 (Domain)</label>
-                    <input type="text" id="edit-domain" placeholder="例如: 生活">
+                    <div style="position: relative;">
+                        <input type="text" id="edit-domain" placeholder="例如: 生活" list="domain-list">
+                        <datalist id="domain-list"></datalist>
+                    </div>
                 </div>
                 <div>
                     <label>主題 (Topic)</label>
-                    <input type="text" id="edit-topic" placeholder="例如: 水果">
+                    <div style="position: relative;">
+                        <input type="text" id="edit-topic" placeholder="例如: 水果" list="topic-list">
+                        <datalist id="topic-list"></datalist>
+                    </div>
                 </div>
                 <div>
                     <label>來源 (Source)</label>
-                    <input type="text" id="edit-source" placeholder="例如: The Alchemist">
+                    <div style="position: relative;">
+                        <input type="text" id="edit-source" placeholder="例如: The Alchemist" list="source-list">
+                        <datalist id="source-list"></datalist>
+                    </div>
                 </div>
             </div>
 

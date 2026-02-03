@@ -451,6 +451,16 @@ const bButton = document.getElementById('bButton');
         });
     }
     
+    // 新增單字按鈕
+    const addWordBtn = document.getElementById('add-word-btn');
+    if (addWordBtn) {
+        addWordBtn.addEventListener('click', () => {
+            const searchInput = document.getElementById('searchInput');
+            const searchWord = searchInput ? searchInput.value.trim() : '';
+            openAddWordModal(searchWord);
+        });
+    }
+    
     const exitHighlightModeBtn = document.getElementById('exit-highlight-mode-btn');
     if (exitHighlightModeBtn) {
         exitHighlightModeBtn.addEventListener('click', exitHighlightMode);
@@ -2175,6 +2185,9 @@ function openEditModal(wordObj = null) {
     const deleteBtn = document.getElementById('btn-delete-word');
     const title = document.getElementById('modalTitle');
     
+    // 填充分類下拉選單
+    populateCategoryDataLists();
+    
     // 清空或填入表單
     if (wordObj) {
         // 編輯模式
@@ -2908,3 +2921,70 @@ function deleteHighlightedWords(word) {
         }
     }
 }
+
+// ========== 新增單字功能 ==========
+
+// 填充分類下拉選單
+function populateCategoryDataLists() {
+    if (!wordsData || wordsData.length === 0) return;
+    
+    // 獲取所有現有的分類
+    const domains = new Set();
+    const topics = new Set();
+    const sources = new Set();
+    
+    wordsData.forEach(word => {
+        const categories = word["分類"] || [];
+        if (categories[0]) domains.add(categories[0]);
+        if (categories[1]) topics.add(categories[1]);
+        if (categories[2]) sources.add(categories[2]);
+    });
+    
+    // 填充 domain datalist
+    const domainList = document.getElementById('domain-list');
+    if (domainList) {
+        domainList.innerHTML = '';
+        Array.from(domains).sort().forEach(domain => {
+            const option = document.createElement('option');
+            option.value = domain;
+            domainList.appendChild(option);
+        });
+    }
+    
+    // 填充 topic datalist
+    const topicList = document.getElementById('topic-list');
+    if (topicList) {
+        topicList.innerHTML = '';
+        Array.from(topics).sort().forEach(topic => {
+            const option = document.createElement('option');
+            option.value = topic;
+            topicList.appendChild(option);
+        });
+    }
+    
+    // 填充 source datalist
+    const sourceList = document.getElementById('source-list');
+    if (sourceList) {
+        sourceList.innerHTML = '';
+        Array.from(sources).sort().forEach(source => {
+            const option = document.createElement('option');
+            option.value = source;
+            sourceList.appendChild(option);
+        });
+    }
+}
+
+// 開啟新增單字的 Modal
+function openAddWordModal(prefilledWord = '') {
+    openEditModal(null); // 開啟空白的編輯 Modal
+    
+    // 如果有預填的單字,填入
+    if (prefilledWord) {
+        const wordInput = document.getElementById('edit-word');
+        if (wordInput) {
+            wordInput.value = prefilledWord;
+            wordInput.disabled = false; // 確保可以編輯
+        }
+    }
+}
+
