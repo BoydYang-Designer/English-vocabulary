@@ -892,6 +892,16 @@ h1 {
     color: var(--text-secondary);
 }
 
+/* 重點模式播放按鈕固定在上方 */
+.audio-controls-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg-primary);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 /* ========== 媒體查詢 ========== */
 @media (max-width: 414px) {
     h1 {
@@ -968,3 +978,33 @@ kbd {
     to { opacity: 1; }
 }
 
+
+/* 優化的畫重點樣式 - 更簡潔美觀 */
+.clickable-word.highlighted,
+.highlight-mode-word.highlighted {
+    background: linear-gradient(120deg, #FFE66D 0%, #FFE66D 100%);
+    background-size: 100% 40%;
+    background-repeat: no-repeat;
+    background-position: 0 85%;
+    font-weight: 500;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+[data-theme="dark"] .clickable-word.highlighted,
+[data-theme="dark"] .highlight-mode-word.highlighted {
+    background: linear-gradient(120deg, #FFA500 0%, #FFA500 100%);
+    background-size: 100% 40%;
+    background-repeat: no-repeat;
+    background-position: 0 85%;
+}
+
+/* 單字複製閃爍效果 */
+@keyframes word-flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.word-flash {
+    animation: word-flash 0.3s ease;
+}

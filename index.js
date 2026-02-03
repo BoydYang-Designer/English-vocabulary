@@ -132,6 +132,11 @@ function autoSaveNote() {
 // ========== 優化功能：鍵盤快捷鍵 ==========
 function initKeyboardShortcuts() {
     document.addEventListener('keydown', (e) => {
+        // 當使用者在輸入框或文字區域輸入時,停用快捷鍵
+        if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+            return;
+        }
+        
         if ((e.ctrlKey || e.metaKey) && e.key === 's') {
             e.preventDefault();
             if (typeof saveNote === 'function') saveNote();
@@ -145,7 +150,7 @@ function initKeyboardShortcuts() {
             }
             return;
         }
-        if (e.key === ' ' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+        if (e.key === ' ') {
             e.preventDefault();
             const playBtn = document.getElementById('playAudioBtn');
             if (playBtn && playBtn.offsetParent !== null) {
@@ -153,12 +158,12 @@ function initKeyboardShortcuts() {
             }
             return;
         }
-        if (e.key === 'ArrowLeft' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+        if (e.key === 'ArrowLeft') {
             e.preventDefault();
             if (typeof adjustAudioTime === 'function') adjustAudioTime(-5);
             return;
         }
-        if (e.key === 'ArrowRight' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+        if (e.key === 'ArrowRight') {
             e.preventDefault();
             if (typeof adjustAudioTime === 'function') adjustAudioTime(5);
             return;
@@ -174,7 +179,7 @@ function initKeyboardShortcuts() {
             }
             return;
         }
-        if (e.key === '?' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+        if (e.key === '?') {
             e.preventDefault();
             showKeyboardShortcutsModal();
             return;
@@ -727,7 +732,8 @@ function createSpecialCategoryButtons() {
         { name: "重要單字", value: "important" },
         { name: "錯誤單字", value: "wrong" },
         { name: "備註單字", value: "note" },
-        { name: "自訂單字", value: "custom" } 
+        { name: "自訂單字", value: "custom" },
+        { name: "畫重點單字", value: "highlighted" }
         // --------------------
     ];
     const specialContainer = document.getElementById("specialCategoryButtons");
@@ -828,6 +834,10 @@ if (selectedSpecials.length > 0) {
                     break;
                 case 'note':
                     Object.keys(vocabularyData.notes || {}).forEach(word => specialWordsSet.add(word));
+                    break;
+                case 'highlighted':
+                    // 獲取所有有畫重點的單字
+                    Object.keys(vocabularyData.highlightedWords || {}).forEach(word => specialWordsSet.add(word));
                     break;
                 
 
@@ -2533,6 +2543,11 @@ function handleWordClick(wordElement) {
         if (word) {
             playWordPronunciation(word);
             copyToClipboard(word);
+            // 添加閃爍效果
+            wordElement.classList.add('word-flash');
+            setTimeout(() => {
+                wordElement.classList.remove('word-flash');
+            }, 300);
         }
     }
 }
@@ -2601,7 +2616,6 @@ function useBrowserSpeech(word) {
         // 添加錯誤處理
         utterance.onerror = function(event) {
             console.error('Speech synthesis error:', event);
-            showNotification('⚠️ 語音播放失敗', 'error');
         };
         
         // 確保在移動設備上也能工作
@@ -2609,19 +2623,22 @@ function useBrowserSpeech(word) {
             console.log('Speech finished');
         };
         
-        // 使用 setTimeout 確保在用戶交互上下文中執行
-        setTimeout(() => {
+        // iOS 特別處理: 直接播放，不使用 setTimeout
+        // 因為 iOS 要求語音合成必須在直接的用戶互動事件中觸發
+        try {
             window.speechSynthesis.speak(utterance);
-        }, 100);
+        } catch (error) {
+            console.error('Speech synthesis failed:', error);
+        }
         
     } else {
-        showNotification('⚠️ 此瀏覽器不支援語音功能', 'error');
+        console.warn('此瀏覽器不支援語音功能');
     }
 }
 
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
-        showNotification(`✅ 已複製: ${text}`, 'success');
+        // 不顯示通知,只用閃爍效果
     }).catch(err => {
         console.error('複製失敗:', err);
     });
