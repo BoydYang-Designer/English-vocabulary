@@ -359,6 +359,12 @@ function initializeAppLogic() {
             wordsMap.set(key, w);
         });
 
+        // [新增] 檢測已整合的單字
+        const integratedWords = detectIntegratedWords(rawWords, customWords);
+        if (integratedWords.length > 0) {
+            showIntegratedWordsPrompt(integratedWords);
+        }
+
         // 將使用者的自訂單字覆蓋或新增進去
         Object.keys(customWords).forEach(key => {
             wordsMap.set(key, customWords[key]);
@@ -3124,5 +3130,200 @@ function openAddWordModal(prefilledWord = '') {
             wordInput.value = prefilledWord;
             wordInput.disabled = false; // 確保可以編輯
         }
+    }
+}
+
+// ========== 檢測已整合的單字 ==========
+
+/**
+ * 比較兩個單字物件是否相同
+ */
+function areWordsSame(word1, word2) {
+    // 比較重要欄位
+    const fieldsToCompare = ['traditional Chinese', 'English meaning', '等級'];
+    
+    for (let field of fieldsToCompare) {
+        if (word1[field] !== word2[field]) {
+            return false;
+        }
+    }
+    
+    // 比較分類
+    const cat1 = JSON.stringify(word1['分類'] || []);
+    const cat2 = JSON.stringify(word2['分類'] || []);
+    
+    return cat1 === cat2;
+}
+
+/**
+ * 檢測哪些 localStorage 單字已經被整合到內建 JSON
+ */
+function detectIntegratedWords(builtInWords, customWords) {
+    const integrated = [];
+    
+    // 建立內建單字的 Map
+    const builtInMap = new Map();
+    builtInWords.forEach(w => {
+        const key = (w.Words || w.word || w["單字"]).trim();
+        builtInMap.set(key, w);
+    });
+    
+    // 檢查每個自訂單字
+    Object.entries(customWords).forEach(([wordText, customWord]) => {
+        const builtInWord = builtInMap.get(wordText);
+        
+        if (builtInWord) {
+            // 單字存在於內建 JSON 中,比較內容是否相同
+            if (areWordsSame(customWord, builtInWord)) {
+                integrated.push({
+                    word: wordText,
+                    type: '完全相同',
+                    customWord: customWord,
+                    builtInWord: builtInWord
+                });
+            } else {
+                // 內容不同,可能是修改過的
+                integrated.push({
+                    word: wordText,
+                    type: '已修改',
+                    customWord: customWord,
+                    builtInWord: builtInWord
+                });
+            }
+        }
+    });
+    
+    console.log('🔍 檢測到已整合的單字:', integrated);
+    return integrated;
+}
+
+/**
+ * 顯示已整合單字的提示 Modal
+ */
+function showIntegratedWordsPrompt(integratedWords) {
+    // 創建 Modal
+    const modalHtml = `
+        <div id="integrated-words-modal" class="modal" style="display: block;">
+            <div class="modal-content" style="max-width: 600px;">
+                <h2>🔄 發現已整合的單字</h2>
+                <p>以下單字已經整合到內建資料庫中,是否要從 localStorage 移除?</p>
+                
+                <div style="max-height: 400px; overflow-y: auto; margin: 20px 0;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: var(--bg-tertiary); position: sticky; top: 0;">
+                                <th style="padding: 10px; text-align: left; border: 1px solid var(--border-color);">
+                                    <input type="checkbox" id="select-all-integrated" onchange="toggleAllIntegratedWords(this)">
+                                </th>
+                                <th style="padding: 10px; text-align: left; border: 1px solid var(--border-color);">單字</th>
+                                <th style="padding: 10px; text-align: left; border: 1px solid var(--border-color);">狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody id="integrated-words-list">
+                            ${integratedWords.map((item, index) => `
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">
+                                        <input type="checkbox" class="integrated-word-checkbox" data-word="${item.word}" checked>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">
+                                        <strong>${item.word}</strong>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">
+                                        ${item.type === '完全相同' 
+                                            ? '<span style="color: #4CAF50;">✅ 已完全整合</span>' 
+                                            : '<span style="color: #FF9800;">⚠️ 內容已更新</span>'}
+                                    </td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div style="margin-top: 20px; padding: 15px; background: var(--bg-tertiary); border-radius: 8px;">
+                    <p style="margin: 0; font-size: 14px; color: var(--text-secondary);">
+                        💡 提示: 移除後這些單字仍會保留在內建資料庫中,不會遺失資料。
+                    </p>
+                </div>
+                
+                <div class="modal-actions" style="margin-top: 20px;">
+                    <button class="button" onclick="closeIntegratedWordsModal()" style="background: var(--bg-tertiary); color: var(--text-primary);">
+                        稍後處理
+                    </button>
+                    <button class="button" onclick="removeIntegratedWords()">
+                        移除選中的單字
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // 添加到頁面
+    const existingModal = document.getElementById('integrated-words-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+}
+
+/**
+ * 切換全選/取消全選
+ */
+function toggleAllIntegratedWords(checkbox) {
+    const checkboxes = document.querySelectorAll('.integrated-word-checkbox');
+    checkboxes.forEach(cb => {
+        cb.checked = checkbox.checked;
+    });
+}
+
+/**
+ * 移除已整合的單字
+ */
+function removeIntegratedWords() {
+    const checkboxes = document.querySelectorAll('.integrated-word-checkbox:checked');
+    const wordsToRemove = Array.from(checkboxes).map(cb => cb.dataset.word);
+    
+    if (wordsToRemove.length === 0) {
+        showNotification('❌ 請選擇要移除的單字', 'error');
+        return;
+    }
+    
+    if (!confirm(`確定要移除 ${wordsToRemove.length} 個單字嗎?\n\n這些單字:\n${wordsToRemove.join(', ')}\n\n將從 localStorage 中移除,但會保留在內建資料庫中。`)) {
+        return;
+    }
+    
+    // 從 localStorage 移除
+    const vocabularyData = window.getVocabularyData();
+    let removedCount = 0;
+    
+    wordsToRemove.forEach(word => {
+        if (vocabularyData.customWords && vocabularyData.customWords[word]) {
+            delete vocabularyData.customWords[word];
+            removedCount++;
+        }
+    });
+    
+    // 儲存更新
+    window.persistVocabularyData();
+    
+    // 關閉 Modal
+    closeIntegratedWordsModal();
+    
+    // 顯示通知
+    showNotification(`✅ 已移除 ${removedCount} 個單字`, 'success');
+    
+    // 重新載入頁面以更新顯示
+    setTimeout(() => {
+        location.reload();
+    }, 1500);
+}
+
+/**
+ * 關閉已整合單字的 Modal
+ */
+function closeIntegratedWordsModal() {
+    const modal = document.getElementById('integrated-words-modal');
+    if (modal) {
+        modal.remove();
     }
 }
