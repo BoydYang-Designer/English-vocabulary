@@ -2044,37 +2044,108 @@ function exportAllData() {
 }
 
 function importAllData() {
+    // 建立確認對話框
+    const confirmImport = confirm(
+        "⚠️ 匯入資料將會覆蓋現有的學習資料。\n\n" +
+        "建議先匯出當前資料作為備份。\n\n" +
+        "確定要繼續匯入嗎？"
+    );
+    
+    if (!confirmImport) {
+        return;
+    }
+    
     let input = document.createElement("input");
     input.type = "file";
     input.accept = ".json";
     input.onchange = e => {
         let file = e.target.files[0];
         if (!file) return;
+        
+        // 檢查檔案大小（限制 10MB）
+        if (file.size > 10 * 1024 * 1024) {
+            showNotification("❌ 檔案太大！請選擇小於 10MB 的檔案。", "error");
+            return;
+        }
+        
         let reader = new FileReader();
         reader.onload = event => {
             try {
                 const data = JSON.parse(event.target.result);
-                if(data.checkedWords) window.setCheckedWords(data.checkedWords);
-                if(data.importantWords) window.setImportantWords(data.importantWords);
-                if(data.wrongWords) window.setWrongWords(data.wrongWords);
-                if(data.notes) window.setNotes(data.notes);
-                if(data.customWords) { // [新增] 匯入自訂單字
+                let importedCount = 0;
+                
+                // 驗證資料格式
+                if (typeof data !== 'object' || data === null) {
+                    throw new Error('無效的資料格式');
+                }
+                
+                // 匯入各類資料
+                if (data.checkedWords) {
+                    window.setCheckedWords(data.checkedWords);
+                    importedCount++;
+                }
+                
+                if (data.importantWords) {
+                    window.setImportantWords(data.importantWords);
+                    importedCount++;
+                }
+                
+                if (data.wrongWords) {
+                    window.setWrongWords(data.wrongWords);
+                    importedCount++;
+                }
+                
+                if (data.notes) {
+                    window.setNotes(data.notes);
+                    importedCount++;
+                }
+                
+                if (data.customWords) {
                     const vocab = window.getVocabularyData();
                     vocab.customWords = data.customWords;
-                    window.persistVocabularyData();
+                    importedCount++;
                 }
+                
+                // 匯入畫重點資料
+                if (data.highlightedWords) {
+                    const vocab = window.getVocabularyData();
+                    vocab.highlightedWords = data.highlightedWords;
+                    importedCount++;
+                }
+                
+                // 儲存所有變更
                 window.persistVocabularyData();
                 
-                showNotification("✅ 學習資料匯入成功!", "success");
-                setTimeout(() => location.reload(), 1000);
+                // 顯示成功訊息
+                const message = importedCount > 0 
+                    ? `✅ 學習資料匯入成功！共匯入 ${importedCount} 類資料。` 
+                    : "⚠️ 檔案中沒有可匯入的資料。";
+                
+                showNotification(message, importedCount > 0 ? "success" : "warning");
+                
+                if (importedCount > 0) {
+                    setTimeout(() => location.reload(), 1500);
+                }
             } catch (error) {
-                showNotification("❌ 檔案匯入失敗，格式不正確。", "error");
+                console.error('匯入錯誤:', error);
+                showNotification(
+                    "❌ 檔案匯入失敗！\n" + 
+                    (error.message || "請確認檔案格式正確。"), 
+                    "error"
+                );
             }
         };
+        
+        reader.onerror = () => {
+            showNotification("❌ 讀取檔案失敗！", "error");
+        };
+        
         reader.readAsText(file);
     };
+    
     input.click();
 }
+
 
 function displayWordDetailsFromURL() {
     let wordName = new URLSearchParams(window.location.search).get('word');
