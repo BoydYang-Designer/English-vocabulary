@@ -2515,6 +2515,7 @@ function exitHighlightMode() {
     if (detailsSentencePlayer && !detailsSentencePlayer.paused) {
         detailsSentencePlayer.pause();
     
+    }
     // [新增] 移除全域事件監聽器
     document.removeEventListener('mouseup', handleGlobalMouseUp);
     
@@ -2525,7 +2526,69 @@ function exitHighlightMode() {
         dragStartElement = null;
         selectedPhraseElements = [];
     }
+    
+    // [新增] 退出時同步高亮到 meaningContainer
+    const meaningContainer = document.getElementById('meaningContainer');
+    if (meaningContainer) {
+        // 確保 meaningContainer 已包裹單字
+        wrapWordsInMeaningContainer(meaningContainer);
+        // 恢復高亮
+        restoreHighlightedWords(meaningContainer);
     }
+}
+
+// [新增] 包裹 meaningContainer 中的單字（一般模式）
+function wrapWordsInMeaningContainer(container) {
+    // 如果已經包裹過了，就不要重複包裹
+    if (container.querySelector('.highlight-mode-word')) {
+        return;
+    }
+    
+    // 一般模式:包裝所有單字,分離標點符號
+    const walker = document.createTreeWalker(
+        container,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+    );
+    
+    const textNodes = [];
+    let node;
+    while (node = walker.nextNode()) {
+        if (node.parentElement.tagName !== 'SCRIPT' && 
+            node.parentElement.tagName !== 'STYLE' &&
+            !node.parentElement.classList.contains('highlight-mode-word') &&
+            !node.parentElement.classList.contains('phrase-highlight-wrapper')) {
+            textNodes.push(node);
+        }
+    }
+    
+    textNodes.forEach(textNode => {
+        const text = textNode.textContent;
+        // 使用更精確的正則表達式分割:保留空格、單字和標點符號
+        // 匹配: 單字(含可能的撇號) | 空格 | 標點符號
+        const parts = text.split(/(\s+|[a-zA-Z']+|[.,!?;:"""''()—–-])/);
+        const fragment = document.createDocumentFragment();
+        
+        parts.forEach(part => {
+            if (!part) return; // 跳過空字串
+            
+            // 判斷是否為單字(只包含字母和撇號)
+            if (/^[a-zA-Z']+$/.test(part)) {
+                const span = document.createElement('span');
+                span.className = 'highlight-mode-word';
+                span.textContent = part;
+                fragment.appendChild(span);
+            } else {
+                // 空格或標點符號,直接作為文本節點
+                fragment.appendChild(document.createTextNode(part));
+            }
+        });
+        
+        if (fragment.childNodes.length > 0) {
+            textNode.parentNode.replaceChild(fragment, textNode);
+        }
+    });
 }
 
 function wrapWordsInHighlightMode(container) {
@@ -3180,6 +3243,13 @@ function loadHighlightedWords() {
     }
     
     console.log('📝 [loadHighlightedWords] 最終 highlightedWords:', Array.from(highlightedWords));
+    
+    // [新增] 包裹 meaningContainer 的單字並恢復高亮
+    const meaningContainer = document.getElementById('meaningContainer');
+    if (meaningContainer && highlightedWords.size > 0) {
+        wrapWordsInMeaningContainer(meaningContainer);
+        restoreHighlightedWords(meaningContainer);
+    }
 }
 
 // ========== LocalStorage 編輯器功能 ==========
