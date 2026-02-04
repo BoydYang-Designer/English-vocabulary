@@ -315,12 +315,61 @@
         .storage-editor-content {
             background: var(--bg-secondary);
             border-radius: 10px;
-            padding: 20px;
+            padding: 15px;
             max-width: 800px;
             width: 100%;
-            margin-top: 20px;
+            margin-top: 10px;
             max-height: 90vh;
             overflow-y: auto;
+        }
+
+        @media (max-width: 414px) {
+            .storage-editor-content {
+                padding: 10px;
+                margin-top: 0;
+                border-radius: 0;
+                max-height: 100vh;
+            }
+            
+            .storage-editor-header h2 {
+                font-size: 18px;
+            }
+            
+            .storage-tab {
+                font-size: 13px;
+                padding: 8px 10px;
+            }
+
+            .storage-action-buttons {
+                display: flex;
+                gap: 5px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .storage-action-btn {
+                flex: 1;
+                min-width: 90px;
+                font-size: 14px !important;
+                padding: 8px 10px !important;
+                margin: 3px !important;
+                height: 40px !important;
+                white-space: nowrap;
+            }
+        }
+
+        .storage-action-buttons {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .storage-action-btn {
+            width: auto;
+            padding: 0 20px;
+            margin: 5px;
         }
 
         .storage-editor-header {
@@ -332,22 +381,33 @@
             padding-bottom: 10px;
         }
 
-        .storage-editor-tabs {
-            display: flex;
-            gap: 10px;
+        .storage-editor-tabs-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
             margin-bottom: 20px;
             border-bottom: 1px solid var(--border-color);
         }
 
+        .storage-editor-tabs {
+            display: flex;
+            gap: 5px;
+            min-width: min-content;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
         .storage-tab {
-            padding: 10px 20px;
+            padding: 10px 12px;
             cursor: pointer;
             border: none;
             background: none;
             color: var(--text-secondary);
-            font-size: 16px;
+            font-size: 14px;
             transition: all 0.2s;
             border-bottom: 3px solid transparent;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .storage-tab.active {
@@ -644,19 +704,21 @@
                 <button class="button" id="close-storage-editor-btn" style="width: auto; height: 35px; padding: 0 15px;">關閉</button>
             </div>
 
-            <div style="margin-bottom: 20px;">
-                <button class="button" onclick="exportAllData()" style="width: auto; padding: 0 20px; margin: 5px;">📤 完整匯出</button>
-                <button class="button" onclick="importAllData()" style="width: auto; padding: 0 20px; margin: 5px; background-color: #66BB6A;">📥 完整匯入</button>
-                <button class="button" onclick="clearAllStorageData()" style="width: auto; padding: 0 20px; margin: 5px; background-color: #EF5350;">🗑️ 清空全部資料</button>
+            <div class="storage-action-buttons">
+                <button class="button storage-action-btn" onclick="exportAllData()">📤 匯出</button>
+                <button class="button storage-action-btn" onclick="importAllData()" style="background-color: #66BB6A;">📥 匯入</button>
+                <button class="button storage-action-btn" onclick="clearAllStorageData()" style="background-color: #EF5350;">🗑️ 清空</button>
             </div>
 
-            <div class="storage-editor-tabs">
-                <button class="storage-tab active" data-tab="notes">備註 (<span id="notes-count">0</span>)</button>
-                <button class="storage-tab" data-tab="custom">自訂單字 (<span id="custom-count">0</span>)</button>
-                <button class="storage-tab" data-tab="highlighted">畫重點 (<span id="highlighted-count">0</span>)</button>
-                <button class="storage-tab" data-tab="checked">Checked (<span id="checked-count">0</span>)</button>
-                <button class="storage-tab" data-tab="important">重要 (<span id="important-count">0</span>)</button>
-                <button class="storage-tab" data-tab="wrong">錯誤 (<span id="wrong-count">0</span>)</button>
+            <div class="storage-editor-tabs-wrapper">
+                <div class="storage-editor-tabs">
+                    <button class="storage-tab active" data-tab="notes">📝 備註 (<span id="notes-count">0</span>)</button>
+                    <button class="storage-tab" data-tab="custom">✏️ 自訂 (<span id="custom-count">0</span>)</button>
+                    <button class="storage-tab" data-tab="highlighted">🖍️ 重點 (<span id="highlighted-count">0</span>)</button>
+                    <button class="storage-tab" data-tab="checked">✓ (<span id="checked-count">0</span>)</button>
+                    <button class="storage-tab" data-tab="important">⭐ (<span id="important-count">0</span>)</button>
+                    <button class="storage-tab" data-tab="wrong">✗ (<span id="wrong-count">0</span>)</button>
+                </div>
             </div>
 
             <div id="tab-notes" class="storage-tab-content active"></div>
