@@ -1010,66 +1010,23 @@ kbd {
 }
 
 /* ========== 片語拖曳選擇樣式 ========== */
-/* 淺黃底預覽 - 長按時顯示 */
 .phrase-selecting {
-    background-color: rgba(255, 235, 59, 0.4) !important;
-    border-bottom: 2px dashed #FBC02D;
+    background-color: rgba(33, 150, 243, 0.3) !important;
+    border-bottom: 2px solid #2196F3;
     transition: all 0.1s ease;
 }
 
 [data-theme="dark"] .phrase-selecting {
-    background-color: rgba(255, 235, 59, 0.3) !important;
-    border-bottom: 2px dashed #FDD835;
+    background-color: rgba(33, 150, 243, 0.4) !important;
+    border-bottom: 2px solid #42A5F5;
 }
 
 /* 片語選擇中的動畫 */
 @keyframes phrase-pulse {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+    50% { opacity: 0.7; }
 }
 
 .phrase-selecting {
-    animation: phrase-pulse 0.6s ease-in-out infinite;
+    animation: phrase-pulse 0.5s ease-in-out;
 }
-
-/* 正式高亮 - 放開後顯示 */
-.highlighted {
-    background-color: rgba(255, 235, 59, 0.7) !important;
-    border-bottom: 2px solid #F9A825;
-}
-
-[data-theme="dark"] .highlighted {
-    background-color: rgba(255, 235, 59, 0.5) !important;
-    border-bottom: 2px solid #FBC02D;
-}
-
-/* [新增] 片語包裹元素 - 連續的黃色底 */
-.phrase-highlight-wrapper {
-    display: inline;
-    background-color: rgba(255, 235, 59, 0.7);
-    border-bottom: 2px solid #F9A825;
-    padding: 2px 4px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.phrase-highlight-wrapper:hover {
-    background-color: rgba(255, 235, 59, 0.85);
-}
-
-[data-theme="dark"] .phrase-highlight-wrapper {
-    background-color: rgba(255, 235, 59, 0.5);
-    border-bottom: 2px solid #FBC02D;
-}
-
-[data-theme="dark"] .phrase-highlight-wrapper:hover {
-    background-color: rgba(255, 235, 59, 0.65);
-}
-
-/* 片語包裹元素內的單字span不需要額外樣式 */
-.phrase-highlight-wrapper .highlight-mode-word {
-    background: none !important;
-    border: none !important;
-}
-

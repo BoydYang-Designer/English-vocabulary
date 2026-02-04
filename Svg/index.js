@@ -1816,13 +1816,10 @@ function playSentenceAudio(audioFile) {
         }
     });
 
-    detailsSentencePlayer.play().then(() => {
-        // [修改] 移除舊的監聽器
-        detailsSentencePlayer.removeEventListener('timeupdate', handleAutoScroll);
-        detailsSentencePlayer.removeEventListener('timeupdate', handleTextTracking);
-        
-        // [新增] 添加文字追蹤（支援兩個容器）
-        detailsSentencePlayer.addEventListener('timeupdate', handleTextTracking);
+    detailsSentencePlayer.play().then(() => { // [優化]
+        if (!isTimestampMode) {
+            detailsSentencePlayer.addEventListener('timeupdate', handleAutoScroll); // [優化]
+        }
 
         let playBtn = document.getElementById("playAudioBtn");
         let pauseBtn = document.getElementById("pauseResumeBtn");
@@ -1831,9 +1828,8 @@ function playSentenceAudio(audioFile) {
             pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg" alt="Pause" width="24" height="24" />`;
             pauseBtn.classList.remove("playing");
         }
-        detailsSentencePlayer.onended = () => {
-            detailsSentencePlayer.removeEventListener('timeupdate', handleAutoScroll);
-            detailsSentencePlayer.removeEventListener('timeupdate', handleTextTracking);
+        detailsSentencePlayer.onended = () => { // [優化]
+            detailsSentencePlayer.removeEventListener('timeupdate', handleAutoScroll); // [優化]
             if (playBtn) playBtn.classList.remove("playing");
             if (pauseBtn) {
                 pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
@@ -2083,61 +2079,6 @@ function displayWordDetailsFromURL() {
     if (wordData) {
         showDetails(wordData);
     }
-}
-
-// [新增] 一般模式下的文字追蹤函數（用於 highlight-meaning-container）
-function handleTextTracking() {
-    if (!detailsSentencePlayer || detailsSentencePlayer.paused || !detailsSentencePlayer.duration) {
-        return;
-    }
-    
-    const currentTime = detailsSentencePlayer.currentTime;
-    
-    // 同時追蹤兩個容器
-    const containers = [
-        document.getElementById('meaningContainer'),
-        document.getElementById('highlight-meaning-container')
-    ].filter(c => c && c.style.display !== 'none');
-    
-    containers.forEach(container => {
-        // 如果是 Timestamp 模式，使用現有的句子追蹤
-        if (isTimestampMode) {
-            const currentSentenceData = timestampData.find(
-                (item) => currentTime >= item.start && currentTime < item.end
-            );
-            
-            let currentSentenceEl = null;
-            if (currentSentenceData) {
-                currentSentenceEl = container.querySelector(`.timestamp-sentence[data-start="${currentSentenceData.start}"]`);
-            }
-            
-            // 移除之前的高亮
-            const prevHighlighted = container.querySelector('.timestamp-sentence.is-current');
-            if (prevHighlighted && prevHighlighted !== currentSentenceEl) {
-                prevHighlighted.classList.remove('is-current');
-            }
-            
-            // 添加當前高亮
-            if (currentSentenceEl) {
-                currentSentenceEl.classList.add('is-current');
-                
-                // 自動滾動到當前句子
-                const containerRect = container.getBoundingClientRect();
-                const sentenceRect = currentSentenceEl.getBoundingClientRect();
-                
-                if (sentenceRect.top < containerRect.top || sentenceRect.bottom > containerRect.bottom) {
-                    currentSentenceEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            }
-        } else {
-            // 一般模式：使用自動滾動
-            const scrollableHeight = container.scrollHeight - container.clientHeight;
-            if (scrollableHeight > 0 && detailsSentencePlayer.duration > 0) {
-                const scrollPosition = (currentTime / detailsSentencePlayer.duration) * scrollableHeight;
-                container.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-            }
-        }
-    });
 }
 
 function handleAutoScroll() {
@@ -2483,24 +2424,6 @@ function enterHighlightModeEnhanced() {
                 highlightTimestampBtn.classList.add('is-active');
             }
         }
-        
-        // [新增] 全域 mouseup 事件監聽器 - 處理在容器外放開的情況
-        document.addEventListener('mouseup', handleGlobalMouseUp);
-
-// [新增] 全域 mouseup 處理函數
-function handleGlobalMouseUp(e) {
-    if (isDraggingPhrase && selectedPhraseElements.length > 0) {
-        handlePhraseSelection(selectedPhraseElements);
-        isDraggingPhrase = false;
-        dragStartElement = null;
-        selectedPhraseElements = [];
-    }
-    if (wordLongPressTimer) {
-        clearTimeout(wordLongPressTimer);
-        wordLongPressTimer = null;
-    }
-}
-
     }
 }
 
@@ -2514,17 +2437,6 @@ function exitHighlightMode() {
     // 停止播放
     if (detailsSentencePlayer && !detailsSentencePlayer.paused) {
         detailsSentencePlayer.pause();
-    
-    // [新增] 移除全域事件監聽器
-    document.removeEventListener('mouseup', handleGlobalMouseUp);
-    
-    // [新增] 清理拖曳狀態
-    if (isDraggingPhrase) {
-        selectedPhraseElements.forEach(el => el.classList.remove('phrase-selecting'));
-        isDraggingPhrase = false;
-        dragStartElement = null;
-        selectedPhraseElements = [];
-    }
     }
 }
 
@@ -2537,7 +2449,7 @@ function wrapWordsInHighlightMode(container) {
             setupWordInteraction(span);
         });
     } else {
-        // 一般模式:包裝所有單字,分離標點符號
+        // 一般模式:包裝所有單字
         const walker = document.createTreeWalker(
             container,
             NodeFilter.SHOW_TEXT,
@@ -2550,38 +2462,29 @@ function wrapWordsInHighlightMode(container) {
         while (node = walker.nextNode()) {
             if (node.parentElement.tagName !== 'SCRIPT' && 
                 node.parentElement.tagName !== 'STYLE' &&
-                !node.parentElement.classList.contains('highlight-mode-word') &&
-                !node.parentElement.classList.contains('phrase-highlight-wrapper')) {
+                !node.parentElement.classList.contains('highlight-mode-word')) {
                 textNodes.push(node);
             }
         }
         
         textNodes.forEach(textNode => {
             const text = textNode.textContent;
-            // [修改] 使用更精確的正則表達式分割:保留空格、單字和標點符號
-            // 匹配: 單字(含可能的撇號) | 空格 | 標點符號
-            const parts = text.split(/(\s+|[a-zA-Z']+|[.,!?;:"""''()—–-])/);
+            const words = text.split(/(\s+)/);
             const fragment = document.createDocumentFragment();
             
-            parts.forEach(part => {
-                if (!part) return; // 跳過空字串
-                
-                // 判斷是否為單字(只包含字母和撇號)
-                if (/^[a-zA-Z']+$/.test(part)) {
+            words.forEach(word => {
+                if (word.trim() && /[a-zA-Z]/.test(word)) {
                     const span = document.createElement('span');
                     span.className = 'highlight-mode-word';
-                    span.textContent = part;
+                    span.textContent = word;
                     setupWordInteraction(span);
                     fragment.appendChild(span);
                 } else {
-                    // 空格或標點符號,直接作為文本節點
-                    fragment.appendChild(document.createTextNode(part));
+                    fragment.appendChild(document.createTextNode(word));
                 }
             });
             
-            if (fragment.childNodes.length > 0) {
-                textNode.parentNode.replaceChild(fragment, textNode);
-            }
+            textNode.parentNode.replaceChild(fragment, textNode);
         });
     }
 }
@@ -2602,11 +2505,11 @@ function setupWordInteraction(wordElement) {
         dragStartElement = wordElement;
         
         wordLongPressTimer = setTimeout(() => {
-            // 長按0.8秒觸發:進入畫重點模式(顯示淺黃底預覽)
+            // 長按觸發:開始拖曳模式
             isDraggingPhrase = true;
             selectedPhraseElements = [wordElement];
             wordElement.classList.add('phrase-selecting');
-        }, 800); // 800ms (0.8秒) 為長按
+        }, 500); // 500ms 為長按
     });
     
     // [新增] 拖曳選擇邏輯
@@ -2626,12 +2529,11 @@ function setupWordInteraction(wordElement) {
             wordLongPressTimer = null;
         }
         
-        // [修改] 如果處於拖曳模式,放開時才完成高亮
+        // [新增] 如果處於拖曳模式,結束並處理片語
         if (isDraggingPhrase && selectedPhraseElements.length > 0) {
             handlePhraseSelection(selectedPhraseElements);
             isDraggingPhrase = false;
             dragStartElement = null;
-            selectedPhraseElements = [];
         }
     });
     
@@ -2642,260 +2544,78 @@ function setupWordInteraction(wordElement) {
         }
     });
     
-    // 觸控支援
+    // 觸控支援 (保持原邏輯,未來可擴展)
     wordElement.addEventListener('touchstart', (e) => {
         e.preventDefault();
         wordLongPressTarget = wordElement;
         dragStartElement = wordElement;
         wordLongPressTimer = setTimeout(() => {
-            // 觸控長按:進入畫重點模式
-            isDraggingPhrase = true;
-            selectedPhraseElements = [wordElement];
-            wordElement.classList.add('phrase-selecting');
-        }, 800);
-    });
-    
-    wordElement.addEventListener('touchmove', (e) => {
-        if (isDraggingPhrase) {
-            // 取得觸控點下的元素
-            const touch = e.touches[0];
-            const elementAtPoint = document.elementFromPoint(touch.clientX, touch.clientY);
-            
-            if (elementAtPoint && elementAtPoint.classList.contains('highlight-mode-word')) {
-                if (!selectedPhraseElements.includes(elementAtPoint)) {
-                    selectedPhraseElements.push(elementAtPoint);
-                    elementAtPoint.classList.add('phrase-selecting');
-                }
-            }
-        }
+            handleWordLongPress(wordElement);
+        }, 500);
     });
     
     wordElement.addEventListener('touchend', () => {
         if (wordLongPressTimer) {
             clearTimeout(wordLongPressTimer);
             wordLongPressTimer = null;
-        }
-        
-        // 觸控放開時完成高亮
-        if (isDraggingPhrase && selectedPhraseElements.length > 0) {
-            handlePhraseSelection(selectedPhraseElements);
-            isDraggingPhrase = false;
-            dragStartElement = null;
-            selectedPhraseElements = [];
-        } else if (wordLongPressTarget === wordElement) {
             // 如果沒有觸發長按,視為點擊
-            handleWordClick(wordElement);
+            if (wordLongPressTarget === wordElement) {
+                handleWordClick(wordElement);
+            }
         }
-        
         wordLongPressTarget = null;
     });
 }
 
-
-// [新增] 同步高亮到 meaningContainer
-function syncHighlightToMeaningContainer(phrase, isHighlighted) {
-    const meaningContainer = document.getElementById('meaningContainer');
-    if (!meaningContainer) return;
-    
-    const words = phrase.split(' ');
-    const phraseKey = words.join('-').toLowerCase();
-    
-    if (isHighlighted) {
-        // 添加高亮
-        if (words.length === 1) {
-            // 單字高亮
-            const wordElements = meaningContainer.querySelectorAll('.highlight-mode-word');
-            wordElements.forEach(wordEl => {
-                if (wordEl.textContent.trim() === phrase) {
-                    wordEl.classList.add('highlighted');
-                }
-            });
-        } else {
-            // 片語高亮
-            const allWords = Array.from(meaningContainer.querySelectorAll('.highlight-mode-word'));
-            
-            for (let i = 0; i < allWords.length; i++) {
-                let match = true;
-                const phraseElements = [];
-                
-                for (let j = 0; j < words.length && i + j < allWords.length; j++) {
-                    const wordText = allWords[i + j].textContent.trim();
-                    if (wordText.toLowerCase() === words[j].toLowerCase()) {
-                        phraseElements.push(allWords[i + j]);
-                    } else {
-                        match = false;
-                        break;
-                    }
-                }
-                
-                if (match && phraseElements.length === words.length) {
-                    wrapPhraseElements(phraseElements, phrase, phraseKey);
-                    i += words.length - 1;
-                }
-            }
-        }
-    } else {
-        // 移除高亮
-        if (words.length === 1) {
-            const wordElements = meaningContainer.querySelectorAll('.highlight-mode-word');
-            wordElements.forEach(wordEl => {
-                if (wordEl.textContent.trim() === phrase) {
-                    wordEl.classList.remove('highlighted');
-                }
-            });
-        } else {
-            // 移除片語高亮
-            const phraseWrappers = meaningContainer.querySelectorAll('.phrase-highlight-wrapper');
-            phraseWrappers.forEach(wrapper => {
-                if (wrapper.getAttribute('data-phrase') === phrase) {
-                    const parent = wrapper.parentNode;
-                    const textContent = wrapper.textContent;
-                    const textNode = document.createTextNode(textContent);
-                    parent.replaceChild(textNode, wrapper);
-                }
-            });
-        }
-    }
-}
 // [新增] 處理片語選擇的函數
 function handlePhraseSelection(phraseElements) {
-    // 移除選擇預覽效果(淺黃底)
+    // 移除選擇中的視覺效果
     phraseElements.forEach(el => el.classList.remove('phrase-selecting'));
     
-    // 取得所有單字,過濾掉標點符號
-    const words = phraseElements
-        .map(el => el.textContent.trim())
-        .filter(w => w && /[a-zA-Z]/.test(w)); // 只保留包含字母的內容
+    // 取得所有單字
+    const words = phraseElements.map(el => el.textContent.trim()).filter(w => w);
     
     if (words.length === 0) return;
     
-    // 組成片語或單字
+    // 如果只選了一個單字,使用原本的單字長按邏輯
+    if (words.length === 1) {
+        handleWordLongPress(phraseElements[0]);
+        return;
+    }
+    
+    // 多個單字:組成片語
     const phrase = words.join(' ');
     const phraseKey = words.join('-').toLowerCase(); // 例如: in-search-of
     
-    // 檢查是否已經被標記為片語
-    const existingPhraseSpan = phraseElements[0].closest('.phrase-highlight-wrapper');
+    // 切換高亮狀態
+    const isCurrentlyHighlighted = phraseElements.every(el => el.classList.contains('highlighted'));
     
-    if (existingPhraseSpan) {
-        // 已經是片語,取消高亮
-        const parent = existingPhraseSpan.parentNode;
-        const textContent = existingPhraseSpan.textContent;
-        
-        // 恢復為普通文本
-        const textNode = document.createTextNode(textContent);
-        parent.replaceChild(textNode, existingPhraseSpan);
-        
-        // 從記錄中移除
+    phraseElements.forEach(el => {
+        if (isCurrentlyHighlighted) {
+            el.classList.remove('highlighted');
+        } else {
+            el.classList.add('highlighted');
+        }
+    });
+    
+    if (isCurrentlyHighlighted) {
+        // 取消高亮
         highlightedWords.delete(phrase);
-        removePhraseMapping(phraseElements);
-        
-        // [新增] 同步移除 meaningContainer 的高亮
-        syncHighlightToMeaningContainer(phrase, false);
-        
-        if (words.length === 1) {
-            showNotification(`已取消重點: ${phrase}`, 'info');
-        } else {
-            showNotification(`已取消片語重點: ${phrase}`, 'info');
-        }
+        showNotification(`已取消片語重點: ${phrase}`, 'info');
     } else {
-        // 新增高亮
-        if (words.length === 1) {
-            // 單字高亮 - 保持原樣,不用包裹
-            phraseElements.forEach(el => el.classList.add('highlighted'));
-            highlightedWords.add(phrase);
-            showNotification(`✨ 已標記重點: ${phrase}`, 'success');
-        } else {
-            // 片語高亮 - 用連續的span包裹
-            wrapPhraseElements(phraseElements, phrase, phraseKey);
-            highlightedWords.add(phrase);
-            showNotification(`✨ 已標記片語重點: ${phrase}`, 'success');
-            playPhrasePronunciation(phraseKey);
-            addPhraseToCustomWords(phrase, phraseKey);
-        }
+        // 添加高亮
+        highlightedWords.add(phrase);
+        showNotification(`✨ 已標記片語重點: ${phrase}`, 'success');
         
-        // [新增] 同步添加 meaningContainer 的高亮
-        syncHighlightToMeaningContainer(phrase, true);
+        // 播放片語的MP3 (使用連字符格式)
+        playPhrasePronunciation(phraseKey);
     }
     
     // 儲存到localStorage
     saveHighlightedWords();
-}
-
-// [新增] 將片語元素包裹成一個連續的高亮區塊
-function wrapPhraseElements(phraseElements, phrase, phraseKey) {
-    if (phraseElements.length === 0) return;
     
-    // 找到第一個和最後一個元素
-    const firstElement = phraseElements[0];
-    const lastElement = phraseElements[phraseElements.length - 1];
-    
-    // 創建包裹的span
-    const phraseSpan = document.createElement('span');
-    phraseSpan.className = 'phrase-highlight-wrapper highlighted';
-    phraseSpan.setAttribute('data-phrase', phrase);
-    phraseSpan.setAttribute('data-phrase-key', phraseKey);
-    
-    // 收集所有要包裹的內容
-    let currentNode = firstElement;
-    const nodesToWrap = [];
-    
-    while (currentNode) {
-        nodesToWrap.push(currentNode);
-        if (currentNode === lastElement) break;
-        currentNode = currentNode.nextSibling;
-    }
-    
-    // 將所有節點移到新的span中
-    const parent = firstElement.parentNode;
-    
-    // 在移除節點之前，先保存插入位置的參考
-    const insertBeforeNode = firstElement;
-    
-    nodesToWrap.forEach(node => {
-        phraseSpan.appendChild(node.cloneNode(true));
-    });
-    
-    // 在移除原始節點之前插入新的包裹span
-    parent.insertBefore(phraseSpan, insertBeforeNode);
-    
-    // 然後移除原始節點
-    nodesToWrap.forEach(node => node.remove());
-    
-    // 為片語span添加點擊事件
-    phraseSpan.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (detailsSentencePlayer.paused) {
-            playPhrasePronunciation(phraseKey);
-            copyToClipboard(phrase);
-            // 添加閃爍效果
-            phraseSpan.classList.add('word-flash');
-            setTimeout(() => {
-                phraseSpan.classList.remove('word-flash');
-            }, 300);
-        }
-    });
-    
-    // 儲存片語映射關係(用於點擊時識別)
-    storePhraseMapping(phraseSpan, phrase, phraseKey);
-}
-
-// [新增] 儲存片語映射關係
-function storePhraseMapping(element, phrase, phraseKey) {
-    if (!window.phraseElementMap) {
-        window.phraseElementMap = new WeakMap();
-    }
-    window.phraseElementMap.set(element, { phrase, phraseKey });
-}
-
-// [新增] 移除片語映射
-function removePhraseMapping(elements) {
-    if (!window.phraseElementMap) return;
-    elements.forEach(el => {
-        const wrapper = el.closest('.phrase-highlight-wrapper');
-        if (wrapper && window.phraseElementMap.has(wrapper)) {
-            window.phraseElementMap.delete(wrapper);
-        }
-    });
+    // [新增] 自動新增到自訂單字區
+    addPhraseToCustomWords(phrase, phraseKey);
 }
 
 // [新增] 播放片語發音
@@ -2952,35 +2672,15 @@ function addPhraseToCustomWords(phrase, phraseKey) {
 function handleWordClick(wordElement) {
     // 只在暫停狀態下才播放單字發音
     if (detailsSentencePlayer.paused) {
-        // [新增] 檢查是否屬於片語高亮
-        const phraseWrapper = wordElement.closest('.phrase-highlight-wrapper');
-        
-        if (phraseWrapper) {
-            // 點擊的是片語中的單字,播放整個片語的MP3
-            const phrase = phraseWrapper.getAttribute('data-phrase');
-            const phraseKey = phraseWrapper.getAttribute('data-phrase-key');
-            
-            if (phraseKey) {
-                playPhrasePronunciation(phraseKey);
-                copyToClipboard(phrase);
-                // 添加閃爍效果到整個片語
-                phraseWrapper.classList.add('word-flash');
-                setTimeout(() => {
-                    phraseWrapper.classList.remove('word-flash');
-                }, 300);
-            }
-        } else {
-            // 普通單字,播放單字發音
-            const word = wordElement.textContent.trim().replace(/[^a-zA-Z]/g, '');
-            if (word) {
-                playWordPronunciation(word);
-                copyToClipboard(word);
-                // 添加閃爍效果
-                wordElement.classList.add('word-flash');
-                setTimeout(() => {
-                    wordElement.classList.remove('word-flash');
-                }, 300);
-            }
+        const word = wordElement.textContent.trim().replace(/[^a-zA-Z]/g, '');
+        if (word) {
+            playWordPronunciation(word);
+            copyToClipboard(word);
+            // 添加閃爍效果
+            wordElement.classList.add('word-flash');
+            setTimeout(() => {
+                wordElement.classList.remove('word-flash');
+            }, 300);
         }
     }
 }
@@ -3003,57 +2703,13 @@ function handleWordLongPress(wordElement) {
 }
 
 function restoreHighlightedWords(container) {
-    console.log('🔄 [restoreHighlightedWords] 開始恢復高亮');
-    console.log('🔄 [restoreHighlightedWords] highlightedWords:', Array.from(highlightedWords));
-    
-    // 恢復單字和片語的高亮狀態
-    highlightedWords.forEach(phrase => {
-        const words = phrase.split(' ');
-        console.log('🔄 [restoreHighlightedWords] 處理:', phrase, '(單字數:', words.length + ')');
-        
-        if (words.length === 1) {
-            // 單字高亮
-            const wordElements = container.querySelectorAll('.highlight-mode-word');
-            let foundCount = 0;
-            wordElements.forEach(wordEl => {
-                if (wordEl.textContent.trim() === phrase) {
-                    wordEl.classList.add('highlighted');
-                    foundCount++;
-                }
-            });
-            console.log('✅ [restoreHighlightedWords] 單字', phrase, '找到', foundCount, '個匹配');
-        } else {
-            // 片語高亮 - 需要找到連續的單字並包裹
-            const phraseKey = words.join('-').toLowerCase();
-            const allWords = Array.from(container.querySelectorAll('.highlight-mode-word'));
-            console.log('🔍 [restoreHighlightedWords] 在', allWords.length, '個單字中尋找片語:', phrase);
-            
-            // 找到符合的連續單字序列
-            for (let i = 0; i < allWords.length; i++) {
-                let match = true;
-                const phraseElements = [];
-                
-                for (let j = 0; j < words.length && i + j < allWords.length; j++) {
-                    const wordText = allWords[i + j].textContent.trim();
-                    if (wordText.toLowerCase() === words[j].toLowerCase()) {
-                        phraseElements.push(allWords[i + j]);
-                    } else {
-                        match = false;
-                        break;
-                    }
-                }
-                
-                if (match && phraseElements.length === words.length) {
-                    // 找到匹配的片語,用包裹元素包起來
-                    console.log('✅ [restoreHighlightedWords] 找到片語匹配，位置:', i);
-                    wrapPhraseElements(phraseElements, phrase, phraseKey);
-                    i += words.length - 1; // 跳過已處理的單字
-                }
-            }
+    const words = container.querySelectorAll('.highlight-mode-word');
+    words.forEach(wordEl => {
+        const word = wordEl.textContent.trim();
+        if (highlightedWords.has(word)) {
+            wordEl.classList.add('highlighted');
         }
     });
-    
-    console.log('🔄 [restoreHighlightedWords] 恢復完成');
 }
 
 function playWordPronunciation(word) {
@@ -3125,32 +2781,15 @@ function saveHighlightedWords() {
     const currentWord = document.getElementById("wordTitle")?.textContent.trim();
     if (!currentWord) return;
     
-    console.log('💾 [saveHighlightedWords] 當前單字:', currentWord);
-    console.log('💾 [saveHighlightedWords] highlightedWords:', Array.from(highlightedWords));
-    
     const vocabularyData = window.getVocabularyData();
     if (!vocabularyData.highlightedWords) vocabularyData.highlightedWords = {};
     
-    // [修改] 改為以被畫重點的單字/片語為 key
-    // 先清除所有與當前主單字相關的舊記錄（避免重複）
-    Object.keys(vocabularyData.highlightedWords).forEach(key => {
-        if (vocabularyData.highlightedWords[key] === currentWord) {
-            console.log('🗑️ [saveHighlightedWords] 刪除舊記錄:', key);
-            delete vocabularyData.highlightedWords[key];
-        }
-    });
-    
-    // 儲存每個被畫重點的單字/片語
     if (highlightedWords.size > 0) {
-        highlightedWords.forEach(word => {
-            // 將片語轉換為連字符形式作為 key
-            const wordKey = word.includes(' ') ? word.split(' ').join('-').toLowerCase() : word;
-            console.log('✅ [saveHighlightedWords] 儲存:', wordKey, '→', currentWord);
-            vocabularyData.highlightedWords[wordKey] = currentWord; // 值為主單字
-        });
+        vocabularyData.highlightedWords[currentWord] = Array.from(highlightedWords);
+    } else {
+        delete vocabularyData.highlightedWords[currentWord];
     }
     
-    console.log('📦 [saveHighlightedWords] 最終 vocabularyData.highlightedWords:', vocabularyData.highlightedWords);
     window.persistVocabularyData();
 }
 
@@ -3159,27 +2798,11 @@ function loadHighlightedWords() {
     if (!currentWord) return;
     
     const vocabularyData = window.getVocabularyData();
-    highlightedWords = new Set();
-    
-    console.log('🔍 [loadHighlightedWords] 當前單字:', currentWord);
-    console.log('📦 [loadHighlightedWords] vocabularyData.highlightedWords:', vocabularyData.highlightedWords);
-    
-    // [修改] 從新的儲存格式載入：找出所有值為當前主單字的項目
-    if (vocabularyData.highlightedWords) {
-        Object.entries(vocabularyData.highlightedWords).forEach(([highlightedWord, mainWord]) => {
-            if (mainWord === currentWord) {
-                // 將連字符形式轉回空格形式（如果是片語）
-                // 判斷: 如果包含連字符且不是常見的連字符單字，就轉換為空格
-                const isPhrase = highlightedWord.includes('-') && highlightedWord.split('-').length >= 2;
-                const originalWord = isPhrase ? highlightedWord.split('-').join(' ') : highlightedWord;
-                
-                console.log('✅ [loadHighlightedWords] 載入:', highlightedWord, '→', originalWord);
-                highlightedWords.add(originalWord);
-            }
-        });
+    if (vocabularyData.highlightedWords && vocabularyData.highlightedWords[currentWord]) {
+        highlightedWords = new Set(vocabularyData.highlightedWords[currentWord]);
+    } else {
+        highlightedWords = new Set();
     }
-    
-    console.log('📝 [loadHighlightedWords] 最終 highlightedWords:', Array.from(highlightedWords));
 }
 
 // ========== LocalStorage 編輯器功能 ==========
@@ -3285,21 +2908,11 @@ function renderHighlightedWordsTab(highlightedWords) {
         return;
     }
     
-    // [修改] 新格式：key 是被畫重點的單字/片語，value 是主單字
-    // 按主單字分組
-    const groupedByMainWord = {};
-    Object.entries(highlightedWords).forEach(([highlightedWord, mainWord]) => {
-        if (!groupedByMainWord[mainWord]) {
-            groupedByMainWord[mainWord] = [];
-        }
-        groupedByMainWord[mainWord].push(highlightedWord);
-    });
-    
-    Object.entries(groupedByMainWord).forEach(([mainWord, highlightedList]) => {
+    Object.entries(highlightedWords).forEach(([mainWord, highlightedList]) => {
         const item = document.createElement('div');
         item.className = 'storage-item';
         
-        // 創建高亮單字的標籤顯示（已經是連字符形式）
+        // 創建高亮單字的標籤顯示
         const highlightedTags = highlightedList.map(word => 
             `<span style="background-color: #FFEB3B; color: #000; padding: 3px 8px; border-radius: 4px; margin: 2px; display: inline-block; font-size: 14px;">${word}</span>`
         ).join(' ');
@@ -3320,6 +2933,7 @@ function renderHighlightedWordsTab(highlightedWords) {
         container.appendChild(item);
     });
 }
+
 function renderWordListTab(type, words) {
     const container = document.getElementById(`tab-${type}`);
     container.innerHTML = '';
@@ -3548,22 +3162,11 @@ function viewWordWithHighlights(word) {
     }
 }
 
-function deleteHighlightedWords(mainWord) {
-    if (confirm(`確定要清除 "${mainWord}" 的所有畫重點標記嗎?`)) {
+function deleteHighlightedWords(word) {
+    if (confirm(`確定要清除 "${word}" 的所有畫重點標記嗎?`)) {
         const vocabularyData = window.getVocabularyData();
         if (vocabularyData.highlightedWords) {
-            // [修改] 刪除所有值為該主單字的項目
-            const keysToDelete = [];
-            Object.entries(vocabularyData.highlightedWords).forEach(([key, value]) => {
-                if (value === mainWord) {
-                    keysToDelete.push(key);
-                }
-            });
-            
-            keysToDelete.forEach(key => {
-                delete vocabularyData.highlightedWords[key];
-            });
-            
+            delete vocabularyData.highlightedWords[word];
             window.persistVocabularyData();
             refreshStorageEditor();
             showNotification('🗑️ 畫重點標記已清除', 'success');
