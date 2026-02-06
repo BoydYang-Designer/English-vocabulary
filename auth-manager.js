@@ -170,19 +170,54 @@ firebase.auth().onAuthStateChanged(async (user) => {
     } else {
         console.log("Auth state changed: User is logged out or in Guest Mode.");
         currentUser = null;
-        // If we are on the index page, show the login view.
-        // On other pages, we assume guest mode is intended if not logged in.
+        
+        // Check if user has previously entered guest mode
+        const hasEnteredGuestMode = localStorage.getItem('hasEnteredGuestMode') === 'true';
+        
+        // If we are on the index page
         const loginView = document.getElementById('login-view');
         if (loginView) { // This element only exists on index.html
-             if (loadingOverlay) loadingOverlay.style.display = 'none';
-             loginView.classList.remove('is-hidden');
-             const appContainer = document.getElementById('app-container');
-             if(appContainer) appContainer.classList.add('is-hidden');
-             return; // Stop further execution for non-logged-in users on the main page
+            if (hasEnteredGuestMode) {
+                // User was in guest mode, show menu directly
+                loadDataFromLocalStorage();
+                if (loadingOverlay) loadingOverlay.style.display = 'none';
+                loginView.classList.add('is-hidden');
+                const menuView = document.getElementById('menu-view');
+                const appContainer = document.getElementById('app-container');
+                if (menuView) menuView.classList.remove('is-hidden');
+                if (appContainer) appContainer.classList.add('is-hidden');
+                updateUserInfoDisplay();
+                document.dispatchEvent(new CustomEvent('auth-ready', { detail: { user: null } }));
+                return;
+            } else {
+                // First time load, show login view
+                if (loadingOverlay) loadingOverlay.style.display = 'none';
+                loginView.classList.remove('is-hidden');
+                const appContainer = document.getElementById('app-container');
+                if(appContainer) appContainer.classList.add('is-hidden');
+                const menuView = document.getElementById('menu-view');
+                if(menuView) menuView.classList.add('is-hidden');
+                return; // Stop further execution for non-logged-in users on the main page
+            }
         } else {
             // On other pages (quiz, sentence), load from local storage for guest mode
             loadDataFromLocalStorage();
         }
+    }
+
+    // --- Show Menu View after successful login ---
+    const loginView = document.getElementById('login-view');
+    const menuView = document.getElementById('menu-view');
+    const appContainer = document.getElementById('app-container');
+    
+    if (loginView && menuView) {
+        if (loadingOverlay) loadingOverlay.style.display = 'none';
+        loginView.classList.add('is-hidden');
+        menuView.classList.remove('is-hidden');
+        if(appContainer) appContainer.classList.add('is-hidden');
+        
+        // Update user info display
+        updateUserInfoDisplay();
     }
 
     // --- CRITICAL STEP ---
@@ -201,6 +236,9 @@ function signIn() {
 }
 
 function signOutUser() {
+    // Clear guest mode flag when user signs out
+    localStorage.removeItem('hasEnteredGuestMode');
+    
     firebase.auth().signOut().catch((error) => {
         console.error("Logout failed:", error);
     });
@@ -209,7 +247,69 @@ function signOutUser() {
 async function enterGuestMode() {
     console.log("Entering Guest Mode...");
     currentUser = null;
+    
+    // Mark that user has entered guest mode
+    localStorage.setItem('hasEnteredGuestMode', 'true');
+    
     loadDataFromLocalStorage();
+    
+    // Show menu view for guest mode
+    const loginView = document.getElementById('login-view');
+    const menuView = document.getElementById('menu-view');
+    const appContainer = document.getElementById('app-container');
+    const loadingOverlay = document.getElementById('loading-overlay');
+    
+    if (loginView && menuView) {
+        if (loadingOverlay) loadingOverlay.style.display = 'none';
+        loginView.classList.add('is-hidden');
+        menuView.classList.remove('is-hidden');
+        if(appContainer) appContainer.classList.add('is-hidden');
+        
+        // Update user info display
+        updateUserInfoDisplay();
+    }
+    
     // Fire the 'auth-ready' event for guest mode as well
     document.dispatchEvent(new CustomEvent('auth-ready', { detail: { user: null } }));
 }
+
+// --- Update User Info Display ---
+function updateUserInfoDisplay() {
+    const userInfo = document.getElementById('user-info');
+    const userInfoMenu = document.getElementById('user-info-menu');
+    const signOutBtn = document.getElementById('sign-out-btn');
+    const signOutBtnMenu = document.getElementById('sign-out-btn-menu');
+    const signInBtn = document.getElementById('sign-in-from-guest-btn');
+    const signInBtnMenu = document.getElementById('sign-in-from-guest-btn-menu');
+    
+    if (currentUser) {
+        const displayName = currentUser.displayName || currentUser.email || 'User';
+        if (userInfo) userInfo.textContent = `👤 ${displayName}`;
+        if (userInfoMenu) userInfoMenu.textContent = `👤 ${displayName}`;
+        if (signOutBtn) signOutBtn.classList.remove('is-hidden');
+        if (signOutBtnMenu) signOutBtnMenu.classList.remove('is-hidden');
+        if (signInBtn) signInBtn.classList.add('is-hidden');
+        if (signInBtnMenu) signInBtnMenu.classList.add('is-hidden');
+    } else {
+        if (userInfo) userInfo.textContent = '👤 訪客模式';
+        if (userInfoMenu) userInfoMenu.textContent = '👤 訪客模式';
+        if (signOutBtn) signOutBtn.classList.add('is-hidden');
+        if (signOutBtnMenu) signOutBtnMenu.classList.add('is-hidden');
+        if (signInBtn) signInBtn.classList.remove('is-hidden');
+        if (signInBtnMenu) signInBtnMenu.classList.remove('is-hidden');
+    }
+}
+
+// --- Initialize Login Buttons ---
+document.addEventListener('DOMContentLoaded', function() {
+    const googleSignInBtn = document.getElementById('google-signin-btn');
+    const guestModeBtn = document.getElementById('guest-mode-btn');
+    
+    if (googleSignInBtn) {
+        googleSignInBtn.addEventListener('click', signIn);
+    }
+    
+    if (guestModeBtn) {
+        guestModeBtn.addEventListener('click', enterGuestMode);
+    }
+});

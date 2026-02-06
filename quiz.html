@@ -6,7 +6,7 @@
     <title>單字測驗</title>
     <link rel="stylesheet" href="quiz.css">
 
-        <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js" defer></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js" defer></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js" defer></script>
     
@@ -15,6 +15,41 @@
     <script src="q_sentence.js" defer></script>
     <script src="quiz.js" defer></script>
     
+    <style>
+        /* 麵包屑導航樣式 */
+        #breadcrumb-nav {
+            background: #fff;
+            padding: 8px 15px;
+            margin: 10px auto;
+            max-width: 414px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #666;
+            display: none;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        #breadcrumb-nav.show {
+            display: block;
+        }
+
+        .breadcrumb-item {
+            display: inline;
+            cursor: pointer;
+            color: #A1887F;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb-item:hover {
+            color: #8D6E63;
+            text-decoration: underline;
+        }
+
+        .breadcrumb-separator {
+            margin: 0 5px;
+            color: #999;
+        }
+    </style>
 </head>
 <body>
     <div id="loadingOverlay">
@@ -23,13 +58,14 @@
 
     <div id="toastNotification"></div>
     
+    <!-- 麵包屑導航 -->
+    <div id="breadcrumb-nav"></div>
+    
     <h1>測驗區</h1>
 
     <div class="button-container" style="text-align: center; margin-top: 20px; margin-bottom: 15px;">
-        <button id="wordPageBtn" class="button" onclick="window.location.href='index.html'">單字頁面</button>
-        <button id="wordQuizBtn" class="button" onclick="window.location.href='quiz.html?show=categories'">單字測驗</button>
-        <button id="sentencePageBtn" class="button" onclick="window.location.href='sentence.html'">句子頁面</button>
-        <button id="startQuizBtn" class="button" onclick="window.location.href='quiz.html?show=sentenceCategories'">句子測驗</button>
+        <button id="wordQuizBtn" class="button" onclick="navigateToQuizType('word')">單字測驗</button>
+        <button id="sentenceQuizBtn" class="button" onclick="navigateToQuizType('sentence')">句子測驗</button>
     </div>
 
     <div class="container">
@@ -58,35 +94,35 @@
             </div>
         </div>
 
-<div id="sentenceQuizCategories" style="display: none;">
-    <div class="button-container">
-        <button id="startSentenceQuizBtn" class="button">Sentense Quiz</button>
-        <button id="startReorganizeQuizBtn" class="button">Reorganize Quiz</button>
-    </div>
-    <div class="collapsible-section-wrapper">
-        <div class="collapsible-section">
-            <button type="button" class="collapsible-header">字母分類</button>
-            <div class="collapsible-content" id="sentenceAlphabetButtons"></div>
-        </div>
-        <div class="collapsible-section">
-            <button type="button" class="collapsible-header">主分類</button>
-            <div class="collapsible-content" id="sentencePrimaryCategoryButtons"></div>
-        </div>
+        <div id="sentenceQuizCategories" style="display: none;">
+            <div class="button-container">
+                <button id="startSentenceQuizBtn" class="button">Sentense Quiz</button>
+                <button id="startReorganizeQuizBtn" class="button">Reorganize Quiz</button>
+            </div>
+            <div class="collapsible-section-wrapper">
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">字母分類</button>
+                    <div class="collapsible-content" id="sentenceAlphabetButtons"></div>
+                </div>
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">主分類</button>
+                    <div class="collapsible-content" id="sentencePrimaryCategoryButtons"></div>
+                </div>
 
-        <div class="collapsible-section">
-            <button type="button" class="collapsible-header">次分類</button>
-            <div class="collapsible-content" id="sentenceSecondaryCategoryButtons"></div>
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">次分類</button>
+                    <div class="collapsible-content" id="sentenceSecondaryCategoryButtons"></div>
+                </div>
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">特殊分類</button>
+                    <div class="collapsible-content" id="sentenceSpecialCategoryButtons"></div>
+                </div>
+                <div class="collapsible-section">
+                    <button type="button" class="collapsible-header">等級分類</button>
+                    <div class="collapsible-content" id="sentenceLevelButtons"></div>
+                </div>
+            </div>
         </div>
-        <div class="collapsible-section">
-            <button type="button" class="collapsible-header">特殊分類</button>
-            <div class="collapsible-content" id="sentenceSpecialCategoryButtons"></div>
-        </div>
-        <div class="collapsible-section">
-            <button type="button" class="collapsible-header">等級分類</button>
-            <div class="collapsible-content" id="sentenceLevelButtons"></div>
-        </div>
-    </div>
-</div>
 
         <div id="reorganizeQuizArea" style="display: none;">
             <button id="cancelReorganizeQuizBtn" class="back-button" onclick="returnToSentenceCategorySelection()">Cancel</button>
@@ -142,10 +178,106 @@
 
         <div id="quizResult" style="display: none;">
            <div class="button-group">
-             <button class="button" onclick="window.location.href='index.html'">返回首頁</button> </div>
-         </div>
+             <button class="button" onclick="backToMenu()">返回選單</button>
+           </div>
+        </div>
     </div>
 
+    <script>
+        // ========== 麵包屑導航系統 ==========
+        window.quizEnhancements = window.quizEnhancements || {
+            breadcrumbPath: [],
+            currentQuizType: null // 'word' or 'sentence'
+        };
+
+        function updateBreadcrumb(path) {
+            if (path) {
+                window.quizEnhancements.breadcrumbPath = path;
+            }
+            
+            const breadcrumbNav = document.getElementById('breadcrumb-nav');
+            if (!breadcrumbNav) return;
+            
+            // 如果路徑為空，隱藏導航
+            if (!window.quizEnhancements.breadcrumbPath || window.quizEnhancements.breadcrumbPath.length === 0) {
+                breadcrumbNav.classList.remove('show');
+                return;
+            }
+            
+            breadcrumbNav.classList.add('show');
+            breadcrumbNav.innerHTML = window.quizEnhancements.breadcrumbPath.map((item, index) => {
+                const isLast = index === window.quizEnhancements.breadcrumbPath.length - 1;
+                let onclickAction = '';
+                
+                // 定義點擊行為
+                if (index === 0) {
+                    onclickAction = 'backToMenu()';
+                } else if (index === 1) {
+                    onclickAction = 'backToQuizSelection()';
+                } else {
+                    onclickAction = `navigateToBreadcrumb(${index})`;
+                }
+                
+                return `<span class="breadcrumb-item" onclick="${onclickAction}">${item}</span>${!isLast ? '<span class="breadcrumb-separator">›</span>' : ''}`;
+            }).join('');
+        }
+
+        function backToMenu() {
+            // 返回到 index.html 的選單頁面
+            window.location.href = 'index.html';
+        }
+
+        function backToQuizSelection() {
+            // 隱藏所有測驗區域
+            document.getElementById('quizCategories').style.display = 'none';
+            document.getElementById('sentenceQuizCategories').style.display = 'none';
+            document.getElementById('quizArea').style.display = 'none';
+            document.getElementById('sentenceQuizArea').style.display = 'none';
+            document.getElementById('rewordQuizArea').style.display = 'none';
+            document.getElementById('reorganizeQuizArea').style.display = 'none';
+            document.getElementById('quizResult').style.display = 'none';
+            
+            // 更新麵包屑
+            updateBreadcrumb(['選擇功能', '測驗中心']);
+        }
+
+        function navigateToQuizType(type) {
+            window.quizEnhancements.currentQuizType = type;
+            
+            if (type === 'word') {
+                // 顯示單字測驗分類
+                document.getElementById('quizCategories').style.display = 'block';
+                document.getElementById('sentenceQuizCategories').style.display = 'none';
+                updateBreadcrumb(['選擇功能', '測驗中心', '單字測驗']);
+                
+                // 觸發原本的 URL 參數邏輯
+                window.location.href = 'quiz.html?show=categories';
+            } else if (type === 'sentence') {
+                // 顯示句子測驗分類
+                document.getElementById('sentenceQuizCategories').style.display = 'block';
+                document.getElementById('quizCategories').style.display = 'none';
+                updateBreadcrumb(['選擇功能', '測驗中心', '句子測驗']);
+                
+                // 觸發原本的 URL 參數邏輯
+                window.location.href = 'quiz.html?show=sentenceCategories';
+            }
+        }
+
+        // 頁面載入時初始化麵包屑
+        document.addEventListener('DOMContentLoaded', function() {
+            // 檢查 URL 參數來判斷當前狀態
+            const urlParams = new URLSearchParams(window.location.search);
+            const showParam = urlParams.get('show');
+            
+            if (showParam === 'categories') {
+                updateBreadcrumb(['選擇功能', '測驗中心', '單字測驗']);
+            } else if (showParam === 'sentenceCategories') {
+                updateBreadcrumb(['選擇功能', '測驗中心', '句子測驗']);
+            } else {
+                updateBreadcrumb(['選擇功能', '測驗中心']);
+            }
+        });
+    </script>
 
 </body>
 </html>

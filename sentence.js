@@ -16,6 +16,86 @@ function createWordVariationsRegex(baseWord) {
     return new RegExp(pattern, 'gi');
 }
 
+// ========== 麵包屑導航系統 ==========
+window.appEnhancements = window.appEnhancements || {
+    breadcrumbPath: [],
+    currentTheme: localStorage.getItem('theme') || 'light'
+};
+
+function updateBreadcrumb(path) {
+    if (path) {
+        window.appEnhancements.breadcrumbPath = path;
+    }
+    
+    const breadcrumbNav = document.getElementById('breadcrumb-nav');
+    if (!breadcrumbNav) return;
+    
+    // 如果路徑為空，隱藏導航
+    if (window.appEnhancements.breadcrumbPath.length === 0) {
+        breadcrumbNav.classList.remove('show');
+        return;
+    }
+    
+    breadcrumbNav.classList.add('show');
+    breadcrumbNav.innerHTML = window.appEnhancements.breadcrumbPath.map((item, index) => {
+        const isLast = index === window.appEnhancements.breadcrumbPath.length - 1;
+        let onclickAction = "";
+        
+        // 定義點擊行為
+        if (index === 0) {
+            onclickAction = "backToMenu()";
+        } else if (index === 1) {
+            onclickAction = "backToFirstLayer()";
+        } else {
+            onclickAction = `navigateToBreadcrumb(${index})`;
+        }
+        
+        return `<span class="breadcrumb-item" onclick="${onclickAction}">${item}</span>${!isLast ? '<span class="breadcrumb-separator">›</span>' : ''}`;
+    }).join('');
+}
+
+function navigateToBreadcrumb(index) {
+    window.appEnhancements.breadcrumbPath = window.appEnhancements.breadcrumbPath.slice(0, index + 1);
+    
+    if (index === 0) {
+        backToMenu();
+    } else if (index === 1) {
+        backToFirstLayer();
+    } else if (index === 2) {
+        backToSentenceList();
+    }
+    
+    updateBreadcrumb();
+}
+
+function backToMenu() {
+    // 返回到 index.html 的選單頁面
+    window.location.href = 'index.html';
+}
+
+// ========== 深色模式 ==========
+function initTheme() {
+    document.documentElement.setAttribute('data-theme', window.appEnhancements.currentTheme);
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    if (themeBtn) {
+        themeBtn.textContent = window.appEnhancements.currentTheme === 'dark' ? '☀️' : '🌙';
+        themeBtn.addEventListener('click', toggleTheme);
+    }
+}
+
+function toggleTheme() {
+    window.appEnhancements.currentTheme = window.appEnhancements.currentTheme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', window.appEnhancements.currentTheme);
+    localStorage.setItem('theme', window.appEnhancements.currentTheme);
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    if (themeBtn) {
+        themeBtn.textContent = window.appEnhancements.currentTheme === 'dark' ? '☀️' : '🌙';
+    }
+    if (typeof showNotification === 'function') {
+        showNotification(`已切換至${window.appEnhancements.currentTheme === 'dark' ? '深色' : '淺色'}模式`, 'success');
+    }
+}
+
 // 全局變數
 let parentLayer = "";
 let wordsData = [];
@@ -48,7 +128,14 @@ function showNotification(message, type = 'success') {
 document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const show = params.get("show");
-const loadingOverlay = document.getElementById('loading-overlay');
+    const loadingOverlay = document.getElementById('loading-overlay');
+    
+    // 初始化主題
+    initTheme();
+    
+    // 初始化麵包屑導航（初始為句子庫首頁）
+    updateBreadcrumb(['選擇功能', '句子庫']);
+    
     document.querySelectorAll('.collapsible-content').forEach(content => {
         content.style.maxHeight = '0px';
     });
@@ -117,10 +204,6 @@ document.querySelectorAll(".collapsible-header").forEach(button => {
         createCategoryButtons();
         createLevelButtons();
 
-        document.getElementById("startQuizBtn").addEventListener("click", () => {window.location.href = "quiz.html?show=sentenceCategories&from=sentence";});
-        document.getElementById("returnHomeBtn").addEventListener("click", () => window.location.href = "index.html");
-        document.getElementById("wordQuizBtn").addEventListener("click", () => {window.location.href = "quiz.html?show=categories&from=sentence";});
-        
         document.getElementById("startLearningBtn").addEventListener("click", startLearning);
 
         const urlParams = new URLSearchParams(window.location.search);
@@ -388,6 +471,9 @@ function displayWordSelectionList(words) {
     const showSentencesBtn = document.getElementById('showSelectedSentencesBtn');
     showSentencesBtn.style.display = 'block';
     showSentencesBtn.onclick = processWordSelection;
+    
+    // 更新麵包屑導航
+    updateBreadcrumb(['選擇功能', '句子庫', '選擇單字']);
 }
 
 function toggleSentenceWordChecked(word, button) {
@@ -581,6 +667,9 @@ function displaySentenceList(sentences, title = "句子列表") {
     });
 
     updateAutoPlayButton();
+    
+    // 更新麵包屑導航
+    updateBreadcrumb(['選擇功能', '句子庫', '句子列表']);
 }
 
 
@@ -593,6 +682,21 @@ function backToWordSelectionList() {
     document.getElementById('wordList').style.display = 'block';
     document.getElementById("wordListTitle").textContent = `勾選單字 (${currentWordList.length}個)`;
     document.getElementById("wordListTitle").style.display = 'block';
+    
+    // 更新麵包屑導航
+    updateBreadcrumb(['選擇功能', '句子庫', '選擇單字']);
+}
+
+// 新增函數：從句子詳情返回句子列表
+function backToSentenceList(event) {
+    if (event) event.preventDefault();
+    
+    document.getElementById('sentenceDetails').style.display = 'none';
+    document.getElementById('sentenceList').style.display = 'block';
+    document.getElementById("wordListTitle").style.display = 'block';
+    
+    // 更新麵包屑導航
+    updateBreadcrumb(['選擇功能', '句子庫', '句子列表']);
 }
 // ▲▲▲ 新增結束 ▲▲▲
 
@@ -616,6 +720,9 @@ function backToFirstLayer() {
         header.classList.remove('active');
         header.nextElementSibling.style.maxHeight = '0px';
     });
+    
+    // 更新麵包屑為句子庫首頁
+    updateBreadcrumb(['選擇功能', '句子庫']);
 }
 
 // ... 此處省略部分未變更的程式碼 ...
@@ -992,6 +1099,9 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
     } else {
         updateAutoPlayButton();
     }
+    
+    // 更新麵包屑導航
+    updateBreadcrumb(['選擇功能', '句子庫', '句子列表', sentenceId]);
 }
 
 let wordAudio = new Audio();

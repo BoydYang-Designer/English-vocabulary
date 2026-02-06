@@ -20,17 +20,24 @@
     </div>
 
     <div id="notification-container"></div>
-    <h1>Boyd Vocabulary</h1>
+    
+    <!-- 用戶狀態頭部 -->
+    <div id="user-status-header">
+        <span id="user-info">載入中...</span>
+        <div class="header-buttons">
+            <button id="theme-toggle-btn" class="button">🌙</button>
+            <button id="edit-storage-btn" class="button">編輯</button>
+            <button id="sign-out-btn" class="button is-hidden">登出</button>
+            <button id="sign-in-from-guest-btn" class="button is-hidden">登入</button>
+        </div>
+    </div>
+    
+    <!-- 麵包屑導航 -->
+    <div id="breadcrumb-nav"></div>
 
     <div id="mainPageContainer">
         <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
             <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterSentences()" style="font-size: 18px; padding: 5px; width: 200px;">
-        </div>
-        <div class="button-container">
-            <button id="returnHomeBtn" class="button">單字頁面</button>
-            <button id="wordQuizBtn" class="button">單字測驗</button>
-            <button id="sentencePageBtn" class="button" style="background-color: #28a745;">句子頁面</button>
-            <button id="startQuizBtn" class="button">句子測驗</button>
         </div>
         
         <div class="start-learning-container">

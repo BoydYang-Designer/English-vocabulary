@@ -1,11 +1,35 @@
 /* sentence.css */
 
+/* CSS 變數定義 */
+:root {
+    --bg-primary: #FDFBF6;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #FAFAFA;
+    --text-primary: #5D4037;
+    --text-secondary: #795548;
+    --border-color: #EFEBE9;
+    --accent-color: #A1887F;
+    --accent-hover: #8D6E63;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-tertiary: #242424;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --border-color: #404040;
+    --accent-color: #A1887F;
+    --accent-hover: #8D6E63;
+}
+
 /* 基本樣式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #FDFBF6; /* [大地色] 溫暖米白 */
+    background: var(--bg-primary);
+    color: var(--text-primary);
 }
 
 /* ▼▼▼ 新增這段 CSS ▼▼▼ */
@@ -16,6 +40,92 @@ html, body {
     width: 100%;
 }
 /* ▲▲▲ 新增結束 ▲▲▲ */
+
+/* 用戶狀態頭部 */
+#user-status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    max-width: 414px;
+    margin: 0 auto;
+}
+
+#user-info {
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.header-buttons .button {
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+    height: auto !important;
+    width: auto !important;
+    margin: 0 !important;
+    border-radius: 15px !important;
+}
+
+#theme-toggle-btn {
+    background-color: #6c757d !important;
+    min-width: 36px;
+    padding: 6px 10px !important;
+}
+
+#edit-storage-btn {
+    background-color: #7986CB !important;
+}
+
+#edit-storage-btn:hover {
+    background-color: #5C6BC0 !important;
+}
+
+/* 麵包屑導航 */
+#breadcrumb-nav {
+    background: var(--bg-secondary);
+    padding: 8px 15px;
+    margin: 0 auto 10px;
+    max-width: 414px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    display: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+#breadcrumb-nav.show {
+    display: block;
+}
+
+.breadcrumb-item {
+    display: inline;
+    cursor: pointer;
+    color: var(--accent-color);
+    transition: color 0.2s;
+}
+
+.breadcrumb-item:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    margin: 0 5px;
+    color: var(--text-secondary);
+}
+
+/* 隱藏類別 */
+.is-hidden {
+    display: none !important;
+}
 
 h1 {
     text-align: center;

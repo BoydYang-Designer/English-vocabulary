@@ -73,6 +73,7 @@ function updateBreadcrumb(path) {
     const breadcrumbNav = document.getElementById('breadcrumb-nav');
     if (!breadcrumbNav) return;
     
+    // 如果路徑為空，隱藏導航
     if (window.appEnhancements.breadcrumbPath.length === 0) {
         breadcrumbNav.classList.remove('show');
         return;
@@ -81,17 +82,81 @@ function updateBreadcrumb(path) {
     breadcrumbNav.classList.add('show');
     breadcrumbNav.innerHTML = window.appEnhancements.breadcrumbPath.map((item, index) => {
         const isLast = index === window.appEnhancements.breadcrumbPath.length - 1;
-        return `<span class="breadcrumb-item" onclick="navigateToBreadcrumb(${index})">${item}</span>${!isLast ? '<span class="breadcrumb-separator">›</span>' : ''}`;
+        let onclickAction = "";
+        
+        // [需求 3] 定義點擊行為：第一層回到選單，其他層級執行 navigateToBreadcrumb
+        if (index === 0) {
+            onclickAction = "backToMenu()";
+        } else {
+            onclickAction = `navigateToBreadcrumb(${index})`;
+        }
+        
+        // [需求 3] 所有麵包屑項目都可點擊，包括最後一項
+        return `<span class="breadcrumb-item" onclick="${onclickAction}">${item}</span>${!isLast ? '<span class="breadcrumb-separator">›</span>' : ''}`;
     }).join('');
 }
 
+// [請在 index.js 中搜尋並替換此函數]
+function backToFirstLayer() {
+    // 1. 切換顯示區域
+    const wordList = document.getElementById('wordList');
+    const wordDetails = document.getElementById('wordDetails');
+    const mainPage = document.getElementById('mainPageContainer');
+
+    if (wordList) wordList.style.display = 'none';
+    if (wordDetails) wordDetails.style.display = 'none';
+    if (mainPage) mainPage.style.display = 'block';
+    
+    // [需求 4 & 5] 在單字庫頁面，隱藏學習列表標題與自動播放按鈕
+    const listTitle = document.getElementById("wordListTitle");
+    if (listTitle) listTitle.style.display = "none";
+    
+    const autoPlayBtn = document.getElementById("autoPlayBtn");
+    if (autoPlayBtn) autoPlayBtn.style.display = "none";
+
+    // 2. [需求 2] 更新麵包屑：加入第一層「選擇功能」
+    if (typeof updateBreadcrumb === 'function') {
+        updateBreadcrumb(['選擇功能', '單字庫']);
+    }
+
+    // 3. 清除搜尋與重置按鈕
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) searchInput.value = '';
+    
+    // 隱藏進度條
+    const progressBar = document.getElementById('reading-progress-bar');
+    if (progressBar) progressBar.style.width = '0%';
+    
+    // 4. 禁用 Back 按鈕
+    const bButton = document.getElementById('bButton');
+    if (bButton) {
+        bButton.disabled = true;
+        bButton.style.backgroundColor = "#ccc"; 
+        bButton.style.cursor = "default";
+    }
+    
+    // 清空歷史堆疊
+    historyStack = [];
+}
+
 function navigateToBreadcrumb(index) {
+    // 更新路徑陣列
     window.appEnhancements.breadcrumbPath = window.appEnhancements.breadcrumbPath.slice(0, index + 1);
+    
+    // 根據新的層級定義導航行為
+    // Index 0: 選擇功能 -> 回到主選單
+    // Index 1: 單字庫 -> 回到分類選擇頁
+    // Index 2: 學習列表 -> 回到單字列表
+    // Index 3: 單字詳情 -> 回到單字詳情（當前頁）
+    
     if (index === 0) {
-        if (typeof backToFirstLayer === 'function') backToFirstLayer();
+        if (typeof backToMenu === 'function') backToMenu();
     } else if (index === 1) {
+        if (typeof backToFirstLayer === 'function') backToFirstLayer();
+    } else if (index === 2) {
         if (typeof backToWordList === 'function') backToWordList();
     }
+    
     updateBreadcrumb();
 }
 
@@ -781,6 +846,7 @@ function startLearning() {
     
     let filteredWords = wordsData;
 
+    // 1. 字母篩選
     if (selectedLetters.length > 0) {
         filteredWords = filteredWords.filter(w => {
             const word = w.Words || w.word || w["單字"] || "";
@@ -788,6 +854,7 @@ function startLearning() {
         });
     }
     
+    // 2. 領域與主題篩選
     if (selectedDomains.length > 0) {
         filteredWords = filteredWords.filter(w => {
             const domain = (w["分類"] && w["分類"][0]) || null;
@@ -804,6 +871,7 @@ function startLearning() {
         });
     }
     
+    // 3. 來源篩選
     if (selectedSources.length > 0) {
         filteredWords = filteredWords.filter(w => {
             const source = (w["分類"] && w["分類"][2]) || null;
@@ -811,6 +879,7 @@ function startLearning() {
         });
     }
     
+    // 4. 等級篩選
     if (selectedLevels.length > 0) {
         filteredWords = filteredWords.filter(w => {
             const level = w["等級"] || "未分類";
@@ -818,9 +887,10 @@ function startLearning() {
         });
     }
     
-if (selectedSpecials.length > 0) {
+    // 5. 特殊分類篩選 (勾選、重點、錯字等)
+    if (selectedSpecials.length > 0) {
         const specialWordsSet = new Set();
-        const vocabularyData = window.getVocabularyData(); // 從 auth-manager 獲取資料
+        const vocabularyData = window.getVocabularyData(); 
         selectedSpecials.forEach(specialType => {
             switch (specialType) {
                 case 'checked':
@@ -836,17 +906,12 @@ if (selectedSpecials.length > 0) {
                     Object.keys(vocabularyData.notes || {}).forEach(word => specialWordsSet.add(word));
                     break;
                 case 'highlighted':
-                    // 獲取所有有畫重點的單字
                     Object.keys(vocabularyData.highlightedWords || {}).forEach(word => specialWordsSet.add(word));
                     break;
-                
-
                 case 'custom': 
-                    // 獲取所有自訂單字的 Key (單字本身)
                     const customWordsObj = vocabularyData.customWords || {};
                     Object.keys(customWordsObj).forEach(word => specialWordsSet.add(word));
                     break;
-
             }
         });
         filteredWords = filteredWords.filter(w => {
@@ -855,18 +920,55 @@ if (selectedSpecials.length > 0) {
         });
     }
 
+    // 6. 結果檢查與視圖切換
     if (filteredWords.length === 0) {
         showNotification("⚠️ 找不到符合的單字。", "error");
         return;
     }
+
+// 執行顯示列表
     displayWordList(filteredWords, "學習列表");
+    
+    // [需求 5] 在"單字庫›學習列表"時隱藏 h2 id="wordListTitle" 
+    const listTitle = document.getElementById("wordListTitle");
+    if (listTitle) listTitle.style.display = "none";
+
+    // ========== [新增/修改內容] ==========
+    
+    // A. 確保選單區域隱藏，列表區域顯示
+    const mainPage = document.getElementById('mainPageContainer');
+    if (mainPage) mainPage.style.display = 'none';
+    
+    document.getElementById('wordList').style.display = 'block';
+
+    // B. [需求 2] 更新麵包屑路徑：加入「選擇功能」
+    updateBreadcrumb(['選擇功能', '單字庫', '學習列表']);
+
+    // C. 啟用 Back 按鈕 (bButton)，讓它可以點擊回到 selectionArea
+    const bButton = document.getElementById('bButton');
+    if (bButton) {
+        bButton.disabled = false;
+        bButton.style.backgroundColor = ""; // 恢復顏色
+        bButton.style.cursor = "pointer";
+    }
+    
+    // D. 捲動到頂部
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function displayWordList(words, title) {
-    document.getElementById("wordListTitle").innerText = title;
-    document.getElementById("wordListTitle").style.display = "block";
+    // [需求 5] 隱藏學習列表標題
+    const wordListTitle = document.getElementById("wordListTitle");
+    if (wordListTitle) {
+        wordListTitle.innerText = title;
+        wordListTitle.style.display = "none"; // 始終隱藏
+    }
+    
     document.getElementById("mainPageContainer").style.display = "none";
-    document.getElementById("autoPlayBtn").style.display = "block";
+    
+    // [需求 4] 隱藏自動播放按鈕
+    const autoPlayBtn = document.getElementById("autoPlayBtn");
+    if (autoPlayBtn) autoPlayBtn.style.display = "none";
     
     let listContainer = document.getElementById("wordList");
     let wordItems = document.getElementById("wordItems");
@@ -930,30 +1032,8 @@ function displayWordList(words, title) {
     lastWordListType = "custom_selection";
 }
 
-function backToFirstLayer() {
-    document.getElementById("mainPageContainer").style.display = "block";
-    document.getElementById("wordList").style.display = "none";
-    document.getElementById("wordDetails").style.display = "none";
-    document.getElementById("wordItems").innerHTML = "";
-    document.getElementById("wordListTitle").style.display = "none";
-    document.getElementById("searchInput").value = "";
-    document.getElementById("autoPlayBtn").style.display = "none";
 
-    let searchResults = document.getElementById("searchResults");
-    if (searchResults) {
-        searchResults.style.display = "block";
-        searchResults.innerHTML = "";
-    }
 
-    historyStack = [];
-    lastWordListType = "";
-    lastWordListValue = "";
-    
-    // 新增：更新麵包屑
-    if (typeof updateBreadcrumb === 'function') {
-        updateBreadcrumb([]);
-    }
-}
 
 function backToWordList() {
     if (isAutoPlaying) {
@@ -974,9 +1054,21 @@ function backToWordList() {
 
     document.getElementById("wordDetails").style.display = "none";
     document.getElementById("wordList").style.display = "block";
-    document.getElementById("wordListTitle").style.display = "block";
-    document.getElementById("autoPlayBtn").style.display = "block";
+    
+    // [需求 5] 隱藏學習列表標題
+    const wordListTitle = document.getElementById("wordListTitle");
+    if (wordListTitle) wordListTitle.style.display = "none";
+    
+    // [需求 4] 隱藏自動播放按鈕
+    const autoPlayBtn = document.getElementById("autoPlayBtn");
+    if (autoPlayBtn) autoPlayBtn.style.display = "none";
+    
     document.getElementById("mainPageContainer").style.display = "none";
+    
+    // 更新麵包屑為學習列表
+    if (typeof updateBreadcrumb === 'function') {
+        updateBreadcrumb(['選擇功能', '單字庫', '學習列表']);
+    }
 }
 
 function navigateTo(state) {
@@ -1579,7 +1671,11 @@ function showDetails(word) {
     let bButton = document.getElementById("bButton");
     let params = new URLSearchParams(window.location.search);
     lastSentenceListWord = word.Words;
-    document.getElementById("autoPlayBtn").style.display = "none";
+    
+    // [需求 4] 隱藏自動播放按鈕
+    const autoPlayBtn = document.getElementById("autoPlayBtn");
+    if (autoPlayBtn) autoPlayBtn.style.display = "none";
+    
     if (document.getElementById("searchInputDetails").value.trim() !== "" || params.get('from') === "sentence") {
         bButton.disabled = false;
         bButton.style.backgroundColor = "#6c757d";
@@ -1701,11 +1797,10 @@ function showDetails(word) {
     // [優化] 刪除: if (isAutoPlaying && !isPaused) playAudioSequentially(word);
     // 播放邏輯現在由 runDetailsAutoPlayLoop 集中管理
     
-    // 新增：更新麵包屑
+    // [需求 2 & 6] 更新麵包屑：選擇功能›單字庫›學習列表›單字名稱
     if (typeof updateBreadcrumb === 'function') {
         const wordText = word.Words || word.word || word["單字"];
-        const categoryInfo = lastWordListValue || '單字';
-        updateBreadcrumb(['首頁', categoryInfo, wordText]);
+        updateBreadcrumb(['選擇功能', '單字庫', '學習列表', wordText]);
     }
 }
 
