@@ -1761,6 +1761,10 @@ function showDetails(word) {
             if (timestampData.length > 0) {
                 hasTimestampFile = true;
                 if (toggleBtn) toggleBtn.style.display = 'inline-block';
+                
+                // [新增] 自動渲染 timestamp 內容到 meaningContainer，以便句子高亮功能可用
+                // 即使不開啟 timestamp 模式，也能在播放時高亮當前句子
+                renderTimestampContent();
             } else {
                 console.warn(`${word.Words} 的時間戳檔案為空或無法解析。`);
             }
@@ -2266,8 +2270,8 @@ function handleTextTracking() {
     ].filter(c => c && c.style.display !== 'none');
     
     containers.forEach(container => {
-        // 如果是 Timestamp 模式，使用現有的句子追蹤
-        if (isTimestampMode) {
+        // [修改] 如果有 timestamp 資料，無論是否在 timestamp 模式都顯示句子高亮
+        if (hasTimestampFile && timestampData && timestampData.length > 0) {
             const currentSentenceData = timestampData.find(
                 (item) => currentTime >= item.start && currentTime < item.end
             );
@@ -2295,8 +2299,8 @@ function handleTextTracking() {
                     currentSentenceEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
             }
-        } else {
-            // 一般模式：使用自動滾動
+        } else if (!isTimestampMode) {
+            // 一般模式且無 timestamp：使用自動滾動
             const scrollableHeight = container.scrollHeight - container.clientHeight;
             if (scrollableHeight > 0 && detailsSentencePlayer.duration > 0) {
                 const scrollPosition = (currentTime / detailsSentencePlayer.duration) * scrollableHeight;
@@ -3698,8 +3702,8 @@ function enterHighlightModeEnhanced() {
     const highlightMeaningContainer = document.getElementById('highlight-meaning-container');
     
     if (container && meaningContainer && highlightMeaningContainer) {
-        // 根據當前模式渲染內容
-        if (isTimestampMode && hasTimestampFile) {
+        // [修改] 如果有 timestamp 資料，總是渲染 timestamp 內容以支持句子高亮
+        if (hasTimestampFile && timestampData && timestampData.length > 0) {
             renderTimestampContentInHighlightMode();
         } else {
             // 複製內容到畫重點模式容器
