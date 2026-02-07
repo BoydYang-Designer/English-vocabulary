@@ -21468,6 +21468,65 @@
             "分類": [
                 "UserCustom"
             ]
+        },
+        {
+            "等級": "C1",
+            "Words": "elicitation",
+            "pronunciation-1": "/ɪˌlɪs.ɪˈteɪ.ʃən/",
+            "traditional Chinese": "n.\n1. 引出、誘導取得（資訊、回應、反應等的過程）\n2. （語言學）語料引出、語言資料蒐集\n3. （心理／教育）引發、激發（情緒、思考或行為）",
+            "English meaning": "elicitation as a Noun: elicitation (countable & uncountable; plural elicitations)\n\n1. The act or process of drawing out information, responses, or reactions from someone\n   E.g. The teacher used careful questioning for the elicitation of student opinions.\n   E.g. The survey focused on the elicitation of honest feedback from participants.\n   E.g. Police avoided leading questions during the elicitation of witness statements.\n   E.g. Good interviews rely on the elicitation of detailed personal experiences.\n\n2. In linguistics, the process of obtaining language data from speakers through prompts or questions\n   E.g. The researcher conducted elicitation sessions with native speakers.\n   E.g. Picture cards were used for the elicitation of vocabulary.\n   E.g. Controlled elicitation helps linguists analyze sentence structure.\n   E.g. The study relied on elicitation rather than spontaneous conversation.\n\n3. In psychology or education, the process of provoking or bringing out a particular response, feeling, or behavior\n   E.g. The activity aimed at the elicitation of creative thinking.\n   E.g. Certain images were chosen for the elicitation of emotional reactions.\n   E.g. Role-playing is useful for the elicitation of authentic communication.\n   E.g. The coach used questions for the elicitation of self-reflection.\n\nSummary:\n“Elicitation” refers to the act of drawing out information, language data, or reactions through questions, prompts, or specific techniques.\n\nSynonyms: extraction, prompting, drawing out, evocation, solicitation\nAntonyms: suppression, concealment, withholding, inhibition\nRelated Words: elicit, elicitor, interview, inquiry, response, feedback",
+            "Unnamed: 10": "elicitation",
+            "Unnamed: 11": "elicitation",
+            "分類": [
+                "學術與教育",
+                "教育"
+            ]
+        },
+        {
+            "等級": "未分類",
+            "Words": "in-search-of",
+            "traditional Chinese": "為了尋找；在找尋中；尋找……",
+            "English meaning": "in search of (phrase)\n\nEnglish Meaning:\nUsed to say that someone is trying to find, seeking, or looking for something, often with effort or purpose.\n\nExamples:\n\t•\tExample: She moved abroad in search of new opportunities.\n\t•\tExample: The team went into the forest in search of rare plants.\n\t•\tExample: He left home early in search of a quiet place to work.\n\nSummary:\n“In search of” means actively trying to find something, and it is commonly used in formal, written, or descriptive English.\n\nRelated Words:\nseek, look for, hunt for, quest for, pursue\n\nAntonyms:\ngive up on, stop looking for, ignore, avoid",
+            "Unnamed: 10": "in-search-of",
+            "Unnamed: 11": "in-search-of",
+            "分類": [
+                "UserCustom"
+            ]
+        },
+        {
+            "等級": "片語",
+            "Words": "take in",
+            "English meaning": "Phrase: take in",
+            "Unnamed: 10": "take in",
+            "Unnamed: 11": "take in",
+            "分類": [
+                "Phrases（片語）",
+                "User Highlighted",
+                "UserCustom"
+            ]
+        },
+        {
+            "等級": "未分類",
+            "Words": "hourly rate",
+            "traditional Chinese": "時薪／每小時的薪資",
+            "English meaning": "Hourly rate is a noun.\n\nEnglish Meaning\n\nHourly rate means the amount of money someone is paid for each hour of work.\n\nExample:\n\t•\tShe earns an hourly rate of $25.\n\t•\tWhat is your hourly rate for freelance design work?\n\t•\tHis hourly rate increases on weekends.\nSummary\n\nHourly rate refers to how much money a person earns per hour of working time.\n\nRelated Words\n\nwage, pay rate, salary (note: salary is usually monthly or yearly, not hourly)\n\nAntonyms\n\nsalary (fixed pay), unpaid work",
+            "Unnamed: 10": "hourly rate",
+            "Unnamed: 11": "hourly rate",
+            "分類": [
+                "UserCustom"
+            ]
+        },
+        {
+            "等級": "片語",
+            "Words": "soak up",
+            "English meaning": "Phrase: soak up",
+            "Unnamed: 10": "soak up",
+            "Unnamed: 11": "soak up",
+            "分類": [
+                "Phrases（片語）",
+                "User Highlighted",
+                "UserCustom"
+            ]
         }
     ]
 }
