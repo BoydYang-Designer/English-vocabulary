@@ -1158,3 +1158,237 @@ body {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
+
+/* ==========================================
+   📱 手機優化補丁 - 2024/02/08 新增
+   專門優化 414×896 手機螢幕的句子重組測驗區
+   
+   ⚠️ 使用說明：
+   1. 複製以下全部代碼（包含此註解）
+   2. 打開您的 quiz.css 文件
+   3. 滾動到文件最底部（第 1161 行之後）
+   4. 直接貼上
+   5. 保存並上傳到 GitHub
+   
+   ✅ 這段代碼會：
+   - 只在手機上生效（max-width: 480px）
+   - 不影響桌面版和平板版
+   - 優化 wordBlocksContainer 顯示
+   - 提升觸控體驗
+========================================== */
+
+/* 覆蓋原有的 480px 斷點設定 */
+@media (max-width: 480px) {
+    
+    /* 🎯 優化 blocks-pool (單詞池區域) */
+    .blocks-pool {
+        max-width: 100% !important;
+        padding: 12px !important;
+        margin: 12px auto !important;
+        gap: 6px !important;
+        /* 移除原來的粗虛線框，改用細邊框和淡背景 */
+        border: 1px solid rgba(226, 232, 240, 0.6) !important;
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.02), rgba(245, 87, 108, 0.02)) !important;
+        border-radius: 12px !important;
+    }
+    
+    /* 🎯 優化單詞方塊 */
+    .word-block {
+        padding: 8px 14px !important;
+        font-size: 0.9rem !important;
+        min-width: auto !important;
+        white-space: nowrap;
+        /* 確保觸控目標足夠大（iOS 建議最小 44px） */
+        min-height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* 🎯 優化答案建構區 (construction-zone) */
+    .construction-zone {
+        min-height: 100px !important;
+        padding: 14px !important;
+        margin: 12px auto !important;
+        gap: 8px !important;
+        max-width: 100% !important;
+    }
+    
+    /* 當有單詞放入時，讓邊框更明顯 */
+    .construction-zone:has(.word-block) {
+        border-color: var(--color-primary) !important;
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.08), rgba(245, 87, 108, 0.08)) !important;
+    }
+    
+    /* 🎯 優化中文提示文字 */
+    .quiz-hint {
+        font-size: 1.1rem !important;
+        padding: 14px 10px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 12px !important;
+    }
+    
+    /* 🎯 優化控制按鈕區域 */
+    .quiz-controls {
+        flex-wrap: wrap;
+        gap: 8px !important;
+        padding: 12px 0 !important;
+    }
+    
+    .control-button {
+        flex: 1 1 calc(50% - 4px);
+        min-width: 100px !important;
+        padding: 12px 14px !important;
+        font-size: 0.9rem !important;
+        min-height: 44px; /* 確保觸控友好 */
+    }
+    
+    /* 播放按鈕佔滿整行 */
+    .control-button.audio {
+        flex: 1 1 100%;
+    }
+    
+    /* 提交按鈕佔滿整行 */
+    .control-button.primary {
+        flex: 1 1 100%;
+    }
+    
+    /* 🎯 優化整體測驗區域的內距 */
+    #reorganizeQuizArea {
+        padding: 10px !important;
+    }
+    
+    #sentenceQuizArea {
+        padding: 10px !important;
+    }
+    
+    /* ✨ 增強觸控反饋 */
+    .word-block:active {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+    }
+    
+    /* 選中狀態更明顯 */
+    .word-block.selected {
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
+    }
+}
+
+/* 針對非常小的螢幕 (iPhone SE 等 < 375px) 進一步優化 */
+@media (max-width: 375px) {
+    .blocks-pool {
+        padding: 10px !important;
+        gap: 5px !important;
+    }
+    
+    .word-block {
+        padding: 7px 12px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .construction-zone {
+        padding: 12px !important;
+    }
+    
+    .quiz-hint {
+        font-size: 1rem !important;
+    }
+}
+
+/* 針對中等手機螢幕 (414px - 768px，如 iPhone Pro Max、大部分安卓手機) */
+@media (min-width: 414px) and (max-width: 768px) {
+    .blocks-pool {
+        max-width: 95%;
+        padding: 14px;
+        gap: 8px;
+    }
+    
+    .word-block {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+    }
+    
+    .construction-zone {
+        padding: 16px;
+    }
+}
+
+/* ==========================================
+   🎨 可選功能區
+   如果需要以下功能，請移除對應的註解符號
+========================================== */
+
+/* 
+   功能 A：當單詞很多時啟用滾動
+   適用情況：如果句子常有 15+ 個單詞
+   
+   使用方法：刪除下方的斜線和星號
+*/
+/*
+@media (max-width: 480px) {
+    .blocks-pool {
+        max-height: 280px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .blocks-pool::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .blocks-pool::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 3px;
+    }
+    
+    .blocks-pool::-webkit-scrollbar-thumb {
+        background: var(--color-primary);
+        border-radius: 3px;
+    }
+}
+*/
+
+/* 
+   功能 B：單詞左對齊（更節省空間）
+   適用情況：如果您覺得居中排列浪費空間
+   
+   使用方法：刪除下方的斜線和星號
+*/
+/*
+@media (max-width: 480px) {
+    .blocks-pool {
+        justify-content: flex-start !important;
+    }
+}
+*/
+
+/* 
+   功能 C：單詞網格排列（整齊對齊）
+   適用情況：如果您希望單詞整齊排列成網格
+   
+   使用方法：刪除下方的斜線和星號
+*/
+/*
+@media (max-width: 480px) {
+    .blocks-pool {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important;
+    }
+}
+*/
+
+/* ==========================================
+   📱 手機優化補丁結束
+   
+   ✅ 完成！您的句子測驗區現在應該在手機上
+   顯示得更好了。
+   
+   如有問題，可以：
+   1. 檢查瀏覽器開發者工具的 Console
+   2. 確認手機寬度是否 ≤ 480px
+   3. 清除瀏覽器快取後重新載入
+   
+   💡 提示：如果想恢復原樣，只需刪除
+   從「手機優化補丁 - 2024/02/08 新增」
+   到此處的所有代碼即可。
+========================================== */
