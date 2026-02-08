@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Boyd Vocabulary</title>
+    <link rel="stylesheet" href="sentence.css">
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js" defer></script>
+    
+    <script src="auth-manager.js" defer></script>
+    <script src="sentence.js" defer></script>
+
+</head>
+<body>
+    <div id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">資料載入中，請稍候...</p>
+    </div>
+
+    <div id="notification-container"></div>
+    
+    <!-- 用戶狀態頭部 -->
+    <div id="user-status-header">
+        <span id="user-info">載入中...</span>
+        <div class="header-buttons">
+            <button id="theme-toggle-btn" class="button">🌙</button>
+            <button id="edit-storage-btn" class="button">編輯</button>
+            <button id="sign-out-btn" class="button is-hidden">登出</button>
+            <button id="sign-in-from-guest-btn" class="button is-hidden">登入</button>
+        </div>
+    </div>
+    
+    <!-- 麵包屑導航 -->
+    <div id="breadcrumb-nav"></div>
+
+    <div id="mainPageContainer">
+        <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
+            <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterSentences()" style="font-size: 18px; padding: 5px; width: 200px;">
+        </div>
+        
+        <div class="start-learning-container">
+            <button id="startLearningBtn" class="button">開始學習</button>
+        </div>
+        <div class="collapsible-section-wrapper">
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">字母分類</button>
+                <div class="collapsible-content" id="alphabetButtons">
+                    </div>
+            </div>
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">主分類</button>
+                <div class="collapsible-content" id="primaryCategoryButtons">
+                    </div>
+            </div>
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">特殊分類</button>
+                <div class="collapsible-content" id="specialCategoryButtons">
+                    </div>
+            </div>
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">等級分類</button>
+                <div class="collapsible-content" id="levelButtons">
+                    </div>
+            </div>
+        </div>
+
+        </div>
+
+    <h2 id="wordListTitle" style="text-align: center; margin-bottom: 10px; display: none;"></h2>
+    <div class="container">
+        <div id="wordList" class="word-list" style="display: none;">
+            <button class="button back-button" onclick="backToFirstLayer()">Back</button>
+            <button id="showSelectedSentencesBtn" class="button" style="display: none; width: 80%; margin: 10px auto; background-color: #28a745;">顯示選定單字的句子</button>
+            <div id="wordItems"></div>
+        </div>
+        <div id="sentenceList" class="word-list" style="display: none;">
+            <button class="button back-button" onclick="backToFirstLayer()">Back</button>
+            <div id="sentenceItems"></div>
+        </div>
+
+        <div id="sentenceDetails" class="details" style="display: none;">
+            <button class="button" onclick="backToSentenceList(event)">Back</button>
+            <button id="prevSentenceBtn" class="arrow-btn left" onclick="switchToPreviousSentence()">◀</button>
+            <button id="nextSentenceBtn" class="arrow-btn right" onclick="switchToNextSentence()">▶</button>
+            <div id="sentenceHeader"></div>
+            <div id="phoneticContainer"></div>
+            <div id="sentenceContainer"></div>
+            <div id="chineseContainer"></div>
+
+            <div class="audio-controls-wrapper">
+                <div class="audio-controls">
+                  <button class="audio-btn" id="playAudioBtn" onclick="playSentenceAudio(currentSentenceList[currentSentenceIndex].Words + '.mp3')">
+                    <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play.svg"
+                         alt="Play" width="24" height="24" />
+                  </button>
+              
+                  <button class="audio-btn" onclick="adjustAudioTime(-2.5)">
+                    <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/rewind.svg"
+                         alt="Rewind" width="24" height="24" />
+                  </button>
+              
+                  <button class="audio-btn" id="pauseResumeBtn" onclick="togglePauseAudio(this)">
+                    <img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/pause.svg"
+                         alt="Pause" width="24" height="24" />
+                  </button>
+                </div>
+            </div>
+  
+
+            <div id="searchInDetails">
+                <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." oninput="filterSentencesInDetails()">
+            </div>
+            <div id="searchResultsDetails" style="max-height: 200px; overflow-y: auto; text-align: left;"></div>
+
+            <div id="noteContainer">
+                <textarea id="sentenceNote" placeholder="輸入筆記..." style="width: 100%; height: 80px;" oninput="updateCheckbox()"></textarea>
+                <p id="savedNote"></p>
+            </div>
+
+            <div id="storageButtons" style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
+                <div style="display: flex; align-items: center;">
+                    <input type="checkbox" id="noteCheckbox" onclick="handleCheckboxClick()" style="margin-right: 10px;">
+                    <button onclick="saveNote()" id="saveNoteButton" class="note-button">Save Note</button>
+                    <button onclick="exportAllData()" id="exportButton" class="note-button">Export</button>
+                    <button onclick="importAllData()" id="importButton" class="note-button">Import</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
