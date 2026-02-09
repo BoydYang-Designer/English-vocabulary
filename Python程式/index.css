@@ -218,7 +218,7 @@ h1 {
     border-radius: 12px;
     margin-top: 15px;
     box-shadow: var(--shadow-md);
-    max-height: 20vh;
+    max-height: 70vh;
     overflow-y: auto;
     /* 重要：增加底部padding，避免內容被控制欄遮住 */
     padding-bottom: 200px;
