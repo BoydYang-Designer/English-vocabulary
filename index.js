@@ -367,6 +367,7 @@ let hasTimestampFile = false;
 let lastHighlightedSentence = null;
 let timestampUpdateRafId = null;
 let originalMeaningContent = ""; // 用於儲存 JSON 內容
+let isSentenceJumping = false; // [新增] 是否正在跳轉句子（避免畫面跳動）
 
 // 此函數顯示主應用程式視圖
 function showAppView(user) {
@@ -1532,6 +1533,12 @@ function timestampUpdateLoop() {
         return;
     }
 
+    // [修復] 如果正在跳轉句子，跳過這一幀的更新
+    if (isSentenceJumping) {
+        timestampUpdateRafId = requestAnimationFrame(timestampUpdateLoop);
+        return;
+    }
+
     const currentTime = detailsSentencePlayer.currentTime; // [優化]
     
     // 根據當前模式選擇容器
@@ -1551,33 +1558,35 @@ function timestampUpdateLoop() {
         currentSentenceEl = container.querySelector(`.timestamp-sentence[data-start="${currentSentenceData.start}"]`);
     }
 
+    // [優化] 只有在切換到新句子時才執行高亮和滾動
     if (currentSentenceEl !== lastHighlightedSentence) {
+        // 移除前一個句子的高亮
         if (lastHighlightedSentence) {
             lastHighlightedSentence.classList.remove('is-current');
         }
+        
+        // 高亮當前句子並立即滾動到固定位置
         if (currentSentenceEl) {
             currentSentenceEl.classList.add('is-current');
+            
+            // 計算滾動位置：讓句子固定在螢幕上方 1/3 處
+            const containerHeight = container.clientHeight;
+            const sentenceTop = currentSentenceEl.offsetTop;
+            
+            // 目標位置 = 句子頂部 - 容器高度的 1/3
+            // 這樣句子就會出現在螢幕上方 1/3 的位置
+            const targetScrollTop = sentenceTop - (containerHeight / 3);
+            
+            // 確保滾動位置在有效範圍內
+            const maxScroll = container.scrollHeight - containerHeight;
+            const finalScrollTop = Math.max(0, Math.min(targetScrollTop, maxScroll));
+            
+            // ⚡ 立即跳轉（無平滑過渡），讓句子瞬間出現在固定位置
+            container.scrollTop = finalScrollTop;
         }
+        
+        // 更新追蹤變數
         lastHighlightedSentence = currentSentenceEl;
-    }
-
-    // --- 2. 滾動邏輯 ---
-    const scrollableHeight = container.scrollHeight - container.clientHeight;
-    if (scrollableHeight > 0 && lastHighlightedSentence) {
-        const sentenceTop = lastHighlightedSentence.offsetTop;
-        const sentenceHeight = lastHighlightedSentence.offsetHeight;
-        const containerHeight = container.clientHeight;
-        
-        let targetScrollTop = sentenceTop - (containerHeight / 2) + (sentenceHeight / 2);
-        targetScrollTop = Math.max(0, Math.min(targetScrollTop, scrollableHeight));
-        
-        const currentScrollTop = container.scrollTop;
-        const scrollDiff = targetScrollTop - currentScrollTop;
-        const easingFactor = 0.1; 
-        
-        if (Math.abs(scrollDiff) > 1) {
-            container.scrollTop += scrollDiff * easingFactor;
-        }
     }
 
     timestampUpdateRafId = requestAnimationFrame(timestampUpdateLoop);
@@ -1913,6 +1922,8 @@ function playSentenceAudio(audioFile) {
             lastHighlightedSentence.classList.remove('is-current');
             lastHighlightedSentence = null;
         }
+        // [修復] 重置追蹤變數
+        lastTrackedSentence = null;
     });
 
     detailsSentencePlayer.play().then(() => {
@@ -1933,6 +1944,8 @@ function playSentenceAudio(audioFile) {
         detailsSentencePlayer.onended = () => {
             detailsSentencePlayer.removeEventListener('timeupdate', handleAutoScroll);
             detailsSentencePlayer.removeEventListener('timeupdate', handleTextTracking);
+            // [修復] 重置追蹤變數
+            lastTrackedSentence = null;
             if (playBtn) playBtn.classList.remove("playing");
             if (pauseBtn) {
                 pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
@@ -1955,6 +1968,12 @@ function togglePauseAudio(button) {
         });
     } else {
         detailsSentencePlayer.pause();
+        // [修復] 暫停時立即停止更新循環並清除跳轉標記
+        if (timestampUpdateRafId) {
+            cancelAnimationFrame(timestampUpdateRafId);
+            timestampUpdateRafId = null;
+        }
+        isSentenceJumping = false;
         if (playBtn) playBtn.classList.remove("playing");
         if (pauseBtn) pauseBtn.classList.add("playing");
         pauseBtn.innerHTML = `<img src="https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Svg/play-circle.svg" alt="Play" width="24" height="24" />`;
@@ -1967,6 +1986,11 @@ function skipToNextSentence() {
     // 使用 detailsSentencePlayer 作為播放器
     if (!timestampData || timestampData.length === 0 || !detailsSentencePlayer) return;
     
+    // [修復] 設置跳轉標記，暫停更新循環
+    isSentenceJumping = true;
+    // [修復] 重置追蹤變數，確保滾動會執行
+    lastTrackedSentence = null;
+    
     const currentTime = detailsSentencePlayer.currentTime;
     // 找到第一個 "開始時間" 晚於當前時間的句子 (加 0.2s 緩衝)
     const nextSent = timestampData.find(line => line.start > currentTime + 0.2);
@@ -1977,10 +2001,20 @@ function skipToNextSentence() {
         // 找不到則跳到結束
         detailsSentencePlayer.currentTime = detailsSentencePlayer.duration;
     }
+    
+    // [修復] 延遲 100ms 後清除跳轉標記，讓更新循環恢復
+    setTimeout(() => {
+        isSentenceJumping = false;
+    }, 100);
 }
 
 function skipToPrevSentence() {
     if (!timestampData || timestampData.length === 0 || !detailsSentencePlayer) return;
+
+    // [修復] 設置跳轉標記，暫停更新循環
+    isSentenceJumping = true;
+    // [修復] 重置追蹤變數，確保滾動會執行
+    lastTrackedSentence = null;
 
     const currentTime = detailsSentencePlayer.currentTime;
     
@@ -1996,6 +2030,10 @@ function skipToPrevSentence() {
 
     if (currentIndex === -1) {
         detailsSentencePlayer.currentTime = 0;
+        // [修復] 延遲後清除跳轉標記
+        setTimeout(() => {
+            isSentenceJumping = false;
+        }, 100);
         return;
     }
 
@@ -2013,6 +2051,11 @@ function skipToPrevSentence() {
             detailsSentencePlayer.currentTime = 0;
         }
     }
+    
+    // [修復] 延遲 100ms 後清除跳轉標記，讓更新循環恢復
+    setTimeout(() => {
+        isSentenceJumping = false;
+    }, 100);
 }
 
 function adjustAudioTime(seconds) {
@@ -2256,6 +2299,9 @@ function displayWordDetailsFromURL() {
 }
 
 // [新增] 一般模式下的文字追蹤函數（用於 highlight-meaning-container）
+// [新增] 用於追蹤上次高亮的句子（避免重複滾動）
+let lastTrackedSentence = null;
+
 function handleTextTracking() {
     if (!detailsSentencePlayer || detailsSentencePlayer.paused || !detailsSentencePlayer.duration) {
         return;
@@ -2281,23 +2327,35 @@ function handleTextTracking() {
                 currentSentenceEl = container.querySelector(`.timestamp-sentence[data-start="${currentSentenceData.start}"]`);
             }
             
-            // 移除之前的高亮
-            const prevHighlighted = container.querySelector('.timestamp-sentence.is-current');
-            if (prevHighlighted && prevHighlighted !== currentSentenceEl) {
-                prevHighlighted.classList.remove('is-current');
-            }
-            
-            // 添加當前高亮
-            if (currentSentenceEl) {
-                currentSentenceEl.classList.add('is-current');
-                
-                // 自動滾動到當前句子
-                const containerRect = container.getBoundingClientRect();
-                const sentenceRect = currentSentenceEl.getBoundingClientRect();
-                
-                if (sentenceRect.top < containerRect.top || sentenceRect.bottom > containerRect.bottom) {
-                    currentSentenceEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // [優化] 只有在切換到新句子時才更新高亮和滾動
+            if (currentSentenceEl !== lastTrackedSentence) {
+                // 移除之前的高亮
+                const prevHighlighted = container.querySelector('.timestamp-sentence.is-current');
+                if (prevHighlighted) {
+                    prevHighlighted.classList.remove('is-current');
                 }
+                
+                // 添加當前高亮並立即滾動到固定位置
+                if (currentSentenceEl) {
+                    currentSentenceEl.classList.add('is-current');
+                    
+                    // 計算滾動位置：讓句子固定在螢幕上方 1/3 處
+                    const containerHeight = container.clientHeight;
+                    const sentenceTop = currentSentenceEl.offsetTop;
+                    
+                    // 目標位置 = 句子頂部 - 容器高度的 1/3
+                    const targetScrollTop = sentenceTop - (containerHeight / 3);
+                    
+                    // 確保滾動位置在有效範圍內
+                    const maxScroll = container.scrollHeight - containerHeight;
+                    const finalScrollTop = Math.max(0, Math.min(targetScrollTop, maxScroll));
+                    
+                    // ⚡ 立即跳轉（無平滑過渡），讓句子瞬間出現在固定位置
+                    container.scrollTop = finalScrollTop;
+                }
+                
+                // 更新追蹤變數
+                lastTrackedSentence = currentSentenceEl;
             }
         } else if (!isTimestampMode) {
             // 一般模式且無 timestamp：使用自動滾動
