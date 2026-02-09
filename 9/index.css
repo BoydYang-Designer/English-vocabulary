@@ -37,7 +37,7 @@
 
 /* 基本樣式 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
     margin: 0;
     padding: 0;
     background: var(--bg-primary);
@@ -52,6 +52,7 @@ h1 {
     padding: 15px 0;
     margin: 0;
     font-size: 24px;
+    font-weight: 600;
 }
 
 /* 容器 */
@@ -73,21 +74,21 @@ h1 {
 
 .collapsible-section {
     margin-bottom: 8px;
-    scroll-margin-top: 80px; /* 優化：支援滾動到分類 */
+    scroll-margin-top: 80px;
 }
 
 .collapsible-header {
     background-color: var(--bg-secondary);
     color: var(--text-primary);
     cursor: pointer;
-    padding: 12px 20px;
+    padding: 14px 20px;
     width: 100%;
     border: 1px solid var(--border-color);
     text-align: left;
     outline: none;
     font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
+    font-weight: 600;
+    border-radius: 12px;
     transition: all 0.3s ease;
     position: relative;
     box-shadow: var(--shadow-sm);
@@ -96,11 +97,13 @@ h1 {
 .collapsible-header:hover {
     background-color: var(--bg-quaternary);
     border-color: var(--border-color-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
 }
 
-/* 當分類區域展開時的淺色背景效果 */
+/* 當分類區域展開時的背景效果 */
 .collapsible-header.active {
-    background-color: #F5F5DC; /* 淺米色 */
+    background-color: #F5F5DC;
     border-color: var(--accent-color);
 }
 
@@ -128,7 +131,7 @@ h1 {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     background-color: var(--bg-tertiary);
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 12px 12px;
     border: 1px solid var(--border-color);
     border-top: none;
 }
@@ -145,13 +148,14 @@ h1 {
 
 /* 字母/分類按鈕 */
 .letter-btn {
-    padding: 8px 15px;
+    padding: 10px 16px;
     margin: 5px;
     cursor: pointer;
     border: 1px solid var(--border-color);
     background: var(--bg-secondary);
     color: var(--accent-color);
     font-size: 16px;
+    font-weight: 500;
     border-radius: 20px;
     transition: all 0.2s ease;
 }
@@ -159,6 +163,7 @@ h1 {
 .letter-btn:hover {
     background: var(--bg-tertiary);
     border-color: var(--accent-color);
+    transform: translateY(-1px);
 }
 
 .letter-btn.selected {
@@ -166,13 +171,14 @@ h1 {
     color: white;
     border-color: var(--accent-color);
     transform: scale(1.05);
+    box-shadow: var(--shadow-sm);
 }
 
 /* 單字列表標題 */
 #wordListTitle {
     text-align: center;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 15px;
 }
@@ -186,7 +192,7 @@ h1 {
     overflow-y: auto;
     background: var(--bg-secondary);
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: var(--shadow-md);
 }
 
@@ -194,101 +200,228 @@ h1 {
 .word-item {
     flex-grow: 1;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
     padding: 8px;
     border-bottom: 1px solid var(--border-color);
-    color: var(--text-secondary);
-    transition: background-color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 .word-item:hover {
-    background: var(--bg-tertiary);
+    color: var(--accent-hover);
 }
 
-/* 音標容器 */
-.phonetics-container button {
-    background-color: var(--accent-color);
-    color: #fff;
-    font-size: 18px;
-    text-align: left;
-    padding: 5px 10px;
-    min-width: 100px;
-    min-height: 40px;
-    width: auto;
-    height: auto;
-    white-space: nowrap;
-    display: inline-block;
-    border: none;
-    border-radius: 18px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.phonetics-container button:hover {
-    background-color: var(--accent-hover);
-    transform: scale(1.05);
-}
-
-/* 英文解釋容器 */
+/* Meaning 容器 */
 #meaningContainer {
-    position: relative;
-    max-height: 400px;
-    overflow-y: auto;
+    position: relative; /* 為參考線定位所需 */
+    background: var(--bg-secondary);
     padding: 20px;
-    border: 1px solid var(--border-color);
-    background: var(--bg-secondary);
-    border-radius: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: var(--shadow-md);
+    max-height: 20vh;
+    overflow-y: auto;
+    /* 重要：增加底部padding，避免內容被控制欄遮住 */
+    padding-bottom: 200px;
+    /* 平滑滾動行為 */
+    scroll-behavior: smooth;
+}
+
+#meaningContainer h3 {
+    color: var(--text-primary);
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+#meaningContainer h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: var(--text-primary);
     font-size: 18px;
-    line-height: 1.6;
-    margin: 0 8px;
+    font-weight: 600;
 }
 
-/* 中文解釋容器 */
-#chineseContainer {
+#meaningContainer p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    line-height: 1.8; /* 恢復正常行高 */
     font-size: 16px;
-    margin-left: 10px;
-    color: var(--text-tertiary);
 }
 
-/* 搜尋輸入框 */
-#searchInput, #searchInputDetails {
-    font-size: 16px;
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
+#meaningContainer p.example {
+    font-style: italic;
+    color: var(--text-secondary);
+    padding-left: 15px;
+    border-left: 3px solid var(--accent-color);
+    margin: 10px 0;
+}
+
+/* 畫重點模式容器 */
+#highlight-mode-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-primary);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.highlight-mode-header {
+    background: linear-gradient(to right, var(--accent-color), var(--accent-hover));
+    color: white;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+}
+
+.highlight-mode-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* 畫重點內容區域 - 重要：增加底部padding */
+#highlight-meaning-container {
+    position: relative; /* 為參考線定位所需 */
+    max-width: 414px;
+    margin: 0 auto; /* [修復] 使用 auto 在 PC 模式下置中 */
+    padding: 15px;
+    /* 重要：大幅增加底部padding，確保播放中的句子不會被音頻控制欄遮住 */
+    padding-bottom: 250px;
+    overflow-y: auto;
+    height: calc(100vh - 180px);
     background: var(--bg-secondary);
+    /* 平滑滾動行為 */
+    scroll-behavior: smooth;
+}
+
+#highlight-meaning-container h3 {
+    color: var(--text-primary);
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+#highlight-meaning-container h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#highlight-meaning-container p {
+    margin: 0 0 1em;
+    line-height: 1.8; /* 恢復正常行高 */
+    font-size: 17px;
+}
+
+/* 可點擊的單字樣式 */
+.clickable-word, .highlight-mode-word {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    padding: 2px 0;
+}
+
+.clickable-word:hover, .highlight-mode-word:hover {
+    background-color: rgba(161, 136, 127, 0.15);
+}
+
+/* 播放中的句子高亮 - 參考Reading Challenge的樣式 */
+.timestamp-sentence {
+    cursor: pointer;
+    padding: 10px 14px;
+    margin: 0 0 10px 0;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    line-height: 1.8;
+    display: block;
+}
+
+.timestamp-sentence:hover {
+    background-color: rgba(161, 136, 127, 0.15);
+}
+
+.timestamp-sentence.is-current {
+    background-color: rgba(161, 136, 127, 0.25);
     color: var(--text-primary);
 }
 
-.button-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+/* JSON模式的連續高亮樣式 */
+/* 句子高亮與固定閱讀位置參考線 */
+#highlight-meaning-container span.is-current-sentence,
+#meaningContainer span.is-current-sentence {
+    /* 🎨 柔和的背景高亮 */
+    background-color: rgba(161, 136, 127, 0.25);
+    
+    /* ⏱️ 平滑過渡 */
+    transition: background-color 0.4s ease;
+    
+    /* 📐 適當的內邊距 */
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
-/* 按鈕 */
+/* 可選：添加視覺參考線，標示固定閱讀位置（螢幕上方 1/3 處）*/
+#highlight-meaning-container::before,
+#meaningContainer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 33.33%; /* 上方 1/3 位置 */
+    height: 2px;
+    background: linear-gradient(to right, transparent, rgba(161, 136, 127, 0.3), transparent);
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* 當有句子高亮時顯示參考線 */
+#highlight-meaning-container:has(span.is-current-sentence)::before,
+#meaningContainer:has(span.is-current-sentence)::before {
+    opacity: 1;
+}
+
+#highlight-meaning-container span.is-current-sentence.highlight-start,
+#meaningContainer span.is-current-sentence.highlight-start {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding-left: 5px;
+}
+
+#highlight-meaning-container span.is-current-sentence.highlight-end,
+#meaningContainer span.is-current-sentence.highlight-end {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding-right: 5px;
+}
+
+/* 按鈕樣式 */
 .button {
-    font-size: 18px;
-    border-radius: 25px;
-    display: block;
-    width: 150px;
-    height: 50px;
-    background-color: var(--accent-color);
-    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
     border: none;
+    border-radius: 9999px;
     cursor: pointer;
-    text-align: center;
-    margin: 10px auto;
-    font-weight: bold;
     transition: all 0.2s ease;
+    background: var(--accent-color);
+    color: white;
     box-shadow: var(--shadow-sm);
 }
 
 .button:hover {
-    background-color: var(--accent-hover);
-    box-shadow: var(--shadow-md);
+    background: var(--accent-hover);
     transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
 }
 
 .button:active {
@@ -300,6 +433,7 @@ h1 {
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
+    margin: 15px 0;
 }
 
 /* 返回按鈕 */
@@ -310,48 +444,75 @@ h1 {
     background-color: var(--accent-color);
     color: white;
     font-size: 18px;
+    font-weight: 600;
     border: none;
-    padding: 8px 0;
+    padding: 12px 0;
     margin: 0;
     text-align: center;
-    font-weight: bold;
     cursor: pointer;
     z-index: 10;
+    transition: background-color 0.2s ease;
 }
 
 .back-button:hover {
     background-color: var(--accent-hover);
 }
 
+/* 音訊控制區域包裝器 */
+.audio-controls-wrapper {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(253, 250, 246, 0.95);
+    padding: 12px 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+[data-theme="dark"] .audio-controls-wrapper {
+    background-color: rgba(45, 45, 45, 0.95);
+}
+
 /* 音訊控制按鈕 */
 .audio-controls {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    padding-top: 10px;
+    gap: 15px;
+    padding: 0;
     margin: 0 auto;
     align-items: center;
+    max-width: 414px;
 }
 
 .audio-btn {
     background-color: var(--accent-color);
     color: #fff;
     font-size: 16px;
-    padding: 15px;
-    min-width: 80px;
-    height: auto;
+    padding: 12px;
+    min-width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: 25px;
+    border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
 }
 
 .audio-btn:hover {
     background-color: var(--accent-hover);
     transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+.audio-btn:active {
+    transform: scale(0.98);
 }
 
 .audio-btn.playing,
@@ -367,8 +528,15 @@ h1 {
 }
 
 .audio-btn img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
+}
+
+/* 主播放按鈕特別樣式 */
+#highlight-play-btn, #highlight-pause-btn {
+    width: 70px;
+    height: 70px;
+    background-color: var(--accent-color);
 }
 
 /* B 按鈕 */
@@ -379,23 +547,23 @@ h1 {
     height: auto;
     padding: 5px 10px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 #bButton:hover {
     background-color: #5a6268;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* 筆記容器 */
 #noteContainer {
     width: 360px;
     background: var(--bg-tertiary);
-    padding: 10px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 12px;
     margin-top: 5px;
     max-height: 90px;
     overflow: hidden;
@@ -407,6 +575,9 @@ h1 {
     background: var(--bg-secondary);
     color: var(--text-primary);
     border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 8px;
+    font-family: inherit;
 }
 
 #saveNoteButton, #storageButtons button {
@@ -421,15 +592,15 @@ h1 {
 #startLearningBtn {
     width: 80%;
     max-width: 300px;
-    padding: 10px;
+    padding: 14px;
     font-size: 20px;
+    font-weight: 600;
     background-color: var(--accent-color);
     color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 9999px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.2s ease;
     box-shadow: var(--shadow-md);
 }
 
@@ -442,24 +613,26 @@ h1 {
 .collapsible-header.header-highlight {
     background-color: var(--bg-tertiary);
     color: var(--text-secondary);
-    font-weight: bold;
+    font-weight: 600;
     border-color: var(--accent-color);
 }
 
 /* 自動播放按鈕樣式 */
 #autoPlayBtn, #autoPlayDetailsBtn {
-    padding: 5px 10px;
+    padding: 8px 16px;
     font-size: 16px;
+    font-weight: 500;
     background-color: #6c757d;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 9999px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 #autoPlayBtn:hover, #autoPlayDetailsBtn:hover {
     background-color: #5a6268;
+    transform: translateY(-1px);
 }
 
 .details {
@@ -468,7 +641,7 @@ h1 {
     padding: 20px;
     max-width: 414px;
     background: var(--bg-secondary);
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: var(--shadow-md);
 }
 
@@ -482,25 +655,25 @@ h1 {
 .note-button {
     background: var(--accent-color);
     color: white;
-    padding: 8px 15px;
+    padding: 10px 18px;
     border: none;
-    border-radius: 20px;
+    border-radius: 9999px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
     transition: all 0.2s ease;
 }
 
 .note-button:hover {
     background: var(--accent-hover);
-    transform: scale(1.05);
+    transform: translateY(-1px);
 }
 
 .word-item-container {
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 8px;
     border-bottom: 1px solid var(--border-color);
-    border-radius: 5px;
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
@@ -517,19 +690,25 @@ h1 {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
-    margin: 0 5px;
+    padding: 8px;
+    margin: 0 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
 }
 
 .play-word-btn img {
-    width: 22px;
-    height: 22px;
-    opacity: 1;
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
     transition: opacity 0.2s, transform 0.2s, filter 0.2s;
     filter: brightness(0) invert(0.6);
+}
+
+.play-word-btn:hover {
+    background-color: rgba(161, 136, 127, 0.1);
 }
 
 .play-word-btn:hover img {
@@ -547,6 +726,7 @@ h1 {
     width: 45px;
     height: 45px;
     margin-left: 10px;
+    transition: transform 0.2s ease;
 }
 
 .check-button img {
@@ -607,7 +787,7 @@ h1 {
     color: white;
     margin-top: 20px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 @keyframes spin {
@@ -628,12 +808,12 @@ h1 {
     color: white;
     padding: 16px;
     margin-bottom: 10px;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: var(--shadow-lg);
     opacity: 0;
     transform: translateX(100%);
     animation: slideIn 0.5s forwards, fadeOut 0.5s 3s forwards;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .toast.success {
@@ -669,7 +849,7 @@ h1 {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     background-color: var(--bg-tertiary);
-    border-radius: 5px;
+    border-radius: 8px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -701,46 +881,28 @@ h1 {
 }
 
 /* Timestamp Styles */
-#toggle-timestamp-btn {
+#toggle-timestamp-btn, #highlight-timestamp-btn {
     width: auto;
     height: 50px;
-    padding: 0 15px;
+    padding: 0 18px;
     background-color: #6c757d;
-    transition: background-color 0.3s ease;
+    transition: all 0.2s ease;
+    border-radius: 9999px;
 }
 
-#toggle-timestamp-btn svg {
+#toggle-timestamp-btn svg, #highlight-timestamp-btn svg {
     width: 24px;
     height: 24px;
     vertical-align: middle;
 }
 
-#toggle-timestamp-btn.is-active {
+#toggle-timestamp-btn.is-active, #highlight-timestamp-btn.is-active {
     background-color: var(--accent-color);
 }
 
-#toggle-timestamp-btn:hover {
-    opacity: 0.8;
-}
-
-.timestamp-sentence {
-    cursor: pointer;
-    padding: 8px 12px;
-    margin: 0 0 8px 0;
-    border-radius: 5px;
-    transition: background-color 0.2s ease;
-    line-height: 1.5;
-    display: block;
-}
-
-.timestamp-sentence:hover {
-    background-color: var(--bg-tertiary);
-}
-
-.timestamp-sentence.is-current {
-    background-color: var(--border-color);
-    font-weight: bold;
-    color: var(--text-primary);
+#toggle-timestamp-btn:hover, #highlight-timestamp-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
 }
 
 /* Modal Styles */
@@ -765,11 +927,11 @@ h1 {
 .modal-content {
     background-color: var(--bg-primary);
     margin: auto;
-    padding: 20px;
+    padding: 25px;
     border: 1px solid var(--border-color);
     width: 90%;
     max-width: 500px;
-    border-radius: 15px;
+    border-radius: 16px;
     box-shadow: var(--shadow-lg);
     position: relative;
     animation: slideIn 0.3s;
@@ -809,7 +971,7 @@ h1 {
 .modal-content label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 600;
     color: var(--text-primary);
 }
 
@@ -817,9 +979,9 @@ h1 {
 .modal-content textarea,
 .modal-content select {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid var(--border-color);
-    border-radius: 5px;
+    border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
     font-family: inherit;
@@ -834,26 +996,20 @@ h1 {
     margin-top: 20px;
 }
 
-/* 分類相關 */
-
-/* index.css */
-
 /* 已編輯/自訂單字的標籤樣式 */
 .category-tag.edited-tag {
-    background-color: #FFECB3; /* 淺琥珀色背景 */
-    color: #5D4037;           /* 深棕色文字 */
-    border: 1px solid #FFCA28; /* 深黃色邊框 */
-    font-weight: bold;
+    background-color: #FFECB3;
+    color: #5D4037;
+    border: 1px solid #FFCA28;
+    font-weight: 600;
 }
 
-/* 深色模式適配 */
 [data-theme="dark"] .category-tag.edited-tag {
     background-color: #5D4037;
     color: #FFECB3;
     border-color: #8D6E63;
 }
 
-/* 在列表顯示的小圖示樣式 */
 .edited-icon {
     font-size: 14px;
     color: var(--accent-color);
@@ -864,7 +1020,7 @@ h1 {
 .category-title {
     text-align: center;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
     color: var(--text-primary);
     margin: 10px 0;
 }
@@ -878,117 +1034,14 @@ h1 {
     display: inline-block;
     background-color: var(--bg-tertiary);
     color: var(--text-secondary);
-    padding: 4px 10px;
+    padding: 6px 12px;
     border-radius: 15px;
     font-size: 15px;
+    font-weight: 500;
     margin-right: 8px;
     margin-top: 5px;
     border: 1px solid var(--border-color);
 }
-
-#meaningContainer h4 {
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    color: var(--text-primary);
-}
-
-#meaningContainer p {
-    margin-top: 0;
-    line-height: 1.6;
-}
-
-#meaningContainer p.example {
-    margin-left: 20px;
-    font-style: italic;
-    color: var(--text-secondary);
-}
-
-/* 重點模式播放按鈕固定在上方 */
-.audio-controls-wrapper {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--bg-primary);
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* ========== 媒體查詢 ========== */
-@media (max-width: 414px) {
-    h1 {
-        font-size: 20px;
-    }
-    .category-title {
-        font-size: 16px;
-        margin: 8px 0;
-    }
-    
-    .button {
-        font-size: 16px;
-        width: 130px;
-        height: 45px;
-    }
-}
-
-/* ========== 滾動條樣式 (深色模式適配) ========== */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--bg-tertiary);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--border-color-hover);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-color);
-}
-
-/* ========== 鍵盤按鍵樣式 ========== */
-kbd {
-    background-color: var(--bg-tertiary);
-    border: 1px solid var(--border-color);
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
-    color: var(--text-primary);
-    display: inline-block;
-    font-size: 0.85em;
-    font-weight: 700;
-    line-height: 1;
-    padding: 2px 4px;
-    white-space: nowrap;
-}
-
-/* ========== 自動填充載入動畫 ========== */
-.spinner-small {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    border: 2px solid var(--border-color);
-    border-top: 2px solid var(--accent-color);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-#auto-fill-loader {
-    animation: fadeIn 0.3s ease-in;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 
 /* 優化的畫重點樣式 - 更簡潔的底線效果 */
 .clickable-word.highlighted,
@@ -1025,8 +1078,7 @@ kbd {
     animation: word-flash 0.3s ease;
 }
 
-/* ========== 片語拖曳選擇樣式 ========== */
-/* 淺黃底預覽 - 長按時顯示 */
+/* 片語拖曳選擇樣式 */
 .phrase-selecting {
     background-color: rgba(255, 235, 59, 0.2) !important;
     border-bottom: 2px dashed #FFC107;
@@ -1038,7 +1090,6 @@ kbd {
     border-bottom: 2px dashed #FFB300;
 }
 
-/* 片語選擇中的動畫 */
 @keyframes phrase-pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.8; }
@@ -1048,7 +1099,6 @@ kbd {
     animation: phrase-pulse 0.6s ease-in-out infinite;
 }
 
-/* 正式高亮 - 放開後顯示 - 使用底線樣式 */
 .highlighted {
     background-color: transparent !important;
     border-bottom: 3px solid #FFD54F !important;
@@ -1060,7 +1110,6 @@ kbd {
     border-bottom: 3px solid #FFA726 !important;
 }
 
-/* [新增] 片語包裹元素 - 連續的底線 */
 .phrase-highlight-wrapper {
     display: inline;
     background-color: transparent;
@@ -1083,9 +1132,133 @@ kbd {
     border-bottom-color: #FF9800;
 }
 
-/* 片語包裹元素內的單字span不需要額外樣式 */
 .phrase-highlight-wrapper .highlight-mode-word {
     background: none !important;
     border: none !important;
 }
 
+/* Storage Editor Modal */
+#storage-editor-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 20000;
+    overflow-y: auto;
+}
+
+.storage-editor-content {
+    background: var(--bg-primary);
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.storage-editor-header {
+    background: linear-gradient(to right, var(--accent-color), var(--accent-hover));
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.storage-editor-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.storage-action-buttons {
+    display: flex;
+    gap: 10px;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.storage-action-btn {
+    flex: 1;
+    min-width: 120px;
+}
+
+.storage-editor-tabs-wrapper {
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-color);
+    overflow-x: auto;
+}
+
+.storage-editor-tabs {
+    display: flex;
+    padding: 0 20px;
+    gap: 5px;
+}
+
+.storage-tab {
+    background: transparent;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.storage-tab:hover {
+    color: var(--text-primary);
+    background: rgba(161, 136, 127, 0.1);
+}
+
+.storage-tab.active {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+    font-weight: 600;
+}
+
+.storage-tab-content {
+    display: none;
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.storage-tab-content.active {
+    display: block;
+}
+
+/* 響應式設計 */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+        padding: 12px 0;
+    }
+    
+    .collapsible-header {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+    
+    .audio-btn {
+        min-width: 50px;
+        height: 50px;
+        padding: 10px;
+    }
+    
+    #highlight-play-btn, #highlight-pause-btn {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
