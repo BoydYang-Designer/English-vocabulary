@@ -6,8 +6,45 @@ window.appEnhancements = {
     autoSaveTimer: null,
     currentTheme: localStorage.getItem('theme') || 'light',
     breadcrumbPath: [],
-    audioPlayers: new Set()
+    audioPlayers: new Set(),
+    scrollAnimation: null // 用於追蹤滾動動畫
 };
+
+// ========== 優化功能：自訂平滑滾動 ==========
+// 使用 easeOutCubic 緩動函數，提供更自然的減速效果
+function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+}
+
+// 自訂平滑滾動函數
+function smoothScrollTo(element, targetScrollTop, duration = 500) {
+    // 如果有正在進行的滾動動畫，取消它
+    if (window.appEnhancements.scrollAnimation) {
+        cancelAnimationFrame(window.appEnhancements.scrollAnimation);
+    }
+    
+    const startScrollTop = element.scrollTop;
+    const distance = targetScrollTop - startScrollTop;
+    const startTime = performance.now();
+    
+    function scroll(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // 使用緩動函數
+        const easeProgress = easeOutCubic(progress);
+        
+        element.scrollTop = startScrollTop + distance * easeProgress;
+        
+        if (progress < 1) {
+            window.appEnhancements.scrollAnimation = requestAnimationFrame(scroll);
+        } else {
+            window.appEnhancements.scrollAnimation = null;
+        }
+    }
+    
+    window.appEnhancements.scrollAnimation = requestAnimationFrame(scroll);
+}
 
 // ========== 優化功能：記憶體洩漏防護 ==========
 function registerAudioPlayer(audio) {
@@ -1581,11 +1618,11 @@ function timestampUpdateLoop() {
             const maxScroll = container.scrollHeight - containerHeight;
             const finalScrollTop = Math.max(0, Math.min(targetScrollTop, maxScroll));
             
-            // 🌊 使用平滑滾動，讓畫面過渡更穩定
-            container.scrollTo({
-                top: finalScrollTop,
-                behavior: 'smooth'
-            });
+            // 🎯 微延遲後開始滾動，讓高亮動畫先啟動，視覺更自然
+            setTimeout(() => {
+                // 🌊 使用自訂的平滑滾動，提供更自然的緩動效果
+                smoothScrollTo(container, finalScrollTop, 600);
+            }, 50);
         }
         
         // 更新追蹤變數
@@ -2353,11 +2390,11 @@ function handleTextTracking() {
                     const maxScroll = container.scrollHeight - containerHeight;
                     const finalScrollTop = Math.max(0, Math.min(targetScrollTop, maxScroll));
                     
-                    // 🌊 使用平滑滾動，讓畫面過渡更穩定
-                    container.scrollTo({
-                        top: finalScrollTop,
-                        behavior: 'smooth'
-                    });
+                    // 🎯 微延遲後開始滾動，讓高亮動畫先啟動
+                    setTimeout(() => {
+                        // 🌊 使用自訂的平滑滾動，提供更自然的緩動效果
+                        smoothScrollTo(container, finalScrollTop, 600);
+                    }, 50);
                 }
                 
                 // 更新追蹤變數
