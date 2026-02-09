@@ -64,6 +64,13 @@ function updateCollapsibleHeaderState(btn) {
 // 📌 進入 Q Sentence 測驗分類頁面
 function showSentenceQuizCategories() {
     document.querySelector("h1").textContent = "句子測驗區";
+    
+    // 隱藏測驗類型選擇區域
+    const quizTypeSelector = document.querySelector(".quiz-type-selector");
+    if (quizTypeSelector) {
+        quizTypeSelector.style.display = "none";
+    }
+    
     document.getElementById("sentenceQuizCategories").style.display = "block";
     console.log("✅ 顯示句子測驗分類頁面");
 
@@ -97,8 +104,24 @@ function showSentenceQuizCategories() {
     })
     .catch(error => {
     console.error("❌ 無法載入 sentence.json:", error);
-    alert("⚠️ 無法載入句子資料，請檢查網路或 URL 是否正確。使用本地儲存的資料（如果可用）。");
+    // 靜默處理：不顯示 alert，直接使用備援資料
+    
+    // 先嘗試從 localStorage 載入之前儲存的資料
+    const savedData = localStorage.getItem("sentenceData");
+    if (savedData) {
+        try {
+            sentenceData = JSON.parse(savedData);
+            console.log("✅ 使用本地儲存的句子資料");
+            generateSentenceCategories(sentenceData);
+            return;
+        } catch (e) {
+            console.error("❌ 本地資料解析失敗:", e);
+        }
+    }
+    
+    // 如果 localStorage 也沒有，使用記憶體中的資料（如果有的話）
     if (sentenceData.length > 0) {
+        console.log("✅ 使用記憶體中的句子資料");
         generateSentenceCategories(sentenceData); // 使用本地 fallback
     } else {
         // 添加臨時樣本資料（使用您提供的 JSON 片段）
@@ -1167,6 +1190,12 @@ function returnToSentenceCategorySelection() {
     document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("reorganizeQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "none";
+
+    // 顯示測驗類型選擇區域
+    const quizTypeSelector = document.querySelector(".quiz-type-selector");
+    if (quizTypeSelector) {
+        quizTypeSelector.style.display = "flex";
+    }
 
     Object.keys(selectedSentenceFilters).forEach(key => selectedSentenceFilters[key].clear());
     

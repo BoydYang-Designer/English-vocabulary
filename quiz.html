@@ -313,11 +313,23 @@
             document.getElementById('reorganizeQuizArea').style.display = 'none';
             document.getElementById('quizResult').style.display = 'none';
             
+            // 顯示測驗類型選擇區域
+            const quizTypeSelector = document.querySelector('.quiz-type-selector');
+            if (quizTypeSelector) {
+                quizTypeSelector.style.display = 'flex';
+            }
+            
             updateBreadcrumb(['選擇功能', '測驗中心']);
         }
 
         function navigateToQuizType(type) {
             window.quizEnhancements.currentQuizType = type;
+            
+            // 隱藏測驗類型選擇區域
+            const quizTypeSelector = document.querySelector('.quiz-type-selector');
+            if (quizTypeSelector) {
+                quizTypeSelector.style.display = 'none';
+            }
             
             if (type === 'word') {
                 document.getElementById('quizCategories').style.display = 'block';
@@ -335,12 +347,25 @@
         document.addEventListener('DOMContentLoaded', function() {
             const urlParams = new URLSearchParams(window.location.search);
             const showParam = urlParams.get('show');
+            const quizTypeSelector = document.querySelector('.quiz-type-selector');
             
             if (showParam === 'categories') {
+                // 進入單字測驗分類，隱藏測驗類型選擇器
+                if (quizTypeSelector) {
+                    quizTypeSelector.style.display = 'none';
+                }
                 updateBreadcrumb(['選擇功能', '測驗中心', '單字測驗']);
             } else if (showParam === 'sentenceCategories') {
+                // 進入句子測驗分類，隱藏測驗類型選擇器
+                if (quizTypeSelector) {
+                    quizTypeSelector.style.display = 'none';
+                }
                 updateBreadcrumb(['選擇功能', '測驗中心', '句子測驗']);
             } else {
+                // 沒有參數，顯示測驗類型選擇器
+                if (quizTypeSelector) {
+                    quizTypeSelector.style.display = 'grid';
+                }
                 updateBreadcrumb(['選擇功能', '測驗中心']);
             }
 

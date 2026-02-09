@@ -91,18 +91,11 @@ document.querySelectorAll(".collapsible-header").forEach(button => {
                 quizResults = JSON.parse(localStorage.getItem("currentQuizResults"));
                 restoreQuizResults();
             } else if (show === "categories") {
-                const wordQuizBtn = document.getElementById('wordQuizBtn');
-                if(wordQuizBtn) wordQuizBtn.style.backgroundColor = '#28a745';
                 showQuizCategories();
             } else if (show === "sentenceCategories") {
-                const startQuizBtn = document.getElementById('startQuizBtn');
-                if(startQuizBtn) startQuizBtn.style.backgroundColor = '#28a745';
                 showSentenceQuizCategories();
-            } else {
-                const wordQuizBtn = document.getElementById('wordQuizBtn');
-                if(wordQuizBtn) wordQuizBtn.style.backgroundColor = '#28a745';
-                showQuizCategories();
             }
+            // 如果沒有 show 參數，保持在測驗類型選擇頁面，不自動進入任何測驗
         })
         .catch(err => {
             console.error("❌ 讀取 JSON 失敗:", err);
@@ -310,6 +303,13 @@ function returnToCategorySelection() {
     document.getElementById("quizArea").style.display = "none";
     document.getElementById("rewordQuizArea").style.display = "none";
     document.getElementById("quizCategories").style.display = "block";
+    
+    // 顯示測驗類型選擇區域
+    const quizTypeSelector = document.querySelector(".quiz-type-selector");
+    if (quizTypeSelector) {
+        quizTypeSelector.style.display = "flex";
+    }
+    
     let quizTypeSelection = document.getElementById("quizTypeSelection");
     if (quizTypeSelection) {
         quizTypeSelection.style.display = "none";
@@ -399,6 +399,12 @@ function showQuizCategories() {
         alert("⚠️ 單字資料尚未載入完成，請稍後再試。");
         return;
     }
+    // 隱藏測驗類型選擇區域
+    const quizTypeSelector = document.querySelector(".quiz-type-selector");
+    if (quizTypeSelector) {
+        quizTypeSelector.style.display = "none";
+    }
+    
     document.getElementById("quizCategories").style.display = "block";
     generateMultiSelectButtons();
     let startQuizBtn = document.getElementById("startFilteredQuizBtn");
