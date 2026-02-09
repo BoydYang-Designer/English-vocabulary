@@ -350,9 +350,7 @@ h1 {
 
 .timestamp-sentence.is-current {
     background-color: rgba(161, 136, 127, 0.25);
-    font-weight: 500;
     color: var(--text-primary);
-    box-shadow: 0 0 0 2px var(--accent-color);
 }
 
 /* JSON模式的連續高亮樣式 */
@@ -363,18 +361,11 @@ h1 {
     background-color: rgba(161, 136, 127, 0.25);
     
     /* ⏱️ 平滑過渡 */
-    transition: background-color 0.4s ease, font-weight 0.3s ease;
+    transition: background-color 0.4s ease;
     
     /* 📐 適當的內邊距 */
     padding-top: 3px;
     padding-bottom: 3px;
-    
-    /* 📝 字體加粗 */
-    font-weight: 600;
-    
-    /* 移除放大效果和外框 */
-    /* 不使用 transform: scale */
-    /* 不使用 border 或 box-shadow */
 }
 
 /* 可選：添加視覺參考線，標示固定閱讀位置（螢幕上方 1/3 處）*/
