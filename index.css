@@ -223,6 +223,8 @@ h1 {
     overflow-y: auto;
     /* 重要：增加底部padding，避免內容被控制欄遮住 */
     padding-bottom: 200px;
+    /* 平滑滾動行為 */
+    scroll-behavior: smooth;
 }
 
 #meaningContainer h3 {
@@ -242,7 +244,8 @@ h1 {
 
 #meaningContainer p {
     margin-top: 0;
-    line-height: 1.8;
+    margin-bottom: 1.5em; /* 增加段落間距 */
+    line-height: 2.2; /* 增加行高，避免放大後的句子重疊 */
     font-size: 16px;
 }
 
@@ -293,6 +296,8 @@ h1 {
     overflow-y: auto;
     height: calc(100vh - 180px);
     background: var(--bg-secondary);
+    /* 平滑滾動行為 */
+    scroll-behavior: smooth;
 }
 
 #highlight-meaning-container h3 {
@@ -311,8 +316,8 @@ h1 {
 }
 
 #highlight-meaning-container p {
-    margin: 0 0 1.2em;
-    line-height: 1.8;
+    margin: 0 0 1.5em; /* 增加段落間距 */
+    line-height: 2.2; /* 增加行高，避免放大後的句子重疊 */
     font-size: 17px;
 }
 
@@ -355,9 +360,19 @@ h1 {
 #highlight-meaning-container span.is-current-sentence,
 #meaningContainer span.is-current-sentence {
     background-color: rgba(161, 136, 127, 0.25);
-    transition: background-color 0.3s ease;
+    /* 平滑過渡：背景色、字體大小、變形、間距 */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     padding-top: 3px;
     padding-bottom: 3px;
+    /* 放大到 1.25 倍 */
+    display: inline-block;
+    transform: scale(1.25);
+    transform-origin: left center;
+    /* 增加上下邊距，避免與其他文字重疊 */
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    /* 字體粗細增加，讓放大效果更明顯 */
+    font-weight: 600;
 }
 
 /* 可選：添加視覺參考線，標示固定閱讀位置（螢幕上方 1/3 處）*/

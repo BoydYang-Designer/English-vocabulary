@@ -1565,7 +1565,7 @@ function timestampUpdateLoop() {
             lastHighlightedSentence.classList.remove('is-current');
         }
         
-        // 高亮當前句子並立即滾動到固定位置
+        // 高亮當前句子並平滑滾動到固定位置
         if (currentSentenceEl) {
             currentSentenceEl.classList.add('is-current');
             
@@ -1581,8 +1581,11 @@ function timestampUpdateLoop() {
             const maxScroll = container.scrollHeight - containerHeight;
             const finalScrollTop = Math.max(0, Math.min(targetScrollTop, maxScroll));
             
-            // ⚡ 立即跳轉（無平滑過渡），讓句子瞬間出現在固定位置
-            container.scrollTop = finalScrollTop;
+            // 🌊 使用平滑滾動，讓畫面過渡更穩定
+            container.scrollTo({
+                top: finalScrollTop,
+                behavior: 'smooth'
+            });
         }
         
         // 更新追蹤變數
@@ -2335,7 +2338,7 @@ function handleTextTracking() {
                     prevHighlighted.classList.remove('is-current');
                 }
                 
-                // 添加當前高亮並立即滾動到固定位置
+                // 添加當前高亮並平滑滾動到固定位置
                 if (currentSentenceEl) {
                     currentSentenceEl.classList.add('is-current');
                     
@@ -2350,8 +2353,11 @@ function handleTextTracking() {
                     const maxScroll = container.scrollHeight - containerHeight;
                     const finalScrollTop = Math.max(0, Math.min(targetScrollTop, maxScroll));
                     
-                    // ⚡ 立即跳轉（無平滑過渡），讓句子瞬間出現在固定位置
-                    container.scrollTop = finalScrollTop;
+                    // 🌊 使用平滑滾動，讓畫面過渡更穩定
+                    container.scrollTo({
+                        top: finalScrollTop,
+                        behavior: 'smooth'
+                    });
                 }
                 
                 // 更新追蹤變數
