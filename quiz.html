@@ -859,11 +859,18 @@
                     const content = this.nextElementSibling;
                     const icon = this.querySelector('.filter-icon');
                     
-                    if (content.style.maxHeight) {
+                    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                        // 收起
                         content.style.maxHeight = null;
                         icon.textContent = '+';
                     } else {
-                        content.style.maxHeight = content.scrollHeight + 'px';
+                        // 展開 - 強制重新計算高度
+                        content.style.maxHeight = 'none'; // 先移除限制
+                        const height = content.scrollHeight; // 獲取實際高度
+                        content.style.maxHeight = '0px'; // 重置為0以便動畫
+                        setTimeout(() => {
+                            content.style.maxHeight = height + 'px'; // 設置目標高度
+                        }, 10);
                         icon.textContent = '−';
                     }
                 });

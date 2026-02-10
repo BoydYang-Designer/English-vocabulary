@@ -1,0 +1,13 @@
+[00:00:00.000 --> 00:00:01.840] Pigmentation is a noun.
+[00:00:02.420 --> 00:00:07.160] It refers to the natural coloring or coloration of an organism's tissues, such as skin, hair,
+[00:00:07.260 --> 00:00:08.700] or eyes, caused by pigments.
+[00:00:09.560 --> 00:00:13.580] It can also refer to artificial coloring or the application of color to materials.
+[00:00:14.540 --> 00:00:19.660] Example, the doctor explained that the uneven pigmentation of her skin was due to sun exposure.
+[00:00:20.200 --> 00:00:23.820] Example, uneven pigmentation of the skin can occur due to sun damage.
+[00:00:24.500 --> 00:00:28.900] Example, the pigmentation of the leaves helps protect the plant from harmful UV rays.
+[00:00:28.900 --> 00:00:33.320] Example, the pigmentation of the fabric faded after years of exposure to sunlight.
+[00:00:34.620 --> 00:00:39.580] Summary, pigmentation refers to the natural or applied coloration of living tissues or
+[00:00:39.580 --> 00:00:41.860] materials influenced by the presence of pigments.
+[00:00:42.740 --> 00:00:46.120] It is often associated with biological, cosmetic, or material properties.
+[00:00:46.720 --> 00:00:52.360] Related words, coloration, hue, pigment, tint, melanin, antonyms, colorlessness, depigmentation,
+[00:00:52.780 --> 00:00:53.600] pallor, bleaching.

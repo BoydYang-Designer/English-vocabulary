@@ -1,0 +1,19 @@
+[00:00:00.000 --> 00:00:03.100] Portrait as a noun it has the following meanings.
+[00:00:03.900 --> 00:00:08.980] One, a painting, drawing, photograph, or other artistic representation of a person,
+[00:00:09.440 --> 00:00:12.560] especially one depicting only the face or head and shoulders.
+[00:00:13.080 --> 00:00:16.460] Example, the gallery featured a stunning portrait of the famous writer.
+[00:00:17.040 --> 00:00:20.660] Example, she commissioned an artist to create a portrait of her family.
+[00:00:21.640 --> 00:00:26.420] Two, a detailed description or representation of something or someone, often in words.
+[00:00:27.240 --> 00:00:31.320] Example, the book provides a vivid portrait of life in the 19th century.
+[00:00:32.080 --> 00:00:32.680] Example,
+[00:00:33.440 --> 00:00:36.220] the documentary paints a poignant portrait of the artist's struggles.
+[00:00:37.640 --> 00:00:42.480] Three, in printing or digital formatting, a vertical orientation of a page or screen as
+[00:00:42.480 --> 00:00:43.200] opposed to landscape.
+[00:00:43.820 --> 00:00:46.620] Example, the document should be printed in portrait format.
+[00:00:47.480 --> 00:00:51.160] Example, the photographer preferred to shoot the image in portrait orientation.
+[00:00:52.400 --> 00:00:53.000] Summary,
+[00:00:53.880 --> 00:00:58.820] portrait refers to an artistic representation of a person, a descriptive depiction or a
+[00:00:58.820 --> 00:01:01.280] vertical page orientation in printing or digital media.
+[00:01:01.900 --> 00:01:02.640] Related words,
+[00:01:03.380 --> 00:01:06.500] representation, depiction, likeness, image, format.
+[00:01:07.280 --> 00:01:11.080] Antonyms, landscape for orientation, abstraction for artistic representation.
