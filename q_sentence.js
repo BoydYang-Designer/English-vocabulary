@@ -177,8 +177,9 @@ function handleSentenceSubcategoryClick(subcatBtn, primaryBtnId) {
 
 
 function handleSentencePrimaryCategoryClick(btn, categoryName) {
-    // 這個函式只負責處理展開/收合次分類列表，不處理按鈕自身的選取狀態。
-    // 選取狀態由新的 handleSentenceSubcategoryClick 函式來管理。
+    // 當用戶點擊主分類按鈕時:
+    // 1. 將主分類加入篩選條件
+    // 2. 展開/收合次分類列表
 
     let subcategoryWrapperId = `sub-for-sentence-${categoryName.replace(/\s/g, '-')}`;
     let subcategoryWrapper = document.getElementById(subcategoryWrapperId);
@@ -204,8 +205,7 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
         }
 
         if (secondaryCategories.length > 0) {
-            // --- 修改部分 ---
-            // 生成次分類按鈕，使其 onclick 調用新的處理函式，並傳入主按鈕 ID (btn.id)
+            // 生成次分類按鈕
             subcategoryWrapper.innerHTML = secondaryCategories.map(subCat =>
                 `<button class="category-button" onclick="handleSentenceSubcategoryClick(this, '${btn.id}')">${subCat}</button>`
             ).join('');
@@ -214,8 +214,10 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
         btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
     }
 
-    // --- 正確的收合/展開邏輯 ---
-    // 檢查次分類容器是否已展開
+    // 將主分類加入篩選條件
+    toggleSentenceSelection('primaryCategories', categoryName, btn);
+
+    // 展開/收合次分類列表
     const isExpanded = subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px';
     if (isExpanded) {
         // 如果已展開，則收合

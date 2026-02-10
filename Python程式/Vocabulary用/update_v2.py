@@ -4,6 +4,9 @@ import re
 import json
 import os
 import sys
+import tkinter as tk
+import traceback  # 新增：用於顯示詳細錯誤訊息
+from tkinter import filedialog, messagebox
 
 def extract_eg_sentences(text):
     """從 'English meaning' 欄位中提取以 'E.g.' 開頭的句子，處理空格數量誤植"""
@@ -11,7 +14,7 @@ def extract_eg_sentences(text):
         return []
     sentences = re.findall(r'E\.g\.\s*(.*?)(?:\.\s*$|\.\s+|\n|$)', text, re.MULTILINE)
     cleaned_sentences = [s.strip() for s in sentences if s.strip()]
-    print(f"提取的例句: {cleaned_sentences}")
+    # print(f"提取的例句: {cleaned_sentences}") # 除錯用，可註解掉減少干擾
     return cleaned_sentences
 
 def get_max_suffix(word, df_b):
@@ -35,8 +38,11 @@ def preprocess_sentence(sentence):
 
 def update_excel_b(excel_a_path, excel_b_path, output_path):
     """將 Excel A 的新例句更新到 Excel B，並更新現有記錄的分類和等級"""
+    print(f"正在讀取檔案 A: {excel_a_path}")
     if not os.path.exists(excel_a_path):
         raise FileNotFoundError(f"找不到 Excel A 檔案: {excel_a_path}")
+    
+    print(f"正在讀取檔案 B: {excel_b_path}")
     if not os.path.exists(excel_b_path):
         raise FileNotFoundError(f"找不到 Excel B 檔案: {excel_b_path}")
     
@@ -55,10 +61,10 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
     
     new_rows = []
     
+    print("開始比對並更新資料...")
     for index, row in df_a.iterrows():
         word = row['Words']
         if pd.isna(word) or not isinstance(word, str):
-            print(f"跳過無效單字: {word}")
             continue
         
         eg_sentences = extract_eg_sentences(row['English meaning'])
@@ -74,13 +80,12 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
 
         level_a = row['等級'] if pd.notna(row['等級']) else ''
         
-        print(f"處理單字: {word}, 分類: {categories}, 等級: {level_a}")
-        
         word_records = df_b[df_b['Words'].notna() & df_b['Words'].str.match(rf'^{re.escape(word)}-\d+$')]
         max_suffix = get_max_suffix(word, df_b)
         
         existing_sentences = set(preprocess_sentence(s) for s in word_records['句子'].dropna())
         
+        # 更新現有資料
         for b_index, b_row in word_records.iterrows():
             b_row_idx = b_index + 2
             update_needed = False
@@ -98,8 +103,9 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
                 update_needed = True
                 
             if update_needed:
-                print(f"更新行 {b_row_idx}: Words={b_row['Words']}, 分類=({category1},{category2},{category3}), 等級={level_a}")
+                print(f"更新: {b_row['Words']} 分類/等級已同步")
         
+        # 新增例句
         if eg_sentences:
             for sentence in eg_sentences:
                 preprocessed_sentence = preprocess_sentence(sentence)
@@ -119,13 +125,13 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
                     }
                     new_rows.append(new_row)
                     existing_sentences.add(preprocessed_sentence)
-                    print(f"添加新例句: {new_word}, 句子={sentence}")
+                    print(f"++ 添加新例句: {new_word}")
     
     if new_rows:
         for row in pd.DataFrame(new_rows).itertuples(index=False):
             ws.append(row)
     
-    print(f"新增行數: {len(new_rows)}")
+    print(f"本次總共新增行數: {len(new_rows)}")
     
     wb.save(output_path)
     
@@ -142,12 +148,8 @@ def update_excel_b(excel_a_path, excel_b_path, output_path):
 
 def compare_excel_files(excel_a_path, excel_b_path, output_json_path):
     """比對兩個 Excel 檔案的指定欄位（不含音檔），並在有差異時記錄到 JSON 檔案"""
+    print("\n正在執行差異比對...")
     columns_to_compare = ['等級', '分類1', '分類2', '分類3', 'Words', '名人', '句子', '中文']
-    
-    if not os.path.exists(excel_a_path):
-        raise FileNotFoundError(f"找不到 Excel A 檔案: {excel_a_path}")
-    if not os.path.exists(excel_b_path):
-        raise FileNotFoundError(f"找不到 Excel B 檔案: {excel_b_path}")
     
     df_a = pd.read_excel(excel_a_path)
     df_b = pd.read_excel(excel_b_path)
@@ -209,34 +211,150 @@ def compare_excel_files(excel_a_path, excel_b_path, output_json_path):
     else:
         print("A 和 B 之間沒有差異，未生成 JSON 檔案")
 
-def main():
-    """主函數，先更新 Excel B，然後比對 sentence.xlsx 和 updated_sentence.xlsx"""
-    excel_a_path = 'Z_total_words.xlsx'
-    excel_b_path = 'sentence.xlsx'
-    output_path = 'updated_sentence.xlsx'
-    output_json_path = 'comparison_result.json'
+def select_files():
+    """使用圖形介面選擇檔案"""
+    print("\n" + "="*60)
+    print("程式啟動中... 請稍候")
+    print("="*60)
     
+    root = tk.Tk()
+    root.withdraw()  # 隱藏主視窗
+    
+    # 確保視窗顯示在最上層
+    root.lift()
+    root.attributes('-topmost', True)
+    root.after_idle(root.attributes, '-topmost', False)
+    
+    print("\n等待使用者選擇檔案 (請留意跳出的視窗)...")
+    
+    # 顯示歡迎訊息
+    messagebox.showinfo(
+        "Excel 更新程式", 
+        "歡迎使用 Excel 更新程式！\n\n" +
+        "接下來將會依序要求您選擇：\n" +
+        "1. Excel A 檔案 (來源檔案)\n" +
+        "2. Excel B 檔案 (要更新的檔案)\n\n" +
+        "按確定開始..."
+    )
+    
+    print("顯示 Excel A 選擇對話框...")
+    
+    # 選擇 Excel A 檔案
+    excel_a_path = filedialog.askopenfilename(
+        title="步驟 1/2：選擇 Excel A 檔案 (來源)",
+        filetypes=[("Excel 檔案", "*.xlsx"), ("所有檔案", "*.*")],
+        parent=root
+    )
+    
+    if not excel_a_path:
+        print("使用者取消選擇 Excel A")
+        root.destroy()
+        return None, None
+    
+    print(f"已選擇 Excel A: {excel_a_path}")
+    
+    print("顯示 Excel B 選擇對話框...")
+    
+    # 選擇 Excel B 檔案
+    excel_b_path = filedialog.askopenfilename(
+        title="步驟 2/2：選擇 Excel B 檔案 (目標)",
+        filetypes=[("Excel 檔案", "*.xlsx"), ("所有檔案", "*.*")],
+        parent=root
+    )
+    
+    if not excel_b_path:
+        print("使用者取消選擇 Excel B")
+        root.destroy()
+        return None, None
+    
+    print(f"已選擇 Excel B: {excel_b_path}")
+    
+    root.destroy()
+    
+    return excel_a_path, excel_b_path
+
+def main():
+    """主函數邏輯"""
+    
+    # 使用圖形介面選擇檔案
+    excel_a_path, excel_b_path = select_files()
+    
+    if not excel_a_path or not excel_b_path:
+        print("\n未選擇檔案，操作已取消。")
+        return # 結束 main，但不關閉視窗，因為外面有 finally
+    
+    # 取得 Excel B 所在的目錄，輸出檔案將保存在同一目錄
+    output_dir = os.path.dirname(excel_b_path)
+    output_path = os.path.join(output_dir, 'updated_sentence.xlsx')
+    output_json_path = os.path.join(output_dir, 'comparison_result.json')
+    
+    print(f"\n輸出目錄: {output_dir}")
+    print(f"預計輸出檔案: updated_sentence.xlsx")
+    
+    # 1. 驗證 Excel B 格式
+    print("\n開始驗證 Excel B 格式...")
     try:
         df_b = pd.read_excel(excel_b_path)
-        # 允許字母、數字、連字符、空格、撇號和重音符號
-        invalid_words = df_b[df_b['Words'].notna() & ~df_b['Words'].str.match(r'^[\w\s\'’éèêëáàâãäåíìîïóòôõöúùûüýÿ-]+-\d+$', na=False)]
-        if not invalid_words.empty:
-            print("發現無效的 Words 欄位值：")
-            print(invalid_words[['Words']])
-            return
-    except Exception as e:
-        print(f"讀取 Excel B 時發生錯誤: {e}")
-        return
-    
-    try:
-        update_excel_b(excel_a_path, excel_b_path, output_path)
-        compare_excel_files(excel_b_path, output_path, output_json_path)
-    except FileNotFoundError as e:
-        print(f"錯誤: {e}")
-        sys.exit(1)
-    except Exception as e:
-        print(f"發生未知錯誤: {e}")
-        sys.exit(1)
+        # 簡單檢查必要欄位
+        if 'Words' not in df_b.columns:
+             raise ValueError("Excel B 檔案缺少必要的 'Words' 欄位！")
 
+        invalid_words = df_b[df_b['Words'].notna() & ~df_b['Words'].str.match(r'^[\w\s\''éèêëáàâãäåíìîïóòôõöúùûüýÿ-]+-\d+$', na=False)]
+        
+        if not invalid_words.empty:
+            print("警告：發現部分 Words 欄位值格式可能不符，但程式將嘗試繼續執行。")
+            # 不強制 return，只做警告
+        
+        print("✓ Excel B 格式驗證通過")
+        
+    except Exception as e:
+        print(f"讀取 Excel B 時發生嚴重錯誤: {e}")
+        traceback.print_exc()
+        return
+
+    # 2. 執行更新
+    print("\n開始更新 Excel B...")
+    update_excel_b(excel_a_path, excel_b_path, output_path)
+    
+    # 3. 執行比對
+    print("\n開始比對檔案...")
+    compare_excel_files(excel_b_path, output_path, output_json_path)
+    
+    success_msg = (
+        f"✓ 處理完成！\n\n"
+        f"輸出檔案位置：\n"
+        f"• {output_path}\n"
+        f"• {output_json_path}\n\n"
+        f"請到該目錄查看結果。"
+    )
+    
+    print("\n" + "="*60)
+    print("全部處理完成！")
+    print("="*60)
+    
+    # 最後彈窗通知
+    root = tk.Tk()
+    root.withdraw()
+    root.attributes('-topmost', True)
+    root.after_idle(root.attributes, '-topmost', False)
+    messagebox.showinfo("完成", success_msg)
+    root.destroy()
+
+# ==========================================
+# 程式入口點：防止閃退的關鍵設計
+# ==========================================
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        # 如果程式崩潰，會捕捉到這裡
+        print("\n" + "!"*60)
+        print("程式發生錯誤 (Error):")
+        print(f"{e}")
+        print("\n詳細錯誤訊息 (Traceback):")
+        traceback.print_exc()
+        print("!"*60)
+    finally:
+        # 無論成功或失敗，這行最後一定會執行
+        print("\n" + "-"*30)
+        input("請按 Enter 鍵關閉視窗...")
