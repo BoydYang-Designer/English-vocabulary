@@ -1,0 +1,28 @@
+[00:00:00.000 --> 00:00:00.660] Landscape.
+[00:00:01.540 --> 00:00:03.440] As a noun, it has the following meanings.
+[00:00:04.360 --> 00:00:09.440] One, the visible features of an area of land, often including natural elements like hills, valleys,
+[00:00:09.860 --> 00:00:12.600] trees, or water, as well as human -made structures.
+[00:00:13.480 --> 00:00:16.780] Example, the rolling hills created a picturesque landscape.
+[00:00:17.440 --> 00:00:20.220] Example, she painted a beautiful landscape of the countryside.
+[00:00:21.280 --> 00:00:26.080] Two, a type of artwork that depicts natural scenery such as mountains, rivers, or forests.
+[00:00:26.360 --> 00:00:31.020] Example, his favorite painting in the museum was a serene landscape of a sunset
+[00:00:31.020 --> 00:00:31.760] over the mountains.
+[00:00:31.940 --> 00:00:36.380] Example, the artist specialized in landscapes, capturing the beauty of nature.
+[00:00:37.500 --> 00:00:38.020] Three,
+[00:00:39.320 --> 00:00:44.140] in printing or digital formatting, a horizontal orientation of a page or screen as opposed
+[00:00:44.140 --> 00:00:44.800] to portrait.
+[00:00:45.020 --> 00:00:45.480] Example,
+[00:00:46.340 --> 00:00:49.080] the chart is better displayed in landscape mode to fit all the data.
+[00:00:49.640 --> 00:00:53.800] Example, the photos were printed in landscape format to show the wide view of the scene.
+[00:00:54.800 --> 00:00:55.120] Four,
+[00:00:56.020 --> 00:01:01.000] a particular field, context, or situation, especially in terms of its overall features
+[00:01:01.000 --> 00:01:02.020] or conditions.
+[00:01:02.740 --> 00:01:03.360] Example,
+[00:01:04.000 --> 00:01:06.980] the political landscape has shifted significantly in recent years.
+[00:01:07.600 --> 00:01:12.180] Example, the economic landscape of the region is defined by agriculture and tourism.
+[00:01:13.360 --> 00:01:14.040] Summary,
+[00:01:14.660 --> 00:01:20.200] landscape refers to natural scenery, artwork depicting such scenery, a horizontal page or screen orientation,
+[00:01:20.820 --> 00:01:23.820] or the overall features of a particular context or situation.
+[00:01:24.360 --> 00:01:27.860] Related words, scenery, view, terrain, panorama, format, environment.
+[00:01:28.520 --> 00:01:33.120] Antoninms, portrait for orientation, abstraction for artistic depiction, detail
+[00:01:33.120 --> 00:01:34.280] for overall features.

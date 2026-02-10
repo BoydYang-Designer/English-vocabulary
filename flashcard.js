@@ -187,14 +187,45 @@ function startFlashcardSession() {
 
     // === 加權排序（智慧抽牌）===
     // 優先級分數越低，越優先出現
+    // 新增「不確定」狀態的考量，讓系統更智慧地安排複習頻率
     function priorityScore(item) {
         const id   = item.Words;
-        const hist = fcHistory[id] || { seen: 0, known: 0, unknown: 0, streak: 0 };
-        if (hist.seen === 0)             return 0;  // 🟠 從未見過 → 最高優先
-        if (hist.streak === 0 && hist.unknown >= 2) return 1;  // 🔴 一直記不住
-        if (hist.streak === 1)           return 2;  // 🟡 剛記住一次
-        if (hist.streak >= 3)            return 4;  // 🟢 熟練
-        return 3;                                   // 普通
+        const hist = fcHistory[id] || { 
+            seen: 0, 
+            known: 0, 
+            uncertain: 0, 
+            unknown: 0, 
+            streak: 0 
+        };
+        
+        // 從未見過 → 最高優先
+        if (hist.seen === 0) return 0;
+        
+        // 計算答對率和不確定率
+        const total = hist.known + hist.uncertain + hist.unknown;
+        if (total === 0) return 0;
+        
+        const knownRate = hist.known / total;
+        const uncertainRate = hist.uncertain / total;
+        const unknownRate = hist.unknown / total;
+        
+        // 🔴 優先級 1：一直記不住（答錯率 > 50%）
+        if (unknownRate > 0.5 && hist.unknown >= 2) return 1;
+        
+        // 🟠 優先級 2：不穩定（不確定率 > 40% 或答錯率 30-50%）
+        if (uncertainRate > 0.4 || (unknownRate >= 0.3 && unknownRate <= 0.5)) return 2;
+        
+        // 🟡 優先級 3：最近才記住，需要鞏固（連續正確 1-2 次）
+        if (hist.streak >= 1 && hist.streak <= 2) return 3;
+        
+        // 🟢 優先級 4：相對穩定（答對率 > 60%，但未完全熟練）
+        if (knownRate > 0.6 && hist.streak < 5) return 4;
+        
+        // 🔵 優先級 5：已熟練（連續正確 5 次以上）
+        if (hist.streak >= 5) return 5;
+        
+        // 預設：一般優先級
+        return 3;
     }
 
     // Fisher-Yates 洗牌後依優先級排序
@@ -204,12 +235,23 @@ function startFlashcardSession() {
     }
     pool.sort((a, b) => priorityScore(a) - priorityScore(b));
 
-    // 取前 N 張（60% 高優先 + 40% 其他，最多 fcCount 張）
-    const highPriority = pool.filter(item => priorityScore(item) <= 1);
-    const others       = pool.filter(item => priorityScore(item) > 1);
-    const highCount    = Math.min(Math.ceil(fcCount * 0.6), highPriority.length);
-    const otherCount   = Math.min(fcCount - highCount, others.length);
-    const combined     = [...highPriority.slice(0, highCount), ...others.slice(0, otherCount)];
+    // 智慧配分：根據優先級分配卡片比例
+    // 高優先（0-2）：70%
+    // 中優先（3-4）：25%
+    // 低優先（5+）：5%
+    const highPriority = pool.filter(item => priorityScore(item) <= 2);
+    const midPriority  = pool.filter(item => priorityScore(item) >= 3 && priorityScore(item) <= 4);
+    const lowPriority  = pool.filter(item => priorityScore(item) >= 5);
+    
+    const highCount = Math.min(Math.ceil(fcCount * 0.7), highPriority.length);
+    const midCount  = Math.min(Math.ceil(fcCount * 0.25), midPriority.length);
+    const lowCount  = Math.min(fcCount - highCount - midCount, lowPriority.length);
+    
+    const combined = [
+        ...highPriority.slice(0, highCount), 
+        ...midPriority.slice(0, midCount),
+        ...lowPriority.slice(0, lowCount)
+    ];
 
     // 再次洗牌，讓高優先不全部集中前面
     for (let i = combined.length - 1; i > 0; i--) {
@@ -358,7 +400,16 @@ function renderDots(total) {
         if (result === undefined) {
             return `<span class="fc-dot ${i === fcIndex ? 'fc-dot-current' : 'fc-dot-pending'}"></span>`;
         }
-        return `<span class="fc-dot ${result.known ? 'fc-dot-known' : 'fc-dot-unknown'}"></span>`;
+        // status: 0=再練習, 1=不確定, 2=記得
+        let dotClass = 'fc-dot ';
+        if (result.status === 2) {
+            dotClass += 'fc-dot-known';
+        } else if (result.status === 1) {
+            dotClass += 'fc-dot-uncertain';
+        } else {
+            dotClass += 'fc-dot-unknown';
+        }
+        return `<span class="${dotClass}"></span>`;
     }).join('');
 }
 
@@ -406,31 +457,38 @@ function fcPlayAudio() {
 }
 
 // ─────────────────────────────────────────
-//  評分：記得 / 再練習
+//  評分：記得 / 不確定 / 再練習
 // ─────────────────────────────────────────
-function fcMarkKnown(known) {
+function fcMarkKnown(status) {
+    // status: 0=再練習, 1=不確定, 2=記得
     const item = fcDeck[fcIndex];
     if (!item) return;
 
     const id   = item.Words;
-    const hist = fcHistory[id] || { seen: 0, known: 0, unknown: 0, streak: 0, lastSeen: null };
+    const hist = fcHistory[id] || { seen: 0, known: 0, uncertain: 0, unknown: 0, streak: 0, lastSeen: null };
 
     hist.seen++;
     hist.lastSeen = new Date().toISOString().split('T')[0];
 
-    if (known) {
+    if (status === 2) {
+        // 記得
         hist.known++;
         hist.streak = (hist.streak || 0) + 1;
+    } else if (status === 1) {
+        // 不確定
+        hist.uncertain = (hist.uncertain || 0) + 1;
+        hist.streak = Math.max(0, (hist.streak || 0) - 1); // 稍微降低連續記錄
     } else {
+        // 再練習
         hist.unknown++;
         hist.streak = 0;
     }
 
     fcHistory[id] = hist;
-    fcResults.push({ id, item, known });
+    fcResults.push({ id, item, status });
 
     // 立即更新這一顆圓點
-    updateDot(fcIndex, known);
+    updateDot(fcIndex, status);
 
     // 儲存到 vocabularyData
     fcSaveHistory();
@@ -446,10 +504,19 @@ function fcMarkKnown(known) {
     }, 200);
 }
 
-function updateDot(index, known) {
+function updateDot(index, status) {
+    // status: 0=再練習, 1=不確定, 2=記得
     const dots = document.querySelectorAll('.fc-dot');
     if (dots[index]) {
-        dots[index].className = `fc-dot ${known ? 'fc-dot-known' : 'fc-dot-unknown'}`;
+        let className = 'fc-dot ';
+        if (status === 2) {
+            className += 'fc-dot-known';
+        } else if (status === 1) {
+            className += 'fc-dot-uncertain';
+        } else {
+            className += 'fc-dot-unknown';
+        }
+        dots[index].className = className;
     }
 }
 
@@ -472,13 +539,15 @@ function showFlashcardResult() {
     hideAllPanels();
     document.getElementById('flashcardResultPanel').style.display = 'block';
 
-    const knownItems   = fcResults.filter(r => r.known);
-    const unknownItems = fcResults.filter(r => !r.known);
+    const knownItems     = fcResults.filter(r => r.status === 2); // 記得
+    const uncertainItems = fcResults.filter(r => r.status === 1); // 不確定
+    const unknownItems   = fcResults.filter(r => r.status === 0); // 再練習
 
-    const knownCount   = knownItems.length;
-    const unknownCount = unknownItems.length;
-    const total        = fcResults.length;
-    const pct          = total > 0 ? Math.round((knownCount / total) * 100) : 0;
+    const knownCount     = knownItems.length;
+    const uncertainCount = uncertainItems.length;
+    const unknownCount   = unknownItems.length;
+    const total          = fcResults.length;
+    const pct            = total > 0 ? Math.round((knownCount / total) * 100) : 0;
 
     // 評語
     let comment = '';
@@ -488,25 +557,30 @@ function showFlashcardResult() {
     else if (pct >= 40)   comment = '💪 加油！多練習幾次就會記住！';
     else                  comment = '📚 還需要多加練習，別放棄！';
 
-    document.getElementById('fc-result-comment').textContent = comment;
-    document.getElementById('fc-result-known').textContent   = knownCount;
-    document.getElementById('fc-result-unknown').textContent = unknownCount;
-    document.getElementById('fc-result-pct').textContent     = pct + '%';
+    document.getElementById('fc-result-comment').textContent   = comment;
+    document.getElementById('fc-result-known').textContent     = knownCount;
+    document.getElementById('fc-result-uncertain').textContent = uncertainCount;
+    document.getElementById('fc-result-unknown').textContent   = unknownCount;
+    document.getElementById('fc-result-pct').textContent       = pct + '%';
 
-    // 列出需要複習的字
+    // 列出需要複習的字（包含「再練習」和「不確定」）
     const reviewList = document.getElementById('fc-review-list');
-    if (unknownItems.length === 0) {
+    const needReview = [...unknownItems, ...uncertainItems];
+    
+    if (needReview.length === 0) {
         reviewList.innerHTML = '<p class="fc-all-good">🎊 沒有需要複習的字卡！</p>';
     } else {
-        reviewList.innerHTML = unknownItems.map(r => {
+        reviewList.innerHTML = needReview.map(r => {
             const item     = r.item;
             const display  = fcType === 'word' ? item.Words : item['句子'];
             const sub      = fcType === 'word'
                 ? (item['traditional Chinese'] || '').split('\n')[0]
                 : (item['中文'] || '');
             const cleanDisp = display ? display.replace(/\s*\[=[^\]]+\]/g, '').trim() : '';
+            const statusIcon = r.status === 1 ? '❓' : '❌';
             return `
                 <div class="fc-review-item">
+                    <span style="font-size: 1.2rem; margin-right: 8px;">${statusIcon}</span>
                     <div class="fc-review-main">${cleanDisp}</div>
                     <div class="fc-review-sub">${sub}</div>
                     <button class="fc-audio-btn" onclick="fcPlayItemAudio('${item.Words}')">🔊</button>
@@ -515,9 +589,9 @@ function showFlashcardResult() {
         }).join('');
     }
 
-    // 控制「再練習答錯的」按鈕
+    // 控制「再練習答錯的」按鈕（包含不確定和答錯的）
     const retryBtn = document.getElementById('fc-retry-wrong-btn');
-    if (retryBtn) retryBtn.style.display = unknownItems.length > 0 ? 'inline-flex' : 'none';
+    if (retryBtn) retryBtn.style.display = needReview.length > 0 ? 'inline-flex' : 'none';
 
     updateBreadcrumb(['選擇功能', '測驗中心', '字卡練習', '練習結果']);
 }
@@ -533,8 +607,8 @@ function fcPlayItemAudio(wordKey) {
 //  結果頁按鈕動作
 // ─────────────────────────────────────────
 function fcRetryWrong() {
-    // 只練習答錯的
-    const wrongItems = fcResults.filter(r => !r.known).map(r => r.item);
+    // 只練習答錯的和不確定的（status 0 或 1）
+    const wrongItems = fcResults.filter(r => r.status === 0 || r.status === 1).map(r => r.item);
     if (wrongItems.length === 0) return;
 
     // 洗牌
@@ -586,7 +660,7 @@ function hideAllPanels() {
         'rewordQuizArea', 'reorganizeQuizArea',
         'quizResult',
         'flashcardTypePanel', 'flashcardSetupPanel',
-        'flashcardArea', 'flashcardResultPanel'
+        'flashcardArea', 'flashcardResultPanel', 'flashcardManagerPanel'
     ];
     ids.forEach(id => {
         const el = document.getElementById(id);
@@ -614,12 +688,477 @@ document.addEventListener('keydown', function(e) {
             fcPlayAudio();
         }
     }
-    if (e.code === 'ArrowRight' && isFlipped) {
-        e.preventDefault();
-        fcMarkKnown(true);
-    }
-    if (e.code === 'ArrowLeft' && isFlipped) {
-        e.preventDefault();
-        fcMarkKnown(false);
+    // 翻牌後的評分快捷鍵
+    if (isFlipped) {
+        if (e.code === 'ArrowLeft') {
+            e.preventDefault();
+            fcMarkKnown(0); // 再練習
+        }
+        if (e.code === 'ArrowDown') {
+            e.preventDefault();
+            fcMarkKnown(1); // 不確定
+        }
+        if (e.code === 'ArrowRight') {
+            e.preventDefault();
+            fcMarkKnown(2); // 記得
+        }
     }
 });
+
+// ═════════════════════════════════════════════════════════════
+//  ⚙️ 記憶度管理功能
+// ═════════════════════════════════════════════════════════════
+
+let fcMgrCurrentType = 'word'; // 'word' | 'sentence'
+let fcMgrAllData = [];
+let fcMgrFilteredData = [];
+let fcMgrActiveCategory = 'all'; // 'all' | 'practiced' | 'mastered' | 'struggling'
+
+// ─────────────────────────────────────────
+//  開啟管理介面
+// ─────────────────────────────────────────
+function openFlashcardManager() {
+    hideAllPanels();
+    document.getElementById('flashcardManagerPanel').style.display = 'block';
+    updateBreadcrumb(['選擇功能', '測驗中心', '字卡練習', '記憶度管理']);
+    
+    fcMgrCurrentType = 'word';
+    fcMgrActiveCategory = 'all';
+    fcMgrLoadData();
+}
+
+function fcCloseManager() {
+    hideAllPanels();
+    document.getElementById('flashcardTypePanel').style.display = 'block';
+    updateBreadcrumb(['選擇功能', '測驗中心', '字卡練習']);
+}
+
+// ─────────────────────────────────────────
+//  切換類型（單字/句子）
+// ─────────────────────────────────────────
+function fcMgrSwitchType(type) {
+    fcMgrCurrentType = type;
+    fcMgrActiveCategory = 'all'; // 切換類型時重置篩選
+    
+    // 更新標籤樣式
+    document.getElementById('mgr-word-tab').classList.toggle('active', type === 'word');
+    document.getElementById('mgr-sentence-tab').classList.toggle('active', type === 'sentence');
+    
+    fcMgrLoadData();
+}
+
+// ─────────────────────────────────────────
+//  載入資料
+// ─────────────────────────────────────────
+function fcMgrLoadData() {
+    // 取得所有字卡資料
+    const sourceData = fcMgrCurrentType === 'word' ? (wordsData || []) : (sentenceData || []);
+    
+    // 取得歷史記錄
+    const vocab = window.getVocabularyData ? window.getVocabularyData() : {};
+    const history = (vocab.flashcardHistory && vocab.flashcardHistory[fcMgrCurrentType]) || {};
+    
+    // 合併資料和歷史記錄
+    fcMgrAllData = sourceData.map(item => {
+        const id = fcMgrCurrentType === 'word' ? item.Words : item.Words;
+        const hist = history[id] || {
+            seen: 0,
+            known: 0,
+            uncertain: 0,
+            unknown: 0,
+            streak: 0,
+            lastSeen: null
+        };
+        
+        return {
+            id,
+            item,
+            history: hist,
+            priority: fcMgrCalculatePriority(hist)
+        };
+    });
+    
+    fcMgrFilterData();
+}
+
+// ─────────────────────────────────────────
+//  計算優先級（與 startFlashcardSession 中的邏輯一致）
+// ─────────────────────────────────────────
+function fcMgrCalculatePriority(hist) {
+    if (hist.seen === 0) return 0;
+    
+    const total = hist.known + hist.uncertain + hist.unknown;
+    if (total === 0) return 0;
+    
+    const knownRate = hist.known / total;
+    const uncertainRate = hist.uncertain / total;
+    const unknownRate = hist.unknown / total;
+    
+    if (unknownRate > 0.5 && hist.unknown >= 2) return 1;
+    if (uncertainRate > 0.4 || (unknownRate >= 0.3 && unknownRate <= 0.5)) return 2;
+    if (hist.streak >= 1 && hist.streak <= 2) return 3;
+    if (knownRate > 0.6 && hist.streak < 5) return 4;
+    if (hist.streak >= 5) return 5;
+    
+    return 3;
+}
+
+// ─────────────────────────────────────────
+//  篩選和排序資料
+// ─────────────────────────────────────────
+function fcMgrFilterData() {
+    const searchText = document.getElementById('fc-mgr-search').value.toLowerCase().trim();
+    const sortBy = document.getElementById('fc-mgr-sort').value;
+    
+    // 第一步：根據分類篩選
+    let categoryFiltered = fcMgrAllData;
+    
+    switch (fcMgrActiveCategory) {
+        case 'practiced':
+            categoryFiltered = fcMgrAllData.filter(d => d.history.seen > 0);
+            break;
+        case 'mastered':
+            categoryFiltered = fcMgrAllData.filter(d => d.priority === 5);
+            break;
+        case 'struggling':
+            categoryFiltered = fcMgrAllData.filter(d => d.priority <= 2 && d.history.seen > 0);
+            break;
+        case 'all':
+        default:
+            categoryFiltered = fcMgrAllData;
+            break;
+    }
+    
+    // 第二步：根據搜尋文字篩選
+    fcMgrFilteredData = categoryFiltered.filter(data => {
+        if (!searchText) return true;
+        
+        const name = fcMgrCurrentType === 'word' 
+            ? data.item.Words || ''
+            : data.item['句子'] || '';
+        const chinese = fcMgrCurrentType === 'word'
+            ? data.item['traditional Chinese'] || ''
+            : data.item['中文'] || '';
+            
+        return name.toLowerCase().includes(searchText) || 
+               chinese.toLowerCase().includes(searchText);
+    });
+    
+    // 第三步：排序
+    fcMgrFilteredData.sort((a, b) => {
+        switch (sortBy) {
+            case 'priority':
+                return a.priority - b.priority;
+            case 'name':
+                const nameA = fcMgrCurrentType === 'word' ? a.item.Words : a.item['句子'];
+                const nameB = fcMgrCurrentType === 'word' ? b.item.Words : b.item['句子'];
+                return (nameA || '').localeCompare(nameB || '');
+            case 'seen-desc':
+                return b.history.seen - a.history.seen;
+            case 'seen-asc':
+                return a.history.seen - b.history.seen;
+            case 'rate-desc':
+                return fcMgrGetRate(b.history) - fcMgrGetRate(a.history);
+            case 'rate-asc':
+                return fcMgrGetRate(a.history) - fcMgrGetRate(b.history);
+            default:
+                return 0;
+        }
+    });
+    
+    fcMgrRenderData();
+}
+
+function fcMgrGetRate(hist) {
+    const total = hist.known + hist.uncertain + hist.unknown;
+    return total > 0 ? (hist.known / total) : 0;
+}
+
+// ─────────────────────────────────────────
+//  渲染資料
+// ─────────────────────────────────────────
+function fcMgrRenderData() {
+    const listEl = document.getElementById('fc-mgr-list');
+    
+    // 更新統計
+    const total = fcMgrAllData.length;
+    const practiced = fcMgrAllData.filter(d => d.history.seen > 0).length;
+    const mastered = fcMgrAllData.filter(d => d.priority === 5).length;
+    const struggling = fcMgrAllData.filter(d => d.priority <= 2 && d.history.seen > 0).length;
+    
+    document.getElementById('mgr-total').textContent = total;
+    document.getElementById('mgr-practiced').textContent = practiced;
+    document.getElementById('mgr-mastered').textContent = mastered;
+    document.getElementById('mgr-struggling').textContent = struggling;
+    
+    // 更新統計卡片的 active 狀態
+    document.querySelectorAll('.fc-mgr-stat').forEach((btn, index) => {
+        const categories = ['all', 'practiced', 'mastered', 'struggling'];
+        btn.classList.toggle('active', fcMgrActiveCategory === categories[index]);
+    });
+    
+    // 更新篩選提示
+    const filterHint = document.getElementById('fc-mgr-filter-hint');
+    const filterText = document.querySelector('.fc-mgr-filter-text');
+    
+    if (fcMgrActiveCategory !== 'all') {
+        const categoryLabels = {
+            'practiced': `顯示已練習的字卡（${fcMgrFilteredData.length} 張）`,
+            'mastered': `顯示已熟練的字卡（${fcMgrFilteredData.length} 張）`,
+            'struggling': `顯示需加強的字卡（${fcMgrFilteredData.length} 張）`
+        };
+        filterText.textContent = categoryLabels[fcMgrActiveCategory] || '';
+        filterHint.style.display = 'flex';
+    } else {
+        filterHint.style.display = 'none';
+    }
+    
+    // 渲染列表
+    if (fcMgrFilteredData.length === 0) {
+        const categoryLabels = {
+            'all': '所有字卡',
+            'practiced': '已練習的字卡',
+            'mastered': '已熟練的字卡',
+            'struggling': '需加強的字卡'
+        };
+        const label = categoryLabels[fcMgrActiveCategory] || '符合條件的資料';
+        listEl.innerHTML = `<div style="padding: 2rem; text-align: center; color: var(--color-text-light);">沒有${label}</div>`;
+        return;
+    }
+    
+    listEl.innerHTML = fcMgrFilteredData.map(data => {
+        const hist = data.history;
+        const item = data.item;
+        const name = fcMgrCurrentType === 'word' ? item.Words : item['句子'];
+        const chinese = fcMgrCurrentType === 'word'
+            ? (item['traditional Chinese'] || '').split('\n')[0]
+            : item['中文'] || '';
+        const cleanName = name ? name.replace(/\s*\[=[^\]]+\]/g, '').trim() : '';
+        
+        const total = hist.known + hist.uncertain + hist.unknown;
+        const rate = total > 0 ? Math.round((hist.known / total) * 100) : 0;
+        
+        const priorityLabels = ['新', '弱', '不穩', '鞏固', '穩定', '熟練'];
+        const priorityLabel = priorityLabels[data.priority] || '新';
+        
+        return `
+            <div class="fc-mgr-item">
+                <div class="fc-mgr-item-info">
+                    <div class="fc-mgr-item-name">
+                        <span class="fc-mgr-priority-badge fc-mgr-priority-${data.priority}">${priorityLabel}</span>
+                        <span>${cleanName}</span>
+                    </div>
+                    <div class="fc-mgr-item-sub">${chinese}</div>
+                    <div class="fc-mgr-item-stats">
+                        <span class="fc-mgr-stat-mini">練習：<strong>${hist.seen}</strong> 次</span>
+                        <span class="fc-mgr-stat-mini">記得：<strong>${hist.known}</strong></span>
+                        <span class="fc-mgr-stat-mini">不確定：<strong>${hist.uncertain || 0}</strong></span>
+                        <span class="fc-mgr-stat-mini">再練習：<strong>${hist.unknown}</strong></span>
+                        <span class="fc-mgr-stat-mini">連續：<strong>${hist.streak}</strong></span>
+                        <span class="fc-mgr-stat-mini">正確率：<strong>${rate}%</strong></span>
+                    </div>
+                </div>
+                <div class="fc-mgr-item-actions">
+                    <button class="fc-mgr-btn" onclick='fcMgrEditItem(${JSON.stringify(data.id)})'>
+                        ✏️ 編輯
+                    </button>
+                    <button class="fc-mgr-btn fc-mgr-btn-danger" onclick='fcMgrResetItem(${JSON.stringify(data.id)})'>
+                        🔄 重置
+                    </button>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+// ─────────────────────────────────────────
+//  編輯單一項目
+// ─────────────────────────────────────────
+function fcMgrEditItem(id) {
+    const data = fcMgrAllData.find(d => d.id === id);
+    if (!data) return;
+    
+    const hist = data.history;
+    const item = data.item;
+    const name = fcMgrCurrentType === 'word' ? item.Words : item['句子'];
+    
+    // 建立模態框
+    const modal = document.createElement('div');
+    modal.className = 'fc-mgr-modal';
+    modal.innerHTML = `
+        <div class="fc-mgr-modal-content">
+            <div class="fc-mgr-modal-header">編輯記憶度記錄</div>
+            
+            <div class="fc-mgr-form-group">
+                <div class="fc-mgr-form-label">字卡名稱</div>
+                <div style="padding: var(--spacing-sm); background: var(--color-bg); border-radius: var(--radius-md); font-weight: 600;">
+                    ${name}
+                </div>
+            </div>
+            
+            <div class="fc-mgr-form-group">
+                <label class="fc-mgr-form-label">已練習次數</label>
+                <input type="number" id="edit-seen" class="fc-mgr-form-input" value="${hist.seen}" min="0">
+                <div class="fc-mgr-form-hint">總共練習了幾次</div>
+            </div>
+            
+            <div class="fc-mgr-form-group">
+                <label class="fc-mgr-form-label">記得次數 ✅</label>
+                <input type="number" id="edit-known" class="fc-mgr-form-input" value="${hist.known}" min="0">
+            </div>
+            
+            <div class="fc-mgr-form-group">
+                <label class="fc-mgr-form-label">不確定次數 ❓</label>
+                <input type="number" id="edit-uncertain" class="fc-mgr-form-input" value="${hist.uncertain || 0}" min="0">
+            </div>
+            
+            <div class="fc-mgr-form-group">
+                <label class="fc-mgr-form-label">再練習次數 ❌</label>
+                <input type="number" id="edit-unknown" class="fc-mgr-form-input" value="${hist.unknown}" min="0">
+            </div>
+            
+            <div class="fc-mgr-form-group">
+                <label class="fc-mgr-form-label">連續答對次數</label>
+                <input type="number" id="edit-streak" class="fc-mgr-form-input" value="${hist.streak}" min="0">
+                <div class="fc-mgr-form-hint">連續答對的次數（影響優先級）</div>
+            </div>
+            
+            <div class="fc-mgr-modal-actions">
+                <button class="control-button" onclick="this.closest('.fc-mgr-modal').remove()">
+                    取消
+                </button>
+                <button class="control-button primary" onclick="fcMgrSaveEdit('${id}')">
+                    儲存
+                </button>
+            </div>
+        </div>
+    `;
+    
+    // 點擊背景關閉
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.remove();
+    });
+    
+    document.body.appendChild(modal);
+}
+
+function fcMgrSaveEdit(id) {
+    const seen = parseInt(document.getElementById('edit-seen').value) || 0;
+    const known = parseInt(document.getElementById('edit-known').value) || 0;
+    const uncertain = parseInt(document.getElementById('edit-uncertain').value) || 0;
+    const unknown = parseInt(document.getElementById('edit-unknown').value) || 0;
+    const streak = parseInt(document.getElementById('edit-streak').value) || 0;
+    
+    // 更新資料
+    const vocab = window.getVocabularyData();
+    if (!vocab.flashcardHistory) vocab.flashcardHistory = {};
+    if (!vocab.flashcardHistory[fcMgrCurrentType]) vocab.flashcardHistory[fcMgrCurrentType] = {};
+    
+    vocab.flashcardHistory[fcMgrCurrentType][id] = {
+        seen,
+        known,
+        uncertain,
+        unknown,
+        streak,
+        lastSeen: new Date().toISOString().split('T')[0]
+    };
+    
+    window.persistVocabularyData();
+    
+    // 關閉模態框並重新載入（保持當前篩選）
+    document.querySelector('.fc-mgr-modal').remove();
+    const currentCategory = fcMgrActiveCategory; // 保存當前篩選
+    fcMgrLoadData();
+    fcMgrActiveCategory = currentCategory; // 恢復篩選
+    fcMgrFilterData();
+    
+    showToast('✅ 已儲存變更', 'success');
+}
+
+// ─────────────────────────────────────────
+//  重置單一項目
+// ─────────────────────────────────────────
+function fcMgrResetItem(id) {
+    if (!confirm('確定要重置此字卡的所有記錄嗎？')) return;
+    
+    const vocab = window.getVocabularyData();
+    if (vocab.flashcardHistory && vocab.flashcardHistory[fcMgrCurrentType]) {
+        delete vocab.flashcardHistory[fcMgrCurrentType][id];
+        window.persistVocabularyData();
+    }
+    
+    const currentCategory = fcMgrActiveCategory; // 保存當前篩選
+    fcMgrLoadData();
+    fcMgrActiveCategory = currentCategory; // 恢復篩選
+    fcMgrFilterData();
+    
+    showToast('✅ 已重置記錄', 'success');
+}
+
+// ─────────────────────────────────────────
+//  重置所有記錄
+// ─────────────────────────────────────────
+function fcMgrResetAll() {
+    const typeLabel = fcMgrCurrentType === 'word' ? '單字' : '句子';
+    if (!confirm(`確定要重置所有${typeLabel}字卡的記錄嗎？此操作無法復原！`)) return;
+    
+    const vocab = window.getVocabularyData();
+    if (vocab.flashcardHistory) {
+        vocab.flashcardHistory[fcMgrCurrentType] = {};
+        window.persistVocabularyData();
+    }
+    
+    fcMgrLoadData();
+    showToast('✅ 已重置所有記錄', 'success');
+}
+
+// ─────────────────────────────────────────
+//  匯出資料
+// ─────────────────────────────────────────
+function fcMgrExportData() {
+    const vocab = window.getVocabularyData();
+    const history = (vocab.flashcardHistory && vocab.flashcardHistory[fcMgrCurrentType]) || {};
+    
+    const exportData = fcMgrAllData.map(data => {
+        const item = data.item;
+        const hist = data.history;
+        const total = hist.known + hist.uncertain + hist.unknown;
+        const rate = total > 0 ? Math.round((hist.known / total) * 100) : 0;
+        
+        return {
+            名稱: fcMgrCurrentType === 'word' ? item.Words : item['句子'],
+            中文: fcMgrCurrentType === 'word' ? item['traditional Chinese'] : item['中文'],
+            優先級: data.priority,
+            已練習: hist.seen,
+            記得: hist.known,
+            不確定: hist.uncertain || 0,
+            再練習: hist.unknown,
+            連續答對: hist.streak,
+            正確率: rate + '%',
+            最後練習: hist.lastSeen || '未練習'
+        };
+    });
+    
+    const json = JSON.stringify(exportData, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `字卡記憶度_${fcMgrCurrentType}_${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    
+    showToast('✅ 已匯出資料', 'success');
+}
+
+// ─────────────────────────────────────────
+//  點擊統計卡片進行分類篩選
+// ─────────────────────────────────────────
+function fcMgrFilterByCategory(category) {
+    fcMgrActiveCategory = category;
+    
+    // 重置搜尋框（可選）
+    // document.getElementById('fc-mgr-search').value = '';
+    
+    fcMgrFilterData();
+}

@@ -288,6 +288,13 @@
                     <span class="fc-type-desc">中文翻譯 → 英文句子</span>
                 </button>
             </div>
+            
+            <!-- 管理按鈕 -->
+            <div class="action-buttons" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+                <button class="primary-button secondary" onclick="openFlashcardManager()">
+                    <span class="button-text">⚙️ 記憶度管理</span>
+                </button>
+            </div>
         </div>
 
         <!-- ════════════════════════════════════════
@@ -363,7 +370,7 @@
             <div class="fc-progress-container">
                 <div class="fc-progress-header">
                     <span id="fc-progress-text" class="fc-progress-label">1 / 10</span>
-                    <span class="fc-keyboard-hint">空白鍵翻牌 · ← 再練習 · → 記得</span>
+                    <span class="fc-keyboard-hint">空白鍵翻牌 · ← 再練習 · ↓ 不確定 · → 記得</span>
                 </div>
                 <div class="fc-progress-track">
                     <div id="fc-progress-bar" class="fc-progress-fill"></div>
@@ -389,11 +396,15 @@
 
             <!-- 翻牌後的評分按鈕 -->
             <div id="fc-action-buttons" class="fc-actions" style="display:none;">
-                <button class="fc-btn-unknown" onclick="fcMarkKnown(false)">
+                <button class="fc-btn-unknown" onclick="fcMarkKnown(0)">
                     <span class="fc-btn-icon">❌</span>
                     <span class="fc-btn-label">再練習</span>
                 </button>
-                <button class="fc-btn-known" onclick="fcMarkKnown(true)">
+                <button class="fc-btn-uncertain" onclick="fcMarkKnown(1)">
+                    <span class="fc-btn-icon">❓</span>
+                    <span class="fc-btn-label">不確定</span>
+                </button>
+                <button class="fc-btn-known" onclick="fcMarkKnown(2)">
                     <span class="fc-btn-icon">✅</span>
                     <span class="fc-btn-label">記得！</span>
                 </button>
@@ -413,6 +424,10 @@
                 <div class="fc-stat fc-stat-known">
                     <span class="fc-stat-number" id="fc-result-known">0</span>
                     <span class="fc-stat-label">✅ 記得</span>
+                </div>
+                <div class="fc-stat fc-stat-uncertain">
+                    <span class="fc-stat-number" id="fc-result-uncertain">0</span>
+                    <span class="fc-stat-label">❓ 不確定</span>
                 </div>
                 <div class="fc-stat fc-stat-pct">
                     <span class="fc-stat-number" id="fc-result-pct">0%</span>
@@ -440,6 +455,80 @@
                 </button>
                 <button class="control-button finish" onclick="fcBackToMenu()">
                     <span class="button-label">返回選單</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════
+             ⚙️ 字卡記憶度管理 Panel 5：管理介面
+        ════════════════════════════════════════ -->
+        <div id="flashcardManagerPanel" class="categories-panel" style="display:none;">
+            <button class="back-button" onclick="fcCloseManager()">← 返回</button>
+
+            <div class="fc-setup-header">
+                <h2 class="fc-section-title">記憶度管理</h2>
+                <p class="fc-section-desc">查看和編輯所有字卡的學習記錄</p>
+            </div>
+
+            <!-- 類型切換 -->
+            <div class="fc-manager-tabs">
+                <button id="mgr-word-tab" class="fc-mgr-tab active" onclick="fcMgrSwitchType('word')">
+                    📖 單字字卡
+                </button>
+                <button id="mgr-sentence-tab" class="fc-mgr-tab" onclick="fcMgrSwitchType('sentence')">
+                    📄 句子字卡
+                </button>
+            </div>
+
+            <!-- 搜尋和篩選 -->
+            <div class="fc-mgr-controls">
+                <input type="text" id="fc-mgr-search" class="fc-mgr-search" placeholder="搜尋單字或句子..." oninput="fcMgrFilterData()">
+                <select id="fc-mgr-sort" class="fc-mgr-sort" onchange="fcMgrFilterData()">
+                    <option value="priority">依優先級排序</option>
+                    <option value="name">依名稱排序</option>
+                    <option value="seen-desc">依練習次數（多→少）</option>
+                    <option value="seen-asc">依練習次數（少→多）</option>
+                    <option value="rate-desc">依正確率（高→低）</option>
+                    <option value="rate-asc">依正確率（低→高）</option>
+                </select>
+            </div>
+
+            <!-- 統計摘要 -->
+            <div class="fc-mgr-summary">
+                <button class="fc-mgr-stat" onclick="fcMgrFilterByCategory('all')">
+                    <span class="fc-mgr-stat-value" id="mgr-total">0</span>
+                    <span class="fc-mgr-stat-label">總字卡數</span>
+                </button>
+                <button class="fc-mgr-stat" onclick="fcMgrFilterByCategory('practiced')">
+                    <span class="fc-mgr-stat-value" id="mgr-practiced">0</span>
+                    <span class="fc-mgr-stat-label">已練習</span>
+                </button>
+                <button class="fc-mgr-stat" onclick="fcMgrFilterByCategory('mastered')">
+                    <span class="fc-mgr-stat-value" id="mgr-mastered">0</span>
+                    <span class="fc-mgr-stat-label">已熟練</span>
+                </button>
+                <button class="fc-mgr-stat" onclick="fcMgrFilterByCategory('struggling')">
+                    <span class="fc-mgr-stat-value" id="mgr-struggling">0</span>
+                    <span class="fc-mgr-stat-label">需加強</span>
+                </button>
+            </div>
+
+            <!-- 當前篩選狀態提示 -->
+            <div id="fc-mgr-filter-hint" class="fc-mgr-filter-hint" style="display:none;">
+                <span class="fc-mgr-filter-text"></span>
+                <button class="fc-mgr-clear-filter" onclick="fcMgrFilterByCategory('all')">✕ 清除篩選</button>
+            </div>
+
+            <!-- 資料列表 -->
+            <div id="fc-mgr-list" class="fc-mgr-list"></div>
+
+            <!-- 批量操作 -->
+            <div class="fc-mgr-actions">
+                <button class="control-button" onclick="fcMgrResetAll()">
+                    <span class="button-label">重置所有記錄</span>
+                </button>
+                <button class="control-button" onclick="fcMgrExportData()">
+                    <span class="button-label">匯出資料</span>
                 </button>
             </div>
         </div>
