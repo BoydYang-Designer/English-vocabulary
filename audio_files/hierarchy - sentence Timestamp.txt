@@ -1,0 +1,20 @@
+[00:00:00.000 --> 00:00:00.840] Hierarchy.
+[00:00:02.180 --> 00:00:02.740] Noun.
+[00:00:03.260 --> 00:00:08.580] A system or organization in which people or groups are ranked one above the other according to status or authority.
+[00:00:09.420 --> 00:00:10.220] Example sentences.
+[00:00:11.380 --> 00:00:16.540] One, the company's hierarchy places the CEO at the top, followed by senior executives, managers,
+[00:00:16.900 --> 00:00:17.880] and then regular employees.
+[00:00:19.000 --> 00:00:23.900] Two, in the social hierarchy of the medieval period, kings and nobles were at the top
+[00:00:23.900 --> 00:00:25.120] while peasants were at the bottom.
+[00:00:25.120 --> 00:00:26.060] Three,
+[00:00:26.920 --> 00:00:31.740] the hierarchy in the organization was so rigid that employees found it difficult to communicate
+[00:00:31.740 --> 00:00:33.840] their ideas directly to the upper management.
+[00:00:34.680 --> 00:00:39.180] Four, different species often establish a social hierarchy with the dominant
+[00:00:39.180 --> 00:00:41.120] individuals controlling access to resources.
+[00:00:41.720 --> 00:00:44.560] Related words, chain of command, pecking order, ranking.
+[00:00:45.220 --> 00:00:48.340] Antonyms, equality, parity, flat structure.
+[00:00:48.340 --> 00:00:49.320] Summary.
+[00:00:49.880 --> 00:00:55.280] Hierarchy refers to a system of ranking where entities are arranged in levels of importance, authority,
+[00:00:55.720 --> 00:00:56.180] or status.
+[00:00:56.900 --> 00:01:01.820] It is used in various contexts including organizational structures, social systems, and
+[00:01:01.820 --> 00:01:04.200] classifications to denote a tiered arrangement.

@@ -1,0 +1,10 @@
+[00:00:00.000 --> 00:00:04.560] Intestine is a noun, plural, intestines, with the following meanings.
+[00:00:05.280 --> 00:00:09.980] One, a part of the digestive system in the body consisting of the small and large
+[00:00:09.980 --> 00:00:14.280] intestines where food is digested, nutrients are absorbed, and waste is processed.
+[00:00:14.980 --> 00:00:18.920] Example, the doctor explained that nutrients are absorbed in the small intestine.
+[00:00:19.760 --> 00:00:23.900] Example, a blockage in the intestine can cause severe abdominal pain.
+[00:00:24.600 --> 00:00:29.080] Example, the large intestine is responsible for absorbing water from digested food.
+[00:00:30.340 --> 00:00:35.080] Summary, intestine refers to a tubular organ in the digestive system where food is broken down,
+[00:00:35.260 --> 00:00:37.860] nutrients are absorbed, and waste is prepared for excretion.
+[00:00:38.220 --> 00:00:42.200] Related words, bowel, gut, colon, digestive system.
+[00:00:42.660 --> 00:00:44.000] Antonyms, none.

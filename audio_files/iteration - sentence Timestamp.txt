@@ -1,0 +1,11 @@
+[00:00:00.000 --> 00:00:04.940] Iteration as a noun refers to the process of repeating a set of instructions, actions, or designs,
+[00:00:05.420 --> 00:00:07.660] often with the goal of refinement or improvement.
+[00:00:08.420 --> 00:00:11.020] It can also describe one version in a series of attempts.
+[00:00:11.460 --> 00:00:15.360] Example, the latest iteration of the app includes several user -requested features.
+[00:00:16.640 --> 00:00:17.240] Example,
+[00:00:18.060 --> 00:00:21.720] through multiple iterations, the design evolved to meet all the requirements.
+[00:00:22.440 --> 00:00:25.780] Iteration in the development process is essential for refining solutions.
+[00:00:26.500 --> 00:00:31.340] Summary, iteration is the process of repetition, especially in contexts of improvement
+[00:00:31.340 --> 00:00:36.260] or gradual change, often referring to each individual version or attempt in a sequence.
+[00:00:36.980 --> 00:00:42.020] Related words, repetition, version, cycle refinement, antonym stagnation,
+[00:00:42.300 --> 00:00:43.480] singularity, first attempt,

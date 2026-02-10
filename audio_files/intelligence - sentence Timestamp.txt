@@ -1,0 +1,17 @@
+[00:00:00.000 --> 00:00:00.760] 1.
+[00:00:01.700 --> 00:00:06.740] Intelligence can refer to the overall mental ability of an individual or a group to comprehend complex ideas,
+[00:00:07.240 --> 00:00:10.580] reason logically, solve problems, and adapt to new situations.
+[00:00:11.340 --> 00:00:16.420] Example, she demonstrated her intelligence by quickly grasping the concepts presented in the lecture.
+[00:00:17.000 --> 00:00:17.360] 2.
+[00:00:18.680 --> 00:00:19.100] Information gathering.
+[00:00:19.800 --> 00:00:24.360] In a more specific sense, intelligence can refer to the collection, analysis, and
+[00:00:24.360 --> 00:00:29.540] interpretation of information, particularly for the purpose of making decisions or taking action,
+[00:00:29.900 --> 00:00:33.840] as seen in the context of intelligence agencies or military operations.
+[00:00:34.980 --> 00:00:39.780] Example, the intelligence community closely monitored the activities of the terrorist organization.
+[00:00:41.200 --> 00:00:41.440] 3.
+[00:00:42.080 --> 00:00:43.000] Artificial intelligence.
+[00:00:43.600 --> 00:00:48.300] In the field of computer science, intelligence refers to the ability of machines or computer
+[00:00:48.300 --> 00:00:53.500] systems to perform tasks that typically require human intelligence, such as learning,
+[00:00:53.920 --> 00:00:55.800] problem solving, and decision making.
+[00:00:56.420 --> 00:01:01.200] Example, virtual assistance like Siri and Alexa rely on artificial intelligence to
+[00:01:01.200 --> 00:01:03.020] understand and respond to user queries.

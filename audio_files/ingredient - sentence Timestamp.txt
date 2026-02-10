@@ -1,0 +1,11 @@
+[00:00:00.000 --> 00:00:01.960] Ingredient as a noun, countable.
+[00:00:02.420 --> 00:00:03.500] Ingredient, ingredients.
+[00:00:04.140 --> 00:00:08.240] A substance that is part of a mixture or combination, especially in cooking or recipes.
+[00:00:09.140 --> 00:00:09.400] Examples,
+[00:00:10.040 --> 00:00:12.120] sugar is a key ingredient in most cakes.
+[00:00:12.860 --> 00:00:17.020] The soup contains several fresh ingredients, including carrots and herbs.
+[00:00:17.480 --> 00:00:20.420] Vanilla extract is an essential ingredient in many desserts.
+[00:00:21.220 --> 00:00:24.340] Honesty is an important ingredient in any strong friendship.
+[00:00:25.120 --> 00:00:25.600] Summary.
+[00:00:26.340 --> 00:00:30.900] Ingredient refers to any component or element that is part of a mixture, combination, or recipe.
+[00:00:31.740 --> 00:00:36.220] Synonyms, component, element, part, constituent, factor, antonyms, whole, entirety.

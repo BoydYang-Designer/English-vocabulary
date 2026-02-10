@@ -1,0 +1,17 @@
+[00:00:00.000 --> 00:00:02.720] Geometry is a noun with the following meanings.
+[00:00:03.620 --> 00:00:07.880] One, a branch of mathematics concerned with shapes, sizes, and properties of space
+[00:00:08.460 --> 00:00:13.780] refers to the study of points, lines, angles, surfaces, and solids as well as their relationships,
+[00:00:13.940 --> 00:00:14.800] measurements, and properties.
+[00:00:15.380 --> 00:00:19.720] Example, in geometry class, we learned how to calculate the area of a circle.
+[00:00:20.640 --> 00:00:24.700] Example, the principles of geometry are applied in architecture and engineering.
+[00:00:25.440 --> 00:00:30.240] Two, the shape or form of a specific object or figure refers to the
+[00:00:30.240 --> 00:00:34.280] arrangement or structure of objects often related to their spatial relationships.
+[00:00:35.020 --> 00:00:35.580] Example,
+[00:00:36.260 --> 00:00:39.720] the geometry of the building's design allows for maximum light exposure.
+[00:00:40.820 --> 00:00:44.860] Example, the bike's geometry affects its comfort and performance during rides.
+[00:00:45.500 --> 00:00:45.900] Summary,
+[00:00:46.540 --> 00:00:51.440] geometry refers to both a field of mathematics that studies spatial relationships and
+[00:00:51.440 --> 00:00:53.500] the shape or arrangement of physical objects.
+[00:00:54.640 --> 00:00:58.320] Related words, shapes, figures, mathematics, structure, form.
+[00:00:59.180 --> 00:01:04.080] Antonyms, none specific, but unrelated subjects could include non -mathematical fields such as literature
+[00:01:04.080 --> 00:01:04.620] or history.

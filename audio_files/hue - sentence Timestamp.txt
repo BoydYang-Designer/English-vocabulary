@@ -1,0 +1,10 @@
+[00:00:00.000 --> 00:00:04.860] Hue refers to a specific shade or color, particularly within the context of
+[00:00:04.860 --> 00:00:05.560] color theory.
+[00:00:06.200 --> 00:00:10.860] It represents one of the three characteristics of color along with saturation
+[00:00:10.860 --> 00:00:11.620] and brightness.
+[00:00:12.360 --> 00:00:15.820] Essentially, hue distinguishes different colors from one another on the color wheel.
+[00:00:15.980 --> 00:00:19.760] For example, red, blue, green, and yellow are all different hues.
+[00:00:20.860 --> 00:00:24.560] The artist carefully selected the perfect hue of blue for the sky in her painting.
+[00:00:25.280 --> 00:00:30.660] The decorator recommended a warmer hue of paint for the living room walls to create a cozy atmosphere.
+[00:00:31.740 --> 00:00:36.420] The sunset painted the sky with hues of orange, pink, and purple, creating a
+[00:00:36.420 --> 00:00:37.580] breathtaking scene.

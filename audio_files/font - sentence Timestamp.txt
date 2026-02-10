@@ -1,0 +1,21 @@
+[00:00:00.000 --> 00:00:02.300] Font is a noun with the following meanings.
+[00:00:03.440 --> 00:00:03.980] 1.
+[00:00:04.360 --> 00:00:09.080] In typography, a set of characters including letters, numbers, punctuation, and symbols,
+[00:00:09.540 --> 00:00:11.540] designed in a specific style and size.
+[00:00:12.240 --> 00:00:14.780] Fonts vary by typeface, weight, e .g.
+[00:00:14.960 --> 00:00:16.360] bold and style, e .g.
+[00:00:16.500 --> 00:00:16.940] italic.
+[00:00:17.840 --> 00:00:21.980] Example, the report used a professional font like Times New Roman for its text.
+[00:00:22.360 --> 00:00:25.520] She chose a playful font for the invitation to match the party's theme.
+[00:00:26.160 --> 00:00:29.400] Modern websites often use sans -serif fonts for readability.
+[00:00:29.400 --> 00:00:32.140] Changing the font size can improve accessibility for readers.
+[00:00:34.060 --> 00:00:34.300] 2.
+[00:00:34.820 --> 00:00:35.400] In religion,
+[00:00:36.060 --> 00:00:39.240] a receptacle typically in a church used for holding water for baptisms.
+[00:00:39.940 --> 00:00:43.620] Example, the priest poured water from the font during the baptism ceremony.
+[00:00:44.300 --> 00:00:46.980] The historic font in the cathedral was carved from marble.
+[00:00:48.180 --> 00:00:53.040] Summary, font can refer to a typographical style used in writing and design or a
+[00:00:53.040 --> 00:00:54.660] religious vessel used for baptisms.
+[00:00:54.660 --> 00:00:59.440] Related words, typeface, style, lettering, baptismal font,
+[00:00:59.900 --> 00:01:02.460] and an infertipography, uniformity, lack of variation,
+[00:01:03.060 --> 00:01:03.720] illegibility.

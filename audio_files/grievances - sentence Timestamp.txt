@@ -1,0 +1,20 @@
+[00:00:00.000 --> 00:00:02.500] Grievance is a noun with the following meanings.
+[00:00:03.440 --> 00:00:03.600] 1.
+[00:00:04.180 --> 00:00:08.960] A complaint or resentment about a real or perceived wrong or injustice refers
+[00:00:08.960 --> 00:00:13.060] to a formal expression of dissatisfaction or a reason for feeling aggrieved.
+[00:00:13.420 --> 00:00:13.920] Example.
+[00:00:15.140 --> 00:00:18.360] She filed a grievance with the company over unfair treatment by her supervisor.
+[00:00:18.940 --> 00:00:19.440] Example.
+[00:00:19.640 --> 00:00:22.820] The workers expressed their grievances regarding unsafe working conditions.
+[00:00:23.960 --> 00:00:24.640] 2.
+[00:00:25.300 --> 00:00:29.880] A formal accusation or complaint, especially in a legal or professional context,
+[00:00:30.500 --> 00:00:34.860] often involves a formal process for addressing issues within organizations or institutions.
+[00:00:36.100 --> 00:00:36.720] Example.
+[00:00:37.260 --> 00:00:41.160] The union filed a grievance against the management for violating the terms of the contract.
+[00:00:42.340 --> 00:00:43.020] Example.
+[00:00:43.700 --> 00:00:47.400] The students grievance about the grading policy was reviewed by the academic committee.
+[00:00:49.320 --> 00:00:49.920] Summary.
+[00:00:50.760 --> 00:00:55.620] Grievance refers to a formal complaint or dissatisfaction regarding perceived wrongs or injustices,
+[00:00:56.200 --> 00:00:58.400] often involving a formal process for resolution.
+[00:00:59.040 --> 00:01:01.540] Related words, complaint, objection, protest, dispute.
+[00:01:02.180 --> 00:01:04.980] Antonim's satisfaction, contentment, approval.

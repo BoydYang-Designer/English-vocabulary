@@ -1,0 +1,9 @@
+[00:00:00.000 --> 00:00:04.760] Indentation refers to a mark or recess made by pressing or cutting into a
+[00:00:04.760 --> 00:00:07.940] surface or the space left at the beginning of a line in writing.
+[00:00:08.900 --> 00:00:12.560] Example, the indentation on the paper indicated where to fold.
+[00:00:13.100 --> 00:00:17.860] Example, the indentation left by the heavy object was still visible on the soft ground.
+[00:00:18.320 --> 00:00:22.340] Example, proper indentation is essential for readability in programming code.
+[00:00:23.340 --> 00:00:28.200] Summary, indentation refers to a physical mark or a formatting technique in writing
+[00:00:28.200 --> 00:00:30.860] that involves creating a space at the beginning of a line.
+[00:00:31.040 --> 00:00:35.260] Related words, mark, dent, impression, formatting, spacing.
+[00:00:35.720 --> 00:00:37.980] Antonyms, flat surface, smoothness.

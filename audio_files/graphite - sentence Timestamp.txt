@@ -1,0 +1,13 @@
+[00:00:00.000 --> 00:00:03.620] Graphite is a form of carbon that is soft, black, and slippery.
+[00:00:04.560 --> 00:00:10.080] It is a naturally occurring mineral and is used in a variety of industrial applications due to its unique properties.
+[00:00:10.800 --> 00:00:15.800] Graphite is an excellent conductor of electricity and heat, and it is commonly used in pencils,
+[00:00:16.100 --> 00:00:17.560] batteries, and lubricants.
+[00:00:18.340 --> 00:00:23.120] For example sentences, graphite is used the lead in pencils
+[00:00:23.120 --> 00:00:25.420] because it leaves a dark mark on paper.
+[00:00:25.700 --> 00:00:29.540] The graphite in lithium ion batteries helps conduct electricity efficiently.
+[00:00:30.260 --> 00:00:35.040] Due to its high melting point and conductivity, graphite is used in many industrial processes.
+[00:00:36.840 --> 00:00:41.400] Summary, graphite is a naturally occurring form of carbon, known for its softness,
+[00:00:41.740 --> 00:00:42.600] electrical conductivity,
+[00:00:43.220 --> 00:00:45.520] and use in pencils and industrial applications.
+[00:00:45.520 --> 00:00:50.000] Related words, carbon, diamond, lubricant, conductor.
+[00:00:50.820 --> 00:00:55.840] Antonyms, diamond, another form of carbon, but with opposite properties, hard and transparent.

@@ -1,0 +1,31 @@
+[00:00:00.000 --> 00:00:01.440] The gallery can be used as a noun.
+[00:00:01.860 --> 00:00:02.180] Gallery.
+[00:00:02.640 --> 00:00:03.100] Galleries.
+[00:00:03.620 --> 00:00:05.820] One, a room or building where art is displayed.
+[00:00:06.840 --> 00:00:07.120] Examples.
+[00:00:07.780 --> 00:00:09.980] The gallery features paintings by contemporary artists.
+[00:00:10.560 --> 00:00:12.520] They visited the art gallery on their field trip.
+[00:00:13.540 --> 00:00:15.900] The museum's gallery was filled with sculptures and photographs.
+[00:00:16.580 --> 00:00:20.160] Two, a long passage or corridor, often with a particular function.
+[00:00:20.960 --> 00:00:21.340] Examples.
+[00:00:22.120 --> 00:00:24.140] The castle had a gallery overlooking the courtyard.
+[00:00:24.880 --> 00:00:27.740] She walked down the gallery connecting the two wings of the building.
+[00:00:27.740 --> 00:00:30.840] The shopping gallery was crowded with weekend shoppers.
+[00:00:31.760 --> 00:00:34.890] Three, a platform or seating area in a theater or auditorium.
+[00:00:35.480 --> 00:00:35.720] Examples.
+[00:00:36.560 --> 00:00:38.340] The upper gallery was reserved for students.
+[00:00:39.200 --> 00:00:40.840] He got tickets in the balcony gallery.
+[00:00:41.460 --> 00:00:44.020] The gallery provided a good view of the stage.
+[00:00:45.020 --> 00:00:45.600] Summary.
+[00:00:45.920 --> 00:00:50.840] Gallery can refer to a place for displaying art a long passageway or a seating area in
+[00:00:50.840 --> 00:00:51.240] a theater.
+[00:00:52.080 --> 00:00:52.660] Synonyms.
+[00:00:52.860 --> 00:00:53.560] Exhibition hall.
+[00:00:53.840 --> 00:00:54.340] Corridor.
+[00:00:54.340 --> 00:00:55.260] Balcony showroom.
+[00:00:55.380 --> 00:00:55.880] Display space.
+[00:00:56.040 --> 00:00:56.540] Antonyms.
+[00:00:56.600 --> 00:00:57.060] Open space.
+[00:00:57.300 --> 00:00:57.640] Floor.
+[00:00:57.640 --> 00:00:58.000] Plain.
+[00:00:58.080 --> 00:00:58.420] Emptiness.
