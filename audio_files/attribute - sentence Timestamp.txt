@@ -1,15 +1,18 @@
-[00:00:00.000 --> 00:00:04.000] Attribute is both a noun and a verb with the following meanings.
-[00:00:04.000 --> 00:00:09.000] One, as a noun, a quality or characteristic inherent in someone or something.
-[00:00:09.000 --> 00:00:13.000] Example, patience is an important attribute for a teacher.
-[00:00:13.000 --> 00:00:17.000] Example, her creativity is one of her strongest attributes.
-[00:00:17.000 --> 00:00:20.000] Example, the product's reliability became its most valued attribute.
-[00:00:20.000 --> 00:00:24.000] Example, the interviewer asked me what I considered to be my best attribute.
-[00:00:24.000 --> 00:00:34.000] Two, as a verb, attribute, attributed, attributing means to regard something as being caused by or associated with someone or something.
-[00:00:34.000 --> 00:00:39.000] Example, he attributed his success to hard work and determination.
-[00:00:39.000 --> 00:00:43.000] Example, the company attributed its growth to the new marketing strategy.
-[00:00:43.000 --> 00:00:46.000] Example, the delay was attributed to heavy traffic.
-[00:00:46.000 --> 00:00:51.000] Example, the study suggests that it is a mistake to attribute adult reasoning to children.
-[00:00:52.000 --> 00:00:56.000] Example, is it right to attribute complex emotions to animals?
-[00:00:56.000 --> 00:01:01.000] Summary, attribute, can refer to a characteristic or quality as a noun or as a verb.
-[00:01:01.000 --> 00:01:04.000] It describes the act of identifying the source or cause of something.
-[00:01:04.000 --> 00:01:13.000] Related words trait, quality, feature, credit, antinims, disassociate, for verb, deficiency, for noun.
+[00:00:00.000 --> 00:00:03.380] Attribute is both a noun and a verb with the following meanings.
+[00:00:04.360 --> 00:00:08.480] One as a noun, a quality or characteristic inherent in someone or something.
+[00:00:09.280 --> 00:00:12.360] Example, patience is an important attribute for a teacher.
+[00:00:13.080 --> 00:00:16.080] Example, her creativity is one of her strongest attributes.
+[00:00:16.780 --> 00:00:19.920] Example, the product's reliability became its most valued attribute.
+[00:00:20.380 --> 00:00:23.640] Example, the interviewer asked me what I consider to be my best attribute.
+[00:00:23.640 --> 00:00:25.740] Two, as a verb,
+[00:00:26.360 --> 00:00:31.200] attribute, attributing means to regard something as being caused
+[00:00:31.200 --> 00:00:33.700] by or associated with someone or something.
+[00:00:34.400 --> 00:00:37.820] Example, he attributed his success to hard work and determination.
+[00:00:39.120 --> 00:00:42.560] Example, the company attributed its growth to the new marketing strategy.
+[00:00:43.400 --> 00:00:45.740] Example, the delay was attributed to heavy traffic.
+[00:00:46.760 --> 00:00:50.980] Example, the study suggests that it is a mistake to attribute adult reasoning to children.
+[00:00:51.940 --> 00:00:55.080] Example, is it right to attribute complex emotions to animals?
+[00:00:56.120 --> 00:01:00.700] Summary, attribute can refer to a characteristic or quality as a noun or as a verb.
+[00:01:00.860 --> 00:01:03.760] It describes the act of identifying the source or cause of something.
+[00:01:04.340 --> 00:01:08.480] Related words, trait, quality, feature, credit, antonyms,
+[00:01:08.840 --> 00:01:12.040] disassociate for verb, deficiency for noun.

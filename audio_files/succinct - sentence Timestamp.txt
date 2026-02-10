@@ -1,4 +1,0 @@
-[00:00:00.000 --> 00:00:06.880] succinct means expressed in a clear and concise manner without unnecessary words or details.
-[00:00:06.880 --> 00:00:12.120] For example, the professor's succinct explanation clarified the concept in a few sentences,
-[00:00:12.120 --> 00:00:14.840] leaving the students with a clear understanding.
-[00:00:14.840 --> 00:00:17.360] Another example is, could you be a little more succinct?

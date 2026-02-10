@@ -1,15 +1,15 @@
-[00:00:00.000 --> 00:00:05.680] In Grosment, as a noun, one, the state of being completely absorbed or deeply involved
-[00:00:05.680 --> 00:00:10.120] in something, the condition of focusing all attention on a particular activity, idea
-[00:00:10.120 --> 00:00:11.920] or feeling.
-[00:00:11.920 --> 00:00:16.760] Example, she read the novel with complete engrossment, unaware of the time passing.
-[00:00:16.760 --> 00:00:21.400] Example, his engrossment in the project made him lose track of his surroundings.
-[00:00:21.400 --> 00:00:22.800] 2.
-[00:00:22.800 --> 00:00:27.440] The Act of Preparing an Official Document in a Formal Final Version.
-[00:00:27.440 --> 00:00:32.520] The process of drafting and producing an official legal document, such as a contract or agreement
-[00:00:32.520 --> 00:00:35.120] in its final, legally binding form.
-[00:00:35.120 --> 00:00:39.360] Example, the engrossment of the contract was completed and ready for signing.
-[00:00:39.360 --> 00:00:45.320] Example, the lawyer handled the engrossment of the agreement to ensure its accuracy.
-[00:00:45.320 --> 00:00:50.320] Summary, engrossment refers to the state of being completely absorbed in something or
-[00:00:50.320 --> 00:00:54.200] the formal preparation of an official document.
-[00:00:54.200 --> 00:00:59.200] Expected words, absorption, preoccupation, concentration, immersion, drafting,
-[00:00:59.200 --> 00:01:04.200] Antonim's distraction detachment in difference neglect disregard.
+[00:00:00.540 --> 00:00:05.200] Ingrossment, as a noun, one, the state of being completely absorbed or deeply
+[00:00:05.200 --> 00:00:06.180] involved in something,
+[00:00:06.840 --> 00:00:10.740] the condition of focusing all attention on a particular activity, idea, or feeling.
+[00:00:11.420 --> 00:00:15.520] Example, she read the novel with complete engrossment, unaware of the time passing.
+[00:00:16.340 --> 00:00:20.460] Example, his engrossment in the project made him lose track of his surroundings.
+[00:00:21.820 --> 00:00:26.360] Two, the act of preparing an official document in a formal, final version.
+[00:00:27.140 --> 00:00:31.920] The process of drafting and producing an official legal document, such as a contract or
+[00:00:31.920 --> 00:00:34.260] agreement in its final legally binding form.
+[00:00:34.960 --> 00:00:38.460] Example, the engrossment of the contract was completed and ready for signing.
+[00:00:39.260 --> 00:00:43.520] Example, the lawyer handled the engrossment of the agreement to ensure its accuracy.
+[00:00:45.520 --> 00:00:50.440] Summary, engrossment refers to the state of being completely absorbed in something or the
+[00:00:50.440 --> 00:00:52.600] formal preparation of an official document.
+[00:00:53.480 --> 00:00:54.500] Related words,
+[00:00:55.140 --> 00:00:58.520] absorption, preoccupation, concentration, immersion, drafting,
+[00:00:59.200 --> 00:01:02.480] antonyms, distraction, detachment, indifference, neglect, disregard.

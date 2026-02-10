@@ -1,11 +1,8 @@
-[00:00:00.000 --> 00:00:02.520] Bi-gon as an adjective, bi-gon,
-[00:00:02.520 --> 00:00:05.920] belonging to an earlier time, past or former.
-[00:00:05.920 --> 00:00:09.400] For example, the museum displays artifacts from a bi-gon era.
-[00:00:09.400 --> 00:00:12.280] They fondly remembered the bi-gon days of their childhood.
-[00:00:12.280 --> 00:00:15.560] Fashion trends from bi-gon decades often come back in style.
-[00:00:15.560 --> 00:00:17.040] The old town still has buildings
-[00:00:17.040 --> 00:00:18.880] that reflect a bi-gon period.
-[00:00:19.840 --> 00:00:21.840] Summary, bi-gon describes something
-[00:00:21.840 --> 00:00:25.040] that belongs to the past or has existed in an earlier time.
-[00:00:25.040 --> 00:00:28.760] Related words, past, former, previous, earlier,
-[00:00:28.760 --> 00:00:32.240] antiquated Antonim's current modern present contemporary new.
+[00:00:00.000 --> 00:00:05.300] Bygone as an adjective, bygone, belonging to an earlier time, past or former.
+[00:00:05.900 --> 00:00:08.800] For example, the museum displays artifacts from a bygone era.
+[00:00:09.360 --> 00:00:11.580] They fondly remembered the bygone days of their childhood.
+[00:00:12.200 --> 00:00:14.880] Fashion trends from bygone decades often come back in style.
+[00:00:15.500 --> 00:00:18.460] The old town still has buildings that reflect a bygone period.
+[00:00:19.580 --> 00:00:24.420] Summary, bygone describes something that belongs to the past or has existed in an earlier time.
+[00:00:24.920 --> 00:00:30.000] Related words, past, former, previous, earlier, antiquated antonym's current,
+[00:00:30.220 --> 00:00:31.900] modern, present, contemporary, new.

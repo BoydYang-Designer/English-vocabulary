@@ -1,8 +1,0 @@
-[00:00:00.000 --> 00:00:07.000] Lubricants are substances used to reduce friction, heat, and wear between surfaces in contact with each other.
-[00:00:07.000 --> 00:00:15.000] They are commonly used in machinery and engines to ensure smooth operation and to prevent damage caused by excessive friction.
-[00:00:15.000 --> 00:00:23.000] Lubricants can be in the form of oils, greases, or fluids, and are essential in many industrial, automotive, and household applications.
-[00:00:23.000 --> 00:00:28.000] Example sentences. The mechanic applied Lubricant to the engine parts to keep them running smoothly.
-[00:00:29.000 --> 00:00:33.000] Lubricants are essential in reducing wear and tear and heavy machinery.
-[00:00:33.000 --> 00:00:38.000] The door hinges stop squeaking after a bit of Lubricant was applied.
-[00:00:38.000 --> 00:00:46.000] Summary. Lubricants are substances that reduce friction and wear between surfaces, ensuring smooth operation in machines and engines.
-[00:00:46.000 --> 00:00:55.000] Related words. Oil, grease, fluid, motor oil. Antonyms. Abrasive, friction, dryness.

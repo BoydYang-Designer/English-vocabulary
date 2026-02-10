@@ -1,8 +1,9 @@
-[00:00:00.000 --> 00:00:06.480] A calamity refers to a disastrous event causing great harm, distress, or destruction.
-[00:00:06.480 --> 00:00:10.880] It often implies a widespread or significant impact, such as a natural disaster like an
-[00:00:10.880 --> 00:00:16.340] earthquake or flood, but it can also apply to other severe events like wars, epidemics,
-[00:00:16.340 --> 00:00:18.760] or economic collapses.
-[00:00:18.760 --> 00:00:23.260] Example, the economic recession was a calamity for many businesses, leading to layoffs and
-[00:00:23.260 --> 00:00:24.260] closures.
-[00:00:24.260 --> 00:00:29.680] Example, the pandemic was a global calamity, impacting millions of lives and economies
-[00:00:29.680 --> 00:00:30.680] around the world.
+[00:00:00.000 --> 00:00:04.540] A calamity refers to a disastrous event causing great harm, distress,
+[00:00:05.040 --> 00:00:05.620] or destruction.
+[00:00:06.300 --> 00:00:11.180] It often implies a widespread or significant impact, such as a natural disaster like an earthquake
+[00:00:11.180 --> 00:00:15.980] or flood, but it can also apply to other severe events like wars, epidemics,
+[00:00:16.240 --> 00:00:17.260] or economic collapses.
+[00:00:18.200 --> 00:00:22.960] Example, the economic recession was a calamity for many businesses, leading to layoffs
+[00:00:22.960 --> 00:00:23.680] and closures.
+[00:00:24.240 --> 00:00:29.200] Example, the pandemic was a global calamity, impacting millions of lives and
+[00:00:29.200 --> 00:00:30.300] economies around the world.

@@ -1,10 +1,15 @@
-[00:00:00.000 --> 00:00:06.720] anonymous is an adjective that describes something or someone whose name is not known or not revealed.
-[00:00:07.440 --> 00:00:13.520] One, not identified by name of unknown name. Example, the author of the book chose to remain
-[00:00:13.520 --> 00:00:19.520] anonymous to protect their privacy. Example, he made an anonymous phone call to the police. Example,
-[00:00:19.520 --> 00:00:24.960] an anonymous buyer purchased the painting. Example, his face was just another anonymous face in the crowd.
-[00:00:25.760 --> 00:00:31.520] Two, lacking individuality or distinction, unremarkable. Example, the restaurant had an anonymous
-[00:00:31.520 --> 00:00:37.680] atmosphere, lacking any unique decor. Example, the report was written in an anonymous style that made
-[00:00:37.680 --> 00:00:44.160] it hard to identify the author's perspective. Summary, anonymous refers to something or someone that
-[00:00:44.160 --> 00:00:50.080] does not have a name or identity disclosed, often used to describe actions taken or contributions
-[00:00:50.080 --> 00:00:55.840] made without revealing personal information. Related words, unidentified, nameless, unknown,
-[00:00:55.840 --> 00:01:06.000] incognito, Antonim's identified named known famous.
+[00:00:00.000 --> 00:00:04.900] Anonymous is an adjective that describes something or someone whose name is
+[00:00:04.900 --> 00:00:06.660] not known or not revealed.
+[00:00:07.560 --> 00:00:10.200] One, not identified by name of unknown name.
+[00:00:11.060 --> 00:00:14.980] Example, the author of the book chose to remain anonymous to protect their privacy.
+[00:00:15.600 --> 00:00:18.500] Example, he made an anonymous phone call to the police.
+[00:00:18.940 --> 00:00:21.460] Example, an anonymous buyer purchased the painting.
+[00:00:21.980 --> 00:00:24.920] Example, his face was just another anonymous face in the crowd.
+[00:00:25.680 --> 00:00:28.900] Two, lacking individuality or distinction, unremarkable.
+[00:00:28.900 --> 00:00:33.760] Example, the restaurant had an anonymous atmosphere, lacking any unique decor.
+[00:00:34.320 --> 00:00:39.540] Example, the report was written in an anonymous style that made it hard to identify the author's perspective.
+[00:00:40.380 --> 00:00:41.040] Summary,
+[00:00:41.840 --> 00:00:46.960] anonymous refers to something or someone that does not have a name or identity disclosed,
+[00:00:47.240 --> 00:00:52.240] often used to describe actions taken or contributions made without revealing personal information.
+[00:00:52.240 --> 00:00:56.480] Related words, unidentified, nameless, unknown, incognito.
+[00:00:56.700 --> 00:00:58.860] Antonum's identified, named, known, famous.

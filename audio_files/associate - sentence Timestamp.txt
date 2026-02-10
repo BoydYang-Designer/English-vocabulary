@@ -1,25 +1,31 @@
-[00:00:00.000 --> 00:00:06.640] Associate can function as a verb, noun, and adjective, each with distinct meanings.
-[00:00:06.640 --> 00:00:11.000] As a verb, associate, associated, associating.
-[00:00:11.000 --> 00:00:13.840] One, to connect or link in the mind.
-[00:00:13.840 --> 00:00:18.760] Example sentence, people often associate the color red with danger or warning.
-[00:00:18.760 --> 00:00:22.320] Two, to be involved or connected with something or someone.
-[00:00:22.320 --> 00:00:27.320] Example sentence, she does not want to associate herself with that controversial group.
-[00:00:27.320 --> 00:00:32.040] As a noun, a partner or colleague in business or at work.
-[00:00:32.040 --> 00:00:40.160] Example sentence, he is a long time associate can function as a verb, noun, and adjective,
-[00:00:40.160 --> 00:00:42.280] each with distinct meanings.
-[00:00:42.280 --> 00:00:46.680] As a verb, associate, associated, associating.
-[00:00:46.680 --> 00:00:49.480] One, to connect or link in the mind.
-[00:00:49.480 --> 00:00:54.400] Example sentence, people often associate the color red with danger or warning.
-[00:00:54.440 --> 00:00:57.520] Two, to be involved or connected with something or someone.
-[00:00:57.520 --> 00:01:02.720] Example sentence, she does not want to associate herself with that controversial group.
-[00:01:02.720 --> 00:01:07.160] As a noun, a partner or colleague in business or at work.
-[00:01:07.160 --> 00:01:11.000] Example sentence, he is a long time associate at the law firm.
-[00:01:11.000 --> 00:01:14.200] Two, a companion or someone with whom one is connected.
-[00:01:14.200 --> 00:01:17.600] Example sentence, she invited a close associate to the event.
-[00:01:17.600 --> 00:01:24.360] As an adjective, one, connected or joined with something else, often in a subordinate role.
-[00:01:24.640 --> 00:01:29.640] Example sentence, she was hired as an associate editor for the magazine.
-[00:01:29.640 --> 00:01:34.200] Two, having partial or limited membership or involvement.
-[00:01:34.200 --> 00:01:39.560] Example sentence, he is an associate member of the committee with limited voting rights.
-[00:01:39.560 --> 00:01:45.400] Summary, as a verb, associate means to link or connect ideas, people, or things.
-[00:01:45.400 --> 00:01:51.240] As a noun, it refers to a colleague, partner, or someone with whom one is connected.
-[00:01:51.240 --> 00:01:56.520] As an adjective, it describes a secondary or supporting connection role or membership.
+[00:00:00.680 --> 00:00:05.660] Associate can function as a verb, noun, and adjective, each with distinct meanings.
+[00:00:06.380 --> 00:00:10.060] As a verb, associate, associated, associating.
+[00:00:10.840 --> 00:00:12.860] One, to connect or link in the mind.
+[00:00:13.380 --> 00:00:14.200] Example sentence,
+[00:00:14.860 --> 00:00:18.060] people often associate the color red with danger or warning.
+[00:00:18.700 --> 00:00:21.560] Two, to be involved or connected with something or someone.
+[00:00:21.960 --> 00:00:25.980] Example sentence, she does not want to associate herself with that controversial group.
+[00:00:26.740 --> 00:00:30.580] As a noun, a partner or colleague in business or at work.
+[00:00:31.480 --> 00:00:34.720] Example sentence, he is a long time associate.
+[00:00:36.380 --> 00:00:41.180] Associate can function as a verb, noun, and adjective, each with distinct meanings.
+[00:00:41.980 --> 00:00:45.680] As a verb, associate, associated, associating.
+[00:00:46.340 --> 00:00:48.460] One, to connect or link in the mind.
+[00:00:49.020 --> 00:00:49.840] Example sentence,
+[00:00:50.460 --> 00:00:53.680] people often associate the color red with danger or warning.
+[00:00:54.420 --> 00:00:57.220] Two, to be involved or connected with something or someone.
+[00:00:57.540 --> 00:01:01.620] Example sentence, she does not want to associate herself with that controversial group.
+[00:01:02.600 --> 00:01:06.180] As a noun, a partner or colleague in business or at work.
+[00:01:07.180 --> 00:01:10.460] Example sentence, he is a long time associate at the law firm.
+[00:01:10.960 --> 00:01:13.660] Two, a companion or someone with whom one is connected.
+[00:01:14.220 --> 00:01:16.920] Example sentence, she invited a close associate to the event.
+[00:01:17.560 --> 00:01:18.360] As an adjective,
+[00:01:19.140 --> 00:01:19.420] one,
+[00:01:20.380 --> 00:01:23.680] connected or joined with something else, often in a subordinate role.
+[00:01:24.700 --> 00:01:25.460] Example sentence,
+[00:01:26.580 --> 00:01:29.020] she was hired as an associate editor for the magazine.
+[00:01:29.700 --> 00:01:33.380] Two, having partial or limited membership or involvement.
+[00:01:34.280 --> 00:01:39.000] Example sentence, he is an associate member of the committee with limited voting rights.
+[00:01:39.540 --> 00:01:40.140] Summary,
+[00:01:40.780 --> 00:01:44.760] as a verb, associate means to link or connect ideas, people, or things.
+[00:01:45.400 --> 00:01:49.940] As a noun, it refers to a colleague, partner, or someone with whom one is connected.
+[00:01:50.780 --> 00:01:56.060] As an adjective, it describes a secondary or supporting connection, role, or membership.

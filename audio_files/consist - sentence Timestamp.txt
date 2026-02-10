@@ -1,30 +1,26 @@
-[00:00:00.000 --> 00:00:04.800] Consist is a verb, consist, consisted, consisting.
-[00:00:04.800 --> 00:00:06.600] It is used to describe the composition
-[00:00:06.600 --> 00:00:08.480] or essential nature of something.
-[00:00:08.480 --> 00:00:09.840] It has two main uses.
-[00:00:09.840 --> 00:00:13.600] One, consist in something, refers to having something
-[00:00:13.600 --> 00:00:16.760] as the essential or main part of something.
-[00:00:16.760 --> 00:00:18.480] Example sentences.
-[00:00:18.480 --> 00:00:21.920] A good design consists in balancing aesthetics, functionality,
-[00:00:21.920 --> 00:00:24.080] and user experience seamlessly.
-[00:00:24.080 --> 00:00:26.880] Happiness consists in being satisfied with what you have.
-[00:00:26.880 --> 00:00:29.960] His success consists in his dedication and hard work.
-[00:00:29.960 --> 00:00:32.960] Two, consist of something, refers to being
-[00:00:32.960 --> 00:00:36.200] formed or made up of specific things or people.
-[00:00:36.200 --> 00:00:37.320] Example sentences.
-[00:00:37.320 --> 00:00:39.960] A design studio consists of talented designers,
-[00:00:39.960 --> 00:00:43.760] skilled mechanical engineers, and experienced project managers.
-[00:00:43.760 --> 00:00:47.200] Breakfast consisted of cereal, fruit, and orange juice.
-[00:00:47.200 --> 00:00:49.400] The committee consists of seven members.
-[00:00:49.400 --> 00:00:53.520] The crowd consisted mainly of teenage girls.
-[00:00:53.520 --> 00:00:54.200] Summary.
-[00:00:54.200 --> 00:00:57.000] Consist describes what something fundamentally is,
-[00:00:57.000 --> 00:01:00.280] consist in, or what it is made up of, consist of.
-[00:01:00.280 --> 00:01:02.960] Use consist, consist in to talk about the essential nature
-[00:01:02.960 --> 00:01:04.520] or core aspect of something.
-[00:01:04.520 --> 00:01:07.160] Use consist of to describe the components or members
-[00:01:07.160 --> 00:01:08.600] that make up a whole.
-[00:01:08.600 --> 00:01:09.800] Related words.
-[00:01:09.800 --> 00:01:13.280] Comprise include make up, be composed of.
-[00:01:13.280 --> 00:01:14.200] Antonyms.
-[00:01:14.200 --> 00:01:16.760] Exclude, omit, disregard.
+[00:00:00.000 --> 00:00:01.280] Consist is a verb.
+[00:00:01.500 --> 00:00:03.780] Consist, consisted, consisting.
+[00:00:04.860 --> 00:00:07.860] It is used to describe the composition or essential nature of something.
+[00:00:08.460 --> 00:00:09.460] It has two main uses.
+[00:00:09.900 --> 00:00:11.420] One, consist in something,
+[00:00:12.060 --> 00:00:15.600] refers to having something as the essential or main part of something.
+[00:00:16.740 --> 00:00:17.560] Example sentences.
+[00:00:18.520 --> 00:00:23.180] A good design consists in balancing aesthetics, functionality, and user experience seamlessly.
+[00:00:24.040 --> 00:00:26.500] Happiness consists in being satisfied with what you have.
+[00:00:26.500 --> 00:00:29.500] His success consists in his dedication and hard work.
+[00:00:30.180 --> 00:00:31.520] Two, consist of something,
+[00:00:32.140 --> 00:00:35.320] refers to being formed or made up of specific things or people.
+[00:00:36.180 --> 00:00:36.860] Example sentences.
+[00:00:37.380 --> 00:00:42.120] A design studio consists of talented designers, skilled mechanical engineers, and experienced
+[00:00:42.120 --> 00:00:43.020] project managers.
+[00:00:43.760 --> 00:00:46.620] Breakfast consists of cereal, fruit, and orange juice.
+[00:00:47.200 --> 00:00:48.920] The committee consists of seven members.
+[00:00:49.420 --> 00:00:51.520] The crowd consists mainly of teenage girls.
+[00:00:53.320 --> 00:00:53.940] Summary.
+[00:00:54.260 --> 00:00:59.660] Consist describes what something fundamentally is, consist in, or what it is made up of, consist of.
+[00:01:00.280 --> 00:01:04.000] Use consist consist in to talk about the essential nature or core aspect of something.
+[00:01:04.480 --> 00:01:07.900] Use consist of to describe the components or members that make up a whole.
+[00:01:08.540 --> 00:01:09.200] Related words.
+[00:01:09.820 --> 00:01:12.640] Comprise include make up, be composed of.
+[00:01:13.280 --> 00:01:13.820] Antonyms.
+[00:01:14.140 --> 00:01:16.140] Exclude, omit, disregard.

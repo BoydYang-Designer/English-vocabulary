@@ -1,7 +1,13 @@
-[00:00:00.000 --> 00:00:05.760] Bulky as an adjective it refers to large and difficult to handle due to size or weight.
-[00:00:05.760 --> 00:00:13.080] Example, the package was too bulky to fit in the mailbox. Example, his coat was bulky, making it hard to move freely.
-[00:00:13.080 --> 00:00:20.520] Taking up a lot of space often awkwardly or inconveniently. Example, the bulky furniture made the room feel cramped.
-[00:00:20.520 --> 00:00:24.400] Example, despite its bulky design, the suitcase was lightweight.
-[00:00:25.200 --> 00:00:35.200] Having a large body or physical size, the bulky wrestler easily overpowered his opponent. Example, his bulky frame made him an intimidating figure.
-[00:00:35.200 --> 00:00:40.920] Summer bulky describes something large and inconveniently sized or someone having a large physical build.
-[00:00:40.920 --> 00:00:48.680] Related words, large, cumbersome, massive, unwieldy, anims, compact, slim, lightweight, small.
+[00:00:00.000 --> 00:00:04.740] Bulkie as an adjective it refers to large and difficult to handle due to
+[00:00:04.740 --> 00:00:05.600] size or weight.
+[00:00:06.580 --> 00:00:09.400] Example, the package was too bulky to fit in the mailbox.
+[00:00:10.160 --> 00:00:12.860] Example, his coat was bulky, making it hard to move freely.
+[00:00:13.840 --> 00:00:17.220] Taking up a lot of space often awkwardly or inconveniently.
+[00:00:17.620 --> 00:00:20.240] Example, the bulky furniture made the room feel cramped.
+[00:00:21.040 --> 00:00:23.960] Example, despite its bulky design, the suitcase was lightweight.
+[00:00:25.000 --> 00:00:27.640] Having a large body or physical size.
+[00:00:28.280 --> 00:00:30.680] The bulky wrestler easily overpowered his opponent.
+[00:00:31.320 --> 00:00:34.080] Example, his bulky frame made him an intimidating figure.
+[00:00:35.100 --> 00:00:40.320] Summer bulky described something large and inconveniently sized or someone having a large physical build.
+[00:00:40.920 --> 00:00:46.360] Related words, large, cumbersome, massive, unwieldy, anims, compact,
+[00:00:46.800 --> 00:00:48.180] slim, lightweight, small.

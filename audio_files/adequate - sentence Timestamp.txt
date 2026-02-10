@@ -1,15 +1,12 @@
-[00:00:00.000 --> 00:00:01.980] Attiquate as an adjective, one,
-[00:00:01.980 --> 00:00:05.260] enough for some need or requirement, example.
-[00:00:05.260 --> 00:00:08.620] Be sure to allow adequate, sufficient enough time
-[00:00:08.620 --> 00:00:09.820] for the paint to dry.
-[00:00:09.820 --> 00:00:13.920] Example, the food was more than adequate for the six of us.
-[00:00:13.920 --> 00:00:17.560] Example, are you adequately prepared for the exam?
-[00:00:17.560 --> 00:00:19.760] Two, good enough.
-[00:00:19.760 --> 00:00:22.660] Of a quality that is good or acceptable,
-[00:00:22.660 --> 00:00:26.360] millions of people lack adequate sufficient healthcare.
-[00:00:26.360 --> 00:00:30.400] The quality of his work was perfectly adequate.
-[00:00:30.400 --> 00:00:32.960] Three, of a quality that is acceptable,
-[00:00:32.960 --> 00:00:35.200] but not better than acceptable.
-[00:00:35.200 --> 00:00:37.460] Example, your performance is adequate,
-[00:00:37.460 --> 00:00:39.800] but I believe there's room for improvement.
-[00:00:39.800 --> 00:00:41.800] That hotel is only adequate.
+[00:00:00.000 --> 00:00:03.980] Adequate as an adjective, one, enough for some need or requirement.
+[00:00:04.160 --> 00:00:04.640] Example,
+[00:00:05.480 --> 00:00:09.440] Be sure to allow adequate, sufficient enough time for the paint to dry.
+[00:00:09.860 --> 00:00:13.280] Example, The food was more than adequate for the six of us.
+[00:00:13.920 --> 00:00:16.420] Example, are you adequately prepared for the exam?
+[00:00:17.500 --> 00:00:18.800] Two, good enough.
+[00:00:19.960 --> 00:00:22.020] Of a quality that is good or acceptable.
+[00:00:22.860 --> 00:00:25.380] Millions of people lack adequate, sufficient health care.
+[00:00:25.380 --> 00:00:28.640] The quality of his work was perfectly adequate.
+[00:00:30.420 --> 00:00:34.720] Three, of a quality that is acceptable but not better than acceptable.
+[00:00:35.200 --> 00:00:38.980] Example, Your performance is adequate but I believe there's room for improvement.
+[00:00:39.920 --> 00:00:41.180] That hotel is only adequate.

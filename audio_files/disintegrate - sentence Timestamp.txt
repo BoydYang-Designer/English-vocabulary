@@ -1,6 +1,10 @@
-[00:00:00.000 --> 00:00:05.500] Disintegrate as a verb, disintegrate, disintegrated, disintegrated, disintegrating.
-[00:00:05.500 --> 00:00:14.000] Disintegrate means to break apart or separate into smaller pieces, often as a result of decay, decomposition, or physical force.
-[00:00:14.000 --> 00:00:19.000] It implies a complete breakdown or fragmentation of the original structure or substance.
-[00:00:19.000 --> 00:00:22.500] Example, the plane would probably disintegrate at that high speed.
-[00:00:22.500 --> 00:00:29.000] Example, the neglected bridge began to disintegrate with pieces of concrete falling into the river below.
-[00:00:30.000 --> 00:00:36.500] Example, the neglected bridge began to disintegrate with pieces of concrete falling into the river below.
+[00:00:00.000 --> 00:00:01.400] Disintegrate as a verb.
+[00:00:01.820 --> 00:00:05.260] Disintegrate, disintegrated, disintegrated, disintegrating.
+[00:00:06.200 --> 00:00:11.120] Disintegrate means to break apart or separate into smaller pieces, often as a result
+[00:00:11.120 --> 00:00:13.700] of decay, decomposition, or physical force.
+[00:00:14.520 --> 00:00:18.340] It implies a complete breakdown or fragmentation of the original structure or substance.
+[00:00:18.980 --> 00:00:22.300] Example, the plane would probably disintegrate at that high speed.
+[00:00:22.760 --> 00:00:23.220] Example,
+[00:00:23.860 --> 00:00:28.420] the neglected bridge began to disintegrate with pieces of concrete falling into the river below.
+[00:00:30.000 --> 00:00:30.160] Disintegrate means to break apart or separate into smaller pieces, often as a result of decay,
+[00:00:30.160 --> 00:00:30.160] decomposition, or physical force.

@@ -1,9 +1,10 @@
-[00:00:00.000 --> 00:00:06.120] Deceit is a noun that refers to the act of deceiving or misleading someone by concealing or misrepresenting the truth.
-[00:00:06.120 --> 00:00:10.680] It involves dishonest behavior intended to trick or manipulate others.
-[00:00:10.680 --> 00:00:16.880] Example, the con artist's deceit was exposed when his lies were uncovered by authorities.
-[00:00:16.880 --> 00:00:21.160] Example, her deceit in the business deal caused a major loss of trust.
-[00:00:21.160 --> 00:00:25.160] Example, he used deceit to gain access to confidential information.
-[00:00:25.160 --> 00:00:26.400] Summary
-[00:00:26.400 --> 00:00:32.280] Deceit is the act of being dishonest or misleading in order to trick others often for personal gain.
-[00:00:32.280 --> 00:00:36.400] Related words, deception, dishonesty, fraud, trickery, duplicity.
-[00:00:36.400 --> 00:00:40.560] Antonyms, honesty, truthfulness, sincerity, integrity.
+[00:00:00.000 --> 00:00:04.680] Deceit is a noun that refers to the act of deceiving or misleading someone by concealing or
+[00:00:04.680 --> 00:00:05.880] misrepresenting the truth.
+[00:00:06.300 --> 00:00:10.000] It involves dishonest behavior intended to trick or manipulate others.
+[00:00:10.980 --> 00:00:16.260] Example, the con artist's deceit was exposed when his lies were uncovered by authorities.
+[00:00:17.300 --> 00:00:20.640] Example, her deceit in the business deal caused a major loss of trust.
+[00:00:21.200 --> 00:00:24.620] Example, he used deceit to gain access to confidential information.
+[00:00:25.380 --> 00:00:25.820] Summary.
+[00:00:26.500 --> 00:00:31.880] Deceit is the act of being dishonest or misleading in order to trick others often for personal gain.
+[00:00:32.400 --> 00:00:37.900] Related words, deception, dishonesty, fraud, trickery, duplicity, antonyms, honesty,
+[00:00:38.300 --> 00:00:40.240] truthfulness, sincerity, integrity.

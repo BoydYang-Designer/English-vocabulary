@@ -1,18 +1,16 @@
-[00:00:00.000 --> 00:00:03.120] Exquisite is an adjective with the following meanings,
-[00:00:03.120 --> 00:00:06.080] one, extremely beautiful and delicate,
-[00:00:06.080 --> 00:00:09.280] characterized by intricate design or craftsmanship.
-[00:00:09.280 --> 00:00:12.760] Example, the artist created an exquisite painting
-[00:00:12.760 --> 00:00:14.480] that captivated everyone who saw it.
-[00:00:14.480 --> 00:00:18.880] Example, she wore an exquisite necklace made of rare gemstones.
-[00:00:18.880 --> 00:00:22.120] Example, the restaurant is known for its exquisite cuisine
-[00:00:22.120 --> 00:00:23.960] that features unique flavors.
-[00:00:23.960 --> 00:00:29.960] Two, intense or acute in feeling often related to sensations or emotions.
-[00:00:30.200 --> 00:00:33.640] Example, he felt an exquisite joy when he heard the good news.
-[00:00:33.640 --> 00:00:37.240] Example, the pain was exquisite, leaving her breathless.
-[00:00:37.240 --> 00:00:40.360] Example, they experienced an exquisite moment of silence
-[00:00:40.360 --> 00:00:42.120] during the ceremony.
-[00:00:42.120 --> 00:00:43.840] Summary, exquisite describes something
-[00:00:43.840 --> 00:00:46.200] that is exceptionally beautiful or delicate,
-[00:00:46.200 --> 00:00:49.520] or it can refer to a profound intensity of feeling.
-[00:00:49.520 --> 00:00:54.520] Related words, beautiful, elegant, refined, delicate, acute.
-[00:00:55.800 --> 00:00:58.520] Antonyms, crude, ordinary, unrefined, ugly,
+[00:00:00.000 --> 00:00:02.800] Exquisite is an adjective with the following meanings.
+[00:00:03.380 --> 00:00:03.480] One,
+[00:00:04.340 --> 00:00:08.720] extremely beautiful and delicate, characterized by intricate design or craftsmanship.
+[00:00:09.640 --> 00:00:14.280] Example, the artist created an exquisite painting that captivated everyone who saw it.
+[00:00:14.600 --> 00:00:18.200] Example, she wore an exquisite necklace made of rare gemstones.
+[00:00:19.060 --> 00:00:23.240] Example, the restaurant is known for its exquisite cuisine that features unique flavors.
+[00:00:24.340 --> 00:00:29.400] Two, intense or acute in feeling, often related to sensations or emotions.
+[00:00:30.140 --> 00:00:33.280] Example, he felt an exquisite joy when he heard the good news.
+[00:00:33.620 --> 00:00:34.080] Example,
+[00:00:34.840 --> 00:00:36.780] the pain was exquisite, leaving her breathless.
+[00:00:37.200 --> 00:00:41.020] Example, they experienced an exquisite moment of silence during the ceremony.
+[00:00:42.000 --> 00:00:46.780] Summary, exquisite describes something that is exceptionally beautiful or delicate, or it can refer
+[00:00:46.780 --> 00:00:48.580] to a profound intensity of feeling.
+[00:00:48.580 --> 00:00:52.560] Related words, beautiful, elegant, refined,
+[00:00:53.240 --> 00:00:54.260] delicate, acute.
+[00:00:55.580 --> 00:00:58.340] Antonyms, crude, ordinary, unrefined, ugly.

@@ -1,17 +1,19 @@
-[00:00:00.000 --> 00:00:06.880] Cras a verb, craft, crafted, crafting means to create or produce something skillfully,
-[00:00:06.880 --> 00:00:11.720] typically by hand or to form or shape something carefully and skillfully.
-[00:00:11.720 --> 00:00:14.720] Example, he is crafting a new sculpture.
-[00:00:14.720 --> 00:00:17.440] Example, the furniture is crafted from Bam Bamboo.
-[00:00:17.440 --> 00:00:20.400] She crafted a strategy to boost the company's earnings.
-[00:00:20.400 --> 00:00:23.800] Example, they carefully crafted a plan to improve their company's efficiency.
-[00:00:24.800 --> 00:00:30.240] As a noun, one, an activity involving skill and making things by hand.
-[00:00:30.240 --> 00:00:33.440] Example, he learned his craft from an old master.
-[00:00:33.440 --> 00:00:38.520] Two, an object or item that has been skillfully made by hand.
-[00:00:38.520 --> 00:00:43.680] Example, the store sells crafts, equals handicrafts, from around the world.
-[00:00:43.680 --> 00:00:48.760] Example, there's a craft's fair and event at which crafts are sold at the school this Saturday.
-[00:00:48.760 --> 00:00:53.320] Summary can be used as a verb to mean creating or shaping something skillfully,
-[00:00:53.320 --> 00:00:56.240] often by hand or with careful planning.
-[00:00:56.240 --> 00:01:01.640] As a noun, it refers to both the skill of making things by hand and the handcrafted objects themselves.
-[00:01:01.640 --> 00:01:07.640] Related words, create, build, design, construct, make, fabricate, form, shape, manufacture, skill, trade,
-[00:01:07.640 --> 00:01:09.800] workmanship, artistry, handcraft,
-[00:01:09.800 --> 00:01:14.600] and an item's destroy ruin neglect, dismantle, demolish, break, damage.
+[00:00:00.000 --> 00:00:00.820] Cras of verb,
+[00:00:01.560 --> 00:00:06.640] craft, crafted, crafting, means to create or produce something skillfully,
+[00:00:06.800 --> 00:00:10.760] typically by hand, or to form or shape something carefully and skillfully.
+[00:00:11.560 --> 00:00:14.080] Example, he is crafting a new sculpture.
+[00:00:14.600 --> 00:00:16.540] Example, the furniture is crafted from bamboo.
+[00:00:17.300 --> 00:00:19.580] She crafted a strategy to boost the company's earnings.
+[00:00:20.240 --> 00:00:23.560] Example, they carefully crafted a plan to improve their company's efficiency.
+[00:00:24.500 --> 00:00:25.440] As a noun,
+[00:00:26.220 --> 00:00:29.780] one, an activity involving skill and making things by hand.
+[00:00:30.360 --> 00:00:32.900] Example, he learned his craft from an old master.
+[00:00:33.760 --> 00:00:37.620] Two, an object or item that has been skillfully made by hand.
+[00:00:38.580 --> 00:00:43.180] Example, the store sells crafts equals handicrafts from around the world.
+[00:00:43.720 --> 00:00:47.900] Example, there's a crafts fair, an event at which crafts are sold at the school this Saturday.
+[00:00:48.800 --> 00:00:53.640] Summary can be used as a verb to mean creating or shaping something skillfully, often
+[00:00:53.640 --> 00:00:55.260] by hand or with careful planning.
+[00:00:56.160 --> 00:01:01.060] As a noun, it refers to both the skill of making things by hand and the handcrafted objects themselves.
+[00:01:01.640 --> 00:01:06.860] Related words, create, build, design, construct, make, fabricate, form, shape, manufacture, skill,
+[00:01:07.180 --> 00:01:09.380] trade, workmanship, artistry, handcraft.
+[00:01:09.860 --> 00:01:14.040] Anonyms destroy, ruin, neglect, dismantle, demolish, break, damage.

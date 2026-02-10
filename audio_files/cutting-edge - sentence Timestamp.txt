@@ -1,10 +1,11 @@
-[00:00:00.000 --> 00:00:05.000] Cutting Edge is an adjective that refers to the latest and most advanced stage of development,
-[00:00:05.000 --> 00:00:09.680] often involving new technology, ideas, or methods that lead the field.
-[00:00:09.680 --> 00:00:15.080] Example, the company's cutting edge technology has revolutionized the industry.
-[00:00:15.080 --> 00:00:20.280] Example, he presented a cutting edge design for the new stroller that incorporates smart features.
-[00:00:20.280 --> 00:00:25.400] The cutting edge software is capable of processing data faster than ever before.
-[00:00:25.400 --> 00:00:29.800] Example, he's a director who tries to keep his films right on the cutting edge.
-[00:00:30.040 --> 00:00:34.600] Summary, cutting edge describes something that is at the forefront of innovation
-[00:00:34.600 --> 00:00:38.400] using the most advanced techniques or technology available.
-[00:00:38.400 --> 00:00:43.640] Related words, innovative, advanced state-of-the-art pioneering revolutionary,
-[00:00:43.640 --> 00:00:48.640] antinimps, outdated, obsolete, traditional, old-fashioned.
+[00:00:00.000 --> 00:00:04.780] Cutting Edge is an adjective that refers to the latest and most advanced stage of development,
+[00:00:05.140 --> 00:00:09.280] often involving new technology, ideas, or methods that lead the field.
+[00:00:09.940 --> 00:00:14.380] Example, the company's Cutting Edge technology has revolutionized the industry.
+[00:00:15.340 --> 00:00:19.740] Example, he presented a Cutting Edge design for the new stroller that incorporates smart features.
+[00:00:20.520 --> 00:00:24.900] The Cutting Edge software is capable of processing data faster than ever before.
+[00:00:25.520 --> 00:00:29.380] Example, he's a director who tries to keep his films right on the Cutting Edge.
+[00:00:30.060 --> 00:00:30.640] Summary,
+[00:00:31.320 --> 00:00:36.200] Cutting Edge describes something that is at the forefront of innovation using the most advanced techniques
+[00:00:36.200 --> 00:00:37.460] or technology available.
+[00:00:38.460 --> 00:00:42.940] Related words, innovative, advanced, state -of -the -art, pioneering, revolutionary.
+[00:00:43.760 --> 00:00:47.500] Antonyms, outdated, obsolete, traditional, old -fashioned.

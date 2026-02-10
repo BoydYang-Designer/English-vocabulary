@@ -1,15 +1,18 @@
-[00:00:00.000 --> 00:00:05.780] Clamy is an adjective that refers to something that is unpleasantly damp, sticky, or sweaty,
-[00:00:05.780 --> 00:00:08.500] often due to humidity or a feeling of coldness.
-[00:00:08.500 --> 00:00:13.300] As an adjective, one, unpleasantly damp or sticky,
-[00:00:13.300 --> 00:00:19.140] refers to a surface or feeling that is slightly wet and cold, often creating a sense of discomfort.
-[00:00:19.140 --> 00:00:24.180] Example, his hands were clammy with nervousness before the big presentation.
-[00:00:24.180 --> 00:00:29.580] Example, she wiped her clammy forehead with a handkerchief during the heat of the day.
-[00:00:29.820 --> 00:00:34.380] Example, the walls of the basement were clammy from the humidity in the air.
-[00:00:34.380 --> 00:00:38.700] Two, sweaty and cold, often due to nervousness or illness,
-[00:00:38.700 --> 00:00:45.500] refers to a feeling of cold, sweat, or discomfort that might be caused by anxiety, fear, or sickness.
-[00:00:45.500 --> 00:00:50.300] Example, after hearing the bad news, he felt a clammy chill run down his spine.
-[00:00:50.300 --> 00:00:54.060] Example, she felt clammy and dizzy after coming down with the flu.
-[00:00:54.060 --> 00:00:58.620] Summary, clammy describes a damp, sticky, and often uncomfortable sensation,
-[00:00:58.620 --> 00:01:02.300] commonly associated with cold, sweat, or humid conditions.
-[00:01:02.300 --> 00:01:07.500] Related words, damp, sweaty, sticky, moist, uncomfortable antinims,
-[00:01:07.500 --> 00:01:10.060] dry, cool, fresh, crisp.
+[00:00:00.000 --> 00:00:05.240] Clammy is an adjective that refers to something that is unpleasantly damp, sticky, or sweaty,
+[00:00:05.960 --> 00:00:08.080] often due to humidity or a feeling of coldness.
+[00:00:08.400 --> 00:00:09.420] As an adjective,
+[00:00:10.200 --> 00:00:10.480] one,
+[00:00:11.340 --> 00:00:16.260] unpleasantly damp or sticky, refers to a surface or feeling that is slightly wet and cold,
+[00:00:16.500 --> 00:00:18.300] often creating a sense of discomfort.
+[00:00:19.340 --> 00:00:23.320] Example, his hands were clammy with nervousness before the big presentation.
+[00:00:24.340 --> 00:00:28.680] Example, she wiped her clammy forehead with a handkerchief during the heat of the day.
+[00:00:29.940 --> 00:00:33.960] Example, the walls of the basement were clammy from the humidity in the air.
+[00:00:34.660 --> 00:00:39.660] Two, sweaty and cold, often due to nervousness or illness, refers to a feeling
+[00:00:39.660 --> 00:00:42.880] of cold, sweat, or discomfort that might be caused by anxiety,
+[00:00:43.500 --> 00:00:44.600] fear, or sickness.
+[00:00:45.580 --> 00:00:49.740] Example, after hearing the bad news, he felt a clammy chill run down his spine.
+[00:00:50.360 --> 00:00:53.620] Example, she felt clammy and dizzy after coming down with the flu.
+[00:00:53.620 --> 00:00:58.220] Summary, clammy describes a damp, sticky, and often uncomfortable sensation,
+[00:00:58.680 --> 00:01:01.380] commonly associated with cold sweat or humid conditions.
+[00:01:02.340 --> 00:01:07.100] Related words, damp, sweaty, sticky, moist, uncomfortable antonyms.
+[00:01:07.520 --> 00:01:09.360] Dry, cool, fresh, crisp.

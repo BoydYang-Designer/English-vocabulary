@@ -1,7 +1,7 @@
-[00:00:00.000 --> 00:00:07.160] An anecdote is a short and amusing or interesting story about a real incident or person.
-[00:00:07.160 --> 00:00:11.440] It's often a brief narrative that focuses on a particular moment or episode, usually
-[00:00:11.440 --> 00:00:15.880] with the purpose of entertaining or illustrating a point.
-[00:00:15.880 --> 00:00:17.280] Example.
-[00:00:17.280 --> 00:00:22.800] At family gatherings, my grandfather always entertained us with amusing anecdotes from his youth.
-[00:00:22.800 --> 00:00:27.040] Example, the speaker shared an anecdote about a memorable encounter she had while traveling
-[00:00:27.040 --> 00:00:28.040] in Europe.
+[00:00:00.000 --> 00:00:04.580] An anecdote is a short and amusing or interesting story about a real
+[00:00:04.580 --> 00:00:05.900] incident or person.
+[00:00:06.880 --> 00:00:11.760] It's often a brief narrative that focuses on a particular moment or episode, usually with the
+[00:00:11.760 --> 00:00:14.420] purpose of entertaining or illustrating a point.
+[00:00:15.440 --> 00:00:16.000] Example.
+[00:00:17.100 --> 00:00:21.760] At Family Gatherings, my grandfather always entertained us with amusing anecdotes from his youth.
+[00:00:22.600 --> 00:00:27.400] Example, the speaker shared an anecdote about a memorable encounter she had while traveling in Europe.

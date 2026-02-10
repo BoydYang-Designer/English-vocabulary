@@ -1,24 +1,20 @@
-[00:00:00.000 --> 00:00:02.600] Dominish can be used as a verb, as a verb,
-[00:00:02.600 --> 00:00:05.160] diminish, diminished, diminishing.
-[00:00:05.160 --> 00:00:09.360] One, to make or become smaller, weaker or less important.
-[00:00:09.360 --> 00:00:12.760] Examples, the medicine helped diminish the pain.
-[00:00:12.760 --> 00:00:15.600] Over time, the excitement of the trip began into diminish.
-[00:00:15.600 --> 00:00:17.440] His influence in the company has diminished
-[00:00:17.440 --> 00:00:19.120] since the restructuring.
-[00:00:19.120 --> 00:00:22.320] Two, to reduce in value, quality or quantity.
-[00:00:22.320 --> 00:00:24.240] Examples, poor maintenance can diminish
-[00:00:24.240 --> 00:00:25.880] the lifespan of the equipment.
-[00:00:25.880 --> 00:00:28.680] The scandal diminished the politician's reputation.
-[00:00:28.680 --> 00:00:31.040] Frequent exposure to sunlight can diminish
-[00:00:31.040 --> 00:00:33.080] the color of fabrics.
-[00:00:33.080 --> 00:00:36.160] Three, to belittle or downplay something.
-[00:00:36.160 --> 00:00:39.080] Examples, don't diminish her achievements.
-[00:00:39.080 --> 00:00:40.520] She worked very hard.
-[00:00:40.520 --> 00:00:43.160] He tried to diminish the importance of the issue.
-[00:00:43.160 --> 00:00:46.960] Criticism should never be used to diminish someone's confidence.
-[00:00:46.960 --> 00:00:49.080] Summary, diminish means to reduce
-[00:00:49.080 --> 00:00:52.120] in size, strength, importance, or value.
-[00:00:52.120 --> 00:00:54.840] It can also mean to belittle or downplay something.
-[00:00:54.840 --> 00:00:58.120] Synonyms, decrease, reduce, lessen, weaken, belittle.
-[00:00:58.120 --> 00:01:00.080] Antonyms increase, grow, strength, and enhance.
-[00:01:00.080 --> 00:01:01.400] Magnify.
+[00:00:00.000 --> 00:00:04.420] Diminish can be used as a verb, as a verb, diminish, diminished, diminishing.
+[00:00:05.080 --> 00:00:08.400] One, to make or become smaller, weaker, or less important.
+[00:00:09.260 --> 00:00:09.520] Examples,
+[00:00:10.320 --> 00:00:12.040] the medicine helped diminish the pain.
+[00:00:12.700 --> 00:00:15.000] Over time, the excitement of the trip began to diminish.
+[00:00:15.580 --> 00:00:18.300] His influence in the company has diminished since the restructuring.
+[00:00:19.000 --> 00:00:21.820] Two, to reduce in value, quality, or quantity.
+[00:00:22.280 --> 00:00:25.180] Examples, poor maintenance can diminish the lifespan of the equipment.
+[00:00:25.800 --> 00:00:27.900] The scandal diminished the politician's reputation.
+[00:00:28.660 --> 00:00:31.940] Frequent exposure to sunlight can diminish the color of fabrics.
+[00:00:32.700 --> 00:00:35.200] Three, to belittle or downplay something.
+[00:00:35.980 --> 00:00:36.360] Examples,
+[00:00:37.300 --> 00:00:38.920] don't diminish her achievements.
+[00:00:39.120 --> 00:00:40.100] She worked very hard.
+[00:00:40.540 --> 00:00:42.580] He tried to diminish the importance of the issue.
+[00:00:43.080 --> 00:00:45.740] Criticism should never be used to diminish someone's confidence.
+[00:00:46.760 --> 00:00:51.560] Summary, diminish means to reduce in size, strength, importance, or value.
+[00:00:52.040 --> 00:00:54.380] It can also mean to belittle or downplay something.
+[00:00:54.880 --> 00:00:57.700] Synonyms, decrease, reduce, lessen, weaken, belittle.
+[00:00:58.120 --> 00:01:00.500] Antonyms increase, grow, strengthen, enhance, magnify.

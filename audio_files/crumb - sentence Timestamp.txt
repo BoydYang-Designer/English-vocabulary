@@ -1,18 +1,24 @@
-[00:00:00.000 --> 00:00:05.500] 1. Crum as a verb, crum, crum, crum, crum, crumming.
-[00:00:05.500 --> 00:00:10.900] In a figurative sense, to crum means to become weak or disintegrate under pressure or stress
-[00:00:10.900 --> 00:00:12.660] similar to to crumble.
-[00:00:12.660 --> 00:00:16.180] Example, she crummed the bread before feeding it to the birds.
-[00:00:16.180 --> 00:00:20.420] Example, under the intense questioning, his resolve began to crum and he confessed.
-[00:00:20.420 --> 00:00:26.380] 2. As a noun in a literal sense, a crum refers to a small fragment or piece that breaks
-[00:00:26.380 --> 00:00:29.860] off from a larger hole, especially in reference to food.
-[00:00:29.860 --> 00:00:35.660] It can be a tiny particle or fragment of something, often related to bread, cake, or pastry.
-[00:00:35.660 --> 00:00:39.660] Example, he brushed the crumbs off his shirt after eating the cookie.
-[00:00:39.660 --> 00:00:45.340] 3. In slang, particularly in the phrase, not to give a crum, it can mean not to care at
-[00:00:45.340 --> 00:00:48.980] all about something or someone to have no interest or concern.
-[00:00:48.980 --> 00:00:51.940] Example, she didn't give a crum about his opinion.
-[00:00:51.940 --> 00:00:57.400] 4. In a term commonly used in dating, crumbs refer to sporadic, minimal, or insincere
-[00:00:57.400 --> 00:01:02.280] communication or attention given by one person to another, often to keep the other person
-[00:01:02.280 --> 00:01:06.340] interested without committing to a full relationship.
-[00:01:06.340 --> 00:01:10.840] Example, she realized he was just giving crumbs of attention, never fully committing to
-[00:01:10.840 --> 00:01:12.580] anything serious.
-[00:01:12.580 --> 00:01:16.380] Example, he gave me a few crumbs of information about the writer.
+[00:00:00.000 --> 00:00:00.940] 1.
+[00:00:01.360 --> 00:00:04.400] Crumb as a verb, crumb, crumbed, crumbed, crumming.
+[00:00:05.040 --> 00:00:09.980] In a figurative sense, to crumb means to become weak or disintegrate under pressure
+[00:00:09.980 --> 00:00:11.840] or stress, similar to to crumble.
+[00:00:12.520 --> 00:00:15.160] Example, she crumbed the bread before feeding it to the birds.
+[00:00:15.940 --> 00:00:19.880] Example, under the intense questioning his resolve began to crumb and he confessed.
+[00:00:20.740 --> 00:00:21.060] 2.
+[00:00:21.380 --> 00:00:26.300] As a noun in a literal sense, a crumb refers to a small fragment or piece that breaks
+[00:00:26.300 --> 00:00:29.060] off from a larger hole, especially in reference to food.
+[00:00:29.640 --> 00:00:34.240] It can be a tiny particle or fragment of something, often related to bread, cake,
+[00:00:34.620 --> 00:00:35.080] or pastry.
+[00:00:35.720 --> 00:00:38.840] Example, he brushed the crumbs off his shirt after eating the cookie.
+[00:00:40.480 --> 00:00:40.720] 3.
+[00:00:41.160 --> 00:00:46.040] In slang, particularly in the phrase, not to give a crumb, it can mean not to care at all about something
+[00:00:46.040 --> 00:00:48.120] or someone, to have no interest or concern.
+[00:00:48.780 --> 00:00:51.140] Example, she didn't give a crumb about his opinion.
+[00:00:51.820 --> 00:00:52.420] 4.
+[00:00:52.900 --> 00:00:57.900] In a term commonly used in dating, crumbs refer to sporadic, minimal, or insincere communication
+[00:00:57.900 --> 00:01:02.640] or attention given by one person to another, often to keep the other person interested
+[00:01:02.640 --> 00:01:05.200] without committing to a full relationship.
+[00:01:05.880 --> 00:01:08.720] Example, she realized he was just giving crumbs of attention,
+[00:01:09.340 --> 00:01:11.680] never fully committing to anything serious.
+[00:01:12.340 --> 00:01:12.900] Example,
+[00:01:13.540 --> 00:01:16.180] he gave me a few crumbs of information about the writer.

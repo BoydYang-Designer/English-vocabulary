@@ -1,8 +1,0 @@
-[00:00:00.000 --> 00:00:03.480] A molecule is a small group of atoms joined together.
-[00:00:03.480 --> 00:00:06.440] It is the basic building block of any chemical substance
-[00:00:06.440 --> 00:00:10.280] and can be as simple as two atoms or as complex as many atoms.
-[00:00:10.280 --> 00:00:11.960] Example sentences.
-[00:00:11.960 --> 00:00:15.960] Water is made of molecules with two hydrogen atoms and one oxygen atom.
-[00:00:15.960 --> 00:00:21.000] The oxygen you breathe is made of pairs of oxygen atoms joined together in molecules.
-[00:00:21.000 --> 00:00:25.200] DNA is made of very large molecules with many atoms.
-[00:00:25.200 --> 00:00:32.200] Summary, a molecule is a small unit made up of atoms forming the building blocks of all substances.

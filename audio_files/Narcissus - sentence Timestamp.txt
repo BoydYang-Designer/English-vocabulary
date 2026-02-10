@@ -1,19 +1,12 @@
-[00:00:00.000 --> 00:00:04.520] Narcissus as a noun, proper, uncountable in mythology.
-[00:00:04.520 --> 00:00:07.440] Narcissus, a figure in Greek mythology,
-[00:00:07.440 --> 00:00:09.760] a young man who fell in love with his own reflection
-[00:00:09.760 --> 00:00:13.080] in a pool of water, ultimately leading to his death,
-[00:00:13.080 --> 00:00:15.920] used metaphorically for someone overly self-absorbed
-[00:00:15.920 --> 00:00:17.720] or vain.
-[00:00:17.720 --> 00:00:18.600] Examples.
-[00:00:18.600 --> 00:00:21.720] Narcissus became so entranced by his reflection
-[00:00:21.720 --> 00:00:24.040] that he could not leave the water's edge.
-[00:00:24.040 --> 00:00:27.120] The story of Narcissus warns against excessive self-love.
-[00:00:27.120 --> 00:00:29.800] He was a modern day Narcissus, always staring
-[00:00:29.800 --> 00:00:31.000] at himself in mirrors.
-[00:00:31.000 --> 00:00:31.680] Summary.
-[00:00:31.680 --> 00:00:33.760] Narcissus refers to a mythological character
-[00:00:33.760 --> 00:00:35.680] known for self-obsession and is often
-[00:00:35.680 --> 00:00:39.120] used to describe someone excessively vain or self-focused.
-[00:00:39.120 --> 00:00:43.320] Synonyms, self-absorbed person, egotist, vain person,
-[00:00:43.320 --> 00:00:45.840] Antonim's humble person, selfless person.
-[00:00:45.840 --> 00:00:50.520] Related words, narcissism, narcissist, self-love, vanity.
+[00:00:00.000 --> 00:00:03.720] Narcissus as a noun, proper uncountable in mythology.
+[00:00:04.700 --> 00:00:09.500] Narcissus, a figure in Greek mythology, a young man who fell in love with his own reflection
+[00:00:09.500 --> 00:00:14.260] in a pool of water, ultimately leading to his death, used metaphorically for
+[00:00:14.260 --> 00:00:16.280] someone overly self -absorbed or vain.
+[00:00:18.100 --> 00:00:23.220] Examples, Narcissus became so entrenched by his reflection that he could not leave the water's edge.
+[00:00:23.960 --> 00:00:26.680] The story of Narcissus warns against excessive self -love.
+[00:00:26.680 --> 00:00:30.520] He was a modern -day Narcissus, always staring at himself in mirrors.
+[00:00:31.020 --> 00:00:35.920] Summary, Narcissus refers to a mythological character known for self -obsession and is often used to
+[00:00:35.920 --> 00:00:38.340] describe someone excessively vain or self -focused.
+[00:00:39.120 --> 00:00:42.920] Synonyms, self -absorbed person, egotist, vain person.
+[00:00:43.260 --> 00:00:45.400] Antonyms, humble person, selfless person.
+[00:00:45.780 --> 00:00:49.260] Related words, Narcissism, Narcissist, self -love, vanity.

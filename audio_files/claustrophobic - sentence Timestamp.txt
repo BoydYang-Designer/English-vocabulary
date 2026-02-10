@@ -1,11 +1,16 @@
-[00:00:00.000 --> 00:00:07.500] Clostrophobic is an adjective that describes a feeling of discomfort or anxiety caused by being in a confined or enclosed space.
-[00:00:07.500 --> 00:00:11.000] It can also refer to a person who experiences such feelings.
-[00:00:11.000 --> 00:00:13.000] Example sentences.
-[00:00:13.000 --> 00:00:17.000] She felt claustrophobic in the small windowless room.
-[00:00:17.000 --> 00:00:21.500] His claustrophobic reaction made him uneasy during the long elevator ride.
-[00:00:21.500 --> 00:00:27.000] The narrow tunnels in the cave made some of the explorers feel claustrophobic.
-[00:00:27.000 --> 00:00:31.000] People with claustrophobia often avoid tight spaces or crowded areas.
-[00:00:31.000 --> 00:00:32.000] Summary.
-[00:00:32.000 --> 00:00:38.000] Clostrophobic describes a feeling of discomfort or anxiety due to being in a confined or enclosed space.
-[00:00:38.000 --> 00:00:42.000] It can also refer to someone who experiences this feeling.
-[00:00:42.000 --> 00:00:49.000] Related words, anxious, confined, cramped, enclosed, antinemous, spacious, open, roomy, comfortable.
+[00:00:00.000 --> 00:00:04.940] Clostrophobic is an adjective that describes a feeling of discomfort or anxiety caused by
+[00:00:04.940 --> 00:00:07.080] being in a confined or enclosed space.
+[00:00:07.840 --> 00:00:10.580] It can also refer to a person who experiences such feelings.
+[00:00:11.860 --> 00:00:12.480] Example sentences.
+[00:00:13.460 --> 00:00:16.220] She felt claustrophobic in the small windowless room.
+[00:00:17.120 --> 00:00:21.180] His claustrophobic reaction made him uneasy during the long elevator ride.
+[00:00:21.900 --> 00:00:25.980] The narrow tunnels in the cave made some of the explorers feel claustrophobic.
+[00:00:26.780 --> 00:00:30.700] People with claustrophobia often avoid tight spaces or crowded areas.
+[00:00:31.380 --> 00:00:31.820] Summary.
+[00:00:32.160 --> 00:00:37.000] Claustrophobic describes a feeling of discomfort or anxiety due to being in a confined or
+[00:00:37.000 --> 00:00:37.860] enclosed space.
+[00:00:38.600 --> 00:00:41.380] It can also refer to someone who experiences this feeling.
+[00:00:42.020 --> 00:00:42.640] Related words.
+[00:00:42.980 --> 00:00:45.160] Anxious, confined, cramped, enclosed.
+[00:00:45.460 --> 00:00:45.880] Antonyms.
+[00:00:46.000 --> 00:00:47.860] Spacious, open, roomy, comfortable.

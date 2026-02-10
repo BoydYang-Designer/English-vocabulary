@@ -1,16 +1,20 @@
-[00:00:00.000 --> 00:00:06.000] Clutch can be used as both a noun and a verb, and it relates to holding or grasping something tightly.
-[00:00:06.000 --> 00:00:11.000] As a noun, clutch clutches, one, a tight grasp or hold.
-[00:00:11.000 --> 00:00:15.500] Example, she had a clutch on her purse as she navigated through the crowded street.
-[00:00:15.500 --> 00:00:21.000] Example, the child's clutch on his mother's hand tightened as they crossed the busy road.
-[00:00:21.000 --> 00:00:26.000] Two, a mechanism in a vehicle that engages and disengages the engine from the wheels.
-[00:00:26.000 --> 00:00:29.500] Example, he pressed the clutch to change gears smoothly.
-[00:00:30.000 --> 00:00:34.000] Example, the car's clutch was slipping, causing difficulty in accelerating.
-[00:00:34.000 --> 00:00:38.000] Three, a small handbag or purse typically carried by hand.
-[00:00:38.000 --> 00:00:41.800] Example, she carried a sleek black clutch to the formal event.
-[00:00:41.800 --> 00:00:46.500] Example, the clutch was decorated with sequins adding a touch of glamour to her outfit.
-[00:00:46.500 --> 00:00:49.500] As a verb, clutch, clutch, clutching.
-[00:00:49.500 --> 00:00:56.000] To grasp or hold something tightly, example, he clutched the book to his chest during this suspenseful scene.
-[00:00:56.000 --> 00:01:00.500] Example, the hiker clutched the rope as he climbed the steep rock face.
-[00:01:00.500 --> 00:01:04.500] Example, the baby clutched the toy tightly refusing to let go.
-[00:01:04.500 --> 00:01:10.500] Summary, clutch refers to a tight grasp or hold, a vehicle mechanism or a small handbag.
-[00:01:10.500 --> 00:01:14.500] It can also describe the action of holding something tightly.
+[00:00:00.000 --> 00:00:04.920] Clutch can be used as both a noun and a verb, and it relates to holding or grasping
+[00:00:04.920 --> 00:00:05.700] something tightly.
+[00:00:06.340 --> 00:00:07.740] As a noun, clutch clutches.
+[00:00:08.320 --> 00:00:10.580] One, a tight grasp or hold.
+[00:00:11.260 --> 00:00:15.120] Example, she had a clutch on her purse as she navigated through the crowded street.
+[00:00:15.800 --> 00:00:16.300] Example,
+[00:00:17.000 --> 00:00:20.500] the child's clutch on his mother's hand tightened as they crossed the busy road.
+[00:00:21.120 --> 00:00:25.420] Two, a mechanism in a vehicle that engages and disengages the engine from the wheels.
+[00:00:26.440 --> 00:00:29.200] Example, he pressed the clutch to change gears smoothly.
+[00:00:30.120 --> 00:00:33.420] Example, the car's clutch was slipping, causing difficulty in accelerating.
+[00:00:34.100 --> 00:00:37.500] Three, a small handbag or purse typically carried by hand.
+[00:00:38.120 --> 00:00:41.480] Example, she carried a sleek black clutch to the formal event.
+[00:00:41.880 --> 00:00:45.500] Example, the clutch was decorated with sequins, adding a touch of glamour to her outfit.
+[00:00:46.440 --> 00:00:49.200] As a verb, clutch, clutched, clutching.
+[00:00:49.800 --> 00:00:51.420] To grasp or hold something tightly.
+[00:00:51.420 --> 00:00:55.120] Example, he clutched the book to his chest during the suspenseful scene.
+[00:00:56.280 --> 00:01:00.040] Example, the hiker clutched the rope as he climbed the steep rock face.
+[00:01:00.960 --> 00:01:04.300] Example, the baby clutched the toy tightly, refusing to let go.
+[00:01:04.880 --> 00:01:10.360] Summary, clutch refers to a tight grasp or hold, a vehicle mechanism or a small handbag.
+[00:01:11.140 --> 00:01:13.760] It can also describe the action of holding something tightly.

@@ -1,17 +1,48 @@
-[00:00:00.000 --> 00:00:03.360] breed is both a noun and a verb with the following meanings.
-[00:00:03.360 --> 00:00:09.440] One, as a noun refers to a specific group of animals or plants that share certain characteristics,
-[00:00:09.440 --> 00:00:15.280] typically resulting from selective reproduction. Example, Labradors are a popular breed of dog known
-[00:00:15.280 --> 00:00:21.200] for their friendly nature. Example, the farm specializes in a rare breed of cattle. Example,
-[00:00:21.200 --> 00:00:29.360] each breed of plant has unique growing requirements. Two, as a verb, breed, bread, breeding, A,
-[00:00:29.360 --> 00:00:33.760] to keep and take care of animals or plants in order to produce more animals or plants of a particular
-[00:00:33.760 --> 00:00:39.440] kind. Example, the farmer breeds sheep for their wool. Example, she breeds rare orchids in her
-[00:00:39.440 --> 00:00:45.440] greenhouse, be to produce young animals, birds, etc., to produce offspring by sexual reproduction.
-[00:00:46.080 --> 00:00:51.200] Example, some birds breed only during specific seasons. Example, the fish in the lake have started
-[00:00:51.200 --> 00:00:58.560] breeding. See, to take care of and teach a child who is growing up. Example, he was bred in a family
-[00:00:58.560 --> 00:01:03.840] that valued hard work and education. Example, she was bred to take over the family business from a
-[00:01:03.840 --> 00:01:11.200] young age. D, to cause or develop a quality idea or situation. Example, constant stress can breed
-[00:01:11.200 --> 00:01:17.920] resentment. Example, their teamwork and dedication breed success. Example, she believes that we are
-[00:01:17.920 --> 00:01:21.520] breeding a generation of children who know nothing about the history of their country.
-[00:01:22.480 --> 00:01:27.200] Summary, breed refers to a specific type of animal or plant or the process of producing and
-[00:01:27.200 --> 00:01:31.520] cultivating particular qualities often through selective reproduction or upbringing.
-[00:01:32.160 --> 00:01:45.440] Related words, type, variety, reproduce, cultiv generate, antinims, destroy, extinguish.
+[00:00:00.000 --> 00:00:02.780] Breed is both a noun and a verb with the following meanings.
+[00:00:03.480 --> 00:00:03.640] 1.
+[00:00:04.420 --> 00:00:09.140] As a noun refers to a specific group of animals or plants that share certain characteristics,
+[00:00:09.560 --> 00:00:11.340] typically resulting from selective reproduction.
+[00:00:12.460 --> 00:00:13.020] Example.
+[00:00:13.300 --> 00:00:16.320] Labradors are a popular breed of dog known for their friendly nature.
+[00:00:17.080 --> 00:00:17.640] Example.
+[00:00:17.880 --> 00:00:19.780] The farm specializes in a rare breed of cattle.
+[00:00:20.680 --> 00:00:21.240] Example.
+[00:00:21.340 --> 00:00:23.500] Each breed of plant has unique growing requirements.
+[00:00:24.400 --> 00:00:24.960] 2.
+[00:00:25.580 --> 00:00:26.180] As a verb,
+[00:00:26.780 --> 00:00:28.440] breed, bred, breeding.
+[00:00:28.820 --> 00:00:28.980] A.
+[00:00:29.480 --> 00:00:34.080] To keep and take care of animals or plants in order to produce more animals or plants of a particular kind.
+[00:00:34.620 --> 00:00:35.180] Example.
+[00:00:35.420 --> 00:00:37.040] The farmer breeds sheep for their wool.
+[00:00:37.540 --> 00:00:38.100] Example.
+[00:00:38.220 --> 00:00:39.840] She breeds rare orchids in her greenhouse.
+[00:00:40.500 --> 00:00:40.680] B.
+[00:00:40.800 --> 00:00:42.900] To produce young animals, birds, etc.
+[00:00:43.360 --> 00:00:45.120] To produce offspring by sexual reproduction.
+[00:00:46.120 --> 00:00:46.680] Example.
+[00:00:46.960 --> 00:00:49.240] Some birds breed only during specific seasons.
+[00:00:49.700 --> 00:00:50.120] Example.
+[00:00:50.220 --> 00:00:51.460] The fish in the lake have started breeding.
+[00:00:52.240 --> 00:00:52.500] C.
+[00:00:53.060 --> 00:00:55.540] To take care of and teach a child who is growing up.
+[00:00:56.780 --> 00:00:57.300] Example.
+[00:00:57.580 --> 00:01:00.280] He was bred in a family that valued hard work and education.
+[00:01:01.060 --> 00:01:01.580] Example.
+[00:01:01.980 --> 00:01:04.340] She was bred to take over the family business from a young age.
+[00:01:04.900 --> 00:01:05.080] D.
+[00:01:05.540 --> 00:01:08.140] To cause or develop a quality idea or situation.
+[00:01:09.020 --> 00:01:09.520] Example.
+[00:01:09.660 --> 00:01:11.660] Constant stress can breed resentment.
+[00:01:12.680 --> 00:01:13.200] Example.
+[00:01:13.660 --> 00:01:15.560] Their teamwork and dedication breed success.
+[00:01:16.580 --> 00:01:17.100] Example.
+[00:01:17.220 --> 00:01:21.520] She believes that we are breeding a generation of children who know nothing about the history of their country.
+[00:01:22.480 --> 00:01:22.980] Summary.
+[00:01:23.480 --> 00:01:28.780] Breed refers to a specific type of animal or plant or the process of producing and cultivating particular qualities,
+[00:01:29.180 --> 00:01:31.360] often through selective reproduction or upbringing.
+[00:01:32.240 --> 00:01:32.880] Related words.
+[00:01:33.380 --> 00:01:36.300] Type, variety, reproduce, Cult of Generate.
+[00:01:36.460 --> 00:01:37.260] Antonyms.
+[00:01:37.380 --> 00:01:37.840] Destroy.
+[00:01:38.340 --> 00:01:39.060] Extinguish.

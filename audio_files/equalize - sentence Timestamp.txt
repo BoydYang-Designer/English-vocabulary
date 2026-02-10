@@ -1,10 +1,16 @@
-[00:00:00.000 --> 00:00:07.000] Equalize is a verb, equalized, equalized, equalizing, one, to make equal or uniform refers to the
-[00:00:07.000 --> 00:00:12.000] act of bringing two or more things to a state of equality or balance, example.
-[00:00:12.000 --> 00:00:16.000] We need to equalize educational opportunities for all children.
-[00:00:16.000 --> 00:00:20.000] Example, they took steps to equalize the opportunities for both genders at work.
-[00:00:20.000 --> 00:00:26.000] Two, to adjust or balance something, used in context like sound systems or sports to refer to
-[00:00:26.000 --> 00:00:29.000] achieving an even distribution or fair conditions.
-[00:00:29.000 --> 00:00:33.000] Example, the audio technician had to equalize the sound levels for the concert.
-[00:00:33.000 --> 00:00:38.000] Example, the referee's job is to equalize the game by ensuring fair play.
-[00:00:38.000 --> 00:00:46.000] Summary, equalize means to make equal or to adjust to achieve balance, often in terms of resources, opportunities or conditions.
-[00:00:46.000 --> 00:00:54.000] Related words, balance, adjust, normalize, antinims, disturbed, disrupt, unequalize.
+[00:00:00.000 --> 00:00:01.600] Equalize is a verb.
+[00:00:02.020 --> 00:00:04.020] Equalized, equalized, equalizing.
+[00:00:04.400 --> 00:00:09.340] One, to make equal or uniform, refers to the act of bringing two or more things to a state of
+[00:00:09.340 --> 00:00:10.380] equality or balance.
+[00:00:10.680 --> 00:00:11.200] Example,
+[00:00:11.980 --> 00:00:14.840] we need to equalize educational opportunities for all children.
+[00:00:15.540 --> 00:00:19.500] Example, they took steps to equalize the opportunities for both genders at work.
+[00:00:20.060 --> 00:00:22.560] Two, to adjust or balance something.
+[00:00:23.140 --> 00:00:27.940] Used in contexts like sound systems or sports to refer to achieving an even distribution or
+[00:00:27.940 --> 00:00:28.640] fair conditions.
+[00:00:29.340 --> 00:00:32.780] Example, the audio technician had to equalize the sound levels for the concert.
+[00:00:33.520 --> 00:00:36.980] Example, the referee's job is to equalize the game by ensuring fair play.
+[00:00:38.260 --> 00:00:43.140] Summary, equalize means to make equal or to adjust to achieve balance, often
+[00:00:43.140 --> 00:00:45.500] in terms of resources, opportunities or conditions.
+[00:00:46.660 --> 00:00:52.060] Related words, balance, adjust, normalize, antonyms, disturb,
+[00:00:52.220 --> 00:00:53.380] disrupt, unequalize.

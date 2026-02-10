@@ -1,7 +1,11 @@
-[00:00:00.000 --> 00:00:09.000] Figurine, as a noun, a figurine is a small sculpted model or statue, often representing a person, animal or an object.
-[00:00:09.000 --> 00:00:17.000] Figurines are typically made from materials such as clay, ceramic, metal or plastic and are often used as decorative items or collectibles.
-[00:00:17.000 --> 00:00:21.000] Example, she has a collection of porcelain figurines displayed on the shelf.
-[00:00:21.000 --> 00:00:27.000] Example, the museum featured intricate wooden figurines from ancient civilizations.
-[00:00:27.000 --> 00:00:30.000] He gave her a small figurine of a dog as a gift.
-[00:00:30.000 --> 00:00:37.000] Summary, a figurine is a small, often detailed sculpture typically used for decoration or as a collectible.
-[00:00:37.000 --> 00:00:41.000] Related words, statue, model, sculpture, ornament, collectible.
+[00:00:00.000 --> 00:00:02.080] Figurine as a noun.
+[00:00:02.320 --> 00:00:07.760] A figurine is a small sculpted model or statue, often representing a person, animal,
+[00:00:08.180 --> 00:00:08.740] or an object.
+[00:00:09.320 --> 00:00:14.260] Figurines are typically made from materials such as clay, ceramic, metal, or plastic and are
+[00:00:14.260 --> 00:00:16.800] often used as decorative items or collectibles.
+[00:00:17.300 --> 00:00:20.680] Example, she has a collection of porcelain figurines displayed on the shelf.
+[00:00:22.020 --> 00:00:26.380] Example, the museum featured intricate wooden figurines from ancient civilizations.
+[00:00:26.380 --> 00:00:29.620] He gave her a small figurine of a dog as a gift.
+[00:00:30.600 --> 00:00:35.540] Summary, a figurine is a small, often detailed sculpture typically used for decoration or
+[00:00:35.540 --> 00:00:36.280] as a collectible.
+[00:00:36.820 --> 00:00:40.840] Related words, statue, model, sculpture, ornament, collectible.

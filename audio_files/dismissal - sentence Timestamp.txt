@@ -1,11 +1,15 @@
-[00:00:00.000 --> 00:00:08.000] Dismissal is a noun that refers to the act of removing someone from a position, job, or situation, or the rejection of an idea or claim.
-[00:00:08.000 --> 00:00:15.000] One, the act of removing someone from a job refers to being fired or let go from employment.
-[00:00:15.000 --> 00:00:20.000] Example, the company faced backlash after the wrongful dismissal of several employees.
-[00:00:20.000 --> 00:00:25.000] Example, he appealed the decision after receiving a dismissal notice from his employer.
-[00:00:26.000 --> 00:00:33.000] Two, the act of rejecting or disregarding something refers to the rejection or refusal to consider an idea or opinion.
-[00:00:33.000 --> 00:00:37.000] Example, his suggestions were met with immediate dismissal by the committee.
-[00:00:37.000 --> 00:00:42.000] Example, the judge ruled in favor of the dismissal of the case due to lack of evidence.
-[00:00:42.000 --> 00:00:45.000] I was surprised by his dismissal of the idea.
-[00:00:45.000 --> 00:00:52.000] Summary, dismissal refers to either the act of firing someone from a job or rejecting an idea, claim, or case.
-[00:00:52.000 --> 00:00:57.000] Related words, firing, rejection, termination, discharge.
-[00:00:57.000 --> 00:01:01.000] Antonyms, hiring acceptance approval consideration.
+[00:00:00.000 --> 00:00:04.560] Dismissal is a noun that refers to the act of removing someone from a position, job,
+[00:00:04.760 --> 00:00:07.780] or situation, or the rejection of an idea or claim.
+[00:00:08.840 --> 00:00:14.220] One, the act of removing someone from a job refers to being fired or let go from employment.
+[00:00:15.380 --> 00:00:20.040] Example, the company faced backlash after the wrongful dismissal of several employees.
+[00:00:20.600 --> 00:00:24.660] Example, he appealed the decision after receiving a dismissal notice from his employer.
+[00:00:25.600 --> 00:00:30.360] Two, the act of rejecting or disregarding something refers to the rejection or
+[00:00:30.360 --> 00:00:32.820] refusal to consider an idea or opinion.
+[00:00:33.640 --> 00:00:36.920] Example, his suggestions were met with immediate dismissal by the committee.
+[00:00:37.740 --> 00:00:41.400] Example, the judge ruled in favor of the dismissal of the case due to lack of evidence.
+[00:00:42.180 --> 00:00:44.400] I was surprised by his dismissal of the idea.
+[00:00:45.880 --> 00:00:50.740] Summary, dismissal refers to either the act of firing someone from a job or rejecting an idea,
+[00:00:51.000 --> 00:00:51.860] claim, or case.
+[00:00:51.860 --> 00:00:55.820] Related words, firing, rejection, termination,
+[00:00:56.440 --> 00:00:56.780] discharge.
+[00:00:57.880 --> 00:01:00.620] Antonyms, hiring, acceptance, approval, consideration.

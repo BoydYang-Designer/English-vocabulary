@@ -1,22 +1,23 @@
-[00:00:00.000 --> 00:00:05.000] Antimicrobial can be used as both an adjective and a noun.
-[00:00:05.000 --> 00:00:10.440] As an adjective, antimicrobial refers to a substance or agent that kills or inhibits the
-[00:00:10.440 --> 00:00:16.000] growth of microorganisms such as bacteria, viruses, fungi, or parasites.
-[00:00:16.000 --> 00:00:19.600] These agents are commonly used to prevent or treat infections.
-[00:00:19.600 --> 00:00:20.600] Examples.
-[00:00:20.600 --> 00:00:24.440] Antimicrobial soaps are designed to kill harmful bacteria and viruses.
-[00:00:24.440 --> 00:00:29.200] The hospital uses antimicrobial cleaning products to reduce the risk of infection.
-[00:00:29.200 --> 00:00:34.680] Some fabrics are treated with antimicrobial agents to prevent odor-causing bacteria.
-[00:00:34.680 --> 00:00:39.880] As a noun, an antimicrobial is a substance or agent that kills or inhibits the growth
-[00:00:39.880 --> 00:00:41.960] of microorganisms.
-[00:00:41.960 --> 00:00:47.040] This includes antibiotics, antifungals, antiseptics, and other chemical agents used in medical
-[00:00:47.040 --> 00:00:49.720] or hygiene contexts.
-[00:00:49.720 --> 00:00:50.720] Examples.
-[00:00:50.720 --> 00:00:54.040] The doctor prescribed an antimicrobial to treat the bacterial infection.
-[00:00:54.040 --> 00:00:57.680] Antimicrobials play an important role in controlling the spread of disease in healthcare
-[00:00:57.680 --> 00:00:58.680] settings.
-[00:00:58.680 --> 00:01:04.000] The summary, as an adjective, antimicrobial refers to substances that kill or inhibit the
-[00:01:04.000 --> 00:01:06.800] growth of microorganisms while as a noun.
-[00:01:06.800 --> 00:01:10.200] It refers to the specific agents that perform this function.
-[00:01:10.200 --> 00:01:11.200] Related words.
-[00:01:11.200 --> 00:01:17.520] Antibiotic, antiseptic, disinfectant, germicidal, antifungal, antinims.
-[00:01:17.520 --> 00:01:20.320] Antibiotic resistant, microbial, infectious.
+[00:00:00.660 --> 00:00:04.240] Antimicrobial can be used as both an adjective and a noun.
+[00:00:04.940 --> 00:00:09.920] As an adjective, antimicrobial refers to a substance or agent that kills or
+[00:00:09.920 --> 00:00:12.420] inhibits the growth of microorganisms such as bacteria,
+[00:00:13.060 --> 00:00:15.160] viruses, fungi, or parasites.
+[00:00:15.900 --> 00:00:18.360] These agents are commonly used to prevent or treat infections.
+[00:00:19.120 --> 00:00:19.380] Examples.
+[00:00:20.500 --> 00:00:23.840] Antimicrobial soaps are designed to kill harmful bacteria and viruses.
+[00:00:24.360 --> 00:00:28.400] The hospital uses antimicrobial cleaning products to reduce the risk of infection.
+[00:00:28.860 --> 00:00:33.540] Some fabrics are treated with antimicrobial agents to prevent odor -causing bacteria.
+[00:00:34.400 --> 00:00:39.400] As a noun, an antimicrobial is a substance or agent that kills or inhibits the
+[00:00:39.400 --> 00:00:41.060] growth of microorganisms.
+[00:00:41.700 --> 00:00:46.660] This includes antibiotics, antifungals, antiseptics, and other chemical agents used in
+[00:00:46.660 --> 00:00:48.320] medical or hygiene contexts.
+[00:00:49.040 --> 00:00:49.440] Examples.
+[00:00:49.960 --> 00:00:53.280] The doctor prescribed an antimicrobial to treat the bacterial infection.
+[00:00:53.280 --> 00:00:58.060] Antimicrobials play an important role in controlling the spread of disease in healthcare settings.
+[00:00:58.520 --> 00:00:59.040] Summary.
+[00:00:59.460 --> 00:01:04.400] As an adjective, antimicrobial refers to substances that kill or inhibit the growth of
+[00:01:04.400 --> 00:01:06.240] microorganisms while as a noun.
+[00:01:06.620 --> 00:01:09.240] It refers to the specific agents that perform this function.
+[00:01:09.760 --> 00:01:10.460] Related words.
+[00:01:11.320 --> 00:01:16.440] Antibiotic, antiseptic, disinfectant, germicidal, antifungal, antonyms,
+[00:01:16.960 --> 00:01:19.900] antibiotic resistant, microbial, infectious.

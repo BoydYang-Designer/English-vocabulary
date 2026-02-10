@@ -1,9 +1,13 @@
-[00:00:00.000 --> 00:00:06.080] Faithful as an adjective, faithful one, loyal, devoted, and steadfast in allegiance or affection.
-[00:00:06.880 --> 00:00:09.360] She remained faithful to her friends through thick and thin.
-[00:00:10.160 --> 00:00:15.040] The dog is very faithful to its owner. He was faithful in supporting the team throughout the season.
-[00:00:16.320 --> 00:00:22.080] Two, accurate, true, or exact in detail or representation. The painting is a faithful
-[00:00:22.080 --> 00:00:26.640] reproduction of the original. The report provides a faithful account of the events.
-[00:00:27.600 --> 00:00:30.080] The translation is faithful to the author's intent.
-[00:00:30.080 --> 00:00:36.000] Summary, Faithful describes loyalty, devotion, or accuracy either in relationships, service, or representation.
-[00:00:36.000 --> 00:00:43.440] Synonyms, loyal, devoted, trustworthy, true, accurate. Antonyms, unfaithful, disloyal, false, inaccurate.
-[00:00:44.080 --> 00:00:47.440] Related words optional, fidelity, devotion, allegiance, reliability.
+[00:00:00.000 --> 00:00:04.820] Faithful as an adjective, faithful one, loyal, devoted, and steadfast in
+[00:00:04.820 --> 00:00:05.980] allegiance or affection.
+[00:00:06.820 --> 00:00:09.320] She remained faithful to her friends through thick and thin.
+[00:00:10.260 --> 00:00:12.080] The dog is very faithful to its owner.
+[00:00:12.900 --> 00:00:14.980] He was faithful in supporting the team throughout the season.
+[00:00:16.400 --> 00:00:20.020] Two, accurate, true, or exact in detail or representation.
+[00:00:20.920 --> 00:00:23.300] The painting is a faithful reproduction of the original.
+[00:00:24.040 --> 00:00:26.620] The report provides a faithful account of the events.
+[00:00:26.620 --> 00:00:29.780] The translation is faithful to the author's intent.
+[00:00:30.500 --> 00:00:35.660] Summary, faithful describes loyalty, devotion, or accuracy either in relationship, service, or representation.
+[00:00:36.500 --> 00:00:39.820] Synonyms, loyal, devoted, trustworthy, true, accurate.
+[00:00:40.240 --> 00:00:43.240] Antonyms, unfaithful, disloyal, false, inaccurate.
+[00:00:44.240 --> 00:00:47.220] Related words optional, fidelity, devotion, allegiance, reliability.

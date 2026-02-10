@@ -1,10 +1,10 @@
-[00:00:00.000 --> 00:00:06.240] Barista is a noun that refers to a person who prepares and serves coffee and other beverages,
-[00:00:06.240 --> 00:00:09.840] typically in a cafe or coffee shop.
-[00:00:09.840 --> 00:00:14.920] Baristas are skilled in making various coffee drinks, often using espresso machines, and
-[00:00:14.920 --> 00:00:19.080] may also have knowledge of different brewing methods and coffee types.
-[00:00:19.080 --> 00:00:24.920] Example, the Barista made a delicious cappuccino with perfectly frothed milk.
-[00:00:24.920 --> 00:00:29.320] Example, she worked as a barista while attending university, learning about coffee and customer
-[00:00:29.320 --> 00:00:30.800] service.
-[00:00:30.800 --> 00:00:35.440] Summary, a barista is a coffee professional who specializes in preparing and serving coffee
-[00:00:35.440 --> 00:00:41.240] beverages, often with a focus on quality and presentation, related words, coffee maker,
-[00:00:41.240 --> 00:00:46.240] cafe worker, espresso technician, Antonim's customer, patron, client.
+[00:00:00.000 --> 00:00:04.860] Barista is a noun that refers to a person who prepares and serves coffee
+[00:00:04.860 --> 00:00:08.700] and other beverages, typically in a cafe or coffee shop.
+[00:00:09.480 --> 00:00:14.300] Baristas are skilled in making various coffee drinks, often using espresso machines,
+[00:00:14.680 --> 00:00:18.020] and may also have knowledge of different brewing methods and coffee types.
+[00:00:18.860 --> 00:00:23.500] Example, the barista made a delicious cappuccino with perfectly frothed milk.
+[00:00:24.620 --> 00:00:29.640] Example, she worked as a barista while attending university, learning about coffee and customer service.
+[00:00:30.580 --> 00:00:35.900] Summary, a barista is a coffee professional who specializes in preparing and serving coffee beverages,
+[00:00:36.160 --> 00:00:38.100] often with a focus on quality and presentation.
+[00:00:38.660 --> 00:00:43.180] Related words, coffee maker, cafe worker, espresso technician,
+[00:00:43.800 --> 00:00:46.160] Antonum's customer, patron, client.

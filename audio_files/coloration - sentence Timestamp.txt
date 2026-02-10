@@ -1,10 +1,13 @@
-[00:00:00.000 --> 00:00:02.120] Coloration is a noun.
-[00:00:02.120 --> 00:00:08.000] It refers to the natural or artificial arrangement and appearance of colors in an object, organism, or material.
-[00:00:08.000 --> 00:00:13.360] It is often used to describe patterns, hues, or tones in nature, art, or design.
-[00:00:13.360 --> 00:00:19.000] Example, the vibrant coloration of the butterfly's wings helps it camouflage in its environment.
-[00:00:19.000 --> 00:00:25.000] Example, the artist admired the unique coloration of the sunset, blending orange and purple hues.
-[00:00:25.000 --> 00:00:28.400] Changes in the bird's coloration occur during mating season.
-[00:00:28.400 --> 00:00:32.800] Example, the fabric's coloration faded after prolonged exposure to sunlight.
-[00:00:32.800 --> 00:00:38.400] Summary, coloration refers to the colors or patterns of colors present in living beings or objects,
-[00:00:38.400 --> 00:00:47.400] whether natural or artificial, contributing to their aesthetic or shional properties, related words, pigmentation, hue, tint, tone, tone, pattern.
-[00:00:47.400 --> 00:00:52.400] Antonyms, colorlessness, monotone, pallor, uniformity.
+[00:00:00.000 --> 00:00:01.860] Coloration is a noun.
+[00:00:02.500 --> 00:00:07.000] It refers to the natural or artificial arrangement and appearance of colors in an object, organism,
+[00:00:07.260 --> 00:00:07.740] or material.
+[00:00:08.420 --> 00:00:13.020] It is often used to describe patterns, hues, or tones in nature, art, or design.
+[00:00:13.760 --> 00:00:18.720] Example, the vibrant coloration of the butterfly's wings helps it camouflage in its environment.
+[00:00:19.380 --> 00:00:24.700] Example, the artist admired the unique coloration of the sunset, blending orange and purple hues.
+[00:00:25.160 --> 00:00:28.000] Changes in the bird's coloration occur during mating season.
+[00:00:28.000 --> 00:00:32.460] Example, the fabric's coloration faded after prolonged exposure to sunlight.
+[00:00:32.960 --> 00:00:38.020] Summary, coloration refers to the colors or patterns of colors present in living beings or objects,
+[00:00:38.520 --> 00:00:42.340] whether natural or artificial, contributing to their aesthetic or channel properties.
+[00:00:42.700 --> 00:00:45.500] Related words, pigmentation, hue, tint,
+[00:00:46.120 --> 00:00:47.360] tone, tone, pattern.
+[00:00:48.160 --> 00:00:51.900] Antonyms, colorlessness, monotone, pallor, uniformity.

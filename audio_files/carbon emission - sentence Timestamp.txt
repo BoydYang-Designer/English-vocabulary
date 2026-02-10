@@ -1,8 +1,11 @@
-[00:00:00.000 --> 00:00:07.000] Carbon emission refers to the release of carbon compounds, primarily carbon dioxide, CO2, into the atmosphere.
-[00:00:07.000 --> 00:00:14.000] These emissions are often a byproduct of burning fossil fuels such as coal, oil, and then natural gas,
-[00:00:14.000 --> 00:00:18.000] and are a major contributor to global warming and climate change.
-[00:00:18.000 --> 00:00:20.000] Example sentences.
-[00:00:20.000 --> 00:00:24.000] Reducing carbon emissions is crucial for combating climate change.
-[00:00:24.000 --> 00:00:29.000] The government has set targets to lower carbon emissions from industrial processes.
-[00:00:29.000 --> 00:00:35.000] Switching to renewable energy sources can help decrease carbon emissions significantly.
-[00:00:35.000 --> 00:00:45.000] Summary. Carbon emission refers to the release of carbon compounds, especially CO2, into the atmosphere, contributing to climate change and environmental impact.
+[00:00:00.000 --> 00:00:05.560] Carbon emission refers to the release of carbon compounds, primarily carbon dioxide, CO2,
+[00:00:05.880 --> 00:00:06.800] into the atmosphere.
+[00:00:07.580 --> 00:00:12.720] These emissions are often a byproduct of burning fossil fuels, such as coal, oil,
+[00:00:13.020 --> 00:00:16.640] and natural gas, and are a major contributor to global warming and climate change.
+[00:00:18.120 --> 00:00:19.040] Example sentences.
+[00:00:19.820 --> 00:00:23.400] Reducing carbon emissions is crucial for combating climate change.
+[00:00:24.040 --> 00:00:27.800] The government has set targets to lower carbon emissions from industrial processes.
+[00:00:29.140 --> 00:00:33.820] Switching to renewable energy sources can help decrease carbon emissions significantly.
+[00:00:35.060 --> 00:00:35.780] Summary.
+[00:00:36.340 --> 00:00:41.400] Carbon emission refers to the release of carbon compounds, especially CO2, into the atmosphere,
+[00:00:41.660 --> 00:00:44.360] contributing to climate change and environmental impact.

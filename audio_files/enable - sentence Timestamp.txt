@@ -1,21 +1,17 @@
-[00:00:00.000 --> 00:00:02.800] Enables a verb with the following meanings.
-[00:00:02.800 --> 00:00:06.120] One, to give someone or something the means,
-[00:00:06.120 --> 00:00:08.840] ability, or permission to do something
-[00:00:08.840 --> 00:00:10.560] refers to making something possible
-[00:00:10.560 --> 00:00:12.840] or allowing something to happen.
-[00:00:12.840 --> 00:00:15.560] Example, the new software will enable the team
-[00:00:15.560 --> 00:00:18.040] to collaborate more efficiently.
-[00:00:18.040 --> 00:00:20.760] Example, her support enabled him to complete the project
-[00:00:20.760 --> 00:00:22.640] on time.
-[00:00:22.640 --> 00:00:25.640] Two, to activate or make functional
-[00:00:25.640 --> 00:00:28.240] refers to making something work or be operational,
-[00:00:28.240 --> 00:00:31.200] especially in terms of systems or features.
-[00:00:31.200 --> 00:00:34.720] Example, you need to enable Bluetooth on your phone
-[00:00:34.720 --> 00:00:36.200] to connect to the speaker.
-[00:00:36.200 --> 00:00:38.040] The technician enabled the new feature
-[00:00:38.040 --> 00:00:39.560] on the device remotely.
-[00:00:39.560 --> 00:00:41.640] Summary, enable means to make something
-[00:00:41.640 --> 00:00:43.720] possible, functional, or accessible
-[00:00:43.720 --> 00:00:46.360] by providing the means or ability to do so.
-[00:00:46.360 --> 00:00:51.480] Related words, empower, allow, activate, facilitate, permit.
-[00:00:51.480 --> 00:00:54.240] Antonyms, disable, prevent, hinder, restrict.
+[00:00:00.000 --> 00:00:02.000] Enable is a verb with the following meanings.
+[00:00:02.860 --> 00:00:03.040] One,
+[00:00:03.980 --> 00:00:07.900] to give someone or something the means, ability, or permission to do something.
+[00:00:08.660 --> 00:00:11.820] Refers to making something possible or allowing something to happen.
+[00:00:12.820 --> 00:00:16.840] Example, the new software will enable the team to collaborate more efficiently.
+[00:00:18.000 --> 00:00:21.180] Example, her support enabled him to complete the project on time.
+[00:00:22.440 --> 00:00:22.880] Two,
+[00:00:23.500 --> 00:00:24.920] to activate or make functional.
+[00:00:24.920 --> 00:00:30.000] Refers to making something work or be operational, especially in terms of systems or features.
+[00:00:31.080 --> 00:00:31.660] Example,
+[00:00:32.720 --> 00:00:35.600] you need to enable Bluetooth on your phone to connect to the speaker.
+[00:00:36.120 --> 00:00:38.860] The technician enabled the new feature on the device remotely.
+[00:00:39.640 --> 00:00:44.400] Summary, enable means to make something possible, functional, or accessible by providing the
+[00:00:44.400 --> 00:00:45.820] means or ability to do so.
+[00:00:46.280 --> 00:00:47.680] Related words, empower,
+[00:00:48.280 --> 00:00:50.660] allow, activate, facilitate, permit.
+[00:00:51.360 --> 00:00:54.000] Antonyms, disable, prevent, hinder, restrict.

@@ -1,12 +1,27 @@
-[00:00:00.000 --> 00:00:07.000] Euthanasia is a noun with the following meanings, one, the act of intentionally ending a person's life to relieve suffering.
-[00:00:07.000 --> 00:00:14.000] This is done typically in cases of terminal illness or severe pain where the individual is unable to recover.
-[00:00:14.000 --> 00:00:20.000] It can be voluntary with the person's consent or involuntary without the person's consent.
-[00:00:21.000 --> 00:00:27.000] Example sentences. The debate over euthanasia raises complex ethical and legal issues.
-[00:00:27.000 --> 00:00:34.000] Some countries have legalized euthanasia under strict regulations to ensure it is carried out ethically.
-[00:00:34.000 --> 00:00:39.000] The patient chose euthanasia to avoid prolonged suffering from a terminal illness.
-[00:00:39.000 --> 00:00:42.000] The act of ending the life of an animal to relieve suffering.
-[00:00:42.000 --> 00:00:49.000] This is commonly practiced in veterinary medicine to prevent unnecessary pain for animals with severe health issues.
-[00:00:49.000 --> 00:00:57.000] Example sentences. The veterinarian performed euthanasia on the dog to end its suffering from a severe injury.
-[00:00:57.000 --> 00:01:04.000] Euthanasia for pets is often considered when there is no hope for recovery and the animal is in significant pain.
-[00:01:04.000 --> 00:01:14.000] Summary. Euthanasia refers to the act of deliberately ending a life to relieve suffering, either in humans or animals, often in cases of terminal illness or severe pain.
-[00:01:14.000 --> 00:01:24.000] Related words. Assisted suicide. Mercy killing. Palliative care. Antonyms. Prolongation of life. Life support. Rehabilitation.
+[00:00:00.000 --> 00:00:02.340] Euthanasia is a noun with the following meanings.
+[00:00:02.740 --> 00:00:06.680] One, the act of intentionally ending a person's life to relieve suffering.
+[00:00:07.920 --> 00:00:13.220] This is done typically in cases of terminal illness or severe pain where the individual is unable to recover.
+[00:00:14.000 --> 00:00:19.040] It can be voluntary with the person's consent or involuntary without the person's consent.
+[00:00:20.820 --> 00:00:21.720] Example sentences.
+[00:00:22.560 --> 00:00:26.640] The debate over euthanasia raises complex ethical and legal issues.
+[00:00:26.640 --> 00:00:31.440] Some countries have legalized euthanasia under strict regulations to
+[00:00:31.440 --> 00:00:33.180] ensure it is carried out ethically.
+[00:00:33.900 --> 00:00:37.720] The patient shows euthanasia to avoid prolonged suffering from a terminal illness.
+[00:00:39.240 --> 00:00:41.820] The act of ending the life of an animal to relieve suffering.
+[00:00:42.260 --> 00:00:47.220] This is commonly practiced in veterinary medicine to prevent unnecessary pain for animals with
+[00:00:47.220 --> 00:00:48.220] severe health issues.
+[00:00:50.360 --> 00:00:51.240] Example sentences.
+[00:00:51.840 --> 00:00:56.260] The veterinarian performed euthanasia on the dog to end its suffering from a severe injury.
+[00:00:56.920 --> 00:01:01.700] Euthanasia for pets is often considered when there is no hope for recovery and the animal
+[00:01:01.700 --> 00:01:02.940] is in significant pain.
+[00:01:04.160 --> 00:01:04.800] Summary.
+[00:01:05.160 --> 00:01:09.960] Euthanasia refers to the act of deliberately ending a life to relieve suffering either in humans or animals
+[00:01:09.960 --> 00:01:13.440] often in cases of terminal illness or severe pain.
+[00:01:14.020 --> 00:01:14.740] Related words.
+[00:01:15.560 --> 00:01:16.400] Assisted suicide.
+[00:01:16.880 --> 00:01:17.520] Mercy killing.
+[00:01:18.120 --> 00:01:18.700] Palliative care.
+[00:01:19.360 --> 00:01:20.000] Antonyms.
+[00:01:20.600 --> 00:01:21.500] Prolongation of life.
+[00:01:21.700 --> 00:01:22.040] Life support.
+[00:01:22.420 --> 00:01:22.940] Rehabilitation.

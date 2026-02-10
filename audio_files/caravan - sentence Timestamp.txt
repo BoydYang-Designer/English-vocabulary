@@ -1,21 +1,16 @@
-[00:00:00.000 --> 00:00:02.300] Caravan as a noun, countable.
-[00:00:02.300 --> 00:00:04.440] Caravan, caravans.
-[00:00:04.440 --> 00:00:06.760] One, a group of travelers or vehicles,
-[00:00:06.760 --> 00:00:09.240] such as wagons or camels traveling together,
-[00:00:09.240 --> 00:00:13.120] often through deserts or difficult terrain for safety.
-[00:00:13.120 --> 00:00:15.520] The caravan crossed the desert after several weeks
-[00:00:15.520 --> 00:00:16.720] of preparation.
-[00:00:16.720 --> 00:00:19.080] Traders formed a caravan to transport goods
-[00:00:19.080 --> 00:00:20.680] across the Sahara.
-[00:00:20.680 --> 00:00:23.720] The explorers joined a caravan heading to the Oasis.
-[00:00:23.720 --> 00:00:26.960] Two, a vehicle or trailer equipped for living in,
-[00:00:26.960 --> 00:00:29.480] often used for holidays or travel.
-[00:00:29.480 --> 00:00:32.880] They spent the summer traveling in a caravan along the coast.
-[00:00:32.880 --> 00:00:36.480] The family parked their caravan near the lake for the weekend.
-[00:00:36.480 --> 00:00:39.400] Modern caravans come with kitchens and bathrooms.
-[00:00:39.400 --> 00:00:40.200] Summary.
-[00:00:40.200 --> 00:00:44.080] Caravan, as a noun, refers either to a group traveling together
-[00:00:44.080 --> 00:00:47.400] for safety or to a mobile home used for travel and camping.
-[00:00:47.400 --> 00:00:50.960] Synonyms, convoy, trailer, camper, procession.
-[00:00:50.960 --> 00:00:53.320] Antonyms, non-commonly used.
-[00:00:53.320 --> 00:00:58.040] Related words, motorhome, journey, expedition, travel.
+[00:00:00.000 --> 00:00:01.700] Caravan as a noun, countable.
+[00:00:02.300 --> 00:00:03.820] Caravan, caravans.
+[00:00:04.400 --> 00:00:08.800] One, a group of travelers or vehicles, such as wagons or camels traveling together,
+[00:00:09.180 --> 00:00:12.020] often through deserts or difficult terrain for safety.
+[00:00:13.080 --> 00:00:16.100] The caravan crossed the desert after several weeks of preparation.
+[00:00:16.760 --> 00:00:19.940] Traders formed a caravan to transport goods across the Sahara.
+[00:00:20.640 --> 00:00:23.000] The explorers joined a caravan heading to the Oasis.
+[00:00:23.680 --> 00:00:28.980] Two, a vehicle or trailer equipped for living in, often used for holidays or travel.
+[00:00:28.980 --> 00:00:32.320] They spent the summer traveling in a caravan along the coast.
+[00:00:32.880 --> 00:00:35.540] The family parked their caravan near the lake for the weekend.
+[00:00:36.360 --> 00:00:38.600] Modern caravans come with kitchens and bathrooms.
+[00:00:39.440 --> 00:00:44.200] Summary, caravan as a noun refers either to a group traveling together for
+[00:00:44.200 --> 00:00:46.900] safety or to a mobile home used for travel and camping.
+[00:00:47.400 --> 00:00:50.660] Synonyms, convoy, trailer, camper, procession.
+[00:00:50.940 --> 00:00:52.720] Antonyms, non -commonly used.
+[00:00:53.300 --> 00:00:56.800] Related words, motor home, journey, expedition, travel.

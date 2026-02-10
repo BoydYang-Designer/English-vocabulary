@@ -1,8 +1,18 @@
-[00:00:00.000 --> 00:00:11.000] Creepy is an adjective that describes something or someone that causes an uncomfortable feeling of fear, unease, or nervousness, often due to being strange, eerie, or unsettling.
-[00:00:11.000 --> 00:00:24.000] As an adjective, one, causing fear or discomfort, describes things, actions, or people that provoke a feeling of unease or nervousness, often because they seem unnatural, strange, or eerie.
-[00:00:24.000 --> 00:00:33.000] Example, the old abandoned house at the end of the street is really creepy at night. He gave me a creepy look when I walked past him in the hallway.
-[00:00:33.000 --> 00:00:39.000] Example, there was a creepy silence in the room after the lights went out. Two, strange or unnatural.
-[00:00:39.000 --> 00:00:47.000] Refers to something that feels off, like it is outside the realm of normal, which often makes people uncomfortable.
-[00:00:47.000 --> 00:00:57.000] The way the doll's eyes followed me around the room was downright creepy. There was something creepy about the way she smiled, like she was hiding something.
-[00:00:57.000 --> 00:01:05.000] Summary, creepy describes something that induces fear, discomfort, or unease, often because it seems strange, eerie, or unsettling.
-[00:01:05.000 --> 00:01:14.000] Related words, eerie, spooky, frightening, unsettling, bizarre, weird, sinister, santinims, comforting, reassuring, pleasant, calming.
+[00:00:00.000 --> 00:00:04.880] Creepy is an adjective that describes something or someone that causes an uncomfortable feeling
+[00:00:04.880 --> 00:00:09.720] of fear, unease, or nervousness, often due to being strange, eerie,
+[00:00:10.020 --> 00:00:10.800] or unsettling.
+[00:00:11.740 --> 00:00:16.860] As an adjective, one, causing fear or discomfort, describes things, actions,
+[00:00:17.260 --> 00:00:22.580] or people that provoke a feeling of unease or nervousness, often because they seem unnatural, strange,
+[00:00:22.920 --> 00:00:23.380] or eerie.
+[00:00:24.240 --> 00:00:28.760] Example, the old abandoned house at the end of the street is really creepy at night.
+[00:00:28.760 --> 00:00:31.960] He gave me a creepy look when I walked past him in the hallway.
+[00:00:33.280 --> 00:00:36.520] Example, there was a creepy silence in the room after the lights went out.
+[00:00:37.040 --> 00:00:38.520] Two, strange or unnatural.
+[00:00:39.680 --> 00:00:44.400] Refers to something that feels off, like it is outside the realm of normal, which
+[00:00:44.400 --> 00:00:46.220] often makes people uncomfortable.
+[00:00:47.480 --> 00:00:51.220] The way the doll's eyes followed me around the room was downright creepy.
+[00:00:52.100 --> 00:00:56.820] There was something creepy about the way she smiled like she was hiding something.
+[00:00:56.820 --> 00:01:01.780] Summary, creepy describes something that induces fear, discomfort, or unease,
+[00:01:02.160 --> 00:01:04.700] often because it seems strange, eerie, or unsettling.
+[00:01:05.320 --> 00:01:10.740] Related words, eerie, spooky, frightening, unsettling, bizarre, weird, sinister, santanims,
+[00:01:11.280 --> 00:01:13.820] comforting, reassuring, pleasant, calming.

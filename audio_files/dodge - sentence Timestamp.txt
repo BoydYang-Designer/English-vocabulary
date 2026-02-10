@@ -1,11 +1,13 @@
-[00:00:00.000 --> 00:00:05.000] Dodge as a verb, dodge, dodge, dodged, dodging one.
-[00:00:05.000 --> 00:00:10.000] To move quickly to one side in order to avoid being hit by someone or something.
-[00:00:10.000 --> 00:00:13.000] Example, he dodged the first punch but was hit by the second.
-[00:00:13.000 --> 00:00:16.000] Example, she dodged through the crowds as she hurried home.
-[00:00:16.000 --> 00:00:20.000] Example, we dodged between the cars as we raced across the street.
-[00:00:20.000 --> 00:00:25.000] Two, to get away from or avoid someone or something in a skillful or dishonest way.
-[00:00:25.000 --> 00:00:29.000] Example, she accused him of dodging his responsibilities as a parent.
-[00:00:29.000 --> 00:00:32.000] Example, he tried to dodge the reporter's queries.
-[00:00:32.000 --> 00:00:37.000] Dodge as a noun, a clever or dishonest trick done in order to avoid something.
-[00:00:37.000 --> 00:00:40.000] Example, it was just another dodge to get out of working.
-[00:00:40.000 --> 00:00:44.000] Example, those were the dodges he used to escape taxation.
+[00:00:00.000 --> 00:00:01.560] Dodge as a verb.
+[00:00:01.980 --> 00:00:04.460] Dodge, dodge, dodged, dodging one.
+[00:00:05.080 --> 00:00:09.620] To move quickly to one side in order to avoid being hit by someone or something.
+[00:00:10.020 --> 00:00:12.840] Example, he dodged the first punch but was hit by the second.
+[00:00:13.300 --> 00:00:15.860] Example, she dodged through the crowds as she hurried home.
+[00:00:16.700 --> 00:00:20.260] Example, we dodged between the cars as we raced across the street.
+[00:00:20.800 --> 00:00:25.140] Two, to get away from or avoid someone or something in a skillful or dishonest way.
+[00:00:25.480 --> 00:00:26.000] Example,
+[00:00:26.600 --> 00:00:28.980] she accused him of dodging his responsibilities as a parent.
+[00:00:29.580 --> 00:00:31.940] Example, he tried to dodge the reporters queries.
+[00:00:32.740 --> 00:00:37.200] Dodge as a noun, a clever or dishonest trick done in order to avoid something.
+[00:00:38.080 --> 00:00:40.340] Example, it was just another dodge to get out of working.
+[00:00:41.180 --> 00:00:44.180] Example, those were the dodges he used to escape taxation.

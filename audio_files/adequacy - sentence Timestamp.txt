@@ -1,3 +1,5 @@
-[00:00:00.000 --> 00:00:07.000] Adequacy refers to the state or quality of being sufficient, suitable, or satisfactory for a particular purpose or need.
-[00:00:07.000 --> 00:00:13.000] Example, the company assessed the adequacy of its resources before committing to the new project.
-[00:00:14.000 --> 00:00:21.000] Example, she doubted the adequacy of his explanation, feeling it lacked sufficient detail to address her concerns.
+[00:00:00.000 --> 00:00:04.940] Adequacy refers to the state or quality of being sufficient, suitable, or satisfactory
+[00:00:04.940 --> 00:00:06.720] for a particular purpose or need.
+[00:00:07.220 --> 00:00:12.340] Example, the company assessed the adequacy of its resources before committing to the new project.
+[00:00:13.940 --> 00:00:18.900] Example, she doubted the adequacy of his explanation, feeling it lacked sufficient detail
+[00:00:18.900 --> 00:00:20.020] to address her concerns.

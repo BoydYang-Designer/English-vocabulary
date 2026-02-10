@@ -1,13 +1,11 @@
-[00:00:00.000 --> 00:00:03.440] Morish as an adjective. Morish relating to the Moors,
-[00:00:03.440 --> 00:00:07.280] their culture, architecture or style often used to describe
-[00:00:07.280 --> 00:00:11.640] art, buildings or design influenced by the Moors.
-[00:00:11.640 --> 00:00:15.120] The palace was decorated with intricate Morish patterns.
-[00:00:15.120 --> 00:00:19.280] She admired the Morish arches and ornate tiles in the old mosque.
-[00:00:19.280 --> 00:00:22.560] The garden featured a beautiful Morish fountain.
-[00:00:22.560 --> 00:00:25.880] Summary. Morish describes anything related to the Moors,
-[00:00:25.880 --> 00:00:27.960] especially their distinctive cultural,
-[00:00:27.960 --> 00:00:31.600] architectural or artistic style. Synonyms Islamic style,
-[00:00:31.600 --> 00:00:33.320] North African and allusion,
-[00:00:33.320 --> 00:00:35.360] Antonyms non-Morish unrelated modern,
-[00:00:35.360 --> 00:00:37.800] related words optional, more al-Andalus,
-[00:00:37.800 --> 00:00:39.400] Islamic art, architecture.
+[00:00:00.000 --> 00:00:01.140] Moorish as an adjective.
+[00:00:01.860 --> 00:00:06.720] Moorish relating to the Moors, their culture, architecture, or style, often used to
+[00:00:06.720 --> 00:00:10.860] describe art, buildings, or design influenced by the Moors.
+[00:00:11.640 --> 00:00:14.180] The palace was decorated with intricate Moorish patterns.
+[00:00:15.100 --> 00:00:18.320] She admired the Moorish arches and ornate tiles in the old mosque.
+[00:00:19.240 --> 00:00:21.120] The garden featured a beautiful Moorish fountain.
+[00:00:22.360 --> 00:00:27.480] Summary, Moorish describes anything related to the Moors, especially their distinctive cultural,
+[00:00:27.880 --> 00:00:29.880] architectural, or artistic style.
+[00:00:30.280 --> 00:00:32.860] Synonyms Islamic style, North African, and illusion.
+[00:00:33.320 --> 00:00:38.480] Antonyms non -Moorish unrelated modern, related words optional, Moor Al -Andalus, Islamic art,
+[00:00:38.580 --> 00:00:38.880] architecture.

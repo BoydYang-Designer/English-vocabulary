@@ -1,15 +1,15 @@
-[00:00:00.000 --> 00:00:03.200] Ancestor is a noun with the following meanings,
-[00:00:03.200 --> 00:00:07.200] one, a person from whom one is descended, typically one more distant than a
-[00:00:07.200 --> 00:00:12.480] grandparent. This refers to individuals in a family lineage who lived in
-[00:00:12.480 --> 00:00:16.320] previous generations, often many years or centuries ago.
-[00:00:16.320 --> 00:00:21.320] Example, she discovered that one of her ancestors was a famous explorer.
-[00:00:21.320 --> 00:00:25.400] Example, his ancestors immigrated to the country over a hundred years ago.
-[00:00:25.560 --> 00:00:30.840] Two, an early form of a species or organism from which later forms have evolved.
-[00:00:30.840 --> 00:00:33.880] This refers to the predecessors in evolutionary terms,
-[00:00:33.880 --> 00:00:38.200] showing the historical development of organisms over time.
-[00:00:38.200 --> 00:00:42.840] Example, the dinosaur is considered an ancestor of modern birds.
-[00:00:42.840 --> 00:00:48.840] Example, scientists study fossils to learn about human ancestors and how they lived.
-[00:00:48.840 --> 00:00:53.400] Summary, ancestor refers to a person or organism from earlier generations or
-[00:00:53.400 --> 00:00:57.960] evolutionary stages representing a source of descent in a family or species.
-[00:00:57.960 --> 00:01:01.640] Related words, forebear predecessor forefather progenitor,
-[00:01:01.640 --> 00:01:06.360] Antonim's descendant successor offspring.
+[00:00:00.000 --> 00:00:02.860] Ancestor is a noun with the following meanings.
+[00:00:03.380 --> 00:00:07.800] One, a person from whom one is descended, typically one more distant than a grandparent.
+[00:00:09.160 --> 00:00:13.580] This refers to individuals in a family lineage who lived in previous generations,
+[00:00:13.940 --> 00:00:15.840] often many years or centuries ago.
+[00:00:16.620 --> 00:00:20.920] Example, she discovered that one of her ancestors was a famous explorer.
+[00:00:21.480 --> 00:00:25.100] Example, his ancestors immigrated to the country over a hundred years ago.
+[00:00:25.100 --> 00:00:30.420] Two, an early form of a species or organism from which later forms have evolved.
+[00:00:30.880 --> 00:00:35.800] This refers to the predecessors in evolutionary terms showing the historical development of
+[00:00:35.800 --> 00:00:37.440] organisms over time.
+[00:00:38.160 --> 00:00:42.260] Example, the dinosaur is considered an ancestor of modern birds.
+[00:00:42.800 --> 00:00:47.780] Example, scientists study fossils to learn about human ancestors and how they lived.
+[00:00:48.620 --> 00:00:53.420] Summary, ancestor refers to a person or organism from earlier generations or
+[00:00:53.420 --> 00:00:57.480] evolutionary stages representing a source of descent in a family or species.
+[00:00:57.940 --> 00:01:03.580] Related words, forebear, predecessor, forefather, progenitor, antonyms descendant, successor,
+[00:01:03.980 --> 00:01:04.260] offspring.

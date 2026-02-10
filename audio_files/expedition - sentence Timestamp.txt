@@ -1,32 +1,31 @@
-[00:00:00.000 --> 00:00:05.600] Expedition is a noun that refers to a journey or voyage undertaken for a specific purpose,
-[00:00:05.600 --> 00:00:09.360] often involving exploration, research, or adventure.
-[00:00:09.360 --> 00:00:14.000] It can also be used in a playful way to refer to a short trip for a specific purpose.
-[00:00:14.000 --> 00:00:20.320] As a noun, one, a journey or voyage undertaken by a group of people with a particular purpose,
-[00:00:20.320 --> 00:00:22.800] especially exploration or research.
-[00:00:22.800 --> 00:00:28.400] Example, the team set out on an expedition to explore the uncharted regions of the Amazon Rainforest.
-[00:00:28.640 --> 00:00:33.680] Two, an organized trip for a specific purpose, often challenging or requiring significant planning.
-[00:00:34.480 --> 00:00:40.320] Example, the scientists embarked on an expedition to the Arctic to study the effects of climate change.
-[00:00:40.320 --> 00:00:44.800] Three, used playfully to describe a short trip for a specific purpose.
-[00:00:44.800 --> 00:00:49.200] Example, they went on a shopping expedition to find the perfect outfit for the party.
-[00:00:49.200 --> 00:00:54.160] Example, our weekend weekend expedition to the flea market yielded some great vintage fines.
-[00:01:28.480 --> 00:01:34.480] Example, the team set out on a shopping expedition to the Arctic to find the perfect outfit for the party.
-[00:01:34.480 --> 00:01:38.480] Example, the team set out on a shopping expedition to the Arctic to find the perfect outfit for the party.
-[00:01:38.480 --> 00:01:43.680] Expedition is a noun that refers to a journey or voyage undertaken for a specific purpose,
-[00:01:43.680 --> 00:01:47.440] often involving exploration, research, or adventure.
-[00:01:47.440 --> 00:01:51.600] It can also be used in a playful way to refer to a short trip for a specific purpose.
-[00:01:52.400 --> 00:01:59.920] As a noun, one, a journey or voyage undertaken by a group of people.
-[00:02:05.280 --> 00:02:10.400] Expedition is a noun that refers to a journey or voyage undertaken for a specific purpose,
-[00:02:10.400 --> 00:02:13.360] often involving exploration, research, or adventure.
-[00:02:14.000 --> 00:02:18.200] It can also be used in a playful way to refer to a short trip for a specific purpose.
-[00:02:18.200 --> 00:02:25.360] As a noun, one, a journey or voyage undertaken by a group of people with a particular purpose,
-[00:02:25.360 --> 00:02:27.600] especially exploration or research.
-[00:02:27.600 --> 00:02:32.040] Example, the team set out on an expedition to explore the uncharted regions of the Amazon
-[00:02:32.040 --> 00:02:33.040] rainforest.
-[00:02:33.040 --> 00:02:38.240] Two, a group of people who travel together to a distant place, a group of people who go
-[00:02:38.240 --> 00:02:40.040] on an expedition.
-[00:02:40.040 --> 00:02:44.880] Example, the expedition reached the summit after weeks of climbing through harsh conditions.
-[00:02:44.880 --> 00:02:49.720] Three, used playfully to describe a short trip for a specific purpose.
-[00:02:49.720 --> 00:02:54.600] Example, they went on a shopping expedition to find the perfect outfit for the party.
-[00:02:54.600 --> 00:03:00.520] Example, our weekend expedition to the flea market yielded some great vintage finds.
-[00:03:00.520 --> 00:03:07.280] Summary, expedition refers to a purposeful journey often related to exploration or research
-[00:03:07.280 --> 00:03:12.680] and can also describe the group involved or a playful short trip for a specific purpose.
+[00:00:00.000 --> 00:00:05.280] Expedition is a noun that refers to a journey or voyage undertaken for a specific purpose,
+[00:00:05.680 --> 00:00:08.620] often involving exploration, research, or adventure.
+[00:00:09.520 --> 00:00:13.440] It can also be used in a playful way to refer to a short trip for a specific purpose.
+[00:00:14.660 --> 00:00:15.520] As a noun,
+[00:00:16.160 --> 00:00:20.780] one, a journey or voyage undertaken by a group of people with a particular purpose, especially
+[00:00:20.780 --> 00:00:22.100] exploration or research.
+[00:00:22.920 --> 00:00:27.700] Example, the team set out on an expedition to explore the uncharted regions of the Amazon Rainforest.
+[00:00:28.400 --> 00:00:33.580] Two, an organized trip for a specific purpose, often challenging or requiring significant planning.
+[00:00:34.540 --> 00:00:39.660] Example, the scientists embarked on an expedition to the Arctic to study the effects of climate change.
+[00:00:40.280 --> 00:00:44.300] Three, used playfully to describe a short trip for a specific purpose.
+[00:00:44.840 --> 00:00:48.680] Example, they went on a shopping expedition to find the perfect outfit for the party.
+[00:00:49.220 --> 00:00:53.640] Example, our weekend weekend expedition to the flea market yielded some great vintage finds.
+[00:01:38.120 --> 00:01:43.400] The expedition is a noun that refers to a journey or voyage undertaken for a specific purpose,
+[00:01:43.760 --> 00:01:46.620] often involving exploration, research, or adventure.
+[00:01:47.460 --> 00:01:51.560] It can also be used in a playful way to refer to a short trip for a specific purpose.
+[00:01:52.360 --> 00:01:56.840] As a noun, one, a journey or voyage undertaken by a group of people
+[00:01:56.840 --> 00:01:57.680] with a particular purpose,
+[00:02:05.600 --> 00:02:10.000] Expedition is a noun that refers to a journey or voyage undertaken for a specific purpose,
+[00:02:10.400 --> 00:02:13.240] often involving exploration, research, or adventure.
+[00:02:14.040 --> 00:02:18.160] It can also be used in a playful way to refer to a short trip for a specific purpose.
+[00:02:18.920 --> 00:02:23.840] As a noun, one, a journey or voyage undertaken by a group of people with a
+[00:02:23.840 --> 00:02:26.820] particular purpose, especially exploration or research.
+[00:02:27.500 --> 00:02:32.520] Example, the team set out on an expedition to explore the uncharted regions of the Amazon Rainforest.
+[00:02:33.620 --> 00:02:38.900] Two, a group of people who travel together to a distant place, a group of people who go on an expedition.
+[00:02:39.620 --> 00:02:44.080] Example, the expedition reached the summit after weeks of climbing through harsh conditions.
+[00:02:44.880 --> 00:02:48.860] Three, used playfully to describe a short trip for a specific purpose.
+[00:02:49.760 --> 00:02:53.760] Example, they went on a shopping expedition to find the perfect outfit for the party.
+[00:02:54.520 --> 00:02:59.120] Example, our weekend expedition to the flea market yielded some great vintage finds.
+[00:03:00.320 --> 00:03:01.020] Summary,
+[00:03:01.720 --> 00:03:06.940] expedition refers to a purposeful journey, often related to exploration or research,
+[00:03:07.340 --> 00:03:11.460] and can also describe the group involved or a playful short trip for a specific purpose.

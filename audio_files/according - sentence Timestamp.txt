@@ -1,10 +1,14 @@
-[00:00:00.000 --> 00:00:08.840] According as a preposition means one, as stated, reported or recorded by someone or something,
-[00:00:08.840 --> 00:00:13.320] example, according to a recent survey most Americans drive to work.
-[00:00:13.320 --> 00:00:16.320] A recent survey says that most Americans drive to work.
-[00:00:16.320 --> 00:00:21.480] Example, according to rumors I've heard he was fired for stealing from the company.
-[00:00:21.480 --> 00:00:24.000] According to the weather forecast, it will rain tomorrow.
-[00:00:24.000 --> 00:00:29.080] Two, as directed or required by rules, directions, etc.
-[00:00:29.080 --> 00:00:34.080] In a way that is based on something, example, he arranged the books on the shelf according to,
-[00:00:34.080 --> 00:00:35.080] by their size.
-[00:00:35.080 --> 00:00:39.080] He was paid according to how quickly he worked.
-[00:00:39.080 --> 00:00:42.080] I'll act according as things turn out.
+[00:00:01.400 --> 00:00:03.280] According, as a preposition means,
+[00:00:03.920 --> 00:00:03.920] one,
+[00:00:04.640 --> 00:00:08.680] as stated, reported, or recorded by someone or something, example,
+[00:00:09.320 --> 00:00:12.360] according to a recent survey, most Americans drive to work.
+[00:00:13.280 --> 00:00:15.760] A recent survey says that most Americans drive to work.
+[00:00:16.060 --> 00:00:19.380] Example, according to rumors I've heard, he was fired for stealing from the company.
+[00:00:20.880 --> 00:00:23.340] According to the weather forecast, it will rain tomorrow.
+[00:00:24.120 --> 00:00:27.680] Two, as directed or required by rules, directions, etc.
+[00:00:28.720 --> 00:00:31.260] Example, she always did everything according to the rules.
+[00:00:31.700 --> 00:00:34.660] Example, I cooked the rice according to the directions on the box.
+[00:00:35.340 --> 00:00:35.820] Three,
+[00:00:36.640 --> 00:00:41.860] in a way that is based on something, example, he arranged the books on the shelf according to by their size.
+[00:00:42.640 --> 00:00:45.100] He was paid according to how quickly he worked.
+[00:00:45.380 --> 00:00:47.140] I'll act according as things turn out.

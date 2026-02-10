@@ -1,12 +1,12 @@
-[00:00:00.000 --> 00:00:05.440] A curator is a person who is responsible for managing, organizing, and overseeing a collection
-[00:00:05.440 --> 00:00:11.000] of items in a museum, gallery, library, or other cultural institution.
-[00:00:11.000 --> 00:00:16.440] Curators are typically experts in a particular field such as art, history, science, or literature,
-[00:00:16.440 --> 00:00:21.140] and their role often involves selecting and arranging exhibitions, caring for the collection,
-[00:00:21.140 --> 00:00:24.840] and conducting research related to the items.
-[00:00:24.840 --> 00:00:26.080] Example sentences.
-[00:00:26.240 --> 00:00:31.040] One, the curator of the museum spent months researching and organizing the new exhibit
-[00:00:31.040 --> 00:00:32.960] on ancient Egyptian artifacts.
-[00:00:32.960 --> 00:00:39.100] Two, as a curator at the art gallery, she is responsible for acquiring new works and
-[00:00:39.100 --> 00:00:41.480] planning upcoming exhibitions.
-[00:00:41.480 --> 00:00:46.520] Three, the library curator is preparing a special collection of rare manuscripts to be displayed
-[00:00:46.520 --> 00:00:47.520] next month.
+[00:00:00.000 --> 00:00:05.000] A curator is a person who is responsible for managing, organizing, and overseeing a
+[00:00:05.000 --> 00:00:09.600] collection of items in a museum, gallery, library, or other cultural institution.
+[00:00:10.440 --> 00:00:15.780] Curators are typically experts in a particular field, such as art, history, science, or literature,
+[00:00:16.180 --> 00:00:21.140] and their role often involves selecting and arranging exhibitions, caring for the collection, and
+[00:00:21.140 --> 00:00:22.940] conducting research related to the items.
+[00:00:24.580 --> 00:00:25.160] Example sentences.
+[00:00:25.860 --> 00:00:30.660] One, the curator of the museum spent months researching and organizing the new
+[00:00:30.660 --> 00:00:32.160] exhibit on ancient Egyptian artifacts.
+[00:00:33.600 --> 00:00:34.240] Two,
+[00:00:34.880 --> 00:00:40.300] as a curator at the art gallery, she is responsible for acquiring new works and planning upcoming exhibitions.
+[00:00:41.460 --> 00:00:41.920] Three,
+[00:00:42.660 --> 00:00:47.060] the library curator is preparing a special collection of rare manuscripts to be displayed next month.

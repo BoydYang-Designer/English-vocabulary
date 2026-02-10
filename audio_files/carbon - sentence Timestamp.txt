@@ -1,12 +1,22 @@
-[00:00:00.000 --> 00:00:06.000] Carbon is a chemical element that forms substances like diamonds and coal and is found in petroleum,
-[00:00:06.000 --> 00:00:09.000] as well as in all living plants and animals.
-[00:00:09.000 --> 00:00:14.000] It is a key component of organic compounds, making it essential for biological processes
-[00:00:14.000 --> 00:00:17.000] and widely used in industrial applications.
-[00:00:17.000 --> 00:00:25.000] Additionally, in everyday language, carbon can refer to a carbon copy or duplicate of something, especially in documents.
-[00:00:25.000 --> 00:00:32.000] Example sentences, carbon is a fundamental building block of organic molecules, such as proteins and DNA.
-[00:00:32.000 --> 00:00:39.000] Diamonds and graphite are two distinct forms of carbon, with vastly different physical properties.
-[00:00:39.000 --> 00:00:44.000] The increase in carbon emissions from burning fossil fuels is a major contributor to climate change.
-[00:00:44.000 --> 00:00:51.000] I want two carbons for our files to keep as duplicates of the original document.
-[00:00:51.000 --> 00:01:00.000] Summary, carbon is a versatile chemical element, essential for life, present in various forms, and critical to both biological and industrial processes.
-[00:01:00.000 --> 00:01:04.000] It can also refer to a duplicate or copy in certain contexts.
-[00:01:04.000 --> 00:01:11.000] Related words, carbon dioxide, CO2, hydrocarbons, organic compounds, carbon emissions, carbon copy.
+[00:00:00.000 --> 00:00:05.280] Carbon is a chemical element that forms substances like diamonds and coal and is found in petroleum,
+[00:00:05.880 --> 00:00:08.000] as well as in all living plants and animals.
+[00:00:08.720 --> 00:00:13.440] It is a key component of organic compounds, making it essential for biological processes
+[00:00:13.440 --> 00:00:16.280] and widely used in industrial applications.
+[00:00:17.060 --> 00:00:21.760] Additionally, in everyday language, carbon can refer to a carbon copy or
+[00:00:21.760 --> 00:00:24.180] duplicate of something, especially in documents.
+[00:00:24.940 --> 00:00:25.980] Example sentences.
+[00:00:26.540 --> 00:00:31.400] Carbon is a fundamental building block of organic molecules such as proteins and DNA.
+[00:00:32.160 --> 00:00:37.520] Diamonds and graphite are two distinct forms of carbon with vastly different physical properties.
+[00:00:38.840 --> 00:00:44.140] The increase in carbon emissions from burning fossil fuels is a major contributor to climate change.
+[00:00:44.720 --> 00:00:49.100] I want two carbons for our files to keep as duplicates of the original document.
+[00:00:50.760 --> 00:00:51.460] Summary.
+[00:00:51.460 --> 00:00:56.420] Carbon is a versatile chemical element, essential for life, present in various forms
+[00:00:56.420 --> 00:00:59.160] and critical to both biological and industrial processes.
+[00:00:59.940 --> 00:01:02.880] It can also refer to a duplicate or copy in certain contexts.
+[00:01:03.940 --> 00:01:04.700] Related words.
+[00:01:05.080 --> 00:01:05.720] Carbon dioxide.
+[00:01:06.080 --> 00:01:06.580] CO2.
+[00:01:06.760 --> 00:01:07.280] Hydrocarbons.
+[00:01:07.460 --> 00:01:08.080] Organic compounds.
+[00:01:08.640 --> 00:01:09.160] Carbon emissions.
+[00:01:09.660 --> 00:01:10.220] Carbon copy.

@@ -1,10 +1,14 @@
-[00:00:00.000 --> 00:00:06.240] Asteroid. As a noun, a small rocky or metallic celestial body that orbits the sun, mostly
-[00:00:06.240 --> 00:00:11.680] found in the asteroid belt between Mars and Jupiter. Some asteroids pass close to Earth
-[00:00:11.680 --> 00:00:16.760] and can pose a potential impact risk. Example, scientists monitor large asteroids to ensure
-[00:00:16.760 --> 00:00:21.680] they do not collide with Earth. Example, the asteroid belt contains thousands of rocky
-[00:00:21.680 --> 00:00:27.600] bodies of different sizes. Example, a massive asteroid impact is believed to have contributed
-[00:00:27.600 --> 00:00:32.320] to the extinction of the dinosaurs. Example, space agencies are developing technology
-[00:00:32.320 --> 00:00:39.120] to deflect hazardous asteroids. Summary, an asteroid is a small rocky or metallic object
-[00:00:39.120 --> 00:00:43.960] orbiting the sun, mainly found in the asteroid belt, though some travel near Earth. Related
-[00:00:43.960 --> 00:00:50.160] words, space rock, celestial body, minor planet, meteoroid, planetoid. Antonim's planet,
-[00:00:50.160 --> 00:00:51.800] star, comet, satellite.
+[00:00:00.000 --> 00:00:00.980] Asteroid.
+[00:00:01.240 --> 00:00:06.140] As a noun, a small rocky or metallic celestial body that orbits the sun, mostly
+[00:00:06.140 --> 00:00:08.700] found in the asteroid belt between Mars and Jupiter.
+[00:00:09.680 --> 00:00:13.560] Some asteroids pass close to Earth and can pose a potential impact risk.
+[00:00:14.040 --> 00:00:17.840] Example, scientists monitor large asteroids to ensure they do not collide with Earth.
+[00:00:18.780 --> 00:00:22.660] Example, the asteroid belt contains thousands of rocky bodies of different sizes.
+[00:00:23.540 --> 00:00:24.080] Example,
+[00:00:24.800 --> 00:00:28.960] a massive asteroid impact is believed to have contributed to the extinction of the dinosaurs.
+[00:00:29.740 --> 00:00:33.820] Example, space agencies are developing technology to deflect hazardous asteroids.
+[00:00:34.840 --> 00:00:35.340] Summary,
+[00:00:36.060 --> 00:00:40.940] an asteroid is a small rocky or metallic object orbiting the sun, mainly found in the
+[00:00:40.940 --> 00:00:42.880] asteroid belt, though some travel near Earth.
+[00:00:43.580 --> 00:00:48.540] Related words, space rock, celestial body, minor planet, meteoroid, planetoid.
+[00:00:49.000 --> 00:00:51.580] Antonyms, planet, star, comet, satellite.

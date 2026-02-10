@@ -1,13 +1,19 @@
-[00:00:00.000 --> 00:00:03.000] Breeding is a noun with the following meanings.
-[00:00:03.000 --> 00:00:10.000] 1. The process by which young animals, birds, etc. are produced by their parents, often used before another noun.
-[00:00:10.000 --> 00:00:14.000] Example. The breeding season for many birds occurs in the spring.
-[00:00:14.000 --> 00:00:19.000] Example. They studied the breeding habits of the endangered species.
-[00:00:19.000 --> 00:00:26.000] 2. The activity of keeping and caring for animals or plants in order to produce more animals or plants of a particular kind.
-[00:00:26.000 --> 00:00:31.000] Example. The breeding of pure bred dogs requires knowledge of genetics and health issues.
-[00:00:31.000 --> 00:00:37.000] Example. Farmers often engage in the breeding of livestock to improve meat quality.
-[00:00:37.000 --> 00:00:42.000] 3. Somewhat old fashioned, the way a person was taught in childhood to behave.
-[00:00:42.000 --> 00:00:46.000] Example. His breeding in manners reflected his family's noble heritage.
-[00:00:46.000 --> 00:00:52.000] Example. The school's emphasis on discipline and respect contributed to the students' excellent breeding.
-[00:00:52.000 --> 00:00:59.000] summary. Breeding. Refers to the act or process of producing young, caring for plants or animals to cultivate specific traits,
-[00:00:59.000 --> 00:01:06.000] and the upbringing that shapes a person's behavior in manners, related words, reproduction, propagation, nurturing,
-[00:01:06.000 --> 00:01:11.000] antinim's, neglect, abandonment, eradication.
+[00:00:00.000 --> 00:00:02.360] Breeding is a noun with the following meanings.
+[00:00:03.240 --> 00:00:06.520] One, the process by which young animals, birds, etc.
+[00:00:06.900 --> 00:00:10.080] are produced by their parents, often used before another noun.
+[00:00:10.880 --> 00:00:14.000] Example, the breeding season for many birds occurs in the spring.
+[00:00:14.820 --> 00:00:15.380] Example,
+[00:00:16.060 --> 00:00:18.360] they studied the breeding habits of the endangered species.
+[00:00:19.240 --> 00:00:24.140] Two, the activity of keeping and caring for animals or plants in order to produce more animals
+[00:00:24.140 --> 00:00:25.720] or plants of a particular kind.
+[00:00:25.720 --> 00:00:31.060] Example, the breeding of purebred dogs requires knowledge of genetics and health issues.
+[00:00:31.700 --> 00:00:36.380] Example, farmers often engage in the breeding of livestock to improve meat quality.
+[00:00:37.900 --> 00:00:41.960] Three, somewhat old fashioned, the way a person was taught in childhood to behave.
+[00:00:42.600 --> 00:00:46.080] Example, his breeding in manners reflected his family's noble heritage.
+[00:00:46.700 --> 00:00:51.480] Example, the school's emphasis on discipline and respect contributed to the student's excellent breeding.
+[00:00:52.360 --> 00:00:57.320] Summary, breeding refers to the act or process of producing young, caring for plants or
+[00:00:57.320 --> 00:01:01.940] animals to cultivate specific traits and the upbringing that shapes a person's behavior and manners.
+[00:01:02.480 --> 00:01:03.720] Related words, reproduction,
+[00:01:04.500 --> 00:01:04.880] propagation,
+[00:01:05.560 --> 00:01:05.980] nurturing,
+[00:01:06.600 --> 00:01:09.480] antonyms, neglect, abandonment, eradication.

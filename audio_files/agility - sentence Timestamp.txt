@@ -1,5 +1,5 @@
-[00:00:00.000 --> 00:00:05.500] Agility refers to the ability to move quickly and easily with grace and precision,
-[00:00:05.500 --> 00:00:08.660] nimbleness and flexibility in physical movement.
-[00:00:08.660 --> 00:00:14.800] Example, the dancer's agility allowed her to perform intricate movements with fluidity and grace,
-[00:00:14.800 --> 00:00:17.660] captivating the audience with her elegant performance.
-[00:00:17.660 --> 00:00:22.660] Example, in business, agility is crucial to adapt quickly to changing market conditions.
+[00:00:00.000 --> 00:00:05.140] Agility refers to the ability to move quickly and easily with grace and precision,
+[00:00:05.960 --> 00:00:08.340] nimbleness and flexibility in physical movement.
+[00:00:08.920 --> 00:00:13.820] Example, the dancer's agility allowed her to perform intricate movements with fluidity
+[00:00:13.820 --> 00:00:17.180] and grace, captivating the audience with her elegant performance.
+[00:00:17.920 --> 00:00:22.120] Example, in business, agility is crucial to adapt quickly to changing market conditions.

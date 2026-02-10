@@ -1,5 +1,13 @@
-[00:00:00.000 --> 00:00:11.000] Decor is a noun with the following meaning, the style and design of the interior of a room, building or space, including furniture, colors, and decorative elements.
-[00:00:11.000 --> 00:00:23.000] Example, the living room's decor was modern with sleek furniture and neutral tones. Example, she spent hours perfecting the decor for her wedding, choosing elegant flowers and vintage decorations.
-[00:00:23.000 --> 00:00:29.000] Example, the restaurant's decor had an industrial feel with exposed brick walls and metal furniture.
-[00:00:29.000 --> 00:00:36.000] Summary, decor refers to the decorative elements and overall style that create a particular atmosphere or design in a space.
-[00:00:36.000 --> 00:00:44.000] Related words, interior design, furnishings, style decoration, antinim, simplicity, bear, plane, Spartan.
+[00:00:00.000 --> 00:00:02.820] Decor is a noun with the following meaning.
+[00:00:03.580 --> 00:00:08.400] The style and design of the interior of a room, building or space, including furniture, colors,
+[00:00:08.860 --> 00:00:09.840] and decorative elements.
+[00:00:11.360 --> 00:00:12.000] Example.
+[00:00:12.500 --> 00:00:16.080] The living room's decor was modern with sleek furniture and neutral tones.
+[00:00:16.620 --> 00:00:21.260] Example, she spent hours perfecting the decor for her wedding, choosing elegant flowers
+[00:00:21.260 --> 00:00:22.380] and vintage decorations.
+[00:00:23.220 --> 00:00:28.200] Example, the restaurant's decor had an industrial feel with exposed brick walls and
+[00:00:28.200 --> 00:00:28.900] metal furniture.
+[00:00:28.900 --> 00:00:30.180] Summary.
+[00:00:30.420 --> 00:00:35.560] Decor refers to the decorative elements and overall style that create a particular atmosphere or design in a space.
+[00:00:36.320 --> 00:00:41.760] Related words, interior design, furnishings, style, decoration, antonyms, simplicity,
+[00:00:42.300 --> 00:00:43.780] bare, plain, spartan.

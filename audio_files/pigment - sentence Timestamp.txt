@@ -1,9 +1,0 @@
-[00:00:00.000 --> 00:00:07.000] Pigment is a noun, refers to a substance that gives color to materials such as paint, ink, or living tissue.
-[00:00:07.000 --> 00:00:13.500] Pigments are used in various applications like art, cosmetics, and biology to impart color to surfaces or substances.
-[00:00:13.500 --> 00:00:18.500] Example, the artist mixed several pigments to create the perfect shade of blue.
-[00:00:18.500 --> 00:00:22.500] Example, natural pigments were used in ancient cave paintings.
-[00:00:22.500 --> 00:00:27.000] Example, carrots get their orange color from the pigment beta-carotene.
-[00:00:27.500 --> 00:00:32.500] Example, the pigment in the flowers cause them to appear vibrant and colorful.
-[00:00:32.500 --> 00:00:39.500] Summary, pigment refers to any substance used to give color, often found in art, cosmetics, and nature, providing vibrant and rich hues.
-[00:00:39.500 --> 00:00:44.000] Related words, color, dye, hue, tint, paint.
-[00:00:44.000 --> 00:00:46.500] Antonyms, colorless, transparent, white.

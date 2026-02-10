@@ -1,17 +1,20 @@
-[00:00:00.000 --> 00:00:05.240] Deed is a noun that refers to an action or act, particularly one that is significant,
-[00:00:05.240 --> 00:00:07.880] intentional or legally recognized.
-[00:00:07.880 --> 00:00:11.920] It can also refer to a document, especially a legal document that serves as proof of
-[00:00:11.920 --> 00:00:13.920] ownership or agreement.
-[00:00:13.920 --> 00:00:19.360] One, an action or act, especially one that is intentional or significant.
-[00:00:19.360 --> 00:00:23.720] This refers to a particular act, either good or bad, performed by someone.
-[00:00:23.720 --> 00:00:26.920] It often carries weight due to its impact or purpose.
-[00:00:26.920 --> 00:00:32.600] For example, she performed a heroic deed by saving the child from the burning building.
-[00:00:32.600 --> 00:00:37.200] Example, his good deeds in the community earned him the respect of his peers.
-[00:00:37.200 --> 00:00:43.640] Example, the thief was caught after committing several criminal deeds.
-[00:00:43.640 --> 00:00:47.240] To a legal document that proves ownership or agreement.
-[00:00:47.240 --> 00:00:52.840] In legal terms, a deed is a formal document that records the transfer of property or other rights.
-[00:00:52.840 --> 00:00:56.880] Example, the house was officially transferred to him through a deed of sale.
-[00:00:56.920 --> 00:01:02.360] Example, the lawyer presented the deed as proof of ownership of the land.
-[00:01:02.360 --> 00:01:10.400] Summary, deed can refer to a significant action or a legal document, and it is often used to describe acts with a moral or legal impact.
-[00:01:10.400 --> 00:01:15.560] Related words, act, action, achievement, document, contract.
-[00:01:15.560 --> 00:01:20.040] Antonyms, inaction, negligence, irresponsibility.
+[00:00:00.000 --> 00:00:04.800] Deed is a noun that refers to an action or act, particularly one that is significant,
+[00:00:05.240 --> 00:00:06.880] intentional, or legally recognized.
+[00:00:07.760 --> 00:00:13.040] It can also refer to a document, especially a legal document, that serves as proof of ownership or agreement.
+[00:00:13.980 --> 00:00:14.160] 1.
+[00:00:14.940 --> 00:00:18.300] An action or act, especially one that is intentional or significant.
+[00:00:19.180 --> 00:00:23.080] This refers to a particular act, either good or bad, performed by someone.
+[00:00:23.600 --> 00:00:26.140] It often carries weight due to its impact or purpose.
+[00:00:26.720 --> 00:00:27.240] Example?
+[00:00:27.760 --> 00:00:31.520] She performed a heroic deed by saving the child from the burning building.
+[00:00:32.200 --> 00:00:36.100] Example, his good deeds in the community earned him the respect of his peers.
+[00:00:36.820 --> 00:00:40.800] Example, the thief was caught after committing several criminal deeds.
+[00:00:43.580 --> 00:00:43.620] 2.
+[00:00:43.780 --> 00:00:46.420] A legal document that proves ownership or agreement.
+[00:00:46.980 --> 00:00:51.660] In legal terms, a deed is a formal document that records the transfer of property or other rights.
+[00:00:52.560 --> 00:00:55.960] Example, the house was officially transferred to him through a deed of sale.
+[00:00:56.600 --> 00:01:00.600] Example, the lawyer presented the deed as proof of ownership of the land.
+[00:01:02.280 --> 00:01:07.220] Summary, deed can refer to a significant action or a legal document, and it is often used
+[00:01:07.220 --> 00:01:09.660] to describe acts with a moral or legal impact.
+[00:01:10.300 --> 00:01:14.420] Related words, act, action, achievement, document, contract.
+[00:01:15.580 --> 00:01:18.860] Antonyms, inaction, negligence, irresponsibility.

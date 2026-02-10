@@ -1,10 +1,10 @@
-[00:00:00.000 --> 00:00:02.000] Equity as a noun.
-[00:00:02.000 --> 00:00:08.000] One, fairness and justice in the way people are treated, ensuring equal opportunities and rights.
-[00:00:08.000 --> 00:00:12.000] Example, the company promotes equity by offering equal pay for equal work.
-[00:00:12.000 --> 00:00:16.000] Example, the new law aims to bring greater equity in education.
-[00:00:16.000 --> 00:00:22.000] Two, the value of an ownership interest in a company or property after deducting liabilities.
-[00:00:22.000 --> 00:00:26.000] Example, she built equity in her home by making regular mortgage payments.
-[00:00:26.000 --> 00:00:30.000] Example, investors are interested in the company's equity growth.
-[00:00:30.000 --> 00:00:36.000] Summary, equity refers to fairness and treatment and opportunities or the value of ownership in a property or business.
-[00:00:36.000 --> 00:00:40.000] Related words, fairness, justice, ownership, value, stake.
-[00:00:40.000 --> 00:00:44.000] Anonyms inequality, bias, debt, unfairness.
+[00:00:00.000 --> 00:00:01.180] Equity as a noun.
+[00:00:02.500 --> 00:00:07.160] One, fairness and justice in the way people are treated, ensuring equal opportunities and rights.
+[00:00:07.900 --> 00:00:12.160] Example, the company promotes equity by offering equal pay for equal work.
+[00:00:12.400 --> 00:00:15.900] Example, the new law aims to bring greater equity in education.
+[00:00:16.540 --> 00:00:21.180] Two, the value of an ownership interest in a company or property after deducting liabilities.
+[00:00:22.360 --> 00:00:26.000] Example, she built equity in her home by making regular mortgage payments.
+[00:00:26.620 --> 00:00:29.660] Example, investors are interested in the company's equity growth.
+[00:00:30.520 --> 00:00:35.700] Summary, equity refers to fairness in treatment and opportunities or the value of ownership in a property or business.
+[00:00:36.120 --> 00:00:40.000] Related words, fairness, justice, ownership, value, stake.
+[00:00:40.880 --> 00:00:44.120] Anonyms, inequality, bias, debt, unfairness.

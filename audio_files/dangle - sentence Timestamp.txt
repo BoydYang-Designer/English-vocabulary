@@ -1,14 +1,17 @@
-[00:00:00.000 --> 00:00:06.000] Dangle is a verb that refers to hanging or swinging loosely or freely often in a way that is noticeable or in motion.
-[00:00:06.640 --> 00:00:14.000] As a verb, dangle, dangled, dangling, one, to hang or swing loosely often from a point of suspension.
-[00:00:14.520 --> 00:00:18.760] This refers to something hanging down freely, typically in a way that moves or sways.
-[00:00:19.320 --> 00:00:23.000] Example, the keys dangled from her fingers as she walked.
-[00:00:23.440 --> 00:00:26.560] Example, a necklace dangled from her neck, catching the sunlight.
-[00:00:27.520 --> 00:00:30.600] The curtain dangled from the rod loosely hanging to the floor.
-[00:00:31.520 --> 00:00:37.000] To offer or present something tempting or unattainable often as a form of enticement.
-[00:00:37.760 --> 00:00:45.760] This refers to putting something in front of someone in a way that is inviting, but not easy to attain often to provoke or tease.
-[00:00:46.000 --> 00:00:51.560] Example, the promise of a bonus dangled before the employees, motivating them to work harder.
-[00:00:52.240 --> 00:00:55.720] Example, she dangled the idea of a vacation in front of her children,
-[00:00:56.040 --> 00:00:57.480] but they didn't know when it would happen.
-[00:00:58.120 --> 00:01:03.960] Summary, dangle refers to something hanging loosely either physically or figuratively often in attempting or visible way.
-[00:01:04.240 --> 00:01:08.920] Related words, hang, swing, dangle, sway, attempt, entice,
-[00:01:09.440 --> 00:01:12.480] Antonim's secure, fastened, fix.
+[00:00:00.000 --> 00:00:04.700] Dangle is a verb that refers to hanging or swinging loosely or freely, often in a way that is
+[00:00:04.700 --> 00:00:05.720] noticeable or in motion.
+[00:00:06.500 --> 00:00:10.040] As a verb, dangle, dangled, dangling, one,
+[00:00:10.660 --> 00:00:13.700] to hang or swing loosely, often from a point of suspension.
+[00:00:14.420 --> 00:00:18.480] This refers to something hanging down freely, typically in a way that moves or sways.
+[00:00:19.500 --> 00:00:22.820] Example, the keys dangled from her fingers as she walked.
+[00:00:23.420 --> 00:00:26.420] Example, a necklace dangled from her neck, catching the sunlight.
+[00:00:27.080 --> 00:00:30.500] The curtain dangled from the rod, loosely hanging to the floor.
+[00:00:31.320 --> 00:00:36.880] Two, to offer or present something tempting or unattainable, often as a form of enticement.
+[00:00:37.660 --> 00:00:42.500] This refers to putting something in front of someone in a way that is inviting but not easy
+[00:00:42.500 --> 00:00:45.440] to attain, often to provoke or tease.
+[00:00:46.000 --> 00:00:51.400] Example, the promise of a bonus dangled before the employees, motivating them to work harder.
+[00:00:52.280 --> 00:00:57.380] Example, she dangled the idea of a vacation in front of her children, but they didn't know when it would happen.
+[00:00:58.180 --> 00:01:03.160] Summary, dangle refers to something hanging loosely, either physically or figuratively, often in an attempting or
+[00:01:03.160 --> 00:01:03.880] visible way.
+[00:01:04.340 --> 00:01:08.720] Related words, hang, swing, dangle, sway, tempt, entice.
+[00:01:09.500 --> 00:01:12.120] Antonyms, secure, fasten, fix.

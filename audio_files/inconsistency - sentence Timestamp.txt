@@ -1,9 +1,0 @@
-[00:00:00.000 --> 00:00:09.000] In consistency as a noun, one, a lack of uniformity or stability, something that changes or does not stay the same.
-[00:00:09.000 --> 00:00:14.000] Example, the team's inconsistency and performance made it difficult to predict their success.
-[00:00:14.000 --> 00:00:19.000] Example, his story had several inconsistencies, making it hard to believe.
-[00:00:19.000 --> 00:00:23.000] Two, a contradiction or conflict between two or more things.
-[00:00:23.000 --> 00:00:27.000] Example, there was an inconsistency between his words and actions.
-[00:00:28.000 --> 00:00:32.000] The report contained inconsistencies that needed clarification.
-[00:00:32.000 --> 00:00:40.000] Summary, inconsistency refers to a lack of stability, uniformity or logical agreement, often leading to confusion or unpredictability.
-[00:00:40.000 --> 00:00:45.000] Related words, contradiction, irregularity, discrepancy, instability, variation.
-[00:00:45.000 --> 00:00:50.000] Antonyms, consistency, uniformity, reliability, stability, coherence.

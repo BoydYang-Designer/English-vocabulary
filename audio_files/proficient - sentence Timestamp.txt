@@ -1,4 +1,0 @@
-[00:00:00.000 --> 00:00:06.320] Proficient is an adjective that describes someone who has a high degree of skill, competence,
-[00:00:06.320 --> 00:00:09.680] or expertise in a particular activity or subject.
-[00:00:09.680 --> 00:00:15.880] For example, she is proficient in several programming languages, including Java and Python.
-[00:00:15.880 --> 00:00:20.400] Another example is the new employee quickly became proficient at using the company's software.

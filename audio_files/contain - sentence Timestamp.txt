@@ -1,16 +1,17 @@
-[00:00:00.000 --> 00:00:04.520] Contain is a verb, contain, contained, containing.
-[00:00:04.520 --> 00:00:09.360] One, to hold or have something inside, to include or enclose something within limits,
-[00:00:09.360 --> 00:00:12.160] such as a container holding an object or substance.
-[00:00:12.160 --> 00:00:16.600] Example, the box contains all the necessary tools for the project.
-[00:00:16.600 --> 00:00:19.960] Example, the bottle contains water, not juice.
-[00:00:19.960 --> 00:00:25.000] Two, to control or limit something, to prevent something from spreading or becoming worse,
-[00:00:25.000 --> 00:00:27.800] such as a situation or emotion.
-[00:00:28.080 --> 00:00:31.520] The fire was contained before it spread to nearby buildings.
-[00:00:31.520 --> 00:00:36.520] Example, she struggled to contain her excitement when she heard the news.
-[00:00:36.520 --> 00:00:42.440] Three, to include or have as part of something, to be made up of certain elements or parts.
-[00:00:42.440 --> 00:00:47.160] Example, the report contains valuable information about market trends.
-[00:00:47.160 --> 00:00:51.480] The book contains several interesting essays on modern art.
-[00:00:51.480 --> 00:00:55.360] Summary, contain refers to holding or enclosing something,
-[00:00:55.360 --> 00:00:58.520] controlling its spread or including elements within something.
-[00:00:58.520 --> 00:01:01.880] Related words hold and close, include, restrain, manage,
-[00:01:01.880 --> 00:01:04.800] Anonym's release, spill, escape, exclude.
+[00:00:00.000 --> 00:00:01.340] Contain is a verb.
+[00:00:01.640 --> 00:00:03.820] Contain, contained, containing.
+[00:00:04.740 --> 00:00:09.700] One, to hold or have something inside, to include or enclose something within limits, such as
+[00:00:09.700 --> 00:00:11.560] a container holding an object or substance.
+[00:00:12.240 --> 00:00:16.240] Example, the box contains all the necessary tools for the project.
+[00:00:16.620 --> 00:00:19.500] Example, the bottle contains water, not juice.
+[00:00:20.120 --> 00:00:24.940] Two, to control or limit something, to prevent something from spreading or becoming worse,
+[00:00:25.100 --> 00:00:26.760] such as a situation or emotion.
+[00:00:27.600 --> 00:00:30.660] The fire was contained before it spread to nearby buildings.
+[00:00:31.560 --> 00:00:35.120] Example, she struggled to contain her excitement when she heard the news.
+[00:00:36.540 --> 00:00:41.320] Three, to include or have as part of something, to be made up of certain elements or parts.
+[00:00:42.380 --> 00:00:46.480] Example, the report contains valuable information about market trends.
+[00:00:47.140 --> 00:00:50.140] The book contains several interesting essays on modern art.
+[00:00:51.360 --> 00:00:56.360] Summary, contain refers to holding or enclosing something, controlling its spread
+[00:00:56.360 --> 00:00:58.160] or including elements within something.
+[00:00:58.560 --> 00:01:01.580] Related words hold, enclose, include, restrain, manage.
+[00:01:01.920 --> 00:01:04.280] Anonyms, release, spill, escape, exclude.

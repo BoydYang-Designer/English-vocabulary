@@ -1,13 +1,18 @@
-[00:00:00.000 --> 00:00:03.000] Attribution is a noun with the following meanings.
-[00:00:03.000 --> 00:00:09.000] 1. The act of assigning a quality, cause, or characteristic to someone or something.
-[00:00:09.000 --> 00:00:14.000] It denotes the identification of the source or origin of a particular idea, work, or action.
-[00:00:14.000 --> 00:00:19.000] Example. The attribution of the idea to her was clear during the discussion.
-[00:00:19.000 --> 00:00:24.000] Example. The attribution of the team's victory to their hard work made everyone proud.
-[00:00:24.000 --> 00:00:29.000] Example. His successful project was a result of careful attribution of credit to his team members.
-[00:00:29.000 --> 00:00:35.000] 2. A statement that identifies the source of a particular idea or piece of information,
-[00:00:35.000 --> 00:00:41.000] often used in academic or formal contexts to credit the original creator.
-[00:00:41.000 --> 00:00:46.000] Example. Proper attribution is important when using someone else's artwork.
-[00:00:46.000 --> 00:00:51.000] Example. The attribution of the story to the original author was mentioned in the introduction.
-[00:00:51.000 --> 00:00:58.000] Example. When discussing emotions in animals, it's important to consider the attribution of human-like feelings to their behaviors.
-[00:00:58.000 --> 00:01:08.000] Summary. Attribution signifies the process of identifying an assigning, responsibility, or credit for an idea, action, or quality to a specific source.
-[00:01:08.000 --> 00:01:16.000] Related words. A subscription. Credit. Acknowledgement. Reference. Antonyms. Disassociation. Denial.
+[00:00:00.000 --> 00:00:02.520] Attribution is a noun with the following meanings.
+[00:00:03.740 --> 00:00:08.760] One, the act of assigning a quality, cause, or characteristic to someone or something,
+[00:00:09.260 --> 00:00:13.740] it denotes the identification of the source or origin of a particular idea, work, or action.
+[00:00:14.500 --> 00:00:15.060] Example,
+[00:00:15.700 --> 00:00:18.900] the attribution of the idea to her was clear during the discussion.
+[00:00:19.620 --> 00:00:24.000] Example, the attribution of the team's victory to their hard work made everyone proud.
+[00:00:24.780 --> 00:00:29.740] Example, his successful project was a result of careful attribution of credit to his team members.
+[00:00:30.700 --> 00:00:30.700] Two,
+[00:00:31.480 --> 00:00:35.660] a statement that identifies the source of a particular idea or piece of information,
+[00:00:36.100 --> 00:00:41.200] often used in academic or formal contexts to credit the original creator.
+[00:00:41.880 --> 00:00:45.900] Example, proper attribution is important when using someone else's artwork.
+[00:00:46.600 --> 00:00:51.100] Example, the attribution of the story to the original author was mentioned in the introduction.
+[00:00:51.900 --> 00:00:56.380] Example, when discussing emotions in animals, it's important to consider the
+[00:00:56.380 --> 00:00:58.800] attribution of human -like feelings to their behaviors.
+[00:00:59.740 --> 00:01:04.660] Summary, attribution signifies the process of identifying and assigning responsibility
+[00:01:04.660 --> 00:01:08.540] or credit for an idea, action, or quality to a specific source.
+[00:01:09.360 --> 00:01:10.740] Related words, ascription,
+[00:01:11.360 --> 00:01:15.780] credit, acknowledgement, reference, antonyms, disassociation, denial.

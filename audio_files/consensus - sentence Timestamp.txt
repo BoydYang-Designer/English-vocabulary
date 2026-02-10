@@ -1,21 +1,24 @@
-[00:00:00.000 --> 00:00:03.240] Consensus is a noun with the following meaning.
-[00:00:03.240 --> 00:00:09.080] General agreement refers to a collective agreement or common opinion reached by a group of people
-[00:00:09.080 --> 00:00:11.840] where there is broad agreement among members.
-[00:00:11.840 --> 00:00:17.880] In some contexts, it can imply unanimous agreement where all parties involved are in complete accord.
-[00:00:17.880 --> 00:00:19.920] Example sentences.
-[00:00:19.920 --> 00:00:24.320] The committee reached a consensus on the new policy changes after extensive discussions.
-[00:00:24.320 --> 00:00:28.960] There was a general consensus among the voters that the new candidate was the best choice.
-[00:00:29.280 --> 00:00:35.760] The board achieved a consensus on the budget proposal with all members agreeing on the final numbers.
-[00:00:35.760 --> 00:00:40.560] Scientists have not reached a consensus on the cause of the disease.
-[00:00:40.560 --> 00:00:43.440] The decision was made by consensus, summary.
-[00:00:43.440 --> 00:00:50.720] Consensus refers to a collective agreement or shared opinion among a group which may involve broad or unanimous agreement.
-[00:00:50.720 --> 00:00:51.880] Related words.
-[00:00:51.880 --> 00:00:52.920] Agreement.
-[00:00:52.920 --> 00:00:53.680] Accord.
-[00:00:53.680 --> 00:00:54.080] Harmony.
-[00:00:54.080 --> 00:00:54.640] Unanimity.
-[00:00:54.640 --> 00:00:55.200] Antonyms.
-[00:00:55.200 --> 00:00:55.840] Disagreement.
-[00:00:55.840 --> 00:00:56.320] Discord.
-[00:00:56.320 --> 00:00:56.760] Conflict.
-[00:00:56.760 --> 00:00:57.320] Descent.
+[00:00:00.000 --> 00:00:02.680] Consensus is a noun with the following meaning.
+[00:00:03.600 --> 00:00:08.340] General agreement refers to a collective agreement or common opinion reached by a group of
+[00:00:08.340 --> 00:00:11.300] people where there is broad agreement among members.
+[00:00:12.060 --> 00:00:17.220] In some contexts, it can imply unanimous agreement, where all parties involved are in complete accord.
+[00:00:18.500 --> 00:00:19.380] Example sentences.
+[00:00:20.060 --> 00:00:23.840] The committee reached a consensus on the new policy changes after extensive discussions.
+[00:00:24.380 --> 00:00:28.240] There was a general consensus among the voters that the new candidate was the best choice.
+[00:00:28.240 --> 00:00:33.160] The board achieved a consensus on the budget proposal, with all members agreeing
+[00:00:33.160 --> 00:00:34.180] on the final numbers.
+[00:00:35.640 --> 00:00:39.500] Scientists have not reached a consensus on the cause of the disease.
+[00:00:40.600 --> 00:00:42.220] The decision was made by consensus.
+[00:00:42.700 --> 00:00:43.060] Summary.
+[00:00:43.540 --> 00:00:48.520] Consensus refers to a collective agreement or shared opinion among a group, which may involve broad
+[00:00:48.520 --> 00:00:49.800] or unanimous agreement.
+[00:00:49.800 --> 00:00:51.320] Related words.
+[00:00:51.920 --> 00:00:52.280] Agreement.
+[00:00:52.900 --> 00:00:53.400] Accord.
+[00:00:53.740 --> 00:00:54.100] Harmony.
+[00:00:54.240 --> 00:00:54.660] Unanimity.
+[00:00:54.820 --> 00:00:55.240] Antonyms.
+[00:00:55.360 --> 00:00:55.840] Disagreement.
+[00:00:55.980 --> 00:00:56.300] Discored.
+[00:00:56.400 --> 00:00:56.820] Conflict.
+[00:00:56.940 --> 00:00:57.240] Descent.

@@ -1,13 +1,18 @@
-[00:00:00.000 --> 00:00:05.240] Archaic as an adjective. Archaic refers to something that is very old or outdated,
-[00:00:05.240 --> 00:00:10.560] often used to describe language, customs, or objects that were common in earlier periods,
-[00:00:10.560 --> 00:00:14.720] but are no longer in widespread use or relevant in the present time.
-[00:00:14.720 --> 00:00:21.320] Example, the museum displayed archaic tools from ancient civilizations.
-[00:00:21.320 --> 00:00:25.640] Example, he used an archaic word in his speech that few people understood.
-[00:00:25.800 --> 00:00:31.560] The building's architecture had an archaic charm reminiscent of earlier times.
-[00:00:31.560 --> 00:00:36.440] Example, the language used in Shakespeare's plays contains many archaic words and phrases
-[00:00:36.440 --> 00:00:42.320] that are unfamiliar to modern readers. Example, many ancient rituals and traditions
-[00:00:42.320 --> 00:00:47.800] are considered archaic in today's society, but they offer valuable insights into our cultural heritage.
-[00:00:47.800 --> 00:00:54.040] Summary, archaic describes something that is old fashioned, outdated, or from an earlier period,
-[00:00:54.040 --> 00:00:57.480] especially when it is no longer in common use.
-[00:00:57.480 --> 00:01:01.400] Related words, old fashioned, outdated ancient obsolete, antiquated,
-[00:01:01.400 --> 00:01:05.400] Antonim's modern contemporary current new.
+[00:00:00.000 --> 00:00:01.460] Archaic as an adjective.
+[00:00:02.020 --> 00:00:07.200] Archaic refers to something that is very old or outdated, often used to describe language,
+[00:00:07.580 --> 00:00:12.480] customs, or objects that were common in earlier periods, but are no longer in widespread use
+[00:00:12.480 --> 00:00:14.180] or relevant in the present time.
+[00:00:16.060 --> 00:00:20.760] Example, the museum displayed archaic tools from ancient civilizations.
+[00:00:21.580 --> 00:00:25.300] Example, he used an archaic word in his speech that few people understood.
+[00:00:25.300 --> 00:00:30.400] The building's architecture had an archaic charm reminiscent of earlier times.
+[00:00:31.800 --> 00:00:36.720] Example, the language used in Shakespeare's plays contains many archaic words and phrases that are
+[00:00:36.720 --> 00:00:38.120] unfamiliar to modern readers.
+[00:00:39.500 --> 00:00:40.140] Example,
+[00:00:40.740 --> 00:00:45.440] many ancient rituals and traditions are considered archaic in today's society, but they offer valuable
+[00:00:45.440 --> 00:00:47.120] insights into our cultural heritage.
+[00:00:47.900 --> 00:00:48.340] Summary,
+[00:00:49.100 --> 00:00:51.340] archaic describes something that is old -fashioned,
+[00:00:51.940 --> 00:00:52.300] outdated,
+[00:00:53.020 --> 00:00:55.840] or from an earlier period, especially when it is no longer in common use.
+[00:00:57.240 --> 00:00:57.980] Related words,
+[00:00:58.660 --> 00:01:04.220] old -fashioned outdated ancient obsolete antiquated, antonyms modern contemporary current new.

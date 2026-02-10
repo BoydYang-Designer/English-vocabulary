@@ -1,9 +1,9 @@
-[00:00:00.000 --> 00:00:06.000] Ambiguous means having more than one possible interpretation or meaning, often due to being
-[00:00:06.000 --> 00:00:10.400] unclear, vague, or open to different interpretations.
-[00:00:10.400 --> 00:00:16.240] For example, the statement was intentionally ambiguous, leaving room for various interpretations.
-[00:00:16.240 --> 00:00:21.080] Another example is he felt that his role in the company was becoming more ambiguous,
-[00:00:21.080 --> 00:00:22.080] uncertain.
-[00:00:22.080 --> 00:00:26.160] Additionally, due to the ambiguous nature of the question, it was difficult to choose
-[00:00:26.160 --> 00:00:27.800] the right answer.
-[00:00:27.800 --> 00:00:32.120] Moreover, his answers were worded ambiguously, so no one could be sure what he meant,
-[00:00:32.120 --> 00:00:33.640] as an adverb ambiguously.
+[00:00:00.000 --> 00:00:04.460] Ambiguous means having more than one possible interpretation or meaning,
+[00:00:04.920 --> 00:00:06.400] often due to being unclear,
+[00:00:07.140 --> 00:00:09.460] vague, or open to different interpretations.
+[00:00:10.260 --> 00:00:15.020] For example, the statement was intentionally ambiguous, leaving room for various interpretations.
+[00:00:15.920 --> 00:00:20.260] Another example is he felt that his role in the company was becoming more ambiguous,
+[00:00:20.920 --> 00:00:21.280] uncertain.
+[00:00:22.220 --> 00:00:26.860] Additionally, due to the ambiguous nature of the question, it was difficult to choose the right answer.
+[00:00:27.590 --> 00:00:32.360] Moreover, his answers were worded ambiguously, so no one could be sure what he meant as an
+[00:00:32.360 --> 00:00:33.500] adverb ambiguously.

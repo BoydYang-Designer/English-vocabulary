@@ -1,4 +1,10 @@
-[00:00:00.000 --> 00:00:11.000] Egypt is a noun that refers to a country located in northeastern Africa, known for its rich history, ancient civilization, and iconic landmarks like the Pyramids of Giza and the Nile River.
-[00:00:11.000 --> 00:00:18.000] Example, the civilization of ancient Egypt made significant advancements in writing, medicine, and engineering.
-[00:00:18.000 --> 00:00:26.000] Example, tourists from around the world visit Egypt to explore its famous archaeological sites and cultural heritage.
-[00:00:26.000 --> 00:00:33.000] Example, the great pyramid of Giza, one of the seven wonders of the ancient world, is a symbol of Egypt's enduring legacy.
+[00:00:00.000 --> 00:00:04.460] Egypt is a noun that refers to a country located in northeastern Africa,
+[00:00:05.040 --> 00:00:09.880] known for its rich history, ancient civilization, and iconic landmarks like the pyramids of
+[00:00:09.880 --> 00:00:11.020] Giza and the Nile River.
+[00:00:11.620 --> 00:00:16.900] Example, the civilization of ancient Egypt made significant advancements in writing, medicine,
+[00:00:17.140 --> 00:00:17.620] and engineering.
+[00:00:18.360 --> 00:00:19.040] Example,
+[00:00:19.660 --> 00:00:24.540] tourists from around the world visit Egypt to explore its famous archaeological sites and
+[00:00:24.540 --> 00:00:25.340] cultural heritage.
+[00:00:26.100 --> 00:00:30.960] Example, the great pyramid of Giza, one of the seven wonders of the ancient world, is a
+[00:00:30.960 --> 00:00:32.840] symbol of Egypt's enduring legacy.

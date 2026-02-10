@@ -1,10 +1,12 @@
-[00:00:00.000 --> 00:00:09.000] Equivalent is an adjective or noun that refers to something being equal in value, function, meaning, or effect to something else.
-[00:00:09.000 --> 00:00:15.000] It indicates that two things are interchangeable or have the same level of significance, though they may differ in form.
-[00:00:15.000 --> 00:00:20.000] Meaning, equivalent, adjective, equal in value, amount, function, or meaning.
-[00:00:20.000 --> 00:00:25.000] Example, the two proposals are equivalent in cost, but one offers more benefits.
-[00:00:26.000 --> 00:00:30.000] Example, his experience in the field is equivalent to a formal degree.
-[00:00:30.000 --> 00:00:35.000] Equivalent, noun, something that has the same value, function, or meaning as something else.
-[00:00:35.000 --> 00:00:40.000] Example, one dollar is roughly the equivalent of 0.90 euros.
-[00:00:40.000 --> 00:00:44.000] Example, in terms of responsibility, her role is the equivalent of a department head.
-[00:00:44.000 --> 00:00:49.000] Related words, equal, comparable, identical, parallel.
-[00:00:49.000 --> 00:00:52.000] Antonyms, different, unequal, dissimilar.
+[00:00:00.000 --> 00:00:05.520] Equivalent is an adjective or noun that refers to something being equal in value, function,
+[00:00:05.980 --> 00:00:08.340] meaning, or effect to something else.
+[00:00:09.100 --> 00:00:13.980] It indicates that two things are interchangeable or have the same level of significance, though they may differ
+[00:00:13.980 --> 00:00:14.500] in form.
+[00:00:15.360 --> 00:00:20.000] Meaning equivalent, adjective, equal, and value amount, function, or meaning.
+[00:00:20.560 --> 00:00:24.860] Example, the two proposals are equivalent in cost, but one offers more benefits.
+[00:00:26.000 --> 00:00:29.840] Example, his experience in the field is equivalent to a formal degree.
+[00:00:30.580 --> 00:00:35.000] Equivalent, noun, something that has the same value, function, or meaning as something else.
+[00:00:35.500 --> 00:00:40.120] Example, $1 is roughly the equivalent of 0 .90 euros.
+[00:00:40.740 --> 00:00:44.140] Example, in terms of responsibility, her role is the equivalent of a department head.
+[00:00:45.060 --> 00:00:48.500] Related words, equal, comparable, identical, parallel.
+[00:00:49.280 --> 00:00:51.480] Antonyms, different, unequal, dissimilar.

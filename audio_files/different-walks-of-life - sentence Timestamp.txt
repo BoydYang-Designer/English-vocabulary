@@ -1,20 +1,17 @@
-[00:00:00.000 --> 00:00:03.340] Different walks of life as an idiom, expression,
-[00:00:03.340 --> 00:00:05.340] refers to people from various social,
-[00:00:05.340 --> 00:00:08.140] economic, professional, or cultural backgrounds,
-[00:00:08.140 --> 00:00:11.860] emphasizing diversity and experience or perspective.
-[00:00:11.860 --> 00:00:14.020] For example, people from different walks of life
-[00:00:14.020 --> 00:00:16.340] attended the Community Festival.
-[00:00:16.340 --> 00:00:18.740] The Charity Project brought together volunteers
-[00:00:18.740 --> 00:00:20.500] from all walks of life.
-[00:00:20.500 --> 00:00:22.980] He has friends from different walks of life,
-[00:00:22.980 --> 00:00:26.460] including artists, engineers, and teachers.
-[00:00:26.460 --> 00:00:27.820] Leaders from different walks of life
-[00:00:27.820 --> 00:00:30.500] contributed ideas for the national initiative.
-[00:00:30.500 --> 00:00:32.500] Summary, different walks of life
-[00:00:32.500 --> 00:00:34.940] highlights the diversity of people's experiences,
-[00:00:34.940 --> 00:00:37.340] occupations, or social backgrounds.
-[00:00:37.340 --> 00:00:40.580] Related words, background, lifestyle, profession,
-[00:00:40.580 --> 00:00:44.220] social class, culture, synonyms, various backgrounds,
-[00:00:44.220 --> 00:00:47.340] diverse origins, all sectors, all classes,
-[00:00:47.340 --> 00:00:50.580] Antonim's homogeneous, uniform, single class,
-[00:00:50.580 --> 00:00:51.820] same background.
+[00:00:00.000 --> 00:00:02.600] Different walks of life as an idiom, expression,
+[00:00:03.280 --> 00:00:07.760] refers to people from various social, economic, professional, or cultural backgrounds,
+[00:00:08.080 --> 00:00:10.800] emphasizing diversity and experience or perspective.
+[00:00:11.820 --> 00:00:15.380] For example, people from different walks of life attended the community festival.
+[00:00:16.340 --> 00:00:19.900] The charity project brought together volunteers from all walks of life.
+[00:00:20.600 --> 00:00:25.200] He has friends from different walks of life, including artists, engineers, and teachers.
+[00:00:26.400 --> 00:00:29.660] Leaders from different walks of life contributed ideas for the national initiative.
+[00:00:30.380 --> 00:00:30.920] Summary.
+[00:00:31.400 --> 00:00:36.700] Different walks of life highlights the diversity of people's experiences, occupations, or social backgrounds.
+[00:00:37.280 --> 00:00:41.760] Related words, background, lifestyle, profession, social class, culture.
+[00:00:42.500 --> 00:00:42.960] Synonyms.
+[00:00:43.160 --> 00:00:46.500] Various backgrounds, diverse origins, all sectors, all classes.
+[00:00:47.300 --> 00:00:47.900] Antonyms.
+[00:00:48.040 --> 00:00:48.520] Homogeneous.
+[00:00:48.900 --> 00:00:49.280] Uniform.
+[00:00:49.640 --> 00:00:50.240] Single class.
+[00:00:50.640 --> 00:00:51.300] Same background.

@@ -1,11 +1,11 @@
-[00:00:00.000 --> 00:00:02.380] Evasive, as an adjective,
-[00:00:02.380 --> 00:00:06.300] tending to avoid commitment, clear answers, or direct action,
-[00:00:06.300 --> 00:00:11.140] often used to describe behavior meant to escape detection, responsibility, or difficulty.
-[00:00:11.140 --> 00:00:16.420] Example, the politician gave evasive answers to avoid addressing the controversial issue.
-[00:00:16.420 --> 00:00:20.260] Example, she became evasive when asked about her future plans.
-[00:00:20.260 --> 00:00:24.300] Example, his evasive behavior made others suspicious of his intentions.
-[00:00:24.300 --> 00:00:28.740] Example, the driver took evasive action to avoid hitting the deer.
-[00:00:29.140 --> 00:00:34.180] Summary, evasive describes actions or behavior intended to avoid giving a clear answer,
-[00:00:34.180 --> 00:00:37.100] facing responsibility, or encountering danger.
-[00:00:37.100 --> 00:00:41.940] Related words, elusive, ambiguous, vague, indirect dodgy.
-[00:00:41.940 --> 00:00:44.660] Antonyms direct straightforward, honest, candid.
+[00:00:00.000 --> 00:00:01.820] Evasive as an adjective.
+[00:00:02.540 --> 00:00:07.440] Tending to avoid commitment, clear answers, or direct action, often used to describe
+[00:00:07.440 --> 00:00:10.660] behavior meant to escape detection, responsibility, or difficulty.
+[00:00:11.240 --> 00:00:16.060] Example, the politician gave evasive answers to avoid addressing the controversial issue.
+[00:00:16.540 --> 00:00:19.700] Example, she became evasive when asked about her future plans.
+[00:00:20.580 --> 00:00:23.620] Example, his evasive behavior made others suspicious of his intentions.
+[00:00:24.540 --> 00:00:28.020] Example, the driver took evasive action to avoid hitting the deer.
+[00:00:29.040 --> 00:00:33.680] Summary, evasive describes actions or behavior intended to avoid giving a clear answer,
+[00:00:34.120 --> 00:00:36.500] facing responsibility, or encountering danger.
+[00:00:37.080 --> 00:00:41.300] Related words, elusive, ambiguous, vague, indirect, dodgy.
+[00:00:41.980 --> 00:00:44.160] Antonin's direct, straightforward, honest, candid.

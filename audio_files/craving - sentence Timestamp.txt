@@ -1,12 +1,12 @@
-[00:00:00.000 --> 00:00:04.940] Craving is a noun that refers to a powerful desire or longing for something.
-[00:00:04.940 --> 00:00:09.680] It often implies a strong need or urge that can be difficult to ignore.
-[00:00:09.680 --> 00:00:13.020] Example, the miserable girl had a craving for sympathy.
-[00:00:13.020 --> 00:00:17.120] Example, his craving for adventure led him to travel around the world.
-[00:00:17.120 --> 00:00:21.360] Example, after a long day of work he had a craving for a hot bowl of ramen.
-[00:00:21.360 --> 00:00:25.620] His craving for success motivated him to work late into the night.
-[00:00:25.620 --> 00:00:28.460] Example, she had a craving for chocolate
-[00:00:28.460 --> 00:00:31.600] and couldn't resist buying a bar from the store.
-[00:00:31.600 --> 00:00:34.700] Summary, craving refers to an intense or strong desire for something
-[00:00:34.700 --> 00:00:37.180] often that is hard to resist or ignore.
-[00:00:37.180 --> 00:00:41.680] Related words, longing, desire, hunger, urge, appetimes,
-[00:00:41.680 --> 00:00:45.720] indifference, aversion, dislike, contentment.
+[00:00:00.000 --> 00:00:04.440] Craving is a noun that refers to a powerful desire or longing for something.
+[00:00:05.000 --> 00:00:09.180] It often implies a strong need or urge that can be difficult to ignore.
+[00:00:09.860 --> 00:00:12.680] Example, the miserable girl had a craving for sympathy.
+[00:00:13.240 --> 00:00:16.500] Example, his craving for adventure led him to travel around the world.
+[00:00:17.420 --> 00:00:20.960] Example, after a long day of work he had a craving for a hot bowl of ramen.
+[00:00:21.480 --> 00:00:25.200] His craving for success motivated him to work late into the night.
+[00:00:25.200 --> 00:00:26.420] Example,
+[00:00:27.040 --> 00:00:30.800] she had a craving for chocolate and couldn't resist buying a bar from the store.
+[00:00:31.520 --> 00:00:36.580] Summary, craving refers to an intense or strong desire for something often one that is hard to resist or ignore.
+[00:00:37.060 --> 00:00:42.360] Related words, longing, desire, hunger, urge, appetimes, indifference,
+[00:00:42.760 --> 00:00:44.020] aversion, dislike,
+[00:00:44.820 --> 00:00:45.180] contentment.

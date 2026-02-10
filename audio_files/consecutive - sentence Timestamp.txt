@@ -1,20 +1,21 @@
-[00:00:00.000 --> 00:00:05.560] Consecutive is an adjective that means following one after another in order, but with the possibility
-[00:00:05.560 --> 00:00:08.120] of breaks or pauses between events.
-[00:00:08.120 --> 00:00:13.640] The key feature is the sequence, not necessarily the absence of interruptions.
-[00:00:13.640 --> 00:00:15.120] Example sentences.
-[00:00:15.120 --> 00:00:17.800] She worked three consecutive nights without a day off.
-[00:00:17.800 --> 00:00:21.520] The team won five consecutive games, setting a new record.
-[00:00:21.520 --> 00:00:25.800] After two consecutive days of rain, the sun finally came out.
-[00:00:25.800 --> 00:00:28.880] Comparison with Continuous.
-[00:00:28.880 --> 00:00:34.240] Continuous, which means something happens without interruption, consecutive refers to events
-[00:00:34.240 --> 00:00:40.120] or actions occurring one after the other in order, but not necessarily without breaks.
-[00:00:40.120 --> 00:00:44.040] For example, working three consecutive nights means you work three nights in a row, but
-[00:00:44.040 --> 00:00:47.080] there were breaks between the shifts.
-[00:00:47.080 --> 00:00:52.000] In contrast, something continuous occurs without any interruptions, such as continuous
-[00:00:52.000 --> 00:00:56.800] rain for 48 hours, meaning it never stopped raining.
-[00:00:56.800 --> 00:01:01.040] Summary, consecutive refers to things that happen in a sequential order one after another,
-[00:01:01.040 --> 00:01:04.520] but have pauses or gaps in between.
-[00:01:04.520 --> 00:01:07.720] Continuous means happening without any interruption or break.
-[00:01:07.720 --> 00:01:08.720] Related words.
-[00:01:08.720 --> 00:01:11.000] Successive, sequential.
-[00:01:11.000 --> 00:01:14.160] Antonyms, non-sequential, interrupted, sporadic.
+[00:00:00.000 --> 00:00:04.960] Consecutive is an adjective that means following one after another in order, but with the
+[00:00:04.960 --> 00:00:07.440] possibility of breaks or pauses between events.
+[00:00:08.060 --> 00:00:12.120] The key feature is the sequence, not necessarily the absence of interruptions.
+[00:00:13.220 --> 00:00:14.020] Example sentences.
+[00:00:15.080 --> 00:00:17.440] She worked three consecutive nights without a day off.
+[00:00:17.760 --> 00:00:20.660] The team won five consecutive games, setting a new record.
+[00:00:21.200 --> 00:00:24.460] After two consecutive days of rain, the sun finally came out.
+[00:00:25.220 --> 00:00:26.580] Comparison with Continuous.
+[00:00:28.160 --> 00:00:32.920] Unlike Continuous, which means something happens without interruption, consecutive
+[00:00:32.920 --> 00:00:37.180] refers to events or actions occurring one after the other in order,
+[00:00:37.640 --> 00:00:39.420] but not necessarily without breaks.
+[00:00:40.060 --> 00:00:44.900] For example, working three consecutive nights means you worked three nights in a row, but there were breaks between
+[00:00:44.900 --> 00:00:45.400] the shifts.
+[00:00:46.440 --> 00:00:51.440] In contrast, something Continuous occurs without any interruptions, such as
+[00:00:51.440 --> 00:00:53.300] continuous rain for 48 hours,
+[00:00:53.940 --> 00:00:55.360] meaning it never stopped raining.
+[00:00:56.460 --> 00:01:01.060] Summary, consecutive, refers to things that happen in a sequential order one after another, but
+[00:01:01.060 --> 00:01:03.260] have pauses or gaps in between.
+[00:01:04.100 --> 00:01:06.820] Continuous means happening without any interruption or break.
+[00:01:07.340 --> 00:01:10.180] Related words, successive, sequential.
+[00:01:10.960 --> 00:01:14.000] Antonyms, non -sequential, interrupted, sporadic.

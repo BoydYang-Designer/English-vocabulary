@@ -1,2 +1,4 @@
-[00:00:00.000 --> 00:00:07.000] Caligraphy refers to the art of beautiful handwriting, often characterized by decorative and elegant lettering, example.
-[00:00:08.000 --> 00:00:14.000] The wedding invitations were adorned with intricate calligraphy, adding a touch of elegance to the event.
+[00:00:00.000 --> 00:00:04.640] Calligraphy refers to the art of beautiful handwriting, often characterized by
+[00:00:04.640 --> 00:00:06.220] decorative and elegant lettering.
+[00:00:06.560 --> 00:00:07.080] Example.
+[00:00:08.760 --> 00:00:13.700] The wedding invitations were adorned with intricate calligraphy, adding a touch of elegance to the event.

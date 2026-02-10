@@ -1,10 +1,17 @@
-[00:00:00.000 --> 00:00:07.000] Copyright infringement is a noun that refers to the unauthorized use or reproduction of someone else's copyrighted work.
-[00:00:07.000 --> 00:00:14.000] This occurs when someone copies, distributes, displays, or performs a protected work without the permission of the copyright holder,
-[00:00:14.000 --> 00:00:18.000] thereby violating the exclusive rights granted to the creator.
-[00:00:18.000 --> 00:00:21.000] Example sentences.
-[00:00:21.000 --> 00:00:28.000] The artist filed a lawsuit against the company for copyright infringement after discovering that her artwork was used without permission.
-[00:00:29.000 --> 00:00:35.000] Sharing music files online without the artist's consent is considered copyright infringement.
-[00:00:35.000 --> 00:00:42.000] The publisher was fined for copyright infringement after printing copies of a book without the author's approval.
-[00:00:42.000 --> 00:00:44.000] Summary.
-[00:00:44.000 --> 00:00:53.000] Copyright infringement refers to the unauthorized use or reproduction of a work protected by copyright, violating the rights of the original creator.
-[00:00:53.000 --> 00:01:03.000] Related words, piracy, plagiarism, unauthorized use, intellectual property violation, antinim's fair use, authorized use, licensing, permission.
+[00:00:00.000 --> 00:00:05.000] Copyright infringement is a noun that refers to the unauthorized use or reproduction
+[00:00:05.000 --> 00:00:06.920] of someone else's copyrighted work.
+[00:00:07.440 --> 00:00:12.340] This occurs when someone copies, distributes, displays, or performs a protected work without
+[00:00:12.340 --> 00:00:13.920] the permission of the copyright holder,
+[00:00:14.660 --> 00:00:17.760] thereby violating the exclusive rights granted to the creator.
+[00:00:19.140 --> 00:00:19.960] Example sentences.
+[00:00:21.420 --> 00:00:26.340] The artist filed a lawsuit against the company for copyright infringement after discovering that her
+[00:00:26.340 --> 00:00:27.840] artwork was used without permission.
+[00:00:29.800 --> 00:00:35.120] Sharing music files online without the artist's consent is considered copyright infringement.
+[00:00:35.980 --> 00:00:40.660] The publisher was fined for copyright infringement after printing copies of a book without the
+[00:00:40.660 --> 00:00:41.420] author's approval.
+[00:00:42.980 --> 00:00:43.660] Summary.
+[00:00:44.380 --> 00:00:49.160] Copyright infringement refers to the unauthorized use or reproduction of a work
+[00:00:49.160 --> 00:00:52.780] protected by copyright violating the rights of the original creator.
+[00:00:53.420 --> 00:00:54.020] Related words.
+[00:00:54.280 --> 00:00:58.740] Piracy, plagiarism, unauthorized use, intellectual property violation, antonyms,
+[00:00:59.080 --> 00:01:02.180] fair use, authorized use, licensing, permission.

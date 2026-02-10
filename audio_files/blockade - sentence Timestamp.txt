@@ -1,13 +1,14 @@
-[00:00:00.000 --> 00:00:03.800] Blockade is a noun and a verb with the following meanings.
-[00:00:03.800 --> 00:00:13.500] As a noun, a blockade is an act of sealing off a place to prevent goods or people from entering or leaving, often used in military or political contexts.
-[00:00:13.500 --> 00:00:18.000] Example, the naval blockade prevented supplies from reaching the enemy's port.
-[00:00:18.000 --> 00:00:23.000] Example, during the blockade, civilians face severe shortages of food and medicine.
-[00:00:23.500 --> 00:00:26.000] As a verb, blockade, blockaded.
-[00:00:26.000 --> 00:00:32.000] Blockading to blockade means to obstruct or seal off a place to prevent access or passage.
-[00:00:32.000 --> 00:00:35.300] Example, the army blockaded the city to force a surrender.
-[00:00:35.300 --> 00:00:39.500] Example, protesters blockaded the road, halting traffic for hours.
-[00:00:39.500 --> 00:00:44.500] Example, the government decided to blockade the border to control the flow of migrants.
-[00:00:44.500 --> 00:00:51.000] Summary, blockade refers to the act of preventing access to a location, often for strategic reasons.
-[00:00:51.000 --> 00:00:54.800] And as a verb, it describes the action of sealing off an area.
-[00:00:54.800 --> 00:00:58.000] Related words obstruction, barrier siege, encirclement.
-[00:00:58.000 --> 00:01:01.000] Antonyms open, allow, permit, facilitate.
+[00:00:00.000 --> 00:00:03.420] Blockade is a noun and a verb with the following meanings.
+[00:00:03.940 --> 00:00:08.920] As a noun, a blockade is an act of sealing off a place to prevent goods or people from
+[00:00:08.920 --> 00:00:13.080] entering or leaving, often used in military or political contexts.
+[00:00:13.880 --> 00:00:17.660] Example, the naval blockade prevented supplies from reaching the enemy's port.
+[00:00:18.600 --> 00:00:22.780] Example, during the blockade, civilians faced severe shortages of food and medicine.
+[00:00:23.520 --> 00:00:25.820] As a verb, blockade, blockaded.
+[00:00:25.820 --> 00:00:31.060] Blockading to blockade means to obstruct or seal off a place to prevent access or passage.
+[00:00:32.000 --> 00:00:35.040] Example, the army blockaded the city to force a surrender.
+[00:00:35.400 --> 00:00:38.760] Example, protesters blockaded the road, halting traffic for hours.
+[00:00:39.760 --> 00:00:43.840] Example, the government decided to blockade the border to control the flow of migrants.
+[00:00:45.020 --> 00:00:50.360] Summary, blockade refers to the act of preventing access to a location, often for strategic reasons.
+[00:00:50.940 --> 00:00:54.460] And as a verb, it describes the action of sealing off an area.
+[00:00:54.460 --> 00:00:58.020] Related words, obstruction, barrier, siege, encirclement.
+[00:00:58.160 --> 00:01:00.540] Antonyms open, allow, permit, facilitate.

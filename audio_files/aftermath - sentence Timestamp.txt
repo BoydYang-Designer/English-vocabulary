@@ -1,7 +1,7 @@
-[00:00:00.000 --> 00:00:05.960] Aftermath refers to the consequences or results of a significant event, particularly a negative
-[00:00:05.960 --> 00:00:07.920] or disastrous one.
-[00:00:07.920 --> 00:00:11.720] Example, many people were homeless in the aftermath of the earthquake.
-[00:00:11.720 --> 00:00:16.620] Example, the financial crisis left a long-lasting impact in the aftermath, leading to widespread
-[00:00:16.620 --> 00:00:19.160] job losses and economic hardship.
-[00:00:19.160 --> 00:00:23.920] Example, the team analyzed the aftermath of their project failure to understand what
-[00:00:23.920 --> 00:00:26.320] went wrong and how to improve in the future.
+[00:00:00.000 --> 00:00:04.220] Aftermath refers to the consequences or results of a significant event,
+[00:00:04.660 --> 00:00:07.000] particularly a negative or disastrous one.
+[00:00:07.720 --> 00:00:10.740] Example, many people were homeless in the aftermath of the earthquake.
+[00:00:11.460 --> 00:00:16.400] Example, the financial crisis left a long -lasting impact in the aftermath, leading to widespread
+[00:00:16.400 --> 00:00:18.280] job losses and economic hardship.
+[00:00:18.960 --> 00:00:23.900] Example, the team analyzed the aftermath of their project failure to understand what
+[00:00:23.900 --> 00:00:26.160] went wrong and how to improve in the future.

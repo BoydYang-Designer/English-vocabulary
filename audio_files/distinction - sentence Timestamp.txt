@@ -1,17 +1,21 @@
-[00:00:00.000 --> 00:00:03.280] Distinction is a noun with the following meanings.
-[00:00:03.280 --> 00:00:07.680] One, a difference or contrast between similar things or people
-[00:00:07.680 --> 00:00:12.320] refers to the recognition of the differences that make something unique or separate from others.
-[00:00:13.360 --> 00:00:18.400] Example, there is a clear distinction between classical music and jazz.
-[00:00:19.040 --> 00:00:23.600] Example, the distinction between a hobby and a career is important for personal growth.
-[00:00:24.320 --> 00:00:28.800] Two, a quality that sets someone or something apart as special or excellent.
-[00:00:29.600 --> 00:00:35.520] Often refers to a mark of honor or achievement that elevates someone or something in status or
-[00:00:35.520 --> 00:00:41.360] recognition. Example, she received the distinction of being named the best student of the year.
-[00:00:42.240 --> 00:00:46.560] Example, the company earned the distinction of having the best customer service in the industry.
-[00:00:47.600 --> 00:00:53.280] Three, the act of distinguishing or recognizing differences refers to the process of making
-[00:00:53.280 --> 00:00:58.560] something clear through comparison or highlighting contrasts. Example, his ability to make
-[00:00:58.560 --> 00:01:04.960] distinctions between similar ideas helped clarify the discussion. Example, the distinction between
-[00:01:04.960 --> 00:01:13.200] fact and opinion is crucial for critical thinking. Summary, distinction refers to a difference or contrast
-[00:01:13.200 --> 00:01:18.640] between things or to a quality that makes someone or something stand out in a positive way.
-[00:01:18.640 --> 00:01:22.880] It can also refer to the process of distinguishing between things. Related words,
-[00:01:22.960 --> 00:01:28.080] difference, contrast, honor, excellence, recognition, Antonim's similarity,
-[00:01:28.080 --> 00:01:36.240] sameness, indistinction, uniformity.
+[00:00:00.000 --> 00:00:02.840] Distinction is a noun with the following meanings.
+[00:00:03.500 --> 00:00:08.380] One, a difference or contrast between similar things or people refers to the
+[00:00:08.380 --> 00:00:12.140] recognition of the differences that make something unique or separate from others.
+[00:00:13.260 --> 00:00:13.940] Example,
+[00:00:15.060 --> 00:00:18.300] there is a clear distinction between classical music and jazz.
+[00:00:19.000 --> 00:00:23.620] Example, the distinction between a hobby and a career is important for personal growth.
+[00:00:24.220 --> 00:00:28.720] Two, a quality that sets someone or something apart as special or excellent.
+[00:00:29.480 --> 00:00:34.120] Often refers to a mark of honor or achievement that elevates someone or
+[00:00:34.120 --> 00:00:36.000] something in status or recognition.
+[00:00:37.040 --> 00:00:41.340] Example, she received the distinction of being named the best student of the year.
+[00:00:42.260 --> 00:00:46.500] Example, the company earned the distinction of having the best customer service in the industry.
+[00:00:47.620 --> 00:00:52.480] Three, the act of distinguishing or recognizing differences refers to the
+[00:00:52.480 --> 00:00:56.280] process of making something clear through comparison or highlighting contrasts.
+[00:00:56.280 --> 00:00:57.040] Example,
+[00:00:57.720 --> 00:01:01.820] his ability to make distinctions between similar ideas helped clarify the discussion.
+[00:01:03.000 --> 00:01:07.240] Example, the distinction between fact and opinion is crucial for critical thinking.
+[00:01:09.800 --> 00:01:14.180] Summary, distinction refers to a difference or contrast between things
+[00:01:14.180 --> 00:01:18.560] or to a quality that makes someone or something stand out in a positive way.
+[00:01:18.700 --> 00:01:21.700] Can also refer to the process of distinguishing between things.
+[00:01:21.700 --> 00:01:26.060] Related words, difference, contrast, honor, excellence, recognition.
+[00:01:26.740 --> 00:01:30.000] Antonyms, similarity, sameness, indistinction, uniformity.

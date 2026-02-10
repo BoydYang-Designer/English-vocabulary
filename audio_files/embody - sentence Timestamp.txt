@@ -1,13 +1,20 @@
-[00:00:00.000 --> 00:00:08.660] Embodied as a verb, embodied, embodied, embodying means to give tangible or visible form to an idea, quality or feeling.
-[00:00:08.660 --> 00:00:12.800] It can also mean to represent or personify something in a concrete form.
-[00:00:12.800 --> 00:00:19.140] One, to represent something in a clear and obvious way, to be a similar example of something.
-[00:00:19.140 --> 00:00:23.740] Example, the Statue of Liberty embodies the spirit of freedom and democracy.
-[00:00:23.740 --> 00:00:27.340] Example, the sculpture embodies the artist's vision of peace.
-[00:00:27.440 --> 00:00:33.600] Example, the CEO embodies the company's values of innovation and excellence.
-[00:00:33.600 --> 00:00:41.240] Two, to include something as an essential or defining part of something, to integrate particular qualities or elements into a whole.
-[00:00:41.240 --> 00:00:48.480] Example, the treaty embodies the principles of mutual respect and cooperation between the two nations.
-[00:00:48.480 --> 00:00:53.720] Example, the architectural design embodies elements of both modern and traditional styles.
-[00:00:53.720 --> 00:00:59.360] Example, the new software update embodies several user-requested features and improvements.
-[00:00:59.360 --> 00:01:10.840] Summary, embody means to give physical form or expression to abstract concepts or qualities, to represent an ideal or concept in a tangible way, or to incorporate certain elements as defining parts of something.
-[00:01:10.840 --> 00:01:16.180] Related words, represent, symbolize, personify, exemplify, manifest.
-[00:01:16.180 --> 00:01:19.580] Antonyms, conceal, hide, suppress, disguise.
+[00:00:00.000 --> 00:00:01.780] Embodied as a verb.
+[00:00:02.280 --> 00:00:07.700] Embodied, embodied, embodying means to give tangible or visible form to an idea, quality,
+[00:00:07.860 --> 00:00:08.220] or feeling.
+[00:00:08.900 --> 00:00:12.360] It can also mean to represent or personify something in a concrete form.
+[00:00:13.160 --> 00:00:18.140] One, to represent something in a clear and obvious way, to be a symbol or example
+[00:00:18.140 --> 00:00:18.600] of something.
+[00:00:19.380 --> 00:00:23.120] Example, the Statue of Liberty embodies the spirit of freedom and democracy.
+[00:00:24.000 --> 00:00:26.920] Example, the sculpture embodies the artist's vision of peace.
+[00:00:26.920 --> 00:00:31.980] Example, the CEO embodies the company's values of innovation and excellence.
+[00:00:33.140 --> 00:00:37.980] Two, to include something as an essential or defining part of something, to integrate
+[00:00:37.980 --> 00:00:40.360] particular qualities or elements into a whole.
+[00:00:41.280 --> 00:00:45.720] Example, the Treaty embodies the principles of mutual respect and cooperation
+[00:00:45.720 --> 00:00:47.220] between the two nations.
+[00:00:48.320 --> 00:00:53.240] Example, the architectural design embodies elements of both modern and traditional styles.
+[00:00:53.240 --> 00:00:57.800] Example, the new software update embodies several user -requested features and improvements.
+[00:00:59.120 --> 00:01:04.040] Summary, embody means to give physical form or expression to abstract concepts or qualities,
+[00:01:04.380 --> 00:01:09.300] to represent an ideal or concept in a tangible way, or to incorporate certain elements as defining
+[00:01:09.300 --> 00:01:10.060] parts of something.
+[00:01:10.840 --> 00:01:15.400] Related words, represent, symbolize, personify, exemplify, manifest.
+[00:01:16.140 --> 00:01:19.160] Antonyms, conceal, hide, suppress, disguise.

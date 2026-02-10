@@ -1,7 +1,7 @@
-[00:00:00.000 --> 00:00:05.440] Cast a spell is a phrase that means to use magic words or actions to create a magical
-[00:00:05.440 --> 00:00:08.440] effect or influence someone or something.
-[00:00:08.440 --> 00:00:13.020] Example, the witch decided to cast a spell to make the flowers bloom overnight.
-[00:00:13.020 --> 00:00:17.680] Example, he felt like he could cast a spell over the audience with his captivating performance.
-[00:00:17.680 --> 00:00:24.480] Summary, to cast a spell means to perform magic to achieve a desired effect.
-[00:00:24.480 --> 00:00:27.680] Traded words in charm, in vogue.
-[00:00:27.680 --> 00:00:30.680] Antonyms, break a spell, dispel.
+[00:00:00.000 --> 00:00:04.820] Cast a spell is a phrase that means to use magic words or actions to create
+[00:00:04.820 --> 00:00:07.440] a magical effect or influence someone or something.
+[00:00:08.000 --> 00:00:12.260] Example, the witch decided to cast a spell to make the flowers bloom overnight.
+[00:00:12.800 --> 00:00:16.740] Example, he felt like he could cast a spell over the audience with his captivating performance.
+[00:00:17.520 --> 00:00:22.460] Summary, to cast a spell means to perform magic to achieve a desired effect.
+[00:00:23.620 --> 00:00:26.640] Related words in charm invoke.
+[00:00:27.300 --> 00:00:29.760] Antonyms break a spell to spell.

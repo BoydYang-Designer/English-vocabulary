@@ -1,33 +1,38 @@
-[00:00:00.000 --> 00:00:04.140] Creep is both a verb and a noun with different meanings.
-[00:00:04.140 --> 00:00:08.840] As a verb, creep, crept, creeping.
-[00:00:08.840 --> 00:00:11.040] One, to move slowly and quietly.
-[00:00:11.040 --> 00:00:14.040] This refers to moving in a way that is difficult to notice,
-[00:00:14.040 --> 00:00:16.760] often with a sense of stealth or caution.
-[00:00:16.760 --> 00:00:20.200] Example, she tried to creep out of the room without waking anyone up.
-[00:00:20.200 --> 00:00:23.800] The cat crept through the grass stalking its prey.
-[00:00:23.800 --> 00:00:27.240] Example, he crept along the hallway trying to avoid being heard.
-[00:00:27.240 --> 00:00:30.280] Two, to grow or spread slowly.
-[00:00:30.280 --> 00:00:33.720] This refers to something that develops or advances gradually,
-[00:00:33.720 --> 00:00:36.680] often in a way that feels uncomfortable or inevitable.
-[00:00:36.680 --> 00:00:41.600] Example, a sense of unease began to creep over her as the hours passed.
-[00:00:41.600 --> 00:00:45.400] The vines crept up the side of the house covering the walls.
-[00:00:45.400 --> 00:00:51.880] As a noun, one, a person who behaves in a strange or unpleasant way,
-[00:00:51.880 --> 00:00:55.120] often refers to someone who makes others feel uncomfortable,
-[00:00:55.160 --> 00:00:57.960] usually because of their actions or appearance.
-[00:00:57.960 --> 00:01:00.640] Example, that guy is a creep.
-[00:01:00.640 --> 00:01:03.680] I feel uncomfortable whenever he's around.
-[00:01:03.680 --> 00:01:08.440] Example, she had to walk home alone and was worried about encountering a creep.
-[00:01:08.440 --> 00:01:11.360] Two, a slow creeping movement or feeling,
-[00:01:11.360 --> 00:01:15.760] a subtle or gradual increase of something, often in an undesirable way.
-[00:01:15.760 --> 00:01:20.680] Example, there was a slow creep of anxiety as the exam approached.
-[00:01:20.680 --> 00:01:24.160] The creep of fog through the streets made it difficult to see.
-[00:01:24.200 --> 00:01:28.000] And three, the creeps, an uncomfortable feeling of nervousness or fear,
-[00:01:28.000 --> 00:01:30.440] often caused by something unsettling.
-[00:01:30.440 --> 00:01:34.120] Example, the dark alley gave her the creeps.
-[00:01:34.120 --> 00:01:38.000] His strange behavior really gave me the creeps.
-[00:01:38.000 --> 00:01:40.760] Creep refers to moving slowly or quietly,
-[00:01:40.760 --> 00:01:42.200] the gradual spread of something,
-[00:01:42.200 --> 00:01:44.920] describing a person whose behavior is unsettling,
-[00:01:44.920 --> 00:01:48.240] or experiencing an uncomfortable feeling of fear or nervousness.
-[00:01:48.240 --> 00:01:53.080] Related words, sneak, slink, slither, tiptoe, advance,
-[00:01:53.080 --> 00:01:56.360] crawl on his rush, hurry, speed, race, leap.
+[00:00:00.000 --> 00:00:03.540] Creep is both a verb and a noun with different meanings.
+[00:00:04.160 --> 00:00:05.320] As a verb, creep,
+[00:00:06.000 --> 00:00:06.300] crept,
+[00:00:07.040 --> 00:00:07.260] creeping.
+[00:00:08.940 --> 00:00:10.760] 1. To move slowly and quietly.
+[00:00:11.180 --> 00:00:16.180] This refers to moving in a way that is difficult to notice, often with a sense of stealth or caution.
+[00:00:16.860 --> 00:00:19.820] Example, she tried to creep out of the room without waking anyone up.
+[00:00:20.320 --> 00:00:22.820] The cat crept through the grass, stalking its prey.
+[00:00:23.960 --> 00:00:26.680] Example, he crept along the hallway trying to avoid being heard.
+[00:00:27.400 --> 00:00:27.700] 2.
+[00:00:28.110 --> 00:00:29.720] To grow or spread slowly.
+[00:00:30.240 --> 00:00:34.840] This refers to something that develops or advances gradually, often in a way that feels
+[00:00:34.840 --> 00:00:36.040] uncomfortable or inevitable.
+[00:00:36.780 --> 00:00:40.340] Example, a sense of unease began to creep over her as the hours passed.
+[00:00:41.760 --> 00:00:44.440] The vines crept up the side of the house, covering the walls.
+[00:00:45.540 --> 00:00:46.180] As a noun,
+[00:00:47.220 --> 00:00:47.500] 1.
+[00:00:48.680 --> 00:00:51.320] A person who behaves in a strange or unpleasant way.
+[00:00:51.860 --> 00:00:56.580] Often refers to someone who makes others feel uncomfortable, usually because of their actions
+[00:00:56.580 --> 00:00:57.320] or appearance.
+[00:00:58.160 --> 00:01:00.240] Example, that guy is a creep.
+[00:01:00.700 --> 00:01:02.400] I feel uncomfortable whenever he's around.
+[00:01:03.800 --> 00:01:07.320] Example, she had to walk home alone and was worried about encountering a creep.
+[00:01:08.560 --> 00:01:08.700] 2.
+[00:01:09.140 --> 00:01:14.120] A slow creeping movement or feeling, a subtle or gradual increase of something, often in
+[00:01:14.120 --> 00:01:15.140] an undesirable way.
+[00:01:15.800 --> 00:01:19.340] Example, there was a slow creep of anxiety as the exam approached.
+[00:01:20.680 --> 00:01:23.320] The creep of fog through the streets made it difficult to see.
+[00:01:24.020 --> 00:01:24.620] And 3.
+[00:01:24.960 --> 00:01:29.840] The creeps, an uncomfortable feeling of nervousness or fear, often caused by something unsettling.
+[00:01:30.440 --> 00:01:31.000] Example,
+[00:01:31.620 --> 00:01:33.420] the dark alley gave her the creeps.
+[00:01:34.160 --> 00:01:36.920] His strange behavior really gave me the creeps.
+[00:01:38.100 --> 00:01:43.040] Creep refers to moving slowly or quietly the gradual spread of something, describing a person
+[00:01:43.040 --> 00:01:47.860] whose behavior is unsettling or experiencing an uncomfortable feeling of fear or nervousness.
+[00:01:47.860 --> 00:01:48.440] 3.
+[00:01:48.440 --> 00:01:53.740] Related words, sneak, slink, slither, tiptoe, advance, crawl unease,
+[00:01:53.880 --> 00:01:55.860] rush, hurry, speed, race, leap.

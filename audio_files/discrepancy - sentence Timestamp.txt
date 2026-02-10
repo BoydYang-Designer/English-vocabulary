@@ -1,18 +1,19 @@
-[00:00:00.000 --> 00:00:03.000] Discrepancy is a noun with the following meanings.
-[00:00:03.000 --> 00:00:07.000] One, a lack of consistency or agreement.
-[00:00:07.000 --> 00:00:14.000] A difference or disagreement between two or more facts, figures or statements that should otherwise match or align.
-[00:00:14.000 --> 00:00:16.000] Example Senses.
-[00:00:16.000 --> 00:00:21.000] The accountant found a discrepancy in the financial statements that needed to be addressed.
-[00:00:21.000 --> 00:00:25.000] There was a discrepancy between the reported and actual sales figures.
-[00:00:25.000 --> 00:00:29.000] There were discrepancies between their accounts of the accident.
-[00:00:29.000 --> 00:00:32.000] The detective noticed a discrepancy in the witness's statements.
-[00:00:32.000 --> 00:00:36.000] Mark II. A variation or deviation from what is expected.
-[00:00:36.000 --> 00:00:39.000] An inconsistency or divergence from a norm or standard.
-[00:00:39.000 --> 00:00:41.000] Example Senses.
-[00:00:41.000 --> 00:00:46.000] The study revealed a discrepancy between the expected outcomes and the actual results.
-[00:00:46.000 --> 00:00:50.000] The engineer reported a discrepancy in the measurements of the prototype.
-[00:00:50.000 --> 00:00:52.000] Summary.
-[00:00:52.000 --> 00:00:58.000] Discrepancy refers to a difference or inconsistency between two or more items that should be in agreement.
-[00:00:58.000 --> 00:01:01.000] Or a deviation from an expected standard.
-[00:01:01.000 --> 00:01:05.000] Related words, inconsistency, variation, divergence, contradiction.
-[00:01:05.000 --> 00:01:10.000] Antonyms, consistency, agreement, uniformity, conformity.
+[00:00:00.000 --> 00:00:02.600] Discrepancy is a noun with the following meanings.
+[00:00:03.400 --> 00:00:05.980] One, a lack of consistency or agreement.
+[00:00:06.880 --> 00:00:11.720] A difference or disagreement between two or more facts, figures or statements that
+[00:00:11.720 --> 00:00:13.320] should otherwise match or align.
+[00:00:14.160 --> 00:00:14.880] Example sentences.
+[00:00:15.980 --> 00:00:20.380] The accountant found a discrepancy in the financial statements that needed to be addressed.
+[00:00:21.020 --> 00:00:24.820] There was a discrepancy between the reported and actual sales figures.
+[00:00:25.560 --> 00:00:29.080] There were discrepancies between their accounts of the accident.
+[00:00:29.080 --> 00:00:31.800] The detective noticed a discrepancy in the witness's statements.
+[00:00:32.640 --> 00:00:37.480] Mark two, a variation or deviation from what is expected, an inconsistency
+[00:00:37.480 --> 00:00:39.280] or divergence from a norm or standard.
+[00:00:39.900 --> 00:00:40.840] Example sentences.
+[00:00:41.500 --> 00:00:46.400] The study revealed a discrepancy between the expected outcomes and the actual results.
+[00:00:46.960 --> 00:00:50.080] The engineer reported a discrepancy in the measurements of the prototype.
+[00:00:51.020 --> 00:00:51.780] Summary.
+[00:00:52.640 --> 00:00:57.640] Discrepancy refers to a difference or inconsistency between two or more items that should be
+[00:00:57.640 --> 00:01:00.800] in agreement or a deviation from an expected standard.
+[00:01:01.260 --> 00:01:06.760] Related words, inconsistency, variation, divergence, contradiction, antonyms, consistency,
+[00:01:07.260 --> 00:01:09.200] agreement, uniformity, conformity.

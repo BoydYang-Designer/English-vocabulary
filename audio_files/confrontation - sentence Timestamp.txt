@@ -1,22 +1,22 @@
-[00:00:00.000 --> 00:00:03.400] Confrontation is a noun with the following meanings.
-[00:00:03.400 --> 00:00:06.200] One, a direct encounter or clash,
-[00:00:06.200 --> 00:00:10.000] the act of facing or meeting someone or something directly,
-[00:00:10.000 --> 00:00:13.000] often in a challenging or confrontational manner.
-[00:00:13.000 --> 00:00:15.400] This can involve a dispute or argument.
-[00:00:15.400 --> 00:00:17.200] Example sentences.
-[00:00:17.200 --> 00:00:21.600] The confrontation between the two leaders was tense and charged with emotion.
-[00:00:21.600 --> 00:00:24.600] They had a confrontation about the misdeed lines in the project.
-[00:00:24.600 --> 00:00:28.400] The police were prepared for a confrontation with the protesters.
-[00:00:28.600 --> 00:00:32.200] We want cooperation, not confrontation.
-[00:00:32.200 --> 00:00:35.600] Two, a situation involving conflict or opposition.
-[00:00:35.600 --> 00:00:41.200] A scenario where there is a conflict, disagreement or clash between parties, ideas or forces.
-[00:00:41.200 --> 00:00:43.000] Example sentences.
-[00:00:43.000 --> 00:00:47.200] The political confrontation between the opposing parties escalated quickly.
-[00:00:47.200 --> 00:00:51.200] The confrontation of different viewpoints led to a heated debate in the meeting.
-[00:00:51.200 --> 00:00:54.400] The film explores the dramatic confrontation between good and evil.
-[00:00:54.400 --> 00:00:55.600] Attach to summary.
-[00:00:55.600 --> 00:00:59.400] Confrontation refers to both a direct, often challenging encounter or clash
-[00:00:59.400 --> 00:01:04.400] and a situation involving conflict or opposition between parties, ideas or forces.
-[00:01:04.400 --> 00:01:05.400] Related words.
-[00:01:05.400 --> 00:01:09.000] Conflict, clash, dispute, argument, encounter.
-[00:01:09.000 --> 00:01:14.000] Antonyms, harmony, agreement, cooperation, reconciliation.
+[00:00:00.000 --> 00:00:02.820] Confrontation is a noun with the following meanings.
+[00:00:03.700 --> 00:00:05.620] One, a direct encounter or clash.
+[00:00:06.520 --> 00:00:11.440] The act of facing or meeting someone or something directly, often in a challenging or
+[00:00:11.440 --> 00:00:12.620] confrontational manner.
+[00:00:13.320 --> 00:00:14.780] This can involve a dispute or argument.
+[00:00:15.740 --> 00:00:16.520] Example sentences.
+[00:00:17.560 --> 00:00:21.260] The confrontation between the two leaders was tense and charged with emotion.
+[00:00:21.920 --> 00:00:24.580] They had a confrontation about the mis -deadlines in the project.
+[00:00:24.800 --> 00:00:27.700] The police were prepared for a confrontation with the protesters.
+[00:00:27.700 --> 00:00:30.980] We want cooperation, not confrontation.
+[00:00:31.980 --> 00:00:34.920] Two, a situation involving conflict or opposition.
+[00:00:35.540 --> 00:00:40.340] A scenario where there is a conflict, disagreement or clash between parties, ideas or forces.
+[00:00:41.200 --> 00:00:42.240] Example sentences.
+[00:00:43.020 --> 00:00:46.340] The political confrontation between the opposing parties escalated quickly.
+[00:00:47.140 --> 00:00:50.400] The confrontation of different viewpoints led to a heated debate in the meeting.
+[00:00:51.220 --> 00:00:54.100] The film explores the dramatic confrontation between good and evil.
+[00:00:54.460 --> 00:00:55.060] Attash summary.
+[00:00:55.060 --> 00:00:59.940] Confrontation refers to both a direct, often challenging encounter or clash, and a situation
+[00:00:59.940 --> 00:01:03.800] involving conflict or opposition between parties, ideas or forces.
+[00:01:04.380 --> 00:01:04.920] Related words.
+[00:01:05.540 --> 00:01:08.260] Conflict, clash, dispute, argument, encounter.
+[00:01:09.000 --> 00:01:12.620] Antonyms, harmony, agreement, cooperation, reconciliation.

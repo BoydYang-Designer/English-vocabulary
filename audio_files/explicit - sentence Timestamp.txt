@@ -1,17 +1,20 @@
-[00:00:00.000 --> 00:00:03.280] Explicit is an adjective with the following meanings.
-[00:00:03.280 --> 00:00:07.760] 1. Stated clearly and in detail, leaving no room for confusion or doubt.
-[00:00:07.760 --> 00:00:11.680] Example, the instructions were explicit, so everyone knew what to do.
-[00:00:11.680 --> 00:00:15.680] She gave explicit directions to the venue to avoid misunderstandings.
-[00:00:15.680 --> 00:00:20.000] The contract contains explicit terms regarding payment and deadlines.
-[00:00:20.000 --> 00:00:24.800] 2. Describing something that is graphic, frank, or openly expressed,
-[00:00:24.800 --> 00:00:29.000] often in relation to content like language, imagery, or behavior.
-[00:00:29.160 --> 00:00:34.440] Example, the movie was rated R due to its explicit language and violent scenes.
-[00:00:34.440 --> 00:00:37.560] His explicit remarks shocked everyone at the meeting.
-[00:00:37.560 --> 00:00:41.400] The book includes explicit descriptions of historical events.
-[00:00:41.400 --> 00:00:44.760] Sora is a creative tool, so please avoid harmful use,
-[00:00:44.760 --> 00:00:49.000] including creating explicit, violent, harassing, or deceptive content.
-[00:00:50.040 --> 00:00:53.880] Summary, explicit means something is stated clearly and directly,
-[00:00:53.880 --> 00:00:55.640] or openly expressed without ambiguity,
-[00:00:55.640 --> 00:00:58.040] sometimes referring to graphic or frank content.
-[00:00:58.120 --> 00:01:02.040] Related words, clear, detailed, direct, specific, precise,
-[00:01:02.840 --> 00:01:05.640] vague, implicit, ambiguous, unclear.
+[00:00:00.000 --> 00:00:02.780] Explicit is an adjective with the following meanings.
+[00:00:03.460 --> 00:00:03.640] 1.
+[00:00:04.160 --> 00:00:07.160] Stated clearly and in detail, leaving no room for confusion or doubt.
+[00:00:07.940 --> 00:00:11.220] Example, the instructions were explicit, so everyone knew what to do.
+[00:00:11.840 --> 00:00:15.220] She gave explicit directions to the venue to avoid misunderstandings.
+[00:00:15.880 --> 00:00:18.960] The contract contains explicit terms regarding payment and deadlines.
+[00:00:20.040 --> 00:00:20.600] 2.
+[00:00:21.360 --> 00:00:26.040] Describing something that is graphic, frank, or openly expressed, often in relation to
+[00:00:26.040 --> 00:00:28.460] content like language, imagery, or behavior.
+[00:00:28.460 --> 00:00:33.340] Example, the movie was rated R due to its explicit language and
+[00:00:33.340 --> 00:00:34.140] violent scenes.
+[00:00:34.640 --> 00:00:37.020] His explicit remarks shocked everyone at the meeting.
+[00:00:37.660 --> 00:00:40.880] The book includes explicit descriptions of historical events.
+[00:00:41.620 --> 00:00:46.920] Sora is a creative tool, so please avoid harmful use, including creating explicit, violent,
+[00:00:47.300 --> 00:00:48.900] harassing, or deceptive content.
+[00:00:49.800 --> 00:00:54.780] Summary, explicit means something is stated clearly and directly, or openly expressed
+[00:00:54.780 --> 00:00:57.680] without ambiguity, sometimes referring to graphic or frank content.
+[00:00:58.000 --> 00:01:01.900] Related words, clear, detailed, direct, specific, precise,
+[00:01:02.760 --> 00:01:03.120] vague,
+[00:01:03.720 --> 00:01:05.240] implicit, ambiguous, unclear.

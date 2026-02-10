@@ -1,12 +1,13 @@
-[00:00:00.000 --> 00:00:04.680] A appendage is a noun that means a part or attachment connected to something bigger.
-[00:00:04.680 --> 00:00:08.560] It can also refer to a smaller part that helps with a specific task.
-[00:00:08.560 --> 00:00:12.040] One, a part attached to a larger structure.
-[00:00:12.040 --> 00:00:17.840] Example, the tail is an appendage that helps the animal maintain balance while running.
-[00:00:17.840 --> 00:00:24.160] Example, the scientists studied the appendages of various marine animals to understand their adaptations.
-[00:00:24.400 --> 00:00:28.560] More, two, a smaller part that supports a main function or role.
-[00:00:28.560 --> 00:00:33.040] Example, the new office will serve as an appendage to the main building,
-[00:00:33.040 --> 00:00:35.200] providing extra space for staff.
-[00:00:35.200 --> 00:00:40.560] Example, she viewed her job at the company as an appendage to her true passion for writing.
-[00:00:40.560 --> 00:00:44.720] Summary, a appendage refers to any part that is attached to a larger entity,
-[00:00:44.720 --> 00:00:50.880] either physically or functionally, and can denote both physical parts and auxiliary roles.
-[00:00:50.880 --> 00:00:58.720] Related words, attachment, extension, adjunct, supplement, and detachment separation, disconnection.
+[00:00:00.000 --> 00:00:04.180] Appendage is a noun that means a part or attachment connected to something bigger.
+[00:00:04.800 --> 00:00:08.140] It can also refer to a smaller part that helps with a specific task.
+[00:00:08.820 --> 00:00:11.360] One, a part attached to a larger structure.
+[00:00:12.420 --> 00:00:17.240] Example, the tail is an appendage that helps the animal maintain balance while running.
+[00:00:18.080 --> 00:00:23.220] Example, the scientists studied the appendages of various marine animals to understand their adaptations.
+[00:00:24.140 --> 00:00:28.120] But, two, a smaller part that supports a main function or role.
+[00:00:28.120 --> 00:00:32.640] Example, the new office will serve as an appendage to the main building,
+[00:00:33.040 --> 00:00:34.680] providing extra space for staff.
+[00:00:35.240 --> 00:00:39.520] Example, she viewed her job at the company as an appendage to her true passion for writing.
+[00:00:40.580 --> 00:00:45.380] Summary, appendage refers to any part that is attached to a larger entity, either physically
+[00:00:45.380 --> 00:00:50.000] or functionally, and can denote both physical parts and auxiliary roles.
+[00:00:50.860 --> 00:00:53.320] Related words, attachment, extension,
+[00:00:53.940 --> 00:00:58.220] adjunct, supplement, and detachment, separation, disconnection.

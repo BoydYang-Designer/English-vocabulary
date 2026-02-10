@@ -1,2 +1,4 @@
-[00:00:00.000 --> 00:00:07.000] As a verb, devise, devise, devising means to invent, plan, or create something, usually with careful thought and intention.
-[00:00:07.000 --> 00:00:13.000] Example, the team worked together to devise a new marketing strategy to attract customers to their product.
+[00:00:00.000 --> 00:00:05.020] As a verb, devise, devise devising means to invent, plan, or create something,
+[00:00:05.240 --> 00:00:06.880] usually with careful thought and intention.
+[00:00:07.360 --> 00:00:12.320] Example, the team worked together to devise a new marketing strategy to attract customers
+[00:00:12.320 --> 00:00:13.020] to their product.

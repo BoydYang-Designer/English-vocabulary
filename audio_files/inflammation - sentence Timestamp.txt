@@ -1,8 +1,0 @@
-[00:00:00.000 --> 00:00:09.000] Inflammation is a noun, refers to the body's biological response to harmful stimuli, such as pathogens, damaged cells, or irritants.
-[00:00:09.000 --> 00:00:18.000] This response involves the activation of the immune system, leading to signs such as redness, heat, swelling, and pain in the affected area.
-[00:00:18.000 --> 00:00:22.000] Example, inflammation of the joints can lead to conditions like arthritis.
-[00:00:22.000 --> 00:00:27.000] Example, the doctor explained that inflammation is a natural part of the healing process.
-[00:00:27.000 --> 00:00:32.000] Example, chronic inflammation has been linked to various diseases, including heart disease and cancer.
-[00:00:32.000 --> 00:00:37.000] Example, ice packs can help reduce inflammation and swelling after an injury.
-[00:00:37.000 --> 00:00:46.000] Summary, inflammation is the body's protective response to injury or infection, characterized by swelling, redness, and pain, which can be acute or chronic.
-[00:00:46.000 --> 00:00:53.000] Related words, swelling, irritation, redness, immune response. Antonyms, healing, calmness, peace.

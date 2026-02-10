@@ -1,7 +1,22 @@
-[00:00:00.000 --> 00:00:08.000] Coherence, noun, refers to the quality of being logical, consistent, and well-organized in ideas or arguments.
-[00:00:08.000 --> 00:00:13.000] Example sentences. One, his films are confusing and have little coherence.
-[00:00:13.000 --> 00:00:19.000] Two, the essay lacked coherence as the author jumped from one idea to another without clear transitions.
-[00:00:19.000 --> 00:00:25.000] Three, to improve coherence, the speaker ensured that each point was clearly connected to the main argument.
-[00:00:26.000 --> 00:00:32.000] Summary, coherence denotes the clarity and logical flow of ideas ensuring that they are consistent and effectively connected.
-[00:00:32.000 --> 00:00:37.000] Synonyms, consistency, logicality, clarity, unity.
-[00:00:37.000 --> 00:00:42.000] Antonyms, incoherence, confusion, disorganization, disconnection.
+[00:00:00.000 --> 00:00:01.660] Coherence, noun,
+[00:00:02.320 --> 00:00:07.280] refers to the quality of being logical, consistent, and well -organized in ideas or arguments.
+[00:00:08.080 --> 00:00:08.880] Example sentences.
+[00:00:09.780 --> 00:00:09.880] 1.
+[00:00:10.120 --> 00:00:12.400] His films are confusing and have little coherence.
+[00:00:12.940 --> 00:00:13.300] 2.
+[00:00:13.600 --> 00:00:18.300] The essay lacked coherence, as the author jumped from one idea to another without clear transitions.
+[00:00:19.280 --> 00:00:19.780] 3.
+[00:00:20.220 --> 00:00:24.560] To improve coherence, the speaker ensured that each point was clearly connected to the main argument.
+[00:00:25.780 --> 00:00:26.460] Summary.
+[00:00:26.560 --> 00:00:31.400] Coherence denotes the clarity and logical flow of ideas, ensuring that they are consistent and
+[00:00:31.400 --> 00:00:32.260] effectively connected.
+[00:00:32.900 --> 00:00:33.360] Synonyms.
+[00:00:33.580 --> 00:00:34.220] Consistency.
+[00:00:34.920 --> 00:00:35.600] Logicality.
+[00:00:35.900 --> 00:00:36.160] Clarity.
+[00:00:36.520 --> 00:00:36.760] Unity.
+[00:00:37.500 --> 00:00:38.100] Antonyms.
+[00:00:38.420 --> 00:00:39.040] Incoherence.
+[00:00:39.300 --> 00:00:39.680] Confusion.
+[00:00:40.040 --> 00:00:40.720] Disorganization.
+[00:00:40.940 --> 00:00:41.540] Disconnection.

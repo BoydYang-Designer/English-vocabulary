@@ -1,7 +1,9 @@
-[00:00:00.000 --> 00:00:04.800] Selendrical is an adjective describing the shape of something that has the form of a cylinder
-[00:00:04.800 --> 00:00:09.400] with two parallel circular bases and a curved surface connecting them.
-[00:00:09.400 --> 00:00:14.000] Example, the lamp has a cylindrical base that fits perfectly in the corner.
-[00:00:14.000 --> 00:00:19.200] Example, the building's design includes several cylindrical columns supporting the roof.
-[00:00:19.200 --> 00:00:26.200] Example, the engineers chose a cylindrical shape for the container to optimize space and strength.
-[00:00:26.600 --> 00:00:32.600] Summary, cylindrical, refers to something having the shape or characteristics of a cylinder.
-[00:00:32.600 --> 00:00:38.600] Related word tubular, round, columnar, barrel shaped, antinims, square, box shaped, cubic.
+[00:00:00.000 --> 00:00:04.960] Cylindrical is an adjective describing the shape of something that has the form of a cylinder with
+[00:00:04.960 --> 00:00:09.080] two parallel circular bases and a curved surface connecting them.
+[00:00:09.740 --> 00:00:13.620] Example, the lamp has a cylindrical base that fits perfectly in the corner.
+[00:00:14.400 --> 00:00:18.920] Example, the building's design includes several cylindrical columns supporting the roof.
+[00:00:19.560 --> 00:00:24.080] Example, the engineers chose a cylindrical shape for the container to optimize
+[00:00:24.080 --> 00:00:25.560] space and strength.
+[00:00:26.460 --> 00:00:31.660] Summary, cylindrical refers to something having the shape or characteristics of a cylinder.
+[00:00:32.380 --> 00:00:36.880] Related word, tubular, round, columnar, barrel -shaped, antonyms, square,
+[00:00:37.300 --> 00:00:38.300] box -shaped, cubic.

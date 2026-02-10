@@ -1,7 +1,10 @@
-[00:00:00.000 --> 00:00:06.320] Collectively is an adverb that refers to acting or functioning as a group or whole rather than individually.
-[00:00:07.280 --> 00:00:11.200] Example, the team collectively agreed on the new project timeline.
-[00:00:12.080 --> 00:00:15.840] The employees collectively decided to address the management about their concerns.
-[00:00:17.680 --> 00:00:20.480] These changes will collectively improve the company's performance.
-[00:00:21.280 --> 00:00:25.360] Collectively, the small contributions made a significant difference to the charity.
-[00:00:25.680 --> 00:00:33.280] Summary, collectively describes actions or effects taken as a group or considered in their entirety rather than separately.
-[00:00:33.280 --> 00:00:40.480] Related words jointly, together, unitedly as a whole. Antonyms individually, separately, independently.
+[00:00:00.000 --> 00:00:04.920] Collectively is an adverb that refers to acting or functioning as a group or whole rather
+[00:00:04.920 --> 00:00:05.940] than individually.
+[00:00:07.260 --> 00:00:11.100] Example, the team collectively agreed on the new project timeline.
+[00:00:12.180 --> 00:00:15.780] The employees collectively decided to address the management about their concerns.
+[00:00:17.620 --> 00:00:20.420] These changes will collectively improve the company's performance.
+[00:00:21.260 --> 00:00:25.340] Collectively, the small contributions made a significant difference to the charity.
+[00:00:26.440 --> 00:00:31.260] Summary Collectively describes actions or effects taken as a group or considered
+[00:00:31.260 --> 00:00:33.300] in their entirety rather than separately.
+[00:00:33.840 --> 00:00:37.300] Related words, jointly, together, unitedly, as a whole.
+[00:00:37.820 --> 00:00:40.600] Antonyms, individually, separately, independently.

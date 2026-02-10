@@ -1,14 +1,16 @@
-[00:00:00.000 --> 00:00:05.000] Extraterrestrial is an adjective and a noun with the following meanings.
-[00:00:05.000 --> 00:00:10.000] As an adjective relating to beings or things that originate outside Earth,
-[00:00:10.000 --> 00:00:15.000] refers to anything that comes from or exists in space beyond our planet.
-[00:00:15.000 --> 00:00:20.000] Example, the scientists are researching extraterrestrial life forms that might exist on other planets.
-[00:00:20.000 --> 00:00:25.000] Example, the film depicted an extraterrestrial invasion of Earth.
-[00:00:26.000 --> 00:00:32.000] As a noun, a being or object that comes from outside Earth refers to any life form or object
-[00:00:32.000 --> 00:00:37.000] that originates from beyond our planet, often imagined as alien life forms.
-[00:00:37.000 --> 00:00:43.000] Example, the discovery of a mysterious object in space was thought to be of extraterrestrial origin.
-[00:00:43.000 --> 00:00:49.000] Example, some people believe that extraterrestrials have visited Earth in the past.
-[00:00:49.000 --> 00:00:51.000] Summary.
-[00:00:51.000 --> 00:00:55.000] A extraterrestrial describes something related to or originating from outside Earth,
-[00:00:55.000 --> 00:00:59.000] either as an adjective for such things or as a noun for beings from other planets.
-[00:00:59.000 --> 00:01:02.000] Related words, alien, outer space, Martian cosmic,
-[00:01:02.000 --> 00:01:05.000] Antonim's terrestrial, Earthly.
+[00:00:00.000 --> 00:00:04.060] Extraterrestrial is an adjective and a noun with the following meanings.
+[00:00:04.760 --> 00:00:09.680] As an adjective, relating to beings or things that originate outside Earth,
+[00:00:10.060 --> 00:00:14.140] refers to anything that comes from or exists in space beyond our planet.
+[00:00:14.800 --> 00:00:19.580] Example, the scientists are researching extraterrestrial life forms that might exist on other planets.
+[00:00:20.420 --> 00:00:23.540] Example, the film depicted an extraterrestrial invasion of Earth.
+[00:00:25.260 --> 00:00:26.360] As a noun,
+[00:00:27.260 --> 00:00:32.000] a being or object that comes from outside Earth refers to any life form or object that
+[00:00:32.000 --> 00:00:35.820] originates from beyond our planet, often imagined as alien life forms.
+[00:00:36.760 --> 00:00:41.400] Example, the discovery of a mysterious object in space was thought to be of
+[00:00:41.400 --> 00:00:42.660] extraterrestrial origin.
+[00:00:43.380 --> 00:00:44.020] Example,
+[00:00:44.920 --> 00:00:48.620] some people believe that extraterrestrials have visited Earth in the past.
+[00:00:50.320 --> 00:00:55.200] Summary, extraterrestrial described something related to or originating from outside Earth, either as an
+[00:00:55.200 --> 00:00:58.120] adjective for such things or as a noun for beings from other planets.
+[00:00:58.640 --> 00:01:01.680] Related words, alien, outer space, Martian, cosmic.
+[00:01:02.340 --> 00:01:04.640] Antonyms, terrestrial, earthly.

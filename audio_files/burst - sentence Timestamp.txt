@@ -1,11 +1,15 @@
-[00:00:00.000 --> 00:00:07.000] Burst can function as both a verb and a noun, with meanings related to sudden intense breaking or outburst.
-[00:00:07.000 --> 00:00:11.000] As a verb, burst, burst at bursting.
-[00:00:11.000 --> 00:00:16.000] Burst means to break open or apart suddenly and violently, typically due to internal pressure.
-[00:00:16.000 --> 00:00:22.000] It can also refer to a sudden intense expression or display of an emotion or activity.
-[00:00:22.000 --> 00:00:26.000] Example the balloon burst when it was accidentally squeezed too hard.
-[00:00:26.000 --> 00:00:30.000] Example after ten days of rain the river burst its banks.
-[00:00:30.000 --> 00:00:34.000] Example she burst into tears when she heard the news of her grandmother's passing.
-[00:00:34.000 --> 00:00:43.000] As a noun, burst, bursts, burst, refers to the act of bursting or a sudden and brief outburst of something.
-[00:00:43.000 --> 00:00:48.000] Example there was a burst of laughter from the audience when the comedian delivered the punchline.
-[00:00:48.000 --> 00:00:52.000] A burst of hand clapping followed the ending of the song.
-[00:00:52.000 --> 00:00:56.000] The volcanoes sudden burst of lava destroyed nearby villages.
+[00:00:00.000 --> 00:00:04.640] Burst can function as both a verb and a noun, with meanings related to sudden,
+[00:00:04.860 --> 00:00:06.380] intense breaking or outburst.
+[00:00:07.800 --> 00:00:08.280] As a verb,
+[00:00:09.000 --> 00:00:10.300] burst, bursted bursting.
+[00:00:10.980 --> 00:00:15.520] Burst means to break open or apart suddenly and violently, typically due to internal pressure.
+[00:00:16.260 --> 00:00:21.660] It can also refer to a sudden, intense expression or display of an emotion or activity.
+[00:00:22.520 --> 00:00:25.160] Example the balloon burst when it was accidentally squeezed too hard.
+[00:00:26.500 --> 00:00:29.540] Example after ten days of rain the river burst its banks.
+[00:00:29.800 --> 00:00:33.540] Example she burst into tears when she heard the news of her grandmother's passing.
+[00:00:33.980 --> 00:00:34.800] As a noun,
+[00:00:35.560 --> 00:00:36.480] burst, bursts,
+[00:00:37.300 --> 00:00:42.340] burst, refers to the act of bursting or a sudden and brief outburst of something.
+[00:00:42.900 --> 00:00:47.320] Example there was a burst of laughter from the audience when the comedian delivered the punchline.
+[00:00:48.300 --> 00:00:51.300] A burst of hand clapping followed the ending of the song.
+[00:00:51.300 --> 00:00:56.040] The volcano's sudden burst of lava destroyed nearby villages.

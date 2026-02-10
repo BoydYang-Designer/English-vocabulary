@@ -1,4 +1,8 @@
-[00:00:00.000 --> 00:00:08.000] Centerpiece refers to the main or most important feature or element of something, often placed in the center for emphasis or decoration.
-[00:00:08.000 --> 00:00:16.000] Example, her speech on climate change was the centerpiece of the conference, sparking important discussions among attendees.
-[00:00:16.000 --> 00:00:23.000] Example, the wedding cake adorned with intricate designs, served as the centerpiece of the reception.
-[00:00:23.000 --> 00:00:31.000] Example, the historic painting was the centerpiece of the art gallery's anniversary exhibition, brought drawing visitors from far and wide.
+[00:00:00.000 --> 00:00:04.560] Centerpiece refers to the main or most important feature or element of something,
+[00:00:05.060 --> 00:00:07.580] often placed in the center for emphasis or decoration.
+[00:00:08.780 --> 00:00:13.600] Example, her speech on climate change was the centerpiece of the conference sparking
+[00:00:13.600 --> 00:00:15.400] important discussions among attendees.
+[00:00:16.520 --> 00:00:21.520] Example, the wedding cake adorned with intricate designs served as the centerpiece
+[00:00:21.520 --> 00:00:22.140] of the reception.
+[00:00:23.180 --> 00:00:27.960] Example, the historic painting was the centerpiece of the Art Gallery's anniversary exhibition
+[00:00:27.960 --> 00:00:30.540] brought drawing visitors from far and wide.

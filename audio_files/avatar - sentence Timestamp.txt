@@ -1,24 +1,16 @@
-[00:00:00.000 --> 00:00:03.800] Avatar is a noun with multiple meanings, one,
-[00:00:03.800 --> 00:00:06.960] a representation of a person in digital or virtual form
-[00:00:06.960 --> 00:00:09.760] such as in online platforms or video games.
-[00:00:09.760 --> 00:00:12.760] Example, she customized her avatar in the game
-[00:00:12.760 --> 00:00:14.640] to look like herself.
-[00:00:14.640 --> 00:00:17.160] Example, the social media platform allows users
-[00:00:17.160 --> 00:00:20.040] to create animated avatars for their profiles,
-[00:00:20.040 --> 00:00:22.840] two, an embodiment or representation of a concept,
-[00:00:22.840 --> 00:00:26.160] quality or idea in physical or tangible form.
-[00:00:26.160 --> 00:00:28.360] Example, the leader was seen as an avatar
-[00:00:28.360 --> 00:00:29.960] of courage and resilience.
-[00:00:29.960 --> 00:00:32.240] Example, in literature, the protagonist
-[00:00:32.240 --> 00:00:35.800] serves as an avatar of justice, three, in Hinduism,
-[00:00:35.800 --> 00:00:38.600] a deities descent to earth in a physical form.
-[00:00:38.600 --> 00:00:43.080] Example, Krishna is considered an avatar of the god Vishnu.
-[00:00:43.080 --> 00:00:46.120] Example, the story of Rama, an avatar of Vishnu
-[00:00:46.120 --> 00:00:48.440] is central to the Ramayana epic.
-[00:00:48.440 --> 00:00:51.400] Summary, avatar refers to a digital representation
-[00:00:51.400 --> 00:00:53.800] of a person, a physical manifestation
-[00:00:53.800 --> 00:00:56.080] of an abstract quality or concept,
-[00:00:56.080 --> 00:00:59.120] or a deities earthly incarnation in Hinduism.
-[00:00:59.120 --> 00:01:01.680] Related words, representation, embodiment, symbol,
-[00:01:01.680 --> 00:01:03.720] manifestation, reincarnation,
-[00:01:03.720 --> 00:01:06.560] Antonim's original disembodiment, contextually.
+[00:00:00.000 --> 00:00:02.280] Avatar is a noun with multiple meanings.
+[00:00:02.900 --> 00:00:03.100] One,
+[00:00:04.040 --> 00:00:09.260] a representation of a person in digital or virtual form, such as in online platforms or video games.
+[00:00:09.780 --> 00:00:13.620] Example, she customized her avatar in the game to look like herself.
+[00:00:14.680 --> 00:00:19.300] Example, the social media platform allows users to create animated avatars for their profiles.
+[00:00:20.040 --> 00:00:25.040] Two, an embodiment or representation of a concept, quality or idea in physical or
+[00:00:25.040 --> 00:00:25.780] tangible form.
+[00:00:26.220 --> 00:00:29.480] Example, the leader was seen as an avatar of courage and resilience.
+[00:00:29.960 --> 00:00:33.740] Example, in literature, the protagonist serves as an avatar of justice.
+[00:00:34.220 --> 00:00:38.020] Three, in Hinduism, a deity's descent to earth in a physical form.
+[00:00:38.600 --> 00:00:41.960] Example, Krishna is considered an avatar of the God Vishnu.
+[00:00:43.060 --> 00:00:47.460] Example, the story of Rama, an avatar of Vishnu, is central to the Ramayana Epic.
+[00:00:48.440 --> 00:00:52.880] Summary, avatar refers to a digital representation of a person, a physical
+[00:00:52.880 --> 00:00:58.280] manifestation of an abstract quality or concept, or a deity's earthly incarnation in Hinduism.
+[00:00:58.920 --> 00:01:03.220] Related words, representation, embodiment, symbol, manifestation, reincarnation,
+[00:01:03.800 --> 00:01:06.260] antonym's original disembodiment contextually.

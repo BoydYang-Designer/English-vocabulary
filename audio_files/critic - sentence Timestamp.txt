@@ -1,9 +1,10 @@
-[00:00:00.000 --> 00:00:03.400] Critic, as a noun, critic, critics.
-[00:00:03.400 --> 00:00:08.400] One, a critic is a person who gives opinions about books, movies, or other forms of art.
-[00:00:08.400 --> 00:00:11.800] Example, he is a very famous film critic.
-[00:00:11.800 --> 00:00:15.300] Example, she was nervous about presenting her artwork to the critic,
-[00:00:15.300 --> 00:00:18.800] knowing that their feedback could greatly influence her career.
-[00:00:18.800 --> 00:00:23.500] Two, a critic is also a person who disapproves of someone or something,
-[00:00:23.500 --> 00:00:26.000] a person who criticizes someone or something.
-[00:00:26.000 --> 00:00:29.900] Example, the actor had to answer many charges from his critics.
-[00:00:29.900 --> 00:00:33.300] Example, he was a very famous film critic.
+[00:00:00.580 --> 00:00:01.680] Critic as a noun.
+[00:00:02.160 --> 00:00:03.000] Critic, critics.
+[00:00:03.540 --> 00:00:07.940] One, a critic is a person who gives opinions about books, movies, or other forms of art.
+[00:00:08.560 --> 00:00:11.420] Example, he is a very famous film critic.
+[00:00:11.980 --> 00:00:16.840] Example, she was nervous about presenting her artwork to the critic, knowing that their feedback could greatly
+[00:00:16.840 --> 00:00:17.820] influence her career.
+[00:00:19.080 --> 00:00:23.940] Two, a critic is also a person who disapproves of someone or something, a person
+[00:00:23.940 --> 00:00:25.400] who criticizes someone or something.
+[00:00:26.160 --> 00:00:26.680] Example,
+[00:00:27.400 --> 00:00:29.800] the actor had to answer many charges from his critics.

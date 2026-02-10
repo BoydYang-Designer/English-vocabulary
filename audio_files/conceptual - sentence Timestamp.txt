@@ -1,6 +1,10 @@
-[00:00:00.000 --> 00:00:08.000] Conceptual is an adjective that relates to ideas or mental concepts rather than physical or practical aspects.
-[00:00:08.000 --> 00:00:14.000] Example, the artist's conceptual work challenges viewers to think beyond traditional aesthetics.
-[00:00:14.000 --> 00:00:20.000] Example, the project began with a conceptual framework that outlined its main objectives.
-[00:00:20.000 --> 00:00:26.000] In the discussion, they focused on conceptual models to understand the complex issue better.
-[00:00:26.000 --> 00:00:34.000] Summary, conceptual pertains to ideas and theories, emphasizing understanding and representation rather than tangible or practical elements.
-[00:00:34.000 --> 00:00:42.000] Related words, theoretical, abstract, ideological, imaginative, antinims, practical, concrete, tangible, real.
+[00:00:00.000 --> 00:00:04.580] Conceptual is an adjective that relates to ideas or mental concepts
+[00:00:04.580 --> 00:00:07.500] rather than physical or practical aspects.
+[00:00:08.320 --> 00:00:13.560] Example, the artist's conceptual work challenges viewers to think beyond traditional aesthetics.
+[00:00:14.260 --> 00:00:19.300] Example, the project began with a conceptual framework that outlined its main objectives.
+[00:00:20.140 --> 00:00:24.940] In the discussion, they focused on conceptual models to understand the complex issue better.
+[00:00:26.400 --> 00:00:31.060] Summary, conceptual pertains to ideas and theories emphasizing understanding
+[00:00:31.060 --> 00:00:34.060] and representation rather than tangible or practical elements.
+[00:00:34.480 --> 00:00:38.020] Related words, theoretical, abstract, ideological, imaginative.
+[00:00:38.260 --> 00:00:40.480] Antonyms, practical, concrete, tangible,
+[00:00:41.420 --> 00:00:41.720] real.

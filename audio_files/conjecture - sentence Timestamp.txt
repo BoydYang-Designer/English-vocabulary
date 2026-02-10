@@ -1,14 +1,19 @@
-[00:00:00.000 --> 00:00:04.000] Conjecture is a noun and a verb with the following meanings.
-[00:00:04.000 --> 00:00:06.400] One, as a noun,
-[00:00:06.400 --> 00:00:13.000] conjecture refers to an opinion or conclusion formed on the basis of incomplete information or insufficient evidence.
-[00:00:13.000 --> 00:00:18.000] It involves making a guess or hypothesis about something that is not yet confirmed.
-[00:00:18.000 --> 00:00:23.000] Example sentences, your plan is based on nothing more than conjecture.
-[00:00:23.000 --> 00:00:28.000] The novel's plot was based on historical conjecture rather than verified facts.
-[00:00:28.000 --> 00:00:34.000] Many of the theories about ancient civilizations are based on conjecture rather than solid evidence.
-[00:00:34.000 --> 00:00:45.000] Two, as a verb, conjecture, conjectured, conjecturing means to form an opinion or make a guess about something without having all the necessary information or evidence.
-[00:00:45.000 --> 00:00:52.000] Example sentences, the detect conjectured about the motive behind the crime based on the available clues.
-[00:00:53.000 --> 00:00:57.000] Without concrete data, we can only conjecture about the reasons for the sudden weather change.
-[00:00:57.000 --> 00:01:02.000] The experts conjectured on the impact of the new policy before it was implemented.
-[00:01:02.000 --> 00:01:09.000] Summary, conjecture refers to forming an opinion or guess based on incomplete information.
-[00:01:09.000 --> 00:01:19.000] It involves both making guesses about unknown aspects noun and speculating about them, verb, related words, guess, hypothesis, speculation, assumption.
-[00:01:19.000 --> 00:01:22.000] Antonyms, fact, evidence, certainty, proof.
+[00:00:00.000 --> 00:00:03.420] Conjecture is a noun and a verb with the following meanings.
+[00:00:04.320 --> 00:00:04.480] One,
+[00:00:05.280 --> 00:00:05.900] as a noun,
+[00:00:06.620 --> 00:00:11.440] conjecture refers to an opinion or conclusion formed on the basis of incomplete information or
+[00:00:11.440 --> 00:00:12.380] insufficient evidence.
+[00:00:13.080 --> 00:00:17.080] It involves making a guess or hypothesis about something that is not yet confirmed.
+[00:00:18.360 --> 00:00:22.340] Example sentences, your plan is based on nothing more than conjecture.
+[00:00:22.960 --> 00:00:26.700] The novel's plot was based on historical conjecture rather than verified facts.
+[00:00:28.040 --> 00:00:33.420] Many of the theories about ancient civilizations are based on conjecture rather than solid evidence.
+[00:00:34.380 --> 00:00:39.280] Two, as a verb, conjecture, conjectured, conjecturing means
+[00:00:39.280 --> 00:00:44.340] to form an opinion or make a guess about something without having all the necessary information or evidence.
+[00:00:45.920 --> 00:00:51.300] Example sentences, the detect conjectured about the motive behind the crime based on the available clues.
+[00:00:52.160 --> 00:00:56.520] Without concrete data, we can only conjecture about the reasons for the sudden weather change.
+[00:00:56.940 --> 00:01:00.400] The experts conjectured on the impact of the new policy before it was implemented.
+[00:01:02.220 --> 00:01:06.860] Summary, conjecture refers to forming an opinion or guess based on
+[00:01:06.860 --> 00:01:08.200] incomplete information.
+[00:01:08.860 --> 00:01:14.060] It involves both making guesses about unknown aspects noun and speculating about them, verb,
+[00:01:14.540 --> 00:01:18.300] related words, guess, hypothesis, speculation, assumption.
+[00:01:18.300 --> 00:01:21.620] Antonin's Fact Evidence Certainty Proof.

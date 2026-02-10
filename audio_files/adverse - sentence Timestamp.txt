@@ -1,7 +1,14 @@
-[00:00:00.000 --> 00:00:06.000] Adverse generally describes something negative, harmful, or contrary to what is wanted or expected.
-[00:00:06.000 --> 00:00:14.000] 1. Harmful or unfavorable. When something is adverse, it is harmful or unfavorable in nature, often causing problems or difficulties.
-[00:00:14.000 --> 00:00:18.000] Example, the adverse weather conditions made driving hazardous.
-[00:00:18.000 --> 00:00:25.000] 2. Contrary or opposing. Adverse can also mean an opposition to something going against what is desired or intended.
-[00:00:25.000 --> 00:00:30.000] For instance, example, the court ruling had adverse effects on the company's profits.
-[00:00:30.000 --> 00:00:37.000] 3. Hostel or antagonistic. It can also describe someone or something that is hostile or antagonistic towards another.
-[00:00:37.000 --> 00:00:41.000] Example, she faced adverse criticism from her peers.
+[00:00:00.000 --> 00:00:05.340] Adverse generally describes something negative, harmful, or contrary to what is wanted or expected.
+[00:00:06.480 --> 00:00:06.720] 1.
+[00:00:07.060 --> 00:00:08.120] Harmful or unfavorable.
+[00:00:08.440 --> 00:00:13.340] When something is adverse, it is harmful or unfavorable in nature, often causing problems or difficulties.
+[00:00:13.840 --> 00:00:17.180] Example, the adverse weather conditions made driving hazardous.
+[00:00:17.940 --> 00:00:18.240] 2.
+[00:00:18.760 --> 00:00:19.680] Contrary or opposing.
+[00:00:20.440 --> 00:00:24.880] Adverse can also mean an opposition to something going against what is desired or intended.
+[00:00:24.880 --> 00:00:26.500] For instance, example,
+[00:00:27.160 --> 00:00:29.680] the court ruling had adverse effects on the company's profits.
+[00:00:30.340 --> 00:00:30.340] 3.
+[00:00:31.060 --> 00:00:32.400] Hostile or antagonistic.
+[00:00:32.980 --> 00:00:37.040] It can also describe someone or something that is hostile or antagonistic towards another.
+[00:00:37.800 --> 00:00:40.700] Example, she faced adverse criticism from her peers.

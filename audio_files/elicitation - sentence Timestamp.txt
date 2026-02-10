@@ -12,10 +12,15 @@
 [00:00:43.280 --> 00:00:46.920] Controlled elicitation helps linguists analyze sentence structure.
 [00:00:47.740 --> 00:00:51.140] The study relied on elicitation rather than spontaneous conversation.
 [00:00:52.000 --> 00:00:52.780] 3.
-[00:00:52.780 --> 00:00:59.320] In psychology or education, the process of provoking or bringing out a particular response, feeling or behavior.
+[00:00:52.780 --> 00:00:57.280] In psychology or education, the process of provoking or bringing out a particular response,
+[00:00:57.900 --> 00:00:59.320] feeling or behavior.
 [00:00:59.940 --> 00:01:02.340] The activity aimed at the elicitation of creative thinking.
 [00:01:03.100 --> 00:01:06.300] Certain images were chosen for the elicitation of emotional reactions.
 [00:01:07.140 --> 00:01:10.100] Role -playing is useful for the elicitation of authentic communication.
 [00:01:10.820 --> 00:01:14.020] The coach used questions for the elicitation of self -reflection.
-[00:01:14.880 --> 00:01:22.760] Summary Elicitation refers to the act of drawing out information, language data or reactions through questions, prompts or specific techniques.
-[00:01:23.620 --> 00:01:36.560] Synonyms Extraction Prompting Drawing out Evocation Solicitation Antonyms Suppression Concealment Withholding Inhibition Related words Elicit Elicitor Interview Inquiry Response Feedback
+[00:01:14.880 --> 00:01:15.200] Summary
+[00:01:15.940 --> 00:01:20.860] Elicitation refers to the act of drawing out information, language data or reactions through questions,
+[00:01:21.120 --> 00:01:22.760] prompts or specific techniques.
+[00:01:23.620 --> 00:01:28.260] Synonyms Extraction Prompting Drawing out Evocation
+[00:01:28.260 --> 00:01:33.020] Solicitation Antonyms Suppression Concealment Withholding Inhibition Related words
+[00:01:33.020 --> 00:01:36.560] Elicit Elicitor Interview Inquiry Response Feedback

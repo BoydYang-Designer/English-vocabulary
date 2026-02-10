@@ -1,6 +1,9 @@
-[00:00:00.000 --> 00:00:05.200] Debris is a noun that means scattered fragments or remains of something that has been broken,
-[00:00:05.200 --> 00:00:11.840] destroyed, or discarded. Example, after the storm, debris from fallen trees covered the streets.
-[00:00:12.480 --> 00:00:18.880] Example, the explosion left debris scattered across the entire area. Example, workers cleared
-[00:00:18.880 --> 00:00:24.720] the construction debris from the site. Summary, debris refers to broken or scattered pieces of
-[00:00:24.720 --> 00:00:30.400] material, often resulting from destruction or waste. Related words, wreckage, rubble, remains,
-[00:00:30.400 --> 00:00:41.440] litter, fragments, antinims, cleanliness, order, intactness, structure.
+[00:00:00.000 --> 00:00:05.040] Debris is a noun that means scattered fragments or remains of something that has been broken,
+[00:00:05.300 --> 00:00:06.540] destroyed, or discarded.
+[00:00:07.660 --> 00:00:11.760] Example, after the storm, debris from fallen trees covered the streets.
+[00:00:12.520 --> 00:00:16.660] Example, the explosion left debris scattered across the entire area.
+[00:00:17.160 --> 00:00:20.380] Example, workers cleared the construction debris from the site.
+[00:00:21.280 --> 00:00:26.080] Summary, debris refers to broken or scattered pieces of material, often
+[00:00:26.080 --> 00:00:28.060] resulting from destruction or waste.
+[00:00:28.220 --> 00:00:33.400] Related words, wreckage, rubble, remains, litter, fragments, antonyms, cleanliness,
+[00:00:33.760 --> 00:00:35.140] order, intactness, structure.

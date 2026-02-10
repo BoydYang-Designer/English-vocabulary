@@ -1,8 +1,9 @@
-[00:00:00.000 --> 00:00:04.740] Duration as a noun, one, the length of time something lasts.
-[00:00:04.740 --> 00:00:08.840] Example, the duration of the movie was over two hours.
-[00:00:08.840 --> 00:00:12.280] Example, he stayed in the hospital for the duration of his treatment.
-[00:00:12.280 --> 00:00:16.120] Example, the contract is valid for the duration of one year.
-[00:00:16.120 --> 00:00:20.800] The teacher extended the duration of the exam by 30 minutes.
-[00:00:20.800 --> 00:00:26.700] Summary, duration, refers to the length of time that something continues or exists,
-[00:00:26.700 --> 00:00:30.700] related words length, span, period, term, time frame,
-[00:00:30.700 --> 00:00:33.700] Antonim's moment, instant, end, termination.
+[00:00:00.000 --> 00:00:01.700] Duration as a noun, one.
+[00:00:02.300 --> 00:00:04.080] The length of time something lasts.
+[00:00:04.920 --> 00:00:08.240] Example, the duration of the movie was over two hours.
+[00:00:08.900 --> 00:00:11.840] Example, he stayed in the hospital for the duration of his treatment.
+[00:00:12.360 --> 00:00:15.680] Example, the contract is valid for the duration of one year.
+[00:00:16.260 --> 00:00:19.440] The teacher extended the duration of the exam by 30 minutes.
+[00:00:21.000 --> 00:00:26.220] Summary, duration, refers to the length of time that something continues or exists,
+[00:00:26.780 --> 00:00:31.840] related words length, span, period, term, timeframe, antinims, moment, instant,
+[00:00:32.100 --> 00:00:33.140] end, termination.

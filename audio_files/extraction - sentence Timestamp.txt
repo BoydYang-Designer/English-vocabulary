@@ -1,19 +1,18 @@
-[00:00:00.000 --> 00:00:03.180] Extraction is a noun with the following meanings.
-[00:00:03.180 --> 00:00:07.240] One, the process of removing or taking out something from a source,
-[00:00:07.240 --> 00:00:10.180] often using specialized techniques or methods.
-[00:00:10.180 --> 00:00:14.480] Example, the extraction of oil from the ground can have environmental impacts.
-[00:00:14.480 --> 00:00:18.980] Example, the dentist performed a tooth extraction to alleviate pain.
-[00:00:18.980 --> 00:00:24.500] Example, the extraction of DNA from biological samples is crucial for genetic testing.
-[00:00:24.580 --> 00:00:28.900] Two, the act of obtaining something, especially information or resources
-[00:00:28.900 --> 00:00:30.940] from a larger context or system.
-[00:00:30.940 --> 00:00:35.980] Example, information extraction from the data set helped the researchers draw valuable conclusions.
-[00:00:35.980 --> 00:00:39.460] Example, the extraction of important insights from the report
-[00:00:39.460 --> 00:00:41.380] was essential for decision making.
-[00:00:41.380 --> 00:00:46.420] Summary, extraction refers to the act or process of removing something from a source,
-[00:00:46.420 --> 00:00:49.300] whether it be physical substances or information.
-[00:00:49.300 --> 00:00:53.820] Related words, removal, extraction process, deduction, obtaining.
-[00:00:53.820 --> 00:00:59.740] Anonyms, insertion, addition, inclusion, amalgamation, difference.
-[00:00:59.740 --> 00:01:03.420] Extractive refers to industries that take natural resources from the earth,
-[00:01:03.420 --> 00:01:05.460] like mining or oil drilling.
-[00:01:05.460 --> 00:01:08.380] While extraction is about the act of removing something,
-[00:01:08.380 --> 00:01:13.260] extractive relates to the industries involved in that process.
+[00:00:00.000 --> 00:00:02.640] Extraction is a noun with the following meanings.
+[00:00:03.340 --> 00:00:08.280] One, the process of removing or taking out something from a source, often using specialized
+[00:00:08.280 --> 00:00:09.600] techniques or methods.
+[00:00:10.260 --> 00:00:13.800] Example, the extraction of oil from the ground can have environmental impacts.
+[00:00:14.460 --> 00:00:18.320] Example, the dentist performed a tooth extraction to alleviate pain.
+[00:00:19.040 --> 00:00:23.700] Example, the extraction of DNA from biological samples is crucial for genetic testing.
+[00:00:23.700 --> 00:00:24.800] Two,
+[00:00:25.460 --> 00:00:30.520] the act of obtaining something, especially information or resources from a larger context or system.
+[00:00:30.940 --> 00:00:35.680] Example, information extraction from the data set helped the researchers draw valuable conclusions.
+[00:00:36.000 --> 00:00:41.040] Example, the extraction of important insights from the report was essential for decision making.
+[00:00:41.440 --> 00:00:46.260] Summary, extraction refers to the act or process of removing something from a source,
+[00:00:46.480 --> 00:00:48.560] whether it be physical substances or information.
+[00:00:48.560 --> 00:00:53.300] Related words, removal, extraction process, deduction, obtaining,
+[00:00:53.920 --> 00:00:56.480] anonyms, insertion, addition, inclusion,
+[00:00:57.700 --> 00:00:59.420] amalgamation, difference.
+[00:00:59.820 --> 00:01:04.980] Extractive refers to industries that take natural resources from the earth, like mining or oil drilling.
+[00:01:05.600 --> 00:01:10.180] While extraction is about the act of removing something, extractive relates to the industries
+[00:01:10.180 --> 00:01:11.720] involved in that process.

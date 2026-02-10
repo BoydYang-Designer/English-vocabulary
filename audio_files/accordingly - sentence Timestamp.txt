@@ -1,10 +1,12 @@
-[00:00:00.000 --> 00:00:07.800] 1. Accordingly as an adverb means in a way that is appropriate to the circumstances or in response to something.
-[00:00:07.800 --> 00:00:12.040] Example, learn the rules and act accordingly.
-[00:00:12.040 --> 00:00:17.440] Example, she received a promotion and accordingly her responsibilities increased.
-[00:00:17.440 --> 00:00:24.000] Example, she carefully reviewed the feedback from her supervisor and adjusted her project accordingly to meet the new requirements.
-[00:00:24.800 --> 00:00:29.840] 2. Accordingly as a conjunctive adverb means as a result, consequently.
-[00:00:29.840 --> 00:00:34.040] Example, he didn't study for the exam accordingly he failed.
-[00:00:34.040 --> 00:00:36.720] Example, the project deadline was extended.
-[00:00:36.720 --> 00:00:39.040] Accordingly, we revised our schedule.
-[00:00:39.040 --> 00:00:40.520] He was too sick to stay.
-[00:00:40.520 --> 00:00:42.280] Accordingly, we sent him home.
+[00:00:00.000 --> 00:00:00.560] 1.
+[00:00:01.300 --> 00:00:03.060] Accordingly as an adverb means,
+[00:00:03.760 --> 00:00:07.480] in a way that is appropriate to the circumstances or in response to something.
+[00:00:08.080 --> 00:00:11.420] Example, learn the rules and act accordingly.
+[00:00:12.600 --> 00:00:16.880] Example, she received a promotion and accordingly her responsibilities increased.
+[00:00:17.540 --> 00:00:22.420] Example, she carefully reviewed the feedback from her supervisor and adjusted her project accordingly to meet
+[00:00:22.420 --> 00:00:23.180] the new requirements.
+[00:00:24.400 --> 00:00:25.080] 2.
+[00:00:26.040 --> 00:00:30.820] Accordingly as a conjunctive adverb means, as a result, consequently, example, he
+[00:00:30.820 --> 00:00:33.020] didn't study for the exam accordingly he failed.
+[00:00:34.080 --> 00:00:38.540] Example, the project deadline was extended, accordingly we revised our schedule.
+[00:00:39.180 --> 00:00:41.900] He was too sick to stay, accordingly we sent him home.

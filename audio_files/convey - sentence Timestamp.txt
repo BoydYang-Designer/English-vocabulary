@@ -1,17 +1,17 @@
-[00:00:00.000 --> 00:00:05.000] Conve is a verb, convey, convey, convey, with the following meanings.
-[00:00:05.000 --> 00:00:09.000] One, to communicate or express a message feeling or idea to someone clearly.
-[00:00:09.000 --> 00:00:14.000] Example, she tried to convey her gratitude through a heartfelt letter.
-[00:00:14.000 --> 00:00:17.000] Example, his tone conveyed a sense of urgency.
-[00:00:17.000 --> 00:00:21.000] Example, the movie conveys a powerful message about kindness.
-[00:00:21.000 --> 00:00:25.000] Two, to transfer or transport something from one place to another,
-[00:00:25.000 --> 00:00:28.000] especially in a formal or legal sense.
-[00:00:28.000 --> 00:00:31.000] Example, the goods were conveyed by truck to the warehouse.
-[00:00:31.000 --> 00:00:36.000] Example, the pipes convey water to the different areas of the building.
-[00:00:36.000 --> 00:00:41.000] Three, law, to change the ownership of property from one person to another.
-[00:00:41.000 --> 00:00:45.000] Example, he conveyed his property to his children through a will.
-[00:00:45.000 --> 00:00:50.000] Example, the deed was used to convey the land to the new owner.
-[00:00:50.000 --> 00:00:54.000] Summary, convey means to communicate information or emotions effectively,
-[00:00:54.000 --> 00:00:58.000] to transport something from one place to another or in legal terms,
-[00:00:58.000 --> 00:01:00.000] to transfer ownership of property.
-[00:01:00.000 --> 00:01:04.000] Related words communicate, express, transfer, transmit, in part,
-[00:01:04.000 --> 00:01:08.000] Antonim's withhold obscure, hide, retain.
+[00:00:00.000 --> 00:00:01.380] Convey is a verb.
+[00:00:01.800 --> 00:00:04.500] Convey, conveyed, conveying with the following meanings.
+[00:00:05.260 --> 00:00:08.740] One, to communicate or express a message feeling or idea to someone clearly.
+[00:00:09.660 --> 00:00:13.180] Example, she tried to convey her gratitude through a heartfelt letter.
+[00:00:14.020 --> 00:00:16.300] Example, his tone conveyed a sense of urgency.
+[00:00:17.000 --> 00:00:20.340] Example, the movie conveys a powerful message about kindness.
+[00:00:21.560 --> 00:00:26.540] Two, to transfer or transport something from one place to another, especially in a formal
+[00:00:26.540 --> 00:00:27.300] or legal sense.
+[00:00:28.140 --> 00:00:30.700] Example, the goods were conveyed by truck to the warehouse.
+[00:00:31.700 --> 00:00:34.840] Example, the pipes convey water to the different areas of the building.
+[00:00:36.040 --> 00:00:40.360] Three, law, to change the ownership of property from one person to another.
+[00:00:41.080 --> 00:00:44.160] Example, he conveyed his property to his children through a will.
+[00:00:44.780 --> 00:00:47.940] Example, the deed was used to convey the land to the new owner.
+[00:00:50.300 --> 00:00:55.240] Summary, convey means to communicate information or emotions effectively to transport
+[00:00:55.240 --> 00:00:59.500] something from one place to another or in legal terms to transfer ownership of property.
+[00:01:00.100 --> 00:01:03.580] Related words, communicate, express, transfer, transmit, impart.
+[00:01:04.120 --> 00:01:06.480] Antonyms, withhold, obscure, hide, retain.

@@ -1,22 +1,16 @@
-[00:00:00.000 --> 00:00:02.000] Cruise ship as a noun.
-[00:00:02.000 --> 00:00:06.500] A cruise ship is a large passenger vessel designed for leisure travel,
-[00:00:06.500 --> 00:00:11.500] typically featuring accommodations, dining, entertainment, and recreational activities.
-[00:00:11.500 --> 00:00:16.500] It is used for multi-day voyages, often stopping at different destinations.
-[00:00:16.500 --> 00:00:21.000] Example, they book a vacation on a luxury cruise ship sailing through the Caribbean.
-[00:00:21.000 --> 00:00:26.500] Example, the cruise ship offered a variety of entertainment, including live shows and casinos.
-[00:00:26.500 --> 00:00:28.500] Example,
-[00:00:28.500 --> 00:00:32.500] passengers enjoyed the stunning ocean views from the deck of the cruise ship.
-[00:00:32.500 --> 00:00:37.500] Example, the cruise ship made a stop at several tropical islands during its journey.
-[00:00:37.500 --> 00:00:38.500] Summary,
-[00:00:38.500 --> 00:00:42.500] a cruise ship is a large passenger vessel designed for leisure travel,
-[00:00:42.500 --> 00:00:46.500] offering accommodations, entertainment, and multiple destinations.
-[00:00:46.500 --> 00:00:48.500] Related words,
-[00:00:48.500 --> 00:00:49.500] Ocean liner,
-[00:00:49.500 --> 00:00:50.500] Passengership,
-[00:00:50.500 --> 00:00:51.500] Vessel,
-[00:00:51.500 --> 00:00:52.500] Luxury liner,
-[00:00:52.500 --> 00:00:53.500] Ferry,
-[00:00:53.500 --> 00:00:54.500] Antonim's cargo ship,
-[00:00:54.500 --> 00:00:55.500] Freight vessel,
-[00:00:55.500 --> 00:00:56.500] Fishing boat,
-[00:00:56.500 --> 00:00:57.500] Barge,
+[00:00:00.000 --> 00:00:01.540] Cruise ship as a noun.
+[00:00:02.640 --> 00:00:07.920] A cruise ship is a large passenger vessel designed for leisure travel, typically featuring accommodations,
+[00:00:08.520 --> 00:00:11.160] dining, entertainment, and recreational activities.
+[00:00:11.940 --> 00:00:15.660] It is used for multi -day voyages, often stopping at different destinations.
+[00:00:16.880 --> 00:00:20.640] Example, they booked a vacation on a luxury cruise ship sailing through the Caribbean.
+[00:00:21.180 --> 00:00:25.580] Example, the cruise ship offered a variety of entertainment, including live shows and casinos.
+[00:00:27.160 --> 00:00:27.740] Example,
+[00:00:28.400 --> 00:00:31.920] passengers enjoyed the stunning ocean views from the deck of the cruise ship.
+[00:00:32.640 --> 00:00:33.280] Example,
+[00:00:34.120 --> 00:00:37.200] the cruise ship made a stop at several tropical islands during its journey.
+[00:00:37.740 --> 00:00:38.060] Summary,
+[00:00:38.920 --> 00:00:44.660] a cruise ship is a large passenger vessel designed for leisure travel, offering accommodations, entertainment,
+[00:00:45.000 --> 00:00:46.100] and multiple destinations.
+[00:00:47.020 --> 00:00:47.700] Related words,
+[00:00:48.400 --> 00:00:53.640] ocean liner, passenger ship, vessel, luxury liner, ferry, antonyms,
+[00:00:53.760 --> 00:00:56.960] cargo ship, freight vessel, fishing boat, barge.

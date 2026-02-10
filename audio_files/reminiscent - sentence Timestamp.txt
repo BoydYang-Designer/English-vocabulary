@@ -1,8 +1,0 @@
-[00:00:00.000 --> 00:00:05.240] Reminiscent is an adjective that describes something that reminds one of someone or something else,
-[00:00:05.240 --> 00:00:09.920] often because of similarities in appearance, sound, smell, or feeling.
-[00:00:09.920 --> 00:00:13.240] It evokes memories or associations with the past,
-[00:00:13.240 --> 00:00:18.400] suggesting a connection or similarity between the current experience and a previous one.
-[00:00:18.400 --> 00:00:24.000] One, example, the old farmhouse was reminiscent of the one she visited as a child
-[00:00:24.000 --> 00:00:27.400] with its creaky wooden floors and cozy fireplace.
-[00:00:27.800 --> 00:00:35.200] Two, example, the aroma of coffee brewing in the morning brought back memories of the cozy cafes she used to frequent during her travels.
-[00:00:35.200 --> 00:00:40.600] Three, example, the atmosphere had a vibe reminiscent of spy movies.

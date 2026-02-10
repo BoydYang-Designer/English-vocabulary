@@ -1,11 +1,18 @@
-[00:00:00.000 --> 00:00:02.000] Appreciation as a noun.
-[00:00:02.000 --> 00:00:07.000] 1. The recognition and understanding of the value or worth of something or someone.
-[00:00:07.000 --> 00:00:12.000] Example. His appreciation for fine art grew after attending the exhibition.
-[00:00:12.000 --> 00:00:17.000] Example. She showed her appreciation for the team's hard work with a heartfelt thank you.
-[00:00:17.000 --> 00:00:24.000] 2. The expression of gratitude or thanks. Example. The teacher received a card as a token of appreciation from her students.
-[00:00:24.000 --> 00:00:29.000] Example. We want to show our appreciation for your generosity with a small gift.
-[00:00:29.000 --> 00:00:33.000] 3. The increase in value or worth of something over time.
-[00:00:33.000 --> 00:00:37.000] Example. The appreciation of the house's value allowed them to sell it for a profit.
-[00:00:37.000 --> 00:00:42.000] Example. The appreciation of stocks over the past few years has been remarkable.
-[00:00:42.000 --> 00:00:50.000] Summary. Appreciation refers to the recognition of value, the expression of gratitude, or the increase in worth over time.
-[00:00:50.000 --> 00:01:00.000] Related words. Gratitude. Acknowledgement. Thankfulness. Rise. Increase animes in gratitude. Depreciation. Disregard. Neglect.
+[00:00:00.000 --> 00:00:01.500] Appreciation as a noun.
+[00:00:02.340 --> 00:00:06.860] One, the recognition and understanding of the value or worth of something or someone.
+[00:00:07.580 --> 00:00:11.200] Example, his appreciation for fine art grew after attending the exhibition.
+[00:00:11.980 --> 00:00:16.860] Example, she showed her appreciation for the team's hard work with a heartfelt thank you.
+[00:00:17.520 --> 00:00:19.780] Two, the expression of gratitude or thanks.
+[00:00:20.400 --> 00:00:23.860] Example, the teacher received a card as a token of appreciation from her students.
+[00:00:24.680 --> 00:00:28.200] Example, we want to show our appreciation for your generosity with a small gift.
+[00:00:28.200 --> 00:00:28.680] Three,
+[00:00:29.740 --> 00:00:32.560] the increase in value or worth of something over time.
+[00:00:33.100 --> 00:00:36.840] Example, the appreciation of the house's value allowed them to sell it for a profit.
+[00:00:37.400 --> 00:00:41.260] Example, the appreciation of stocks over the past few years has been remarkable.
+[00:00:41.960 --> 00:00:42.300] Summary.
+[00:00:43.460 --> 00:00:48.260] Appreciation refers to the recognition of value, the expression of gratitude, or the increase in
+[00:00:48.260 --> 00:00:49.240] worth over time.
+[00:00:50.020 --> 00:00:50.900] Related words,
+[00:00:51.680 --> 00:00:52.120] gratitude,
+[00:00:52.960 --> 00:00:53.480] acknowledgement,
+[00:00:54.240 --> 00:00:58.860] thankfulness, rise, increase, anonyms, and gratitude, appreciation, disregard, neglect.

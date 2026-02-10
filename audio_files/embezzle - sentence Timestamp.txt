@@ -1,14 +1,12 @@
-[00:00:00.000 --> 00:00:03.640] Embezzle as a verb, embezzle, embezzling.
-[00:00:03.640 --> 00:00:06.840] To secretly steal or misappropriate money or property
-[00:00:06.840 --> 00:00:09.960] entrusted to one's care, especially from an organization
-[00:00:09.960 --> 00:00:11.520] or employer.
-[00:00:11.520 --> 00:00:14.440] Examples, the accountant embezzled thousands of dollars
-[00:00:14.440 --> 00:00:15.440] from the company.
-[00:00:15.440 --> 00:00:19.040] She was caught embezzling funds from the charity.
-[00:00:19.040 --> 00:00:20.920] He embezzled money over several years
-[00:00:20.920 --> 00:00:22.760] before being discovered.
-[00:00:22.760 --> 00:00:26.760] Summary, embezzle means to fraudulently take money or property
-[00:00:26.760 --> 00:00:29.840] that one is responsible for managing, typically for personal gain.
-[00:00:29.840 --> 00:00:33.760] Synonyms, steel, misappropriate, defraud, siphon off.
-[00:00:33.760 --> 00:00:36.440] Antonyms return, give back, reimburse,
-[00:00:36.440 --> 00:00:40.720] related words, fraud, theft, corruption, embezzlement.
+[00:00:00.000 --> 00:00:02.840] Embezzle as a verb, embezzle, embezzled, embezzling.
+[00:00:03.680 --> 00:00:08.200] To secretly steal or misappropriate money or property entrusted to one's care,
+[00:00:08.400 --> 00:00:10.540] especially from an organization or employer.
+[00:00:11.420 --> 00:00:11.800] Examples,
+[00:00:12.460 --> 00:00:14.880] the accountant embezzled thousands of dollars from the company.
+[00:00:15.440 --> 00:00:18.280] She was caught embezzling funds from the charity.
+[00:00:18.980 --> 00:00:21.740] He embezzled money over several years before being discovered.
+[00:00:22.620 --> 00:00:27.460] Summary, embezzle means to fraudulently take money or property that one is responsible
+[00:00:27.460 --> 00:00:29.380] for managing, typically for personal gain.
+[00:00:29.380 --> 00:00:33.360] Synonyms, steal, misappropriate, defraud, siphon off.
+[00:00:33.760 --> 00:00:35.740] Antonyms, return, give back, reimburse.
+[00:00:36.320 --> 00:00:39.380] Related words, fraud, theft, corruption, embezzlement.

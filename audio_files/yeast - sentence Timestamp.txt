@@ -1,8 +1,0 @@
-[00:00:00.000 --> 00:00:10.000] Yeast is a noun, refers to a type of fungus that is used in baking and brewing, known for its ability to ferment sugars and produce carbon dioxide and alcohol.
-[00:00:10.000 --> 00:00:17.500] Yeast is used to make dough rise in baking and is a key ingredient in the production of alcoholic beverages like beer and wine.
-[00:00:17.500 --> 00:00:21.000] Example, yeast is added to the dough to make it rise during baking.
-[00:00:21.000 --> 00:00:25.500] Example, the brewery uses a special strain of yeast to ferment the beer.
-[00:00:26.000 --> 00:00:31.000] Example, some recipes for bread require a specific type of yeast for the best texture.
-[00:00:31.000 --> 00:00:36.500] Example, yeast is also used in the production of biofuels as it ferment sugars into alcohol.
-[00:00:36.500 --> 00:00:45.000] Summary, yeast is a microscopic fungus used in baking and brewing, known for its ability to ferment sugars to produce gases and alcohol.
-[00:00:45.000 --> 00:00:50.000] Related words, fungus, ferment, microorganism, leavening agent.

@@ -1,8 +1,0 @@
-[00:00:00.000 --> 00:00:06.000] Mediator is a noun that means a person who facilitates communication and resolution between conflicting parties.
-[00:00:06.000 --> 00:00:17.000] A mediator helps individuals or groups in dispute reach an agreement or resolution by guiding discussions, suggesting solutions, and ensuring that each party's views are considered.
-[00:00:17.000 --> 00:00:25.000] Mediators often work in legal, business, or personal conflict situations to help resolve disagreements without going to court.
-[00:00:26.000 --> 00:00:32.000] Example sentences. The mediator helped the two companies negotiate a compromise that satisfied both sides.
-[00:00:32.000 --> 00:00:39.000] During the family dispute, a professional mediator was brought in to facilitate communication and find a resolution.
-[00:00:39.000 --> 00:00:46.000] The mediator's role is to remain neutral and assist both parties in finding a mutually acceptable solution.
-[00:00:47.000 --> 00:00:56.000] Summary. A mediator is someone who assists conflicting parties in reaching an agreement or resolving disputes through facilitated communication and negotiation.
-[00:00:56.000 --> 00:01:06.000] Related words, arbitrator, negotiator, facilitator, conciliator, antinims, adversary, opponent, antagonist, instigator.

@@ -1,9 +1,9 @@
-[00:00:00.000 --> 00:00:07.000] Ambience is a noun that refers to the character, atmosphere, or mood of a particular environment,
-[00:00:07.000 --> 00:00:12.280] encompassing both the overall feeling created by the surroundings and the specific qualities
-[00:00:12.280 --> 00:00:14.200] that define that atmosphere.
-[00:00:14.200 --> 00:00:20.520] Example, the restaurant had a romantic ambiance, enhanced by soft lighting and gentle music.
-[00:00:20.520 --> 00:00:26.000] Example, the cozy fireplace added to the warm ambiance of the living room.
-[00:00:26.000 --> 00:00:30.360] We discussed our mutual problems in a friendly ambiance, which made the conversation more
-[00:00:30.360 --> 00:00:31.520] comfortable.
-[00:00:31.520 --> 00:00:36.920] Related words, atmosphere, mood, environment, setting, antinims, dullness, blandness,
-[00:00:36.920 --> 00:00:37.640] sterility.
+[00:00:00.000 --> 00:00:03.000] Ambience is a noun that refers to the character,
+[00:00:03.600 --> 00:00:08.560] atmosphere, or mood of a particular environment, encompassing both the overall
+[00:00:08.560 --> 00:00:13.460] feeling created by the surroundings and the specific qualities that define that atmosphere.
+[00:00:14.220 --> 00:00:19.340] Example, the restaurant had a romantic ambience, enhanced by soft lighting and gentle music.
+[00:00:20.280 --> 00:00:24.960] Example, the cozy fireplace added to the warm ambience of the living room.
+[00:00:24.960 --> 00:00:29.660] We discussed our mutual problems in a friendly ambience, which made the
+[00:00:29.660 --> 00:00:30.700] conversation more comfortable.
+[00:00:31.440 --> 00:00:36.800] Related words, atmosphere, mood, environment, setting, antonyms, dullness, blandness,
+[00:00:37.060 --> 00:00:37.480] sterility.

@@ -1,16 +1,11 @@
-[00:00:00.000 --> 00:00:04.960] Andalusia as a noun, uncountable, proper noun, and allusion.
-[00:00:04.960 --> 00:00:07.600] A region in southern Spain known for its rich history,
-[00:00:07.600 --> 00:00:09.720] cultural heritage, and distinctive architecture
-[00:00:09.720 --> 00:00:11.720] influenced by the Moors.
-[00:00:11.720 --> 00:00:15.120] Andalusia is famous for flamenco music and dance.
-[00:00:15.120 --> 00:00:18.160] The El Hamba in Andalusia is a remarkable example
-[00:00:18.160 --> 00:00:19.920] of Moorish architecture.
-[00:00:19.920 --> 00:00:23.080] Many tourists visit Andalusia to experience its festivals
-[00:00:23.080 --> 00:00:24.800] and cuisine.
-[00:00:24.800 --> 00:00:28.520] Summary, Andalusia refers to the southern region of Spain,
-[00:00:28.520 --> 00:00:31.520] celebrated for its history, culture, and unique architectural
-[00:00:31.520 --> 00:00:33.360] and artistic traditions.
-[00:00:33.360 --> 00:00:35.760] Synonyms, southern Spain, region,
-[00:00:35.760 --> 00:00:38.680] anonyms, northern Spain, region, related words,
-[00:00:38.680 --> 00:00:41.160] optional Andalusian, Moorish, al Andalus, flamenco,
-[00:00:41.160 --> 00:00:42.160] Seville.
+[00:00:00.000 --> 00:00:03.980] Andalusia as a noun, uncountable, proper noun, Andalusia.
+[00:00:04.880 --> 00:00:09.560] A region in southern Spain known for its rich history, cultural heritage, and distinctive architecture
+[00:00:09.560 --> 00:00:10.740] influenced by the Moors.
+[00:00:11.620 --> 00:00:14.360] Andalusia is famous for flamenco music and dance.
+[00:00:15.120 --> 00:00:19.180] The Alhambra in Andalusia is a remarkable example of Moorish architecture.
+[00:00:19.920 --> 00:00:23.440] Many tourists visit Andalusia to experience its festivals and cuisine.
+[00:00:24.520 --> 00:00:27.720] Summary, Andalusia refers to the southern region of Spain,
+[00:00:28.480 --> 00:00:32.720] celebrated for its history, culture, and unique architectural and artistic traditions.
+[00:00:33.440 --> 00:00:35.260] Synonyms, southern Spain, region.
+[00:00:35.760 --> 00:00:37.660] Anonyms, northern Spain, region.
+[00:00:37.960 --> 00:00:41.700] Related words, optional Andalusian, Moorish, Al -Andalus, flamenco, civill.

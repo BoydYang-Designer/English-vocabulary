@@ -1,25 +1,17 @@
-[00:00:00.000 --> 00:00:03.180] Animation is a noun with the following meanings.
-[00:00:03.180 --> 00:00:06.640] One, the process of creating the illusion of motion
-[00:00:06.640 --> 00:00:09.120] by displaying a series of individual drawings,
-[00:00:09.120 --> 00:00:12.320] paintings, or illustrations in rapid succession.
-[00:00:12.320 --> 00:00:15.320] It refers to the technique used to make characters or objects
-[00:00:15.320 --> 00:00:19.120] move in film, video, or digital media.
-[00:00:19.120 --> 00:00:22.600] Example, the animation in the movie was so smooth
-[00:00:22.600 --> 00:00:24.720] that it felt lifelike.
-[00:00:24.720 --> 00:00:26.840] Example, she studied animation techniques
-[00:00:26.840 --> 00:00:28.880] to improve her skills and character design.
-[00:00:28.960 --> 00:00:31.640] Example, the animation of the cartoon characters
-[00:00:31.640 --> 00:00:34.280] brought joy to children everywhere.
-[00:00:34.280 --> 00:00:37.080] Two, the state of being lively or spirited.
-[00:00:37.080 --> 00:00:40.040] It can refer to enthusiasm or energy in a person's demeanor
-[00:00:40.040 --> 00:00:41.600] or behavior.
-[00:00:41.600 --> 00:00:43.680] His presentation was filled with animation
-[00:00:43.680 --> 00:00:45.600] captivating the audience.
-[00:00:45.600 --> 00:00:47.560] The children played with great animation
-[00:00:47.560 --> 00:00:50.280] enjoying their time at the park.
-[00:00:50.280 --> 00:00:53.200] Summary, animation.
-[00:00:53.200 --> 00:00:55.680] Refers to both the technique of creating moving images
-[00:00:55.680 --> 00:00:57.800] through a series of frames and the quality
-[00:00:57.800 --> 00:01:00.720] of liveliness or energy and behavior.
-[00:01:00.720 --> 00:01:04.760] Related words, cartoon, motion, liveliness, enthusiasm,
-[00:01:04.760 --> 00:01:07.640] Antonim's lifelessness, inactivity, apathy.
+[00:00:00.000 --> 00:00:02.640] Animation is a noun with the following meanings.
+[00:00:03.580 --> 00:00:08.920] One, the process of creating the illusion of motion by displaying a series of individual drawings,
+[00:00:09.180 --> 00:00:11.620] paintings, or illustrations in rapid succession.
+[00:00:12.400 --> 00:00:17.760] It refers to the technique used to make characters or objects move in film, video, or digital media.
+[00:00:19.180 --> 00:00:19.760] Example,
+[00:00:20.640 --> 00:00:23.720] the animation in the movie was so smooth that it felt lifelike.
+[00:00:24.680 --> 00:00:28.620] Example, she studied animation techniques to improve her skills in character design.
+[00:00:28.620 --> 00:00:32.940] Example, the animation of the cartoon characters brought joy to children everywhere.
+[00:00:34.520 --> 00:00:36.680] Two, the state of being lively or spirited.
+[00:00:37.100 --> 00:00:40.580] It can refer to enthusiasm or energy in a person's demeanor or behavior.
+[00:00:41.640 --> 00:00:44.780] His presentation was filled with animation captivating the audience.
+[00:00:45.620 --> 00:00:48.840] The children played with great animation, enjoying their time at the park.
+[00:00:50.100 --> 00:00:50.740] Summary,
+[00:00:51.560 --> 00:00:56.420] animation. It refers to both the technique of creating moving images through a series of
+[00:00:56.420 --> 00:00:59.380] frames and the quality of liveliness or energy and behavior.
+[00:01:00.440 --> 00:01:05.960] Related words, cartoon, motion, liveliness, enthusiasm, antonyms, lifelessness,
+[00:01:06.240 --> 00:01:07.420] inactivity, apathy.

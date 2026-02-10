@@ -1,19 +1,21 @@
-[00:00:00.000 --> 00:00:03.040] Dignify is a verb with the following meanings.
-[00:00:03.040 --> 00:00:06.400] As a verb, dignified, dignified, dignifying.
-[00:00:06.400 --> 00:00:10.560] One, to make something or someone seem worthy, important, or respectable,
-[00:00:10.560 --> 00:00:14.560] to add, honor, or value to a person, action, or thing.
-[00:00:14.560 --> 00:00:17.680] Example, the teacher dignified each student's question,
-[00:00:17.680 --> 00:00:19.920] making them feel valued.
-[00:00:19.920 --> 00:00:24.320] Example, she dignified her speech with a sense of calm and authority.
-[00:00:24.320 --> 00:00:28.720] His actions dignified the occasion, adding a sense of solemnity.
-[00:00:28.800 --> 00:00:33.120] Two, to treat something or someone with respect or seriousness that is not deserved,
-[00:00:33.840 --> 00:00:36.800] giving more attention or importance than it warrants.
-[00:00:36.800 --> 00:00:40.320] Example, he didn't want to dignify the rumor with a response.
-[00:00:41.040 --> 00:00:46.000] Example, by responding to the insult, she felt she was dignifying it unnecessarily.
-[00:00:47.200 --> 00:00:49.600] Example, the artist refused to dignify the criticism,
-[00:00:50.320 --> 00:00:52.560] knowing it wasn't worth acknowledging.
-[00:00:52.560 --> 00:00:58.000] Summary, dignify means to confer respect or importance on something or someone,
-[00:00:58.000 --> 00:00:59.360] whether deserved or not.
-[00:00:59.360 --> 00:01:04.400] It can refer to elevating a subject's perceived worth or giving unnecessary recognition.
-[00:01:05.120 --> 00:01:07.840] Related words, honor, elevate respect, and noble.
-[00:01:07.840 --> 00:01:15.120] Antonyms, belittle, disrespect, demean, diminish.
+[00:00:00.000 --> 00:00:02.080] Dignify is a verb with the following meanings.
+[00:00:02.900 --> 00:00:05.840] As a verb, dignify, dignified, dignifying.
+[00:00:06.540 --> 00:00:06.660] 1.
+[00:00:06.900 --> 00:00:10.020] To make something or someone seem worthy, important, or respectable.
+[00:00:10.600 --> 00:00:14.060] To add honor or value to a person, action, or thing.
+[00:00:14.640 --> 00:00:18.960] Example, the teacher dignified each student's question, making them feel valued.
+[00:00:19.920 --> 00:00:23.300] Example, she dignified her speech with a sense of calm and authority.
+[00:00:24.320 --> 00:00:27.320] His actions dignified the occasion, adding a sense of solemnity.
+[00:00:28.360 --> 00:00:28.980] 2.
+[00:00:29.300 --> 00:00:33.080] To treat something or someone with respect or seriousness that is not deserved.
+[00:00:33.760 --> 00:00:36.400] Giving more attention or importance than it warrants.
+[00:00:36.860 --> 00:00:40.180] Example, he didn't want to dignify the rumor with a response.
+[00:00:41.000 --> 00:00:45.900] Example, by responding to the insult, she felt she was dignifying it unnecessarily.
+[00:00:47.180 --> 00:00:49.580] Example, the artist refused to dignify the criticism,
+[00:00:50.260 --> 00:00:52.080] knowing it wasn't worth acknowledging.
+[00:00:52.620 --> 00:00:53.020] Summary.
+[00:00:54.060 --> 00:00:58.980] Dignify means to confer respect or importance on something or someone, whether deserved or not.
+[00:00:59.500 --> 00:01:04.380] It can refer to elevating a subject's perceived worth or giving unnecessary recognition.
+[00:01:05.220 --> 00:01:07.780] Related words honor, elevate, respect, ennoble.
+[00:01:08.000 --> 00:01:09.960] Antonyms, belittle, disrespect,
+[00:01:10.620 --> 00:01:11.680] demean, diminish.

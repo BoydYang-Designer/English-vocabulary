@@ -1,7 +1,9 @@
-[00:00:00.000 --> 00:00:06.000] Carefree is an adjective that describes a state of being free from worries, concerns, or responsibilities.
-[00:00:06.000 --> 00:00:09.000] As an adjective, carefree.
-[00:00:09.000 --> 00:00:14.000] One, free from worries or concerns, enjoying a relaxed and happy state.
-[00:00:14.000 --> 00:00:20.000] Example, the children played in the park with a carefree spirit, laughing and running without a care in the world.
-[00:00:20.000 --> 00:00:25.000] Two, without responsibilities or obligations that might cause stress.
-[00:00:25.000 --> 00:00:31.000] Example, after finishing her exams, she enjoyed a carefree summer vacation with her friends.
-[00:00:31.000 --> 00:00:39.000] Carefree describes a state of being without worries or stress, often associated with relaxation and enjoyment.
+[00:00:00.000 --> 00:00:05.400] Carefree is an adjective that describes a state of being free from worries, concerns, or responsibilities.
+[00:00:06.440 --> 00:00:07.200] As an adjective,
+[00:00:08.040 --> 00:00:08.580] carefree.
+[00:00:09.480 --> 00:00:13.400] One, free from worries or concerns, enjoying a relaxed and happy state.
+[00:00:14.280 --> 00:00:19.340] Example, the children played in the park with a carefree spirit, laughing and running without a care in the world.
+[00:00:20.300 --> 00:00:23.880] Two, without responsibilities or obligations that might cause stress.
+[00:00:25.360 --> 00:00:30.240] Example, after finishing her exams, she enjoyed a carefree summer vacation with her friends.
+[00:00:31.380 --> 00:00:34.720] Carefree describes a state of being without worries or stress,
+[00:00:35.340 --> 00:00:38.080] often associated with relaxation and enjoyment.

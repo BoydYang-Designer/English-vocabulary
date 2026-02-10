@@ -1,15 +1,16 @@
-[00:00:00.000 --> 00:00:05.540] Embed is a verb, embed, embedded, embedding with the following meanings.
-[00:00:05.540 --> 00:00:10.160] One, to fix or insert something firmly and deeply into a surrounding mass,
-[00:00:10.160 --> 00:00:12.900] often making it an integral part of that mass.
-[00:00:12.900 --> 00:00:17.660] Example, the artist embedded tiny gems into the sculpture for added detail.
-[00:00:17.660 --> 00:00:22.240] Example, they embedded the microchip into the device to enhance its functionality.
-[00:00:22.240 --> 00:00:27.440] Example, microchips are embedded in many modern electronic devices for improved performance.
-[00:00:27.600 --> 00:00:33.120] Example, traditional values are embedded in our culture, influencing our behavior and beliefs.
-[00:00:33.120 --> 00:00:38.400] Two, to incorporate or integrate a media file, such as a video or audio clip,
-[00:00:38.400 --> 00:00:40.960] into a webpage or digital document.
-[00:00:40.960 --> 00:00:44.080] Example, the blogger embedded a video to illustrate her point.
-[00:00:44.080 --> 00:00:47.280] Example, you can embed images directly into your presentation slides.
-[00:00:48.080 --> 00:00:52.640] Summary, embed means to firmly insert something into a surrounding material
-[00:00:52.640 --> 00:00:54.960] or to integrate media into a digital format.
-[00:00:55.840 --> 00:00:59.760] Related words, insert, implant, integrate, and close,
-[00:00:59.760 --> 00:01:03.280] Antonim's extract removed attached dislodge.
+[00:00:00.000 --> 00:00:01.740] Embed is a verb.
+[00:00:02.180 --> 00:00:05.160] Embed, embedded, embedding, with the following meanings.
+[00:00:05.880 --> 00:00:10.640] One, to fix or insert something firmly and deeply into a surrounding mass, often
+[00:00:10.640 --> 00:00:12.420] making it an integral part of that mass.
+[00:00:13.140 --> 00:00:17.220] Example, the artist embedded tiny gems into the sculpture for added detail.
+[00:00:17.880 --> 00:00:21.620] Example, they embedded the microchip into the device to enhance its functionality.
+[00:00:22.380 --> 00:00:27.000] Example, microchips are embedded in many modern electronic devices for improved performance.
+[00:00:27.000 --> 00:00:32.260] Example, traditional values are embedded in our culture, influencing our behavior and beliefs.
+[00:00:33.180 --> 00:00:38.180] Two, to incorporate or integrate a media file such as a video or audio clip
+[00:00:38.180 --> 00:00:40.420] into a web page or digital document.
+[00:00:40.940 --> 00:00:43.680] Example, the blogger embedded a video to illustrate her point.
+[00:00:44.100 --> 00:00:47.140] Example, you can embed images directly into your presentation slides.
+[00:00:47.940 --> 00:00:52.940] Summary, embed means to firmly insert something into a surrounding material or
+[00:00:52.940 --> 00:00:54.900] to integrate media into a digital format.
+[00:00:55.700 --> 00:01:00.880] Related words, insert, implant, integrate, enclose, antonyms, extract,
+[00:01:01.160 --> 00:01:02.500] remove, detach, dislodge.

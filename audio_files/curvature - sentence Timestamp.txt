@@ -1,8 +1,12 @@
-[00:00:00.000 --> 00:00:08.000] Curvature is a noun, meaning the state, quality, or degree of being curved or bent, or the measurement of how much something curves.
-[00:00:08.000 --> 00:00:13.000] It can describe shapes, lines, surfaces, or natural forms.
-[00:00:13.000 --> 00:00:17.000] Examples, the curvature of the earth becomes visible from high altitudes.
-[00:00:17.000 --> 00:00:21.000] The architect admired the graceful curvature of the building's roof.
-[00:00:21.000 --> 00:00:24.000] The doctor studied the curvature of the patient's spine.
-[00:00:24.000 --> 00:00:27.000] The road's sharp curvature made it dangerous to drive fast.
-[00:00:27.000 --> 00:00:34.000] Summary, curvature refers to the quality or degree of being curved, whether in natural forms, objects, or geometric shapes.
-[00:00:34.000 --> 00:00:40.000] Related words bend arc curve roundness, anonym straightness flatness linearity.
+[00:00:00.000 --> 00:00:05.080] Curvature is a noun, meaning the state, quality, or degree of being curved or bent,
+[00:00:05.520 --> 00:00:07.700] or the measurement of how much something curves.
+[00:00:08.120 --> 00:00:11.980] It can describe shapes, lines, surfaces, or natural forms.
+[00:00:12.860 --> 00:00:13.140] Examples,
+[00:00:13.860 --> 00:00:16.640] the curvature of the earth becomes visible from high altitudes.
+[00:00:17.320 --> 00:00:20.540] The architect admired the graceful curvature of the building's roof.
+[00:00:21.060 --> 00:00:23.280] The doctor studied the curvature of the patient's spine.
+[00:00:23.740 --> 00:00:26.540] The road's sharp curvature made it dangerous to drive fast.
+[00:00:27.420 --> 00:00:28.020] Summary.
+[00:00:28.500 --> 00:00:33.880] Curvature refers to the quality or degree of being curved, whether in natural forms, objects, or geometric shapes.
+[00:00:34.640 --> 00:00:37.000] Related words bend arc curve roundness.
+[00:00:37.440 --> 00:00:39.840] Anonym straightness, flatness, linearity.

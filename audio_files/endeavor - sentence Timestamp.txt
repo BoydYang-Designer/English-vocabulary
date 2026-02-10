@@ -1,11 +1,34 @@
-[00:00:00.000 --> 00:00:07.000] Endeavor as a noun and verb, as a noun, one, a serious effort or attempt to achieve something.
-[00:00:07.000 --> 00:00:11.000] Example, his endeavor to start a new business was met with success.
-[00:00:11.000 --> 00:00:15.000] Example, scientific endeavors have led to major medical breakthroughs.
-[00:00:15.000 --> 00:00:20.000] Example, she put great effort into her artistic endeavor.
-[00:00:20.000 --> 00:00:27.000] As a verb, endeavour endeavour endeavouring one to try hard or make an effort to accomplish something.
-[00:00:27.000 --> 00:00:31.000] Example, he endeavored to complete the project before the deadline.
-[00:00:31.000 --> 00:00:34.000] Example, the team is endeavouring to improve customer satisfaction.
-[00:00:34.000 --> 00:00:38.000] Example, she endeavored to learn a new language within a year.
-[00:00:38.000 --> 00:00:42.000] Summary, endeavour as a noun refers to an effort to achieve something.
-[00:00:42.000 --> 00:00:50.000] And as a verb, it means to try hard to do something, related words, attempt, effort, strive, undertaking, pursuit.
-[00:00:50.000 --> 00:00:55.000] Antonyms, neglect, abandon, quit, give up.
+[00:00:00.000 --> 00:00:01.700] Endeavour as a noun and verb.
+[00:00:02.220 --> 00:00:02.840] As a noun.
+[00:00:03.540 --> 00:00:03.800] One.
+[00:00:04.360 --> 00:00:06.580] A serious effort or attempt to achieve something.
+[00:00:07.120 --> 00:00:07.680] Example.
+[00:00:08.160 --> 00:00:10.700] His endeavor to start a new business was met with success.
+[00:00:11.420 --> 00:00:11.980] Example.
+[00:00:12.560 --> 00:00:14.980] Scientific endeavors have led to major medical breakthroughs.
+[00:00:15.480 --> 00:00:16.040] Example.
+[00:00:16.400 --> 00:00:18.520] She put great effort into her artistic endeavor.
+[00:00:20.280 --> 00:00:21.180] As a verb,
+[00:00:21.800 --> 00:00:23.620] endeavor, endeavored, endeavoring.
+[00:00:23.820 --> 00:00:24.060] One.
+[00:00:24.380 --> 00:00:26.680] To try hard or make an effort to accomplish something.
+[00:00:27.040 --> 00:00:27.540] Example.
+[00:00:27.540 --> 00:00:30.240] He endeavored to complete the project before the deadline.
+[00:00:31.060 --> 00:00:31.660] Example.
+[00:00:31.960 --> 00:00:34.240] The team is endeavoring to improve customer satisfaction.
+[00:00:34.660 --> 00:00:35.220] Example.
+[00:00:35.320 --> 00:00:37.380] She endeavored to learn a new language within a year.
+[00:00:38.100 --> 00:00:38.560] Summary.
+[00:00:38.800 --> 00:00:41.520] Endeavor as a noun refers to an effort to achieve something.
+[00:00:42.000 --> 00:00:45.300] And as a verb, it means to try hard to do something.
+[00:00:45.440 --> 00:00:45.940] Related words.
+[00:00:46.540 --> 00:00:47.140] Attempt.
+[00:00:47.680 --> 00:00:48.140] Effort.
+[00:00:48.540 --> 00:00:48.840] Strive.
+[00:00:49.280 --> 00:00:49.780] Undertaking.
+[00:00:50.060 --> 00:00:50.400] Pursuit.
+[00:00:50.640 --> 00:00:51.140] Antonyms.
+[00:00:51.500 --> 00:00:51.860] Neglect.
+[00:00:52.340 --> 00:00:52.720] Abandon.
+[00:00:53.180 --> 00:00:53.360] Quit.
+[00:00:53.940 --> 00:00:54.200] Give up.

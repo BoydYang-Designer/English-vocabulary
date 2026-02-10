@@ -1,8 +1,14 @@
-[00:00:00.000 --> 00:00:05.520] Escapade is a noun refers to an adventurous, exciting, or sometimes reckless act or incident
-[00:00:05.520 --> 00:00:11.120] that often involves daring or mischievous behavior. Example, their spontaneous escapade to the
-[00:00:11.120 --> 00:00:16.400] mountains ended with an unexpected encounter with a bear. Example as a teenager he embarked on a
-[00:00:16.400 --> 00:00:22.080] series of ill-advised escapades. Example, the group's escapade through the abandoned house became
-[00:00:22.080 --> 00:00:28.000] the talk of the neighborhood. Example, their overseas escapade during the summer break was filled
-[00:00:28.000 --> 00:00:33.280] with thrilling adventures and unforgettable memories. Summary, escapade refers to an adventurous
-[00:00:33.280 --> 00:00:39.280] or risky experience often marked by excitement, mischief, or recklessness. Related words,
-[00:00:39.280 --> 00:00:55.040] adventure, exploit, misadventure, prank. Antonyms, routine, seriousness, caution, predictability.
+[00:00:00.000 --> 00:00:04.800] Escapade as a noun refers to an adventurous, exciting, or sometimes reckless act
+[00:00:04.800 --> 00:00:08.300] or incident that often involves daring or mischievous behavior.
+[00:00:08.660 --> 00:00:13.580] Example, their spontaneous escapade to the mountains ended with an unexpected encounter with
+[00:00:13.580 --> 00:00:13.920] a bear.
+[00:00:14.580 --> 00:00:18.120] Example, as a teenager he embarked on a series of ill -advised escapades.
+[00:00:18.620 --> 00:00:19.220] Example,
+[00:00:19.960 --> 00:00:23.000] the group's escapade through the abandoned house became the talk of the neighborhood.
+[00:00:23.940 --> 00:00:24.540] Example,
+[00:00:25.540 --> 00:00:30.140] their overseas escapade during the summer break was filled with thrilling adventures and unforgettable memories.
+[00:00:30.860 --> 00:00:35.900] Summary, escapade refers to an adventurous or risky experience often marked by excitement,
+[00:00:36.380 --> 00:00:37.540] mischief, or recklessness.
+[00:00:38.320 --> 00:00:41.740] Related words, adventure, exploit, misadventure, prank.
+[00:00:42.500 --> 00:00:45.100] Antonyms, routine, seriousness, caution,
+[00:00:45.700 --> 00:00:46.280] predictability.

@@ -1,7 +1,11 @@
-[00:00:00.000 --> 00:00:05.320] 1. Ambush as a noun means a surprise attack by people lying in weight in a concealed position.
-[00:00:05.320 --> 00:00:09.280] Example. The soldiers walked into an ambush set by the enemy.
-[00:00:09.280 --> 00:00:13.680] Example during the hike, the group stumbled into an ambush by a pack of wild animals.
-[00:00:13.680 --> 00:00:17.960] 2. Ambush as a verb. Ambush. Ambushed. Ambushing.
-[00:00:17.960 --> 00:00:22.920] 2. Ambush means to make a surprise attack on someone from a concealed position.
-[00:00:22.920 --> 00:00:26.840] Example. The police. Ambush. The robbers during their getaway.
-[00:00:26.840 --> 00:00:31.160] Example. The hunters set up camp and prepared to ambush the deer at dawn.
+[00:00:00.000 --> 00:00:00.540] 1.
+[00:00:01.020 --> 00:00:05.080] Ambush as a noun means a surprise attack by people lying in wait in a concealed position.
+[00:00:05.640 --> 00:00:09.040] Example, the soldiers walked into an ambush set by the enemy.
+[00:00:09.480 --> 00:00:13.340] Example, during the hike the group stumbled into an ambush by a pack of wild animals.
+[00:00:13.980 --> 00:00:14.200] 2.
+[00:00:14.480 --> 00:00:15.280] Ambush as a verb.
+[00:00:15.740 --> 00:00:17.640] Ambush, ambushed, ambushing.
+[00:00:18.460 --> 00:00:18.580] 2.
+[00:00:18.800 --> 00:00:22.600] Ambush means to make a surprise attack on someone from a concealed position.
+[00:00:23.340 --> 00:00:26.560] Example, the police ambushed the robbers during their getaway.
+[00:00:26.560 --> 00:00:30.840] Example, the hunters set up camp and prepared to ambush the deer at dawn.

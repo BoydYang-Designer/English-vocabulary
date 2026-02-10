@@ -1,15 +1,24 @@
-[00:00:00.000 --> 00:00:04.100] elliptical is an adjective and a noun with the following meanings.
-[00:00:04.100 --> 00:00:11.780] As an adjective, one, shape, describes a shape or path that is elongated and rounded, similar to an ellipse.
-[00:00:11.780 --> 00:00:15.880] Example, the design of the new stadium features an elliptical shape.
-[00:00:15.880 --> 00:00:20.720] Example, the elliptical orbit of the planet around the sun was observed by the scientists.
-[00:00:20.720 --> 00:00:28.560] Two, language, refers to a style of writing or speech that is vague or indirect, often omitting details, for brevity.
-[00:00:28.720 --> 00:00:35.100] Example, the president's elliptical remarks left many unsure of his exact stance on the issue.
-[00:00:35.100 --> 00:00:42.080] Example, the writer's use of elliptical phrasing made the poem open to multiple interpretations, as a noun.
-[00:00:42.080 --> 00:00:50.160] One, exercise machine, a fitness machine that simulates walking, running, or stair climbing with a smooth elliptical motion,
-[00:00:50.160 --> 00:00:53.360] often used for cardiovascular workouts.
-[00:00:53.360 --> 00:00:58.520] Example, she uses the elliptical at the gym to get a low impact cardiovascular workout.
-[00:00:58.920 --> 00:01:05.800] Example, the new elliptical in the fitness center has various settings to adjust the intensity of the exercise.
-[00:01:05.800 --> 00:01:13.640] Summary, elliptical as an adjective describes something with an elongated, rounded shape or an indirect style of communication.
-[00:01:13.640 --> 00:01:20.520] As a noun, it refers to a type of exercise machine that provides a smooth, elliptical motion for cardiovascular workouts,
-[00:01:20.520 --> 00:01:24.840] related words oval, elliptical orbit, indirect, ambiguous.
-[00:01:24.840 --> 00:01:28.120] Antonyms circular for shape, direct for communication.
+[00:00:00.000 --> 00:00:03.520] Elliptical is an adjective and a noun with the following meanings.
+[00:00:04.180 --> 00:00:05.660] As an adjective, one,
+[00:00:06.280 --> 00:00:11.160] shape, describes a shape or path that is elongated and rounded similar to an ellipse.
+[00:00:12.020 --> 00:00:15.460] Example, the design of the new stadium features an elliptical shape.
+[00:00:15.980 --> 00:00:20.000] Example, the elliptical orbit of the planet around the sun was observed by the scientists.
+[00:00:20.620 --> 00:00:21.180] Two,
+[00:00:21.800 --> 00:00:22.040] language,
+[00:00:22.680 --> 00:00:26.980] refers to a style of writing or speech that is vague or indirect, often omitting details
+[00:00:26.980 --> 00:00:28.140] for brevity.
+[00:00:28.140 --> 00:00:33.140] Example, the president's elliptical remarks left many unsure of his
+[00:00:33.140 --> 00:00:34.620] exact stance on the issue.
+[00:00:35.140 --> 00:00:40.020] Example, the writer's use of elliptical phrasing made the poem open to multiple interpretations
+[00:00:40.020 --> 00:00:41.280] as a noun.
+[00:00:42.200 --> 00:00:42.520] One,
+[00:00:43.220 --> 00:00:48.120] exercise machine, a fitness machine that simulates walking, running, or stair climbing with
+[00:00:48.120 --> 00:00:52.600] a smooth elliptical motion often used for cardiovascular workouts.
+[00:00:53.700 --> 00:00:58.020] Example, she uses the elliptical at the gym to get a low -impact cardiovascular workout.
+[00:00:58.880 --> 00:01:03.960] Example, the new elliptical in the fitness center has various settings to adjust the intensity of the exercise.
+[00:01:06.320 --> 00:01:11.240] Summary, elliptical as an adjective describes something with an elongated, rounded shape or
+[00:01:11.240 --> 00:01:12.820] an indirect style of communication.
+[00:01:13.600 --> 00:01:18.440] As a noun, it refers to a type of exercise machine that provides a smooth elliptical
+[00:01:18.440 --> 00:01:20.100] motion for cardiovascular workouts.
+[00:01:20.100 --> 00:01:23.940] Related words, oval, elliptical orbit, indirect, ambiguous.
+[00:01:24.740 --> 00:01:27.140] Antonyms circular for shape, direct for communication.

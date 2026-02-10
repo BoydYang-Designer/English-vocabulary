@@ -1,9 +1,25 @@
-[00:00:00.000 --> 00:00:10.500] Amendment. As a noun, an amendment refers to a formal change, revision, or addition made to a law, document, policy, or agreement to improve or clarify its meaning.
-[00:00:10.500 --> 00:00:15.000] It can also refer to modifications in general to correct or enhance something.
-[00:00:15.000 --> 00:00:19.500] Example. The Senator proposed an amendment to the existing law.
-[00:00:19.500 --> 00:00:24.000] Example. The first amendment of the U.S. Constitution guarantees freedom of speech.
-[00:00:24.000 --> 00:00:28.500] Example. He made several amendments to his research paper before submitting it.
-[00:00:28.500 --> 00:00:33.500] Example. The contract underwent multiple amendments to meet both parties requirements.
-[00:00:33.500 --> 00:00:41.500] Summary. An amendment is a formal change or improvement made to a document, law, or agreement to enhance its clarity, accuracy, or effectiveness.
-[00:00:41.500 --> 00:00:48.000] Related revision, modification, correction, adjustment, alteration, improvement, update, edit.
-[00:00:48.000 --> 00:00:54.000] Antonyms. Original, preservation, retention, stagnation, repeal.
+[00:00:00.000 --> 00:00:00.560] Amendment.
+[00:00:01.040 --> 00:00:01.780] As a noun,
+[00:00:02.400 --> 00:00:07.580] an amendment refers to a formal change, revision, or addition made to a law, document, policy,
+[00:00:07.760 --> 00:00:10.200] or agreement to improve or clarify its meaning.
+[00:00:10.820 --> 00:00:14.480] It can also refer to modifications in general to correct or enhance something.
+[00:00:15.400 --> 00:00:16.000] Example.
+[00:00:16.620 --> 00:00:19.080] The senator proposed an amendment to the existing law.
+[00:00:19.700 --> 00:00:20.300] Example.
+[00:00:20.540 --> 00:00:21.820] The first amendment of the U .S.
+[00:00:21.940 --> 00:00:23.680] Constitution guarantees freedom of speech.
+[00:00:24.320 --> 00:00:24.920] Example.
+[00:00:25.320 --> 00:00:28.260] He made several amendments to his research paper before submitting it.
+[00:00:28.260 --> 00:00:29.220] Example.
+[00:00:29.560 --> 00:00:32.600] The contract underwent multiple amendments to meet both parties' requirements.
+[00:00:33.700 --> 00:00:34.320] Summary.
+[00:00:34.560 --> 00:00:39.460] An amendment is a formal change or improvement made to a document, law, or agreement to enhance its clarity,
+[00:00:39.880 --> 00:00:41.000] accuracy, or effectiveness.
+[00:00:41.920 --> 00:00:43.360] Related revision, modification,
+[00:00:44.020 --> 00:00:47.800] correction, adjustment, alteration, improvement, update, edit.
+[00:00:48.260 --> 00:00:48.820] Antonyms.
+[00:00:49.060 --> 00:00:49.280] Original.
+[00:00:49.840 --> 00:00:50.140] Preservation.
+[00:00:50.640 --> 00:00:50.920] Retention.
+[00:00:51.360 --> 00:00:51.800] Stagnation.
+[00:00:52.180 --> 00:00:52.500] Repeal.

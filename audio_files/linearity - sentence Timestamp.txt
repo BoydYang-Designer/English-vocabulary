@@ -1,7 +1,0 @@
-[00:00:00.000 --> 00:00:10.000] Linearity is a noun, meaning the quality, condition, or state of being linear, arranged in a straight line or involving a direct proportional relationship.
-[00:00:10.000 --> 00:00:16.000] It can describe shapes, patterns, thought processes, or mathematical relationships, examples.
-[00:00:16.000 --> 00:00:20.000] The linearity of the design gives the building a modern look.
-[00:00:20.000 --> 00:00:25.000] In mathematics, linearity means that the relationship between two variables is directly proportional.
-[00:00:25.000 --> 00:00:33.000] The teacher explained the linearity of the equation to the students. His thinking lacked linearity, jumping from one topic to another.
-[00:00:33.000 --> 00:00:41.000] Summary, linearity refers to the state of being straight, orderly, or directly proportional, often used in design, logic, or mathematics.
-[00:00:41.000 --> 00:00:50.000] Related words, straightness, alignment, directness, proportionality, antinim's curvature, complexity, irregularity, non-linearity.

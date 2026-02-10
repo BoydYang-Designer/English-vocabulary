@@ -1,10 +1,11 @@
-[00:00:00.000 --> 00:00:03.440] Auditory is an adjective with the following meaning.
-[00:00:03.440 --> 00:00:09.080] Related to hearing or the sense of hearing refers to anything that involves or pertains
-[00:00:09.080 --> 00:00:13.440] to the sense of hearing, sound, or the process of listening.
-[00:00:13.440 --> 00:00:18.640] Example, the auditory system is responsible for processing sounds in the brain.
-[00:00:18.640 --> 00:00:22.760] Example, the lecture was designed to engage auditory learners who absorb information best
-[00:00:22.760 --> 00:00:24.640] by listening.
-[00:00:24.640 --> 00:00:29.920] Example, he has encountered some auditory problems after he turned over 70.
-[00:00:30.160 --> 00:00:34.480] Summary, auditory refers to anything related to the sense of hearing or sound,
-[00:00:34.480 --> 00:00:37.800] related words oral, acoustic, hearing, sonic,
-[00:00:37.800 --> 00:00:41.360] antinims, visual, non auditory, silent.
+[00:00:00.000 --> 00:00:02.640] Auditory is an adjective with the following meaning.
+[00:00:04.160 --> 00:00:09.060] Related to hearing or the sense of hearing refers to anything that involves or pertains
+[00:00:09.060 --> 00:00:12.420] to the sense of hearing, sound, or the process of listening.
+[00:00:13.440 --> 00:00:14.000] Example,
+[00:00:14.660 --> 00:00:17.660] the auditory system is responsible for processing sounds in the brain.
+[00:00:18.640 --> 00:00:23.300] Example, the lecture was designed to engage auditory learners who absorb information best by listening.
+[00:00:24.680 --> 00:00:25.240] Example,
+[00:00:26.060 --> 00:00:28.960] he has encountered some auditory problems after he turned over 70.
+[00:00:29.980 --> 00:00:34.800] Summary, auditory refers to anything related to the sense of hearing or sound, related
+[00:00:34.800 --> 00:00:37.500] words oral, acoustic, hearing, sonic.
+[00:00:37.860 --> 00:00:40.900] Antonyms, visual, non -auditory, silent.

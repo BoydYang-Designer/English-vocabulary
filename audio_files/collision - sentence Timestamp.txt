@@ -1,24 +1,24 @@
-[00:00:00.000 --> 00:00:06.000] Collision is a noun that refers to the act of two or more objects striking or crashing into each other.
-[00:00:06.000 --> 00:00:10.000] It can also describe the conflict or clash between ideas or forces.
-[00:00:10.000 --> 00:00:12.000] Meanings.
-[00:00:12.000 --> 00:00:13.000] One.
-[00:00:13.000 --> 00:00:14.000] Physical impact.
-[00:00:14.000 --> 00:00:19.000] The instance when two or more objects hit each other forcefully.
-[00:00:19.000 --> 00:00:20.000] Example.
-[00:00:20.000 --> 00:00:24.000] The collision between the two cars resulted in significant damage.
-[00:00:24.000 --> 00:00:25.000] Example.
-[00:00:25.000 --> 00:00:29.000] The scientists studied the collision of asteroids in space to understand their effects on Earth.
-[00:00:29.000 --> 00:00:30.000] Example.
-[00:00:30.000 --> 00:00:33.000] She hurt her shoulder in a collision with another player.
-[00:00:33.000 --> 00:00:34.000] Two.
-[00:00:34.000 --> 00:00:35.000] Conflict or clash.
-[00:00:35.000 --> 00:00:40.000] A situation where different ideas, interests or forces come into conflict.
-[00:00:40.000 --> 00:00:41.000] Example.
-[00:00:41.000 --> 00:00:46.000] The collision of opinions during the debate led to a heated discussion.
-[00:00:46.000 --> 00:00:47.000] Example.
-[00:00:47.000 --> 00:00:52.000] The collision between traditional values and modern beliefs often creates tension in society.
-[00:00:52.000 --> 00:00:53.000] Summary.
-[00:00:53.000 --> 00:00:57.000] Collision refers to both the physical impact of objects coming together.
-[00:00:57.000 --> 00:01:01.000] And the conflict that arises between differing ideas or forces.
-[00:01:01.000 --> 00:01:05.000] Related words crash impact clash confrontation.
-[00:01:05.000 --> 00:01:08.000] Antonyms separation harmony agreement.
+[00:00:00.000 --> 00:00:04.680] Collision is a noun that refers to the act of two or more objects striking or
+[00:00:04.680 --> 00:00:05.860] crashing into each other.
+[00:00:06.440 --> 00:00:09.700] It can also describe the conflict or clash between ideas or forces.
+[00:00:11.140 --> 00:00:11.360] Meaning.
+[00:00:12.140 --> 00:00:12.500] One.
+[00:00:13.400 --> 00:00:14.180] Physical impact.
+[00:00:14.840 --> 00:00:18.180] The instance when two or more objects hit each other forcefully.
+[00:00:19.360 --> 00:00:19.960] Example.
+[00:00:20.680 --> 00:00:23.780] The collision between the two cars resulted in significant damage.
+[00:00:24.460 --> 00:00:24.920] Example.
+[00:00:25.020 --> 00:00:29.100] The scientists studied the collision of asteroids in space to understand their effects on Earth.
+[00:00:29.100 --> 00:00:30.000] Example.
+[00:00:30.180 --> 00:00:32.360] She hurt her shoulder in a collision with another player.
+[00:00:33.820 --> 00:00:34.820] Conflict or clash.
+[00:00:35.560 --> 00:00:39.420] A situation where different ideas, interests or forces come into conflict.
+[00:00:40.500 --> 00:00:41.180] Example.
+[00:00:41.600 --> 00:00:45.340] The collision of opinions during the debate led to a heated discussion.
+[00:00:46.140 --> 00:00:46.740] Example.
+[00:00:46.860 --> 00:00:51.080] The collision between traditional values and modern beliefs often creates tension in society.
+[00:00:52.240 --> 00:00:52.860] Summary.
+[00:00:53.100 --> 00:00:58.000] Collision refers to both the physical impact of objects coming together and the conflict that
+[00:00:58.000 --> 00:01:00.020] arises between differing ideas or forces.
+[00:01:00.840 --> 00:01:04.120] Related words, crash, impact, clash, confrontation.
+[00:01:04.880 --> 00:01:07.140] Antonyms, separation, harmony, agreement.

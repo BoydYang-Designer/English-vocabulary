@@ -1,8 +1,11 @@
-[00:00:00.000 --> 00:00:06.440] InterviewE is a noun means a person who is being interviewed, especially for a job, position, or a study.
-[00:00:06.440 --> 00:00:11.840] Example, the interviewE answered all the questions with confidence and clarity.
-[00:00:11.840 --> 00:00:17.880] The interviewer was impressed by the interviewE's qualifications and experience, example.
-[00:00:17.880 --> 00:00:22.760] As an interviewE, it is important to be prepared and showcase your strengths.
-[00:00:22.760 --> 00:00:28.680] Summary, an interviewE is the person being questioned or evaluated in an interview setting,
-[00:00:28.680 --> 00:00:31.920] typically for a job or research purpose.
-[00:00:31.920 --> 00:00:37.480] Related words, candidate, respondent, subject, applicant, interview, antinims,
-[00:00:37.480 --> 00:00:39.960] interviewer, recruiter, hiring manager.
+[00:00:00.000 --> 00:00:04.200] Interview e is a noun means a person who is being interviewed, especially for a job,
+[00:00:04.400 --> 00:00:06.000] position, or a study.
+[00:00:06.560 --> 00:00:10.920] Example, the interview e answered all the questions with confidence and clarity.
+[00:00:11.880 --> 00:00:15.960] The interviewer was impressed by the interview e's qualifications and experience.
+[00:00:16.480 --> 00:00:17.100] Example,
+[00:00:18.040 --> 00:00:22.140] as an interview e, it is important to be prepared and showcase your strengths.
+[00:00:22.820 --> 00:00:23.360] Summary,
+[00:00:24.100 --> 00:00:28.960] an interview e is the person being questioned or evaluated in an interview setting, typically
+[00:00:28.960 --> 00:00:31.100] for a job or research purpose.
+[00:00:31.900 --> 00:00:38.120] Related words, candidate, respondent, subject, applicant, interview, antonyms, interviewer,
+[00:00:38.300 --> 00:00:39.600] recruiter, hiring manager.

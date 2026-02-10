@@ -1,8 +1,16 @@
-[00:00:00.000 --> 00:00:08.000] European Union EU is a political and economic union of 27 European countries that are located primarily in Europe.
-[00:00:08.000 --> 00:00:18.000] It was established to foster economic cooperation, promote peace and stability, and allow for the free movement of goods, services, people, and capital across member states.
-[00:00:18.000 --> 00:00:25.000] Examples, the European Union has implemented strict environmental regulations across its member states.
-[00:00:25.000 --> 00:00:31.000] The UK's departure from the EU, known as Brexit, marked a significant shift in European politics.
-[00:00:31.000 --> 00:00:37.000] The European Union is working to strengthen its relations with other countries around the world, summary.
-[00:00:37.000 --> 00:00:48.000] The European Union EU is a political and economic union aimed at enhancing cooperation, economic stability, and peace among its member countries, with various shared policies and institutions.
-[00:00:48.000 --> 00:00:55.000] Related words, union, European Council, European Parliament, Eurozone, Shengen area, trade block.
-[00:00:55.000 --> 00:00:59.000] Antonyms, non-member states, national sovereignty.
+[00:00:00.000 --> 00:00:04.840] European Union, EU, is a political and economic union of 27 European
+[00:00:04.840 --> 00:00:07.620] countries that are located primarily in Europe.
+[00:00:08.120 --> 00:00:12.940] It was established to foster economic cooperation, promote peace and stability, and
+[00:00:12.940 --> 00:00:17.560] allow for the free movement of goods, services, people, and capital across member states.
+[00:00:18.420 --> 00:00:18.920] Examples,
+[00:00:19.600 --> 00:00:24.020] the European Union has implemented strict environmental regulations across its member states.
+[00:00:24.740 --> 00:00:29.560] The UK's departure from the EU, known as Brexit, marked a significant shift
+[00:00:29.560 --> 00:00:30.720] in European politics.
+[00:00:31.460 --> 00:00:35.200] The European Union is working to strengthen its relations with other countries around the world.
+[00:00:35.820 --> 00:00:36.240] Summary
+[00:00:36.960 --> 00:00:41.860] The European Union, EU, is a political and economic union aimed at enhancing cooperation,
+[00:00:42.480 --> 00:00:47.700] economic stability, and peace among its member countries with various shared policies and institutions.
+[00:00:47.700 --> 00:00:51.900] Related words, Union, European Council, European Parliament,
+[00:00:52.560 --> 00:00:53.040] Eurozone,
+[00:00:53.640 --> 00:00:55.200] Schengen Area, Trade Block.
+[00:00:55.980 --> 00:00:59.060] Antonyms, non -member states, national sovereignty.

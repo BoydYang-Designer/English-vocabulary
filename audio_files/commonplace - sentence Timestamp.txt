@@ -1,16 +1,21 @@
-[00:00:00.000 --> 00:00:05.300] Commonplace is an adjective and a noun that refers to something that is ordinary,
-[00:00:05.300 --> 00:00:10.240] usual, or not special in any way. It can describe something that is widely encountered,
-[00:00:10.240 --> 00:00:17.040] unremarkable, or lacking in uniqueness. As an adjective, one, ordinary or unremarkable,
-[00:00:17.040 --> 00:00:22.760] this refers to something that is not unusual or special, often because it is frequently encountered
-[00:00:22.760 --> 00:00:27.960] or widely accepted. Example, the restaurant's decor was nice but quite commonplace compared
-[00:00:27.960 --> 00:00:33.560] to other high-end eateries. Example, the idea of working from home has become quite commonplace
-[00:00:33.560 --> 00:00:40.000] in today's world. Two, frequently occurring or seen, this refers to things that are commonly
-[00:00:40.000 --> 00:00:46.000] found or seen in many situations or places. Example, it's commonplace to see tourists taking
-[00:00:46.000 --> 00:00:51.360] pictures at famous landmarks. Example, complaints about the weather are commonplace during the winter
-[00:00:51.360 --> 00:00:59.960] months. As a noun, one, a common or usual thing. A commonplace is something that is considered
-[00:00:59.960 --> 00:01:05.760] normal, typical, or unremarkable because it occurs often. Example, the phrase, better late than
-[00:01:05.760 --> 00:01:11.080] never has become a commonplace. Example, in many cities, long commutes are a daily commonplace
-[00:01:11.080 --> 00:01:16.400] for workers. Entraub summary, commonplace refers to something that is ordinary, frequent, or
-[00:01:16.400 --> 00:01:21.120] lacks uniqueness, either as an adjective to describe an unremarkable thing or as a noun to
-[00:01:21.120 --> 00:01:27.200] refer to a common occurrence. Related words, ordinary, routine, usual, typical, conventional,
-[00:01:27.200 --> 00:01:31.200] antinim's unusual, exceptional, unique, extraordinary.
+[00:00:00.000 --> 00:00:05.100] Commonplace is an adjective and a noun that refers to something that is ordinary,
+[00:00:05.440 --> 00:00:07.400] usual, or not special in any way.
+[00:00:07.920 --> 00:00:12.980] It can describe something that is widely encountered, unremarkable, or lacking in uniqueness.
+[00:00:13.780 --> 00:00:14.320] As an adjective,
+[00:00:14.940 --> 00:00:20.260] one, ordinary or unremarkable, this refers to something that is not unusual or special,
+[00:00:20.700 --> 00:00:23.680] often because it is frequently encountered or widely accepted.
+[00:00:24.140 --> 00:00:29.180] Example, the restaurant's decor was nice but quite commonplace compared to other high -end eateries.
+[00:00:29.880 --> 00:00:34.420] Example, the idea of working from home has become quite commonplace in today's world.
+[00:00:35.700 --> 00:00:37.940] Two, frequently occurring or seen.
+[00:00:38.400 --> 00:00:42.780] This refers to things that are commonly found or seen in many situations or places.
+[00:00:43.620 --> 00:00:47.640] Example, it's commonplace to see tourists taking pictures at famous landmarks.
+[00:00:47.940 --> 00:00:51.660] Example, complaints about the weather are commonplace during the winter months.
+[00:00:53.100 --> 00:00:57.540] As a noun, one, a common or usual thing.
+[00:00:57.980 --> 00:01:03.240] A commonplace is something that is considered normal, typical, or unremarkable because it occurs often.
+[00:01:03.720 --> 00:01:07.200] Example, the phrase better late than never has become a commonplace.
+[00:01:07.900 --> 00:01:11.520] Example, in many cities, long commutes are a daily commonplace for workers.
+[00:01:11.520 --> 00:01:16.420] Example, the word, commonplace refers to something that is ordinary, frequent, or
+[00:01:16.420 --> 00:01:17.200] lacks uniqueness,
+[00:01:17.840 --> 00:01:22.420] either as an adjective to describe an unremarkable thing or as a noun to refer to a common occurrence.
+[00:01:23.200 --> 00:01:27.000] Related words, ordinary, routine, usual, typical, conventional,
+[00:01:27.660 --> 00:01:30.580] antonyms, unusual, exceptional, unique, extraordinary.

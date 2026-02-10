@@ -1,6 +1,10 @@
-[00:00:00.000 --> 00:00:06.000] Expedite as a verb, expedite, expedited, expedited, expediting.
-[00:00:06.000 --> 00:00:11.000] Expedite means to speed up a process or make something happen more quickly.
-[00:00:11.000 --> 00:00:17.000] It involves taking actions to ensure that a task or procedure is completed promptly or ahead of schedule.
-[00:00:17.000 --> 00:00:22.000] For example, to meet the tight deadline, the manager decided to expedite the production process
-[00:00:22.000 --> 00:00:25.000] by allocating additional resources and working overtime.
-[00:00:25.000 --> 00:00:32.000] For example, in order to avoid any delays, please expedite the approval process for the new project proposal.
+[00:00:00.000 --> 00:00:01.460] Expedite as a verb.
+[00:00:01.800 --> 00:00:03.280] Expedite, expedited.
+[00:00:04.040 --> 00:00:05.720] Expedited, expediting.
+[00:00:06.420 --> 00:00:10.540] Expedite means to speed up a process or make something happen more quickly.
+[00:00:11.320 --> 00:00:15.560] It involves taking actions to ensure that a task or procedure is completed promptly
+[00:00:15.560 --> 00:00:17.060] or ahead of schedule.
+[00:00:17.560 --> 00:00:22.480] For example, to meet the tight deadline, the manager decided to expedite the production process by
+[00:00:22.480 --> 00:00:25.280] allocating additional resources and working overtime.
+[00:00:25.280 --> 00:00:30.280] For example, in order to avoid any delays, please expedite the approval process for the
+[00:00:30.280 --> 00:00:31.280] new project proposal.

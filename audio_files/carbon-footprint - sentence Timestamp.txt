@@ -1,7 +1,12 @@
-[00:00:00.000 --> 00:00:07.000] Carbon footprint refers to the total amount of greenhouse gases, primarily carbon dioxide, CO2, and other carbon compounds
-[00:00:07.000 --> 00:00:14.000] that are emitted directly or indirectly by an individual, organization, event, or product throughout its life cycle.
-[00:00:14.000 --> 00:00:20.000] It is a measure of the impact that activities have on the environment, particularly in terms of global warming.
-[00:00:20.000 --> 00:00:28.000] Examples, reducing your carbon footprint can be achieved by using public transportation instead of driving a car.
-[00:00:28.000 --> 00:00:33.000] The company is working to minimize its carbon footprint by implementing more sustainable practices.
-[00:00:33.000 --> 00:00:42.000] Choosing products with a lower carbon footprint can help reduce your overall environmental impact.
-[00:00:42.000 --> 00:00:51.000] Summary, carbon footprint refers to the total amount of greenhouse gases emitted by an individual, organization, or activity contributing to global warming.
+[00:00:00.000 --> 00:00:05.520] Carbon footprint refers to the total amount of greenhouse gases, primarily carbon dioxide, CO2,
+[00:00:05.740 --> 00:00:10.860] and other carbon compounds, that are emitted directly or indirectly by an individual, organization,
+[00:00:11.520 --> 00:00:13.760] event, or product throughout its life cycle.
+[00:00:14.520 --> 00:00:19.880] It is a measure of the impact that activities have on the environment, particularly in terms of global warming.
+[00:00:20.700 --> 00:00:21.120] Examples,
+[00:00:21.980 --> 00:00:26.900] reducing your carbon footprint can be achieved by using public transportation instead of driving
+[00:00:26.900 --> 00:00:27.340] a car.
+[00:00:27.340 --> 00:00:32.800] The company is working to minimize its carbon footprint by implementing more sustainable practices.
+[00:00:33.520 --> 00:00:38.720] Choosing products with a lower carbon footprint can help reduce your overall environmental impact.
+[00:00:41.600 --> 00:00:42.360] Summary.
+[00:00:43.020 --> 00:00:48.140] Carbon footprint refers to the total amount of greenhouse gases emitted by an individual, organization,
+[00:00:48.700 --> 00:00:50.940] or activity, contributing to global warming.

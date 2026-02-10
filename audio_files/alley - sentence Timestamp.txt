@@ -1,7 +1,12 @@
-[00:00:00.000 --> 00:00:07.000] And Alley is a narrow street or passageway, often located between or behind buildings.
-[00:00:07.000 --> 00:00:15.000] Alleys are typically used for access to the back of buildings for services such as garbage collection or deliveries or as shortcuts between streets.
-[00:00:15.000 --> 00:00:22.000] They can vary in size and appearance ranging from small pedestrian walkways to larger lanes that allow vehicular traffic.
-[00:00:22.000 --> 00:00:28.000] In urban areas, Alleys are common features of the cityscape and serve various practical purposes.
-[00:00:28.000 --> 00:00:37.000] Additionally, Alleys can sometimes have a reputation for being dimly lit or less frequented, making them associated with certain activities or subcultures.
-[00:00:37.000 --> 00:00:42.000] For example, I always take the Alley behind the coffee shop to get to work faster.
-[00:00:42.000 --> 00:00:48.000] The detective cautiously entered the dimly lit Alley, knowing it was a common spot for illicit deals.
+[00:00:00.000 --> 00:00:04.620] An alley is a narrow street or passageway, often located between
+[00:00:04.620 --> 00:00:05.880] or behind buildings.
+[00:00:06.700 --> 00:00:11.660] Allies are typically used for access to the back of buildings for services such as garbage collection
+[00:00:11.660 --> 00:00:14.600] or deliveries or as shortcuts between streets.
+[00:00:15.440 --> 00:00:20.360] They can vary in size and appearance, ranging from small pedestrian walkways to larger
+[00:00:20.360 --> 00:00:21.980] lanes that allow vehicular traffic.
+[00:00:22.700 --> 00:00:27.820] In urban areas, alleys are common features of the cityscape and serve various practical purposes.
+[00:00:28.560 --> 00:00:29.100] Additionally,
+[00:00:29.720 --> 00:00:34.700] alleys can sometimes have a reputation for being dimly lit or less frequented, making them associated
+[00:00:34.700 --> 00:00:37.140] with certain activities or subcultures.
+[00:00:38.040 --> 00:00:42.000] For example, I always take the alley behind the coffee shop to get to work faster.
+[00:00:42.900 --> 00:00:47.760] The detective cautiously entered the dimly lit alley, knowing it was a common spot for illicit deals.

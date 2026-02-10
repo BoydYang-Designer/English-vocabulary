@@ -1,15 +1,16 @@
-[00:00:00.000 --> 00:00:03.400] Addict can be used as both a noun and a verb.
-[00:00:03.400 --> 00:00:09.080] Addict as a noun means a person who is physically or psychologically dependent on a particular
-[00:00:09.080 --> 00:00:11.080] substance or activity.
-[00:00:11.080 --> 00:00:17.080] Example, he is an addict to caffeine, needing several cups of coffee to function each day.
-[00:00:17.080 --> 00:00:21.160] Example, many former addicts have shared their stories to help others struggling with substance
-[00:00:21.160 --> 00:00:22.480] abuse.
-[00:00:22.480 --> 00:00:27.720] She became an addict to exercise, spending hours at the gym every day.
-[00:00:28.720 --> 00:00:33.360] 2. As a verb means to cause someone to become physically or psychologically dependent
-[00:00:33.360 --> 00:00:35.760] on a substance or activity.
-[00:00:35.760 --> 00:00:41.400] Example, the new game addicted many players leading them to spend all their free time on
-[00:00:41.400 --> 00:00:42.400] it.
-[00:00:42.400 --> 00:00:48.040] Example, the company's marketing strategy was designed to addict consumers to their products.
-[00:00:48.040 --> 00:00:52.800] Example, the series was so addicting that viewers binge watched all the episodes in
-[00:00:52.800 --> 00:00:54.720] one weekend.
-[00:00:54.720 --> 00:00:59.800] Delated words, dependency, habit, and an amnest non addict of stainer, free.
+[00:00:00.000 --> 00:00:03.020] Addict can be used as both a noun and a verb.
+[00:00:03.820 --> 00:00:08.580] Addict as a noun means a person who is physically or psychologically dependent on a
+[00:00:08.580 --> 00:00:10.260] particular substance or activity.
+[00:00:10.920 --> 00:00:11.380] Example,
+[00:00:12.300 --> 00:00:16.240] he is an addict to caffeine, needing several cups of coffee to function each day.
+[00:00:16.900 --> 00:00:21.380] Example, many former addicts have shared their stories to help others struggling with substance abuse.
+[00:00:22.280 --> 00:00:26.560] She became an addict to exercise, spending hours at the gym every day.
+[00:00:28.200 --> 00:00:33.120] Two, as a verb means to cause someone to become physically or psychologically dependent
+[00:00:33.120 --> 00:00:34.740] on a substance or activity.
+[00:00:35.660 --> 00:00:40.640] Example, the new game addicted many players, leading them to spend all
+[00:00:40.640 --> 00:00:41.560] their free time on it.
+[00:00:42.100 --> 00:00:46.740] Example, the company's marketing strategy was designed to addict consumers to their products.
+[00:00:47.760 --> 00:00:52.660] Example, the series was so addicting that viewers binge watched all the episodes
+[00:00:52.660 --> 00:00:53.360] in one weekend.
+[00:00:54.260 --> 00:00:55.820] Related words, dependency,
+[00:00:56.520 --> 00:00:59.620] habit, antonyms, non -addict, abstainer, free.

@@ -1,12 +1,11 @@
-[00:00:00.000 --> 00:00:04.840] Excellence is a noun that refers to the quality of being exceptionally good or outstanding
-[00:00:04.840 --> 00:00:08.560] in a particular area, performance or skill.
-[00:00:08.560 --> 00:00:12.500] It is the state of surpassing ordinary standards and achieving the highest level of quality
-[00:00:12.500 --> 00:00:14.000] or performance.
-[00:00:14.000 --> 00:00:19.400] Example, her dedication to her work resulted in excellence in every project she completed.
-[00:00:19.400 --> 00:00:23.240] The school is known for its academic excellence and strong curriculum.
-[00:00:23.240 --> 00:00:27.320] The company strives for excellence in customer service by continually improving their support
-[00:00:27.320 --> 00:00:28.320] team.
-[00:00:28.560 --> 00:00:33.040] Example, his excellence in sports earned him numerous awards and recognitions.
-[00:00:33.040 --> 00:00:37.400] Summary, excellence refers to the quality of being exceptionally good often achieved
-[00:00:37.400 --> 00:00:43.320] through effort, skill or dedication, related words, superiority, mastery, brilliance,
-[00:00:43.320 --> 00:00:49.320] distinction, Antonim's mediocrity, inferiority, substandard, average.
+[00:00:00.000 --> 00:00:04.940] Excellence is a noun that refers to the quality of being exceptionally good or outstanding in
+[00:00:04.940 --> 00:00:07.660] a particular area, performance, or skill.
+[00:00:08.420 --> 00:00:12.980] It is the state of surpassing ordinary standards and achieving the highest level of quality or performance.
+[00:00:13.580 --> 00:00:18.280] Example, her dedication to her work resulted in excellence in every project she completed.
+[00:00:19.240 --> 00:00:22.640] The school is known for its academic excellence and strong curriculum.
+[00:00:23.180 --> 00:00:27.600] The company strives for excellence in customer service by continually improving their support team.
+[00:00:28.500 --> 00:00:32.260] Example, his excellence in sports earned him numerous awards and recognitions.
+[00:00:33.080 --> 00:00:38.500] Summary, excellence refers to the quality of being exceptionally good, often achieved through effort, skill,
+[00:00:38.780 --> 00:00:39.260] or dedication.
+[00:00:39.960 --> 00:00:43.680] Related words, superiority, mastery, brilliance, distinction.
+[00:00:44.960 --> 00:00:48.560] Antonyms, mediocrity, inferiority, substandard, average.

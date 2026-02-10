@@ -1,10 +1,13 @@
-[00:00:00.000 --> 00:00:09.000] Accentricity is a noun, refers to the quality of being unconventional, unusual, or odd in behavior, appearance, or character.
-[00:00:09.000 --> 00:00:16.000] It can also describe the degree to which something deviates from a standard path, particularly in mathematics or astronomy.
-[00:00:16.000 --> 00:00:21.000] Example, her eccentricity was evident in her unique fashion sense and creative ideas.
-[00:00:21.000 --> 00:00:26.000] Example, the inventor's eccentricity often led to groundbreaking innovations.
-[00:00:27.000 --> 00:00:31.000] The eccentricity of the comments orbit makes it difficult to predict its path.
-[00:00:31.000 --> 00:00:36.000] Example, his colleagues admired his eccentricity, seeing it as a sign of his genius.
-[00:00:36.000 --> 00:00:44.000] Summary, eccentricity refers to the characteristic of being unconventional or peculiar, often associated with creativity or uniqueness.
-[00:00:44.000 --> 00:00:49.000] In technical context, it describes deviation from a regular shape or path.
-[00:00:49.000 --> 00:00:54.000] Related words, quirkiness, oddity, peculiarity, uniqueness, individuality.
-[00:00:54.000 --> 00:00:59.000] Antonyms, normality, conformity, regularity, conventionality.
+[00:00:00.000 --> 00:00:05.520] Excentricity is a noun, refers to the quality of being unconventional, unusual,
+[00:00:06.060 --> 00:00:08.640] or odd in behavior, appearance, or character.
+[00:00:09.500 --> 00:00:14.180] It can also describe the degree to which something deviates from a standard path, particularly in
+[00:00:14.180 --> 00:00:15.640] mathematics or astronomy.
+[00:00:16.360 --> 00:00:20.740] Example, her eccentricity was evident in her unique fashion sense and creative ideas.
+[00:00:21.240 --> 00:00:25.340] Example, the inventor's eccentricity often led to groundbreaking innovations.
+[00:00:25.340 --> 00:00:29.980] The eccentricity of the comet's orbit makes it difficult to predict its path.
+[00:00:30.720 --> 00:00:35.160] Example, his colleagues admired his eccentricity seeing it as a sign of his genius.
+[00:00:37.040 --> 00:00:41.780] Summary, eccentricity refers to the characteristic of being unconventional or peculiar, often
+[00:00:41.780 --> 00:00:43.820] associated with creativity or uniqueness.
+[00:00:44.540 --> 00:00:48.520] In technical contexts, it describes deviation from a regular shape or path.
+[00:00:49.220 --> 00:00:53.960] Related words, quirkiness, oddity, peculiarity, uniqueness, individuality.
+[00:00:53.960 --> 00:00:58.420] Antonyms, normality, conformity, regularity, conventionality.

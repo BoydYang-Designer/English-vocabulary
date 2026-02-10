@@ -1,4 +1,4 @@
-[00:00:00.000 --> 00:00:05.280] Aroma tends to be used more in contexts related to food, drinks, and cooking.
-[00:00:05.280 --> 00:00:09.440] It often implies a natural and appealing scent associated with these items.
-[00:00:09.440 --> 00:00:14.240] For instance, as she entered the bakery, the warm aroma of freshly baked bread enveloped her,
-[00:00:14.240 --> 00:00:17.040] instantly triggering memories of her childhood.
+[00:00:00.000 --> 00:00:04.900] Aroma tends to be used more in contexts related to food, drinks, and cooking.
+[00:00:05.440 --> 00:00:09.080] It often implies a natural and appealing scent associated with these items.
+[00:00:09.580 --> 00:00:14.040] For instance, as she entered the bakery, the warm aroma of freshly baked bread enveloped her,
+[00:00:14.340 --> 00:00:16.400] instantly triggering memories of her childhood.

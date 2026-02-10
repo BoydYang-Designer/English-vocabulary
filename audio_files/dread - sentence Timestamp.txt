@@ -1,23 +1,16 @@
-[00:00:00.000 --> 00:00:02.320] Dread can be a verb and noun.
-[00:00:02.320 --> 00:00:05.280] As a verb, dread, dreaded, dreading,
-[00:00:05.280 --> 00:00:07.680] to anticipate with fear or apprehension
-[00:00:07.680 --> 00:00:09.840] to be afraid or anxious about something
-[00:00:09.840 --> 00:00:11.600] that is expected to happen.
-[00:00:11.600 --> 00:00:13.280] Example, every Monday morning,
-[00:00:13.280 --> 00:00:15.120] he dreaded the commute to work,
-[00:00:15.120 --> 00:00:17.920] knowing he would face heavy traffic and a long day ahead.
-[00:00:18.800 --> 00:00:21.440] Example, she dreaded having to confront her boss
-[00:00:21.440 --> 00:00:22.240] about the mistake.
-[00:00:23.200 --> 00:00:26.880] Dread as a noun, the feeling of extreme fear or apprehension
-[00:00:26.880 --> 00:00:29.120] about something unpleasant or threatening
-[00:00:29.120 --> 00:00:30.320] that is likely to happen.
-[00:00:30.960 --> 00:00:34.160] Example, he felt a sense of dread before the final exam.
-[00:00:34.960 --> 00:00:37.360] Example, the deepening shadows in the forest
-[00:00:37.360 --> 00:00:39.600] filled him with a sense of dread
-[00:00:39.600 --> 00:00:42.000] as he knew the legends of what lurked within.
-[00:00:42.000 --> 00:00:45.680] Summary, dread refers to both the action of feeling
-[00:00:45.680 --> 00:00:48.240] or anticipating fear about something to come
-[00:00:48.240 --> 00:00:50.640] and the actual feeling of fear or anxiety
-[00:00:50.640 --> 00:00:52.880] typically about something unpleasant or threatening.
-[00:00:53.440 --> 00:00:57.280] Related words, fear, anxiety, apprehension, terror,
-[00:00:57.280 --> 00:00:59.520] courage, bravery, calm, confidence.
+[00:00:00.000 --> 00:00:01.940] Dread can be a verb and noun.
+[00:00:02.460 --> 00:00:07.400] As a verb, dread, dreaded, dreading, to anticipate with fear or apprehension
+[00:00:07.400 --> 00:00:11.020] to be afraid or anxious about something that is expected to happen.
+[00:00:11.700 --> 00:00:16.680] Example, every Monday morning he dreaded the commute to work, knowing he would face heavy traffic
+[00:00:16.680 --> 00:00:17.880] and a long day ahead.
+[00:00:18.860 --> 00:00:22.120] Example, she dreaded having to confront her boss about the mistake.
+[00:00:23.220 --> 00:00:27.980] Dread as a noun, the feeling of extreme fear or apprehension about something unpleasant
+[00:00:27.980 --> 00:00:30.260] or threatening that is likely to happen.
+[00:00:31.020 --> 00:00:34.120] Example, he felt a sense of dread before the final exam.
+[00:00:34.940 --> 00:00:39.820] Example, the deepening shadows in the forest filled him with a sense of dread as
+[00:00:39.820 --> 00:00:41.480] he knew the legends of what lurked within.
+[00:00:42.080 --> 00:00:47.000] Summary, dread refers to both the action of feeling or anticipating fear about
+[00:00:47.000 --> 00:00:51.680] something to come and the actual feeling of fear or anxiety typically about something
+[00:00:51.680 --> 00:00:52.860] unpleasant or threatening.
+[00:00:52.860 --> 00:00:58.060] Related words, fear, anxiety, apprehension, terror, courage, bravery,
+[00:00:58.520 --> 00:00:59.380] calm, confidence.

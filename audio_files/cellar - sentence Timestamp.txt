@@ -1,11 +1,13 @@
-[00:00:00.000 --> 00:00:05.000] Cellar primarily functions as a noun, but can also be used as a verb.
-[00:00:05.000 --> 00:00:11.000] As a noun, one, a room or space below ground level used for storage often found in a building's basement.
-[00:00:11.000 --> 00:00:16.000] Example, the wine was stored in a cool dark cellar to age properly.
-[00:00:16.000 --> 00:00:19.000] Two, a storage place for wine.
-[00:00:19.000 --> 00:00:24.000] Example, the restaurant boasts an impressive wine cellar with rare vintage selections.
-[00:00:24.000 --> 00:00:30.000] As a verb, cellar, cellar, cellar, and one, to store something, especially wine in a cellar, best example,
-[00:00:30.000 --> 00:00:34.000] they decided to sell the rare wine to improve its flavor over time.
-[00:00:34.000 --> 00:00:39.000] Two, to place or hide something in a cellar or similar storage space.
-[00:00:39.000 --> 00:00:44.000] Example, the family sellered their canned goods to ensure they lasted through the winter.
-[00:00:44.000 --> 00:00:50.000] Summary, as a noun, cellar refers to an underground storage space or wine storage area.
-[00:00:50.000 --> 00:00:54.000] As a verb, it means to store or place something in a cellar.
+[00:00:00.000 --> 00:00:04.000] Seller primarily functions as a noun but can also be used as a verb.
+[00:00:04.820 --> 00:00:09.620] As a noun, one, a room or space below ground level used for storage often
+[00:00:09.620 --> 00:00:10.700] found in a building's basement.
+[00:00:11.220 --> 00:00:15.180] Example, the wine was stored in a cool, dark cellar to age properly.
+[00:00:15.900 --> 00:00:18.060] Two, a storage place for wine.
+[00:00:18.760 --> 00:00:23.180] Example, the restaurant boasts an impressive wine cellar with rare vintage selections.
+[00:00:23.900 --> 00:00:28.620] As a verb, seller, cellared cellaring, one, to store something, especially
+[00:00:28.620 --> 00:00:33.800] wine in a cellar best example, they decided to sell the rare wine to improve its flavor over time.
+[00:00:34.880 --> 00:00:38.540] Two, to place or hide something in a cellar or similar storage space.
+[00:00:39.460 --> 00:00:43.340] Example, the family cellared their canned goods to ensure they lasted through the winter.
+[00:00:44.100 --> 00:00:49.060] Summary, as a noun, seller refers to an underground storage space or wine
+[00:00:49.060 --> 00:00:49.840] storage area.
+[00:00:49.840 --> 00:00:53.980] As a verb, it means to store or place something in a cellar.

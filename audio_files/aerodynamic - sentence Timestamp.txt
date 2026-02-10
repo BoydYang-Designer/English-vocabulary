@@ -1,8 +1,11 @@
-[00:00:00.000 --> 00:00:07.000] Aerodynamic is an adjective that refers to designed or shaped to reduce air resistance and increase efficiency.
-[00:00:07.000 --> 00:00:16.000] Refers to objects or designs that are streamlined to move smoothly through air, often for the purpose of improving speed or fuel efficiency.
-[00:00:16.000 --> 00:00:22.000] Example, the car's aerodynamic shape reduces drag and improves fuel economy.
-[00:00:22.000 --> 00:00:26.000] Example, the athlete wore an aerodynamic suit to enhance performance.
-[00:00:26.000 --> 00:00:30.000] Example, the new bike has an aerodynamic frame for better speed.
-[00:00:30.000 --> 00:00:36.000] Summary, aerodynamic describes shapes or designs that minimize air resistance to improve efficiency, speed or performance.
-[00:00:36.000 --> 00:00:41.000] Related words, streamlined, sleek, efficient, fluid, smooth.
-[00:00:41.000 --> 00:00:45.000] Antonyms, bulky, inefficient, clunky, unstream lined.
+[00:00:00.000 --> 00:00:04.980] Aerodynamic is an adjective that refers to designed or shape to reduce
+[00:00:04.980 --> 00:00:06.780] air resistance and increase efficiency.
+[00:00:07.120 --> 00:00:11.940] It refers to objects or designs that are streamlined to move smoothly through air,
+[00:00:12.320 --> 00:00:15.080] often for the purpose of improving speed or fuel efficiency.
+[00:00:16.080 --> 00:00:21.160] Example, the car's aerodynamic shape reduces drag and improves fuel economy.
+[00:00:21.720 --> 00:00:25.240] Example, the athlete wore an aerodynamic suit to enhance performance.
+[00:00:25.240 --> 00:00:29.200] Example, the new bike has an aerodynamic frame for better speed.
+[00:00:29.540 --> 00:00:33.980] Summary, aerodynamic describes shapes or designs that minimize air resistance to improve efficiency,
+[00:00:34.400 --> 00:00:35.260] speed or performance.
+[00:00:35.840 --> 00:00:39.760] Related words, streamlined, sleek, efficient, fluid, smooth.
+[00:00:40.740 --> 00:00:43.980] Antoninms, bulky, inefficient, clunky, un -streamlined.

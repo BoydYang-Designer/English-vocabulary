@@ -1,36 +1,28 @@
-[00:00:00.000 --> 00:00:03.600] Character is a noun and a verb with the following meanings.
-[00:00:03.600 --> 00:00:06.600] As a noun, one, the mental and moral qualities
-[00:00:06.600 --> 00:00:09.680] distinctive to an individual, often referring to traits
-[00:00:09.680 --> 00:00:12.400] such as honesty, integrity, and courage.
-[00:00:12.400 --> 00:00:14.920] Example, she has a strong character
-[00:00:14.920 --> 00:00:17.240] and always stands up for what she believes in.
-[00:00:17.240 --> 00:00:19.640] Example, his actions have demonstrated
-[00:00:19.640 --> 00:00:22.320] his true character and integrity.
-[00:00:22.320 --> 00:00:25.000] Example, a person's character is often revealed
-[00:00:25.000 --> 00:00:26.320] in times of adversity.
-[00:00:26.320 --> 00:00:29.160] Two, a person in a story, play, or movie,
-[00:00:29.160 --> 00:00:32.400] usually with a specific role or personality.
-[00:00:32.400 --> 00:00:34.920] Example, the main character in the novel
-[00:00:34.920 --> 00:00:36.840] undergoes significant growth and development
-[00:00:36.840 --> 00:00:38.040] throughout the story.
-[00:00:38.040 --> 00:00:40.400] Example, he identified with a protagonist
-[00:00:40.400 --> 00:00:44.320] finding aspects of his own character reflected in the story.
-[00:00:44.320 --> 00:00:48.080] Three, a written or printed symbol, such as a letter, number,
-[00:00:48.080 --> 00:00:51.720] or punctuation mark used in writing or printing.
-[00:00:51.720 --> 00:00:53.560] Amodicons and emoji characters are often
-[00:00:53.560 --> 00:00:57.600] used in digital communication to convey emotions or reactions.
-[00:00:57.600 --> 00:01:00.040] Example, he wrote in italic characters
-[00:01:00.040 --> 00:01:02.200] to emphasize the importance of the word.
-[00:01:02.200 --> 00:01:04.240] Example, the ancient text contains
-[00:01:04.240 --> 00:01:07.880] symbols and characters that were hard to decipher.
-[00:01:07.880 --> 00:01:11.600] As a verb, one, to engrave or inscribe something
-[00:01:11.600 --> 00:01:15.440] onto a surface, often referring to letters or symbols.
-[00:01:15.440 --> 00:01:18.800] Example, the artist characterized the sculpture
-[00:01:18.800 --> 00:01:21.920] with intricate details that added depth to its meaning.
-[00:01:21.920 --> 00:01:24.840] Summary, character refers to a person's moral qualities
-[00:01:24.840 --> 00:01:27.040] or personality, a figure in a narrative
-[00:01:27.040 --> 00:01:29.720] or a written symbol used in communication.
-[00:01:29.720 --> 00:01:31.880] It can also be used as a verb, meaning
-[00:01:31.880 --> 00:01:34.440] to engrave or inscribe related words.
-[00:01:34.440 --> 00:01:38.720] Personality, trait, symbol, integrity, figure, emblem.
-[00:01:38.720 --> 00:01:43.120] Antonym, dishonor, weakness, villain, fake, impersonator.
+[00:00:00.000 --> 00:00:02.740] A character is a noun and a verb with the following meanings.
+[00:00:03.480 --> 00:00:04.040] As a noun,
+[00:00:04.720 --> 00:00:09.460] one, the mental and moral qualities distinctive to an individual, often referring to traits
+[00:00:09.460 --> 00:00:11.800] such as honesty, integrity, and courage.
+[00:00:12.340 --> 00:00:12.860] Example,
+[00:00:13.580 --> 00:00:16.680] she has a strong character and always stands up for what she believes in.
+[00:00:17.160 --> 00:00:21.040] Example, his actions have demonstrated his true character and integrity.
+[00:00:22.160 --> 00:00:25.820] Example, a person's character is often revealed in times of adversity.
+[00:00:25.820 --> 00:00:30.600] Two, a person in a story, play, or movie, usually with a specific role
+[00:00:30.600 --> 00:00:31.380] or personality.
+[00:00:32.360 --> 00:00:37.480] Example, the main character in the novel undergoes significant growth and development throughout the story.
+[00:00:37.980 --> 00:00:42.900] Example, he identified with the protagonist finding aspects of his own character reflected
+[00:00:42.900 --> 00:00:43.700] in the story.
+[00:00:44.260 --> 00:00:44.520] Three,
+[00:00:45.220 --> 00:00:50.020] a written or printed symbol such as a letter, number, or punctuation mark used in writing
+[00:00:50.020 --> 00:00:50.760] or printing.
+[00:00:51.640 --> 00:00:56.820] Emoticons and emoji characters are often used in digital communication to convey emotions or reactions.
+[00:00:57.500 --> 00:01:01.540] Example, he wrote in italic characters to emphasize the importance of the word.
+[00:01:02.140 --> 00:01:06.140] Example, the ancient text contains symbols and characters that were hard to decipher.
+[00:01:07.820 --> 00:01:08.420] As a verb,
+[00:01:09.280 --> 00:01:14.180] one, to engrave or inscribe something onto a surface, often referring to letters or symbols.
+[00:01:15.360 --> 00:01:15.960] Example,
+[00:01:16.960 --> 00:01:21.440] the artist characterized the sculpture with intricate details that added depth to its meaning.
+[00:01:21.920 --> 00:01:26.720] Summary, character refers to a person's moral qualities or personality, a figure in a narrative
+[00:01:26.720 --> 00:01:28.880] or a written symbol used in communication.
+[00:01:29.700 --> 00:01:33.840] It can also be used as a verb meaning to engrave or in scar -related words.
+[00:01:34.420 --> 00:01:38.160] Personality, trait, symbol, integrity, figure, emblem.
+[00:01:38.700 --> 00:01:42.740] Antonym, dishonor, weakness, villain, fake, impersonator.

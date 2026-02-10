@@ -1,21 +1,22 @@
-[00:00:00.000 --> 00:00:02.800] antagonist as a noun.
-[00:00:02.800 --> 00:00:06.300] One, a person who opposes or competes with someone,
-[00:00:06.300 --> 00:00:10.200] someone who actively works against or is in conflict with another person,
-[00:00:10.200 --> 00:00:12.300] often in a competition or dispute.
-[00:00:12.300 --> 00:00:16.400] Example, the two politicians were fierce antagonists during the debate.
-[00:00:16.400 --> 00:00:20.600] Example, she saw him as her main antagonist in the race for promotion.
-[00:00:20.600 --> 00:00:23.600] Two, the main opponent in a story or conflict.
-[00:00:23.600 --> 00:00:27.600] A character in a book, movie or play who opposes the protagonist and creates challenges.
-[00:00:27.700 --> 00:00:32.500] Example, the antagonist in the novel plotted against the hero at every turn.
-[00:00:32.500 --> 00:00:39.200] Example, in many stories, the antagonist serves to test the protagonist's strength and determination.
-[00:00:39.200 --> 00:00:44.200] Three, a substance, force or condition that counteracts or opposes another.
-[00:00:44.200 --> 00:00:47.400] Something that works against progress, function or success,
-[00:00:47.400 --> 00:00:52.300] such as a drug that blocks a biological response or a hardship that creates obstacles.
-[00:00:52.300 --> 00:00:57.200] Example, this medication acts as an antagonist to the effects of the hormone.
-[00:00:57.200 --> 00:01:01.000] Example, poverty became the greatest antagonist to his success.
-[00:01:01.000 --> 00:01:04.000] Example, fear can be an antagonist to personal growth,
-[00:01:04.000 --> 00:01:06.400] preventing people from taking summary.
-[00:01:06.400 --> 00:01:09.100] An antagonist can be a person who opposes another,
-[00:01:09.100 --> 00:01:15.400] a character in a story who challenges the protagonist or a force, substance or condition that counteracts another.
-[00:01:15.400 --> 00:01:20.600] Related words, opponent, adversary, rival, competitor, enemy,
-[00:01:20.600 --> 00:01:25.100] Antonyms, protagonist, ally, supporter, friend, hero.
+[00:00:00.560 --> 00:00:01.800] Antagonist as a noun.
+[00:00:03.040 --> 00:00:05.760] One, a person who opposes or competes with someone.
+[00:00:06.440 --> 00:00:11.080] Someone who actively works against or is in conflict with another person, often in a
+[00:00:11.080 --> 00:00:12.020] competition or dispute.
+[00:00:12.500 --> 00:00:16.000] Example, the two politicians were fierce antagonists during the debate.
+[00:00:16.580 --> 00:00:20.080] Example, she saw him as her main antagonist in the race for promotion.
+[00:00:20.800 --> 00:00:23.320] Two, the main opponent in a story or conflict.
+[00:00:23.620 --> 00:00:27.300] A character in a book, movie, or play who opposes the protagonist and creates challenges.
+[00:00:27.300 --> 00:00:31.700] Example, the antagonist in the novel plotted against the hero at every turn.
+[00:00:32.620 --> 00:00:37.340] Example, in many stories the antagonist serves to test the protagonist's
+[00:00:37.340 --> 00:00:38.520] strength and determination.
+[00:00:39.380 --> 00:00:43.720] Three, a substance, force, or condition that counteracts or opposes another.
+[00:00:44.180 --> 00:00:49.160] Something that works against progress, function, or success, such as a drug that blocks a biological
+[00:00:49.160 --> 00:00:51.580] response or a hardship that creates obstacles.
+[00:00:52.340 --> 00:00:52.920] Example,
+[00:00:53.800 --> 00:00:56.680] this medication acts as an antagonist to the effects of the hormone.
+[00:00:57.340 --> 00:01:00.460] Example, poverty became the greatest antagonist to his success.
+[00:01:01.080 --> 00:01:05.760] Example, fear can be an antagonist to personal growth, preventing people from taking summary.
+[00:01:06.480 --> 00:01:11.320] An antagonist can be a person who opposes another, a character in a story who challenges the protagonist
+[00:01:11.320 --> 00:01:14.560] or a force, substance, or condition that counteracts another.
+[00:01:15.400 --> 00:01:19.860] Related words, opponent, adversary, rival, competitor, enemy.
+[00:01:20.600 --> 00:01:23.980] Antonyms, protagonist, ally, supporter, friend, hero.

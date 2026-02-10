@@ -1,8 +1,0 @@
-[00:00:00.000 --> 00:00:06.000] Indistinct describes something that is not clearly defined, blurred, or difficult to perceive
-[00:00:06.000 --> 00:00:08.280] or distinguish.
-[00:00:08.280 --> 00:00:13.000] The painting was so abstract that the shapes and colors appear indistinct, leaving viewers
-[00:00:13.000 --> 00:00:15.640] to interpret its meaning for themselves.
-[00:00:15.640 --> 00:00:17.400] Your voice was indistinct.
-[00:00:17.400 --> 00:00:20.320] Could you please repeat that again?
-[00:00:20.320 --> 00:00:25.120] The presenter's slides were poorly organized and their explanations were often indistinct,
-[00:00:25.120 --> 00:00:29.120] leaving the audience confused about the main points of the presentation.

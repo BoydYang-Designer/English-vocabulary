@@ -1,13 +1,19 @@
-[00:00:00.000 --> 00:00:06.920] Encroach is a verb, encroach, encroached, encroaching, meaning to gradually move into someone
-[00:00:06.920 --> 00:00:12.320] else's space or territory, often without permission or in a way that causes problems or discomfort.
-[00:00:12.320 --> 00:00:17.320] It suggests stepping over a line or boundary that one is not supposed to cross.
-[00:00:17.320 --> 00:00:23.640] One, to gradually move or go into an area that is beyond the usual or desired limits.
-[00:00:23.640 --> 00:00:26.640] Example, people are encroaching on the animal's habitat.
-[00:00:26.640 --> 00:00:29.960] Example, the ocean is slowly encroaching upon the shoreline.
-[00:00:30.760 --> 00:00:36.600] Two, to gradually take or begin to use or affect something that belongs to someone else or that
-[00:00:36.600 --> 00:00:42.040] someone else is using. Example, he argues that the law would encroach upon state's authority.
-[00:00:42.680 --> 00:00:46.360] Example, the new company is encroaching on their traditional market.
-[00:00:47.080 --> 00:00:51.320] The construction project encroached on the neighboring property, leading to a dispute between
-[00:00:51.320 --> 00:00:56.840] the homeowners. Summary, encroach refers to the gradual intrusion into someone else's territory
-[00:00:56.840 --> 00:01:00.120] or rights often in a way that causes inconvenience or disputes.
-[00:01:00.680 --> 00:01:07.480] Related words invade trespass, intrude, overstep, Antonim's respect, retreat, withdraw.
+[00:00:00.000 --> 00:00:04.140] Encroach is a verb, encroach, encroached, encroaching,
+[00:00:04.820 --> 00:00:09.820] meaning to gradually move into someone else's space or territory, often without permission or in
+[00:00:09.820 --> 00:00:11.600] a way that causes problems or discomfort.
+[00:00:12.160 --> 00:00:16.240] It suggests stepping over a line or boundary that one is not supposed to cross.
+[00:00:17.280 --> 00:00:17.760] 1.
+[00:00:18.280 --> 00:00:22.560] To gradually move or go into an area that is beyond the usual or desired limits.
+[00:00:23.380 --> 00:00:25.720] Example, people are encroaching on the animal's habitat.
+[00:00:26.200 --> 00:00:26.720] Example,
+[00:00:27.560 --> 00:00:29.960] the ocean is slowly encroaching upon the shoreline.
+[00:00:29.960 --> 00:00:31.060] 2.
+[00:00:31.420 --> 00:00:36.240] To gradually take or begin to use or affect something that belongs to someone else
+[00:00:36.240 --> 00:00:37.620] or that someone else is using.
+[00:00:38.160 --> 00:00:41.940] Example, he argues that the law would encroach upon states authority.
+[00:00:42.740 --> 00:00:46.320] Example, the new company is encroaching on their traditional market.
+[00:00:47.200 --> 00:00:51.800] The construction project encroached on the neighboring property, leading to a dispute between the homeowners.
+[00:00:52.780 --> 00:00:57.400] Summary, encroach refers to the gradual intrusion into someone else's territory or rights,
+[00:00:57.640 --> 00:00:59.900] often in a way that causes inconvenience or disputes.
+[00:01:00.760 --> 00:01:05.320] Related words, invade, trespass, intrude, overstep, antonyms, respect,
+[00:01:06.020 --> 00:01:07.220] retreat, withdraw.

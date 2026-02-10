@@ -1,9 +1,14 @@
-[00:00:00.000 --> 00:00:07.200] Cruel is an adjective that describes behavior, actions, or situations that intentionally cause harm, pain, or suffering,
-[00:00:07.200 --> 00:00:12.400] either physically or emotionally, often in an unfair or inhuman manner.
-[00:00:12.400 --> 00:00:19.600] Example. The children were punished in a cruel manner, forced to stand outside in the cold without proper clothing.
-[00:00:19.600 --> 00:00:23.500] Example. The death of their beloved son was a cruel blow.
-[00:00:23.500 --> 00:00:29.400] Example. The weather grew crueler as winter approached, with biting winds and freezing temperatures.
-[00:00:29.800 --> 00:00:35.800] Example. The cruelest part of the punishment was not the physical pain, but the emotional anguish it caused.
-[00:00:35.800 --> 00:00:42.800] Summary. Cruel refers to actions or conditions that intentionally cause significant harm, suffering, or distress,
-[00:00:42.800 --> 00:00:49.800] often with a harsh or inhuman quality. Related words, heartless brutal, inhumane, callous, merciless,
-[00:00:49.800 --> 00:00:54.700] antinims, kind, compassionate, gentle, humane, merciful.
+[00:00:00.000 --> 00:00:04.540] Cruel is an adjective that describes behavior, actions, or situations that
+[00:00:04.540 --> 00:00:09.060] intentionally cause harm, pain, or suffering, either physically or emotionally,
+[00:00:09.560 --> 00:00:12.020] often in an unfair or inhuman manner.
+[00:00:12.900 --> 00:00:17.800] Example, the children were punished in a cruel manner, forced to stand outside in the
+[00:00:17.800 --> 00:00:19.300] cold without proper clothing.
+[00:00:19.960 --> 00:00:23.140] Example, the death of their beloved son was a cruel blow.
+[00:00:23.780 --> 00:00:28.840] Example, the weather grew crueler as winter approached, with biting winds and freezing temperatures.
+[00:00:29.820 --> 00:00:34.580] Example, the cruelest part of the punishment was not the physical pain, but the emotional anguish it caused.
+[00:00:36.300 --> 00:00:36.900] Summary,
+[00:00:37.520 --> 00:00:42.380] cruel refers to actions or conditions that intentionally cause significant harm, suffering, or distress,
+[00:00:43.240 --> 00:00:45.200] often with a harsh or inhuman quality.
+[00:00:46.020 --> 00:00:49.300] Related words, heartless, brutal, inhumane, callous, merciless.
+[00:00:49.980 --> 00:00:51.100] Antonyms, kind,
+[00:00:51.700 --> 00:00:54.140] compassionate, gentle, humane, merciful.

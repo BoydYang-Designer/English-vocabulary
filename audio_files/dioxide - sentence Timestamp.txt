@@ -1,8 +1,12 @@
-[00:00:00.000 --> 00:00:07.000] Dioxide is a noun that refers to a chemical compound containing two oxygen atoms bonded to another element or group.
-[00:00:07.000 --> 00:00:14.000] It is commonly used in the context of gases or compounds formed by the combination of oxygen with another element.
-[00:00:14.000 --> 00:00:19.000] Example, carbon dioxide CO2 is released when fossil fuels are burned.
-[00:00:19.000 --> 00:00:24.000] Example, nitrogen dioxide NO2 is a pollutant that contributes to smog formation.
-[00:00:25.000 --> 00:00:31.000] The production of dioxide gases in industrial processes needs to be carefully regulated to prevent environmental damage.
-[00:00:31.000 --> 00:00:35.000] Summary, dioxide refers to a compound containing two oxygen atoms.
-[00:00:35.000 --> 00:00:41.000] It is commonly used in various chemical contexts, especially regarding gases like carbon dioxide and nitrogen dioxide.
-[00:00:41.000 --> 00:00:46.000] Related words, oxygen, compound, gas, pollutant CO2.
+[00:00:00.000 --> 00:00:04.760] Dioxide is a noun that refers to a chemical compound containing two oxygen atoms
+[00:00:04.760 --> 00:00:06.820] bonded to another element or group.
+[00:00:07.440 --> 00:00:12.380] It is commonly used in the context of gases or compounds formed by the combination of
+[00:00:12.380 --> 00:00:14.060] oxygen with another element.
+[00:00:14.560 --> 00:00:18.840] Example, carbon dioxide CO2 is released when fossil fuels are burned.
+[00:00:19.580 --> 00:00:23.880] Example, nitrogen dioxide NO2 is a pollutant that contributes to smog formation.
+[00:00:24.650 --> 00:00:29.560] The production of dioxide gases in industrial processes needs to be carefully regulated to prevent
+[00:00:29.560 --> 00:00:30.540] environmental damage.
+[00:00:31.460 --> 00:00:35.180] Summary, dioxide refers to a compound containing two oxygen atoms.
+[00:00:35.580 --> 00:00:40.360] It is commonly used in various chemical contexts, especially regarding gases like carbon dioxide and
+[00:00:40.360 --> 00:00:41.260] nitrogen dioxide.
+[00:00:41.900 --> 00:00:45.940] Related words, oxygen, compound, gas, pollutant, CO2.

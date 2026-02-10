@@ -1,13 +1,22 @@
-[00:00:00.000 --> 00:00:03.400] Absorption is a noun with the following meanings.
-[00:00:03.400 --> 00:00:10.400] 1. The process of taking in or soaking up a substance, such as liquid, energy, or information.
-[00:00:10.400 --> 00:00:14.200] Example. The sponge's absorption of water was rapid.
-[00:00:14.200 --> 00:00:19.400] Example. The plants' roots are responsible for the absorption of nutrients from the soil.
-[00:00:19.400 --> 00:00:24.200] Example. Absorption of sunlight by the leaves is essential for photosynthesis.
-[00:00:24.200 --> 00:00:28.000] 2. The mental or emotional focus or involvement in something,
-[00:00:28.200 --> 00:00:32.800] referring to the state of being completely engaged or absorbed in an activity or task.
-[00:00:32.800 --> 00:00:38.200] Example. He was lost in absorption as he read the book, unaware of the passing time.
-[00:00:38.200 --> 00:00:42.600] Example. The child's absorption in the puzzle kept him quiet for hours.
-[00:00:42.600 --> 00:00:49.000] Summary. Absorption refers to the process of taking in a substance or becoming fully focused on something,
-[00:00:49.000 --> 00:00:51.400] whether it is physical or mental.
-[00:00:51.400 --> 00:00:56.200] Related words. Soaking. Intake. Consumption. Assimilation.
-[00:00:56.200 --> 00:01:01.200] Ingrossment. Antonyms. Distraction. Detachment. Exclusion. In Difference.
+[00:00:00.000 --> 00:00:02.820] Absorption is a noun with the following meanings.
+[00:00:03.660 --> 00:00:03.860] 1.
+[00:00:04.600 --> 00:00:09.780] The process of taking in or soaking up a substance, such as liquid, energy, or information.
+[00:00:10.540 --> 00:00:11.060] Example.
+[00:00:11.500 --> 00:00:13.660] The sponge's absorption of water was rapid.
+[00:00:14.460 --> 00:00:15.060] Example.
+[00:00:15.480 --> 00:00:18.980] The plant's roots are responsible for the absorption of nutrients from the soil.
+[00:00:19.660 --> 00:00:20.280] Example.
+[00:00:20.600 --> 00:00:23.600] Absorption of sunlight by the leaves is essential for photosynthesis.
+[00:00:24.320 --> 00:00:24.620] 2.
+[00:00:25.060 --> 00:00:29.840] The mental or emotional focus or involvement in something, referring to the state of being completely
+[00:00:29.840 --> 00:00:32.200] engaged or absorbed in an activity or task.
+[00:00:33.140 --> 00:00:33.740] Example.
+[00:00:33.960 --> 00:00:37.740] He was lost in absorption as he read the book, Unaware of the Passing Time.
+[00:00:38.400 --> 00:00:39.000] Example.
+[00:00:39.200 --> 00:00:41.940] The child's absorption in the puzzle kept him quiet for hours.
+[00:00:42.620 --> 00:00:43.220] Summary.
+[00:00:43.740 --> 00:00:48.840] Absorption refers to the process of taking in a substance or becoming fully focused on something,
+[00:00:49.060 --> 00:00:50.600] whether it is physical or mental.
+[00:00:50.600 --> 00:00:52.200] Related words.
+[00:00:52.680 --> 00:00:55.760] Soaking, intake, consumption, assimilation,
+[00:00:56.440 --> 00:01:00.420] engrossment, antonyms, distraction, detachment, exclusion, indifference.

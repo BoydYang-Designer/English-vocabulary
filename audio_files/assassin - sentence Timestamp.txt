@@ -1,10 +1,11 @@
-[00:00:00.000 --> 00:00:05.880] Assassin, as a noun, a person who murders someone, especially a public figure or important
-[00:00:05.880 --> 00:00:10.680] person, often for political or financial reasons.
-[00:00:10.680 --> 00:00:15.160] Example, the assassin was hired to eliminate the political leader.
-[00:00:15.160 --> 00:00:19.400] Example, the king's assassin carried out the attack in the dead of night.
-[00:00:19.400 --> 00:00:23.760] Example, the authorities arrested a suspected assassin before he could strike.
-[00:00:23.760 --> 00:00:29.320] History is full of famous assassins who changed the course of events.
-[00:00:29.320 --> 00:00:33.120] An assassin is someone who kills a person, usually an important figure, often for money
-[00:00:33.120 --> 00:00:35.200] or political motives.
-[00:00:35.200 --> 00:00:40.600] Related words, killer, murderer, hitman, executioner, antinims, protector, guardian,
-[00:00:40.600 --> 00:00:40.960] defender.
+[00:00:00.000 --> 00:00:01.620] Assassin as a noun,
+[00:00:02.220 --> 00:00:06.220] a person who murders someone, especially a public figure or important person,
+[00:00:06.800 --> 00:00:09.040] often for political or financial reasons.
+[00:00:10.320 --> 00:00:14.040] Example, the assassin was hired to eliminate the political leader.
+[00:00:14.880 --> 00:00:18.400] Example, the king's assassin carried out the attack in the dead of night.
+[00:00:18.860 --> 00:00:23.020] Example, the authorities arrested a suspected assassin before he could strike.
+[00:00:23.440 --> 00:00:27.020] History is full of famous assassins who changed the course of events.
+[00:00:28.560 --> 00:00:33.260] An assassin is someone who kills a person, usually an important figure, often for money or
+[00:00:33.260 --> 00:00:34.140] political motives.
+[00:00:34.760 --> 00:00:38.020] Related words, killer, murderer, hitman, executioner.
+[00:00:38.400 --> 00:00:40.740] Antonims, protector, guardian, defender.

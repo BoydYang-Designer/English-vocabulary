@@ -1,8 +1,9 @@
-[00:00:00.000 --> 00:00:06.120] A Tainable is an adjective that describes something that is possible to achieve, reach, or accomplish.
-[00:00:06.120 --> 00:00:07.340] Example.
-[00:00:07.340 --> 00:00:11.520] With dedication and hard work, his goals became attainable.
-[00:00:11.520 --> 00:00:15.520] The company's target for next year is ambitious, but still attainable.
-[00:00:15.520 --> 00:00:20.400] The mountaintop seemed far, but it was attainable with the right equipment and preparation.
-[00:00:20.400 --> 00:00:25.720] A Tainable describes something that is within reach or can be achieved often after effort or planning.
-[00:00:25.720 --> 00:00:30.040] Related words, achievable, reachable, possible, realistic.
-[00:00:30.040 --> 00:00:34.680] Antonyms, unattainable, impossible, unreachable, unrealistic.
+[00:00:00.000 --> 00:00:04.700] Attainable is an adjective that describes something that is possible to achieve, reach,
+[00:00:05.020 --> 00:00:05.560] or accomplish.
+[00:00:06.260 --> 00:00:06.900] Example,
+[00:00:07.600 --> 00:00:11.260] with dedication and hard work, his goals became attainable.
+[00:00:11.640 --> 00:00:15.140] The company's target for next year is ambitious, but still attainable.
+[00:00:15.700 --> 00:00:19.900] The mountaintop seemed far, but it was attainable with the right equipment and preparation.
+[00:00:20.580 --> 00:00:25.220] Attainable describes something that is within reach or can be achieved often after effort or planning.
+[00:00:25.780 --> 00:00:29.300] Related words, achievable, reachable, possible, realistic.
+[00:00:30.200 --> 00:00:33.960] Antonyms, unattainable, impossible, unreachable, unrealistic.

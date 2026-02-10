@@ -1,8 +1,10 @@
-[00:00:00.000 --> 00:00:01.760] Aircraft as a noun.
-[00:00:01.760 --> 00:00:07.940] One, an aircraft is any vehicle that is capable of flying through the air, such as an airplane, helicopter, or drone.
-[00:00:07.940 --> 00:00:11.400] Example, the aircraft landed safely despite the heavy fog.
-[00:00:11.400 --> 00:00:15.620] Example, the military uses various types of aircraft for surveillance and transport.
-[00:00:15.620 --> 00:00:16.820] Summary.
-[00:00:16.820 --> 00:00:25.020] An aircraft refers to any vehicle designed for flight, whether it is manned or unmanned, and can include airplanes, helicopters, and drones.
-[00:00:25.020 --> 00:00:26.280] Related words,
-[00:00:26.280 --> 00:00:32.580] Airplane, helicopter, drone, flight, plane, Antonim's ground vehicle, terrestrial vehicle.
+[00:00:00.000 --> 00:00:01.280] Aircraft as a noun.
+[00:00:02.020 --> 00:00:06.340] One, an aircraft is any vehicle that is capable of flying through the air, such as an airplane,
+[00:00:06.700 --> 00:00:07.820] helicopter, or drone.
+[00:00:08.000 --> 00:00:11.080] Example, the aircraft landed safely despite the heavy fog.
+[00:00:11.600 --> 00:00:15.160] Example, the military uses various types of aircraft for surveillance and transport.
+[00:00:15.880 --> 00:00:16.300] Summary.
+[00:00:17.320 --> 00:00:22.320] An aircraft refers to any vehicle designed for flight, whether it is manned or unmanned, and can
+[00:00:22.320 --> 00:00:24.540] include airplanes, helicopters, and drones.
+[00:00:24.540 --> 00:00:28.220] Related words, airplane, helicopter, drone,
+[00:00:28.920 --> 00:00:32.160] flight, plane, antonyms, ground vehicle, terrestrial vehicle.

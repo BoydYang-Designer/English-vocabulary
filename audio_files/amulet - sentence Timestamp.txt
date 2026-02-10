@@ -1,7 +1,10 @@
-[00:00:00.000 --> 00:00:04.740] Amulet is a noun that refers to an object typically a small piece of jewelry
-[00:00:04.740 --> 00:00:10.500] believed to have magical or protective powers, often worn for good luck or to ward off evil.
-[00:00:10.500 --> 00:00:15.660] Example, she wore a silver amulet around her neck, believing it would protect her from harm.
-[00:00:15.660 --> 00:00:21.460] Example, the ancient amulet was passed down through generations thought to bring prosperity to its wearer.
-[00:00:21.460 --> 00:00:26.500] Example, many cultures use amulets to safeguard against misfortune or illness.
-[00:00:27.500 --> 00:00:36.500] Has summary, an amulet is a protective object often worn as jewelry believed to bring good fortune or protect its owner from negative influences.
-[00:00:36.500 --> 00:00:42.500] Related words, talisman, charm, protection, lucky charm, fetish, anonyms, curse, hex, jinx.
+[00:00:00.000 --> 00:00:04.780] Amulet is a noun that refers to an object, typically a small piece of jewelry
+[00:00:04.780 --> 00:00:10.120] believed to have magical or protective powers, often worn for good luck or to ward off evil.
+[00:00:10.800 --> 00:00:15.400] Example, she wore a silver amulet around her neck, believing it would protect her from harm.
+[00:00:16.080 --> 00:00:21.200] Example, the ancient amulet was passed down through generations thought to bring prosperity to its wearer.
+[00:00:21.720 --> 00:00:26.040] Example, many cultures use amulets to safeguard against misfortune or illness.
+[00:00:27.340 --> 00:00:28.380] Has summary,
+[00:00:29.000 --> 00:00:33.940] an amulet is a protective object often worn as jewelry believed to bring good fortune or
+[00:00:33.940 --> 00:00:35.660] protect its owner from negative influences.
+[00:00:36.240 --> 00:00:41.600] Related words, talisman, charm, protection, lucky charm, fetish, anonyms, curse, hex,
+[00:00:41.960 --> 00:00:42.240] jinx.

@@ -1,12 +1,15 @@
-[00:00:00.000 --> 00:00:05.000] Correspond is a verb, correspond, corresponded, corresponding.
-[00:00:05.000 --> 00:00:10.480] One, correspond means to communicate with someone by exchanging letters or messages,
-[00:00:10.480 --> 00:00:12.400] typically over a period of time.
-[00:00:12.400 --> 00:00:16.840] Example, despite living in different countries, they corresponded regularly through letters,
-[00:00:16.840 --> 00:00:20.040] sharing updates about their lives and experiences.
-[00:00:20.040 --> 00:00:23.280] Example, we haven't corresponded in years.
-[00:00:23.280 --> 00:00:26.680] We have not written letters, emails to each other for years.
-[00:00:26.680 --> 00:00:32.140] Two, correspond can also mean to have a close similarity, match, or equivalence to something
-[00:00:32.140 --> 00:00:33.640] else.
-[00:00:33.640 --> 00:00:40.160] Example, her actions do not correspond with her words, causing confusion among her colleagues.
-[00:00:40.160 --> 00:00:45.240] Example, the test results of the sample closely correspond with the anticipated analysis.
-[00:00:45.240 --> 00:00:49.840] Example, the data from the experiment corresponds closely to the theoretical predictions.
+[00:00:00.000 --> 00:00:03.800] Correspondingly, correspond as a verb, correspond, corresponded, corresponding.
+[00:00:04.820 --> 00:00:05.020] 1.
+[00:00:05.580 --> 00:00:09.940] Correspond means to communicate with someone by exchanging letters or messages,
+[00:00:10.420 --> 00:00:11.860] typically over a period of time.
+[00:00:12.280 --> 00:00:17.140] Example, despite living in different countries, they corresponded regularly through letters, sharing
+[00:00:17.140 --> 00:00:19.060] updates about their lives and experiences.
+[00:00:19.880 --> 00:00:22.560] Example, we haven't corresponded in years.
+[00:00:23.140 --> 00:00:25.820] We have not written letters, emails to each other for years.
+[00:00:25.820 --> 00:00:26.740] 2.
+[00:00:27.080 --> 00:00:30.220] Correspond can also mean to have a close similarity, match,
+[00:00:30.820 --> 00:00:32.260] or equivalence to something else.
+[00:00:33.080 --> 00:00:33.760] Example,
+[00:00:34.420 --> 00:00:39.040] her actions do not correspond with her words, causing confusion among her colleagues.
+[00:00:39.720 --> 00:00:43.760] Example, the test results of the sample closely correspond with the anticipated analysis.
+[00:00:44.680 --> 00:00:49.280] Example, the data from the experiment corresponds closely to the theoretical predictions.

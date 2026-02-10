@@ -1,10 +1,18 @@
-[00:00:00.000 --> 00:00:06.000] Correspond is a verb, correspond, corresponded, corresponding with the following meanings.
-[00:00:06.000 --> 00:00:12.000] 1. To be in agreement or conformity refers to when two or more things match or are consistent with each other.
-[00:00:12.000 --> 00:00:17.000] Example sentences. Her findings correspond with the results of previous studies.
-[00:00:17.000 --> 00:00:20.000] The numbers on the invoice correspond to the purchase order.
-[00:00:20.000 --> 00:00:24.000] 2. To communicate by exchanging letters or messages.
-[00:00:24.000 --> 00:00:29.000] Refers to the act of writing and sending letters or emails to each other.
-[00:00:29.000 --> 00:00:33.000] Example sentences. They corresponded for years before meeting in person.
-[00:00:33.000 --> 00:00:36.000] The company will correspond with clients through email.
-[00:00:36.000 --> 00:00:43.000] Summary. Correspond means to be in agreement or match with something or to communicate by exchanging written messages.
-[00:00:43.000 --> 00:00:51.000] Related words. Match, agree, align, communicate. Antonyms. Differ, disagree, mismatch.
+[00:00:00.000 --> 00:00:01.600] Correspond is a verb.
+[00:00:02.000 --> 00:00:05.340] Correspond, corresponded, corresponding with the following meanings.
+[00:00:05.920 --> 00:00:06.100] One,
+[00:00:06.700 --> 00:00:11.740] to be in agreement or conformity refers to when two or more things match or are consistent with each other.
+[00:00:12.380 --> 00:00:13.180] Example sentences.
+[00:00:13.940 --> 00:00:16.700] Her findings correspond with the results of previous studies.
+[00:00:17.280 --> 00:00:19.880] The numbers on the invoice correspond to the purchase order.
+[00:00:20.840 --> 00:00:25.800] Two, to communicate by exchanging letters or messages refers to the act
+[00:00:25.800 --> 00:00:28.340] of writing and sending letters or emails to each other.
+[00:00:29.200 --> 00:00:30.260] Example sentences.
+[00:00:30.720 --> 00:00:32.660] They corresponded for years before meeting in person.
+[00:00:33.460 --> 00:00:35.640] The company will correspond with clients through email.
+[00:00:36.560 --> 00:00:36.960] Summary.
+[00:00:37.280 --> 00:00:42.800] Correspond means to be in agreement or match with something or to communicate by exchanging written messages.
+[00:00:43.280 --> 00:00:43.920] Related words.
+[00:00:44.340 --> 00:00:46.640] Match, agree, align, communicate.
+[00:00:47.260 --> 00:00:47.840] Antonyms.
+[00:00:48.440 --> 00:00:50.380] Differ, disagree, mismatch.

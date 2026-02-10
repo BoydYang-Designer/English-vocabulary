@@ -1,18 +1,17 @@
-[00:00:00.000 --> 00:00:03.520] Abstractly is an adverb with the following meanings.
-[00:00:03.520 --> 00:00:07.600] One, in a way that is not concrete or tangible,
-[00:00:07.600 --> 00:00:13.440] refers to thinking or discussing ideas without relating them to specific examples or physical realities.
-[00:00:13.440 --> 00:00:16.320] Example, she approached the problem abstractly,
-[00:00:16.320 --> 00:00:19.520] focusing on theories rather than practical solutions.
-[00:00:19.520 --> 00:00:22.960] Example, the artist's work can be appreciated abstractly,
-[00:00:22.960 --> 00:00:26.840] highlighting the emotions conveyed rather than the subject matter.
-[00:00:27.320 --> 00:00:30.360] Two, in a manner that is difficult to understand,
-[00:00:30.360 --> 00:00:34.520] used to describe concepts or discussions that are complex or theoretical.
-[00:00:35.480 --> 00:00:38.200] Example, the lecture was presented abstractly,
-[00:00:38.200 --> 00:00:41.320] leaving many students confused about the main points.
-[00:00:41.320 --> 00:00:44.040] Example, he expressed his thoughts abstractly,
-[00:00:44.040 --> 00:00:46.520] making it hard for others to grasp his intentions.
-[00:00:48.280 --> 00:00:51.640] Summary, abstractly refers to a manner of thinking or discussing
-[00:00:51.640 --> 00:00:54.040] that emphasizes ideas over physical examples,
-[00:00:54.760 --> 00:00:57.240] often making concepts more theoretical or complex.
-[00:00:57.880 --> 00:01:00.840] Related words, theoretically, conceptually, intangibly,
-[00:01:00.840 --> 00:01:04.040] antinims concretely, specifically, clearly.
+[00:00:00.000 --> 00:00:02.980] Abstractly is an adverb with the following meanings.
+[00:00:03.900 --> 00:00:03.900] 1.
+[00:00:05.300 --> 00:00:10.100] In a way that is not concrete or tangible, refers to thinking or discussing ideas without relating
+[00:00:10.100 --> 00:00:12.840] them to specific examples or physical realities.
+[00:00:13.580 --> 00:00:18.640] Example, she approached the problem abstractly, focusing on theories rather than practical solutions.
+[00:00:19.780 --> 00:00:24.460] Example, the artist's work can be appreciated abstractly, highlighting the emotions conveyed
+[00:00:24.460 --> 00:00:25.700] rather than the subject matter.
+[00:00:27.040 --> 00:00:27.560] 2.
+[00:00:28.080 --> 00:00:32.820] In a manner that is difficult to understand, used to describe concepts or discussions that are
+[00:00:32.820 --> 00:00:34.340] complex or theoretical.
+[00:00:35.480 --> 00:00:40.540] Example, the lecture was presented abstractly, leaving many students confused about the main points.
+[00:00:41.300 --> 00:00:41.860] Example,
+[00:00:42.460 --> 00:00:46.320] he expressed his thoughts abstractly, making it hard for others to grasp his intentions.
+[00:00:48.440 --> 00:00:54.020] Summary, abstractly refers to a manner of thinking or discussing that emphasizes ideas over physical examples,
+[00:00:54.640 --> 00:00:57.100] often making concepts more theoretical or complex.
+[00:00:57.940 --> 00:01:02.720] Related words, theoretically, conceptually, intangibly, antonyms, concretely, specifically,
+[00:01:03.320 --> 00:01:03.540] clearly.

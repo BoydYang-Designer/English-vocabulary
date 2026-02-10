@@ -1,19 +1,24 @@
-[00:00:00.000 --> 00:00:03.340] Binding can function as both an adjective and a noun.
-[00:00:03.340 --> 00:00:09.500] As an adjective, binding describes something that is obligatory or enforceable, especially in a legal context.
-[00:00:10.500 --> 00:00:12.340] Example sentences.
-[00:00:12.340 --> 00:00:16.240] The contract is binding, meaning both parties must fulfill their obligations.
-[00:00:16.240 --> 00:00:20.040] A binding agreement was reached, leaving no room for negotiation.
-[00:00:20.040 --> 00:00:23.680] The parties agreed to settle the dispute through binding arbitration.
-[00:00:24.320 --> 00:00:29.700] As a noun, binding refers to something that fastens or holds things together
-[00:00:29.700 --> 00:00:31.860] or the action of securing something.
-[00:00:32.660 --> 00:00:34.020] Example sentences.
-[00:00:34.020 --> 00:00:37.140] The book's binding was starting to come apart after years of use.
-[00:00:37.140 --> 00:00:40.500] The binding of the documents was done with a strong adhesive.
-[00:00:40.500 --> 00:00:44.420] The carpet was edged with canvas binding to prevent fraying.
-[00:00:44.420 --> 00:00:45.540] Summary.
-[00:00:45.540 --> 00:00:50.020] Adjective binding means enforceable or obligatory.
-[00:00:50.020 --> 00:00:51.020] Noun.
-[00:00:51.020 --> 00:00:55.020] Binding refers to something that fastens or holds items together.
-[00:00:55.020 --> 00:00:59.620] Related words, adjective obligatory and forcible mandatory.
-[00:00:59.780 --> 00:01:02.420] Noun, fastening, securing adhesion.
-[00:01:02.420 --> 00:01:06.980] Antonyms are non-binding, voluntary, optional, noun separation detachment.
+[00:00:00.000 --> 00:00:02.700] Binding can function as both an adjective and a noun.
+[00:00:03.420 --> 00:00:09.020] As an adjective, binding describes something that is obligatory or enforceable, especially in a legal context.
+[00:00:10.660 --> 00:00:11.500] Example sentences.
+[00:00:12.580 --> 00:00:15.420] The contract is binding, meaning both parties must fulfill their obligations.
+[00:00:16.400 --> 00:00:19.320] A binding agreement was reached, leaving no room for negotiation.
+[00:00:20.140 --> 00:00:23.080] The parties agreed to settle the dispute through binding arbitration.
+[00:00:24.100 --> 00:00:24.960] As a noun,
+[00:00:25.600 --> 00:00:30.540] binding refers to something that fastens or holds things together, or the action
+[00:00:30.540 --> 00:00:31.520] of securing something.
+[00:00:32.840 --> 00:00:33.640] Example sentences.
+[00:00:34.160 --> 00:00:36.660] The book's binding was starting to come apart after years of use.
+[00:00:37.320 --> 00:00:40.000] The binding of the documents was done with a strong adhesive.
+[00:00:40.880 --> 00:00:44.040] The carpet was edged with canvas binding to prevent fraying.
+[00:00:44.740 --> 00:00:45.140] Summary.
+[00:00:45.820 --> 00:00:49.560] Adjective binding means enforceable or obligatory.
+[00:00:50.440 --> 00:00:50.680] Noun.
+[00:00:51.200 --> 00:00:54.500] Binding refers to something that fastens or holds items together.
+[00:00:54.500 --> 00:00:56.140] Related words.
+[00:00:56.500 --> 00:00:59.000] Adjective obligatory and forceable mandatory.
+[00:00:59.660 --> 00:01:00.080] Noun.
+[00:01:00.340 --> 00:01:01.780] Fastening securing adhesion.
+[00:01:02.320 --> 00:01:04.840] Antonyms are nonbinding voluntary optional.
+[00:01:05.220 --> 00:01:05.360] Noun.
+[00:01:05.520 --> 00:01:06.560] Separation detachment.

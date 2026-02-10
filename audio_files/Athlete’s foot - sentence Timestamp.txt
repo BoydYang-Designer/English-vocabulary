@@ -1,13 +1,14 @@
-[00:00:00.000 --> 00:00:07.000] Athlete's foot is a noun referring to a common fungal infection of the skin, usually affecting the feet.
-[00:00:07.000 --> 00:00:13.000] It is caused by a fungus that thrives in warm moist environments, such as the areas between the toes,
-[00:00:13.000 --> 00:00:16.000] and can spread to other parts of the body or to other people.
-[00:00:16.000 --> 00:00:23.000] The condition is often characterized by itching, redness, peeling skin, and sometimes blisters.
-[00:00:23.000 --> 00:00:29.000] He went to the doctor after noticing the itchy rash on his feet, which was diagnosed as athlete's foot.
-[00:00:30.000 --> 00:00:31.000] Example.
-[00:00:31.000 --> 00:00:36.000] Athlete's foot can spread easily in public places like swimming pools and locker rooms.
-[00:00:36.000 --> 00:00:37.000] Example.
-[00:00:37.000 --> 00:00:41.000] She treated her athlete's foot with antifungal cream to reduce the symptoms.
-[00:00:42.000 --> 00:00:43.000] Summary.
-[00:00:43.000 --> 00:00:49.000] Athlete's foot is a fungal infection that typically affects the feet, causing itching, redness, and peeling skin,
-[00:00:49.000 --> 00:00:53.000] and is often contracted in moist communal environments.
-[00:00:53.000 --> 00:00:59.000] Relatable infection, tiniapitis, skin rash, antifungal antinims, healthy feet, clear skin.
+[00:00:00.800 --> 00:00:05.560] Athlete's foot is a noun referring to a common fungal infection of the skin,
+[00:00:05.780 --> 00:00:07.080] usually affecting the feet.
+[00:00:07.880 --> 00:00:12.740] It is caused by a fungus that thrives in warm, moist environments, such as the areas between the toes,
+[00:00:13.220 --> 00:00:15.860] and can spread to other parts of the body or to other people.
+[00:00:16.800 --> 00:00:21.440] The condition is often characterized by itching, redness, peeling skin, and
+[00:00:21.440 --> 00:00:22.300] sometimes blisters.
+[00:00:23.760 --> 00:00:28.760] He went to the doctor after noticing the itchy rash on his feet, which was diagnosed as Athlete's foot.
+[00:00:30.280 --> 00:00:30.600] Example
+[00:00:31.260 --> 00:00:35.640] Athlete's foot can spread easily in public places like swimming pools and locker rooms.
+[00:00:36.120 --> 00:00:40.640] Example She treated her athlete's foot with antifungal cream to reduce the symptoms.
+[00:00:42.360 --> 00:00:47.500] Summary Athlete's foot is a fungal infection that typically affects the feet, causing itching,
+[00:00:47.720 --> 00:00:52.340] redness, and peeling skin, and is often contracted in moist communal environments.
+[00:00:52.900 --> 00:00:57.480] Relatable Infection Tineopitis Skin Rash Antifungal Antenim Healthy
+[00:00:57.480 --> 00:00:58.840] Feet Clear Skin

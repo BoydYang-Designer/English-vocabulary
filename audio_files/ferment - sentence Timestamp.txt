@@ -1,16 +1,19 @@
-[00:00:00.000 --> 00:00:04.240] Firmant is both a noun and a verb, as a noun,
-[00:00:04.240 --> 00:00:10.160] refers to a process in which yeast or bacteria break down sugars often to produce alcohol, gases, or acids.
-[00:00:10.160 --> 00:00:15.680] It can also refer to a state of agitation or excitement, especially in a social or political context.
-[00:00:15.680 --> 00:00:19.040] Example, the fermentation of grapes produces wine.
-[00:00:19.040 --> 00:00:23.760] Example, the yeast causes the dough to undergo a slow ferment making it rise.
-[00:00:23.760 --> 00:00:28.320] Example, the country was in a state of ferment after the announcement of the new law.
-[00:00:29.200 --> 00:00:32.800] As a verb, ferment, fermented, fermenting.
-[00:00:32.800 --> 00:00:37.520] To undergo or cause a chemical change due to the action of yeast, bacteria, or enzymes,
-[00:00:38.080 --> 00:00:43.840] often producing alcohol or gas, it can also mean to stir up or create a state of agitation or excitement.
-[00:00:44.720 --> 00:00:47.760] Example, the bread dough must ferment for several hours before baking.
-[00:00:48.400 --> 00:00:51.360] Example, the wine was left to ferment in barrels for six months.
-[00:00:52.160 --> 00:00:56.720] Example, his ideas began to ferment in the minds of the group, leading to a major change.
-[00:00:57.600 --> 00:01:02.480] Summary, ferment, refers to the process of chemical breakdown, especially by yeast or bacteria
-[00:01:02.480 --> 00:01:08.480] leading to the production of alcohol or gas. It can also describe a state of unrest or excitement,
-[00:01:08.480 --> 00:01:13.120] related words, fermentation, yeast, bacteria, brew, agitate,
-[00:01:13.120 --> 00:01:22.000] antinim, calm, sooth, settle, stabilize.
+[00:00:00.000 --> 00:00:03.680] Ferment is both a noun and a verb, as a noun.
+[00:00:04.200 --> 00:00:08.320] It refers to a process in which yeast or bacteria break down sugars often to produce alcohol,
+[00:00:08.700 --> 00:00:09.780] gases, or acids.
+[00:00:10.240 --> 00:00:15.040] It can also refer to a state of agitation or excitement, especially in a social or political context.
+[00:00:15.740 --> 00:00:18.500] Example, the fermentation of grapes produces wine.
+[00:00:19.160 --> 00:00:23.280] Example, the yeast causes the dough to undergo a slow ferment making it rise.
+[00:00:23.820 --> 00:00:28.380] Example, the country was in a state of ferment after the announcement of the new law.
+[00:00:28.960 --> 00:00:33.940] As a verb, ferment, fermented, fermenting, to undergo or cause
+[00:00:33.940 --> 00:00:37.460] a chemical change due to the action of yeast, bacteria, or enzymes,
+[00:00:38.140 --> 00:00:39.760] often producing alcohol or gas.
+[00:00:40.120 --> 00:00:43.760] It can also mean to stir up or create a state of agitation or excitement.
+[00:00:44.780 --> 00:00:47.700] Example, the bread dough must ferment for several hours before baking.
+[00:00:48.420 --> 00:00:51.240] Example, the wine was left to ferment in barrels for six months.
+[00:00:52.240 --> 00:00:56.720] Example, his ideas began to ferment in the minds of the group leading to a major change.
+[00:00:57.480 --> 00:01:02.060] Summary, ferment refers to the process of chemical breakdown, especially by yeast or bacteria
+[00:01:02.060 --> 00:01:04.400] leading to the production of alcohol or gas.
+[00:01:05.240 --> 00:01:07.900] It can also describe a state of unrest or excitement.
+[00:01:08.560 --> 00:01:09.600] Related words, fermentation,
+[00:01:10.300 --> 00:01:15.640] yeast, bacteria, brew, agitate, antonyms, calm, soothe, settle, stabilize.

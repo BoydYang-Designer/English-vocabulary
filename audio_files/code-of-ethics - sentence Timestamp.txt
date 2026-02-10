@@ -1,10 +1,16 @@
-[00:00:00.000 --> 00:00:04.000] Code of Ethics is a noun phrase referring to,
-[00:00:04.000 --> 00:00:09.000] one, a formal document outlining a set of principles and rules of conduct.
-[00:00:09.000 --> 00:00:15.000] This document provides guidelines for ethical behavior and decision making within an organization or profession.
-[00:00:15.000 --> 00:00:21.000] It specifies the standards expected of members and the procedures for handling ethical dilemmas.
-[00:00:21.000 --> 00:00:29.000] Example sentences. The company's Code of Ethics requires employees to act with integrity and respect in all business dealings.
-[00:00:29.000 --> 00:00:34.000] Adhering to a Code of Ethics helps maintain trust and professionalism in the legal field.
-[00:00:34.000 --> 00:00:40.000] The organization revised its Code of Ethics to address new challenges in technology and privacy.
-[00:00:40.000 --> 00:00:50.000] Summary. A Code of Ethics is a formal set of guidelines and principles designed to guide ethical behavior and decision making within an organization or profession.
-[00:00:50.000 --> 00:00:57.000] Related words. Ethical guidelines, standards of conduct. Code of conduct, ethical principles.
-[00:00:57.000 --> 00:01:02.000] Antonyms. Lack of standards on ethical practices, moral ambiguity.
+[00:00:00.000 --> 00:00:04.860] Code of Ethics is a noun phrase referring to, one, a
+[00:00:04.860 --> 00:00:08.460] formal document outlining a set of principles and rules of conduct.
+[00:00:09.200 --> 00:00:14.400] This document provides guidelines for ethical behavior and decision -making within an organization or profession.
+[00:00:15.180 --> 00:00:20.020] It specifies the standards expected of members and the procedures for handling ethical dilemmas.
+[00:00:20.980 --> 00:00:21.960] Example sentences.
+[00:00:21.960 --> 00:00:26.680] The company's Code of Ethics requires employees to act with integrity and
+[00:00:26.680 --> 00:00:28.900] respect in all business dealings.
+[00:00:29.320 --> 00:00:33.700] Adhering to a Code of Ethics helps maintain trust and professionalism in the legal field.
+[00:00:34.600 --> 00:00:38.980] The organization revised its Code of Ethics to address new challenges in technology and privacy.
+[00:00:40.020 --> 00:00:40.660] Summary.
+[00:00:41.600 --> 00:00:46.280] A Code of Ethics is a formal set of guidelines and principles designed to guide
+[00:00:46.280 --> 00:00:49.880] ethical behavior and decision -making within an organization or profession.
+[00:00:49.880 --> 00:00:51.280] Related words.
+[00:00:51.920 --> 00:00:56.060] Ethical guidelines, standards of conduct, Code of Conduct, ethical principles.
+[00:00:57.180 --> 00:00:57.900] Antonyms.
+[00:00:58.460 --> 00:01:01.260] Lack of standards on ethical practices, moral ambiguity.

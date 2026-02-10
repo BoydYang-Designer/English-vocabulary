@@ -1,14 +1,15 @@
-[00:00:00.000 --> 00:00:05.880] Descent as a noun, one, the act of moving downward or declining example.
-[00:00:05.880 --> 00:00:09.480] The airplane began its gradual descent toward the airport.
-[00:00:09.480 --> 00:00:13.520] Example the hikers struggled during the steep descent from the mountain.
-[00:00:13.520 --> 00:00:18.160] Example, his career took a sudden descent after the scandal.
-[00:00:18.160 --> 00:00:20.640] Two, a person's origin or ancestry.
-[00:00:20.640 --> 00:00:25.400] Example, she is a French descent and speaks the language fluently.
-[00:00:25.400 --> 00:00:29.280] Many people in the region can trace their descent back to ancient tribes.
-[00:00:29.280 --> 00:00:34.600] Example, his descent from a noble family was well documented.
-[00:00:34.600 --> 00:00:37.680] Three, a sudden or forceful arrival or attack.
-[00:00:37.680 --> 00:00:41.320] Example, the descent of the enemy troops caught them off guard.
-[00:00:41.320 --> 00:00:46.520] Example, the town prepared for the sudden descent of tourists during the festival.
-[00:00:46.520 --> 00:00:51.480] Summary, descent refers to moving downward, a person's ancestry or a sudden arrival.
-[00:00:51.480 --> 00:00:55.640] Related words, decline, drop, ancestry lineage fall.
-[00:00:55.640 --> 00:01:01.720] Antonyms, ascent rise climb elevation ancestry for origin related, antonym unrelated.
+[00:00:00.000 --> 00:00:05.020] Descent as a noun, one, the act of moving downward or declining,
+[00:00:05.260 --> 00:00:05.680] example.
+[00:00:05.880 --> 00:00:08.200] The airplane began its gradual descent toward the airport.
+[00:00:09.220 --> 00:00:12.100] Example, the hiker struggled during the steep descent from the mountain.
+[00:00:13.720 --> 00:00:16.900] Example, his career took a sudden descent after the scandal.
+[00:00:18.060 --> 00:00:20.100] Two, a person's origin or ancestry.
+[00:00:20.620 --> 00:00:24.460] Example, she is of French descent and speaks the language fluently.
+[00:00:25.260 --> 00:00:28.600] Many people in the region can trace their descent back to ancient tribes.
+[00:00:29.420 --> 00:00:32.840] Example, his descent from a noble family was well documented.
+[00:00:34.800 --> 00:00:37.060] Three, a sudden or forceful arrival or attack.
+[00:00:37.620 --> 00:00:40.480] Example, the descent of the enemy troops caught them off guard.
+[00:00:41.240 --> 00:00:45.080] Example, the town prepared for the sudden descent of tourists during the festival.
+[00:00:46.360 --> 00:00:50.600] Summary, descent refers to moving downward, a person's ancestry or a sudden arrival.
+[00:00:51.200 --> 00:00:56.600] Related words, decline, drop, ancestry, lineage, fall, antonyms, ascent,
+[00:00:56.860 --> 00:01:00.180] rise, climb, elevation, ancestry for origin -related antonyms unrelated.

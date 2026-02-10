@@ -1,16 +1,22 @@
-[00:00:00.000 --> 00:00:05.500] Decay as a noun, one, the process of rotting or breaking down over time.
-[00:00:05.500 --> 00:00:11.000] Example, the dentist warned him about tooth decay caused by too much sugar.
-[00:00:11.000 --> 00:00:15.500] Exe-old house showed signs of decay with crumbling walls and broken windows.
-[00:00:15.500 --> 00:00:20.500] Two, a gradual decline in strength, quality, or effectiveness.
-[00:00:20.500 --> 00:00:24.500] Example, the decay of moral values in society was a concern for many.
-[00:00:24.500 --> 00:00:28.500] Example, the once great empire fell into decay over the centuries.
-[00:00:28.500 --> 00:00:35.500] Decay as a verb, decay, decayed decaying, one to rot or decompose over time.
-[00:00:35.500 --> 00:00:39.500] Example, the fallen leaves began to decay on the forest floor.
-[00:00:39.500 --> 00:00:43.500] Example, if food is left out for too long it will start to decay.
-[00:00:43.500 --> 00:00:47.000] Two, to decline in strength, quality, or effectiveness.
-[00:00:47.000 --> 00:00:50.000] Example, his memory started to decay with age.
-[00:00:50.000 --> 00:00:54.000] Example, without proper maintenance, the building will quickly decay.
-[00:00:54.500 --> 00:00:57.500] Summary, decay refers to the process of breaking down back,
-[00:00:57.500 --> 00:01:01.500] whether it be physical decomposition or a gradual decline in quality or strength.
-[00:01:01.500 --> 00:01:05.500] Related words, rot, decompose, deteriorate, spoil, erode.
-[00:01:05.500 --> 00:01:10.500] Antonyms, preserve, strengthen, restore, improve, renew.
+[00:00:00.000 --> 00:00:01.100] Decay as a noun.
+[00:00:01.540 --> 00:00:01.780] One,
+[00:00:02.480 --> 00:00:05.000] the process of rotting or breaking down over time.
+[00:00:05.900 --> 00:00:06.460] Example,
+[00:00:07.180 --> 00:00:10.560] the dentist warned him about tooth decay caused by too much sugar.
+[00:00:11.440 --> 00:00:14.700] The old house showed signs of decay with crumbling walls and broken windows.
+[00:00:15.940 --> 00:00:16.200] Two,
+[00:00:16.900 --> 00:00:20.020] a gradual decline in strength, quality, or effectiveness.
+[00:00:20.660 --> 00:00:23.860] Example, the decay of moral values in society was a concern for many.
+[00:00:24.440 --> 00:00:28.080] Example, the once great empire fell into decay over the centuries.
+[00:00:28.640 --> 00:00:32.100] Decay as a verb, decay, decay, decaying.
+[00:00:32.540 --> 00:00:34.820] One, to rot or decompose over time.
+[00:00:35.840 --> 00:00:39.020] Example, the fallen leaves began to decay on the forest floor.
+[00:00:39.980 --> 00:00:43.100] Example, if food is left out for too long, it will start to decay.
+[00:00:43.840 --> 00:00:46.540] Two, to decline in strength, quality, or effectiveness.
+[00:00:47.440 --> 00:00:49.720] Example, his memory started to decay with age.
+[00:00:50.320 --> 00:00:53.100] Example, without proper maintenance, the building will quickly decay.
+[00:00:54.380 --> 00:00:58.900] Summary, decay refers to the process of breaking down back, whether it be physical decomposition
+[00:00:58.900 --> 00:01:01.240] or a gradual decline in quality or strength.
+[00:01:01.800 --> 00:01:05.300] Related words, rot, decompose, deteriorate, spoil, erode.
+[00:01:05.820 --> 00:01:08.520] Antonyms, preserve, strengthen, restore, improve,
+[00:01:09.120 --> 00:01:09.280] renew.

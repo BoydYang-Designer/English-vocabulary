@@ -1,18 +1,17 @@
-[00:00:00.000 --> 00:00:03.800] Consiliatory is an adjective with the following meanings.
-[00:00:03.800 --> 00:00:08.180] 1. Intended to reconcile or make peace.
-[00:00:08.180 --> 00:00:14.860] Describes actions or attitudes aimed at reducing hostility or resolving conflicts between parties.
-[00:00:14.860 --> 00:00:16.480] Example sentences.
-[00:00:16.480 --> 00:00:21.040] The mediator's conciliatory remarks helped calm tensions between the disputing parties.
-[00:00:21.040 --> 00:00:26.080] She made a conciliatory gesture by apologizing for the misunderstanding and offering to make amends.
-[00:00:26.080 --> 00:00:30.880] The company's conciliatory approach to employee grievances improved morale and cooperation.
-[00:00:30.880 --> 00:00:34.580] 2. Appeasing or placating.
-[00:00:34.580 --> 00:00:41.080] Designed to soothe or pacify others, often to avoid further disagreements or to gain favor.
-[00:00:41.080 --> 00:00:42.680] Example sentences.
-[00:00:42.680 --> 00:00:46.880] His conciliatory tone in the meeting was meant to smooth over the recent conflicts.
-[00:00:46.880 --> 00:00:52.580] The conciliatory measures taken by the manager were appreciated by the team after the recent disputes.
-[00:00:52.580 --> 00:00:53.580] Summary.
-[00:00:53.580 --> 00:00:58.580] Consiliatory refers to actions or attitudes aimed at resolving conflicts and making peace,
-[00:00:58.580 --> 00:01:01.080] often through appeasement or reconciliation.
-[00:01:01.080 --> 00:01:05.780] Related words, a conciliatory approach, appeasing, placating, reconciling.
-[00:01:05.780 --> 00:01:06.780] Antonyms.
-[00:01:06.780 --> 00:01:11.280] Antagonistic, confrontational, aggressive, hostile.
+[00:00:00.000 --> 00:00:03.380] Conciliatory is an adjective with the following meanings.
+[00:00:04.100 --> 00:00:04.280] One,
+[00:00:05.380 --> 00:00:09.980] intended to reconcile or make peace, describes actions or attitudes
+[00:00:09.980 --> 00:00:14.020] aimed at reducing hostility or resolving conflicts between parties.
+[00:00:15.160 --> 00:00:20.460] Example sentences, the mediator's conciliatory remarks helped calm tensions between the disputing parties.
+[00:00:21.080 --> 00:00:25.920] She made a conciliatory gesture by apologizing for the misunderstanding and offering to make amends.
+[00:00:26.180 --> 00:00:30.260] The company's conciliatory approach to employee grievances improved morale and cooperation.
+[00:00:31.840 --> 00:00:33.880] Two, appeasing or placating,
+[00:00:34.620 --> 00:00:39.520] designed to soothe or pacify others, often to avoid further disagreements or to
+[00:00:39.520 --> 00:00:40.120] gain favor.
+[00:00:41.120 --> 00:00:42.000] Example sentences,
+[00:00:42.740 --> 00:00:46.260] his conciliatory tone in the meeting was meant to smooth over the recent conflicts.
+[00:00:46.980 --> 00:00:51.760] The conciliatory measures taken by the manager were appreciated by the team after the recent disputes.
+[00:00:53.080 --> 00:00:58.220] Summary, conciliatory refers to actions or attitudes aimed at resolving conflicts and making peace,
+[00:00:58.580 --> 00:01:00.540] often through appeasement or reconciliation.
+[00:01:01.140 --> 00:01:05.500] Related words, a conciliatory approach, appeasing, placating, reconciling.
+[00:01:05.840 --> 00:01:10.060] Antonyms, antagonistic, confrontational, aggressive, hostile.

@@ -1,4 +1,6 @@
-[00:00:00.000 --> 00:00:06.160] Anum is a Latin word that means year. It is often used in financial contexts to refer
-[00:00:06.160 --> 00:00:13.040] to something that occurs annually or is measured on a yearly basis. Example her salary is $60,000
-[00:00:13.040 --> 00:00:17.680] per annum. Example the company reported a growth rate of 10% per annum over the past five
-[00:00:17.680 --> 00:00:22.960] years. In these sentences, per annum is a phrase meaning each year or annually.
+[00:00:00.000 --> 00:00:02.940] Anom is a Latin word that means year.
+[00:00:03.320 --> 00:00:07.580] It is often used in financial contexts to refer to something that occurs annually
+[00:00:07.580 --> 00:00:09.680] or is measured on a yearly basis.
+[00:00:10.760 --> 00:00:13.520] Example, her salary is $60 ,000 per annum.
+[00:00:13.760 --> 00:00:17.920] Example, the company reported a growth rate of 10 % per annum over the past five years.
+[00:00:18.380 --> 00:00:22.800] In these sentences, per annum is a phrase meaning each year or annually.

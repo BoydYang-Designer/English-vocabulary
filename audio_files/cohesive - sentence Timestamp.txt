@@ -1,13 +1,14 @@
-[00:00:00.000 --> 00:00:05.860] Cohesive, adjective, describes something that is well-integrated, connected, and unified,
-[00:00:05.860 --> 00:00:09.280] allowing parts to work together effectively as a whole.
-[00:00:09.280 --> 00:00:11.160] Example sentences 1.
-[00:00:11.160 --> 00:00:16.360] The team developed a cohesive strategy that aligned all their efforts toward a common goal.
-[00:00:16.360 --> 00:00:17.360] 2.
-[00:00:17.360 --> 00:00:21.800] Her presentation was cohesive with each section smoothly connecting to the next and reinforcing
-[00:00:21.800 --> 00:00:23.800] the overall message.
-[00:00:23.800 --> 00:00:24.800] 3.
-[00:00:24.800 --> 00:00:29.800] The new design features a cohesive color scheme that ties all elements of the room together.
-[00:00:29.800 --> 00:00:34.800] Summary, cohesive, refers to the quality of being well-integrated and unified where
-[00:00:34.800 --> 00:00:38.680] different parts work together effectively to form a whole.
-[00:00:38.680 --> 00:00:42.960] Synonyms, unified, integrated, connected, harmonious.
-[00:00:42.960 --> 00:00:47.440] Antonyms, disjointed, fragmented, inconsistent, unrelated.
+[00:00:00.000 --> 00:00:01.500] Cohesive, adjective,
+[00:00:02.100 --> 00:00:05.280] describes something that is well integrated, connected, and unified,
+[00:00:05.900 --> 00:00:08.420] allowing parts to work together effectively as a whole.
+[00:00:09.100 --> 00:00:10.620] Example sentences, 1.
+[00:00:11.100 --> 00:00:15.700] The team developed a cohesive strategy that aligned all their efforts toward a common goal.
+[00:00:16.480 --> 00:00:16.800] 2.
+[00:00:17.360 --> 00:00:22.000] Her presentation was cohesive with each section smoothly connecting to the next and reinforcing the
+[00:00:22.000 --> 00:00:22.800] overall message.
+[00:00:23.820 --> 00:00:24.460] 3.
+[00:00:24.900 --> 00:00:29.160] The new design features a cohesive color scheme that ties all elements of the room together.
+[00:00:30.280 --> 00:00:35.040] Summary, cohesive, refers to the quality of being well integrated and unified where different
+[00:00:35.040 --> 00:00:37.480] parts work together effectively to form a whole.
+[00:00:38.600 --> 00:00:42.340] Synonyms, unified, integrated, connected, harmonious.
+[00:00:42.980 --> 00:00:47.080] Antonyms, disjointed, fragmented, inconsistent, unrelated.

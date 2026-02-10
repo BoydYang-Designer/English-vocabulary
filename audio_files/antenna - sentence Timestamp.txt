@@ -1,8 +1,14 @@
-[00:00:00.000 --> 00:00:07.240] Antenna, as a noun, refers to a device used for receiving or transmitting radio, television, or other signals.
-[00:00:07.240 --> 00:00:15.000] It can also refer to a sensory appendage found in certain animals like insects, which helps in detecting environmental stimuli.
-[00:00:15.000 --> 00:00:22.680] 1. A device for receiving or transmitting signals. Example, the radio reception improved after he adjusted the antenna.
-[00:00:22.680 --> 00:00:26.200] Example, she installed a new antenna to get better TV channels.
-[00:00:26.400 --> 00:00:32.240] 2. A sensory appendage in animals, particularly insects, used for sensing the environment.
-[00:00:32.240 --> 00:00:41.600] Example, the antennas on the butterfly helped it detect flowers from a distance. Example, insects use their antennas to communicate and navigate their surroundings.
-[00:00:41.600 --> 00:00:51.680] Summary, an antenna is a device that either receives or transmits signals in technology, or a sensory organ in animals that aids in environmental interaction.
-[00:00:51.680 --> 00:00:55.160] Related words, receiver, transmitter, signal, center organ.
+[00:00:00.000 --> 00:00:05.700] Antenna as a noun refers to a device used for receiving or transmitting radio, television,
+[00:00:06.100 --> 00:00:06.920] or other signals.
+[00:00:07.540 --> 00:00:12.500] It can also refer to a sensory appendage found in certain animals like insects, which helps
+[00:00:12.500 --> 00:00:14.320] in detecting environmental stimuli.
+[00:00:15.480 --> 00:00:18.300] One, a device for receiving or transmitting signals.
+[00:00:18.800 --> 00:00:22.180] Example, the radio reception improved after he adjusted the antenna.
+[00:00:22.860 --> 00:00:25.720] Example, she installed a new antenna to get better TV channels.
+[00:00:25.720 --> 00:00:30.480] Two, a sensory appendage in animals, particularly insects, used for
+[00:00:30.480 --> 00:00:31.380] sensing the environment.
+[00:00:32.240 --> 00:00:36.240] Example, the antennas on the butterfly helped it detect flowers from a distance.
+[00:00:36.880 --> 00:00:40.700] Example, insects use their antennas to communicate and navigate their surroundings.
+[00:00:41.680 --> 00:00:46.660] Summary, an antenna is a device that either receives or transmits signals in technology
+[00:00:46.660 --> 00:00:51.100] or a sensory organ in animals that aids in environmental interaction.
+[00:00:51.100 --> 00:00:55.100] Related words, receiver, transmitter, signal, sensory organ.

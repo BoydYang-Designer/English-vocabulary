@@ -1,22 +1,23 @@
-[00:00:00.000 --> 00:00:07.540] Extract is a verb and noun with the following meanings, as a verb extract, extracted, extracting.
-[00:00:07.540 --> 00:00:13.840] 1. To remove or take out something often with effort or force, example, the dentist extracted
-[00:00:13.840 --> 00:00:15.880] the wisdom tooth carefully.
-[00:00:15.880 --> 00:00:19.880] Example, he managed to extract the key from the locked door.
-[00:00:19.880 --> 00:00:23.760] 2. To obtain something from a substance, resource, or environment.
-[00:00:23.760 --> 00:00:26.920] Example, scientists extracted DNA from the samples.
-[00:00:26.920 --> 00:00:29.960] Example, the company extracts oil from deep underground.
-[00:00:29.960 --> 00:00:34.400] 3. To derive or obtain information, meaning, or value from a source.
-[00:00:34.400 --> 00:00:38.240] Example, she extracted valuable insights from the research data.
-[00:00:38.240 --> 00:00:42.240] Example, he extracted a quote from the speech for his article.
-[00:00:42.240 --> 00:00:47.320] As a noun, one, a concentrated substance obtained by a process of extraction often used
-[00:00:47.320 --> 00:00:49.800] in cooking, medicine, or cosmetics.
-[00:00:49.800 --> 00:00:53.640] Example, vanilla extract is commonly used in baking.
-[00:00:53.640 --> 00:00:57.240] Example, the herbal extract is known for its medicinal properties.
-[00:00:57.240 --> 00:01:01.160] 2. A short passage or piece taken from a larger work or text.
-[00:01:01.160 --> 00:01:03.560] Example, he read an extract from his favorite novel.
-[00:01:03.560 --> 00:01:07.880] Example, the article included extracts from her interviews.
-[00:01:07.880 --> 00:01:13.200] Summary, extract as a verb means to take out, obtain, or derive something often with effort
-[00:01:13.200 --> 00:01:15.360] or by a specific process.
-[00:01:15.360 --> 00:01:20.000] As a noun, it refers to a concentrated substance or a portion of a larger work.
-[00:01:20.000 --> 00:01:24.600] Related words, remove, derive, obtain, distil, excerpt.
-[00:01:24.600 --> 00:01:27.840] Antonyms, insert, embed, combine, integrate.
+[00:00:00.000 --> 00:00:02.960] Extract is a verb and noun with the following meanings.
+[00:00:03.560 --> 00:00:06.960] As a verb, extract, extracted, extracting.
+[00:00:08.080 --> 00:00:11.520] One, to remove or take out something often with effort or force.
+[00:00:11.900 --> 00:00:15.000] Example, the dentist extracted the wisdom tooth carefully.
+[00:00:16.340 --> 00:00:19.140] Example, he managed to extract the key from the locked door.
+[00:00:19.760 --> 00:00:23.000] Two, to obtain something from a substance, resource, or environment.
+[00:00:23.820 --> 00:00:26.140] Example, scientists extracted DNA from the samples.
+[00:00:26.840 --> 00:00:29.600] Example, the company extracts oil from deep underground.
+[00:00:29.900 --> 00:00:33.920] Three, to derive or obtain information, meaning, or value from a source.
+[00:00:34.320 --> 00:00:37.440] Example, she extracted valuable insights from the research data.
+[00:00:38.140 --> 00:00:41.040] Example, he extracted a quote from the speech for his article.
+[00:00:42.120 --> 00:00:47.000] As a noun, one, a concentrated substance obtained by a process of extraction often
+[00:00:47.000 --> 00:00:48.860] used in cooking, medicine, or cosmetics.
+[00:00:49.760 --> 00:00:52.700] Example, vanilla extract is commonly used in baking.
+[00:00:53.520 --> 00:00:56.640] Example, the herbal extract is known for its medicinal properties.
+[00:00:57.520 --> 00:01:00.920] Two, a short passenger piece taken from a larger work or text.
+[00:01:01.160 --> 00:01:03.220] Example, he read an extract from his favorite novel.
+[00:01:03.560 --> 00:01:06.180] Example, the article included extracts from her interviews.
+[00:01:07.740 --> 00:01:12.580] Summary, extract as a verb means to take out, obtain, or derive something often
+[00:01:12.580 --> 00:01:14.560] with effort or by a specific process.
+[00:01:15.260 --> 00:01:19.280] As a noun, it refers to a concentrated substance or a portion of a larger work.
+[00:01:19.860 --> 00:01:24.040] Related words, remove, derive, obtain, distill, excerpt.
+[00:01:24.620 --> 00:01:27.560] Antonyms, insert, embed, combine, integrate.

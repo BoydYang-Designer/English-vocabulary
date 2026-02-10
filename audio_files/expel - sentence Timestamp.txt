@@ -1,7 +1,12 @@
-[00:00:00.000 --> 00:00:08.000] Expel. As a verb, expel, expel, expelling. One, to force someone to leave a place, organization, or institution.
-[00:00:08.000 --> 00:00:13.000] Example, the student was expelled from school for violating the rules.
-[00:00:13.000 --> 00:00:17.000] Example, the country decided to expel the foreign diplomat for espionage.
-[00:00:17.000 --> 00:00:24.000] Two, to force out or eject something from the body or a space. Example the lungs expel carbon dioxide when we exhale.
-[00:00:24.000 --> 00:00:27.000] Example the volcano expelled a massive cloud of ash and smoke.
-[00:00:27.000 --> 00:00:34.000] Summary, expel means to force someone to leave a place or organization or to eject something from the body or a space.
-[00:00:34.000 --> 00:00:42.000] Related words, eject, remove, banish, discharge, oust. Antonyms admit welcome, retain, accept.
+[00:00:00.000 --> 00:00:00.900] Expel.
+[00:00:01.400 --> 00:00:04.340] As a verb, expel, expelled, expelling.
+[00:00:04.820 --> 00:00:07.520] One, to force someone to leave a place, organization, or institution.
+[00:00:09.220 --> 00:00:12.660] Example, the student was expelled from school for violating the rules.
+[00:00:13.160 --> 00:00:16.820] Example, the country decided to expel the foreign diplomat for espionage.
+[00:00:17.220 --> 00:00:20.400] Two, to force out or eject something from the body or a space.
+[00:00:20.640 --> 00:00:23.320] Example, the lungs expel carbon dioxide when we exhale.
+[00:00:23.880 --> 00:00:26.840] Example, the volcano expelled a massive cloud of ash and smoke.
+[00:00:28.220 --> 00:00:33.120] Summary, expel means to force someone to leave a place or organization or to eject something from the body
+[00:00:33.120 --> 00:00:33.760] or a space.
+[00:00:34.180 --> 00:00:38.360] Related words, eject, remove, banish, discharge, oust.
+[00:00:38.780 --> 00:00:41.340] Antonyms, admit, welcome, retain, accept.

@@ -1,21 +1,14 @@
-[00:00:00.000 --> 00:00:04.680] Alchemist as a noun, countable, alchemist, alchemists.
-[00:00:04.680 --> 00:00:07.160] An alchemist is a person who practices alchemy,
-[00:00:07.160 --> 00:00:09.160] a medieval form of chemistry and philosophy
-[00:00:09.160 --> 00:00:12.200] aimed at transforming base metals into gold,
-[00:00:12.200 --> 00:00:14.000] discovering the elixir of life,
-[00:00:14.000 --> 00:00:16.480] or achieving spiritual transformation.
-[00:00:16.480 --> 00:00:18.880] Figuratively, it can refer to someone who transforms
-[00:00:18.880 --> 00:00:21.920] or creates something in a remarkable or magical way.
-[00:00:21.920 --> 00:00:24.720] For example, the alchemist tried to turn lead
-[00:00:24.720 --> 00:00:26.520] into gold in his laboratory.
-[00:00:27.520 --> 00:00:30.800] Many alchemists in history sought the secret to immortality.
-[00:00:30.800 --> 00:00:32.440] The author was an alchemist of words
-[00:00:32.440 --> 00:00:35.480] turning simple sentences into vivid stories.
-[00:00:35.480 --> 00:00:37.160] She acted as an alchemist in the kitchen
-[00:00:37.160 --> 00:00:40.280] turning simple ingredients into a gourmet meal.
-[00:00:40.280 --> 00:00:43.440] Summary, an alchemist is someone who practices alchemy
-[00:00:43.440 --> 00:00:46.040] or more broadly, someone who transforms things
-[00:00:46.040 --> 00:00:48.440] in a remarkable or creative way.
-[00:00:48.440 --> 00:00:50.480] Related words, chemist, magician,
-[00:00:50.480 --> 00:00:52.800] transformer, innovator, visionary,
-[00:00:52.800 --> 00:00:56.760] Antonim's destroyer, dismantler, non-creator.
+[00:00:00.000 --> 00:00:01.680] Alchemist as a noun, countable.
+[00:00:02.120 --> 00:00:03.500] Alchemist, alchemists.
+[00:00:04.640 --> 00:00:09.500] An alchemist is a person who practices alchemy, a medieval form of chemistry and philosophy aimed at
+[00:00:09.500 --> 00:00:11.540] transforming base metals into gold,
+[00:00:12.180 --> 00:00:15.680] discovering the elixir of life or achieving spiritual transformation.
+[00:00:16.460 --> 00:00:21.360] Figuratively, it can refer to someone who transforms or creates something in a remarkable or magical way.
+[00:00:21.880 --> 00:00:26.120] For example, the alchemist tried to turn lead into gold in his laboratory.
+[00:00:27.400 --> 00:00:30.340] Many alchemists in history sought the secret to immortality.
+[00:00:30.860 --> 00:00:34.720] The author was an alchemist of words, turning simple sentences into vivid stories.
+[00:00:35.500 --> 00:00:39.440] She acted as an alchemist in the kitchen, turning simple ingredients into a gourmet meal.
+[00:00:40.360 --> 00:00:45.180] Summary, an alchemist is someone who practices alchemy or more broadly, someone who
+[00:00:45.180 --> 00:00:47.640] transforms things in a remarkable or creative way.
+[00:00:48.460 --> 00:00:52.220] Related words, chemist, magician, transformer, innovator, visionary,
+[00:00:52.900 --> 00:00:56.520] antonyms, destroyer, dismantler, non -creator.

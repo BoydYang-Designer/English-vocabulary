@@ -1,14 +1,16 @@
-[00:00:00.000 --> 00:00:02.000] Appreciate as a verb.
-[00:00:02.000 --> 00:00:06.500] One, to recognize and understand the value or worth of something or someone.
-[00:00:06.500 --> 00:00:09.500] Example, I really appreciate your help with the project.
-[00:00:09.500 --> 00:00:14.000] Example, she appreciates the beauty of the old paintings in the gallery.
-[00:00:14.000 --> 00:00:17.500] Two, to express gratitude or thankfulness for something.
-[00:00:17.500 --> 00:00:22.000] Example, he appreciates the support his friends gave him during difficult times.
-[00:00:22.000 --> 00:00:26.000] Example, we appreciated the delicious meal prepared by our host.
-[00:00:26.500 --> 00:00:30.000] Three, to increase in value or worth over time.
-[00:00:30.000 --> 00:00:34.500] Example, the property appreciated in value after the new park was built nearby.
-[00:00:34.500 --> 00:00:39.500] Example, his investments and stocks appreciated significantly over the years.
-[00:00:39.500 --> 00:00:44.000] Summary, appreciate means to recognize the value or significance of something,
-[00:00:44.000 --> 00:00:47.000] express gratitude or describe an increase in value over time.
-[00:00:47.000 --> 00:00:51.000] Related words, acknowledge, admire, thank, rise.
-[00:00:51.000 --> 00:00:55.500] Antonyms, undervalue, ignore, depreciate, take for granted.
+[00:00:00.860 --> 00:00:01.440] 1.
+[00:00:03.040 --> 00:00:06.460] To recognize and understand the value or worth of something or someone.
+[00:00:06.620 --> 00:00:09.440] Example, I really appreciate your help with the project.
+[00:00:09.860 --> 00:00:13.740] Example, she appreciates the beauty of the old paintings in the gallery.
+[00:00:14.240 --> 00:00:14.520] 2.
+[00:00:15.020 --> 00:00:17.220] To express gratitude or thankfulness for something.
+[00:00:17.820 --> 00:00:21.460] Example, he appreciates the support his friends gave him during difficult times.
+[00:00:22.440 --> 00:00:25.880] Example, we appreciated the delicious meal prepared by our host.
+[00:00:25.880 --> 00:00:26.560] 3.
+[00:00:27.240 --> 00:00:29.540] To increase in value or worth over time.
+[00:00:29.960 --> 00:00:33.720] Example, the property appreciated in value after the new park was built nearby.
+[00:00:34.440 --> 00:00:38.440] Example, his investments in stocks appreciated significantly over the years.
+[00:00:39.220 --> 00:00:44.040] Summary, appreciate means to recognize the value or significance of something, express
+[00:00:44.040 --> 00:00:46.640] gratitude or describe an increase in value over time.
+[00:00:47.220 --> 00:00:50.520] Related words, acknowledge, admire, thank, rise.
+[00:00:50.520 --> 00:00:55.240] Antonyms, undervalue, ignore, depreciate, take for granted.

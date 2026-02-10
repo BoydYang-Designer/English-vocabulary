@@ -1,4 +1,4 @@
-[00:00:00.000 --> 00:00:03.460] Decelerate means to slow down or decrease in speed.
-[00:00:03.460 --> 00:00:06.440] Example 1, as they approach the intersection,
-[00:00:06.440 --> 00:00:10.560] the driver began to decelerate preparing to stop at the red light.
-[00:00:10.560 --> 00:00:15.440] Example 2, experts predict that economic growth will decelerate.
+[00:00:00.000 --> 00:00:03.080] decelerate means to slow down or decrease in speed.
+[00:00:03.600 --> 00:00:08.580] Example one, as they approach the intersection, the driver began to decelerate preparing to
+[00:00:08.580 --> 00:00:09.920] stop at the red light.
+[00:00:10.920 --> 00:00:14.980] Example two, experts predict that economic growth will decelerate.

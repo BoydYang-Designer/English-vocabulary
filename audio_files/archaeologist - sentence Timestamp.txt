@@ -1,5 +1,8 @@
-[00:00:00.000 --> 00:00:11.000] Archaeologist is a noun referring to a person who studies human history and prehistory through the excavation and analysis of artifacts, structures, and other physical remains.
-[00:00:11.000 --> 00:00:16.000] Example, the archaeologist discovered ancient pottery while digging at the historical site.
-[00:00:16.000 --> 00:00:21.000] Example, she became an archaeologist to learn more about ancient civilizations.
-[00:00:21.000 --> 00:00:28.000] Summary, an archaeologist investigates past human life by examining physical evidence from archaeological sites.
-[00:00:28.000 --> 00:00:38.000] Related words, anthropologist historian, excavator, researcher, antinim's uneducated person, layman, non-specialist.
+[00:00:00.000 --> 00:00:04.820] Archaeologist is a noun referring to a person who studies human history and prehistory
+[00:00:04.820 --> 00:00:10.260] through the excavation and analysis of artifacts, structures, and other physical remains.
+[00:00:10.920 --> 00:00:15.300] Example, the archaeologist discovered ancient pottery while digging at the historical site.
+[00:00:15.920 --> 00:00:19.640] Example, she became an archaeologist to learn more about ancient civilizations.
+[00:00:20.620 --> 00:00:21.320] Summary,
+[00:00:21.980 --> 00:00:27.380] an archaeologist investigates past human life by examining physical evidence from archaeological sites.
+[00:00:27.380 --> 00:00:32.460] Related words, anthropologist, historian, excavator, researcher,
+[00:00:32.720 --> 00:00:35.440] antonym's uneducated person, layman, non -specialist.

@@ -1,13 +1,15 @@
-[00:00:00.000 --> 00:00:06.560] Backlash is a noun with two meanings, one, a strong negative reaction or criticism.
-[00:00:06.560 --> 00:00:11.240] This refers to public discontent or opposition that arises in response to a specific action,
-[00:00:11.240 --> 00:00:13.160] decision or statement.
-[00:00:13.160 --> 00:00:19.560] Example, the new policy received considerable backlash from the employees who felt it was unfair.
-[00:00:19.560 --> 00:00:25.120] Example, after the controversial statement, the politician faced severe backlash from voters.
-[00:00:25.360 --> 00:00:29.440] 2. A sudden or violent reaction caused by a force.
-[00:00:29.440 --> 00:00:34.640] This involves a physical movement in the opposite direction, following an impact or force.
-[00:00:34.640 --> 00:00:39.680] Example, the backlash from the powerful engine caused the car to jerk backward.
-[00:00:39.680 --> 00:00:45.120] Example, you can feel a strong backlash in the car when accelerating quickly after a sudden stop.
-[00:00:45.120 --> 00:00:52.000] Summary, backlash refers to a strong adverse reaction that either as public criticism in response to a decision
-[00:00:52.000 --> 00:00:54.400] or a physical force that causes movement.
-[00:00:54.400 --> 00:00:58.840] Related words, repercussion, response, counteraction, resistance.
-[00:00:58.840 --> 00:01:02.240] Antonyms, support approval, endorsement.
+[00:00:00.000 --> 00:00:02.220] Backlash is a noun with two meanings.
+[00:00:02.580 --> 00:00:05.560] One, a strong negative reaction or criticism.
+[00:00:06.340 --> 00:00:11.460] This refers to public discontent or opposition that arises in response to a specific action, decision,
+[00:00:11.700 --> 00:00:12.100] or statement.
+[00:00:13.080 --> 00:00:18.420] Example, the new policy received considerable backlash from the employees who felt it was unfair.
+[00:00:19.280 --> 00:00:19.900] Example,
+[00:00:20.500 --> 00:00:24.060] after the controversial statement, the politician faced severe backlash from
+[00:00:24.940 --> 00:00:29.080] Two, a sudden or violent reaction caused by a force.
+[00:00:29.540 --> 00:00:34.160] This involves a physical movement in the opposite direction following an impact or force.
+[00:00:34.660 --> 00:00:38.760] Example, the backlash from the powerful engine caused the car to jerk backward.
+[00:00:39.600 --> 00:00:44.280] Example, you can feel a strong backlash in the car when accelerating quickly after a sudden stop.
+[00:00:45.080 --> 00:00:49.940] Summary, backlash refers to a strong adverse reaction that either as public
+[00:00:49.940 --> 00:00:53.900] criticism in response to a decision or a physical force that causes movement.
+[00:00:54.400 --> 00:00:58.020] Related words, repercussion, response, counteraction, resistance.
+[00:00:58.840 --> 00:01:01.200] Antonyms, support, approval, endorsement.

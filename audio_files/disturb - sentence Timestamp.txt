@@ -1,20 +1,16 @@
-[00:00:00.000 --> 00:00:04.440] Disturb is a verb, disturb, disturbed, disturbing.
-[00:00:04.440 --> 00:00:08.160] One, to interrupt or interfere with someone's peace or activity,
-[00:00:08.160 --> 00:00:11.240] causing distraction or inconvenience.
-[00:00:11.240 --> 00:00:15.800] Example, please try not to disturb me while I'm studying.
-[00:00:15.800 --> 00:00:17.880] The loud noises from the construction site
-[00:00:17.880 --> 00:00:20.600] disturbed my sleep.
-[00:00:20.600 --> 00:00:24.200] He was disturbed by the constant phone calls during his meeting.
-[00:00:24.200 --> 00:00:26.920] I don't want to disturb them while they're having dinner
-[00:00:26.920 --> 00:00:29.960] to cause emotional distress or anxiety to someone
-[00:00:29.960 --> 00:00:32.240] leading to discomfort or concern.
-[00:00:32.240 --> 00:00:35.240] Example, the news of the accident disturbed her deeply,
-[00:00:35.240 --> 00:00:38.480] and she couldn't concentrate on anything else.
-[00:00:38.480 --> 00:00:41.040] Example, the thought of the upcoming exam
-[00:00:41.040 --> 00:00:44.280] disturbed him so much that he couldn't sleep.
-[00:00:44.280 --> 00:00:46.360] Example, the argument with her friend
-[00:00:46.360 --> 00:00:48.920] disturbed her for the rest of the day.
-[00:00:48.920 --> 00:00:52.320] Summary, disturb refers to interrupting someone's peace
-[00:00:52.320 --> 00:00:56.440] or activity or causing emotional distress or discomfort.
-[00:00:56.440 --> 00:00:59.400] Related words interrupt bother, disrupt, unsettle,
-[00:00:59.400 --> 00:01:02.400] agitate, Antonim Kahn, soothe comfort assist.
+[00:00:00.000 --> 00:00:03.760] Disturb is a verb, disturb, disturbed, disturbing.
+[00:00:04.380 --> 00:00:09.100] One, to interrupt or interfere with someone's peace or activity, causing distraction
+[00:00:09.100 --> 00:00:10.300] or inconvenience.
+[00:00:11.200 --> 00:00:14.540] Example, please try not to disturb me while I'm studying.
+[00:00:15.620 --> 00:00:19.260] The loud noises from the construction site disturbed my sleep.
+[00:00:20.320 --> 00:00:23.360] He was disturbed by the constant phone calls during his meeting.
+[00:00:24.100 --> 00:00:26.060] I don't want to disturb them while they're having dinner.
+[00:00:26.700 --> 00:00:31.720] To cause emotional distress or anxiety to someone, leading to discomfort or concern.
+[00:00:32.240 --> 00:00:36.860] Example, the news of the accident disturbed her deeply, and she couldn't concentrate on
+[00:00:36.860 --> 00:00:37.660] anything else.
+[00:00:38.480 --> 00:00:43.520] Example, the thought of the upcoming exam disturbed him so much that he couldn't sleep.
+[00:00:44.300 --> 00:00:48.060] Example, the argument with her friend disturbed her for the rest of the day.
+[00:00:48.920 --> 00:00:53.800] Summary, disturb refers to interrupting someone's peace or activity or causing
+[00:00:53.800 --> 00:00:55.480] emotional distress or discomfort.
+[00:00:56.220 --> 00:01:01.260] Related words, interrupt, bother, disrupt, unsettle, agitate, antonym calm, soothe,
+[00:01:01.300 --> 00:01:02.020] comfort, assist.

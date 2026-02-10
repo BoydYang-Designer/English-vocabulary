@@ -1,10 +1,12 @@
-[00:00:00.000 --> 00:00:05.000] 1. Alli as a verb, alli, alli, allying.
-[00:00:05.000 --> 00:00:09.380] 2. Alli means to form or enter into an alliance with someone or something, usually from
-[00:00:09.380 --> 00:00:11.320] mutual benefit or protection.
-[00:00:11.320 --> 00:00:15.220] Example, the two companies decided to alli themselves to compete more effectively in
-[00:00:15.220 --> 00:00:16.420] the market.
-[00:00:16.420 --> 00:00:21.720] 2. Alli as a noun refers to a person, group, or nation that is associated with another
-[00:00:21.720 --> 00:00:24.300] for a common cause or purpose.
-[00:00:24.300 --> 00:00:30.060] In this sense, an ally is someone who provides support, assistance, or cooperation.
-[00:00:30.060 --> 00:00:34.540] Example, during the war, the two countries became allies and worked together to defeat
-[00:00:34.540 --> 00:00:35.100] the enemy.
+[00:00:00.000 --> 00:00:00.500] 1.
+[00:00:01.240 --> 00:00:02.140] Ally as a verb.
+[00:00:02.680 --> 00:00:04.520] Ally, allied, allying.
+[00:00:05.120 --> 00:00:10.020] To ally means to form or enter into an alliance with someone or something, usually for mutual benefit
+[00:00:10.020 --> 00:00:10.760] or protection.
+[00:00:11.300 --> 00:00:15.600] Example, the two companies decided to ally themselves to compete more effectively in the market.
+[00:00:16.320 --> 00:00:16.880] 2.
+[00:00:17.280 --> 00:00:22.080] Ally as a noun refers to a person, group, or nation that is associated with another for a
+[00:00:22.080 --> 00:00:23.440] common cause or purpose.
+[00:00:23.440 --> 00:00:24.340] 3.
+[00:00:24.340 --> 00:00:29.020] In this sense, an ally is someone who provides support, assistance, or cooperation.
+[00:00:30.160 --> 00:00:34.940] Example, during the war, the two countries became allies and worked together to defeat the enemy.

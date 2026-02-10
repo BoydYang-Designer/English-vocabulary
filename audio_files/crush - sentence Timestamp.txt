@@ -1,22 +1,27 @@
-[00:00:00.000 --> 00:00:07.240] Crush can be used as both a noun and a verb, as a noun, one, a strong feeling of romantic
-[00:00:07.240 --> 00:00:11.120] infatuation for someone, often without a deep relationship.
-[00:00:11.120 --> 00:00:15.480] Example, she has a crush on her classmate and gets nervous around him.
-[00:00:15.480 --> 00:00:20.000] Example, many teenagers experience their first crush during middle school.
-[00:00:20.000 --> 00:00:24.040] Two, an intense feeling of admiration or attraction.
-[00:00:24.040 --> 00:00:29.920] Example, his crush on the famous actor was evident when he collected all her movies.
-[00:00:29.920 --> 00:00:34.000] Example, after meeting the author, she developed a crush on his passion for writing.
-[00:00:34.000 --> 00:00:37.600] Three, a crowded situation or group of people.
-[00:00:37.600 --> 00:00:42.600] Example, outside the hotel stood a crush of reporters waiting for her arrival.
-[00:00:42.600 --> 00:00:49.080] As a verb, crush, crushed, crushing, one, to press or squeeze something with force, often
-[00:00:49.080 --> 00:00:51.240] to break or deform it.
-[00:00:51.240 --> 00:00:55.880] Example, she crushed the can before tossing it into the recycling bin.
-[00:00:55.920 --> 00:00:59.520] Unfortunately, some of the flowers got crushed when we were moving them.
-[00:00:59.520 --> 00:01:04.000] Example, crush the nuts and sprinkle them on top of the cake.
-[00:01:04.000 --> 00:01:07.480] Two, to defeat someone decisively or to overwhelm.
-[00:01:07.480 --> 00:01:12.000] Example, the team crushed their opponents in the championship game.
-[00:01:12.000 --> 00:01:18.000] Example, the storm crushed the hopes of the outdoor event organizers.
-[00:01:18.000 --> 00:01:22.520] Summary, crush, refers to a strong feeling of infatuation or admiration,
-[00:01:22.520 --> 00:01:27.640] typically for someone unattainable, as well as the act of breaking something by applying pressure.
-[00:01:27.640 --> 00:01:32.640] It can also mean to decisively defeat someone or something and can describe a crowded situation.
-[00:01:32.640 --> 00:01:37.120] Related words, infatuation, fascination, squash, defeat.
-[00:01:37.120 --> 00:01:40.640] Antonyms, sustain, support, encourage.
+[00:00:00.000 --> 00:00:03.200] Crush can be used as both a noun and a verb.
+[00:00:03.700 --> 00:00:08.400] As a noun, one, a strong feeling of romantic infatuation for someone,
+[00:00:08.580 --> 00:00:10.040] often without a deep relationship.
+[00:00:10.820 --> 00:00:11.380] Example,
+[00:00:12.060 --> 00:00:14.540] she has a crush on her classmate and gets nervous around him.
+[00:00:15.000 --> 00:00:19.220] Example, many teenagers experience their first crush during middle school.
+[00:00:20.160 --> 00:00:23.640] Two, an intense feeling of admiration or attraction.
+[00:00:24.040 --> 00:00:28.340] Example, his crush on the famous actor was evident when he collected all her movies.
+[00:00:29.660 --> 00:00:33.240] Example, after meeting the author, she developed a crush on his passion for writing.
+[00:00:34.360 --> 00:00:36.500] Three, a crowded situation or group of people.
+[00:00:37.480 --> 00:00:41.780] Example, outside the hotel stood a crush of reporters waiting for her arrival.
+[00:00:42.380 --> 00:00:43.020] As a verb,
+[00:00:43.700 --> 00:00:45.960] crush, crushed, crushing, one,
+[00:00:46.800 --> 00:00:50.180] to press or squeeze something with force, often to break or to form it.
+[00:00:50.780 --> 00:00:54.460] Example, she crushed the can before tossing it into the recycling bin.
+[00:00:55.740 --> 00:00:56.300] Unfortunately,
+[00:00:57.060 --> 00:00:59.180] some of the flowers got crushed when we were moving them.
+[00:00:59.540 --> 00:01:03.340] Example, crush the nuts and sprinkle them on top of the cake.
+[00:01:03.860 --> 00:01:07.020] Two, to defeat someone decisively or to overwhelm.
+[00:01:07.540 --> 00:01:08.100] Example,
+[00:01:08.780 --> 00:01:11.160] the team crushed their opponents in the championship game.
+[00:01:12.040 --> 00:01:15.760] Example, the storm crushed the hopes of the outdoor event organizers.
+[00:01:17.880 --> 00:01:22.840] Summary, crush refers to a strong feeling of infatuation or admiration, typically
+[00:01:22.840 --> 00:01:27.060] for someone unattainable, as well as the act of breaking something by applying pressure.
+[00:01:27.680 --> 00:01:31.940] It can also mean to decisively defeat someone or something and can describe a crowded situation.
+[00:01:32.680 --> 00:01:36.420] Related words, infatuation, fascination, squash, defeat.
+[00:01:37.160 --> 00:01:39.720] Antonyms, sustain, support, encourage.

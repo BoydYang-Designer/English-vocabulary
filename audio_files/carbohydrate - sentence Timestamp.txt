@@ -1,8 +1,10 @@
-[00:00:00.000 --> 00:00:07.000] Carbohydrate is a noun means a type of organic compound found in foods made up of carbon, hydrogen and oxygen
-[00:00:07.000 --> 00:00:10.000] that serves as a major source of energy for the body.
-[00:00:10.000 --> 00:00:14.000] Carbohydrates include sugars, starches, and fiber.
-[00:00:14.000 --> 00:00:18.000] Example, bread, rice, and pasta are high in carbohydrates.
-[00:00:18.000 --> 00:00:24.000] Example, athletes often consume carbohydrates before a race to boost their energy levels.
-[00:00:24.000 --> 00:00:30.000] A balanced diet with controlled carbohydrates is crucial for managing diabetes effectively.
-[00:00:30.000 --> 00:00:37.000] Summary, carbohydrates are organic compounds that provide energy to the body, primarily found in foods like grains, fruits, and vegetables.
-[00:00:37.000 --> 00:00:44.000] Related words, sugar, starch, fiber, glucose, energy, antinim's protein, fat.
+[00:00:00.000 --> 00:00:04.540] Carbohydrate is a noun means a type of organic compound found in foods
+[00:00:04.540 --> 00:00:09.780] made up of carbon, hydrogen, and oxygen that serves as a major source of energy for the body.
+[00:00:10.400 --> 00:00:13.500] Carbohydrates include sugars, starches, and fiber.
+[00:00:14.420 --> 00:00:17.780] Example, bread, rice, and pasta are high in carbohydrates.
+[00:00:18.660 --> 00:00:23.080] Example, athletes often consume carbohydrates before a race to boost their energy levels.
+[00:00:24.520 --> 00:00:29.280] A balanced diet with controlled carbohydrates is crucial for managing diabetes effectively.
+[00:00:29.280 --> 00:00:34.240] Summary, carbohydrates are organic compounds that provide energy to the body, primarily
+[00:00:34.240 --> 00:00:36.580] found in foods like grains, fruits, and vegetables.
+[00:00:37.140 --> 00:00:40.820] Related words, sugar, starch, fiber, glucose, energy.
+[00:00:41.280 --> 00:00:42.840] Antenim's protein, fat.

@@ -1,17 +1,24 @@
-[00:00:00.000 --> 00:00:02.880] Deadlock can be used as both a verb and a noun,
-[00:00:02.880 --> 00:00:08.560] referring to a situation where no progress or agreement can be made due to opposing positions or forces.
-[00:00:08.560 --> 00:00:12.160] As a verb, deadlock, deadlocked, deadlocking.
-[00:00:12.160 --> 00:00:17.200] One, to bring about a situation where no agreement or decision can be made due to opposing positions.
-[00:00:18.000 --> 00:00:23.440] This refers to causing a stalemate or impasse, often in negotiations or discussions,
-[00:00:23.440 --> 00:00:25.840] where both sides refuse to compromise.
-[00:00:25.920 --> 00:00:31.920] Example, the negotiations deadlocked when both parties refused to budge on their demands.
-[00:00:32.560 --> 00:00:36.240] Example, the two teams deadlocked in a scoreless match.
-[00:00:37.280 --> 00:00:39.600] Her home run deadlocked the game at 3-3.
-[00:00:40.640 --> 00:00:47.120] As a noun, one, a situation where no progress can be made because two opposing sides are equally strong
-[00:00:47.120 --> 00:00:49.360] and neither is willing to change their position.
-[00:00:49.920 --> 00:00:55.360] This refers to an impasse or stalemate in which both sides are stuck and no resolution can be
-[00:00:55.360 --> 00:01:01.040] achieved. Example, the board meeting ended in a deadlock with no decision reached on the proposed
-[00:01:01.040 --> 00:01:06.240] merger. Example is meeting with a supervisor regarding employee workload ended in a deadlock.
-[00:01:07.040 --> 00:01:11.680] Deadlock refers to a situation in which no agreement or progress can be made due to opposing
-[00:01:11.680 --> 00:01:18.560] positions or forces. Related words, stalemate, impasse, gridlock, standstill,
-[00:01:18.560 --> 00:01:28.880] Antonim's agreement resolution compromise breakthrough.
+[00:00:00.000 --> 00:00:04.580] Deadlock can be used as both a verb and a noun, referring to a situation where no
+[00:00:04.580 --> 00:00:08.200] progress or agreement can be made due to opposing positions or forces.
+[00:00:08.680 --> 00:00:13.640] As a verb, deadlock, deadlocked, deadlocking, one, to bring about a situation
+[00:00:13.640 --> 00:00:17.160] where no agreement or decision can be made due to opposing positions.
+[00:00:17.960 --> 00:00:22.900] This refers to causing a stalemate or impasse, often in negotiations or discussions
+[00:00:22.900 --> 00:00:25.200] where both sides refuse to compromise.
+[00:00:25.880 --> 00:00:30.840] Example, the negotiations deadlocked when both parties refused to
+[00:00:30.840 --> 00:00:31.840] budge on their demands.
+[00:00:32.520 --> 00:00:36.300] Example, the two teams deadlocked in a scoreless match.
+[00:00:37.340 --> 00:00:39.540] Her homerun deadlocked the game at 3 -3.
+[00:00:40.440 --> 00:00:41.160] As a noun,
+[00:00:41.840 --> 00:00:46.780] one, a situation where no progress can be made because two opposing sides are equally strong
+[00:00:46.780 --> 00:00:49.320] and neither is willing to change their position.
+[00:00:49.960 --> 00:00:54.920] This refers to an impasse or stalemate in which both sides are stuck and no resolution
+[00:00:54.920 --> 00:00:55.800] can be achieved.
+[00:00:56.540 --> 00:00:57.140] Example,
+[00:00:57.760 --> 00:01:01.360] the board meeting ended in a deadlock with no decision reached on the proposed merger.
+[00:01:02.240 --> 00:01:06.260] To exemplize meeting with the supervisor regarding employee workload ended in a deadlock.
+[00:01:06.940 --> 00:01:11.600] Deadlock refers to a situation in which no agreement or progress can be made due to opposing
+[00:01:11.600 --> 00:01:12.780] positions or forces.
+[00:01:13.680 --> 00:01:16.040] Related words, stalemate, impasse,
+[00:01:16.780 --> 00:01:17.200] gridlock,
+[00:01:17.920 --> 00:01:18.520] standstill,
+[00:01:19.280 --> 00:01:23.280] antonyms, agreement, resolution, compromise, breakthrough.

@@ -1,14 +1,15 @@
-[00:00:00.000 --> 00:00:02.420] Airborne as an adjective.
-[00:00:02.420 --> 00:00:04.980] One, in the air or moving through the air,
-[00:00:04.980 --> 00:00:08.800] airborne describes something that is flying, floating, or carried through the air,
-[00:00:08.800 --> 00:00:12.040] often used for objects, particles, or vehicles.
-[00:00:12.040 --> 00:00:16.720] Example, the helicopter remained airborne for hours, surveying the area from above.
-[00:00:16.720 --> 00:00:22.380] Example, airborne particles can be harmful when inhaled, especially in polluted areas.
-[00:00:22.380 --> 00:00:28.220] Two, carried by air or wind, airborne can also refer to things that are transported through the air,
-[00:00:28.220 --> 00:00:32.020] such as diseases, seeds, or pollen.
-[00:00:32.020 --> 00:00:37.560] Example, the pollen count was high with airborne allergens affecting those with allergies.
-[00:00:37.560 --> 00:00:43.620] Example, the virus was airborne, making it easier for people to catch it in crowded places.
-[00:00:43.620 --> 00:00:48.860] Summary, airborne refers to something that is in or moving through the air,
-[00:00:48.860 --> 00:00:54.100] whether it is a physical object or something like a disease or particle carried by the wind.
-[00:00:54.100 --> 00:00:58.980] Related words, flying, floating, drifting, airborne particles, airborne disease.
-[00:00:58.980 --> 00:01:02.980] Antonyms, grounded stationary earthbound.
+[00:00:00.000 --> 00:00:01.760] Airborne as an adjective.
+[00:00:02.580 --> 00:00:07.360] One, in the air or moving through the air, airborne describes something that is flying, floating,
+[00:00:07.580 --> 00:00:11.360] or carried through the air, often used for objects, particles, or vehicles.
+[00:00:12.140 --> 00:00:16.220] Example, the helicopter remained airborne for hours surveying the area from above.
+[00:00:16.820 --> 00:00:21.660] Example, airborne particles can be harmful when inhaled, especially in polluted areas.
+[00:00:22.380 --> 00:00:22.940] Two,
+[00:00:23.660 --> 00:00:24.940] carried by air or wind.
+[00:00:24.940 --> 00:00:30.060] Airborne can also refer to things that are transported through the air, such as diseases, seeds,
+[00:00:30.280 --> 00:00:30.680] or pollen.
+[00:00:32.700 --> 00:00:36.620] Example, the pollen count was high, with airborne allergens affecting those with allergies.
+[00:00:37.560 --> 00:00:42.240] Example, the virus was airborne, making it easier for people to catch it in crowded places.
+[00:00:44.280 --> 00:00:49.240] Summary, airborne refers to something that is in or moving through the air, whether it
+[00:00:49.240 --> 00:00:53.200] is a physical object or something like a disease or particle carried by the wind.
+[00:00:53.200 --> 00:00:58.420] Related words, flying, floating, drifting, airborne particles, airborne disease.
+[00:00:59.000 --> 00:01:01.340] Antonyms, grounded, stationary, earthbound.

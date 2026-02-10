@@ -1,13 +1,20 @@
-[00:00:00.000 --> 00:00:05.960] Citizenship is a noun that refers to the status of being a citizen of a particular country,
-[00:00:05.960 --> 00:00:13.420] including the rights, privileges, and responsibilities associated with that status.
-[00:00:13.420 --> 00:00:15.420] Meaning and example sentences.
-[00:00:15.420 --> 00:00:20.800] One, the state of being a citizen, example, acquiring citizenship involves meeting certain
-[00:00:20.800 --> 00:00:25.560] residency requirements and passing an exam on the country's history and government.
-[00:00:25.560 --> 00:00:31.880] Two, the rights and responsibilities associated with being a citizen, example, citizenship grants
-[00:00:31.880 --> 00:00:36.880] individuals the right to vote, access public services, and participate in government activities.
-[00:00:36.880 --> 00:00:42.180] Three, the legal status or condition of being a member of a particular country.
-[00:00:42.180 --> 00:00:47.040] Example, she was awarded citizenship after demonstrating her commitment to the country's
-[00:00:47.040 --> 00:00:49.780] values and laws.
-[00:00:49.780 --> 00:00:55.320] Summary, citizenship encompasses both the legal status of being a citizen and the associated
-[00:00:55.320 --> 00:00:57.480] rights and duties.
-[00:00:57.480 --> 00:01:01.080] It signifies a person's formal membership and participation in a country.
+[00:00:00.820 --> 00:00:05.160] Citizenship is a noun that refers to the status of being a citizen of a particular country,
+[00:00:05.870 --> 00:00:10.740] including the rights, privileges, and responsibilities associated with that status.
+[00:00:12.740 --> 00:00:14.340] Meaning and example sentences.
+[00:00:15.220 --> 00:00:15.380] 1.
+[00:00:15.760 --> 00:00:17.040] The state of being a citizen.
+[00:00:17.580 --> 00:00:18.200] Example.
+[00:00:18.760 --> 00:00:23.500] Acquiring citizenship involves meeting certain residency requirements and passing an exam on the
+[00:00:23.500 --> 00:00:24.680] country's history and government.
+[00:00:25.320 --> 00:00:25.780] 2.
+[00:00:26.160 --> 00:00:29.240] The rights and responsibilities associated with being a citizen.
+[00:00:29.720 --> 00:00:30.220] Example.
+[00:00:31.040 --> 00:00:36.420] Citizenship grants individuals the right to vote, access public services, and participate in government activities.
+[00:00:37.400 --> 00:00:37.900] 3.
+[00:00:38.580 --> 00:00:41.560] The legal status or condition of being a member of a particular country.
+[00:00:42.200 --> 00:00:42.740] Example.
+[00:00:43.260 --> 00:00:47.860] She was awarded citizenship after demonstrating her commitment to the country's values and laws.
+[00:00:49.320 --> 00:00:50.000] Summary.
+[00:00:50.200 --> 00:00:55.180] Citizenship encompasses both the legal status of being a citizen and the associated
+[00:00:55.180 --> 00:00:56.060] rights and duties.
+[00:00:57.240 --> 00:01:00.940] It signifies a person's formal membership and participation in a country.

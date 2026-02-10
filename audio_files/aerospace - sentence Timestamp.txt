@@ -1,8 +1,11 @@
-[00:00:00.000 --> 00:00:08.000] Aerospace refers to the branch of technology and industry concerned with the design, development, and production of aircraft and spacecraft.
-[00:00:08.000 --> 00:00:14.000] It encompasses both the Earth's atmosphere, aeronautics, and outer space, astronautics.
-[00:00:14.000 --> 00:00:16.000] Hash example sentences.
-[00:00:16.000 --> 00:00:23.000] The company specializes in aerospace engineering, developing cutting-edge aircraft and spacecraft.
-[00:00:23.000 --> 00:00:28.000] Aerospace technology has advanced significantly, making space travel more feasible.
-[00:00:28.000 --> 00:00:33.000] It has a degree in aerospace science and works on designing satellites.
-[00:00:33.000 --> 00:00:41.000] Hashir summary, aerospace involves the technology and industry related to aircraft and spacecraft covering both air and space travel.
-[00:00:41.000 --> 00:00:46.000] Aeronautics, astronautics, aviation, spaceflight, spacecraft.
+[00:00:00.000 --> 00:00:04.960] Aerospace refers to the branch of technology and industry concerned with the design, development,
+[00:00:05.320 --> 00:00:07.360] and production of aircraft and spacecraft.
+[00:00:08.400 --> 00:00:13.360] It encompasses both the Earth's atmosphere, aeronautics, and outer space, astronautics.
+[00:00:14.060 --> 00:00:15.340] Hash Example Sentences
+[00:00:16.000 --> 00:00:20.860] The company specializes in aerospace engineering, developing cutting -edge aircraft
+[00:00:20.860 --> 00:00:21.620] and spacecraft.
+[00:00:22.820 --> 00:00:27.020] Aerospace technology has advanced significantly, making space travel more feasible.
+[00:00:27.020 --> 00:00:32.020] She has a degree in aerospace science and works on designing satellites.
+[00:00:32.860 --> 00:00:38.260] Hashirt Summary Aerospace involves the technology and industry related to aircraft and spacecraft,
+[00:00:38.480 --> 00:00:40.360] covering both air and space travel.
+[00:00:40.780 --> 00:00:45.740] Related words, aeronautics, astronautics, aviation, spaceflight, spacecraft.

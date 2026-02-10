@@ -1,8 +1,9 @@
-[00:00:00.000 --> 00:00:07.000] A prize is a verb, a prized, a prized apprising, meaning to inform or notify someone about something,
-[00:00:07.000 --> 00:00:11.000] to make someone aware of a situation or fact.
-[00:00:11.000 --> 00:00:15.000] Example, she decided to apprise her supervisor of the changes in the project timeline.
-[00:00:15.000 --> 00:00:19.000] Example, the manager will apprise the team of any updates regarding the new policy.
-[00:00:19.000 --> 00:00:24.000] Example, please apprise me of any changes in the situation.
-[00:00:24.000 --> 00:00:30.000] Summary, a prize refers to the act of informing or notifying someone about important information or developments.
-[00:00:30.000 --> 00:00:34.000] Related words inform, notify, advise, update.
-[00:00:34.000 --> 00:00:38.000] Antonyms, conceal, hide, withhold.
+[00:00:00.000 --> 00:00:04.920] A prize is a verb, a prized, a prized, a prizing, meaning to inform
+[00:00:04.920 --> 00:00:10.100] or notify someone about something, to make someone aware of a situation or fact.
+[00:00:10.900 --> 00:00:15.000] Example, she decided to apprise her supervisor of the changes in the project timeline.
+[00:00:15.440 --> 00:00:19.280] Example, the manager will apprise the team of any updates regarding the new policy.
+[00:00:19.720 --> 00:00:23.000] Example, please apprise me of any changes in the situation.
+[00:00:23.880 --> 00:00:28.500] Summary, a prize refers to the act of informing or notifying someone about important
+[00:00:28.500 --> 00:00:29.940] information or developments.
+[00:00:30.420 --> 00:00:33.460] Related words inform, notify, advise, update.
+[00:00:33.920 --> 00:00:36.780] Antonyms, conceal, hide, withhold.

@@ -1,30 +1,35 @@
-[00:00:00.000 --> 00:00:03.040] Default is a noun and verb with the following meanings.
-[00:00:03.040 --> 00:00:05.000] As a noun, one.
-[00:00:06.000 --> 00:00:09.480] Failure to fulfill an obligation, especially a financial one,
-[00:00:09.480 --> 00:00:13.320] refers to not meeting a requirement or making a payment as agreed.
-[00:00:13.320 --> 00:00:16.720] Example, the company went into default on its loan.
-[00:00:16.720 --> 00:00:20.720] Example, he was sued for defaulting on his rent payments.
-[00:00:21.360 --> 00:00:23.920] Two, pre-selected option or setting,
-[00:00:23.920 --> 00:00:29.200] refers to the standard setting or choice that is automatically applied when no other choice is made.
-[00:00:29.440 --> 00:00:33.880] Example, the default setting on the computer was set to automatic updates.
-[00:00:34.880 --> 00:00:38.280] Example, the default font in the document is Times New Roman.
-[00:00:39.680 --> 00:00:43.320] Three, something happening due to a lack of alternatives or competition.
-[00:00:43.320 --> 00:00:47.880] This can occur when a position or outcome is achieved because no other option is available.
-[00:00:49.080 --> 00:00:54.160] Example, no one else wanted the job so he became the club's president by default.
-[00:00:54.160 --> 00:00:58.760] Example, we won the game by default when the other team failed to show up.
-[00:01:00.200 --> 00:01:05.120] As a verb, one, to fail to meet an obligation, especially a financial one,
-[00:01:05.120 --> 00:01:08.000] refers to failing to pay or comply with an agreement.
-[00:01:08.000 --> 00:01:11.320] Example, if you default on your mortgage, you could lose your home.
-[00:01:11.320 --> 00:01:15.280] Two, to revert to a standard option or setting,
-[00:01:15.280 --> 00:01:19.720] refers to automatically returning to a preset choice or condition.
-[00:01:19.720 --> 00:01:24.520] Example, after the power outage, the system defaulted to its original settings.
-[00:01:24.520 --> 00:01:26.520] Three,
-[00:01:27.360 --> 00:01:29.840] To withdraw from a competition due to circumstances,
-[00:01:29.840 --> 00:01:34.960] this can be used when someone drops out or fails to participate often due to unforeseen reasons.
-[00:01:34.960 --> 00:01:38.920] Example, the player defaulted in the tournament because of her injury.
-[00:01:39.760 --> 00:01:46.000] Summary, default can refer to the failure to meet a responsibility, especially a financial one,
-[00:01:46.000 --> 00:01:51.320] a preselected option that applies automatically or an outcome achieved due to a lack of alternatives.
-[00:01:51.320 --> 00:01:53.880] As a verb, it means failing to meet an obligation,
-[00:01:53.880 --> 00:01:58.160] reverting to a preset condition or withdrawing from a competition.
-[00:01:58.160 --> 00:02:01.760] Related words, nonpayment, neglect, preset standard,
-[00:02:01.760 --> 00:02:06.400] Antonim's fulfillment, commitment, customization, completion.
+[00:00:00.000 --> 00:00:02.780] Default is a noun and verb with the following meanings.
+[00:00:03.300 --> 00:00:04.640] As a noun, 1.
+[00:00:06.220 --> 00:00:10.980] Failure to fulfill an obligation, especially a financial one, refers to not meeting a
+[00:00:10.980 --> 00:00:13.000] requirement or making a payment as agreed.
+[00:00:13.460 --> 00:00:16.060] Example, the company went into default on its loan.
+[00:00:16.980 --> 00:00:20.160] Example, he was sued for defaulting on his rent payments.
+[00:00:21.260 --> 00:00:21.820] 2.
+[00:00:22.340 --> 00:00:27.000] Preselected option or setting refers to the standard setting or choice that is automatically
+[00:00:27.000 --> 00:00:28.740] applied when no other choice is made.
+[00:00:29.800 --> 00:00:33.320] Example, the default setting on the computer was set to automatic updates.
+[00:00:34.960 --> 00:00:37.820] Example, the default font in the document is Times New Roman.
+[00:00:39.480 --> 00:00:39.960] 3.
+[00:00:40.200 --> 00:00:42.660] Something happening due to a lack of alternatives or competition.
+[00:00:43.360 --> 00:00:47.300] This can occur when a position or outcome is achieved because no other option is available.
+[00:00:49.220 --> 00:00:53.280] Example, no one else wanted the job so he became the club's president by default.
+[00:00:54.320 --> 00:00:58.380] Example, we won the game by default when the other team failed to show up.
+[00:01:00.160 --> 00:01:01.340] As a verb, 1.
+[00:01:01.940 --> 00:01:06.600] To fail to meet an obligation, especially a financial one, refers to failing to pay or
+[00:01:06.600 --> 00:01:07.580] comply with an agreement.
+[00:01:08.120 --> 00:01:10.860] Example, if you default on your mortgage, you could lose your home.
+[00:01:11.600 --> 00:01:11.860] 2.
+[00:01:12.640 --> 00:01:17.600] To revert to a standard option or setting refers to automatically returning to a
+[00:01:17.600 --> 00:01:19.020] preset choice or condition.
+[00:01:19.960 --> 00:01:23.940] Example, after the power outage, the system defaulted to its original settings.
+[00:01:24.560 --> 00:01:25.080] 3.
+[00:01:27.340 --> 00:01:29.240] To withdraw from a competition due to circumstances,
+[00:01:29.880 --> 00:01:34.400] this can be used when someone drops out or fails to participate, often due to unforeseen reasons.
+[00:01:35.000 --> 00:01:38.740] Example, the player defaulted in the tournament because of her injury.
+[00:01:39.720 --> 00:01:44.560] Summary, default can refer to the failure to meet a responsibility, especially
+[00:01:44.560 --> 00:01:49.360] a financial one, a pre -selected option that applies automatically or an outcome achieved
+[00:01:49.360 --> 00:01:50.740] due to a lack of alternatives.
+[00:01:51.320 --> 00:01:56.280] As a verb, it means failing to meet an obligation, reverting to a preset condition or withdrawing
+[00:01:56.280 --> 00:01:57.020] from a competition.
+[00:01:58.080 --> 00:02:03.620] Related words, non -payment, neglect, preset standard, antonyms, fulfillment, commitment,
+[00:02:04.160 --> 00:02:05.440] customization, completion.

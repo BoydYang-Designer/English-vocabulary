@@ -1,12 +1,16 @@
-[00:00:00.000 --> 00:00:04.640] Creepy crawly is a noun and can also be used as an adjective.
-[00:00:04.640 --> 00:00:11.880] It refers to small, often unpleasant creatures, especially insects or spiders that cause feelings of discomfort or fear.
-[00:00:11.880 --> 00:00:17.040] As a noun, example, the children were fascinated by the creepy crawlies in the garden example.
-[00:00:17.040 --> 00:00:21.920] She has a fear of creepy crawlies, especially spiders and centipedes.
-[00:00:21.920 --> 00:00:27.680] As an adjective, creepy crawly, creepy crawlier, creepy crawliest.
-[00:00:27.680 --> 00:00:31.840] Example, the kids were scared by the creepy crawly decorations at the haunted house.
-[00:00:31.840 --> 00:00:37.200] Example, she shivered at the thought of having a creepy crawly insect crawling up her leg.
-[00:00:37.200 --> 00:00:40.640] The centipede was the creepy crawliest of them all.
-[00:00:40.640 --> 00:00:44.800] Creepy crawly described small creatures that evoke fear or disgust,
-[00:00:44.800 --> 00:00:48.560] whether used as a noun or an adjective, related words,
-[00:00:48.560 --> 00:00:53.120] insect, bug, arachnid, pest,
-[00:00:53.120 --> 00:00:56.960] antinemps, comforting, appealing.
+[00:00:00.000 --> 00:00:04.000] Creepy Crawly is a noun and can also be used as an adjective.
+[00:00:04.740 --> 00:00:09.580] It refers to small, often unpleasant creatures, especially insects or spiders
+[00:00:09.580 --> 00:00:11.500] that cause feelings of discomfort or fear.
+[00:00:11.960 --> 00:00:16.860] As a noun, example, the children were fascinated by the Creepy Crawlies in the garden example.
+[00:00:17.120 --> 00:00:21.220] She has a fear of Creepy Crawlies, especially spiders and centipedes.
+[00:00:21.980 --> 00:00:22.940] As an adjective,
+[00:00:24.040 --> 00:00:24.900] Creepy Crawly,
+[00:00:25.560 --> 00:00:27.500] Creepy Crawlier, Creepy Crawliest.
+[00:00:27.720 --> 00:00:31.400] Example, the kids were scared by the Creepy Crawly decorations at the haunted house.
+[00:00:31.880 --> 00:00:36.140] Example, she shivered at the thought of having a Creepy Crawly insect crawling up her leg.
+[00:00:37.260 --> 00:00:40.020] The centipede was the Creepy Crawliest of them all.
+[00:00:40.660 --> 00:00:45.560] Creepy Crawly describes small creatures that evoke fear or disgust, whether used as
+[00:00:45.560 --> 00:00:49.000] a noun or an adjective, related words, insect,
+[00:00:49.640 --> 00:00:50.140] bug,
+[00:00:50.840 --> 00:00:51.940] arachnid, pest.
+[00:00:52.980 --> 00:00:55.800] Antonyms, comforting, appealing.

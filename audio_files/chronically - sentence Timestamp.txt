@@ -1,11 +1,13 @@
-[00:00:00.000 --> 00:00:05.240] Chronically is an adverb that refers to something occurring or existing over a long period of time,
-[00:00:05.240 --> 00:00:09.280] especially in a way that is persistent, recurring, or difficult to manage.
-[00:00:09.280 --> 00:00:14.560] It is often used to describe conditions or behaviors that are long-lasting or frequent.
-[00:00:14.560 --> 00:00:18.680] Example, he is chronically late to meetings despite multiple reminders.
-[00:00:18.680 --> 00:00:23.560] Example, she has been chronically ill requiring regular treatment and care.
-[00:00:23.560 --> 00:00:27.160] The area is chronically affected by flooding during the rainy season.
-[00:00:27.200 --> 00:00:32.520] Example, he is chronically short of money making it hard to plan for the future.
-[00:00:32.520 --> 00:00:36.040] Summary, chronically refers to something that persists over a long period,
-[00:00:36.040 --> 00:00:40.960] often describing ongoing issues or conditions that are hard to resolve,
-[00:00:40.960 --> 00:00:45.200] related words persistently, continuously, enduringly.
-[00:00:45.200 --> 00:00:48.800] Antonyms, temporarily, occasionally, briefly.
+[00:00:00.000 --> 00:00:05.140] Chronically is an adverb that refers to something occurring or existing over a long period of time,
+[00:00:05.460 --> 00:00:08.900] especially in a way that is persistent, recurring, or difficult to manage.
+[00:00:09.740 --> 00:00:14.260] It is often used to describe conditions or behaviors that are long -lasting or frequent.
+[00:00:14.940 --> 00:00:18.260] Example, he is chronically late to meetings despite multiple reminders.
+[00:00:19.160 --> 00:00:19.760] Example,
+[00:00:20.480 --> 00:00:23.260] she has been chronically ill requiring regular treatment and care.
+[00:00:23.960 --> 00:00:26.980] The area is chronically affected by flooding during the rainy season.
+[00:00:26.980 --> 00:00:31.640] Example, he is chronically short of money making it hard to plan for the future.
+[00:00:32.320 --> 00:00:37.280] Summary, chronically refers to something that persists over a long period, often describing ongoing
+[00:00:37.280 --> 00:00:40.400] issues or conditions that are hard to resolve.
+[00:00:40.940 --> 00:00:43.340] Related words persistently, continuously,
+[00:00:44.140 --> 00:00:46.260] enduringly. Antonyms, temporarily,
+[00:00:46.900 --> 00:00:48.180] occasionally, briefly.

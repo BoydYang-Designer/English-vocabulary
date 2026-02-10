@@ -1,17 +1,18 @@
-[00:00:00.000 --> 00:00:05.880] Autonomous refers to the capability of acting independently or having the freedom to make
-[00:00:05.880 --> 00:00:08.720] decisions without external control.
-[00:00:08.720 --> 00:00:13.560] In various contexts, it can imply different degrees of independence ranging from complete
-[00:00:13.560 --> 00:00:17.560] self-governance to partial decision-making abilities.
-[00:00:17.560 --> 00:00:22.480] For instance, in robotics, autonomous robots can operate and make decisions without direct
-[00:00:22.480 --> 00:00:24.080] human intervention.
-[00:00:24.080 --> 00:00:28.320] While in politics, an autonomous region has a certain level of self-governance within
-[00:00:28.320 --> 00:00:31.560] a larger political entity.
-[00:00:31.560 --> 00:00:32.560] Examples 1.
-[00:00:32.560 --> 00:00:37.360] The autonomous car smoothly navigated through city traffic, adjusting its speed and direction
-[00:00:37.360 --> 00:00:41.200] based on real-time sensor data and pre-programmed algorithms.
-[00:00:41.200 --> 00:00:42.360] 2.
-[00:00:42.360 --> 00:00:46.640] The research team developed an autonomous drone capable of surveying remote landscapes
-[00:00:46.640 --> 00:00:51.200] and collecting environmental data without the need for human guidance.
-[00:00:51.200 --> 00:00:53.400] 3.
-[00:00:53.400 --> 00:00:58.120] The autonomous region gained increased authority over its economic policies, allowing it
-[00:00:58.120 --> 00:01:01.840] to enact regulations and trade agreements independently from the central government.
+[00:00:00.000 --> 00:00:04.960] Autonomous refers to the capability of acting independently or having
+[00:00:04.960 --> 00:00:07.740] the freedom to make decisions without external control.
+[00:00:08.360 --> 00:00:09.580] In various contexts,
+[00:00:10.220 --> 00:00:15.000] it can imply different degrees of independence, ranging from complete self -governance to partial
+[00:00:15.000 --> 00:00:16.360] decision -making abilities.
+[00:00:17.400 --> 00:00:22.400] For instance, in robotics, autonomous robots can operate and make decisions without direct
+[00:00:22.400 --> 00:00:23.340] human intervention.
+[00:00:23.340 --> 00:00:28.260] While in politics, an autonomous region has a certain level of self -governance within
+[00:00:28.260 --> 00:00:29.560] a larger political entity.
+[00:00:30.580 --> 00:00:31.260] Examples.
+[00:00:32.400 --> 00:00:37.220] One, the autonomous car smoothly navigated through city traffic, adjusting its speed and direction
+[00:00:37.220 --> 00:00:40.380] based on real -time sensor data and pre -programmed algorithms.
+[00:00:41.120 --> 00:00:41.520] Two,
+[00:00:42.280 --> 00:00:47.160] the research team developed an autonomous drone capable of surveying remote landscapes and collecting
+[00:00:47.160 --> 00:00:49.640] environmental data without the need for human guidance.
+[00:00:51.740 --> 00:00:52.500] Three,
+[00:00:53.100 --> 00:00:57.960] the autonomous region gained increased authority over its economic policies, allowing
+[00:00:57.960 --> 00:01:01.660] it to enact regulations and trade agreements independently from the central government.

@@ -1,21 +1,22 @@
-[00:00:00.000 --> 00:00:05.840] Contrast is both a noun and a verb with the following meanings.
-[00:00:05.840 --> 00:00:08.080] As a noun, it refers to.
-[00:00:08.080 --> 00:00:13.720] The difference or opposition between two or more things, often highlighting distinct qualities.
-[00:00:13.720 --> 00:00:18.320] Example, there is a sharp contrast between the urban and rural lifestyles.
-[00:00:18.320 --> 00:00:23.600] Example, the contrast between the dark storm clouds and the bright sunset was striking.
-[00:00:23.600 --> 00:00:27.560] Example, the design of the stroller emphasizes the contrast between the upper frame with
-[00:00:27.560 --> 00:00:32.640] its muted metallic color and the lower frame, which features a practical textile-covered
-[00:00:32.640 --> 00:00:34.000] basket.
-[00:00:34.000 --> 00:00:38.560] Example, the contrast in textures between the leather seats and the soft fabric cushions
-[00:00:38.560 --> 00:00:40.560] was noticeable.
-[00:00:40.560 --> 00:00:46.680] As a verb, contrast, contrasted, contrasting, to compare two or more things to highlight
-[00:00:46.680 --> 00:00:48.160] their differences.
-[00:00:48.160 --> 00:00:53.960] Example, the artist contrasted light and dark shades to create depth in the painting.
-[00:00:53.960 --> 00:00:59.080] Example, the teacher asked the students to contrast the two novels in their essays.
-[00:00:59.080 --> 00:01:03.440] Example, the designer contrasted the metallic finish of the stroller's frame with the soft
-[00:01:03.440 --> 00:01:06.640] textile of the seat for visual impact.
-[00:01:06.640 --> 00:01:11.280] Example contrasted the old and new buildings to show how the city had evolved.
-[00:01:11.280 --> 00:01:16.920] Summary, as a noun, contrast refers to the difference between two or more things.
-[00:01:16.920 --> 00:01:21.400] As a verb, it means to compare things to emphasize their differences.
-[00:01:21.400 --> 00:01:26.720] Contrary words, comparison, difference, distinction, opposition, variation.
-[00:01:26.720 --> 00:01:30.000] Antonyms similarity, resemblance, uniformity, sameness.
+[00:00:01.300 --> 00:00:04.800] Contrast is both a noun and a verb with the following meanings.
+[00:00:05.420 --> 00:00:10.600] As a noun, it refers to the difference or opposition between two or more things,
+[00:00:10.740 --> 00:00:12.500] often highlighting distinct qualities.
+[00:00:13.200 --> 00:00:13.800] Example,
+[00:00:14.500 --> 00:00:17.440] there is a sharp contrast between the urban and rural lifestyles.
+[00:00:17.720 --> 00:00:21.900] Example the contrast between the dark storm clouds and the bright sunset was striking.
+[00:00:23.060 --> 00:00:28.060] Example, the design of the stroller emphasizes the contrast between the upper frame with its muted
+[00:00:28.060 --> 00:00:32.980] metallic color and the lower frame, which features a practical textile covered basket.
+[00:00:33.680 --> 00:00:38.600] Example, the contrast in textures between the leather seats and the soft fabric cushions
+[00:00:38.600 --> 00:00:39.240] was noticeable.
+[00:00:40.380 --> 00:00:40.860] As a verb,
+[00:00:41.480 --> 00:00:44.060] contrast, contrasted, contrasting,
+[00:00:44.680 --> 00:00:47.160] to compare two or more things to highlight their differences.
+[00:00:47.700 --> 00:00:52.700] Example, the artist contrasted light and dark shades to create depth in the painting.
+[00:00:53.660 --> 00:00:57.960] Example, the teacher asked the students to contrast the two novels in their essays.
+[00:00:58.580 --> 00:01:03.460] Example, the designer contrasted the metallic finish of the stroller's frame with the soft
+[00:01:03.460 --> 00:01:05.520] textile of the seat for visual impact.
+[00:01:06.220 --> 00:01:09.840] Example contrasted the old and new buildings to show how the city had evolved.
+[00:01:10.720 --> 00:01:15.980] Summary, as a noun, contrast refers to the difference between two or more things.
+[00:01:16.680 --> 00:01:20.040] As a verb, it means to compare things to emphasize their differences.
+[00:01:20.970 --> 00:01:25.600] Related words, comparison, difference, distinction, opposition, variation.
+[00:01:26.360 --> 00:01:29.800] Antonin's similarity, resemblance, uniformity, sameness.

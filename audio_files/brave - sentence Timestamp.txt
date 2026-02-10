@@ -1,11 +1,21 @@
-[00:00:00.000 --> 00:00:04.680] Brave is a versatile word that can function as an adjective, verb, and noun.
-[00:00:04.680 --> 00:00:13.520] As a verb, brave, braved, braving means showing courage or fearlessness in the face of danger, difficulty, or adversity.
-[00:00:13.520 --> 00:00:17.440] Example sentence, they braved the storm to rescue their sheep.
-[00:00:17.440 --> 00:00:27.520] As an adjective, brave, braver, bravest describes showing courage or fearlessness in the face of danger, difficulty, or adversity.
-[00:00:27.760 --> 00:00:36.080] He embarked on the brave journey, venturing into the unknown wilderness with only a map and his determination.
-[00:00:36.080 --> 00:00:41.040] A noun, brave, braves, can refer to a courageous person or a Native American warrior.
-[00:00:41.040 --> 00:00:50.240] Example sentence, the young recruit was eager to prove himself as a brave ready to face any challenge that came his way on the battlefield.
-[00:00:50.240 --> 00:00:57.360] Example sentence, she bravely confronted her fears and delivered a heartfelt speech in front of the large audience.
-[00:00:57.360 --> 00:01:03.440] Summary, as a verb, brave means to show courage or endure something challenging.
-[00:01:03.440 --> 00:01:07.520] As an adjective, brave describes having or showing courage.
-[00:01:07.520 --> 00:01:12.800] As a noun, brave refers to a courageous person or a Native American warrior.
+[00:00:00.000 --> 00:00:04.280] Brave is a versatile word that can function as an adjective, verb, and noun.
+[00:00:04.800 --> 00:00:05.380] As a verb,
+[00:00:06.520 --> 00:00:12.180] brave, braved, braving means showing courage or fearlessness in the face of danger, difficulty,
+[00:00:12.640 --> 00:00:13.160] or adversity.
+[00:00:13.600 --> 00:00:16.980] Example sentence, they braved the storm to rescue their sheep.
+[00:00:17.520 --> 00:00:18.400] As an adjective,
+[00:00:19.200 --> 00:00:23.860] brave, braver, bravest, describes showing courage or fearlessness
+[00:00:23.860 --> 00:00:26.720] in the face of danger, difficulty, or adversity.
+[00:00:26.720 --> 00:00:31.340] He embarked on the brave journey, venturing into the unknown
+[00:00:31.340 --> 00:00:34.800] wilderness with only a map and his determination.
+[00:00:35.700 --> 00:00:40.700] A noun, brave, braves, can refer to a courageous person or a Native American warrior.
+[00:00:42.080 --> 00:00:46.880] Example sentence, the young recruit was eager to prove himself as a brave ready to
+[00:00:46.880 --> 00:00:49.540] face any challenge that came his way on the battlefield.
+[00:00:50.180 --> 00:00:55.140] Example sentence, she bravely confronted her fears and delivered a heartfelt speech in front of the
+[00:00:55.140 --> 00:00:56.460] large audience.
+[00:00:57.220 --> 00:00:57.820] Summary,
+[00:00:58.700 --> 00:01:02.640] as a verb, brave means to show courage or endure something challenging.
+[00:01:03.400 --> 00:01:04.120] As an adjective,
+[00:01:04.800 --> 00:01:07.060] brave, describes having or showing courage.
+[00:01:07.600 --> 00:01:08.240] As a noun,
+[00:01:08.900 --> 00:01:12.100] brave refers to a courageous person or a Native American warrior.

@@ -1,12 +1,19 @@
-[00:00:00.000 --> 00:00:04.000] Contemporary is an adjective and a noun with the following meanings.
-[00:00:04.000 --> 00:00:08.000] As an adjective, contemporary, contemporarily.
-[00:00:08.000 --> 00:00:16.000] Existing or happening in the same time period, often referring to events, people, or styles that belong to the present time.
-[00:00:16.000 --> 00:00:21.000] Example, contemporary art often blends traditional techniques with modern technology.
-[00:00:21.000 --> 00:00:26.000] Example, the novel's themes are still relevant to contemporary society.
-[00:00:26.000 --> 00:00:33.000] Example, he is known for his contemporary style of architecture, which combines innovation with sustainability.
-[00:00:33.000 --> 00:00:40.000] As a noun, contemporary contemporaries, a person living or occurring at the same time as another.
-[00:00:40.000 --> 00:00:45.000] Example, Shakespeare and Servantes were contemporaries, both living during the 16th century.
-[00:00:45.000 --> 00:00:50.000] Example, she found inspiration in the work of her contemporaries in the art world.
-[00:00:50.000 --> 00:00:59.000] Summary, contemporary as an adjective refers to something that exists or occurs in the same time period, especially the present.
-[00:00:59.000 --> 00:01:03.000] As a noun, it refers to a person living or happening at the same time as another.
-[00:01:03.000 --> 00:01:10.000] Related words, modern, current, coevil, peer, antinims, ancient, old-fashioned, past, outdated.
+[00:00:00.000 --> 00:00:03.460] Contemporary is an adjective and a noun with the following meanings.
+[00:00:04.380 --> 00:00:05.040] As an adjective,
+[00:00:05.700 --> 00:00:07.860] contemporary, contemporarily.
+[00:00:08.880 --> 00:00:13.620] Existing or happening in the same time period, often referring to events, people, or
+[00:00:13.620 --> 00:00:15.520] styles that belong to the present time.
+[00:00:16.240 --> 00:00:20.900] Example, contemporary art often blends traditional techniques with modern technology.
+[00:00:21.680 --> 00:00:25.680] Example, the novel's themes are still relevant to contemporary society.
+[00:00:26.380 --> 00:00:30.980] Example, he is known for his contemporary style of architecture, which combines innovation
+[00:00:30.980 --> 00:00:32.140] with sustainability.
+[00:00:33.320 --> 00:00:38.260] As a noun, contemporary contemporaries, a person living or occurring at the same time
+[00:00:38.260 --> 00:00:38.780] as another.
+[00:00:40.180 --> 00:00:44.820] Example, Shakespeare and Cervantes were contemporaries, both living during the 16th century.
+[00:00:45.340 --> 00:00:49.220] Example, she found inspiration in the work of her contemporaries in the art world.
+[00:00:50.480 --> 00:00:55.460] Summary, contemporary as an adjective refers to something that exists or occurs in
+[00:00:55.460 --> 00:00:56.560] the same time period,
+[00:00:57.240 --> 00:01:02.160] especially the present, as a noun, it refers to a person living or happening at the same
+[00:01:02.160 --> 00:01:02.860] time as another.
+[00:01:03.280 --> 00:01:08.800] Related words, modern, current, co -eval, peer, antonyms, ancient, old fashioned, past,
+[00:01:09.140 --> 00:01:09.440] outdated.

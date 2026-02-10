@@ -1,12 +1,13 @@
-[00:00:00.000 --> 00:00:04.640] Detract is a verb, detract, detracted, detracting.
-[00:00:04.640 --> 00:00:08.600] Duse or take away from the value, quality, or importance of something
-[00:00:08.600 --> 00:00:11.600] to make something seem less good or impressive.
-[00:00:11.600 --> 00:00:16.720] Example, the minor flaws in the painting did not detract from its overall beauty.
-[00:00:16.720 --> 00:00:22.000] Example, the loud noise from the construction site detracts from the beauty of the park.
-[00:00:22.000 --> 00:00:26.840] Example, her minor mistakes did not detract from the overall excellence of her performance.
-[00:00:26.840 --> 00:00:31.000] Example, the flashy design of the website detracts from its usability.
-[00:00:31.000 --> 00:00:34.600] Example, the scandal will not detract from his fame.
-[00:00:34.600 --> 00:00:39.000] Summary, detract means to lessen the value, impact, or attractiveness of something,
-[00:00:39.000 --> 00:00:41.880] often by introducing a flaw or distraction.
-[00:00:41.880 --> 00:00:45.640] Related words diminish, reduce, lessen, take away from.
-[00:00:45.640 --> 00:00:48.840] Antonyms enhance, improve, boost, add to.
+[00:00:00.000 --> 00:00:01.300] Detract is a verb.
+[00:00:01.740 --> 00:00:04.140] Detract, detracted, detracting.
+[00:00:04.700 --> 00:00:09.560] Deuce or take away from the value, quality, or importance of something to make something seem
+[00:00:09.560 --> 00:00:10.700] less good or impressive.
+[00:00:11.800 --> 00:00:16.000] Example, the minor flaws in the painting did not detract from its overall beauty.
+[00:00:16.880 --> 00:00:21.500] Example, the loud noise from the construction site detracts from the beauty of the park.
+[00:00:22.180 --> 00:00:26.440] Example, her minor mistakes did not detract from the overall excellence of her performance.
+[00:00:26.440 --> 00:00:30.380] Example, the flashy design of the website detracts from its usability.
+[00:00:31.140 --> 00:00:34.100] Example, the scandal will not detract from his fame.
+[00:00:34.700 --> 00:00:39.480] Summary, detract means to lessen the value, impact, or attractiveness of something, often by
+[00:00:39.480 --> 00:00:41.140] introducing a flaw or distraction.
+[00:00:41.920 --> 00:00:45.100] Related words, diminish, reduce, lessen, take away from.
+[00:00:45.680 --> 00:00:48.560] Antonyms, enhance, improve, boost, add to.

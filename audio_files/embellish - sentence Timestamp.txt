@@ -1,9 +1,16 @@
-[00:00:00.000 --> 00:00:05.000] Embellish as a verb, embellish, embellished, embellishing.
-[00:00:05.000 --> 00:00:12.000] Embellish means to enhance or decorate something with additional details or ornaments in order to make it more attractive or interesting.
-[00:00:12.000 --> 00:00:19.000] It often involves adding extra features or decorations to make something more visually appealing or elaborate.
-[00:00:19.000 --> 00:00:28.000] It can also refer to adding details or descriptions to a story or account, sometimes in a way that exaggerates or enhances its attractiveness or interest.
-[00:00:28.000 --> 00:00:35.000] Example. He tends to embellish his stories with fantastical details to make them more entertaining.
-[00:00:35.000 --> 00:00:41.000] Example. The interior designer embellish the room with luxurious fabrics and elegant furnishings.
-[00:00:41.000 --> 00:00:47.000] Example. He tends to embellish his accomplishments making them seem more impressive than they actually are.
-[00:00:47.000 --> 00:00:57.000] Example. The designer chose to embellish the product by adding texture to the plastic surface, effectively distinguishing different areas based on their function
-[00:00:57.000 --> 00:01:02.000] and creating a more detailed and visually appealing design.
+[00:00:00.000 --> 00:00:01.660] Embellish as a verb.
+[00:00:02.240 --> 00:00:04.260] Embellish, embellished, embellishing.
+[00:00:05.340 --> 00:00:10.300] Embellish means to enhance or decorate something with additional details or ornaments in order to
+[00:00:10.300 --> 00:00:11.760] make it more attractive or interesting.
+[00:00:12.360 --> 00:00:16.940] It often involves adding extra features or decorations to make something more visually
+[00:00:16.940 --> 00:00:18.340] appealing or elaborate.
+[00:00:19.200 --> 00:00:24.160] It can also refer to adding details or descriptions to a story or account, sometimes
+[00:00:24.160 --> 00:00:27.360] in a way that exaggerates or enhances its attractiveness or interest.
+[00:00:28.680 --> 00:00:29.340] Example.
+[00:00:30.160 --> 00:00:34.420] He tends to embellish his stories with fantastical details to make them more entertaining.
+[00:00:35.720 --> 00:00:40.840] Example, the interior designer embellished the room with luxurious fabrics and elegant furnishings.
+[00:00:41.680 --> 00:00:46.540] Example, he tends to embellish his accomplishments making them seem more impressive than they actually are.
+[00:00:48.040 --> 00:00:48.700] Example.
+[00:00:49.100 --> 00:00:53.160] The designer chose to embellish the product by adding texture to the plastic surface,
+[00:00:53.760 --> 00:00:58.420] effectively distinguishing different areas based on their function and creating a more
+[00:00:58.420 --> 00:01:01.160] detailed and visually appealing design.

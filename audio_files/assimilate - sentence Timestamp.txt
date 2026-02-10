@@ -1,29 +1,31 @@
-[00:00:00.000 --> 00:00:04.080] A simulate as a verb, a simulate, a simulated,
-[00:00:04.080 --> 00:00:06.780] a simulating one to absorb and integrate
-[00:00:06.780 --> 00:00:09.180] new information, ideas or experiences
-[00:00:09.180 --> 00:00:11.560] into one's understanding or culture.
-[00:00:11.560 --> 00:00:14.520] Example, she quickly assimilated the new language
-[00:00:14.520 --> 00:00:16.460] after moving abroad.
-[00:00:16.460 --> 00:00:19.400] Example, students need time to assimilate complex
-[00:00:19.400 --> 00:00:21.040] scientific concepts.
-[00:00:21.040 --> 00:00:23.360] Example, the company assimilated new technology
-[00:00:23.360 --> 00:00:25.200] to improve efficiency.
-[00:00:25.200 --> 00:00:27.880] Two, to become similar to or adopt
-[00:00:27.880 --> 00:00:29.720] the characteristics of another group,
-[00:00:29.720 --> 00:00:32.440] often in a cultural or social context.
-[00:00:32.440 --> 00:00:34.520] Example, immigrants often assimilate
-[00:00:34.520 --> 00:00:37.120] into the local culture over time.
-[00:00:37.120 --> 00:00:39.800] Example, the minority group struggled to assimilate
-[00:00:39.800 --> 00:00:41.760] while maintaining their traditions.
-[00:00:41.760 --> 00:00:44.920] Three, to absorb or digest food or nutrients
-[00:00:44.920 --> 00:00:46.000] into the body.
-[00:00:46.000 --> 00:00:48.400] Example, the body assimilates nutrients
-[00:00:48.400 --> 00:00:50.400] from the food we eat.
-[00:00:50.400 --> 00:00:53.000] Example, some vitamins are more easily assimilated
-[00:00:53.000 --> 00:00:54.200] than others.
-[00:00:54.200 --> 00:00:56.920] Summary, to assimilate means to absorb
-[00:00:56.920 --> 00:00:59.960] and integrate information, adopt cultural traits
-[00:00:59.960 --> 00:01:02.160] or physically absorb substances into the body.
-[00:01:02.160 --> 00:01:04.720] Related words, absorb, integrate, incorporate,
-[00:01:04.720 --> 00:01:06.760] adapt, adjust, digest.
-[00:01:06.760 --> 00:01:10.240] Antonyms, reject, separate, isolate, exclude, resist.
+[00:00:00.000 --> 00:00:01.500] Assimilate as a verb.
+[00:00:02.060 --> 00:00:02.600] Assimilate.
+[00:00:03.060 --> 00:00:03.760] Assimilated.
+[00:00:04.080 --> 00:00:04.600] Assimilating.
+[00:00:04.900 --> 00:00:04.960] One.
+[00:00:05.480 --> 00:00:10.280] To absorb and integrate new information, ideas, or experiences into one's understanding
+[00:00:10.280 --> 00:00:10.860] or culture.
+[00:00:11.460 --> 00:00:12.080] Example.
+[00:00:12.440 --> 00:00:15.460] She quickly assimilated the new language after moving abroad.
+[00:00:16.400 --> 00:00:17.040] Example.
+[00:00:17.380 --> 00:00:20.260] Students need time to assimilate complex scientific concepts.
+[00:00:20.880 --> 00:00:21.500] Example.
+[00:00:21.640 --> 00:00:24.220] The company assimilated new technology to improve efficiency.
+[00:00:25.020 --> 00:00:25.440] Two.
+[00:00:25.880 --> 00:00:30.880] To become similar to or adopt the characteristics of another group, often in a cultural or
+[00:00:30.880 --> 00:00:31.840] social context.
+[00:00:32.340 --> 00:00:32.940] Example.
+[00:00:33.120 --> 00:00:36.160] Immigrants often assimilate into the local culture over time.
+[00:00:36.960 --> 00:00:37.640] Example.
+[00:00:37.820 --> 00:00:41.060] The minority groups struggled to assimilate while maintaining their traditions.
+[00:00:41.880 --> 00:00:41.980] Three.
+[00:00:42.260 --> 00:00:45.480] To absorb or digest food or nutrients into the body.
+[00:00:45.940 --> 00:00:46.480] Example.
+[00:00:46.820 --> 00:00:49.500] The body assimilates nutrients from the food we eat.
+[00:00:50.260 --> 00:00:50.860] Example.
+[00:00:51.000 --> 00:00:53.360] Some vitamins are more easily assimilated than others.
+[00:00:54.060 --> 00:00:54.700] Summary.
+[00:00:55.180 --> 00:01:00.060] To assimilate means to absorb and integrate information, adopt cultural traits or
+[00:01:00.060 --> 00:01:01.900] physically absorb substances into the body.
+[00:01:02.160 --> 00:01:06.060] Related words, absorb, integrate, incorporate, adapt, adjust, digest.
+[00:01:06.720 --> 00:01:09.840] Antonyms, reject, separate, isolate, exclude, resist.

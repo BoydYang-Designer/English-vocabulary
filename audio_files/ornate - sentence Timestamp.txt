@@ -1,7 +1,0 @@
-[00:00:00.000 --> 00:00:05.760] Ornate describes something that is heavily decorated, often with intricate patterns or details.
-[00:00:06.160 --> 00:00:07.160] Examples.
-[00:00:08.000 --> 00:00:12.000] The cathedral's interior was a masterpiece of Gothic architecture,
-[00:00:12.160 --> 00:00:17.360] with its ornate stained glass windows casting colorful patterns of light onto the stone floor.
-[00:00:17.760 --> 00:00:23.120] The wedding invitations were beautifully crafted, featuring ornate calligraphy and delicate embossing.
-[00:00:23.600 --> 00:00:27.680] Catherine admired the ornate vase displayed in the antique shop window,
-[00:00:27.680 --> 00:00:31.440] marveling at its intricate patterns and delicate craftsmanship.

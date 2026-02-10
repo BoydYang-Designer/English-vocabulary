@@ -1,5 +1,0 @@
-[00:00:00.000 --> 00:00:05.000] Larva as a noun, larva, singular, larvae, plural.
-[00:00:05.000 --> 00:00:10.000] A larva is the immature early stage of an insect or other animal that undergoes metamorphosis.
-[00:00:10.000 --> 00:00:15.000] It typically hatches from an egg and looks very different from the adult form.
-[00:00:15.000 --> 00:00:21.000] Examples, the butterfly's life cycle includes a stage where it is a larva, commonly known as a caterpillar.
-[00:00:21.000 --> 00:00:26.000] Tad poles are the larvae of frogs living in water before they mature into adult frogs.

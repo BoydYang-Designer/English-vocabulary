@@ -1,8 +1,12 @@
-[00:00:00.000 --> 00:00:07.000] Apra-Hend as a verb, apprehend apprehended apprehending one to arrest or take into custody.
-[00:00:07.000 --> 00:00:11.000] Example, the police apprehended the suspect after a lengthy investigation.
-[00:00:11.000 --> 00:00:16.000] Two, to understand or perceive something often with a sense of fear or suspicion.
-[00:00:16.000 --> 00:00:20.000] Example, it took me a while to apprehend the complexity of the situation.
-[00:00:20.000 --> 00:00:23.000] This sense is less commonly used in everyday language.
-[00:00:23.000 --> 00:00:26.000] Three, to anticipate with fear or anxiety.
-[00:00:26.000 --> 00:00:32.000] Similarly, apprehend can mean to anticipate or fear something, often with a sense of anxiety or concern.
-[00:00:32.000 --> 00:00:37.000] Example, she apprehended the outcome of the meeting with trepidation.
+[00:00:00.000 --> 00:00:01.640] Apprehend as a verb.
+[00:00:02.040 --> 00:00:04.180] Apprehend apprehended apprehending one.
+[00:00:04.880 --> 00:00:06.400] To arrest or take into custody.
+[00:00:06.800 --> 00:00:10.520] Example, the police apprehended the suspect after a lengthy investigation.
+[00:00:11.160 --> 00:00:15.320] Two, to understand or perceive something, often with a sense of fear or suspicion.
+[00:00:16.160 --> 00:00:19.620] Example, it took me a while to apprehend the complexity of the situation.
+[00:00:20.080 --> 00:00:22.320] This sense is less commonly used in everyday language.
+[00:00:23.220 --> 00:00:25.880] Three, to anticipate with fear or anxiety.
+[00:00:26.220 --> 00:00:31.180] Similarly, apprehend can mean to anticipate or fear something, often with a sense of
+[00:00:31.180 --> 00:00:32.200] anxiety or concern.
+[00:00:32.880 --> 00:00:33.420] Example,
+[00:00:34.140 --> 00:00:36.940] she apprehended the outcome of the meeting with trepidation.

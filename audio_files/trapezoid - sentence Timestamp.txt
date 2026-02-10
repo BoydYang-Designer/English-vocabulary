@@ -1,8 +1,0 @@
-[00:00:00.000 --> 00:00:09.000] Trapezoid is a noun with a following meaning, a flat, closed geometric figure with four sides where at least one pair of opposite sides are parallel.
-[00:00:09.000 --> 00:00:17.000] A trapezoid, also known as a trapezium in British English, is a type of quadrilateral that has exactly one pair of parallel sides.
-[00:00:17.000 --> 00:00:22.000] The non-parallel sides called legs can be of different lengths and the angles can vary.
-[00:00:22.000 --> 00:00:26.000] Example, the roof of the house was designed in the shape of a trapezoid.
-[00:00:27.000 --> 00:00:34.000] Example, in geometry, students learn to calculate the area of a trapezoid using the formula for its parallel sides.
-[00:00:34.000 --> 00:00:38.000] Example, the park's playground had a trapezoid-shaped climbing frame.
-[00:00:38.000 --> 00:00:47.000] Summary, a trapezoid is a four-sided flat shape with at least one pair of parallel sides. The lengths of the other sides and the angles can vary.
-[00:00:47.000 --> 00:00:59.000] Related words, parallelogram, rectangle, quadrilateral trapezoid British English, antinims, triangle, circle, oval shapes with different numbers of sides or curves.

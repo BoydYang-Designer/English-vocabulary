@@ -1392,3 +1392,301 @@ body {
    從「手機優化補丁 - 2024/02/08 新增」
    到此處的所有代碼即可。
 ========================================== */
+
+/* ==========================================
+   🃏 字卡練習模組樣式
+   flashcard.js 對應樣式
+========================================== */
+
+/* ── 第三張入口卡片動畫延遲 ── */
+.type-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* ── Panel 1：選擇類型 ── */
+.fc-type-header {
+    text-align: center;
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+}
+.fc-section-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+.fc-section-desc { color: var(--color-text-secondary); font-size: 0.9375rem; }
+.fc-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: 600px;
+    margin: var(--spacing-xl) auto;
+}
+.fc-type-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    background: var(--color-bg-elevated);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+}
+.fc-type-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+.fc-type-icon  { font-size: 2.5rem; }
+.fc-type-label { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--color-text-primary); }
+.fc-type-desc  { font-size: 0.875rem; color: var(--color-text-secondary); }
+
+/* ── Panel 2：設定 ── */
+.fc-setup-header { text-align: center; padding: var(--spacing-xl) 0 var(--spacing-md); }
+.fc-count-section {
+    background: var(--color-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border: 1px solid var(--color-border);
+}
+.fc-sub-title { font-size: 1.0625rem; font-weight: 600; color: var(--color-text-primary); margin-bottom: var(--spacing-md); }
+.fc-count-buttons { display: flex; gap: var(--spacing-md); flex-wrap: wrap; }
+
+/* ── Panel 3：翻牌主畫面 ── */
+.fc-progress-container {
+    max-width: 600px;
+    margin: var(--spacing-2xl) auto var(--spacing-xl);
+    padding-top: var(--spacing-2xl);
+}
+.fc-progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+.fc-progress-label  { font-weight: 700; font-size: 1rem; color: var(--color-text-primary); }
+.fc-keyboard-hint   { font-size: 0.75rem; color: var(--color-text-light); display: none; }
+@media (min-width: 640px) { .fc-keyboard-hint { display: inline; } }
+.fc-progress-track {
+    width: 100%;
+    height: 8px;
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: var(--spacing-md);
+}
+.fc-progress-fill {
+    height: 100%;
+    background: var(--primary-gradient);
+    border-radius: var(--radius-full);
+    transition: width 0.4s ease;
+    width: 0%;
+}
+
+/* 圓點進度 */
+.fc-dots { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin-bottom: var(--spacing-lg); }
+.fc-dot  { width: 10px; height: 10px; border-radius: 50%; transition: all var(--transition-base); flex-shrink: 0; }
+.fc-dot-pending  { background: var(--color-border); }
+.fc-dot-current  { background: var(--color-primary); transform: scale(1.3); box-shadow: 0 0 0 3px rgba(102,126,234,0.25); }
+.fc-dot-known    { background: #96e6a1; }
+.fc-dot-unknown  { background: #ff9a9e; }
+
+/* ── 3D 翻牌場景 ── */
+.fc-scene    { perspective: 1200px; max-width: 560px; margin: 0 auto; cursor: pointer; }
+.fc-card {
+    position: relative;
+    width: 100%;
+    min-height: 280px;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: var(--radius-xl);
+}
+.fc-card.flipped { transform: rotateY(180deg); }
+.fc-card-face {
+    position: absolute;
+    width: 100%;
+    min-height: 280px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid transparent;
+}
+.fc-card-front { background: var(--color-bg-elevated); border-color: var(--color-border); }
+.fc-card-back  { background: linear-gradient(145deg, #f8f9ff 0%, #fff5f8 100%); border-color: rgba(102,126,234,0.3); transform: rotateY(180deg); }
+
+/* 字卡內容 */
+.fc-content { width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--spacing-md); }
+.fc-tags    { display: flex; gap: var(--spacing-sm); flex-wrap: wrap; justify-content: center; }
+.fc-tag     { padding: 2px var(--spacing-sm); border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600; }
+.fc-tag-level { background: rgba(102,126,234,0.12); color: var(--color-primary); }
+.fc-tag-cat   { background: rgba(118,75,162,0.1); color: var(--color-secondary); }
+
+.fc-word          { font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--color-text-primary); letter-spacing: 0.02em; line-height: 1.2; }
+.fc-phonetics-front { font-size: 1rem; color: var(--color-text-light); letter-spacing: 0.05em; min-height: 1.5em; }
+.fc-phonetics {
+    font-size: 1.0625rem; color: var(--color-primary); cursor: pointer;
+    padding: var(--spacing-sm) var(--spacing-lg); border-radius: var(--radius-full);
+    border: 1.5px solid rgba(102,126,234,0.3); transition: all var(--transition-fast); user-select: none;
+}
+.fc-phonetics:hover { background: rgba(102,126,234,0.08); border-color: var(--color-primary); }
+.fc-chinese       { font-size: 1.25rem; color: var(--color-text-primary); line-height: 1.7; font-weight: 500; }
+.fc-chinese-front { font-size: 1.25rem; color: var(--color-text-primary); line-height: 1.8; font-weight: 500; max-width: 480px; }
+.fc-hint-label    { font-size: 0.875rem; color: var(--color-text-light); margin-top: var(--spacing-sm); }
+.fc-sentence {
+    font-size: 1.125rem; color: var(--color-primary); line-height: 1.8; cursor: pointer;
+    padding: var(--spacing-md) var(--spacing-lg); border-radius: var(--radius-lg);
+    border: 1.5px solid rgba(102,126,234,0.3); transition: all var(--transition-fast); max-width: 480px; user-select: none;
+}
+.fc-sentence:hover { background: rgba(102,126,234,0.06); border-color: var(--color-primary); }
+.fc-divider { width: 40%; height: 1px; background: var(--color-border); margin: var(--spacing-sm) 0; }
+
+/* 翻牌提示 */
+.fc-flip-hint {
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    margin-top: var(--spacing-lg); color: var(--color-text-light); font-size: 0.875rem;
+    animation: fcBounce 1.6s ease-in-out infinite;
+}
+.fc-flip-arrow { font-size: 1.25rem; }
+@keyframes fcBounce {
+    0%, 100% { transform: translateY(0); opacity: 0.7; }
+    50%       { transform: translateY(4px); opacity: 1; }
+}
+
+/* ── 評分按鈕 ── */
+.fc-actions { display: flex; gap: var(--spacing-xl); justify-content: center; margin-top: var(--spacing-xl); flex-wrap: wrap; }
+.fc-btn-known, .fc-btn-unknown {
+    display: inline-flex; flex-direction: column; align-items: center; gap: var(--spacing-xs);
+    padding: var(--spacing-lg) var(--spacing-2xl); border: 2px solid transparent;
+    border-radius: var(--radius-xl); font-family: var(--font-body); cursor: pointer;
+    transition: all var(--transition-base); min-width: 140px; box-shadow: var(--shadow-md);
+}
+.fc-btn-known   { background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); color: #2d5a3d; }
+.fc-btn-known:hover   { transform: translateY(-3px) scale(1.04); box-shadow: var(--shadow-xl); }
+.fc-btn-unknown { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: #7b2d36; }
+.fc-btn-unknown:hover { transform: translateY(-3px) scale(1.04); box-shadow: var(--shadow-xl); }
+.fc-btn-icon  { font-size: 1.75rem; }
+.fc-btn-label { font-size: 1rem; font-weight: 700; }
+
+/* ── Panel 4：結果頁 ── */
+.fc-result-header { text-align: center; padding: var(--spacing-xl) 0; }
+.fc-result-emoji  { font-size: 3.5rem; margin-bottom: var(--spacing-md); }
+.fc-result-comment { font-family: var(--font-display); font-size: 1.375rem; font-weight: 700; color: var(--color-text-primary); }
+.fc-result-stats {
+    display: flex; justify-content: center; gap: var(--spacing-xl); flex-wrap: wrap;
+    margin: var(--spacing-xl) 0; padding: var(--spacing-xl);
+    background: var(--color-bg); border-radius: var(--radius-xl);
+}
+.fc-stat { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm); min-width: 100px; }
+.fc-stat-number { font-family: var(--font-display); font-size: 2.5rem; font-weight: 900; line-height: 1; }
+.fc-stat-known   .fc-stat-number { color: #48bb78; }
+.fc-stat-unknown .fc-stat-number { color: #fc8181; }
+.fc-stat-pct     .fc-stat-number { color: var(--color-primary); }
+.fc-stat-label { font-size: 0.875rem; color: var(--color-text-secondary); font-weight: 500; }
+
+/* 複習清單 */
+.fc-review-section { margin: var(--spacing-xl) 0; text-align: left; }
+.fc-review-title {
+    font-size: 1.0625rem; font-weight: 700; color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md); padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-border);
+}
+.fc-review-list {
+    display: flex; flex-direction: column; gap: var(--spacing-sm);
+    max-height: 280px; overflow-y: auto; padding-right: var(--spacing-sm);
+}
+.fc-review-list::-webkit-scrollbar { width: 4px; }
+.fc-review-list::-webkit-scrollbar-track { background: var(--color-bg); border-radius: 4px; }
+.fc-review-list::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
+.fc-review-item {
+    display: flex; align-items: center; gap: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: linear-gradient(135deg, rgba(255,154,158,0.1), rgba(254,207,239,0.1));
+    border: 1px solid rgba(255,154,158,0.4); border-radius: var(--radius-lg);
+}
+.fc-review-main { flex: 1; font-weight: 600; color: var(--color-text-primary); font-size: 1rem; }
+.fc-review-sub  { font-size: 0.875rem; color: var(--color-text-secondary); flex: 1; }
+.fc-audio-btn {
+    background: none; border: none; font-size: 1.25rem; cursor: pointer;
+    padding: 4px; border-radius: var(--radius-sm); transition: transform var(--transition-fast); flex-shrink: 0;
+}
+.fc-audio-btn:hover { transform: scale(1.2); }
+.fc-all-good { text-align: center; padding: var(--spacing-xl); color: #48bb78; font-weight: 600; font-size: 1.125rem; }
+.fc-result-actions {
+    display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;
+    margin-top: var(--spacing-xl); padding-top: var(--spacing-xl); border-top: 1px solid var(--color-border);
+}
+
+/* ── 手機響應 ── */
+@media (max-width: 480px) {
+    .fc-word           { font-size: 2rem; }
+    .fc-type-grid      { grid-template-columns: 1fr 1fr; gap: var(--spacing-md); }
+    .fc-type-card      { padding: var(--spacing-lg) var(--spacing-md); }
+    .fc-type-icon      { font-size: 2rem; }
+    .fc-type-label     { font-size: 1rem; }
+    .fc-btn-known,
+    .fc-btn-unknown    { min-width: 120px; padding: var(--spacing-md) var(--spacing-lg); }
+    .fc-result-stats   { gap: var(--spacing-lg); }
+    .fc-stat-number    { font-size: 2rem; }
+    .fc-review-item    { flex-wrap: wrap; }
+    .fc-review-sub     { display: none; }
+}
+
+/* 句子字卡正面：開頭提示樣式 */
+.fc-sentence-hint {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 480px;
+    letter-spacing: 0.03em;
+}
+.fc-hint-known {
+    color: var(--color-text-primary);
+}
+.fc-hint-blanks {
+    color: var(--color-text-light);
+    letter-spacing: 0.2em;
+}
+.fc-chinese-sub {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    margin-top: var(--spacing-sm);
+    max-width: 440px;
+    line-height: 1.6;
+}
+
+/* 字卡正面播放按鈕 */
+.fc-play-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--success-gradient);
+    color: white;
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+    font-family: var(--font-body);
+}
+.fc-play-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    filter: brightness(1.05);
+}
+.fc-play-btn:active {
+    transform: translateY(0);
+}

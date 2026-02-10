@@ -1,15 +1,29 @@
-[00:00:00.000 --> 00:00:08.000] Disruption is a noun that refers to a disturbance or interruption that causes disorder, confusion, or a break-in-normal function.
-[00:00:08.000 --> 00:00:12.000] 1. A disturbance that interrupts an activity process or system.
-[00:00:12.000 --> 00:00:18.000] This refers to an event or action that causes a halt or major change in the usual way of functioning.
-[00:00:18.000 --> 00:00:23.000] Example. The storm caused a severe disruption in electricity supply.
-[00:00:23.000 --> 00:00:28.000] Example. Construction work led to a disruption in traffic flow during peak hours.
-[00:00:28.000 --> 00:00:33.000] Example. The company faced significant disruptions in production due to equipment failure.
-[00:00:33.000 --> 00:00:39.000] 2. A radical change in an industry or market caused by innovation.
-[00:00:39.000 --> 00:00:45.000] This refers to innovations or advancements that dramatically alter established systems or norms.
-[00:00:45.000 --> 00:00:50.000] Example. The rise of streaming services caused a disruption in the traditional cable TV industry.
-[00:00:50.000 --> 00:00:55.000] Smartphones have created a disruption in how people communicate and access information.
-[00:00:55.000 --> 00:01:00.000] Example. The startups innovative business model led to a disruption in the retail sector.
-[00:01:00.000 --> 00:01:07.000] Summary. Disruption refers to an interruption that causes disorder in systems, processes, or markets.
-[00:01:07.000 --> 00:01:11.000] And can also denote transformative changes brought about by innovation.
-[00:01:11.000 --> 00:01:17.000] Related words. Interruption. Disturbance. Upheaval. Innovation. Interference.
-[00:01:17.000 --> 00:01:22.000] Antonyms. Stability. Continuity order. Consistency. Harmony.
+[00:00:00.000 --> 00:00:05.280] Disruption is a noun that refers to a disturbance or interruption that causes disorder, confusion,
+[00:00:05.780 --> 00:00:07.220] or a break in normal function.
+[00:00:08.140 --> 00:00:08.300] 1.
+[00:00:08.880 --> 00:00:11.600] A disturbance that interrupts an activity process or system.
+[00:00:12.160 --> 00:00:17.520] This refers to an event or action that causes a halt or major change in the usual way of functioning.
+[00:00:18.900 --> 00:00:19.540] Example.
+[00:00:19.980 --> 00:00:22.360] The storm caused a severe disruption in electricity supply.
+[00:00:23.040 --> 00:00:23.540] Example.
+[00:00:24.160 --> 00:00:27.560] Construction work led to a disruption in traffic flow during peak hours.
+[00:00:28.380 --> 00:00:29.080] Example.
+[00:00:29.360 --> 00:00:33.020] The company faced significant disruptions in production due to equipment failure.
+[00:00:34.360 --> 00:00:34.360] 2.
+[00:00:35.120 --> 00:00:38.420] A radical change in an industry or market caused by innovation.
+[00:00:39.040 --> 00:00:43.980] This refers to innovations or advancements that dramatically alter established systems
+[00:00:43.980 --> 00:00:44.620] or norms.
+[00:00:45.320 --> 00:00:45.920] Example.
+[00:00:46.080 --> 00:00:50.140] The rise of streaming services caused a disruption in the traditional cable TV industry.
+[00:00:50.880 --> 00:00:54.900] Smartphones have created a disruption in how people communicate and access information.
+[00:00:54.900 --> 00:00:56.240] Example.
+[00:00:56.380 --> 00:01:00.080] The start -ups innovative business model led to a disruption in the retail sector.
+[00:01:00.800 --> 00:01:01.380] Summary.
+[00:01:01.940 --> 00:01:06.960] Disruption refers to an interruption that causes disorder in systems, processes, or markets,
+[00:01:07.400 --> 00:01:10.720] and can also denote transformative changes brought about by innovation.
+[00:01:11.520 --> 00:01:12.260] Related words.
+[00:01:12.960 --> 00:01:16.640] Interruption, disturbance, upheaval, innovation, interference.
+[00:01:17.480 --> 00:01:18.060] Antonyms.
+[00:01:18.580 --> 00:01:19.200] Stability,
+[00:01:19.820 --> 00:01:21.760] continuity order, consistency, harmony.
+[00:01:21.760 --> 00:01:21.840] Thanks for watching.

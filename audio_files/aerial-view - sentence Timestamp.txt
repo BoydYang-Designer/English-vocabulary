@@ -1,10 +1,11 @@
-[00:00:00.000 --> 00:00:06.500] Aerial view is a noun phrase that refers to a view of an area or scene from a height,
-[00:00:06.500 --> 00:00:10.800] typically captured from an aircraft, drone, or elevated position,
-[00:00:10.800 --> 00:00:14.700] allowing a broader perspective of the landscape or structures below.
-[00:00:14.700 --> 00:00:21.100] Example, the aerial view of the city showcased the intricate layout of streets and parks.
-[00:00:21.100 --> 00:00:27.100] The Xiaritect used an aerial view to illustrate how the new building would fit into the surrounding area.
-[00:00:27.100 --> 00:00:28.400] Example,
-[00:00:28.600 --> 00:00:34.600] In the documentary, they included aerial views of the natural disasters impact on the landscape.
-[00:00:34.600 --> 00:00:42.100] Summary, an aerial view provides a high perspective of an area, often revealing details not visible from the ground level.
-[00:00:42.100 --> 00:00:47.100] Related words, birds eye view, overhead view, landscape view, top down view,
-[00:00:47.100 --> 00:00:52.100] Antonim's ground level view, close up view, low angle view.
+[00:00:00.000 --> 00:00:04.920] Aerial view is a noun phrase that refers to a view of an area or
+[00:00:04.920 --> 00:00:09.580] scene from a height, typically captured from an aircraft, drone, or
+[00:00:09.580 --> 00:00:14.120] elevated position, allowing a broader perspective of the landscape or structures below.
+[00:00:15.200 --> 00:00:20.500] Example The aerial view of the city showcased the intricate layout of streets and parks.
+[00:00:21.280 --> 00:00:26.660] The Xerarchitect used an aerial view to illustrate how the new building would fit into the surrounding area.
+[00:00:27.460 --> 00:00:32.460] Example In the documentary, they included aerial views of the natural disaster's impact on
+[00:00:32.460 --> 00:00:32.960] the landscape.
+[00:00:34.640 --> 00:00:39.520] Summary Summary, an aerial view provides a high perspective of an area, often revealing details
+[00:00:39.520 --> 00:00:41.440] not visible from the ground level.
+[00:00:42.060 --> 00:00:46.540] Related words, bird's eye view, overhead view, landscape view, top -down view.
+[00:00:47.160 --> 00:00:50.620] Antonyms, ground level view, close -up view, low -angle view.

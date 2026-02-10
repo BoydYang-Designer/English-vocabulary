@@ -1,12 +1,20 @@
-[00:00:00.000 --> 00:00:05.440] Blur can function as a verb and a noun, with meanings related to making something unclear or
-[00:00:05.440 --> 00:00:13.200] indistinct. As a verb, blur, blurred, blurring, one, to make something unclear or difficult to see
-[00:00:13.200 --> 00:00:19.840] by smearing or obscuring it. Example sentence, the rain blurred the view through the car window,
-[00:00:19.840 --> 00:00:25.360] two, to make something less distinct or more difficult to understand. Example sentence,
-[00:00:25.360 --> 00:00:31.440] the rush deadline caused the details of the report to blur together. As a noun, blur, blurs,
-[00:00:32.000 --> 00:00:39.280] one, an indistinct or unclear shape or outline. Example sentence, the photograph was a blur
-[00:00:39.280 --> 00:00:44.080] because it was taken too quickly. Everything becomes a blur when you travel beyond a certain speed.
-[00:00:45.680 --> 00:00:51.040] To a state of confusion or lack of clarity, the events of the previous night were a blur due to
-[00:00:51.200 --> 00:00:56.560] her exhaustion. The details of the experience passed in a blur as she tried to make sense of everything.
-[00:00:57.760 --> 00:01:06.400] Summary, as a verb, blur means to make something unclear or difficult to perceive. As a noun,
-[00:01:06.400 --> 00:01:10.800] it refers to something that is unclear or indistinct, either visually or conceptually,
-[00:01:10.800 --> 00:01:19.920] including the state of being in a state of confusion or lack of clarity.
+[00:00:00.000 --> 00:00:04.800] Blur can function as a verb and a noun, with meanings related to making something unclear
+[00:00:04.800 --> 00:00:06.020] or indistinct.
+[00:00:07.240 --> 00:00:12.200] As a verb, blur, blurred, blurring, one, to make something unclear or
+[00:00:12.200 --> 00:00:14.840] difficult to see by smearing or obscuring it.
+[00:00:15.960 --> 00:00:16.720] Example sentence,
+[00:00:17.320 --> 00:00:19.240] the rain blurred the view through the car window.
+[00:00:19.900 --> 00:00:23.480] Two, to make something less distinct or more difficult to understand.
+[00:00:24.260 --> 00:00:28.780] Example sentence, the rushed deadline caused the details of the report to blur together.
+[00:00:29.380 --> 00:00:34.640] As a noun, blur, blurs, one, an indistinct or unclear shape or outline.
+[00:00:35.160 --> 00:00:35.960] Example sentence,
+[00:00:37.320 --> 00:00:40.760] the photograph was a blur because it was taken too quickly.
+[00:00:41.040 --> 00:00:44.100] Everything becomes a blur when you travel beyond a certain speed.
+[00:00:45.380 --> 00:00:48.100] Two, a state of confusion or lack of clarity.
+[00:00:48.540 --> 00:00:51.640] The events of the previous night were a blur due to her exhaustion.
+[00:00:52.340 --> 00:00:56.520] The details of the experience passed in a blur as she tried to make sense of everything.
+[00:00:57.720 --> 00:00:58.260] Summary,
+[00:00:59.260 --> 00:01:00.000] as a verb,
+[00:01:00.700 --> 00:01:04.680] blur means to make something unclear or difficult to perceive.
+[00:01:05.300 --> 00:01:10.820] As a noun, it refers to something that is unclear or indistinct, either visually or conceptually,
+[00:01:10.900 --> 00:01:13.820] including the state of being in a state of confusion or lack of clarity.

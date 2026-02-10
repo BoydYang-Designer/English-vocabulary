@@ -1,6 +1,9 @@
-[00:00:00.000 --> 00:00:09.000] Boredom is a noun that refers to the feeling of being uninterested, tired, or restless due to a lack of stimulation or excitement.
-[00:00:09.000 --> 00:00:14.000] Example, she felt overwhelming boredom during the long, uneventful weekend.
-[00:00:14.000 --> 00:00:19.000] The students were struggling to stay awake from boredom during the lecture.
-[00:00:19.000 --> 00:00:24.000] Example, his job involves so much routine that he often experiences boredom.
-[00:00:24.000 --> 00:00:31.000] Summarym describes the state of feeling uninterested or unstimulated, often due to repetitive or unengaging activities.
-[00:00:31.000 --> 00:00:38.000] Related words, dullness, monotony, tedium, weariness, antinemms, excitement, interest, stimulation, enthusiasm.
+[00:00:00.000 --> 00:00:04.980] Boredom is a noun that refers to the feeling of being uninterested, tired, or
+[00:00:04.980 --> 00:00:07.780] restless due to a lack of stimulation or excitement.
+[00:00:09.360 --> 00:00:13.720] Example, she felt overwhelming boredom during the long, uneventful weekend.
+[00:00:14.880 --> 00:00:18.160] The students were struggling to stay awake from boredom during the lecture.
+[00:00:18.980 --> 00:00:23.200] Example, his job involves so much routine that he often experiences boredom.
+[00:00:24.020 --> 00:00:28.980] Summary describes the state of feeling uninterested or unstimulated often
+[00:00:28.980 --> 00:00:30.860] due to repetitive or unengaging activities.
+[00:00:31.180 --> 00:00:36.380] Related words, dullness, monotony, tedium, weariness, antonyms, excitement, interest,
+[00:00:36.740 --> 00:00:37.960] stimulation, enthusiasm.

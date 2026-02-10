@@ -1,19 +1,14 @@
-[00:00:00.000 --> 00:00:05.520] Controversial describes something that provokes disagreement, debate, or differing opinions,
-[00:00:05.520 --> 00:00:09.120] often because it involves sensitive or divisive issues.
-[00:00:09.120 --> 00:00:14.560] Controversial topics or actions tend to generate strong reactions from people with opposing viewpoints.
-[00:00:14.560 --> 00:00:18.800] These could be subjects related to politics, religion, ethics, or social issues,
-[00:00:18.800 --> 00:00:22.320] where there's no clear consensus, and opinions are deeply divided.
-[00:00:23.360 --> 00:00:24.960] Examples.
-[00:00:25.360 --> 00:00:29.360] His controversial remarks on social media led to widespread criticism.
-[00:00:29.440 --> 00:00:33.840] The new policy was highly controversial, sparking heated debates among the employees.
-[00:00:33.840 --> 00:00:36.640] Abortion is a highly controversial subject.
-[00:00:37.360 --> 00:00:38.000] Summary.
-[00:00:38.000 --> 00:00:42.480] Controversial describes something that causes or is likely to cause disagreement or debate due to
-[00:00:42.480 --> 00:00:44.160] differing opinions or viewpoints.
-[00:00:45.120 --> 00:00:46.320] Related words.
-[00:00:46.320 --> 00:00:49.760] Contentious, disputacious, provocative, debatable.
-[00:00:50.320 --> 00:00:50.960] Antonyms.
-[00:00:50.960 --> 00:00:52.240] Uncontroversial.
-[00:00:52.240 --> 00:00:53.040] Agreed upon.
-[00:00:53.680 --> 00:00:54.640] Accepted.
-[00:00:54.640 --> 00:00:55.520] Noncontroversial.
+[00:00:00.000 --> 00:00:05.160] Controversial describes something that provokes disagreement, debate, or differing opinions,
+[00:00:05.640 --> 00:00:08.700] often because it involves sensitive or divisive issues.
+[00:00:09.380 --> 00:00:14.240] Controversial topics or actions tend to generate strong reactions from people with opposing viewpoints.
+[00:00:14.700 --> 00:00:19.460] These could be subjects related to politics, religion, ethics, or social issues where there's no clear
+[00:00:19.460 --> 00:00:21.580] consensus and opinions are deeply divided.
+[00:00:23.360 --> 00:00:24.000] Examples
+[00:00:25.000 --> 00:00:29.000] His controversial remarks on social media led to widespread criticism.
+[00:00:29.660 --> 00:00:33.560] The new policy was highly controversial, sparking heated debates among the employees.
+[00:00:34.200 --> 00:00:36.560] Abortion is a highly controversial subject.
+[00:00:37.340 --> 00:00:42.240] Summary Controversial describes something that causes or is likely to cause disagreement or debate
+[00:00:42.240 --> 00:00:44.180] due to differing opinions or viewpoints.
+[00:00:44.860 --> 00:00:49.780] Related words Contentious, disputatious, provocative, debatable.
+[00:00:50.260 --> 00:00:54.480] Antonyms Uncontroversial Agreed upon Accepted
+[00:00:54.480 --> 00:00:55.600] noncontroversial

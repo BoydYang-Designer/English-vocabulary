@@ -1,11 +1,15 @@
-[00:00:00.000 --> 00:00:06.400] Antibiotics is a noun that refers to a class of medicines used to treat infections caused by bacteria.
-[00:00:06.900 --> 00:00:12.800] They work by killing or inhibiting the growth of bacteria and are not effective against viral infections.
-[00:00:13.300 --> 00:00:18.500] Examples, the doctor prescribed antibiotics to treat the bacterial infection in my lungs.
-[00:00:18.800 --> 00:00:24.300] Overuse of antibiotics can lead to antibiotic resistance, making infections harder to treat.
-[00:00:25.100 --> 00:00:30.800] Some infections, such as the common cold, cannot be treated with antibiotics because they are caused by viruses.
-[00:00:31.900 --> 00:00:38.400] Even though I felt better after a few days, I continued taking the antibiotics for the full 10-day course as prescribed by my doctor.
-[00:00:39.600 --> 00:00:40.200] Summary.
-[00:00:40.700 --> 00:00:45.900] Antibiotics are medications used to treat bacterial infections by killing or inhibiting bacteria.
-[00:00:46.200 --> 00:00:50.500] They are widely used in medicine but must be prescribed carefully to avoid resistance.
-[00:00:51.000 --> 00:00:52.000] Related words.
-[00:00:52.300 --> 00:01:00.000] Antibacterial antimicrobial, penicillin, cephalosporin, antibiotic resistance, antifungal antiviral.
+[00:00:00.000 --> 00:00:04.820] Antibiotics is a noun that refers to a class of medicines used to treat infections
+[00:00:04.820 --> 00:00:06.020] caused by bacteria.
+[00:00:06.900 --> 00:00:11.520] They work by killing or inhibiting the growth of bacteria and are not effective against
+[00:00:11.520 --> 00:00:12.400] viral infections.
+[00:00:13.360 --> 00:00:13.760] Examples,
+[00:00:14.520 --> 00:00:18.220] the doctor prescribed antibiotics to treat the bacterial infection in my lungs.
+[00:00:18.920 --> 00:00:24.080] Overuse of antibiotics can lead to antibiotic resistance, making infections harder to treat.
+[00:00:24.660 --> 00:00:29.480] Some infections, such as the common cold, cannot be treated with antibiotics because they are
+[00:00:29.480 --> 00:00:30.420] caused by viruses.
+[00:00:31.500 --> 00:00:36.260] Even though I felt better after a few days, I continued taking the antibiotics for the full 10 -day
+[00:00:36.260 --> 00:00:38.020] course as prescribed by my doctor.
+[00:00:39.380 --> 00:00:39.940] Summary
+[00:00:40.680 --> 00:00:45.540] Antibiotics are medications used to treat bacterial infections by killing or inhibiting bacteria.
+[00:00:46.000 --> 00:00:50.280] They are widely used in medicine but must be prescribed carefully to avoid resistance.
+[00:00:50.280 --> 00:00:51.800] Related words

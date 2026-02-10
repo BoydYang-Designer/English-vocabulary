@@ -1,21 +1,16 @@
-[00:00:00.000 --> 00:00:03.360] Displaced is an adjective with the following meanings.
-[00:00:03.360 --> 00:00:07.340] One, moved from its original or usual location,
-[00:00:07.340 --> 00:00:10.320] refers to something that has been physically shifted
-[00:00:10.320 --> 00:00:12.240] from where it normally belongs.
-[00:00:12.240 --> 00:00:15.480] Example, the displaced furniture cluttered the living room
-[00:00:15.480 --> 00:00:17.080] after the renovation.
-[00:00:17.080 --> 00:00:20.080] Two, forced to leave a place,
-[00:00:20.080 --> 00:00:22.920] especially due to conflict, natural disasters,
-[00:00:22.920 --> 00:00:24.940] or other disruptive events,
-[00:00:24.940 --> 00:00:27.320] describes people or animals that have been removed
-[00:00:27.320 --> 00:00:29.360] from their homes or habitats.
-[00:00:29.600 --> 00:00:31.720] Many displaced families sought shelter
-[00:00:31.720 --> 00:00:34.080] in temporary camps after the earthquake.
-[00:00:34.080 --> 00:00:37.440] Example, displaced wildlife often struggle to adapt
-[00:00:37.440 --> 00:00:38.560] to new environments.
-[00:00:39.560 --> 00:00:42.440] Summary, displaced describes something or someone
-[00:00:42.440 --> 00:00:44.280] that has been moved from its original position
-[00:00:44.280 --> 00:00:46.080] or forced to leave a place,
-[00:00:46.080 --> 00:00:48.240] often due to external circumstances,
-[00:00:48.240 --> 00:00:52.040] related words, removed, evacuated, relocated.
-[00:00:53.480 --> 00:00:57.160] Antonyms, situated, positioned, settled.
+[00:00:00.000 --> 00:00:02.720] Displaced is an adjective with the following meanings.
+[00:00:03.580 --> 00:00:03.740] One,
+[00:00:04.360 --> 00:00:09.060] moved from its original or usual location, refers to something that has been
+[00:00:09.060 --> 00:00:11.560] physically shifted from where it normally belongs.
+[00:00:12.340 --> 00:00:16.280] Example, the displaced furniture cluttered the living room after the renovation.
+[00:00:17.020 --> 00:00:17.660] Two,
+[00:00:18.420 --> 00:00:19.540] forced to leave a place,
+[00:00:20.140 --> 00:00:24.440] especially due to conflict, natural disasters, or other disruptive events,
+[00:00:25.000 --> 00:00:28.580] describes people or animals that have been removed from their homes or habitats.
+[00:00:28.580 --> 00:00:33.420] Many displaced families sought shelter in temporary camps after the earthquake.
+[00:00:33.980 --> 00:00:38.280] Example, displaced wildlife often struggled to adapt to new environments.
+[00:00:39.220 --> 00:00:44.160] Summary, displaced describes something or someone that has been moved from its original position
+[00:00:44.160 --> 00:00:48.860] or forced to leave a place, often due to external circumstances, related words,
+[00:00:49.500 --> 00:00:51.760] removed, evacuated, relocated.
+[00:00:53.360 --> 00:00:55.920] Antonyms, situated, positioned,
+[00:00:56.520 --> 00:00:56.720] settled.

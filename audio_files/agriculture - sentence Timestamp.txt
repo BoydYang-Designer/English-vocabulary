@@ -1,7 +1,11 @@
-[00:00:00.000 --> 00:00:09.000] Agriculture is a noun that refers to the practice of cultivating land, growing crops, and raising livestock for food, fiber, and other products.
-[00:00:09.000 --> 00:00:15.000] It includes various farming techniques and activities essential for sustaining human and animal life.
-[00:00:15.000 --> 00:00:26.000] Example, modern agriculture relies on advanced machinery and technology. Sustainable agriculture helps protect the environment while maintaining food production.
-[00:00:26.000 --> 00:00:32.000] The country's economy is heavily dependent on agriculture and exports of agricultural products.
-[00:00:32.000 --> 00:00:37.000] Advances in agriculture have significantly increased food production over the past century.
-[00:00:37.000 --> 00:00:45.000] Summary, agriculture is the practice of farming including growing crops and raising animals for food and other products.
-[00:00:45.000 --> 00:00:53.000] Related words, farming, cultivation, horticulture, agronomy, antinims, urbanization, industrialization.
+[00:00:00.000 --> 00:00:04.500] Agriculture is a noun that refers to the practice of cultivating land,
+[00:00:05.060 --> 00:00:08.800] growing crops, and raising livestock for food, fiber, and other products.
+[00:00:09.560 --> 00:00:14.560] It includes various farming techniques and activities essential for sustaining human and animal life.
+[00:00:15.260 --> 00:00:20.380] Example, modern agriculture relies on advanced machinery and technology.
+[00:00:21.240 --> 00:00:25.820] Sustainable agriculture helps protect the environment while maintaining food production.
+[00:00:26.460 --> 00:00:31.620] The country's economy is heavily dependent on agriculture and exports of agricultural products.
+[00:00:32.120 --> 00:00:36.640] Advances in agriculture have significantly increased food production over the past century.
+[00:00:37.540 --> 00:00:42.380] Summary, agriculture is the practice of farming including growing crops and raising animals
+[00:00:42.380 --> 00:00:44.300] for food and other products.
+[00:00:44.980 --> 00:00:47.200] Related words, farming, cultivation,
+[00:00:47.860 --> 00:00:52.420] horticulture, agronomy, antonyms, urbanization, industrialization.

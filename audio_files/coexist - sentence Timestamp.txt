@@ -1,10 +1,15 @@
-[00:00:00.000 --> 00:00:04.000] Coexist is a verb, coexist, coexisted, coexisting.
-[00:00:04.000 --> 00:00:08.700] Refers to the act of living or existing together at the same time or in the same place,
-[00:00:08.700 --> 00:00:14.000] especially when different people, groups, or things are able to do so peacefully and without conflict.
-[00:00:14.000 --> 00:00:20.500] Example, different species of animals can coexist in the same habitat without competing for resources.
-[00:00:20.500 --> 00:00:25.500] Example, the two companies learn to coexist after merging their operations.
-[00:00:25.500 --> 00:00:32.000] Example, in a multicultural society, people from different backgrounds must learn to coexist peacefully.
-[00:00:32.000 --> 00:00:37.500] Example, the new technology allows humans and robots to coexist in workplaces more efficiently.
-[00:00:37.500 --> 00:00:44.500] Summary, coexist means to exist together in harmony or without conflict, despite differences or challenges.
-[00:00:44.500 --> 00:00:50.000] Related words, live together, harmonize, coexistence, collaborate, integrate.
-[00:00:50.000 --> 00:00:54.000] Antonyms, conflict, clash, oppose, segregate, dispute.
+[00:00:00.000 --> 00:00:01.240] Coexist is a verb.
+[00:00:01.560 --> 00:00:02.720] Coexist coexisted.
+[00:00:03.040 --> 00:00:07.860] Coexisting refers to the act of living or existing together at the same time or in the
+[00:00:07.860 --> 00:00:12.760] same place, especially when different people, groups or things are able to do so peacefully and
+[00:00:12.760 --> 00:00:13.460] without conflict.
+[00:00:14.500 --> 00:00:19.380] Example, different species of animals can coexist in the same habitat without competing
+[00:00:19.380 --> 00:00:20.100] for resources.
+[00:00:20.860 --> 00:00:24.620] Example, the two companies learn to coexist after merging their operations.
+[00:00:25.680 --> 00:00:30.660] Example, in a multicultural society, people from different backgrounds must learn to
+[00:00:30.660 --> 00:00:31.760] coexist peacefully.
+[00:00:32.420 --> 00:00:36.700] Example, the new technology allows humans and robots to coexist in workplaces more efficiently.
+[00:00:37.800 --> 00:00:42.140] Summary, coexist means to exist together in harmony or without conflict,
+[00:00:42.580 --> 00:00:44.480] despite differences or challenges.
+[00:00:45.000 --> 00:00:49.600] Related words, live together, harmonize, coexistence, collaborate, integrate.
+[00:00:50.260 --> 00:00:53.700] Antonyms, conflict, clash, oppose, segregate, dispute.

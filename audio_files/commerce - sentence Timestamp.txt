@@ -1,10 +1,8 @@
-[00:00:00.000 --> 00:00:04.640] Commerce is a noun that refers to the activity of buying and selling goods and services,
-[00:00:04.640 --> 00:00:07.680] especially on a large scale or between different countries.
-[00:00:09.920 --> 00:00:11.520] Example.
-[00:00:11.520 --> 00:00:16.280] The growth of e-commerce has revolutionized how global commerce operates.
-[00:00:16.280 --> 00:00:17.280] Example.
-[00:00:17.280 --> 00:00:21.320] International commerce depends heavily on agreements like trade accords and tariffs.
-[00:00:21.320 --> 00:00:22.320] Example.
-[00:00:22.320 --> 00:00:26.520] The city's economy is heavily reliant on both tourism and commerce.
-[00:00:26.520 --> 00:00:30.520] Related words, trade, business, exchange, transaction market,
-[00:00:30.520 --> 00:00:33.520] Antonums, non-trade inactivity, stagnation.
+[00:00:00.000 --> 00:00:04.420] Commerce is a noun that refers to the activity of buying and selling goods and services,
+[00:00:04.580 --> 00:00:07.360] especially on a large scale or between different countries.
+[00:00:09.820 --> 00:00:10.420] Example.
+[00:00:11.460 --> 00:00:14.900] The growth of e -commerce has revolutionized how global commerce operates.
+[00:00:16.200 --> 00:00:20.440] Example, international commerce depends heavily on agreements like trade accords and tariffs.
+[00:00:21.260 --> 00:00:25.320] Example, the city's economy is heavily reliant on both tourism and commerce.
+[00:00:26.320 --> 00:00:31.200] Related words, trade, business, exchange, transaction market, Antonum's non
+[00:00:31.200 --> 00:00:32.840] -trade inactivity stagnation.

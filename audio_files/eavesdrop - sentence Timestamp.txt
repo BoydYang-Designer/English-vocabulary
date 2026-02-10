@@ -1,18 +1,20 @@
-[00:00:00.000 --> 00:00:05.000] Eavesdrop as a verb, eavesdrop, eavesdropped, eavesdropping.
-[00:00:06.000 --> 00:00:09.000] To eavesdropped means to secretly listen to a conversation
-[00:00:09.000 --> 00:00:12.000] or sounds without the knowledge of the speakers,
-[00:00:12.000 --> 00:00:15.000] typically to gather information or gossip.
-[00:00:15.000 --> 00:00:18.000] Example, she eavesdropped on her neighbor's conversation
-[00:00:18.000 --> 00:00:20.000] to find out more about the party.
-[00:00:20.000 --> 00:00:24.000] He was caught eavesdropping outside the door during the meeting.
-[00:00:25.000 --> 00:00:29.000] Eavesdropping on their discussion gave her insights into the project.
-[00:00:29.000 --> 00:00:33.000] Example, they were eavesdropping on a private conversation at the cafe
-[00:00:33.000 --> 00:00:35.000] when they heard their names mentioned.
-[00:00:35.000 --> 00:00:37.000] Example, while waiting in the hallway,
-[00:00:37.000 --> 00:00:40.000] she unintentionally eavesdropped on a conversation
-[00:00:40.000 --> 00:00:43.000] about the upcoming changes in management.
-[00:00:43.000 --> 00:00:47.000] Summary, eavesdropped refers to the act of secretly listening in
-[00:00:47.000 --> 00:00:51.000] on a conversation or sound, usually without the consent or knowledge
-[00:00:51.000 --> 00:00:53.000] of those involved.
-[00:00:53.000 --> 00:00:58.000] Related words, over here, listen, spy, antinims, ignore,
-[00:00:58.000 --> 00:01:00.000] disregard, avoid.
+[00:00:00.000 --> 00:00:01.320] Eavesdrop as a verb.
+[00:00:02.220 --> 00:00:02.740] Eavesdrop.
+[00:00:03.220 --> 00:00:03.880] Eavesdropped.
+[00:00:04.460 --> 00:00:05.120] Eavesdropping.
+[00:00:06.220 --> 00:00:11.300] To eavesdrop means to secretly listen to a conversation or sounds without the knowledge of the speakers,
+[00:00:11.820 --> 00:00:14.120] typically to gather information or gossip.
+[00:00:14.620 --> 00:00:18.960] Example, she eavesdropped on her neighbor's conversation to find out more about the party.
+[00:00:20.580 --> 00:00:23.480] He was caught eavesdropping outside the door during the meeting.
+[00:00:25.480 --> 00:00:28.920] Eavesdropping on their discussion gave her insights into the project.
+[00:00:29.880 --> 00:00:34.920] Example, they were eavesdropping on a private conversation at the cafe when they heard their names mentioned.
+[00:00:35.760 --> 00:00:40.560] Example, while waiting in the hallway, she unintentionally eavesdropped on a conversation
+[00:00:40.560 --> 00:00:42.420] about the upcoming changes in management.
+[00:00:43.180 --> 00:00:43.600] Summary.
+[00:00:44.400 --> 00:00:48.740] Eavesdrop refers to the act of secretly listening in on a conversation or sound,
+[00:00:49.160 --> 00:00:52.260] usually without the consent or knowledge of those involved.
+[00:00:52.900 --> 00:00:55.640] Related words, over here, listen, spy.
+[00:00:55.640 --> 00:00:57.060] Antonyms.
+[00:00:57.360 --> 00:00:57.980] Ignore.
+[00:00:58.280 --> 00:00:59.060] Disregard.
+[00:00:59.320 --> 00:00:59.440] Avoid.

@@ -1,11 +1,30 @@
-[00:00:00.000 --> 00:00:05.000] Brittle is an adjective that refers to something that is easily broken, cracked, or damaged,
-[00:00:05.000 --> 00:00:09.000] often due to being dry, fragile, or lacking flexibility.
-[00:00:09.000 --> 00:00:15.000] It can also describe a person's demeanor or emotions as being easily broken or vulnerable.
-[00:00:15.000 --> 00:00:20.000] Additionally, it can refer to a sharp or harsh sound that is often abrupt or piercing.
-[00:00:20.000 --> 00:00:27.000] One, easily broken or cracked, refers to materials that lack flexibility and can break or shatter under pressure.
-[00:00:27.000 --> 00:00:36.000] Example. The brittle branches snapped in the wind. Example. The cookie was so brittle that it crumbled into pieces with a slight touch.
-[00:00:36.000 --> 00:00:45.000] Two. A person's demeanor or emotions being easily broken or vulnerable describes someone who is emotionally fragile or quick to be upset.
-[00:00:45.000 --> 00:00:55.000] Example. She had a brittle personality, always reacting dramatically to criticism. Example, his brittle temper flared up when he was questioned about his performance.
-[00:00:55.000 --> 00:01:06.000] Three. Sharp and sound describes sounds that are harsh, piercing, or uncomfortable to hear. Example. The brittle sound of the glass breaking startled everyone in the room.
-[00:01:06.000 --> 00:01:22.000] Example. Brittle crackling of dry leaves underfoot echoed in the quiet forest. Summary. Brittle describes something that is easily breakable, whether physically, emotionally, or in terms of sound, often due to fragility or a lack of resilience, related words.
-[00:01:22.000 --> 00:01:30.000] Fragell, delicate, breakable, brittle, sharp, piercing, strong, resilient, flexible, durable, soft.
+[00:00:00.000 --> 00:00:04.540] Brittle is an adjective that refers to something that is easily broken, cracked, or damaged,
+[00:00:05.300 --> 00:00:08.480] often due to being dry, fragile, or lacking flexibility.
+[00:00:09.560 --> 00:00:14.140] It can also describe a person's demeanor or emotions as being easily broken or vulnerable.
+[00:00:15.000 --> 00:00:18.780] Additionally, it can refer to a sharp or harsh sound that is often abrupt or piercing.
+[00:00:20.040 --> 00:00:20.200] 1.
+[00:00:20.740 --> 00:00:26.020] Easily broken or cracked refers to materials that lack flexibility and can break or shatter under pressure.
+[00:00:27.060 --> 00:00:27.640] Example.
+[00:00:28.290 --> 00:00:30.440] The brittle branches snapped in the wind.
+[00:00:30.860 --> 00:00:31.460] Example.
+[00:00:31.960 --> 00:00:35.460] The cookie was so brittle that it crumbled into pieces with a slight touch.
+[00:00:36.340 --> 00:00:36.680] 2.
+[00:00:37.720 --> 00:00:42.440] A person's demeanor or emotions being easily broken or vulnerable describes someone who is
+[00:00:42.440 --> 00:00:44.380] emotionally fragile or quick to be upset.
+[00:00:45.200 --> 00:00:45.800] Example.
+[00:00:46.200 --> 00:00:49.960] She had a brittle personality, always reacting dramatically to criticism.
+[00:00:50.740 --> 00:00:54.200] Example, his brittle temper flared up when he was questioned about his performance.
+[00:00:55.200 --> 00:00:55.620] 3.
+[00:00:56.260 --> 00:00:57.020] Sharp in sound.
+[00:00:57.620 --> 00:01:00.720] Describe sounds that are harsh, piercing, or uncomfortable to hear.
+[00:01:01.680 --> 00:01:02.360] Example.
+[00:01:03.020 --> 00:01:05.960] The brittle sound of the glass breaking startled everyone in the room.
+[00:01:06.360 --> 00:01:06.740] Example.
+[00:01:06.840 --> 00:01:10.060] Brittle crackling of dry leaves underfoot echoed in the quiet forest.
+[00:01:10.760 --> 00:01:11.100] Summary.
+[00:01:11.440 --> 00:01:14.920] Brittle describes something that is easily breakable, whether physically,
+[00:01:15.620 --> 00:01:20.640] emotionally, or in terms of sound, often due to fragility or a lack of resilience.
+[00:01:21.160 --> 00:01:21.820] Related words.
+[00:01:22.460 --> 00:01:23.780] Fragile, delicate,
+[00:01:24.400 --> 00:01:29.600] breakable, brittle, sharp, piercing, strong, resilient, flexible, durable,
+[00:01:29.660 --> 00:01:30.080] soft.

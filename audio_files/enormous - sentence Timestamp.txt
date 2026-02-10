@@ -1,16 +1,15 @@
-[00:00:00.000 --> 00:00:02.520] Enormous can be used as an adjective.
-[00:00:02.520 --> 00:00:06.640] As an adjective, enormous, more enormous, most enormous.
-[00:00:06.640 --> 00:00:10.560] One, extremely large in size, quantity, or degree.
-[00:00:10.560 --> 00:00:13.680] Examples, the elephant is an enormous animal.
-[00:00:13.680 --> 00:00:15.120] They faced an enormous challenge
-[00:00:15.120 --> 00:00:17.000] in completing the project on time.
-[00:00:17.000 --> 00:00:19.520] The company made an enormous profit last year.
-[00:00:19.520 --> 00:00:22.520] Two, very great or significant examples.
-[00:00:22.520 --> 00:00:25.560] The discovery had an enormous impact on science.
-[00:00:25.560 --> 00:00:28.280] She felt an enormous sense of relief after the exam.
-[00:00:28.280 --> 00:00:30.920] His contribution to the team was enormous.
-[00:00:30.920 --> 00:00:32.360] Summary enormous describes something
-[00:00:32.360 --> 00:00:35.440] that is extremely large, great, or significant in size,
-[00:00:35.440 --> 00:00:36.680] amount, or importance.
-[00:00:36.680 --> 00:00:40.760] Synonyms, huge, gigantic, immense, massive, tremendous.
-[00:00:40.760 --> 00:00:44.200] Antonyms, tiny, small, insignificant, minor, slight.
+[00:00:00.000 --> 00:00:01.660] Enormous can be used as an adjective.
+[00:00:02.340 --> 00:00:05.800] As an adjective, enormous, more enormous, most enormous.
+[00:00:06.600 --> 00:00:09.960] One, extremely large in size, quantity, or degree.
+[00:00:10.560 --> 00:00:10.800] Examples,
+[00:00:11.540 --> 00:00:13.060] the elephant is an enormous animal.
+[00:00:13.640 --> 00:00:16.320] They faced an enormous challenge in completing the project on time.
+[00:00:16.940 --> 00:00:18.960] The company made an enormous profit last year.
+[00:00:19.480 --> 00:00:21.040] Two, very great or significant.
+[00:00:21.520 --> 00:00:21.840] Examples,
+[00:00:22.480 --> 00:00:25.020] the discovery had an enormous impact on science.
+[00:00:25.460 --> 00:00:27.860] She felt an enormous sense of relief after the exam.
+[00:00:27.860 --> 00:00:29.960] His contribution to the team was enormous.
+[00:00:30.860 --> 00:00:36.260] Summary Enormous describes something that is extremely large, great, or significant in size, amount, or importance.
+[00:00:36.700 --> 00:00:40.200] Synonyms, huge, gigantic, immense, massive, tremendous.
+[00:00:40.720 --> 00:00:43.460] Antonyms, tiny, small, insignificant, minor, slight.

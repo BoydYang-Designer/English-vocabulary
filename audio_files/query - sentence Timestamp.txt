@@ -1,7 +1,0 @@
-[00:00:00.000 --> 00:00:07.040] 1. Query as a verb. Query, queried, querying typically means to ask a question or to inquire
-[00:00:07.040 --> 00:00:11.600] about something, often with the intention of obtaining information or clarification.
-[00:00:11.600 --> 00:00:17.040] Example. The company accountant queried my travel expenses. Example. She queried the librarian
-[00:00:17.040 --> 00:00:24.240] about the availability of books on ancient history. 2. Query as a noun refers to a question or inquiry,
-[00:00:24.240 --> 00:00:30.400] especially one seeking information or clarification. Example. The student's query about the
-[00:00:30.400 --> 00:00:36.000] assignment deadline prompted the teacher to provide further details. Example. I have a query
-[00:00:36.000 --> 00:00:40.160] regarding the new project timeline. Could you clarify when the final deadline is?

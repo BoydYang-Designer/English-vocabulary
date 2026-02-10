@@ -1,15 +1,19 @@
-[00:00:00.000 --> 00:00:05.600] Fellowship is a noun that refers to various forms of companionship and support among individuals.
-[00:00:06.720 --> 00:00:12.640] One, a friendly relationship among people. Example, the fellowship among team members helped
-[00:00:12.640 --> 00:00:18.640] them work more effectively together. Example, their fellowship grew stronger through shared experiences
-[00:00:18.640 --> 00:00:23.920] during the challenging project. Two, the relationship of people who share interests or feelings.
-[00:00:24.880 --> 00:00:30.400] Example, the fellowship of artists at the retreat encouraged creativity and collaboration.
-[00:00:31.280 --> 00:00:35.920] Example, the book club formed a fellowship that deepened their appreciation for literature.
-[00:00:36.560 --> 00:00:42.400] Three, a group of people who have similar interests. Example, the writers fellowship met
-[00:00:42.400 --> 00:00:47.760] every month to discuss their projects and provide feedback. The science fellowship included
-[00:00:47.760 --> 00:00:53.360] researchers from various fields who shared their findings. Four, an amount of money given to a
-[00:00:53.360 --> 00:01:00.320] graduate student to cover food, housing, etc. while teaching or doing research at a university.
-[00:01:01.280 --> 00:01:06.480] Example, she received a fellowship to support her studies and research in environmental science.
-[00:01:07.200 --> 00:01:11.760] Example, the university offers fellowships to help students focus on their research
-[00:01:11.760 --> 00:01:18.400] without financial worries. Summary, fellowship encompasses the ideas of friendship, shared interests,
-[00:01:18.400 --> 00:01:24.320] community and financial support in academic settings. Related words, companionship, association,
-[00:01:24.320 --> 00:01:34.320] community grant, Antonym Isolation, separation division.
+[00:00:00.000 --> 00:00:05.520] Fellowship is a noun that refers to various forms of companionship and support among individuals.
+[00:00:06.560 --> 00:00:09.220] One, a friendly relationship among people.
+[00:00:09.560 --> 00:00:14.260] Example, the fellowship among team members helped them work more effectively together.
+[00:00:15.080 --> 00:00:19.840] Example, their fellowship grew stronger through shared experiences during the challenging project.
+[00:00:20.380 --> 00:00:23.780] Two, the relationship of people who share interests or feelings.
+[00:00:24.900 --> 00:00:30.120] Example, the fellowship of artists at the retreat encouraged creativity and collaboration.
+[00:00:31.300 --> 00:00:35.780] Example, the book club formed a fellowship that deepened their appreciation for literature.
+[00:00:36.620 --> 00:00:39.200] Three, a group of people who have similar interests.
+[00:00:39.900 --> 00:00:45.240] Example, the writers fellowship met every month to discuss their projects and provide feedback.
+[00:00:46.480 --> 00:00:50.260] The science fellowship included researchers from various fields who shared their findings.
+[00:00:51.180 --> 00:00:56.140] Four, an amount of money given to a graduate student to cover food, housing, etc.
+[00:00:56.860 --> 00:01:00.100] while teaching or doing research at a university.
+[00:01:01.240 --> 00:01:06.400] Example, she received a fellowship to support her studies and research in environmental science.
+[00:01:07.180 --> 00:01:07.820] Example,
+[00:01:08.480 --> 00:01:13.060] the university offers fellowships to help students focus on their research without financial worries.
+[00:01:13.820 --> 00:01:18.740] Summary, fellowship encompasses the ideas of friendship, shared interests, community,
+[00:01:19.120 --> 00:01:21.100] and financial support in academic settings.
+[00:01:21.820 --> 00:01:25.440] Related words, companionship, association, community, grant.
+[00:01:26.080 --> 00:01:27.960] Antonym isolation separation division.

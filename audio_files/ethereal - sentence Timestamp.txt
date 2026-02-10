@@ -1,15 +1,22 @@
-[00:00:00.000 --> 00:00:02.200] Ethereal as an adjective.
-[00:00:02.200 --> 00:00:07.620] One, extremely delicate and light in a way that seems too perfect for this world.
-[00:00:07.620 --> 00:00:12.900] Ethereal describes something that seems otherworldly, fragile, or heavenly, often conveying
-[00:00:12.900 --> 00:00:17.620] a sense of beauty or grace that is hard to grasp or fully comprehend.
-[00:00:17.620 --> 00:00:22.860] Example, the ethereal glow of the moonlit sky made the scene feel magical.
-[00:00:22.860 --> 00:00:27.420] Example, her voice had an ethereal quality, almost as if it were not of this world.
-[00:00:27.420 --> 00:00:29.900] Two, lacking material substance.
-[00:00:29.900 --> 00:00:35.360] Intangible, ethereal can also refer to something that is intangible, fleeting, or abstract,
-[00:00:35.360 --> 00:00:39.240] often evoking a sense of impermanence or being difficult to hold onto.
-[00:00:39.240 --> 00:00:45.100] Example, the ethereal nature of the dream left her with a sense of wonder and longing.
-[00:00:45.100 --> 00:00:52.240] The concept of time is often seen as ethereal, impossible to fully understand or define.
-[00:00:52.240 --> 00:00:57.000] Ethereal refers to something delicate, light, and seemingly otherworldly.
-[00:00:57.000 --> 00:00:59.380] Often evoking beauty or impermanence.
-[00:00:59.380 --> 00:01:03.640] Related words, delicate, airy, heavenly, intangible, surreal, sublime,
-[00:01:03.640 --> 00:01:06.440] anti-nerthly, substantial, material grounded.
+[00:00:00.000 --> 00:00:01.680] Ethereal as an adjective.
+[00:00:02.640 --> 00:00:02.780] 1.
+[00:00:03.280 --> 00:00:06.940] Extremely delicate and light in a way that seems too perfect for this world.
+[00:00:07.300 --> 00:00:11.720] Ethereal describes something that seems otherworldly, fragile, or heavenly,
+[00:00:12.280 --> 00:00:16.720] often conveying a sense of beauty or grace that is hard to grasp or fully comprehend.
+[00:00:17.380 --> 00:00:17.940] Example.
+[00:00:18.260 --> 00:00:21.720] The ethereal glow of the moonlit sky made the scene feel magical.
+[00:00:22.420 --> 00:00:22.880] Example.
+[00:00:22.980 --> 00:00:26.660] Her voice had an ethereal quality, almost as if it were not of this world.
+[00:00:27.260 --> 00:00:27.720] 2.
+[00:00:28.100 --> 00:00:29.400] Lacking material substance.
+[00:00:29.940 --> 00:00:30.540] Intangible.
+[00:00:30.780 --> 00:00:34.660] Ethereal can also refer to something that is intangible, fleeting, or abstract,
+[00:00:35.320 --> 00:00:38.460] often evoking a sense of impermanence or being difficult to hold onto.
+[00:00:39.200 --> 00:00:39.780] Example.
+[00:00:40.140 --> 00:00:44.040] The ethereal nature of the dream left her with a sense of wonder and longing.
+[00:00:45.040 --> 00:00:49.620] The concept of time is often seen as ethereal, impossible to fully understand
+[00:00:49.620 --> 00:00:50.560] or define.
+[00:00:51.980 --> 00:00:56.560] Ethereal refers to something delicate, light, and seemingly otherworldly,
+[00:00:56.980 --> 00:00:59.220] often evoking beauty or impermanence.
+[00:00:59.360 --> 00:01:04.740] Related words, delicate, airy, heavenly, intangible, surreal, sublime, antinearthly, substantial,
+[00:01:05.080 --> 00:01:05.980] material, grounded.

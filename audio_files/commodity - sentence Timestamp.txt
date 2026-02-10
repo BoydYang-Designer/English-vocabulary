@@ -1,12 +1,18 @@
-[00:00:00.000 --> 00:00:07.560] The word commodity is a noun and it refers to a raw material or primary product that can be bought, sold, or traded,
-[00:00:07.560 --> 00:00:11.320] especially one that is interchangeable with other goods of the same type.
-[00:00:11.320 --> 00:00:19.280] One, commodity, raw material product, a basic good used in commerce that is interchangeable with other goods of the same type.
-[00:00:19.280 --> 00:00:24.660] Example, oil is a major global commodity traded on international markets.
-[00:00:24.900 --> 00:00:31.180] Example, coffee, sugar, and wheat are all common commodities in the agricultural sector.
-[00:00:31.180 --> 00:00:38.660] Example, fluctuations in commodity prices can significantly impact the profitability of agricultural businesses.
-[00:00:38.660 --> 00:00:46.180] Two, commodity, figurative use, something of value or utility that is in high demand or limited supply.
-[00:00:46.180 --> 00:00:51.460] Example, in a fast-paced industry, time can be the most valuable commodity.
-[00:00:51.460 --> 00:00:55.940] Creativity is a highly sought-after commodity in the world of advertising.
-[00:00:55.940 --> 00:01:04.580] Example, your data has become a commodity in the digital age, meaning that personal information is often traded or used by companies to generate value.
-[00:01:04.580 --> 00:01:07.920] Related words, product, good, resource, merchandise,
-[00:01:07.920 --> 00:01:12.720] Antonim's liability, non-essential luxury in some contexts.
+[00:00:00.000 --> 00:00:04.780] The word commodity is a noun and it refers to a raw material or primary
+[00:00:04.780 --> 00:00:09.540] product that can be bought sold or traded especially one that is interchangeable
+[00:00:09.540 --> 00:00:11.180] with other goods of the same type.
+[00:00:12.060 --> 00:00:16.800] One commodity raw materials product a basic good used in commerce that is
+[00:00:16.800 --> 00:00:19.060] interchangeable with other goods of the same type.
+[00:00:20.340 --> 00:00:24.400] Example oil is a major global commodity traded on international markets.
+[00:00:24.720 --> 00:00:29.420] Example coffee sugar and wheat are all common commodities in the
+[00:00:29.420 --> 00:00:30.400] agricultural sector.
+[00:00:31.120 --> 00:00:36.040] Example fluctuations in commodity prices can significantly impact the profitability
+[00:00:36.040 --> 00:00:37.640] of agricultural businesses.
+[00:00:38.740 --> 00:00:43.680] Two commodity figurative use something of value or utility that is in high
+[00:00:43.680 --> 00:00:45.220] demand or limited supply.
+[00:00:46.020 --> 00:00:50.540] Example in a fast -paced industry time can be the most valuable commodity.
+[00:00:51.260 --> 00:00:55.380] Creativity is a highly sought -after commodity in the world of advertising.
+[00:00:55.940 --> 00:01:00.940] Example your data has become a commodity in the digital age meaning that personal information is
+[00:01:00.940 --> 00:01:03.360] often traded or used by companies to generate value.
+[00:01:04.200 --> 00:01:07.400] Related words product good resource merchandise.
+[00:01:07.820 --> 00:01:11.580] Antonyms liability non -essential luxury in some contexts.

@@ -1,5 +1,6 @@
-[00:00:00.000 --> 00:00:05.940] Aquatic as an adjective relating to water or living in water. Examples aquatic
-[00:00:05.940 --> 00:00:09.760] sports such as swimming and diving are popular during the summer. Examples we
-[00:00:09.760 --> 00:00:15.360] visited in Aquatic City in Italy. Aquatic as a noun a planter animal that
-[00:00:15.360 --> 00:00:21.480] lives in or near water. Examples Aquatics in the Lake include ducks, fish and algae
-[00:00:21.480 --> 00:00:23.480] all vital parts of the ecosystem.
+[00:00:00.000 --> 00:00:04.520] Aquatic as an adjective relating to water or living in water.
+[00:00:04.880 --> 00:00:08.580] Examples, aquatic sports such as swimming and diving are popular during the summer.
+[00:00:09.080 --> 00:00:11.280] Examples, we visited an aquatic city in Italy.
+[00:00:12.880 --> 00:00:16.400] Aquatic as a noun, a plant or animal that lives in or near water.
+[00:00:17.140 --> 00:00:17.500] Examples,
+[00:00:18.260 --> 00:00:22.860] aquatics in the lake include ducks, fish and algae, all vital parts of the ecosystem.

@@ -1,9 +1,14 @@
-[00:00:00.000 --> 00:00:02.000] Contemporary touch as a noun.
-[00:00:02.000 --> 00:00:13.000] A contemporary touch refers to the addition of modern or current design elements, features, or styles that give something a more up-to-date, fashionable or trendy appearance.
-[00:00:13.000 --> 00:00:18.000] It often involves blending traditional or classic designs with newer, more current influences.
-[00:00:18.000 --> 00:00:24.000] Example, the room had a contemporary touch with sleek furniture and bold modern artwork on the walls.
-[00:00:24.000 --> 00:00:31.000] Example, she added a contemporary touch to the vintage furniture by re-affolstering it with a bright modern fabric.
-[00:00:31.000 --> 00:00:38.000] Example, her fashion designs incorporate a contemporary touch, making the overall look both modern and creative.
-[00:00:38.000 --> 00:00:45.000] Summary, a contemporary touch involves incorporating modern or current design elements to give something a fresh, updated look.
-[00:00:45.000 --> 00:00:51.000] Related words, modern influence, current style, trendy feature, up-to-date element.
-[00:00:51.000 --> 00:00:57.000] Antonyms, traditional element, classic style vintage touch.
+[00:00:00.000 --> 00:00:01.700] Contemporary touch as a noun.
+[00:00:02.440 --> 00:00:07.660] A contemporary touch refers to the addition of modern or current design elements, features,
+[00:00:08.040 --> 00:00:12.460] or styles that give something a more up -to -date, fashionable, or trendy appearance.
+[00:00:13.200 --> 00:00:17.680] It often involves blending traditional or classic designs with newer, more current influences.
+[00:00:18.660 --> 00:00:23.820] Example, the room had a contemporary touch with sleek furniture and bold, modern artwork on the walls.
+[00:00:24.460 --> 00:00:29.200] Example, she added a contemporary touch to the vintage furniture by re -a -fulstering it with a bright,
+[00:00:29.380 --> 00:00:30.200] modern fabric.
+[00:00:31.260 --> 00:00:36.180] Example, her fashion designs incorporate a contemporary touch, making the overall look both
+[00:00:36.180 --> 00:00:37.240] modern and creative.
+[00:00:38.120 --> 00:00:43.060] Summary, a contemporary touch involves incorporating modern or current design elements
+[00:00:43.060 --> 00:00:44.860] to give something a fresh, updated look.
+[00:00:45.440 --> 00:00:50.320] Related words, modern influence, current style, trendy feature, up -to
+[00:00:50.320 --> 00:00:50.800] -date element.
+[00:00:51.840 --> 00:00:55.700] Antonyms, traditional element, classic style vintage touch.

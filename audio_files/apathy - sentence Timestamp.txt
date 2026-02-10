@@ -1,11 +1,10 @@
-[00:00:00.000 --> 00:00:05.120] Apathy refers to a lack of interest, enthusiasm, or concern about something.
-[00:00:05.120 --> 00:00:09.280] It often implies a state of emotional indifference or disengagement.
-[00:00:09.280 --> 00:00:12.760] Example sentences 1.
-[00:00:12.760 --> 00:00:17.040] Her apathy towards the team's project was evident when she missed several important meetings
-[00:00:17.040 --> 00:00:19.280] and failed to contribute ideas.
-[00:00:19.280 --> 00:00:20.280] 2.
-[00:00:20.280 --> 00:00:24.880] The voter turnout was low, reflecting the widespread apathy among the electorate regarding
-[00:00:24.880 --> 00:00:26.280] the election.
-[00:00:26.840 --> 00:00:27.280] 3.
-[00:00:27.280 --> 00:00:31.720] Despite the growing concerns about climate change, there seems to be a general apathy towards
-[00:00:31.720 --> 00:00:33.720] taking action to address the issue.
+[00:00:00.000 --> 00:00:04.720] Apathy refers to a lack of interest, enthusiasm, or concern about something.
+[00:00:05.300 --> 00:00:08.780] It often implies a state of emotional indifference or disengagement.
+[00:00:10.700 --> 00:00:11.320] Example sentences.
+[00:00:11.940 --> 00:00:12.080] One,
+[00:00:12.720 --> 00:00:17.680] her apathy towards the team's project was evident when she missed several important meetings and failed to
+[00:00:17.680 --> 00:00:18.480] contribute ideas.
+[00:00:19.520 --> 00:00:19.840] Two,
+[00:00:20.440 --> 00:00:25.380] the voter turnout was low, reflecting the widespread apathy among the electorate regarding the election.
+[00:00:26.500 --> 00:00:31.340] Three, despite the growing concerns about climate change, there seems to be a general apathy
+[00:00:31.340 --> 00:00:33.280] towards taking action to address the issue.

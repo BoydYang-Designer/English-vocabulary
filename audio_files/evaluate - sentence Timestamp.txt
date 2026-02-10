@@ -1,9 +1,10 @@
-[00:00:00.000 --> 00:00:06.100] Evaluate is a verb, evaluate, evaluated, evaluating with the following meaning.
-[00:00:06.100 --> 00:00:12.900] To assess or judge the value, quality, or significance of something after careful consideration.
-[00:00:12.900 --> 00:00:18.900] Example, the teacher will evaluate the student's projects based on creativity and originality.
-[00:00:18.900 --> 00:00:23.100] Example, we need to evaluate the effectiveness of the new marketing strategy.
-[00:00:23.100 --> 00:00:27.500] Example, the committee will evaluate the proposals before making a decision.
-[00:00:27.500 --> 00:00:29.500] Summary, evaluate.
-[00:00:29.500 --> 00:00:34.100] Referred to the process of determining the worth or importance of something through careful assessment.
-[00:00:34.100 --> 00:00:38.200] Related words, assess, appraise, analyze, judge.
-[00:00:38.200 --> 00:00:42.700] Antonyms, ignore, overlook, dismiss, disregard.
+[00:00:00.000 --> 00:00:04.820] Evaluate is a verb evaluate evaluated evaluating with the following
+[00:00:04.820 --> 00:00:09.780] meaning to assess or judge the value quality or significance of
+[00:00:09.780 --> 00:00:11.980] something after careful consideration.
+[00:00:12.560 --> 00:00:18.200] Example the teacher will evaluate the students projects based on creativity and originality.
+[00:00:18.720 --> 00:00:22.520] Example we need to evaluate the effectiveness of the new marketing strategy.
+[00:00:22.940 --> 00:00:26.600] Example the committee will evaluate the proposals before making a decision.
+[00:00:27.380 --> 00:00:32.340] Summary evaluate refers to the process of determining the worth or importance of something
+[00:00:32.340 --> 00:00:33.400] through careful assessment.
+[00:00:33.820 --> 00:00:37.340] Related words assess, appraise, analyze, judge.
+[00:00:37.960 --> 00:00:41.220] Antonyms ignore, overlook, dismiss, disregard.

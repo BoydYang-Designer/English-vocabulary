@@ -1,14 +1,18 @@
-[00:00:00.000 --> 00:00:05.680] Contemplation is a noun with the following meanings, one, deep and prolonged thinking,
-[00:00:05.680 --> 00:00:10.320] the act of thinking deeply or reflecting on something, often in a thoughtful or meditative
-[00:00:10.320 --> 00:00:12.240] manner.
-[00:00:12.240 --> 00:00:17.320] Example sentences, after much contemplation she decided to change her career path.
-[00:00:17.320 --> 00:00:21.660] The philosopher's contemplation of existence led to profound insights.
-[00:00:21.660 --> 00:00:27.680] He engaged in the contemplation of the meaning of life, seeking answers to existential questions.
-[00:00:28.160 --> 00:00:33.440] 2. Meditative or reflective thought, a state of mental focus and consideration, often
-[00:00:33.440 --> 00:00:37.520] associated with spiritual or philosophical reflection.
-[00:00:37.520 --> 00:00:43.560] Example sentences, he spent hours in contemplation at the quiet lakeside, the retreat provided
-[00:00:43.560 --> 00:00:48.200] a perfect setting for contemplation and personal growth.
-[00:00:48.200 --> 00:00:53.080] Summary, contemplation refers to both deep, prolonged thinking and a meditative state
-[00:00:53.080 --> 00:00:58.280] of reflective thought, often used in the context of personal reflection or philosophical inquiry.
-[00:00:58.280 --> 00:01:03.040] Related words, reflection, meditation, consideration, introspection.
-[00:01:03.040 --> 00:01:07.280] Antonyms, distractedness, hastiness, impulsiveness in attention.
+[00:00:00.000 --> 00:00:02.760] Contemplation is a noun with the following meanings.
+[00:00:03.320 --> 00:00:08.300] One, deep and prolonged thinking, the act of thinking deeply or reflecting on something,
+[00:00:08.700 --> 00:00:10.600] often in a thoughtful or meditative manner.
+[00:00:11.720 --> 00:00:12.580] Example sentences.
+[00:00:13.200 --> 00:00:16.520] After much contemplation, she decided to change her career path.
+[00:00:17.240 --> 00:00:20.940] The philosopher's contemplation of existence led to profound insights.
+[00:00:21.480 --> 00:00:26.780] He engaged in the contemplation of the meaning of life, seeking answers to existential questions.
+[00:00:27.740 --> 00:00:32.780] Two, meditative or reflective thought, a state of mental focus and consideration,
+[00:00:33.100 --> 00:00:36.120] often associated with spiritual or philosophical reflection.
+[00:00:37.080 --> 00:00:38.180] Example sentences.
+[00:00:39.320 --> 00:00:42.220] He spent hours in contemplation at the quiet lakeside.
+[00:00:42.680 --> 00:00:46.380] The retreat provided a perfect setting for contemplation and personal growth.
+[00:00:47.780 --> 00:00:48.480] Summary.
+[00:00:48.920 --> 00:00:54.060] Contemplation refers to both deep, prolonged thinking and a meditative state of reflective thought,
+[00:00:54.060 --> 00:00:57.660] often used in the context of personal reflection or philosophical inquiry.
+[00:00:58.160 --> 00:01:01.040] Related words, reflection, meditation, consideration,
+[00:01:01.700 --> 00:01:02.200] introspection.
+[00:01:03.060 --> 00:01:07.060] Antonyms, distractiveness, hastiness, impulsiveness, inattention.

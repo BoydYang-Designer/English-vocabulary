@@ -1,9 +1,12 @@
-[00:00:00.000 --> 00:00:06.080] Bleaching agent. As a noun, a bleaching agent is a chemical substance used to remove color,
-[00:00:06.080 --> 00:00:11.920] whiteen, or disinfect materials by breaking down pigments or stains. It is commonly used in cleaning,
-[00:00:11.920 --> 00:00:18.480] textile processing, and water purification. Example, chlorine is a powerful bleaching agent used in
-[00:00:18.480 --> 00:00:25.600] disinfecting water. Example, hydrogen peroxide acts as a bleaching agent in hair dyes. Example,
-[00:00:25.600 --> 00:00:31.520] the fabric was treated with a bleaching agent to remove stains. Example, many laundry detergents
-[00:00:31.520 --> 00:00:37.040] contain a mild bleaching agent to keep clothes bright. Summary, a bleaching agent is a chemical
-[00:00:37.040 --> 00:00:42.160] compound that whitens or removes color from substances often used for cleaning, disinfecting,
-[00:00:42.160 --> 00:00:49.120] or cosmetic purposes. Related words, bleach, whitener, decolorizer, oxidizer, disinfectant,
-[00:00:49.120 --> 00:00:58.240] antinem, dye, stain, color, and pigment, darkener.
+[00:00:00.000 --> 00:00:01.160] Bleaching agent.
+[00:00:01.440 --> 00:00:05.800] As a noun, a bleaching agent is a chemical substance used to remove color,
+[00:00:06.140 --> 00:00:09.580] whiten or disinfect materials by breaking down pigments or stains.
+[00:00:10.320 --> 00:00:14.240] It is commonly used in cleaning, textile processing, and water purification.
+[00:00:15.120 --> 00:00:19.560] Example, chlorine is a powerful bleaching agent used in disinfecting water.
+[00:00:20.420 --> 00:00:24.420] Example, hydrogen peroxide acts as a bleaching agent in hair dyes.
+[00:00:24.980 --> 00:00:28.660] Example, the fabric was treated with a bleaching agent to remove stains.
+[00:00:29.520 --> 00:00:34.300] Example, many laundry detergents contain a mild bleaching agent to keep clothes bright.
+[00:00:35.340 --> 00:00:40.080] Summary, a bleaching agent is a chemical compound that whitens or removes color from substances often
+[00:00:40.080 --> 00:00:43.400] used for cleaning, disinfecting, or cosmetic purposes.
+[00:00:44.320 --> 00:00:49.720] Related words, bleach, whitener, decolorizer, oxidizer, disinfectant, antonyms,
+[00:00:49.900 --> 00:00:52.220] dye, stain, colorant, pigment, darkener.

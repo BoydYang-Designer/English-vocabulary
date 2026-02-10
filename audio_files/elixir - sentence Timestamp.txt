@@ -1,24 +1,19 @@
-[00:00:00.000 --> 00:00:02.100] Alixir as a noun, countable.
-[00:00:02.100 --> 00:00:04.040] Alixir, elixirs.
-[00:00:04.040 --> 00:00:06.200] One, a liquid usually medicinal,
-[00:00:06.200 --> 00:00:08.400] believed to cure illnesses or prolonged life,
-[00:00:08.400 --> 00:00:11.720] often associated with magical or miraculous properties.
-[00:00:11.720 --> 00:00:14.840] For example, the ancient recipe claimed to be an elixir
-[00:00:14.840 --> 00:00:16.280] that could heal any disease.
-[00:00:16.280 --> 00:00:19.160] He drank a mysterious elixir to regain his strength.
-[00:00:19.160 --> 00:00:22.480] Alchemists sought the elixir of life for immortality.
-[00:00:22.480 --> 00:00:26.520] Some herbal teas are considered natural elixirs for health.
-[00:00:26.520 --> 00:00:30.360] Two, something regarded as a magical or life-giving solution
-[00:00:30.360 --> 00:00:31.920] in a figurative sense.
-[00:00:31.920 --> 00:00:35.000] For example, music is an elixir for the soul.
-[00:00:35.000 --> 00:00:37.160] Laughter can be an elixir that lifts the spirit
-[00:00:37.160 --> 00:00:38.680] during tough times.
-[00:00:38.680 --> 00:00:41.440] Travel became her elixir for stress relief.
-[00:00:41.440 --> 00:00:45.040] Friendship is an elixir that makes life more joyful.
-[00:00:45.040 --> 00:00:47.760] Summary, elixir originally refers to a medicinal
-[00:00:47.760 --> 00:00:50.480] or magical potion, but can also mean any substance
-[00:00:50.480 --> 00:00:53.040] or experience that rejuvenates, heals,
-[00:00:53.040 --> 00:00:55.400] or brings positive effects.
-[00:00:55.400 --> 00:00:58.120] Related words, potion remedy tonic cure medicines
-[00:00:58.120 --> 00:01:00.560] and emphotions, panacea remedy cure tonic
-[00:01:00.560 --> 00:01:03.840] antinempoison toxin, harmful substance disease.
+[00:00:00.000 --> 00:00:01.640] Elixir as a noun, countable.
+[00:00:02.120 --> 00:00:03.540] Elixir, elixirs.
+[00:00:04.080 --> 00:00:09.060] One, a liquid usually medicinal believed to cure illnesses or prolong life, often associated
+[00:00:09.060 --> 00:00:10.980] with magical or miraculous properties.
+[00:00:11.720 --> 00:00:12.260] For example,
+[00:00:12.940 --> 00:00:16.000] the ancient recipe claimed to be an elixir that could heal any disease.
+[00:00:16.320 --> 00:00:18.500] He drank a mysterious elixir to regain his strength.
+[00:00:19.120 --> 00:00:21.760] Alchemists sought the elixir of life for immortality.
+[00:00:22.440 --> 00:00:25.400] Some herbal teas are considered natural elixirs for health.
+[00:00:26.280 --> 00:00:31.200] Two, something regarded as a magical or life -giving solution in a figurative sense.
+[00:00:31.900 --> 00:00:32.380] For example,
+[00:00:33.140 --> 00:00:34.500] music is an elixir for the soul.
+[00:00:34.960 --> 00:00:37.980] Laughter can be an elixir that lifts the spirit during tough times.
+[00:00:38.580 --> 00:00:40.600] Travel became her elixir for stress relief.
+[00:00:41.380 --> 00:00:43.620] Friendship is an elixir that makes life more joyful.
+[00:00:45.000 --> 00:00:49.760] Summary, elixir originally refers to a medicinal or magical potion, but can also mean any
+[00:00:49.760 --> 00:00:54.440] substance or experience that rejuvenates, heals, or brings positive effects.
+[00:00:55.200 --> 00:01:00.500] Related words, potion, remedy, tonic, cure, medicines, poisons, panacea, remedy, cure, tonic,
+[00:01:00.600 --> 00:01:03.400] antonyms, poison, toxin, harmful substance, disease.

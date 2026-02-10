@@ -1,6 +1,8 @@
-[00:00:00.000 --> 00:00:06.160] Agitation, as a noun, won a state of anxiety, nervousness, or restlessness, the feeling of being
-[00:00:06.160 --> 00:00:12.480] disturbed or unsettled. Example, she paced back and forth in agitation, unable to sit still while
-[00:00:12.480 --> 00:00:18.160] waiting for the test results. Example, his agitation was evident as he struggled to keep calm during the
-[00:00:18.160 --> 00:00:24.320] heated argument. 2. The act or process of stirring or shaking something often to cause mixing or
-[00:00:24.320 --> 00:00:30.160] turbulence. Example, the agitation of the liquid caused it to foam and bubble. Example, the
-[00:00:30.160 --> 00:00:34.240] scientist used a mechanical agitator to ensure thorough mixing of the chemicals.
+[00:00:00.000 --> 00:00:01.460] Agitation as a noun.
+[00:00:02.040 --> 00:00:07.600] One, a state of anxiety, nervousness, or restlessness, the feeling of being disturbed or unsettled.
+[00:00:08.120 --> 00:00:13.120] Example, she paced back and forth in agitation, unable to sit still while waiting for the
+[00:00:13.120 --> 00:00:13.720] test results.
+[00:00:14.680 --> 00:00:18.900] Example, his agitation was evident as he struggled to keep calm during the heated argument.
+[00:00:19.900 --> 00:00:24.680] Two, the act or process of stirring or shaking something often to cause mixing or turbulence.
+[00:00:25.420 --> 00:00:28.880] Example, the agitation of the liquid caused it to foam and bubble.
+[00:00:29.520 --> 00:00:34.140] Example, the scientist used a mechanical agitator to ensure thorough mixing of the chemicals.

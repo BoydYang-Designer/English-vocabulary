@@ -1,17 +1,20 @@
-[00:00:00.000 --> 00:00:02.480] Alchemy as a noun, uncountable.
-[00:00:02.480 --> 00:00:07.560] Alchemy 1, a medieval practice that combined science, philosophy, and mysticism,
-[00:00:07.560 --> 00:00:12.960] aiming to transform ordinary metals into gold or discover a universal elixir for immortality.
-[00:00:12.960 --> 00:00:18.480] For example, in ancient times, Alchemy was seen as both a science and a spiritual pursuit.
-[00:00:18.480 --> 00:00:22.360] Many Alchemists spent their lives trying to turn lead into gold.
-[00:00:22.360 --> 00:00:28.080] Alchemy laid the groundwork for modern chemistry through its experiments and symbolism.
-[00:00:28.080 --> 00:00:32.880] Medieval scholars studied Alchemy in hopes of unlocking the secrets of eternal life.
-[00:00:32.880 --> 00:00:39.280] 2. A mysterious or magical process of transformation, creation, or combination.
-[00:00:39.280 --> 00:00:43.520] For example, the chef's ability to mix flavors was pure alchemy.
-[00:00:43.520 --> 00:00:47.120] There's a certain alchemy between the actors that makes the film work beautifully.
-[00:00:47.120 --> 00:00:51.600] Music can create an emotional alchemy that transforms sadness into beauty.
-[00:00:51.600 --> 00:00:55.920] The artists work captures the alchemy of light and color.
-[00:00:55.920 --> 00:00:59.680] Summary Alchemy refers both to the ancient practice of transforming substances
-[00:00:59.680 --> 00:01:05.440] like turning base metals into gold and to any mysterious or magical process of transformation or creation.
-[00:01:05.440 --> 00:01:10.480] Related words, transformation mysticism, chemistry, magic, art, synonyms,
-[00:01:10.480 --> 00:01:14.080] transmutation, transformation, enchantment, sorcery, magic,
-[00:01:14.080 --> 00:01:18.080] antinims, science, realism, stagnation, immutability.
+[00:00:00.000 --> 00:00:02.060] Alchemy as a noun, uncountable.
+[00:00:02.400 --> 00:00:03.100] Alchemy 1,
+[00:00:03.720 --> 00:00:08.260] a medieval practice that combines science, philosophy, and mysticism, aiming to transform
+[00:00:08.260 --> 00:00:12.180] ordinary metals into gold or discover a universal elixir for immortality.
+[00:00:12.920 --> 00:00:17.620] For example, in ancient times, alchemy was seen as both a science and a spiritual pursuit.
+[00:00:18.420 --> 00:00:21.540] Many alchemists spent their lives trying to turn lead into gold.
+[00:00:22.260 --> 00:00:26.620] Alchemy laid the groundwork for modern chemistry through its experiments and symbolism.
+[00:00:27.740 --> 00:00:32.520] Medieval scholars studied alchemy in hopes of unlocking the secrets of eternal life.
+[00:00:33.060 --> 00:00:33.080] 2.
+[00:00:33.940 --> 00:00:38.280] A mysterious or magical process of transformation, creation, or combination.
+[00:00:39.260 --> 00:00:39.720] For example,
+[00:00:40.560 --> 00:00:43.100] the chef's ability to mix flavors was pure alchemy.
+[00:00:43.540 --> 00:00:46.520] There's a certain alchemy between the actors that makes the film work beautifully.
+[00:00:47.080 --> 00:00:50.960] Music can create an emotional alchemy that transforms sadness into beauty.
+[00:00:51.540 --> 00:00:53.900] The artist's work captures the alchemy of light and color.
+[00:00:55.640 --> 00:01:00.420] Summary, alchemy, refers both to the ancient practice of transforming substances like turning base
+[00:01:00.420 --> 00:01:04.680] metals into gold and to any mysterious or magical process of transformation or creation.
+[00:01:05.520 --> 00:01:10.960] Related words, transformation, mysticism, chemistry, magic, art, synonyms, transmutation,
+[00:01:11.220 --> 00:01:16.780] transformation, enchantment, sorcery, magic, antonyms, science, realism, stagnation,
+[00:01:16.960 --> 00:01:17.440] immutability.

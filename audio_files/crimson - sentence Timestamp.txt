@@ -1,9 +1,14 @@
-[00:00:00.000 --> 00:00:05.880] Crimson is a noun and adjective that refers to a deep, rich red color, often with a hint of purple.
-[00:00:06.720 --> 00:00:10.120] It is commonly associated with passion, warmth, or intensity.
-[00:00:10.720 --> 00:00:16.160] As a noun, Crimson is a vivid red color, example the crimson of the sunset was reflected in the lake.
-[00:00:17.040 --> 00:00:21.640] As an adjective, Crimson describes something that is deep red in color.
-[00:00:22.080 --> 00:00:27.600] Example, the sky turned Crimson as the sun dipped below the horizon, painting the clouds with fiery hues.
-[00:00:28.000 --> 00:00:31.280] Example, the artist used Crimson for the highlights in the painting.
-[00:00:31.840 --> 00:00:36.880] Example, the crimson leaves of autumn adorn the trees creating a stunning display of color.
-[00:00:37.360 --> 00:00:44.240] Summary, Crimson refers to a deep red color, often used to describe intense or vivid red shades in nature, art or fabric.
-[00:00:44.960 --> 00:00:52.240] Related words, scarlet, ruby, maroon, cherry burgundy, antinims, pale, colorless, white, faded.
+[00:00:00.000 --> 00:00:04.940] Crimson is a noun and adjective that refers to a deep, rich red color, often with
+[00:00:04.940 --> 00:00:05.620] a hint of purple.
+[00:00:06.740 --> 00:00:09.880] It is commonly associated with passion, warmth, or intensity.
+[00:00:10.760 --> 00:00:12.980] As a noun, crimson is a vivid red color.
+[00:00:13.300 --> 00:00:15.980] Example, the crimson of the sunset was reflected in the lake.
+[00:00:16.980 --> 00:00:21.440] As an adjective, crimson describes something that is deep red in color.
+[00:00:22.040 --> 00:00:27.280] Example, the sky turned crimson as the sun dipped below the horizon, painting the clouds with fiery hues.
+[00:00:28.020 --> 00:00:31.140] Example, the artist used crimson for the highlights in the painting.
+[00:00:31.900 --> 00:00:32.420] Example,
+[00:00:33.260 --> 00:00:36.760] the crimson leaves of autumn adorn the trees, creating a stunning display of color.
+[00:00:37.380 --> 00:00:42.280] Summary, crimson refers to a deep red color, often used to describe intense or vivid
+[00:00:42.280 --> 00:00:44.100] red shades in nature, art, or fabric.
+[00:00:44.980 --> 00:00:48.700] Related words, scarlet, ruby, maroon, cherry, burgundy.
+[00:00:49.140 --> 00:00:52.080] Antonyms, pale, colorless, white, faded.

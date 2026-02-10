@@ -1,15 +1,23 @@
-[00:00:00.000 --> 00:00:05.520] Compotent, adjective, having the necessary skills, knowledge, or ability to do something
-[00:00:05.520 --> 00:00:08.640] effectively and efficiently.
-[00:00:08.640 --> 00:00:09.880] Example sentences.
-[00:00:09.880 --> 00:00:10.880] 1.
-[00:00:10.880 --> 00:00:15.560] She proved to be a competent leader, effectively managing the team through challenging projects.
-[00:00:15.560 --> 00:00:16.560] 2.
-[00:00:16.560 --> 00:00:20.320] His competent driving skills allowed him to navigate through heavy traffic without any
-[00:00:20.320 --> 00:00:21.320] issues.
-[00:00:21.320 --> 00:00:22.320] 3.
-[00:00:22.320 --> 00:00:26.560] The team of designers was highly competent, successfully turning our vague ideas into
-[00:00:26.560 --> 00:00:30.040] innovative products through compelling presentation proposals.
-[00:00:30.040 --> 00:00:34.600] Summary, competent, describes someone who is capable and skilled enough to perform
-[00:00:34.600 --> 00:00:36.680] a task or job effectively.
-[00:00:36.680 --> 00:00:44.620] Synonyms, skilled, proficient, capable, adequate, antonyms, incompetent, inept, unskilled,
-[00:00:44.620 --> 00:00:45.620] ineffective.
+[00:00:00.000 --> 00:00:01.720] Competent, adjective,
+[00:00:02.360 --> 00:00:06.980] having the necessary skills, knowledge, or ability to do something effectively and efficiently.
+[00:00:08.380 --> 00:00:09.000] Example sentences.
+[00:00:10.340 --> 00:00:10.560] 1.
+[00:00:10.900 --> 00:00:14.940] She proved to be a competent leader, effectively managing the team through challenging projects.
+[00:00:15.600 --> 00:00:15.920] 2.
+[00:00:16.420 --> 00:00:20.680] His competent driving skills allowed him to navigate through heavy traffic without any issues.
+[00:00:21.420 --> 00:00:22.000] 3.
+[00:00:22.540 --> 00:00:27.440] The team of designers was highly competent, successfully turning our vague ideas into innovative products
+[00:00:27.440 --> 00:00:29.240] through compelling presentation proposals.
+[00:00:30.000 --> 00:00:30.540] Summary.
+[00:00:31.080 --> 00:00:31.660] Competent.
+[00:00:31.960 --> 00:00:36.020] Describe someone who is capable and skilled enough to perform a task or job effectively.
+[00:00:36.840 --> 00:00:37.260] Synonyms.
+[00:00:37.560 --> 00:00:37.800] Skilled.
+[00:00:38.040 --> 00:00:38.520] Proficient.
+[00:00:39.100 --> 00:00:39.560] Capable.
+[00:00:40.020 --> 00:00:40.400] Adequate.
+[00:00:40.940 --> 00:00:41.520] Antonyms.
+[00:00:41.760 --> 00:00:42.360] Incompetent.
+[00:00:42.800 --> 00:00:43.060] Inept.
+[00:00:43.580 --> 00:00:44.080] Unskilled.
+[00:00:44.540 --> 00:00:44.880] Ineffective.

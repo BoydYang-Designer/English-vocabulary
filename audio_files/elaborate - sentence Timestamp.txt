@@ -1,17 +1,19 @@
-[00:00:00.000 --> 00:00:03.680] Elaborate is an adjective and a verb with the following meanings.
-[00:00:03.680 --> 00:00:08.240] As an adjective, elaborate means intricate, detailed, or carefully developed.
-[00:00:08.240 --> 00:00:13.280] It describes something that has been created with thoroughness, complexity, or great attention to detail.
-[00:00:14.080 --> 00:00:18.720] Example. The architect presented an elaborate design for the new museum,
-[00:00:18.720 --> 00:00:23.920] complete with intricate patterns, innovative materials, and carefully planned exhibition spaces.
-[00:00:23.920 --> 00:00:29.120] Example. They made elaborate preparations for his visit. Example.
-[00:00:29.120 --> 00:00:34.240] I see now that her behavior was all part of an elaborate plan plot scheme.
-[00:00:35.280 --> 00:00:41.440] As a verb, elaborate, elaborated, elaborating, to explain or develop something in more detail,
-[00:00:41.440 --> 00:00:46.000] to expand upon an idea, plan, or point by giving additional information.
-[00:00:46.640 --> 00:00:49.520] Example. I'll be glad to elaborate if you want to hear more.
-[00:00:50.160 --> 00:00:54.560] During the meeting, the team members elaborated on their ideas for the upcoming project,
-[00:00:54.560 --> 00:00:58.000] discussing potential strategies, timelines, and resource allocations.
-[00:00:58.720 --> 00:01:02.480] Example. Some of these points will be elaborated in the following chapter.
-[00:01:02.480 --> 00:01:06.480] Summary. Elaborate as an adjective means detailed and complex.
-[00:01:06.480 --> 00:01:10.160] As a verb, it means to provide more information or develop something more fully.
-[00:01:10.640 --> 00:01:15.120] Related words. Detailed, complex, expand, explain, develop.
-[00:01:15.120 --> 00:01:19.040] Antonyms. Simple, vague, shortened, summarize, basic.
+[00:00:00.000 --> 00:00:03.320] Elaborate is an adjective and a verb with the following meanings.
+[00:00:03.840 --> 00:00:07.780] As an adjective, elaborate means intricate, detailed, or carefully developed.
+[00:00:08.360 --> 00:00:13.200] It describes something that has been created with thoroughness, complexity, or great attention to detail.
+[00:00:14.160 --> 00:00:19.060] Example, the architect presented an elaborate design for the new museum, complete
+[00:00:19.060 --> 00:00:23.440] with intricate patterns, innovative materials, and carefully planned exhibition spaces.
+[00:00:24.280 --> 00:00:27.660] Example, they made elaborate preparations for his visit.
+[00:00:28.300 --> 00:00:32.700] Example, I see now that her behavior was all part of an elaborate plan
+[00:00:32.700 --> 00:00:34.160] plot scheme.
+[00:00:35.020 --> 00:00:39.840] As a verb, elaborate, elaborated, elaborating, to explain or
+[00:00:39.840 --> 00:00:44.780] develop something in more detail, to expand upon an idea, plan, or point by
+[00:00:44.780 --> 00:00:45.900] giving additional information.
+[00:00:46.760 --> 00:00:49.500] Example, I'll be glad to elaborate if you want to hear more.
+[00:00:50.200 --> 00:00:54.960] During the meeting, the team members elaborated on their ideas for the upcoming project, discussing
+[00:00:54.960 --> 00:00:58.040] potential strategies, timelines, and resource allocations.
+[00:00:58.760 --> 00:01:01.880] Example, some of these points will be elaborated in the following chapter.
+[00:01:02.660 --> 00:01:06.180] Summary, elaborate as an adjective means detailed and complex.
+[00:01:06.600 --> 00:01:10.140] As a verb, it means to provide more information or develop something more fully.
+[00:01:10.740 --> 00:01:14.820] Related words, detailed, complex, expand, explain, develop.
+[00:01:15.180 --> 00:01:18.960] Antonyms, simple, vague, shorten, summarize, basic.

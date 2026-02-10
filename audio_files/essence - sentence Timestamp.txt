@@ -1,12 +1,31 @@
-[00:00:00.000 --> 00:00:06.000] Essence is a noun refers to the intrinsic nature or indispensable quality of something that determines its character.
-[00:00:06.000 --> 00:00:12.000] It can also mean the most important or central aspect of an idea, situation, or object.
-[00:00:12.000 --> 00:00:18.000] Additionally, it can refer to an extract or concentrate of something that contains its most significant qualities.
-[00:00:18.000 --> 00:00:24.000] 1. The basic nature of a thing. The quality or qualities that make something what it is.
-[00:00:24.000 --> 00:00:27.000] The book's illustrations capture the essence of the story.
-[00:00:27.000 --> 00:00:32.000] Examples. The essence of her argument is that everyone deserves equal rights.
-[00:00:32.000 --> 00:00:36.000] The essence of his leadership style is empathy and integrity.
-[00:00:36.000 --> 00:00:46.000] 2. Extract or concentrate. A substance that contains in very strong form the special qualities, such as the taste and smell of the thing from which it is taken.
-[00:00:46.000 --> 00:00:51.000] Examples. Vanilla essence is commonly used in baking to add flavor.
-[00:00:51.000 --> 00:00:54.000] The perfume is made from the essence of various flowers.
-[00:00:55.000 --> 00:01:04.000] Summary essence refers to the core quality or nature of something, either in terms of its intrinsic characteristics or as a concentrated form of its most significant qualities.
-[00:01:04.000 --> 00:01:13.000] Related words. Core. Nature. Extract. Spirit. Substance. Antonyms. Superficiality. Exterior. Appearance.
+[00:00:00.000 --> 00:00:04.700] Essence is a noun refers to the intrinsic nature or indispensable quality of something that
+[00:00:04.700 --> 00:00:05.780] determines its character.
+[00:00:06.360 --> 00:00:11.300] It can also mean the most important or central aspect of an idea, situation, or object.
+[00:00:11.880 --> 00:00:17.180] Additionally, it can refer to an extract or concentrate of something that contains its most significant qualities.
+[00:00:18.160 --> 00:00:18.360] One.
+[00:00:19.080 --> 00:00:20.220] The basic nature of a thing.
+[00:00:20.820 --> 00:00:23.780] The quality or qualities that make something what it is.
+[00:00:24.120 --> 00:00:26.900] The book's illustrations capture the essence of the story.
+[00:00:26.900 --> 00:00:27.900] Examples.
+[00:00:28.660 --> 00:00:32.080] The essence of her argument is that everyone deserves equal rights.
+[00:00:32.620 --> 00:00:35.540] The essence of his leadership style is empathy and integrity.
+[00:00:36.840 --> 00:00:36.840] Two.
+[00:00:37.180 --> 00:00:38.280] Extract or concentrate.
+[00:00:38.700 --> 00:00:43.620] A substance that contains in very strong form the special qualities, such as the taste and smell
+[00:00:43.620 --> 00:00:45.400] of the thing from which it is taken.
+[00:00:46.280 --> 00:00:46.880] Examples.
+[00:00:47.920 --> 00:00:50.720] Vanilla essence is commonly used in baking to add flavor.
+[00:00:51.520 --> 00:00:53.780] The perfume is made from the essence of various flowers.
+[00:00:54.860 --> 00:00:55.480] Summary.
+[00:00:55.620 --> 00:01:00.280] Essence refers to the core quality or nature of something, either in terms of its intrinsic characteristics
+[00:01:00.280 --> 00:01:03.260] or as a concentrated form of its most significant qualities.
+[00:01:03.920 --> 00:01:04.600] Related words.
+[00:01:05.420 --> 00:01:05.660] Core.
+[00:01:06.100 --> 00:01:06.260] Nature.
+[00:01:06.700 --> 00:01:07.120] Extract.
+[00:01:07.500 --> 00:01:07.660] Spirit.
+[00:01:08.020 --> 00:01:08.480] Substance.
+[00:01:09.760 --> 00:01:10.380] Antonyms.
+[00:01:10.380 --> 00:01:11.000] Superficiality.
+[00:01:11.280 --> 00:01:11.680] Exterior.
+[00:01:12.020 --> 00:01:12.460] Appearance.

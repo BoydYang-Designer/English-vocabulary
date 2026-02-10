@@ -1,10 +1,16 @@
-[00:00:00.000 --> 00:00:05.360] Conceptually is an adverb that relates to the underlying idea, theory, or concept of something,
-[00:00:05.360 --> 00:00:08.660] rather than its physical form or practical application.
-[00:00:08.660 --> 00:00:15.920] Example. Conceptually, the new software design is groundbreaking, but will require extensive
-[00:00:15.920 --> 00:00:22.400] development to make it functional. Example. The artist's work is conceptually challenging,
-[00:00:22.400 --> 00:00:27.320] encouraging viewers to think deeply about social issues. Conceptually, the business plan
-[00:00:27.320 --> 00:00:31.720] is strong, though it still needs a clear strategy for implementation.
-[00:00:31.720 --> 00:00:36.440] Summary. Conceptually refers to considering or discussing something based on its ideas
-[00:00:36.440 --> 00:00:40.720] or theoretical basis, rather than its actual form or execution.
-[00:00:40.720 --> 00:00:45.320] Related words, theoretically, abstractly, intellectually, fundamentally,
-[00:00:45.320 --> 00:00:48.920] intonims, practically, tangibly, physically.
+[00:00:00.000 --> 00:00:05.160] Conceptually is an adverb that relates to the underlying idea, theory, or concept of something,
+[00:00:05.460 --> 00:00:08.020] rather than its physical form or practical application.
+[00:00:09.640 --> 00:00:10.360] Example.
+[00:00:11.120 --> 00:00:15.820] Conceptually, the new software design is groundbreaking, but will require extensive
+[00:00:15.820 --> 00:00:17.200] development to make it functional.
+[00:00:18.080 --> 00:00:18.600] Example.
+[00:00:19.560 --> 00:00:24.920] The artist's work is conceptually challenging, encouraging viewers to think deeply about social issues.
+[00:00:25.440 --> 00:00:30.780] Conceptually, the business plan is strong, though it still needs a clear strategy for implementation.
+[00:00:31.700 --> 00:00:32.020] Summary.
+[00:00:32.440 --> 00:00:37.400] Conceptually refers to considering or discussing something based on its ideas or theoretical basis,
+[00:00:37.720 --> 00:00:39.980] rather than its actual form or execution.
+[00:00:40.640 --> 00:00:41.540] Related words, theoretically,
+[00:00:42.160 --> 00:00:43.180] abstractly, intellectually,
+[00:00:43.840 --> 00:00:44.120] fundamentally,
+[00:00:45.200 --> 00:00:46.840] antonyms, practically,
+[00:00:47.560 --> 00:00:48.580] tangibly, physically.

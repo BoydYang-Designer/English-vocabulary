@@ -1,11 +1,18 @@
-[00:00:00.000 --> 00:00:05.440] Deviation refers to the act of departing or veering away from a standard rule, path, or norm.
-[00:00:05.440 --> 00:00:12.960] 1. From a standard or rule, the student's behavior showed a clear deviation from the school's
-[00:00:12.960 --> 00:00:15.680] code of conduct prompting a meeting with the principal.
-[00:00:15.680 --> 00:00:21.200] 2. From a path or route, the airplane encountered strong winds causing it to make a slight deviation
-[00:00:21.200 --> 00:00:23.000] from its planned flight path.
-[00:00:23.000 --> 00:00:28.920] 3. From a norm or average, the company's profits for the quarter showed a deviation from
-[00:00:28.920 --> 00:00:32.720] the industry average raising concerns among shareholders.
-[00:00:32.720 --> 00:00:38.840] 4. In statistical analysis, the quality control team identified a deviation in the product
-[00:00:38.840 --> 00:00:43.320] specifications leading to adjustments in the manufacturing process.
-[00:00:43.320 --> 00:00:49.480] 5. In behavior or performance, the employee's consistent tardiness was viewed as a deviation
-[00:00:49.480 --> 00:00:52.880] from company policy resulting in disciplinary action.
+[00:00:00.000 --> 00:00:05.160] Deviation refers to the act of departing or veering away from a standard rule, path, or norm.
+[00:00:05.840 --> 00:00:06.360] 1.
+[00:00:07.460 --> 00:00:12.180] From a standard or rule, the student's behavior showed a clear deviation
+[00:00:12.180 --> 00:00:15.120] from the school's code of conduct, prompting a meeting with the principal.
+[00:00:15.980 --> 00:00:16.280] 2.
+[00:00:16.520 --> 00:00:21.400] From a path or route, the airplane encountered strong winds, causing it to make a slight deviation from
+[00:00:21.400 --> 00:00:22.560] its planned flight path.
+[00:00:22.560 --> 00:00:23.760] 3.
+[00:00:24.260 --> 00:00:29.060] From a norm or average, the company's profits for the quarter showed a deviation from the
+[00:00:29.060 --> 00:00:31.460] industry average, raising concerns among shareholders.
+[00:00:33.040 --> 00:00:33.720] 4.
+[00:00:34.160 --> 00:00:35.280] In statistical analysis,
+[00:00:35.880 --> 00:00:40.560] the quality control team identified a deviation in the product specifications leading to adjustments
+[00:00:40.560 --> 00:00:42.140] in the manufacturing process.
+[00:00:43.480 --> 00:00:44.280] 5.
+[00:00:44.640 --> 00:00:45.900] In behavior or performance,
+[00:00:46.500 --> 00:00:51.360] the employee's consistent tardiness was viewed as a deviation from company policy, resulting
+[00:00:51.360 --> 00:00:52.800] in disciplinary action.

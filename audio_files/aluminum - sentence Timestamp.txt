@@ -1,18 +1,15 @@
-[00:00:00.000 --> 00:00:04.360] Aluminum is a noun and an adjective with the following meanings.
-[00:00:04.360 --> 00:00:09.200] As a noun, aluminum, also called aluminum in some regions,
-[00:00:09.200 --> 00:00:12.520] refers to a soft, lightweight and corrosion-resistant metal
-[00:00:12.520 --> 00:00:14.920] that is widely used in various industries,
-[00:00:14.920 --> 00:00:18.040] including construction, transportation, and packaging.
-[00:00:18.040 --> 00:00:21.320] Example, the airplane's body is made from lightweight aluminum
-[00:00:21.320 --> 00:00:23.160] to reduce fuel consumption.
-[00:00:23.160 --> 00:00:27.840] Example, aluminum foil is often used to wrap food to keep it fresh.
-[00:00:28.120 --> 00:00:32.480] The window frames are made of aluminum for durability and a modern look.
-[00:00:33.480 --> 00:00:36.200] As an adjective, aluminum describes something made from
-[00:00:36.200 --> 00:00:38.720] or relating to the metal aluminum.
-[00:00:38.720 --> 00:00:43.000] Example, the aluminum cans are easy to recycle and lightweight.
-[00:00:43.000 --> 00:00:46.120] The aluminum coating on the roof helps reflect heat.
-[00:00:46.120 --> 00:00:50.560] Summary, aluminum is a metal known for being lightweight, durable,
-[00:00:50.560 --> 00:00:53.720] and resistant to corrosion, commonly used in many industries
-[00:00:53.720 --> 00:00:55.880] for various products.
-[00:00:55.920 --> 00:00:59.640] Related words, metal, alloy, foil, light, durable,
-[00:00:59.640 --> 00:01:02.880] Antonyms heavy fragile, non-corrosive as in other materials.
+[00:00:00.000 --> 00:00:03.680] Aluminum is a noun and an adjective with the following meanings.
+[00:00:04.540 --> 00:00:09.480] As a noun, aluminum, also called aluminum in some regions, refers
+[00:00:09.480 --> 00:00:14.460] to a soft, lightweight, and corrosion -resistant metal that is widely used in various industries,
+[00:00:14.900 --> 00:00:17.380] including construction, transportation, and packaging.
+[00:00:18.180 --> 00:00:22.520] Example, the airplane's body is made from lightweight aluminum to reduce fuel consumption.
+[00:00:23.320 --> 00:00:27.300] Example, aluminum foil is often used to wrap food to keep it fresh.
+[00:00:27.900 --> 00:00:31.580] The window frames are made of aluminum for durability and a modern look.
+[00:00:33.020 --> 00:00:37.840] As an adjective, aluminum describes something made from or relating to the metal aluminum.
+[00:00:38.600 --> 00:00:42.200] Example, the aluminum cans are easy to recycle and lightweight.
+[00:00:42.900 --> 00:00:45.200] The aluminum coating on the roof helps reflect heat.
+[00:00:45.960 --> 00:00:46.640] Summary,
+[00:00:47.340 --> 00:00:52.300] aluminum is a metal known for being lightweight, durable, and resistant to corrosion, commonly
+[00:00:52.300 --> 00:00:54.860] used in many industries for various products.
+[00:00:55.820 --> 00:00:59.140] Related words, metal alloy foil light durable.
+[00:00:59.560 --> 00:01:02.400] Antenom's heavy, fragile, non -corrosive as in other materials.

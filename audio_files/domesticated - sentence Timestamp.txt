@@ -1,11 +1,11 @@
-[00:00:00.000 --> 00:00:02.760] Domesticated as an adjective, one,
-[00:00:02.760 --> 00:00:07.560] tamed and adapted for human use such as for companionship, work, or food production.
-[00:00:07.560 --> 00:00:12.800] Example, dogs and cats are among the most commonly domesticated animals.
-[00:00:12.800 --> 00:00:17.040] Example, the farm had several domesticated horses trained for riding.
-[00:00:17.040 --> 00:00:22.400] Example, over generations, wild plants have been domesticated to produce better crops.
-[00:00:22.400 --> 00:00:26.080] Two, accustomed to home life or household activities.
-[00:00:26.320 --> 00:00:32.000] Example, he became more domesticated after getting married, helping with chores and cooking.
-[00:00:32.000 --> 00:00:36.480] Example, she never saw herself as the domesticated type, preferring travel over home life.
-[00:00:37.680 --> 00:00:44.160] Summary, domesticated refers to animals tamed for human use or a person accustomed to household life.
-[00:00:44.160 --> 00:00:48.880] Related words, tamed, trained, cultivated household, civilized.
-[00:00:48.880 --> 00:00:52.960] Antonyms, wild, feral, untamed, undemesticated, untrained.
+[00:00:00.000 --> 00:00:01.660] Domesticated as an adjective,
+[00:00:02.280 --> 00:00:07.000] one, tamed and adapted for human use such as for companionship, work, or food production.
+[00:00:08.060 --> 00:00:12.320] Example, dogs and cats are among the most commonly domesticated animals.
+[00:00:13.060 --> 00:00:16.560] Example, the farm had several domesticated horses trained for riding.
+[00:00:17.280 --> 00:00:21.780] Example, over generations, wild plants have been domesticated to produce better crops.
+[00:00:22.580 --> 00:00:25.640] Two, accustomed to home life or household activities.
+[00:00:26.320 --> 00:00:31.320] Example, he became more domesticated after getting married, helping with chores and cooking.
+[00:00:32.020 --> 00:00:36.260] Example, she never saw herself as the domesticated type, preferring travel over home life.
+[00:00:38.520 --> 00:00:43.500] Summary, domesticated refers to animals tamed for human use or a person accustomed to household life.
+[00:00:44.080 --> 00:00:48.020] Related words, tamed, trained, cultivated household, civilized.
+[00:00:48.840 --> 00:00:52.640] Antonyms, wild, feral, untamed, undomesticated, untrained.

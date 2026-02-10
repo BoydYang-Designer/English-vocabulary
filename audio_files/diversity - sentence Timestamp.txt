@@ -1,5 +1,7 @@
-[00:00:00.000 --> 00:00:05.620] Diversity refers to the presence of a wide range of different elements or qualities within a particular group,
-[00:00:06.280 --> 00:00:08.280] community or environment.
-[00:00:08.280 --> 00:00:15.000] For example, the diversity of opinions among the office led to a more comprehensive understanding of the issues at hand and
-[00:00:15.280 --> 00:00:17.280] inspired creative solutions.
-[00:00:18.400 --> 00:00:25.520] Another example is the company values diversity in its workforce, believing that different perspectives lead to better decision making.
+[00:00:00.000 --> 00:00:04.960] Diversity refers to the presence of a wide range of different elements or qualities within a
+[00:00:04.960 --> 00:00:07.660] particular group, community, or environment.
+[00:00:08.440 --> 00:00:08.920] For example,
+[00:00:09.540 --> 00:00:14.480] the diversity of opinions among the office led to a more comprehensive understanding of the issues at
+[00:00:14.480 --> 00:00:16.780] hand and inspired creative solutions.
+[00:00:18.120 --> 00:00:22.900] Another example is the company values diversity in its workforce believing that
+[00:00:22.900 --> 00:00:25.460] different perspectives lead to better decision -making.

@@ -1,16 +1,18 @@
-[00:00:00.000 --> 00:00:06.240] Coherent, adjective, describes something that is logical, consistent, and well-organized,
-[00:00:06.240 --> 00:00:08.720] making it easy to understand or work with.
-[00:00:08.720 --> 00:00:14.720] One, logical and well-organized, clear and easy to understand.
-[00:00:14.720 --> 00:00:15.820] Example sentences.
-[00:00:15.820 --> 00:00:19.360] He proposed the most coherent plan to improve the schools.
-[00:00:19.360 --> 00:00:23.600] His explanation was clear and coherent, making it easy for everyone to understand the complex
-[00:00:23.600 --> 00:00:24.600] concept.
-[00:00:24.600 --> 00:00:27.400] The student has trouble expressing his ideas coherently.
-[00:00:27.880 --> 00:00:32.760] Two, working well together, functioning effectively as a group or team.
-[00:00:32.760 --> 00:00:34.160] Example sentences.
-[00:00:34.160 --> 00:00:39.160] They are able to function as a coherent group, working seamlessly together.
-[00:00:39.160 --> 00:00:43.960] They seem to have no coherent plan for saving the company, which is causing confusion.
-[00:00:43.960 --> 00:00:49.720] They work coherently together, ensuring that all aspects of the project align.
-[00:00:49.720 --> 00:00:50.720] Summary.
-[00:00:50.720 --> 00:00:55.720] Coherent refers to something that is well-organized and logically connected, making it easy
-[00:00:55.720 --> 00:00:58.520] to understand or effectively function together.
+[00:00:00.000 --> 00:00:01.760] Coherent, adjective,
+[00:00:02.380 --> 00:00:07.340] describes something that is logical, consistent, and well -organized, making it easy to understand
+[00:00:07.340 --> 00:00:08.120] or work with.
+[00:00:08.660 --> 00:00:08.820] 1.
+[00:00:09.520 --> 00:00:13.180] Logical and well -organized, clear and easy to understand.
+[00:00:14.300 --> 00:00:15.060] Example sentences.
+[00:00:15.780 --> 00:00:18.580] He proposed the most coherent plan to improve the schools.
+[00:00:19.220 --> 00:00:24.120] His explanation was clear and coherent, making it easy for everyone to understand the complex concept.
+[00:00:24.520 --> 00:00:26.820] The student has trouble expressing his ideas coherently.
+[00:00:27.480 --> 00:00:28.120] 2.
+[00:00:28.120 --> 00:00:31.720] Working well together, functioning effectively as a group or team.
+[00:00:32.520 --> 00:00:33.240] Example sentences.
+[00:00:34.120 --> 00:00:38.260] They are able to function as a coherent group, working seamlessly together.
+[00:00:38.960 --> 00:00:43.040] They seem to have no coherent plan for saving the company, which is causing confusion.
+[00:00:43.800 --> 00:00:47.760] They work coherently together, ensuring that all aspects of the project align.
+[00:00:49.580 --> 00:00:49.960] Summary.
+[00:00:50.340 --> 00:00:55.240] Coherent refers to something that is well -organized and logically connected, making
+[00:00:55.240 --> 00:00:58.260] it easy to understand or effectively function together.

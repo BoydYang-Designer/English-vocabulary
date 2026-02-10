@@ -1,7 +1,10 @@
-[00:00:00.000 --> 00:00:11.000] Biofuel is a noun, refers to a type of fuel that is derived from biological sources such as plants, algae, or animal waste, and is used as an alternative to fossil fuels.
-[00:00:11.000 --> 00:00:17.000] Biofuels can be in the form of liquid, gas, or solid, and are considered renewable energy sources.
-[00:00:17.000 --> 00:00:23.000] Example, the government is investing in research to develop more efficient biofuels for transportation.
-[00:00:23.000 --> 00:00:28.000] Example, biofuel made from algae has the potential to be a sustainable energy source.
-[00:00:28.000 --> 00:00:32.000] Example, the car runs on biofuel derived from vegetable oil.
-[00:00:32.000 --> 00:00:42.000] Summary, biofuel refers to a renewable fuel made from biological materials used as an alternative to traditional fossil fuels to help reduce environmental impact.
-[00:00:42.000 --> 00:00:51.000] Related words, renewable energy, ethanol, biodiesel, biomass, alternative fuel, antinims, fossil fuel, petroleum, coal, natural gas.
+[00:00:00.880 --> 00:00:05.960] Biofuel is a noun, refers to a type of fuel that is derived from biological sources such as plants,
+[00:00:06.400 --> 00:00:10.720] algae, or animal waste, and is used as an alternative to fossil fuels.
+[00:00:11.040 --> 00:00:16.260] Biofuels can be in the form of liquid, gas, or solid, and are considered renewable energy sources.
+[00:00:17.600 --> 00:00:22.320] Example, the government is investing in research to develop more efficient biofuels for transportation.
+[00:00:22.940 --> 00:00:27.340] Example, biofuel made from algae has the potential to be a sustainable energy source.
+[00:00:27.340 --> 00:00:31.180] Example, the car runs on biofuel derived from vegetable oil.
+[00:00:32.180 --> 00:00:37.080] Summary, biofuel refers to a renewable fuel made from biological materials used
+[00:00:37.080 --> 00:00:41.120] as an alternative to traditional fossil fuels to help reduce environmental impact.
+[00:00:41.660 --> 00:00:46.400] Related words, renewable energy, ethanol, biodiesel, biomass, alternative fuel.
+[00:00:46.480 --> 00:00:50.220] Antonyms, fossil fuel, petroleum, coal, natural gas.

@@ -1,15 +1,16 @@
-[00:00:00.000 --> 00:00:06.640] Essential, as an adjective, absolutely necessary or extremely important, fundamental or indispensable
-[00:00:06.640 --> 00:00:09.600] for something to function or exist.
-[00:00:09.600 --> 00:00:12.960] Example, water is essential for all forms of life.
-[00:00:12.960 --> 00:00:17.560] Example, it's essential to have a valid passport when traveling internationally.
-[00:00:17.560 --> 00:00:21.840] Example, good communication skills are essential for effective teamwork.
-[00:00:21.840 --> 00:00:25.960] Example, proper rest is essential for maintaining good health.
-[00:00:25.960 --> 00:00:31.280] Example, as a noun, something that is absolutely necessary or indispensable.
-[00:00:31.280 --> 00:00:36.000] Example, food, water, and shelter are basic essentials for survival.
-[00:00:36.000 --> 00:00:39.720] Example, she packed only the essentials for her hiking trip.
-[00:00:39.720 --> 00:00:43.520] Example, understanding grammar is an essential for learning a new language.
-[00:00:43.520 --> 00:00:47.760] Example, the kit includes all the camping essentials.
-[00:00:47.760 --> 00:00:52.480] Summary, essential refers to something that is absolutely necessary or extremely important,
-[00:00:52.480 --> 00:00:57.800] either as an indispensable quality or as a vital item, related words necessary, vital,
-[00:00:57.800 --> 00:01:03.160] crucial, fundamental, indispensable, and in him's unnecessary, optional, non-essential,
-[00:01:03.160 --> 00:01:04.240] trivial.
+[00:00:00.000 --> 00:00:00.860] Essential.
+[00:00:01.300 --> 00:00:05.920] As an adjective, absolutely necessary or extremely important, fundamental or
+[00:00:05.920 --> 00:00:08.300] indispensable for something to function or exist.
+[00:00:09.100 --> 00:00:11.820] Example, water is essential for all forms of life.
+[00:00:12.440 --> 00:00:16.200] Example, it's essential to have a valid passport when traveling internationally.
+[00:00:17.080 --> 00:00:20.420] Example, good communication skills are essential for effective teamwork.
+[00:00:21.280 --> 00:00:24.680] Example, proper rest is essential for maintaining good health.
+[00:00:25.380 --> 00:00:29.660] Essential, as a noun, something that is absolutely necessary or indispensable.
+[00:00:30.780 --> 00:00:34.760] Example, food, water and shelter are basic essentials for survival.
+[00:00:35.480 --> 00:00:38.600] Example, she packed only the essentials for her hiking trip.
+[00:00:39.280 --> 00:00:42.740] Example, understanding grammar is an essential for learning a new language.
+[00:00:42.940 --> 00:00:45.580] Example, the kit includes all the camping essentials.
+[00:00:47.180 --> 00:00:52.280] Summary, essential refers to something that is absolutely necessary or extremely important,
+[00:00:52.520 --> 00:00:55.680] either as an indispensable quality or as a vital item.
+[00:00:55.880 --> 00:00:59.400] Related words, necessary, vital, crucial, fundamental, indispensable,
+[00:01:00.020 --> 00:01:03.080] antonyms unnecessary, optional, non -essential, trivial.

@@ -1,21 +1,20 @@
-[00:00:00.000 --> 00:00:03.920] Critique can function as both a noun and a verb.
-[00:00:03.920 --> 00:00:07.080] It refers to a detailed analysis and assessment of something,
-[00:00:07.080 --> 00:00:10.000] such as a literary work, piece of art, or performance.
-[00:00:10.960 --> 00:00:13.880] As a noun, a careful judgment
-[00:00:13.880 --> 00:00:15.000] in which you give your opinion
-[00:00:15.000 --> 00:00:17.440] about the good and bad parts of something,
-[00:00:17.440 --> 00:00:19.640] such as a piece of writing or a work of art.
-[00:00:20.520 --> 00:00:22.240] Example sentences.
-[00:00:22.240 --> 00:00:24.840] One, the professors critique of the students' essay
-[00:00:24.840 --> 00:00:27.800] provided valuable insights for improvement.
-[00:00:27.800 --> 00:00:30.400] Two, the art exhibit received a glowing critique
-[00:00:30.400 --> 00:00:32.000] from the gallery's curator.
-[00:00:32.000 --> 00:00:36.120] Three, they gave a fair and honest critique of her art.
-[00:00:36.120 --> 00:00:40.360] As a verb, critique, critiqued,
-[00:00:40.360 --> 00:00:42.920] critiquing means to evaluate or review something
-[00:00:42.920 --> 00:00:45.040] in a detailed and analytical way.
-[00:00:45.040 --> 00:00:46.520] Example sentences.
-[00:00:46.520 --> 00:00:49.840] One, the editor was asked to critique the manuscript
-[00:00:49.840 --> 00:00:52.160] before it was submitted for publication.
-[00:00:52.160 --> 00:00:54.800] The panel will critique each participant's presentation,
-[00:00:54.800 --> 00:00:56.800] offering constructive feedback.
+[00:00:00.720 --> 00:00:03.260] Critique can function as both a noun and a verb.
+[00:00:03.860 --> 00:00:08.880] It refers to a detailed analysis and assessment of something, such as a literary work, piece of art,
+[00:00:09.020 --> 00:00:09.480] or performance.
+[00:00:10.720 --> 00:00:11.760] As a noun,
+[00:00:12.700 --> 00:00:16.760] a careful judgment in which you give your opinion about the good and bad parts of something,
+[00:00:17.160 --> 00:00:19.220] such as a piece of writing or a work of art.
+[00:00:20.420 --> 00:00:21.120] Example sentences.
+[00:00:22.140 --> 00:00:22.480] 1.
+[00:00:22.980 --> 00:00:26.800] The professor's critique of the student's essay provided valuable insights for improvement.
+[00:00:26.800 --> 00:00:27.940] 2.
+[00:00:28.500 --> 00:00:31.380] The art exhibit received a glowing critique from the gallery's curator.
+[00:00:31.920 --> 00:00:32.260] 3.
+[00:00:32.820 --> 00:00:35.420] They gave a fair and honest critique of her art.
+[00:00:36.020 --> 00:00:36.660] As a verb,
+[00:00:38.480 --> 00:00:43.440] critiquing means to evaluate or review something in a detailed
+[00:00:43.440 --> 00:00:44.440] and analytical way.
+[00:00:44.960 --> 00:00:45.660] Example sentences.
+[00:00:46.440 --> 00:00:46.780] 1.
+[00:00:47.620 --> 00:00:51.260] The editor was asked to critique the manuscript before it was submitted for publication.
+[00:00:51.260 --> 00:00:56.000] The panel will critique each participant's presentation offering constructive feedback.

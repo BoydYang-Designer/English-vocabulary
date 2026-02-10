@@ -1,23 +1,26 @@
-[00:00:00.000 --> 00:00:05.620] Feature can be used as a noun or a verb, as a noun, feature, features.
-[00:00:05.620 --> 00:00:08.560] One, a distinctive part or characteristic of something.
-[00:00:08.560 --> 00:00:11.880] Examples, the car has several new safety features.
-[00:00:11.880 --> 00:00:14.440] Her eyes are her most striking feature.
-[00:00:14.440 --> 00:00:17.360] The phone's best feature is its long battery life.
-[00:00:17.360 --> 00:00:21.000] Two, a special article or program highlighting a topic.
-[00:00:21.000 --> 00:00:24.640] Examples, the magazine published a feature on climate change.
-[00:00:24.640 --> 00:00:27.560] The news channel aired a feature about local artists.
-[00:00:27.560 --> 00:00:30.440] The newspaper ran a feature on healthy eating habits.
-[00:00:30.440 --> 00:00:34.640] Three, a prominent or noticeable aspect of a landscape or environment.
-[00:00:34.640 --> 00:00:38.760] Examples, the mountains features were visible even from a distance.
-[00:00:38.760 --> 00:00:41.440] The river is a key feature of the national park.
-[00:00:41.440 --> 00:00:46.200] Architectural features of the building include tall columns and arched windows.
-[00:00:46.200 --> 00:00:50.600] As a verb, feature, featured, featuring.
-[00:00:50.600 --> 00:00:54.080] To include or give special attention to something or someone.
-[00:00:54.080 --> 00:00:57.040] Examples, the festival will feature local musicians,
-[00:00:57.040 --> 00:01:00.200] the exhibition features works by young artists.
-[00:01:00.200 --> 00:01:03.120] The movie features several award-winning actors.
-[00:01:03.120 --> 00:01:07.560] Summary, as a noun, feature can mean a characteristic, a special article or program,
-[00:01:07.560 --> 00:01:09.840] or a noticeable part of a landscape.
-[00:01:09.840 --> 00:01:13.480] As a verb, it means to include or highlight something or someone.
-[00:01:13.480 --> 00:01:18.240] Synonyms, characteristic, attribute, highlight, element, aspect.
-[00:01:18.240 --> 00:01:22.160] Antonyms, detail, minor point, insignificant omission.
+[00:00:00.000 --> 00:00:02.160] This feature can be used as a noun or a verb.
+[00:00:02.680 --> 00:00:04.620] As a noun, feature, features.
+[00:00:05.500 --> 00:00:07.760] One, a distinctive part or characteristic of something.
+[00:00:08.360 --> 00:00:11.020] Examples, the car has several new safety features.
+[00:00:11.800 --> 00:00:13.720] Her eyes are her most striking feature.
+[00:00:14.380 --> 00:00:16.800] The phone's best feature is its long battery life.
+[00:00:17.280 --> 00:00:20.260] Two, a special article or program highlighting a topic.
+[00:00:20.860 --> 00:00:21.200] Examples,
+[00:00:21.900 --> 00:00:23.940] the magazine published a feature on climate change.
+[00:00:24.500 --> 00:00:26.700] The news channel aired a feature about local artists.
+[00:00:27.260 --> 00:00:29.760] The newspaper ran a feature on healthy eating habits.
+[00:00:30.660 --> 00:00:34.060] Three, a prominent or noticeable aspect of a landscape or environment.
+[00:00:34.560 --> 00:00:34.860] Examples,
+[00:00:35.940 --> 00:00:38.160] the mountains features were visible even from a distance.
+[00:00:38.740 --> 00:00:40.700] The river is a key feature of the National Park.
+[00:00:41.460 --> 00:00:45.440] Architectural features of the building include tall columns and arched windows.
+[00:00:46.100 --> 00:00:49.060] As a verb, feature, featured, featuring.
+[00:00:50.260 --> 00:00:53.680] To include or give special attention to something or someone.
+[00:00:53.680 --> 00:00:56.440] Examples, the festival will feature local musicians.
+[00:00:57.020 --> 00:00:59.200] The exhibition features works by young artists.
+[00:00:59.880 --> 00:01:02.160] The movie features several award -winning actors.
+[00:01:03.000 --> 00:01:07.800] Summary, as a noun, feature can mean a characteristic, a special article or program, or a
+[00:01:07.800 --> 00:01:09.160] noticeable part of a landscape.
+[00:01:09.680 --> 00:01:12.640] As a verb, it means to include or highlight something or someone.
+[00:01:13.420 --> 00:01:17.620] Synonyms, characteristic, attribute, highlight, element, aspect.
+[00:01:18.180 --> 00:01:21.640] Antonyms, detail, minor point, insignificance, omission.

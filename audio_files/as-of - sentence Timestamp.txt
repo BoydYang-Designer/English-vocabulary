@@ -1,8 +1,12 @@
-[00:00:00.000 --> 00:00:08.000] As of as a prepositional phrase used to indicate a specific time or date when something begins is effective or is measured.
-[00:00:08.000 --> 00:00:12.000] It can also mean starting from or at a particular point in time.
-[00:00:12.000 --> 00:00:16.000] Example, as of next week the new policy will take effect.
-[00:00:16.000 --> 00:00:21.000] Example, as of 2025 the company will no longer produce plastic packaging.
-[00:00:21.000 --> 00:00:26.000] Example, as of now there are no updates on the situation.
-[00:00:26.000 --> 00:00:29.000] As of yesterday she had not responded to the email.
-[00:00:29.000 --> 00:00:36.000] Summary, as of, is used to specify a point in time when something starts, applies or is measured.
-[00:00:36.000 --> 00:00:43.000] Related words starting from, effective from beginning on up to, Antonim's until before.
+[00:00:00.000 --> 00:00:01.940] As of as a prepositional phrase,
+[00:00:02.560 --> 00:00:07.440] used to indicate a specific time or date when something begins is effective or
+[00:00:07.440 --> 00:00:07.980] is measured.
+[00:00:08.500 --> 00:00:11.760] It can also mean starting from or at a particular point in time.
+[00:00:12.600 --> 00:00:15.900] Example, as of next week, the new policy will take effect.
+[00:00:16.620 --> 00:00:20.940] Example, as of 2025, the company will no longer produce plastic packaging.
+[00:00:21.740 --> 00:00:22.300] Example,
+[00:00:22.980 --> 00:00:25.260] as of now, there are no updates on the situation.
+[00:00:25.260 --> 00:00:28.560] As of yesterday, she had not responded to the email.
+[00:00:29.580 --> 00:00:34.720] Summary, as of, is used to specify a point in time when something starts, applies,
+[00:00:35.060 --> 00:00:35.540] or is measured.
+[00:00:36.180 --> 00:00:41.320] Related words starting from, effective from, beginning on, up to, antonyms until before.

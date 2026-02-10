@@ -1,18 +1,20 @@
-[00:00:00.000 --> 00:00:03.440] Aerial can be used as both an adjective and a noun.
-[00:00:03.440 --> 00:00:05.000] Here are its meanings.
-[00:00:05.000 --> 00:00:08.480] As an adjective, meaning one, relating to the air,
-[00:00:08.480 --> 00:00:11.320] existing, happening, or done in the air.
-[00:00:11.320 --> 00:00:15.720] Example, the aerial display of fireworks lit up the night sky.
-[00:00:15.720 --> 00:00:19.720] Example, they conducted aerial surveys to monitor wildlife populations.
-[00:00:19.720 --> 00:00:24.120] Example, aerial photography provides stunning views of landscapes from above.
-[00:00:24.120 --> 00:00:27.920] Meaning two, related to the air, light and delicate.
-[00:00:28.160 --> 00:00:32.960] Example, the dancer's movements were light and aerial, almost as if she were floating.
-[00:00:32.960 --> 00:00:37.640] Example, the aerial quality of the painting gives it a dreamlike atmosphere.
-[00:00:37.640 --> 00:00:43.520] As a noun, a device used for receiving or transmitting radio or television signals,
-[00:00:43.520 --> 00:00:45.680] often called an antenna.
-[00:00:45.680 --> 00:00:50.680] Example, the technician installed a new aerial on the roof to improve the TV signal.
-[00:00:50.680 --> 00:00:55.800] Example, an aerial can enhance the reception quality for various broadcasting services.
-[00:00:55.800 --> 00:01:01.000] Summary, the term aerial, refers to anything related to the air or atmosphere,
-[00:01:01.000 --> 00:01:06.480] whether in the context of activities or qualities, or as a physical device for signal transmission.
-[00:01:06.480 --> 00:01:10.400] Related words, aerialist, airborne, ethereal antenna,
-[00:01:10.400 --> 00:01:13.480] Antonim's ground-based terrestrial solid.
+[00:00:00.000 --> 00:00:03.020] Aerial can be used as both an adjective and a noun.
+[00:00:03.600 --> 00:00:04.300] Here are its meanings.
+[00:00:05.440 --> 00:00:06.080] As an adjective,
+[00:00:06.700 --> 00:00:10.880] meaning one, relating to the air existing, happening, or done in the air.
+[00:00:11.520 --> 00:00:15.260] Example, the aerial display of fireworks lit up the night sky.
+[00:00:15.880 --> 00:00:19.280] Example, they conducted aerial surveys to monitor wildlife populations.
+[00:00:19.900 --> 00:00:23.480] Example, aerial photography provides stunning views of landscapes from above.
+[00:00:24.160 --> 00:00:25.040] Meaning two,
+[00:00:25.680 --> 00:00:27.480] related to the air, light and delicate.
+[00:00:27.480 --> 00:00:32.420] Example, the dancers' movements were light and aerial, almost as if she were floating.
+[00:00:32.940 --> 00:00:36.920] Example, the aerial quality of the painting gives it a dreamlike atmosphere.
+[00:00:38.780 --> 00:00:43.200] As a noun, a device used for receiving or transmitting radio or television signals,
+[00:00:43.500 --> 00:00:44.560] often called an antenna.
+[00:00:45.660 --> 00:00:49.760] Example, the technician installed a new aerial on the roof to improve the TV signal.
+[00:00:50.640 --> 00:00:54.840] Example, an aerial can enhance the reception quality for various broadcasting services.
+[00:00:54.840 --> 00:00:59.620] Summary, the term aerial, refers to anything related to the
+[00:00:59.620 --> 00:01:04.220] air or atmosphere, whether in the context of activities or qualities, or as a physical
+[00:01:04.220 --> 00:01:05.880] device for signal transmission.
+[00:01:06.460 --> 00:01:11.340] Related words, aerialist, airborne, ethereal antenna, antonym's ground
+[00:01:11.340 --> 00:01:13.020] -based terrestrial solid.

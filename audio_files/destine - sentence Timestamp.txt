@@ -1,7 +1,15 @@
-[00:00:00.000 --> 00:00:08.000] Destin is a verb. Destin, destined, destined. That means to determine or set something aside for a specific purpose or fate.
-[00:00:08.000 --> 00:00:13.000] It is often used to indicate that something is meant to happen or is planned for a particular outcome.
-[00:00:13.000 --> 00:00:18.000] 1. To determine beforehand or designate for a particular purpose.
-[00:00:18.000 --> 00:00:26.000] Example, this money is destined for a new house. Example, the room was destined to become a nursery for the new baby.
-[00:00:26.000 --> 00:00:34.000] 2. To intend or choose someone or something for a particular fate. Example, he was destined to become a great leader.
-[00:00:34.000 --> 00:00:38.000] Example, the couple believed they were destined to be together.
-[00:00:38.000 --> 00:00:49.000] Summary, destined, refers to the act of determining or assigning something or someone to a specific purpose, outcome or fate, often implying a sense of inevitability or preordination.
+[00:00:00.000 --> 00:00:01.280] Destin is a verb.
+[00:00:02.220 --> 00:00:02.680] Destin.
+[00:00:02.860 --> 00:00:03.300] Destin.
+[00:00:03.400 --> 00:00:03.800] Destining.
+[00:00:04.080 --> 00:00:08.040] That means to determine or set something aside for a specific purpose or fate.
+[00:00:08.220 --> 00:00:13.020] It is often used to indicate that something is meant to happen or is planned for a particular outcome.
+[00:00:13.800 --> 00:00:17.320] One, to determine beforehand or designate for a particular purpose.
+[00:00:17.820 --> 00:00:21.180] Example, this money is destined for a new house.
+[00:00:21.880 --> 00:00:25.420] Example, the room was destined to become a nursery for the new baby.
+[00:00:25.420 --> 00:00:30.600] Two, to intend or choose someone or something for a particular fate.
+[00:00:31.060 --> 00:00:33.820] Example, he was destined to become a great leader.
+[00:00:34.460 --> 00:00:37.260] Example, the couple believed they were destined to be together.
+[00:00:38.200 --> 00:00:42.840] Summary, Destin, refers to the act of determining or assigning something or
+[00:00:42.840 --> 00:00:47.260] someone to a specific purpose, outcome or fate, often implying a sense of
+[00:00:47.260 --> 00:00:48.860] inevitability or preordination.

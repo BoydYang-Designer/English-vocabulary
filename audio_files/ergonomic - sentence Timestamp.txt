@@ -1,12 +1,15 @@
-[00:00:00.000 --> 00:00:05.680] Ergonomic is an adjective with the following meaning relating to or designed for efficiency
-[00:00:05.680 --> 00:00:10.680] and comfort in the working environment, particularly in terms of tools, furniture, or equipment
-[00:00:10.680 --> 00:00:14.200] that promote good posture and reduce strain on the body.
-[00:00:14.200 --> 00:00:20.080] Example, the office chair has an ergonomic design to support the lower back and encourage
-[00:00:20.080 --> 00:00:21.840] good posture.
-[00:00:21.840 --> 00:00:28.040] Example, the company invested in ergonomic workstations to improve employee comfort and productivity.
-[00:00:28.040 --> 00:00:32.480] Example, the stroller features an ergonomic handlebar to reduce strain on the parents' arms
-[00:00:32.480 --> 00:00:34.800] and wrists during long walks.
-[00:00:34.800 --> 00:00:39.720] Summary, ergonomic refers to designs or products that aim to improve comfort, efficiency,
-[00:00:39.720 --> 00:00:43.360] and well-being, often in a work or home environment.
-[00:00:43.360 --> 00:00:48.600] Related words, comfortable, functional, efficient, user-friendly.
-[00:00:48.600 --> 00:00:52.000] Antonyms, uncomfortable, strain-inducing, inefficient.
+[00:00:00.000 --> 00:00:02.620] Ergonomic is an adjective with the following meaning,
+[00:00:03.460 --> 00:00:08.200] relating to or designed for efficiency and comfort in the working environment, particularly
+[00:00:08.200 --> 00:00:13.320] in terms of tools, furniture, or equipment that promote good posture and reduced strain on the body.
+[00:00:14.200 --> 00:00:14.840] Example,
+[00:00:15.600 --> 00:00:20.780] the office chair has an ergonomic design to support the lower back and encourage good posture.
+[00:00:21.360 --> 00:00:21.980] Example,
+[00:00:22.620 --> 00:00:26.980] the company invested in ergonomic workstations to improve employee comfort and productivity.
+[00:00:28.020 --> 00:00:33.000] Example, the stroller features an ergonomic handlebar to reduce strain on the parent's arms and wrists
+[00:00:33.000 --> 00:00:33.960] during long walks.
+[00:00:34.660 --> 00:00:39.240] Summary, ergonomic refers to designs or products that aim to improve comfort, efficiency,
+[00:00:39.660 --> 00:00:42.240] and well -being, often in a work or home environment.
+[00:00:43.160 --> 00:00:45.540] Related words, comfortable, functional,
+[00:00:46.240 --> 00:00:47.660] efficient, user -friendly.
+[00:00:48.600 --> 00:00:49.880] Antonyms, uncomfortable,
+[00:00:50.500 --> 00:00:51.660] strain -inducing, inefficient.

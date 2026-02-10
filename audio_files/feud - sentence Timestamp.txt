@@ -1,14 +1,17 @@
-[00:00:00.000 --> 00:00:03.640] FUDE is a noun and a verb with the following meanings.
-[00:00:03.640 --> 00:00:07.500] As a noun, a long lasting and bitter conflict are dispute,
-[00:00:07.500 --> 00:00:10.360] often between families, groups, or individuals.
-[00:00:10.360 --> 00:00:14.400] Example, the FUDE between the two families lasted for generations.
-[00:00:14.400 --> 00:00:19.440] Example, the political FUDE between the two leaders intensified over time.
-[00:00:19.440 --> 00:00:24.560] Their FUDE started over a small misunderstanding but grew into a major conflict.
-[00:00:25.200 --> 00:00:32.320] As a verb, FUDE, FUDE, FUDING to engage in a prolonged and bitter conflict or dispute.
-[00:00:32.320 --> 00:00:36.560] Example, the two companies FUDE over the rights to the product.
-[00:00:36.560 --> 00:00:39.120] Example, the brothers FUDE for years over their inheritance.
-[00:00:39.120 --> 00:00:43.040] Example, the rival teams have been FUDING for decades.
-[00:00:43.040 --> 00:00:47.600] Summary, FUDE as a noun refers to a prolonged and bitter conflict.
-[00:00:47.600 --> 00:00:50.160] While as a verb, it means to engage in such a dispute.
-[00:00:50.160 --> 00:00:55.760] Related words, conflict, rivalry, dispute, quarrel, hostility.
-[00:00:55.760 --> 00:00:59.440] Antonyms, peace, harmony agreement, reconciliation.
+[00:00:00.000 --> 00:00:03.100] Feud is a noun and a verb with the following meanings.
+[00:00:03.780 --> 00:00:08.900] As a noun, a long lasting and bitter conflict or dispute often between families, groups,
+[00:00:09.160 --> 00:00:09.600] or individuals.
+[00:00:10.540 --> 00:00:13.760] Example, the feud between the two families lasted for generations.
+[00:00:14.560 --> 00:00:15.160] Example,
+[00:00:15.800 --> 00:00:18.960] the political feud between the two leaders intensified over time.
+[00:00:19.620 --> 00:00:23.680] Their feud started over a small misunderstanding but grew into a major conflict.
+[00:00:24.840 --> 00:00:27.960] As a verb, feud, feuded, feuding,
+[00:00:28.800 --> 00:00:31.680] to engage in a prolonged and bitter conflict or dispute.
+[00:00:32.340 --> 00:00:35.840] Example, the two companies feuded over the rights to the product.
+[00:00:36.540 --> 00:00:38.840] Example, the brothers feuded for years over their inheritance.
+[00:00:39.200 --> 00:00:41.620] Example, the rival teams have been feuding for decades.
+[00:00:43.040 --> 00:00:43.600] Summary,
+[00:00:44.220 --> 00:00:49.160] feud as a noun refers to a prolonged and bitter conflict while as a verb it means to engage
+[00:00:49.160 --> 00:00:49.880] in such a dispute.
+[00:00:49.880 --> 00:00:55.160] Related words, conflict, rivalry, dispute, quarrel, hostility.
+[00:00:55.820 --> 00:00:58.820] Antonyms, peace, harmony agreement, reconciliation.

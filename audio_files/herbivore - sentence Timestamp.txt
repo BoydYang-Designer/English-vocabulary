@@ -1,3 +1,0 @@
-[00:00:00.000 --> 00:00:03.800] Herbivore is an animal that primarily eats plants.
-[00:00:03.800 --> 00:00:10.400] This term is used in biology and ecology to describe organisms that consume vegetation as their main source of food.
-[00:00:10.400 --> 00:00:17.400] Example, elephants are large herbivores that feed on a variety of plants, including leaves, fruits, and bark.

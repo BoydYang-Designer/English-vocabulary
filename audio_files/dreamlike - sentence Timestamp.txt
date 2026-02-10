@@ -1,17 +1,16 @@
-[00:00:00.000 --> 00:00:02.580] Dreamlike as an adjective, one.
-[00:00:02.580 --> 00:00:07.420] Having qualities of a dream often surreal, ethereal, or fantastical.
-[00:00:07.420 --> 00:00:10.180] Dreamlike describes something that seems unreal,
-[00:00:10.180 --> 00:00:12.280] otherworldly, or full of imagination,
-[00:00:12.280 --> 00:00:14.980] often creating a sense of wonder or mystery.
-[00:00:14.980 --> 00:00:18.380] Example. The landscape at sunrise look dreamlike,
-[00:00:18.380 --> 00:00:21.260] with soft golden light bathing the entire scene.
-[00:00:21.260 --> 00:00:25.860] Example, the movie had a dreamlike quality blurring the lines between reality and fantasy.
-[00:00:26.420 --> 00:00:31.320] Two, appearing peaceful, tranquil, or unreal in a pleasant way.
-[00:00:31.320 --> 00:00:36.060] Dreamlike can also refer to a feeling or experience that is calm, serene,
-[00:00:36.060 --> 00:00:38.160] and almost too perfect to be real.
-[00:00:38.160 --> 00:00:44.500] Example. The quiet, dreamlike atmosphere of the beach at dusk made it feel like time had stopped.
-[00:00:44.500 --> 00:00:48.300] Her dreamlike smile made everything around her seem peaceful.
-[00:00:48.300 --> 00:00:52.460] Summary. Dreamlike refers to something that has qualities reminiscent of a dream,
-[00:00:52.460 --> 00:00:58.200] often characterized by surreal, peaceful, or fantastical elements.
-[00:00:58.200 --> 00:01:02.300] Related words, surreal, ethereal, whimsical, fantastical, otherworldly,
-[00:01:02.300 --> 00:01:05.700] Antonim's realistic, ordinary mundane.
+[00:00:00.000 --> 00:00:02.140] Dreamlike as an adjective, one.
+[00:00:02.920 --> 00:00:06.880] Having qualities of a dream often surreal, ethereal, or fantastical.
+[00:00:07.580 --> 00:00:11.940] Dreamlike describes something that seems unreal, otherworldly, or full of imagination,
+[00:00:12.260 --> 00:00:14.220] often creating a sense of wonder or mystery.
+[00:00:15.460 --> 00:00:20.200] Example, the landscape at sunrise looked dreamlike, with soft golden light bathing the
+[00:00:20.200 --> 00:00:20.900] entire scene.
+[00:00:21.380 --> 00:00:25.160] Example, the movie had a dreamlike quality blurring the lines between reality and fantasy.
+[00:00:26.480 --> 00:00:30.860] Two, appearing peaceful, tranquil, or unreal in a pleasant way.
+[00:00:31.440 --> 00:00:36.300] Dreamlike can also refer to a feeling or experience that is calm, serene, and
+[00:00:36.300 --> 00:00:37.600] almost too perfect to be real.
+[00:00:38.220 --> 00:00:43.600] Example, the quiet dreamlike atmosphere of the beach at dusk made it feel like time had stopped.
+[00:00:44.560 --> 00:00:47.180] Her dreamlike smile made everything around her seem peaceful.
+[00:00:48.240 --> 00:00:53.080] Summary, dreamlike refers to something that has qualities reminiscent of a dream, often characterized
+[00:00:53.080 --> 00:00:55.700] by surreal, peaceful, or fantastical elements.
+[00:00:57.920 --> 00:01:03.360] Related words, surreal, ethereal, whimsical, fantastical, otherworldly, antonyms, realistic,
+[00:01:03.740 --> 00:01:04.340] ordinary mundane.

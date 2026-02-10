@@ -1,9 +1,11 @@
-[00:00:00.000 --> 00:00:09.000] As an adjective, corresponding refers to something that matches, relates, or is equivalent to something else in position, function, or meaning.
-[00:00:09.000 --> 00:00:13.000] It can also describe things that are logically connected or associated.
-[00:00:13.000 --> 00:00:17.000] Example, each student received a corresponding number for their assigned seat.
-[00:00:17.000 --> 00:00:22.000] Example, the map uses different colors to indicate corresponding regions.
-[00:00:22.000 --> 00:00:27.000] Example, her promotion came with a corresponding increase in salary.
-[00:00:27.000 --> 00:00:32.000] Example, the results of the experiment were compared with the corresponding data from last year.
-[00:00:32.000 --> 00:00:40.000] Summary, corresponding describes something that matches, relates to, or is equivalent to something else in terms of position, function, or meaning.
-[00:00:40.000 --> 00:00:46.000] Related words, equivalent, matching, related, parallel, comparable, corresponding.
-[00:00:46.000 --> 00:00:51.000] Antonyms, different, unrelated, mismatched, dissimilar, contrasting.
+[00:00:00.000 --> 00:00:05.000] As an adjective, corresponding refers to something that matches, relates, or
+[00:00:05.000 --> 00:00:08.600] is equivalent to something else in position, function, or meaning.
+[00:00:09.120 --> 00:00:12.500] It can also describe things that are logically connected or associated.
+[00:00:13.200 --> 00:00:16.820] Example, each student received a corresponding number for their assigned seat.
+[00:00:17.700 --> 00:00:22.200] Example, the map uses different colors to indicate corresponding regions.
+[00:00:22.860 --> 00:00:26.860] Example, her promotion came with a corresponding increase in salary.
+[00:00:26.860 --> 00:00:31.820] Example, the results of the experiment were compared with the corresponding data from last year.
+[00:00:32.420 --> 00:00:37.420] Summary, corresponding describes something that matches, relates to, or is equivalent to something
+[00:00:37.420 --> 00:00:39.900] else in terms of position, function, or meaning.
+[00:00:40.560 --> 00:00:45.280] Related words, equivalent, matching, related, parallel, comparable, corresponding.
+[00:00:46.100 --> 00:00:50.200] Antonyms, different, unrelated, mismatched, dissimilar, contrasting.

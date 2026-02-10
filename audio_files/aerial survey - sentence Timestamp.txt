@@ -1,10 +1,12 @@
-[00:00:00.000 --> 00:00:03.000] Aerial Survey as a noun.
-[00:00:03.000 --> 00:00:06.000] The process of collecting information or images from the air,
-[00:00:06.000 --> 00:00:12.000] typically using aircraft, drones, or satellites to study or map land, structures, or features.
-[00:00:12.000 --> 00:00:18.000] Example. The government conducted an aerial survey to assess the damage caused by the flood.
-[00:00:18.000 --> 00:00:22.000] Example. An aerial survey of the forest revealed signs of illegal logging.
-[00:00:22.000 --> 00:00:28.000] Example. The construction team used an aerial survey to map out the site before beginning work.
-[00:00:28.000 --> 00:00:34.000] Example. Scientists performed an aerial survey to monitor wildlife populations in the national park.
-[00:00:34.000 --> 00:00:43.000] Summary. An aerial survey is the collection of data or images from the air to study, map, or monitor land, structures, or natural features.
-[00:00:43.000 --> 00:00:49.000] Related words. Aerial photography, mapping, observation, remote sensing, surveillance.
-[00:00:49.000 --> 00:00:54.000] Antonyms, ground survey, on-site inspection, land-based survey.
+[00:00:00.000 --> 00:00:01.540] Aerial Survey as a Noun
+[00:00:02.620 --> 00:00:07.060] The process of collecting information or images from the air, typically using aircraft,
+[00:00:07.600 --> 00:00:11.760] drones or satellites to study or map land, structures or features.
+[00:00:12.660 --> 00:00:17.640] Example, the government conducted an aerial survey to assess the damage caused by the flood.
+[00:00:18.180 --> 00:00:21.760] Example, an aerial survey of the forest revealed signs of illegal logging.
+[00:00:22.420 --> 00:00:27.300] Example, the construction team used an aerial survey to map out the site before beginning work.
+[00:00:27.920 --> 00:00:32.620] Example, scientists performed an aerial survey to monitor wildlife populations
+[00:00:32.620 --> 00:00:33.640] in the National Park.
+[00:00:34.260 --> 00:00:39.360] Summary, an aerial survey is the collection of data or images from the air to study,
+[00:00:39.640 --> 00:00:42.820] map or monitor land, structures or natural features.
+[00:00:43.480 --> 00:00:48.400] Related words, aerial photography, mapping, observation, remote sensing, surveillance.
+[00:00:49.060 --> 00:00:52.800] Antonyms, ground survey, on -site inspection, land -based survey.

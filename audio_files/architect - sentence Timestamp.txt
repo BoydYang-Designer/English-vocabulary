@@ -1,9 +1,11 @@
-[00:00:00.000 --> 00:00:08.000] Architect, as a noun, a person who designs buildings, structures, or systems, often overseeing their construction or development.
-[00:00:08.000 --> 00:00:14.000] It can also refer to someone who plans or creates complex ideas, projects, or strategies.
-[00:00:14.000 --> 00:00:19.000] Example, the architect designed a modern skyscraper for the city's downtown area.
-[00:00:19.000 --> 00:00:24.000] Example, she worked as an architect specializing in sustainable housing projects.
-[00:00:24.000 --> 00:00:29.000] Example, the software architect developed the framework for the new application.
-[00:00:29.000 --> 00:00:33.000] Example, he was the chief architect of the company's expansion strategy.
-[00:00:33.000 --> 00:00:41.000] Summary, an architect is a professional who designs buildings and structures or someone who plans and creates complex projects or systems.
-[00:00:41.000 --> 00:00:46.000] Related words, designer, planner, builder, creator, engineer.
-[00:00:46.000 --> 00:00:50.000] Antonyms, demolisher, follower, imitator.
+[00:00:00.000 --> 00:00:04.540] Architect as a noun, a person who designs buildings, structures, or systems,
+[00:00:05.040 --> 00:00:07.880] often overseeing their construction or development.
+[00:00:08.520 --> 00:00:13.480] It can also refer to someone who plans or creates complex ideas, projects, or strategies.
+[00:00:14.560 --> 00:00:18.760] Example, the architect designed a modern skyscraper for the city's downtown area.
+[00:00:19.400 --> 00:00:23.680] Example, she worked as an architect specializing in sustainable housing projects.
+[00:00:24.460 --> 00:00:28.360] Example, the software architect developed the framework for the new application.
+[00:00:29.180 --> 00:00:32.740] Example, he was the chief architect of the company's expansion strategy.
+[00:00:33.620 --> 00:00:38.260] Summary, an architect is a professional who designs buildings and structures, or someone who
+[00:00:38.260 --> 00:00:40.680] plans and creates complex projects or systems.
+[00:00:41.560 --> 00:00:45.560] Related words, designer, planner, builder, creator, engineer.
+[00:00:46.260 --> 00:00:49.100] Antonyms, demolisher, follower, imitator.

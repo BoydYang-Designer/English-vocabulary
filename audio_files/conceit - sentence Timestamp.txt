@@ -1,12 +1,22 @@
-[00:00:00.000 --> 00:00:06.000] Conceit refers to an excessive or exaggerated opinion of one's own abilities, appearance, or worth.
-[00:00:06.000 --> 00:00:12.000] It can also refer to a specific or elaborate idea or image in literature or art.
-[00:00:12.000 --> 00:00:24.000] As a noun, one excessive self-admiration, example sentences, his conceit made it difficult for him to work effectively with others, as he believed he was superior to everyone else.
-[00:00:24.000 --> 00:00:29.000] The actor's conceit was evident in the way he boasted about his achievements at every opportunity.
-[00:00:29.000 --> 00:00:35.000] Despite his talent, his conceit often overshadowed his genuine contributions to the team.
-[00:00:35.000 --> 00:00:40.000] I don't want to sound conceited, but our team excels in juvenile product development expertise.
-[00:00:40.000 --> 00:00:45.000] Two, elaborate or ingenious idea, example sentences.
-[00:00:45.000 --> 00:00:53.000] The designer's use of intricate patterns and innovative materials was a clever conceit adding uniqueness to the fashion collection.
-[00:00:53.000 --> 00:00:59.000] The novel's conceit involved a time-traveling detective solving crimes in different historical periods.
-[00:00:59.000 --> 00:01:07.000] The artist's conceit was reflected in the intricate details of his abstract paintings, which invited viewers to find hidden meanings.
-[00:01:07.000 --> 00:01:17.000] Summary. Conceit can denote an inflated sense of self-worth or vanity, as well as an elaborate or ingenious idea, particularly in literature or art.
-[00:01:17.000 --> 00:01:25.000] Related words, vanity, arrogance, pretension, metaphor, idea, Antonim's humility, modesty, simplicity.
+[00:00:00.000 --> 00:00:05.020] Conceit refers to an excessive or exaggerated opinion of one's own abilities, appearance,
+[00:00:05.440 --> 00:00:05.800] or worth.
+[00:00:06.160 --> 00:00:11.400] It can also refer to a specific or elaborate idea or image in literature or art.
+[00:00:11.960 --> 00:00:12.560] As a noun,
+[00:00:13.300 --> 00:00:18.280] one excessive self -admiration, example sentences, his conceit
+[00:00:18.280 --> 00:00:23.240] made it difficult for him to work effectively with others as he believed he was superior to everyone else.
+[00:00:23.820 --> 00:00:28.600] The actor's conceit was evident in the way he boasted about his achievements at every opportunity.
+[00:00:28.600 --> 00:00:33.340] Despite his talent, his conceit often overshadowed his genuine
+[00:00:33.340 --> 00:00:34.740] contributions to the team.
+[00:00:35.280 --> 00:00:39.520] I don't want to sound conceited, but our team excels in juvenile product development expertise.
+[00:00:40.980 --> 00:00:44.800] Two, elaborate or ingenious idea, example sentences.
+[00:00:45.780 --> 00:00:50.280] The designer's use of intricate patterns and innovative materials was a clever
+[00:00:50.280 --> 00:00:52.920] conceit adding uniqueness to the fashion collection.
+[00:00:52.920 --> 00:00:57.860] The novel's conceit involved a time -traveling detective solving crimes in different
+[00:00:57.860 --> 00:00:58.840] historical periods.
+[00:00:59.740 --> 00:01:04.380] The artist's conceit was reflected in the intricate details of his abstract paintings, which
+[00:01:04.380 --> 00:01:06.400] invited viewers to find hidden meanings.
+[00:01:07.400 --> 00:01:08.120] Summary.
+[00:01:08.520 --> 00:01:13.500] Conceit can denote an inflated sense of self -worth or vanity, as well as an
+[00:01:13.500 --> 00:01:16.940] elaborate or ingenious idea, particularly in literature or art.
+[00:01:16.940 --> 00:01:19.420] Related words, vanity,
+[00:01:20.060 --> 00:01:24.320] arrogance, pretension, metaphor, idea, Antonin's humility, modesty, simplicity.

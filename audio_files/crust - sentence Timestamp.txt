@@ -1,18 +1,19 @@
-[00:00:00.000 --> 00:00:06.400] Crust is a noun that refers to the outermost layer or surface of something or the hardened
-[00:00:06.400 --> 00:00:12.800] part of a material, meaning one, the hard outer layer of bread or baked goods, the firm
-[00:00:12.800 --> 00:00:15.320] outer surface that forms during baking.
-[00:00:15.320 --> 00:00:19.600] Example, she cut off the crusts of the sandwich for her child.
-[00:00:19.600 --> 00:00:22.600] Example, the pizza had a crispy golden crust.
-[00:00:22.600 --> 00:00:27.080] You can order pizza with a thin or thick crust, depending on your preference.
-[00:00:27.200 --> 00:00:30.040] 2. The outer layer of the earth.
-[00:00:30.040 --> 00:00:35.920] In geology, it refers to the earth's solid outer shell lying above the mantle.
-[00:00:35.920 --> 00:00:40.920] Example, the earth's crust is made up of tectonic plates that are constantly moving.
-[00:00:40.920 --> 00:00:47.080] Example, scientists study the earth's crust to learn more about its structure and history.
-[00:00:47.080 --> 00:00:51.800] Third three, a hardened or tough outer layer or surface on something.
-[00:00:51.800 --> 00:00:55.480] This can refer to the outer covering of various objects or materials.
-[00:00:55.480 --> 00:01:00.840] Example, after the volcano erupted, a thick crust of cooled lava formed on the surface.
-[00:01:00.840 --> 00:01:03.880] Example, a crust of snow covered the ground after the cold night.
-[00:01:03.880 --> 00:01:08.200] A summary, crust refers to the hard outer layer of food like bread, the earth's surface,
-[00:01:08.200 --> 00:01:09.840] or any tough external layer.
-[00:01:09.840 --> 00:01:14.920] Related words, shell covering layer surface.
-[00:01:14.920 --> 00:01:18.120] Antonyms, core, interior, center.
+[00:00:00.000 --> 00:00:04.800] Crust is a noun that refers to the outermost layer or surface of
+[00:00:04.800 --> 00:00:07.340] something or the hardened part of a material.
+[00:00:07.860 --> 00:00:12.660] Meaning, one, the hard outer layer of bread or baked goods, the firm
+[00:00:12.660 --> 00:00:14.580] outer surface that forms during baking.
+[00:00:15.260 --> 00:00:18.300] Example, she cut off the crusts of the sandwich for her child.
+[00:00:19.060 --> 00:00:21.780] Example, the pizza had a crispy golden crust.
+[00:00:22.500 --> 00:00:26.060] You can order pizza with a thin or thick crust, depending on your preference.
+[00:00:26.840 --> 00:00:29.520] Two, the outer layer of the earth.
+[00:00:30.040 --> 00:00:34.940] In geology, it refers to the earth's solid outer shell, lying above the mantle.
+[00:00:35.960 --> 00:00:40.380] Example, the earth's crust is made up of tectonic plates that are constantly moving.
+[00:00:41.000 --> 00:00:45.960] Example, scientists study the earth's crust to learn more about its structure and history.
+[00:00:46.740 --> 00:00:51.160] Third, a hardened or tough outer layer or surface on something.
+[00:00:51.800 --> 00:00:54.840] This can refer to the outer covering of various objects or materials.
+[00:00:55.620 --> 00:01:00.380] Example, after the volcano erupted, a thick crust of cooled lava formed on the surface.
+[00:01:00.900 --> 00:01:03.580] Example, a crust of snow covered the ground after the cold night.
+[00:01:04.060 --> 00:01:09.380] Summary, crust refers to the hard outer layer of food like bread, the earth's surface, or any tough external layer.
+[00:01:09.860 --> 00:01:10.440] Related words,
+[00:01:11.100 --> 00:01:13.400] shell covering layer surface.
+[00:01:15.060 --> 00:01:17.240] Antonyms, core interior center.

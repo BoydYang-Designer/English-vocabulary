@@ -1,9 +1,10 @@
-[00:00:00.000 --> 00:00:05.760] distinctive is an adjective, meaning having a special quality feature or characteristic
-[00:00:05.760 --> 00:00:10.640] that makes someone or something different from others and easily recognized.
-[00:00:10.640 --> 00:00:14.880] Examples, the artist has a distinctive style that sets her work apart.
-[00:00:14.880 --> 00:00:19.160] His deep voice is distinctive and immediately recognizable.
-[00:00:19.160 --> 00:00:22.040] The building is known for its distinctive architecture.
-[00:00:22.040 --> 00:00:26.120] The cake has a distinctive flavor because of the special spices used.
-[00:00:26.120 --> 00:00:33.160] The summary, distinctive, describes something that stands out because of unique or special qualities that make it easily identifiable.
-[00:00:33.160 --> 00:00:37.080] Related words, unique, characteristic, special, recognizable.
-[00:00:37.080 --> 00:00:41.080] Antonyms, ordinary, common, typical, unremarkable.
+[00:00:00.000 --> 00:00:04.900] Distinctive is an adjective, meaning having a special quality feature
+[00:00:04.900 --> 00:00:09.280] or characteristic that makes someone or something different from others and easily recognized.
+[00:00:09.920 --> 00:00:14.040] Examples, the artist has a distinctive style that sets her work apart.
+[00:00:14.680 --> 00:00:18.240] His deep voice is distinctive and immediately recognizable.
+[00:00:19.060 --> 00:00:21.360] The building is known for its distinctive architecture.
+[00:00:21.920 --> 00:00:25.140] The cake has a distinctive flavor because of the special spices used.
+[00:00:25.800 --> 00:00:30.780] Summary, distinctive, describes something that stands out because of unique or special qualities
+[00:00:30.780 --> 00:00:32.480] that make it easily identifiable.
+[00:00:32.940 --> 00:00:36.160] Related words, unique, characteristic, special, recognizable.
+[00:00:36.820 --> 00:00:40.020] Antonyms, ordinary, common, typical, unremarkable.

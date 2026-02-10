@@ -1,16 +1,17 @@
-[00:00:00.000 --> 00:00:03.040] Bind can be used as both a verb and a noun.
-[00:00:03.040 --> 00:00:04.360] Here are its meanings.
-[00:00:04.360 --> 00:00:09.800] As a verb, bind, bound, binding means to tie or fasten something securely,
-[00:00:09.800 --> 00:00:11.640] or to cause something to be held together.
-[00:00:11.640 --> 00:00:14.040] One, to tie or secure something.
-[00:00:14.040 --> 00:00:17.680] Example, she used string to bind the boxes together for shipping.
-[00:00:17.680 --> 00:00:21.680] Example, the book was bound with a leather cover to protect it.
-[00:00:21.680 --> 00:00:24.720] Two, to cause something to adhere or stick together.
-[00:00:24.720 --> 00:00:28.560] Example, the glue will bind the pieces of wood effectively.
-[00:00:28.800 --> 00:00:32.640] Example, they used a special adhesive to bind the tiles to the wall.
-[00:00:32.640 --> 00:00:39.280] As a noun, bind refers to a situation where someone is in a difficult position or is constrained.
-[00:00:39.280 --> 00:00:43.400] Example, the unexpected expenses put him in a bind.
-[00:00:43.400 --> 00:00:48.280] Example, she found herself in a bind when her car broke down on the way to the meeting.
-[00:00:48.280 --> 00:00:52.760] Summary, bind refers to the act of tying or securing things together,
-[00:00:52.760 --> 00:00:57.080] both physically and metaphorically, and can also describe a challenging situation.
-[00:00:57.080 --> 00:01:02.360] Related words, tie, fasten, secure connect Antonim's loose detach, separate, unbind.
+[00:00:00.000 --> 00:00:02.420] Bind can be used as both a verb and a noun.
+[00:00:03.180 --> 00:00:03.880] Here are its meanings.
+[00:00:04.560 --> 00:00:09.460] As a verb, bind, bound, binding means to tie or fasten something securely,
+[00:00:09.840 --> 00:00:11.240] or to cause something to be held together.
+[00:00:11.900 --> 00:00:13.680] One, to tie or secure something.
+[00:00:14.280 --> 00:00:17.220] Example, she used string to bind the boxes together for shipping.
+[00:00:17.880 --> 00:00:21.060] Example, the book was bound with a leather cover to protect it.
+[00:00:22.000 --> 00:00:24.320] Two, to cause something to adhere or stick together.
+[00:00:24.960 --> 00:00:27.560] Example, the glue will bind the pieces of wood effectively.
+[00:00:28.840 --> 00:00:31.960] Example, they used a special adhesive to bind the tiles to the wall.
+[00:00:32.700 --> 00:00:33.240] As a noun,
+[00:00:33.860 --> 00:00:38.740] bind refers to a situation where someone is in a difficult position or is constrained.
+[00:00:39.400 --> 00:00:42.780] Example, the unexpected expenses put him in a bind.
+[00:00:43.520 --> 00:00:47.460] Example, she found herself in a bind when her car broke down on the way to the meeting.
+[00:00:48.220 --> 00:00:52.940] Summary, bind refers to the act of tying or securing things together, both
+[00:00:52.940 --> 00:00:56.040] physically and metaphorically, and can also describe a challenging situation.
+[00:00:56.800 --> 00:01:02.120] Related words, tie, fasten, secure connect, antonyms loose, detach, separate, unbind.

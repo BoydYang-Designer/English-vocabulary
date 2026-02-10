@@ -1,16 +1,18 @@
-[00:00:00.000 --> 00:00:04.000] Choppy is an adjective with the following meanings.
-[00:00:04.000 --> 00:00:09.500] One, characterized by a regular, rough, or uneven movement or texture,
-[00:00:09.500 --> 00:00:14.000] refers to something that is not smooth or steady, often used to describe water or motion
-[00:00:14.000 --> 00:00:16.500] that is disrupted by waves or turbulence.
-[00:00:16.500 --> 00:00:21.000] Example, the boat struggled to sail through the choppy waters during the storm.
-[00:00:21.000 --> 00:00:25.500] Example, his writing was choppy with many short, disjointed sentences.
-[00:00:25.500 --> 00:00:30.000] Example, the pilot had to navigate through choppy air conditions during the flight.
-[00:00:30.000 --> 00:00:35.500] Two, having a jagged or uneven appearance often in reference to a surface or texture
-[00:00:35.500 --> 00:00:39.500] describes something with sharp, irregular edges or segments.
-[00:00:39.500 --> 00:00:45.000] Example, the painter's brushstrokes were choppy giving the artwork a rough, unfinished feel.
-[00:00:45.000 --> 00:00:48.000] Example, the choppy terrain made hiking difficult.
-[00:00:48.000 --> 00:00:54.000] Example, the cliffside was marked by choppy rocks making it dangerous to climb.
-[00:00:54.500 --> 00:00:58.500] Summary, choppy refers to uneven or rough movement, texture or appearance,
-[00:00:58.500 --> 00:01:01.500] often characterized by abrupt or regular changes.
-[00:01:01.500 --> 00:01:05.000] Related words, rough and even, jagged, turbulent bumpy.
-[00:01:05.000 --> 00:01:08.000] Antonyms, smooth, calm, steady, even.
+[00:00:00.000 --> 00:00:03.360] Choppy is an adjective with the following meanings.
+[00:00:04.120 --> 00:00:04.320] One,
+[00:00:05.160 --> 00:00:10.020] characterized by a regular, rough, or uneven movement or texture, refers to
+[00:00:10.020 --> 00:00:14.740] something that is not smooth or steady, often used to describe water or motion that is disrupted
+[00:00:14.740 --> 00:00:15.960] by waves or turbulence.
+[00:00:16.680 --> 00:00:20.320] Example, the boat struggled to sail through the choppy waters during the storm.
+[00:00:21.340 --> 00:00:24.960] Example, his writing was choppy with many short, disjointed sentences.
+[00:00:25.580 --> 00:00:29.520] Example, the pilot had to navigate through choppy air conditions during the flight.
+[00:00:30.220 --> 00:00:30.420] Two,
+[00:00:31.080 --> 00:00:35.960] having a jagged or uneven appearance, often in reference to a surface or texture, describes
+[00:00:35.960 --> 00:00:38.680] something with sharp, irregular edges or segments.
+[00:00:39.660 --> 00:00:44.020] Example, the painter's brushstrokes were choppy, giving the artwork a rough, unfinished feel.
+[00:00:45.160 --> 00:00:47.620] Example, the choppy terrain made hiking difficult.
+[00:00:48.360 --> 00:00:52.880] Example, the cliffside was marked by choppy rocks, making it dangerous to climb.
+[00:00:54.460 --> 00:00:59.460] Summary, choppy refers to uneven or rough movement, texture, or appearance, often characterized
+[00:00:59.460 --> 00:01:00.880] by abrupt or regular changes.
+[00:01:01.460 --> 00:01:04.180] Related words, rough, uneven, jagged, turbulent, bumpy.
+[00:01:04.980 --> 00:01:07.760] Antonyms, smooth, calm, steady, even.

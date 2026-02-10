@@ -1,14 +1,22 @@
-[00:00:00.000 --> 00:00:02.000] Boyancy as a noun.
-[00:00:02.000 --> 00:00:05.720] One, the ability or capacity to float in a fluid,
-[00:00:05.720 --> 00:00:10.720] buoyancy refers to the force or property that allows an object to float or rise in a liquid,
-[00:00:10.720 --> 00:00:14.960] typically due to its lighter density compared to the liquid, example.
-[00:00:14.960 --> 00:00:18.760] The buoyancy of the boat kept it a float even in rough waters.
-[00:00:18.760 --> 00:00:25.680] The scientists studied the buoyancy of different materials in water to understand their floating properties.
-[00:00:25.680 --> 00:00:29.680] Two, a cheerful or optimistic attitude or mood.
-[00:00:29.680 --> 00:00:36.880] Boyancy can also refer to a person's mental or emotional state characterized by lightness, optimism, or resilience.
-[00:00:36.880 --> 00:00:42.080] Example, despite the setbacks, her buoyancy and determination helped her keep going.
-[00:00:42.080 --> 00:00:47.360] Example, his buoyancy was contagious, lifting the spirits of everyone around him.
-[00:00:47.360 --> 00:00:51.760] Summary, buoyancy refers to the ability of an object to float due to its density
-[00:00:51.760 --> 00:00:54.800] or to a cheerful, optimistic attitude or mood.
-[00:00:54.800 --> 00:00:59.040] Related words, floating, lightness, optimism, resilience,
-[00:00:59.040 --> 00:01:03.040] Antonim's sinking, heaviness, gloom, despair.
+[00:00:00.000 --> 00:00:01.280] buoyancy as a noun.
+[00:00:01.980 --> 00:00:02.260] 1.
+[00:00:02.680 --> 00:00:05.020] The ability or capacity to float in a fluid.
+[00:00:05.640 --> 00:00:10.300] buoyancy refers to the force or property that allows an object to float or rise in a liquid,
+[00:00:10.740 --> 00:00:13.080] typically due to its lighter density compared to the liquid.
+[00:00:13.380 --> 00:00:13.940] Example.
+[00:00:15.060 --> 00:00:17.900] The buoyancy of the boat kept it afloat even in rough waters.
+[00:00:18.760 --> 00:00:23.960] The scientists studied the buoyancy of different materials in water to understand their floating properties.
+[00:00:25.440 --> 00:00:26.000] 2.
+[00:00:26.620 --> 00:00:28.920] A cheerful or optimistic attitude or mood.
+[00:00:29.560 --> 00:00:34.680] buoyancy can also refer to a person's mental or emotional state characterized by lightness, optimism,
+[00:00:35.060 --> 00:00:35.540] or resilience.
+[00:00:36.920 --> 00:00:37.480] Example.
+[00:00:37.980 --> 00:00:41.600] Despite the setbacks, her buoyancy and determination helped her keep going.
+[00:00:42.140 --> 00:00:42.560] Example.
+[00:00:42.960 --> 00:00:46.220] His buoyancy was contagious, lifting the spirits of everyone around him.
+[00:00:47.400 --> 00:00:47.840] Summary.
+[00:00:48.200 --> 00:00:52.580] buoyancy refers to the ability of an object to float due to its density or to a cheerful,
+[00:00:52.780 --> 00:00:54.240] optimistic attitude or mood.
+[00:00:54.240 --> 00:00:55.480] Related words.
+[00:00:56.000 --> 00:00:58.580] Floating, lightness, optimism, resilience.
+[00:00:59.140 --> 00:01:01.680] Antonin's sinking, heaviness, gloom, despair.

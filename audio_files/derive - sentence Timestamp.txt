@@ -1,19 +1,18 @@
-[00:00:00.000 --> 00:00:02.000] Derive is a verb.
-[00:00:02.000 --> 00:00:05.000] Derive, derived, deriving.
-[00:00:05.000 --> 00:00:09.000] To derive something is like figuring it out or getting it from somewhere.
-[00:00:09.000 --> 00:00:14.000] It's like when you find an answer by looking at clues or when you get an idea from something else.
-[00:00:14.000 --> 00:00:18.000] 1. To obtain or receive something from a source.
-[00:00:18.000 --> 00:00:21.000] To take or trace a connection from something else.
-[00:00:21.000 --> 00:00:26.000] Example, the word biology is derived from the Greek words for life and study.
-[00:00:26.000 --> 00:00:29.000] Example, she derived great satisfaction from her work in the community.
-[00:00:29.000 --> 00:00:34.000] Example, the design of this chair derives inspiration from mid-century modern aesthetics.
-[00:00:34.000 --> 00:00:39.000] Example, my name is derived from an ancient language meaning brave warrior.
-[00:00:39.000 --> 00:00:44.000] 2. To deduce or infer something from reasoning or facts.
-[00:00:44.000 --> 00:00:47.000] To reach a conclusion through logical thinking.
-[00:00:47.000 --> 00:00:51.000] Example, we can derive that it will rain tomorrow because the sky is very cloudy.
-[00:00:51.000 --> 00:00:56.000] Example, she derived the answer to the math problem by using a formula she learned in class.
-[00:00:56.000 --> 00:00:59.000] Example, the word class.
-[00:00:59.000 --> 00:01:04.000] To derive means to obtain something from a source or to infer a conclusion from reasoning.
-[00:01:04.000 --> 00:01:09.000] It can also describe how product designs are influenced by existing ideas or concepts.
-[00:01:09.000 --> 00:01:12.000] Related words obtain, extract, deduce, infer.
-[00:01:12.000 --> 00:01:15.000] Antonyms, lose, forfeit, miss.
+[00:00:00.000 --> 00:00:01.300] Derive is a verb.
+[00:00:02.580 --> 00:00:04.580] Derive, derived, deriving.
+[00:00:05.320 --> 00:00:09.020] To derive something is like figuring it out or getting it from somewhere.
+[00:00:09.420 --> 00:00:13.420] It's like when you find an answer by looking at clues or when you get an idea from something else.
+[00:00:14.320 --> 00:00:14.500] One,
+[00:00:15.180 --> 00:00:20.120] to obtain or receive something from a source, to take or trace a connection from something else.
+[00:00:21.100 --> 00:00:25.060] Example, the word biology is derived from the Greek words for life and study.
+[00:00:25.940 --> 00:00:29.540] Example, she derived great satisfaction from her work in the community.
+[00:00:29.840 --> 00:00:34.280] Example, the design of this chair derives inspiration from mid -century modern aesthetics.
+[00:00:35.400 --> 00:00:38.840] Example, my name is derived from an ancient language meaning brave warrior.
+[00:00:39.820 --> 00:00:43.800] Two, to deduce or infer something from reasoning or facts,
+[00:00:44.400 --> 00:00:46.640] to reach a conclusion through logical thinking.
+[00:00:47.760 --> 00:00:51.520] Example, we can derive that it will rain tomorrow because the sky is very cloudy.
+[00:00:52.240 --> 00:00:56.120] Example, she derived the answer to the math problem by using a formula she learned in class.
+[00:00:58.400 --> 00:01:03.280] To derive means to obtain something from a source or to infer a conclusion from reasoning.
+[00:01:03.940 --> 00:01:07.900] It can also describe how product designs are influenced by existing ideas or concepts.
+[00:01:08.760 --> 00:01:11.800] Related words, obtain, extract, deduce, infer.
+[00:01:12.260 --> 00:01:14.220] Antonyms, lose, forfeit, miss.

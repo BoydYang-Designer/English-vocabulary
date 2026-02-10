@@ -1,9 +1,10 @@
-[00:00:00.000 --> 00:00:07.040] Artisan is a noun, artisans, refers to a skilled worker or crafts person who creates products
-[00:00:07.040 --> 00:00:13.440] by hand using traditional methods, often with a focus on quality, craftsmanship, and uniqueness.
-[00:00:13.440 --> 00:00:18.520] Example, the artisan carefully carved the wooden figurine with intricate details.
-[00:00:18.520 --> 00:00:22.680] Example, local artisans sell their handmade jewelry at the market.
-[00:00:22.680 --> 00:00:27.400] Example, she learned the art of pottery from an experienced artisan summary.
-[00:00:27.400 --> 00:00:32.600] An artisan is a skilled craftsman who creates handmade items, often using traditional techniques,
-[00:00:32.600 --> 00:00:35.800] with an emphasis on craftsmanship and individuality.
-[00:00:35.800 --> 00:00:40.720] Related words, craftsman, maker, creator, artisanry, crafts people.
-[00:00:40.720 --> 00:00:46.360] Antonyms factory worker, machine-made, mass producer, industrial worker.
+[00:00:00.000 --> 00:00:02.660] Artisan is a noun, artisans.
+[00:00:03.300 --> 00:00:07.980] Refers to a skilled worker or crafts person who creates products by hand using
+[00:00:07.980 --> 00:00:12.820] traditional methods, often with a focus on quality, craftsmanship, and uniqueness.
+[00:00:13.480 --> 00:00:17.740] Example, the artisan carefully carved the wooden figurine with intricate details.
+[00:00:18.540 --> 00:00:22.200] Example, local artisans sell their handmade jewelry at the market.
+[00:00:22.720 --> 00:00:26.460] Example, she learned the art of pottery from an experienced artisan.
+[00:00:26.460 --> 00:00:31.020] Summary, an artisan is a skilled craftsman who creates handmade items, often using
+[00:00:31.020 --> 00:00:35.400] traditional techniques with an emphasis on craftsmanship and individuality.
+[00:00:35.800 --> 00:00:40.320] Related words, craftsman, maker, creator, artisanry, crafts people.
+[00:00:40.800 --> 00:00:44.960] Antonem's factory worker, machine -made, mass producer, industrial worker.

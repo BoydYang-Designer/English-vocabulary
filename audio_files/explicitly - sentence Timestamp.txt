@@ -1,12 +1,12 @@
-[00:00:00.000 --> 00:00:05.840] Explicitly, as an adverb, explicitly refers to expressing something clearly and in detail,
-[00:00:05.840 --> 00:00:08.080] leaving no room for confusion or doubt.
-[00:00:08.880 --> 00:00:11.680] One, in a clear and direct manner without ambiguity,
-[00:00:11.680 --> 00:00:15.680] example, the teacher explicitly explained the instructions for the project.
-[00:00:15.680 --> 00:00:19.600] Example, the contract explicitly states the terms of payment.
-[00:00:19.600 --> 00:00:23.280] Example, she explicitly asked for a detailed report on the matter.
-[00:00:24.400 --> 00:00:28.400] In a way that is fully detailed or unambiguous, example,
-[00:00:28.400 --> 00:00:30.960] the guidelines explicitly outline the steps to follow.
-[00:00:30.960 --> 00:00:34.400] Example, he was explicitly told not to enter the restricted area.
-[00:00:34.400 --> 00:00:37.440] Example, the manual explicitly describes how to operate the machinery.
-[00:00:38.080 --> 00:00:42.560] Related words, clearly, directly, precisely, plainly, unambiguously.
-[00:00:43.120 --> 00:00:46.640] Antonyms, implicitly, vaguely, ambiguously.
+[00:00:00.000 --> 00:00:04.700] Explicitly as an adverb, explicitly refers to expressing something clearly
+[00:00:04.700 --> 00:00:08.080] and in detail, leaving no room for confusion or doubt.
+[00:00:08.880 --> 00:00:13.740] One, in a clear and direct manner without ambiguity, example, the teacher explicitly explained
+[00:00:13.740 --> 00:00:15.120] the instructions for the project.
+[00:00:15.680 --> 00:00:19.020] Example, the contract explicitly states the terms of payment.
+[00:00:19.620 --> 00:00:23.280] Example, she explicitly asked for a detailed report on the matter.
+[00:00:24.200 --> 00:00:28.940] In a way that is fully detailed or unambiguous, example, the guidelines
+[00:00:28.940 --> 00:00:30.900] explicitly outline the steps to follow.
+[00:00:31.100 --> 00:00:34.260] Example, he was explicitly told not to enter the restricted area.
+[00:00:34.460 --> 00:00:37.400] Example, the manual explicitly describes how to operate the machinery.
+[00:00:38.020 --> 00:00:42.540] Related words, clearly, directly, precisely, plainly, unambiguously.
+[00:00:43.580 --> 00:00:46.220] Antonyms, implicitly, vaguely, ambiguously.

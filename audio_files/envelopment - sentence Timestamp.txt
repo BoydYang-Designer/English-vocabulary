@@ -1,4 +1,6 @@
-[00:00:00.000 --> 00:00:07.000] Involupment refers to the action, process, or state of being completely surrounded, enclosed, or immersed in something else.
-[00:00:07.000 --> 00:00:13.000] For example, the thick fogs, envelopment of the landscape created an eerie atmosphere.
-[00:00:13.000 --> 00:00:17.000] The envelopment of the package in bubble wrap protected it during shipping.
-[00:00:17.000 --> 00:00:22.000] The soldiers found themselves in a dangerous envelopment by enemy forces.
+[00:00:00.000 --> 00:00:05.720] Involvement refers to the action, process, or state of being completely surrounded, enclosed,
+[00:00:06.180 --> 00:00:07.220] or immersed in something else.
+[00:00:07.840 --> 00:00:08.280] For example,
+[00:00:09.060 --> 00:00:12.660] the thick fog's envelopment of the landscape created an eerie atmosphere.
+[00:00:13.860 --> 00:00:16.860] The envelopment of the package in bubble wrap protected it during shipping.
+[00:00:17.800 --> 00:00:21.260] The soldiers found themselves in a dangerous envelopment by enemy forces.

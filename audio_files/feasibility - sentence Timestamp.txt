@@ -1,10 +1,13 @@
-[00:00:00.000 --> 00:00:05.920] Feasibility is a noun that refers to the state or degree of being easily or conveniently done,
-[00:00:05.920 --> 00:00:12.800] achievable, or practical. It involves assessing whether something is possible or realistic,
-[00:00:12.800 --> 00:00:19.200] given the available resources, time, and conditions. Example, the team conducted a feasibility study
-[00:00:19.200 --> 00:00:24.880] to determine if the project could be completed within budget. The feasibility of building a bridge
-[00:00:24.880 --> 00:00:29.200] in that location was questioned due to environmental concerns. Before launching the product,
-[00:00:29.200 --> 00:00:34.240] they evaluated the feasibility of manufacturing it at scale. The engineer explained the technical
-[00:00:34.240 --> 00:00:40.240] feasibility of implementing the proposed design. Summary, feasibility refers to the practicality
-[00:00:40.240 --> 00:00:46.160] and possibility of carrying out a task or project successfully. Related words,
-[00:00:46.160 --> 00:00:52.400] possibility, practicality, viability, achievability, Antonums in practicality, impossibility,
-[00:00:52.400 --> 00:01:00.640] unliked hood, infeasibility.
+[00:00:00.000 --> 00:00:04.760] Feasibility is a noun that refers to the state or degree of being easily or
+[00:00:04.760 --> 00:00:07.720] conveniently done, achievable, or practical.
+[00:00:08.500 --> 00:00:13.980] It involves assessing whether something is possible or realistic, given the available resources,
+[00:00:14.500 --> 00:00:15.500] time, and conditions.
+[00:00:16.560 --> 00:00:21.260] Example, the team conducted a feasibility study to determine if the project could be completed
+[00:00:21.260 --> 00:00:22.040] within budget.
+[00:00:23.100 --> 00:00:27.880] The feasibility of building a bridge in that location was questioned due to environmental concerns.
+[00:00:28.200 --> 00:00:32.500] Before launching the product, they evaluated the feasibility of manufacturing it at scale.
+[00:00:33.020 --> 00:00:36.060] The engineer explained the technical feasibility of implementing the proposed design.
+[00:00:37.320 --> 00:00:42.240] Summary, feasibility refers to the practicality and possibility of carrying out a
+[00:00:42.240 --> 00:00:43.940] task or project successfully.
+[00:00:45.020 --> 00:00:49.400] Related words, possibility, practicality, viability, achievability.
+[00:00:49.400 --> 00:00:54.540] Antonyms, impracticality, impossibility, unlikelihood, infeasibility.

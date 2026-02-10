@@ -1,21 +1,16 @@
-[00:00:00.000 --> 00:00:02.500] Carbon emissions.
-[00:00:02.500 --> 00:00:05.900] As a noun, it refers to the release of carbon compounds,
-[00:00:05.900 --> 00:00:09.200] primarily carbon dioxide CO2 into the atmosphere,
-[00:00:09.200 --> 00:00:11.200] usually as a result of human activities,
-[00:00:11.200 --> 00:00:12.800] such as burning fossil fuels,
-[00:00:12.800 --> 00:00:15.700] deforestation, and industrial processes.
-[00:00:15.700 --> 00:00:18.600] Example, carbon emissions from vehicles
-[00:00:18.600 --> 00:00:21.200] contribute significantly to air pollution.
-[00:00:21.200 --> 00:00:23.900] Example, governments are implementing policies
-[00:00:23.900 --> 00:00:26.600] to reduce carbon emissions and combat climate change.
-[00:00:26.600 --> 00:00:29.000] Example, renewable energy sources
-[00:00:29.000 --> 00:00:32.000] like wind and solar can help lower carbon emissions.
-[00:00:32.000 --> 00:00:34.600] Example, industries are being urged to track and report
-[00:00:34.600 --> 00:00:38.500] their carbon emissions to meet environmental goals.
-[00:00:38.500 --> 00:00:41.700] Summary, carbon emissions refer to the release
-[00:00:41.700 --> 00:00:44.700] of carbon-based gases, particularly CO2,
-[00:00:44.700 --> 00:00:47.500] into the atmosphere, contributing to global warming
-[00:00:47.500 --> 00:00:49.100] and climate change.
-[00:00:49.100 --> 00:00:53.000] Related words, greenhouse gases, CO2, pollution,
-[00:00:53.000 --> 00:00:57.000] climate change, carbon footprint, antinims, carbon reduction,
-[00:00:57.000 --> 00:00:59.800] carbon sequestration, emissions-free, clean energy.
+[00:00:00.000 --> 00:00:01.620] Carbon emissions.
+[00:00:02.520 --> 00:00:07.920] As a noun, it refers to the release of carbon compounds, primarily carbon dioxide, CO2,
+[00:00:08.140 --> 00:00:13.620] into the atmosphere, usually as a result of human activities such as burning fossil fuels, deforestation,
+[00:00:13.960 --> 00:00:15.180] and industrial processes.
+[00:00:15.820 --> 00:00:16.360] Example,
+[00:00:17.040 --> 00:00:20.760] carbon emissions from vehicles contribute significantly to air pollution.
+[00:00:21.220 --> 00:00:26.260] Example, governments are implementing policies to reduce carbon emissions and combat climate change.
+[00:00:26.260 --> 00:00:31.240] Example, renewable energy sources like wind and solar can help lower carbon emissions.
+[00:00:31.980 --> 00:00:36.580] Example, industries are being urged to track and report their carbon emissions to meet environmental goals.
+[00:00:38.340 --> 00:00:38.980] Summary.
+[00:00:39.800 --> 00:00:44.240] Carbon emissions refer to the release of carbon -based gases, particularly CO2,
+[00:00:44.620 --> 00:00:48.260] into the atmosphere, contributing to global warming and climate change.
+[00:00:49.000 --> 00:00:53.660] Related words, greenhouse gases, CO2, pollution, climate change,
+[00:00:53.860 --> 00:00:54.480] carbon footprint.
+[00:00:54.480 --> 00:00:55.580] Antonyms.
+[00:00:55.920 --> 00:00:59.480] Carbon reduction, carbon sequestration, emissions -free clean energy.

@@ -1,16 +1,16 @@
-[00:00:00.000 --> 00:00:02.440] Cork can be a noun or a verb.
-[00:00:02.440 --> 00:00:05.040] As a noun, cork, corks.
-[00:00:05.040 --> 00:00:07.240] The stopper made from the bark of the cork oak tree
-[00:00:07.240 --> 00:00:09.480] used to seal bottles.
-[00:00:09.480 --> 00:00:11.520] She pulled the cork from the wine bottle.
-[00:00:11.520 --> 00:00:14.280] The champagne cork popped loudly when opened.
-[00:00:14.280 --> 00:00:16.960] He saved the corks to make a craft project.
-[00:00:16.960 --> 00:00:20.360] As a verb, cork, cork, corking.
-[00:00:21.280 --> 00:00:23.880] To seal or stop a bottle with a cork.
-[00:00:23.880 --> 00:00:25.680] She corked the wine bottle carefully.
-[00:00:25.680 --> 00:00:28.000] He corked the homemade juice before storing it.
-[00:00:28.840 --> 00:00:31.800] The workers corked the bottles quickly on the production line.
-[00:00:31.800 --> 00:00:34.920] Summary cork refers to the stopper used for sealing bottles
-[00:00:34.920 --> 00:00:37.440] or the action of sealing a bottle with such a stopper.
-[00:00:37.440 --> 00:00:40.480] Synonym stopper, plug, seal,
-[00:00:40.480 --> 00:00:45.240] Antonim's open related words, wine, bottle, seal, stopper.
+[00:00:00.000 --> 00:00:01.600] Cork can be a noun or a verb.
+[00:00:02.320 --> 00:00:04.380] As a noun, cork corks.
+[00:00:04.900 --> 00:00:08.720] The stopper made from the bark of the cork oak tree used to seal bottles.
+[00:00:09.500 --> 00:00:11.080] She pulled the cork from the wine bottle.
+[00:00:11.480 --> 00:00:13.560] The champagne cork popped loudly when opened.
+[00:00:14.200 --> 00:00:16.080] He saved the corks to make a craft project.
+[00:00:16.820 --> 00:00:20.080] As a verb, cork corked corking.
+[00:00:21.060 --> 00:00:23.640] To seal or stop a bottle with a cork.
+[00:00:23.800 --> 00:00:25.280] She corked the wine bottle carefully.
+[00:00:25.700 --> 00:00:27.720] He corked the homemade juice before storing it.
+[00:00:28.380 --> 00:00:31.180] The workers corked the bottles quickly on the production line.
+[00:00:31.780 --> 00:00:36.640] Summary cork refers to the stopper used for sealing bottles or the action of sealing a bottle with
+[00:00:36.640 --> 00:00:37.300] such a stopper.
+[00:00:37.520 --> 00:00:38.920] Synonyms stopper, plug,
+[00:00:39.520 --> 00:00:42.220] seal. Antonyms un - open, related words.
+[00:00:42.820 --> 00:00:44.960] Wine, bottle, seal, stopper.

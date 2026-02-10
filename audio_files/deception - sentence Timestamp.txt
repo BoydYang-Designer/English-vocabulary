@@ -1,5 +1,8 @@
-[00:00:00.000 --> 00:00:05.440] Deception is the broader term that describes the act of deceiving or the state of being deceived.
-[00:00:06.240 --> 00:00:08.960] One example, these deceptions cost them dear.
-[00:00:10.080 --> 00:00:15.200] Two example, after years of trusting their financial advisor, they discovered that he had been
-[00:00:15.200 --> 00:00:20.640] involved in fraudulent schemes. These deceptions cost them dear as they lost their life savings and
-[00:00:20.640 --> 00:00:30.640] faced financial ruin.
+[00:00:00.000 --> 00:00:05.300] Deception is the broader term that describes the act of deceiving or the state of being deceived.
+[00:00:06.420 --> 00:00:06.540] 1.
+[00:00:06.840 --> 00:00:07.120] Example.
+[00:00:07.460 --> 00:00:08.880] These deceptions cost them dear.
+[00:00:09.820 --> 00:00:10.420] 2.
+[00:00:11.100 --> 00:00:11.600] Example.
+[00:00:11.860 --> 00:00:16.600] After years of trusting their financial advisor, they discovered that he had been involved in fraudulent schemes.
+[00:00:17.420 --> 00:00:21.620] These deceptions cost them dear as they lost their life savings and faced financial ruin.

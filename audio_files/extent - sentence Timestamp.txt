@@ -1,10 +1,10 @@
-[00:00:00.000 --> 00:00:06.480] Extent can be a noun that refers to the range, area, or degree to which something exists
-[00:00:06.480 --> 00:00:09.580] is relevant or has an effect.
-[00:00:09.580 --> 00:00:14.580] As a noun, it refers to the degree, scope, or size of something.
-[00:00:14.580 --> 00:00:19.480] Example, the extent of the damage from the storm was more severe than an initially thought.
-[00:00:19.480 --> 00:00:22.980] She did not realize the extent of his knowledge on the subject.
-[00:00:22.980 --> 00:00:28.340] The project was completed to a large extent, but some details still needed to be finalized.
-[00:00:28.340 --> 00:00:31.280] The extent of his influence in the company is well known.
-[00:00:31.280 --> 00:00:35.480] Summary, extent refers to the degree, range, or scope of something.
-[00:00:35.480 --> 00:00:39.160] Related words, range, scope, degree, measure.
-[00:00:39.160 --> 00:00:42.160] Anonym's limitation, restriction, confinement.
+[00:00:00.000 --> 00:00:04.680] Extent can be a noun that refers to the range, area, or degree
+[00:00:04.680 --> 00:00:08.120] to which something exists is relevant or has an effect.
+[00:00:09.080 --> 00:00:13.660] As a noun, it refers to the degree, scope, or size of something.
+[00:00:14.380 --> 00:00:18.800] Example, the extent of the damage from the storm was more severe than an initially thought.
+[00:00:19.340 --> 00:00:22.000] She did not realize the extent of his knowledge on the subject.
+[00:00:22.740 --> 00:00:27.520] The project was completed to a large extent, but some details still needed to be finalized.
+[00:00:28.300 --> 00:00:30.300] The extent of his influence in the company is well known.
+[00:00:31.080 --> 00:00:34.860] Summary, extent refers to the degree, range, or scope of something.
+[00:00:35.380 --> 00:00:38.660] Related words, range, scope, degree, measure.
+[00:00:39.060 --> 00:00:41.480] Anonym's limitation, restriction, confinement.

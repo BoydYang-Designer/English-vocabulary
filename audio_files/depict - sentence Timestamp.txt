@@ -1,8 +1,15 @@
-[00:00:00.000 --> 00:00:06.720] Depict is a verb. Depict depicted depicting. It means to represent, describe, or show something in
-[00:00:06.720 --> 00:00:13.360] a visual or detailed manner, often in art, literature or speech. Example, his enemies depicked
-[00:00:13.360 --> 00:00:19.520] portray him as a cruel and dangerous leader. Example, the book depicts him as a rather unpleasant
-[00:00:19.520 --> 00:00:24.960] character. Example, the travel brochure depicts the idyllic beaches and charming coastal towns of
-[00:00:24.960 --> 00:00:30.400] the Mediterranean region, inviting tourists to experience its beauty first hand. Summary,
-[00:00:31.120 --> 00:00:35.520] a depict refers to the act of representing or describing something, often with the intention of
-[00:00:35.520 --> 00:00:41.680] showing or conveying a particular image or impression. Related words, portray, represent illustrate,
-[00:00:41.680 --> 00:00:49.120] describe, show, Antonim's distort, misrepresent, obscure.
+[00:00:00.000 --> 00:00:01.140] Depict is a verb.
+[00:00:01.720 --> 00:00:02.100] Depict.
+[00:00:02.480 --> 00:00:02.980] Depicted.
+[00:00:03.460 --> 00:00:03.820] Depicting.
+[00:00:04.520 --> 00:00:08.900] It means to represent, describe, or show something in a visual or detailed manner, often in art,
+[00:00:08.960 --> 00:00:09.840] literature, or speech.
+[00:00:11.080 --> 00:00:16.180] Example, his enemies depict, portray him as a cruel and dangerous leader.
+[00:00:16.880 --> 00:00:19.920] Example, the book depicts him as a rather unpleasant character.
+[00:00:20.800 --> 00:00:26.020] Example, the travel brochure depicts the idyllic beaches and charming coastal towns of the Mediterranean region,
+[00:00:26.580 --> 00:00:29.020] inviting tourists to experience its beauty firsthand.
+[00:00:29.800 --> 00:00:30.440] Summary.
+[00:00:31.140 --> 00:00:36.060] Depict refers to the act of representing or describing something, often with the intention of showing or
+[00:00:36.060 --> 00:00:38.540] conveying a particular image or impression.
+[00:00:39.260 --> 00:00:42.680] Related words, portray, represent, illustrate, describe, show.
+[00:00:43.380 --> 00:00:46.020] Antonyms distort, misrepresent, obscure.

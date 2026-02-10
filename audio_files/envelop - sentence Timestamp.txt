@@ -1,15 +1,17 @@
-[00:00:00.000 --> 00:00:06.960] Envelope is a verb, envelope, enveloped, enveloping, meaning to surround or cover something completely,
-[00:00:06.960 --> 00:00:09.640] often in a way that hides or encloses it.
-[00:00:09.640 --> 00:00:15.320] It can refer to both physical and metaphorical situations where something is completely surrounded or enveloped.
-[00:00:15.320 --> 00:00:16.520] Examples.
-[00:00:16.520 --> 00:00:19.960] One, the city enveloped in snow looked so mysterious.
-[00:00:19.960 --> 00:00:25.520] Two, the thick fog enveloped the entire city, reducing visibility to almost zero.
-[00:00:25.520 --> 00:00:28.920] Three, the dancers flowing costume enveloped her body,
-[00:00:28.920 --> 00:00:31.200] adding to the elegance of her performance.
-[00:00:31.200 --> 00:00:35.120] Four, the darkness of the cave enveloped them as they ventured deeper inside.
-[00:00:35.120 --> 00:00:40.120] Five, the peaceful silence of the forest enveloped them, calming their restless minds.
-[00:00:40.120 --> 00:00:41.120] Summary.
-[00:00:41.120 --> 00:00:46.960] Envelope means to completely cover, surround or conceal something, either physically or figuratively.
-[00:00:46.960 --> 00:00:51.040] Related words, surround, encircle, envelop, cloak, cover.
-[00:00:51.040 --> 00:00:51.840] Antonyms.
-[00:00:51.840 --> 00:00:54.840] Expose, uncover, reveal, unveil.
+[00:00:00.000 --> 00:00:01.380] Envelope is a verb.
+[00:00:01.880 --> 00:00:06.620] Envelope, enveloped, enveloping, meaning to surround or cover something completely,
+[00:00:07.160 --> 00:00:09.100] often in a way that hides or encloses it.
+[00:00:09.760 --> 00:00:14.980] It can refer to both physical and metaphorical situations where something is completely surrounded or enveloped.
+[00:00:15.560 --> 00:00:15.860] Examples.
+[00:00:16.580 --> 00:00:19.120] One, the city enveloped in snow looked so mysterious.
+[00:00:19.940 --> 00:00:24.820] Two, the thick fog enveloped the entire city, reducing visibility to almost zero.
+[00:00:24.820 --> 00:00:25.980] Three,
+[00:00:26.600 --> 00:00:30.480] the dancer's flowing costume enveloped her body, adding to the elegance of her performance.
+[00:00:31.200 --> 00:00:34.640] Four, the darkness of the cave enveloped them as they ventured deeper inside.
+[00:00:35.160 --> 00:00:39.100] Five, the peaceful silence of the forest enveloped them, calming their restless minds.
+[00:00:40.000 --> 00:00:40.600] Summary.
+[00:00:41.240 --> 00:00:46.460] Envelope means to completely cover, surround or conceal something, either physically or figuratively.
+[00:00:47.040 --> 00:00:47.620] Related words.
+[00:00:47.980 --> 00:00:50.800] Surround, encircle, envelop, cloak, cover.
+[00:00:50.800 --> 00:00:51.700] Antonyms.
+[00:00:52.000 --> 00:00:54.360] Expose, uncover, reveal, unveil.

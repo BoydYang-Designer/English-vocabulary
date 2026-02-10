@@ -1,9 +1,10 @@
-[00:00:00.000 --> 00:00:06.640] Empathize is a verb, empathize, empathize, empathizing to understand and share the feelings of
-[00:00:06.640 --> 00:00:10.760] another person by putting oneself in their emotional situation.
-[00:00:10.760 --> 00:00:15.720] Example, she empathized with her friend's sadness after the loss of a pet.
-[00:00:15.720 --> 00:00:20.560] Example, he found it difficult to empathize with those who had never experienced hardship.
-[00:00:20.560 --> 00:00:24.440] Example, the counselor empathized with the struggles of the students.
-[00:00:24.440 --> 00:00:28.620] Summary empathize means to deeply understand and share another person's emotions by relating
-[00:00:28.620 --> 00:00:30.660] to their experiences.
-[00:00:30.660 --> 00:00:35.420] Related words, sympathize, understand, relate, identify with, feel for.
-[00:00:35.420 --> 00:00:38.420] Antonyms disregard, ignore, misunderstand, detach.
+[00:00:00.000 --> 00:00:01.480] Empathize is a verb.
+[00:00:01.920 --> 00:00:06.840] Empathize, empathized, empathizing, to understand and share the feelings of another
+[00:00:06.840 --> 00:00:09.700] person by putting oneself in their emotional situation.
+[00:00:10.500 --> 00:00:14.700] Example, she empathized with her friend's sadness after the loss of a pet.
+[00:00:15.220 --> 00:00:19.480] Example, he found it difficult to empathize with those who had never experienced hardship.
+[00:00:20.300 --> 00:00:23.580] Example, the counselor empathized with the struggles of the students.
+[00:00:24.100 --> 00:00:29.520] Summary empathize means to deeply understand and share another person's emotions by relating to their experiences.
+[00:00:30.320 --> 00:00:34.700] Related words, sympathize, understand, relate, identify with, feel for.
+[00:00:35.320 --> 00:00:37.080] Antonyms, disregard, ignore, misunderstand,
+[00:00:37.760 --> 00:00:38.020] detach.

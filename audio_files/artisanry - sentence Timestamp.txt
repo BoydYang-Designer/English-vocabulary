@@ -1,8 +1,14 @@
-[00:00:00.000 --> 00:00:11.500] Artisanry as a noun. Artisanry refers to the work or craft of an artisan typically involving skilled manual labor to create handmade goods such as pottery, textiles, jewelry, and other craft items.
-[00:00:11.500 --> 00:00:15.500] It emphasizes traditional methods and techniques passed down through generations.
-[00:00:15.500 --> 00:00:22.000] Example, the artisanry in the small village is famous for its beautifully crafted wooden furniture.
-[00:00:22.000 --> 00:00:28.500] She learned the artisanry of weaving from her grandmother, who had been a skilled textile worker.
-[00:00:29.000 --> 00:00:35.500] Example, the market was filled with items made from local artisanry including handmade baskets and leather goods.
-[00:00:35.500 --> 00:00:46.000] Summary, artisanry refers to the craft and skilled work of artisans, often involving the creation of handmade, unique items with attention to detail and traditional techniques.
-[00:00:46.000 --> 00:00:50.500] Related words, craftsmanship, handcraft, artistry, trade, skill.
-[00:00:50.500 --> 00:00:55.000] Antonyms, mass production, factory made, industrial production.
+[00:00:00.000 --> 00:00:01.400] Artisanry as a noun.
+[00:00:01.780 --> 00:00:06.580] Artisanry refers to the work or craft of an artisan typically involving skilled manual labor to
+[00:00:06.580 --> 00:00:11.340] create handmade goods such as pottery, textiles, jewelry, and other craft items.
+[00:00:11.920 --> 00:00:15.060] It emphasizes traditional methods and techniques passed down through generations.
+[00:00:15.920 --> 00:00:20.540] Example, the artisanry in the small village is famous for its beautifully
+[00:00:20.540 --> 00:00:21.760] crafted wooden furniture.
+[00:00:22.700 --> 00:00:27.380] She learned the artisanry of weaving from her grandmother, who had been a skilled
+[00:00:27.380 --> 00:00:28.300] textile worker.
+[00:00:29.160 --> 00:00:33.700] Example, the market was filled with items made from local artisanry including handmade
+[00:00:33.700 --> 00:00:34.940] baskets and leather goods.
+[00:00:35.720 --> 00:00:40.320] Summary, artisanry refers to the craft and skilled work of artisans,
+[00:00:40.720 --> 00:00:45.740] often involving the creation of handmade, unique items with attention to detail and traditional techniques.
+[00:00:46.480 --> 00:00:50.420] Related words, craftsmanship, handcraft, artistry, trade, skill.
+[00:00:51.060 --> 00:00:54.580] Antonyms, mass production, factory made, industrial production.

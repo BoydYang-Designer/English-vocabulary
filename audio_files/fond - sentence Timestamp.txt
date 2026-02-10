@@ -1,8 +1,0 @@
-[00:00:00.000 --> 00:00:03.400] as an adjective, fond, fonder, fondest.
-[00:00:03.400 --> 00:00:05.600] Fond typically means having a strong liking
-[00:00:05.600 --> 00:00:07.900] or affection for someone or something.
-[00:00:07.900 --> 00:00:10.800] It implies a feeling of warmth, tenderness,
-[00:00:10.800 --> 00:00:13.800] or sentimentality towards the object of affection.
-[00:00:13.800 --> 00:00:16.300] For example, as they sat together reminiscing,
-[00:00:16.300 --> 00:00:18.900] they shared fond memories of their childhood adventures
-[00:00:18.900 --> 00:00:20.900] and family vacations.

@@ -1,9 +1,14 @@
-[00:00:00.000 --> 00:00:08.240] Expedite is a verb, expedite, expedited, expediting, meaning to make a process, action, or task
-[00:00:08.240 --> 00:00:12.720] happen more quickly or efficiently to speed up the progress or completion of something.
-[00:00:13.280 --> 00:00:18.160] Example, to meet the tight deadline, the manager decided to expedite the production process
-[00:00:18.160 --> 00:00:24.000] by allocating additional resources and working overtime. Example, in order to avoid any delays,
-[00:00:24.000 --> 00:00:28.960] please expedite the approval process for the new project proposal. Example, the company hired
-[00:00:28.960 --> 00:00:33.840] extra staff to expedite the delivery of holiday orders. Example, we need to expedite the visa
-[00:00:33.840 --> 00:00:39.440] application process to ensure timely travel. Summary, expedite means to speed up or facilitate the
-[00:00:39.440 --> 00:00:44.960] completion of a task or process making it happen faster and more efficiently. Related words,
-[00:00:44.960 --> 00:00:58.800] accelerate, hasten, quicken, advance, facilitate. Antonyms, delay, hinder, slow, impede.
+[00:00:00.000 --> 00:00:01.240] Expedite is a verb.
+[00:00:01.900 --> 00:00:04.380] Expedite, expedited, expediting.
+[00:00:05.040 --> 00:00:05.460] Meaning,
+[00:00:06.200 --> 00:00:10.940] to make a process, action, or task happen more quickly or efficiently, to speed up the
+[00:00:10.940 --> 00:00:12.660] progress or completion of something.
+[00:00:13.300 --> 00:00:18.140] Example, to meet the tight deadline, the manager decided to expedite the production process
+[00:00:18.140 --> 00:00:21.200] by allocating additional resources and working overtime.
+[00:00:21.900 --> 00:00:26.780] Example, in order to avoid any delays, please expedite the approval process for the new project proposal.
+[00:00:27.460 --> 00:00:31.340] Example, the company hired extra staff to expedite the delivery of holiday orders.
+[00:00:32.020 --> 00:00:35.980] Example, we need to expedite the visa application process to ensure timely travel.
+[00:00:36.500 --> 00:00:41.340] Summary, expedite means to speed up or facilitate the completion of a task or process making it
+[00:00:41.340 --> 00:00:42.840] happen faster and more efficiently.
+[00:00:43.760 --> 00:00:49.220] Related words, accelerate, hasten, quicken, advance, facilitate.
+[00:00:49.700 --> 00:00:52.680] Antonims delay, hinder, slow, impede.

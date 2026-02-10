@@ -1,8 +1,13 @@
-[00:00:00.000 --> 00:00:09.000] Crumble as a verb, crumbled, crumbled crumbling, to crumble means to break or fall apart into small pieces, often due to being dry, old, or fragile.
-[00:00:09.000 --> 00:00:14.000] Example, the old building began to crumble under the weight of neglect and decay.
-[00:00:14.000 --> 00:00:18.000] Example, she crumbled an empty snail shell in her fingers.
-[00:00:18.000 --> 00:00:24.000] Two, figuratively, to crumble can mean to collapse or disintegrate, often under pressure, stress, or adversity.
-[00:00:24.000 --> 00:00:27.000] Example, in the end, the Roman Empire crumbled.
-[00:00:27.000 --> 00:00:34.000] Example, under the intense scrutiny his confident demeanor started to crumble, revealing his insecurities.
-[00:00:34.000 --> 00:00:43.000] Three, as a noun, crumble can refer to a dessert made from fruit, flour, butter, and sugar, which is baked and then served in a crumbly textured form.
-[00:00:43.000 --> 00:00:49.000] Example, she baked a delicious apple crumble for dessert, topped with a scoop of vanilla ice cream.
+[00:00:00.000 --> 00:00:01.140] Crumble as a verb.
+[00:00:01.680 --> 00:00:03.040] Crumbled, crumbled crumbling.
+[00:00:03.340 --> 00:00:07.380] To crumble means to break or fall apart into small pieces, often due to being dry,
+[00:00:07.580 --> 00:00:08.500] old, or fragile.
+[00:00:09.300 --> 00:00:13.160] Example, the old building began to crumble under the weight of neglect and decay.
+[00:00:13.960 --> 00:00:17.180] Example, she crumbled an empty snail shell in her fingers.
+[00:00:18.160 --> 00:00:23.200] Two, figuratively, to crumble can mean to collapse or disintegrate, often under pressure, stress,
+[00:00:23.420 --> 00:00:23.900] or adversity.
+[00:00:24.740 --> 00:00:27.100] Example, in the end, the Roman Empire crumbled.
+[00:00:27.640 --> 00:00:33.060] Example, under the intense scrutiny, his confident demeanor started to crumble, revealing his insecurities.
+[00:00:34.460 --> 00:00:39.460] Three, as a noun, crumble can refer to a dessert made from fruit, flour, butter, and sugar,
+[00:00:39.780 --> 00:00:42.740] which is baked and then served in a crumbly, textured form.
+[00:00:43.500 --> 00:00:48.560] Example, she baked a delicious apple crumble for dessert, topped with a scoop of vanilla ice cream.

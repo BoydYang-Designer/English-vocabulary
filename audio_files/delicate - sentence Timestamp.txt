@@ -1,9 +1,12 @@
-[00:00:00.000 --> 00:00:07.580] Delecate is an adjective. It refers to something that is fragile, easily damaged, or requiring careful handling.
-[00:00:07.580 --> 00:00:12.460] It can also describe something that is subtle, refined, or sensitive in nature.
-[00:00:12.460 --> 00:00:16.820] Example, she handled the delicate china teacup with great care.
-[00:00:16.820 --> 00:00:21.140] Example, the delicate aroma of the flowers filled the room.
-[00:00:21.140 --> 00:00:25.460] The doctor gave delicate advice on how to manage the patient's condition.
-[00:00:25.460 --> 00:00:29.060] He made a delicate remark to avoid offending anyone.
-[00:00:29.220 --> 00:00:32.180] Some relicate describes something that requires careful attention,
-[00:00:32.180 --> 00:00:35.780] or something that is fragile, refined, or subtle in nature.
-[00:00:35.780 --> 00:00:43.620] Related words, fragile, sensitive, fine, subtle, tender, and names sturdy, strong, tough, durable, rough.
+[00:00:00.000 --> 00:00:01.380] Delicate is an adjective.
+[00:00:02.160 --> 00:00:03.860] It refers to something that is fragile,
+[00:00:04.480 --> 00:00:07.000] easily damaged, or requiring careful handling.
+[00:00:07.720 --> 00:00:11.980] It can also describe something that is subtle, refined, or sensitive in nature.
+[00:00:12.640 --> 00:00:16.260] Example, she handled the delicate china teacup with great care.
+[00:00:16.940 --> 00:00:20.300] Example, the delicate aroma of the flowers filled the room.
+[00:00:21.400 --> 00:00:25.000] The doctor gave delicate advice on how to manage the patient's condition.
+[00:00:25.580 --> 00:00:28.340] He made a delicate remark to avoid offending anyone.
+[00:00:28.340 --> 00:00:33.420] Some relicate describes something that requires careful attention, or something that is fragile,
+[00:00:33.780 --> 00:00:35.280] refined, or subtle in nature.
+[00:00:35.880 --> 00:00:41.140] Related words, fragile, sensitive, fine, subtle, tender, and it is sturdy, strong,
+[00:00:41.500 --> 00:00:42.860] tough, durable, rough.

@@ -1,16 +1,17 @@
-[00:00:00.000 --> 00:00:06.000] Detachment, as a noun, one, the state of being emotionally uninvolved or indifferent,
-[00:00:06.000 --> 00:00:10.000] a sense of separation from feelings, situations, or personal connections.
-[00:00:10.000 --> 00:00:14.000] Example, he spoke about the tragedy with surprising detachment.
-[00:00:14.000 --> 00:00:20.000] Example, emotional detachment can sometimes be a coping mechanism during stressful situations.
-[00:00:20.000 --> 00:00:24.000] Two, the act of separating or removing something from a larger hole,
-[00:00:24.000 --> 00:00:28.000] the process of disconnecting or taking something apart.
-[00:00:28.000 --> 00:00:33.000] Example, the detachment of the upper frame allowed the stroller to convert into a cart.
-[00:00:33.000 --> 00:00:38.000] Example, the detachment of the painting from the wall required careful handling.
-[00:00:38.000 --> 00:00:43.000] Three, a group of people sent on a specific mission, especially in the military,
-[00:00:43.000 --> 00:00:47.000] a specialized unit assigned for a particular task or operation.
-[00:00:47.000 --> 00:00:52.000] Example, a military detachment was sent to assist with disaster relief efforts.
-[00:00:52.000 --> 00:00:56.000] Example, the small detachment patrolled the remote area regularly.
-[00:00:56.000 --> 00:01:01.000] Summary, detachment refers to emotional distance, the act of separating something,
-[00:01:01.000 --> 00:01:04.000] or a group assigned for a particular mission.
-[00:01:04.000 --> 00:01:09.000] Related words, separation, disengagement, aloofness, disconnection, division,
-[00:01:09.000 --> 00:01:14.000] Antonim's attachment, involvement, connection, engagement, unity.
+[00:00:00.000 --> 00:00:01.520] Detachment as a noun.
+[00:00:01.920 --> 00:00:05.300] One, the state of being emotionally uninvolved or indifferent.
+[00:00:06.140 --> 00:00:09.800] A sense of separation from feelings, situations, or personal connections.
+[00:00:10.460 --> 00:00:14.040] Example, he spoke about the tragedy with surprising detachment.
+[00:00:14.660 --> 00:00:19.220] Example, emotional detachment can sometimes be a coping mechanism during stressful situations.
+[00:00:20.180 --> 00:00:24.120] Two, the act of separating or removing something from a larger whole.
+[00:00:24.840 --> 00:00:27.560] The process of disconnecting or taking something apart.
+[00:00:28.280 --> 00:00:32.580] Example, the detachment of the upper frame allowed the stroller to convert into a cart.
+[00:00:33.540 --> 00:00:37.460] Example, the detachment of the painting from the wall required careful handling.
+[00:00:38.760 --> 00:00:43.640] Three, a group of people sent on a specific mission, especially in the military, a specialized
+[00:00:43.640 --> 00:00:46.440] unit assigned for a particular task or operation.
+[00:00:47.120 --> 00:00:51.160] Example, a military detachment was sent to assist with disaster relief efforts.
+[00:00:51.960 --> 00:00:55.400] Example, the small detachment patrolled the remote area regularly.
+[00:00:56.500 --> 00:01:01.460] Summary, detachment refers to emotional distance, the act of separating something
+[00:01:01.460 --> 00:01:03.700] or a group assigned for a particular mission.
+[00:01:04.480 --> 00:01:09.140] Related words, separation, disengagement, aloofness, disconnection, division.
+[00:01:09.920 --> 00:01:13.600] Antonyms, attachment, involvement, connection, engagement, unity.

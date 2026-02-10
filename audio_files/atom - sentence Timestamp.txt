@@ -1,10 +1,10 @@
-[00:00:00.000 --> 00:00:05.100] And atom is the smallest unit of matter that retains the properties of an element.
-[00:00:05.100 --> 00:00:09.300] It consists of a central nucleus which contains protons and neutrons
-[00:00:09.300 --> 00:00:13.600] and is surrounded by a cloud of electrons that orbit around the nucleus.
-[00:00:13.600 --> 00:00:15.600] Example sentences.
-[00:00:15.600 --> 00:00:19.600] And atom of hydrogen has one proton and one electron.
-[00:00:19.600 --> 00:00:22.600] Everything around us is made up of atoms.
-[00:00:22.600 --> 00:00:26.600] The atoms in a water molecule are hydrogen and oxygen atoms.
-[00:00:26.700 --> 00:00:27.700] Summary.
-[00:00:27.700 --> 00:00:30.700] And atom is the basic building block of matter.
-[00:00:30.700 --> 00:00:35.700] Made up of a nucleus with protons and neutrons and electrons orbiting around it.
+[00:00:00.000 --> 00:00:04.680] An atom is the smallest unit of matter that retains the properties of an element.
+[00:00:05.180 --> 00:00:10.060] It consists of a central nucleus which contains protons and neutrons, and is surrounded
+[00:00:10.060 --> 00:00:12.980] by a cloud of electrons that orbit around the nucleus.
+[00:00:14.000 --> 00:00:15.000] Example sentences.
+[00:00:15.740 --> 00:00:19.120] An atom of hydrogen has one proton and one electron.
+[00:00:19.700 --> 00:00:22.180] Everything around us is made up of atoms.
+[00:00:22.600 --> 00:00:25.880] The atoms in a water molecule are hydrogen and oxygen atoms.
+[00:00:25.880 --> 00:00:27.240] Summary.
+[00:00:27.660 --> 00:00:32.600] An atom is the basic building block of matter, made up of a nucleus with protons and
+[00:00:32.600 --> 00:00:35.280] neutrons and electrons orbiting around it.

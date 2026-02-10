@@ -1,14 +1,15 @@
-[00:00:00.000 --> 00:00:07.320] As a verb, exceed exceeded exceeding means to go beyond a limit standard or expectation,
-[00:00:07.320 --> 00:00:09.880] whether in quantity, degree, or ability.
-[00:00:09.880 --> 00:00:14.560] One, if something exceeds a particular amount or number, it is greater or larger than that
-[00:00:14.560 --> 00:00:15.720] amount or number.
-[00:00:15.720 --> 00:00:18.040] Example, the sales exceeded my expectation.
-[00:00:18.040 --> 00:00:21.280] Example, his older brother exceeds him in intelligence.
-[00:00:21.280 --> 00:00:24.880] Example, the number of participants exceeded our expectations.
-[00:00:24.880 --> 00:00:30.320] Two, if you exceed a limit or rule, you go beyond it, even though you are not supposed
-[00:00:30.320 --> 00:00:32.360] to or it is against the law.
-[00:00:32.360 --> 00:00:36.480] Example, he was taken to the police box for exceeding the speed limit.
-[00:00:36.480 --> 00:00:39.800] Example, he exceeded the speed limit and got a ticket.
-[00:00:39.800 --> 00:00:46.600] Summary, exceed refers to going beyond or surpassing a certain limit, boundary, or expectation.
-[00:00:46.600 --> 00:00:50.000] Related words, surpass, outdo, go beyond, transcend.
-[00:00:50.000 --> 00:00:52.720] Antonyms, fall short, underperform, fail.
+[00:00:00.000 --> 00:00:04.540] As a verb, exceed, exceeded, exceeding means to go
+[00:00:04.540 --> 00:00:09.160] beyond a limit, standard or expectation, whether in quantity, degree, or ability.
+[00:00:10.080 --> 00:00:15.180] One, if something exceeds a particular amount or number, it is greater or larger than that amount or number.
+[00:00:15.500 --> 00:00:17.260] Example, the sales exceeded my expectation.
+[00:00:17.740 --> 00:00:20.560] Example, his older brother exceeds him in intelligence.
+[00:00:21.280 --> 00:00:23.860] Example, the number of participants exceeded our expectations.
+[00:00:24.760 --> 00:00:29.700] Two, if you exceed a limit or rule, you go beyond it, even though you are
+[00:00:29.700 --> 00:00:31.580] not supposed to or it is against the law.
+[00:00:32.180 --> 00:00:32.700] Example,
+[00:00:33.340 --> 00:00:35.700] he was taken to the police box for exceeding the speed limit.
+[00:00:36.260 --> 00:00:39.000] Example, he exceeded the speed limit and got a ticket.
+[00:00:39.580 --> 00:00:44.340] Summary, exceed refers to going beyond or surpassing a certain limit, boundary,
+[00:00:44.620 --> 00:00:45.120] or expectation.
+[00:00:46.120 --> 00:00:49.480] Related words, surpass, outdo, go beyond, transcend.
+[00:00:50.040 --> 00:00:52.560] Antonyms, fall short, underperform, fail.

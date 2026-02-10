@@ -1,23 +1,25 @@
-[00:00:00.000 --> 00:00:03.920] Brief can be used as an adjective or less commonly as a noun.
-[00:00:03.920 --> 00:00:07.600] As an adjective, brief, brief or briefest, one short,
-[00:00:07.600 --> 00:00:09.960] interation or length.
-[00:00:09.960 --> 00:00:12.440] Examples they had a brief meeting before lunch.
-[00:00:12.440 --> 00:00:14.720] The movie was brief but very entertaining.
-[00:00:14.720 --> 00:00:17.120] He gave a brief explanation of the rules.
-[00:00:17.120 --> 00:00:20.120] Two, concise or using few words.
-[00:00:20.120 --> 00:00:22.240] Examples, please keep your answers brief.
-[00:00:22.240 --> 00:00:24.320] She wrote a brief summary of the report.
-[00:00:24.320 --> 00:00:27.680] The teacher gave a brief instruction before starting the experiment.
-[00:00:27.680 --> 00:00:30.960] Brief, temporary or lasting a short time.
-[00:00:30.960 --> 00:00:33.960] Examples, there was a brief pause in the conversation.
-[00:00:33.960 --> 00:00:36.040] The storm was brief but intense.
-[00:00:36.040 --> 00:00:38.040] His stay in the city was brief.
-[00:00:38.040 --> 00:00:41.640] As a noun, less common literary, a short statement or summary.
-[00:00:41.640 --> 00:00:43.680] The lawyer prepared a brief for the court.
-[00:00:43.680 --> 00:00:46.680] The student submitted a brief of the research article.
-[00:00:46.680 --> 00:00:49.480] The CEO read the brief before the meeting.
-[00:00:49.480 --> 00:00:50.480] Summary.
-[00:00:50.480 --> 00:00:55.360] Brief generally means short in time, concise in words or temporary.
-[00:00:55.360 --> 00:00:58.600] As a noun, it refers to a summary or short statement.
-[00:00:58.600 --> 00:01:01.720] Synonyms short, concise, quick, temporary summary.
-[00:01:01.720 --> 00:01:04.480] Antonyms long, lengthy, extended, detailed, prolonged.
+[00:00:00.000 --> 00:00:03.440] Brief can be used as an adjective or less commonly as a noun.
+[00:00:03.920 --> 00:00:06.740] As an adjective, brief, briefer, briefest.
+[00:00:07.020 --> 00:00:08.940] One short in duration or length.
+[00:00:09.480 --> 00:00:11.700] Examples, they had a brief meeting before lunch.
+[00:00:12.360 --> 00:00:14.300] The movie was brief but very entertaining.
+[00:00:14.660 --> 00:00:16.420] He gave a brief explanation of the rules.
+[00:00:17.000 --> 00:00:19.080] Two, concise or using few words.
+[00:00:19.560 --> 00:00:19.860] Examples,
+[00:00:20.480 --> 00:00:21.880] please keep your answers brief.
+[00:00:22.140 --> 00:00:23.780] She wrote a brief summary of the report.
+[00:00:24.220 --> 00:00:26.820] The teacher gave a brief instruction before starting the experiment.
+[00:00:27.460 --> 00:00:27.720] Three,
+[00:00:28.340 --> 00:00:30.140] temporary or lasting a short time.
+[00:00:30.700 --> 00:00:33.460] Examples, there was a brief pause in the conversation.
+[00:00:33.800 --> 00:00:35.200] The storm was brief but intense.
+[00:00:35.880 --> 00:00:37.380] His stay in the city was brief.
+[00:00:37.880 --> 00:00:38.440] As a noun,
+[00:00:39.100 --> 00:00:41.460] less common, literary, a short statement or summary.
+[00:00:41.580 --> 00:00:43.120] The lawyer prepared a brief for the court.
+[00:00:43.520 --> 00:00:45.760] The student submitted a brief of the research article.
+[00:00:46.480 --> 00:00:48.680] The CEO read the brief before the meeting.
+[00:00:49.360 --> 00:00:54.440] Summary, brief generally means short in time, concise in words or temporary.
+[00:00:55.070 --> 00:00:58.220] As a noun, it refers to a summary or short statement.
+[00:00:58.440 --> 00:01:00.920] Synonyms, short, concise, quick, temporary summary.
+[00:01:01.440 --> 00:01:04.080] Antonyms, long, lengthy, extended, detailed, prolonged.

@@ -1,16 +1,18 @@
-[00:00:00.000 --> 00:00:08.200] Consumption as a noun, one, the active using resources, energy, or materials.
-[00:00:08.200 --> 00:00:13.720] The process of utilizing or using up resources, energy, or materials for various purposes.
-[00:00:13.720 --> 00:00:17.680] Example, the air conditioner has very high energy consumption.
-[00:00:17.680 --> 00:00:21.160] Example, water consumption tends to rise during the summer months.
-[00:00:21.160 --> 00:00:23.920] Two, the active eating or drinking something.
-[00:00:23.920 --> 00:00:28.040] The intake of food, drink, or other substances into the body.
-[00:00:28.040 --> 00:00:32.400] Example, the consumption of fruits and vegetables is beneficial for health.
-[00:00:32.400 --> 00:00:36.600] Example, excessive sugar consumption can lead to health problems.
-[00:00:36.600 --> 00:00:40.440] Three, the act of purchasing and using goods or services.
-[00:00:40.440 --> 00:00:45.160] The buying and utilization of products or services by individuals or groups.
-[00:00:45.160 --> 00:00:49.080] Example, as income increases, people's consumption also rises.
-[00:00:49.080 --> 00:00:54.760] Example, online shopping has significantly boosted global consumption rates.
-[00:00:55.160 --> 00:00:58.200] Consumption refers to the act of using resources,
-[00:00:58.200 --> 00:01:01.720] eating or drinking substances, or purchasing and using goods and services.
-[00:01:01.720 --> 00:01:06.680] Related words, usage, expenditure, intake, utilization, depletion.
-[00:01:06.680 --> 00:01:10.280] Antonyms, production, conservation, saving preservation.
+[00:00:02.460 --> 00:00:04.000] Consumption as a noun.
+[00:00:04.600 --> 00:00:07.460] One, the act of using resources, energy, or materials.
+[00:00:08.140 --> 00:00:12.720] The process of utilizing or using up resources, energy, or materials for various purposes.
+[00:00:13.320 --> 00:00:16.500] Example, the air conditioner has very high energy consumption.
+[00:00:17.140 --> 00:00:20.540] Example, water consumption tends to rise during the summer months.
+[00:00:21.240 --> 00:00:23.160] Two, the act of eating or drinking something.
+[00:00:23.780 --> 00:00:26.700] The intake of food, drink, or other substances into the body.
+[00:00:27.540 --> 00:00:28.080] Example,
+[00:00:28.740 --> 00:00:31.440] the consumption of fruits and vegetables is beneficial for health.
+[00:00:32.000 --> 00:00:35.400] Example, excessive sugar consumption can lead to health problems.
+[00:00:37.100 --> 00:00:39.840] Three, the act of purchasing and using goods or services.
+[00:00:40.380 --> 00:00:44.000] The buying and utilization of products or services by individuals or groups.
+[00:00:44.640 --> 00:00:47.980] Example, as income increases, people's consumption also rises.
+[00:00:48.600 --> 00:00:52.700] Example, online shopping has significantly boosted global consumption rates.
+[00:00:54.120 --> 00:00:59.380] Summary, consumption refers to the act of using resources, eating or drinking substances,
+[00:00:59.780 --> 00:01:01.480] or purchasing and using goods and services.
+[00:01:01.840 --> 00:01:07.300] Related words, usage, expenditure, intake, utilization, depletion, antonym,
+[00:01:07.580 --> 00:01:09.620] production, conservation, saving, preservation.

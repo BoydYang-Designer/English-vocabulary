@@ -1,11 +1,15 @@
-[00:00:00.000 --> 00:00:07.080] Dim can be a verb and adjective with the following meanings as a verb, dim, dimmed, dimming,
-[00:00:07.080 --> 00:00:12.800] meaning to make something less bright or illuminated to reduce the brightness or intensity of light.
-[00:00:12.800 --> 00:00:16.840] Example, he dimmed the lights in the room to create a cozy atmosphere.
-[00:00:16.840 --> 00:00:20.320] Example, he dimmed the lights in the theater before the movie started.
-[00:00:20.320 --> 00:00:28.160] As an adjective, dim, dimmer, dimmest, meaning one, lacking in brightness or illumination.
-[00:00:28.160 --> 00:00:33.680] The dim light in the room made it difficult to read, meaning two, lacking clarity or sharpness.
-[00:00:33.680 --> 00:00:38.400] Example, his memory of the event was dim after so many years.
-[00:00:38.400 --> 00:00:42.720] Meaning three, describe something that has a low probability of success or achievement.
-[00:00:42.720 --> 00:00:47.120] Example, her chances of success seemed dim after the recent setbacks.
-[00:00:47.120 --> 00:00:55.280] Summary, dim can refer to reducing brightness, verb, lack of illumination, clarity, or chances of success, adjective.
-[00:00:55.280 --> 00:01:01.360] Related words, faint dull obscure shadowy weak, bright clear vivid strong promising.
+[00:00:00.000 --> 00:00:03.600] Dim can be a verb and adjective with the following meanings as a verb.
+[00:00:04.300 --> 00:00:09.180] Dim dimmed dimming, meaning to make something less bright or
+[00:00:09.180 --> 00:00:12.020] illuminated to reduce the brightness or intensity of light.
+[00:00:12.820 --> 00:00:16.080] Example, he dimmed the lights in the room to create a cozy atmosphere.
+[00:00:16.700 --> 00:00:19.540] Example, he dimmed the lights in the theater before the movie started.
+[00:00:20.400 --> 00:00:23.620] As an adjective dim dimmer dimmest,
+[00:00:24.420 --> 00:00:27.180] meaning one lacking in brightness or illumination.
+[00:00:27.860 --> 00:00:33.260] The dim light in the room made it difficult to read, meaning to lacking clarity or sharpness.
+[00:00:33.760 --> 00:00:39.080] Example, his memory of the event was dim after so many years, meaning three,
+[00:00:39.380 --> 00:00:42.360] describe something that has a low probability of success or achievement.
+[00:00:42.760 --> 00:00:46.620] Example, her chances of success seemed dim after the recent setbacks.
+[00:00:47.160 --> 00:00:51.760] Summary, dim can refer to reducing brightness, verb, lack of illumination,
+[00:00:52.080 --> 00:00:54.620] clarity or chances of success, adjective.
+[00:00:55.160 --> 00:01:00.340] Related words, faint, dull, obscure, shadowy, weak, bright, clear, vivid, strong,
+[00:01:00.520 --> 00:01:00.820] promising.

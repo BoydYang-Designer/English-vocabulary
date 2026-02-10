@@ -1,11 +1,23 @@
-[00:00:00.000 --> 00:00:06.000] Corrod is a verb, corrode, corroded, corroding with the following meanings.
-[00:00:06.000 --> 00:00:13.000] One, to gradually destroy or damage something, usually metal through a chemical reaction, often involving oxidation,
-[00:00:13.000 --> 00:00:21.000] refers to the process where materials are worn away or deteriorate due to chemical reactions, typically with moisture or acids.
-[00:00:21.000 --> 00:00:26.000] Example sentences, the metal pipes corroded over time due to exposure to water and chemicals,
-[00:00:26.000 --> 00:00:35.000] the old car had corroded parts that needed replacing, the rust on the iron gate indicated that it had corroded from years of exposure to the elements.
-[00:00:35.000 --> 00:00:40.000] It's important to regularly clean and protect metal surfaces to prevent them from corroding.
-[00:00:40.000 --> 00:00:48.000] Two, to weaken or undermine something gradually refers to causing something to lose strength or effectiveness over time.
-[00:00:48.000 --> 00:00:54.000] Example sentences, the constant criticism began to corrode her confidence.
-[00:00:54.000 --> 00:00:58.000] The scandal corroded the trust between the politicians and the public.
-[00:00:58.000 --> 00:01:06.000] Summary, corrode means to gradually destroy or damage something, usually through a chemical reaction or to weaken or undermine something over time.
-[00:01:06.000 --> 00:01:14.000] Related words, rust, erode, deteriorate, damage. Antonyms, strengthen, protect, preserve.
+[00:00:00.000 --> 00:00:01.880] Corrhod is a verb.
+[00:00:02.480 --> 00:00:05.560] Corrhod, corroded, corroding, with the following meanings.
+[00:00:06.180 --> 00:00:11.180] One, to gradually destroy or damage something, usually metal, through a chemical reaction,
+[00:00:11.520 --> 00:00:12.820] often involving oxidation,
+[00:00:13.680 --> 00:00:18.460] refers to the process where materials are worn away or deteriorate due to chemical reactions,
+[00:00:18.820 --> 00:00:20.340] typically with moisture or acids.
+[00:00:21.020 --> 00:00:21.820] Example sentences.
+[00:00:22.420 --> 00:00:25.960] The metal pipes corroded over time due to exposure to water and chemicals.
+[00:00:25.960 --> 00:00:28.960] The old car had corroded parts that needed replacing.
+[00:00:29.720 --> 00:00:34.280] The rust on the iron gate indicated that it had corroded from years of exposure to the elements.
+[00:00:35.140 --> 00:00:39.160] It's important to regularly clean and protect metal surfaces to prevent them from corroding.
+[00:00:40.760 --> 00:00:45.760] Two, to weaken or undermine something gradually, refers to causing something to lose
+[00:00:45.760 --> 00:00:47.620] strength or effectiveness over time.
+[00:00:48.400 --> 00:00:49.300] Example sentences.
+[00:00:50.100 --> 00:00:52.840] The constant criticism began to corrode her confidence.
+[00:00:53.690 --> 00:00:57.400] The scandal corroded the trust between the politicians and the public.
+[00:00:57.980 --> 00:00:58.380] Summary.
+[00:00:58.820 --> 00:01:03.740] Corrhod means to gradually destroy or damage something, usually through a chemical reaction or
+[00:01:03.740 --> 00:01:05.980] to weaken or undermine something over time.
+[00:01:06.740 --> 00:01:07.340] Related words.
+[00:01:07.780 --> 00:01:10.040] Rust, erode, deteriorate, damage.
+[00:01:10.720 --> 00:01:11.260] Antonyms.
+[00:01:11.540 --> 00:01:12.940] Strengthen, protect, preserve.

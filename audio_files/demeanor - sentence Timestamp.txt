@@ -1,9 +1,18 @@
-[00:00:00.000 --> 00:00:05.600] Demenor is a noun, it refers to a person's outward behavior, manner, or appearance,
-[00:00:05.600 --> 00:00:09.360] particularly how they present themselves in a social or emotional context.
-[00:00:10.080 --> 00:00:15.520] Example, despite the stressful situation, her calm and composed demeanor helped reassure everyone
-[00:00:15.520 --> 00:00:21.760] around her. Example, I dislike his pompous demeanor. Example, she had a shy demeanor that made
-[00:00:21.760 --> 00:00:26.880] her seem approachable and humble. Example, his friendly demeanor made everyone feel at ease
-[00:00:26.880 --> 00:00:32.800] during the meeting. Summary, demeanor describes the way a person behaves or presents themselves,
-[00:00:32.800 --> 00:00:38.080] often reflecting their mood, attitude, or personality in a given situation. Related words,
-[00:00:38.080 --> 00:00:44.480] behavior, manner, attitude, conduct, appearance. Antonyms, hostility, aggression,
-[00:00:44.480 --> 00:00:46.080] rudeness, impoliteness.
+[00:00:00.000 --> 00:00:01.420] Demenor is a noun.
+[00:00:01.820 --> 00:00:06.620] It refers to a person's outward behavior, manner, or appearance, particularly how they
+[00:00:06.620 --> 00:00:09.280] present themselves in a social or emotional context.
+[00:00:10.100 --> 00:00:10.640] Example.
+[00:00:11.300 --> 00:00:16.120] Despite the stressful situation, her calm and composed demeanor helped reassure everyone around her.
+[00:00:16.760 --> 00:00:17.260] Example.
+[00:00:17.760 --> 00:00:19.280] I dislike his pompous demeanor.
+[00:00:19.640 --> 00:00:20.160] Example.
+[00:00:20.640 --> 00:00:23.220] She had a shy demeanor that made her seem approachable and humble.
+[00:00:23.920 --> 00:00:24.480] Example.
+[00:00:24.820 --> 00:00:27.480] His friendly demeanor made everyone feel at ease during the meeting.
+[00:00:28.180 --> 00:00:28.740] Summary.
+[00:00:29.220 --> 00:00:34.440] Demenor describes the way a person behaves or presents themselves, often reflecting their mood, attitude,
+[00:00:34.680 --> 00:00:36.420] or personality in a given situation.
+[00:00:37.300 --> 00:00:37.960] Related words.
+[00:00:38.260 --> 00:00:40.820] Behavior, manner, attitude, conduct, appearance.
+[00:00:42.040 --> 00:00:42.600] Antonyms.
+[00:00:43.000 --> 00:00:45.800] Hostility, aggression, rudeness, and politeness.

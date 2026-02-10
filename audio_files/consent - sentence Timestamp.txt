@@ -1,21 +1,24 @@
-[00:00:00.000 --> 00:00:04.140] Consent is a noun and a verb with the following meanings.
-[00:00:04.140 --> 00:00:08.500] As a noun, one, permission or agreement to do something.
-[00:00:08.500 --> 00:00:12.980] Consent refers to the approval or agreement to allow something to happen,
-[00:00:12.980 --> 00:00:17.800] typically after considering the potential outcomes or consequences.
-[00:00:17.800 --> 00:00:19.680] Example sentences.
-[00:00:19.680 --> 00:00:23.880] The parents gave their consent for the child to participate in the field trip.
-[00:00:23.880 --> 00:00:27.480] Written consent is required before conducting the medical procedure.
-[00:00:27.480 --> 00:00:31.800] The agreement was valid only after receiving consent from all parties involved.
-[00:00:31.800 --> 00:00:35.520] As a verb, consent, consented, consenting.
-[00:00:35.520 --> 00:00:39.040] Two, to give permission or agree to something,
-[00:00:39.040 --> 00:00:42.760] to consent means to officially allow or approve something,
-[00:00:42.760 --> 00:00:45.280] typically after consideration.
-[00:00:45.280 --> 00:00:46.680] Example sentences.
-[00:00:46.680 --> 00:00:51.360] She consented to the terms of the contract after reviewing them thoroughly.
-[00:00:51.360 --> 00:00:55.400] The patient consented to the surgery after discussing the risk with the doctor.
-[00:00:55.400 --> 00:00:59.000] They consented to the changes in the project plan.
-[00:00:59.000 --> 00:01:03.240] Summary consent refers to the act of giving permission or agreeing to something.
-[00:01:03.240 --> 00:01:06.200] As a noun, it denotes the approval or agreement and as a verb,
-[00:01:06.200 --> 00:01:09.160] it means to grant permission or agree.
-[00:01:09.160 --> 00:01:13.280] Related words, approval, agreement, authorization, permission.
-[00:01:13.280 --> 00:01:18.040] Antonyms, refusal, denial, disapproval, rejection.
+[00:00:00.000 --> 00:00:03.540] Consent is a noun and a verb with the following meanings.
+[00:00:04.300 --> 00:00:05.020] As a noun,
+[00:00:05.660 --> 00:00:05.960] one,
+[00:00:06.660 --> 00:00:08.120] permission or agreement to do something.
+[00:00:08.760 --> 00:00:13.560] Consent refers to the approval or agreement to allow something to happen, typically
+[00:00:13.560 --> 00:00:16.900] after considering the potential outcomes or consequences.
+[00:00:18.100 --> 00:00:19.040] Example sentences.
+[00:00:20.080 --> 00:00:23.500] The parents gave their consent for the child to participate in the field trip.
+[00:00:24.120 --> 00:00:27.360] Written consent is required before conducting the medical procedure.
+[00:00:27.360 --> 00:00:30.980] The agreement was valid only after receiving consent from all parties involved.
+[00:00:31.920 --> 00:00:34.880] As a verb, consent, consented, consenting.
+[00:00:35.620 --> 00:00:35.820] Two,
+[00:00:36.440 --> 00:00:38.500] to give permission or agree to something,
+[00:00:39.120 --> 00:00:44.140] to consent means to officially allow or approve something, typically after consideration.
+[00:00:45.160 --> 00:00:46.060] Example sentences.
+[00:00:46.760 --> 00:00:50.340] She consented to the terms of the contract after reviewing them thoroughly.
+[00:00:51.360 --> 00:00:54.840] The patient consented to the surgery after discussing the risks with the doctor.
+[00:00:54.840 --> 00:00:57.760] They consented to the changes in the project plan.
+[00:00:58.860 --> 00:00:59.460] Summary.
+[00:00:59.840 --> 00:01:02.760] Consent refers to the act of giving permission or agreeing to something.
+[00:01:03.280 --> 00:01:08.020] As a noun, it denotes the approval or agreement and as a verb it means to grant permission or agree.
+[00:01:09.140 --> 00:01:09.820] Related words.
+[00:01:10.200 --> 00:01:12.860] Approval, agreement, authorization, permission.
+[00:01:13.340 --> 00:01:16.740] Antonyms, refusal, denial, disapproval, rejection.

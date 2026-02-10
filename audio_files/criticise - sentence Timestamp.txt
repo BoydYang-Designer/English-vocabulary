@@ -1,13 +1,13 @@
-[00:00:00.000 --> 00:00:05.000] Criticize as a verb, criticize, criticized, criticizing.
-[00:00:05.000 --> 00:00:08.000] Means to express disapproval of someone or something
-[00:00:08.000 --> 00:00:10.000] by pointing out faults or problems.
-[00:00:10.000 --> 00:00:13.000] It can also mean to evaluate or analyze something,
-[00:00:13.000 --> 00:00:15.000] especially in a detailed and constructive way.
-[00:00:15.000 --> 00:00:19.000] One, his boss criticized him for his sloppy work habits.
-[00:00:19.000 --> 00:00:22.000] Two, he was quick to criticize the new policy,
-[00:00:22.000 --> 00:00:25.000] arguing that it would create more problems than it would solve.
-[00:00:25.000 --> 00:00:29.000] Three, the teacher tried not to criticize the students too harshly,
-[00:00:29.000 --> 00:00:33.000] instead offering constructive feedback to help them improve.
-[00:00:33.000 --> 00:00:37.000] Four, some people criticize the movie for its slow pacing,
-[00:00:37.000 --> 00:00:41.000] but others appreciate its deep, thoughtful approach to storytelling.
-[00:00:41.000 --> 00:00:45.000] Five, he asked me to criticize also critique his drawings.
+[00:00:00.640 --> 00:00:01.980] Criticize as a verb.
+[00:00:02.440 --> 00:00:07.400] Criticize, criticized, criticizing means to express disapproval of someone
+[00:00:07.400 --> 00:00:09.780] or something by pointing out faults or problems.
+[00:00:10.360 --> 00:00:15.000] It can also mean to evaluate or analyze something, especially in a detailed and constructive way.
+[00:00:15.560 --> 00:00:15.740] One,
+[00:00:16.500 --> 00:00:18.880] his boss criticized him for his sloppy work habits.
+[00:00:19.680 --> 00:00:24.960] Two, he was quick to criticize the new policy, arguing that it would create more problems than it would solve.
+[00:00:25.620 --> 00:00:30.280] Three, the teacher tried not to criticize the students too harshly, instead offering constructive
+[00:00:30.280 --> 00:00:32.280] feedback to help them improve.
+[00:00:33.400 --> 00:00:33.960] Four,
+[00:00:34.560 --> 00:00:39.520] some people criticize the movie for its slow pacing, but others appreciate its deep, thoughtful
+[00:00:39.520 --> 00:00:40.580] approach to storytelling.
+[00:00:41.560 --> 00:00:44.000] Five, he asked me to criticize also critique his drawings.

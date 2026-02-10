@@ -1,12 +1,29 @@
-[00:00:00.000 --> 00:00:02.400] Emphasis as a noun.
-[00:00:02.400 --> 00:00:06.300] One, special importance or significance given to something.
-[00:00:06.300 --> 00:00:11.900] Emphasis refers to focusing attention or highlighting something to make it stand out or be more noticeable.
-[00:00:11.900 --> 00:00:17.800] Example, the teacher placed emphasis on the importance of studying for the final exam.
-[00:00:17.800 --> 00:00:23.000] Example, the emphasis in her speech was on the need for environmental conservation.
-[00:00:23.000 --> 00:00:26.600] Two, a stress or extension in its speech or writing.
-[00:00:26.700 --> 00:00:33.700] Emphasis can also refer to the way certain words or phrases are stressed to convey importance or to clarify meaning.
-[00:00:33.700 --> 00:00:38.200] Example, the word definitely was said with extra emphasis to show certainty.
-[00:00:38.200 --> 00:00:44.200] Example, the speaker used emphasis to underline the main points of her argument.
-[00:00:44.200 --> 00:00:50.500] Summary, emphasis refers to giving special importance or attention to something, either in speech or writing,
-[00:00:50.500 --> 00:00:53.500] to make it stand out or appear more significant.
-[00:00:53.500 --> 00:01:02.400] Related words, importance, focus, stress, accent, prominence, neglect, disregard, indifference, insignificance.
+[00:00:00.000 --> 00:00:01.540] Emphasis as a noun.
+[00:00:02.560 --> 00:00:02.800] 1.
+[00:00:03.320 --> 00:00:05.540] Special importance or significance given to something.
+[00:00:06.300 --> 00:00:11.280] Emphasis refers to focusing attention or highlighting something to make it stand out or be more noticeable.
+[00:00:12.020 --> 00:00:12.620] Example.
+[00:00:13.660 --> 00:00:16.980] The teacher placed emphasis on the importance of studying for the final exam.
+[00:00:17.940 --> 00:00:18.540] Example.
+[00:00:18.900 --> 00:00:21.920] The emphasis in her speech was on the need for environmental conservation.
+[00:00:23.040 --> 00:00:23.440] 2.
+[00:00:24.020 --> 00:00:26.220] A stress or extension in a speech or writing.
+[00:00:26.220 --> 00:00:31.080] Emphasis can also refer to the way certain words or phrases are stressed to convey
+[00:00:31.080 --> 00:00:33.140] importance or to clarify meaning.
+[00:00:33.900 --> 00:00:34.500] Example.
+[00:00:34.600 --> 00:00:37.540] The word definitely was said with extra emphasis to show certainty.
+[00:00:38.440 --> 00:00:39.020] Example.
+[00:00:39.220 --> 00:00:42.880] The speaker used emphasis to underline the main points of her argument.
+[00:00:44.380 --> 00:00:44.980] Summary.
+[00:00:45.260 --> 00:00:50.060] Emphasis refers to giving special importance or attention to something, either in speech or writing,
+[00:00:50.540 --> 00:00:52.980] to make it stand out or appear more significant.
+[00:00:52.980 --> 00:00:54.280] Related words.
+[00:00:54.940 --> 00:00:55.540] Importance.
+[00:00:55.920 --> 00:00:56.320] Focus.
+[00:00:56.680 --> 00:00:56.840] Stress.
+[00:00:57.160 --> 00:00:57.500] Accent.
+[00:00:57.680 --> 00:00:58.120] Prominence.
+[00:00:58.420 --> 00:00:58.780] Neglect.
+[00:00:59.100 --> 00:00:59.560] Disregard.
+[00:00:59.740 --> 00:01:00.180] Indifference.
+[00:01:00.360 --> 00:01:00.980] Insignificance.

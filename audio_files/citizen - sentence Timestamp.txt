@@ -1,5 +1,7 @@
-[00:00:00.000 --> 00:00:05.500] A citizen is a person who legally belongs to a country and has the rights and protection of that country.
-[00:00:05.500 --> 00:00:07.500] Example sentences.
-[00:00:07.500 --> 00:00:12.000] 1. As a citizen, she has the right to vote in national elections.
-[00:00:12.000 --> 00:00:16.500] 2. The new law will benefit all citizens regardless of their background.
-[00:00:16.500 --> 00:00:21.500] 3. He became a citizen of the United States after living there for 10 years.
+[00:00:00.000 --> 00:00:05.340] A citizen is a person who legally belongs to a country and has the rights and protection of that country.
+[00:00:06.060 --> 00:00:06.860] Example sentences.
+[00:00:07.640 --> 00:00:07.840] One,
+[00:00:08.460 --> 00:00:11.680] as a citizen she has the right to vote in national elections.
+[00:00:12.360 --> 00:00:16.280] Two, the new law will benefit all citizens regardless of their background.
+[00:00:17.000 --> 00:00:17.520] Three,
+[00:00:18.140 --> 00:00:20.980] he became a citizen of the United States after living there for ten years.

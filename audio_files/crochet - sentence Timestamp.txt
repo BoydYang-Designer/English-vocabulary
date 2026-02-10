@@ -1,6 +1,10 @@
-[00:00:00.000 --> 00:00:07.500] Crochet is a handicraft that involves creating fabric by interlocking loops of yarn or thread using a hooked needle.
-[00:00:07.500 --> 00:00:12.320] It's similar to knitting, but uses a single hook needle instead of two needles.
-[00:00:12.320 --> 00:00:19.460] Crochet can be used to make a wide range of items, including clothing, accessories, household items, and decorative pieces.
-[00:00:19.460 --> 00:00:24.400] For example, she spent her evenings crocheting a cozy blanket for her newborn niece.
-[00:00:24.400 --> 00:00:31.640] For example, the local crocheter displayed her beautifully crafted scarves and hats at the artisan market.
-[00:00:31.640 --> 00:00:39.240] For example, my grandmother taught me how to crochet, and now I'm making a colorful scarf for winter.
+[00:00:00.000 --> 00:00:04.880] Crochet is a handicraft that involves creating fabric by interlocking loops of
+[00:00:04.880 --> 00:00:07.300] yarn or thread using a hooked needle.
+[00:00:07.880 --> 00:00:11.940] It's similar to knitting, but uses a single hooked needle instead of two needles.
+[00:00:12.660 --> 00:00:17.700] Crochet can be used to make a wide range of items, including clothing, accessories, household items,
+[00:00:17.960 --> 00:00:19.120] and decorative pieces.
+[00:00:19.860 --> 00:00:24.100] For example, she spent her evenings crocheting a cozy blanket for her newborn niece.
+[00:00:24.100 --> 00:00:28.880] For example, the local crocheter displayed her beautifully crafted scarves and hats
+[00:00:28.880 --> 00:00:30.160] at the artisan market.
+[00:00:31.140 --> 00:00:35.700] For example, my grandmother taught me how to crochet, and now I'm making a colorful
+[00:00:35.700 --> 00:00:37.000] scarf for winter.

@@ -1,13 +1,14 @@
-[00:00:00.000 --> 00:00:04.480] As a noun, the Mid-Autumn Festival is a traditional Chinese festival celebrated on the 15th
-[00:00:04.480 --> 00:00:08.880] day of the 8th lunar month, usually in September or early October.
-[00:00:08.880 --> 00:00:12.780] It is a time for family reunions, moon gazing, and enjoying moon cakes.
-[00:00:12.780 --> 00:00:17.360] The festival is associated with legends such as Chong, the moon goddess, and is widely
-[00:00:17.360 --> 00:00:21.720] celebrated in China and other East Asian countries.
-[00:00:21.720 --> 00:00:22.720] Example
-[00:00:22.720 --> 00:00:27.360] Families gather to celebrate the Mid-Autumn Festival by eating moon cakes.
-[00:00:27.360 --> 00:00:31.160] Example, the streets were decorated with lanterns for the Mid-Autumn Festival.
-[00:00:31.160 --> 00:00:36.040] Example, children enjoy playing with lanterns during the Mid-Autumn Festival.
-[00:00:36.040 --> 00:00:41.680] Example, the Mid-Autumn Festival symbolizes unity and gratitude.
-[00:00:41.680 --> 00:00:46.680] Summary, the Mid-Autumn Festival is a traditional Chinese holiday centered around family reunions,
-[00:00:46.680 --> 00:00:50.960] moon appreciation, and the sharing of moon cakes.
-[00:00:50.960 --> 00:00:56.440] Related words, moon festival, lantern festival, harvest festival, reunion celebration.
+[00:00:00.000 --> 00:00:04.860] As a noun, the Mid -Autumn Festival is a traditional Chinese festival celebrated on the 15th day of the
+[00:00:04.860 --> 00:00:08.000] 8th lunar month, usually in September or early October.
+[00:00:08.700 --> 00:00:12.060] It is a time for family reunions, moon gazing, and enjoying mooncakes.
+[00:00:12.640 --> 00:00:17.220] The festival is associated with legends such as Chang, the Moon Goddess, and is widely
+[00:00:17.220 --> 00:00:19.620] celebrated in China and other East Asian countries.
+[00:00:21.240 --> 00:00:21.800] Example
+[00:00:22.740 --> 00:00:26.580] Families gather to celebrate the Mid -Autumn Festival by eating mooncakes.
+[00:00:26.580 --> 00:00:30.600] Example The streets were decorated with lanterns for the Mid -Autumn Festival.
+[00:00:30.980 --> 00:00:35.120] Example Children enjoy playing with lanterns during the Mid -Autumn Festival.
+[00:00:36.040 --> 00:00:40.760] Example The Mid -Autumn Festival symbolizes unity and gratitude.
+[00:00:41.520 --> 00:00:46.420] Summary The Mid -Autumn Festival is a traditional Chinese holiday centered around family reunions,
+[00:00:46.620 --> 00:00:49.220] moon appreciation, and the sharing of mooncakes.
+[00:00:50.560 --> 00:00:55.240] Related words Moon Festival, Lantern Festival, Harvest Festival
+[00:00:55.240 --> 00:00:55.980] reunion celebration.

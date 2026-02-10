@@ -1,12 +1,13 @@
-[00:00:00.000 --> 00:00:04.460] Deseave is a verb, deceive, deceived, deceiving.
-[00:00:04.460 --> 00:00:07.860] It means to cause someone to believe something that is not true,
-[00:00:07.860 --> 00:00:11.780] typically in order to gain some personal advantage or to mislead.
-[00:00:11.780 --> 00:00:16.320] Example, she deceived him into believing that she was wealthy.
-[00:00:16.320 --> 00:00:22.540] Example, the company was accused of deceiving customers with false advertising.
-[00:00:22.540 --> 00:00:25.580] He tried to deceive his parents about where he had been.
-[00:00:25.580 --> 00:00:27.860] Example, don't be deceived by appearances,
-[00:00:27.860 --> 00:00:30.940] like the situation is more complicated than it looks.
-[00:00:30.940 --> 00:00:35.240] Summary, to deceive means to mislead or trick someone by hiding or distorting the truth,
-[00:00:35.240 --> 00:00:37.940] often to gain an advantage or avoid consequences.
-[00:00:37.940 --> 00:00:41.960] Related words, mislead, trick, cheat, dup, con.
-[00:00:41.960 --> 00:00:45.400] Antonyms, be honest, reveal, inform, disclose.
+[00:00:00.000 --> 00:00:01.480] Deceive is a verb.
+[00:00:02.000 --> 00:00:03.980] Deceive, deceived, deceiving.
+[00:00:04.620 --> 00:00:09.260] It means to cause someone to believe something that is not true, typically in order to gain some
+[00:00:09.260 --> 00:00:11.440] personal advantage or to mislead.
+[00:00:11.880 --> 00:00:15.800] Example, she deceived him into believing that she was wealthy.
+[00:00:16.500 --> 00:00:17.140] Example,
+[00:00:17.860 --> 00:00:21.980] the company was accused of deceiving customers with false advertising.
+[00:00:22.620 --> 00:00:25.160] He tried to deceive his parents about where he had been.
+[00:00:25.640 --> 00:00:30.160] Example, don't be deceived by appearances like the situation is more complicated than it looks.
+[00:00:31.020 --> 00:00:35.880] Summary, to deceive means to mislead or trick someone by hiding or distorting the truth, often to gain an
+[00:00:35.880 --> 00:00:37.300] advantage or avoid consequences.
+[00:00:37.880 --> 00:00:41.380] Related words, mislead, trick, cheat, dupe, con.
+[00:00:42.000 --> 00:00:44.760] Antonyms, be honest, reveal, inform, disclose.

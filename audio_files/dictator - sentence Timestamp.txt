@@ -1,8 +1,11 @@
-[00:00:00.000 --> 00:00:08.400] Dictator is a noun with the following meaning, a person who rules with absolute power, often in an oppressive or autocratic manner,
-[00:00:08.400 --> 00:00:18.000] a leader who has total control over a country or organization, typically without consent from the governed and often through the use of force or fear.
-[00:00:18.000 --> 00:00:23.500] Example, the dictator ruled the country with an iron fist, punishing anyone who opposed him.
-[00:00:23.500 --> 00:00:28.000] Example, many dictators have used propaganda to maintain their hold on power.
-[00:00:28.500 --> 00:00:33.500] Example, the dictator's regime was marked by widespread human rights violations.
-[00:00:33.500 --> 00:00:43.000] Summary, a dictator is a leader who wields complete control, often without legal or moral justification, typically ruling in an authoritarian or tyrannical manner.
-[00:00:43.000 --> 00:00:47.000] Related words, tyrant, autocrat, despot, oppressor.
-[00:00:47.000 --> 00:00:51.000] Antonyms, Democrat, leader, representative, statesperson.
+[00:00:00.000 --> 00:00:02.720] Dictator is a noun with the following meaning.
+[00:00:03.300 --> 00:00:08.060] A person who rules with absolute power, often in an oppressive or autocratic manner.
+[00:00:08.760 --> 00:00:13.360] A leader who has total control over a country or organization, typically
+[00:00:13.360 --> 00:00:17.480] without consent from the governed and often through the use of force or fear.
+[00:00:18.460 --> 00:00:23.120] Example, the dictator ruled the country with an iron fist, punishing anyone who opposed him.
+[00:00:23.960 --> 00:00:28.000] Example, many dictators have used propaganda to maintain their hold on power.
+[00:00:28.000 --> 00:00:32.460] Example, the dictator's regime was marked by widespread human rights violations.
+[00:00:33.440 --> 00:00:39.000] Summary, a dictator is a leader who wields complete control, often without legal or moral justification,
+[00:00:39.500 --> 00:00:42.120] typically ruling in an authoritarian or tyrannical manner.
+[00:00:43.220 --> 00:00:46.620] Related words, tyrant, autocrat, despot, oppressor.
+[00:00:47.240 --> 00:00:50.440] Antonyms, Democrat, leader, representative, statesperson.

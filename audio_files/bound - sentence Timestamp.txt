@@ -1,29 +1,25 @@
-[00:00:00.000 --> 00:00:03.200] bound can be an adjective, verb, or noun.
-[00:00:03.200 --> 00:00:07.040] As an adjective, bound, certain or likely to do something,
-[00:00:07.040 --> 00:00:08.680] obligated or tied.
-[00:00:08.680 --> 00:00:11.640] He is bound to succeed if he keeps working hard.
-[00:00:11.640 --> 00:00:14.080] She felt bound by her promise to help.
-[00:00:14.080 --> 00:00:16.500] They are bound together by a shared goal.
-[00:00:16.500 --> 00:00:19.720] As a verb, one, to tie or fasten something tightly,
-[00:00:19.720 --> 00:00:24.320] to connect or secure from the verb bind, bind, bound, binding.
-[00:00:24.320 --> 00:00:26.160] They bound his hands with rope.
-[00:00:26.160 --> 00:00:27.640] The book was bound in leather.
-[00:00:28.520 --> 00:00:31.760] Friendship and trust bound the team together.
-[00:00:31.760 --> 00:00:34.400] Two, to move quickly with leaping motions
-[00:00:34.400 --> 00:00:37.560] from the verb bound, bound, bounded, bounding.
-[00:00:37.560 --> 00:00:39.960] The dog bounded across the field.
-[00:00:39.960 --> 00:00:42.560] He bounded to his feet and waved goodbye to his friends.
-[00:00:42.560 --> 00:00:44.040] The rabbit bounded away into the bushes.
-[00:00:44.040 --> 00:00:47.680] As a noun, bound, bounds, a limit or boundary,
-[00:00:47.680 --> 00:00:49.720] also a leap or jump.
-[00:00:49.720 --> 00:00:52.200] His imagination knows no bounds.
-[00:00:52.200 --> 00:00:55.600] The deer disappeared in a few graceful bounds.
-[00:00:55.600 --> 00:00:57.640] You must stay within the bounds of the law.
-[00:00:57.640 --> 00:01:00.720] Summary, bound can mean tied or obligated, adjective,
-[00:01:00.720 --> 00:01:03.800] to tie or leap, verb or a limit or jump, noun.
-[00:01:03.800 --> 00:01:06.080] It expresses ideas of restriction, connection,
-[00:01:06.080 --> 00:01:08.120] or energetic motion depending on context.
-[00:01:08.120 --> 00:01:11.160] Synonyms, tied, obligated, connected, restricted,
-[00:01:11.160 --> 00:01:12.160] leap limit.
-[00:01:12.160 --> 00:01:15.720] Antonyms, free, unbound, released, unlimited.
-[00:01:15.720 --> 00:01:19.320] Related words, bind, boundary, bond, restriction, leap.
+[00:00:00.000 --> 00:00:02.220] Bound can be an adjective, verb, or noun.
+[00:00:03.260 --> 00:00:08.300] As an adjective, bound, certain, or likely to do something, obligated, or tied,
+[00:00:08.680 --> 00:00:11.000] he is bound to succeed if he keeps working hard.
+[00:00:11.620 --> 00:00:13.480] She felt bound by her promise to help.
+[00:00:14.020 --> 00:00:15.920] They are bound together by a shared goal.
+[00:00:16.500 --> 00:00:21.700] As a verb, one, to tie or fasten something tightly to connect or secure from the verb bind,
+[00:00:22.080 --> 00:00:23.600] bind, bound, binding.
+[00:00:24.260 --> 00:00:25.560] They bound his hands with rope.
+[00:00:26.100 --> 00:00:27.220] The book was bound in leather.
+[00:00:28.360 --> 00:00:30.300] Friendship and trust bound the team together.
+[00:00:31.460 --> 00:00:37.060] Two, to move quickly with leaping motions from the verb bound, bound, bounded, bounding.
+[00:00:37.540 --> 00:00:39.160] The dog bounded across the field.
+[00:00:39.960 --> 00:00:42.220] He bounded to his feet and waved goodbye to his friends.
+[00:00:42.600 --> 00:00:43.740] The rabbit bounded away into the bushes.
+[00:00:44.040 --> 00:00:45.980] As a noun, bound, bounds.
+[00:00:46.460 --> 00:00:48.860] A limit or boundary, also a leap or jump.
+[00:00:49.680 --> 00:00:51.040] His imagination knows no bounds.
+[00:00:51.800 --> 00:00:54.380] The deer disappeared in a few graceful bounds.
+[00:00:55.180 --> 00:00:57.360] You must stay within the bounds of the law.
+[00:00:57.700 --> 00:01:02.840] Summary, bound can mean tied or obligated, adjective to tie or leap, verb or limit or jump,
+[00:01:03.120 --> 00:01:03.320] noun.
+[00:01:03.840 --> 00:01:07.720] It expresses ideas of restriction, connection, or energetic motion depending on context.
+[00:01:08.160 --> 00:01:11.680] Synonyms, tied, obligated, connected, restricted, leap, limit.
+[00:01:12.200 --> 00:01:15.060] Antonyms, free, unbound, released, unlimited.
+[00:01:15.680 --> 00:01:19.000] Related words, bind, boundary, bond, restriction, leap.

@@ -1,14 +1,15 @@
-[00:00:00.000 --> 00:00:05.480] Amber is a noun and an adjective that refers to a yellowish brown color or fossilized tree
-[00:00:05.480 --> 00:00:08.000] resin that is often used in jewelry.
-[00:00:08.000 --> 00:00:11.660] As a noun, one fossilized tree resin.
-[00:00:11.660 --> 00:00:17.040] This is the hardened sap from trees that can sometimes trap insects or plant material inside.
-[00:00:17.040 --> 00:00:22.760] Example, the piece of amber in the ring had a small insect trapped inside it.
-[00:00:22.760 --> 00:00:28.640] Archaeologists found ancient plants preserved in amber as an adjective, one describing a
-[00:00:28.640 --> 00:00:29.640] color.
-[00:00:29.800 --> 00:00:32.400] It refers to a warm yellowish brown color.
-[00:00:32.400 --> 00:00:35.600] Example, the room was filled with an amber light from the setting sun.
-[00:00:35.600 --> 00:00:39.560] She wore a beautiful amber dress that matched her amber colored shoes.
-[00:00:39.560 --> 00:00:44.800] Summary, amber can mean a warm yellowish brown color or fossilized tree resin that is often
-[00:00:44.800 --> 00:00:46.520] used for decoration.
-[00:00:46.520 --> 00:00:50.880] Related words, gold, honey, resin.
-[00:00:50.880 --> 00:00:53.800] Antonyms, clear, colorless, dull.
+[00:00:00.000 --> 00:00:04.720] Amber is a noun and an adjective that refers to a yellowish -brown color or
+[00:00:04.720 --> 00:00:07.000] fossilized tree resin that is often used in jewelry.
+[00:00:07.880 --> 00:00:08.420] As a noun,
+[00:00:09.100 --> 00:00:11.320] one, fossilized tree resin.
+[00:00:11.720 --> 00:00:16.020] This is the hardened sap from trees that can sometimes trap insects or plant material inside.
+[00:00:16.860 --> 00:00:20.780] Example, the piece of amber in the ring had a small insect trapped inside it.
+[00:00:22.820 --> 00:00:26.840] Archaeologists found ancient plants preserved in amber as an adjective.
+[00:00:26.840 --> 00:00:28.940] One, describing a color.
+[00:00:29.800 --> 00:00:31.740] It refers to a warm yellowish -brown color.
+[00:00:32.320 --> 00:00:35.000] Example, the room was filled with an amber light from the setting sun.
+[00:00:35.480 --> 00:00:38.500] She wore a beautiful amber dress that matched her amber -colored shoes.
+[00:00:39.500 --> 00:00:44.480] Summary, amber can mean a warm yellowish -brown color or fossilized tree resin that
+[00:00:44.480 --> 00:00:45.640] is often used for decoration.
+[00:00:46.360 --> 00:00:49.240] Related words, gold, honey, resin.
+[00:00:50.840 --> 00:00:53.680] Antonyms, clear, colorless, dull.

@@ -1,7 +1,13 @@
-[00:00:00.000 --> 00:00:12.000] Distill is a verb, distill, distilled, distilling with the following meanings, to purify or separate a liquid by heating it to create vapor and then cooling it to collect the condensed liquid.
-[00:00:13.000 --> 00:00:21.000] Example, the whiskey is distilled to achieve a smooth flavor. They distilled the seawater to produce drinkable water.
-[00:00:21.000 --> 00:00:26.000] To extract the essential meaning, ideas or most important aspects from something.
-[00:00:27.000 --> 00:00:30.000] She distilled the complex report into a few clear points for the team.
-[00:00:31.000 --> 00:00:35.000] Example, the novel distills the essence of life in a small town.
-[00:00:36.000 --> 00:00:42.000] Summary distilled means to purify a liquid by heating and cooling process or to extract the main elements or meaning from something complex.
-[00:00:43.000 --> 00:00:49.000] Related words, purify, extract, refine, condense, antinums, dilute, mix, complicate.
+[00:00:00.000 --> 00:00:05.100] Distill is a verb, distilled, distilled, distilling, with the following meanings.
+[00:00:05.780 --> 00:00:10.540] To purify or separate a liquid by heating it to create vapor and then cooling it to
+[00:00:10.540 --> 00:00:11.780] collect the condensed liquid.
+[00:00:13.300 --> 00:00:16.660] Example, the whiskey is distilled to achieve a smooth flavor.
+[00:00:17.500 --> 00:00:20.320] They distilled the seawater to produce drinkable water.
+[00:00:21.240 --> 00:00:25.380] To extract the essential meaning, ideas, or most important aspects from something.
+[00:00:26.500 --> 00:00:30.000] She distilled the complex report into a few clear points for the team.
+[00:00:31.200 --> 00:00:31.760] Example,
+[00:00:32.440 --> 00:00:34.900] the novel distills the essence of life in a small town.
+[00:00:35.680 --> 00:00:40.640] Summary distilled means to purify a liquid by a heating and cooling process or to extract the
+[00:00:40.640 --> 00:00:42.540] main elements or meaning from something complex.
+[00:00:42.820 --> 00:00:48.100] Related words, purify, extract, refine, condense, antonyms, dilute,
+[00:00:48.440 --> 00:00:49.400] mix, complicate.

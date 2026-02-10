@@ -1,19 +1,20 @@
-[00:00:00.000 --> 00:00:02.280] cringe as a verb and noun.
-[00:00:02.280 --> 00:00:05.440] As a verb, cringe, cringed, cringing.
-[00:00:05.440 --> 00:00:09.720] One, to shrink back or recoil in fear, discomfort or embarrassment.
-[00:00:09.720 --> 00:00:13.320] Example, she cringed when she saw the spider crawling toward her.
-[00:00:13.320 --> 00:00:16.680] Example, he cringed at the loud, unexpected noise.
-[00:00:16.680 --> 00:00:21.320] Two, to feel embarrassed or awkward due to something unpleasant or shameful.
-[00:00:21.320 --> 00:00:24.440] I cringed at my own embarrassing mistake during the speech.
-[00:00:24.440 --> 00:00:29.120] Example, she cringed when she heard her old recordings from years ago.
-[00:00:29.280 --> 00:00:35.400] Three, to act in a survival or overly submissive way, often to gain favor.
-[00:00:35.400 --> 00:00:40.440] Example, the employee cringed before his boss, hoping to avoid punishment.
-[00:00:40.440 --> 00:00:44.480] Example, he cringed and apologized repeatedly to avoid conflict.
-[00:00:44.480 --> 00:00:50.360] As a noun, a feeling or active, active, recoiling due to discomfort, fear or embarrassment.
-[00:00:50.360 --> 00:00:54.440] Example, his bad joke caused an awkward cringe from the audience.
-[00:00:54.440 --> 00:00:58.520] She let out a cringe when she remembered the embarrassing moment.
-[00:00:58.560 --> 00:01:04.560] Summary cringe means to physically or emotionally recoil in fear, discomfort or embarrassment.
-[00:01:04.560 --> 00:01:07.520] It can also describe excessive submissiveness.
-[00:01:07.520 --> 00:01:12.160] As a noun, it refers to the feeling or reaction of awkwardness or embarrassment.
-[00:01:12.160 --> 00:01:16.160] Related words, flinch, recoil, winds shrink, cower.
-[00:01:16.160 --> 00:01:19.160] Antonyms, relax, embrace, confront, face.
+[00:00:00.000 --> 00:00:01.860] Cringe as a verb and noun.
+[00:00:02.380 --> 00:00:05.040] As a verb, cringe, cringe, cringing.
+[00:00:05.680 --> 00:00:09.280] One, to shrink back or recoil in fear, discomfort or embarrassment.
+[00:00:09.860 --> 00:00:13.000] Example, she cringed when she saw the spider crawling toward her.
+[00:00:13.500 --> 00:00:16.020] Example, he cringed at the loud, unexpected noise.
+[00:00:16.840 --> 00:00:20.940] Two, to feel embarrassed or awkward due to something unpleasant or shameful.
+[00:00:21.440 --> 00:00:24.000] I cringed at my own embarrassing mistake during the speech.
+[00:00:24.580 --> 00:00:28.580] Example, she cringed when she heard her old recordings from years ago.
+[00:00:29.240 --> 00:00:34.100] Three, to act in a servile or overly submissive way, often to gain favor.
+[00:00:35.220 --> 00:00:35.780] Example,
+[00:00:36.620 --> 00:00:39.720] the employee cringed before his boss, hoping to avoid punishment.
+[00:00:40.420 --> 00:00:43.840] Example, he cringed and apologized repeatedly to avoid conflict.
+[00:00:44.440 --> 00:00:49.880] As a noun, one of feeling or act of recoiling due to discomfort, fear or embarrassment.
+[00:00:50.420 --> 00:00:53.580] Example, his bad joke caused an awkward cringe from the audience.
+[00:00:54.320 --> 00:00:56.660] She let out a cringe when she remembered the embarrassing moment.
+[00:00:58.580 --> 00:01:04.000] Summary, cringe means to physically or emotionally recoil in fear, discomfort or embarrassment.
+[00:01:04.600 --> 00:01:06.600] It can also describe excessive submissiveness.
+[00:01:07.500 --> 00:01:11.160] As a noun, it refers to the feeling or reaction of awkwardness or embarrassment.
+[00:01:12.000 --> 00:01:15.660] Related words, flinch, recoil, wince, shrink, cower.
+[00:01:16.200 --> 00:01:18.720] Antonyms, relax, embrace, confront, face.

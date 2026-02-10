@@ -1,11 +1,17 @@
-[00:00:00.000 --> 00:00:07.840] Clunky as an adjective, one large, heavy, or awkward in shape or movement, lacking smoothness or elegance.
-[00:00:07.840 --> 00:00:12.240] Example, the old computer was clunky and difficult to carry.
-[00:00:12.240 --> 00:00:20.120] Example, he walked in clean boots that made a loud noise, two, not well designed or lacking efficiency difficult to use.
-[00:00:20.120 --> 00:00:23.840] Example, the software had a clunky interface that was hard to navigate.
-[00:00:23.840 --> 00:00:27.000] The clunky controls made the game frustrating to play.
-[00:00:27.800 --> 00:00:32.040] Three, awkward or unpolished in speech, writing, or style.
-[00:00:32.040 --> 00:00:36.520] Example, the dialogue in the movie felt clunky and unnatural.
-[00:00:36.520 --> 00:00:39.960] Example, his clunky wording made the message hard to understand.
-[00:00:39.960 --> 00:00:47.640] Summary, clunky describes something that is heavy, awkward, poorly designed, or lacking smoothness in function, appearance, or style.
-[00:00:47.640 --> 00:00:52.280] Related words, bulky, awkward, cumbersome, unrefined, inefficient.
-[00:00:52.280 --> 00:00:56.280] Antonyms, sleek, smooth, refined, efficient, elegant.
+[00:00:00.000 --> 00:00:01.540] Clunky as an adjective.
+[00:00:02.240 --> 00:00:02.520] One,
+[00:00:03.120 --> 00:00:07.460] large, heavy, or awkward in shape or movement, lacking smoothness or elegance.
+[00:00:08.320 --> 00:00:11.780] Example, the old computer was clunky and difficult to carry.
+[00:00:12.520 --> 00:00:15.160] Example, he walked in clib boots that made a loud noise.
+[00:00:15.760 --> 00:00:15.980] Two,
+[00:00:16.740 --> 00:00:19.740] not well designed or lacking efficiency, difficult to use.
+[00:00:20.260 --> 00:00:23.480] Example, the software had a clunky interface that was hard to navigate.
+[00:00:23.980 --> 00:00:26.520] The clunky controls made the game frustrating to play.
+[00:00:27.500 --> 00:00:31.500] Three, awkward or unpolished in speech, writing, or style.
+[00:00:32.100 --> 00:00:35.720] Example, the dialogue in the movie felt clunky and unnatural.
+[00:00:36.620 --> 00:00:39.480] Example, his clunky wording made the message hard to understand.
+[00:00:40.020 --> 00:00:45.000] Summary, clunky describes something that is heavy, awkward, poorly designed, or lacking smoothness
+[00:00:45.000 --> 00:00:47.100] in function, appearance, or style.
+[00:00:47.720 --> 00:00:51.520] Related words, bulky, awkward, cumbersome, unrefined, inefficient.
+[00:00:52.420 --> 00:00:55.800] Antonyms, sleek, smooth, refined, efficient, elegant.
+[00:00:56.520 --> 00:00:57.660] Transcribed by ESO, translated by –

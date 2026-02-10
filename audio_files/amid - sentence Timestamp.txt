@@ -1,7 +1,8 @@
-[00:00:00.000 --> 00:00:06.080] Amid and amidst are prepositions that mean essentially the same thing in the middle of or
-[00:00:06.080 --> 00:00:07.520] surrounded by.
-[00:00:07.520 --> 00:00:13.600] However, amid is more commonly used in modern English while amidst is somewhat more formal
-[00:00:13.600 --> 00:00:15.320] or literary.
-[00:00:15.320 --> 00:00:18.440] Example we lost our companions amid the storm in the darkness.
-[00:00:18.440 --> 00:00:21.800] Example it was hard to hear amid all the cheering.
-[00:00:21.800 --> 00:00:27.440] Example amidst during all the fighting, there still remained a steady hope for peace.
+[00:00:00.000 --> 00:00:04.640] Amid and amidst are prepositions that mean essentially the same thing,
+[00:00:05.020 --> 00:00:06.840] in the middle of or surrounded by.
+[00:00:07.620 --> 00:00:12.440] However, amidst is more commonly used in modern English, while amidst is
+[00:00:12.440 --> 00:00:14.140] somewhat more formal or literary.
+[00:00:14.920 --> 00:00:17.560] Example, we lost our companions amidst the storm and the darkness.
+[00:00:18.000 --> 00:00:20.180] Example it was hard to hear amidst all the cheering.
+[00:00:21.600 --> 00:00:26.500] Example, amidst during all the fighting, there still remained a steady hope
+[00:00:26.500 --> 00:00:27.000] for peace.

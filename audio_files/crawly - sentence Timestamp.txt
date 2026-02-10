@@ -1,9 +1,14 @@
-[00:00:00.000 --> 00:00:06.720] Crawley is an adjective. It describes a sensation of discomfort or unease, often associated
-[00:00:06.720 --> 00:00:12.960] with small, unpleasant creatures that crawl, such as insects or spiders. This term can
-[00:00:12.960 --> 00:00:17.400] also refer to an atmosphere or situation that feels creepy or unsettling.
-[00:00:17.400 --> 00:00:22.560] Example, the thought of a spider crawling on me gives me a crawly feeling. Example, I
-[00:00:22.560 --> 00:00:27.320] felt crawly when I saw the bugs scurrying across the floor. Example, the abandoned house
-[00:00:27.320 --> 00:00:33.080] had a crawly atmosphere that made everyone uneasy. Example, the crawly decorations at
-[00:00:33.080 --> 00:00:37.680] the haunted house were enough to frighten the children. Summary, Crawley refers to the
-[00:00:37.680 --> 00:00:44.200] discomfort or unease caused by small creatures that crawl, often invoking fear or disgust.
-[00:00:44.200 --> 00:00:50.040] Related words, creepy, unsettling, discomforting, antinims. Comfortable, pleasant.
+[00:00:00.000 --> 00:00:01.620] Crawly is an adjective.
+[00:00:02.260 --> 00:00:07.400] It describes a sensation of discomfort or unease, often associated with small,
+[00:00:07.660 --> 00:00:11.500] unpleasant creatures that crawl, such as insects or spiders.
+[00:00:12.340 --> 00:00:16.880] This term can also refer to an atmosphere or situation that feels creepy or unsettling.
+[00:00:17.340 --> 00:00:20.400] Example, the thought of a spider crawling on me gives me a crawly feeling.
+[00:00:21.040 --> 00:00:21.600] Example,
+[00:00:22.260 --> 00:00:25.180] I felt crawly when I saw the bugs scurrying across the floor.
+[00:00:25.820 --> 00:00:29.620] Example, the abandoned house had a crawly atmosphere that made everyone uneasy.
+[00:00:30.340 --> 00:00:30.940] Example,
+[00:00:31.700 --> 00:00:35.120] the crawly decorations at the haunted house were enough to frighten the children.
+[00:00:35.840 --> 00:00:40.780] Summary, crawly refers to the discomfort or unease caused by small creatures that crawl,
+[00:00:41.260 --> 00:00:43.300] often invoking fear or disgust.
+[00:00:43.900 --> 00:00:49.200] Related words, creepy, unsettling, discomforting, antonyms, comfortable,
+[00:00:49.560 --> 00:00:49.860] pleasant.

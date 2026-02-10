@@ -1,17 +1,17 @@
-[00:00:00.000 --> 00:00:05.200] Bottom line is a noun that refers to the most important or fundamental aspect of something,
-[00:00:05.200 --> 00:00:08.040] often summarizing the final result or main point.
-[00:00:08.040 --> 00:00:12.840] It is also widely used in business contexts to mean the final financial outcome,
-[00:00:12.840 --> 00:00:15.320] especially net income or profit.
-[00:00:15.320 --> 00:00:17.880] Examples 1.
-[00:00:17.880 --> 00:00:19.920] We've analyzed all the strategies,
-[00:00:19.920 --> 00:00:23.760] but the bottom line is we need to increase sales to remain profitable.
-[00:00:23.760 --> 00:00:27.720] Translation, the key point is to focus on increasing sales.
-[00:00:28.360 --> 00:00:33.640] We can argue about who was right or wrong, but the bottom line is we need to fix this issue together.
-[00:00:33.640 --> 00:00:38.040] Translation, the main point is to resolve the issue collaboratively.
-[00:00:38.040 --> 00:00:38.640] 3.
-[00:00:38.640 --> 00:00:44.360] There are many features in these smartphones, but the bottom line is I need a phone with a good camera.
-[00:00:44.360 --> 00:00:48.480] Translation, the crucial factor for me is the camera quality.
-[00:00:48.480 --> 00:00:53.720] Summary, bottom line refers to the key or most essential point in a situation.
-[00:00:53.720 --> 00:00:57.520] In business, it specifically means the final profit or loss.
-[00:00:57.520 --> 00:01:02.480] Related words, essence, core, conclusion, net result, profitability.
-[00:01:02.480 --> 00:01:05.600] Antonyms, detail, secondary factors, overhead.
+[00:00:00.000 --> 00:00:05.000] Bottom line is a noun that refers to the most important or fundamental aspect of something,
+[00:00:05.160 --> 00:00:07.500] often summarizing the final result or main point.
+[00:00:08.200 --> 00:00:12.560] It is also widely used in business contexts to mean the final financial outcome,
+[00:00:12.820 --> 00:00:14.480] especially net income or profit.
+[00:00:16.060 --> 00:00:17.260] Examples 1.
+[00:00:18.140 --> 00:00:23.040] We've analyzed all the strategies, but the bottom line is we need to increase sales to remain profitable.
+[00:00:24.160 --> 00:00:26.880] Translation, the key point is to focus on increasing sales.
+[00:00:28.040 --> 00:00:28.560] 2.
+[00:00:28.560 --> 00:00:32.820] We can argue about who was right or wrong, but the bottom line is we need to fix this issue together.
+[00:00:33.820 --> 00:00:37.240] Translation, the main point is to resolve the issue collaboratively.
+[00:00:37.920 --> 00:00:38.420] 3.
+[00:00:38.780 --> 00:00:43.440] There are many features in these smartphones, but the bottom line is I need a phone with a good camera.
+[00:00:44.540 --> 00:00:47.820] Translation, the crucial factor for me is the camera quality.
+[00:00:48.500 --> 00:00:53.120] Summary, bottom line refers to the key or most essential point in a situation.
+[00:00:53.580 --> 00:00:56.860] In business, it specifically means the final profit or loss.
+[00:00:57.520 --> 00:01:01.100] Related words, essence, core, conclusion, net result, profitability.
+[00:01:02.480 --> 00:01:05.140] Antonim's detail secondary factors overhead.

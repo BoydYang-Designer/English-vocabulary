@@ -1,7 +1,7 @@
-[00:00:00.000 --> 00:00:06.200] brochure refers to a small, thin book or magazine that usually has many pictures and information
-[00:00:06.200 --> 00:00:09.180] about a product, a place, etc.
-[00:00:09.180 --> 00:00:11.680] Example sentence
-[00:00:11.680 --> 00:00:15.920] The hotel provided a brochure with details about local attractions and dining options for
-[00:00:15.920 --> 00:00:17.680] its guests.
-[00:00:17.680 --> 00:00:22.200] Example sentence, she picked up a travel brochure at the tourism office to plan her vacation,
-[00:00:22.200 --> 00:00:25.760] filled with stunning photos of tropical beaches and cultural landmarks.
+[00:00:00.000 --> 00:00:04.720] Brochure refers to a small, thin book or magazine that usually has many
+[00:00:04.720 --> 00:00:08.040] pictures and information about a product, a place, etc.
+[00:00:08.780 --> 00:00:09.540] Example sentence.
+[00:00:11.360 --> 00:00:16.460] The hotel provided a brochure with details about local attractions and dining options for its guests.
+[00:00:17.220 --> 00:00:18.060] Example sentence.
+[00:00:18.400 --> 00:00:23.280] She picked up a travel brochure at the tourism office to plan her vacation, filled with stunning photos
+[00:00:23.280 --> 00:00:25.760] of tropical beaches and cultural landmarks.

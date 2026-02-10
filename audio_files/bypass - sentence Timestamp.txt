@@ -1,18 +1,22 @@
-[00:00:00.000 --> 00:00:04.500] Bipass is both a noun and a verb with the following meanings.
-[00:00:04.500 --> 00:00:09.420] One as a noun, a road or path designed to divert traffic from the main route,
-[00:00:09.420 --> 00:00:12.300] usually to avoid congestion in urban areas.
-[00:00:12.300 --> 00:00:16.820] Example, the new bypass around the city has greatly reduced traffic jams.
-[00:00:16.820 --> 00:00:21.540] Example, the town's traffic problems were eased by the construction of a bypass.
-[00:00:21.540 --> 00:00:26.100] Example, the bypass allows drivers to avoid the busy downtown area.
-[00:00:26.500 --> 00:00:33.380] Two, as of her bypass, bypassed bypassing A to go around or avoid a place or area.
-[00:00:33.380 --> 00:00:38.260] Example, they decided to bypass the construction site to save time.
-[00:00:38.260 --> 00:00:41.380] Example, is there a way to bypass the bridge construction?
-[00:00:41.380 --> 00:00:45.540] Example, we took a different route to bypass the traffic in the city center.
-[00:00:45.540 --> 00:00:50.100] B, to avoid or ignore someone or something, especially to get something done quicker
-[00:00:50.100 --> 00:00:52.780] or to avoid a difficulty or obstacle.
-[00:00:52.860 --> 00:00:57.020] Example, she tried to bypass the rules by submitting her application late.
-[00:00:57.020 --> 00:01:00.860] Example, he bypassed the issue altogether by changing the subject.
-[00:01:00.860 --> 00:01:04.620] Example, he bypassed the usual procedures to speed up the process.
-[00:01:04.620 --> 00:01:10.060] Summary, bypass refers to a route that avoids something or a method of circumventing a process,
-[00:01:10.060 --> 00:01:14.620] whether in the form of a physical road or by avoiding obstacles or procedures.
-[00:01:14.620 --> 00:01:22.700] Related words, detour, alternative, avoid, sidestep thems, confront, follow, encounter.
+[00:00:00.000 --> 00:00:04.080] Bypass is both a noun and a verb with the following meanings.
+[00:00:04.740 --> 00:00:09.280] One, as a noun, a road or path designed to divert traffic from the main route,
+[00:00:09.500 --> 00:00:11.760] usually to avoid congestion in urban areas.
+[00:00:12.640 --> 00:00:16.580] Example, the new bypass around the city has greatly reduced traffic jams.
+[00:00:16.940 --> 00:00:20.920] Example, the town's traffic problems were eased by the construction of a bypass.
+[00:00:21.700 --> 00:00:25.520] Example, the bypass allows drivers to avoid the busy downtown area.
+[00:00:26.180 --> 00:00:31.080] Two, as of her bypass, bypassed bypassing A to go around
+[00:00:31.080 --> 00:00:33.100] or avoid a place or area.
+[00:00:33.380 --> 00:00:37.420] Example, they decided to bypass the construction site to save time.
+[00:00:38.240 --> 00:00:40.760] Example, is there a way to bypass the bridge construction?
+[00:00:41.320 --> 00:00:45.020] Example, we took a different route to bypass the traffic in the city center.
+[00:00:45.500 --> 00:00:50.440] B, to avoid or ignore someone or something, especially to get something done quicker or to
+[00:00:50.440 --> 00:00:51.900] avoid a difficulty or obstacle.
+[00:00:52.840 --> 00:00:56.620] Example, she tried to bypass the rules by submitting her application late.
+[00:00:57.040 --> 00:01:00.520] Example, he bypassed the issue altogether by changing the subject.
+[00:01:00.840 --> 00:01:03.680] Example, he bypassed the usual procedures to speed up the process.
+[00:01:04.420 --> 00:01:09.380] Summary, bypass refers to a route that avoids something or a method of circumventing
+[00:01:09.380 --> 00:01:13.760] a process, whether in the form of a physical road or by avoiding obstacles or procedures.
+[00:01:14.560 --> 00:01:16.960] Related words, detour, alternative,
+[00:01:17.680 --> 00:01:18.080] avoid,
+[00:01:18.820 --> 00:01:20.340] sidestep them, confront,
+[00:01:20.960 --> 00:01:22.180] follow, encounter.

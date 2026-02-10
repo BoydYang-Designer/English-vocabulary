@@ -1,5 +1,8 @@
-[00:00:00.000 --> 00:00:05.000] Evacuate as a verb, evacuate. Evacuated, evacuating.
-[00:00:05.000 --> 00:00:12.000] Evacuate means to remove someone from a place of danger to a safe location, typically in an organized and urgent manner.
-[00:00:12.000 --> 00:00:16.000] For example, the civilians were evacuated from the city to farms.
-[00:00:16.000 --> 00:00:23.000] During the fire drill, students practiced the procedures for safely evacuating the school building in case of an emergency.
-[00:00:23.000 --> 00:00:28.000] The authorities ordered residents to evacuate the coastal area ahead of the approaching hurricane.
+[00:00:00.000 --> 00:00:02.000] Evacuate as a verb, evacuate.
+[00:00:02.740 --> 00:00:04.200] Evacuated, evacuating.
+[00:00:05.240 --> 00:00:10.240] Evacuate means to remove someone from a place of danger to a safe location, typically in
+[00:00:10.240 --> 00:00:11.840] an organized and urgent manner.
+[00:00:12.520 --> 00:00:15.620] For example, the civilians were evacuated from the city to farms.
+[00:00:16.280 --> 00:00:21.240] During the fire drill, students practiced the procedures for safely evacuating the school building
+[00:00:21.240 --> 00:00:22.460] in case of an emergency.
+[00:00:23.340 --> 00:00:27.820] The authorities ordered residents to evacuate the coastal area ahead of the approaching hurricane.

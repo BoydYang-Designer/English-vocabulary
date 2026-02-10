@@ -1,9 +1,14 @@
-[00:00:00.000 --> 00:00:06.240] Caramel is a noun that refers to a sweet, thick, amber-colored substance made by heating
-[00:00:06.240 --> 00:00:12.080] sugar until it melts and turns brown. It can be used as a flavoring, topping, or ingredient
-[00:00:12.080 --> 00:00:17.140] in various desserts and confections. Examples, she drizzled caramel over her ice cream
-[00:00:17.140 --> 00:00:22.960] for added sweetness. The recipe calls for caramel to be added to the chocolate sauce. He enjoys
-[00:00:22.960 --> 00:00:27.320] caramel-flavored candies, especially during the holidays.
-[00:00:27.320 --> 00:00:31.800] The cake was layered with caramel and chocolate for a rich dessert. Caramel can also be made
-[00:00:31.800 --> 00:00:37.200] using brown sugar for a deeper flavor and richer color. Summary, caramel is a sweet golden
-[00:00:37.200 --> 00:00:42.760] brown substance created from melted sugar, often used in desserts and confections.
-[00:00:42.760 --> 00:00:49.160] Fitted words, toffee, butter scotch, fudge, syrup, bitter, unsweetened.
+[00:00:00.000 --> 00:00:04.820] Caramel is a noun that refers to a sweet, thick, amber -colored
+[00:00:04.820 --> 00:00:08.400] substance made by heating sugar until it melts and turns brown.
+[00:00:08.920 --> 00:00:13.780] It can be used as a flavoring, topping, or ingredient in various desserts and confections.
+[00:00:14.400 --> 00:00:17.860] Examples, she drizzled caramel over her ice cream for added sweetness.
+[00:00:18.560 --> 00:00:21.300] The recipe calls for caramel to be added to the chocolate sauce.
+[00:00:22.300 --> 00:00:25.220] He enjoys caramel -flavored candies, especially during the holidays.
+[00:00:26.680 --> 00:00:30.060] The cake was layered with caramel and chocolate for a rich dessert.
+[00:00:30.640 --> 00:00:34.340] Caramel can also be made using brown sugar for a deeper flavor and richer color.
+[00:00:35.020 --> 00:00:39.920] Summary, caramel is a sweet golden brown substance created from melted sugar, often used
+[00:00:39.920 --> 00:00:41.420] in desserts and confections.
+[00:00:42.300 --> 00:00:44.820] Related words, toffee, butterscotch,
+[00:00:45.500 --> 00:00:46.780] fudge, syrup,
+[00:00:47.540 --> 00:00:47.860] bitter,
+[00:00:48.560 --> 00:00:49.120] unsweetened.

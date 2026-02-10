@@ -1,10 +1,14 @@
-[00:00:00.000 --> 00:00:05.520] Alga is a noun, alga, alga's, or algae that refers to a single organism from the group of
-[00:00:05.520 --> 00:00:11.200] simple autotrophic organisms known as algae. Algae can range in size from microscopic to large,
-[00:00:11.200 --> 00:00:16.960] and they are capable of photosynthesis. Algae can live in water, soil, or other damp environments,
-[00:00:16.960 --> 00:00:20.880] and are important contributors to ecosystems, especially in aquatic environments.
-[00:00:21.840 --> 00:00:26.640] Example. The alga found in the aquarium is green and grows rapidly in the warm water.
-[00:00:27.360 --> 00:00:33.280] Example. Some species of alga form harmful blooms in water, affecting water quality and marine life.
-[00:00:33.280 --> 00:00:37.760] Example. The research focused on the properties of a particular alga used in biofuel production.
-[00:00:39.200 --> 00:00:44.000] Summary. Alga refers to a single organism from the group of simple photosynthetic organisms
-[00:00:44.000 --> 00:00:50.240] known as algae, typically found in aquatic or damp environments, related words, algae, plankton,
-[00:00:50.240 --> 00:00:59.360] seaweed, microalga, phytoplankton, antinims, terrestrial plants, land plants.
+[00:00:00.000 --> 00:00:04.760] Alga is a noun, alga, algas, or algae, that refers to a single organism
+[00:00:04.760 --> 00:00:07.920] from the group of simple autotrophic organisms known as algae.
+[00:00:08.400 --> 00:00:12.920] Algae can range in size from microscopic to large, and they are capable of photosynthesis.
+[00:00:13.520 --> 00:00:19.020] Algae can live in water, soil, or other damp environments, and are important contributors to ecosystems,
+[00:00:19.280 --> 00:00:20.780] especially in aquatic environments.
+[00:00:21.920 --> 00:00:26.620] Example, the alga found in the aquarium is green and grows rapidly in the warm water.
+[00:00:27.380 --> 00:00:32.220] Example, some species of alga form harmful blooms in water, affecting water quality and
+[00:00:32.220 --> 00:00:32.800] marine life.
+[00:00:33.320 --> 00:00:37.720] Example, the research focused on the properties of a particular alga used in biofuel production.
+[00:00:39.000 --> 00:00:43.880] Summary, alga refers to a single organism from the group of simple photosynthetic organisms
+[00:00:43.880 --> 00:00:47.300] known as algae, typically found in aquatic or damp environments.
+[00:00:47.780 --> 00:00:50.620] Related words, algae, plankton, seaweed,
+[00:00:51.260 --> 00:00:52.940] microalga, phytoplankton.
+[00:00:52.940 --> 00:00:56.240] Antonyms, terrestrial plants, land plants.

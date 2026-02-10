@@ -1,3 +1,4 @@
-[00:00:00.000 --> 00:00:05.920] Cramp refers to a sudden involuntary contraction or spasm of a muscle, often causing pain.
-[00:00:05.920 --> 00:00:07.680] It can occur during physical activity.
-[00:00:08.480 --> 00:00:15.920] One example, she had to stop running because of a severe cramp in her side.
+[00:00:00.000 --> 00:00:04.660] Cramp refers to a sudden involuntary contraction or spasm of a muscle, often
+[00:00:04.660 --> 00:00:05.520] causing pain.
+[00:00:06.080 --> 00:00:07.620] It can occur during physical activity.
+[00:00:08.440 --> 00:00:12.580] One example, she had to stop running because of a severe cramp in her side.

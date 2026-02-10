@@ -1,23 +1,26 @@
-[00:00:00.000 --> 00:00:02.800] Drone is a noun and a verb as a noun.
-[00:00:02.800 --> 00:00:07.820] One, a drone is an unmanned aircraft often remotely controlled used for surveillance,
-[00:00:07.820 --> 00:00:09.960] military, or commercial purposes.
-[00:00:09.960 --> 00:00:14.200] Example, the drone flew over the field, capturing aerial footage.
-[00:00:14.200 --> 00:00:18.600] Example, drones are commonly used for delivering packages in some regions.
-[00:00:18.600 --> 00:00:23.680] Two, a male bee, specifically one that does not have stingers and whose primary role is
-[00:00:23.680 --> 00:00:24.920] mating with the queen.
-[00:00:24.920 --> 00:00:29.680] Example, the drone bee had no other role in the hive but to mate with the queen.
-[00:00:29.680 --> 00:00:33.720] Example, drones are larger than worker bees but have no stinger.
-[00:00:33.720 --> 00:00:37.520] Three, a monotonous sound typically a low hum or buzz.
-[00:00:37.520 --> 00:00:42.040] Example, the drone of the old refrigerator could be heard in the background.
-[00:00:42.040 --> 00:00:45.760] Example, the drone of the engine signaled that the plane was about to land.
-[00:00:45.760 --> 00:00:49.360] As a verb, drone, drone, droning.
-[00:00:49.360 --> 00:00:52.120] One, to make a low, continuous sound.
-[00:00:52.120 --> 00:00:56.600] Example, the speaker droned on for hours, losing the audience's attention.
-[00:00:56.640 --> 00:01:00.360] Example, the airplane droned overhead as it approached the runway.
-[00:01:00.360 --> 00:01:03.200] Two, to speak in a dull monotonous tone.
-[00:01:03.200 --> 00:01:06.040] Example, he droned about his day without any enthusiasm.
-[00:01:06.040 --> 00:01:11.000] Example, the teacher droned on and the students grew restless.
-[00:01:11.000 --> 00:01:15.920] Summary, a drone can refer to an unmanned flying device, a male bee in a colony,
-[00:01:15.920 --> 00:01:17.760] or a low monotonous sound.
-[00:01:17.760 --> 00:01:22.760] As a verb, it refers to making a dull, continuous noise or speaking in a monotonous tone.
-[00:01:22.760 --> 00:01:26.920] Related words, hum buzz unmanned bee monoton quiet lively.
+[00:00:00.000 --> 00:00:02.300] Drone is a noun and a verb as a noun.
+[00:00:02.980 --> 00:00:08.120] One, a drone is an unmanned manned aircraft often remotely controlled used for surveillance, military,
+[00:00:08.500 --> 00:00:09.340] or commercial purposes.
+[00:00:10.140 --> 00:00:13.560] Example, the drone flew over the field, capturing aerial footage.
+[00:00:14.540 --> 00:00:17.960] Example, drones are commonly used for delivering packages in some regions.
+[00:00:18.980 --> 00:00:23.960] Two, a male bee, specifically one that does not have stingers and whose primary role is mating
+[00:00:23.960 --> 00:00:24.480] with the queen.
+[00:00:25.100 --> 00:00:25.580] Example,
+[00:00:26.420 --> 00:00:29.080] the drone bee had no other role in the hive but to mate with the queen.
+[00:00:29.880 --> 00:00:33.180] Example, drones are larger than worker bees but have no stinger.
+[00:00:33.960 --> 00:00:33.980] Three,
+[00:00:34.600 --> 00:00:36.980] a monotonous sound typically a low hum or buzz.
+[00:00:37.540 --> 00:00:41.440] Example, the drone of the old refrigerator could be heard in the background.
+[00:00:42.040 --> 00:00:45.320] Example, the drone of the engine signaled that the plane was about to land.
+[00:00:45.720 --> 00:00:46.320] As a verb,
+[00:00:46.960 --> 00:00:48.800] drone, drone, droning.
+[00:00:49.320 --> 00:00:51.560] One, to make a low continuous sound.
+[00:00:52.080 --> 00:00:55.780] Example, the speaker droned on for hours losing the audience's attention.
+[00:00:56.660 --> 00:00:59.660] Example, the airplane droned overhead as it approached the runway.
+[00:01:00.600 --> 00:01:02.840] Two, to speak in a dull monotonous tone.
+[00:01:03.220 --> 00:01:05.600] Example, he droned about his day without any enthusiasm.
+[00:01:06.120 --> 00:01:09.280] Example, the teacher droned on and the students grew restless.
+[00:01:10.980 --> 00:01:15.680] Summary, a drone can refer to an unmanned flying device, a male bee in a colony,
+[00:01:15.940 --> 00:01:17.580] or a low monotonous sound.
+[00:01:17.760 --> 00:01:22.260] As a verb, it refers to making a dull, continuous noise or speaking in a monotonous tone.
+[00:01:22.260 --> 00:01:26.600] Related words, hum, buzz, unmanned, bee, monotonous, quiet, lively.

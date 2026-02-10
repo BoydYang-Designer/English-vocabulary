@@ -1,8 +1,8 @@
-[00:00:00.000 --> 00:00:04.320] Bustling describes a place or situation that is full of energetic activity,
-[00:00:04.320 --> 00:00:07.840] often with many people moving around quickly and with purpose.
-[00:00:07.840 --> 00:00:11.120] It implies a lively and busy atmosphere.
-[00:00:11.120 --> 00:00:16.400] For instance, a bustling city street might have pedestrians hurrying along sidewalks, cars
-[00:00:16.400 --> 00:00:20.880] navigating through traffic, and various shops and businesses with customers coming and going.
-[00:00:21.840 --> 00:00:26.800] Similarly, a bustling marketplace might be filled with vendors selling goods and customers
-[00:00:26.800 --> 00:00:28.320] browsing and making purchases.
-[00:00:28.320 --> 00:00:38.320] For example, a bustling market or bustling streets.
+[00:00:00.000 --> 00:00:04.840] Bustling describes a place or situation that is full of energetic activity, often with
+[00:00:04.840 --> 00:00:07.140] many people moving around quickly and with purpose.
+[00:00:07.900 --> 00:00:10.060] It implies a lively and busy atmosphere.
+[00:00:10.960 --> 00:00:16.000] For instance, a bustling city street might have pedestrians hurrying along sidewalks,
+[00:00:16.080 --> 00:00:20.780] cars navigating through traffic, and various shops and businesses with customers coming and going.
+[00:00:21.700 --> 00:00:26.660] Similarly, a bustling marketplace might be filled with vendors selling goods and customers
+[00:00:26.660 --> 00:00:28.160] browsing and making purchases.
+[00:00:28.160 --> 00:00:32.180] For example, a bustling market or bustling streets.

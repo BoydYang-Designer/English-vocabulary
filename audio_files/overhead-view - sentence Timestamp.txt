@@ -1,9 +1,0 @@
-[00:00:00.000 --> 00:00:02.000] Overhead view as a noun.
-[00:00:02.000 --> 00:00:06.000] An overhead view refers to a perspective or image seen from directly above,
-[00:00:06.000 --> 00:00:10.000] often used to capture the layout or arrangement of an area or scene.
-[00:00:10.000 --> 00:00:14.000] Example, the overhead view of the city revealed its intricate street patterns.
-[00:00:14.000 --> 00:00:19.000] Example, the map provided an overhead view of the entire park.
-[00:00:19.000 --> 00:00:23.000] Summary, an overhead view is a visual perspective from above,
-[00:00:23.000 --> 00:00:28.000] often used in photography, maps, or design to show a broad or detailed layout of a space.
-[00:00:28.000 --> 00:00:31.000] Related words, aerial view, bird's eye view, top down view,
-[00:00:31.000 --> 00:00:35.000] Antonim's ground level view, low angle view.

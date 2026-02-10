@@ -1,8 +1,10 @@
-[00:00:00.000 --> 00:00:05.920] Aerialist as a noun. An aerialist is a person who performs acrobatic or gymnastic feats while
-[00:00:05.920 --> 00:00:12.800] suspended in the air, often as part of a circus or theatrical performance. Example, the aerialist
-[00:00:12.800 --> 00:00:18.320] gracefully flipped and spun through the air during the performance. Example, she trained for
-[00:00:18.320 --> 00:00:23.840] years to become a skilled aerialist in the circus. Example, the aerialist captivated the audience
-[00:00:23.840 --> 00:00:29.680] with her daring stunts on the silks. Summary, an aerialist is a performer who specializes in
-[00:00:29.680 --> 00:00:34.960] aerial acrobatics, typically using equipment such as trapeze silks or hoops to perform stunning
-[00:00:34.960 --> 00:00:41.280] stunts in the air. Related words, acrobat gymnast performer, trapeze artist, circus artist,
-[00:00:41.280 --> 00:00:51.280] Antonim's ground performer, terrestrial artist.
+[00:00:00.000 --> 00:00:01.820] Aerialist as a noun.
+[00:00:02.380 --> 00:00:07.040] An aerialist is a person who performs acrobatic or gymnastic feats while suspended in the air,
+[00:00:07.240 --> 00:00:09.780] often as part of a circus or theatrical performance.
+[00:00:11.180 --> 00:00:15.960] Example, the aerialist gracefully flipped and spun through the air during the performance.
+[00:00:17.140 --> 00:00:20.460] Example, she trained for years to become a skilled aerialist in the circus.
+[00:00:21.560 --> 00:00:25.260] Example, the aerialist captivated the audience with her daring stunts on the silks.
+[00:00:25.260 --> 00:00:30.800] Summary, an aerialist is a performer who specializes in aerial acrobatics,
+[00:00:31.060 --> 00:00:35.880] typically using equipment such as trapeze, silks, or hoops to perform stunning stunts in the air.
+[00:00:36.420 --> 00:00:40.920] Related words, acrobat, gymnast, performer, trapeze artist, circus artist.
+[00:00:41.400 --> 00:00:44.040] Antonim's ground performer, terrestrial artist.

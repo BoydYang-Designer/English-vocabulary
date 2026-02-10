@@ -1,11 +1,15 @@
-[00:00:00.000 --> 00:00:05.640] Corporate espionage is a noun, meaning the act of spying or using secretive methods to
-[00:00:05.640 --> 00:00:10.680] steal trade secrets, confidential information, or strategies from a business competitor,
-[00:00:10.680 --> 00:00:13.440] often for financial or competitive advantage.
-[00:00:13.440 --> 00:00:19.320] Examples, the company strengthened its cybersecurity to prevent corporate espionage.
-[00:00:19.320 --> 00:00:24.360] He was accused of corporate espionage after leaking product designs to a rival firm.
-[00:00:24.360 --> 00:00:29.960] Corporate espionage can involve bribery, hacking, or planting insiders within a company.
-[00:00:29.960 --> 00:00:34.240] The scandal of corporate espionage damaged the company's reputation in the global market.
-[00:00:34.240 --> 00:00:39.200] Summary, corporate espionage is the secret and illegal gathering of a company's private information
-[00:00:39.200 --> 00:00:41.960] by competitors gain an advantage.
-[00:00:41.960 --> 00:00:46.720] Related words, spying, data theft, surveillance, trade secret theft.
-[00:00:46.720 --> 00:00:51.520] Antonyms, transparency, integrity, fair competition, openness.
+[00:00:00.000 --> 00:00:04.540] Corporate espionage is a noun, meaning the act of spying or using
+[00:00:04.540 --> 00:00:09.500] secretive methods to steal trade secrets, confidential information, or strategies from a
+[00:00:09.500 --> 00:00:12.900] business competitor, often for financial or competitive advantage.
+[00:00:13.400 --> 00:00:13.680] Examples,
+[00:00:14.400 --> 00:00:18.520] the company strengthened its cybersecurity to prevent corporate espionage.
+[00:00:19.080 --> 00:00:23.560] He was accused of corporate espionage after leaking product designs to a rival firm.
+[00:00:23.560 --> 00:00:28.140] Corporate espionage can involve bribery, hacking, or planting
+[00:00:28.140 --> 00:00:29.320] insiders within a company.
+[00:00:30.100 --> 00:00:33.860] The scandal of corporate espionage damaged the company's reputation in the global market.
+[00:00:34.440 --> 00:00:34.820] Summary.
+[00:00:34.940 --> 00:00:39.860] Corporate espionage is the secret and illegal gathering of a company's private information by competitors
+[00:00:39.860 --> 00:00:41.480] gain an advantage.
+[00:00:41.940 --> 00:00:47.460] Related words, spying, data theft, surveillance, trade secret theft, antonyms,
+[00:00:47.780 --> 00:00:48.180] transparency,
+[00:00:48.780 --> 00:00:50.860] integrity, fair competition, openness.

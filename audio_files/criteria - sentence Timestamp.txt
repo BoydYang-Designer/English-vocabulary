@@ -1,9 +1,14 @@
-[00:00:00.000 --> 00:00:06.000] Criteria is a noun that refers to the standards or principles by which something is judged or decided.
-[00:00:06.000 --> 00:00:08.000] It is the plural form of criterion.
-[00:00:08.000 --> 00:00:16.000] As a noun, criterion, singular, criteria, plural, one, standards or principles used to evaluate or make decisions.
-[00:00:16.000 --> 00:00:24.000] Example, the scholarship committee used several criteria to select the recipients, including academic performance and extra curricular involvement.
-[00:00:24.000 --> 00:00:29.000] Example, the job candidates were assessed based on criteria such as experience, skills, and other things.
-[00:00:29.000 --> 00:00:36.000] Example, high test scores are one criterion equal standard used by universities to determine which students to admit.
-[00:00:36.000 --> 00:00:43.000] Example, the project's success was measured against specific criteria, including timeliness and budget adherence.
-[00:00:43.000 --> 00:00:49.000] Summary, criteria are the standards or rules used to evaluate or make judgments about something.
-[00:00:49.000 --> 00:00:56.000] Example, the project's success was measured against specific criteria, including the standard or standards or rules used to evaluate or make judgments about something.
+[00:00:00.000 --> 00:00:04.740] Criteria is a noun that refers to the standards or principles by which something is judged
+[00:00:04.740 --> 00:00:05.740] or decided.
+[00:00:06.360 --> 00:00:07.960] It is the plural form of criterion.
+[00:00:08.900 --> 00:00:11.420] As a noun, criterion, singular, criteria,
+[00:00:12.080 --> 00:00:15.920] plural, one, standards or principles used to evaluate or make decisions.
+[00:00:16.840 --> 00:00:21.840] Example, the scholarship committee used several criteria to select the recipients, including academic
+[00:00:21.840 --> 00:00:23.900] performance and extracurricular involvement.
+[00:00:24.840 --> 00:00:29.760] Example, the job candidates were assessed based on criteria such as experience, skills,
+[00:00:30.140 --> 00:00:30.980] and cultural fit.
+[00:00:32.280 --> 00:00:37.080] Example, high test scores are one criterion equal standard used by universities
+[00:00:37.080 --> 00:00:38.660] to determine which students to admit.
+[00:00:39.480 --> 00:00:44.380] Example, the project's success was measured against specific criteria, including timeliness
+[00:00:44.380 --> 00:00:45.700] and budget adherence.
+[00:00:47.280 --> 00:00:52.120] Summary, criteria are the standards or rules used to evaluate or make judgments about something.

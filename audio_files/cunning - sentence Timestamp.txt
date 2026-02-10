@@ -1,11 +1,28 @@
-[00:00:00.000 --> 00:00:11.000] Cunning is an adjective and a noun that refers to the ability to achieve goals through cleverness, skill, and often deceit, or to something that is skillfully made or designed.
-[00:00:11.000 --> 00:00:20.500] As an adjective, one, clever and skillful, often in a deceitful way, this refers to being able to achieve something by using trickery or manipulation.
-[00:00:20.500 --> 00:00:30.500] Example, the Cunning Thief outsmarted the police by disguising himself as a delivery man. Example, she had a cunning plan to win the competition without anyone noticing.
-[00:00:30.500 --> 00:00:37.500] Example, his cunning tactics and business made him a successful entrepreneur but at the cost of others' trust.
-[00:00:37.500 --> 00:00:46.500] 2. Skillfully made or designed, this refers to something that is done with great skill or attention to detail, often in a way that is impressive.
-[00:00:46.500 --> 00:00:57.500] Example, the artist created a cunning piece of jewelry with intricate patterns. Example, the watch was a cunning piece of engineering with tiny gears that worked flawlessly.
-[00:00:57.500 --> 00:01:07.500] As a noun, one, the ability to achieve something through deceit or cleverness refers to the skill or ability to use cleverness often to manipulate or deceive others.
-[00:01:07.500 --> 00:01:17.500] Excunning helped him rise to power but it left many enemies in his wake. Example, the fox is often depicted in folklore as a symbol of cunning.
-[00:01:18.500 --> 00:01:32.500] 2. Skill or Dexterity in achieving something refers to someone's ability to do something with a high level of skill particularly through cleverness. Example, the inventor's cunning allowed him to create groundbreaking technology.
-[00:01:33.500 --> 00:01:41.500] Cunning refers to the skill of achieving goals through cleverness or deceit and can also describe something skillfully made or designed.
-[00:01:41.500 --> 00:01:50.500] Related words, sligh, deceitful, clever, wily, shrewd, artful, naïve, honest, straightforward, innocent.
+[00:00:00.000 --> 00:00:05.640] Cunning is an adjective and a noun that refers to the ability to achieve goals through cleverness,
+[00:00:05.940 --> 00:00:10.480] skill, and often deceit, or to something that is skillfully made or designed.
+[00:00:11.100 --> 00:00:15.400] As an adjective, one, clever and skillful, often in a deceitful way,
+[00:00:16.320 --> 00:00:20.220] this refers to being able to achieve something by using trickery or manipulation.
+[00:00:20.660 --> 00:00:21.140] Example,
+[00:00:21.760 --> 00:00:25.080] the cunning thief outsmarted the police by disguising himself as a delivery man.
+[00:00:25.640 --> 00:00:26.200] Example,
+[00:00:27.040 --> 00:00:30.080] she had a cunning plan to win the competition without anyone noticing.
+[00:00:30.920 --> 00:00:35.580] Example, his cunning tactics in business made him a successful entrepreneur but
+[00:00:35.580 --> 00:00:37.400] at the cost of others' trust.
+[00:00:38.320 --> 00:00:43.100] Two, skillfully made or designed, this refers to something that is done with great skill or
+[00:00:43.100 --> 00:00:44.100] attention to detail,
+[00:00:44.700 --> 00:00:46.360] often in a way that is impressive.
+[00:00:47.220 --> 00:00:51.080] Example, the artist created a cunning piece of jewelry with intricate patterns.
+[00:00:52.200 --> 00:00:57.580] Example, the watch was a cunning piece of engineering with tiny gears that worked flawlessly.
+[00:00:57.820 --> 00:01:02.280] As a noun, one, the ability to achieve something through deceit or cleverness
+[00:01:02.280 --> 00:01:07.160] refers to the skill or ability to use cleverness often to manipulate or
+[00:01:07.160 --> 00:01:07.860] deceive others.
+[00:01:08.560 --> 00:01:12.180] Ex -cunning helped him rise to power but it left many enemies in his wake.
+[00:01:13.180 --> 00:01:13.740] Example,
+[00:01:14.340 --> 00:01:17.240] the fox is often depicted in folklore as a symbol of cunning.
+[00:01:17.240 --> 00:01:21.980] But two, skill or dexterity in achieving something refers to
+[00:01:21.980 --> 00:01:27.060] someone's ability to do something with a high level of skill, particularly through cleverness.
+[00:01:27.620 --> 00:01:31.840] Example, the inventor's cunning allowed him to create groundbreaking technology.
+[00:01:32.960 --> 00:01:37.340] Cunning refers to the skill of achieving goals through cleverness or deceit
+[00:01:37.340 --> 00:01:41.000] and can also describe something skillfully made or designed.
+[00:01:41.000 --> 00:01:46.200] Related words, sly, deceitful, clever, wily,
+[00:01:46.880 --> 00:01:50.600] shrewd, artful, naive, honest, straightforward, innocent.

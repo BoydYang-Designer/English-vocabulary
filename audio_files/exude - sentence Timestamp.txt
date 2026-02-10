@@ -1,6 +1,11 @@
-[00:00:00.000 --> 00:00:14.000] Exude is a verb, exude, exuded, exuding, meaning, to display or project a quality, emotion, or characteristic strongly and openly, to release or give off, liquid, smell, or feeling, gradually.
-[00:00:14.000 --> 00:00:18.000] Example, he was exuding confidence when he took the podium.
-[00:00:18.000 --> 00:00:25.000] Example, even in challenging situations, Sarah always seemed to exude calmness and composure, which had a calming effect on those around her.
-[00:00:25.000 --> 00:00:33.000] Example, the tree exuded a sticky sap from its bark after being damaged. Example, his speech exuded warmth and sincerity, making everyone feel welcomed.
-[00:00:33.000 --> 00:00:43.000] Summary, exude means to clearly display a quality or feeling or to gradually release a substance. Related words, emit, radiate, ooze, project, release.
-[00:00:43.000 --> 00:00:46.000] Antonyms, conceal, suppress, withhold, absorb.
+[00:00:00.000 --> 00:00:03.920] Exude is a verb, exude, exuded, exuding, meaning,
+[00:00:04.740 --> 00:00:08.700] to display or project a quality, emotion or characteristic strongly and openly,
+[00:00:09.300 --> 00:00:13.320] to release or give off, liquid, smell or feeling, gradually.
+[00:00:14.060 --> 00:00:17.060] Example, he was exuding confidence when he took the podium.
+[00:00:17.740 --> 00:00:22.420] Example, even in challenging situations, Sarah always seemed to exude calmness and composure,
+[00:00:22.660 --> 00:00:24.560] which had a calming effect on those around her.
+[00:00:25.460 --> 00:00:29.120] Example, the tree exuded a sticky sap from its bark after being damaged.
+[00:00:29.120 --> 00:00:33.360] Example, his speech exuded warmth and sincerity, making everyone feel welcomed.
+[00:00:33.840 --> 00:00:37.880] Summary, exude means to clearly display a quality or feeling or to gradually release a substance.
+[00:00:38.340 --> 00:00:42.600] Related words, emit, radiate, ooze, project, release.
+[00:00:43.080 --> 00:00:46.260] Antonyms, conceal, suppress, withhold, absorb.

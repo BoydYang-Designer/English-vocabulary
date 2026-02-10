@@ -1,9 +1,0 @@
-[00:00:00.000 --> 00:00:04.560] Molten is an adjective, referring to a substance that has been melted by heat,
-[00:00:04.560 --> 00:00:08.640] typically a metal or rock that is in liquid form due to intense heat.
-[00:00:08.640 --> 00:00:14.160] Example, the blacksmith poured the molten metal into the mold, shaping it into a finely crafted sword.
-[00:00:14.160 --> 00:00:19.480] Example, as the volcano erupted, streams of molten lava flowed down the mountain side,
-[00:00:19.480 --> 00:00:21.520] engulfing everything in their path.
-[00:00:21.520 --> 00:00:27.520] Example, the molten gold glistened as it was carefully poured into intricate molds for jewelry.
-[00:00:27.600 --> 00:00:32.000] Summary, molten refers to a substance that is in liquid form because it has been heated
-[00:00:32.000 --> 00:00:37.280] to the point of melting, often used to describe metals or rocks. Related words, melted,
-[00:00:37.280 --> 00:00:43.440] liquefied, hot, fluid, lava. Antonyms, solid, frozen, solidified.

@@ -1,12 +1,18 @@
-[00:00:00.000 --> 00:00:07.000] Adorn as a verb. Adorn adorned adorning. It means to decorate or add beauty to something
-[00:00:07.000 --> 00:00:12.080] by adding ornaments, embellishments, or other attractive features. Example, she adorned her
-[00:00:12.080 --> 00:00:18.120] hair with flowers for the special occasion, adding a touch of natural beauty to her appearance.
-[00:00:18.120 --> 00:00:23.240] Example, she adorned the cake with intricate icing designs, turning a simple dessert into
-[00:00:23.240 --> 00:00:26.440] a stunning centerpiece for the party.
-[00:00:26.440 --> 00:00:32.400] The main difference between adorn and decorate lies in their connotations and usage. Adorn
-[00:00:32.400 --> 00:00:37.200] often implies adding beauty or elegance to something, sometimes with a sense of reverence
-[00:00:37.200 --> 00:00:43.280] or respect. It's often used in contexts where the addition is seen as enhancing the inherent
-[00:00:43.280 --> 00:00:48.520] beauty or value of the object. On the other hand, decorate is a more general term that
-[00:00:48.520 --> 00:00:54.000] simply means to embellish or enhance the appearance of something. It can include adding ornaments,
-[00:00:54.000 --> 00:00:59.120] colors, patterns, or any other elements to make something more visually appealing, without
-[00:00:59.120 --> 00:01:02.400] necessarily implying a deeper significance or reverence.
+[00:00:00.000 --> 00:00:01.680] Adorn as a verb.
+[00:00:02.200 --> 00:00:03.960] Adorn, adorned, adorning.
+[00:00:04.760 --> 00:00:09.940] It means to decorate or add beauty to something by adding ornaments, embellishments, or other attractive features.
+[00:00:10.580 --> 00:00:13.840] Example, she adorned her hair with flowers for the special occasion,
+[00:00:14.500 --> 00:00:16.860] adding a touch of natural beauty to her appearance.
+[00:00:17.880 --> 00:00:18.480] Example,
+[00:00:19.100 --> 00:00:23.640] she adorned the cake with intricate icing designs, turning a simple dessert into a stunning
+[00:00:23.640 --> 00:00:24.920] centerpiece for the party.
+[00:00:25.920 --> 00:00:30.900] The main difference between adorn and decorate lies in their connotations and usage.
+[00:00:31.620 --> 00:00:36.500] Adorn often implies adding beauty or elegance to something, sometimes with a sense
+[00:00:36.500 --> 00:00:37.740] of reverence or respect.
+[00:00:38.580 --> 00:00:43.520] It's often used in contexts where the addition is seen as enhancing the inherent beauty
+[00:00:43.520 --> 00:00:44.760] or value of the object.
+[00:00:45.600 --> 00:00:50.540] On the other hand, decorate is a more general term that simply means to embellish or enhance the
+[00:00:50.540 --> 00:00:51.440] appearance of something.
+[00:00:52.020 --> 00:00:57.000] It can include adding ornaments, colors, patterns, or any other elements to make something
+[00:00:57.000 --> 00:00:58.360] more visually appealing.
+[00:00:58.360 --> 00:01:02.260] Without necessarily implying a deeper significance or reverence.

@@ -1,15 +1,17 @@
-[00:00:00.000 --> 00:00:07.460] Acute is an adjective with the following meanings, one, sharp or severe in effect intense.
-[00:00:07.460 --> 00:00:11.820] This refers to conditions or feelings that are strong, sudden, and often critical.
-[00:00:11.820 --> 00:00:16.320] Example, he felt an acute pain in his back after lifting the heavy box.
-[00:00:16.320 --> 00:00:21.580] Example, the doctor diagnosed her with acute appendicitis requiring immediate surgery.
-[00:00:21.580 --> 00:00:27.160] Two, having a sharp end or point, ending in a sharp angle, this describes the shape of
-[00:00:27.160 --> 00:00:30.100] objects often relating to angles in geometry.
-[00:00:30.100 --> 00:00:35.500] Example, the architect designed the building with acute angles to create a modern look.
-[00:00:35.500 --> 00:00:40.220] Example, an acute triangle has all its angles measuring less than 90 degrees.
-[00:00:40.220 --> 00:00:43.980] Three, keenly perceptive or discerning, insightful.
-[00:00:43.980 --> 00:00:47.980] This refers to someone who is highly observant or sensitive to details.
-[00:00:47.980 --> 00:00:53.820] Example, her acute understanding of human behavior made her an excellent psychologist.
-[00:00:53.820 --> 00:00:58.220] Example, the artist had an acute eye for color and composition.
-[00:00:58.220 --> 00:01:02.940] Summary, acute, refers to conditions or feelings that are intense or severe, shapes that
-[00:01:02.940 --> 00:01:07.580] have sharp angles, and the ability to perceive or understand things deeply.
-[00:01:07.580 --> 00:01:13.580] Related words, sharp, intense, severe, keen, Antonim's chronic dull obtuse blunted.
+[00:00:00.000 --> 00:00:03.100] Acute is an adjective with the following meanings.
+[00:00:03.880 --> 00:00:06.300] One, sharp or severe in effect, intense.
+[00:00:07.240 --> 00:00:11.000] This refers to conditions or feelings that are strong, sudden, and often critical.
+[00:00:11.600 --> 00:00:15.380] Example, he felt an acute pain in his back after lifting the heavy box.
+[00:00:16.100 --> 00:00:20.740] Example, the doctor diagnosed her with acute appendicitis, requiring immediate surgery.
+[00:00:21.560 --> 00:00:25.480] Two, having a sharp end or point, ending in a sharp angle.
+[00:00:25.480 --> 00:00:29.740] This describes the shape of objects, often relating to angles in geometry.
+[00:00:30.120 --> 00:00:34.300] Example, the architect designed the building with acute angles to create a modern look.
+[00:00:35.340 --> 00:00:39.300] Example, an acute triangle has all its angles measuring less than 90 degrees.
+[00:00:40.300 --> 00:00:42.920] Three, keenly perceptive or discerning, insightful.
+[00:00:43.820 --> 00:00:47.180] This refers to someone who is highly observant or sensitive to details.
+[00:00:47.920 --> 00:00:52.540] Example, her acute understanding of human behavior made her an excellent psychologist.
+[00:00:53.720 --> 00:00:57.120] Example, the artist had an acute eye for color and composition.
+[00:00:58.080 --> 00:01:02.960] Summary, acute refers to conditions or feelings that are intense or severe, shapes that
+[00:01:02.960 --> 00:01:06.560] have sharp angles, and the ability to perceive or understand things deeply.
+[00:01:07.420 --> 00:01:10.220] Related words, sharp, intense, severe, keen.
+[00:01:10.660 --> 00:01:13.340] Antonyms, chronic, dull, obtuse, blunted.

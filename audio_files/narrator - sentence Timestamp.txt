@@ -1,9 +1,0 @@
-[00:00:00.000 --> 00:00:06.160] Narrator is the person or entity that tells a story, either in written form or orally.
-[00:00:06.160 --> 00:00:10.600] The narrator can be a character within the story known as a first-person narrator,
-[00:00:10.600 --> 00:00:15.680] or an external voice detached from the events known as a third-person narrator.
-[00:00:15.680 --> 00:00:19.960] The choice of narrator influences how the story is perceived and can shape the reader's
-[00:00:19.960 --> 00:00:23.360] understanding of events and characters.
-[00:00:23.360 --> 00:00:24.360] Example.
-[00:00:24.360 --> 00:00:28.840] The novel's narrator provided insights into the protagonist's thoughts and feelings.
-[00:00:28.840 --> 00:00:29.840] Example.
-[00:00:29.840 --> 00:00:33.760] In the documentary, the narrator's voice guided viewers through the historical events.

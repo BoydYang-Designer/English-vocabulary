@@ -1,14 +1,15 @@
-[00:00:00.000 --> 00:00:05.000] Bisekt is a verb, bisekt, bisected, bisecting, one.
-[00:00:05.000 --> 00:00:07.000] To divide something into two equal parts,
-[00:00:07.000 --> 00:00:10.000] this means to cut or split something into two halves
-[00:00:10.000 --> 00:00:13.000] of the same size, typically through its center.
-[00:00:13.000 --> 00:00:18.000] Example, the teacher asks the students to bisect the angle using a protractor.
-[00:00:18.000 --> 00:00:23.000] Example, the road bisex the town, separating the residential area from the commercial district.
-[00:00:23.000 --> 00:00:29.000] Two, to intersect or divide something, such as an angle or a line, into two parts.
-[00:00:29.000 --> 00:00:35.000] In geometry, this refers to the action of splitting an angle or line segment into two equal parts.
-[00:00:35.000 --> 00:00:39.000] Example, the diagonal of a rectangle bisex it into two congruent triangles.
-[00:00:39.000 --> 00:00:43.000] Example, the line bisecting the circle goes through its center.
-[00:00:43.000 --> 00:00:47.000] Summary, to bisect means to divide something into two equal parts
-[00:00:47.000 --> 00:00:50.000] or to intersect it in such a way that it creates two equal segments.
-[00:00:50.000 --> 00:00:55.000] Related words, divide, split, intersect, have.
-[00:00:55.000 --> 00:00:58.000] Antonyms, combine, unite, merge.
+[00:00:00.000 --> 00:00:01.320] Bissect is a verb.
+[00:00:02.200 --> 00:00:04.200] Bissect, bisected, bisecting.
+[00:00:04.580 --> 00:00:09.360] One, to divide something into two equal parts, this means to cut or split something into
+[00:00:09.360 --> 00:00:12.200] two halves of the same size, typically through its center.
+[00:00:13.040 --> 00:00:17.500] Example, the teacher asks the students to bisect the angle using a protractor.
+[00:00:18.200 --> 00:00:22.720] Example, the road bisects the town separating the residential area from the commercial district.
+[00:00:23.500 --> 00:00:28.220] Two, to intersect or divide something, such as an angle or a line, into two parts.
+[00:00:28.220 --> 00:00:33.020] In geometry, this refers to the action of splitting an angle or line segment
+[00:00:33.020 --> 00:00:34.460] into two equal parts.
+[00:00:34.760 --> 00:00:38.580] Example, the diagonal of a rectangle bisects it into two congruent triangles.
+[00:00:39.140 --> 00:00:42.320] Example, the line bisecting the circle goes through its center.
+[00:00:43.060 --> 00:00:48.000] Summary, to bisect means to divide something into two equal parts or to intersect it in
+[00:00:48.000 --> 00:00:49.920] such a way that it creates two equal segments.
+[00:00:50.360 --> 00:00:53.320] Related words, divide, split, intersect,
+[00:00:54.080 --> 00:00:57.680] have. Antonims, combine, unite, merge.

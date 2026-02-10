@@ -1,17 +1,16 @@
-[00:00:00.000 --> 00:00:02.400] Artfully as an adverb, one.
-[00:00:02.400 --> 00:00:07.160] Artfully describes something done with skill, creativity, and an aesthetic sense,
-[00:00:07.160 --> 00:00:11.400] often involving a high degree of craftsmanship or imagination.
-[00:00:11.400 --> 00:00:12.800] Example.
-[00:00:12.800 --> 00:00:17.100] The chef artfully arranged the food on the plate, making it look like a work of art.
-[00:00:17.100 --> 00:00:22.400] Example, she artfully wove together different colors of thread to create a beautiful tapestry.
-[00:00:22.400 --> 00:00:27.200] Two, artfully can also describe something done in a clever or subtle manner,
-[00:00:27.200 --> 00:00:30.000] often with an element of trickery or sophistication.
-[00:00:30.000 --> 00:00:31.000] Example.
-[00:00:31.000 --> 00:00:35.400] The magician artfully distracted the audience with one hand while performing the trick with the other.
-[00:00:35.400 --> 00:00:40.800] Example, he artfully navigated the conversation to avoid any awkward topics.
-[00:00:40.800 --> 00:00:45.300] Summary, artfully refers to actions performed with skill, creativity, and finesse,
-[00:00:45.300 --> 00:00:48.600] often reflecting an artistic or clever approach.
-[00:00:48.600 --> 00:00:50.200] Related words.
-[00:00:50.200 --> 00:00:54.300] Skillfully, creatively, imaginatively, gracefully, cleverly.
-[00:00:54.300 --> 00:00:55.900] Antonyms.
-[00:00:55.900 --> 00:00:58.900] Clumsily, awkwardly, unskilfully.
+[00:00:00.000 --> 00:00:01.720] Artfully as an adverb, one.
+[00:00:02.500 --> 00:00:06.740] Artfully describes something done with skill, creativity, and an aesthetic sense,
+[00:00:07.200 --> 00:00:10.560] often involving a high degree of craftsmanship or imagination.
+[00:00:11.560 --> 00:00:12.160] Example.
+[00:00:13.020 --> 00:00:16.740] The chef artfully arranged the food on the plate, making it look like a work of art.
+[00:00:17.200 --> 00:00:21.780] Example, she artfully wove together different colors of thread to create a beautiful tapestry.
+[00:00:22.580 --> 00:00:26.980] Two, artfully can also describe something done in a clever or subtle manner, often
+[00:00:26.980 --> 00:00:29.640] with an element of trickery or sophistication.
+[00:00:30.040 --> 00:00:34.920] Example, the magician artfully distracted the audience with one hand while performing the trick with the other.
+[00:00:35.480 --> 00:00:39.780] Example, he artfully navigated the conversation to avoid any awkward topics.
+[00:00:40.900 --> 00:00:45.680] Summary, artfully refers to actions performed with skill, creativity, and finesse, often
+[00:00:45.680 --> 00:00:47.900] reflecting an artistic or clever approach.
+[00:00:48.620 --> 00:00:49.360] Related words,
+[00:00:50.200 --> 00:00:53.780] skillfully, creatively, imaginatively, gracefully, cleverly.
+[00:00:53.780 --> 00:00:55.260] Antonyms,
+[00:00:55.900 --> 00:00:57.660] clumsily, awkwardly unskillfully.

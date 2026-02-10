@@ -1,12 +1,13 @@
-[00:00:00.000 --> 00:00:05.360] Birdonsum, as an adjective, refers to something that causes difficulty, stress, or discomfort
-[00:00:05.360 --> 00:00:09.160] due to being heavy, demanding, or challenging to manage.
-[00:00:09.160 --> 00:00:14.720] Example, the project became Birdonsum as more tasks were added without additional support.
-[00:00:14.720 --> 00:00:19.640] Example, the financial obligations were Birdonsum for her small business to handle.
-[00:00:19.640 --> 00:00:25.120] Example, his job's constant travel requirements felt increasingly birdonsum over time.
-[00:00:25.120 --> 00:00:29.400] Example, caring for an elderly relative can sometimes be Birdonsum, both emotionally
-[00:00:29.400 --> 00:00:31.080] and physically.
-[00:00:31.080 --> 00:00:37.160] Example, the responsibility has become Birdonsum, taking up most of his time and energy.
-[00:00:37.160 --> 00:00:41.160] Summary, Birdonsum describes something that is difficult to bear, often causing stress
-[00:00:41.160 --> 00:00:43.400] or hardship due to its weight or demands.
-[00:00:43.400 --> 00:00:50.880] Related words, onerous, taxing, oppressive, weighty, Antonums, light, manageable, easy,
-[00:00:50.880 --> 00:00:51.440] effortless.
+[00:00:00.000 --> 00:00:04.880] burdensome as an adjective refers to something that causes difficulty, stress, or discomfort
+[00:00:04.880 --> 00:00:08.420] due to being heavy, demanding, or challenging to manage.
+[00:00:09.040 --> 00:00:13.880] Example, the project became burdensome as more tasks were added without additional support.
+[00:00:14.700 --> 00:00:18.960] Example, the financial obligations were burdensome for her small business to handle.
+[00:00:19.560 --> 00:00:24.300] Example, his job's constant travel requirements felt increasingly burdensome over time.
+[00:00:24.300 --> 00:00:25.420] Example,
+[00:00:26.080 --> 00:00:30.100] caring for an elderly relative can sometimes be burdensome both emotionally and physically.
+[00:00:30.720 --> 00:00:31.360] Example,
+[00:00:31.960 --> 00:00:36.060] the responsibility has become burdensome, taking up most of his time and energy.
+[00:00:36.900 --> 00:00:41.780] Summary, burdensome describes something that is difficult to bear, often causing stress or hardship
+[00:00:41.780 --> 00:00:42.960] due to its weight or demands.
+[00:00:43.300 --> 00:00:45.960] Related words, onerous, taxing, oppressive,
+[00:00:46.800 --> 00:00:51.280] weighty, antonyms, light, manageable, easy, effortless.

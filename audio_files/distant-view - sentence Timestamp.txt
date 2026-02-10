@@ -1,5 +1,10 @@
-[00:00:00.000 --> 00:00:10.000] Distant view as a noun. A distant view refers to a perspective or image of a scene taken from a faraway point, often capturing a broad or expansive landscape or subject.
-[00:00:10.000 --> 00:00:16.000] Example, the distant view of the mountains was breathtaking as the sun set behind them.
-[00:00:16.000 --> 00:00:20.000] Example, from the hill we had a distant view of the entire valley.
-[00:00:20.000 --> 00:00:29.000] Summary. A distant view is a visual perspective from far away, showing a broad or wide area, often used to capture landscapes or large scenes.
-[00:00:29.000 --> 00:00:37.000] Related words, far view, wide angle view, panoramic view. Antonyms, close up view, zoomed in view, detailed view.
+[00:00:00.000 --> 00:00:01.380] Distant view as a noun.
+[00:00:01.940 --> 00:00:06.360] A distant view refers to a perspective or image of a scene taken from a faraway point,
+[00:00:06.720 --> 00:00:09.740] often capturing a broad or expansive landscape or subject.
+[00:00:10.780 --> 00:00:15.540] Example, the distant view of the mountains was breathtaking as the sun set behind them.
+[00:00:16.320 --> 00:00:19.440] Example, from the hill we had a distant view of the entire valley.
+[00:00:20.180 --> 00:00:20.740] Summary.
+[00:00:21.460 --> 00:00:25.720] A distant view is a visual perspective from far away showing a broad or wide area,
+[00:00:26.180 --> 00:00:28.900] often used to capture landscapes or large scenes.
+[00:00:28.900 --> 00:00:32.600] Related words, far view, wide angle view, panoramic view.
+[00:00:32.980 --> 00:00:36.120] Antonum's close -up view, zoomed in view, detailed view.

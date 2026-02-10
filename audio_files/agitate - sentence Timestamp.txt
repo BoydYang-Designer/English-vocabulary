@@ -1,6 +1,9 @@
-[00:00:00.000 --> 00:00:04.000] Agitate as a verb, agitate, agitated, agitating.
-[00:00:04.000 --> 00:00:09.800] One, to stir up or provoke strong feelings of excitement, anxiety, or unrest in someone,
-[00:00:09.800 --> 00:00:11.600] to disturb or unsettle.
-[00:00:11.600 --> 00:00:15.200] Example, his controversial speech agitated the crowd.
-[00:00:15.200 --> 00:00:19.500] Two, to shake or move something vigorously, often to mix or dissolve its contents.
-[00:00:19.500 --> 00:00:24.000] Example, she used a spoon to agitate the mixture until the sugar dissolved completely.
+[00:00:00.000 --> 00:00:01.280] Agitate as a verb.
+[00:00:01.700 --> 00:00:03.620] Agitate, agitated, agitating.
+[00:00:04.280 --> 00:00:04.360] One.
+[00:00:05.320 --> 00:00:09.560] To stir up or provoke strong feelings of excitement, anxiety, or unrest in someone.
+[00:00:09.920 --> 00:00:11.160] To disturb or unsettle.
+[00:00:11.820 --> 00:00:14.720] Example, his controversial speech agitated the crowd.
+[00:00:15.340 --> 00:00:15.540] Two.
+[00:00:15.800 --> 00:00:19.060] To shake or move something vigorously, often to mix or dissolve its contents.
+[00:00:19.660 --> 00:00:23.300] Example, she used a spoon to agitate the mixture until the sugar dissolved completely.

@@ -1,9 +1,12 @@
-[00:00:00.000 --> 00:00:06.640] Emission as a noun. One, the act of producing or releasing something, especially gas, heat,
-[00:00:06.640 --> 00:00:11.600] light, or radiation. Example, the factory reduced its carbon emissions to meet environmental
-[00:00:11.600 --> 00:00:15.440] regulations. Example, the emission of greenhouse gases contributes to climate change.
-[00:00:16.320 --> 00:00:20.240] Example, scientists are studying the emission of light from distant stars.
-[00:00:21.120 --> 00:00:25.120] Two, a substance, gas, or energy released into the environment.
-[00:00:25.280 --> 00:00:31.600] Example, vehicle emissions are a major cause of air pollution example. The emission of toxic fumes
-[00:00:31.600 --> 00:00:37.280] force the evacuation of the building. Summary, emission refers to the release of gases, energy,
-[00:00:37.280 --> 00:00:42.800] or substances into the environment. Discharge, release, output, radiation, exhaust,
-[00:00:42.800 --> 00:00:51.520] annums, absorption, containment, retention.
+[00:00:00.000 --> 00:00:01.480] Emission as a noun.
+[00:00:02.140 --> 00:00:06.920] One, the act of producing or releasing something, especially gas, heat, light,
+[00:00:07.180 --> 00:00:07.720] or radiation.
+[00:00:08.300 --> 00:00:12.140] Example, the factory reduced its carbon emissions to meet environmental regulations.
+[00:00:12.560 --> 00:00:15.360] Example, the emission of greenhouse gases contributes to climate change.
+[00:00:16.320 --> 00:00:20.140] Example, scientists are studying the emission of light from distant stars.
+[00:00:21.120 --> 00:00:24.920] Two, a substance, gas, or energy released into the environment.
+[00:00:26.260 --> 00:00:29.340] Example, vehicle emissions are a major cause of air pollution.
+[00:00:29.520 --> 00:00:33.120] Example, the emission of toxic fumes force the evacuation of the building.
+[00:00:33.780 --> 00:00:39.160] Summary, emission refers to the release of gases, energy, or substances into the environment.
+[00:00:39.780 --> 00:00:44.580] Discharge, release, output, radiation, exhaust, anemones, absorption, containment,
+[00:00:45.180 --> 00:00:45.480] retention.

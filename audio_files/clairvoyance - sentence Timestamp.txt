@@ -1,10 +1,14 @@
-[00:00:00.000 --> 00:00:02.000] Clarevoyance as a noun.
-[00:00:02.000 --> 00:00:11.000] One, the ability to perceive events or gain knowledge about things beyond normal sensory perception often associated with supernatural or psychic abilities.
-[00:00:11.000 --> 00:00:15.500] Example, she claimed to have clairvoyance and could predict future events.
-[00:00:15.500 --> 00:00:20.000] Example, his clairvoyance allowed him to sense danger before it happened.
-[00:00:20.000 --> 00:00:25.500] Two, exceptional insight or intuition about people or situations.
-[00:00:25.500 --> 00:00:29.500] Example, the detectives clairvoyance helped him solve the case quickly.
-[00:00:30.500 --> 00:00:36.000] Example, with remarkable clairvoyance, she anticipated market trends before anyone else.
-[00:00:36.000 --> 00:00:45.000] Summary, clairvoyance refers to the supernatural ability to perceive hidden or future events as well as an exceptional level of intuition or insight.
-[00:00:45.000 --> 00:00:50.500] Related words, foresight, intuition, sixth sense, perception, divination.
-[00:00:50.500 --> 00:00:55.500] Antonyms, ignorance, blindness, unawareness, misjudgment.
+[00:00:00.000 --> 00:00:01.500] clairvoyance as a noun.
+[00:00:02.280 --> 00:00:07.300] One, the ability to perceive events or gain knowledge about things beyond normal sensory perception,
+[00:00:07.600 --> 00:00:10.320] often associated with supernatural or psychic abilities.
+[00:00:11.200 --> 00:00:14.920] Example, she claimed to have clairvoyance and could predict future events.
+[00:00:15.760 --> 00:00:19.120] Example, his clairvoyance allowed him to sense danger before it happened.
+[00:00:20.120 --> 00:00:20.760] Two,
+[00:00:21.820 --> 00:00:24.720] exceptional insight or intuition about people or situations.
+[00:00:25.640 --> 00:00:26.280] Example,
+[00:00:27.080 --> 00:00:29.760] the detective's clairvoyance helped him solve the case quickly.
+[00:00:29.760 --> 00:00:34.860] Example, with remarkable clairvoyance, she anticipated market trends before anyone else.
+[00:00:36.040 --> 00:00:40.800] Summary, clairvoyance refers to the supernatural ability to perceive hidden or
+[00:00:40.800 --> 00:00:44.720] future events, as well as an exceptional level of intuition or insight.
+[00:00:45.240 --> 00:00:50.060] Related words, foresight, intuition, sixth sense, perception, divination.
+[00:00:50.700 --> 00:00:54.440] Antonyms, ignorance, blindness, unawareness, misjudgment.

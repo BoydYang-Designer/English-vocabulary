@@ -1,11 +1,11 @@
-[00:00:00.000 --> 00:00:06.000] Disciplinary is an adjective with the following meaning relating to the practice of enforcing
-[00:00:06.000 --> 00:00:12.920] rules or regulations, especially in a professional or organizational context, often in the form
-[00:00:12.920 --> 00:00:15.320] of punishment or correction.
-[00:00:15.320 --> 00:00:20.200] Example, the teacher took disciplinary action against the student for breaking the school
-[00:00:20.200 --> 00:00:21.520] rules.
-[00:00:21.520 --> 00:00:26.320] Example, the company has a disciplinary procedure for employees who violate policies.
-[00:00:26.320 --> 00:00:30.720] The disciplinary committee reviewed the case and decided to suspend the employee.
-[00:00:30.720 --> 00:00:36.480] Summary, disciplinary refers to actions or measures taken to enforce rules, correct behavior,
-[00:00:36.480 --> 00:00:41.360] or maintain order, particularly in structured environments like schools, workplaces, or
-[00:00:41.360 --> 00:00:42.680] institutions.
-[00:00:42.680 --> 00:00:50.200] Related words, corrective, punitive, regulatory, reprimanding, permissive, lenient, indulgent.
+[00:00:00.000 --> 00:00:04.880] Disciplinary is an adjective with the following meaning, relating to the
+[00:00:04.880 --> 00:00:07.560] practice of enforcing rules or regulations,
+[00:00:08.320 --> 00:00:11.280] especially in a professional or organizational context,
+[00:00:11.940 --> 00:00:14.620] often in the form of punishment or correction.
+[00:00:15.360 --> 00:00:20.600] Example, the teacher took disciplinary action against the student for breaking the school rules.
+[00:00:21.500 --> 00:00:25.800] Example, the company has a disciplinary procedure for employees who violate policies.
+[00:00:25.800 --> 00:00:29.860] The disciplinary committee reviewed the case and decided to suspend the employee.
+[00:00:30.600 --> 00:00:36.080] Summary, disciplinary refers to actions or measures taken to enforce rules, correct behavior,
+[00:00:36.420 --> 00:00:41.660] or maintain order, particularly in structured environments like schools, workplaces, or institutions.
+[00:00:42.600 --> 00:00:45.900] Related words, corrective, punitive, regulatory,
+[00:00:46.600 --> 00:00:50.020] reprimanding, permissive, lenient, indulgent.

@@ -1,9 +1,0 @@
-[00:00:00.000 --> 00:00:07.000] Substance abuse is a noun phrase that refers to the harmful or hazardous use of psychoactive substances,
-[00:00:07.000 --> 00:00:09.600] including alcohol and illicit drugs.
-[00:00:09.600 --> 00:00:14.720] It often leads to significant adverse consequences in various areas of life, including health,
-[00:00:14.720 --> 00:00:18.000] social relationships, and occupational functioning.
-[00:00:18.000 --> 00:00:26.000] Example, many individuals seek help for substance abuse to regain control of their lives and improve their well-being.
-[00:00:26.000 --> 00:00:31.600] Example, the community launched a program aimed at preventing substance abuse among teenagers.
-[00:00:31.600 --> 00:00:38.000] Example, treatment for substance abuse often includes therapy, support groups, and sometimes medication.
-[00:00:38.000 --> 00:00:43.000] Related words, addiction, dependency, misuse, chemical dependence,
-[00:00:43.000 --> 00:00:47.000] antinim, sobriety, moderation, responsible use.

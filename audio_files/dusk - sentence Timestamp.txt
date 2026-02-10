@@ -1,6 +1,13 @@
-[00:00:00.000 --> 00:00:06.000] Dusk is a noun that refers to the time of day just after the sun has set, but before it is completely dark.
-[00:00:06.880 --> 00:00:13.040] It is also sometimes referred to as twilight. Examples, the children played outside until dusk when the
-[00:00:13.040 --> 00:00:18.560] sky turns shades of orange and purple. The hikers hurried to set up their tent before dusk fell.
-[00:00:19.280 --> 00:00:24.480] At dusk, the streetlights began to flicker on, casting a soft glow on the quiet street.
-[00:00:25.360 --> 00:00:30.560] Summary, dusk is the period of time just after sunset, characterized by fading light and the
-[00:00:30.560 --> 00:00:38.480] onset of evening, related words twilight, evening, sundown, nightfall, Antonim's dawn, sunrise, daylight.
+[00:00:00.000 --> 00:00:04.280] Dusk is a noun that refers to the time of day just after the sun has set,
+[00:00:04.520 --> 00:00:06.000] but before it is completely dark.
+[00:00:06.920 --> 00:00:09.000] It is also sometimes referred to as twilight.
+[00:00:09.580 --> 00:00:09.960] Examples,
+[00:00:10.620 --> 00:00:14.720] the children played outside until dusk when the sky turned shades of orange and purple.
+[00:00:15.660 --> 00:00:18.600] The hikers hurried to set up their tent before dusk fell.
+[00:00:19.380 --> 00:00:21.780] At dusk, the streetlights began to flicker on,
+[00:00:22.400 --> 00:00:24.420] casting a soft glow on the quiet street.
+[00:00:25.280 --> 00:00:25.880] Summary.
+[00:00:26.280 --> 00:00:31.340] Dusk is the period of time just after sunset, characterized by fading light in the onset of evening.
+[00:00:31.840 --> 00:00:35.360] Related words, twilight, evening, sundown, nightfall.
+[00:00:35.860 --> 00:00:37.380] Antonyms dawn, sunrise,
+[00:00:38.120 --> 00:00:38.340] daylight.

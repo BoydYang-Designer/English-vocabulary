@@ -1,18 +1,28 @@
-[00:00:00.000 --> 00:00:05.340] Assert is a verb, assert, asserted, asserting with the following meanings.
-[00:00:05.340 --> 00:00:10.840] One, to state or declare confidently, to make a statement or claim with strong conviction
-[00:00:10.840 --> 00:00:15.540] and confidence, often asserting something is true without needing proof.
-[00:00:15.540 --> 00:00:20.240] Example sentences, she asserted that her proposal would lead to better results.
-[00:00:20.240 --> 00:00:23.280] He asserted his innocence despite the accusations.
-[00:00:23.280 --> 00:00:26.680] He asserted that there were spies in the government.
-[00:00:27.240 --> 00:00:35.520] Two, to insist on or maintain something to strongly and persistently affirm or defend a belief, position, or right.
-[00:00:35.520 --> 00:00:40.520] Example sentences, the activist asserted their right to free speech at the rally.
-[00:00:40.520 --> 00:00:43.920] The manager asserted the company's commitment to quality service.
-[00:00:43.920 --> 00:00:47.360] She asserted her independence from her parents by getting her own apartment.
-[00:00:50.400 --> 00:00:56.640] Three, to make a formal or official claim to assert a legal or official claim or right, often in a formal setting.
-[00:00:56.880 --> 00:01:01.320] Example sentences, the lawyer asserted his clients right to a fair trial.
-[00:01:01.320 --> 00:01:04.400] The property owner asserted their claim to the disputed land.
-[00:01:04.400 --> 00:01:08.400] If you want people to listen to your opinions, you'll need to learn how to assert yourself.
-[00:01:09.520 --> 00:01:13.560] Summary, assert means to state or declare something confidently,
-[00:01:13.560 --> 00:01:17.840] to insist on or defend a position or right or to make a formal claim.
-[00:01:17.840 --> 00:01:21.720] Related words, declare a firm, insist claim.
-[00:01:21.720 --> 00:01:25.960] Antonyms, deny, retract, abandon, relinquish.
+[00:00:00.000 --> 00:00:01.340] Assert is a verb.
+[00:00:01.800 --> 00:00:04.800] Assert, asserted, asserting with the following meanings.
+[00:00:05.860 --> 00:00:10.780] One, to state or declare confidently, to make a statement or claim with strong conviction
+[00:00:10.780 --> 00:00:14.620] and confidence, often asserting something is true without needing proof.
+[00:00:15.480 --> 00:00:16.400] Example sentences.
+[00:00:16.940 --> 00:00:19.380] She asserted that her proposal would lead to better results.
+[00:00:20.120 --> 00:00:22.480] He asserted his innocence despite the accusations.
+[00:00:23.080 --> 00:00:25.560] He asserted that there were spies in the government.
+[00:00:26.820 --> 00:00:31.640] Two, to insist on or maintain something to strongly and persistently affirm
+[00:00:31.640 --> 00:00:34.260] or defend a belief, position, or right.
+[00:00:35.380 --> 00:00:36.320] Example sentences.
+[00:00:37.260 --> 00:00:40.140] The activist asserted their right to free speech at the rally.
+[00:00:40.540 --> 00:00:43.460] The manager asserted the company's commitment to quality service.
+[00:00:43.920 --> 00:00:46.900] She asserted her independence from her parents by getting her own apartment.
+[00:00:50.140 --> 00:00:54.540] Three, to make a formal or official claim to assert a legal or official claim or right,
+[00:00:54.660 --> 00:00:55.740] often in a formal setting.
+[00:00:56.840 --> 00:00:57.640] Example sentences.
+[00:00:57.980 --> 00:01:00.640] The lawyer asserted his client's right to a fair trial.
+[00:01:01.280 --> 00:01:03.900] The property owner asserted their claim to the disputed land.
+[00:01:04.380 --> 00:01:07.900] If you want people to listen to your opinions, you'll need to learn how to assert yourself.
+[00:01:09.420 --> 00:01:09.900] Summary.
+[00:01:10.060 --> 00:01:14.940] Assert means to state or declare something confidently, to insist on or defend a
+[00:01:14.940 --> 00:01:17.160] position or right, or to make a formal claim.
+[00:01:17.760 --> 00:01:18.540] Related words.
+[00:01:19.000 --> 00:01:19.900] Declare, affirm,
+[00:01:20.540 --> 00:01:21.300] insist, claim.
+[00:01:21.720 --> 00:01:22.320] Antonyms.
+[00:01:22.680 --> 00:01:25.640] Deny, retract, abandon, relinquish.

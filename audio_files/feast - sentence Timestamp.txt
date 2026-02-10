@@ -1,28 +1,31 @@
-[00:00:00.000 --> 00:00:04.640] Feast is a noun and a verb with the following meanings.
-[00:00:04.640 --> 00:00:09.400] As a noun, one, a large meal often for a celebration or special occasion.
-[00:00:09.400 --> 00:00:13.180] Example, the family prepared a grand feast for the holiday.
-[00:00:13.180 --> 00:00:16.880] Example, they enjoyed a delicious feast at the wedding banquet.
-[00:00:16.880 --> 00:00:21.520] Example, the royal feast included a variety of exotic dishes.
-[00:00:21.520 --> 00:00:24.200] Two, a religious or ceremonial festival.
-[00:00:24.200 --> 00:00:29.000] Example, many cultures hold annual feasts to honor their traditions.
-[00:00:29.080 --> 00:00:33.920] Example, the feast of Thanksgiving is widely celebrated in the United States.
-[00:00:33.920 --> 00:00:38.440] Example, the town hosted a feast to celebrate the harvest season.
-[00:00:38.440 --> 00:00:42.240] Three, something that is extremely enjoyable or abundant,
-[00:00:42.240 --> 00:00:45.840] especially in a non-food context, figurative use.
-[00:00:45.840 --> 00:00:48.800] The concert was a feast for the ears.
-[00:00:48.800 --> 00:00:53.200] Example, the museum exhibit was a feast for the eyes.
-[00:00:53.200 --> 00:00:57.520] Exhibition offers a feast of knowledge about ancient civilizations.
-[00:00:57.560 --> 00:00:59.920] As a verb, feast, feasted feasting.
-[00:00:59.920 --> 00:01:04.360] One, to eat a large and delicious meal often in celebration.
-[00:01:04.360 --> 00:01:07.960] Example, they feasted on roasted turkey and pumpkin pie.
-[00:01:07.960 --> 00:01:11.720] Example, after the long journey, they feasted on fresh seafood.
-[00:01:11.720 --> 00:01:15.440] Example, the guests feasted until they were completely full.
-[00:01:15.440 --> 00:01:22.680] Two, to enjoy something greatly, especially in a visual or sensory way.
-[00:01:22.680 --> 00:01:27.160] Example, she feasted her eyes on the breathtaking sunset.
-[00:01:27.160 --> 00:01:29.600] The audience feasted on the stunning performance.
-[00:01:29.600 --> 00:01:33.120] Example, he feasted on the beautiful scenery of the countryside.
-[00:01:33.120 --> 00:01:37.440] Summary, feast as a noun refers to a large meal, a celebration,
-[00:01:37.440 --> 00:01:39.960] or something enjoyable in abundance.
-[00:01:39.960 --> 00:01:43.640] As a verb, it means to eat lavishly or to enjoy something deeply.
-[00:01:43.640 --> 00:01:48.760] Related words, banquet, meal, celebration, festival, enjoy, indulge.
-[00:01:48.760 --> 00:01:53.240] Antonyms, fast, famine, scarcity, abstain, deprive.
+[00:00:00.000 --> 00:00:03.680] Feast is a noun and a verb with the following meanings.
+[00:00:04.540 --> 00:00:08.920] As a noun, one, a large meal often for a celebration or special occasion.
+[00:00:09.520 --> 00:00:12.640] Example, the family prepared a grand feast for the holiday.
+[00:00:13.280 --> 00:00:16.460] Example, they enjoyed a delicious feast at the wedding banquet.
+[00:00:16.920 --> 00:00:20.160] Example, the royal feast included a variety of exotic dishes.
+[00:00:21.600 --> 00:00:23.740] Two, a religious or ceremonial festival.
+[00:00:24.320 --> 00:00:28.120] Example, many cultures hold annual feasts to honor their traditions.
+[00:00:29.020 --> 00:00:33.620] Example, the feast of Thanksgiving is widely celebrated in the United States.
+[00:00:33.920 --> 00:00:37.720] Example, the town hosted a feast to celebrate the harvest season.
+[00:00:38.520 --> 00:00:38.800] Three,
+[00:00:39.480 --> 00:00:44.360] something that is extremely enjoyable or abundant, especially in a non -food context,
+[00:00:44.680 --> 00:00:45.220] figurative use.
+[00:00:45.860 --> 00:00:47.800] The concert was a feast for the ears.
+[00:00:48.780 --> 00:00:49.420] Example,
+[00:00:50.040 --> 00:00:52.520] the museum exhibit was a feast for the eyes.
+[00:00:53.180 --> 00:00:56.800] Exhib book offers a feast of knowledge about ancient civilizations.
+[00:00:57.360 --> 00:01:02.220] As a verb, feast feasted feasting, one, to eat a large and delicious meal
+[00:01:02.220 --> 00:01:03.580] often in celebration.
+[00:01:04.320 --> 00:01:07.460] Example, they feasted on roasted turkey and pumpkin pie.
+[00:01:07.960 --> 00:01:11.120] Example, after the long journey they feasted on fresh seafood.
+[00:01:11.700 --> 00:01:14.840] Example, the guests feasted until they were completely full.
+[00:01:15.440 --> 00:01:17.340] Two, to enjoy something greatly,
+[00:01:18.020 --> 00:01:21.880] especially in a visual or sensory way.
+[00:01:22.700 --> 00:01:25.880] Example, she feasted her eyes on the breathtaking sunset.
+[00:01:26.960 --> 00:01:29.020] The audience feasted on the stunning performance.
+[00:01:29.540 --> 00:01:32.280] Example, he feasted on the beautiful scenery of the countryside.
+[00:01:32.920 --> 00:01:33.540] Summary,
+[00:01:34.280 --> 00:01:39.320] feast as a noun refers to a large meal, a celebration, or something enjoyable in abundance.
+[00:01:39.880 --> 00:01:42.980] As a verb, it means to eat lavishly or to enjoy something deeply.
+[00:01:43.560 --> 00:01:48.360] Related words, banquet, meal, celebration, festival, enjoy, indulge.
+[00:01:48.360 --> 00:01:52.720] Antonyms, fast, famine, scarcity, abstain, deprive.

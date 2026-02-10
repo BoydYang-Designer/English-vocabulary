@@ -1,18 +1,20 @@
-[00:00:00.000 --> 00:00:06.960] Contemplate is a verb with the following meanings, one, to think about or consider carefully,
-[00:00:06.960 --> 00:00:12.200] to engage in deep thought or reflection about something, often pondering its implications
-[00:00:12.200 --> 00:00:13.840] or possibilities.
-[00:00:13.840 --> 00:00:17.800] Example, she sat by the window to contemplate her future and the decisions she needed to
-[00:00:17.800 --> 00:00:18.800] make.
-[00:00:18.800 --> 00:00:24.600] Example, he contemplated the meaning of life during his long walk in the park.
-[00:00:24.600 --> 00:00:29.880] Example, after much contemplation, they decided to move to a new city for a fresh start.
-[00:00:29.880 --> 00:00:35.280] Example, he began to contemplate committing suicide, but reached out for help instead.
-[00:00:35.280 --> 00:00:39.080] 2. To look at or observe thoughtfully.
-[00:00:39.080 --> 00:00:43.240] To gaze at something in a way that suggests deep thought or consideration.
-[00:00:43.240 --> 00:00:47.440] Example, the artist contemplated the landscape before starting her painting.
-[00:00:47.440 --> 00:00:51.280] Example, he contemplated the stars lost in their beauty and mystery.
-[00:00:51.280 --> 00:00:56.520] Example, she contemplated the sculpture, trying to understand the artist's vision.
-[00:00:56.520 --> 00:00:57.520] Summary.
-[00:00:57.720 --> 00:01:02.280] Contemplate means to think deeply about something or to observe it thoughtfully, often
-[00:01:02.280 --> 00:01:05.400] involving careful consideration and reflection.
-[00:01:05.400 --> 00:01:09.000] Related words, ponder, reflect, meditate, consider.
-[00:01:09.000 --> 00:01:12.000] Antonyms, dismiss, ignore, overlook, disregard.
+[00:00:00.560 --> 00:00:02.700] Contemplate is a verb with the following meanings.
+[00:00:03.240 --> 00:00:03.240] One,
+[00:00:03.900 --> 00:00:06.040] to think about or consider carefully.
+[00:00:06.820 --> 00:00:11.540] To engage in deep thought or reflection about something, often pondering its
+[00:00:11.540 --> 00:00:12.820] implications or possibilities.
+[00:00:13.420 --> 00:00:17.980] Example, she sat by the window to contemplate her future and the decisions she needed to make.
+[00:00:18.740 --> 00:00:22.920] Example, he contemplated the meaning of life during his long walk in the park.
+[00:00:24.120 --> 00:00:29.040] Example, after much contemplation, they decided to move to a new city for a fresh start.
+[00:00:29.820 --> 00:00:34.220] Example, he began to contemplate committing suicide but reached out for help instead.
+[00:00:35.040 --> 00:00:35.640] Two,
+[00:00:36.240 --> 00:00:38.460] to look at or observe thoughtfully.
+[00:00:39.000 --> 00:00:42.440] To gaze at something in a way that suggests deep thought or consideration.
+[00:00:43.080 --> 00:00:46.500] Example, the artist contemplated the landscape before starting her painting.
+[00:00:47.160 --> 00:00:50.380] Example, he contemplated the stars lost in their beauty and mystery.
+[00:00:51.040 --> 00:00:55.260] Example, she contemplated the sculpture trying to understand the artist's vision.
+[00:00:56.340 --> 00:00:56.780] Summary,
+[00:00:57.380 --> 00:01:02.240] contemplate means to think deeply about something or to observe it thoughtfully, often
+[00:01:02.240 --> 00:01:04.380] involving careful consideration and reflection.
+[00:01:05.200 --> 00:01:08.400] Related words, ponder, reflect, meditate, consider.
+[00:01:08.980 --> 00:01:11.820] Antonyms, dismiss, ignore, overlook, disregard.

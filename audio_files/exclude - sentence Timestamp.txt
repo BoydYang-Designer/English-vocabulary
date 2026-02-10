@@ -1,14 +1,16 @@
-[00:00:00.000 --> 00:00:06.360] Exclude is a verb, exclude, excluded, excluding with the following meanings.
-[00:00:06.360 --> 00:00:10.460] One, to intentionally leave something or someone out,
-[00:00:10.460 --> 00:00:16.900] refers to the act of not allowing something or someone to be part of a group, activity, or consideration.
-[00:00:16.900 --> 00:00:21.800] Example, the club decided to exclude new members until the end of the year.
-[00:00:21.800 --> 00:00:26.640] Example, she felt excluded from the conversation because she wasn't familiar with the topic.
-[00:00:26.840 --> 00:00:30.840] You can share files with some people on the network while excluding others.
-[00:00:30.840 --> 00:00:34.240] Two, to prevent something from being included or considered,
-[00:00:34.240 --> 00:00:38.040] refers to keeping something from being part of a process or system.
-[00:00:38.040 --> 00:00:43.840] Example, the policy aims to exclude any unfair practices from the hiring process.
-[00:00:43.840 --> 00:00:47.440] Certain expenses are excluded from the budget calculations.
-[00:00:47.440 --> 00:00:51.140] Example, the prices on the menu exclude tax.
-[00:00:51.140 --> 00:00:57.940] Exclude means to intentionally leave out or prevent something or someone from being part of a group or process.
-[00:00:57.940 --> 00:01:00.940] Related words omit, ban, reject, eliminate,
-[00:01:00.940 --> 00:01:04.740] antinims include, admit, accept, incorporate.
+[00:00:00.000 --> 00:00:01.540] Exclude is a verb.
+[00:00:01.880 --> 00:00:06.040] Exclude, excluded, excluding with the following meanings.
+[00:00:06.700 --> 00:00:11.620] One, to intentionally leave something or someone out refers to the act
+[00:00:11.620 --> 00:00:16.120] of not allowing something or someone to be part of a group, activity, or consideration.
+[00:00:17.120 --> 00:00:21.420] Example, the club decided to exclude new members until the end of the year.
+[00:00:22.000 --> 00:00:26.240] Example, she felt excluded from the conversation because she wasn't familiar with the topic.
+[00:00:26.240 --> 00:00:30.060] You can share files with some people on the network while excluding others.
+[00:00:30.980 --> 00:00:35.860] Two, to prevent something from being included or considered refers to keeping something from being
+[00:00:35.860 --> 00:00:37.360] part of a process or system.
+[00:00:38.080 --> 00:00:43.300] Example, the policy aims to exclude any unfair practices from the hiring process.
+[00:00:43.920 --> 00:00:46.580] Certain expenses are excluded from the budget calculations.
+[00:00:47.460 --> 00:00:50.000] Example, the prices on the menu exclude tax.
+[00:00:51.420 --> 00:00:56.180] Exclude means to intentionally leave out or prevent something or someone from being
+[00:00:56.180 --> 00:00:57.580] part of a group or process.
+[00:00:58.000 --> 00:01:00.580] Related words omit, ban, reject, eliminate.
+[00:01:01.000 --> 00:01:03.960] Antonyms include admit, accept, incorporate.

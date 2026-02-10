@@ -1,8 +1,0 @@
-[00:00:00.000 --> 00:00:02.800] The verb sweep swept swept sweeping sweeps.
-[00:00:02.800 --> 00:00:05.640] One, example one, she swept the floor clean.
-[00:00:05.640 --> 00:00:08.840] Two, example two, the wind swept through the trees.
-[00:00:08.840 --> 00:00:12.400] Three, example three, her eyes swept the room.
-[00:00:12.400 --> 00:00:14.800] Four, example four, the police conducted a sweep
-[00:00:14.800 --> 00:00:16.840] of the area to find the suspect.
-[00:00:16.840 --> 00:00:18.840] Example five, he won all the awards
-[00:00:18.840 --> 00:00:20.160] sweeping the competition.

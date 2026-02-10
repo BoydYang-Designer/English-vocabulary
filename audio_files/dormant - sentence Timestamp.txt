@@ -1,21 +1,19 @@
-[00:00:00.000 --> 00:00:03.360] Dormant is an adjective with the following meanings,
-[00:00:03.360 --> 00:00:06.200] one, in a state of rest or inactivity,
-[00:00:06.200 --> 00:00:10.000] not currently active but capable of becoming active again.
-[00:00:10.000 --> 00:00:14.120] This often describes organisms such as plants or animals
-[00:00:14.120 --> 00:00:18.640] that are not growing or functioning but can resume activity under the right conditions.
-[00:00:18.640 --> 00:00:24.000] Example, the seeds remain dormant until the spring rains arrive.
-[00:00:24.000 --> 00:00:26.760] Example of alcano has been dormant for decades,
-[00:00:26.760 --> 00:00:29.040] but it could erupt again at any time.
-[00:00:29.280 --> 00:00:33.600] Example, some individuals may seem dormant during difficult times,
-[00:00:33.600 --> 00:00:37.240] but they have the potential to thrive once their circumstances improve.
-[00:00:38.240 --> 00:00:42.640] Two, not showing any signs of activity or development inactive.
-[00:00:43.520 --> 00:00:46.680] This can refer to anything that is not currently in use or functioning
-[00:00:46.680 --> 00:00:48.440] but has the potential to become active.
-[00:00:49.480 --> 00:00:53.960] Example, the project has been dormant for several months due to lack of funding.
-[00:00:54.960 --> 00:00:59.480] The company has several dormant patents that they plan to revisit in the future.
-[00:00:59.480 --> 00:01:03.240] Example, after the merger, many of the divisions became dormant
-[00:01:03.240 --> 00:01:05.280] as the company reassessed its strategy.
-[00:01:05.280 --> 00:01:09.520] Summary, dormant describes a state of inactivity or rest,
-[00:01:09.520 --> 00:01:12.760] particularly when something has the potential to become active again.
-[00:01:12.760 --> 00:01:17.280] Related words, inactive, latent, idle, resting.
-[00:01:17.280 --> 00:01:21.800] Antonyms, active, functioning, lively, operational.
+[00:00:00.700 --> 00:00:02.980] Dormant is an adjective with the following meanings.
+[00:00:03.620 --> 00:00:08.540] One, in a state of rest or inactivity, not currently active but capable of becoming
+[00:00:08.540 --> 00:00:09.340] active again.
+[00:00:10.520 --> 00:00:15.520] This often describes organisms, such as plants or animals, that are not growing or functioning
+[00:00:15.520 --> 00:00:17.820] but can resume activity under the right conditions.
+[00:00:20.120 --> 00:00:23.540] Example, the seeds remain dormant until the spring rains arrive.
+[00:00:24.300 --> 00:00:28.520] Example, the volcano has been dormant for decades, but it could erupt again at any time.
+[00:00:29.280 --> 00:00:34.160] Example, some individuals may seem dormant during difficult times, but they have the
+[00:00:34.160 --> 00:00:36.900] potential to thrive once their circumstances improve.
+[00:00:37.920 --> 00:00:38.480] Two,
+[00:00:39.320 --> 00:00:42.440] not showing any signs of activity or development, inactive.
+[00:00:43.480 --> 00:00:48.180] This can refer to anything that is not currently in use or functioning but has the potential to become active.
+[00:00:49.420 --> 00:00:53.720] Example, the project has been dormant for several months due to lack of funding.
+[00:00:55.120 --> 00:00:59.120] The company has several dormant patents that they plan to revisit in the future.
+[00:00:59.840 --> 00:01:05.080] Example, after the merger, many of the divisions became dormant as the company reassessed its strategy.
+[00:01:06.100 --> 00:01:10.880] Summary, dormant describes a state of inactivity or rest, particularly when something
+[00:01:10.880 --> 00:01:12.600] has the potential to become active again.
+[00:01:13.580 --> 00:01:17.040] Related words, inactive, latent, idle, resting.
+[00:01:18.100 --> 00:01:21.560] Antonyms, active, functioning, lively, operational.

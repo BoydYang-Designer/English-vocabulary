@@ -1,8 +1,14 @@
-[00:00:00.000 --> 00:00:07.000] Celestial relates to the sky or the heavens, often referring to things associated with the stars, planets, or outer space.
-[00:00:07.000 --> 00:00:10.000] 1. Celestial is relating to the sky.
-[00:00:10.000 --> 00:00:16.000] Example, the astronomers used powerful telescopes to study celestial bodies such as stars and galaxies.
-[00:00:16.000 --> 00:00:20.000] 2. Celestial is relating to heaven, heavenly.
-[00:00:20.000 --> 00:00:24.000] Example, the late afternoon sunlight gave the room a celestial glow.
-[00:00:24.000 --> 00:00:31.000] Example, the painting depicted a serene landscape with clouds resembling a celestial staircase leading to heaven.
-[00:00:31.000 --> 00:00:39.000] Example, in many myths and legends, celestial beings are described as guardians of the heavens watching over the balance of the universe.
-[00:00:39.000 --> 00:00:49.000] Summary, celestial pertains to anything related to the sky, outer space, or heaven, often evoking a sense of grandeur or other worldliness.
+[00:00:00.000 --> 00:00:04.740] Celestial relates to the sky or the heavens, often referring to things associated
+[00:00:04.740 --> 00:00:06.740] with the stars, planets, or outer space.
+[00:00:07.520 --> 00:00:07.700] 1.
+[00:00:08.200 --> 00:00:09.960] Celestial is relating to the sky.
+[00:00:10.680 --> 00:00:15.760] Example, the astronomers used powerful telescopes to study celestial bodies such as stars and galaxies.
+[00:00:16.540 --> 00:00:16.840] 2.
+[00:00:17.580 --> 00:00:19.840] Celestial is relating to heaven, heavenly.
+[00:00:20.560 --> 00:00:23.920] Example, the late afternoon sunlight gave the room a celestial glow.
+[00:00:24.680 --> 00:00:29.420] Example, the painting depicted a serene landscape with clouds resembling a celestial
+[00:00:29.420 --> 00:00:31.000] staircase leading to heaven.
+[00:00:31.700 --> 00:00:36.480] Example, in many myths and legends celestial beings are described as guardians of the heavens,
+[00:00:36.780 --> 00:00:38.860] watching over the balance of the universe.
+[00:00:39.620 --> 00:00:44.540] Summary, celestial pertains to anything related to the sky, outer space, or heaven,
+[00:00:44.980 --> 00:00:48.440] often evoking a sense of grandeur or other worldliness.

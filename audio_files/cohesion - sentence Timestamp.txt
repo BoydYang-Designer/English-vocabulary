@@ -1,23 +1,25 @@
-[00:00:00.000 --> 00:00:06.000] Cohesion, noun, refers to the quality of being logically and grammatically connected
-[00:00:06.000 --> 00:00:10.800] within a text or speech, ensuring that different parts work together effectively to create
-[00:00:10.800 --> 00:00:13.760] a unified whole.
-[00:00:13.760 --> 00:00:16.320] Example sentences 1.
-[00:00:16.320 --> 00:00:21.000] The use of transitional phrases, such as however, and, for example, contributes to the
-[00:00:21.000 --> 00:00:23.720] cohesion of the essay, making it easier to follow.
-[00:00:23.720 --> 00:00:24.720] 2.
-[00:00:24.720 --> 00:00:29.000] The report lacked cohesion because the ideas were scattered and not well linked.
-[00:00:29.000 --> 00:00:33.500] In the third, effective cohesion in a team involves members working together seamlessly
-[00:00:33.500 --> 00:00:36.200] to achieve a common goal.
-[00:00:36.200 --> 00:00:40.400] Summary cohesion denotes the aspect of writing or speech that ensures different parts
-[00:00:40.400 --> 00:00:45.240] are well connected through grammatical and lexical means, such as transitions, pronouns, and linking
-[00:00:45.240 --> 00:00:49.200] words to create a smooth and unified flow.
-[00:00:49.200 --> 00:00:54.440] Synonyms unity, connection, linkage, integration.
-[00:00:54.440 --> 00:01:00.000] Disconnection, fragmentation, disunity in coherence.
-[00:01:00.000 --> 00:01:02.880] Difference between cohesion and coherence.
-[00:01:02.880 --> 00:01:08.360] Cohesion deals with how sentences and paragraphs are linked together using words and phrases.
-[00:01:08.360 --> 00:01:11.680] It focuses on the smooth flow of text.
-[00:01:11.680 --> 00:01:15.440] Coherence deals with the logical structure and clarity of ideas.
-[00:01:15.440 --> 00:01:20.400] It ensures that the text makes sense as a whole and that the ideas are clearly connected.
-[00:01:20.400 --> 00:01:22.440] Summary of differences.
-[00:01:22.440 --> 00:01:27.200] Cohesion is about how parts of a text are connected grammatically and lexically.
-[00:01:27.200 --> 00:01:31.800] Coherence is about how well the ideas in a text are logically organized and clear.
+[00:00:01.560 --> 00:00:06.440] Cohesion, noun, refers to the quality of being logically and grammatically connected within a
+[00:00:06.440 --> 00:00:11.620] text or speech, ensuring that different parts work together effectively to create a unified whole.
+[00:00:13.480 --> 00:00:14.140] Example sentences.
+[00:00:15.540 --> 00:00:15.820] 1.
+[00:00:16.260 --> 00:00:21.020] The use of transitional phrases, such as however and for example, contributes to the
+[00:00:21.020 --> 00:00:23.220] cohesion of the essay, making it easier to follow.
+[00:00:23.880 --> 00:00:24.480] 2.
+[00:00:24.660 --> 00:00:28.120] The report lacked cohesion because the ideas were scattered and not well linked.
+[00:00:28.120 --> 00:00:29.280] 3.
+[00:00:29.720 --> 00:00:34.920] Effective cohesion in a team involves members working together seamlessly to achieve a common goal.
+[00:00:35.740 --> 00:00:40.720] Summary cohesion denotes the aspect of writing or speech that ensures different parts are well
+[00:00:40.720 --> 00:00:45.560] connected through grammatical and lexical means, such as transitions, pronouns, and linking words
+[00:00:45.560 --> 00:00:48.060] to create a smooth and unified flow.
+[00:00:48.720 --> 00:00:50.540] Synonyms, unity, connection,
+[00:00:51.240 --> 00:00:52.480] linkage, integration.
+[00:00:54.140 --> 00:00:56.280] Antonyms, disconnection, fragmentation,
+[00:00:56.900 --> 00:00:58.700] disunity, incoherence.
+[00:00:59.380 --> 00:01:01.860] Difference between cohesion and coherence.
+[00:01:02.280 --> 00:01:07.260] Cohesion deals with how sentences and paragraphs are linked together using words and phrases.
+[00:01:08.180 --> 00:01:10.480] It focuses on the smooth flow of text.
+[00:01:11.320 --> 00:01:14.740] Coherence deals with the logical structure and clarity of ideas.
+[00:01:15.200 --> 00:01:19.060] It ensures that the text makes sense as a whole and that the ideas are clearly connected.
+[00:01:19.920 --> 00:01:20.920] Summary of differences.
+[00:01:21.900 --> 00:01:26.120] Cohesion is about how parts of a text are connected grammatically and lexically.
+[00:01:26.740 --> 00:01:31.680] Coherence is about how well the ideas in a text are logically organized and clear.

@@ -1,12 +1,12 @@
-[00:00:00.000 --> 00:00:04.360] Fascinate is a verb, fascinate, fascinated, fascinating,
-[00:00:04.360 --> 00:00:08.000] that refers to capturing someone's attention or interest intensely,
-[00:00:08.000 --> 00:00:12.800] often due to something being highly appealing, mysterious, or unusual.
-[00:00:12.800 --> 00:00:17.360] Example, the magician's tricks fascinated the audience.
-[00:00:17.360 --> 00:00:21.800] She is fascinated by ancient history and loves reading about it.
-[00:00:21.800 --> 00:00:27.040] Example, the intricate details of the painting were fascinating to everyone at the gallery.
-[00:00:27.440 --> 00:00:31.680] His stories about his travels to remote places never fail to fascinate his listeners.
-[00:00:31.680 --> 00:00:36.520] Example, the documentary about deep sea creatures was absolutely fascinating.
-[00:00:36.520 --> 00:00:41.360] Summary, fascinate means to deeply attract or captivate someone's interest or curiosity,
-[00:00:41.360 --> 00:00:43.680] often by being intriguing or unusual.
-[00:00:43.680 --> 00:00:48.840] Related words, captivate, intrigue, enchant, mesmerized, charm,
-[00:00:48.840 --> 00:00:52.840] antinims, boar, repel, disinterest, offend.
+[00:00:00.000 --> 00:00:03.700] Fascinate is a verb, fascinate, fascinated, fascinating,
+[00:00:04.600 --> 00:00:10.120] that refers to capturing someone's attention or interest intensely, often due to something being highly appealing,
+[00:00:10.600 --> 00:00:11.960] mysterious, or unusual.
+[00:00:13.220 --> 00:00:16.580] Example, the magician's tricks fascinated the audience.
+[00:00:17.660 --> 00:00:20.960] She is fascinated by ancient history and loves reading about it.
+[00:00:22.060 --> 00:00:25.960] Example, the intricate details of the painting were fascinating to everyone at the gallery.
+[00:00:26.860 --> 00:00:31.100] His stories about his travels to remote places never fail to fascinate his listeners.
+[00:00:31.680 --> 00:00:35.900] Example, the documentary about deep sea creatures was absolutely fascinating.
+[00:00:36.640 --> 00:00:41.580] Summary, fascinate means to deeply attract or captivate someone's interest or curiosity, often
+[00:00:41.580 --> 00:00:43.040] by being intriguing or unusual.
+[00:00:43.700 --> 00:00:49.440] Related words, captivate, intrigue, enchant, mesmerize, charm, antonyms,
+[00:00:49.700 --> 00:00:52.080] bore, repel, disinterest, offend.

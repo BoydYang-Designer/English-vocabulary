@@ -1,12 +1,20 @@
-[00:00:00.000 --> 00:00:07.600] Clamp as a noun and verb. As a noun, one a device used to hold objects firmly together or in place.
-[00:00:07.600 --> 00:00:13.920] Example, he used a clamp to secure the wooden boards while the glue dried. Example, the metal clamp
-[00:00:13.920 --> 00:00:20.160] kept the pipe from leaking. Two, a strong grip or fastening that restricts movement. Example,
-[00:00:20.160 --> 00:00:25.280] the mechanic applied a clamp to hold the car part in place. Example, the clamp on the bicycle's
-[00:00:25.280 --> 00:00:33.280] wheel prevented it from being used. As a verb, clamp, clamp, clamp, clamping. One, to fasten or
-[00:00:33.280 --> 00:00:39.280] hold something firmly in place using a clamp or similar tool. Example, he clamped the pieces
-[00:00:39.280 --> 00:00:44.160] of metal together before welding. Example, the dentist clamped the braces onto her teeth.
-[00:00:44.960 --> 00:00:50.320] Two, to impose strict control or restrictions on something. Example, the government clamped
-[00:00:50.320 --> 00:00:56.160] down on tax fraud. The school clamped new rules on student behavior. Summary, a clamp,
-[00:00:56.800 --> 00:01:01.280] is a tool or device used to hold things tightly together. As a verb, it means to secure something
-[00:01:01.280 --> 00:01:06.320] firmly or to impose strict control. Related words, fastened, secure, grip, tighten,
-[00:01:06.320 --> 00:01:16.320] restrain, Antonim's loosen, release, detach, unfasten.
+[00:00:00.000 --> 00:00:01.540] Clamp as a noun and verb.
+[00:00:02.520 --> 00:00:07.060] As a noun, one, a device used to hold objects firmly together or in place.
+[00:00:07.800 --> 00:00:11.820] Example, he used a clamp to secure the wooden boards while the glue dried.
+[00:00:12.600 --> 00:00:14.960] Example, the metal clamp kept the pipe from leaking.
+[00:00:15.560 --> 00:00:16.040] Two,
+[00:00:16.660 --> 00:00:18.960] a strong grip or fastening that restricts movement.
+[00:00:19.560 --> 00:00:22.800] Example, the mechanic applied a clamp to hold the car part in place.
+[00:00:23.380 --> 00:00:26.840] Example, the clamp on the bicycle's wheel prevented it from being used.
+[00:00:27.600 --> 00:00:28.500] As a verb,
+[00:00:29.140 --> 00:00:31.700] clamp, clamp, clamped, clamping.
+[00:00:32.140 --> 00:00:36.440] One, to fasten or hold something firmly in place using a clamp or similar tool.
+[00:00:37.960 --> 00:00:40.640] Example, he clamped the pieces of metal together before welding.
+[00:00:41.760 --> 00:00:44.140] Example, the dentist clamped the braces onto her teeth.
+[00:00:44.960 --> 00:00:48.400] Two, to impose strict control or restrictions on something.
+[00:00:49.040 --> 00:00:51.360] Example, the government clamped down on tax fraud.
+[00:00:51.840 --> 00:00:54.080] The school clamped new rules on student behavior.
+[00:00:54.840 --> 00:00:59.440] Summary, a clamp is a tool or device used to hold things tightly together.
+[00:00:59.820 --> 00:01:03.180] As a verb, it means to secure something firmly or to impose strict control.
+[00:01:03.620 --> 00:01:06.900] Related words, fasten, secure, grip, tighten, restrain.
+[00:01:07.100 --> 00:01:10.820] Antonyms, loosen, release, detach, unfasten.

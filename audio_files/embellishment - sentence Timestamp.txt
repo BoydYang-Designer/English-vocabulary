@@ -1,9 +1,8 @@
-[00:00:00.000 --> 00:00:05.120] Embellishment refers to the act of adding decorative details or enhancements to something,
-[00:00:05.120 --> 00:00:07.680] often to make it more attractive or interesting.
-[00:00:07.680 --> 00:00:13.360] It can also refer to the act of adding extra details or exaggerations to a story or description
-[00:00:13.360 --> 00:00:15.920] to make it more entertaining or impressive.
-[00:00:15.920 --> 00:00:17.600] Examples.
-[00:00:17.600 --> 00:00:22.720] This painting is nearly perfect, but it may still need a final embellishment.
-[00:00:22.720 --> 00:00:26.320] The storyteller added a touch of embellishment to the tail,
-[00:00:26.320 --> 00:00:29.360] weaving in colorful details and exaggerated anecdotes
-[00:00:29.360 --> 00:00:31.360] to captivate the audience.
+[00:00:00.000 --> 00:00:04.880] Embellishment refers to the act of adding decorative details or enhancements to something,
+[00:00:05.280 --> 00:00:07.300] often to make it more attractive or interesting.
+[00:00:07.880 --> 00:00:12.780] It can also refer to the act of adding extra details or exaggerations to a story or
+[00:00:12.780 --> 00:00:15.460] description to make it more entertaining or impressive.
+[00:00:16.480 --> 00:00:16.820] Examples
+[00:00:17.800 --> 00:00:22.200] This painting is nearly perfect, but it may still need a final embellishment.
+[00:00:22.740 --> 00:00:27.240] The storyteller added a touch of embellishment to the tail, weaving in colorful
+[00:00:27.240 --> 00:00:30.520] details and exaggerated anecdotes to captivate the audience.

@@ -1,18 +1,15 @@
-[00:00:00.000 --> 00:00:03.180] Devious is an adjective with the following meanings.
-[00:00:03.180 --> 00:00:06.200] One, showing a skillful use of underhanded tactics
-[00:00:06.200 --> 00:00:09.840] to achieve goals dishonest or deceitful in a clever way.
-[00:00:09.840 --> 00:00:13.300] Example, the devious salesman manipulated his customers
-[00:00:13.300 --> 00:00:15.540] into buying unnecessary products.
-[00:00:15.540 --> 00:00:18.940] Example, his devious plan to sabotage his competitor's business
-[00:00:18.940 --> 00:00:20.740] was finally exposed.
-[00:00:20.740 --> 00:00:24.680] Indirect or circuitous in route or manner, not straightforward.
-[00:00:24.680 --> 00:00:27.520] Example, instead of confronting the issue directly,
-[00:00:27.620 --> 00:00:30.760] she took a devious approach by spreading rumors about her rival.
-[00:00:30.760 --> 00:00:33.820] Example, he took a devious route through the back alleys
-[00:00:33.820 --> 00:00:35.860] and side streets to avoid the heavy traffic
-[00:00:35.860 --> 00:00:37.700] on the main roads during rush hour.
-[00:00:37.700 --> 00:00:40.860] Summary, devious can describe someone who uses dishonest
-[00:00:40.860 --> 00:00:44.540] or sneaky methods to achieve goals, or a path or method
-[00:00:44.540 --> 00:00:47.460] that is indirect or not straightforward.
-[00:00:47.460 --> 00:00:52.140] Related, cunning, tricky, sneaky, indirect, deceitful.
-[00:00:52.140 --> 00:00:55.940] Antonyms, honest, straightforward, direct, open.
+[00:00:00.000 --> 00:00:02.640] Devious is an adjective with the following meanings.
+[00:00:03.460 --> 00:00:07.900] One, showing a skillful use of underhanded tactics to achieve goals dishonest or
+[00:00:07.900 --> 00:00:09.320] deceitful in a clever way.
+[00:00:10.080 --> 00:00:15.000] Example, the devious salesman manipulated his customers into buying unnecessary products.
+[00:00:15.600 --> 00:00:20.200] Example, his devious plan to sabotage his competitor's business was finally exposed.
+[00:00:20.900 --> 00:00:24.000] Indirect or circuitous in route or manner, not straightforward.
+[00:00:24.800 --> 00:00:29.540] Example, instead of confronting the issue directly, she took a devious approach by spreading rumors
+[00:00:29.540 --> 00:00:30.360] about her rival.
+[00:00:30.800 --> 00:00:31.340] Example,
+[00:00:32.020 --> 00:00:36.800] he took a devious route through the back alleys and side streets to avoid the heavy traffic on the main roads during
+[00:00:36.800 --> 00:00:37.300] rush hour.
+[00:00:37.760 --> 00:00:42.580] Summary, devious can describe someone who uses dishonest or sneaky methods to achieve goals,
+[00:00:42.960 --> 00:00:46.620] or a path or method that is indirect or not straightforward.
+[00:00:47.500 --> 00:00:50.540] Related, cunning, tricky, sneaky, indirect,
+[00:00:51.140 --> 00:00:55.640] deceitful. Antonyms, honest, straightforward, direct, open.

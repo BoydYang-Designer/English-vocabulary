@@ -1,9 +1,14 @@
-[00:00:00.000 --> 00:00:07.560] Shakespeare as a noun. Shakespeare refers to William Shakespeare, 1564 to 1616, an English
-[00:00:07.560 --> 00:00:11.900] playwright, poet, and actor, widely regarded as one of the greatest writers in the English
-[00:00:11.900 --> 00:00:16.640] language and world literature. He is famous for his plays, sonnets, and poems which explore
-[00:00:16.640 --> 00:00:23.600] themes such as love, power, betrayal, and the human condition. Example, Shakespeare's works,
-[00:00:23.600 --> 00:00:30.080] such as Romeo and Juliet and Hamlet, are still performed worldwide today. Example, the
-[00:00:30.080 --> 00:00:35.020] professor gave a lecture on Shakespeare's influence on modern theater. Example, she was a fan
-[00:00:35.020 --> 00:00:41.380] of Shakespeare's sonnets, often quoting them in conversation. Summary, Shakespeare is
-[00:00:41.380 --> 00:00:45.360] a renowned English playwright and poet whose literary works have had a lasting impact
-[00:00:45.360 --> 00:00:50.960] on literature, theater, and language. Related words, playwright, poet, dramatist,
+[00:00:00.000 --> 00:00:01.400] Shakespeare as a noun.
+[00:00:02.160 --> 00:00:06.620] Shakespeare refers to William Shakespeare, 1564 to 1616,
+[00:00:07.120 --> 00:00:11.860] an English playwright, poet, and actor, widely regarded as one of the greatest writers in the English
+[00:00:11.860 --> 00:00:13.200] language and world literature.
+[00:00:13.760 --> 00:00:18.700] He is famous for his plays, sonnets, and poems which explore themes such as love, power,
+[00:00:18.980 --> 00:00:20.540] betrayal, and the human condition.
+[00:00:21.340 --> 00:00:26.040] Example, Shakespeare's works such as Romeo and Juliet and Hamlet are still
+[00:00:26.040 --> 00:00:27.340] performed worldwide today.
+[00:00:29.040 --> 00:00:32.920] Example, the professor gave a lecture on Shakespeare's influence on modern theatre.
+[00:00:33.700 --> 00:00:37.540] Example, she was a fan of Shakespeare's sonnets, often quoting them in conversation.
+[00:00:39.400 --> 00:00:39.960] Summary,
+[00:00:40.620 --> 00:00:45.780] Shakespeare is a renowned English playwright and poet whose literary works have had a lasting impact on literature,
+[00:00:46.220 --> 00:00:47.100] theatre, and language.
+[00:00:47.780 --> 00:00:51.760] Related words, playwright, poet, dramatist, bard, author.

@@ -1,17 +1,15 @@
-[00:00:00.000 --> 00:00:03.000] Ellipse is a noun with the following meanings.
-[00:00:03.000 --> 00:00:06.500] One geometry, a closed curve around two focal points,
-[00:00:06.500 --> 00:00:09.500] such that the sum of the distances to the focal points
-[00:00:09.500 --> 00:00:13.000] is constant for every point on the curve.
-[00:00:13.000 --> 00:00:16.000] It is a type of conic section.
-[00:00:16.000 --> 00:00:20.000] Example the orbits of planets around the sun are elliptical in shape.
-[00:00:20.000 --> 00:00:24.000] The garden was designed within ellipse in the center for a unique look.
-[00:00:24.000 --> 00:00:26.000] About two, linguistics.
-[00:00:26.000 --> 00:00:28.000] The omission of one or more words in a sentence
-[00:00:28.000 --> 00:00:32.000] that are understood from the context, but are not explicitly stated.
-[00:00:32.000 --> 00:00:36.000] Example, in the sentence, she can play the guitar and he, the piano.
-[00:00:36.000 --> 00:00:40.000] The word can is omitted after he due to ellipsis.
-[00:00:40.000 --> 00:00:46.000] Example, I went to the store and she to the park uses ellipsis to omit the repeated verb.
-[00:00:46.000 --> 00:00:50.000] Summary, an ellipse refers to a specific geometric shape
-[00:00:50.000 --> 00:00:55.000] or a linguistic device where parts of a sentence are omitted but implied.
-[00:00:55.000 --> 00:00:58.000] Related words, oval, curve, conic section.
-[00:00:58.000 --> 00:01:02.000] Antonyms circle for shape, complete sentence for linguistic use.
+[00:00:00.000 --> 00:00:02.760] Ellipse is a noun with the following meanings.
+[00:00:03.280 --> 00:00:08.180] One geometry, a closed curve around two focal points, such that the sum of the distances
+[00:00:08.180 --> 00:00:12.540] to the focal points is constant for every point on the curve.
+[00:00:13.340 --> 00:00:15.240] It is a type of conic section.
+[00:00:16.100 --> 00:00:19.600] Example, the orbits of planets around the sun are elliptical in shape.
+[00:00:20.320 --> 00:00:23.320] The garden was designed with an ellipse in the center for a unique look.
+[00:00:24.480 --> 00:00:29.280] Two, linguistics, the omission of one or more words in a sentence that are understood from the
+[00:00:29.280 --> 00:00:31.500] context but are not explicitly stated.
+[00:00:32.280 --> 00:00:37.160] Example, in the sentence, she can play the guitar and he, the piano, the word can
+[00:00:37.160 --> 00:00:39.580] is omitted after he due to ellipsis.
+[00:00:39.940 --> 00:00:44.920] Example, I went to the store and she to the park uses ellipsis to omit the repeated verb.
+[00:00:46.560 --> 00:00:51.400] Summary, an ellipse refers to a specific geometric shape or a linguistic
+[00:00:51.400 --> 00:00:54.660] device where parts of a sentence are omitted but implied.
+[00:00:55.080 --> 00:00:57.700] Related words, oval, curve, conic section.
+[00:00:58.100 --> 00:01:01.100] Antonyms circle for shape, complete sentence for linguistic use.

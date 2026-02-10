@@ -1,11 +1,14 @@
-[00:00:00.000 --> 00:00:05.320] Chlorine is a noun that refers to a chemical element that, in its natural state, is a greenish
-[00:00:05.320 --> 00:00:12.040] yellow gas with a strong, pungent smell. Chlorine is highly reactive and widely used as a disinfectant,
-[00:00:12.040 --> 00:00:18.160] bleaching agent, and in various industrial processes, including water treatment and sanitation.
-[00:00:18.160 --> 00:00:24.000] Example, chlorine is added to swimming pools to kill harmful bacteria.
-[00:00:24.000 --> 00:00:28.240] The smell of chlorine in the water was quite strong.
-[00:00:28.240 --> 00:00:32.240] Green gas was first used as a chemical weapon during World War I.
-[00:00:32.240 --> 00:00:36.440] Summary, chlorine refers to a greenish yellow, highly reactive chemical element commonly
-[00:00:36.440 --> 00:00:39.920] used for disinfection, water treatment, and industrial purposes.
-[00:00:39.920 --> 00:00:44.160] It is characterized by its strong odor and antibacterial properties.
-[00:00:44.160 --> 00:00:50.040] Related words, halogen, disinfectant, bleach, sanitizer, chemical antinems.
-[00:00:50.040 --> 00:00:53.200] Contaminant, pollutant, pathogen, impurity.
+[00:00:00.000 --> 00:00:04.820] Chlorine is a noun that refers to a chemical element that, in its natural state, is a
+[00:00:04.820 --> 00:00:07.860] greenish yellow gas with a strong, pungent smell.
+[00:00:08.700 --> 00:00:13.680] Chlorine is highly reactive and widely used as a disinfectant, bleaching agent, and in various
+[00:00:13.680 --> 00:00:17.480] industrial processes, including water treatment and sanitation.
+[00:00:18.260 --> 00:00:22.600] Example, chlorine is added to swimming pools to kill harmful bacteria.
+[00:00:23.780 --> 00:00:26.100] The smell of chlorine in the water was quite strong.
+[00:00:27.600 --> 00:00:31.540] Chlorine gas was first used as a chemical weapon during World War I.
+[00:00:31.980 --> 00:00:37.540] Summary, chlorine refers to a greenish yellow, highly reactive chemical element commonly used for disinfection,
+[00:00:37.600 --> 00:00:39.280] water treatment, and industrial purposes.
+[00:00:39.860 --> 00:00:43.340] It is characterized by its strong odor and antibacterial properties.
+[00:00:44.040 --> 00:00:47.380] Related words, halogen, disinfectant, bleach, sanitizer,
+[00:00:48.020 --> 00:00:49.120] chemical, antonyms.
+[00:00:49.840 --> 00:00:51.960] Contaminant, pollutant, pathogen,
+[00:00:52.600 --> 00:00:52.960] impurity.

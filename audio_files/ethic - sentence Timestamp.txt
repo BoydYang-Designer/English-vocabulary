@@ -1,13 +1,18 @@
-[00:00:00.000 --> 00:00:03.800] Ethic is a noun with the following meanings, one,
-[00:00:03.800 --> 00:00:11.000] a set of moral principles or values refers to the principles that govern a person's behavior or the conduct of an activity.
-[00:00:11.000 --> 00:00:13.000] Example sentences.
-[00:00:13.000 --> 00:00:17.300] The company's ethics include honesty and fairness in all business dealings.
-[00:00:17.300 --> 00:00:21.200] She was admired for her strong work ethic and commitment to her job.
-[00:00:21.200 --> 00:00:26.000] Many debates center around the ethics of artificial intelligence and data privacy.
-[00:00:27.000 --> 00:00:35.000] Two, a branch of philosophy dealing with what is morally right and wrong refers to the study and examination of moral values and principles.
-[00:00:35.000 --> 00:00:37.000] Example sentences.
-[00:00:37.000 --> 00:00:42.500] The course in ethics covered theories from various philosophers on moral behavior.
-[00:00:42.500 --> 00:00:47.500] Philosophers have long debated the ethics of euthanasia and animal rights.
-[00:00:47.500 --> 00:00:55.500] Summary, ethic refers to a system of moral principles that guide behavior or the study of these principles in philosophy.
-[00:00:55.500 --> 00:00:59.200] Related words, morals, principles, values, standards,
-[00:00:59.200 --> 00:01:03.500] Antonyms immorality, dishonesty, misconduct, unethical behavior.
+[00:00:00.000 --> 00:00:02.660] Ethic is a noun with the following meanings.
+[00:00:03.340 --> 00:00:03.340] One,
+[00:00:03.980 --> 00:00:08.840] a set of moral principles or values refers to the principles that govern a person's behavior
+[00:00:08.840 --> 00:00:10.360] or the conduct of an activity.
+[00:00:11.360 --> 00:00:12.360] Example Sentences
+[00:00:13.200 --> 00:00:17.000] The company's ethics include honesty and fairness in all business dealings.
+[00:00:17.380 --> 00:00:20.760] She was admired for her strong work ethic and commitment to her job.
+[00:00:21.320 --> 00:00:25.000] Many debates center around the ethics of artificial intelligence and data privacy.
+[00:00:26.460 --> 00:00:31.440] Two, a branch of philosophy dealing with what is morally right and wrong refers
+[00:00:31.440 --> 00:00:34.300] to the study and examination of moral values and principles.
+[00:00:34.960 --> 00:00:35.960] Example Sentences
+[00:00:37.200 --> 00:00:41.680] The course in ethics covered theories from various philosophers on moral behavior.
+[00:00:42.880 --> 00:00:46.580] Philosophers have long debated the ethics of euthanasia and animal rights.
+[00:00:47.440 --> 00:00:52.260] Summary, ethic refers to a system of moral principles that guide behavior
+[00:00:52.260 --> 00:00:54.380] or the study of these principles in philosophy.
+[00:00:55.500 --> 00:00:56.220] Related Words
+[00:00:56.900 --> 00:01:01.740] Morals, Principles, Values, Standards Antonyms, Immorality, Dishonesty, Misconduct,
+[00:01:02.040 --> 00:01:02.800] Unethical Behavior

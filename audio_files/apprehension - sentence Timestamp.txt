@@ -1,21 +1,22 @@
-[00:00:00.000 --> 00:00:04.920] Apprehension as a noun, one, suspicion or fear, especially of future evil.
-[00:00:04.920 --> 00:00:10.160] Apprehension can refer to a feeling of unease or worry about something that is about to happen,
-[00:00:10.160 --> 00:00:12.760] or that one feels is likely to happen.
-[00:00:12.760 --> 00:00:17.760] It's often used synonymously with anxiety, dread, or foreboding.
-[00:00:17.760 --> 00:00:22.000] Example, the apprehension she felt before the job interview was overwhelming,
-[00:00:22.000 --> 00:00:24.960] causing her palms to sweat and her heart to race.
-[00:00:24.960 --> 00:00:28.400] Example, as the storm clouds gathered overhead,
-[00:00:28.560 --> 00:00:31.680] a sense of apprehension settled over the small town.
-[00:00:31.680 --> 00:00:34.240] Two, understanding or grasping.
-[00:00:34.240 --> 00:00:38.720] In a different context, apprehension can refer to the act of comprehending or understanding something,
-[00:00:38.720 --> 00:00:41.920] particularly complex or abstract ideas.
-[00:00:41.920 --> 00:00:45.760] Example, the student's apprehension of the mathematical concept
-[00:00:45.760 --> 00:00:49.600] grew as the teacher provided more examples and explanations.
-[00:00:49.600 --> 00:00:54.720] Example, after hours of study, she finally felt a sense of apprehension about the complicated
-[00:00:54.720 --> 00:00:58.640] theory, able to explain it to her classmates with confidence.
-[00:00:58.640 --> 00:01:01.120] Three, arrest or capture.
-[00:01:01.120 --> 00:01:07.200] In a legal context, apprehension can refer to the act of arresting or capturing a suspect
-[00:01:07.200 --> 00:01:09.920] or fugitive by law enforcement authorities.
-[00:01:09.920 --> 00:01:13.840] Example, they will begin to cooperate in the apprehension of these gangsters.
-[00:01:13.840 --> 00:01:19.760] Example, the apprehension of the criminal was the result of months of diligent police work
-[00:01:19.760 --> 00:01:23.920] and cooperation between multiple law enforcement agencies.
+[00:00:00.000 --> 00:00:04.540] Apprehension as a noun, one, suspicion or fear, especially of future evil.
+[00:00:05.060 --> 00:00:09.840] Apprehension can refer to a feeling of unease or worry about something that is about to happen,
+[00:00:10.200 --> 00:00:12.340] or that one feels is likely to happen.
+[00:00:13.020 --> 00:00:17.060] It's often used synonymously with anxiety, dread, or foreboding.
+[00:00:18.220 --> 00:00:23.000] Example, the apprehension she felt before the job interview was overwhelming, causing her palms to
+[00:00:23.000 --> 00:00:24.440] sweat and her heart to race.
+[00:00:25.140 --> 00:00:30.040] Example, as the storm clouds gathered overhead, a sense of apprehension settled
+[00:00:30.040 --> 00:00:31.080] over the small town.
+[00:00:31.620 --> 00:00:33.800] Two, understanding or grasping.
+[00:00:34.120 --> 00:00:39.120] In a different context, apprehension can refer to the act of comprehending or understanding something, particularly
+[00:00:39.120 --> 00:00:41.240] complex or abstract ideas.
+[00:00:41.860 --> 00:00:46.620] Example, the student's apprehension of the mathematical concept grew as the teacher
+[00:00:46.620 --> 00:00:48.540] provided more examples and explanations.
+[00:00:49.520 --> 00:00:50.160] Example,
+[00:00:50.760 --> 00:00:55.680] after hours of study, she finally felt a sense of apprehension about the complicated theory, able
+[00:00:55.680 --> 00:00:57.980] to explain it to her classmates with confidence.
+[00:00:58.940 --> 00:01:00.480] Three, arrest or capture.
+[00:01:01.100 --> 00:01:06.100] In a legal context, apprehension can refer to the act of arresting or capturing
+[00:01:06.100 --> 00:01:09.080] a suspect or fugitive by law enforcement authorities.
+[00:01:09.860 --> 00:01:13.200] Example, they will begin to cooperate in the apprehension of these gangsters.
+[00:01:13.900 --> 00:01:18.860] Example, the apprehension of the criminal was the result of months of diligent
+[00:01:18.860 --> 00:01:23.080] police work and cooperation between multiple law enforcement agencies.

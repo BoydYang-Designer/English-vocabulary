@@ -1,11 +1,10 @@
-[00:00:00.000 --> 00:00:06.540] Authentic refers to something that is genuine, real, or true to its origin or nature.
-[00:00:06.540 --> 00:00:10.900] It implies that something is not fake, counterfeit, or artificial, but rather it is exactly
-[00:00:10.900 --> 00:00:13.860] as it claims to be.
-[00:00:13.860 --> 00:00:15.540] Examples 1.
-[00:00:15.540 --> 00:00:19.420] She appreciated his authentic nature, always speaking from the heart and staying true
-[00:00:19.420 --> 00:00:21.220] to himself in any situation.
-[00:00:21.220 --> 00:00:22.220] 2.
-[00:00:22.220 --> 00:00:26.620] The art expert confirmed that the painting was indeed authentic, dating back to the Renaissance
-[00:00:26.620 --> 00:00:27.620] period.
-[00:00:28.020 --> 00:00:29.020] 3.
-[00:00:29.020 --> 00:00:33.020] After traveling to Italy, he savored the authentic flavors of homemade pasta.
+[00:00:00.760 --> 00:00:05.740] Authentic refers to something that is genuine, real, or true to its origin or nature.
+[00:00:06.360 --> 00:00:11.260] It implies that something is not fake, counterfeit, or artificial, but rather it is exactly as it
+[00:00:11.260 --> 00:00:11.920] claims to be.
+[00:00:13.140 --> 00:00:13.660] Examples.
+[00:00:14.600 --> 00:00:14.820] 1.
+[00:00:15.480 --> 00:00:20.500] She appreciated his authentic nature, always speaking from the heart and staying true to himself in any situation.
+[00:00:21.380 --> 00:00:21.720] 2.
+[00:00:22.220 --> 00:00:26.920] The art expert confirmed that the painting was indeed authentic, dating back to the Renaissance period.
+[00:00:27.700 --> 00:00:28.220] 3.
+[00:00:28.220 --> 00:00:32.260] After traveling to Italy, he savored the authentic flavors of homemade pasta.

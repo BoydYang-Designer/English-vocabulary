@@ -1,10 +1,11 @@
-[00:00:00.000 --> 00:00:03.280] Anodization is a noun with the following meaning.
-[00:00:03.280 --> 00:00:07.500] The process of anodizing refers to the electrochemical treatment of a metal,
-[00:00:07.500 --> 00:00:11.520] typically aluminum, to create a protective oxide layer on its surface.
-[00:00:11.520 --> 00:00:17.240] This layer enhances corrosion resistance, improves appearance, and can increase hardness.
-[00:00:17.240 --> 00:00:24.000] Example sentences, the anodization of the aluminum components improve their durability and aesthetic appeal.
-[00:00:24.000 --> 00:00:29.480] Anodization is commonly used in the aerospace industry to protect metal parts from corrosion.
-[00:00:29.800 --> 00:00:35.720] Summary, anodization refers to the process of treating a metal to create a protective oxide layer,
-[00:00:35.720 --> 00:00:38.520] enhancing its durability and appearance.
-[00:00:38.520 --> 00:00:42.360] Related words, anodize, electroplating, coding, treatment,
-[00:00:42.360 --> 00:00:45.400] antonyms, corrosion, damage, degradation.
+[00:00:00.000 --> 00:00:02.980] Annotization is a noun with the following meaning.
+[00:00:03.420 --> 00:00:08.220] The process of anodizing refers to the electrochemical treatment of a metal, typically aluminum,
+[00:00:08.560 --> 00:00:11.080] to create a protective oxide layer on its surface.
+[00:00:11.820 --> 00:00:16.520] This layer enhances corrosion resistance, improves appearance, and can increase hardness.
+[00:00:17.580 --> 00:00:18.480] Example sentences,
+[00:00:19.380 --> 00:00:23.340] the annotization of the aluminum components improve their durability and aesthetic appeal.
+[00:00:24.500 --> 00:00:28.920] Annotization is commonly used in the aerospace industry to protect metal parts from corrosion.
+[00:00:29.880 --> 00:00:34.700] Summary, annotization, refers to the process of treating a metal to create a protective
+[00:00:34.700 --> 00:00:37.920] oxide layer, enhancing its durability and appearance.
+[00:00:38.620 --> 00:00:44.160] Related words, anodize, electroplating, coating, treatment, antonyms, corrosion, damage,
+[00:00:44.480 --> 00:00:44.760] degradation.

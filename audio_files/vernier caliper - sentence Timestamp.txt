@@ -1,3 +1,0 @@
-[00:00:00.000 --> 00:00:09.000] Avernei caliper is a measuring instrument used for accurately measuring linear dimensions, thickness, and outer and inner diameters of objects.
-[00:00:09.000 --> 00:00:18.000] It typically consists of a main scale graduated in millimeters or inches, and a sliding vernear scale that allows for precise readings to be taken.
-[00:00:18.000 --> 00:00:27.000] For example, the machinist used a vernei caliper to determine the exact thickness of the metal sheet, ensuring precise cuts for the engineering project.

@@ -1,23 +1,18 @@
-[00:00:00.000 --> 00:00:03.200] Compassionate is an adjective and verb.
-[00:00:03.200 --> 00:00:06.700] As an adjective, showing sympathy, understanding,
-[00:00:06.700 --> 00:00:08.160] and a willingness to help others
-[00:00:08.160 --> 00:00:10.320] who are suffering or in need.
-[00:00:10.320 --> 00:00:13.040] Example, she offered compassionate support
-[00:00:13.040 --> 00:00:14.640] to the grieving family.
-[00:00:14.640 --> 00:00:18.480] Example, his compassionate nature made him a great caregiver.
-[00:00:18.480 --> 00:00:22.480] Example, the doctor gave compassionate care to his patients.
-[00:00:22.480 --> 00:00:26.600] As a verb, compassionate, compassionate, compassionateing,
-[00:00:26.600 --> 00:00:29.760] to show compassion or express sympathy towards someone,
-[00:00:29.760 --> 00:00:31.200] rare usage.
-[00:00:31.200 --> 00:00:33.760] Example, the counselor compassionate
-[00:00:33.760 --> 00:00:35.760] with the victims of the disaster.
-[00:00:35.760 --> 00:00:38.400] Example, she compassionate the child
-[00:00:38.400 --> 00:00:40.200] who had lost his parents.
-[00:00:40.200 --> 00:00:43.320] Summary, compassionate describes being caring
-[00:00:43.320 --> 00:00:44.760] and empathetic toward others,
-[00:00:44.760 --> 00:00:47.280] especially during difficult times.
-[00:00:47.280 --> 00:00:49.760] As a verb means to express sympathy or compassion
-[00:00:49.760 --> 00:00:53.200] toward someone, though it is rarely used in this form.
-[00:00:53.200 --> 00:00:56.640] Related words, empathetic, kind, sympathetic,
-[00:00:56.640 --> 00:00:59.160] caring benevolent, Antonim's cruel, indifferent,
-[00:00:59.160 --> 00:01:00.760] unkind harsh.
+[00:00:00.000 --> 00:00:02.180] Compassionate is an adjective and verb.
+[00:00:03.100 --> 00:00:03.860] As an adjective,
+[00:00:04.540 --> 00:00:09.440] showing sympathy, understanding, and a willingness to help others who are suffering or in need.
+[00:00:10.260 --> 00:00:13.940] Example, she offered compassionate support to the grieving family.
+[00:00:14.580 --> 00:00:17.620] Example, his compassionate nature made him a great caregiver.
+[00:00:18.440 --> 00:00:21.580] Example, the doctor gave compassionate care to his patients.
+[00:00:22.360 --> 00:00:22.980] As a verb,
+[00:00:23.680 --> 00:00:25.540] compassionate, compassionate, and compassionate,
+[00:00:26.160 --> 00:00:28.980] to show compassion or express sympathy toward someone.
+[00:00:28.980 --> 00:00:30.620] Rare usage.
+[00:00:31.100 --> 00:00:35.060] Example, the counselor compassionate with the victims of the disaster.
+[00:00:35.680 --> 00:00:36.320] Example,
+[00:00:36.920 --> 00:00:39.340] she compassionate the child who had lost his parents.
+[00:00:40.220 --> 00:00:45.180] Summary, compassionate describes being caring and empathetic toward others, especially
+[00:00:45.180 --> 00:00:46.560] during difficult times.
+[00:00:47.200 --> 00:00:52.360] As a verb means to express sympathy or compassion toward someone, though it is rarely used in this form.
+[00:00:52.360 --> 00:00:57.440] Related words, empathetic, kind, sympathetic, caring, benevolent,
+[00:00:57.560 --> 00:00:59.960] antonyms cruel, indifferent, unkind, harsh.

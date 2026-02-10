@@ -1,19 +1,23 @@
-[00:00:00.000 --> 00:00:04.800] Absorb is a verb, absorb, absorbed, absorbing with the following meanings.
-[00:00:04.800 --> 00:00:09.840] One, to take in or soak up a substance such as liquid, energy, or information.
-[00:00:09.840 --> 00:00:13.360] Example, the towel absorbed the spilled water quickly.
-[00:00:13.360 --> 00:00:17.440] Example, the soil absorbs moisture from the rain.
-[00:00:17.440 --> 00:00:21.040] Example, the plant absorbs sunlight to produce energy.
-[00:00:21.040 --> 00:00:24.960] Two, to fully engage or take in mentally or emotionally,
-[00:00:24.960 --> 00:00:28.160] to become deeply involved or focused.
-[00:00:28.240 --> 00:00:32.160] She was so absorbed in her book that she didn't hear the phone ring.
-[00:00:32.160 --> 00:00:37.760] Example, the children absorb the lesson quickly and were eager to try it themselves.
-[00:00:37.760 --> 00:00:43.040] Three, to incorporate or assimilate something into a larger hole such as
-[00:00:43.040 --> 00:00:48.880] knowledge, ideas, or practices. Example, the company absorbed the smaller start up into its
-[00:00:48.880 --> 00:00:53.440] operations. Example, he absorbed the new culture after living abroad for several years.
-[00:00:53.920 --> 00:01:00.400] Four, to diminish the effect of something often used in physics or in reference to shock or impact.
-[00:01:00.400 --> 00:01:04.160] Example, the mattress absorbed most of the impact when the child fell.
-[00:01:04.160 --> 00:01:08.880] Example, the car's suspension system absorbs the bumps in the road to provide a smoother ride.
-[00:01:09.520 --> 00:01:15.200] Summary, absorb refers to the act of taking in, soaking up, or incorporating something.
-[00:01:15.200 --> 00:01:19.120] Either physically or mentally, or reducing the impact of something.
-[00:01:19.680 --> 00:01:24.800] Related words soak, assimilate, ingest, consume, engage, incorporate.
-[00:01:24.800 --> 00:01:28.000] Anonyms release, expel, ignore, disregard, repel.
+[00:00:00.000 --> 00:00:01.140] Absorb is a verb.
+[00:00:01.360 --> 00:00:04.280] Absorb, absorbed, absorbing with the following meanings.
+[00:00:04.960 --> 00:00:09.400] One, to take in or soak up a substance such as liquid, energy, or information.
+[00:00:09.860 --> 00:00:12.660] Example, the towel absorbed the spilled water quickly.
+[00:00:13.380 --> 00:00:16.060] Example, the soil absorbs moisture from the rain.
+[00:00:17.460 --> 00:00:20.340] Example, the plant absorbs sunlight to produce energy.
+[00:00:21.000 --> 00:00:21.360] Two,
+[00:00:21.960 --> 00:00:26.960] to fully engage or take in mentally or emotionally, to become deeply involved or focused.
+[00:00:26.960 --> 00:00:31.160] She was so absorbed in her book that she didn't hear the phone ring.
+[00:00:32.180 --> 00:00:36.220] Example, the children absorbed the lesson quickly and were eager to try it themselves.
+[00:00:37.520 --> 00:00:38.080] Three,
+[00:00:39.020 --> 00:00:44.000] to incorporate or assimilate something into a larger whole, such as knowledge, ideas,
+[00:00:44.380 --> 00:00:44.840] or practices.
+[00:00:45.940 --> 00:00:49.400] Example, the company absorbed the smaller startup into its operations.
+[00:00:49.840 --> 00:00:53.160] Example, he absorbed the new culture after living abroad for several years.
+[00:00:53.880 --> 00:00:58.700] Four, to diminish the effect of something, often used in physics or in reference to
+[00:00:58.700 --> 00:00:59.800] shock or impact.
+[00:01:00.460 --> 00:01:03.660] Example, the mattress absorbed most of the impact when the child fell.
+[00:01:04.220 --> 00:01:08.880] Example, the car's suspension system absorbs the bumps in the road to provide a smoother ride.
+[00:01:09.460 --> 00:01:14.580] Summary, absorb refers to the act of taking in, soaking up, or incorporating something,
+[00:01:15.200 --> 00:01:19.040] either physically or mentally, or reducing the impact of something.
+[00:01:19.600 --> 00:01:24.180] Related words, soak, assimilate, ingest, consume, engage, incorporate.
+[00:01:24.960 --> 00:01:27.660] Anonyms, release, expel, ignore, disregard, repel.

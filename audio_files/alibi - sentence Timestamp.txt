@@ -1,17 +1,24 @@
-[00:00:00.000 --> 00:00:06.200] Alibi, as a noun, refers to a claim or evidence that one was elsewhere when an act, typically
-[00:00:06.200 --> 00:00:10.400] a crime was committed, thus providing a defense against charges.
-[00:00:10.400 --> 00:00:15.840] It can also refer more generally to any excuse or justification for a person's actions.
-[00:00:15.840 --> 00:00:17.240] Example.
-[00:00:17.240 --> 00:00:21.600] The suspect provided an alibi, claiming he was at a different location during the time
-[00:00:21.600 --> 00:00:23.440] of the robbery.
-[00:00:23.440 --> 00:00:27.120] Example her friends corroborated her alibi, confirming that they were all together
-[00:00:27.120 --> 00:00:29.840] at the concert.
-[00:00:29.840 --> 00:00:34.400] The detective found holes in his alibi that raised suspicion.
-[00:00:34.400 --> 00:00:35.400] Example.
-[00:00:35.400 --> 00:00:39.000] Having a solid alibi is crucial for anyone accused of a serious crime.
-[00:00:39.000 --> 00:00:40.000] Example.
-[00:00:40.000 --> 00:00:44.040] She made up an alibi for why she missed the meeting.
-[00:00:44.040 --> 00:00:45.040] Summary.
-[00:00:45.040 --> 00:00:49.480] Alibi is a defense mechanism that asserts a person was not present at the scene of a crime,
-[00:00:49.480 --> 00:00:55.800] supported by evidence or witness statements, or it can refer to a general excuse for behavior.
-[00:00:55.800 --> 00:01:01.480] In other words, defense, excuse, justification, anonym, accusation, charge, guilt.
+[00:00:00.000 --> 00:00:04.780] Alibi, as a noun, refers to a claim or evidence that one was elsewhere
+[00:00:04.780 --> 00:00:09.860] when an act, typically a crime, was committed, thus providing a defense against charges.
+[00:00:10.300 --> 00:00:14.460] It can also refer more generally to any excuse or justification for a person's actions.
+[00:00:16.060 --> 00:00:16.640] Example.
+[00:00:17.120 --> 00:00:22.080] The suspect provided an alibi, claiming he was at a different location during the time of the robbery.
+[00:00:22.980 --> 00:00:23.500] Example.
+[00:00:23.600 --> 00:00:27.660] Her friends corroborated her alibi, confirming that they were all together at the concert.
+[00:00:29.360 --> 00:00:29.880] Example.
+[00:00:29.880 --> 00:00:32.420] The detective found holes in his alibi that raised suspicion.
+[00:00:33.960 --> 00:00:34.480] Example.
+[00:00:34.620 --> 00:00:37.920] Having a solid alibi is crucial for anyone accused of a serious crime.
+[00:00:38.540 --> 00:00:39.060] Example.
+[00:00:39.400 --> 00:00:41.160] She made up an alibi for why she missed the meeting.
+[00:00:43.780 --> 00:00:44.300] Summary.
+[00:00:44.860 --> 00:00:49.840] Alibi is a defense mechanism that asserts a person was not present at the scene of a crime supported by
+[00:00:49.840 --> 00:00:54.400] evidence or witness statements, or it can refer to a general excuse for behavior.
+[00:00:55.360 --> 00:00:56.080] Related words.
+[00:00:56.580 --> 00:00:56.840] Defense.
+[00:00:57.340 --> 00:00:57.960] Excuses.
+[00:00:58.060 --> 00:00:58.620] Justification.
+[00:00:58.940 --> 00:00:59.360] Anonyms.
+[00:00:59.560 --> 00:01:00.160] Accusation.
+[00:01:00.480 --> 00:01:00.600] Charge.
+[00:01:01.020 --> 00:01:01.280] Guilt.

@@ -1,8 +1,14 @@
-[00:00:00.000 --> 00:00:05.600] Anthropomorphic is an adjective that describes the attribution of human traits, emotions,
-[00:00:05.600 --> 00:00:11.920] or intentions to non-human entities, such as animals, inanimate objects, or abstract concepts.
-[00:00:11.920 --> 00:00:19.520] Example. In many children's stories, animals are depicted as anthropomorphic characters who can talk and behave like humans.
-[00:00:19.520 --> 00:00:25.720] Example. The anthropomorphic design of the robot made it more relatable and appealing to users.
-[00:00:26.600 --> 00:00:32.200] The movie features an anthropomorphic tree that expresses feelings and emotions similar to those of people.
-[00:00:32.200 --> 00:00:37.400] Summary. Anthropomorphic refers to the tendency to ascribe human characteristics or behaviors to
-[00:00:37.400 --> 00:00:44.280] non-human beings or objects often used in literature and art. Related words, personification, human like, humanized.
-[00:00:46.120 --> 00:00:48.120] Non-human inanimate.
+[00:00:00.000 --> 00:00:05.320] Anthropomorphic is an adjective that describes the attribution of human traits, emotions,
+[00:00:05.680 --> 00:00:10.440] or intentions to non -human entities, such as animals, inanimate objects, or
+[00:00:10.440 --> 00:00:11.560] abstract concepts.
+[00:00:12.160 --> 00:00:16.920] Example, in many children's stories, animals are depicted as anthropomorphic characters
+[00:00:16.920 --> 00:00:19.100] who can talk and behave like humans.
+[00:00:19.700 --> 00:00:20.340] Example,
+[00:00:21.060 --> 00:00:25.240] the anthropomorphic design of the robot made it more relatable and appealing to users.
+[00:00:25.240 --> 00:00:30.000] The movie features an anthropomorphic tree that expresses feelings
+[00:00:30.000 --> 00:00:31.880] and emotions similar to those of people.
+[00:00:32.320 --> 00:00:37.200] Summary, anthropomorphic refers to the tendency to ascribe human characteristics or behaviors
+[00:00:37.200 --> 00:00:40.180] to non -human beings or objects often used in literature and art.
+[00:00:40.680 --> 00:00:44.260] Related words, personification, human -like, humanized.
+[00:00:46.200 --> 00:00:46.800] Non -human,
+[00:00:47.420 --> 00:00:47.920] inanimate.

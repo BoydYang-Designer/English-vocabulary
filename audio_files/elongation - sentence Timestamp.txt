@@ -1,6 +1,12 @@
-[00:00:00.000 --> 00:00:07.000] Elongation is a noun that refers to the act or process of making something longer or the state of being stretched and in length.
-[00:00:07.000 --> 00:00:13.000] Example, the elongation of the metal occurred when it was heated and pulled into a wire.
-[00:00:13.000 --> 00:00:18.000] Example, the elongation of the road improved access to the new neighborhood.
-[00:00:18.000 --> 00:00:24.000] Example, the elongation of the muscles during the stretch helped improve flexibility.
-[00:00:24.000 --> 00:00:31.000] Example, the dotted lines indicate the elongation of the handlebar adjustment for people with different height requirements.
-[00:00:31.000 --> 00:00:46.000] Summary, elongation refers to the process of lengthening or stretching something, related words extension, lengthening, stretching, prolongation, antinims, contraction, shortening, compression, reduction.
+[00:00:00.000 --> 00:00:04.800] Elongation is a noun that refers to the act or process of making something longer
+[00:00:04.800 --> 00:00:07.020] or the state of being stretched and in length.
+[00:00:07.900 --> 00:00:12.820] Example, the elongation of the metal occurred when it was heated and pulled into a wire.
+[00:00:14.060 --> 00:00:17.840] Example, the elongation of the road improved access to the new neighborhood.
+[00:00:18.820 --> 00:00:23.320] Example, the elongation of the muscles during the stretch helped improve flexibility.
+[00:00:24.280 --> 00:00:29.180] Example, the dotted lines indicate the elongation of the handlebar adjustment for people with
+[00:00:29.180 --> 00:00:30.120] different height requirements.
+[00:00:31.060 --> 00:00:35.260] Summary, elongation refers to the process of lengthening or stretching something.
+[00:00:36.160 --> 00:00:40.400] Related words, extension, lengthening, stretching, prolongation,
+[00:00:41.060 --> 00:00:42.320] antonyms, contraction,
+[00:00:42.920 --> 00:00:44.300] shortening, compression,
+[00:00:44.900 --> 00:00:45.160] reduction.

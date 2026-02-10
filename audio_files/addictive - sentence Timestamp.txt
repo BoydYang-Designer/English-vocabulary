@@ -1,11 +1,13 @@
-[00:00:00.000 --> 00:00:05.760] Addictive is an adjective that describes something that causes a strong dependence or compulsion,
-[00:00:05.760 --> 00:00:09.960] making it difficult for individuals to stop using or consuming it.
-[00:00:09.960 --> 00:00:14.720] This term is often used in relation to substances like drugs or alcohol, but it can also refer
-[00:00:14.720 --> 00:00:18.600] to behaviors, activities, or foods.
-[00:00:18.600 --> 00:00:24.240] Example, many people find sugary snacks to be highly addictive, often craving them throughout
-[00:00:24.240 --> 00:00:25.640] the day.
-[00:00:25.640 --> 00:00:32.640] Example, video games can be incredibly addictive, leading players to spend hours immersed in virtual worlds.
-[00:00:32.640 --> 00:00:38.360] Example, cigarettes are known to be addictive, making it hard for smokers to quit despite wanting to.
-[00:00:38.360 --> 00:00:45.960] Example, scrolling through social media can become an addictive habit as users find themselves lost in an endless feed of content.
-[00:00:45.960 --> 00:00:49.760] Related words, habit forming, compulsive, irresistible.
-[00:00:49.760 --> 00:00:54.160] Antonyms, non-addictive, manageable, controllable.
+[00:00:00.000 --> 00:00:05.120] Addictive is an adjective that describes something that causes a strong dependence or compulsion,
+[00:00:05.400 --> 00:00:09.300] making it difficult for individuals to stop using or consuming it.
+[00:00:09.820 --> 00:00:14.700] This term is often used in relation to substances like drugs or alcohol, but it can also refer
+[00:00:14.700 --> 00:00:16.680] to behaviors, activities, or foods.
+[00:00:18.820 --> 00:00:23.740] Example, many people find sugary snacks to be highly addictive, often craving
+[00:00:23.740 --> 00:00:24.600] them throughout the day.
+[00:00:25.640 --> 00:00:30.460] Example, video games can be incredibly addictive, leading players to spend hours
+[00:00:30.460 --> 00:00:31.860] immersed in virtual worlds.
+[00:00:32.740 --> 00:00:37.580] Example, cigarettes are known to be addictive, making it hard for smokers to quit despite wanting to.
+[00:00:38.460 --> 00:00:43.420] Example, scrolling through social media can become an addictive habit, as users find themselves lost
+[00:00:43.420 --> 00:00:45.140] in an endless feed of content.
+[00:00:46.060 --> 00:00:49.080] Related words, habit -forming, compulsive, irresistible.
+[00:00:49.820 --> 00:00:53.260] Antonyms, non -addictive, manageable, controllable.

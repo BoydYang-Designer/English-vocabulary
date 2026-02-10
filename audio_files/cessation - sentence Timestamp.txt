@@ -1,8 +1,10 @@
-[00:00:00.000 --> 00:00:05.760] Sensation is a noun referring to the act of stopping or bringing something to an end.
-[00:00:05.760 --> 00:00:10.760] Example, the cessation of hostilities was welcomed by the international community.
-[00:00:10.760 --> 00:00:16.680] Example, the company announced the cessation of production due to financial difficulties.
-[00:00:16.680 --> 00:00:22.600] Example, after months of negotiations, there was a cessation of the conflict between the two parties.
-[00:00:22.600 --> 00:00:29.520] Summary, cessation indicates the complete stopping or ending of an activity or process,
-[00:00:29.520 --> 00:00:33.320] often used in contexts like negotiations, production, or hostilities.
-[00:00:33.320 --> 00:00:36.280] Related words, termination, halt, stop, pause.
-[00:00:36.280 --> 00:00:40.280] Antonyms, continuation, resumption, start, beginning.
+[00:00:00.000 --> 00:00:05.260] Cessation is a noun referring to the act of stopping or bringing something to an end.
+[00:00:06.140 --> 00:00:10.260] Example, the cessation of hostilities was welcomed by the international community.
+[00:00:11.220 --> 00:00:11.860] Example,
+[00:00:12.520 --> 00:00:16.040] the company announced the cessation of production due to financial difficulties.
+[00:00:16.940 --> 00:00:21.780] Example, after months of negotiations, there was a cessation of the conflict between the two parties.
+[00:00:23.820 --> 00:00:28.640] Summary, cessation indicates the complete stopping or ending of an activity or
+[00:00:28.640 --> 00:00:32.920] process often used in contexts like negotiations, production, or hostilities.
+[00:00:33.440 --> 00:00:35.880] Related words, termination, halt, stop, pause.
+[00:00:36.420 --> 00:00:37.180] Antonyms, continuation,
+[00:00:37.780 --> 00:00:39.660] resumption, start, beginning.

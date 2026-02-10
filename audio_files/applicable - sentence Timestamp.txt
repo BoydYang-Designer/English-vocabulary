@@ -1,9 +1,18 @@
-[00:00:00.000 --> 00:00:07.500] Applicable is an adjective that describes something that is relevant or appropriate in a particular situation or context.
-[00:00:07.500 --> 00:00:11.500] It can also mean that something can be applied or used effectively.
-[00:00:11.500 --> 00:00:16.500] One, relevant or appropriate for a particular situation, example,
-[00:00:16.500 --> 00:00:20.500] the new safety regulations are applicable to all manufacturing companies.
-[00:00:20.500 --> 00:00:25.500] Example, the principles discussed in the seminar are applicable to everyday decision making.
-[00:00:25.500 --> 00:00:29.500] Two, capable of being applied or used.
-[00:00:29.500 --> 00:00:33.500] Example, the discount code is only applicable to online purchases.
-[00:00:33.500 --> 00:00:39.500] Example, the guidelines are applicable to various industries and can be adapted as needed.
-[00:00:39.500 --> 00:00:48.500] Summary, applicable indicates that something is relevant, suitable, or can be effectively used in a specific context or situation.
+[00:00:00.000 --> 00:00:04.520] Applicable is an adjective that describes something that is relevant or
+[00:00:04.520 --> 00:00:07.140] appropriate in a particular situation or context.
+[00:00:07.820 --> 00:00:11.080] It can also mean that something can be applied or used effectively.
+[00:00:11.940 --> 00:00:12.080] 1.
+[00:00:12.820 --> 00:00:15.280] Relevant or appropriate for a particular situation.
+[00:00:15.560 --> 00:00:16.080] Example.
+[00:00:16.820 --> 00:00:20.220] The new safety regulations are applicable to all manufacturing companies.
+[00:00:20.960 --> 00:00:21.300] Example.
+[00:00:21.840 --> 00:00:25.200] The principles discussed in the seminar are applicable to everyday decision making.
+[00:00:25.820 --> 00:00:26.120] 2.
+[00:00:26.920 --> 00:00:28.880] Capable of being applied or used.
+[00:00:29.800 --> 00:00:30.440] Example.
+[00:00:30.640 --> 00:00:33.260] The discount code is only applicable to online purchases.
+[00:00:33.980 --> 00:00:34.540] Example.
+[00:00:35.000 --> 00:00:38.740] The guidelines are applicable to various industries and can be adapted as needed.
+[00:00:40.100 --> 00:00:40.740] Summary.
+[00:00:41.080 --> 00:00:43.780] Applicable indicates that something is relevant, suitable,
+[00:00:44.500 --> 00:00:47.680] or can be effectively used in a specific context or situation.

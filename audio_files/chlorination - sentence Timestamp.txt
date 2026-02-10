@@ -1,12 +1,14 @@
-[00:00:00.000 --> 00:00:05.580] Chlorination is a noun that refers to the process of adding or applying chlorine to a substance,
-[00:00:05.580 --> 00:00:11.120] typically water or other materials for disinfection, purification, or chemical treatment.
-[00:00:11.120 --> 00:00:16.820] It is commonly used to eliminate harmful microorganisms and make water safe for drinking or use.
-[00:00:16.820 --> 00:00:23.760] Example, the chlorination of drinking water has greatly reduced the spread of waterborne diseases.
-[00:00:24.960 --> 00:00:29.700] Swimming pools require regular chlorination to maintain hygienic conditions.
-[00:00:30.100 --> 00:00:35.340] Example, the factory uses chlorination to treat wastewater before releasing it into the environment.
-[00:00:36.500 --> 00:00:41.480] Example, critics of chlorination in food production, such as chlorinated poultry,
-[00:00:41.480 --> 00:00:44.620] argue about its safety and environmental impact.
-[00:00:45.020 --> 00:00:50.660] Summary, chlorination refers to the process of treating substances with chlorine to disinfect,
-[00:00:50.660 --> 00:00:55.320] purify, or chemically alter them, commonly used in water treatment and sanitation.
-[00:00:55.320 --> 00:01:00.980] Related words, disinfection, purification, sanitization, sterilization, chemical treatment,
-[00:01:00.980 --> 00:01:04.760] Antonyms, contamination, pollution, impurity, fouling.
+[00:00:00.000 --> 00:00:05.340] Chlorination is a noun that refers to the process of adding or applying chlorine to a substance,
+[00:00:05.700 --> 00:00:10.680] typically water or other materials, for disinfection, purification, or chemical treatment.
+[00:00:11.460 --> 00:00:16.380] It is commonly used to eliminate harmful microorganisms and make water safe for drinking or use.
+[00:00:17.000 --> 00:00:17.600] Example,
+[00:00:18.560 --> 00:00:23.060] the chlorination of drinking water has greatly reduced the spread of waterborne diseases.
+[00:00:24.860 --> 00:00:29.100] Swimming pools require regular chlorination to maintain hygienic conditions.
+[00:00:29.980 --> 00:00:34.940] Example, the factory uses chlorination to treat wastewater before releasing it into the environment.
+[00:00:36.400 --> 00:00:41.140] Example, critics of chlorination in food production, such as chlorinated poultry,
+[00:00:41.600 --> 00:00:44.060] argue about its safety and environmental impact.
+[00:00:44.900 --> 00:00:50.120] Summary, chlorination refers to the process of treating substances with chlorine to disinfect,
+[00:00:50.720 --> 00:00:52.640] purify, or chemically alter them.
+[00:00:52.640 --> 00:00:55.020] Commonly used in water treatment and sanitation.
+[00:00:55.360 --> 00:01:00.480] Related words, disinfection, purification, sanitization, sterilization, chemical treatment.
+[00:01:01.100 --> 00:01:04.540] Antonyms, contamination, pollution, impurity, fouling.

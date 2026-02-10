@@ -1,14 +1,17 @@
-[00:00:00.000 --> 00:00:03.280] Ancestry is a noun with the following meanings.
-[00:00:04.240 --> 00:00:09.600] One one's family or ethnic descent, the line of ancestors from whom a person is descended.
-[00:00:10.160 --> 00:00:14.160] This refers to the historical background and lineage of an individual or group,
-[00:00:14.160 --> 00:00:17.280] often including information about family history and origins.
-[00:00:17.920 --> 00:00:23.040] Example, she researched her ancestry to learn more about her family's origins.
-[00:00:23.040 --> 00:00:26.560] His ancestry includes several cultures reflecting a rich heritage.
-[00:00:27.360 --> 00:00:31.440] Forber 2, the origin or background of a particular group or species.
-[00:00:32.160 --> 00:00:37.040] This can refer to the lineage of animals or plants, indicating how they have developed over time.
-[00:00:37.600 --> 00:00:41.920] Example, the ancestry of domestic cats can be traced back to wild cats in the Middle East.
-[00:00:42.560 --> 00:00:47.520] Example, understanding the ancestry of crops helps scientists improve agricultural practices.
-[00:00:49.200 --> 00:00:55.120] Summary, ancestry refers to a person's or group's lineage and family background,
-[00:00:55.120 --> 00:00:59.120] including their ethnic origins and historical connections as well as the lineage of species
-[00:00:59.120 --> 00:01:05.360] in a biological context. Related words, lineage, heritage, genealogy, descent, family tree,
-[00:01:05.920 --> 00:01:09.680] Antonim's descendant, offspring, progeny, successor.
+[00:00:00.000 --> 00:00:03.100] Ancestry is a noun with the following meanings.
+[00:00:04.280 --> 00:00:06.260] One, one's family or ethnic descent,
+[00:00:06.920 --> 00:00:09.500] the line of ancestors from whom a person is descended.
+[00:00:10.180 --> 00:00:14.900] This refers to the historical background and lineage of an individual or group, often including
+[00:00:14.900 --> 00:00:17.120] information about family history and origins.
+[00:00:17.800 --> 00:00:18.440] Example,
+[00:00:19.080 --> 00:00:22.400] she researched her ancestry to learn more about her family's origins.
+[00:00:23.160 --> 00:00:26.480] His ancestry includes several cultures reflecting a rich heritage.
+[00:00:27.340 --> 00:00:31.320] For her to the origin or background of a particular group or species.
+[00:00:31.900 --> 00:00:37.120] This can refer to the lineage of animals or plants indicating how they have developed over time.
+[00:00:37.640 --> 00:00:42.020] Example, the ancestry of domestic cats can be traced back to wild cats in the Middle East.
+[00:00:42.700 --> 00:00:47.440] Example, understanding the ancestry of crops helps scientists improve agricultural practices.
+[00:00:49.120 --> 00:00:54.100] Summary, ancestry refers to a person's or group's lineage and
+[00:00:54.100 --> 00:00:59.080] family background, including their ethnic origins and historical connections, as well as the lineage of species
+[00:00:59.080 --> 00:01:00.400] in a biological context.
+[00:01:01.240 --> 00:01:05.320] Related words, lineage, heritage, genealogy, descent, family tree.
+[00:01:06.040 --> 00:01:09.260] Antonyms, descendant, offspring, progeny, successor.

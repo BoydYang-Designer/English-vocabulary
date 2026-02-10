@@ -1,7 +1,14 @@
-[00:00:00.000 --> 00:00:09.500] Colloquial, adjective, refers to the informal language or expressions used in everyday conversation rather than informal speech or writing.
-[00:00:09.500 --> 00:00:11.500] Example sentences.
-[00:00:11.500 --> 00:00:16.500] 1. His use of colloquial phrases made the conversation feel more relaxed and friendly.
-[00:00:16.500 --> 00:00:23.000] 2. The novel's dialogue was written in a colloquial style capturing the natural speech patterns of the characters.
-[00:00:23.000 --> 00:00:29.500] 3. Using colloquial expressions informal reports can be inappropriate and might not be well received.
-[00:00:29.500 --> 00:00:35.500] 4. The book's colloquial style made it accessible to readers of all ages and backgrounds.
-[00:00:35.500 --> 00:00:45.500] Summary. Colloquial describes language that is casual and conversational, typically used in informal settings rather than informal communication.
+[00:00:00.000 --> 00:00:04.720] Colloquial, adjective, refers to the informal language or expressions
+[00:00:04.720 --> 00:00:08.980] used in everyday conversation rather than informal speech or writing.
+[00:00:10.060 --> 00:00:10.720] Example sentences.
+[00:00:11.540 --> 00:00:11.720] 1.
+[00:00:12.100 --> 00:00:15.920] His use of colloquial phrases made the conversation feel more relaxed and friendly.
+[00:00:16.520 --> 00:00:16.880] 2.
+[00:00:17.220 --> 00:00:22.320] The novel's dialogue was written in a colloquial style capturing the natural speech patterns of the characters.
+[00:00:23.200 --> 00:00:23.700] 3.
+[00:00:24.060 --> 00:00:28.660] Using colloquial expressions in formal reports can be inappropriate and might not be well received.
+[00:00:29.840 --> 00:00:30.160] 4.
+[00:00:30.620 --> 00:00:34.380] The book's colloquial style made it accessible to readers of all ages and backgrounds.
+[00:00:35.920 --> 00:00:36.640] Summary.
+[00:00:37.480 --> 00:00:42.380] Colloquial describes language that is casual and conversational, typically used in informal
+[00:00:42.380 --> 00:00:44.360] settings rather than informal communication.

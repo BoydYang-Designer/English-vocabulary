@@ -1,13 +1,14 @@
-[00:00:00.000 --> 00:00:05.140] Celsius is a noun and an adjective that refers to a scale for measuring temperature, where
-[00:00:05.140 --> 00:00:10.180] zero degree cells represents the freezing point of water, and 100 degree Celsius represents
-[00:00:10.180 --> 00:00:13.860] the boiling point of water at standard atmospheric pressure.
-[00:00:13.860 --> 00:00:18.660] The Celsius scale is commonly used around the world, especially in scientific contexts.
-[00:00:18.660 --> 00:00:24.660] Example, the temperature outside was a chilly 5 degree Celsius, so we decided to wear jackets.
-[00:00:24.660 --> 00:00:29.800] Example, the scientist recorded the experiment at a constant temperature of 25 degrees
-[00:00:29.800 --> 00:00:31.440] Celsius Celsius.
-[00:00:31.440 --> 00:00:36.040] Example, the weather report predicted a high of 30 degrees Celsius tomorrow, perfect for
-[00:00:36.040 --> 00:00:37.440] a day at the beach.
-[00:00:37.440 --> 00:00:42.140] Summary, Celsius is a temperature scale used to measure heat or cold, with zero degree
-[00:00:42.140 --> 00:00:47.320] Celsius as the freezing point of water and 100 degree Celsius as the boiling point.
-[00:00:47.320 --> 00:00:51.080] Related words, temperature, scale, thermometer, degree.
-[00:00:51.080 --> 00:00:53.560] Antonyms, Fahrenheit, a different temperature scale.
+[00:00:00.000 --> 00:00:04.740] Celsius is a noun and an adjective that refers to a scale for measuring temperature,
+[00:00:04.980 --> 00:00:09.540] where zero -degree cells represents the freezing point of water and 100 -degree Celsius
+[00:00:09.540 --> 00:00:12.920] represents the boiling point of water at standard atmospheric pressure.
+[00:00:13.780 --> 00:00:17.640] The Celsius scale is commonly used around the world, especially in scientific contexts.
+[00:00:18.460 --> 00:00:23.360] Example, the temperature outside was a chilly 5 -degree Celsius, so we decided to
+[00:00:23.360 --> 00:00:23.880] wear jackets.
+[00:00:24.880 --> 00:00:25.480] Example,
+[00:00:26.140 --> 00:00:29.980] the scientist recorded the experiment at a constant temperature of 25 degrees Celsius
+[00:00:31.100 --> 00:00:31.700] Example,
+[00:00:32.320 --> 00:00:36.700] the weather report predicted a high of 30 -degree Celsius tomorrow, perfect for a day at the beach.
+[00:00:37.260 --> 00:00:42.140] Summary, Celsius is a temperature scale used to measure heat or cold, with zero -degree
+[00:00:42.140 --> 00:00:46.140] Celsius as the freezing point of water and 100 -degree Celsius as the boiling point.
+[00:00:46.960 --> 00:00:50.240] Related words, temperature, scale, thermometer, degree.
+[00:00:51.040 --> 00:00:53.440] Antonyms, Fahrenheit, a different temperature scale.

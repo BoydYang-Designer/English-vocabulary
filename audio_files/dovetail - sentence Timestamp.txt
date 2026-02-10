@@ -1,25 +1,18 @@
-[00:00:00.000 --> 00:00:04.000] Dovetail is a verb and noun with the following meanings.
-[00:00:04.000 --> 00:00:07.000] As a verb, dovetail, dovetailed, dovetailing,
-[00:00:07.000 --> 00:00:11.000] one to fit or combine precisely and harmoniously,
-[00:00:11.000 --> 00:00:15.000] especially referring to ideas, plans, or pieces of work
-[00:00:15.000 --> 00:00:17.000] that complement each other well.
-[00:00:17.000 --> 00:00:20.000] Example, the two departments dovetail their projects
-[00:00:20.000 --> 00:00:22.000] to ensure a seamless workflow.
-[00:00:22.000 --> 00:00:26.000] Example, her goals dovetail perfectly with the company's mission.
-[00:00:26.000 --> 00:00:29.000] Two in Carpentry to join two pieces of wood with interlocking,
-[00:00:29.000 --> 00:00:32.000] fan-shaped cutouts for a secure and durable fit.
-[00:00:32.000 --> 00:00:35.000] Example, the Carpentry dovetailed the drawers
-[00:00:35.000 --> 00:00:37.000] to ensure a sturdy construction.
-[00:00:37.000 --> 00:00:40.000] As a noun, a type of woodworking joint
-[00:00:40.000 --> 00:00:42.000] where two pieces of wood are joined with interlocking
-[00:00:42.000 --> 00:00:47.000] fan-shaped projections, making a strong and durable connection.
-[00:00:47.000 --> 00:00:51.000] Example, the cabinet's dovetail joints enhance its durability
-[00:00:51.000 --> 00:00:53.000] and craftsmanship.
-[00:00:53.000 --> 00:00:55.000] Example, the dovetail was skillfully crafted
-[00:00:55.000 --> 00:00:58.000] to create a perfect fit between the wooden panels.
-[00:00:58.000 --> 00:01:02.000] Summary, dovetail means to fit or align closely and effectively,
-[00:01:02.000 --> 00:01:04.000] either conceptually or physically.
-[00:01:04.000 --> 00:01:06.000] It also refers to a precise woodworking joint
-[00:01:06.000 --> 00:01:09.000] that interlocks two pieces of wood securely.
-[00:01:09.000 --> 00:01:13.000] Related words, align, interlock, harmonize, fit together,
-[00:01:13.000 --> 00:01:16.000] Antonums, clash, separate, mismatch.
+[00:00:00.000 --> 00:00:03.080] Dovetail is a verb and noun with the following meanings.
+[00:00:03.960 --> 00:00:06.920] As a verb, dovetail, dovetailed, dovetailing.
+[00:00:07.480 --> 00:00:12.540] One to fit or combine precisely and harmoniously, especially referring to ideas,
+[00:00:13.000 --> 00:00:16.020] plans, or pieces of work that complement each other well.
+[00:00:16.640 --> 00:00:20.820] Example, the two departments dovetail their projects to ensure a seamless workflow.
+[00:00:21.340 --> 00:00:24.700] Example, her goals dovetail perfectly with the company's mission.
+[00:00:25.440 --> 00:00:30.320] Two in carpentry to join two pieces of wood with interlocking, fan -shaped cutouts
+[00:00:30.320 --> 00:00:32.080] for a secure and durable fit.
+[00:00:32.860 --> 00:00:37.100] Example, the carpenter dovetailed the drawers to ensure a sturdy construction.
+[00:00:37.920 --> 00:00:42.580] As a noun, a type of woodworking joint where two pieces of wood are joined with interlocking,
+[00:00:42.680 --> 00:00:45.940] fan -shaped projections making a strong and durable connection.
+[00:00:47.800 --> 00:00:52.620] Example, the cabinet's dovetail joints enhance its durability and craftsmanship.
+[00:00:53.280 --> 00:00:57.760] Example, the dovetail was skillfully crafted to create a perfect fit between the wooden panels.
+[00:00:58.480 --> 00:01:02.820] Summary, dovetail means to fit or align closely and effectively, either
+[00:01:02.820 --> 00:01:04.080] conceptually or physically.
+[00:01:04.740 --> 00:01:08.740] It also refers to a precise woodworking joint that interlocks two pieces of wood securely.
+[00:01:09.380 --> 00:01:12.820] Related words, align, interlock, harmonize, fit together.
+[00:01:13.060 --> 00:01:15.660] Antonyms, clash, separate, mismatch.

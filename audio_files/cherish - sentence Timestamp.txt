@@ -1,8 +1,11 @@
-[00:00:00.000 --> 00:00:05.000] Cherish as a verb, cherish, cherished, cherishing.
-[00:00:05.000 --> 00:00:08.000] To cherish means to hold something dear,
-[00:00:08.000 --> 00:00:13.000] to care for something lovingly, or to keep something in mind deeply and protectively.
-[00:00:13.000 --> 00:00:18.000] Example, she cherishes the memories of her childhood summers spent at her grandparents' farm.
-[00:00:18.000 --> 00:00:24.000] Example, he sat in his favorite chair, cherishing the quiet moments with his family after a long day at work.
-[00:00:24.000 --> 00:00:29.000] Example, the couple cherished their wedding day, remembering every detail with fondness.
-[00:00:29.000 --> 00:00:32.000] Example, they cherished the child as one of their own.
-[00:00:32.000 --> 00:00:37.000] Example, she cherished the hope that he would come back to her someday.
+[00:00:00.580 --> 00:00:01.660] Cherish as a verb.
+[00:00:02.240 --> 00:00:02.800] Cherish.
+[00:00:03.200 --> 00:00:03.760] Cherished.
+[00:00:04.340 --> 00:00:04.900] Cherishing.
+[00:00:05.720 --> 00:00:10.680] To cherish means to hold something dear, to care for something lovingly, or to keep something
+[00:00:10.680 --> 00:00:12.480] in mind deeply and protectively.
+[00:00:13.100 --> 00:00:17.800] Example, she cherishes the memories of her childhood summers spent at her grandparents' farm.
+[00:00:18.780 --> 00:00:23.780] Example, he sat in his favorite chair cherishing the quiet moments with his family after a long day at work.
+[00:00:24.400 --> 00:00:28.740] Example, the couple cherished their wedding day, remembering every detail with fondness.
+[00:00:29.380 --> 00:00:31.780] Example, they cherished the child as one of their own.
+[00:00:32.720 --> 00:00:36.180] Example, she cherished the hope that he would come back to her someday.

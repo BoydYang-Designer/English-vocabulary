@@ -1,6 +1,5 @@
-[00:00:00.000 --> 00:00:03.560] Calibrate as a verb, calibrate, calibrated,
-[00:00:03.560 --> 00:00:06.720] calibrating to adjust or mark something,
-[00:00:06.720 --> 00:00:08.880] such as a measuring device, so that it can be used
-[00:00:08.880 --> 00:00:10.680] in an accurate and exact way.
-[00:00:10.680 --> 00:00:13.040] For example, before you pull the trigger,
-[00:00:13.040 --> 00:00:16.440] you have to calibrate the distance between you and your target.
+[00:00:00.000 --> 00:00:01.460] Calibrate as a verb.
+[00:00:01.940 --> 00:00:06.640] Calibrate, calibrated, calibrating to adjust or mark something
+[00:00:06.640 --> 00:00:10.520] such as a measuring device so that it can be used in an accurate and exact way.
+[00:00:11.000 --> 00:00:11.460] For example,
+[00:00:12.080 --> 00:00:16.180] before you pull the trigger, you have to calibrate the distance between you and your target.

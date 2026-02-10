@@ -1,15 +1,21 @@
-[00:00:00.000 --> 00:00:07.440] Academic can function as an adjective and a noun with meanings related to education, scholarship, and scholarly pursuits.
-[00:00:07.440 --> 00:00:15.920] As an adjective, academic, more academic, most academic, one related to education, schools, or scholarly activities.
-[00:00:15.920 --> 00:00:19.920] Example, she has an academic background in literature and philosophy.
-[00:00:19.920 --> 00:00:24.160] Example, he was offered a teaching job and decided to return to academic life.
-[00:00:24.560 --> 00:00:30.880] Two, pertaining to scholarly or intellectual pursuits, often involving rigorous study or research.
-[00:00:30.880 --> 00:00:35.200] Example, the university is known for its academic excellence in the field of engineering.
-[00:00:35.840 --> 00:00:40.080] Three, theoretical or abstract, rather than practical or applied.
-[00:00:40.720 --> 00:00:45.840] Example, the debate became more of an academic exercise rather than offering practical solutions.
-[00:00:46.720 --> 00:00:50.880] Example, his interest in sailing is purely academic, he's not a sailor himself.
-[00:00:51.840 --> 00:00:58.800] As a noun, academic academics, one, a person who is a scholar or teacher at an institute of higher education.
-[00:00:58.800 --> 00:01:02.720] Example, the academic published several papers on modernist literature.
-[00:01:03.360 --> 00:01:08.240] Two, the field of study or research pursued in higher education or scholarly activities.
-[00:01:09.840 --> 00:01:14.720] Example, her achievements in the field of academics are well recognized.
-[00:01:15.280 --> 00:01:20.640] Summary as an adjective academic relates to education, scholarly activities, or theoretical study.
-[00:01:20.880 --> 00:01:29.120] As a noun, it refers to a scholar or the field of study in higher education.
+[00:00:00.000 --> 00:00:04.660] Academic can function as an adjective and a noun with meanings related to education,
+[00:00:05.320 --> 00:00:07.200] scholarship, and scholarly pursuits.
+[00:00:07.980 --> 00:00:10.500] As an adjective, academic, more academic,
+[00:00:11.140 --> 00:00:11.740] most academic.
+[00:00:12.480 --> 00:00:15.580] One, related to education, schools, or scholarly activities.
+[00:00:16.100 --> 00:00:19.540] Example, she has an academic background in literature and philosophy.
+[00:00:20.100 --> 00:00:23.860] Example, he was offered a teaching job and decided to return to academic life.
+[00:00:24.500 --> 00:00:29.100] Two, pertaining to scholarly or intellectual pursuits, often involving
+[00:00:29.100 --> 00:00:30.500] rigorous study or research.
+[00:00:30.920 --> 00:00:35.040] Example, the university is known for its academic excellence in the field of engineering.
+[00:00:35.900 --> 00:00:36.140] Three,
+[00:00:36.880 --> 00:00:40.020] theoretical or abstract, rather than practical or applied.
+[00:00:40.760 --> 00:00:45.600] Example, the debate became more of an academic exercise rather than offering practical solutions.
+[00:00:46.660 --> 00:00:50.780] Example, his interest in sailing is purely academic, he's not a sailor himself.
+[00:00:51.560 --> 00:00:54.200] As a noun, academic academics.
+[00:00:54.840 --> 00:00:58.580] One, a person who is a scholar or teacher at an institute of higher education.
+[00:00:59.080 --> 00:01:02.720] Example, the academic published several papers on modernist literature.
+[00:01:03.340 --> 00:01:08.180] Two, the field of study or research pursued in higher education or scholarly activities.
+[00:01:10.120 --> 00:01:14.640] Example, her achievements in the field of academics are well recognized.
+[00:01:15.280 --> 00:01:20.640] Summary as an adjective, academic relates to education, scholarly activities or theoretical study.
+[00:01:21.580 --> 00:01:25.940] As a noun, it refers to a scholar or the field of study in higher education.

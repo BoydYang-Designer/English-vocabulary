@@ -1,20 +1,16 @@
-[00:00:00.000 --> 00:00:03.560] Andalusian as an adjective or noun.
-[00:00:03.560 --> 00:00:06.520] As an adjective and allusion relating to Andalusia,
-[00:00:06.520 --> 00:00:08.080] a region in southern Spain,
-[00:00:08.080 --> 00:00:10.800] or its people, culture, language, or traditions.
-[00:00:11.800 --> 00:00:14.800] The festival showcased Andalusian music and dance.
-[00:00:14.800 --> 00:00:18.520] She wore a traditional Andalusian dress for the celebration.
-[00:00:18.520 --> 00:00:21.480] The architecture had a distinct Andalusian influence.
-[00:00:21.480 --> 00:00:25.280] As a noun, countable, Andalusians, Andalusians,
-[00:00:25.280 --> 00:00:26.880] a person from Andalusia.
-[00:00:26.880 --> 00:00:29.400] The Andalusians are known for their flamenco dancing.
-[00:00:29.400 --> 00:00:33.360] Many Andalusians celebrate the Feria de Abriel every year.
-[00:00:33.360 --> 00:00:36.920] He met several Andalusians while traveling through southern Spain.
-[00:00:36.920 --> 00:00:40.560] Summary Andalusian refers to people or things related to Andalusia,
-[00:00:40.560 --> 00:00:42.360] a region in southern Spain,
-[00:00:42.360 --> 00:00:45.080] including its culture, traditions, or inhabitants.
-[00:00:45.080 --> 00:00:47.320] Synonyms, Spanish, regional, civilian,
-[00:00:47.320 --> 00:00:49.920] for a specific area in Andalusia.
-[00:00:49.920 --> 00:00:52.440] Antonyms, non-Andalusian, foreign.
-[00:00:52.440 --> 00:00:53.840] Related words, optional.
-[00:00:53.840 --> 00:00:58.200] Andalusia, flamenco, Morish influence, southern Spain.
+[00:00:00.000 --> 00:00:02.420] Andalusian as an adjective or noun.
+[00:00:03.360 --> 00:00:08.680] As an adjective, Andalusian relating to Andalusia, a region in southern Spain, or its people,
+[00:00:08.880 --> 00:00:10.280] culture, language, or traditions.
+[00:00:11.700 --> 00:00:14.220] The festival showcased Andalusian music and dance.
+[00:00:14.800 --> 00:00:17.400] She wore a traditional Andalusian dress for the celebration.
+[00:00:18.480 --> 00:00:20.740] The architecture had a distinct Andalusian influence.
+[00:00:21.360 --> 00:00:24.820] As a noun, countable, Andalusians, Andalusians.
+[00:00:25.220 --> 00:00:29.080] A person from Andalusia, the Andalusians are known for their flamenco dancing.
+[00:00:29.080 --> 00:00:32.340] Many Andalusians celebrate the Feria de Abril every year.
+[00:00:33.340 --> 00:00:35.960] He met several Andalusians while traveling through southern Spain.
+[00:00:36.880 --> 00:00:41.880] Summary, Andalusian refers to people or things related to Andalusia, a region in southern Spain,
+[00:00:42.300 --> 00:00:44.540] including its culture, traditions, or inhabitants.
+[00:00:45.140 --> 00:00:49.200] Synonyms, Spanish, regional, civilian, for a specific area in Andalusia.
+[00:00:49.820 --> 00:00:51.860] Antonyms, non -Andalusian, foreign.
+[00:00:52.420 --> 00:00:56.240] Related words, optional, Andalusia, flamenco, Moorish influence,
+[00:00:56.920 --> 00:00:57.760] southern Spain.

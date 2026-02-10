@@ -1,24 +1,24 @@
-[00:00:00.000 --> 00:00:04.900] Cacune can be used as both a noun and a verb, and it relates to a protective covering
-[00:00:04.900 --> 00:00:08.060] often used in the context of insects.
-[00:00:08.060 --> 00:00:10.740] As a noun, cacune, cacune's.
-[00:00:10.740 --> 00:00:15.400] One, a protective covering spun by insects, particularly by larvae or pupae, often made
-[00:00:15.400 --> 00:00:16.900] of silk.
-[00:00:16.900 --> 00:00:20.900] Example, the caterpillar will eventually emerge from its cacune as a butterfly.
-[00:00:20.900 --> 00:00:24.900] Example, the silkworms produce cacune's from which silk is harvested.
-[00:00:25.000 --> 00:00:28.700] Two, a protective or enveloping cover or environment.
-[00:00:28.700 --> 00:00:33.500] Example, the new house felt like a cozy cocoon away from the busy city life.
-[00:00:33.500 --> 00:00:38.100] Example, the thick, warm blanket acted as a cacune on the chilly night.
-[00:00:38.100 --> 00:00:43.000] Example, the movie star was surrounded by a protective cocoon of bodyguards.
-[00:00:43.000 --> 00:00:50.000] As a verb, cacune, cacune, cacune, one, to enclose or cover something in a protective layer
-[00:00:50.000 --> 00:00:51.500] or environment.
-[00:00:51.600 --> 00:00:56.400] Example, the workers cacune the building in plastic sheeting during the renovation.
-[00:00:56.400 --> 00:01:00.600] Example, the child was cacuneed in blankets, sleeping peacefully.
-[00:01:00.600 --> 00:01:04.400] Example, the team cacune themselves in the conference room to focus on the project
-[00:01:04.400 --> 00:01:06.100] without interruptions.
-[00:01:06.100 --> 00:01:10.200] Two, to isolate oneself or someone from the outside world.
-[00:01:10.200 --> 00:01:14.500] Example, Americans are spending more time cacuneing at home in recent years.
-[00:01:14.500 --> 00:01:19.000] Example, during her recovery, she cacune herself at home, avoiding social interactions
-[00:01:19.000 --> 00:01:21.300] until she felt better.
-[00:01:21.300 --> 00:01:28.900] Summary, cacune refers to a protective covering spun by insects or a snug enveloping environment.
-[00:01:28.900 --> 00:01:33.300] It can also describe the action of enclosing or covering something in a protective layer
-[00:01:33.300 --> 00:01:36.300] or isolating oneself from the outside world.
+[00:00:00.000 --> 00:00:04.640] Cocoon can be used as both a noun and a verb, and it relates to a protective covering
+[00:00:04.640 --> 00:00:06.920] often used in the context of insects.
+[00:00:07.700 --> 00:00:10.060] As a noun, cocoon, cocoons.
+[00:00:10.760 --> 00:00:15.860] One, a protective covering spun by insects, particularly by larvae or pupae, often made of silk.
+[00:00:16.420 --> 00:00:19.800] Example, the caterpillar will eventually emerge from its cocoon as a butterfly.
+[00:00:20.480 --> 00:00:23.960] Example, the silkworms produce cocoons from which silk is harvested.
+[00:00:25.000 --> 00:00:28.200] Two, a protective or enveloping cover or environment.
+[00:00:28.200 --> 00:00:29.020] Example,
+[00:00:29.620 --> 00:00:32.940] the new house felt like a cozy cocoon away from the busy city life.
+[00:00:33.360 --> 00:00:37.540] Example, the thick, warm blanket acted as a cocoon on the chilly night.
+[00:00:38.080 --> 00:00:42.300] Example, the movie star was surrounded by a protective cocoon of bodyguards.
+[00:00:42.800 --> 00:00:45.880] As a verb, cocoon, cocooned, cocooning.
+[00:00:46.340 --> 00:00:50.620] One, to enclose or cover something in a protective layer or environment.
+[00:00:51.420 --> 00:00:55.300] Example, the workers cocooned the building in plastic sheeting during the renovation.
+[00:00:56.220 --> 00:00:59.480] Example, the child was cocooned in blankets sleeping peacefully.
+[00:01:00.500 --> 00:01:05.400] Example, the team cocooned themselves in the conference room to focus on the project without interruptions.
+[00:01:06.100 --> 00:01:09.360] Two, to isolate oneself or someone from the outside world.
+[00:01:10.120 --> 00:01:13.780] Example, Americans are spending more time cocooning at home in recent years.
+[00:01:14.400 --> 00:01:19.320] Example, during her recovery she cocooned herself at home, avoiding social interactions until
+[00:01:19.320 --> 00:01:20.120] she felt better.
+[00:01:20.120 --> 00:01:24.920] Summary, cocoon refers to a protective covering spun
+[00:01:24.920 --> 00:01:28.320] by insects or a snug enveloping environment.
+[00:01:28.920 --> 00:01:33.600] It can also describe the action of enclosing or covering something in a protective layer or
+[00:01:33.600 --> 00:01:35.960] isolating oneself from the outside world.

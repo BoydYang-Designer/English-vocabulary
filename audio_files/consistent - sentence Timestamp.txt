@@ -1,20 +1,21 @@
-[00:00:00.000 --> 00:00:05.820] Consistent is an adjective that describes something that is steady and unchanging in behavior,
-[00:00:05.820 --> 00:00:09.360] quality or achievement over a period of time.
-[00:00:09.360 --> 00:00:13.160] One, always acting or behaving in the same way,
-[00:00:13.160 --> 00:00:14.900] example sentences,
-[00:00:14.900 --> 00:00:20.560] her consistent performance in every project earned her the reputation of being reliable and effective.
-[00:00:20.560 --> 00:00:24.860] Customers expect that the quality of service they receive will be consistent.
-[00:00:24.860 --> 00:00:28.640] Two, compatible or in agreement with something,
-[00:00:28.720 --> 00:00:30.800] example sentences,
-[00:00:30.800 --> 00:00:35.920] her actions were consistent with her stated goals and values.
-[00:00:35.920 --> 00:00:40.080] Three, presenting a uniform appearance or character.
-[00:00:40.080 --> 00:00:44.800] The artist's paintings are consistent in their use of vibrant colors and bold strokes.
-[00:00:44.800 --> 00:00:49.120] The product line is consistent in its sleek design and user-friendly features,
-[00:00:49.120 --> 00:00:53.200] making it instantly recognizable to customers.
-[00:00:53.200 --> 00:00:54.400] Summary,
-[00:00:54.480 --> 00:00:58.160] Consistent refers to something that is steady and unchanging in behavior,
-[00:00:58.160 --> 00:01:01.280] quality or appearance. It can describe uniformity in actions,
-[00:01:01.280 --> 00:01:05.440] compatibility with goals or standards, or a uniform appearance.
-[00:01:05.440 --> 00:01:06.400] Related words,
-[00:01:06.400 --> 00:01:09.040] steady, uniform, reliable, coherent,
-[00:01:09.040 --> 00:01:13.040] Antonim's inconsistent, erratic, variable, contradictory.
+[00:00:00.000 --> 00:00:05.240] Consistent is an adjective that describes something that is steady and unchanging in behavior,
+[00:00:05.880 --> 00:00:09.020] quality, or achievement over a period of time.
+[00:00:09.580 --> 00:00:09.760] 1.
+[00:00:10.300 --> 00:00:12.780] Always acting or behaving in the same way.
+[00:00:13.360 --> 00:00:14.260] Example sentences.
+[00:00:15.120 --> 00:00:20.160] Her consistent performance in every project earned her the reputation of being reliable and effective.
+[00:00:20.680 --> 00:00:24.140] Customers expect that the quality of service they receive will be consistent.
+[00:00:25.000 --> 00:00:25.440] 2.
+[00:00:26.280 --> 00:00:28.280] Compatible or in agreement with something.
+[00:00:28.280 --> 00:00:29.620] Example sentences.
+[00:00:30.820 --> 00:00:33.680] Her actions were consistent with her stated goals and values.
+[00:00:36.100 --> 00:00:36.260] 3.
+[00:00:36.940 --> 00:00:39.220] Presenting a uniform appearance or character.
+[00:00:40.160 --> 00:00:43.920] The artist's paintings are consistent in their use of vibrant colors and bold strokes.
+[00:00:44.900 --> 00:00:49.660] The product line is consistent in its sleek design and user -friendly features, making it
+[00:00:49.660 --> 00:00:51.220] instantly recognizable to customers.
+[00:00:53.180 --> 00:00:53.780] Summary.
+[00:00:53.780 --> 00:00:59.080] Consistent refers to something that is steady and unchanging in behavior, quality, or appearance.
+[00:00:59.480 --> 00:01:04.660] It can describe uniformity in actions, compatibility with goals or standards, or a uniform appearance.
+[00:01:05.500 --> 00:01:08.560] Related words, steady, uniform, reliable, coherent.
+[00:01:09.060 --> 00:01:11.940] Antonyms, inconsistent, erratic, variable, contradictory.

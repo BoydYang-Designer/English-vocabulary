@@ -1,6 +1,14 @@
-[00:00:00.000 --> 00:00:11.000] An advertising campaign is a series of coordinated promotional activities or advertisements aimed at promoting a product, service, or brand to a target audience over a specific period of time.
-[00:00:11.000 --> 00:00:22.000] It typically includes various forms of media such as TV, radio, print, online, and social media to convey a consistent message designed to influence consumer behavior.
-[00:00:22.000 --> 00:00:29.000] Example sentences, the company launched a massive advertising campaign to introduce its new smartphone model.
-[00:00:29.000 --> 00:00:37.000] The advertising campaign for the movie generated a lot of buzz on social media, an effective advertising campaign helped boost the brand's visibility in sales.
-[00:00:37.000 --> 00:00:46.000] Summary, an advertising campaign refers to a planned and organized effort to promote a product or service using various media channels.
-[00:00:46.000 --> 00:00:55.000] Related words, marketing campaign, promotion, publicity, branding, antinims, no promotion, lack of advertising, under promotion.
+[00:00:00.000 --> 00:00:04.740] An advertising campaign is a series of coordinated promotional activities or
+[00:00:04.740 --> 00:00:09.680] advertisements aimed at promoting a product, service, or brand to a target audience over a
+[00:00:09.680 --> 00:00:10.880] specific period of time.
+[00:00:11.540 --> 00:00:17.000] It typically includes various forms of media, such as TV, radio, print, online,
+[00:00:17.280 --> 00:00:21.700] and social media, to convey a consistent message designed to influence consumer behavior.
+[00:00:22.380 --> 00:00:23.160] Example sentences.
+[00:00:23.940 --> 00:00:28.560] The company launched a massive advertising campaign to introduce its new smartphone model.
+[00:00:28.560 --> 00:00:32.800] The advertising campaign for the movie generated a lot of buzz on social media.
+[00:00:33.340 --> 00:00:36.900] An effective advertising campaign helped boost the brand's visibility in sales.
+[00:00:38.060 --> 00:00:38.680] Summary.
+[00:00:39.080 --> 00:00:44.080] An advertising campaign refers to a planned and organized effort to promote a product or
+[00:00:44.080 --> 00:00:46.120] service using various media channels.
+[00:00:46.840 --> 00:00:50.940] Related words, marketing campaign, promotion, publicity, branding.
+[00:00:51.600 --> 00:00:54.960] Antonyms, no promotion, lack of advertising, under promotion.

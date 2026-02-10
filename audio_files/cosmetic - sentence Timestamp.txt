@@ -1,15 +1,20 @@
-[00:00:00.000 --> 00:00:04.000] Cosmetic is an adjective and noun with the following meanings.
-[00:00:04.000 --> 00:00:11.000] As an adjective, one, relating to beauty treatments and products designed to enhance appearance.
-[00:00:11.000 --> 00:00:15.000] Example, she purchased several cosmetic products to prepare for the event.
-[00:00:15.000 --> 00:00:20.000] Example, the cosmetic industry has seen significant growth in recent years,
-[00:00:20.000 --> 00:00:25.000] two, having a superficial or decorative purpose rather than a functional one.
-[00:00:25.000 --> 00:00:28.000] Example, the changes to the building were primarily cosmetic,
-[00:00:28.000 --> 00:00:31.000] improving its appearance without altering its structure.
-[00:00:31.000 --> 00:00:35.000] Example, the cosmetic updates to the website made it more visually appealing,
-[00:00:35.000 --> 00:00:38.000] but the functionality remained the same.
-[00:00:38.000 --> 00:00:43.000] As a noun, one, a product applied to the body to improve appearance such as makeup or skincare items.
-[00:00:43.000 --> 00:00:48.000] Example, she applied a cosmetic to her lips before going out.
-[00:00:48.000 --> 00:00:54.000] Example, the store offers a wide range of cosmetics, including foundations and eye shadows.
-[00:00:55.000 --> 00:01:00.000] Summary, cosmetic refers to products or treatments aimed at enhancing beauty or improving appearance
-[00:01:00.000 --> 00:01:03.000] as well as superficial changes that do not affect functionality.
-[00:01:03.000 --> 00:01:11.000] Related words, beauty, makeup, skincare, aesthetic, antinems, functional, practical, utilitarian.
+[00:00:00.000 --> 00:00:03.580] Cosmetic is an adjective and noun with the following meanings.
+[00:00:04.140 --> 00:00:04.740] As an adjective,
+[00:00:05.540 --> 00:00:05.880] 1.
+[00:00:07.020 --> 00:00:10.320] Relating to beauty treatments and products designed to enhance appearance.
+[00:00:11.140 --> 00:00:14.520] Example, she purchased several cosmetic products to prepare for the event.
+[00:00:15.260 --> 00:00:19.180] Example, the cosmetic industry has seen significant growth in recent years.
+[00:00:19.920 --> 00:00:20.280] 2.
+[00:00:20.460 --> 00:00:24.200] Having a superficial or decorative purpose rather than a functional one.
+[00:00:24.880 --> 00:00:29.700] Example, the changes to the building were primarily cosmetic, improving its appearance without
+[00:00:29.700 --> 00:00:30.820] altering its structure.
+[00:00:31.220 --> 00:00:35.880] Example, the cosmetic updates to the website made it more visually appealing, but the functionality
+[00:00:35.880 --> 00:00:36.960] remained the same.
+[00:00:38.100 --> 00:00:39.160] As a noun, 1.
+[00:00:39.540 --> 00:00:43.120] A product applied to the body to improve appearance such as makeup or skincare items.
+[00:00:43.880 --> 00:00:47.440] Example, she applied a cosmetic to her lips before going out.
+[00:00:48.200 --> 00:00:53.740] Example, the store offers a wide range of cosmetics including foundations and eyeshadows.
+[00:00:54.740 --> 00:00:59.640] Summary, cosmetic refers to products or treatments aimed at enhancing beauty or improving
+[00:00:59.640 --> 00:01:02.780] appearance as well as superficial changes that do not affect functionality.
+[00:01:03.300 --> 00:01:07.100] Related words, beauty, makeup, skincare, aesthetic.
+[00:01:07.800 --> 00:01:10.840] Antonyms, functional, practical, utilitarian.

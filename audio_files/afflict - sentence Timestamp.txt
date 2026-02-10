@@ -1,6 +1,7 @@
-[00:00:00.000 --> 00:00:04.960] Afflict as a verb, afflict, afflicted, afflicting.
-[00:00:04.960 --> 00:00:10.320] To afflict means to cause pain, suffering, or hardship to someone or something.
-[00:00:10.320 --> 00:00:13.720] It often implies a condition of physical or mental distress.
-[00:00:13.720 --> 00:00:18.600] Example, the sudden loss of her beloved pet afflicted her with deep sadness.
-[00:00:18.600 --> 00:00:23.880] Example, the disease continued to afflict the small village causing widespread suffering.
-[00:00:23.880 --> 00:00:27.120] Example guilt began to afflict him, keeping him awake at night.
+[00:00:00.000 --> 00:00:01.540] Afflict as a verb.
+[00:00:02.020 --> 00:00:04.120] Afflict, afflicted, afflicting.
+[00:00:04.920 --> 00:00:09.560] To afflict means to cause pain, suffering, or hardship to someone or something.
+[00:00:10.260 --> 00:00:12.740] It often implies a condition of physical or mental distress.
+[00:00:13.480 --> 00:00:17.720] Example, the sudden loss of her beloved pet afflicted her with deep sadness.
+[00:00:18.640 --> 00:00:22.880] Example, the disease continued to afflict the small village causing widespread suffering.
+[00:00:23.500 --> 00:00:26.700] Example, guilt began to afflict him, keeping him awake at night.

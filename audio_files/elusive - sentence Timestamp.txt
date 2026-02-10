@@ -1,7 +1,8 @@
-[00:00:00.000 --> 00:00:04.600] Elusive describes something that is difficult to find, catch, or achieve.
-[00:00:04.600 --> 00:00:08.880] It often refers to something that is evasive or hard to pin down.
-[00:00:08.880 --> 00:00:14.320] For example, the elusive truth about the legend of the Loch Ness Monster continues to captivate
-[00:00:14.320 --> 00:00:17.000] the minds of researchers worldwide.
-[00:00:17.000 --> 00:00:21.920] For example, she pursued the elusive feeling of contentment, but it seemed to slip away
-[00:00:21.920 --> 00:00:24.800] every time she thought she had found it.
-[00:00:24.800 --> 00:00:28.800] For example, the meaning of her words remained elusively vague.
+[00:00:00.000 --> 00:00:03.880] Elusive describes something that is difficult to find, catch, or achieve.
+[00:00:04.520 --> 00:00:07.840] It often refers to something that is evasive or hard to pin down.
+[00:00:08.760 --> 00:00:09.240] For example,
+[00:00:09.880 --> 00:00:14.880] the elusive truth about the legend of the Loch Ness monster continues to captivate the minds of
+[00:00:14.880 --> 00:00:16.020] researchers worldwide.
+[00:00:16.840 --> 00:00:21.620] For example, she pursued the elusive feeling of contentment, but it seemed to slip
+[00:00:21.620 --> 00:00:23.660] away every time she thought she had found it.
+[00:00:24.280 --> 00:00:27.620] For example, the meaning of her words remained elusively vague.

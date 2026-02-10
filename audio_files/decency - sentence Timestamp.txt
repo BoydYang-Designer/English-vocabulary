@@ -1,10 +1,13 @@
-[00:00:00.000 --> 00:00:06.540] Deciency is a noun that refers to behavior that conforms to accepted standards of morality and respectability.
-[00:00:06.540 --> 00:00:11.720] It denotes the quality of being decent, proper, or polite in social interactions.
-[00:00:11.720 --> 00:00:17.020] Example, he was admired for his decency and honesty in all his dealings.
-[00:00:17.020 --> 00:00:22.420] Example, despite the heated debate, they maintained a level of decency toward each other.
-[00:00:22.420 --> 00:00:27.820] Example, if you're going to be late, please have the decency to call and let me know.
-[00:00:27.980 --> 00:00:31.280] Example, have you no sense of decency? Summary.
-[00:00:31.280 --> 00:00:35.700] Decency signifies the quality of adhering to moral standards and exhibiting polite behavior,
-[00:00:35.700 --> 00:00:38.360] reflecting respect for oneself and others.
-[00:00:38.360 --> 00:00:43.080] Related words, respectability, integrity, morality, civility.
-[00:00:43.080 --> 00:00:48.280] Antonyms, indecency, immorality, rudeness, disrespect.
+[00:00:00.000 --> 00:00:04.660] Decency is a noun that refers to behavior that conforms to accepted standards of
+[00:00:04.660 --> 00:00:06.260] morality and respectability.
+[00:00:06.820 --> 00:00:11.120] It denotes the quality of being decent, proper, or polite in social interactions.
+[00:00:12.000 --> 00:00:16.600] Example, he was admired for his decency and honesty in all his dealings.
+[00:00:17.540 --> 00:00:21.840] Example, despite the heated debate, they maintained a level of decency toward each other.
+[00:00:22.740 --> 00:00:23.280] Example,
+[00:00:23.940 --> 00:00:27.540] if you're going to be late, please have the decency to call and let me know.
+[00:00:27.540 --> 00:00:30.000] Example, have you no sense of decency?
+[00:00:30.460 --> 00:00:35.580] Summary, decency signifies the quality of adhering to moral standards and exhibiting polite behavior,
+[00:00:35.740 --> 00:00:37.680] reflecting respect for oneself and others.
+[00:00:38.360 --> 00:00:42.320] Related words, respectability, integrity, morality, civility.
+[00:00:43.140 --> 00:00:46.240] Antonyms, indecency, immorality, rudeness,
+[00:00:46.960 --> 00:00:47.320] disrespect.

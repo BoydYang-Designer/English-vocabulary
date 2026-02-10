@@ -1,7 +1,11 @@
-[00:00:00.000 --> 00:00:07.000] Civilians are typically members of the general population who are not involved in warfare or military operations.
-[00:00:07.000 --> 00:00:17.000] They may include individuals from various walks of life, such as ordinary citizens, non-combatant workers, government officials, or professionals in different fields.
-[00:00:17.000 --> 00:00:25.000] Example. During times of conflict, it's essential to protect civilian populations from the impact of warfare and ensure their safety.
-[00:00:25.000 --> 00:00:26.000] Example.
-[00:00:26.000 --> 00:00:31.000] The soldiers were careful to avoid harming civilians during the operation. Example.
-[00:00:31.000 --> 00:00:41.000] Even in times of war, civilians are protected by international law. Example. After retiring from the military, he found it challenging to adjust to civilian life.
-[00:00:41.000 --> 00:00:47.000] Example. The organization is dedicated to supporting the rights of civilians in conflict zones.
+[00:00:00.000 --> 00:00:04.860] Civilians are typically members of the general population who are not involved in
+[00:00:04.860 --> 00:00:06.780] warfare or military operations.
+[00:00:07.320 --> 00:00:12.200] They may include individuals from various walks of life, such as ordinary citizens,
+[00:00:12.760 --> 00:00:16.600] non -combatant workers, government officials, or professionals in different fields.
+[00:00:17.460 --> 00:00:22.240] Example, during times of conflict it's essential to protect civilian populations from the
+[00:00:22.240 --> 00:00:24.260] impact of warfare and ensure their safety.
+[00:00:24.980 --> 00:00:25.520] Example,
+[00:00:26.500 --> 00:00:30.100] the soldiers were careful to avoid harming civilians during the operation.
+[00:00:30.860 --> 00:00:35.540] Example, even in times of war civilians are protected by international law.
+[00:00:36.060 --> 00:00:40.940] Example, after retiring from the military he found it challenging to adjust to civilian life.
+[00:00:41.620 --> 00:00:46.880] Example, the organization is dedicated to supporting the rights of civilians in conflict zones.

@@ -1,21 +1,29 @@
-[00:00:00.000 --> 00:00:02.400] Drill is a noun in a verb with the following meanings.
-[00:00:02.400 --> 00:00:07.600] As a noun, one, tool, a tool with a rotating cutting or driving tip,
-[00:00:07.600 --> 00:00:12.000] used for making holes in various materials such as wood, metal, or plastic.
-[00:00:12.000 --> 00:00:16.800] It typically consists of a handle or grip and a motorized mechanism that rotates a drill bit.
-[00:00:17.280 --> 00:00:20.560] Example, he used a drill to bore holes in the wooden plank.
-[00:00:21.520 --> 00:00:25.040] Example, the carpenter needed a powerful drill to work with the thick metal.
-[00:00:25.680 --> 00:00:30.960] Two, training exercise. A training exercise or practice session designed to teach or
-[00:00:30.960 --> 00:00:36.960] reinforce a specific skill or procedure. In military or emergency contexts, Drill's simulate
-[00:00:36.960 --> 00:00:41.280] real-life scenarios to prepare individuals or groups for potential situations.
-[00:00:41.280 --> 00:00:45.600] Example, the fire department conducted a fire drill to practice evacuation procedures.
-[00:00:46.240 --> 00:00:50.480] Example, the students participated in a safety drill to prepare for potential earthquakes.
-[00:00:51.440 --> 00:00:59.600] As a verb, drill, drilled drilling. One, to bore holes. To make a hole in something using a drill tool,
-[00:00:59.600 --> 00:01:05.920] often by rotating the drill bit against a surface to create the hole. Example, he drilled holes in
-[00:01:05.920 --> 00:01:12.160] the wall to hang the shelves. Example, she drilled into the concrete to install the heavy duty hooks.
-[00:01:12.800 --> 00:01:17.760] Two, to train or instruct. To train or instruct someone in a particular skill or procedure
-[00:01:17.760 --> 00:01:22.800] through repeated exercises or practice, especially in military or educational contexts.
-[00:01:23.520 --> 00:01:29.280] Example, the sergeant drilled the recruits on rifle assembly and disassembly. Example, the coach
-[00:01:29.280 --> 00:01:34.560] drilled the team on their passing techniques before the big game. Summary, Drill can refer to a tool
-[00:01:34.560 --> 00:01:39.280] for making holes, a practice session to teach specific skills or actions related to making holes
-[00:01:39.280 --> 00:01:47.680] or training. Related words, bore, exercise, practice, instruct, tool. Endums neglect, ignore,
-[00:01:47.680 --> 00:01:49.280] abandon.
+[00:00:00.000 --> 00:00:02.220] Drill is a noun and a verb with the following meanings.
+[00:00:02.540 --> 00:00:07.200] As a noun, one, tool, a tool with a rotating cutting or driving tip,
+[00:00:07.620 --> 00:00:11.280] used for making holes in various materials such as wood, metal, or plastic.
+[00:00:12.080 --> 00:00:16.620] It typically consists of a handle or grip and a motorized mechanism that rotates a drill bit.
+[00:00:17.480 --> 00:00:20.480] Example, he used a drill to bore holes in the wooden plank.
+[00:00:21.580 --> 00:00:25.000] Example, the carpenter needed a powerful drill to work with the thick metal.
+[00:00:25.700 --> 00:00:27.120] Two, training exercise.
+[00:00:28.060 --> 00:00:33.400] A training exercise or practice session designed to teach or reinforce a specific skill or procedure.
+[00:00:34.060 --> 00:00:38.860] In military or emergency contexts, drills simulate real -life scenarios to prepare individuals
+[00:00:38.860 --> 00:00:40.780] or groups for potential situations.
+[00:00:41.300 --> 00:00:45.440] Example, the fire department conducted a fire drill to practice evacuation procedures.
+[00:00:46.200 --> 00:00:50.400] Example, the students participated in a safety drill to prepare for potential earthquakes.
+[00:00:51.260 --> 00:00:54.640] As a verb, drill, drilled, drilling.
+[00:00:55.400 --> 00:00:56.980] One, to bore holes.
+[00:00:57.380 --> 00:01:02.300] To make a hole in something using a drill tool, often by rotating the drill bit against a surface to
+[00:01:02.300 --> 00:01:03.020] create the hole.
+[00:01:03.820 --> 00:01:04.440] Example,
+[00:01:05.060 --> 00:01:07.080] he drilled holes in the wall to hang the shelves.
+[00:01:07.780 --> 00:01:08.360] Example,
+[00:01:09.020 --> 00:01:12.140] she drilled into the concrete to install the heavy duty hooks.
+[00:01:12.840 --> 00:01:14.220] Two, to train or instruct.
+[00:01:14.580 --> 00:01:19.700] To train or instruct someone in a particular skill or procedure through repeated exercises or practice,
+[00:01:20.180 --> 00:01:22.560] especially in military or educational contexts.
+[00:01:23.480 --> 00:01:27.560] Example, the sergeant drilled the recruits on rifle assembly and disassembly.
+[00:01:28.060 --> 00:01:31.700] Example, the coach drilled the team on their passing techniques before the big game.
+[00:01:32.540 --> 00:01:37.460] Summary, drill can refer to a tool for making holes, a practice session to teach specific skills
+[00:01:37.460 --> 00:01:39.800] or actions related to making holes or training.
+[00:01:40.740 --> 00:01:45.020] Related words, bore, exercise, practice, instruct, tool.
+[00:01:45.960 --> 00:01:48.460] Endems, neglect, ignore, abandon.

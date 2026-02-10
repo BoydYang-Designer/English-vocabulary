@@ -1,18 +1,15 @@
-[00:00:00.000 --> 00:00:02.360] Don can be a noun or a verb.
-[00:00:02.360 --> 00:00:04.960] As a noun uncountable, Don.
-[00:00:04.960 --> 00:00:06.680] The first appearance of light in the morning,
-[00:00:06.680 --> 00:00:08.720] the beginning of day, we woke up at Don
-[00:00:08.720 --> 00:00:10.400] to watch the sunrise.
-[00:00:10.400 --> 00:00:12.800] The birds started singing at Don.
-[00:00:12.800 --> 00:00:15.680] At Don, the city looked calm and peaceful.
-[00:00:15.680 --> 00:00:20.120] As a verb, Don, Don, Don, Don, to begin to become light
-[00:00:20.120 --> 00:00:23.440] in the morning, to begin to be understood or realized.
-[00:00:24.640 --> 00:00:27.360] It Don'd on him that he had forgotten the meeting.
-[00:00:27.360 --> 00:00:30.800] A new era dawned with the invention of the internet.
-[00:00:30.800 --> 00:00:33.800] The sun dawned over the mountains, lighting up the valley.
-[00:00:33.800 --> 00:00:36.600] Summary, Don refers to the beginning of the day
-[00:00:36.600 --> 00:00:38.440] or light noun, and can also mean
-[00:00:38.440 --> 00:00:41.880] the start of understanding, realization, or an era.
-[00:00:41.880 --> 00:00:45.080] Synonyms sunrise, daybreak, beginning, emerge.
-[00:00:45.080 --> 00:00:48.520] Antonyms dusk, sunset, ending, conclude.
-[00:00:48.520 --> 00:00:51.800] Related words optional, morning, daybreak, first light awakening.
+[00:00:00.000 --> 00:00:01.500] Dawn can be a noun or a verb.
+[00:00:02.240 --> 00:00:04.000] As a noun uncountable, dawn.
+[00:00:04.820 --> 00:00:09.460] The first appearance of light in the morning, the beginning of day, we woke up at dawn to watch the sunrise.
+[00:00:10.320 --> 00:00:12.000] The birds started singing at dawn.
+[00:00:12.700 --> 00:00:14.780] At dawn, the city looked calm and peaceful.
+[00:00:15.540 --> 00:00:18.020] As a verb, dawn, dawned, dawning.
+[00:00:18.840 --> 00:00:22.880] To begin to become light in the morning, to begin to be understood or realized.
+[00:00:24.260 --> 00:00:26.380] It dawned on him that he had forgotten the meeting.
+[00:00:26.380 --> 00:00:29.960] A new era dawned with the invention of the Internet.
+[00:00:30.860 --> 00:00:33.320] The sun dawned over the mountains, lighting up the valley.
+[00:00:33.860 --> 00:00:38.740] Summary, dawn refers to the beginning of the day or light, noun, and can also mean the start
+[00:00:38.740 --> 00:00:41.040] of understanding, realization, or an Arab.
+[00:00:41.860 --> 00:00:44.500] Synonyms sunrise, daybreak, beginning, emerge.
+[00:00:45.100 --> 00:00:47.680] Antonyms dusk, sunset, ending, conclude.
+[00:00:48.500 --> 00:00:51.340] Related words optional morning, daybreak, first light awakening.

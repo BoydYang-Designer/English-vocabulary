@@ -16,6 +16,7 @@
     <script src="auth-manager.js" defer></script>
     <script src="q_sentence.js" defer></script>
     <script src="quiz.js" defer></script>
+    <script src="flashcard.js" defer></script>
 </head>
 <body>
     <div id="loadingOverlay">
@@ -48,6 +49,11 @@
             <div class="card-icon">💬</div>
             <h2 class="card-title">句子測驗</h2>
             <p class="card-description">練習完整句子理解</p>
+        </button>
+        <button id="flashcardBtn" class="type-card" onclick="navigateToFlashcard()">
+            <div class="card-icon">🃏</div>
+            <h2 class="card-title">字卡練習</h2>
+            <p class="card-description">翻牌記憶，智慧複習</p>
         </button>
     </div>
 
@@ -260,6 +266,183 @@
              </button>
            </div>
         </div>
+
+        <!-- ════════════════════════════════════════
+             🃏 字卡練習 Panel 1：選擇類型
+        ════════════════════════════════════════ -->
+        <div id="flashcardTypePanel" class="categories-panel" style="display:none;">
+            <button class="back-button" onclick="fcBackToMenu()">← 返回</button>
+            <div class="fc-type-header">
+                <h2 class="fc-section-title">選擇字卡類型</h2>
+                <p class="fc-section-desc">選擇要練習的字卡種類</p>
+            </div>
+            <div class="fc-type-grid">
+                <button class="fc-type-card" onclick="selectFlashcardType('word')">
+                    <span class="fc-type-icon">📖</span>
+                    <span class="fc-type-label">單字字卡</span>
+                    <span class="fc-type-desc">英文單字 → 中文意思</span>
+                </button>
+                <button class="fc-type-card" onclick="selectFlashcardType('sentence')">
+                    <span class="fc-type-icon">📄</span>
+                    <span class="fc-type-label">句子字卡</span>
+                    <span class="fc-type-desc">中文翻譯 → 英文句子</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════
+             🃏 字卡練習 Panel 2：篩選設定
+        ════════════════════════════════════════ -->
+        <div id="flashcardSetupPanel" class="categories-panel" style="display:none;">
+            <button class="back-button" onclick="fcBackToTypeSelect()">← 返回</button>
+
+            <div class="fc-setup-header">
+                <h2 class="fc-section-title">字卡設定</h2>
+                <p class="fc-section-desc">不選擇篩選條件將從所有字卡中隨機抽取</p>
+            </div>
+
+            <!-- 張數選擇 -->
+            <div class="fc-count-section">
+                <div class="fc-sub-title">練習張數</div>
+                <div class="fc-count-buttons">
+                    <button class="fc-count-btn category-button" data-count="5"  onclick="fcSelectCount(5, this)">5 張</button>
+                    <button class="fc-count-btn category-button selected" data-count="10" onclick="fcSelectCount(10,this)">10 張</button>
+                    <button class="fc-count-btn category-button" data-count="20" onclick="fcSelectCount(20,this)">20 張</button>
+                </div>
+            </div>
+
+            <div class="filters-section" style="margin-top: 1.5rem;">
+                <!-- 難易度 -->
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">難易度</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content">
+                        <div id="fc-level-buttons"></div>
+                    </div>
+                </div>
+
+                <!-- 主題大類 -->
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">主題大類</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content">
+                        <div id="fc-category-buttons"></div>
+                    </div>
+                </div>
+
+                <!-- 特殊篩選 -->
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">特殊篩選</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content">
+                        <div id="fc-special-buttons"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+                <button class="primary-button" onclick="startFlashcardSession()">
+                    <span class="button-text">🃏 開始練習</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════
+             🃏 字卡練習 Panel 3：翻牌練習主畫面
+        ════════════════════════════════════════ -->
+        <div id="flashcardArea" class="quiz-panel" style="display:none;">
+            <button class="back-button" onclick="fcBackToSetup()">← 返回</button>
+
+            <!-- 進度 -->
+            <div class="fc-progress-container">
+                <div class="fc-progress-header">
+                    <span id="fc-progress-text" class="fc-progress-label">1 / 10</span>
+                    <span class="fc-keyboard-hint">空白鍵翻牌 · ← 再練習 · → 記得</span>
+                </div>
+                <div class="fc-progress-track">
+                    <div id="fc-progress-bar" class="fc-progress-fill"></div>
+                </div>
+                <div id="fc-dots" class="fc-dots"></div>
+            </div>
+
+            <!-- 字卡本體（3D 翻牌） -->
+            <div class="fc-scene" onclick="fcFlipCard()">
+                <div id="fc-card" class="fc-card">
+                    <div class="fc-card-face fc-card-front">
+                        <div id="fc-front-content" class="fc-content"></div>
+                        <div id="fc-flip-hint" class="fc-flip-hint">
+                            <span>點擊翻牌</span>
+                            <span class="fc-flip-arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="fc-card-face fc-card-back">
+                        <div id="fc-back-content" class="fc-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 翻牌後的評分按鈕 -->
+            <div id="fc-action-buttons" class="fc-actions" style="display:none;">
+                <button class="fc-btn-unknown" onclick="fcMarkKnown(false)">
+                    <span class="fc-btn-icon">❌</span>
+                    <span class="fc-btn-label">再練習</span>
+                </button>
+                <button class="fc-btn-known" onclick="fcMarkKnown(true)">
+                    <span class="fc-btn-icon">✅</span>
+                    <span class="fc-btn-label">記得！</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════
+             🃏 字卡練習 Panel 4：結果頁
+        ════════════════════════════════════════ -->
+        <div id="flashcardResultPanel" class="result-panel" style="display:none;">
+            <div class="fc-result-header">
+                <div class="fc-result-emoji">🃏</div>
+                <p id="fc-result-comment" class="fc-result-comment"></p>
+            </div>
+
+            <div class="fc-result-stats">
+                <div class="fc-stat fc-stat-known">
+                    <span class="fc-stat-number" id="fc-result-known">0</span>
+                    <span class="fc-stat-label">✅ 記得</span>
+                </div>
+                <div class="fc-stat fc-stat-pct">
+                    <span class="fc-stat-number" id="fc-result-pct">0%</span>
+                    <span class="fc-stat-label">正確率</span>
+                </div>
+                <div class="fc-stat fc-stat-unknown">
+                    <span class="fc-stat-number" id="fc-result-unknown">0</span>
+                    <span class="fc-stat-label">❌ 再練習</span>
+                </div>
+            </div>
+
+            <!-- 需要複習的清單 -->
+            <div class="fc-review-section">
+                <h3 class="fc-review-title">需要複習的字卡</h3>
+                <div id="fc-review-list" class="fc-review-list"></div>
+            </div>
+
+            <!-- 結果頁按鈕 -->
+            <div class="fc-result-actions">
+                <button id="fc-retry-wrong-btn" class="control-button primary" onclick="fcRetryWrong()">
+                    <span class="button-label">再練習答錯的</span>
+                </button>
+                <button class="control-button" onclick="fcRestartSame()">
+                    <span class="button-label">重新抽牌</span>
+                </button>
+                <button class="control-button finish" onclick="fcBackToMenu()">
+                    <span class="button-label">返回選單</span>
+                </button>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -312,6 +495,11 @@
             document.getElementById('rewordQuizArea').style.display = 'none';
             document.getElementById('reorganizeQuizArea').style.display = 'none';
             document.getElementById('quizResult').style.display = 'none';
+            // 字卡 panels
+            document.getElementById('flashcardTypePanel').style.display = 'none';
+            document.getElementById('flashcardSetupPanel').style.display = 'none';
+            document.getElementById('flashcardArea').style.display = 'none';
+            document.getElementById('flashcardResultPanel').style.display = 'none';
             
             // 顯示測驗類型選擇區域
             const quizTypeSelector = document.querySelector('.quiz-type-selector');

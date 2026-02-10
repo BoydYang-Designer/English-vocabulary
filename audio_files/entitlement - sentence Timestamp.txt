@@ -1,12 +1,13 @@
-[00:00:00.000 --> 00:00:05.160] Entitlement is a noun that refers to the right to have or do something, or the belief that
-[00:00:05.160 --> 00:00:11.320] one deserves certain privileges, whether legally, legitimately, or unjustifiably.
-[00:00:11.320 --> 00:00:16.960] Example, employees have an entitlement to paid holidays as per the company policy.
-[00:00:16.960 --> 00:00:20.480] Example the scholarship provides students with an entitlement to financial support for
-[00:00:20.480 --> 00:00:21.560] their education.
-[00:00:21.560 --> 00:00:26.600] His sense of entitlement made it difficult for him to accept constructive criticism.
-[00:00:26.600 --> 00:00:31.160] Example, the manager's entitlement to respect was not reciprocated by the team due to her
-[00:00:31.160 --> 00:00:33.520] unfair treatment of staff.
-[00:00:33.520 --> 00:00:38.640] Summary entitlement refers to having a right to something or the belief in deserving privileges,
-[00:00:38.640 --> 00:00:40.360] whether justified or not.
-[00:00:40.360 --> 00:00:48.280] Related words, right, privilege, claim, allowance, prerogative, antinims, disqualification,
-[00:00:48.280 --> 00:00:50.880] deprivation, forfeiture, humility.
+[00:00:00.000 --> 00:00:04.980] Entitlement is a noun that refers to the right to have or do something or the belief
+[00:00:04.980 --> 00:00:09.860] that one deserves certain privileges, whether legally, legitimately, or unjustifiably.
+[00:00:10.760 --> 00:00:15.260] Example, employees have an entitlement to paid holidays as per the company policy.
+[00:00:16.400 --> 00:00:21.120] Example, the scholarship provides students with an entitlement to financial support for their education.
+[00:00:21.480 --> 00:00:25.640] His sense of entitlement made it difficult for him to accept constructive criticism.
+[00:00:26.480 --> 00:00:31.120] Example, the manager's entitlement to respect was not reciprocated by the team due to her
+[00:00:31.120 --> 00:00:32.400] unfair treatment of staff.
+[00:00:33.260 --> 00:00:38.320] Summary, entitlement refers to having a right to something or the belief in deserving privileges,
+[00:00:38.600 --> 00:00:39.660] whether justified or not.
+[00:00:40.300 --> 00:00:40.980] Related words,
+[00:00:41.760 --> 00:00:44.400] right, privilege, claim, allowance,
+[00:00:45.060 --> 00:00:48.740] prerogative, antonyms, disqualification, deprivation,
+[00:00:49.380 --> 00:00:50.540] forfeiture, humility.

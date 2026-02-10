@@ -1,8 +1,11 @@
-[00:00:00.000 --> 00:00:05.000] Deplete is a verb, deplete, depleted, depleting.
-[00:00:05.000 --> 00:00:10.300] To reduce the quantity or supply of something, often in a way that leaves it scarce or exhausted.
-[00:00:10.300 --> 00:00:14.800] Example, overfishing can deplete fish populations threatening their survival.
-[00:00:14.800 --> 00:00:19.200] Example, activities such as logging and mining, deplete our natural resources.
-[00:00:19.200 --> 00:00:23.700] Example, we completely depleted our life savings when we bought our new house.
-[00:00:23.800 --> 00:00:30.300] Summary, deplete means to reduce something in size, quantity or value, often leading to it being used up or exhausted.
-[00:00:30.300 --> 00:00:34.000] Related words, exhaust, drain, diminish, use up, consume.
-[00:00:34.000 --> 00:00:37.500] Antonyms, replenish, restore, refill, increase.
+[00:00:00.000 --> 00:00:01.480] Deplete is a verb.
+[00:00:01.860 --> 00:00:03.100] Deplete, depleted,
+[00:00:03.940 --> 00:00:04.420] depleting.
+[00:00:05.260 --> 00:00:09.840] To reduce the quantity or supply of something, often in a way that leaves it scarce or exhausted.
+[00:00:10.440 --> 00:00:14.260] Example, overfishing can deplete fish populations, threatening their survival.
+[00:00:14.980 --> 00:00:18.680] Example, activities such as logging and mining deplete our natural resources.
+[00:00:19.360 --> 00:00:22.900] Example, we completely depleted our life savings when we bought our new house.
+[00:00:23.820 --> 00:00:28.780] Summary, deplete means to reduce something in size, quantity or value often leading to it being
+[00:00:28.780 --> 00:00:30.000] used up or exhausted.
+[00:00:30.600 --> 00:00:33.880] Related words, exhaust, drain, diminish, use up, consume.
+[00:00:34.140 --> 00:00:37.080] Antonyms, replenish, restore, refill, increase.

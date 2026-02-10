@@ -1,6 +1,8 @@
-[00:00:00.000 --> 00:00:06.000] Cognitive relates to mental processes such as thinking, learning, memory, perception, and decision-making.
-[00:00:06.000 --> 00:00:11.500] It comes from the Latin word Cognocere, which means to know or to recognize.
-[00:00:11.500 --> 00:00:16.500] In psychology, cognitive refers to the way our minds process information.
-[00:00:16.500 --> 00:00:23.000] Example, cognitive development in children includes learning how to think, reason, and solve problems.
-[00:00:23.000 --> 00:00:28.500] Language learning involves various cognitive processes such as memorization and comprehension.
-[00:00:28.500 --> 00:00:35.500] Example, as people age, they may experience a decline in cognitive abilities such as memory and attention span.
+[00:00:00.000 --> 00:00:04.940] Cognitive relates to mental processes such as thinking, learning, memory, perception, and
+[00:00:04.940 --> 00:00:05.560] decision -making.
+[00:00:06.120 --> 00:00:10.840] It comes from the Latin word cognocere, which means to know or to recognize.
+[00:00:11.880 --> 00:00:15.620] In psychology, cognitive refers to the way our minds process information.
+[00:00:16.920 --> 00:00:22.140] Example, cognitive development in children includes learning how to think, reason, and solve problems.
+[00:00:23.140 --> 00:00:28.020] Language learning involves various cognitive processes, such as memorization and comprehension.
+[00:00:28.800 --> 00:00:33.800] Example, as people age, they may experience a decline in cognitive abilities, such as
+[00:00:33.800 --> 00:00:35.160] memory and attention span.

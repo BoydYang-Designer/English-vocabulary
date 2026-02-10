@@ -1,14 +1,20 @@
-[00:00:00.000 --> 00:00:05.940] Clostrophobia is a noun that refers to an intense fear of being an enclosed or confined
-[00:00:05.940 --> 00:00:06.940] spaces.
-[00:00:06.940 --> 00:00:12.920] It is a type of anxiety disorder where individuals experience significant discomfort, panic,
-[00:00:12.920 --> 00:00:16.620] or distress when they feel trapped or restricted.
-[00:00:16.620 --> 00:00:17.620] Example sentences.
-[00:00:17.620 --> 00:00:22.680] Her claustrophobia made it difficult for her to use elevators or travel in crowded places.
-[00:00:22.680 --> 00:00:29.120] The therapist helped him manage his claustrophobia through exposure therapy and relaxation techniques.
-[00:00:29.120 --> 00:00:35.320] During the MRI scan, his claustrophobia caused him to panic and request to stop the procedure.
-[00:00:35.320 --> 00:00:39.280] Clostrophobia can be triggered by tight spaces like small rooms, crowded areas, or even narrow
-[00:00:39.280 --> 00:00:41.360] hallways.
-[00:00:41.360 --> 00:00:45.600] Summary claustrophobia is the intense fear of being an confined or enclosed spaces, often
-[00:00:45.600 --> 00:00:49.080] leading to significant anxiety or panic.
-[00:00:49.080 --> 00:00:53.240] Related words, fear of confined spaces, anxiety, panic disorder.
-[00:00:53.240 --> 00:00:55.880] Antonyms, comfort, calm, ease.
+[00:00:00.000 --> 00:00:04.580] Clostrophobia is a noun that refers to an intense fear of being in
+[00:00:04.580 --> 00:00:06.480] enclosed or confined spaces.
+[00:00:07.180 --> 00:00:11.680] It is a type of anxiety disorder where individuals experience significant discomfort,
+[00:00:12.300 --> 00:00:15.320] panic, or distress when they feel trapped or restricted.
+[00:00:16.120 --> 00:00:17.040] Example sentences.
+[00:00:17.400 --> 00:00:21.520] Her claustrophobia made it difficult for her to use elevators or travel in crowded places.
+[00:00:22.380 --> 00:00:28.020] The therapist helped him manage his claustrophobia through exposure therapy and relaxation techniques.
+[00:00:28.020 --> 00:00:33.420] During the MRI scan, his claustrophobia caused him to panic and request to stop the procedure.
+[00:00:34.700 --> 00:00:39.760] Clostrophobia can be triggered by tight spaces like small rooms, crowded areas, or even narrow hallways.
+[00:00:41.000 --> 00:00:41.300] Summary.
+[00:00:41.860 --> 00:00:46.480] Clostrophobia is the intense fear of being in confined or enclosed spaces, often leading to significant
+[00:00:46.480 --> 00:00:47.760] anxiety or panic.
+[00:00:48.700 --> 00:00:49.340] Related words.
+[00:00:49.700 --> 00:00:50.560] Fear of confined spaces.
+[00:00:51.080 --> 00:00:51.420] Anxiety.
+[00:00:51.800 --> 00:00:52.280] Panic disorder.
+[00:00:52.980 --> 00:00:53.500] Antonyms.
+[00:00:53.820 --> 00:00:54.160] Comfort.
+[00:00:54.700 --> 00:00:54.880] Calm.
+[00:00:55.460 --> 00:00:55.780] Ease.

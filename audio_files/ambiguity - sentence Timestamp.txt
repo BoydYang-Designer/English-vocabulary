@@ -1,5 +1,6 @@
-[00:00:00.000 --> 00:00:06.140] Ambiguity refers to a lack of clarity or uncertainty in meaning, where something can be interpreted
-[00:00:06.140 --> 00:00:10.040] in more than one way or is not clearly defined.
-[00:00:10.040 --> 00:00:14.340] For example, due to the ambiguity of the boss's order, the team wasn't sure which approach
-[00:00:14.340 --> 00:00:17.240] to take to complete the project.
-[00:00:17.240 --> 00:00:22.640] Another example is you should remove ambiguity, vagueness, from your essay by adding more details.
+[00:00:00.000 --> 00:00:04.840] Ambiguity refers to a lack of clarity or uncertainty in meaning, where
+[00:00:04.840 --> 00:00:08.940] something can be interpreted in more than one way or is not clearly defined.
+[00:00:09.900 --> 00:00:14.820] For example, due to the ambiguity of the boss's order, the team wasn't sure which approach to take
+[00:00:14.820 --> 00:00:15.900] to complete the project.
+[00:00:16.860 --> 00:00:21.740] Another example is you should remove ambiguity, vagueness, from your essay by adding
+[00:00:21.740 --> 00:00:22.340] more details.

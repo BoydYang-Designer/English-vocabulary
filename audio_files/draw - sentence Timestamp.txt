@@ -1,23 +1,34 @@
-[00:00:00.000 --> 00:00:05.040] Draw as a verb and noun. As a verb, draw, drew, drawing.
-[00:00:05.040 --> 00:00:09.680] One, to draw, means to make a picture, image, or design by marking lines on a surface,
-[00:00:09.680 --> 00:00:15.920] usually with a pen, pencil, or other tool. Example, she loves to draw portraits of her friends.
-[00:00:15.920 --> 00:00:18.880] Example, the artist drew a beautiful landscape on the canvas.
-[00:00:20.160 --> 00:00:25.360] Two, draw can also mean to pull or drag something towards oneself. Example, he drew the curtains
-[00:00:25.360 --> 00:00:30.720] to let in the sunlight. Example, she drew the chair closer to the table. Three, to draw,
-[00:00:30.720 --> 00:00:36.000] can refer to extracting or pulling out something, such as a liquid or an object. Example,
-[00:00:36.000 --> 00:00:40.960] he drew water from the well using a bucket. Example, the nurse drew blood for testing.
-[00:00:41.600 --> 00:00:47.680] Four, to draw can also mean to attract or pull attention or interest. Example, the exhibition drew
-[00:00:47.680 --> 00:00:52.240] many visitors from around the world. Example, the new movie is expected to draw large audiences.
-[00:00:53.040 --> 00:00:58.000] Five, to draw, can mean to make a decision or conclusion based on reasoning or evidence.
-[00:00:58.960 --> 00:01:04.560] Example, from the data, they drew the conclusion that the experiment was a success. Example,
-[00:01:04.560 --> 00:01:11.600] she drew inspiration from nature for her design. As a noun, one, a draw can refer to the act of pulling
-[00:01:11.600 --> 00:01:17.200] or dragging something or the result of it. Example, the draw of the rope was strong enough to pull the
-[00:01:17.200 --> 00:01:22.880] heavy object. Example, after the draw, the contestants waited to see who would win the prize.
-[00:01:23.520 --> 00:01:29.040] Two, a draw can refer to a random selection, such as in a lottery or competition. Example,
-[00:01:29.040 --> 00:01:34.560] the raffle draw determined the winner of the grand prize. Example, the draw for the tournament was
-[00:01:34.560 --> 00:01:40.240] held yesterday. Three, a draw can be a situation in a game or competition where neither side wins,
-[00:01:40.240 --> 00:01:46.960] resulting in a tie. Example, the soccer match ended in a one-one draw. Example, the chess game
-[00:01:46.960 --> 00:01:53.360] resulted in a draw after hours of play. Summary draw, as a verb, refers to creating images, pulling
-[00:01:53.360 --> 00:01:58.320] or attracting something or making a conclusion. As a noun, it can refer to a tie in a competition
-[00:01:58.320 --> 00:02:04.640] or the act of drawing something. Related words, sketch, pull, attract, tie, raffle. Anonym's push,
-[00:02:04.640 --> 00:02:06.240] lose, drive, withdraw.
+[00:00:00.000 --> 00:00:01.400] Draw as a verb and noun.
+[00:00:01.920 --> 00:00:04.440] As a verb, draw, drew, drawing.
+[00:00:05.180 --> 00:00:09.460] One, to draw means to make a picture, image, or design by marking lines on a surface,
+[00:00:09.700 --> 00:00:12.100] usually with a pen, pencil, or other tool.
+[00:00:13.100 --> 00:00:15.320] Example, she loves to draw portraits of her friends.
+[00:00:16.040 --> 00:00:18.720] Example, the artist drew a beautiful landscape on the canvas.
+[00:00:20.000 --> 00:00:23.700] Two, draw can also mean to pull or drag something towards oneself.
+[00:00:24.420 --> 00:00:26.220] Example, he drew the curtains to let in the sunlight.
+[00:00:27.280 --> 00:00:29.260] Example, she drew the chair closer to the table.
+[00:00:29.520 --> 00:00:34.240] Three, to draw can refer to extracting or pulling out something, such as a liquid
+[00:00:34.240 --> 00:00:35.000] or an object.
+[00:00:35.180 --> 00:00:38.200] Example, he drew water from the well using a bucket.
+[00:00:38.940 --> 00:00:40.860] Example, the nurse drew blood for testing.
+[00:00:41.640 --> 00:00:45.480] Four, to draw can also mean to attract or pull attention or interest.
+[00:00:46.420 --> 00:00:49.140] Example, the exhibition drew many visitors from around the world.
+[00:00:49.740 --> 00:00:52.080] Example, the new movie is expected to draw large audiences.
+[00:00:52.920 --> 00:00:57.940] Five, to draw can mean to make a decision or conclusion based on reasoning or evidence.
+[00:00:59.020 --> 00:01:03.160] Example, from the data, they drew the conclusion that the experiment was a success.
+[00:01:04.040 --> 00:01:06.620] Example, she drew inspiration from nature for her design.
+[00:01:07.520 --> 00:01:08.240] As a noun,
+[00:01:09.140 --> 00:01:13.600] one, a draw can refer to the act of pulling or dragging something or the result of it.
+[00:01:14.240 --> 00:01:17.920] Example, the draw of the rope was strong enough to pull the heavy object.
+[00:01:19.380 --> 00:01:22.860] Example, after the draw, the contestants waited to see who would win the prize.
+[00:01:23.540 --> 00:01:27.780] Two, a draw can refer to a random selection, such as in a lottery or competition.
+[00:01:28.460 --> 00:01:32.180] Example, the raffle draw determined the winner of the grand prize.
+[00:01:32.960 --> 00:01:35.240] Example, the draw for the tournament was held yesterday.
+[00:01:36.140 --> 00:01:41.300] Three, a draw can be a situation in a game or competition where neither side wins resulting in a tie.
+[00:01:41.920 --> 00:01:45.220] Example, the soccer match ended in a 1 -1 draw.
+[00:01:45.840 --> 00:01:49.060] Example, the chess game resulted in a draw after hours of play.
+[00:01:49.800 --> 00:01:54.460] Summary draw as a verb refers to creating images, pulling or attracting something
+[00:01:54.460 --> 00:01:55.780] or making a conclusion.
+[00:01:56.080 --> 00:01:59.580] As a noun, it can refer to a tie in a competition or the act of drawing something.
+[00:01:59.980 --> 00:02:02.880] Related words, sketch, pull, attract, tie, raffle.
+[00:02:03.480 --> 00:02:05.980] Anonyms, push, lose, drive, withdraw.

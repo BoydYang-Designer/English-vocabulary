@@ -1,7 +1,9 @@
-[00:00:00.000 --> 00:00:08.040] Embarrassment is a noun that means a feeling of self-consciousness, shame, or awkwardness caused by a situation or mistake.
-[00:00:08.040 --> 00:00:13.640] Example, she felt deep embarrassment when she forgot her speech in front of the audience.
-[00:00:13.640 --> 00:00:18.480] Example, his voice cracked while speaking, and he turned red with embarrassment.
-[00:00:18.480 --> 00:00:23.560] Losing his wallet twice in one week was a source of great embarrassment for him.
-[00:00:24.560 --> 00:00:32.960] Summary, embarrassment refers to a feeling of awkwardness, shame, or discomfort caused by an uncomfortable or humiliating situation.
-[00:00:32.960 --> 00:00:38.360] Related words, humiliation, shame, awkwardness, discomfort, self-consciousness.
-[00:00:38.360 --> 00:00:41.760] Antonyms, confidence, pride, comfort, assurance.
+[00:00:00.000 --> 00:00:04.640] Embarrassment is a noun that means a feeling of self -consciousness, shame,
+[00:00:05.020 --> 00:00:07.600] or awkwardness caused by a situation or mistake.
+[00:00:08.300 --> 00:00:13.140] Example, she felt deep embarrassment when she forgot her speech in front of the audience.
+[00:00:13.780 --> 00:00:17.800] Example, his voice cracked while speaking and he turned red with embarrassment.
+[00:00:18.800 --> 00:00:22.920] Losing his wallet twice in one week was a source of great embarrassment for him.
+[00:00:24.560 --> 00:00:29.080] Summary, embarrassment refers to a feeling of awkwardness, shame,
+[00:00:29.640 --> 00:00:32.580] or discomfort caused by an uncomfortable or humiliating situation.
+[00:00:33.160 --> 00:00:38.400] Related words, humiliation, shame, awkwardness, discomfort, self -consciousness,
+[00:00:38.540 --> 00:00:41.420] antonyms, confidence, pride, comfort, assurance.

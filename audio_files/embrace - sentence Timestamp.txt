@@ -1,5 +1,6 @@
-[00:00:00.000 --> 00:00:06.500] Embrace means to accept or eagerly welcome something or someone, often with open arms or figuratively.
-[00:00:06.500 --> 00:00:09.300] One, they embrace each other warmly.
-[00:00:09.300 --> 00:00:13.000] Two, we should embrace diversity and celebrate our differences.
-[00:00:13.000 --> 00:00:16.500] Three, she gave him a warm embrace when he returned home.
-[00:00:16.500 --> 00:00:21.000] Four, she embraced the opportunity to travel and explore new cultures.
+[00:00:00.000 --> 00:00:05.000] Embrace means to accept or eagerly welcome something or someone, often with open
+[00:00:05.000 --> 00:00:05.980] arms or figuratively.
+[00:00:07.200 --> 00:00:09.020] One, they embraced each other warmly.
+[00:00:09.480 --> 00:00:12.260] Two, we should embrace diversity and celebrate our differences.
+[00:00:13.080 --> 00:00:15.860] Three, she gave him a warm embrace when he returned home.
+[00:00:16.520 --> 00:00:20.040] Four, she embraced the opportunity to travel and explore new cultures.

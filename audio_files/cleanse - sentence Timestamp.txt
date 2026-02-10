@@ -1,9 +1,14 @@
-[00:00:00.000 --> 00:00:04.720] CLENZ is a verb, CLENZ cleansed, cleansing, with the following meanings.
-[00:00:04.720 --> 00:00:09.520] One to clean something thoroughly, especially to remove dirt, toxins, or harmful substances.
-[00:00:10.080 --> 00:00:15.680] Example, she used soap and water to cleanse the wound. Example, the spa offers treatments to
-[00:00:15.680 --> 00:00:21.280] cleanse the skin of impurities. He drank herbal tea to cleanse his body of toxins,
-[00:00:22.080 --> 00:00:27.920] two to purify something, often in a moral, spiritual, or emotional sense. Meditation helped
-[00:00:27.920 --> 00:00:33.280] cleanse his mind of negative thoughts. Example, the ritual was meant to cleanse the soul of past
-[00:00:33.280 --> 00:00:38.800] mistakes. The confession cleansed him of guilt. CLENZ means to clean something thoroughly or to
-[00:00:38.800 --> 00:00:45.920] purify it, either physically, emotionally, or spiritually. Related words, purify, wash,
-[00:00:45.920 --> 00:00:56.640] disinfect, detox, sanitize, antinims, contaminate, pollute, soil, dirty,
+[00:00:00.000 --> 00:00:04.480] Cleanse is a verb, cleanse, cleansed, cleansing, with the following meanings.
+[00:00:04.960 --> 00:00:09.200] One to clean something thoroughly, especially to remove dirt, toxins, or harmful substances.
+[00:00:10.200 --> 00:00:13.420] Example, she used soap and water to cleanse the wound.
+[00:00:14.120 --> 00:00:17.060] Example, the spa offers treatments to cleanse the skin of impurities.
+[00:00:18.260 --> 00:00:21.140] He drank herbal tea to cleanse his body of toxins.
+[00:00:22.100 --> 00:00:26.440] Two to purify something, often in a moral, spiritual, or emotional sense.
+[00:00:27.120 --> 00:00:29.540] Meditation helped cleanse his mind of negative thoughts.
+[00:00:30.340 --> 00:00:33.720] Example, the ritual was meant to cleanse the soul of past mistakes.
+[00:00:34.580 --> 00:00:35.980] The confession cleansed him of guilt.
+[00:00:36.580 --> 00:00:41.360] Cleans means to clean something thoroughly or to purify it, either physically, emotionally,
+[00:00:41.920 --> 00:00:42.420] or spiritually.
+[00:00:43.500 --> 00:00:44.180] Related words,
+[00:00:44.820 --> 00:00:49.920] purify, wash, disinfect, detox, sanitize, antonyms, contaminate, pollute,
+[00:00:50.100 --> 00:00:50.680] soil, dirty.

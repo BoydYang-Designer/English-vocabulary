@@ -1,12 +1,13 @@
-[00:00:00.000 --> 00:00:06.760] At first blush is an idiom that means at first glance or upon initial consideration.
-[00:00:06.760 --> 00:00:12.680] It suggests an immediate impression or reaction before further examination or thought.
-[00:00:12.680 --> 00:00:13.680] Examples 1.
-[00:00:13.680 --> 00:00:19.160] At first blush, the proposal seemed beneficial, but further analysis revealed several flaws.
-[00:00:19.160 --> 00:00:20.160] 2.
-[00:00:20.160 --> 00:00:24.440] She appeared confident at first blush, but later admitted she was quite nervous.
-[00:00:24.440 --> 00:00:25.440] 3.
-[00:00:25.440 --> 00:00:30.240] At first blush, the idea sounded great, but we need to consider the long-term implications.
-[00:00:30.240 --> 00:00:35.240] Summary, the phrase at first blush indicates an initial reaction or impression that may
-[00:00:35.240 --> 00:00:39.440] change upon deeper reflection or investigation.
-[00:00:39.440 --> 00:00:45.400] Related words, initially, superficially, at first glance, antinims, upon closer inspection
-[00:00:45.400 --> 00:00:46.400] after further thought.
+[00:00:00.000 --> 00:00:04.760] At first blush is an idiom that means at first glance or upon
+[00:00:04.760 --> 00:00:05.860] initial consideration.
+[00:00:06.560 --> 00:00:10.960] It suggests an immediate impression or reaction before further examination or thought.
+[00:00:11.900 --> 00:00:13.100] Examples 1.
+[00:00:13.340 --> 00:00:18.260] At first blush, the proposal seemed beneficial, but further analysis revealed several flaws.
+[00:00:19.300 --> 00:00:19.600] 2.
+[00:00:19.900 --> 00:00:23.480] She appeared confident at first blush, but later admitted she was quite nervous.
+[00:00:24.180 --> 00:00:24.700] 3.
+[00:00:25.040 --> 00:00:28.840] At first blush, the idea sounded great, but we need to consider the long -term implications.
+[00:00:29.780 --> 00:00:34.480] Summary, the phrase at first blush indicates an initial reaction or
+[00:00:34.480 --> 00:00:37.720] impression that may change upon deeper reflection or investigation.
+[00:00:39.020 --> 00:00:43.660] Related words, initially, superficially, at first glance, antonyms,
+[00:00:44.060 --> 00:00:46.220] upon closer inspection after further thought.

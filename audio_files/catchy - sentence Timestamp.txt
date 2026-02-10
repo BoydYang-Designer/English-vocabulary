@@ -1,12 +1,10 @@
-[00:00:00.000 --> 00:00:04.320] Catchy is an adjective, catchy, catchier, catchiest,
-[00:00:04.320 --> 00:00:07.200] that refers to being easy to remember or attention grabbing,
-[00:00:07.200 --> 00:00:11.120] often appealing and designed to quickly capture interest.
-[00:00:11.120 --> 00:00:16.320] Example, the advertisement's jingle was so catchy that everyone hummed it.
-[00:00:16.320 --> 00:00:20.520] Example, she came up with a catchy title for her blog post.
-[00:00:20.520 --> 00:00:25.200] Example, the store's catchy window display drew in many customers.
-[00:00:25.200 --> 00:00:29.320] The product's packaging has a catchy design that appeals to young buyers.
-[00:00:29.400 --> 00:00:32.840] Example, the new slogan isn't as catchy as the old one.
-[00:00:32.840 --> 00:00:35.160] Summary, catchy describes something memorable,
-[00:00:35.160 --> 00:00:38.200] appealing and designed to attract attention effectively.
-[00:00:38.200 --> 00:00:43.160] Related words, memorable, appealing, engaging, striking, attention grabbing.
-[00:00:43.160 --> 00:00:47.880] Antonyms, dull, forgettable, unremarkable, uninteresting.
+[00:00:00.000 --> 00:00:05.000] Catchy is an adjective, catchy, catchier, catchiest, that refers to
+[00:00:05.000 --> 00:00:10.360] being easy to remember or attention grabbing, often appealing and designed to quickly capture interest.
+[00:00:11.560 --> 00:00:15.800] Example, the advertisement's jingle was so catchy that everyone hummed it.
+[00:00:16.620 --> 00:00:20.100] Example, she came up with a catchy title for her blog post.
+[00:00:20.680 --> 00:00:24.660] Example, the store's catchy window display drew in many customers.
+[00:00:25.380 --> 00:00:28.740] The product's packaging has a catchy design that appeals to young buyers.
+[00:00:28.740 --> 00:00:32.320] Example, the new slogan isn't as catchy as the old one.
+[00:00:32.900 --> 00:00:37.500] Summary, catchy describes something memorable appealing and designed to attract attention effectively.
+[00:00:38.300 --> 00:00:42.540] Related words, memorable, appealing, engaging, striking, attention grabbing.
+[00:00:43.200 --> 00:00:47.220] Antonyms, dull, forgettable, unremarkable, uninteresting.

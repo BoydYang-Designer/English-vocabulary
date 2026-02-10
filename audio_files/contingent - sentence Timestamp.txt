@@ -1,19 +1,22 @@
-[00:00:00.000 --> 00:00:06.000] Contingent is a versatile word, functioning as an adjective and a noun with the following meanings.
-[00:00:06.000 --> 00:00:11.000] As an adjective, one, dependent on certain conditions or circumstances,
-[00:00:11.000 --> 00:00:15.000] refers to something that will happen only if specific requirements are met.
-[00:00:15.000 --> 00:00:19.000] Example, the contract is contingent on the completion of the project.
-[00:00:19.000 --> 00:00:24.000] Example, their participation in the event is contingent upon receiving funding.
-[00:00:24.000 --> 00:00:27.000] 2. Accidental or occurring by chance.
-[00:00:27.000 --> 00:00:30.000] Refers to something happening unpredictably or incidentally.
-[00:00:30.000 --> 00:00:35.000] Example, the success of the experiment was contingent on an unforeseen discovery.
-[00:00:35.000 --> 00:00:39.000] Example, his promotion was contingent upon a series of lucky events.
-[00:00:39.000 --> 00:00:44.000] As a noun, one, a group of people united by a common feature or purpose,
-[00:00:44.000 --> 00:00:48.000] refers to a subset of a larger group, often representing a specific interest or region.
-[00:00:48.000 --> 00:00:53.000] Example, a contingent of delegates arrived from neighboring countries for the summit.
-[00:00:53.000 --> 00:00:58.000] Example, the school sent a contingent of students to compete in the science fair.
-[00:00:58.000 --> 00:01:04.000] 2. A possible future event or outcome refers to an event that might occur but is not guaranteed.
-[00:01:04.000 --> 00:01:09.000] Example, the company prepared for every possible contingent in their risk assessment.
-[00:01:09.000 --> 00:01:14.000] Summary, contingent as an adjective describes dependency on conditions or chance,
-[00:01:14.000 --> 00:01:19.000] while as a noun, it refers to a group of individuals or a potential future event.
-[00:01:19.000 --> 00:01:25.000] Related words, dependent, conditional, possible group delegation accidental antinim's independent,
-[00:01:25.000 --> 00:01:28.000] certain necessary guaranteed sovereign.
+[00:00:00.000 --> 00:00:05.360] Contingent is a versatile word functioning as an adjective and a noun with the following meanings.
+[00:00:06.180 --> 00:00:06.800] As an adjective,
+[00:00:07.520 --> 00:00:07.800] one,
+[00:00:08.540 --> 00:00:13.400] dependent on certain conditions or circumstances, refers to something that will happen only if
+[00:00:13.400 --> 00:00:14.700] specific requirements are met.
+[00:00:15.880 --> 00:00:18.920] Example, the contract is contingent on the completion of the project.
+[00:00:19.520 --> 00:00:23.280] Example, their participation in the event is contingent upon receiving funding.
+[00:00:24.040 --> 00:00:28.400] Two, accidental or occurring by chance refers to something happening
+[00:00:28.400 --> 00:00:29.980] unpredictably or incidentally.
+[00:00:30.600 --> 00:00:34.500] Example, the success of the experiment was contingent on an unforeseen discovery.
+[00:00:35.180 --> 00:00:38.840] Example, his promotion was contingent upon a series of lucky events.
+[00:00:39.680 --> 00:00:44.520] As a noun, one, a group of people united by a common feature or purpose refers to a
+[00:00:44.520 --> 00:00:48.020] subset of a larger group often representing a specific interest or region.
+[00:00:48.960 --> 00:00:53.060] Example, a contingent of delegates arrived from neighboring countries for the summit.
+[00:00:53.560 --> 00:00:57.620] Example, the school sent a contingent of students to compete in the science fair.
+[00:00:58.130 --> 00:01:03.140] Two, a possible future event or outcome refers to an event that might occur but is not guaranteed.
+[00:01:03.840 --> 00:01:04.420] Example,
+[00:01:05.080 --> 00:01:08.200] the company prepared for every possible contingent in their risk assessment.
+[00:01:09.480 --> 00:01:14.160] Summary, contingent as an adjective describes dependency on conditions or chance,
+[00:01:14.660 --> 00:01:18.480] while as a noun it refers to a group individual's or a potential future event.
+[00:01:19.480 --> 00:01:24.800] Related words, dependent, conditional, possible, group, delegation, accidental, antonyms,
+[00:01:24.880 --> 00:01:27.800] independent, certain, necessary, guaranteed, sovereign.

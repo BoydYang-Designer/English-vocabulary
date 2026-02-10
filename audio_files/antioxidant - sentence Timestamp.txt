@@ -1,9 +1,12 @@
-[00:00:00.000 --> 00:00:05.440] Antioxidant is a noun, refers to a substance that is added to food and other products to prevent
-[00:00:05.440 --> 00:00:11.360] harmful chemical reactions in which oxygen is combined with other substances. Example, blueberries
-[00:00:11.360 --> 00:00:15.200] are rich in antioxidants, which are beneficial for maintaining healthy skin.
-[00:00:16.880 --> 00:00:23.280] Vitamin C is a well-known antioxidant that helps protect cells from damage. Example, the cream
-[00:00:23.280 --> 00:00:30.000] contains antioxidants to reduce signs of aging and improve skin elasticity. Example, adding
-[00:00:30.000 --> 00:00:34.320] antioxidant rich foods like spinach and nuts to your diet can boost your immune system.
-[00:00:35.120 --> 00:00:40.640] Summary, antioxidants are substances that protect the body from oxidative stress caused by free
-[00:00:40.640 --> 00:00:46.960] radicals, often contributing to better health and anti-aging effects. Related words, free radicals,
-[00:00:46.960 --> 00:00:59.200] oxidation, vitamins, anti-aging, protection, health, antinims, pro-oxidant, toxin, free radical.
+[00:00:00.000 --> 00:00:04.840] Antioxidant is a noun, refers to a substance that is added to food and other products
+[00:00:04.840 --> 00:00:09.200] to prevent harmful chemical reactions in which oxygen is combined with other substances.
+[00:00:09.920 --> 00:00:15.300] Example, blueberries are rich in antioxidants, which are beneficial for maintaining healthy skin.
+[00:00:16.600 --> 00:00:21.040] Vitamin C is a well -known antioxidant that helps protect cells from damage.
+[00:00:22.240 --> 00:00:27.240] Example, the cream contains antioxidants to reduce signs of aging and improve skin elasticity.
+[00:00:28.180 --> 00:00:28.820] Example,
+[00:00:29.660 --> 00:00:34.300] adding antioxidant -rich foods like spinach and nuts to your diet can boost your immune system.
+[00:00:35.180 --> 00:00:40.180] Summary, antioxidants are substances that protect the body from oxidative stress caused
+[00:00:40.180 --> 00:00:44.000] by free radicals, often contributing to better health and anti -aging effects.
+[00:00:44.680 --> 00:00:45.360] Related words,
+[00:00:45.980 --> 00:00:51.800] free radicals, oxidation, vitamins, anti -aging, protection, health, Antinums, Prooxidant,
+[00:00:51.840 --> 00:00:52.980] Toxin, Free Radical.

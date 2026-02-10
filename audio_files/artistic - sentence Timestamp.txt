@@ -1,10 +1,12 @@
-[00:00:00.000 --> 00:00:03.800] Artistic is an adjective with the following meanings.
-[00:00:03.800 --> 00:00:09.000] One, relating to or characteristic of art, artists, or creativity.
-[00:00:09.000 --> 00:00:13.600] Example, the artistic design of the stroller combined functionality with beauty.
-[00:00:13.600 --> 00:00:17.400] Example, she has an artistic flair for painting landscapes.
-[00:00:17.400 --> 00:00:22.600] Two, having natural creative skill or talent in art or a specific craft.
-[00:00:22.600 --> 00:00:27.000] Example, his artistic abilities were evident in the intricate carvings on the furniture.
-[00:00:27.000 --> 00:00:32.000] Example, the artist created an artistic masterpiece with the use of vibrant colors.
-[00:00:32.000 --> 00:00:39.000] Summary, artistic refers to anything related to art, creativity, or having an innate ability to create aesthetically pleasing work.
-[00:00:39.000 --> 00:00:43.400] Related words, creative, aesthetic, skilled, inventive.
-[00:00:43.400 --> 00:00:47.600] Antonyms, uncreative, unimaginative, ordinary, mechanical.
+[00:00:00.000 --> 00:00:03.280] Artistic is an adjective with the following meanings.
+[00:00:04.140 --> 00:00:04.140] One,
+[00:00:04.860 --> 00:00:08.260] relating to or characteristic of art, artists, or creativity.
+[00:00:09.080 --> 00:00:13.120] Example, the artistic design of the stroller combined functionality with beauty.
+[00:00:13.740 --> 00:00:16.740] Example, she has an artistic flair for painting landscapes.
+[00:00:17.500 --> 00:00:21.920] Two, having natural creative skill or talent in art or a specific craft.
+[00:00:22.640 --> 00:00:26.380] Example, his artistic abilities were evident in the intricate carvings on the furniture.
+[00:00:26.380 --> 00:00:31.340] Example, the artist created an artistic masterpiece with the use of vibrant colors.
+[00:00:32.260 --> 00:00:37.000] Summary, artistic refers to anything related to art, creativity, or having an innate ability to
+[00:00:37.000 --> 00:00:38.600] create aesthetically pleasing work.
+[00:00:39.300 --> 00:00:43.200] Related words, creative, aesthetic, skilled, inventive.
+[00:00:43.600 --> 00:00:46.940] Antonyms, uncreative, unimaginative, ordinary, mechanical.

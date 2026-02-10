@@ -1,13 +1,16 @@
-[00:00:00.000 --> 00:00:04.320] Beforehand is an adverb with the following meanings.
-[00:00:04.320 --> 00:00:08.520] One, in advance, prior to a particular time or event.
-[00:00:08.520 --> 00:00:12.960] Example, she prepared the ingredients beforehand to save time while cooking.
-[00:00:12.960 --> 00:00:17.120] Example, it's important to book your tickets beforehand to avoid long lines.
-[00:00:17.120 --> 00:00:20.360] Example, we paid for our tickets beforehand.
-[00:00:20.360 --> 00:00:23.760] He always checks the weather beforehand to plan his activities.
-[00:00:23.760 --> 00:00:27.080] Two, earlier in time, previously.
-[00:00:27.480 --> 00:00:30.160] I didn't know beforehand that the meeting was cancelled.
-[00:00:30.160 --> 00:00:34.600] Example, they were given instructions beforehand about the procedure.
-[00:00:34.600 --> 00:00:39.480] Example, we discussed the project beforehand to ensure everyone was on the same page.
-[00:00:39.480 --> 00:00:45.680] Summary, beforehand refers to something done or known in advance or prior to an event.
-[00:00:45.680 --> 00:00:49.000] Related words in advance, earlier, prior.
-[00:00:49.000 --> 00:00:52.800] Antonyms, afterward, subsequently, later.
+[00:00:01.100 --> 00:00:03.880] Beforehand is an adverb with the following meanings.
+[00:00:04.760 --> 00:00:08.180] One, in advance, prior to a particular time or event.
+[00:00:08.680 --> 00:00:12.420] Example, she prepared the ingredients beforehand to save time while cooking.
+[00:00:13.280 --> 00:00:16.500] Example, it's important to book your tickets beforehand to avoid long lines.
+[00:00:17.700 --> 00:00:19.820] Example, we paid for our tickets beforehand.
+[00:00:20.480 --> 00:00:23.080] He always checks the weather beforehand to plan his activities.
+[00:00:23.860 --> 00:00:26.240] Two, earlier in time, previously.
+[00:00:26.240 --> 00:00:26.500] Obviously.
+[00:00:27.200 --> 00:00:29.620] I didn't know beforehand that the meeting was cancelled.
+[00:00:30.220 --> 00:00:33.720] Example, they were given instructions beforehand about the procedure.
+[00:00:34.620 --> 00:00:38.560] Example, we discussed the project beforehand to ensure everyone was on the same page.
+[00:00:39.380 --> 00:00:44.300] Summary, beforehand refers to something done or known in advance or prior
+[00:00:44.300 --> 00:00:44.900] to an event.
+[00:00:45.720 --> 00:00:48.400] Related words in advance, earlier, prior.
+[00:00:49.060 --> 00:00:51.220] Antonyms, afterward, subsequently,
+[00:00:52.060 --> 00:00:52.340] later.

@@ -1,11 +1,20 @@
-[00:00:00.000 --> 00:00:05.200] Arruption refers to the actor process of bursting forth or breaking out suddenly and violently.
-[00:00:05.200 --> 00:00:11.700] It is commonly used to describe the sudden release of material, energy, or emotion, often with explosive force.
-[00:00:11.700 --> 00:00:19.300] 1. Volcanic eruption refers to the sudden release of magma, gases, and volcanic ash from a volcano.
-[00:00:19.300 --> 00:00:25.000] Example, the volcanic eruption caused widespread destruction and displaced thousands of people.
-[00:00:25.300 --> 00:00:33.500] 2. Emotional eruption, in a figurative sense, describes a sudden and intense outburst of emotion, such as anger, excitement, or joy.
-[00:00:33.500 --> 00:00:38.500] Example, her eruption of laughter filled the room with warmth and happiness.
-[00:00:38.500 --> 00:00:47.700] 3. Other uses. Arruption can also describe any sudden and forceful bursting forth, such as an eruption of applause, violence, or activity.
-[00:00:47.700 --> 00:00:51.500] Example, the eruption of applause greeted the performer as they took the stage.
-[00:00:51.500 --> 00:01:00.000] Summary, eruption refers to a sudden, often violent outburst or release of energy, material, or emotion, whether natural, emotional, or situational.
-[00:01:00.000 --> 00:01:03.600] Related words, explosion, outburst, discharge, upheaval.
-[00:01:03.600 --> 00:01:07.000] Antonyms, calm, silence, stillness, peace.
+[00:00:00.000 --> 00:00:04.780] Eruption refers to the actor process of bursting forth or breaking out suddenly and violently.
+[00:00:05.300 --> 00:00:10.160] It is commonly used to describe the sudden release of material, energy, or emotion, often
+[00:00:10.160 --> 00:00:11.220] with explosive force.
+[00:00:11.940 --> 00:00:12.100] 1.
+[00:00:12.760 --> 00:00:17.560] Volcanic eruption refers to the sudden release of magma, gases, and volcanic
+[00:00:17.560 --> 00:00:18.620] ash from a volcano.
+[00:00:19.400 --> 00:00:24.160] Example, the volcanic eruption caused widespread destruction and displaced thousands of people.
+[00:00:24.980 --> 00:00:25.580] 2.
+[00:00:25.980 --> 00:00:31.280] Emotional eruption in a figurative sense describes a sudden and intense outburst of emotion, such as anger,
+[00:00:31.700 --> 00:00:32.820] excitement, or joy.
+[00:00:33.520 --> 00:00:37.520] Example, her eruption of laughter filled the room with warmth and happiness.
+[00:00:38.340 --> 00:00:38.940] 3.
+[00:00:39.240 --> 00:00:39.700] Other uses.
+[00:00:40.220 --> 00:00:45.500] Eruption can also describe any sudden and forceful bursting forth, such as an eruption of applause,
+[00:00:46.000 --> 00:00:47.180] violence, or activity.
+[00:00:47.700 --> 00:00:51.000] Example, the eruption of applause greeted the performer as they took the stage.
+[00:00:51.000 --> 00:00:55.740] Summary, eruption refers to a sudden, often violent, outburst or
+[00:00:55.740 --> 00:00:59.680] release of energy, material or emotion, whether natural, emotional or situational.
+[00:01:00.080 --> 00:01:03.380] Related words, explosion, outburst, discharge, upheaval.
+[00:01:03.700 --> 00:01:06.440] Antonyms, calm, silence, stillness, peace.

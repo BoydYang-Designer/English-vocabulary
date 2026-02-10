@@ -1,9 +1,19 @@
-[00:00:00.000 --> 00:00:07.000] Confined is a verb that means to restrict or limit someone or something to a specific area or scope.
-[00:00:07.000 --> 00:00:11.000] It can also refer to keeping someone or something within certain boundaries.
-[00:00:11.000 --> 00:00:13.000] Example sentences.
-[00:00:13.000 --> 00:00:21.000] 1. To restrict to a specific area or scope, the patient was confined to the hospital for a week due to the severity of the illness.
-[00:00:21.000 --> 00:00:26.000] The project was confined to a small budget, which limited its scope.
-[00:00:26.000 --> 00:00:32.000] 2. To keep within certain boundaries, the debate was confined to the topic of environmental policy.
-[00:00:32.000 --> 00:00:36.000] The dog was confined to the backyard while the repairs were being made.
-[00:00:36.000 --> 00:00:44.000] Summary. Confined means to limit or restrict someone or something to a particular area or scope or to keep within certain boundaries.
-[00:00:44.000 --> 00:00:52.000] Related words restrict, limit, and close bound. Antonyms, free, release, expand, liberate.
+[00:00:00.000 --> 00:00:04.580] Confine is a verb that means to restrict or limit someone or something
+[00:00:04.580 --> 00:00:06.760] to a specific area or scope.
+[00:00:07.240 --> 00:00:10.900] It can also refer to keeping someone or something within certain boundaries.
+[00:00:11.580 --> 00:00:12.320] Example sentences.
+[00:00:13.120 --> 00:00:13.400] 1.
+[00:00:14.000 --> 00:00:16.040] To restrict to a specific area or scope.
+[00:00:16.760 --> 00:00:21.100] The patient was confined to the hospital for a week due to the severity of the illness.
+[00:00:21.820 --> 00:00:25.640] The project was confined to a small budget, which limited its scope.
+[00:00:25.640 --> 00:00:26.320] 2.
+[00:00:26.780 --> 00:00:28.260] To keep within certain boundaries.
+[00:00:28.780 --> 00:00:31.640] The debate was confined to the topic of environmental policy.
+[00:00:32.200 --> 00:00:35.560] The dog was confined to the backyard while the repairs were being made.
+[00:00:36.360 --> 00:00:36.900] Summary.
+[00:00:37.600 --> 00:00:42.300] Confine means to limit or restrict someone or something to a particular area or scope
+[00:00:42.300 --> 00:00:44.000] or to keep within certain boundaries.
+[00:00:44.600 --> 00:00:45.280] Related words.
+[00:00:45.680 --> 00:00:47.480] Restrict, limit, enclose, bound.
+[00:00:48.240 --> 00:00:48.840] Antonyms.
+[00:00:49.080 --> 00:00:51.300] Free, release, expand, liberate.

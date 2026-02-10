@@ -1,10 +1,14 @@
-[00:00:00.000 --> 00:00:06.000] Actuate is a verb actuate actuated actuating with the following meanings.
-[00:00:06.000 --> 00:00:12.000] One, to cause a machine or device to operate, refers to the act of starting or setting a mechanism in motion.
-[00:00:12.000 --> 00:00:16.000] Example, the engineer actuated the system by flipping the switch.
-[00:00:16.000 --> 00:00:21.000] Example, the alarm is actuated by any motion detected in the room.
-[00:00:21.000 --> 00:00:28.000] Example, a stroller with a multi-step fold mechanism requires pressing a button and pulling a lever to actuate the folding process.
-[00:00:28.000 --> 00:00:35.000] Two, to motivate or drive someone to take action, describes prompting or encouraging someone to act.
-[00:00:35.000 --> 00:00:38.000] Example, his desire for success actuated him to work harder.
-[00:00:38.000 --> 00:00:42.000] Example, fear of failure actuated her to double check her work.
-[00:00:42.000 --> 00:00:48.000] Summary, actuate means to trigger or set in motion a machine or device or to motivate someone to take action.
-[00:00:48.000 --> 00:00:56.000] Related words, trigger, activate, motivate, drive. Antonyms, deactivate, halt, discourage, suppress.
+[00:00:00.000 --> 00:00:05.380] Actuate is a verb actuate actuated actuating with the following meanings.
+[00:00:06.080 --> 00:00:10.960] One, to cause a machine or device to operate refers to the act of starting or setting a
+[00:00:10.960 --> 00:00:11.860] mechanism in motion.
+[00:00:12.560 --> 00:00:15.920] Example, the engineer actuated the system by flipping the switch.
+[00:00:16.860 --> 00:00:20.580] Example, the alarm is actuated by any motion detected in the room.
+[00:00:21.120 --> 00:00:26.020] Example, a stroller with a multi -step fold mechanism requires pressing a button and pulling a lever to
+[00:00:26.020 --> 00:00:27.060] actuate the folding process.
+[00:00:28.420 --> 00:00:30.860] Two, to motivate or drive someone to take action.
+[00:00:31.380 --> 00:00:34.480] Describes prompting or encouraging someone to act.
+[00:00:34.980 --> 00:00:37.600] Example, his desire for success actuated him to work harder.
+[00:00:38.140 --> 00:00:41.500] Example, fear of failure actuated her to double -check her work.
+[00:00:42.120 --> 00:00:47.200] Summary, actuate means to trigger or set in motion a machine or device or to motivate someone to take action.
+[00:00:48.000 --> 00:00:51.160] Related words, trigger, activate, motivate, drive.
+[00:00:51.680 --> 00:00:55.000] Antonyms, deactivate, halt, discourage, suppress.

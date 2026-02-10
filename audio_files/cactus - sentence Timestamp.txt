@@ -1,5 +1,6 @@
-[00:00:00.000 --> 00:00:06.000] Cactus as a noun, cactus, singular, cactuses or cacti, plural.
-[00:00:06.000 --> 00:00:11.000] A cactus is a plant that lives in the desert and has many sharp points called spines.
-[00:00:11.000 --> 00:00:14.000] Examples, there we could see nothing but cacti.
-[00:00:14.000 --> 00:00:20.000] Cacti have thick, fleshy stems that store water, allowing them to survive in dry conditions.
-[00:00:20.000 --> 00:00:27.000] Instead of leaves, cacti have spines or needles that help reduce water loss and provide protection from herbivores.
+[00:00:00.000 --> 00:00:05.120] Cactus as a noun, cactus, singular, cactuses or cacti, plural.
+[00:00:06.680 --> 00:00:10.540] A cactus is a plant that lives in the desert and has many sharp points called spines.
+[00:00:10.960 --> 00:00:13.320] Examples, there we could see nothing but cacti.
+[00:00:13.800 --> 00:00:18.440] Cacti have thick, fleshy stems that store water, allowing them to survive in dry conditions.
+[00:00:20.000 --> 00:00:25.000] Instead of leaves, cacti have spines or needles that help reduce water loss and provide protection
+[00:00:25.000 --> 00:00:25.660] from herbivores.

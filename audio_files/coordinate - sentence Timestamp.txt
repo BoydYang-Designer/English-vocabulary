@@ -1,23 +1,28 @@
-[00:00:00.000 --> 00:00:04.000] coordinate as a noun, verb, and adjective.
-[00:00:04.000 --> 00:00:11.000] As a noun, one of a set of numbers or values used to determine a position on a map or grid.
-[00:00:11.000 --> 00:00:14.000] Example the GPS showed the exact coordinates of the hidden treasure.
-[00:00:14.000 --> 00:00:19.000] Example, the pilot entered the coordinates to navigate the aircraft.
-[00:00:19.000 --> 00:00:23.000] Two, an item of clothing that matches or complements another piece.
-[00:00:23.000 --> 00:00:28.000] Example, she bought a set of coordinates for her new outfit.
-[00:00:28.000 --> 00:00:31.000] The store sells jackets with matching coordinates.
-[00:00:31.000 --> 00:00:35.000] As a verb, coordinate, coordinated, coordinating.
-[00:00:35.000 --> 00:00:41.000] One, to organize or arrange activities, people, or things so that they work together effectively.
-[00:00:41.000 --> 00:00:46.000] Example, she coordinated the team's schedules to avoid conflicts.
-[00:00:46.000 --> 00:00:49.000] Example, the wedding planner coordinated every detail of the event.
-[00:00:49.000 --> 00:00:53.000] Two, to match or harmonize different elements together.
-[00:00:53.000 --> 00:00:56.000] Example, he coordinated his tie with his suit.
-[00:00:56.000 --> 00:01:00.000] Example, the colors of the decorations were carefully coordinated.
-[00:01:00.000 --> 00:01:06.000] As an adjective, one of equal importance or rank working together in a balanced way.
-[00:01:06.000 --> 00:01:10.000] The two departments have coordinate roles in the project.
-[00:01:10.000 --> 00:01:15.000] Example, the dancers moved in a coordinate manner during the performance.
-[00:01:15.000 --> 00:01:20.000] Summary, coordinate can refer to numerical values used to determine a position,
-[00:01:20.000 --> 00:01:23.000] matching clothing, or equal roles.
-[00:01:23.000 --> 00:01:27.000] As a verb, it means to organize or bring things into harmony.
-[00:01:27.000 --> 00:01:32.000] As an adjective, it describes things of equal importance or working together.
-[00:01:32.000 --> 00:01:36.000] Related words, organize, arrange, align, harmonize, match.
-[00:01:36.000 --> 00:01:40.000] Antonyms, disorder, mismatch, disorganize, disrupt.
+[00:00:00.000 --> 00:00:02.740] coordinate as a noun, verb, and adjective.
+[00:00:03.620 --> 00:00:08.560] As a noun, one of a set of numbers or values used to determine a position
+[00:00:08.560 --> 00:00:10.160] on a map or grid.
+[00:00:10.780 --> 00:00:14.160] Example, the GPS showed the exact coordinates of the hidden treasure.
+[00:00:14.440 --> 00:00:18.200] Example, the pilot entered the coordinates to navigate the aircraft.
+[00:00:18.880 --> 00:00:22.240] Two, an item of clothing that matches or complements another piece.
+[00:00:23.040 --> 00:00:26.080] Example, she bought a set of coordinates for her new outfit.
+[00:00:27.540 --> 00:00:30.440] The store sells jackets with matching coordinates.
+[00:00:31.260 --> 00:00:31.920] As a verb,
+[00:00:32.640 --> 00:00:34.840] coordinate, coordinated, coordinating.
+[00:00:35.500 --> 00:00:40.280] One, to organize or arrange activities, people, or things so that they work together effectively.
+[00:00:41.620 --> 00:00:45.080] Example, she coordinated the team's schedules to avoid conflicts.
+[00:00:45.980 --> 00:00:49.260] Example, the wedding planner coordinated every detail of the event.
+[00:00:49.740 --> 00:00:53.000] Two, to match or harmonize different elements together.
+[00:00:53.000 --> 00:00:56.420] Example, he coordinated his tie with his suit.
+[00:00:56.780 --> 00:01:00.180] Example, the colors of the decorations were carefully coordinated.
+[00:01:00.820 --> 00:01:02.000] As an adjective,
+[00:01:02.880 --> 00:01:06.740] one of equal importance or rank working together in a balanced way.
+[00:01:07.300 --> 00:01:10.420] The two departments have coordinate roles in the project.
+[00:01:10.820 --> 00:01:11.400] Example,
+[00:01:12.080 --> 00:01:14.680] the dancers moved in a coordinate manner during the performance.
+[00:01:15.420 --> 00:01:19.940] Summary, coordinate can refer to numerical values used to determine a position,
+[00:01:20.280 --> 00:01:22.820] matching clothing, or equal roles.
+[00:01:23.000 --> 00:01:24.280] As a verb,
+[00:01:25.080 --> 00:01:27.240] it means to organize or bring things into harmony.
+[00:01:27.620 --> 00:01:31.340] As an adjective, it describes things of equal importance or working together.
+[00:01:32.000 --> 00:01:35.620] Related words, organize, arrange, align, harmonize, match.
+[00:01:36.060 --> 00:01:39.440] Antonyms, disorder, mismatch, disorganize, disrupt.

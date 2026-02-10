@@ -1,8 +1,0 @@
-[00:00:00.000 --> 00:00:06.300] Misconduct, as a noun, refers to improper, inappropriate, or unacceptable behavior, especially
-[00:00:06.300 --> 00:00:08.840] in a professional or official context.
-[00:00:08.840 --> 00:00:13.340] It typically involves actions that violate established rules, standards, codes of conduct,
-[00:00:13.340 --> 00:00:15.400] or legal regulations.
-[00:00:15.400 --> 00:00:19.560] One example, the company's CEO was accused of financial misconduct for embezzling company
-[00:00:19.560 --> 00:00:20.560] funds.
-[00:00:20.560 --> 00:00:26.640] Two, example, the company has a zero tolerance policy for workplace misconduct, including
-[00:00:26.640 --> 00:00:28.160] sexual harassment and bullying.

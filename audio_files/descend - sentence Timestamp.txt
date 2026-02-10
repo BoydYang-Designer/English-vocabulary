@@ -1,19 +1,33 @@
-[00:00:00.000 --> 00:00:04.320] Descend is a verb, descend, descend, descending.
-[00:00:04.320 --> 00:00:10.800] It means to move or fall downward to come down from a higher place or to decline in status, quality or condition.
-[00:00:10.800 --> 00:00:16.440] 1. To move or fall downward or come down from a higher place and to slope or lead downward.
-[00:00:16.440 --> 00:00:20.640] Example. The plane began to descend as it approached the airport.
-[00:00:20.640 --> 00:00:27.000] Example. Wait for the elevator to descend. Example. You can ride the escalator up but have to descend on foot.
-[00:00:27.160 --> 00:00:33.160] Example. Desending the mountain was even more dangerous than climbing, ascending it.
-[00:00:33.160 --> 00:00:36.840] Example. The children descended the staircase silently.
-[00:00:36.840 --> 00:00:41.320] Example. The cat slowly descended from the tree after being stuck for hours.
-[00:00:41.320 --> 00:00:47.080] 2. To go or change to a worse state or condition. To decline or deteriorate. Example.
-[00:00:47.080 --> 00:00:54.200] After his wife died, he descended into a deep depression. Example. As the evening wore on, the party descended into chaos.
-[00:00:54.200 --> 00:01:03.560] 3. To be derived from an ancestor. Example. She descends from a long line of artists. Example. He is descended from Confucius.
-[00:01:03.560 --> 00:01:13.640] 4. To pass to a later generation. Example. The family estate will descend to the eldest son. Example. The custom has descended to our day. Example.
-[00:01:13.640 --> 00:01:17.720] Recent evidence supports the theory that birds descended from dinosaurs.
-[00:01:17.720 --> 00:01:24.760] 5. To appear or happen like something that comes down from the sky. Example. The soldiers descended on the enemy camp at dawn.
-[00:01:24.760 --> 00:01:33.240] Example. Bob and his girlfriend descended on us for the weekend. Example. In autumn, thousands of students descend upon visit our town.
-[00:01:33.240 --> 00:01:37.720] Example. Silence descended upon the crowd. The crowd became silent.
-[00:01:37.720 --> 00:01:43.080] Summary. Descend means to move downward, fall from a higher position or decline in condition.
-[00:01:43.080 --> 00:01:49.640] It can also refer to the passing of traits or property through generations or an event happening like something falling from the sky.
-[00:01:49.640 --> 00:01:57.240] Related words fall, sink, decline, deteriorate, drop, slope, originate. Antonyms ascend, rise, elevate, improve.
+[00:00:00.000 --> 00:00:01.560] Descend is a verb.
+[00:00:01.980 --> 00:00:04.020] Descend, descended, descending.
+[00:00:04.360 --> 00:00:08.300] It means to move or fall downward to come down from a higher place or to decline in status,
+[00:00:08.640 --> 00:00:09.840] quality, or condition.
+[00:00:11.120 --> 00:00:15.880] One, to move or fall downward or come down from a higher place and to slope or lead downward.
+[00:00:16.660 --> 00:00:19.720] Example, the plane began to descend as it approached the airport.
+[00:00:20.920 --> 00:00:22.660] Example, wait for the elevator to descend.
+[00:00:23.200 --> 00:00:26.080] Example, you can ride the escalator up but have to descend on foot.
+[00:00:27.220 --> 00:00:32.540] Example, descending the mountain was even more dangerous than climbing ascending it.
+[00:00:33.240 --> 00:00:36.000] Example, the children descended the staircase silently.
+[00:00:36.860 --> 00:00:40.520] Example, the cat slowly descended from the tree after being stuck for hours.
+[00:00:40.520 --> 00:00:46.000] Two, to go or change to a worse state or condition, to decline or deteriorate.
+[00:00:46.200 --> 00:00:49.920] Example, after his wife died he descended into a deep depression.
+[00:00:50.640 --> 00:00:53.600] Example, as the evening war on the party descended into chaos.
+[00:00:54.240 --> 00:00:55.960] Three, to be derived from an ancestor.
+[00:00:56.480 --> 00:00:57.000] Example,
+[00:00:57.600 --> 00:00:59.500] she descends from a long line of artists.
+[00:01:00.520 --> 00:01:03.020] Example, he has descended from Confucius.
+[00:01:03.020 --> 00:01:05.760] Four, to pass to a later generation.
+[00:01:06.580 --> 00:01:09.640] Example, the family estate will descend to the eldest son.
+[00:01:09.920 --> 00:01:12.300] Example, the custom has descended to our day.
+[00:01:12.800 --> 00:01:16.660] Example, recent evidence supports the theory that birds descended from dinosaurs.
+[00:01:17.600 --> 00:01:20.680] Five, to appear or happen like something that comes down from the sky.
+[00:01:21.400 --> 00:01:24.200] Example, the soldiers descended on the enemy camp at dawn.
+[00:01:24.820 --> 00:01:28.100] Example, Bob and his girlfriend descended on us for the weekend.
+[00:01:28.780 --> 00:01:32.580] Example, in autumn, thousands of students descend upon visit our town.
+[00:01:33.300 --> 00:01:35.860] Example, silence descended upon the crowd.
+[00:01:36.100 --> 00:01:37.000] The crowd became silent.
+[00:01:37.600 --> 00:01:42.500] Summary, descend means to move downward, fall from a higher position or decline in condition.
+[00:01:43.160 --> 00:01:47.980] It can also refer to the passing of traits or property through generations or an event happening like
+[00:01:47.980 --> 00:01:49.120] something falling from the sky.
+[00:01:49.740 --> 00:01:54.400] Related words, fall, sink, decline, deteriorate, drop, slope, originate.
+[00:01:54.580 --> 00:01:56.820] Antonyms ascend, rise, elevate, improve.

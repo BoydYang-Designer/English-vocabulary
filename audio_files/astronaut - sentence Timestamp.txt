@@ -1,8 +1,10 @@
-[00:00:00.000 --> 00:00:06.500] Astronaut as a noun. A person trained to travel and work in space, often as part of a space mission.
-[00:00:06.500 --> 00:00:11.500] Example the astronaut spent six months aboard the International Space Station.
-[00:00:11.500 --> 00:00:15.500] Example, she dreamed of becoming an astronaut and exploring Mars.
-[00:00:15.500 --> 00:00:19.500] Example, the astronauts conducted experiments in zero gravity.
-[00:00:19.500 --> 00:00:23.500] Example, Neil Armstrong was the first astronaut to walk on the moon.
-[00:00:23.500 --> 00:00:29.500] Summary, an astronaut is a trained space traveler who participates in space missions and scientific exploration.
-[00:00:30.500 --> 00:00:34.500] Related words, cosmonaut, space traveler, explorer, pilot.
-[00:00:34.500 --> 00:00:38.500] Antonim's Earth-bound civilian, non-traveler.
+[00:00:00.000 --> 00:00:01.460] Astronaut as a noun.
+[00:00:02.560 --> 00:00:06.360] A person trained to travel and work in space, often as part of a space mission.
+[00:00:07.260 --> 00:00:11.120] Example, the astronaut spent six months aboard the International Space Station.
+[00:00:12.140 --> 00:00:15.360] Example, she dreamed of becoming an astronaut and exploring Mars.
+[00:00:15.960 --> 00:00:18.980] Example, the astronauts conducted experiments in zero gravity.
+[00:00:19.500 --> 00:00:22.500] Example, Neil Armstrong was the first astronaut to walk on the moon.
+[00:00:24.060 --> 00:00:28.620] Summary, an astronaut is a trained space traveler who participates in space missions and
+[00:00:28.620 --> 00:00:29.800] scientific exploration.
+[00:00:30.660 --> 00:00:34.260] Related words, cosmonaut, space traveler, explorer, pilot.
+[00:00:34.900 --> 00:00:37.820] Antonyms, earthbound civilian, non -traveler.

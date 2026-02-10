@@ -1,11 +1,17 @@
-[00:00:00.000 --> 00:00:09.640] Alienate as a verb, alienate, alienated alienating means to cause someone to feel isolated, estranged, or disconnected from a group, person, or environment.
-[00:00:09.640 --> 00:00:15.640] It can also mean to turn someone away from affection, loyalty, or interest, often leading to a loss of support or connection.
-[00:00:15.640 --> 00:00:23.800] One, to cause someone to feel isolated or estranged, example, his refusal to listen to others' opinions alienated him from his friends.
-[00:00:23.800 --> 00:00:24.800] Example,
-[00:00:25.800 --> 00:00:29.800] The changes in the company's culture have alienated many long-term employees.
-[00:00:29.800 --> 00:00:36.800] Number two, to turn away affection, loyalty, or interest, often resulting in a loss of support or connection.
-[00:00:36.800 --> 00:00:42.800] Example, her constant demands alienated her colleagues, making collaboration difficult.
-[00:00:42.800 --> 00:00:48.800] Example, his neglectful behavior eventually alienated his partner's affections, leading to a breakdown in their relationship.
-[00:00:49.800 --> 00:00:57.800] Summary, alienate, refers to the act of making someone feel isolated or estranged, or causing a loss of affection, loyalty, or connection.
-[00:00:57.800 --> 00:01:02.800] Related words, estranged, isolate, distance, detach.
-[00:01:02.800 --> 00:01:05.800] Antonyms, unite, include, reconcile, engage.
+[00:00:00.000 --> 00:00:01.420] Alienate as a verb.
+[00:00:02.320 --> 00:00:07.280] Alienate, alienated, alienating, means to cause someone to feel isolated, estranged, or
+[00:00:07.280 --> 00:00:09.540] disconnected from a group, person, or environment.
+[00:00:09.820 --> 00:00:15.260] It can also mean to turn someone away from affection, loyalty, or interest, often leading to a loss of support or connection.
+[00:00:15.980 --> 00:00:18.840] One, to cause someone to feel isolated or estranged.
+[00:00:19.100 --> 00:00:23.440] Example, his refusal to listen to others' opinions alienated him from his friends.
+[00:00:24.040 --> 00:00:24.500] Example,
+[00:00:26.220 --> 00:00:29.820] the changes in the company's culture have alienated many long -term employees.
+[00:00:30.540 --> 00:00:35.320] Number two, to turn away affection, loyalty, or interest, often resulting
+[00:00:35.320 --> 00:00:37.120] in a loss of support or connection.
+[00:00:37.760 --> 00:00:42.360] Example, her constant demands alienated her colleagues, making collaboration difficult.
+[00:00:43.040 --> 00:00:48.000] Example, his neglectful behavior eventually alienated his partner's affections, leading to
+[00:00:48.000 --> 00:00:49.200] a breakdown in their relationship.
+[00:00:49.880 --> 00:00:54.480] Summary, alienate refers to the act of making someone feel isolated or
+[00:00:54.480 --> 00:00:57.760] estranged or causing a loss of affection, loyalty, or connection.
+[00:00:58.200 --> 00:01:01.860] Related words, estranged, isolate, distance, detach.
+[00:01:02.500 --> 00:01:05.840] Antonyms unite, include, reconcile, engage.

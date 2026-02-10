@@ -1,16 +1,14 @@
-[00:00:00.000 --> 00:00:03.520] Blockage is a noun with the following meanings.
-[00:00:03.520 --> 00:00:06.500] One, an obstruction that prevents movement or flow,
-[00:00:06.500 --> 00:00:08.660] something that blocks a passage or channel.
-[00:00:08.660 --> 00:00:12.480] Example, the heavy snowfall caused a blockage on the road,
-[00:00:12.480 --> 00:00:14.400] making it impassable.
-[00:00:14.400 --> 00:00:17.700] Example, the doctor explained that the blockage in
-[00:00:17.700 --> 00:00:20.240] her arteries could lead to serious health issues.
-[00:00:20.240 --> 00:00:23.380] Two, a state of being blocked or obstructed,
-[00:00:23.380 --> 00:00:27.180] which can refer to physical spaces or metaphorical situations.
-[00:00:27.180 --> 00:00:29.400] Example, the blockage and
-[00:00:29.400 --> 00:00:33.800] communication between the two departments hindered the project's progress.
-[00:00:33.800 --> 00:00:38.760] Example, he experienced a mental blockage that prevented him from coming up with new ideas.
-[00:00:38.760 --> 00:00:44.080] Summary, blockage refers to an obstruction or barrier that prevents movement or progress,
-[00:00:44.080 --> 00:00:46.820] whether physically or metaphorically.
-[00:00:46.820 --> 00:00:50.760] Related words, obstruction, impediment barrier, clog,
-[00:00:50.760 --> 00:00:54.360] antinims, clearance, passage, opening, flow.
+[00:00:00.600 --> 00:00:03.040] Blockage is a noun with the following meanings.
+[00:00:03.880 --> 00:00:08.280] One, an obstruction that prevents movement or flow, something that blocks a passage or channel.
+[00:00:08.860 --> 00:00:09.360] Example,
+[00:00:10.080 --> 00:00:13.800] the heavy snowfall caused a blockage on the road, making it impassable.
+[00:00:14.900 --> 00:00:19.740] Example, the doctor explained that the blockage in her arteries could lead to serious health issues.
+[00:00:20.400 --> 00:00:20.700] Two,
+[00:00:21.340 --> 00:00:26.380] a state of being blocked or obstructed, which can refer to physical spaces or metaphorical situations.
+[00:00:27.240 --> 00:00:27.820] Example,
+[00:00:28.780 --> 00:00:32.820] the blockage in communication between the two departments hindered the project's progress.
+[00:00:33.780 --> 00:00:37.880] Example, he experienced a mental blockage that prevented him from coming up with new ideas.
+[00:00:38.760 --> 00:00:43.440] Summary, blockage refers to an obstruction or barrier that prevents movement or progress,
+[00:00:44.000 --> 00:00:45.740] whether physically or metaphorically.
+[00:00:46.640 --> 00:00:49.900] Related words, obstruction, impediment, barrier, clog.
+[00:00:50.760 --> 00:00:53.960] Antonyms, clearance, passage, opening, flow.

@@ -1,24 +1,31 @@
-[00:00:00.000 --> 00:00:02.800] Appeal as a noun and a verb.
-[00:00:02.800 --> 00:00:07.840] As a noun, one, an appeal is a formal request for a decision to be reconsidered,
-[00:00:07.840 --> 00:00:12.240] usually in a legal context where someone asks a higher authority to review a case.
-[00:00:12.240 --> 00:00:16.720] Example, the defendant filed an appeal after being convicted of theft.
-[00:00:16.720 --> 00:00:20.380] Example, the lawyer's appeal was based on new evidence that had not been
-[00:00:20.380 --> 00:00:22.240] considered in the original trial.
-[00:00:22.240 --> 00:00:27.840] Two, appeal can refer to the quality of being attractive or interesting to someone.
-[00:00:28.240 --> 00:00:33.600] Example, the appeal of the new movie was its unique storyline and stunning visuals.
-[00:00:33.600 --> 00:00:38.560] Example, his charm and charisma gave him a natural appeal to the audience.
-[00:00:38.560 --> 00:00:43.440] Three, appeal can also refer to a serious or urgent request for help or support.
-[00:00:43.440 --> 00:00:48.160] Example, the charity launched an appeal for donations to help the victims of the disaster.
-[00:00:48.160 --> 00:00:52.320] Example, the government made an appeal for calm after the unrest in the city.
-[00:00:52.320 --> 00:00:57.440] As a verb, one, to appeal means to make a formal request to a higher
-[00:00:57.440 --> 00:01:02.000] authority for a decision to be changed or reviewed, especially in a legal context.
-[00:01:03.040 --> 00:01:07.200] Example, the lawyer appealed the court's decision, hoping for a more lenient sentence.
-[00:01:08.000 --> 00:01:11.680] Example, they appealed to the judge for a reduction in their sentence.
-[00:01:12.720 --> 00:01:18.240] Two, to appeal can mean to make a serious or urgent request for something, often in the form of
-[00:01:18.240 --> 00:01:23.520] help or support. Example, the organization appealed for donations to help those affected by the
-[00:01:23.520 --> 00:01:28.800] hurricane. Example, the police appealed to the public for information about the missing person.
-[00:01:29.440 --> 00:01:35.360] Three, to appeal also means to attract or be interesting to someone. Example, the new video game
-[00:01:35.360 --> 00:01:40.800] appeals to fans of both action and strategy genres. Example, the design of the house appeals to
-[00:01:40.800 --> 00:01:48.240] modern tastes with its minimalist style. Summary, as a noun, appeal refers to a formal request,
-[00:01:48.240 --> 00:01:53.440] attractiveness, or a plea for help. As a verb, it means to make a request or to attract someone
-[00:01:53.440 --> 00:02:03.040] interest. Related words, request charm plea attraction petition and repulse deter reject.
+[00:00:00.000 --> 00:00:02.280] Appeal as a noun and a verb.
+[00:00:03.020 --> 00:00:07.860] As a noun, one, an appeal is a formal request for a decision to be reconsidered,
+[00:00:07.900 --> 00:00:11.580] usually in a legal context where someone asks a higher authority to review a case.
+[00:00:12.600 --> 00:00:16.180] Example, the defendant filed an appeal after being convicted of theft.
+[00:00:17.080 --> 00:00:21.900] Example, the lawyer's appeal was based on new evidence that had not been considered in the original trial.
+[00:00:22.520 --> 00:00:22.700] Two,
+[00:00:23.400 --> 00:00:27.220] appeal can refer to the quality of being attractive or interesting to someone.
+[00:00:28.420 --> 00:00:32.820] Example, the appeal of the new movie was its unique storyline and stunning visuals.
+[00:00:33.680 --> 00:00:37.540] Example, his charm and charisma gave him a natural appeal to the audience.
+[00:00:38.480 --> 00:00:42.500] Three, appeal can also refer to a serious or urgent request for help or support.
+[00:00:43.460 --> 00:00:47.460] Example, the charity launched an appeal for donations to help the victims of the disaster.
+[00:00:48.240 --> 00:00:51.680] Example, the government made an appeal for calm after the unrest in the city.
+[00:00:52.260 --> 00:00:52.820] As a verb.
+[00:00:54.000 --> 00:00:58.840] One, to appeal means to make a formal request to a higher authority for a decision to be
+[00:00:58.840 --> 00:01:01.740] changed or reviewed, especially in a legal context.
+[00:01:03.100 --> 00:01:07.080] Example, the lawyer appealed the court's decision hoping for a more lenient sentence.
+[00:01:08.080 --> 00:01:08.600] Example,
+[00:01:09.220 --> 00:01:11.600] they appealed to the judge for a reduction in their sentence.
+[00:01:12.440 --> 00:01:12.960] Two,
+[00:01:13.560 --> 00:01:18.480] to appeal can mean to make a serious or urgent request for something, often in the form of help
+[00:01:18.480 --> 00:01:18.880] or support.
+[00:01:19.700 --> 00:01:24.000] Example, the organization appealed for donations to help those affected by the hurricane.
+[00:01:24.680 --> 00:01:25.240] Example,
+[00:01:25.840 --> 00:01:28.740] the police appealed to the public for information about the missing person.
+[00:01:29.780 --> 00:01:32.980] Three, to appeal also means to attract or be interesting to someone.
+[00:01:33.500 --> 00:01:37.960] Example, the new video game appeals to fans of both action and strategy genres.
+[00:01:38.620 --> 00:01:42.640] Example, the design of the house appeals to modern tastes with its minimalist style.
+[00:01:43.260 --> 00:01:47.680] Summary, as a noun, appeal refers to a formal request,
+[00:01:48.340 --> 00:01:50.220] attractiveness or a plea for help.
+[00:01:50.740 --> 00:01:53.960] As a verb, it means to make a request or to attract someone's interest.
+[00:01:54.780 --> 00:02:00.280] Related words, request, charm, plea, attraction, petition and repulse, deter, reject.

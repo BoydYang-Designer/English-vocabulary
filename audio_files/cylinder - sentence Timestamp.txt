@@ -1,12 +1,16 @@
-[00:00:00.000 --> 00:00:03.220] Cylinder is a noun with the following meanings,
-[00:00:03.220 --> 00:00:09.660] A, a three-dimensional geometric shape with two parallel circular bases connected by a curved surface.
-[00:00:09.660 --> 00:00:15.060] Example, the engineer calculated the volume of the cylinder using its radius and height.
-[00:00:15.060 --> 00:00:20.140] Example, the gas tank is shaped like a cylinder for better storage and handling.
-[00:00:20.140 --> 00:00:24.660] Example, the pipes in the building are cylindrical, allowing smooth water flow.
-[00:00:24.660 --> 00:00:28.540] B, mechanical, a cylindrical component of a machine,
-[00:00:28.760 --> 00:00:33.480] often used to house or support moving parts or to contain fluids under pressure.
-[00:00:33.480 --> 00:00:37.620] Example, the car's engine has several cylinders that drive the pistons.
-[00:00:37.620 --> 00:00:42.620] Example, the hydraulic cylinder is used to lift heavy loads and construction machinery.
-[00:00:42.620 --> 00:00:48.380] Summary, a cylinder is a three-dimensional shape with two circular bases and a curved surface,
-[00:00:48.380 --> 00:00:54.660] and it can also refer to a mechanical component in machines, typically used to hold or move objects.
-[00:00:54.660 --> 00:01:00.580] Related words, tube, barrel, pipe, drum and m cubes fear box square.
+[00:00:00.000 --> 00:00:02.940] Cylinder is a noun with the following meanings.
+[00:00:03.460 --> 00:00:03.600] A.
+[00:00:03.920 --> 00:00:09.280] A three -dimensional geometric shape with two parallel circular bases connected by a curved surface.
+[00:00:09.980 --> 00:00:14.720] Example, the engineer calculated the volume of the cylinder using its radius and height.
+[00:00:15.280 --> 00:00:19.780] Example, the gas tank is shaped like a cylinder for better storage and handling.
+[00:00:20.340 --> 00:00:24.200] Example, the pipes in the building are cylindrical, allowing smooth water flow.
+[00:00:24.960 --> 00:00:25.280] B.
+[00:00:25.920 --> 00:00:28.120] Mechanical, a cylindrical component of a machine,
+[00:00:28.740 --> 00:00:32.840] often used to house or support moving parts or to contain fluids under pressure.
+[00:00:33.520 --> 00:00:36.600] Example, the car's engine has several cylinders that drive the pistons.
+[00:00:37.560 --> 00:00:41.320] Example, the hydraulic cylinder is used to lift heavy loads in construction machinery.
+[00:00:42.580 --> 00:00:43.180] Summary,
+[00:00:43.860 --> 00:00:48.760] a cylinder is a three -dimensional shape with two circular bases and a curved surface, and it can
+[00:00:48.760 --> 00:00:53.560] also refer to a mechanical component in machines, typically used to hold or move objects.
+[00:00:54.580 --> 00:00:59.360] Related words, tube, barrel, pipe, drum and m -cube sphere
+[00:00:59.360 --> 00:01:00.160] box square.

@@ -1,14 +1,23 @@
-[00:00:00.000 --> 00:00:06.400] Envelope is a noun, one, paper container for documents or special occasions, a flat,
-[00:00:06.400 --> 00:00:12.320] usually rectangular or square paper container used for enclosing a letter, document, or special item.
-[00:00:12.960 --> 00:00:18.160] It is often sealed and addressed for mailing. Additionally, envelopes can be used for symbolic
-[00:00:18.160 --> 00:00:24.000] purposes, such as for gifts or ceremonial occasions, like the red envelopes given during Chinese
-[00:00:24.000 --> 00:00:29.520] New Year. Examples, she sealed the letter in an envelope and addressed it to her friend. The
-[00:00:29.520 --> 00:00:34.720] envelope was beautifully decorated with a floral design. He opened the envelope with anticipation,
-[00:00:34.720 --> 00:00:39.920] eager to read the news inside. She received a red envelope for Chinese New Year, symbolizing
-[00:00:39.920 --> 00:00:46.240] good luck and prosperity. Two, metaphorical use, covering or surrounding, something that covers
-[00:00:46.240 --> 00:00:52.160] or surrounds another object often used metaphorically to describe a boundary or outer layer. Examples,
-[00:00:53.040 --> 00:00:58.880] the thick fog formed an envelope around the city, making it hard to see. The protective envelope
-[00:00:58.880 --> 00:01:04.240] of the spacecraft shielded it from the harsh elements of space. Summary, an envelope can refer to a
-[00:01:04.240 --> 00:01:09.600] paper container for enclosing documents or a symbolic item used for special occasions, or it can
-[00:01:09.600 --> 00:01:15.760] describe something that surrounds or covers another object. Related words, cover, casing, package,
-[00:01:15.760 --> 00:01:25.760] wrapper, antennas reveal, expose, uncover.
+[00:00:00.000 --> 00:00:01.180] Envelope is a noun.
+[00:00:01.680 --> 00:00:01.820] One,
+[00:00:02.620 --> 00:00:04.980] paper container for documents or special occasions.
+[00:00:05.640 --> 00:00:10.960] A flat, usually rectangular or square paper container used for enclosing a letter, document,
+[00:00:11.480 --> 00:00:12.320] or special item.
+[00:00:13.000 --> 00:00:15.160] It is often sealed and addressed for mailing.
+[00:00:16.100 --> 00:00:20.560] Additionally, envelopes can be used for symbolic purposes, such as for gifts or
+[00:00:20.560 --> 00:00:24.460] ceremonial occasions, like the red envelopes given during Chinese New Year.
+[00:00:25.160 --> 00:00:29.040] Examples, she sealed the letter in an envelope and addressed it to her friend.
+[00:00:29.040 --> 00:00:32.360] The envelope was beautifully decorated with a floral design.
+[00:00:32.760 --> 00:00:36.100] He opened the envelope with anticipation, eager to read the news inside.
+[00:00:36.940 --> 00:00:41.140] She received a red envelope for Chinese New Year, symbolizing good luck and prosperity.
+[00:00:42.140 --> 00:00:47.660] Two, metaphorical use, covering or surrounding, something that covers or surrounds another object,
+[00:00:47.900 --> 00:00:50.980] often used metaphorically to describe a boundary or outer layer.
+[00:00:51.560 --> 00:00:51.860] Examples,
+[00:00:53.100 --> 00:00:57.080] the thick fog formed an envelope around the city, making it hard to see.
+[00:00:57.680 --> 00:01:01.800] The protective envelope of the spacecraft shielded it from the harsh elements of space.
+[00:01:02.420 --> 00:01:07.320] Summary, an envelope can refer to a paper container for enclosing documents or a symbolic item
+[00:01:07.320 --> 00:01:08.460] used for special occasions,
+[00:01:09.120 --> 00:01:12.080] or it can describe something that surrounds or covers another object.
+[00:01:12.800 --> 00:01:16.120] Related words, cover, casing, package, wrapper.
+[00:01:16.860 --> 00:01:18.740] Antonyms, reveal, expose,
+[00:01:19.560 --> 00:01:19.780] uncover.

@@ -1,12 +1,15 @@
-[00:00:00.000 --> 00:00:05.000] Continuous means something that happens or exists without a break or interruption.
-[00:00:05.000 --> 00:00:08.000] Example sentences.
-[00:00:08.000 --> 00:00:14.000] The continuous lines and curves of the smartphone's design make it ergonomic and visually appealing.
-[00:00:14.000 --> 00:00:22.000] The continuous integration of sustainable materials throughout the product design reflects the company's commitment to eco-friendly practices.
-[00:00:22.000 --> 00:00:27.000] The continuous noise from the construction site made it difficult to concentrate.
-[00:00:27.000 --> 00:00:33.000] The team worked tirelessly through a week of continuous meetings to finalize the project proposal.
-[00:00:33.000 --> 00:00:39.000] We experienced a week of continuous rain which caused flooding in many low-lying areas.
-[00:00:39.000 --> 00:00:43.000] The continuous flow of traffic made crossing the street challenging.
-[00:00:43.000 --> 00:00:45.000] Summary.
-[00:00:45.000 --> 00:00:51.000] Continuous refers to something that happens without interruption or maintains a steady, unbroken state.
-[00:00:51.000 --> 00:00:54.000] Related words uninterrupted ongoing steady constant.
-[00:00:54.000 --> 00:00:58.000] Antonyms intermittent sporadic, broken, discontinuous.
+[00:00:00.000 --> 00:00:04.860] Continuous means something that happens or exists without a break or interruption.
+[00:00:05.760 --> 00:00:06.960] Example sentences.
+[00:00:08.340 --> 00:00:13.560] The continuous lines and curves of the smartphone's design make it ergonomic and visually appealing.
+[00:00:15.100 --> 00:00:19.820] The continuous integration of sustainable materials throughout the product design reflects the company's
+[00:00:19.820 --> 00:00:21.680] commitment to eco -friendly practices.
+[00:00:22.200 --> 00:00:25.980] The continuous noise from the construction site made it difficult to concentrate.
+[00:00:26.760 --> 00:00:31.420] The team worked tirelessly through a week of continuous meetings to finalize the
+[00:00:31.420 --> 00:00:32.280] project proposal.
+[00:00:33.120 --> 00:00:38.140] We experienced a week of continuous rain which caused flooding in many low -lying areas.
+[00:00:39.020 --> 00:00:42.600] The continuous flow of traffic made crossing the street challenging.
+[00:00:43.600 --> 00:00:44.360] Summary.
+[00:00:44.820 --> 00:00:49.420] Continuous refers to something that happens without interruption or maintains a steady,
+[00:00:49.680 --> 00:00:50.480] unbroken state.
+[00:00:50.480 --> 00:00:54.080] Related words uninterrupted, ongoing, steady, constant.
+[00:00:54.340 --> 00:00:57.420] Antonyms intermittent, sporadic, broken, discontinuous.

@@ -1,9 +1,10 @@
-[00:00:00.000 --> 00:00:04.240] Ingrost as an adjective, completely focused or absorbed in something,
-[00:00:04.240 --> 00:00:07.540] often to the exclusion of everything else.
-[00:00:07.540 --> 00:00:12.200] Example, she was so engrossed in her book that she didn't hear the phone ring.
-[00:00:12.200 --> 00:00:17.640] Example, he sat engrossed in thought, unaware of his surroundings.
-[00:00:17.640 --> 00:00:21.920] Example, the children were engrossed in the movie and didn't notice the time passing.
-[00:00:21.920 --> 00:00:25.680] Example, he became engrossed in his work and forgot to eat lunch.
-[00:00:26.080 --> 00:00:31.040] Summary, engrost means being fully absorbed in something, giving it complete attention.
-[00:00:31.040 --> 00:00:35.360] Related words, absorbed, captivated, immersed, preoccupied, fixated.
-[00:00:35.360 --> 00:00:39.520] Antonyms, distracted, uninterested, indifferent, detached.
+[00:00:00.000 --> 00:00:04.940] Engrossed as an adjective, completely focused or absorbed in something, often to
+[00:00:04.940 --> 00:00:06.920] the exclusion of everything else.
+[00:00:08.100 --> 00:00:12.060] Example, she was so engrossed in her book that she didn't hear the phone ring.
+[00:00:12.300 --> 00:00:16.940] Example, he sat engrossed in thought, unaware of his surroundings.
+[00:00:17.980 --> 00:00:21.560] Example, the children were engrossed in the movie and didn't notice the time passing.
+[00:00:22.000 --> 00:00:25.080] Example, he became engrossed in his work and forgot to eat lunch.
+[00:00:25.920 --> 00:00:26.480] Summary,
+[00:00:27.120 --> 00:00:30.440] engrossed means being fully absorbed in something, and giving it complete attention.
+[00:00:31.080 --> 00:00:34.980] Related words, absorbed, captivated, immersed, preoccupied, fixated.
+[00:00:35.400 --> 00:00:38.880] Antonyms, distracted, uninterested, indifferent, detached.

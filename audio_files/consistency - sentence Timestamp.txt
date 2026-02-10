@@ -1,15 +1,20 @@
-[00:00:00.000 --> 00:00:03.400] Consistency is a noun with the following meanings.
-[00:00:03.400 --> 00:00:08.800] One, the quality of always behaving or performing in a similar way
-[00:00:08.800 --> 00:00:14.300] refers to maintaining the same standards, patterns, or behavior over time.
-[00:00:14.300 --> 00:00:19.600] Example sentences, the teacher values consistency in student effort and work ethic.
-[00:00:19.600 --> 00:00:23.600] Her consistency in delivering high quality results impressed her supervisors.
-[00:00:23.600 --> 00:00:26.600] There is no consistency between the movie and the book.
-[00:00:26.700 --> 00:00:30.500] Two, the degree of thickness or firmness of a substance
-[00:00:30.500 --> 00:00:35.200] refers to how dense, thick, or firm something is.
-[00:00:35.200 --> 00:00:40.800] Example sentences, the consistency of the sauce was too thick, so I added more water.
-[00:00:40.800 --> 00:00:44.200] The consistency of the batter needs to be smooth before baking.
-[00:00:44.200 --> 00:00:46.800] She mixed the dough to the right consistency.
-[00:00:46.800 --> 00:00:52.300] Summary, consistency refers to the reliability of performance or behavior over time
-[00:00:52.300 --> 00:00:55.400] as well as the texture or thickness of a substance.
-[00:00:55.500 --> 00:00:58.400] Related words, reliability, steadiness, uniformity, coherence,
-[00:00:58.400 --> 00:01:02.400] antinims, inconsistency, irregularity, variability, fluctuation.
+[00:00:00.000 --> 00:00:02.720] Consistency is a noun with the following meanings.
+[00:00:03.600 --> 00:00:03.760] 1.
+[00:00:04.440 --> 00:00:09.400] The quality of always behaving or performing in a similar way refers to
+[00:00:09.400 --> 00:00:13.380] maintaining the same standards, patterns, or behavior over time.
+[00:00:14.220 --> 00:00:15.060] Example sentences.
+[00:00:15.700 --> 00:00:18.840] The teacher values consistency in student effort and work ethic.
+[00:00:19.640 --> 00:00:23.140] Her consistency in delivering high -quality results impressed her supervisors.
+[00:00:23.660 --> 00:00:25.940] There is no consistency between the movie and the book.
+[00:00:25.940 --> 00:00:26.920] 2.
+[00:00:27.520 --> 00:00:32.340] The degree of thickness or firmness of a substance refers to how dense, thick,
+[00:00:32.620 --> 00:00:33.740] or firm something is.
+[00:00:35.160 --> 00:00:36.020] Example sentences.
+[00:00:37.080 --> 00:00:40.140] The consistency of the sauce was too thick, so I added more water.
+[00:00:40.740 --> 00:00:43.740] The consistency of the batter needs to be smooth before baking.
+[00:00:44.200 --> 00:00:45.880] She mixed the dough to the right consistency.
+[00:00:46.800 --> 00:00:47.320] Summary.
+[00:00:47.860 --> 00:00:52.840] Consistency refers to the reliability of performance or behavior over time, as well as the
+[00:00:52.840 --> 00:00:54.360] texture or thickness of a substance.
+[00:00:54.360 --> 00:00:56.040] Related words.
+[00:00:56.340 --> 00:01:02.220] Reliability, steadiness, uniformity, coherence, antonyms, inconsistency, irregularity, variability, fluctuation.

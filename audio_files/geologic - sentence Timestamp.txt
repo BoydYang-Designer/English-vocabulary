@@ -1,6 +1,0 @@
-[00:00:00.000 --> 00:00:05.320] Geologic is an adjective that refers to anything related to the Earth's physical structure,
-[00:00:05.320 --> 00:00:09.680] history, and the processes that shape its features over time.
-[00:00:09.680 --> 00:00:15.720] Example, the geologic formations in the area reveal a rich history of volcanic activity.
-[00:00:15.720 --> 00:00:21.760] Example, understanding geologic processes help scientists predict natural disasters like earthquakes.
-[00:00:23.760 --> 00:00:28.600] Geologic pertains to the study of the Earth's structure, history, and the natural processes
-[00:00:28.600 --> 00:00:34.280] that influence its changes, related words, geological, Earth science, tectonic.
