@@ -1,12 +1,27 @@
 /**
- * auth-manager.js - 備援版本
- * 提供基本的資料管理功能
+ * auth-manager.js - 備援版本（已修復）
+ * 提供基本的資料管理功能，並兼容 Firebase 相關調用
  * 如果您有完整的Firebase auth-manager.js，請使用該版本
  */
 
-console.log("✅ auth-manager.js (備援版本) loaded");
+console.log("✅ auth-manager.js (備援版本 - 已修復) loaded");
 
+// ============================================
+// 模擬 Firebase 用戶物件
+// ============================================
+const mockUser = {
+    isAnonymous: true,
+    uid: 'local-user',
+    displayName: '訪客模式',
+    email: null
+};
+
+// 全域變數，模擬 Firebase 的 currentUser
+window.currentUser = mockUser;
+
+// ============================================
 // 全域資料物件
+// ============================================
 let vocabularyData = {
     checkedWords: {},        // { "word": "true" }
     importantWords: {},      // { "word": "true" }
@@ -100,14 +115,65 @@ window.setWrongQS = function(sentences) {
     saveVocabularyData();
 };
 
+// ============================================
+// 模擬 Firebase 認證函數
+// ============================================
+
+/**
+ * 模擬登入功能
+ */
+window.signIn = function() {
+    console.log('📝 備援模式：登入功能未啟用，使用訪客模式');
+    alert('此為備援版本，登入功能未啟用。\n您可以繼續使用訪客模式。');
+    // 不執行任何操作，因為已經在訪客模式中
+};
+
+/**
+ * 模擬訪客模式進入
+ */
+window.enterGuestMode = function() {
+    console.log('✅ 進入訪客模式');
+    // 已經在訪客模式中，不需要額外操作
+};
+
+/**
+ * 模擬登出功能
+ */
+window.signOutUser = function() {
+    console.log('📝 備援模式：登出功能未啟用');
+    if (confirm('確定要清除所有資料並重新載入嗎？')) {
+        localStorage.clear();
+        location.reload();
+    }
+};
+
+/**
+ * 模擬 Firestore 儲存（實際上不執行）
+ */
+window.saveWordsToFirestore = function() {
+    console.log('ℹ️ 備援模式：Firestore 儲存功能未啟用，資料已儲存到 localStorage');
+    // 在備援模式中，資料已經透過 localStorage 儲存
+};
+
+// ============================================
+// 初始化
+// ============================================
+
 // 頁面載入時立即載入資料
 loadVocabularyData();
 
 // 發送 'auth-ready' 事件，通知其他模組可以開始使用資料
 document.addEventListener('DOMContentLoaded', function() {
-    const event = new Event('auth-ready');
-    document.dispatchEvent(event);
-    console.log("✅ auth-ready 事件已發送");
+    // 延遲發送事件，確保其他腳本已載入
+    setTimeout(() => {
+        const event = new CustomEvent('auth-ready', {
+            detail: {
+                user: mockUser
+            }
+        });
+        document.dispatchEvent(event);
+        console.log("✅ auth-ready 事件已發送（含模擬用戶資料）");
+    }, 100);
 });
 
 // 頁面關閉前儲存資料
@@ -244,3 +310,4 @@ console.log("📊 當前資料統計:", {
     wordQuizHistory: Object.keys(vocabularyData.wordQuizHistory).length,
     sentenceQuizHistory: Object.keys(vocabularyData.sentenceQuizHistory).length
 });
+console.log("👤 當前用戶模式: 訪客模式（備援版本）");
