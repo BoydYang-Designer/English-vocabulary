@@ -10,8 +10,7 @@
             "Unnamed: 11": "absorb",
             "分類": [
                 "Arts, Design & Aesthetics（藝術與設計）",
-                "Design",
-                "UserCustom"
+                "Design"
             ]
         },
         {
@@ -2688,8 +2687,7 @@
             "Unnamed: 11": "cast-a-spell",
             "分類": [
                 "幻想與神話",
-                "魔法",
-                "UserCustom"
+                "魔法"
             ]
         },
         {
@@ -9534,8 +9532,7 @@
             "Unnamed: 11": "incantation",
             "分類": [
                 "幻想與神話",
-                "魔法",
-                "UserCustom"
+                "魔法"
             ]
         },
         {
@@ -11146,8 +11143,7 @@
             "Unnamed: 11": "maze",
             "分類": [
                 "幻想與神話",
-                "幻想",
-                "UserCustom"
+                "幻想"
             ]
         },
         {
@@ -11160,8 +11156,7 @@
             "Unnamed: 11": "mazelike",
             "分類": [
                 "幻想與神話",
-                "幻想",
-                "UserCustom"
+                "幻想"
             ]
         },
         {
@@ -19043,7 +19038,10 @@
             "English meaning": "\"Vibe\" is a colloquial term that refers to the atmosphere or feeling that a person, place, or situation emits or evokes. It's often used to describe the overall impression or energy of a particular environment or interaction. A \"good vibe\" suggests a positive or pleasant atmosphere, while a \"bad vibe\" implies a negative or uncomfortable feeling.\nE.g. The party had a relaxed vibe, with people chatting and laughing.\nE.g. Listening to the old songs from our school days brought back nostalgic vibes of carefree times and lasting friendships",
             "Unnamed: 10": "vibe",
             "Unnamed: 11": "vibe",
-            "分類": []
+            "分類": [
+                "行為與心理",
+                "情緒"
+            ]
         },
         {
             "等級": "B2",
@@ -20409,6 +20407,7 @@
             ]
         },
         {
+            "等級": "B1",
             "Words": "different-walks-of-life",
             "pronunciation-1": "/ˈdɪf.ɚ.ənt wɔːks əv laɪf/",
             "traditional Chinese": "n.\n來自各行各業的人；各種社會階層的人",
@@ -20718,6 +20717,7 @@
             ]
         },
         {
+            "等級": "B2",
             "Words": "innovator",
             "pronunciation-1": "[ˈɪnəveɪtə(r)]",
             "traditional Chinese": "n.\n創新者；革新者；改革者\n",
@@ -21325,25 +21325,29 @@
             ]
         },
         {
-            "等級": "未分類",
+            "等級": "C1",
             "Words": "zenith",
             "pronunciation-1": "[ˈzenɪθ]",
-            "English meaning": "Zenith\n\nAs a Noun (countable & uncountable): zenith / zeniths\n\nA zenith is the highest point or peak of something. Literally, it refers to the point in the sky directly above an observer. Figuratively, it refers to the time when something — such as power, success, or influence — is at its greatest.\n\nE.g. At noon, the sun was near its zenith in the clear summer sky.\nE.g. The empire reached its zenith in the 16th century.\nE.g. She was at the zenith of her career when she won the international award.\nE.g. His popularity has passed its zenith and begun to decline.\n\nSummary\n\nZenith means the highest point, either physically (in the sky) or figuratively (in success, power, or achievement).\n\nRelated Words\n\npeak, apex, pinnacle, summit, height\n\nAntonyms\n\nnadir, low point, bottom",
+            "traditional Chinese": "n.\n\n1. 頂點、巔峰、極點（成就、成功或影響力等）\n2. 天頂（觀測者正上方的天空點）\n",
+            "English meaning": "zenith as a Noun: zenith (countable; plural zeniths)\n\n1. The highest point or peak, especially of achievement, success, or influence\n   E.g. The singer reached the zenith of her career with the hit album.\n   E.g. The company was at its zenith during the late 1990s.\n   E.g. His popularity hit its zenith after the award-winning performance.\n   E.g. The athlete’s performance marked the zenith of his professional life.\n   E.g. The empire was at its zenith before political instability set in.\n\n2. In astronomy, the point in the sky directly above an observer\n   E.g. At noon, the sun was at its zenith.\n   E.g. The telescope was aligned to observe the star near the zenith.\n   E.g. The climbers measured the zenith angle to calculate their position.\n   E.g. The meteor passed close to the zenith of the night sky.\n\nSummary:\n“Zenith” refers to the **highest point** of something, whether metaphorical (achievement, success) or literal (astronomical position above the observer).\n\nSynonyms: peak, apex, pinnacle, climax, summit, acme\nAntonyms: nadir, bottom, low point, base\nRelated Words: pinnacle, height, top, culmination, summit, high point, celestial, sky, altitude, maximum\n",
             "Unnamed: 10": "zenith",
             "Unnamed: 11": "zenith",
             "分類": [
-                "UserCustom"
+                "自然與環境",
+                "宇宙"
             ]
         },
         {
-            "等級": "未分類",
+            "等級": "B2",
             "Words": "reduction",
             "pronunciation-1": "[rɪˈdʌkʃn]",
-            "traditional Chinese": "n.下降，降低；",
+            "traditional Chinese": "\n\nn.\n1. 減少，縮小，降低（量、大小或程度）\n2. （化學／烹飪）濃縮、收乾\n3. （數學／邏輯）簡化、化簡\n",
+            "English meaning": "reduction as a Noun: reduction (countable & uncountable; plural reductions)\n\n1. The act or process of making something smaller, less, or lower in amount, size, or degree\n   E.g. The company announced a reduction in working hours to cut costs.\n   E.g. The recipe calls for a reduction of sugar to make it healthier.\n   E.g. There has been a significant reduction in pollution levels over the past decade.\n   E.g. The city implemented policies for the reduction of traffic congestion.\n   E.g. Exercise can lead to the reduction of stress and anxiety.\n\n2. In chemistry or cooking, a process where a substance is concentrated by removing water or other elements\n   E.g. Simmer the sauce to achieve a rich reduction.\n   E.g. The chef prepared a wine reduction to enhance the flavor of the dish.\n   E.g. Reduction of the solution increased its chemical concentration.\n   E.g. Butter is often used in a reduction to thicken sauces.\n\n3. In mathematics or logic, a simplification or transformation of a problem to a simpler form\n   E.g. The theorem was proved by a reduction to a previously solved case.\n   E.g. Matrix reduction helps solve systems of linear equations.\n   E.g. The proof uses reduction to show the impossibility of the configuration.\n   E.g. Logical reduction can make complex statements easier to understand.\n\nSummary:\n“Reduction” refers to the act, process, or result of making something smaller, simpler, or more concentrated, whether in general, chemical, culinary, or mathematical contexts.\n\nSynonyms: decrease, diminishment, cutback, simplification, concentration, condensation\nAntonyms: increase, expansion, growth, addition, amplification\nRelated Words: shrink, compress, lessen, minimize, simplify, condense, concentration, transformation, economize, streamline\n",
             "Unnamed: 10": "reduction",
             "Unnamed: 11": "reduction",
             "分類": [
-                "UserCustom"
+                "商業與管理",
+                "商業"
             ]
         },
         {
@@ -21459,14 +21463,16 @@
             ]
         },
         {
-            "等級": "未分類",
+            "等級": "C1",
             "Words": "hyperbolic",
             "pronunciation-1": "[ˌhaɪpəˈbɒlɪk]",
-            "English meaning": "Hyperbolic is an adjective. It has two main meanings, depending on the context.\n\n⸻\n\nMeaning 1: Exaggerated or overstated (common in everyday English)\n\nHyperbolic describes language or behavior that uses extreme exaggeration, often for emphasis, drama, or effect—not meant to be taken literally.\n\nExample:\n\t•\tHis claim that he waited a million years was clearly hyperbolic.\n\t•\tThe article used hyperbolic language to grab attention.\n\t•\tSaying “this bag weighs a ton” is a hyperbolic expression.\n\nChinese: 誇張的；誇大的\n\n⸻\n\nMeaning 2: Related to hyperbola (mathematics / geometry)\n\nIn math, hyperbolic refers to something connected to a hyperbola (a type of curve) or hyperbolic geometry.\n\nExample:\n\t•\tThe graph shows a hyperbolic curve.\n\t•\tHyperbolic functions like sinh and cosh are used in calculus.\n\nChinese: 雙曲線的；雙曲幾何的\n\n⸻\n\nSummary\n\nHyperbolic can mean greatly exaggerated in everyday language, or mathematically related to a hyperbola in technical contexts.\n\nIf you want, I can also explain hyperbole vs. hyperbolic, or show how native speakers commonly misuse it in daily conversation.",
+            "traditional Chinese": "adj.\n\n1. 誇張的，言過其實的\n2. （數學）雙曲線的，呈雙曲線形的\n",
+            "English meaning": "hyperbolic as an Adjective: hyperbolic; comparative: more hyperbolic; superlative: most hyperbolic\n\n1. Exaggerated or overstated, often for effect\n   E.g. His claim that he ran ten miles in five minutes was clearly hyperbolic.\n   E.g. She used hyperbolic language to make the story more entertaining.\n   E.g. The advertisement made hyperbolic promises about the product’s effectiveness.\n   E.g. Critics warned that the article’s tone was unnecessarily hyperbolic.\n   E.g. He tends to be hyperbolic when describing minor inconveniences.\n\n2. Relating to or shaped like a hyperbola in mathematics\n   E.g. The curve in the diagram is hyperbolic.\n   E.g. Hyperbolic functions are important in calculus and engineering.\n   E.g. The mathematician studied hyperbolic geometry to understand non-Euclidean spaces.\n   E.g. The bridge’s design features a hyperbolic arch for strength and stability.\n\nSummary:\n“Hyperbolic” can describe something **exaggerated or overstated**, or refer to **mathematical properties related to a hyperbola or hyperbolic functions**.\n\nSynonyms: exaggerated, overstated, amplified, inflated, magnified (for meaning 1); curvilinear, geometric (for meaning 2)\nAntonyms: understated, restrained, moderate (for meaning 1); linear, flat (for meaning 2)\nRelated Words: overstatement, dramatization, hyperbola, exaggeration, amplification, inflation, mathematical curve, asymptote, geometry, calculus\n",
             "Unnamed: 10": "hyperbolic",
             "Unnamed: 11": "hyperbolic",
             "分類": [
-                "UserCustom"
+                "學術與教育",
+                "語言"
             ]
         },
         {
@@ -21483,49 +21489,68 @@
             ]
         },
         {
-            "等級": "未分類",
+            "等級": "B2",
             "Words": "in-search-of",
+            "pronunciation-1": "/ɪn sɜːtʃ əv/",
             "traditional Chinese": "為了尋找；在找尋中；尋找……",
-            "English meaning": "in search of (phrase)\n\nEnglish Meaning:\nUsed to say that someone is trying to find, seeking, or looking for something, often with effort or purpose.\n\nExamples:\n\t•\tExample: She moved abroad in search of new opportunities.\n\t•\tExample: The team went into the forest in search of rare plants.\n\t•\tExample: He left home early in search of a quiet place to work.\n\nSummary:\n“In search of” means actively trying to find something, and it is commonly used in formal, written, or descriptive English.\n\nRelated Words:\nseek, look for, hunt for, quest for, pursue\n\nAntonyms:\ngive up on, stop looking for, ignore, avoid",
+            "English meaning": "in-search-of as a Prepositional Phrase: \nSeeking or trying to find someone or something\n\nE.g. They moved abroad in-search-of better career opportunities.\nE.g. The detective traveled city to city in-search-of new evidence.\nE.g. She spent hours online in-search-of reliable information.\nE.g. Many students study overseas in-search-of international experience.\nE.g. The explorers crossed the desert in-search-of hidden ruins.\n\nSummary:\n“In-search-of” describes actively trying to find, obtain, or discover something through effort or exploration.\n\nSynonyms: seeking, looking for, pursuing, hunting for, questing for\nAntonyms: avoiding, ignoring, abandoning, overlooking\nRelated Words: search, investigation, exploration, clue, evidence, discovery, inquiry, expedition, research, objective",
             "Unnamed: 10": "in-search-of",
             "Unnamed: 11": "in-search-of",
             "分類": [
-                "UserCustom"
+                "行為與心理",
+                "動作"
             ]
         },
         {
-            "等級": "片語",
-            "Words": "take in",
-            "English meaning": "Phrase: take in",
-            "Unnamed: 10": "take in",
-            "Unnamed: 11": "take in",
+            "等級": "B1",
+            "Words": "take-in",
+            "pronunciation-1": "/ˈteɪk ɪn/",
+            "traditional Chinese": "v.\n\n1. 理解、吸收（資訊或知識）\n2. 收留、照顧（人或動物）\n3. 欺騙、哄騙（某人）\n4. 吸收或納入（景觀、空氣、文化、衣物調整等）\n",
+            "English meaning": "take-in as a Verb (phrasal verb): take / took / taking\n\n1. To understand or mentally absorb information\n   E.g. It was a lot of information to take-in during the first lesson.\n   E.g. She paused to take-in everything the teacher had explained.\n   E.g. He needed a moment to take-in the surprising news.\n   E.g. The audience listened carefully to take-in the main ideas.\n\n2. To provide someone with a place to stay or care for them\n   E.g. The family decided to take-in a stray cat.\n   E.g. They kindly took-in travelers during the storm.\n   E.g. The shelter takes-in homeless teenagers every winter.\n   E.g. Her aunt took-in the children while their parents worked abroad.\n\n3. To deceive or trick someone\n   E.g. The scammer tried to take-in elderly customers.\n   E.g. He was completely taken-in by the fake story.\n   E.g. The advertisement was designed to take-in careless buyers.\n   E.g. She felt embarrassed after being taken-in by the prank.\n\n4. To absorb or include something such as sights, air, or clothing adjustments\n   E.g. We stopped at the hilltop to take-in the beautiful view.\n   E.g. She stood quietly to take-in the fresh morning air.\n   E.g. The tailor will take-in the dress around the waist.\n   E.g. Tourists walked slowly to take-in the local culture.\n\nSummary:\n“Take-in” is a versatile phrasal verb meaning to understand information, provide shelter, deceive someone, or absorb/include sights, air, or physical adjustments depending on context.\n\nSynonyms: understand, absorb, accommodate, deceive, include, alter\nAntonyms: misunderstand, reject, expose, exclude, release\nRelated Words: information, explanation, shelter, guest, scam, fraud, view, scenery, culture, tailor, adjustment, observation\n",
+            "Unnamed: 10": "take-in",
+            "Unnamed: 11": "take-in",
             "分類": [
-                "Phrases（片語）",
-                "User Highlighted",
-                "UserCustom"
+                "行為與心理",
+                "動作"
             ]
         },
         {
-            "等級": "未分類",
-            "Words": "hourly rate",
+            "等級": "B1",
+            "Words": "hourly-rate",
+            "pronunciation-1": "/ˈaʊə.li reɪt/",
             "traditional Chinese": "時薪／每小時的薪資",
-            "English meaning": "Hourly rate is a noun.\n\nEnglish Meaning\n\nHourly rate means the amount of money someone is paid for each hour of work.\n\nExample:\n\t•\tShe earns an hourly rate of $25.\n\t•\tWhat is your hourly rate for freelance design work?\n\t•\tHis hourly rate increases on weekends.\nSummary\n\nHourly rate refers to how much money a person earns per hour of working time.\n\nRelated Words\n\nwage, pay rate, salary (note: salary is usually monthly or yearly, not hourly)\n\nAntonyms\n\nsalary (fixed pay), unpaid work",
-            "Unnamed: 10": "hourly rate",
-            "Unnamed: 11": "hourly rate",
+            "English meaning": "hourly-rate as a Noun: hourly rate (countable; plural hourly rates)\nDefinition\nThe amount of money paid or charged for each hour of work or service\n\nE.g. Freelancers often negotiate their hourly rate before starting a project.\nE.g. The consultant increased her hourly rate after gaining more experience.\nE.g. Many tutors set different hourly rates depending on the subject.\nE.g. The job listing clearly stated the hourly rate for part-time workers.\nE.g. He compared several candidates’ hourly rates before hiring.\nE.g. Some workers prefer a fixed salary over an hourly rate.\n\nSummary:\n“Hourly rate” refers to the payment amount calculated for each hour of work, commonly used in employment, freelancing, or service contracts.\n\nSynonyms: pay per hour, wage, compensation rate, fee\nAntonyms: salary, flat rate, fixed payment\nRelated Words: freelance, consultant, contractor, employment, work, paycheck, billing, timesheet, negotiation, project, service\n",
+            "Unnamed: 10": "hourly-rate",
+            "Unnamed: 11": "hourly-rate",
             "分類": [
-                "UserCustom"
+                "商業與管理",
+                "商業"
             ]
         },
         {
-            "等級": "片語",
-            "Words": "soak up",
-            "English meaning": "Phrase: soak up",
-            "Unnamed: 10": "soak up",
-            "Unnamed: 11": "soak up",
+            "等級": "B1",
+            "Words": "soak-up",
+            "pronunciation-1": "/soʊk ʌp/",
+            "traditional Chinese": "v.\n\n1. 吸收（液體、濕氣或物質）\n2. 享受、充分體驗（氣氛、感受或知識）\n",
+            "English meaning": "soak-up as a Verb (phrasal verb): soak up / soaked up / soaking up\n\n1. To absorb a liquid, moisture, or substance\n   E.g. The sponge quickly soaked-up the spilled juice.\n   E.g. Plants soak-up water through their roots.\n   E.g. The towel soaked-up all the rain from the floor.\n   E.g. Sand can soak-up oil during a spill.\n\n2. To enjoy or fully experience something, often an atmosphere, feeling, or knowledge\n   E.g. Tourists walked slowly along the streets to soak-up the local culture.\n   E.g. She sat on the balcony to soak-up the morning sun.\n   E.g. He tried to soak-up every detail of the lecture.\n   E.g. Visitors lingered at the museum to soak-up the art and history.\n   E.g. The students soaked-up the teacher’s explanations during the workshop.\n\nSummary:\n“Soak-up” can mean either to physically absorb a substance or to mentally or emotionally absorb and enjoy an experience or environment.\n\nSynonyms: absorb, ingest, take in, enjoy, experience, learn\nAntonyms: release, drain, ignore, overlook\nRelated Words: sponge, towel, liquid, water, sun, atmosphere, culture, knowledge, environment, learning, observation, experience\n",
+            "Unnamed: 10": "soak-up",
+            "Unnamed: 11": "soak-up",
             "分類": [
-                "Phrases（片語）",
-                "User Highlighted",
-                "UserCustom"
+                "行為與心理",
+                "動作"
+            ]
+        },
+        {
+            "等級": "C1",
+            "Words": "vibe-code",
+            "pronunciation-1": "/vaɪb koʊd/",
+            "traditional Chinese": "\n\n\nv. \n用 AI 根據文字指令寫程式碼（非正式）。\n\n",
+            "English meaning": "vibe-code as a Verb (phrasal verb; informal slang): vibe-code / vibe-coded / vibe-coding\nDefinition\nTo create software using AI-assisted programming by giving natural language prompts instead of writing code manually.\n\nE.g. Let’s vibe-code a prototype tonight and see how fast we can get it running.\nE.g. She vibe-coded the entire front-end in under three hours.\nE.g. They vibe-coded the backend while the designers finalized the UI.\nE.g. Startups often vibe-code features to test new ideas quickly.\nE.g. He spent the afternoon vibe-coding the app’s main functionality before the demo.\nE.g. We vibe-coded the automation scripts so the system could handle repetitive tasks.\n\nSummary:\n“Vibe-code” is an informal verb meaning to generate code using AI from plain-language instructions. It is derived from the noun “vibe coding” but emphasizes the action.\n\nSynonyms: AI-generate, prompt-code, AI-build, generate via AI\nAntonyms: manually code, hand-write, traditional programming\nRelated Words: AI assistant, LLM, automation, prompt engineering, prototype, software development, low-code/no-code, debugging, toolchain, iteration",
+            "Unnamed: 10": "vibe-code",
+            "Unnamed: 11": "vibe-code",
+            "分類": [
+                "科學與技術",
+                "動作"
             ]
         }
     ]
