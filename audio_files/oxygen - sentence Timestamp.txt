@@ -1,0 +1,11 @@
+[00:00:00.000 --> 00:00:02.900] Oxygen is a noun with the following meaning.
+[00:00:03.280 --> 00:00:08.100] A chemical element, oxygen is a colorless, odorless, and tasteless gas that is
+[00:00:08.100 --> 00:00:10.340] essential for the respiration of living organisms.
+[00:00:11.120 --> 00:00:14.300] It makes up about 21 % of the Earth's atmosphere.
+[00:00:14.700 --> 00:00:15.340] Example senses.
+[00:00:16.140 --> 00:00:19.060] Oxygen is crucial for breathing and sustaining life.
+[00:00:20.380 --> 00:00:23.200] The tank was filled with pure oxygen for medical use.
+[00:00:24.500 --> 00:00:25.140] Summary.
+[00:00:25.740 --> 00:00:30.420] Oxygen refers to the essential gas necessary for life and combustion, comprising about
+[00:00:30.420 --> 00:00:32.340] 21 % of the Earth's atmosphere.
+[00:00:32.640 --> 00:00:35.620] Related words, air, gas, oxidizer, element.

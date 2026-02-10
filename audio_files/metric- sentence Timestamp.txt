@@ -1,0 +1,15 @@
+[00:00:00.000 --> 00:00:00.780] Metric.
+[00:00:01.160 --> 00:00:05.820] As a noun, a standard of measurement used to evaluate, compare, or quantify something.
+[00:00:06.640 --> 00:00:09.780] Example, customer satisfaction is an important metric for businesses.
+[00:00:10.540 --> 00:00:13.800] Example, the company tracks key performance metrics to measure success.
+[00:00:14.800 --> 00:00:17.780] Example, scientists use different metrics to assess climate change.
+[00:00:18.520 --> 00:00:23.280] Two, a system of measurement based on meters, liters, and grams, commonly used worldwide.
+[00:00:24.540 --> 00:00:27.840] Example, the metric system is widely used in science and engineering.
+[00:00:28.520 --> 00:00:31.740] Example, the length was measured in metric units rather than inches.
+[00:00:32.580 --> 00:00:35.200] As an adjective, related to the metric system of measurement.
+[00:00:35.860 --> 00:00:39.840] Example, many countries use metric measurements instead of imperial units.
+[00:00:40.560 --> 00:00:44.380] Example, the recipe provides both metric and imperial conversions.
+[00:00:45.380 --> 00:00:50.240] Summary, metric can refer to a standard of measurement used for evaluation or the metric system,
+[00:00:50.760 --> 00:00:54.260] which is a unit of measurement based on meters, liters, and grams.
+[00:00:54.260 --> 00:00:59.640] Related words, measurement, standard, scale, benchmark, sap, gauge, system.
+[00:01:00.260 --> 00:01:03.860] Antonyms for measurement, guess, estimate for metric system, imperial system.

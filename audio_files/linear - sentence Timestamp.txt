@@ -1,0 +1,13 @@
+[00:00:00.000 --> 00:00:05.320] Linear is an adjective, meaning one, arranged in or extending along a straight line.
+[00:00:05.880 --> 00:00:10.580] Two, in mathematics or logic, involving a direct relationship between variables often
+[00:00:10.580 --> 00:00:11.720] represented by a straight line.
+[00:00:12.360 --> 00:00:16.460] Three, sequential or following a straight orderly progression without deviation.
+[00:00:17.400 --> 00:00:17.720] Examples,
+[00:00:18.480 --> 00:00:20.840] the artist used simple linear patterns in the painting.
+[00:00:21.360 --> 00:00:25.120] A linear equation shows a straight line relationship between X and Y.
+[00:00:25.120 --> 00:00:30.000] The story had a linear structure moving from beginning to end without flashbacks.
+[00:00:30.420 --> 00:00:33.100] Engineers measured the linear distance between the two points.
+[00:00:33.640 --> 00:00:38.340] Summary, linear describes something straight, direct or sequential, often used in mathematics,
+[00:00:38.820 --> 00:00:40.080] design or storytelling.
+[00:00:40.660 --> 00:00:43.700] Related words, straight, direct, sequential, proportional.
+[00:00:44.320 --> 00:00:47.220] Antonyms, curved, nonlinear, irregular, complex.

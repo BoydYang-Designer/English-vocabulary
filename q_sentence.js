@@ -63,7 +63,7 @@ function updateCollapsibleHeaderState(btn) {
 
 // 📌 進入 Q Sentence 測驗分類頁面
 function showSentenceQuizCategories() {
-    document.querySelector("h1").textContent = "句子測驗區";
+    // 不修改標題，保持「測驗區」
     
     // 隱藏測驗類型選擇區域
     const quizTypeSelector = document.querySelector(".quiz-type-selector");
@@ -352,23 +352,30 @@ if (selectedSentenceFilters.special.size > 0) {
         return;
     }
 
+    // 使用智慧抽題系統（評分低的句子更容易被抽到）
+    if (typeof weightedRandomSentences === 'function') {
+        currentQuizSentences = weightedRandomSentences(filteredSentences, 10);
+        console.log(`✅ 使用智慧抽題，本次測驗句子數: ${currentQuizSentences.length}`);
+    } else {
+        // 降級方案：使用原有的隨機排序
+        filteredSentences.sort((a, b) => {
+            const countA = sentenceQuizHistory[a.Words] || 0;
+            const countB = sentenceQuizHistory[b.Words] || 0;
+            return countA - countB;
+        });
 
-    filteredSentences.sort((a, b) => {
-        const countA = sentenceQuizHistory[a.Words] || 0;
-        const countB = sentenceQuizHistory[b.Words] || 0;
-        return countA - countB;
-    });
+        for (let i = filteredSentences.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [filteredSentences[i], filteredSentences[j]] = [filteredSentences[j], filteredSentences[i]];
+        }
 
-    for (let i = filteredSentences.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [filteredSentences[i], filteredSentences[j]] = [filteredSentences[j], filteredSentences[i]];
+        currentQuizSentences = filteredSentences.slice(0, 10);
+        console.log(`✅ 使用隨機抽題，本次測驗句子數: ${currentQuizSentences.length}`);
     }
-
-    currentQuizSentences = filteredSentences.slice(0, 10);
+    
     currentSentenceIndex = 0;
     userAnswers = [];
 
-    console.log("✅ 本次測驗的句子數量:", currentQuizSentences.length);
     console.log("✅ 本次測驗的隨機句子:", currentQuizSentences.map(s => s.Words));
 
     localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
@@ -1087,11 +1094,15 @@ function finishSentenceQuiz() {
         let isUnanswered = userAnswer === "(未作答)";
 
         let resultClass = isCorrect ? "correct" : (isUnanswered ? "unanswered" : "wrong");
-
+        
+        // 根據答題結果給予建議評分
+        let suggestedRating = isCorrect ? 4 : (isUnanswered ? 3 : 2);
+        
         let importantCheckbox = `<input type="checkbox" class="important-checkbox" onchange="toggleImportantSentence('${sentenceObj.Words}', this)" ${localStorage.getItem('important_sentence_' + sentenceObj.Words) === "true" ? "checked" : ""} />`;
         let sentenceIdentifierLink = `<a href="sentence.html?sentence=${encodeURIComponent(sentenceObj.Words)}&from=quiz&layer=4" class="sentence-link-btn">${sentenceObj.Words}</a>`;
         let wordDetailButton = `<button class="word-detail-btn" onclick="goToWordDetail('${sentenceObj.Words.split("-")[0]}')">單字詳情</button>`;
         let correctSentenceLink = `<button class="sentence-link-btn" onclick="playSentenceAudio('${sentenceObj.Words}.mp3')">${correctSentence}</button>`;
+        let ratingHTML = typeof generateRatingHTML === 'function' ? generateRatingHTML('sentence', sentenceObj.Words, suggestedRating) : '';
 
         resultContainer.innerHTML += `
             <div class="result-item ${resultClass}">
@@ -1103,6 +1114,7 @@ function finishSentenceQuiz() {
                 <div class="vertical-group">
                     ${correctSentenceLink}
                 </div>
+                ${ratingHTML}
             </div>
         `;
     }
@@ -1110,6 +1122,7 @@ function finishSentenceQuiz() {
     resultContainer.innerHTML += `
         <div class="result-buttons">
             <button class="action-button" onclick="saveQSResults()">Save</button>
+            <button class="action-button" onclick="openSentenceRatingManager()">查看評分記錄</button>
             <button class="action-button" onclick="returnToMainMenu()">Back</button>
         </div>
     `;
@@ -1191,10 +1204,16 @@ function returnToSentenceCategorySelection() {
     document.getElementById("reorganizeQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "none";
 
-    // 顯示測驗類型選擇區域
+    // 不顯示測驗類型選擇區域，因為我們是返回到分類頁面
     const quizTypeSelector = document.querySelector(".quiz-type-selector");
     if (quizTypeSelector) {
-        quizTypeSelector.style.display = "flex";
+        quizTypeSelector.style.display = "none";
+    }
+    
+    // 確保標題為「測驗區」
+    const header = document.querySelector('.page-title');
+    if (header) {
+        header.textContent = '測驗區';
     }
 
     Object.keys(selectedSentenceFilters).forEach(key => selectedSentenceFilters[key].clear());

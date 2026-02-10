@@ -1,0 +1,26 @@
+[00:00:00.000 --> 00:00:03.080] Parallelogram is a noun with the following meaning.
+[00:00:03.460 --> 00:00:08.140] A flat closed geometric figure with four sides where opposite sides are both parallel and
+[00:00:08.140 --> 00:00:09.020] equal in length.
+[00:00:09.620 --> 00:00:14.560] A parallelogram is a type of quadrilateral in which each pair of opposite sides is parallel
+[00:00:14.560 --> 00:00:17.500] and of equal length, and opposite angles are equal.
+[00:00:18.320 --> 00:00:23.760] The angles between the sides can vary, so a parallelogram can have various shapes, such as rectangles,
+[00:00:24.120 --> 00:00:25.340] rhombuses, and rhomboids.
+[00:00:25.340 --> 00:00:26.480] Example.
+[00:00:26.860 --> 00:00:29.620] The shape of a standard road sign is often a parallelogram.
+[00:00:30.640 --> 00:00:31.240] Example.
+[00:00:31.440 --> 00:00:34.660] Rectangles, squares, and rhombuses are all parallelograms.
+[00:00:35.060 --> 00:00:35.640] Example.
+[00:00:35.840 --> 00:00:38.180] The floor tiles were arranged in a parallelogram pattern.
+[00:00:39.020 --> 00:00:39.500] Summary.
+[00:00:40.020 --> 00:00:44.880] A parallelogram is a four -sided, flat shape where opposite sides are parallel and equal in length
+[00:00:44.880 --> 00:00:46.240] with equal opposite angles.
+[00:00:46.960 --> 00:00:47.760] Related words.
+[00:00:48.300 --> 00:00:48.820] Rectangle.
+[00:00:49.120 --> 00:00:49.460] Rhombus.
+[00:00:49.760 --> 00:00:50.220] Rhomboid.
+[00:00:50.360 --> 00:00:50.880] Quadrilateral.
+[00:00:51.560 --> 00:00:52.100] Antonyms.
+[00:00:52.420 --> 00:00:52.780] Triangle.
+[00:00:53.100 --> 00:00:53.260] Circle.
+[00:00:53.600 --> 00:00:53.840] Oval.
+[00:00:53.840 --> 00:00:55.820] Shapes with different numbers of sides or curves.

@@ -304,10 +304,16 @@ function returnToCategorySelection() {
     document.getElementById("rewordQuizArea").style.display = "none";
     document.getElementById("quizCategories").style.display = "block";
     
-    // 顯示測驗類型選擇區域
+    // 不顯示測驗類型選擇區域，因為我們是返回到分類頁面
     const quizTypeSelector = document.querySelector(".quiz-type-selector");
     if (quizTypeSelector) {
-        quizTypeSelector.style.display = "flex";
+        quizTypeSelector.style.display = "none";
+    }
+    
+    // 確保標題為「測驗區」
+    const header = document.querySelector('.page-title');
+    if (header) {
+        header.textContent = '測驗區';
     }
     
     let quizTypeSelection = document.getElementById("quizTypeSelection");
@@ -394,7 +400,7 @@ function toggleWrongFilter() {
     }
 }
 function showQuizCategories() {
-    document.querySelector("h1").textContent = "單字測驗區";
+    // 不修改標題，保持「測驗區」
     if (!isDataLoaded) {
         alert("⚠️ 單字資料尚未載入完成，請稍後再試。");
         return;
@@ -457,17 +463,27 @@ let isWrong = (vocabularyData.wrongWords || []).includes(word);
         alert("⚠️ 沒有符合條件的單字，請重新選擇篩選條件。");
         return;
     }
-    filteredWords.sort((a, b) => {
-        const countA = wordQuizHistory[a.Words] || 0;
-        const countB = wordQuizHistory[b.Words] || 0;
-        return countA - countB;
-    });
-    for (let i = filteredWords.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [filteredWords[i], filteredWords[j]] = [filteredWords[j], filteredWords[i]];
+    
+    // 使用智慧抽題系統（評分低的單字更容易被抽到）
+    if (typeof weightedRandomWords === 'function') {
+        quizWords = weightedRandomWords(filteredWords, 10);
+        console.log(`✅ 使用智慧抽題，本次測驗單字數: ${quizWords.length}`);
+    } else {
+        // 降級方案：使用原有的隨機排序
+        filteredWords.sort((a, b) => {
+            const countA = wordQuizHistory[a.Words] || 0;
+            const countB = wordQuizHistory[b.Words] || 0;
+            return countA - countB;
+        });
+        for (let i = filteredWords.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [filteredWords[i], filteredWords[j]] = [filteredWords[j], filteredWords[i]];
+        }
+        quizWords = filteredWords.slice(0, 10);
+        console.log(`✅ 使用隨機抽題，本次測驗單字數: ${quizWords.length}`);
     }
-    quizWords = filteredWords.slice(0, 10);
-    console.log(`✅ 本次測驗單字數: ${quizWords.length}`, quizWords.map(w => w.Words));
+    
+    console.log(`測驗單字:`, quizWords.map(w => w.Words));
     currentWord = null;
     quizResults = [];
     localStorage.setItem("currentQuizResults", JSON.stringify(quizResults));
@@ -637,9 +653,26 @@ function finishQuiz() {
         } else {
             resultClass = 'unanswered';
         }
-        return `<div class='result-item ${resultClass}'><label class='important-word'><input type='checkbox' class='important-checkbox' data-word='${result.word}' ${window.getVocabularyData().importantWords?.[result.word] === "true" ? "checked" : ""} onchange='toggleImportant("${result.word}", this)'></label><button class='word-link' onclick="goToWordDetail('${result.word}')">${result.word}</button><button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button></div>`;
+        
+        // 根據答題結果給予建議評分
+        let suggestedRating = result.result === '正確' ? 4 : (result.result === '錯誤' ? 2 : 3);
+        
+        return `<div class='result-item ${resultClass}'>
+            <label class='important-word'>
+                <input type='checkbox' class='important-checkbox' data-word='${result.word}' 
+                       ${window.getVocabularyData().importantWords?.[result.word] === "true" ? "checked" : ""} 
+                       onchange='toggleImportant("${result.word}", this)'>
+            </label>
+            <button class='word-link' onclick="goToWordDetail('${result.word}')">${result.word}</button>
+            <button class='phonetic-btn' onclick="playAudioForWord('${result.word}')">${phonetics}</button>
+            ${generateRatingHTML('word', result.word, suggestedRating)}
+        </div>`;
     }).join("");
-    resultContainer.innerHTML += `<div>${resultList}</div><div class="button-group"><button class="button" onclick="returnToMainMenu()">返回主頁</button></div>`;
+    resultContainer.innerHTML += `<div>${resultList}</div>
+        <div class="button-group">
+            <button class="button" onclick="openWordRatingManager()">查看評分記錄</button>
+            <button class="button" onclick="returnToMainMenu()">返回主頁</button>
+        </div>`;
     if (existingNotification) {
         setTimeout(function() {
             existingNotification.style.display = "block";
@@ -873,4 +906,28 @@ function showToast(message, type = 'success') {
     setTimeout(() => {
         toast.className = toast.className.replace('show', '');
     }, 3000);
+}
+/**
+ * 返回測驗中心（三選項區）
+ */
+function returnToQuizCenter() {
+    // 隱藏所有測驗相關面板
+    hideAllPanels();
+    
+    // 顯示測驗類型選擇區域
+    const quizTypeSelector = document.querySelector('.quiz-type-selector');
+    if (quizTypeSelector) {
+        quizTypeSelector.style.display = 'flex';
+    }
+    
+    // 更新標題為「測驗區」
+    const header = document.querySelector('.page-title');
+    if (header) {
+        header.textContent = '測驗區';
+    }
+    
+    // 更新麵包屑
+    updateBreadcrumb(['選擇功能', '測驗中心']);
+    
+    console.log('✅ 返回測驗中心');
 }
