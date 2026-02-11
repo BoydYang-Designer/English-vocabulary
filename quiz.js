@@ -68,8 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     w["分類"] = [];
                 }
             });
+            window.wordsData = wordsData; // 🔧 修復：讓 flashcard.js 可透過 window.wordsData 存取
             isDataLoaded = true;
-            console.log("✅ 單字資料已載入");
+            console.log("✅ 單字資料已載入，已掛載至 window.wordsData，共", wordsData.length, "筆");
             
             showToast("✅ 資料載入成功！", "success");
 

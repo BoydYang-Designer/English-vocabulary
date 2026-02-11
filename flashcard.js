@@ -32,6 +32,22 @@ let fcCurrentAudio = null;
 //  初始化入口（從 quiz.html 的第三張卡片呼叫）
 // ─────────────────────────────────────────
 function navigateToFlashcard() {
+    // 🔧 新增：檢查基礎資料是否已載入
+    const wordDataReady = typeof window.wordsData !== 'undefined' && window.wordsData.length > 0;
+    const sentenceDataReady = typeof window.sentenceData !== 'undefined' && window.sentenceData.length > 0;
+    
+    console.log('📊 字卡資料載入狀態：', {
+        wordsData: wordDataReady ? `${window.wordsData.length} 筆` : '未載入',
+        sentenceData: sentenceDataReady ? `${window.sentenceData?.length || 0} 筆` : '未載入'
+    });
+    
+    // 如果單字資料未載入，顯示警告（句子資料可以延遲載入）
+    if (!wordDataReady) {
+        alert('⚠️ 單字資料尚未載入完成\n\n請稍候 2-3 秒後再試，或重新整理頁面。\n\n提示：確保 quiz.js 已正確載入。');
+        console.error('❌ wordsData 未載入');
+        return;
+    }
+    
     // 隱藏其他區域
     hideAllPanels();
     document.getElementById('flashcardTypePanel').style.display = 'block';
@@ -48,7 +64,45 @@ function selectFlashcardType(type) {
     const label = type === 'word' ? '單字字卡' : '句子字卡';
     updateBreadcrumb(['選擇功能', '測驗中心', '字卡練習', label]);
 
-    buildFlashcardFilters(type);
+    // 🔧 句子字卡：確保資料已載入
+    if (type === 'sentence') {
+        if (typeof window.ensureSentenceDataLoaded === 'function') {
+            console.log('📥 開始載入句子資料...');
+            window.ensureSentenceDataLoaded()
+                .then(() => {
+                    console.log(`✅ 句子資料已就緒：${sentenceData.length} 筆`);
+                    buildFlashcardFilters(type);
+                })
+                .catch((error) => {
+                    console.error('❌ 句子資料載入失敗:', error);
+                    alert('⚠️ 句子資料載入失敗\n\n請檢查網路連線後重試。');
+                    hideAllPanels();
+                    document.getElementById('flashcardTypePanel').style.display = 'block';
+                });
+        } else {
+            const dataSource = window.sentenceData || sentenceData;
+            if (!dataSource || dataSource.length === 0) {
+                alert('⚠️ 句子資料尚未載入\n\n請先進入「句子測驗」頁面載入資料，或重新整理頁面。');
+                hideAllPanels();
+                document.getElementById('flashcardTypePanel').style.display = 'block';
+            } else {
+                console.log(`✅ 使用已載入的句子資料：${dataSource.length} 筆`);
+                buildFlashcardFilters(type);
+            }
+        }
+    } 
+    // 🔧 單字字卡：檢查資料
+    else {
+        const dataSource = window.wordsData || wordsData;
+        if (!dataSource || dataSource.length === 0) {
+            alert('⚠️ 單字資料尚未載入完成\n\n請稍候 2-3 秒後再試。');
+            hideAllPanels();
+            document.getElementById('flashcardTypePanel').style.display = 'block';
+        } else {
+            console.log(`✅ 單字字卡類型已選擇，資料筆數：${dataSource.length}`);
+            buildFlashcardFilters(type);
+        }
+    }
 }
 
 // ─────────────────────────────────────────
@@ -62,18 +116,38 @@ function buildFlashcardFilters(type) {
     // 重置
     [levelEl, categoryEl, specialEl].forEach(el => { if (el) el.innerHTML = ''; });
 
+    // 🔧 新增：檢查資料是否已載入
+    const dataSource = type === 'word' ? window.wordsData : window.sentenceData;
+    const dataName = type === 'word' ? 'wordsData' : 'sentenceData';
+    
+    if (!dataSource || dataSource.length === 0) {
+        const warningMsg = `
+            <div style="padding: 1rem; background: #fff3cd; border-radius: 8px; color: #856404; margin: 1rem 0;">
+                <strong>⚠️ 資料尚未載入</strong><br>
+                <small>請稍候 2-3 秒讓資料從伺服器載入完成，然後重新選擇字卡類型。</small>
+            </div>
+        `;
+        [levelEl, categoryEl, specialEl].forEach(el => { 
+            if (el) el.innerHTML = warningMsg; 
+        });
+        console.warn(`❌ ${dataName} 尚未載入或為空陣列`);
+        return;
+    }
+
+    console.log(`✅ 正在建構 ${type} 字卡篩選器，資料筆數：${dataSource.length}`);
+
     // === 難易度按鈕 ===
     const standardLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
     if (type === 'word') {
-        const usedLevels = new Set((wordsData || []).map(w => w['等級'] || '未分類'));
+        const usedLevels = new Set((window.wordsData || []).map(w => w['等級'] || '未分類'));
         const levels = standardLevels.filter(l => usedLevels.has(l));
         if (usedLevels.has('未分類')) levels.push('未分類');
         levelEl.innerHTML = levels.map(l =>
             `<button class="category-button" onclick="fcToggleFilter('levels','${l}',this)">${l}</button>`
         ).join('');
     } else {
-        const usedLevels = new Set((sentenceData || []).map(s => s['等級'] || '未分類'));
+        const usedLevels = new Set((window.sentenceData || []).map(s => s['等級'] || '未分類'));
         const levels = standardLevels.filter(l => usedLevels.has(l));
         if (usedLevels.has('未分類')) levels.push('未分類');
         levelEl.innerHTML = levels.map(l =>
@@ -83,12 +157,12 @@ function buildFlashcardFilters(type) {
 
     // === 主題大類按鈕 ===
     if (type === 'word') {
-        const cats = [...new Set((wordsData || []).map(w => (w['分類'] && w['分類'][0]) || '未分類').filter(Boolean))];
+        const cats = [...new Set((window.wordsData || []).map(w => (w['分類'] && w['分類'][0]) || '未分類').filter(Boolean))];
         categoryEl.innerHTML = cats.map(c =>
             `<button class="category-button" onclick="fcToggleFilter('categories','${c}',this)">${c}</button>`
         ).join('');
     } else {
-        const cats = [...new Set((sentenceData || []).map(s => s.primaryCategory).filter(Boolean))];
+        const cats = [...new Set((window.sentenceData || []).map(s => s.primaryCategory).filter(Boolean))];
         categoryEl.innerHTML = cats.map(c =>
             `<button class="category-button" onclick="fcToggleFilter('categories','${c}',this)">${c}</button>`
         ).join('');
@@ -137,13 +211,41 @@ function startFlashcardSession() {
 
     // 根據類型取得原始資料集
     let pool = fcType === 'word'
-        ? (wordsData || [])
-        : (sentenceData || []);
+        ? (window.wordsData || [])
+        : (window.sentenceData || []);
 
+    // 🔧 改進的資料檢查邏輯，提供更明確的錯誤訊息
     if (!pool || pool.length === 0) {
-        alert('⚠️ 資料尚未載入，請稍後再試。');
+        if (fcType === 'word') {
+            // 檢查 wordsData 是否已定義但為空
+            if (typeof window.wordsData === 'undefined') {
+                alert('⚠️ 單字資料模組尚未載入\n\n原因：quiz.js 可能尚未正確載入\n解決方法：請重新整理頁面後再試');
+                console.error('❌ wordsData 未定義 - quiz.js 可能未載入');
+            } else if (window.wordsData.length === 0) {
+                alert('⚠️ 單字資料尚未從伺服器載入完成\n\n請稍候 2-3 秒後再點擊「開始練習」\n\n如果問題持續，請檢查：\n1. 網路連線是否正常\n2. 瀏覽器控制台是否有錯誤訊息');
+                console.error('❌ wordsData 長度為 0 - 資料尚未從 GitHub 載入');
+            } else {
+                alert('⚠️ 無法取得單字資料，請重新整理頁面');
+                console.error('❌ 無法取得 wordsData');
+            }
+        } else {
+            // 句子字卡
+            if (typeof window.sentenceData === 'undefined') {
+                alert('⚠️ 句子資料模組尚未載入\n\n原因：q_sentence.js 可能尚未正確載入\n解決方法：請重新整理頁面後再試');
+                console.error('❌ sentenceData 未定義 - q_sentence.js 可能未載入');
+            } else if (window.sentenceData.length === 0) {
+                alert('⚠️ 句子資料尚未從伺服器載入完成\n\n請稍候 2-3 秒後再點擊「開始練習」\n\n如果問題持續，請檢查：\n1. 網路連線是否正常\n2. 瀏覽器控制台是否有錯誤訊息');
+                console.error('❌ sentenceData 長度為 0 - 資料尚未從 GitHub 載入');
+            } else {
+                alert('⚠️ 無法取得句子資料，請重新整理頁面');
+                console.error('❌ 無法取得 sentenceData');
+            }
+        }
         return;
     }
+
+    console.log(`✅ 字卡資料已就緒：${pool.length} 個${fcType === 'word' ? '單字' : '句子'}`);
+
 
     // === 套用篩選 ===
     pool = pool.filter(item => {
@@ -752,7 +854,7 @@ function fcMgrSwitchType(type) {
 // ─────────────────────────────────────────
 function fcMgrLoadData() {
     // 取得所有字卡資料
-    const sourceData = fcMgrCurrentType === 'word' ? (wordsData || []) : (sentenceData || []);
+    const sourceData = fcMgrCurrentType === 'word' ? (window.wordsData || []) : (window.sentenceData || []);
     
     // 取得歷史記錄
     const vocab = window.getVocabularyData ? window.getVocabularyData() : {};

@@ -20,6 +20,96 @@ let selectedSentenceFilters = {
     special: new Set()
 };
 
+// 🔧 新增：資料載入狀態追蹤
+let sentenceDataLoading = false;
+let sentenceDataLoaded = false;
+
+// 🔧 新增：全域函數，供其他模組（如 flashcard.js）調用以確保資料載入
+window.ensureSentenceDataLoaded = async function() {
+    // 如果資料已載入，直接返回
+    if (sentenceDataLoaded && sentenceData.length > 0) {
+        console.log('✅ sentenceData 已載入，無需重複載入');
+        return Promise.resolve(sentenceData);
+    }
+    
+    // 如果正在載入中，等待載入完成
+    if (sentenceDataLoading) {
+        console.log('⏳ sentenceData 正在載入中，等待完成...');
+        return new Promise((resolve, reject) => {
+            const checkInterval = setInterval(() => {
+                if (sentenceDataLoaded) {
+                    clearInterval(checkInterval);
+                    resolve(sentenceData);
+                } else if (!sentenceDataLoading) {
+                    clearInterval(checkInterval);
+                    reject(new Error('資料載入失敗'));
+                }
+            }, 100);
+        });
+    }
+    
+    // 開始載入資料
+    console.log('📥 開始載入 sentenceData...');
+    sentenceDataLoading = true;
+    
+    try {
+        const response = await fetch(GITHUB_JSON_URL);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        
+        if (!data["New Words"] || !Array.isArray(data["New Words"])) {
+            throw new Error('資料格式錯誤');
+        }
+        
+        sentenceData = data["New Words"].filter(item => item.句子 && item.中文);
+        
+        // 處理分類
+        sentenceData.forEach(item => {
+            if (typeof item["分類"] === "string") {
+                item["分類"] = [item["分類"]];
+            } else if (!Array.isArray(item["分類"])) {
+                item["分類"] = [];
+            }
+            
+            item.primaryCategoryFull = item["分類"][0] || "未分類";
+            item.primaryCategory = extractChineseName(item.primaryCategoryFull);
+            item.primaryCategoryEn = extractEnglishName(item.primaryCategoryFull);
+            item.secondaryCategories = item["分類"].slice(1);
+        });
+        
+        localStorage.setItem("sentenceData", JSON.stringify(sentenceData));
+        window.sentenceData = sentenceData; // 🔧 修復：讓 flashcard.js 可透過 window.sentenceData 存取
+        sentenceDataLoaded = true;
+        sentenceDataLoading = false;
+        
+        console.log(`✅ sentenceData 載入成功：${sentenceData.length} 個句子，已掛載至 window.sentenceData`);
+        return sentenceData;
+        
+    } catch (error) {
+        console.error("❌ 載入 sentenceData 失敗:", error);
+        sentenceDataLoading = false;
+        
+        // 嘗試從 localStorage 載入
+        const savedData = localStorage.getItem("sentenceData");
+        if (savedData) {
+            try {
+                sentenceData = JSON.parse(savedData);
+                sentenceDataLoaded = true;
+                window.sentenceData = sentenceData; // 🔧 修復：localStorage fallback 也掛載至 window
+                console.log("✅ 使用本地儲存的句子資料");
+                return sentenceData;
+            } catch (e) {
+                console.error("❌ 本地資料解析失敗:", e);
+            }
+        }
+        
+        throw error;
+    }
+};
+
+
 // 🔧 新增：從完整分類名稱中提取中文部分
 function extractChineseName(fullName) {
     if (!fullName) return "未分類";
@@ -98,69 +188,16 @@ function showSentenceQuizCategories() {
     document.getElementById("sentenceQuizCategories").style.display = "block";
     console.log("✅ 顯示句子測驗分類頁面");
 
-    fetch(GITHUB_JSON_URL)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log("✅ 成功載入 sentence.json");
-        if (!data["New Words"] || !Array.isArray(data["New Words"])) {
-            console.error("❌ 資料格式錯誤，'New Words' 不是一個數組。");
-            return;
-        }
-
-        sentenceData = data["New Words"].filter(item => item.句子 && item.中文);
-        
-        // 🔧 改進的分類處理
-        sentenceData.forEach(item => {
-            if (typeof item["分類"] === "string") {
-                item["分類"] = [item["分類"]];
-            } else if (!Array.isArray(item["分類"])) {
-                item["分類"] = [];
-            }
-            
-            // 保存完整的主分類名稱（包含英文和中文）- 用於顯示
-            item.primaryCategoryFull = item["分類"][0] || "未分類";
-            // 提取中文名稱用於匹配
-            item.primaryCategory = extractChineseName(item.primaryCategoryFull);
-            // 提取英文名稱
-            item.primaryCategoryEn = extractEnglishName(item.primaryCategoryFull);
-            // 次分類
-            item.secondaryCategories = item["分類"].slice(1);
-        });
-
-        localStorage.setItem("sentenceData", JSON.stringify(sentenceData));
-        console.log(`✅ 已載入 ${sentenceData.length} 個句子`);
-        generateSentenceCategories(sentenceData);
-    })
-    .catch(error => {
-    console.error("❌ 無法載入 sentence.json:", error);
-    // 靜默處理：不顯示 alert，直接使用備援資料
-    
-    // 先嘗試從 localStorage 載入之前儲存的資料
-    const savedData = localStorage.getItem("sentenceData");
-    if (savedData) {
-        try {
-            sentenceData = JSON.parse(savedData);
-            console.log("✅ 使用本地儲存的句子資料");
+    // 🔧 使用新的載入機制
+    window.ensureSentenceDataLoaded()
+        .then(() => {
+            console.log(`✅ 已載入 ${sentenceData.length} 個句子`);
             generateSentenceCategories(sentenceData);
-            return;
-        } catch (e) {
-            console.error("❌ 本地資料解析失敗:", e);
-        }
-    }
-    
-    // 如果 localStorage 也沒有，使用記憶體中的資料（如果有的話）
-    if (sentenceData.length > 0) {
-        console.log("✅ 使用記憶體中的句子資料");
-        generateSentenceCategories(sentenceData);
-    } else {
-        alert("❌ 無法載入句子資料，請檢查網路連線。");
-    }
-});
+        })
+        .catch(error => {
+            console.error("❌ 無法載入 sentence.json:", error);
+            alert("❌ 無法載入句子資料，請檢查網路連線。");
+        });
 }
 
 function handleSentenceSubcategoryClick(subcatBtn, primaryBtnId) {
