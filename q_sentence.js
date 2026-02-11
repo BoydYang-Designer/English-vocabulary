@@ -59,24 +59,37 @@ window.ensureSentenceDataLoaded = async function() {
         }
         const data = await response.json();
         
-        if (!data["New Words"] || !Array.isArray(data["New Words"])) {
+        // 相容兩種格式：物件或陣列
+        let rawData = Array.isArray(data) ? data : (data["New Words"] || []);
+        if (!Array.isArray(rawData)) {
             throw new Error('資料格式錯誤');
         }
         
-        sentenceData = data["New Words"].filter(item => item.句子 && item.中文);
+        sentenceData = rawData.filter(item => item.句子 && item.中文);
         
-        // 處理分類
+        // 處理分類 - 確保分類是陣列格式
         sentenceData.forEach(item => {
+            // 如果沒有「分類」欄位，從「分類1/2/3」合併
+            if (!item["分類"] && (item["分類1"] || item["分類2"] || item["分類3"])) {
+                item["分類"] = [item["分類1"], item["分類2"], item["分類3"]].filter(Boolean);
+            }
+            // 確保分類是陣列
             if (typeof item["分類"] === "string") {
                 item["分類"] = [item["分類"]];
             } else if (!Array.isArray(item["分類"])) {
                 item["分類"] = [];
             }
-            
-            item.primaryCategoryFull = item["分類"][0] || "未分類";
-            item.primaryCategory = extractChineseName(item.primaryCategoryFull);
-            item.primaryCategoryEn = extractEnglishName(item.primaryCategoryFull);
-            item.secondaryCategories = item["分類"].slice(1);
+        });
+        
+        // 📊 調試：顯示前3個句子的分類資訊
+        console.log('📊 數據分類處理範例 (前3個句子):');
+        sentenceData.slice(0, 3).forEach((item, idx) => {
+            console.log(`  句子 ${idx + 1}:`, {
+                Words: item.Words,
+                分類: item["分類"],
+                主分類: item["分類"][0],
+                次分類: item["分類"][1]
+            });
         });
         
         localStorage.setItem("sentenceData", JSON.stringify(sentenceData));
@@ -233,6 +246,9 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
     // 1. 將主分類加入篩選條件
     // 2. 展開/收合次分類列表
 
+    console.log('🔍 點擊主分類:', categoryName);
+    console.log('📊 sentenceData 總數:', sentenceData.length);
+
     let subcategoryWrapperId = `sub-for-sentence-${categoryName.replace(/\s/g, '-')}`;
     let subcategoryWrapper = document.getElementById(subcategoryWrapperId);
 
@@ -243,33 +259,43 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
         subcategoryWrapper.id = subcategoryWrapperId;
         subcategoryWrapper.style.maxHeight = '0px';
 
+        // 🔧 改用與單字測驗相同的邏輯：直接使用 分類[0] 和 分類[1]
         const secondaryCategories = [...new Set(
             sentenceData
-                .filter(s => s.primaryCategory === categoryName && s.secondaryCategories && s.secondaryCategories.length > 0)
-                .flatMap(s => s.secondaryCategories)
+                .filter(s => s["分類"] && s["分類"][0] === categoryName && s["分類"][1])
+                .map(s => s["分類"][1])
         )];
 
+        console.log('📋 找到的次分類:', secondaryCategories);
+
         const hasUncategorized = sentenceData.some(s =>
-            s.primaryCategory === categoryName && (!s.secondaryCategories || s.secondaryCategories.length === 0)
+            s["分類"] && s["分類"][0] === categoryName && (!s["分類"][1] || s["分類"][1].trim() === '')
         );
 
         if (hasUncategorized) {
             secondaryCategories.unshift("未分類");
         }
 
+        console.log('✅ 最終次分類列表:', secondaryCategories);
+
         if (secondaryCategories.length > 0) {
             // 生成次分類按鈕
             subcategoryWrapper.innerHTML = secondaryCategories.map(subCat =>
                 `<button class="category-button" onclick="handleSentenceSubcategoryClick(this, '${btn.id}')">${subCat}</button>`
             ).join('');
+            console.log('🎨 生成了', secondaryCategories.length, '個次分類按鈕');
+        } else {
+            console.warn('⚠️ 沒有找到任何次分類！');
         }
         
         // 找到包裝所有主分類按鈕的 div（filter-content > div），插入其中
         const wrapperDiv = btn.closest('.filter-content > div');
         if (wrapperDiv) {
             wrapperDiv.insertBefore(subcategoryWrapper, btn.nextSibling);
+            console.log('✅ 次分類容器已插入到 wrapper div');
         } else {
             btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
+            console.log('✅ 次分類容器已插入到 parent node');
         }
     }
 
@@ -283,10 +309,12 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
         // 收合次分類
         subcategoryWrapper.classList.remove('expanded');
         subcategoryWrapper.style.maxHeight = '0px';
+        console.log('📦 收合次分類');
     } else {
         // 展開次分類
         subcategoryWrapper.classList.add('expanded');
         subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
+        console.log('📂 展開次分類，高度:', subcategoryWrapper.scrollHeight);
     }
 
     // 更新父容器（.filter-content）的高度
@@ -302,6 +330,7 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
             // 更新為新的高度
             setTimeout(() => {
                 parentFilterContent.style.maxHeight = newHeight + 'px';
+                console.log('📏 更新父容器高度:', newHeight);
             }, 10);
         }
     }, 50);
@@ -319,7 +348,7 @@ function generateSentenceCategories(data) {
     }
 
     const levels = new Set();
-    const primaryCategoriesMap = new Map(); // 使用 Map 儲存 中文名稱 -> 完整名稱 的映射
+    const primaryCategories = new Set(); // 🔧 改用 Set 直接儲存完整的主分類名稱
     const alphabetSet = new Set();
 
     data.forEach(item => {
@@ -328,9 +357,9 @@ function generateSentenceCategories(data) {
         if (/[A-Z]/.test(firstLetter)) {
             alphabetSet.add(firstLetter);
         }
-        if (item.primaryCategory && item.primaryCategoryFull) {
-            // 使用中文名稱作為 key,完整名稱作為 value
-            primaryCategoriesMap.set(item.primaryCategory, item.primaryCategoryFull);
+        // 🔧 直接使用 分類[0]，與單字測驗邏輯一致
+        if (item["分類"] && item["分類"][0]) {
+            primaryCategories.add(item["分類"][0]);
         }
     });
 
@@ -341,13 +370,12 @@ function generateSentenceCategories(data) {
         `<button class="category-button" onclick="toggleSentenceSelection('alphabet', '${letter}', this)">${letter}</button>`
     ).join("");
 
-    // 🔧 渲染主分類按鈕，顯示完整名稱（英文+中文），但用中文名稱作為 key
-    const primaryButtonsHtml = [...primaryCategoriesMap.entries()]
-        .sort((a, b) => a[1].localeCompare(b[1])) // 按完整名稱排序
-        .map(([chineseName, fullName]) => {
-            const btnId = `sentence-primary-btn-${chineseName.replace(/\s/g, '-')}`;
-            // 顯示完整名稱，但 onclick 傳遞中文名稱用於匹配
-            return `<button id="${btnId}" class="category-button" onclick="handleSentencePrimaryCategoryClick(this, '${chineseName}')">${fullName}</button>`;
+    // 🔧 生成主分類按鈕，直接使用完整名稱
+    const primaryButtonsHtml = [...primaryCategories]
+        .sort((a, b) => a.localeCompare(b))
+        .map(categoryName => {
+            const btnId = `sentence-primary-btn-${categoryName.replace(/\s/g, '-')}`;
+            return `<button id="${btnId}" class="category-button" onclick="handleSentencePrimaryCategoryClick(this, '${categoryName}')">${categoryName}</button>`;
         }).join("");
     // 包一層 div 以符合 .filter-content > div 的 CSS 結構
     primaryContainer.innerHTML = `<div>${primaryButtonsHtml}</div>`;
@@ -363,7 +391,7 @@ function generateSentenceCategories(data) {
         `<button class="category-button" onclick="toggleSentenceSelection('levels', '${l}', this)">${l}</button>`
     ).join("");
     
-    console.log(`✅ 生成分類按鈕完成: ${primaryCategoriesMap.size} 個主分類, ${standardLevels.length} 個等級`);
+    console.log(`✅ 生成分類按鈕完成: ${primaryCategories.size} 個主分類, ${standardLevels.length} 個等級`);
 }
 
 
@@ -406,16 +434,15 @@ function startSentenceQuiz() {
         let levelMatch = selectedSentenceFilters.levels.size === 0 || 
                         selectedSentenceFilters.levels.has(item.等級 || "未分類");
         
-        // 🔧 主分類篩選 - 使用提取的中文名稱
+        // 🔧 主分類篩選 - 改用 分類[0]，與單字測驗邏輯一致
         let primaryCategoryMatch = selectedSentenceFilters.primaryCategories.size === 0 || 
-                                  selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
+                                  selectedSentenceFilters.primaryCategories.has(item["分類"] && item["分類"][0]);
         
-        // 次分類篩選
+        // 🔧 次分類篩選 - 改用 分類[1]，與單字測驗邏輯一致
         let secondaryCategoryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
-            ((item.secondaryCategories && item.secondaryCategories.length > 0) && 
-             item.secondaryCategories.some(cat => selectedSentenceFilters.secondaryCategories.has(cat))) ||
+            (item["分類"] && item["分類"][1] && selectedSentenceFilters.secondaryCategories.has(item["分類"][1])) ||
             (selectedSentenceFilters.secondaryCategories.has('未分類') && 
-             (!item.secondaryCategories || item.secondaryCategories.length === 0));
+             (!item["分類"] || !item["分類"][1] || item["分類"][1].trim() === ''));
 
         // 字母篩選
         let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || 

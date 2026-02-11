@@ -2,10 +2,10 @@
  * flashcard.js
  * 字卡練習模組 — 單字字卡 & 句子字卡
  * 依賴：wordsData (quiz.js), sentenceData (q_sentence.js),
- *       window.getVocabularyData(), window.persistVocabularyData()
+ * window.getVocabularyData(), window.persistVocabularyData()
  */
 
-console.log("✅ flashcard.js loaded");
+console.log("✅ flashcard.js loaded (FIXED VERSION)");
 
 // ─────────────────────────────────────────
 //  狀態變數
@@ -32,7 +32,7 @@ let fcCurrentAudio = null;
 //  初始化入口（從 quiz.html 的第三張卡片呼叫）
 // ─────────────────────────────────────────
 function navigateToFlashcard() {
-    // 🔧 新增：檢查基礎資料是否已載入
+    // 🔧 檢查基礎資料是否已載入
     const wordDataReady = typeof window.wordsData !== 'undefined' && window.wordsData.length > 0;
     const sentenceDataReady = typeof window.sentenceData !== 'undefined' && window.sentenceData.length > 0;
     
@@ -70,7 +70,9 @@ function selectFlashcardType(type) {
             console.log('📥 開始載入句子資料...');
             window.ensureSentenceDataLoaded()
                 .then(() => {
-                    console.log(`✅ 句子資料已就緒：${sentenceData.length} 筆`);
+                    // 確保 window.sentenceData 已同步
+                    if (!window.sentenceData && sentenceData) window.sentenceData = sentenceData;
+                    console.log(`✅ 句子資料已就緒：${window.sentenceData.length} 筆`);
                     buildFlashcardFilters(type);
                 })
                 .catch((error) => {
@@ -116,7 +118,7 @@ function buildFlashcardFilters(type) {
     // 重置
     [levelEl, categoryEl, specialEl].forEach(el => { if (el) el.innerHTML = ''; });
 
-    // 🔧 新增：檢查資料是否已載入
+    // 🔧 檢查資料是否已載入
     const dataSource = type === 'word' ? window.wordsData : window.sentenceData;
     const dataName = type === 'word' ? 'wordsData' : 'sentenceData';
     
@@ -139,30 +141,40 @@ function buildFlashcardFilters(type) {
     // === 難易度按鈕 ===
     const standardLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
+    // 取得所有資料中的等級
+    const usedLevels = new Set(dataSource.map(item => item['等級'] || '未分類'));
+    const levels = standardLevels.filter(l => usedLevels.has(l));
+    if (usedLevels.has('未分類')) levels.push('未分類');
+    
+    levelEl.innerHTML = levels.map(l =>
+        `<button class="category-button" onclick="fcToggleFilter('levels','${l}',this)">${l}</button>`
+    ).join('');
+
+    // === 主題大類按鈕 (主要修正點) ===
+    let cats = [];
     if (type === 'word') {
-        const usedLevels = new Set((window.wordsData || []).map(w => w['等級'] || '未分類'));
-        const levels = standardLevels.filter(l => usedLevels.has(l));
-        if (usedLevels.has('未分類')) levels.push('未分類');
-        levelEl.innerHTML = levels.map(l =>
-            `<button class="category-button" onclick="fcToggleFilter('levels','${l}',this)">${l}</button>`
-        ).join('');
+        cats = [...new Set(dataSource.map(w => (w['分類'] && w['分類'][0]) || '未分類').filter(Boolean))];
     } else {
-        const usedLevels = new Set((window.sentenceData || []).map(s => s['等級'] || '未分類'));
-        const levels = standardLevels.filter(l => usedLevels.has(l));
-        if (usedLevels.has('未分類')) levels.push('未分類');
-        levelEl.innerHTML = levels.map(l =>
-            `<button class="category-button" onclick="fcToggleFilter('levels','${l}',this)">${l}</button>`
-        ).join('');
+        // 🔧 修正：句子資料分類讀取邏輯
+        // 優先讀取 ['分類'][0] (q_sentence.js 處理過的陣列)，其次讀取 '分類1' (原始 JSON)
+        cats = [...new Set(dataSource.map(s => {
+            if (s['分類'] && Array.isArray(s['分類']) && s['分類'].length > 0) {
+                return s['分類'][0];
+            }
+            return s['分類1'] || '未分類';
+        }).filter(Boolean))];
     }
 
-    // === 主題大類按鈕 ===
-    if (type === 'word') {
-        const cats = [...new Set((window.wordsData || []).map(w => (w['分類'] && w['分類'][0]) || '未分類').filter(Boolean))];
-        categoryEl.innerHTML = cats.map(c =>
-            `<button class="category-button" onclick="fcToggleFilter('categories','${c}',this)">${c}</button>`
-        ).join('');
+    // 排序並過濾掉空值
+    cats = cats.filter(c => c !== '未分類').sort();
+    // 確保有未分類選項
+    if (dataSource.some(d => !d['分類'] && !d['分類1'])) {
+       // cats.push('未分類'); // 視需求決定是否顯示未分類按鈕
+    }
+
+    if (cats.length === 0) {
+        categoryEl.innerHTML = '<span style="color: #666; font-size: 0.9em;">無分類資料</span>';
     } else {
-        const cats = [...new Set((window.sentenceData || []).map(s => s.primaryCategory).filter(Boolean))];
         categoryEl.innerHTML = cats.map(c =>
             `<button class="category-button" onclick="fcToggleFilter('categories','${c}',this)">${c}</button>`
         ).join('');
@@ -214,33 +226,9 @@ function startFlashcardSession() {
         ? (window.wordsData || [])
         : (window.sentenceData || []);
 
-    // 🔧 改進的資料檢查邏輯，提供更明確的錯誤訊息
+    // 🔧 資料檢查
     if (!pool || pool.length === 0) {
-        if (fcType === 'word') {
-            // 檢查 wordsData 是否已定義但為空
-            if (typeof window.wordsData === 'undefined') {
-                alert('⚠️ 單字資料模組尚未載入\n\n原因：quiz.js 可能尚未正確載入\n解決方法：請重新整理頁面後再試');
-                console.error('❌ wordsData 未定義 - quiz.js 可能未載入');
-            } else if (window.wordsData.length === 0) {
-                alert('⚠️ 單字資料尚未從伺服器載入完成\n\n請稍候 2-3 秒後再點擊「開始練習」\n\n如果問題持續，請檢查：\n1. 網路連線是否正常\n2. 瀏覽器控制台是否有錯誤訊息');
-                console.error('❌ wordsData 長度為 0 - 資料尚未從 GitHub 載入');
-            } else {
-                alert('⚠️ 無法取得單字資料，請重新整理頁面');
-                console.error('❌ 無法取得 wordsData');
-            }
-        } else {
-            // 句子字卡
-            if (typeof window.sentenceData === 'undefined') {
-                alert('⚠️ 句子資料模組尚未載入\n\n原因：q_sentence.js 可能尚未正確載入\n解決方法：請重新整理頁面後再試');
-                console.error('❌ sentenceData 未定義 - q_sentence.js 可能未載入');
-            } else if (window.sentenceData.length === 0) {
-                alert('⚠️ 句子資料尚未從伺服器載入完成\n\n請稍候 2-3 秒後再點擊「開始練習」\n\n如果問題持續，請檢查：\n1. 網路連線是否正常\n2. 瀏覽器控制台是否有錯誤訊息');
-                console.error('❌ sentenceData 長度為 0 - 資料尚未從 GitHub 載入');
-            } else {
-                alert('⚠️ 無法取得句子資料，請重新整理頁面');
-                console.error('❌ 無法取得 sentenceData');
-            }
-        }
+        alert(`⚠️ ${fcType === 'word' ? '單字' : '句子'}資料尚未載入，請重新整理頁面。`);
         return;
     }
 
@@ -250,9 +238,20 @@ function startFlashcardSession() {
     // === 套用篩選 ===
     pool = pool.filter(item => {
         const level    = item['等級'] || '未分類';
-        const category = fcType === 'word'
-            ? (item['分類'] && item['分類'][0]) || '未分類'
-            : (item.primaryCategory || '未分類');
+        
+        // 🔧 修正：取得分類的邏輯
+        let category = '未分類';
+        if (fcType === 'word') {
+             category = (item['分類'] && item['分類'][0]) || '未分類';
+        } else {
+            // 句子資料邏輯
+            if (item['分類'] && Array.isArray(item['分類']) && item['分類'].length > 0) {
+                category = item['分類'][0];
+            } else {
+                category = item['分類1'] || '未分類';
+            }
+        }
+            
         const id       = fcType === 'word' ? item.Words : item.Words;
         const hist     = fcHistory[id] || {};
 
@@ -289,7 +288,6 @@ function startFlashcardSession() {
 
     // === 加權排序（智慧抽牌）===
     // 優先級分數越低，越優先出現
-    // 新增「不確定」狀態的考量，讓系統更智慧地安排複習頻率
     function priorityScore(item) {
         const id   = item.Words;
         const hist = fcHistory[id] || { 
@@ -337,10 +335,7 @@ function startFlashcardSession() {
     }
     pool.sort((a, b) => priorityScore(a) - priorityScore(b));
 
-    // 智慧配分：根據優先級分配卡片比例
-    // 高優先（0-2）：70%
-    // 中優先（3-4）：25%
-    // 低優先（5+）：5%
+    // 智慧配分
     const highPriority = pool.filter(item => priorityScore(item) <= 2);
     const midPriority  = pool.filter(item => priorityScore(item) >= 3 && priorityScore(item) <= 4);
     const lowPriority  = pool.filter(item => priorityScore(item) >= 5);
@@ -451,7 +446,15 @@ function renderFlashcard() {
         // 句子字卡
         const sentence  = item['句子'] || '';
         const chinese   = item['中文'] || '（無中文翻譯）';
-        const category  = item.primaryCategory || '';
+        
+        // 🔧 修正：渲染時正確讀取句子分類
+        let category = '';
+        if (item['分類'] && Array.isArray(item['分類']) && item['分類'].length > 0) {
+            category = item['分類'][0];
+        } else {
+            category = item['分類1'] || '';
+        }
+        
         const level     = item['等級'] || '';
         // 去除 [=...] 標記
         const cleanSent = sentence.replace(/\s*\[=[^\]]+\]/g, '').trim();
@@ -468,7 +471,7 @@ function renderFlashcard() {
             </div>
             <div class="fc-sentence-hint">
                 <span class="fc-hint-known">${hintWords.join(' ')}</span>
-                <span class="fc-hint-blanks">${'_ '.repeat(restCount).trim()}</span>
+                <span class="fc-hint-blanks">${'_ '.repeat(Math.max(0, restCount)).trim()}</span>
             </div>
             <div class="fc-hint-label">完成這個句子 →</div>
             <button class="fc-play-btn" onclick="event.stopPropagation(); fcPlayAudio()" title="播放發音">

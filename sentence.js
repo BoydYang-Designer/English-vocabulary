@@ -168,7 +168,8 @@ document.querySelectorAll(".collapsible-header").forEach(button => {
                 return res.json();
             })
             .then(data => {
-                wordsData = data["New Words"] || [];
+                // 相容兩種格式：物件或陣列
+                wordsData = Array.isArray(data) ? data : (data["New Words"] || []);
                 console.log("✅ Z_total_words.json 載入成功");
             }),
         fetch("https://boydyang-designer.github.io/English-vocabulary/Sentence%20file/sentence.json")
@@ -177,7 +178,8 @@ document.querySelectorAll(".collapsible-header").forEach(button => {
                 return res.json();
             })
             .then(data => {
-                sentenceData = data["New Words"] || [];
+                // 相容兩種格式：物件或陣列
+                sentenceData = Array.isArray(data) ? data : (data["New Words"] || []);
                 console.log("✅ sentence.json 載入成功");
             })
     ])
@@ -195,9 +197,26 @@ document.querySelectorAll(".collapsible-header").forEach(button => {
 
         showNotification('✅ 資料載入完成！', 'success');
 
+        // 處理單字資料
         wordsData.forEach(w => {
+            // 如果沒有「分類」欄位，從「分類1/2/3」合併
+            if (!w["分類"] && (w["分類1"] || w["分類2"] || w["分類3"])) {
+                w["分類"] = [w["分類1"], w["分類2"], w["分類3"]].filter(Boolean);
+            }
+            // 確保分類是陣列
             if (typeof w["分類"] === "string") w["分類"] = [w["分類"]];
             else if (!Array.isArray(w["分類"])) w["分類"] = [];
+        });
+
+        // 處理句子資料
+        sentenceData.forEach(s => {
+            // 如果沒有「分類」欄位，從「分類1/2/3」合併
+            if (!s["分類"] && (s["分類1"] || s["分類2"] || s["分類3"])) {
+                s["分類"] = [s["分類1"], s["分類2"], s["分類3"]].filter(Boolean);
+            }
+            // 確保分類是陣列
+            if (typeof s["分類"] === "string") s["分類"] = [s["分類"]];
+            else if (!Array.isArray(s["分類"])) s["分類"] = [];
         });
 
         renderAlphabetButtons();

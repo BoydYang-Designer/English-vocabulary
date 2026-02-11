@@ -60,8 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
             return res.json();
         })
         .then(data => {
-            wordsData = data["New Words"] || [];
+            // 相容兩種格式：物件或陣列
+            wordsData = Array.isArray(data) ? data : (data["New Words"] || []);
+            
             wordsData.forEach(w => {
+                // 如果沒有「分類」欄位，從「分類1/2/3」合併
+                if (!w["分類"] && (w["分類1"] || w["分類2"] || w["分類3"])) {
+                    w["分類"] = [w["分類1"], w["分類2"], w["分類3"]].filter(Boolean);
+                }
+                // 確保分類是陣列
                 if (typeof w["分類"] === "string") {
                     w["分類"] = [w["分類"]];
                 } else if (!Array.isArray(w["分類"])) {
