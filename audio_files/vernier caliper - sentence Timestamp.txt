@@ -1,0 +1,7 @@
+[00:00:00.000 --> 00:00:05.260] A vernier caliper is a measuring instrument used for accurately measuring linear dimensions,
+[00:00:05.680 --> 00:00:08.500] thickness, and outer and inner diameters of objects.
+[00:00:09.120 --> 00:00:13.400] It typically consists of a main scale graduated in millimeters or inches
+[00:00:13.400 --> 00:00:18.100] and a sliding vernier scale that allows for precise readings to be taken.
+[00:00:18.720 --> 00:00:19.240] For example,
+[00:00:19.860 --> 00:00:24.700] the machinist used a vernier caliper to determine the exact thickness of the metal sheet, ensuring
+[00:00:24.700 --> 00:00:26.580] precise cuts for the engineering project.

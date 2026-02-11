@@ -1,0 +1,6 @@
+[00:00:00.000 --> 00:00:04.920] A stalling tactic and a delaying tactic are very similar concepts, often
+[00:00:04.920 --> 00:00:05.860] used interchangeably.
+[00:00:06.480 --> 00:00:11.820] Both involve actions or strategies designed to postpone or prolong a process, decision, or action.
+[00:00:12.860 --> 00:00:17.620] Example, the student used a stalling tactic during the group project by repeatedly
+[00:00:17.620 --> 00:00:21.960] suggesting alternative meeting times and asking for more time to complete their portion,
+[00:00:22.500 --> 00:00:24.320] delaying the completion of the assignment.

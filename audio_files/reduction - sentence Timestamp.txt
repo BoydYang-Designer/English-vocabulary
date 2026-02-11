@@ -1,0 +1,30 @@
+[00:00:00.000 --> 00:00:01.120] Reduction as a noun.
+[00:00:01.640 --> 00:00:03.600] Reduction, countable and uncountable.
+[00:00:03.960 --> 00:00:04.680] Plural reductions.
+[00:00:05.200 --> 00:00:05.460] One,
+[00:00:06.140 --> 00:00:10.820] the act or process of making something smaller, less or lower in amount, size
+[00:00:10.820 --> 00:00:11.760] or degree.
+[00:00:12.600 --> 00:00:16.060] The company announced a reduction in working hours to cut costs.
+[00:00:16.640 --> 00:00:19.460] The recipe calls for a reduction of sugar to make it healthier.
+[00:00:20.060 --> 00:00:23.300] There has been a significant reduction in pollution levels over the past decade.
+[00:00:23.720 --> 00:00:27.260] The city implemented policies for the reduction of traffic congestion.
+[00:00:27.780 --> 00:00:30.840] Exercise can lead to the reduction of stress and anxiety.
+[00:00:31.820 --> 00:00:36.720] Two, in chemistry or cooking, a process where a substance is concentrated by removing
+[00:00:36.720 --> 00:00:38.120] water or other elements.
+[00:00:38.980 --> 00:00:41.120] Simmer the sauce to achieve a rich reduction.
+[00:00:41.720 --> 00:00:45.100] The chef prepared a wine reduction to enhance the flavor of the dish.
+[00:00:45.640 --> 00:00:48.480] Reduction of the solution increased its chemical concentration.
+[00:00:49.140 --> 00:00:51.600] Butter is often used in a reduction to thicken sauces.
+[00:00:52.680 --> 00:00:57.540] Three, in mathematics or logic, a simplification or transformation of a problem to a
+[00:00:57.540 --> 00:00:58.120] simpler form.
+[00:00:58.920 --> 00:01:02.300] The theorem was proved by a reduction to a previously solved case.
+[00:01:03.200 --> 00:01:06.560] Matrix reduction helps solve systems of linear equations.
+[00:01:07.280 --> 00:01:10.720] The proof uses reduction to show the impossibility of the configuration.
+[00:01:11.340 --> 00:01:14.280] Logical reduction can make complex statements easier to understand.
+[00:01:14.960 --> 00:01:20.200] Summary, reduction refers to the act, process or result of making something smaller,
+[00:01:20.460 --> 00:01:25.700] simpler or more concentrated, whether in general, chemical, culinary or mathematical contexts.
+[00:01:26.580 --> 00:01:30.260] Synonyms decrease, diminishment, cutback, simplification, concentration,
+[00:01:30.920 --> 00:01:31.380] condensation.
+[00:01:32.000 --> 00:01:35.160] Antonyms increase, expansion, growth, addition, amplification.
+[00:01:35.600 --> 00:01:40.220] Related words, shrink, compress, lessen, minimize, simplify, condense, concentration, transformation,
+[00:01:40.880 --> 00:01:41.740] economize, streamline.

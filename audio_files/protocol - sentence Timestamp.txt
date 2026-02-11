@@ -1,0 +1,21 @@
+[00:00:00.000 --> 00:00:01.680] Protocol is a noun.
+[00:00:02.260 --> 00:00:06.940] It refers to an official set of rules, procedures, or conventions that govern behavior, communication,
+[00:00:07.220 --> 00:00:09.040] or actions in various contexts,
+[00:00:09.640 --> 00:00:12.980] such as diplomacy, science, technology, or everyday activities.
+[00:00:13.620 --> 00:00:16.200] One, a formal system of rules or procedures.
+[00:00:16.660 --> 00:00:20.520] Example, the company established a strict protocol for handling confidential information.
+[00:00:21.340 --> 00:00:26.360] Example, the protocol for emergency evacuations was clearly outlined in the safety manual.
+[00:00:27.160 --> 00:00:31.860] Example, degree of robustness dependent on the test protocol developed with the certifier.
+[00:00:32.660 --> 00:00:32.920] Two,
+[00:00:33.620 --> 00:00:36.240] an official record or document of an agreement or procedure.
+[00:00:36.660 --> 00:00:40.960] Example, the two nations signed a protocol to outline the terms of their trade agreement.
+[00:00:41.600 --> 00:00:46.520] Example, the medical protocol was documented to ensure consistency in patient care.
+[00:00:47.320 --> 00:00:51.940] Three, the etiquette or conventions of diplomatic or official behavior.
+[00:00:52.200 --> 00:00:56.440] Example, the ambassador adhered to diplomatic protocol during the state visit.
+[00:00:56.820 --> 00:00:59.600] Example, the ceremony followed the royal protocol to the letter.
+[00:01:00.440 --> 00:01:00.840] Summary.
+[00:01:01.640 --> 00:01:06.580] Protocol refers to formal procedures, rules, or conventions for communication or actions
+[00:01:06.580 --> 00:01:11.020] in various settings, and can also mean an official document or record of an agreement.
+[00:01:11.920 --> 00:01:12.940] Related words.
+[00:01:13.760 --> 00:01:15.760] Procedure, convention, guideline,
+[00:01:16.400 --> 00:01:20.760] etiquette, code, antonym, improvisation, disorder, informality, spontaneity.

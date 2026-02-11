@@ -1,0 +1,18 @@
+[00:00:00.000 --> 00:00:04.820] Vibe code as a verb, phrasal verb, informal slang, vibe code, vibe coded,
+[00:00:05.200 --> 00:00:05.840] vibe coding,
+[00:00:06.620 --> 00:00:07.100] definition.
+[00:00:08.200 --> 00:00:13.180] To create software using AI assisted programming by giving natural language prompts instead of writing
+[00:00:13.180 --> 00:00:14.040] code manually.
+[00:00:15.200 --> 00:00:18.260] Let's vibe code a prototype tonight and see how fast we can get it running.
+[00:00:19.140 --> 00:00:21.960] She vibe coded the entire front end in under three hours.
+[00:00:22.440 --> 00:00:25.020] They vibe coded the back end while the designers finalized the UI.
+[00:00:25.820 --> 00:00:29.080] Startups often vibe code features to test new ideas quickly.
+[00:00:29.080 --> 00:00:32.920] He spent the afternoon vibe coding the app's main functionality before the demo.
+[00:00:33.380 --> 00:00:37.100] We vibe coded the automation scripts so the system could handle repetitive tasks.
+[00:00:38.080 --> 00:00:43.020] Summary, vibe code is an informal verb meaning to generate code using AI from plain
+[00:00:43.020 --> 00:00:43.860] language instructions.
+[00:00:44.700 --> 00:00:48.140] It is derived from the noun vibe coding but emphasizes the action.
+[00:00:48.960 --> 00:00:53.140] Synonyms AI generate, prompt code, AI build, generate via AI.
+[00:00:53.680 --> 00:00:57.180] Antonyms manually code, hand write, traditional programming.
+[00:00:57.180 --> 00:01:02.020] Related words, AI assistant, LLM automation, prompt engineering, prototype,
+[00:01:02.280 --> 00:01:05.980] software development, low code, no code, debugging, tool chain, iteration.

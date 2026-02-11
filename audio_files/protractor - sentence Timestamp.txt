@@ -1,0 +1,9 @@
+[00:00:00.620 --> 00:00:02.920] Protractor is a noun with the following meaning.
+[00:00:04.020 --> 00:00:06.320] An instrument used to measure and draw angles.
+[00:00:07.240 --> 00:00:12.080] A protractor is a flat, semi -circular tool marked with degrees used in geometry and
+[00:00:12.080 --> 00:00:16.060] drafting to measure angles or to construct angles of a specified measure.
+[00:00:16.580 --> 00:00:21.340] Example, the students used a protractor to measure the angles in their geometry exercises.
+[00:00:22.280 --> 00:00:27.140] Example, to draw a 60 -degree angle, he placed the protractor on the paper and marked the angle.
+[00:00:28.060 --> 00:00:32.560] Example, the architect used a protractor to ensure the precision of the angle in the blueprint.
+[00:00:33.240 --> 00:00:38.100] Summary, a protractor is a tool used to measure and draw angles, typically marked in degrees.
+[00:00:38.500 --> 00:00:41.760] Related words, compass, ruler, angle, goniometer.

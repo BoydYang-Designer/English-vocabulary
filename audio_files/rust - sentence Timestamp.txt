@@ -1,0 +1,39 @@
+[00:00:00.000 --> 00:00:04.060] Rust is a noun, verb, and adjective with the following meanings.
+[00:00:04.720 --> 00:00:04.740] 1.
+[00:00:05.300 --> 00:00:10.220] As a noun, a, a reddish -brown flaky coating that forms on iron or steel due to
+[00:00:10.220 --> 00:00:12.560] oxidation when exposed to moisture or air.
+[00:00:13.220 --> 00:00:13.760] Example.
+[00:00:14.340 --> 00:00:17.120] The old fence was covered in rust after years of exposure to rain.
+[00:00:17.800 --> 00:00:18.340] Example.
+[00:00:18.600 --> 00:00:21.200] Regular maintenance can prevent rust from forming on metal surfaces.
+[00:00:22.120 --> 00:00:22.400] B.
+[00:00:22.920 --> 00:00:28.340] The condition or damage caused by rust, often affecting the durability or appearance of metal objects.
+[00:00:28.880 --> 00:00:31.960] Rust on the car's underbody could weaken its structure over time.
+[00:00:32.940 --> 00:00:33.380] C.
+[00:00:33.880 --> 00:00:38.020] A disease caused by fungi affecting plants typically forming reddish or brownish spots.
+[00:00:38.500 --> 00:00:39.060] Example.
+[00:00:39.540 --> 00:00:42.220] The wheat crop suffered from rust impacting the harvest yield.
+[00:00:43.240 --> 00:00:43.480] 2.
+[00:00:44.020 --> 00:00:48.760] As a verb, rust, rusted, rusting, a, to undergo rusting or to
+[00:00:48.760 --> 00:00:49.900] cause something to rust.
+[00:00:50.180 --> 00:00:50.620] Example.
+[00:00:50.720 --> 00:00:53.260] If you leave the tools outside, they will start to rust.
+[00:00:53.780 --> 00:00:56.400] The humid climate rusted the metal parts of the bicycle.
+[00:00:57.400 --> 00:00:57.960] B.
+[00:00:58.240 --> 00:00:58.780] Figurative.
+[00:00:59.040 --> 00:01:03.540] To deteriorate in quality, skill, or condition due to neglect or lack of use.
+[00:01:03.980 --> 00:01:04.540] Example.
+[00:01:04.920 --> 00:01:08.260] Her piano skills rusted over the years because she rarely practiced.
+[00:01:08.960 --> 00:01:09.160] 3.
+[00:01:09.720 --> 00:01:10.280] As an adjective,
+[00:01:11.040 --> 00:01:16.080] informal, describing something that is of a reddish -brown color resembling the color of rust.
+[00:01:16.820 --> 00:01:17.380] Example.
+[00:01:17.880 --> 00:01:21.220] The room was painted in a warm rust color to give it a vintage look.
+[00:01:22.220 --> 00:01:22.820] Summary.
+[00:01:23.280 --> 00:01:28.240] Rust refers to the reddish -brown coating that forms on metals like iron through oxidation, as well as the
+[00:01:28.240 --> 00:01:29.480] process of this deterioration.
+[00:01:29.840 --> 00:01:34.700] It also describes plant diseases with reddish spots and, informally, anything in a rusty or reddish
+[00:01:34.700 --> 00:01:35.240] -brown color.
+[00:01:35.760 --> 00:01:36.300] Related words.
+[00:01:36.660 --> 00:01:41.760] Corrode, oxidize, tarnish, erode, antonyms, preserve, protect,
+[00:01:42.180 --> 00:01:42.420] maintain.

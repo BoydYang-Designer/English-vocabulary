@@ -1,0 +1,18 @@
+[00:00:00.000 --> 00:00:01.480] Rhombus is a noun.
+[00:00:01.860 --> 00:00:05.320] Rhombus, singular, rhombuses, or rhombi, plural.
+[00:00:05.960 --> 00:00:10.660] A flat, closed geometric figure with four equal sides where opposite sides are parallel and
+[00:00:10.660 --> 00:00:11.800] opposite angles are equal.
+[00:00:12.380 --> 00:00:16.200] A rhombus is a type of parallelogram where all four sides are of equal length.
+[00:00:16.840 --> 00:00:21.100] Unlike a square, the angles are not necessarily right angles, but opposite angles are equal.
+[00:00:21.560 --> 00:00:22.020] Equal.
+[00:00:22.540 --> 00:00:26.120] The diagonals of a rhombus intersect at right angles and bisect each other.
+[00:00:26.980 --> 00:00:30.580] Example, the shape of a traditional diamond -shaped playing card is a rhombus.
+[00:00:31.120 --> 00:00:35.700] Example, in geometry, the rhombus is often used to study properties related to symmetry
+[00:00:35.700 --> 00:00:36.680] and angles.
+[00:00:37.680 --> 00:00:41.580] Example, the windows on the old building were designed in a rhombus pattern.
+[00:00:42.880 --> 00:00:47.240] Summary, a rhombus is a four -sided flat shape where all sides are of equal length,
+[00:00:47.500 --> 00:00:50.340] opposite sides are parallel, and opposite angles are equal.
+[00:00:50.980 --> 00:00:54.440] The diagonals intersect at right angles and bisect each other.
+[00:00:55.320 --> 00:00:56.180] Related words,
+[00:00:56.900 --> 00:01:02.160] square, parallelogram, diamond, quadrilateral, antonyms, triangle, circle, oval,
+[00:01:02.420 --> 00:01:04.020] shapes with different numbers of sides or curves.

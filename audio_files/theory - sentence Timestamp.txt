@@ -1,0 +1,31 @@
+[00:00:00.000 --> 00:00:04.740] Theory is a noun that refers to a set of ideas or principles intended to
+[00:00:04.740 --> 00:00:09.440] explain something, often based on general assumptions or established principles, but not
+[00:00:09.440 --> 00:00:10.260] always proven.
+[00:00:11.940 --> 00:00:12.240] 1.
+[00:00:12.500 --> 00:00:17.500] A system of ideas explaining something, especially one based on general principles independent of the
+[00:00:17.500 --> 00:00:18.400] thing to be explained.
+[00:00:19.220 --> 00:00:19.840] Example.
+[00:00:20.840 --> 00:00:24.600] The theory of evolution offers an explanation for the diversity of species on Earth.
+[00:00:25.460 --> 00:00:25.980] Example.
+[00:00:26.560 --> 00:00:29.540] He proposed a new theory about the causes of climate change.
+[00:00:30.260 --> 00:00:33.540] Example, there are several different theories about the cause of the disease.
+[00:00:35.800 --> 00:00:36.320] 2.
+[00:00:38.260 --> 00:00:42.320] A supposition or idea used to explain something, often speculative or hypothetical.
+[00:00:43.580 --> 00:00:44.100] Example.
+[00:00:44.240 --> 00:00:46.760] She has a theory about why her team is not performing well.
+[00:00:47.540 --> 00:00:50.800] Example, in theory, the plan sounds good, but it might not work in practice.
+[00:00:51.420 --> 00:00:51.900] Example.
+[00:00:51.960 --> 00:00:55.500] I agree with you in theory, but realistically I don't think we have the time to do that.
+[00:00:56.240 --> 00:00:56.640] Summary.
+[00:00:56.960 --> 00:01:01.720] Theory refers to a structured set of ideas or explanations, sometimes abstract or hypothetical,
+[00:01:02.320 --> 00:01:04.760] that aims to describe how something works or why it happens.
+[00:01:05.480 --> 00:01:06.120] Related words.
+[00:01:06.620 --> 00:01:07.120] Hypothesis.
+[00:01:07.340 --> 00:01:07.580] Concept.
+[00:01:08.060 --> 00:01:08.280] Model.
+[00:01:08.800 --> 00:01:09.300] Explanation.
+[00:01:10.180 --> 00:01:10.680] Antonyms.
+[00:01:10.840 --> 00:01:10.960] Fact.
+[00:01:11.200 --> 00:01:11.440] Proof.
+[00:01:11.580 --> 00:01:11.960] Certainty.
+[00:01:12.140 --> 00:01:12.360] Reality.

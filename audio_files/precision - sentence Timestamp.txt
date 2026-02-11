@@ -1,0 +1,5 @@
+[00:00:00.000 --> 00:00:04.920] Precision refers to the quality of being exact, accurate, or meticulous in a
+[00:00:04.920 --> 00:00:06.940] particular action, measurement, or detail.
+[00:00:07.700 --> 00:00:11.260] It implies a high degree of correctness or refinement in execution.
+[00:00:12.600 --> 00:00:17.600] For example, the engineer calibrated the instruments with precision to ensure accurate measurements.
+[00:00:18.740 --> 00:00:23.700] Another example is the skilled archer demonstrated remarkable precision hitting the bullseye with every arrow.

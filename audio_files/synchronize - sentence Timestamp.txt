@@ -1,0 +1,14 @@
+[00:00:00.000 --> 00:00:01.100] Synchronize as a verb.
+[00:00:02.600 --> 00:00:04.640] Synchronize, synchronized, synchronizing.
+[00:00:05.380 --> 00:00:09.560] One, to cause two or more things to happen at the same time or operate in unison.
+[00:00:10.640 --> 00:00:13.380] The dancers synchronized their movements perfectly with the music.
+[00:00:14.160 --> 00:00:16.440] The clocks in the building are synchronized every night.
+[00:00:17.000 --> 00:00:19.060] They synchronize their watches before the race started.
+[00:00:20.020 --> 00:00:23.480] Two, to coordinate or match events, actions, or processes.
+[00:00:24.600 --> 00:00:27.280] The team synchronized their schedules to meet for the project.
+[00:00:27.940 --> 00:00:30.560] Software can synchronize data across multiple devices.
+[00:00:31.200 --> 00:00:34.020] The director synchronized the video and audio tracks for the film.
+[00:00:34.620 --> 00:00:39.620] Summary, to synchronize means to make events, actions, or objects happen at the same time or
+[00:00:39.620 --> 00:00:40.360] operate in harmony.
+[00:00:41.060 --> 00:00:44.340] Synonyms, coordinate, harmonize, align, match, time.
+[00:00:44.820 --> 00:00:48.960] Antonyms, desynchronize, misalign, disrupt, scatter, unsynchronize.

@@ -1,0 +1,9 @@
+[00:00:00.000 --> 00:00:04.300] A vernier is a type of scale or mechanism used for precise measurement.
+[00:00:04.740 --> 00:00:09.720] It typically consists of a main scale, which is the primary scale, and a sliding
+[00:00:09.720 --> 00:00:14.800] secondary scale, known as the vernier scale, that allows for finer measurements.
+[00:00:16.020 --> 00:00:20.980] The vernier scale is slightly smaller in length than the main scale, and has divisions that are
+[00:00:20.980 --> 00:00:22.600] a fraction of those on the main scale.
+[00:00:23.180 --> 00:00:28.080] By aligning the markings of the two scales, one can determine the measurement with greater accuracy
+[00:00:28.080 --> 00:00:31.280] than what is possible with just the main scale alone.
+[00:00:32.160 --> 00:00:36.960] For example, the engineer carefully read the vernier scale of the caliper to obtain a
+[00:00:36.960 --> 00:00:39.820] precise measurement of the diameter of the small gear.

@@ -1,0 +1,13 @@
+[00:00:00.520 --> 00:00:02.660] Rectangle is a noun with the following meaning.
+[00:00:03.480 --> 00:00:07.980] A flat, closed geometric figure with four straight sides and four right angles,
+[00:00:08.340 --> 00:00:10.320] where opposite sides are of equal length.
+[00:00:11.020 --> 00:00:15.800] A rectangle is a type of quadrilateral where the opposite sides are equal, and all
+[00:00:15.800 --> 00:00:17.520] interior angles are 90 degrees.
+[00:00:18.240 --> 00:00:21.800] Unlike a square, the sides are not all equal, but the shape is still symmetrical.
+[00:00:23.620 --> 00:00:26.880] Example, a standard sheet of paper is typically shaped like a rectangle.
+[00:00:28.180 --> 00:00:32.920] Example, the students learned how to calculate the area of a rectangle in their math class.
+[00:00:33.960 --> 00:00:38.660] Example, the living room was designed in a large rectangle with windows on both sides.
+[00:00:39.560 --> 00:00:43.820] Summary, a rectangle is a four -sided flat shape where opposite sides are equal in length,
+[00:00:44.060 --> 00:00:45.960] and all angles are right angles.
+[00:00:46.380 --> 00:00:50.220] Related words, square, quadrilateral, parallelogram, rhombus.
+[00:00:50.980 --> 00:00:55.960] Antonyms, triangle, circle, oval shapes with different numbers of sides or curves.

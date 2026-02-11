@@ -1,0 +1,12 @@
+[00:00:00.000 --> 00:00:03.220] Vapor is a noun and verb with the following meanings.
+[00:00:03.940 --> 00:00:08.640] As a noun, a substance in the form of a gas, especially one that is produced by heating or
+[00:00:08.640 --> 00:00:09.740] evaporating a liquid.
+[00:00:10.780 --> 00:00:13.460] Example, the hot water created steam vapor in the bathroom.
+[00:00:14.460 --> 00:00:17.740] Example, clouds are formed from water vapor rising in the atmosphere.
+[00:00:18.460 --> 00:00:23.360] As a verb, vaporize vaporized vaporizing to convert or
+[00:00:23.360 --> 00:00:25.980] be converted into vapor, often by applying heat.
+[00:00:26.520 --> 00:00:28.860] Example, the heat caused the liquid to vaporize quickly.
+[00:00:29.820 --> 00:00:33.140] Example, he vaporized the liquid nitrogen to create a cooling effect.
+[00:00:33.640 --> 00:00:38.220] Summary, vapor refers to a gas -like form of a substance usually created by heating a liquid,
+[00:00:38.680 --> 00:00:41.900] and as a verb, it describes the process of turning into vapor.
+[00:00:42.620 --> 00:00:47.520] Related words, gas, steam, mist, fog, antonyms, liquid, solid.

@@ -1,0 +1,22 @@
+[00:00:00.000 --> 00:00:02.940] Veterinarian is a noun with the following meaning.
+[00:00:03.920 --> 00:00:03.920] One,
+[00:00:04.660 --> 00:00:07.900] a medical professional who specializes in the treatment of animals.
+[00:00:08.580 --> 00:00:13.960] A veterinarian diagnoses, treats, and provides care for animals, including pets, livestock,
+[00:00:14.200 --> 00:00:14.660] and wildlife.
+[00:00:15.970 --> 00:00:16.600] Example sentences.
+[00:00:17.600 --> 00:00:21.680] The veterinarian examined the cat and recommended surgery for its broken leg.
+[00:00:22.830 --> 00:00:27.360] Veterinarians play a crucial role in maintaining the health of farm animals and preventing the spread of diseases.
+[00:00:27.360 --> 00:00:32.200] She has been working as a veterinarian for over 10 years and has a special interest in
+[00:00:32.200 --> 00:00:33.000] exotic animals.
+[00:00:33.800 --> 00:00:34.300] Summary.
+[00:00:34.780 --> 00:00:39.640] A veterinarian is a professional who provides medical care and treatment for animals, ensuring their
+[00:00:39.640 --> 00:00:40.500] health and well -being.
+[00:00:41.200 --> 00:00:41.840] Related words.
+[00:00:42.420 --> 00:00:42.980] Animal doctor.
+[00:00:43.320 --> 00:00:43.580] Vet.
+[00:00:44.020 --> 00:00:44.840] Animal health specialist.
+[00:00:45.660 --> 00:00:46.040] Clinician.
+[00:00:46.740 --> 00:00:47.380] Antonyms.
+[00:00:47.600 --> 00:00:48.040] Layperson.
+[00:00:48.560 --> 00:00:48.880] Amateur.
+[00:00:49.420 --> 00:00:50.220] Non -specialist.

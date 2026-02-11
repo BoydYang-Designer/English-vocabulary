@@ -1,0 +1,24 @@
+[00:00:00.800 --> 00:00:03.140] Representation is a noun with the following meanings.
+[00:00:03.720 --> 00:00:03.880] One,
+[00:00:04.520 --> 00:00:08.120] the act of standing in for someone or speaking on their behalf.
+[00:00:08.680 --> 00:00:13.060] This meaning refers to a person or group acting in an official capacity for someone else,
+[00:00:13.240 --> 00:00:15.460] often for legal or professional purposes.
+[00:00:16.120 --> 00:00:20.300] Example, the lawyer provided legal representation for the client during the trial.
+[00:00:21.160 --> 00:00:25.360] Example, he was chosen as the official representation of the company at the conference.
+[00:00:25.360 --> 00:00:30.320] Two, a depiction, portrayal, or image of something.
+[00:00:30.920 --> 00:00:35.840] This refers to something that illustrates or symbolizes a concept, idea, or object,
+[00:00:36.000 --> 00:00:37.320] such as an artwork or a model.
+[00:00:38.120 --> 00:00:42.220] Example, the sculpture is a powerful representation of resilience and strength.
+[00:00:42.940 --> 00:00:43.560] Example,
+[00:00:44.500 --> 00:00:47.100] maps are visual representations of geographical information.
+[00:00:47.640 --> 00:00:51.560] Three, a description or statement intended to influence perception.
+[00:00:51.560 --> 00:00:56.000] This involves the presentation of information or ideas in a specific way,
+[00:00:56.300 --> 00:00:59.720] often with the intent to convey a certain impression or influence opinions.
+[00:01:00.420 --> 00:01:04.260] Example, the media's representation of the event was criticized as biased.
+[00:01:04.860 --> 00:01:08.320] Example, his account was a truthful representation of what happened.
+[00:01:09.200 --> 00:01:12.420] Example, her representation of the situation was very confusing.
+[00:01:13.440 --> 00:01:16.280] Example, he was accused of making false representations.
+[00:01:18.160 --> 00:01:22.700] Summary, representation refers to the act or result of standing in for someone,
+[00:01:23.160 --> 00:01:28.260] depicting something visually or conceptually, or presenting information in a way to influence perception.
+[00:01:29.200 --> 00:01:33.440] Related words, depiction, portrayal, symbol, likeness, delegation, advocacy.
+[00:01:34.260 --> 00:01:37.000] Antonin's misrepresentation distortion, absence.

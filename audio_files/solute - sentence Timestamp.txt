@@ -1,0 +1,13 @@
+[00:00:00.000 --> 00:00:03.900] A solute is a substance that is dissolved in a solvent to form a solution.
+[00:00:04.320 --> 00:00:09.300] It can be a solid, liquid, or gas, and it is typically the component in smaller quantity in
+[00:00:09.300 --> 00:00:09.740] a solution.
+[00:00:10.580 --> 00:00:13.420] In a solution, the solute is evenly distributed throughout the solvent.
+[00:00:14.860 --> 00:00:15.420] Examples.
+[00:00:16.440 --> 00:00:20.000] Salt is a common solute in water, forming a saline solution.
+[00:00:20.580 --> 00:00:23.040] The sugar dissolved in the tea was the solute.
+[00:00:23.500 --> 00:00:26.420] The scientist measured the concentration of the solute in the solution.
+[00:00:27.240 --> 00:00:27.880] Summary.
+[00:00:28.500 --> 00:00:33.340] A solute is the substance that dissolves in a solvent to form a solution, and it is typically
+[00:00:33.340 --> 00:00:35.860] present in a lesser amount compared to the solvent.
+[00:00:36.600 --> 00:00:39.720] Related words, solution, dissolve, solvent, concentration.
+[00:00:40.300 --> 00:00:42.840] Antonyms, solvent, solid, precipitate.

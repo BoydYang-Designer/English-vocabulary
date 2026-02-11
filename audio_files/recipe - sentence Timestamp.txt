@@ -1,0 +1,15 @@
+[00:00:00.000 --> 00:00:02.400] Recipe is a noun with the following meanings.
+[00:00:03.160 --> 00:00:03.160] One,
+[00:00:03.880 --> 00:00:07.980] a set of instructions for preparing a particular dish, including the ingredients and steps.
+[00:00:08.680 --> 00:00:11.900] Example, she followed a traditional recipe to bake the cake.
+[00:00:12.780 --> 00:00:15.500] Example, the cookbook contains hundreds of delicious recipes.
+[00:00:16.300 --> 00:00:18.800] Example, do you have a recipe for homemade pasta?
+[00:00:19.360 --> 00:00:22.620] Two, a method or formula for achieving a desired result.
+[00:00:23.320 --> 00:00:26.280] Figurative use, lack of planning is a recipe for disaster.
+[00:00:27.260 --> 00:00:30.540] Example, hard work and persistence are the recipe for success.
+[00:00:31.200 --> 00:00:34.680] Example, ignoring customer feedback is a recipe for failure in business.
+[00:00:35.360 --> 00:00:40.820] Summary, a recipe is a set of instructions for making food or a formula for achieving a specific outcome.
+[00:00:41.400 --> 00:00:45.060] It can be used literally for cooking or figuratively for success or failure.
+[00:00:45.820 --> 00:00:49.940] Related words, formula method, guide, instructions, blueprint.
+[00:00:51.040 --> 00:00:52.340] Antonyms, disorder,
+[00:00:52.980 --> 00:00:54.160] improvisation, randomness.
