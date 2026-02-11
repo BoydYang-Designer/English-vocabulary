@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單字測驗</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js" defer></script>
+    
+    <script src="auth-manager.js" defer></script>
+    <script src="quiz-rating-system.js" defer></script>
+    <script src="quiz-memory-manager.js" defer></script>
+    <script src="q_sentence.js" defer></script>
+    <script src="quiz.js" defer></script>
+    <script src="flashcard.js" defer></script>
+</head>
+<body>
+    <div id="loadingOverlay">
+        <div class="spinner-container">
+            <div class="spinner"></div>
+            <p class="loading-text">準備中...</p>
+        </div>
+    </div>
+
+    <div id="toastNotification"></div>
+    
+    <!-- 麵包屑導航 -->
+    <nav id="breadcrumb-nav" class="breadcrumb-container">
+        <div class="breadcrumb-content"></div>
+    </nav>
+    
+    <header class="main-header">
+        <div class="header-decoration"></div>
+        <h1 class="page-title">測驗區</h1>
+        <div class="header-subtitle">挑戰您的英語能力</div>
+    </header>
+
+    <div class="quiz-type-selector">
+        <button id="wordQuizBtn" class="type-card" onclick="navigateToQuizType('word')">
+            <div class="card-icon">📝</div>
+            <h2 class="card-title">單字測驗</h2>
+            <p class="card-description">測試單字拼寫與記憶</p>
+        </button>
+        <button id="sentenceQuizBtn" class="type-card" onclick="navigateToQuizType('sentence')">
+            <div class="card-icon">💬</div>
+            <h2 class="card-title">句子測驗</h2>
+            <p class="card-description">練習完整句子理解</p>
+        </button>
+        <button id="flashcardBtn" class="type-card" onclick="navigateToFlashcard()">
+            <div class="card-icon">🃏</div>
+            <h2 class="card-title">字卡練習</h2>
+            <p class="card-description">翻牌記憶，智慧複習</p>
+        </button>
+    </div>
+
+    <div class="container">
+        <!-- 單字測驗分類 -->
+        <div id="quizCategories" class="categories-panel">
+            <div class="fc-setup-header">
+                <h2 class="fc-section-title">單字測驗設定</h2>
+                <p class="fc-section-desc">選擇篩選條件以縮小範圍，或不選擇以測驗所有單字</p>
+            </div>
+
+            <div class="action-buttons" style="margin-bottom: 1.5rem;">
+                <button id="startFilteredQuizBtn" class="primary-button">
+                    <span class="button-text">Word Quiz</span>
+                </button>
+                <button id="startRewordQuizBtn" class="primary-button secondary">
+                    <span class="button-text">Reword Quiz</span>
+                </button>
+            </div>
+            
+            <div class="filters-section">
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">字母分類</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content" id="alphabetButtons"></div>
+                </div>
+                
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">主分類</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content" id="primaryCategoryButtons"></div>
+                </div>
+                
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">特殊分類</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content" id="specialCategoryButtons"></div>
+                </div>
+                
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">等級分類</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content" id="levelButtons"></div>
+                </div>
+            </div>
+
+            <div class="action-buttons" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+                <button class="back-button-inline" onclick="returnToQuizCenter()">← 返回</button>
+                <button class="primary-button" onclick="openWordMemoryManager()" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <span class="button-text">⚙️ 記憶度管理</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 句子測驗分類 -->
+        <div id="sentenceQuizCategories" class="categories-panel">
+            <div class="fc-setup-header">
+                <h2 class="fc-section-title">句子測驗設定</h2>
+                <p class="fc-section-desc">選擇篩選條件以縮小範圍，或不選擇以測驗所有句子</p>
+            </div>
+
+            <div class="action-buttons" style="margin-bottom: 1.5rem;">
+                <button id="startSentenceQuizBtn" class="primary-button">
+                    <span class="button-text">Sentence Quiz</span>
+                </button>
+                <button id="startReorganizeQuizBtn" class="primary-button secondary">
+                    <span class="button-text">Reorganize Quiz</span>
+                </button>
+            </div>
+            
+            <div class="filters-section">
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">字母分類</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content" id="sentenceAlphabetButtons"></div>
+                </div>
+                
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">主分類</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content" id="sentencePrimaryCategoryButtons"></div>
+                </div>
+
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">次分類</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content" id="sentenceSecondaryCategoryButtons"></div>
+                </div>
+                
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">特殊分類</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content" id="sentenceSpecialCategoryButtons"></div>
+                </div>
+                
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">等級分類</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content" id="sentenceLevelButtons"></div>
+                </div>
+            </div>
+
+            <div class="action-buttons" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+                <button class="back-button-inline" onclick="returnToQuizCenter()">← 返回</button>
+                <button class="primary-button" onclick="openSentenceMemoryManager()" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <span class="button-text">⚙️ 記憶度管理</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 重組測驗區域 -->
+        <div id="reorganizeQuizArea" class="quiz-panel">
+            <button id="cancelReorganizeQuizBtn" class="back-button" onclick="returnToSentenceCategorySelection()">
+                <span>← 返回</span>
+            </button>
+            <div id="reorganizeSentenceHint" class="quiz-hint"></div>
+            <div id="sentenceConstructionArea" class="construction-zone"></div>
+            <div id="wordBlocksContainer" class="blocks-pool"></div>
+            <div class="quiz-controls">
+                <button id="playReorganizeAudioBtn" class="control-button audio">
+                    <span class="button-icon">🔊</span>
+                    <span class="button-label">播放</span>
+                </button>
+                <button id="submitReorganizeBtn" class="control-button primary" onclick="submitReorganizeAnswer()">
+                    <span class="button-label">提交答案</span>
+                </button>
+                <button id="nextReorganizeBtn" class="control-button" onclick="goToNextReorganizeSentence()">
+                    <span class="button-label">下一題</span>
+                </button>
+                <button class="control-button finish" onclick="finishReorganizeQuiz()">
+                    <span class="button-label">完成測驗</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Reword 測驗區域 -->
+        <div id="rewordQuizArea" class="quiz-panel">
+            <button id="cancelRewordQuizBtn" class="back-button" onclick="returnToCategorySelection()">
+                <span>← 返回</span>
+            </button>
+            <div id="rewordHint" class="quiz-hint"></div>
+            <div id="rewordConstructionArea" class="construction-zone"></div>
+            <div id="rewordLetterBlocksContainer" class="blocks-pool"></div>
+            <div class="quiz-controls">
+                <button id="playRewordAudioBtn" class="control-button audio">
+                    <span class="button-icon">🔊</span>
+                    <span class="button-label">播放</span>
+                </button>
+                <button id="submitRewordBtn" class="control-button primary" onclick="submitRewordAnswer()">
+                    <span class="button-label">提交答案</span>
+                </button>
+                <button id="nextRewordBtn" class="control-button" onclick="goToNextReword()">
+                    <span class="button-label">下一題</span>
+                </button>
+                <button class="control-button finish" onclick="finishRewordQuiz()">
+                    <span class="button-label">完成測驗</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 單字測驗區域 -->
+        <div id="quizArea" class="quiz-panel">
+            <button id="cancelBtn" class="back-button danger" onclick="returnToCategorySelection()">
+                <span>← 取消</span>
+            </button>
+            <div id="wordHint" class="quiz-hint"></div>
+            <div id="wordInput" class="letter-grid"></div>
+            <div class="quiz-controls">
+                <button id="playAudioCenterBtn" class="control-button audio">
+                    <span class="button-icon">🔊</span>
+                    <span class="button-label">Voice</span>
+                </button>
+                <button id="submitBtn" class="control-button primary" onclick="submitAnswer()">
+                    <span class="button-label">Submit</span>
+                </button>
+                <button id="nextBtn" class="control-button" onclick="goToNextWord()">
+                    <span class="button-label">Next</span>
+                </button>
+                <button class="control-button finish" onclick="finishQuiz()">
+                    <span class="button-label">Finish</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 句子測驗區域 -->
+        <div id="sentenceQuizArea" class="quiz-panel">
+            <button id="cancelSentenceQuizBtn" class="back-button" onclick="returnToSentenceCategorySelection()">
+                <span>← 返回</span>
+            </button>
+            <div id="sentenceHint" class="quiz-hint"></div>
+            <div id="sentenceInput" class="sentence-input-area">
+                <input type="text" id="userSentenceAnswer" class="sentence-answer-input" placeholder="輸入您的答案">
+            </div>
+            <div class="quiz-controls">
+                <button id="playSentenceAudioBtn" class="control-button audio">
+                    <span class="button-icon">🔊</span>
+                    <span class="button-label">播放</span>
+                </button>
+                <button id="submitSentenceBtn" class="control-button primary" onclick="submitSentenceAnswer()">
+                    <span class="button-label">提交</span>
+                </button>
+                <button id="nextSentenceBtn" class="control-button" onclick="goToNextSentence()">
+                    <span class="button-label">下一題</span>
+                </button>
+                <button class="control-button finish" onclick="finishSentenceQuiz()">
+                    <span class="button-label">完成測驗</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 測驗結果 -->
+        <div id="quizResult" class="result-panel">
+           <div class="result-actions">
+             <button class="primary-button large" onclick="backToMenu()">
+                <span class="button-text">返回選單</span>
+             </button>
+           </div>
+        </div>
+
+        <!-- ════════════════════════════════════════
+             🃏 字卡練習 Panel 1：選擇類型
+        ════════════════════════════════════════ -->
+        <div id="flashcardTypePanel" class="categories-panel" style="display:none;">
+            <div class="fc-type-header">
+                <h2 class="fc-section-title">選擇字卡類型</h2>
+                <p class="fc-section-desc">選擇要練習的字卡種類</p>
+            </div>
+            <div class="fc-type-grid">
+                <button class="fc-type-card" onclick="selectFlashcardType('word')">
+                    <span class="fc-type-icon">📖</span>
+                    <span class="fc-type-label">單字字卡</span>
+                    <span class="fc-type-desc">英文單字 → 中文意思</span>
+                </button>
+                <button class="fc-type-card" onclick="selectFlashcardType('sentence')">
+                    <span class="fc-type-icon">📄</span>
+                    <span class="fc-type-label">句子字卡</span>
+                    <span class="fc-type-desc">中文翻譯 → 英文句子</span>
+                </button>
+            </div>
+            
+            <!-- 底部按鈕區 -->
+            <div class="action-buttons" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+                <button class="back-button-inline" onclick="fcBackToMenu()">← 返回</button>
+                <button class="primary-button secondary" onclick="openFlashcardManager()">
+                    <span class="button-text">⚙️ 記憶度管理</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════
+             🃏 字卡練習 Panel 2：篩選設定
+        ════════════════════════════════════════ -->
+        <div id="flashcardSetupPanel" class="categories-panel" style="display:none;">
+            <div class="fc-setup-header">
+                <h2 class="fc-section-title">字卡設定</h2>
+                <p class="fc-section-desc">不選擇篩選條件將從所有字卡中隨機抽取</p>
+            </div>
+
+            <!-- 張數選擇 -->
+            <div class="fc-count-section">
+                <div class="fc-sub-title">練習張數</div>
+                <div class="fc-count-buttons">
+                    <button class="fc-count-btn category-button" data-count="5"  onclick="fcSelectCount(5, this)">5 張</button>
+                    <button class="fc-count-btn category-button selected" data-count="10" onclick="fcSelectCount(10,this)">10 張</button>
+                    <button class="fc-count-btn category-button" data-count="20" onclick="fcSelectCount(20,this)">20 張</button>
+                </div>
+            </div>
+
+            <div class="filters-section" style="margin-top: 1.5rem;">
+                <!-- 難易度 -->
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">難易度</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content">
+                        <div id="fc-level-buttons"></div>
+                    </div>
+                </div>
+
+                <!-- 主題大類 -->
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">主題大類</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content">
+                        <div id="fc-category-buttons"></div>
+                    </div>
+                </div>
+
+                <!-- 特殊篩選 -->
+                <div class="filter-group">
+                    <button type="button" class="filter-header">
+                        <span class="filter-title">特殊篩選</span>
+                        <span class="filter-icon">+</span>
+                    </button>
+                    <div class="filter-content">
+                        <div id="fc-special-buttons"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+                <button class="back-button-inline" onclick="fcBackToTypeSelect()">← 返回</button>
+                <button class="primary-button" onclick="startFlashcardSession()">
+                    <span class="button-text">🃏 開始練習</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════
+             🃏 字卡練習 Panel 3：翻牌練習主畫面
+        ════════════════════════════════════════ -->
+        <div id="flashcardArea" class="quiz-panel" style="display:none;">
+            <button class="back-button" onclick="fcBackToSetup()">← 返回</button>
+
+            <!-- 進度 -->
+            <div class="fc-progress-container">
+                <div class="fc-progress-header">
+                    <span id="fc-progress-text" class="fc-progress-label">1 / 10</span>
+                    <span class="fc-keyboard-hint">空白鍵翻牌 · ← 再練習 · ↓ 不確定 · → 記得</span>
+                </div>
+                <div class="fc-progress-track">
+                    <div id="fc-progress-bar" class="fc-progress-fill"></div>
+                </div>
+                <div id="fc-dots" class="fc-dots"></div>
+            </div>
+
+            <!-- 字卡本體（3D 翻牌） -->
+            <div class="fc-scene" onclick="fcFlipCard()">
+                <div id="fc-card" class="fc-card">
+                    <div class="fc-card-face fc-card-front">
+                        <div id="fc-front-content" class="fc-content"></div>
+                        <div id="fc-flip-hint" class="fc-flip-hint">
+                            <span>點擊翻牌</span>
+                            <span class="fc-flip-arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="fc-card-face fc-card-back">
+                        <div id="fc-back-content" class="fc-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 翻牌後的評分按鈕 -->
+            <div id="fc-action-buttons" class="fc-actions" style="display:none;">
+                <button class="fc-btn-unknown" onclick="fcMarkKnown(0)">
+                    <span class="fc-btn-icon">❌</span>
+                    <span class="fc-btn-label">再練習</span>
+                </button>
+                <button class="fc-btn-uncertain" onclick="fcMarkKnown(1)">
+                    <span class="fc-btn-icon">❓</span>
+                    <span class="fc-btn-label">不確定</span>
+                </button>
+                <button class="fc-btn-known" onclick="fcMarkKnown(2)">
+                    <span class="fc-btn-icon">✅</span>
+                    <span class="fc-btn-label">記得！</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════
+             🃏 字卡練習 Panel 4：結果頁
+        ════════════════════════════════════════ -->
+        <div id="flashcardResultPanel" class="result-panel" style="display:none;">
+            <div class="fc-result-header">
+                <div class="fc-result-emoji">🃏</div>
+                <p id="fc-result-comment" class="fc-result-comment"></p>
+            </div>
+
+            <div class="fc-result-stats">
+                <div class="fc-stat fc-stat-known">
+                    <span class="fc-stat-number" id="fc-result-known">0</span>
+                    <span class="fc-stat-label">✅ 記得</span>
+                </div>
+                <div class="fc-stat fc-stat-uncertain">
+                    <span class="fc-stat-number" id="fc-result-uncertain">0</span>
+                    <span class="fc-stat-label">❓ 不確定</span>
+                </div>
+                <div class="fc-stat fc-stat-pct">
+                    <span class="fc-stat-number" id="fc-result-pct">0%</span>
+                    <span class="fc-stat-label">正確率</span>
+                </div>
+                <div class="fc-stat fc-stat-unknown">
+                    <span class="fc-stat-number" id="fc-result-unknown">0</span>
+                    <span class="fc-stat-label">❌ 再練習</span>
+                </div>
+            </div>
+
+            <!-- 需要複習的清單 -->
+            <div class="fc-review-section">
+                <h3 class="fc-review-title">需要複習的字卡</h3>
+                <div id="fc-review-list" class="fc-review-list"></div>
+            </div>
+
+            <!-- 結果頁按鈕 -->
+            <div class="fc-result-actions">
+                <button id="fc-retry-wrong-btn" class="control-button primary" onclick="fcRetryWrong()">
+                    <span class="button-label">再練習答錯的</span>
+                </button>
+                <button class="control-button" onclick="fcRestartSame()">
+                    <span class="button-label">重新抽牌</span>
+                </button>
+                <button class="control-button finish" onclick="fcBackToMenu()">
+                    <span class="button-label">返回選單</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════
+             ⚙️ 單字測驗記憶度管理面板
+        ════════════════════════════════════════ -->
+        <div id="wordMemoryManagerPanel" class="categories-panel" style="display:none;">
+            <button class="back-button" onclick="closeWordMemoryManager()">← 返回</button>
+
+            <div class="fc-setup-header">
+                <h2 class="fc-section-title">⚙️ 單字測驗記憶度管理</h2>
+                <p class="fc-section-desc">查看和編輯所有單字的測驗記錄</p>
+            </div>
+
+            <!-- 搜尋和篩選 -->
+            <div class="fc-mgr-controls">
+                <input type="text" id="word-mgr-search" class="fc-mgr-search" placeholder="搜尋單字..." oninput="wordMgrFilterData()">
+                <select id="word-mgr-sort" class="fc-mgr-sort" onchange="wordMgrFilterData()">
+                    <option value="priority">依優先級排序</option>
+                    <option value="name">依名稱排序</option>
+                    <option value="tested-desc">依測驗次數（多→少）</option>
+                    <option value="tested-asc">依測驗次數（少→多）</option>
+                    <option value="rating-desc">依平均分數（高→低）</option>
+                    <option value="rating-asc">依平均分數（低→高）</option>
+                </select>
+            </div>
+
+            <!-- 統計摘要 -->
+            <div class="fc-mgr-summary">
+                <button class="fc-mgr-stat" onclick="wordMgrFilterByCategory('all')">
+                    <span class="fc-mgr-stat-value" id="word-mgr-total">0</span>
+                    <span class="fc-mgr-stat-label">總單字數</span>
+                </button>
+                <button class="fc-mgr-stat" onclick="wordMgrFilterByCategory('tested')">
+                    <span class="fc-mgr-stat-value" id="word-mgr-tested">0</span>
+                    <span class="fc-mgr-stat-label">已測驗過</span>
+                </button>
+                <button class="fc-mgr-stat" onclick="wordMgrFilterByCategory('correct')">
+                    <span class="fc-mgr-stat-value" id="word-mgr-correct">0</span>
+                    <span class="fc-mgr-stat-label">已答對</span>
+                </button>
+                <button class="fc-mgr-stat" onclick="wordMgrFilterByCategory('incorrect')">
+                    <span class="fc-mgr-stat-value" id="word-mgr-incorrect">0</span>
+                    <span class="fc-mgr-stat-label">已答錯</span>
+                </button>
+            </div>
+
+            <!-- 當前篩選狀態提示 -->
+            <div id="word-mgr-filter-hint" class="fc-mgr-filter-hint" style="display:none;">
+                <span class="fc-mgr-filter-text"></span>
+                <button class="fc-mgr-clear-filter" onclick="wordMgrFilterByCategory('all')">✕ 清除篩選</button>
+            </div>
+
+            <!-- 資料列表 -->
+            <div id="word-mgr-list" class="fc-mgr-list"></div>
+
+            <!-- 批量操作 -->
+            <div class="fc-mgr-actions">
+                <button class="control-button" onclick="wordMgrResetAll()">
+                    <span class="button-label">重置所有記錄</span>
+                </button>
+                <button class="control-button" onclick="wordMgrExportData()">
+                    <span class="button-label">匯出資料</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════
+             ⚙️ 句子測驗記憶度管理面板
+        ════════════════════════════════════════ -->
+        <div id="sentenceMemoryManagerPanel" class="categories-panel" style="display:none;">
+            <button class="back-button" onclick="closeSentenceMemoryManager()">← 返回</button>
+
+            <div class="fc-setup-header">
+                <h2 class="fc-section-title">⚙️ 句子測驗記憶度管理</h2>
+                <p class="fc-section-desc">查看和編輯所有句子的測驗記錄</p>
+            </div>
+
+            <!-- 搜尋和篩選 -->
+            <div class="fc-mgr-controls">
+                <input type="text" id="sentence-mgr-search" class="fc-mgr-search" placeholder="搜尋句子..." oninput="sentenceMgrFilterData()">
+                <select id="sentence-mgr-sort" class="fc-mgr-sort" onchange="sentenceMgrFilterData()">
+                    <option value="priority">依優先級排序</option>
+                    <option value="name">依名稱排序</option>
+                    <option value="tested-desc">依測驗次數（多→少）</option>
+                    <option value="tested-asc">依測驗次數（少→多）</option>
+                    <option value="rating-desc">依平均分數（高→低）</option>
+                    <option value="rating-asc">依平均分數（低→高）</option>
+                </select>
+            </div>
+
+            <!-- 統計摘要 -->
+            <div class="fc-mgr-summary">
+                <button class="fc-mgr-stat" onclick="sentenceMgrFilterByCategory('all')">
+                    <span class="fc-mgr-stat-value" id="sentence-mgr-total">0</span>
+                    <span class="fc-mgr-stat-label">總句子數</span>
+                </button>
+                <button class="fc-mgr-stat" onclick="sentenceMgrFilterByCategory('tested')">
+                    <span class="fc-mgr-stat-value" id="sentence-mgr-tested">0</span>
+                    <span class="fc-mgr-stat-label">已測驗過</span>
+                </button>
+                <button class="fc-mgr-stat" onclick="sentenceMgrFilterByCategory('correct')">
+                    <span class="fc-mgr-stat-value" id="sentence-mgr-correct">0</span>
+                    <span class="fc-mgr-stat-label">已答對</span>
+                </button>
+                <button class="fc-mgr-stat" onclick="sentenceMgrFilterByCategory('incorrect')">
+                    <span class="fc-mgr-stat-value" id="sentence-mgr-incorrect">0</span>
+                    <span class="fc-mgr-stat-label">已答錯</span>
+                </button>
+            </div>
+
+            <!-- 當前篩選狀態提示 -->
+            <div id="sentence-mgr-filter-hint" class="fc-mgr-filter-hint" style="display:none;">
+                <span class="fc-mgr-filter-text"></span>
+                <button class="fc-mgr-clear-filter" onclick="sentenceMgrFilterByCategory('all')">✕ 清除篩選</button>
+            </div>
+
+            <!-- 資料列表 -->
+            <div id="sentence-mgr-list" class="fc-mgr-list"></div>
+
+            <!-- 批量操作 -->
+            <div class="fc-mgr-actions">
+                <button class="control-button" onclick="sentenceMgrResetAll()">
+                    <span class="button-label">重置所有記錄</span>
+                </button>
+                <button class="control-button" onclick="sentenceMgrExportData()">
+                    <span class="button-label">匯出資料</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════
+             ⚙️ 字卡記憶度管理 Panel 5：管理介面
+        ════════════════════════════════════════ -->
+        <div id="flashcardManagerPanel" class="categories-panel" style="display:none;">
+            <button class="back-button" onclick="fcCloseManager()">← 返回</button>
+
+            <div class="fc-setup-header">
+                <h2 class="fc-section-title">記憶度管理</h2>
+                <p class="fc-section-desc">查看和編輯所有字卡的學習記錄</p>
+            </div>
+
+            <!-- 類型切換 -->
+            <div class="fc-manager-tabs">
+                <button id="mgr-word-tab" class="fc-mgr-tab active" onclick="fcMgrSwitchType('word')">
+                    📖 單字字卡
+                </button>
+                <button id="mgr-sentence-tab" class="fc-mgr-tab" onclick="fcMgrSwitchType('sentence')">
+                    📄 句子字卡
+                </button>
+            </div>
+
+            <!-- 搜尋和篩選 -->
+            <div class="fc-mgr-controls">
+                <input type="text" id="fc-mgr-search" class="fc-mgr-search" placeholder="搜尋單字或句子..." oninput="fcMgrFilterData()">
+                <select id="fc-mgr-sort" class="fc-mgr-sort" onchange="fcMgrFilterData()">
+                    <option value="priority">依優先級排序</option>
+                    <option value="name">依名稱排序</option>
+                    <option value="seen-desc">依練習次數（多→少）</option>
+                    <option value="seen-asc">依練習次數（少→多）</option>
+                    <option value="rate-desc">依正確率（高→低）</option>
+                    <option value="rate-asc">依正確率（低→高）</option>
+                </select>
+            </div>
+
+            <!-- 統計摘要 -->
+            <div class="fc-mgr-summary">
+                <button class="fc-mgr-stat" onclick="fcMgrFilterByCategory('all')">
+                    <span class="fc-mgr-stat-value" id="mgr-total">0</span>
+                    <span class="fc-mgr-stat-label">總字卡數</span>
+                </button>
+                <button class="fc-mgr-stat" onclick="fcMgrFilterByCategory('practiced')">
+                    <span class="fc-mgr-stat-value" id="mgr-practiced">0</span>
+                    <span class="fc-mgr-stat-label">已練習</span>
+                </button>
+                <button class="fc-mgr-stat" onclick="fcMgrFilterByCategory('mastered')">
+                    <span class="fc-mgr-stat-value" id="mgr-mastered">0</span>
+                    <span class="fc-mgr-stat-label">已熟練</span>
+                </button>
+                <button class="fc-mgr-stat" onclick="fcMgrFilterByCategory('struggling')">
+                    <span class="fc-mgr-stat-value" id="mgr-struggling">0</span>
+                    <span class="fc-mgr-stat-label">需加強</span>
+                </button>
+            </div>
+
+            <!-- 當前篩選狀態提示 -->
+            <div id="fc-mgr-filter-hint" class="fc-mgr-filter-hint" style="display:none;">
+                <span class="fc-mgr-filter-text"></span>
+                <button class="fc-mgr-clear-filter" onclick="fcMgrFilterByCategory('all')">✕ 清除篩選</button>
+            </div>
+
+            <!-- 資料列表 -->
+            <div id="fc-mgr-list" class="fc-mgr-list"></div>
+
+            <!-- 批量操作 -->
+            <div class="fc-mgr-actions">
+                <button class="control-button" onclick="fcMgrResetAll()">
+                    <span class="button-label">重置所有記錄</span>
+                </button>
+                <button class="control-button" onclick="fcMgrExportData()">
+                    <span class="button-label">匯出資料</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 麵包屑導航系統
+        window.quizEnhancements = window.quizEnhancements || {
+            breadcrumbPath: [],
+            currentQuizType: null
+        };
+
+        function updateBreadcrumb(path) {
+            if (path) {
+                window.quizEnhancements.breadcrumbPath = path;
+            }
+            
+            const breadcrumbNav = document.getElementById('breadcrumb-nav');
+            const breadcrumbContent = breadcrumbNav?.querySelector('.breadcrumb-content');
+            if (!breadcrumbNav || !breadcrumbContent) return;
+            
+            if (!window.quizEnhancements.breadcrumbPath || window.quizEnhancements.breadcrumbPath.length === 0) {
+                breadcrumbNav.classList.remove('visible');
+                return;
+            }
+            
+            breadcrumbNav.classList.add('visible');
+            breadcrumbContent.innerHTML = window.quizEnhancements.breadcrumbPath.map((item, index) => {
+                const isLast = index === window.quizEnhancements.breadcrumbPath.length - 1;
+                let onclickAction = '';
+                
+                if (index === 0) {
+                    onclickAction = 'backToMenu()';
+                } else if (index === 1) {
+                    onclickAction = 'backToQuizSelection()';
+                } else {
+                    onclickAction = `navigateToBreadcrumb(${index})`;
+                }
+                
+                return `<span class="breadcrumb-item ${isLast ? 'current' : ''}" onclick="${onclickAction}">${item}</span>${!isLast ? '<span class="breadcrumb-separator">›</span>' : ''}`;
+            }).join('');
+        }
+
+        function backToMenu() {
+            window.location.href = 'index.html';
+        }
+
+        function backToQuizSelection() {
+            document.getElementById('quizCategories').style.display = 'none';
+            document.getElementById('sentenceQuizCategories').style.display = 'none';
+            document.getElementById('quizArea').style.display = 'none';
+            document.getElementById('sentenceQuizArea').style.display = 'none';
+            document.getElementById('rewordQuizArea').style.display = 'none';
+            document.getElementById('reorganizeQuizArea').style.display = 'none';
+            document.getElementById('quizResult').style.display = 'none';
+            // 字卡 panels
+            document.getElementById('flashcardTypePanel').style.display = 'none';
+            document.getElementById('flashcardSetupPanel').style.display = 'none';
+            document.getElementById('flashcardArea').style.display = 'none';
+            document.getElementById('flashcardResultPanel').style.display = 'none';
+            
+            // 顯示測驗類型選擇區域
+            const quizTypeSelector = document.querySelector('.quiz-type-selector');
+            if (quizTypeSelector) {
+                quizTypeSelector.style.display = 'grid';
+            }
+            
+            // 更新標題為「測驗區」
+            const header = document.querySelector('.page-title');
+            if (header) {
+                header.textContent = '測驗區';
+            }
+            
+            updateBreadcrumb(['選擇功能', '測驗中心']);
+        }
+
+        function navigateToQuizType(type) {
+            window.quizEnhancements.currentQuizType = type;
+            
+            // 隱藏測驗類型選擇區域
+            const quizTypeSelector = document.querySelector('.quiz-type-selector');
+            if (quizTypeSelector) {
+                quizTypeSelector.style.display = 'none';
+            }
+            
+            if (type === 'word') {
+                document.getElementById('quizCategories').style.display = 'block';
+                document.getElementById('sentenceQuizCategories').style.display = 'none';
+                updateBreadcrumb(['選擇功能', '測驗中心', '單字測驗']);
+                
+                // 自動滾動到底部按鈕區域
+                setTimeout(() => {
+                    const quizCategories = document.getElementById('quizCategories');
+                    if (quizCategories) {
+                        const actionButtons = quizCategories.querySelectorAll('.action-buttons');
+                        const bottomButtons = actionButtons[actionButtons.length - 1];
+                        if (bottomButtons) {
+                            bottomButtons.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                        }
+                    }
+                }, 300);
+            } else if (type === 'sentence') {
+                document.getElementById('sentenceQuizCategories').style.display = 'block';
+                document.getElementById('quizCategories').style.display = 'none';
+                updateBreadcrumb(['選擇功能', '測驗中心', '句子測驗']);
+                
+                // 自動滾動到底部按鈕區域
+                setTimeout(() => {
+                    const sentenceCategories = document.getElementById('sentenceQuizCategories');
+                    if (sentenceCategories) {
+                        const actionButtons = sentenceCategories.querySelectorAll('.action-buttons');
+                        const bottomButtons = actionButtons[actionButtons.length - 1];
+                        if (bottomButtons) {
+                            bottomButtons.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                        }
+                    }
+                }, 300);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const showParam = urlParams.get('show');
+            const quizTypeSelector = document.querySelector('.quiz-type-selector');
+            
+            if (showParam === 'categories') {
+                // 進入單字測驗分類，隱藏測驗類型選擇器
+                if (quizTypeSelector) {
+                    quizTypeSelector.style.display = 'none';
+                }
+                updateBreadcrumb(['選擇功能', '測驗中心', '單字測驗']);
+                
+                // 自動滾動到底部按鈕區域
+                setTimeout(() => {
+                    const quizCategories = document.getElementById('quizCategories');
+                    if (quizCategories) {
+                        const actionButtons = quizCategories.querySelectorAll('.action-buttons');
+                        const bottomButtons = actionButtons[actionButtons.length - 1]; // 取得最後一個按鈕區（下方的）
+                        if (bottomButtons) {
+                            bottomButtons.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                        }
+                    }
+                }, 300);
+            } else if (showParam === 'sentenceCategories') {
+                // 進入句子測驗分類，隱藏測驗類型選擇器
+                if (quizTypeSelector) {
+                    quizTypeSelector.style.display = 'none';
+                }
+                updateBreadcrumb(['選擇功能', '測驗中心', '句子測驗']);
+                
+                // 自動滾動到底部按鈕區域
+                setTimeout(() => {
+                    const sentenceCategories = document.getElementById('sentenceQuizCategories');
+                    if (sentenceCategories) {
+                        const actionButtons = sentenceCategories.querySelectorAll('.action-buttons');
+                        const bottomButtons = actionButtons[actionButtons.length - 1]; // 取得最後一個按鈕區（下方的）
+                        if (bottomButtons) {
+                            bottomButtons.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                        }
+                    }
+                }, 300);
+            } else {
+                // 沒有參數，顯示測驗類型選擇器
+                if (quizTypeSelector) {
+                    quizTypeSelector.style.display = 'grid';
+                }
+                updateBreadcrumb(['選擇功能', '測驗中心']);
+            }
+
+            // 初始化折疊面板功能
+            const filterHeaders = document.querySelectorAll('.filter-header');
+            filterHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.filter-icon');
+                    
+                    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                        // 收起
+                        content.style.maxHeight = null;
+                        icon.textContent = '+';
+                    } else {
+                        // 展開 - 強制重新計算高度
+                        content.style.maxHeight = 'none'; // 先移除限制
+                        const height = content.scrollHeight; // 獲取實際高度
+                        content.style.maxHeight = '0px'; // 重置為0以便動畫
+                        setTimeout(() => {
+                            content.style.maxHeight = height + 'px'; // 設置目標高度
+                        }, 10);
+                        icon.textContent = '−';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
