@@ -227,7 +227,13 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
             ).join('');
         }
         
-        btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
+        // 找到包裝所有主分類按鈕的 div（filter-content > div），插入其中
+        const wrapperDiv = btn.closest('.filter-content > div');
+        if (wrapperDiv) {
+            wrapperDiv.insertBefore(subcategoryWrapper, btn.nextSibling);
+        } else {
+            btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
+        }
     }
 
     // 將主分類加入篩選條件
