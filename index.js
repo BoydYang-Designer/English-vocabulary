@@ -409,25 +409,90 @@ let isSentenceJumping = false; // [新增] 是否正在跳轉句子（避免畫�
 // 此函數顯示主應用程式視圖
 function showAppView(user) {
     const loginView = document.getElementById('login-view');
+    const menuView = document.getElementById('menu-view');
     const appContainer = document.getElementById('app-container');
+    
     if (loginView) loginView.classList.add('is-hidden');
-    if (appContainer) appContainer.classList.remove('is-hidden');
+    if (menuView) menuView.classList.remove('is-hidden');
+    if (appContainer) appContainer.classList.add('is-hidden'); // 先隱藏主應用容器
 
     const isGuest = !user;
+    
+    // 更新menu-view中的用戶資訊
+    const userInfoMenuEl = document.getElementById('user-info-menu');
+    const signOutBtnMenu = document.getElementById('sign-out-btn-menu');
+    const signInFromGuestBtnMenu = document.getElementById('sign-in-from-guest-btn-menu');
+    
+    if (!isGuest) {
+        if (userInfoMenuEl) userInfoMenuEl.textContent = `歡迎, ${user.displayName || user.email}`;
+        if (signOutBtnMenu) signOutBtnMenu.classList.remove('is-hidden');
+        if (signInFromGuestBtnMenu) signInFromGuestBtnMenu.classList.add('is-hidden');
+    } else {
+        if (userInfoMenuEl) userInfoMenuEl.textContent = '訪客模式';
+        if (signOutBtnMenu) signOutBtnMenu.classList.add('is-hidden');
+        if (signInFromGuestBtnMenu) signInFromGuestBtnMenu.classList.remove('is-hidden');
+    }
+    
+    // 設置menu-view中的按鈕事件
+    const gotoVocabularyBtn = document.getElementById('goto-vocabulary-btn');
+    const gotoSentenceBtn = document.getElementById('goto-sentence-btn');
+    const gotoTestBtn = document.getElementById('goto-test-btn');
+    const themeToggleBtnMenu = document.getElementById('theme-toggle-btn-menu');
+    const editStorageBtnMenu = document.getElementById('edit-storage-btn-menu');
+    
+    if (gotoVocabularyBtn) {
+        gotoVocabularyBtn.onclick = function() {
+            if (menuView) menuView.classList.add('is-hidden');
+            if (appContainer) appContainer.classList.remove('is-hidden');
+            backToFirstLayer();
+        };
+    }
+    
+    if (gotoSentenceBtn) {
+        gotoSentenceBtn.onclick = function() {
+            window.location.href = 'sentence.html';
+        };
+    }
+    
+    if (gotoTestBtn) {
+        gotoTestBtn.onclick = function() {
+            window.location.href = 'quiz.html';
+        };
+    }
+    
+    if (themeToggleBtnMenu) {
+        themeToggleBtnMenu.addEventListener('click', toggleTheme);
+    }
+    
+    if (editStorageBtnMenu) {
+        editStorageBtnMenu.addEventListener('click', openStorageEditor);
+    }
+    
+    if (signOutBtnMenu) {
+        signOutBtnMenu.addEventListener('click', signOutUser);
+    }
+    
+    if (signInFromGuestBtnMenu) {
+        signInFromGuestBtnMenu.addEventListener('click', signIn);
+    }
+    
+    // 初始化主題
+    initTheme();
+    
+    // 更新app-container中的用戶資訊(為了當從menu進入時有正確資訊)
     const userInfoEl = document.getElementById('user-info');
     const signOutBtn = document.getElementById('sign-out-btn');
     const signInFromGuestBtn = document.getElementById('sign-in-from-guest-btn');
 
     if (!isGuest) {
-        userInfoEl.textContent = `歡迎, ${user.displayName || user.email}`;
-        signOutBtn.classList.remove('is-hidden');
-        signInFromGuestBtn.classList.add('is-hidden');
+        if (userInfoEl) userInfoEl.textContent = `歡迎, ${user.displayName || user.email}`;
+        if (signOutBtn) signOutBtn.classList.remove('is-hidden');
+        if (signInFromGuestBtn) signInFromGuestBtn.classList.add('is-hidden');
     } else {
-        userInfoEl.textContent = '訪客模式';
-        signOutBtn.classList.add('is-hidden');
-        signInFromGuestBtn.classList.remove('is-hidden');
+        if (userInfoEl) userInfoEl.textContent = '訪客模式';
+        if (signOutBtn) signOutBtn.classList.add('is-hidden');
+        if (signInFromGuestBtn) signInFromGuestBtn.classList.remove('is-hidden');
     }
-    backToFirstLayer();
 }
 
 // 索引頁面的主要應用程式邏輯
