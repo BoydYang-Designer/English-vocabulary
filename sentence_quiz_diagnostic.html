@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>句子測驗診斷工具</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .section h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .error {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        .warning {
+            color: #ffc107;
+            font-weight: bold;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .category-list {
+            max-height: 300px;
+            overflow-y: auto;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .category-item {
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 句子測驗診斷工具</h1>
+        
+        <div class="section">
+            <h2>📊 步驟 1: 載入資料</h2>
+            <button onclick="loadData()">載入 sentence.json</button>
+            <div id="loadStatus" class="info-box" style="margin-top: 10px;"></div>
+        </div>
+        
+        <div class="section">
+            <h2>📋 步驟 2: 查看資料統計</h2>
+            <div id="dataStats" class="info-box"></div>
+        </div>
+        
+        <div class="section">
+            <h2>🏷️ 步驟 3: 查看分類列表</h2>
+            <div id="categoryList" class="category-list"></div>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 步驟 4: 測試篩選功能</h2>
+            <button onclick="testNoFilter()">測試:不選擇任何條件</button>
+            <button onclick="testLevelFilter()">測試:只選B2等級</button>
+            <button onclick="testCategoryFilter()">測試:選擇主分類</button>
+            <div id="filterResult" class="info-box" style="margin-top: 10px;"></div>
+        </div>
+        
+        <div class="section">
+            <h2>🐛 步驟 5: 查看完整日誌</h2>
+            <div id="debugLog"></div>
+        </div>
+    </div>
+
+    <script>
+        let sentenceData = [];
+        let logs = [];
+        
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = `[${timestamp}] ${message}`;
+            logs.push(logEntry);
+            console.log(logEntry);
+            updateDebugLog();
+        }
+        
+        function updateDebugLog() {
+            const debugLog = document.getElementById('debugLog');
+            debugLog.innerHTML = '<pre>' + logs.join('\n') + '</pre>';
+        }
+        
+        // 提取中文名稱
+        function extractChineseName(fullName) {
+            if (!fullName) return "未分類";
+            const match = fullName.match(/（([^）]+)）/);
+            if (match && match[1]) {
+                return match[1];
+            }
+            return fullName;
+        }
+        
+        // 提取英文名稱
+        function extractEnglishName(fullName) {
+            if (!fullName) return "";
+            return fullName.replace(/（[^）]+）/g, '').trim();
+        }
+        
+        async function loadData() {
+            const statusDiv = document.getElementById('loadStatus');
+            statusDiv.innerHTML = '<span class="warning">⏳ 載入中...</span>';
+            log('開始載入 sentence.json');
+            
+            try {
+                const response = await fetch('https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/sentence.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                
+                const data = await response.json();
+                log(`✅ JSON 載入成功`);
+                
+                if (!data["New Words"] || !Array.isArray(data["New Words"])) {
+                    throw new Error('資料格式錯誤');
+                }
+                
+                sentenceData = data["New Words"].filter(item => item.句子 && item.中文);
+                log(`✅ 篩選後有 ${sentenceData.length} 個有效句子`);
+                
+                // 處理分類
+                sentenceData.forEach(item => {
+                    if (typeof item["分類"] === "string") {
+                        item["分類"] = [item["分類"]];
+                    } else if (!Array.isArray(item["分類"])) {
+                        item["分類"] = [];
+                    }
+                    
+                    item.primaryCategoryFull = item["分類"][0] || "未分類";
+                    item.primaryCategory = extractChineseName(item.primaryCategoryFull);
+                    item.primaryCategoryEn = extractEnglishName(item.primaryCategoryFull);
+                    item.secondaryCategories = item["分類"].slice(1);
+                });
+                
+                log(`✅ 分類處理完成`);
+                
+                statusDiv.innerHTML = `<span class="success">✅ 成功載入 ${sentenceData.length} 個句子</span>`;
+                
+                showStats();
+                showCategories();
+                
+            } catch (error) {
+                log(`❌ 載入失敗: ${error.message}`, 'error');
+                statusDiv.innerHTML = `<span class="error">❌ 載入失敗: ${error.message}</span>`;
+            }
+        }
+        
+        function showStats() {
+            const statsDiv = document.getElementById('dataStats');
+            
+            // 統計等級
+            const levels = {};
+            sentenceData.forEach(item => {
+                const level = item.等級 || '未分類';
+                levels[level] = (levels[level] || 0) + 1;
+            });
+            
+            // 統計主分類
+            const categories = {};
+            sentenceData.forEach(item => {
+                const cat = item.primaryCategory;
+                categories[cat] = (categories[cat] || 0) + 1;
+            });
+            
+            let html = `
+                <div><strong>總句子數:</strong> ${sentenceData.length}</div>
+                <div><strong>等級分布:</strong></div>
+                <div style="margin-left: 20px;">
+                    ${Object.entries(levels).sort().map(([k,v]) => `${k}: ${v} 個`).join('<br>')}
+                </div>
+                <div style="margin-top: 10px;"><strong>主分類數量:</strong> ${Object.keys(categories).length} 個</div>
+            `;
+            
+            statsDiv.innerHTML = html;
+            log(`統計完成: ${Object.keys(levels).length} 個等級, ${Object.keys(categories).length} 個主分類`);
+        }
+        
+        function showCategories() {
+            const listDiv = document.getElementById('categoryList');
+            
+            const categories = {};
+            sentenceData.forEach(item => {
+                const cat = item.primaryCategory;
+                categories[cat] = (categories[cat] || 0) + 1;
+            });
+            
+            let html = '<div style="font-weight: bold; margin-bottom: 10px;">所有主分類 (點擊查看詳情):</div>';
+            
+            Object.entries(categories).sort((a,b) => b[1] - a[1]).forEach(([cat, count]) => {
+                html += `<div class="category-item" onclick="showCategoryDetail('${cat}')">
+                    <strong>${cat}</strong>: ${count} 個句子
+                </div>`;
+            });
+            
+            listDiv.innerHTML = html;
+        }
+        
+        function showCategoryDetail(categoryName) {
+            const samples = sentenceData.filter(s => s.primaryCategory === categoryName).slice(0, 3);
+            alert(`分類: ${categoryName}\n\n範例句子:\n${samples.map(s => `- ${s.Words}: ${s.句子.substring(0, 50)}...`).join('\n')}`);
+        }
+        
+        function testNoFilter() {
+            log('測試: 不選擇任何條件');
+            const resultDiv = document.getElementById('filterResult');
+            
+            if (sentenceData.length === 0) {
+                resultDiv.innerHTML = '<span class="error">❌ 請先載入資料</span>';
+                return;
+            }
+            
+            const filtered = sentenceData.filter(item => {
+                return true; // 不篩選,全部通過
+            });
+            
+            log(`篩選結果: ${filtered.length} 個句子`);
+            
+            if (filtered.length > 0) {
+                const samples = filtered.slice(0, 5);
+                resultDiv.innerHTML = `
+                    <div class="success">✅ 測試成功!</div>
+                    <div>找到 ${filtered.length} 個句子</div>
+                    <div style="margin-top: 10px;"><strong>前5個句子:</strong></div>
+                    ${samples.map(s => `<div style="margin-left: 20px;">- ${s.Words}</div>`).join('')}
+                `;
+            } else {
+                resultDiv.innerHTML = '<span class="error">❌ 沒有找到任何句子</span>';
+            }
+        }
+        
+        function testLevelFilter() {
+            log('測試: 只選B2等級');
+            const resultDiv = document.getElementById('filterResult');
+            
+            if (sentenceData.length === 0) {
+                resultDiv.innerHTML = '<span class="error">❌ 請先載入資料</span>';
+                return;
+            }
+            
+            const filtered = sentenceData.filter(item => {
+                return item.等級 === 'B2';
+            });
+            
+            log(`篩選結果: ${filtered.length} 個B2句子`);
+            
+            if (filtered.length > 0) {
+                const samples = filtered.slice(0, 5);
+                resultDiv.innerHTML = `
+                    <div class="success">✅ 測試成功!</div>
+                    <div>找到 ${filtered.length} 個 B2 等級句子</div>
+                    <div style="margin-top: 10px;"><strong>前5個句子:</strong></div>
+                    ${samples.map(s => `<div style="margin-left: 20px;">- ${s.Words}: ${s.等級}</div>`).join('')}
+                `;
+            } else {
+                resultDiv.innerHTML = '<span class="error">❌ 沒有找到 B2 句子</span>';
+            }
+        }
+        
+        function testCategoryFilter() {
+            log('測試: 選擇主分類');
+            const resultDiv = document.getElementById('filterResult');
+            
+            if (sentenceData.length === 0) {
+                resultDiv.innerHTML = '<span class="error">❌ 請先載入資料</span>';
+                return;
+            }
+            
+            // 找出最多句子的分類
+            const categories = {};
+            sentenceData.forEach(item => {
+                const cat = item.primaryCategory;
+                categories[cat] = (categories[cat] || 0) + 1;
+            });
+            
+            const topCategory = Object.entries(categories).sort((a,b) => b[1] - a[1])[0][0];
+            log(`測試分類: ${topCategory}`);
+            
+            const filtered = sentenceData.filter(item => {
+                return item.primaryCategory === topCategory;
+            });
+            
+            log(`篩選結果: ${filtered.length} 個句子屬於 "${topCategory}"`);
+            
+            if (filtered.length > 0) {
+                const samples = filtered.slice(0, 5);
+                resultDiv.innerHTML = `
+                    <div class="success">✅ 測試成功!</div>
+                    <div>測試分類: <strong>${topCategory}</strong></div>
+                    <div>找到 ${filtered.length} 個句子</div>
+                    <div style="margin-top: 10px;"><strong>前5個句子:</strong></div>
+                    ${samples.map(s => `<div style="margin-left: 20px;">- ${s.Words}<br><small style="color: #666;">完整分類: ${s.primaryCategoryFull}</small></div>`).join('')}
+                `;
+            } else {
+                resultDiv.innerHTML = '<span class="error">❌ 沒有找到句子</span>';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -961,3 +961,32 @@ function returnToQuizCenter() {
     
     console.log('✅ 返回測驗中心');
 }
+
+// 🔧 新增：導航到不同測驗類型
+function navigateToQuizType(type) {
+    console.log(`🎯 導航到測驗類型: ${type}`);
+    
+    if (type === 'word') {
+        // 單字測驗
+        showQuizCategories();
+    } else if (type === 'sentence') {
+        // 句子測驗 - 調用 q_sentence.js 中的函數
+        if (typeof showSentenceQuizCategories === 'function') {
+            showSentenceQuizCategories();
+        } else {
+            console.error('❌ showSentenceQuizCategories 函數不存在');
+            showToast('❌ 句子測驗功能載入失敗', 'error');
+        }
+    }
+}
+
+// 🔧 新增：導航到字卡練習
+function navigateToFlashcard() {
+    console.log('🎯 導航到字卡練習');
+    if (typeof showFlashcardTypePanel === 'function') {
+        showFlashcardTypePanel();
+    } else {
+        console.error('❌ showFlashcardTypePanel 函數不存在');
+        showToast('❌ 字卡功能載入失敗', 'error');
+    }
+}
