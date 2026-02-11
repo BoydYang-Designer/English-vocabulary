@@ -310,7 +310,6 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
 function generateSentenceCategories(data) {
     const alphabetContainer = document.getElementById("sentenceAlphabetButtons");
     const primaryContainer = document.getElementById("sentencePrimaryCategoryButtons");
-    const secondaryContainer = document.getElementById("sentenceSecondaryCategoryButtons");
     const specialContainer = document.getElementById("sentenceSpecialCategoryButtons");
     const levelContainer = document.getElementById("sentenceLevelButtons");
 
@@ -352,11 +351,6 @@ function generateSentenceCategories(data) {
         }).join("");
     // 包一層 div 以符合 .filter-content > div 的 CSS 結構
     primaryContainer.innerHTML = `<div>${primaryButtonsHtml}</div>`;
-
-    if (secondaryContainer) {
-        secondaryContainer.innerHTML = "";
-        secondaryContainer.closest('.filter-group').style.display = 'none';
-    }
     
     specialContainer.innerHTML = `
         <button class="category-button" onclick="toggleSentenceSelection('special', 'important', this)">⭐ 重要句子</button>
