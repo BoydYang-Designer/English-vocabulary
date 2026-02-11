@@ -471,7 +471,6 @@ function renderFlashcard() {
                 <span class="fc-hint-blanks">${'_ '.repeat(restCount).trim()}</span>
             </div>
             <div class="fc-hint-label">完成這個句子 →</div>
-            <div class="fc-chinese-sub">${chinese}</div>
             <button class="fc-play-btn" onclick="event.stopPropagation(); fcPlayAudio()" title="播放發音">
                 🔊 <span>播放</span>
             </button>
