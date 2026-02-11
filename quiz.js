@@ -41,28 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const show = params.get("show");
 
-    document.querySelectorAll('.collapsible-content').forEach(content => {
+    document.querySelectorAll('.filter-content').forEach(content => {
         content.style.maxHeight = '0px';
     });
     
-    document.querySelectorAll(".collapsible-header").forEach(button => {
-        button.addEventListener("click", function() {
-            this.classList.toggle("active");
-            const content = this.nextElementSibling;
-            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                content.style.maxHeight = '0px';
-                
-                // 當主分類收合時，尋找並收合所有次分類
-                const subcategoryWrappers = content.querySelectorAll('.subcategory-wrapper');
-                subcategoryWrappers.forEach(wrapper => {
-                    wrapper.style.maxHeight = '0px';
-                });
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    });
-
     const sentenceButton = document.getElementById("sentencePageBtn");
     if (sentenceButton) {
         sentenceButton.addEventListener("click", function () {
@@ -181,10 +163,12 @@ function handleQuizSubcategoryClick(subcatBtn, primaryBtnId) {
 function handleQuizPrimaryCategoryClick(btn, categoryName) {
     let subcategoryWrapper = document.getElementById(`sub-for-quiz-${categoryName.replace(/\s/g, '-')}`);
 
+    // 如果次分類容器不存在，創建它
     if (!subcategoryWrapper) {
         subcategoryWrapper = document.createElement('div');
         subcategoryWrapper.className = 'subcategory-wrapper';
         subcategoryWrapper.id = `sub-for-quiz-${categoryName.replace(/\s/g, '-')}`;
+        subcategoryWrapper.style.maxHeight = '0px';
 
         const secondaryCategories = [...new Set(
             wordsData
@@ -209,22 +193,36 @@ function handleQuizPrimaryCategoryClick(btn, categoryName) {
         btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
     }
 
-    // 檢查次分類容器是否已展開
-    const isExpanded = subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px';
+    // 切換次分類的展開/收合狀態
+    const isExpanded = subcategoryWrapper.classList.contains('expanded');
+    
     if (isExpanded) {
+        // 收合次分類
+        subcategoryWrapper.classList.remove('expanded');
         subcategoryWrapper.style.maxHeight = '0px';
     } else {
+        // 展開次分類
+        subcategoryWrapper.classList.add('expanded');
         subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
     }
 
-    // ===== 修復：使用 transitionend 事件而非固定延遲 =====
-    subcategoryWrapper.addEventListener('transitionend', function handler() {
-        const mainCollapsibleContent = btn.closest('.collapsible-content');
-        if (mainCollapsibleContent && mainCollapsibleContent.style.maxHeight !== '0px') {
-            mainCollapsibleContent.style.maxHeight = mainCollapsibleContent.scrollHeight + "px";
+    // 更新父容器（.filter-content）的高度
+    // 延遲執行以確保次分類的高度變化已經開始
+    setTimeout(() => {
+        const parentFilterContent = btn.closest('.filter-content');
+        if (parentFilterContent) {
+            // 暫時移除高度限制以計算真實高度
+            const currentMaxHeight = parentFilterContent.style.maxHeight;
+            parentFilterContent.style.maxHeight = 'none';
+            const newHeight = parentFilterContent.scrollHeight;
+            parentFilterContent.style.maxHeight = currentMaxHeight;
+            
+            // 更新為新的高度
+            setTimeout(() => {
+                parentFilterContent.style.maxHeight = newHeight + 'px';
+            }, 10);
         }
-        subcategoryWrapper.removeEventListener('transitionend', handler);
-    }, { once: true });
+    }, 50);
 }
 
 function toggleSpecialFilterAndCheckHeader(btn, filterType) {
@@ -244,10 +242,12 @@ function generateMultiSelectButtons() {
     let primaryCategories = [...new Set(wordsData.map(w => (w["分類"] && w["分類"][0]) || "未分類").filter(c => c))];
     let primaryContainer = document.getElementById("primaryCategoryButtons");
     if(primaryContainer) {
-        primaryContainer.innerHTML = primaryCategories.map(c => {
+        const buttonsHtml = primaryCategories.map(c => {
             const btnId = `quiz-primary-btn-${c.replace(/\s/g, '-')}`;
             return `<button id="${btnId}" class='category-button' onclick='handleQuizPrimaryCategoryClick(this, "${c}")'>${c}</button>`;
         }).join(" ");
+        // 包一層 div 以符合 .filter-content > div 的 CSS 結構
+        primaryContainer.innerHTML = `<div>${buttonsHtml}</div>`;
     }
     
     let specialContainer = document.getElementById("specialCategoryButtons");

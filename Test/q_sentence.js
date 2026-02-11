@@ -1,4 +1,4 @@
-console.log("✅ q_sentence.js loaded");
+console.log("✅ q_sentence.js loaded (FIXED VERSION)");
 
 // All variable definitions remain at the top level
 const GITHUB_JSON_URL = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/sentence.json";
@@ -19,6 +19,25 @@ let selectedSentenceFilters = {
     alphabet: new Set(),
     special: new Set()
 };
+
+// 🔧 新增：從完整分類名稱中提取中文部分
+function extractChineseName(fullName) {
+    if (!fullName) return "未分類";
+    // 匹配括號內的中文部分：（xxx）
+    const match = fullName.match(/（([^）]+)）/);
+    if (match && match[1]) {
+        return match[1];
+    }
+    // 如果沒有括號，返回原始名稱
+    return fullName;
+}
+
+// 🔧 新增：從完整分類名稱中提取英文部分
+function extractEnglishName(fullName) {
+    if (!fullName) return "";
+    // 移除括號及其內容
+    return fullName.replace(/（[^）]+）/g, '').trim();
+}
 
 // This function can be defined outside
 function getUserAnswer(index) {
@@ -44,14 +63,19 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.warn("Could not find startSentenceQuizBtn");
     }
+    
+    const reorganizeBtn = document.getElementById("startReorganizeQuizBtn");
+    if (reorganizeBtn) {
+        reorganizeBtn.addEventListener("click", startReorganizeQuiz);
+    }
 });
 
 
 function updateCollapsibleHeaderState(btn) {
-    const contentWrapper = btn.closest('.collapsible-content');
+    const contentWrapper = btn.closest('.filter-content');
     if (!contentWrapper) return;
     const header = contentWrapper.previousElementSibling;
-    if (!header || !header.classList.contains('collapsible-header')) return;
+    if (!header || !header.classList.contains('filter-header')) return;
     const hasSelectedChildren = contentWrapper.querySelector('.category-button.selected') !== null;
     if (hasSelectedChildren) {
         header.classList.add('header-highlight');
@@ -63,7 +87,14 @@ function updateCollapsibleHeaderState(btn) {
 
 // 📌 進入 Q Sentence 測驗分類頁面
 function showSentenceQuizCategories() {
-    document.querySelector("h1").textContent = "句子測驗區";
+    // 不修改標題，保持「測驗區」
+    
+    // 隱藏測驗類型選擇區域
+    const quizTypeSelector = document.querySelector(".quiz-type-selector");
+    if (quizTypeSelector) {
+        quizTypeSelector.style.display = "none";
+    }
+    
     document.getElementById("sentenceQuizCategories").style.display = "block";
     console.log("✅ 顯示句子測驗分類頁面");
 
@@ -75,56 +106,63 @@ function showSentenceQuizCategories() {
         return response.json();
     })
     .then(data => {
-        console.log("✅ 成功載入 sentence.json", data);
+        console.log("✅ 成功載入 sentence.json");
         if (!data["New Words"] || !Array.isArray(data["New Words"])) {
             console.error("❌ 資料格式錯誤，'New Words' 不是一個數組。");
             return;
         }
 
         sentenceData = data["New Words"].filter(item => item.句子 && item.中文);
+        
+        // 🔧 改進的分類處理
         sentenceData.forEach(item => {
             if (typeof item["分類"] === "string") {
                 item["分類"] = [item["分類"]];
             } else if (!Array.isArray(item["分類"])) {
                 item["分類"] = [];
             }
-            item.primaryCategory = item["分類"][0] || "未分類";
+            
+            // 保存完整的主分類名稱（包含英文和中文）- 用於顯示
+            item.primaryCategoryFull = item["分類"][0] || "未分類";
+            // 提取中文名稱用於匹配
+            item.primaryCategory = extractChineseName(item.primaryCategoryFull);
+            // 提取英文名稱
+            item.primaryCategoryEn = extractEnglishName(item.primaryCategoryFull);
+            // 次分類
             item.secondaryCategories = item["分類"].slice(1);
         });
 
         localStorage.setItem("sentenceData", JSON.stringify(sentenceData));
+        console.log(`✅ 已載入 ${sentenceData.length} 個句子`);
         generateSentenceCategories(sentenceData);
     })
     .catch(error => {
     console.error("❌ 無法載入 sentence.json:", error);
-    alert("⚠️ 無法載入句子資料，請檢查網路或 URL 是否正確。使用本地儲存的資料（如果可用）。");
+    // 靜默處理：不顯示 alert，直接使用備援資料
+    
+    // 先嘗試從 localStorage 載入之前儲存的資料
+    const savedData = localStorage.getItem("sentenceData");
+    if (savedData) {
+        try {
+            sentenceData = JSON.parse(savedData);
+            console.log("✅ 使用本地儲存的句子資料");
+            generateSentenceCategories(sentenceData);
+            return;
+        } catch (e) {
+            console.error("❌ 本地資料解析失敗:", e);
+        }
+    }
+    
+    // 如果 localStorage 也沒有，使用記憶體中的資料（如果有的話）
     if (sentenceData.length > 0) {
-        generateSentenceCategories(sentenceData); // 使用本地 fallback
+        console.log("✅ 使用記憶體中的句子資料");
+        generateSentenceCategories(sentenceData);
     } else {
-        // 添加臨時樣本資料（使用您提供的 JSON 片段）
-        sentenceData = [
-            {
-                "等級": "B2",
-                "Words": "absorb-1",
-                "名人": "Barack Obama",
-                "句子": "A great leader absorbs criticism, not as a wound, but as a lesson to grow stronger.",
-                "中文": "（偉大的領袖吸收批評，不是當作傷害，而是當作讓自己更強大的課程。）",
-                "分類": ["藝術與美學", "Design"]
-            },
-            {
-                "等級": "B2",
-                "Words": "absorb-10",
-                "句子": "The towel absorbed the spilled water quickly",
-                "中文": "（毛巾迅速吸收了灑出的水。）",
-                "分類": ["藝術與美學", "Design"]
-            }
-        ];
-        console.log("✅ 使用臨時樣本資料載入分類");
-        generateSentenceCategories(sentenceData); // 使用樣本資料生成分類
-        localStorage.setItem("sentenceData", JSON.stringify(sentenceData)); // 儲存到 localStorage 以便下次使用
+        alert("❌ 無法載入句子資料，請檢查網路連線。");
     }
 });
 }
+
 function handleSentenceSubcategoryClick(subcatBtn, primaryBtnId) {
     // 這個新函式處理次分類按鈕的點擊。
     // 它負責切換次分類的選取狀態，並根據結果更新主分類按鈕的高亮狀態。
@@ -154,8 +192,9 @@ function handleSentenceSubcategoryClick(subcatBtn, primaryBtnId) {
 
 
 function handleSentencePrimaryCategoryClick(btn, categoryName) {
-    // 這個函式只負責處理展開/收合次分類列表，不處理按鈕自身的選取狀態。
-    // 選取狀態由新的 handleSentenceSubcategoryClick 函式來管理。
+    // 當用戶點擊主分類按鈕時:
+    // 1. 將主分類加入篩選條件
+    // 2. 展開/收合次分類列表
 
     let subcategoryWrapperId = `sub-for-sentence-${categoryName.replace(/\s/g, '-')}`;
     let subcategoryWrapper = document.getElementById(subcategoryWrapperId);
@@ -181,8 +220,7 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
         }
 
         if (secondaryCategories.length > 0) {
-            // --- 修改部分 ---
-            // 生成次分類按鈕，使其 onclick 調用新的處理函式，並傳入主按鈕 ID (btn.id)
+            // 生成次分類按鈕
             subcategoryWrapper.innerHTML = secondaryCategories.map(subCat =>
                 `<button class="category-button" onclick="handleSentenceSubcategoryClick(this, '${btn.id}')">${subCat}</button>`
             ).join('');
@@ -191,8 +229,10 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
         btn.parentNode.insertBefore(subcategoryWrapper, btn.nextSibling);
     }
 
-    // --- 正確的收合/展開邏輯 ---
-    // 檢查次分類容器是否已展開
+    // 將主分類加入篩選條件
+    toggleSentenceSelection('primaryCategories', categoryName, btn);
+
+    // 展開/收合次分類列表
     const isExpanded = subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px';
     if (isExpanded) {
         // 如果已展開，則收合
@@ -202,13 +242,16 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
         subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
     }
 
-    // 為了讓動畫平順，延遲一小段時間後再重新計算父容器的高度
+    // 🔧 修復：延遲更新父容器高度
     setTimeout(() => {
-        const mainCollapsibleContent = btn.closest('.collapsible-content');
-        if (mainCollapsibleContent && mainCollapsibleContent.style.maxHeight !== '0px') {
-             mainCollapsibleContent.style.maxHeight = mainCollapsibleContent.scrollHeight + "px";
+        const mainFilterContent = btn.closest('.filter-content');
+        if (mainFilterContent && mainFilterContent.style.maxHeight !== '0px') {
+            // 先移除限制以獲取真實高度
+            mainFilterContent.style.maxHeight = 'none';
+            const realHeight = mainFilterContent.scrollHeight;
+            mainFilterContent.style.maxHeight = realHeight + 'px';
         }
-    }, 310);
+    }, 350); // 等待次分類動畫完成
 }
 
 function generateSentenceCategories(data) {
@@ -224,7 +267,7 @@ function generateSentenceCategories(data) {
     }
 
     const levels = new Set();
-    const primaryCategories = new Set();
+    const primaryCategoriesMap = new Map(); // 使用 Map 儲存 中文名稱 -> 完整名稱 的映射
     const alphabetSet = new Set();
 
     data.forEach(item => {
@@ -233,8 +276,9 @@ function generateSentenceCategories(data) {
         if (/[A-Z]/.test(firstLetter)) {
             alphabetSet.add(firstLetter);
         }
-        if (item.primaryCategory) {
-            primaryCategories.add(item.primaryCategory);
+        if (item.primaryCategory && item.primaryCategoryFull) {
+            // 使用中文名稱作為 key,完整名稱作為 value
+            primaryCategoriesMap.set(item.primaryCategory, item.primaryCategoryFull);
         }
     });
 
@@ -245,28 +289,32 @@ function generateSentenceCategories(data) {
         `<button class="category-button" onclick="toggleSentenceSelection('alphabet', '${letter}', this)">${letter}</button>`
     ).join("");
 
-    // --- 修改部分 ---
-    // 渲染主分類按鈕，並為每個按鈕加上唯一的 ID
-    primaryContainer.innerHTML = [...primaryCategories].map(c => {
-        const btnId = `sentence-primary-btn-${c.replace(/\s/g, '-')}`;
-        return `<button id="${btnId}" class="category-button" onclick="handleSentencePrimaryCategoryClick(this, '${c}')">${c}</button>`;
-    }).join("");
+    // 🔧 渲染主分類按鈕，顯示完整名稱（英文+中文），但用中文名稱作為 key
+    primaryContainer.innerHTML = [...primaryCategoriesMap.entries()]
+        .sort((a, b) => a[1].localeCompare(b[1])) // 按完整名稱排序
+        .map(([chineseName, fullName]) => {
+            const btnId = `sentence-primary-btn-${chineseName.replace(/\s/g, '-')}`;
+            // 顯示完整名稱，但 onclick 傳遞中文名稱用於匹配
+            return `<button id="${btnId}" class="category-button" onclick="handleSentencePrimaryCategoryClick(this, '${chineseName}')">${fullName}</button>`;
+        }).join("");
 
     if (secondaryContainer) {
         secondaryContainer.innerHTML = "";
-        secondaryContainer.closest('.collapsible-section').style.display = 'none';
+        secondaryContainer.closest('.filter-group').style.display = 'none';
     }
     
     specialContainer.innerHTML = `
-        <button class="category-button" onclick="toggleSentenceSelection('special', 'important', this)">重要句子</button>
-        <button class="category-button" onclick="toggleSentenceSelection('special', 'incorrect', this)">錯誤句子</button>
-        <button class="category-button" onclick="toggleSentenceSelection('special', 'checked', this)">Checked 句子</button>
-        <button class="category-button" onclick="toggleSentenceSelection('special', 'word_checked', this)">Checked 單字</button>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'important', this)">⭐ 重要句子</button>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'incorrect', this)">❌ 錯誤句子</button>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'checked', this)">✅ Checked 句子</button>
+        <button class="category-button" onclick="toggleSentenceSelection('special', 'word_checked', this)">📝 Checked 單字</button>
     `;
 
     levelContainer.innerHTML = standardLevels.map(l =>
         `<button class="category-button" onclick="toggleSentenceSelection('levels', '${l}', this)">${l}</button>`
     ).join("");
+    
+    console.log(`✅ 生成分類按鈕完成: ${primaryCategoriesMap.size} 個主分類, ${standardLevels.length} 個等級`);
 }
 
 
@@ -287,7 +335,7 @@ function toggleSentenceSelection(type, value, button) {
     }
     console.log(`✅ ${type} 篩選更新:`, [...filterSet]);
 
-    // ▼▼▼【新增此行】觸發區塊標題更新 ▼▼▼
+    // 觸發區塊標題更新
     if (button) updateCollapsibleHeaderState(button);
 }
 
@@ -295,58 +343,87 @@ function startSentenceQuiz() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("sentenceQuizArea").style.display = "block";
 
-    let filteredSentences = sentenceData.filter(item => {
-        let levelMatch = selectedSentenceFilters.levels.size === 0 || selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
-        let primaryCategoryMatch = selectedSentenceFilters.primaryCategories.size === 0 || selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
-        
-        let secondaryCategoryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
-            ((item.secondaryCategories && item.secondaryCategories.length > 0) && item.secondaryCategories.some(cat => selectedSentenceFilters.secondaryCategories.has(cat))) ||
-            (selectedSentenceFilters.secondaryCategories.has('未分類') && (!item.secondaryCategories || item.secondaryCategories.length === 0));
-
-        let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
-        
-        let specialMatch = true;
-if (selectedSentenceFilters.special.size > 0) {
-    const vocabularyData = window.getVocabularyData();
-    specialMatch = [...selectedSentenceFilters.special].every(filter => {
-         if (filter === 'important') return (vocabularyData.importantSentences || {})[item.Words] === "true";
-         if (filter === 'incorrect') return (vocabularyData.wrongQS || []).includes(item.Words);
-         if (filter === 'checked') return (vocabularyData.checkedSentences || {})[item.Words] === "true";
-         if (filter === 'word_checked') {
-             const baseWord = item.Words.split('-')[0];
-             return (vocabularyData.checkedWords || []).includes(baseWord);
-         }
-         return true;
+    console.log("🔍 開始篩選句子...");
+    console.log("當前篩選條件:", {
+        levels: [...selectedSentenceFilters.levels],
+        primaryCategories: [...selectedSentenceFilters.primaryCategories],
+        secondaryCategories: [...selectedSentenceFilters.secondaryCategories],
+        alphabet: [...selectedSentenceFilters.alphabet],
+        special: [...selectedSentenceFilters.special]
     });
-}
+
+    let filteredSentences = sentenceData.filter(item => {
+        // 等級篩選
+        let levelMatch = selectedSentenceFilters.levels.size === 0 || 
+                        selectedSentenceFilters.levels.has(item.等級 || "未分類");
+        
+        // 🔧 主分類篩選 - 使用提取的中文名稱
+        let primaryCategoryMatch = selectedSentenceFilters.primaryCategories.size === 0 || 
+                                  selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
+        
+        // 次分類篩選
+        let secondaryCategoryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
+            ((item.secondaryCategories && item.secondaryCategories.length > 0) && 
+             item.secondaryCategories.some(cat => selectedSentenceFilters.secondaryCategories.has(cat))) ||
+            (selectedSentenceFilters.secondaryCategories.has('未分類') && 
+             (!item.secondaryCategories || item.secondaryCategories.length === 0));
+
+        // 字母篩選
+        let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 || 
+                           selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
+        
+        // 特殊篩選
+        let specialMatch = true;
+        if (selectedSentenceFilters.special.size > 0) {
+            const vocabularyData = window.getVocabularyData();
+            specialMatch = [...selectedSentenceFilters.special].every(filter => {
+                if (filter === 'important') return (vocabularyData.importantSentences || {})[item.Words] === "true";
+                if (filter === 'incorrect') return (vocabularyData.wrongQS || []).includes(item.Words);
+                if (filter === 'checked') return (vocabularyData.checkedSentences || {})[item.Words] === "true";
+                if (filter === 'word_checked') {
+                    const baseWord = item.Words.split('-')[0];
+                    return (vocabularyData.checkedWords || []).includes(baseWord);
+                }
+                return true;
+            });
+        }
         
         return levelMatch && primaryCategoryMatch && secondaryCategoryMatch && alphabetMatch && specialMatch;
     });
 
+    console.log(`✅ 篩選結果: ${filteredSentences.length} 個句子符合條件`);
+
     if (filteredSentences.length === 0) {
-        alert("⚠️ 沒有符合條件的句子！");
+        alert("⚠️ 沒有符合條件的句子！\n\n提示：\n1. 嘗試不選擇任何條件\n2. 避免選擇「特殊分類」(如果是第一次使用)\n3. 檢查是否選擇了過多篩選條件");
         returnToSentenceCategorySelection();
         return;
     }
 
+    // 使用智慧抽題系統（評分低的句子更容易被抽到）
+    if (typeof weightedRandomSentences === 'function') {
+        currentQuizSentences = weightedRandomSentences(filteredSentences, 10);
+        console.log(`✅ 使用智慧抽題，本次測驗句子數: ${currentQuizSentences.length}`);
+    } else {
+        // 降級方案：使用原有的隨機排序
+        filteredSentences.sort((a, b) => {
+            const countA = sentenceQuizHistory[a.Words] || 0;
+            const countB = sentenceQuizHistory[b.Words] || 0;
+            return countA - countB;
+        });
 
-    filteredSentences.sort((a, b) => {
-        const countA = sentenceQuizHistory[a.Words] || 0;
-        const countB = sentenceQuizHistory[b.Words] || 0;
-        return countA - countB;
-    });
+        for (let i = filteredSentences.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [filteredSentences[i], filteredSentences[j]] = [filteredSentences[j], filteredSentences[i]];
+        }
 
-    for (let i = filteredSentences.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [filteredSentences[i], filteredSentences[j]] = [filteredSentences[j], filteredSentences[i]];
+        currentQuizSentences = filteredSentences.slice(0, 10);
+        console.log(`✅ 使用隨機抽題，本次測驗句子數: ${currentQuizSentences.length}`);
     }
-
-    currentQuizSentences = filteredSentences.slice(0, 10);
+    
     currentSentenceIndex = 0;
     userAnswers = [];
 
-    console.log("✅ 本次測驗的句子數量:", currentQuizSentences.length);
-    console.log("✅ 本次測驗的隨機句子:", currentQuizSentences.map(s => s.Words));
+    console.log("✅ 本次測驗的句子:", currentQuizSentences.map(s => s.Words));
 
     localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
 
@@ -479,6 +556,8 @@ function autoPlayAudio() {
 function startReorganizeQuiz() {
     document.getElementById("sentenceQuizCategories").style.display = "none";
     document.getElementById("reorganizeQuizArea").style.display = "block";
+
+    console.log("🔍 開始篩選重組測驗句子...");
 
     let filteredSentences = sentenceData.filter(item => {
         let levelMatch = selectedSentenceFilters.levels.size === 0 ||
@@ -696,6 +775,10 @@ function goToNextReorganizeSentence() {
     }
 }
 
+function normalizeText(text) {
+    return text.toLowerCase().replace(/\s+/g, ' ').replace(/[.,!?;]/g, '').trim();
+}
+
 function finishReorganizeQuiz() {
     document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("reorganizeQuizArea").style.display = "none";
@@ -716,16 +799,22 @@ function finishReorganizeQuiz() {
 
         let userWords = userAnswer.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
         let correctWords = correctSentence.match(/[a-zA-Z]+(?:'[a-zA-Z]+)?|'s|[a-zA-Z]+(?:-[a-zA-Z]+)+/g) || [];
-        let isCorrect = userWords.join(" ").toLowerCase() === correctWords.join(" ").toLowerCase();
-        let isUnanswered = userAnswer === "(未作答)";
 
+        let highlightedCorrect = correctWords.map((word, i) => {
+            return (userWords[i] && normalizeText(userWords[i]) === normalizeText(word))
+                ? word
+                : `<span style='color: red; font-weight: bold;'>${word}</span>`;
+        }).join(' ');
+
+        let isCorrect = normalizeText(userAnswer) === normalizeText(correctSentence);
+        let isUnanswered = userAnswer === "(未作答)";
         let resultClass = isCorrect ? "correct" : (isUnanswered ? "unanswered" : "wrong");
 
+        let suggestedRating = isCorrect ? 4 : (isUnanswered ? 3 : 2);
         let importantCheckbox = `<input type="checkbox" class="important-checkbox" onchange="toggleImportantSentence('${sentenceObj.Words}', this)" ${localStorage.getItem('important_sentence_' + sentenceObj.Words) === "true" ? "checked" : ""} />`;
         let sentenceIdentifierLink = `<a href="sentence.html?sentence=${encodeURIComponent(sentenceObj.Words)}&from=quiz&layer=4" class="sentence-link-btn">${sentenceObj.Words}</a>`;
         let wordDetailButton = `<button class="word-detail-btn" onclick="goToWordDetail('${sentenceObj.Words.split("-")[0]}')">單字詳情</button>`;
-        let correctSentenceLink = `<button class="sentence-link-btn" onclick="playSentenceAudio('${sentenceObj.Words}.mp3')">${correctSentence}</button>`;
-        let chineseExplanation = sentenceObj.中文 ? sentenceObj.中文.replace(/\n/g, "<br>") : "無中文解釋";
+        let ratingHTML = typeof generateRatingHTML === 'function' ? generateRatingHTML('sentence', sentenceObj.Words, suggestedRating) : '';
 
         resultContainer.innerHTML += `
             <div class="result-item ${resultClass}">
@@ -735,12 +824,10 @@ function finishReorganizeQuiz() {
                     ${wordDetailButton}
                 </div>
                 <div class="vertical-group">
-                    ${correctSentenceLink}
-                    <div class="chinese-explanation">
-                        <h3>中文解釋</h3>
-                        <p>${chineseExplanation}</p>
-                    </div>
+                    <div><strong>正確答案:</strong> ${highlightedCorrect}</div>
+                    <div><strong>您的答案:</strong> ${userAnswer}</div>
                 </div>
+                ${ratingHTML}
             </div>
         `;
     }
@@ -748,279 +835,120 @@ function finishReorganizeQuiz() {
     resultContainer.innerHTML += `
         <div class="result-buttons">
             <button class="action-button" onclick="saveQSResults()">Save</button>
-            <button class="action-button" onclick="returnToSentenceCategorySelection()">Back</button>
+            <button class="action-button" onclick="openSentenceRatingManager()">查看評分記錄</button>
+            <button class="action-button" onclick="returnToMainMenu()">Back</button>
         </div>
     `;
 
     localStorage.setItem("userConstructedSentences", JSON.stringify(userConstructedSentences));
     localStorage.setItem("currentQuizSentences", JSON.stringify(currentQuizSentences));
-    console.log("✅ 測驗結束時保存的資料:", { userConstructedSentences, currentQuizSentences });
 }
 
-document.getElementById("startReorganizeQuizBtn").addEventListener("click", startReorganizeQuiz);
-
-function handleLetterInput(event) {
-    let input = event.target;
-    let value = input.value.trim();
+// 以下是其他必要的輔助函數...
+function handleLetterInput(e) {
+    const input = e.target;
+    const wordIndex = parseInt(input.dataset.wordIndex);
+    const letterIndex = parseInt(input.dataset.letterIndex);
     
-    if (value.length > 1) {
-        input.value = value[0];
-    }
-
-    let allInputs = Array.from(document.querySelectorAll(".letter-input"));
-    let currentIndex = allInputs.indexOf(input);
-
-    if (currentIndex !== -1 && value !== "") {
-        let nextInput = allInputs[currentIndex + 1];
+    if (input.value.length === 1) {
+        const allInputs = document.querySelectorAll('.letter-input');
+        const currentInputIndex = Array.from(allInputs).indexOf(input);
+        const nextInput = allInputs[currentInputIndex + 1];
+        
         if (nextInput) {
             nextInput.focus();
         }
     }
 }
 
-function handleArrowNavigation(event) {
-    let input = event.target;
-    let allInputs = Array.from(document.querySelectorAll(".letter-input"));
-    let currentIndex = allInputs.indexOf(input);
-
-    if (event.key === "ArrowRight") {
-        event.preventDefault();
-        let nextInput = allInputs[currentIndex + 1];
-        if (nextInput) {
-            nextInput.focus();
-        }
-    } else if (event.key === "ArrowLeft") {
-        event.preventDefault();
-        let prevInput = allInputs[currentIndex - 1];
-        if (prevInput) {
-            prevInput.focus();
-        }
-    } else if (event.key === "Backspace") {
-        event.preventDefault();
-        if (input.value) {
-            input.value = "";
-        } else {
-            let prevInput = allInputs[currentIndex - 1];
-            if (prevInput) {
-                prevInput.value = "";
-                prevInput.focus();
-            }
-        }
+function handleArrowNavigation(e) {
+    const allInputs = document.querySelectorAll('.letter-input');
+    const currentInputIndex = Array.from(allInputs).indexOf(e.target);
+    
+    if (e.key === 'ArrowLeft' && currentInputIndex > 0) {
+        e.preventDefault();
+        allInputs[currentInputIndex - 1].focus();
+    } else if (e.key === 'ArrowRight' && currentInputIndex < allInputs.length - 1) {
+        e.preventDefault();
+        allInputs[currentInputIndex + 1].focus();
     }
-}
-
-function playAudio() {
-    if (currentAudio) {
-        const playBtn = document.getElementById("playSentenceAudioBtn");
-        
-        playBtn.classList.add("playing");
-        
-        currentAudio.currentTime = 0;
-        currentAudio.play()
-            .then(() => {
-                console.log("✅ 播放成功");
-            })
-            .catch(error => {
-                console.error("🔊 播放失敗:", error);
-                playBtn.classList.remove("playing");
-            });
-
-        currentAudio.onended = () => {
-            playBtn.classList.remove("playing");
-            console.log("✅ 音檔播放結束");
-        };
-    } else {
-        console.warn("⚠️ 尚未加載音檔，請確認檔案是否正確");
-    }
-}
-
-function playSentenceAudio(audioFile) {
-    let audioUrl = GITHUB_MP3_BASE_URL + audioFile;
-    let audio = new Audio(audioUrl);
-    audio.play().catch(error => console.error("🔊 播放失敗:", error));
-}
-window.playSentenceAudio = playSentenceAudio;
-
-function handleSpacebar(event) {
-    if (event.code === "Space" && document.getElementById("sentenceQuizArea").style.display === "block") {
-        event.preventDefault();
-        playAudio();
-    }
-}
-
-document.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        if (document.getElementById("sentenceQuizArea").style.display === "block") {
-            let submitBtn = document.getElementById("submitSentenceBtn");
-            if (!submitBtn) return;
-            if (submitBtn.dataset.next === "true") {
-                console.log("📌 進入下一題 (Sentence Quiz)");
-                goToNextSentence();
-            } else {
-                console.log("📌 提交答案 (Sentence Quiz)");
-                submitSentenceAnswer();
-            }
-        }
-        else if (document.getElementById("reorganizeQuizArea").style.display === "block") {
-            let submitBtn = document.getElementById("submitReorganizeBtn");
-            if (!submitBtn) return;
-            if (submitBtn.innerText === "下一題") {
-                console.log("📌 進入下一題 (Reorganize Quiz)");
-                goToNextReorganizeSentence();
-            } else {
-                console.log("📌 提交答案 (Reorganize Quiz)");
-                submitReorganizeAnswer();
-            }
-        } else {
-            console.log("⚠️ 不在測驗模式，忽略 Enter 鍵");
-        }
-    }
-
-    if (event.code === "Space") {
-        event.preventDefault();
-        if (document.getElementById("sentenceQuizArea").style.display === "block") {
-            console.log("📌 空白鍵觸發音頻播放 (Sentence Quiz)");
-            playAudio();
-        }
-        else if (document.getElementById("reorganizeQuizArea").style.display === "block") {
-            console.log("📌 空白鍵觸發音頻播放 (Reorganize Quiz)");
-            if (currentAudio) {
-                const playBtn = document.getElementById("playReorganizeAudioBtn");
-                playBtn.classList.add("playing");
-                currentAudio.currentTime = 0;
-                currentAudio.play().catch(error => {
-                    console.error("🔊 播放失敗:", error);
-                    playBtn.classList.remove("playing");
-                });
-            } else {
-                console.warn("⚠️ 無音頻可播放");
-            }
-        }
-    }
-});
-
-function normalizeText(text) {
-    return text
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .toLowerCase()
-        .replace(/\bii\b/g, '2')
-        .replace(/\s+/g, ' ')
-        .replace(/,\s*/g, ',')
-        .trim();
 }
 
 function submitSentenceAnswer() {
     let sentenceObj = currentQuizSentences[currentSentenceIndex];
-    let correctSentence = sentenceObj.filteredSentence || sentenceObj.句子.replace(/\s*\[=[^\]]+\]/g, "").trim();
+    if (!sentenceObj) {
+        console.error("❌ 找不到 sentenceObj!");
+        return;
+    }
+
     let allInputs = document.querySelectorAll("#sentenceInput .letter-input");
+    let userAnswer = "";
+    let currentWord = [];
 
-    let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]|\s+/gu) || [];
-    let userAnswer = [];
-    let inputIndex = 0;
+    allInputs.forEach((input) => {
+        let char = input.value || "_";
+        currentWord.push(char);
 
-    correctWords.forEach((word, wordIndex) => {
-        if (/\p{L}+/u.test(word)) {
-            let inputWord = "";
-            while (inputIndex < allInputs.length && parseInt(allInputs[inputIndex].dataset.wordIndex) === wordIndex) {
-                inputWord += allInputs[inputIndex].value || "";
-                inputIndex++;
-            }
-            userAnswer.push(inputWord);
-        } else {
-            userAnswer.push(word);
+        let nextInput = input.nextElementSibling;
+        if (!nextInput || !nextInput.classList.contains("letter-input")) {
+            userAnswer += currentWord.join("") + " ";
+            currentWord = [];
         }
     });
 
-    let userAnswerStr = normalizeText(userAnswer.join(""));
-    let correctSentenceStr = normalizeText(correctSentence);
+    userAnswer = userAnswer.trim();
+    userAnswers[currentSentenceIndex] = userAnswer;
+    
+    let correctSentence = sentenceObj.filteredSentence;
+    let userAnswerNormalized = userAnswer.replace(/\s+/g, " ").replace(/_/g, "").replace(/,\s*/g, ",").trim().toLowerCase();
+    let correctSentenceNormalized = correctSentence.replace(/\s+/g, " ").replace(/,\s*/g, ",").trim().toLowerCase();
+    let isCorrect = userAnswerNormalized === correctSentenceNormalized;
 
-    userAnswers[currentSentenceIndex] = userAnswer.join("").trim();
-
-    let isCorrect = userAnswerStr === correctSentenceStr;
-    if (!isCorrect) {
-        if (!incorrectSentences.includes(sentenceObj.Words)) {
-            incorrectSentences.push(sentenceObj.Words);
-        }
-    } else {
+    if (!isCorrect && !incorrectSentences.includes(sentenceObj.Words)) {
+        incorrectSentences.push(sentenceObj.Words);
+    } else if (isCorrect) {
         incorrectSentences = incorrectSentences.filter(w => w !== sentenceObj.Words);
     }
+    localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
 
-    console.log("✅ submitSentenceAnswer 後更新 incorrectSentences:", incorrectSentences);
+    let correctChars = Array.from(correctSentence);
+    let userChars = Array.from(userAnswer.replace(/_/g, ""));
 
-    updateSentenceHint(correctSentence, userAnswer);
-    highlightUserAnswers(allInputs, correctSentence);
+    let inputElements = document.querySelectorAll("#sentenceInput .letter-input");
+    let charIndex = 0;
+
+    allInputs.forEach((input) => {
+        if (input.classList.contains("letter-input")) {
+            let userChar = input.value || "_";
+            let correctChar = correctChars[charIndex] || "_";
+            charIndex++;
+
+            if (userChar.toLowerCase() === correctChar.toLowerCase()) {
+                input.classList.add("correct");
+                input.classList.remove("incorrect");
+            } else {
+                input.classList.add("incorrect");
+                input.classList.remove("correct");
+            }
+
+            input.value = correctChar;
+            input.disabled = true;
+        }
+    });
+
+    let chineseExplanation = sentenceObj.中文 ? sentenceObj.中文.replace(/\n/g, "<br>") : "無中文解釋";
+    document.getElementById("sentenceHint").innerHTML = `
+        <div>${correctSentence}</div>
+        <div class="chinese-explanation">
+            <h3>中文解釋</h3>
+            <p>${chineseExplanation}</p>
+        </div>
+    `;
 
     let submitBtn = document.getElementById("submitSentenceBtn");
     submitBtn.innerText = "下一題";
     submitBtn.onclick = goToNextSentence;
     submitBtn.dataset.next = "true";
-}
-
-function updateSentenceHint(correctSentence, userAnswer) {
-    let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]|\s+/gu) || [];
-    let userWords = userAnswer;
-
-    let formattedSentence = correctWords.map((word, index) => {
-        if (/\p{L}+/u.test(word) || word === "II") {
-            let userWord = userWords[index] || "";
-            if (normalizeText(userWord) === normalizeText(word) || (word === "II" && userWord === "2")) {
-                return `<span style="color: black; font-weight: bold;">${word}</span>`;
-            } else {
-                return `<span style="color: red; font-weight: bold;">${word}</span>`;
-            }
-        } else {
-            return `<span style="color: black;">${word}</span>`;
-        }
-    }).join("");
-
-    document.getElementById("sentenceHint").innerHTML = formattedSentence;
-}
-
-function highlightUserAnswers(allInputs, correctSentence) {
-    let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+|[.,!?;]|\s+/gu) || [];
-    let inputIndex = 0;
-
-    correctWords.forEach((word, wordIndex) => {
-        if (/\p{L}+/u.test(word) || word === "II") {
-            let inputWord = "";
-            let inputElements = [];
-
-            while (inputIndex < allInputs.length && parseInt(allInputs[inputIndex].dataset.wordIndex) === wordIndex) {
-                inputWord += allInputs[inputIndex].value || "";
-                inputElements.push(allInputs[inputIndex]);
-                inputIndex++;
-            }
-
-            let normalizedInputWord = normalizeText(inputWord);
-            let normalizedWord = normalizeText(word);
-
-            if (normalizedInputWord === normalizedWord || (word === "II" && inputWord === "2")) {
-                inputElements.forEach(input => {
-                    input.style.color = "black";
-                    input.style.fontWeight = "bold";
-                });
-            } else {
-                let wordChars = Array.from(word);
-                inputElements.forEach((input, letterIndex) => {
-                    let inputChar = input.value || "";
-                    let correctChar = wordChars[letterIndex] || "";
-                    if (normalizeText(inputChar) === normalizeText(correctChar) || 
-                        (word === "II" && inputWord === "2" && letterIndex === 0)) {
-                        input.style.color = "black";
-                    } else {
-                        input.style.color = "red";
-                    }
-                    input.style.fontWeight = "bold";
-                });
-
-                for (let i = inputElements.length; i < wordChars.length; i++) {
-                    console.log(`⚠️ 單詞 "${word}" 缺少字符: ${wordChars[i]}`);
-                }
-            }
-        }
-    });
 }
 
 function goToNextSentence() {
@@ -1064,11 +992,15 @@ function finishSentenceQuiz() {
         let isUnanswered = userAnswer === "(未作答)";
 
         let resultClass = isCorrect ? "correct" : (isUnanswered ? "unanswered" : "wrong");
-
+        
+        // 根據答題結果給予建議評分
+        let suggestedRating = isCorrect ? 4 : (isUnanswered ? 3 : 2);
+        
         let importantCheckbox = `<input type="checkbox" class="important-checkbox" onchange="toggleImportantSentence('${sentenceObj.Words}', this)" ${localStorage.getItem('important_sentence_' + sentenceObj.Words) === "true" ? "checked" : ""} />`;
         let sentenceIdentifierLink = `<a href="sentence.html?sentence=${encodeURIComponent(sentenceObj.Words)}&from=quiz&layer=4" class="sentence-link-btn">${sentenceObj.Words}</a>`;
         let wordDetailButton = `<button class="word-detail-btn" onclick="goToWordDetail('${sentenceObj.Words.split("-")[0]}')">單字詳情</button>`;
         let correctSentenceLink = `<button class="sentence-link-btn" onclick="playSentenceAudio('${sentenceObj.Words}.mp3')">${correctSentence}</button>`;
+        let ratingHTML = typeof generateRatingHTML === 'function' ? generateRatingHTML('sentence', sentenceObj.Words, suggestedRating) : '';
 
         resultContainer.innerHTML += `
             <div class="result-item ${resultClass}">
@@ -1080,6 +1012,7 @@ function finishSentenceQuiz() {
                 <div class="vertical-group">
                     ${correctSentenceLink}
                 </div>
+                ${ratingHTML}
             </div>
         `;
     }
@@ -1087,6 +1020,7 @@ function finishSentenceQuiz() {
     resultContainer.innerHTML += `
         <div class="result-buttons">
             <button class="action-button" onclick="saveQSResults()">Save</button>
+            <button class="action-button" onclick="openSentenceRatingManager()">查看評分記錄</button>
             <button class="action-button" onclick="returnToMainMenu()">Back</button>
         </div>
     `;
@@ -1106,60 +1040,9 @@ function saveQSResults() {
     alert("測驗結果中的錯誤句子已儲存！");
 }
 
-function highlightErrors(correctSentence, userAnswer) {
-    let correctWords = correctSentence.split(/\b/);
-    let userWords = userAnswer.split(/\b/);
-
-    return correctWords.map((word, i) => {
-        let userWord = userWords[i] || "";
-        return (/\w+/.test(word) && userWord.toLowerCase() !== word.toLowerCase()) 
-            ? `<span style='color: red;'>${word}</span>` 
-            : word;
-    }).join("");
-}
-
 function goToWordDetail(word) {
     let baseWord = word.replace(/-\d+$/, '');
     window.location.href = `index.html?word=${encodeURIComponent(baseWord)}&from=quiz`;
-}
-
-function returnToQuizResult() {
-    document.getElementById("sentenceQuizArea").style.display = "none";
-    document.getElementById("quizResult").style.display = "block";
-    finishSentenceQuiz();
-}
-
-function getReturningStatus() {
-    let params = new URLSearchParams(window.location.search);
-    return params.get('returning') === 'true';
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    if (getReturningStatus()) {
-        console.log("✅ 從外部返回，顯示測驗結果");
-        restoreQuizResult();
-    } else {
-        console.log("ℹ️ 正常載入 quiz.html");
-    }
-
-    document.getElementById("startSentenceQuizBtn").addEventListener("click", startSentenceQuiz);
-});
-
-function restoreQuizResult() {
-    currentQuizSentences = JSON.parse(localStorage.getItem("currentQuizSentences")) || [];
-    userAnswers = JSON.parse(localStorage.getItem("userAnswers")) || [];
-    incorrectSentences = JSON.parse(localStorage.getItem("wrongQS")) || [];
-
-    if (currentQuizSentences.length === 0 || userAnswers.length === 0) {
-        console.warn("⚠️ 無測驗資料可恢復，回到分類頁面");
-        showSentenceQuizCategories();
-        return;
-    }
-
-    document.getElementById("sentenceQuizCategories").style.display = "none";
-    document.getElementById("sentenceQuizArea").style.display = "none";
-    document.getElementById("quizResult").style.display = "block";
-    finishSentenceQuiz();
 }
 
 function returnToSentenceCategorySelection() {
@@ -1167,6 +1050,18 @@ function returnToSentenceCategorySelection() {
     document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("reorganizeQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "none";
+
+    // 不顯示測驗類型選擇區域，因為我們是返回到分類頁面
+    const quizTypeSelector = document.querySelector(".quiz-type-selector");
+    if (quizTypeSelector) {
+        quizTypeSelector.style.display = "none";
+    }
+    
+    // 確保標題為「測驗區」
+    const header = document.querySelector('.page-title');
+    if (header) {
+        header.textContent = '測驗區';
+    }
 
     Object.keys(selectedSentenceFilters).forEach(key => selectedSentenceFilters[key].clear());
     

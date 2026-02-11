@@ -855,22 +855,52 @@
             const filterHeaders = document.querySelectorAll('.filter-header');
             filterHeaders.forEach(header => {
                 header.addEventListener('click', function() {
-                    this.classList.toggle('active');
+                    const isCurrentlyActive = this.classList.contains('active');
                     const content = this.nextElementSibling;
                     const icon = this.querySelector('.filter-icon');
+                    const filterGroup = this.closest('.filter-group');
                     
-                    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                        // 收起
-                        content.style.maxHeight = null;
+                    if (isCurrentlyActive) {
+                        // 收合 - 先收合所有次分類
+                        const subcategoryWrappers = content.querySelectorAll('.subcategory-wrapper');
+                        subcategoryWrappers.forEach(wrapper => {
+                            wrapper.style.maxHeight = '0px';
+                        });
+                        
+                        // 延遲收合主容器，讓次分類收合動畫可見
+                        setTimeout(() => {
+                            content.style.maxHeight = '0px';
+                        }, 50);
+                        
+                        // 添加 collapsed class 來隱藏整個 filter-group
+                        setTimeout(() => {
+                            filterGroup.classList.add('collapsed');
+                        }, 400);
+                        
+                        this.classList.remove('active');
                         icon.textContent = '+';
                     } else {
-                        // 展開 - 強制重新計算高度
-                        content.style.maxHeight = 'none'; // 先移除限制
-                        const height = content.scrollHeight; // 獲取實際高度
-                        content.style.maxHeight = '0px'; // 重置為0以便動畫
+                        // 展開 - 先移除 collapsed class
+                        filterGroup.classList.remove('collapsed');
+                        
+                        // 展開
+                        this.classList.add('active');
+                        
+                        // 先移除限制以獲取真實高度
+                        content.style.maxHeight = 'none';
+                        const height = content.scrollHeight;
+                        
+                        // 重置為 0 以便動畫
+                        content.style.maxHeight = '0px';
+                        
+                        // 強制瀏覽器重繪
+                        content.offsetHeight;
+                        
+                        // 設置目標高度
                         setTimeout(() => {
-                            content.style.maxHeight = height + 'px'; // 設置目標高度
+                            content.style.maxHeight = height + 'px';
                         }, 10);
+                        
                         icon.textContent = '−';
                     }
                 });

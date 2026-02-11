@@ -122,9 +122,9 @@ function showSentenceQuizCategories() {
                 item["分類"] = [];
             }
             
-            // 保存完整的主分類名稱（包含英文和中文）
+            // 保存完整的主分類名稱（包含英文和中文）- 用於顯示
             item.primaryCategoryFull = item["分類"][0] || "未分類";
-            // 提取中文名稱用於顯示
+            // 提取中文名稱用於匹配
             item.primaryCategory = extractChineseName(item.primaryCategoryFull);
             // 提取英文名稱
             item.primaryCategoryEn = extractEnglishName(item.primaryCategoryFull);
@@ -204,6 +204,7 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
         subcategoryWrapper = document.createElement('div');
         subcategoryWrapper.className = 'subcategory-wrapper'; 
         subcategoryWrapper.id = subcategoryWrapperId;
+        subcategoryWrapper.style.maxHeight = '0px';
 
         const secondaryCategories = [...new Set(
             sentenceData
@@ -233,22 +234,34 @@ function handleSentencePrimaryCategoryClick(btn, categoryName) {
     toggleSentenceSelection('primaryCategories', categoryName, btn);
 
     // 展開/收合次分類列表
-    const isExpanded = subcategoryWrapper.style.maxHeight && subcategoryWrapper.style.maxHeight !== '0px';
+    const isExpanded = subcategoryWrapper.classList.contains('expanded');
+    
     if (isExpanded) {
-        // 如果已展開，則收合
+        // 收合次分類
+        subcategoryWrapper.classList.remove('expanded');
         subcategoryWrapper.style.maxHeight = '0px';
     } else {
-        // 如果已收合，則展開
+        // 展開次分類
+        subcategoryWrapper.classList.add('expanded');
         subcategoryWrapper.style.maxHeight = subcategoryWrapper.scrollHeight + "px";
     }
 
-    // 為了讓動畫平順，延遲一小段時間後再重新計算父容器的高度
+    // 更新父容器（.filter-content）的高度
     setTimeout(() => {
-        const mainFilterContent = btn.closest('.filter-content');
-        if (mainFilterContent && mainFilterContent.style.maxHeight !== '0px') {
-             mainFilterContent.style.maxHeight = mainFilterContent.scrollHeight + "px";
+        const parentFilterContent = btn.closest('.filter-content');
+        if (parentFilterContent) {
+            // 暫時移除高度限制以計算真實高度
+            const currentMaxHeight = parentFilterContent.style.maxHeight;
+            parentFilterContent.style.maxHeight = 'none';
+            const newHeight = parentFilterContent.scrollHeight;
+            parentFilterContent.style.maxHeight = currentMaxHeight;
+            
+            // 更新為新的高度
+            setTimeout(() => {
+                parentFilterContent.style.maxHeight = newHeight + 'px';
+            }, 10);
         }
-    }, 310);
+    }, 50);
 }
 
 function generateSentenceCategories(data) {
@@ -264,7 +277,7 @@ function generateSentenceCategories(data) {
     }
 
     const levels = new Set();
-    const primaryCategories = new Set();
+    const primaryCategoriesMap = new Map(); // 使用 Map 儲存 中文名稱 -> 完整名稱 的映射
     const alphabetSet = new Set();
 
     data.forEach(item => {
@@ -273,8 +286,9 @@ function generateSentenceCategories(data) {
         if (/[A-Z]/.test(firstLetter)) {
             alphabetSet.add(firstLetter);
         }
-        if (item.primaryCategory) {
-            primaryCategories.add(item.primaryCategory);
+        if (item.primaryCategory && item.primaryCategoryFull) {
+            // 使用中文名稱作為 key,完整名稱作為 value
+            primaryCategoriesMap.set(item.primaryCategory, item.primaryCategoryFull);
         }
     });
 
@@ -285,11 +299,16 @@ function generateSentenceCategories(data) {
         `<button class="category-button" onclick="toggleSentenceSelection('alphabet', '${letter}', this)">${letter}</button>`
     ).join("");
 
-    // 🔧 渲染主分類按鈕，使用中文名稱顯示
-    primaryContainer.innerHTML = [...primaryCategories].sort().map(c => {
-        const btnId = `sentence-primary-btn-${c.replace(/\s/g, '-')}`;
-        return `<button id="${btnId}" class="category-button" onclick="handleSentencePrimaryCategoryClick(this, '${c}')">${c}</button>`;
-    }).join("");
+    // 🔧 渲染主分類按鈕，顯示完整名稱（英文+中文），但用中文名稱作為 key
+    const primaryButtonsHtml = [...primaryCategoriesMap.entries()]
+        .sort((a, b) => a[1].localeCompare(b[1])) // 按完整名稱排序
+        .map(([chineseName, fullName]) => {
+            const btnId = `sentence-primary-btn-${chineseName.replace(/\s/g, '-')}`;
+            // 顯示完整名稱，但 onclick 傳遞中文名稱用於匹配
+            return `<button id="${btnId}" class="category-button" onclick="handleSentencePrimaryCategoryClick(this, '${chineseName}')">${fullName}</button>`;
+        }).join("");
+    // 包一層 div 以符合 .filter-content > div 的 CSS 結構
+    primaryContainer.innerHTML = `<div>${primaryButtonsHtml}</div>`;
 
     if (secondaryContainer) {
         secondaryContainer.innerHTML = "";
@@ -307,7 +326,7 @@ function generateSentenceCategories(data) {
         `<button class="category-button" onclick="toggleSentenceSelection('levels', '${l}', this)">${l}</button>`
     ).join("");
     
-    console.log(`✅ 生成分類按鈕完成: ${primaryCategories.size} 個主分類, ${standardLevels.length} 個等級`);
+    console.log(`✅ 生成分類按鈕完成: ${primaryCategoriesMap.size} 個主分類, ${standardLevels.length} 個等級`);
 }
 
 
