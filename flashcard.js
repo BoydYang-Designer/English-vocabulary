@@ -838,10 +838,19 @@ function navigateToFlashcardManager() {
 function fcMgrSelectType(type) {
     fcMgrCurrentType = type;
     
-    // 更新類型按鈕狀態
-    document.querySelectorAll('.fc-mgr-type-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.type === type);
+    // 🔧 修正：更新標籤按鈕狀態（使用正確的 class）
+    document.querySelectorAll('.fc-mgr-tab').forEach(btn => {
+        btn.classList.remove('active');
     });
+    
+    // 根據類型添加 active class
+    const activeTab = type === 'word' ? 
+        document.getElementById('mgr-word-tab') : 
+        document.getElementById('mgr-sentence-tab');
+    
+    if (activeTab) {
+        activeTab.classList.add('active');
+    }
 
     fcMgrLoadData();
 }
@@ -889,36 +898,46 @@ function fcMgrLoadData() {
 }
 
 function fcMgrUpdateStats() {
-    const high = fcMgrAllData.filter(d => d.priority >= 120).length;
-    const medium = fcMgrAllData.filter(d => d.priority >= 80 && d.priority < 120).length;
-    const low = fcMgrAllData.filter(d => d.priority >= 50 && d.priority < 80).length;
+    // 🔧 修正：根據 HTML 中實際的統計分類重新計算
+    const total = fcMgrAllData.length;
+    const practiced = fcMgrAllData.filter(d => d.history.seen > 0).length;
     const mastered = fcMgrAllData.filter(d => d.priority < 50).length;
+    const struggling = fcMgrAllData.filter(d => d.priority >= 120).length;
 
-    document.getElementById('fc-mgr-stat-high').textContent = high;
-    document.getElementById('fc-mgr-stat-medium').textContent = medium;
-    document.getElementById('fc-mgr-stat-low').textContent = low;
-    document.getElementById('fc-mgr-stat-mastered').textContent = mastered;
+    // 🔧 修正：使用正確的 ID
+    const totalEl = document.getElementById('mgr-total');
+    const practicedEl = document.getElementById('mgr-practiced');
+    const masteredEl = document.getElementById('mgr-mastered');
+    const strugglingEl = document.getElementById('mgr-struggling');
+
+    if (totalEl) totalEl.textContent = total;
+    if (practicedEl) practicedEl.textContent = practiced;
+    if (masteredEl) masteredEl.textContent = mastered;
+    if (strugglingEl) strugglingEl.textContent = struggling;
 
     // 更新統計卡片點擊事件
-    document.querySelectorAll('.fc-mgr-stat-card').forEach(card => {
-        card.onclick = () => fcMgrFilterByCategory(card.dataset.category);
+    document.querySelectorAll('.fc-mgr-stat').forEach(card => {
+        if (card.onclick) return; // 已經有 onclick 就跳過
+        const category = card.getAttribute('onclick')?.match(/fcMgrFilterByCategory\('(.+?)'\)/)?.[1];
+        if (category) {
+            card.onclick = () => fcMgrFilterByCategory(category);
+        }
     });
 }
 
 function fcMgrFilterData() {
     const searchTerm = document.getElementById('fc-mgr-search')?.value.toLowerCase() || '';
     
-    // 先根據類別篩選
+    // 🔧 修正：先根據類別篩選（對應 HTML 中的分類）
     let filtered = fcMgrAllData;
-    if (fcMgrActiveCategory === 'high') {
-        filtered = fcMgrAllData.filter(d => d.priority >= 120);
-    } else if (fcMgrActiveCategory === 'medium') {
-        filtered = fcMgrAllData.filter(d => d.priority >= 80 && d.priority < 120);
-    } else if (fcMgrActiveCategory === 'low') {
-        filtered = fcMgrAllData.filter(d => d.priority >= 50 && d.priority < 80);
+    if (fcMgrActiveCategory === 'practiced') {
+        filtered = fcMgrAllData.filter(d => d.history.seen > 0);
     } else if (fcMgrActiveCategory === 'mastered') {
         filtered = fcMgrAllData.filter(d => d.priority < 50);
+    } else if (fcMgrActiveCategory === 'struggling') {
+        filtered = fcMgrAllData.filter(d => d.priority >= 120);
     }
+    // 'all' 不需要篩選
 
     // 再根據搜尋詞篩選
     if (searchTerm) {
@@ -1185,9 +1204,11 @@ function fcMgrExportData() {
 function fcMgrFilterByCategory(category) {
     fcMgrActiveCategory = category;
     
-    // 更新統計卡片的選中狀態
-    document.querySelectorAll('.fc-mgr-stat-card').forEach(card => {
-        card.classList.toggle('active', card.dataset.category === category);
+    // 🔧 修正：更新統計卡片的選中狀態（使用正確的 class）
+    document.querySelectorAll('.fc-mgr-stat').forEach(button => {
+        // 從 onclick 屬性中提取 category
+        const btnCategory = button.getAttribute('onclick')?.match(/fcMgrFilterByCategory\('(.+?)'\)/)?.[1];
+        button.classList.toggle('active', btnCategory === category);
     });
     
     fcMgrFilterData();

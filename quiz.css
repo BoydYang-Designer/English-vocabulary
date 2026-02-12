@@ -1841,7 +1841,20 @@ body {
 .fc-mgr-tab.active {
     color: var(--color-primary);
     border-bottom-color: var(--color-primary);
-    background: rgba(102, 126, 234, 0.08);
+    background: linear-gradient(to bottom, rgba(102, 126, 234, 0.15), rgba(102, 126, 234, 0.08));
+    font-weight: 700;
+    position: relative;
+}
+
+.fc-mgr-tab.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 0 0 2px 2px;
 }
 
 /* 搜尋和篩選控制 */
