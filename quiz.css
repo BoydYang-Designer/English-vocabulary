@@ -1531,14 +1531,14 @@ body {
 .fc-scene    { 
     perspective: 1200px; 
     max-width: 560px; 
-    margin: 0 auto var(--spacing-xl); /* 增加底部邊距 */ 
+    margin: 0 auto var(--spacing-xl);
     cursor: pointer; 
 }
 .fc-card {
     position: relative;
     width: 100%;
     min-height: 280px;
-    max-height: 420px; /* 限制最大高度，防止遮住按鈕 */
+    max-height: none; /* ✅ 移除最大高度限制，讓卡片可以自適應內容 */
     transform-style: preserve-3d;
     transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: var(--radius-xl);
@@ -1548,7 +1548,7 @@ body {
     position: absolute;
     width: 100%;
     min-height: 280px;
-    max-height: 420px; /* 與卡片一致 */
+    max-height: none; /* ✅ 移除最大高度限制 */
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     border-radius: var(--radius-xl);
@@ -1559,11 +1559,37 @@ body {
     justify-content: center;
     box-shadow: var(--shadow-lg);
     border: 2px solid transparent;
-    overflow-y: auto; /* 內容過長時可以滾動 */
+    overflow: visible; /* ✅ 改為 visible，讓內容可以超出卡片範圍 */
+}
+.fc-card-front { 
+    background: var(--color-bg-elevated); 
+    border-color: var(--color-border); 
+}
+.fc-card-back  { 
+    background: linear-gradient(145deg, #f8f9ff 0%, #fff5f8 100%); 
+    border-color: rgba(102,126,234,0.3); 
+    transform: rotateY(180deg);
+    /* ✅ 添加內部滾動，當內容過多時 */
+    max-height: 500px;
+    overflow-y: auto;
     overflow-x: hidden;
 }
-.fc-card-front { background: var(--color-bg-elevated); border-color: var(--color-border); }
-.fc-card-back  { background: linear-gradient(145deg, #f8f9ff 0%, #fff5f8 100%); border-color: rgba(102,126,234,0.3); transform: rotateY(180deg); }
+
+/* ✅ 背面卡片滾動條樣式 */
+.fc-card-back::-webkit-scrollbar {
+    width: 6px;
+}
+.fc-card-back::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+}
+.fc-card-back::-webkit-scrollbar-thumb {
+    background: rgba(102, 126, 234, 0.3);
+    border-radius: 3px;
+}
+.fc-card-back::-webkit-scrollbar-thumb:hover {
+    background: rgba(102, 126, 234, 0.5);
+}
 
 /* 字卡內容 */
 .fc-content { width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--spacing-md); }
@@ -1634,13 +1660,14 @@ body {
     display: flex; 
     gap: var(--spacing-lg); 
     justify-content: center; 
-    margin-top: var(--spacing-xl); 
-    margin-bottom: var(--spacing-2xl); /* 增加底部空間 */
-    padding-bottom: var(--spacing-xl); /* 額外的底部內邊距 */
+    margin-top: var(--spacing-2xl); /* ✅ 增加上方邊距 */
+    margin-bottom: var(--spacing-2xl);
+    padding-top: var(--spacing-xl); /* ✅ 增加上方內邊距 */
+    padding-bottom: var(--spacing-xl);
     flex-wrap: wrap;
-    position: relative; /* 確保按鈕不會被其他元素遮住 */
-    z-index: 10; /* 提高層級 */
-    min-height: 120px; /* 確保有足夠的最小高度 */
+    position: relative;
+    z-index: 10;
+    clear: both; /* ✅ 確保按鈕在卡片下方 */
 }
 .fc-btn-known, .fc-btn-unknown, .fc-btn-uncertain {
     display: inline-flex; flex-direction: column; align-items: center; gap: var(--spacing-xs);
@@ -1656,6 +1683,11 @@ body {
 .fc-btn-unknown:hover { transform: translateY(-3px) scale(1.04); box-shadow: var(--shadow-xl); }
 .fc-btn-icon  { font-size: 1.75rem; }
 .fc-btn-label { font-size: 1rem; font-weight: 700; }
+
+/* ✅ 確保字卡容器有足夠的下方空間 */
+#flashcardArea {
+    padding-bottom: var(--spacing-2xl);
+}
 
 /* ── Panel 4：結果頁 ── */
 .fc-result-header { text-align: center; padding: var(--spacing-xl) 0; }

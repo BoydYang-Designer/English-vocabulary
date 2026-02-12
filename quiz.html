@@ -19,6 +19,8 @@
     <script src="q_sentence.js" defer></script>
     <script src="quiz.js" defer></script>
     <script src="flashcard.js" defer></script>
+    <!-- 🔧 全域函數掛載 - 必須放在最後！ -->
+    <script src="global-functions-setup.js" defer></script>
 </head>
 <body>
     <div id="loadingOverlay">
@@ -370,8 +372,8 @@
             </div>
 
             <div class="action-buttons" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
-                <button class="back-button-inline" onclick="fcBackToTypeSelect()">← 返回</button>
-                <button class="primary-button" onclick="startFlashcardSession()">
+                <button class="back-button-inline" onclick="fcBackToTypeSelection()">← 返回</button>
+                <button class="primary-button" onclick="fcStartPractice()">
                     <span class="button-text">🃏 開始練習</span>
                 </button>
             </div>
@@ -467,7 +469,7 @@
                 <button id="fc-retry-wrong-btn" class="control-button primary" onclick="fcRetryWrong()">
                     <span class="button-label">再練習答錯的</span>
                 </button>
-                <button class="control-button" onclick="fcRestartSame()">
+                <button class="control-button" onclick="fcRestartPractice()">
                     <span class="button-label">重新抽牌</span>
                 </button>
                 <button class="control-button finish" onclick="fcBackToMenu()">
@@ -608,7 +610,7 @@
              ⚙️ 字卡記憶度管理 Panel 5：管理介面
         ════════════════════════════════════════ -->
         <div id="flashcardManagerPanel" class="categories-panel" style="display:none;">
-            <button class="back-button" onclick="fcCloseManager()">← 返回</button>
+            <button class="back-button" onclick="fcBackToMenu()">← 返回</button>
 
             <div class="fc-setup-header">
                 <h2 class="fc-section-title">記憶度管理</h2>
