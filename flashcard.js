@@ -564,6 +564,17 @@ function renderFlashcard() {
 
     // 準備音檔並自動播放
     fcPrepareAudio(item);
+    
+    // 🎯 自動滾動到合適位置（卡片和按鈕都可見）
+    setTimeout(() => {
+        const cardElement = document.querySelector('.fc-scene');
+        if (cardElement) {
+            cardElement.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+            });
+        }
+    }, 100);
 }
 
 function renderDots(total) {
@@ -601,6 +612,19 @@ function fcFlipCard() {
 
     if (actionBtns) actionBtns.style.display = isFlipped ? 'flex' : 'none';
     if (flipHint)   flipHint.style.display   = isFlipped ? 'none' : 'flex';
+    
+    // 🎯 翻牌後確保按鈕可見
+    if (isFlipped) {
+        setTimeout(() => {
+            const cardElement = document.querySelector('.fc-scene');
+            if (cardElement) {
+                cardElement.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }
+        }, 300); // 等待翻牌動畫完成
+    }
 }
 
 // ─────────────────────────────────────────

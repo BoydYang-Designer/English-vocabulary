@@ -1490,8 +1490,8 @@ body {
 /* ── Panel 3：翻牌主畫面 ── */
 .fc-progress-container {
     max-width: 600px;
-    margin: var(--spacing-2xl) auto var(--spacing-xl);
-    padding-top: var(--spacing-2xl);
+    margin: var(--spacing-sm) auto var(--spacing-md);  /* 🔧 減少上下邊距 */
+    padding-top: 0;  /* 🔧 移除上方內距 */
 }
 .fc-progress-header {
     display: flex;
@@ -1531,7 +1531,7 @@ body {
 .fc-scene    { 
     perspective: 1200px; 
     max-width: 560px; 
-    margin: 0 auto var(--spacing-xl);
+    margin: 0 auto var(--spacing-xl);  /* 🔧 再增加下邊距 */
     cursor: pointer; 
 }
 .fc-card {
@@ -1660,14 +1660,14 @@ body {
     display: flex; 
     gap: var(--spacing-lg); 
     justify-content: center; 
-    margin-top: var(--spacing-2xl); /* ✅ 增加上方邊距 */
-    margin-bottom: var(--spacing-2xl);
-    padding-top: var(--spacing-xl); /* ✅ 增加上方內邊距 */
-    padding-bottom: var(--spacing-xl);
+    margin-top: var(--spacing-xl); /* 🔧 再增加上方邊距 */
+    margin-bottom: var(--spacing-xl);
+    padding-top: var(--spacing-md); /* 🔧 增加上方內邊距 */
+    padding-bottom: var(--spacing-lg);
     flex-wrap: wrap;
     position: relative;
     z-index: 10;
-    clear: both; /* ✅ 確保按鈕在卡片下方 */
+    clear: both;
 }
 .fc-btn-known, .fc-btn-unknown, .fc-btn-uncertain {
     display: inline-flex; flex-direction: column; align-items: center; gap: var(--spacing-xs);
