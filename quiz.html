@@ -385,7 +385,7 @@
         <div id="flashcardArea" class="quiz-panel" style="display:none;">
             <button class="back-button" onclick="fcBackToSetup()">← 返回</button>
 
-            <!-- 進度 -->
+            <!-- 1. 進度條 - 移到最上方 -->
             <div class="fc-progress-container">
                 <div class="fc-progress-header">
                     <span id="fc-progress-text" class="fc-progress-label">1 / 10</span>
@@ -397,7 +397,23 @@
                 <div id="fc-dots" class="fc-dots"></div>
             </div>
 
-            <!-- 字卡本體（3D 翻牌） -->
+            <!-- 2. 評分按鈕 - 固定高度容器，即使隱藏也保留空間 -->
+            <div id="fc-action-buttons" class="fc-actions" style="visibility:hidden;">
+                <button class="fc-btn-unknown" onclick="fcMarkKnown(0)">
+                    <span class="fc-btn-icon">❌</span>
+                    <span class="fc-btn-label">再練習</span>
+                </button>
+                <button class="fc-btn-uncertain" onclick="fcMarkKnown(1)">
+                    <span class="fc-btn-icon">❓</span>
+                    <span class="fc-btn-label">不確定</span>
+                </button>
+                <button class="fc-btn-known" onclick="fcMarkKnown(2)">
+                    <span class="fc-btn-icon">✅</span>
+                    <span class="fc-btn-label">記得！</span>
+                </button>
+            </div>
+
+            <!-- 3. 字卡本體 - 位置固定 -->
             <div class="fc-scene" onclick="fcFlipCard()">
                 <div id="fc-card" class="fc-card">
                     <div class="fc-card-face fc-card-front">
@@ -411,22 +427,6 @@
                         <div id="fc-back-content" class="fc-content"></div>
                     </div>
                 </div>
-            </div>
-
-            <!-- 翻牌後的評分按鈕 -->
-            <div id="fc-action-buttons" class="fc-actions" style="display:none;">
-                <button class="fc-btn-unknown" onclick="fcMarkKnown(0)">
-                    <span class="fc-btn-icon">❌</span>
-                    <span class="fc-btn-label">再練習</span>
-                </button>
-                <button class="fc-btn-uncertain" onclick="fcMarkKnown(1)">
-                    <span class="fc-btn-icon">❓</span>
-                    <span class="fc-btn-label">不確定</span>
-                </button>
-                <button class="fc-btn-known" onclick="fcMarkKnown(2)">
-                    <span class="fc-btn-icon">✅</span>
-                    <span class="fc-btn-label">記得！</span>
-                </button>
             </div>
         </div>
 

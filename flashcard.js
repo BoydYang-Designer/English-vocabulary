@@ -470,7 +470,7 @@ function renderFlashcard() {
 
     // 按鈕狀態重置
     const actionBtns = document.getElementById('fc-action-buttons');
-    if (actionBtns) actionBtns.style.display = 'none';
+    if (actionBtns) actionBtns.style.visibility = 'hidden';
     const flipHint = document.getElementById('fc-flip-hint');
     if (flipHint) flipHint.style.display = 'flex';
 
@@ -495,7 +495,7 @@ function renderFlashcard() {
             <div class="fc-word">${word}</div>
             <div class="fc-phonetics-front">${phonetics || '&nbsp;'}</div>
             <button class="fc-play-btn" onclick="event.stopPropagation(); fcPlayAudio()" title="播放發音">
-                🔊 <span>播放</span>
+                🔊 <span>播放發音</span>
             </button>
         `;
 
@@ -542,9 +542,9 @@ function renderFlashcard() {
                 <span class="fc-hint-known">${hintWords.join(' ')}</span>
                 <span class="fc-hint-blanks">${'_ '.repeat(Math.max(0, restCount)).trim()}</span>
             </div>
-            <div class="fc-hint-label">完成這個句子 →</div>
+            <div class="fc-hint-label">完成這個句子</div>
             <button class="fc-play-btn" onclick="event.stopPropagation(); fcPlayAudio()" title="播放發音">
-                🔊 <span>播放</span>
+                🔊 <span>播放發音</span>
             </button>
         `;
 
@@ -610,7 +610,7 @@ function fcFlipCard() {
     const actionBtns = document.getElementById('fc-action-buttons');
     const flipHint   = document.getElementById('fc-flip-hint');
 
-    if (actionBtns) actionBtns.style.display = isFlipped ? 'flex' : 'none';
+    if (actionBtns) actionBtns.style.visibility = isFlipped ? 'visible' : 'hidden';
     if (flipHint)   flipHint.style.display   = isFlipped ? 'none' : 'flex';
     
     // 🎯 翻牌後確保按鈕可見
@@ -925,7 +925,15 @@ function fcMgrUpdateStats() {
     // 🔧 修正：根據 HTML 中實際的統計分類重新計算
     const total = fcMgrAllData.length;
     const practiced = fcMgrAllData.filter(d => d.history.seen > 0).length;
-    const mastered = fcMgrAllData.filter(d => d.priority < 50).length;
+    
+    // ✅ 修正：使用與篩選相同的「已熟練」標準
+    const mastered = fcMgrAllData.filter(d => {
+        const h = d.history;
+        const totalAnswers = h.known + (h.uncertain || 0) + h.unknown;
+        const accuracy = totalAnswers > 0 ? (h.known / totalAnswers) : 0;
+        return (h.streak >= 2) || (accuracy >= 0.8 && totalAnswers >= 2);
+    }).length;
+    
     const struggling = fcMgrAllData.filter(d => d.priority >= 120).length;
 
     // 🔧 修正：使用正確的 ID
@@ -957,7 +965,16 @@ function fcMgrFilterData() {
     if (fcMgrActiveCategory === 'practiced') {
         filtered = fcMgrAllData.filter(d => d.history.seen > 0);
     } else if (fcMgrActiveCategory === 'mastered') {
-        filtered = fcMgrAllData.filter(d => d.priority < 50);
+        // ✅ 修正：「已熟練」的判斷標準改為更合理的條件
+        // 條件1：連續答對次數 >= 2
+        // 條件2：正確率 >= 80% 且至少練習過 2 次
+        filtered = fcMgrAllData.filter(d => {
+            const h = d.history;
+            const total = h.known + (h.uncertain || 0) + h.unknown;
+            const accuracy = total > 0 ? (h.known / total) : 0;
+            
+            return (h.streak >= 2) || (accuracy >= 0.8 && total >= 2);
+        });
     } else if (fcMgrActiveCategory === 'struggling') {
         filtered = fcMgrAllData.filter(d => d.priority >= 120);
     }
