@@ -1478,6 +1478,48 @@ body {
 
 /* ── Panel 2：設定 ── */
 .fc-setup-header { text-align: center; padding: var(--spacing-xl) 0 var(--spacing-md); }
+
+/* ✅ 記憶度管理標題 - 返回按鈕在左側 */
+.fc-mgr-header-with-back {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    text-align: left;
+    padding: var(--spacing-lg) 0;
+}
+
+.fc-mgr-back {
+    flex-shrink: 0;
+    margin-top: 0.25rem; /* ✅ 微調垂直對齊 */
+}
+
+.fc-mgr-title-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.fc-mgr-header-with-back .fc-section-title {
+    margin-bottom: 0.25rem;
+    font-size: 1.625rem; /* ✅ 稍微縮小以配合並排 */
+}
+
+.fc-mgr-header-with-back .fc-section-desc {
+    font-size: 0.875rem;
+}
+
+/* ✅ 響應式：小螢幕時改為垂直排列 */
+@media (max-width: 640px) {
+    .fc-mgr-header-with-back {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .fc-mgr-back {
+        margin-top: 0;
+    }
+}
 .fc-count-section {
     background: var(--color-bg);
     border-radius: var(--radius-lg);
