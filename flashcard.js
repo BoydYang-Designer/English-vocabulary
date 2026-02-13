@@ -31,7 +31,9 @@ function hideAllPanels() {
         'flashcardSetupPanel',
         'flashcardArea',
         'flashcardResultPanel',
-        'flashcardManagerPanel'
+        'flashcardManagerPanel',
+        'wordMemoryManagerPanel',     // ✅ 加入單字測驗記憶度管理
+        'sentenceMemoryManagerPanel'  // ✅ 加入句子測驗記憶度管理
     ];
     
     panels.forEach(id => {

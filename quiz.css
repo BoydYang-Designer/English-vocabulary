@@ -1490,7 +1490,10 @@ body {
 
 .fc-mgr-back {
     flex-shrink: 0;
-    margin-top: 0.25rem; /* ✅ 微調垂直對齊 */
+    margin-top: 0.25rem;
+    position: relative; /* ✅ 覆蓋 absolute */
+    top: auto;          /* ✅ 取消絕對定位的 top */
+    left: auto;         /* ✅ 取消絕對定位的 left */
 }
 
 .fc-mgr-title-group {
