@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Boyd Vocabulary</title>
+    <title>Boyd Vocabulary - 句子頁面</title>
     <link rel="stylesheet" href="sentence.css">
 
     <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js" defer></script>
@@ -11,12 +11,13 @@
     
     <script src="auth-manager.js" defer></script>
     <script src="sentence.js" defer></script>
+    <script src="sentence-enhancements.js" defer></script>
 
 </head>
 <body>
     <div id="loading-overlay">
         <div class="loading-spinner"></div>
-        <p class="loading-text">資料載入中，請稍候...</p>
+        <p class="loading-text">資料載入中,請稍候...</p>
     </div>
 
     <div id="notification-container"></div>
@@ -43,6 +44,16 @@
         <div class="start-learning-container">
             <button id="startLearningBtn" class="button">開始學習</button>
         </div>
+
+        <!-- 最近閱讀記錄 -->
+        <div id="recent-sentences-container" class="recent-sentences-wrapper" style="display: none;">
+            <div class="recent-sentences-header">
+                <span class="recent-icon">📖</span>
+                <span class="recent-title">最近閱讀/播放記錄</span>
+            </div>
+            <div id="recent-sentences-list" class="recent-sentences-list"></div>
+        </div>
+
         <div class="collapsible-section-wrapper">
             <div class="collapsible-section">
                 <button type="button" class="collapsible-header">字母分類</button>

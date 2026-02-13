@@ -1,0 +1,103 @@
+{
+  "importantWords": [
+    "gourmet",
+    "magician",
+    "medieval",
+    "philosophy",
+    "contain",
+    "exceed",
+    "mediator",
+    "dispute",
+    "Rush-Limbaugh",
+    "sensation"
+  ],
+  "wrongWords": [
+    "sustainability",
+    "juxtaposition",
+    "blurry",
+    "panoramic",
+    "coordinate"
+  ],
+  "customWords": {
+    "elicitation": {
+      "lastModified": "2026-02-03T14:40:56.922Z",
+      "等級": "未分類",
+      "traditional Chinese": "n. 引出,誘出,抽出   •  誘導",
+      "Words": "elicitation",
+      "分類": [
+        "",
+        "",
+        "UserCustom"
+      ],
+      "English meaning": ""
+    },
+    "in-search-of": {
+      "Words": "in-search-of",
+      "traditional Chinese": "為了尋找；在找尋中；尋找……",
+      "lastModified": "2026-02-03T12:10:52.213Z",
+      "等級": "未分類",
+      "分類": [
+        "",
+        "",
+        "UserCustom"
+      ],
+      "English meaning": "in search of (phrase)\n\nEnglish Meaning:\nUsed to say that someone is trying to find, seeking, or looking for something, often with effort or purpose.\n\nExamples:\n\t•\tExample: She moved abroad in search of new opportunities.\n\t•\tExample: The team went into the forest in search of rare plants.\n\t•\tExample: He left home early in search of a quiet place to work.\n\nSummary:\n“In search of” means actively trying to find something, and it is commonly used in formal, written, or descriptive English.\n\nRelated Words:\nseek, look for, hunt for, quest for, pursue\n\nAntonyms:\ngive up on, stop looking for, ignore, avoid"
+    },
+    "take in": {
+      "等級": "片語",
+      "English meaning": "Phrase: take in",
+      "phraseKey": "take-in",
+      "分類": [
+        "Phrases（片語）",
+        "User Highlighted",
+        "UserCustom"
+      ],
+      "traditional Chinese": "",
+      "lastModified": "2026-02-04T11:16:31.090Z",
+      "Words": "take in"
+    },
+    "hourly rate": {
+      "lastModified": "2026-02-03T14:57:58.064Z",
+      "等級": "未分類",
+      "分類": [
+        "",
+        "",
+        "UserCustom"
+      ],
+      "Words": "hourly rate",
+      "English meaning": "Hourly rate is a noun.\n\nEnglish Meaning\n\nHourly rate means the amount of money someone is paid for each hour of work.\n\nExample:\n\t•\tShe earns an hourly rate of $25.\n\t•\tWhat is your hourly rate for freelance design work?\n\t•\tHis hourly rate increases on weekends.\nSummary\n\nHourly rate refers to how much money a person earns per hour of working time.\n\nRelated Words\n\nwage, pay rate, salary (note: salary is usually monthly or yearly, not hourly)\n\nAntonyms\n\nsalary (fixed pay), unpaid work",
+      "traditional Chinese": "時薪／每小時的薪資"
+    },
+    "soak up": {
+      "lastModified": "2026-02-04T11:16:35.025Z",
+      "等級": "片語",
+      "phraseKey": "soak-up",
+      "分類": [
+        "Phrases（片語）",
+        "User Highlighted",
+        "UserCustom"
+      ],
+      "Words": "soak up",
+      "traditional Chinese": "",
+      "English meaning": "Phrase: soak up"
+    }
+  },
+  "highlightedWords": {
+    "take-in": "absorb",
+    "soak-up": "absorb"
+  },
+  "checkedWords": [
+    "absorption",
+    "abstract",
+    "abstractly",
+    "absorb"
+  ],
+  "notes": {
+    "absorb": "test",
+    "capacity": "tank, stadium, empathy, the professor spoke …. 例句音有問題。 in a personal capacity / for personal reasons ; official capacity, capability, capability, volume,",
+    "northeast": "migration",
+    "desperate": "extreme measures, despair,",
+    "bygone": "fondly",
+    "relic": "remnant"
+  }
+}
