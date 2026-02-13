@@ -19,7 +19,6 @@
     <script src="q_sentence.js" defer></script>
     <script src="quiz.js" defer></script>
     <script src="flashcard.js" defer></script>
-    <!-- 🔧 全域函數掛載 - 必須放在最後！ -->
     <script src="global-functions-setup.js" defer></script>
 </head>
 <body>
@@ -32,7 +31,6 @@
 
     <div id="toastNotification"></div>
     
-    <!-- 麵包屑導航 -->
     <nav id="breadcrumb-nav" class="breadcrumb-container">
         <div class="breadcrumb-content"></div>
     </nav>
@@ -62,7 +60,6 @@
     </div>
 
     <div class="container">
-        <!-- 單字測驗分類 -->
         <div id="quizCategories" class="categories-panel">
             <div class="fc-setup-header">
                 <h2 class="fc-section-title">單字測驗設定</h2>
@@ -120,7 +117,6 @@
             </div>
         </div>
 
-        <!-- 句子測驗分類 -->
         <div id="sentenceQuizCategories" class="categories-panel">
             <div class="fc-setup-header">
                 <h2 class="fc-section-title">句子測驗設定</h2>
@@ -178,7 +174,6 @@
             </div>
         </div>
 
-        <!-- 重組測驗區域 -->
         <div id="reorganizeQuizArea" class="quiz-panel">
             <button id="cancelReorganizeQuizBtn" class="back-button" onclick="returnToSentenceCategorySelection()">
                 <span>← 返回</span>
@@ -203,7 +198,6 @@
             </div>
         </div>
 
-        <!-- Reword 測驗區域 -->
         <div id="rewordQuizArea" class="quiz-panel">
             <button id="cancelRewordQuizBtn" class="back-button" onclick="returnToCategorySelection()">
                 <span>← 返回</span>
@@ -228,7 +222,6 @@
             </div>
         </div>
 
-        <!-- 單字測驗區域 -->
         <div id="quizArea" class="quiz-panel">
             <button id="cancelBtn" class="back-button danger" onclick="returnToCategorySelection()">
                 <span>← 取消</span>
@@ -252,7 +245,6 @@
             </div>
         </div>
 
-        <!-- 句子測驗區域 -->
         <div id="sentenceQuizArea" class="quiz-panel">
             <button id="cancelSentenceQuizBtn" class="back-button" onclick="returnToSentenceCategorySelection()">
                 <span>← 返回</span>
@@ -278,7 +270,6 @@
             </div>
         </div>
 
-        <!-- 測驗結果 -->
         <div id="quizResult" class="result-panel">
            <div class="result-actions">
              <button class="primary-button large" onclick="backToMenu()">
@@ -287,9 +278,6 @@
            </div>
         </div>
 
-        <!-- ════════════════════════════════════════
-             🃏 字卡練習 Panel 1：選擇類型
-        ════════════════════════════════════════ -->
         <div id="flashcardTypePanel" class="categories-panel" style="display:none;">
             <div class="fc-type-header">
                 <h2 class="fc-section-title">選擇字卡類型</h2>
@@ -308,7 +296,6 @@
                 </button>
             </div>
             
-            <!-- 底部按鈕區 -->
             <div class="action-buttons" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
                 <button class="back-button-inline" onclick="fcBackToMenu()">← 返回</button>
                 <button class="primary-button secondary" onclick="openFlashcardManager()">
@@ -317,16 +304,12 @@
             </div>
         </div>
 
-        <!-- ════════════════════════════════════════
-             🃏 字卡練習 Panel 2：篩選設定
-        ════════════════════════════════════════ -->
         <div id="flashcardSetupPanel" class="categories-panel" style="display:none;">
             <div class="fc-setup-header">
                 <h2 class="fc-section-title">字卡設定</h2>
                 <p class="fc-section-desc">不選擇篩選條件將從所有字卡中隨機抽取</p>
             </div>
 
-            <!-- 張數選擇 -->
             <div class="fc-count-section">
                 <div class="fc-sub-title">練習張數</div>
                 <div class="fc-count-buttons">
@@ -337,7 +320,6 @@
             </div>
 
             <div class="filters-section" style="margin-top: 1.5rem;">
-                <!-- 難易度 -->
                 <div class="filter-group">
                     <button type="button" class="filter-header">
                         <span class="filter-title">難易度</span>
@@ -348,7 +330,6 @@
                     </div>
                 </div>
 
-                <!-- 主題大類 -->
                 <div class="filter-group">
                     <button type="button" class="filter-header">
                         <span class="filter-title">主題大類</span>
@@ -359,7 +340,6 @@
                     </div>
                 </div>
 
-                <!-- 特殊篩選 -->
                 <div class="filter-group">
                     <button type="button" class="filter-header">
                         <span class="filter-title">特殊篩選</span>
@@ -379,13 +359,9 @@
             </div>
         </div>
 
-        <!-- ════════════════════════════════════════
-             🃏 字卡練習 Panel 3：翻牌練習主畫面
-        ════════════════════════════════════════ -->
         <div id="flashcardArea" class="quiz-panel" style="display:none;">
             <button class="back-button" onclick="fcBackToSetup()">← 返回</button>
 
-            <!-- 1. 進度條 - 移到最上方 -->
             <div class="fc-progress-container">
                 <div class="fc-progress-header">
                     <span id="fc-progress-text" class="fc-progress-label">1 / 10</span>
@@ -397,7 +373,6 @@
                 <div id="fc-dots" class="fc-dots"></div>
             </div>
 
-            <!-- 2. 評分按鈕 - 固定高度容器，即使隱藏也保留空間 -->
             <div id="fc-action-buttons" class="fc-actions" style="visibility:hidden;">
                 <button class="fc-btn-unknown" onclick="fcMarkKnown(0)">
                     <span class="fc-btn-icon">❌</span>
@@ -413,7 +388,6 @@
                 </button>
             </div>
 
-            <!-- 3. 字卡本體 - 位置固定 -->
             <div class="fc-scene" onclick="fcFlipCard()">
                 <div id="fc-card" class="fc-card">
                     <div class="fc-card-face fc-card-front">
@@ -430,9 +404,6 @@
             </div>
         </div>
 
-        <!-- ════════════════════════════════════════
-             🃏 字卡練習 Panel 4：結果頁
-        ════════════════════════════════════════ -->
         <div id="flashcardResultPanel" class="result-panel" style="display:none;">
             <div class="fc-result-header">
                 <div class="fc-result-emoji">🃏</div>
@@ -458,13 +429,11 @@
                 </div>
             </div>
 
-            <!-- 需要複習的清單 -->
             <div class="fc-review-section">
                 <h3 class="fc-review-title">需要複習的字卡</h3>
                 <div id="fc-review-list" class="fc-review-list"></div>
             </div>
 
-            <!-- 結果頁按鈕 -->
             <div class="fc-result-actions">
                 <button id="fc-retry-wrong-btn" class="control-button primary" onclick="fcRetryWrong()">
                     <span class="button-label">再練習答錯的</span>
@@ -478,18 +447,16 @@
             </div>
         </div>
 
-        <!-- ════════════════════════════════════════
-             ⚙️ 單字測驗記憶度管理面板
-        ════════════════════════════════════════ -->
         <div id="wordMemoryManagerPanel" class="categories-panel" style="display:none;">
-            <button class="back-button" onclick="closeWordMemoryManager()">← 返回</button>
-
-            <div class="fc-setup-header">
-                <h2 class="fc-section-title">⚙️ 單字測驗記憶度管理</h2>
-                <p class="fc-section-desc">查看和編輯所有單字的測驗記錄</p>
+            <div style="display: flex; align-items: center; gap: 15px; padding: 20px 0;">
+                <button class="back-button-inline" onclick="closeWordMemoryManager()" style="margin: 0; min-width: auto; padding: 0.5rem 1rem;">
+                    ← 返回
+                </button>
+                <div style="text-align: left;">
+                    <h2 class="fc-section-title" style="margin: 0; font-size: 1.5rem; text-align: left;">⚙️ 單字測驗記憶度管理</h2>
+                    <p class="fc-section-desc" style="margin: 5px 0 0 0; text-align: left;">查看和編輯所有單字的測驗記錄</p>
+                </div>
             </div>
-
-            <!-- 搜尋和篩選 -->
             <div class="fc-mgr-controls">
                 <input type="text" id="word-mgr-search" class="fc-mgr-search" placeholder="搜尋單字..." oninput="wordMgrFilterData()">
                 <select id="word-mgr-sort" class="fc-mgr-sort" onchange="wordMgrFilterData()">
@@ -502,7 +469,6 @@
                 </select>
             </div>
 
-            <!-- 統計摘要 -->
             <div class="fc-mgr-summary">
                 <button class="fc-mgr-stat" onclick="wordMgrFilterByCategory('all')">
                     <span class="fc-mgr-stat-value" id="word-mgr-total">0</span>
@@ -522,16 +488,13 @@
                 </button>
             </div>
 
-            <!-- 當前篩選狀態提示 -->
             <div id="word-mgr-filter-hint" class="fc-mgr-filter-hint" style="display:none;">
                 <span class="fc-mgr-filter-text"></span>
                 <button class="fc-mgr-clear-filter" onclick="wordMgrFilterByCategory('all')">✕ 清除篩選</button>
             </div>
 
-            <!-- 資料列表 -->
             <div id="word-mgr-list" class="fc-mgr-list"></div>
 
-            <!-- 批量操作 -->
             <div class="fc-mgr-actions">
                 <button class="control-button" onclick="wordMgrResetAll()">
                     <span class="button-label">重置所有記錄</span>
@@ -542,18 +505,16 @@
             </div>
         </div>
 
-        <!-- ════════════════════════════════════════
-             ⚙️ 句子測驗記憶度管理面板
-        ════════════════════════════════════════ -->
         <div id="sentenceMemoryManagerPanel" class="categories-panel" style="display:none;">
-            <button class="back-button" onclick="closeSentenceMemoryManager()">← 返回</button>
-
-            <div class="fc-setup-header">
-                <h2 class="fc-section-title">⚙️ 句子測驗記憶度管理</h2>
-                <p class="fc-section-desc">查看和編輯所有句子的測驗記錄</p>
+            <div style="display: flex; align-items: center; gap: 15px; padding: 20px 0;">
+                <button class="back-button-inline" onclick="closeSentenceMemoryManager()" style="margin: 0; min-width: auto; padding: 0.5rem 1rem;">
+                    ← 返回
+                </button>
+                <div style="text-align: left;">
+                    <h2 class="fc-section-title" style="margin: 0; font-size: 1.5rem; text-align: left;">⚙️ 句子測驗記憶度管理</h2>
+                    <p class="fc-section-desc" style="margin: 5px 0 0 0; text-align: left;">查看和編輯所有句子的測驗記錄</p>
+                </div>
             </div>
-
-            <!-- 搜尋和篩選 -->
             <div class="fc-mgr-controls">
                 <input type="text" id="sentence-mgr-search" class="fc-mgr-search" placeholder="搜尋句子..." oninput="sentenceMgrFilterData()">
                 <select id="sentence-mgr-sort" class="fc-mgr-sort" onchange="sentenceMgrFilterData()">
@@ -566,7 +527,6 @@
                 </select>
             </div>
 
-            <!-- 統計摘要 -->
             <div class="fc-mgr-summary">
                 <button class="fc-mgr-stat" onclick="sentenceMgrFilterByCategory('all')">
                     <span class="fc-mgr-stat-value" id="sentence-mgr-total">0</span>
@@ -586,16 +546,13 @@
                 </button>
             </div>
 
-            <!-- 當前篩選狀態提示 -->
             <div id="sentence-mgr-filter-hint" class="fc-mgr-filter-hint" style="display:none;">
                 <span class="fc-mgr-filter-text"></span>
                 <button class="fc-mgr-clear-filter" onclick="sentenceMgrFilterByCategory('all')">✕ 清除篩選</button>
             </div>
 
-            <!-- 資料列表 -->
             <div id="sentence-mgr-list" class="fc-mgr-list"></div>
 
-            <!-- 批量操作 -->
             <div class="fc-mgr-actions">
                 <button class="control-button" onclick="sentenceMgrResetAll()">
                     <span class="button-label">重置所有記錄</span>
@@ -606,18 +563,16 @@
             </div>
         </div>
 
-        <!-- ════════════════════════════════════════
-             ⚙️ 字卡記憶度管理 Panel 5：管理介面
-        ════════════════════════════════════════ -->
         <div id="flashcardManagerPanel" class="categories-panel" style="display:none;">
-            <button class="back-button" onclick="fcBackToMenu()">← 返回</button>
-
-            <div class="fc-setup-header">
-                <h2 class="fc-section-title">記憶度管理</h2>
-                <p class="fc-section-desc">查看和編輯所有字卡的學習記錄</p>
+            <div style="display: flex; align-items: center; gap: 15px; padding: 20px 0;">
+                <button class="back-button-inline" onclick="fcBackToMenu()" style="margin: 0; min-width: auto; padding: 0.5rem 1rem;">
+                    ← 返回
+                </button>
+                <div style="text-align: left;">
+                    <h2 class="fc-section-title" style="margin: 0; font-size: 1.5rem; text-align: left;">記憶度管理</h2>
+                    <p class="fc-section-desc" style="margin: 5px 0 0 0; text-align: left;">查看和編輯所有字卡的學習記錄</p>
+                </div>
             </div>
-
-            <!-- 類型切換 -->
             <div class="fc-manager-tabs">
                 <button id="mgr-word-tab" class="fc-mgr-tab active" onclick="fcMgrSwitchType('word')">
                     📖 單字字卡
@@ -627,7 +582,6 @@
                 </button>
             </div>
 
-            <!-- 搜尋和篩選 -->
             <div class="fc-mgr-controls">
                 <input type="text" id="fc-mgr-search" class="fc-mgr-search" placeholder="搜尋單字或句子..." oninput="fcMgrFilterData()">
                 <select id="fc-mgr-sort" class="fc-mgr-sort" onchange="fcMgrFilterData()">
@@ -640,7 +594,6 @@
                 </select>
             </div>
 
-            <!-- 統計摘要 -->
             <div class="fc-mgr-summary">
                 <button class="fc-mgr-stat" onclick="fcMgrFilterByCategory('all')">
                     <span class="fc-mgr-stat-value" id="mgr-total">0</span>
@@ -660,16 +613,13 @@
                 </button>
             </div>
 
-            <!-- 當前篩選狀態提示 -->
             <div id="fc-mgr-filter-hint" class="fc-mgr-filter-hint" style="display:none;">
                 <span class="fc-mgr-filter-text"></span>
                 <button class="fc-mgr-clear-filter" onclick="fcMgrFilterByCategory('all')">✕ 清除篩選</button>
             </div>
 
-            <!-- 資料列表 -->
             <div id="fc-mgr-list" class="fc-mgr-list"></div>
 
-            <!-- 批量操作 -->
             <div class="fc-mgr-actions">
                 <button class="control-button" onclick="fcMgrResetAll()">
                     <span class="button-label">重置所有記錄</span>
@@ -712,7 +662,7 @@
                 } else if (index === 1) {
                     onclickAction = 'backToQuizSelection()';
                 } else {
-                    onclickAction = `navigateToBreadcrumb(${index})`;
+                    onclickAction = `MapsToBreadcrumb(${index})`;
                 }
                 
                 return `<span class="breadcrumb-item ${isLast ? 'current' : ''}" onclick="${onclickAction}">${item}</span>${!isLast ? '<span class="breadcrumb-separator">›</span>' : ''}`;
