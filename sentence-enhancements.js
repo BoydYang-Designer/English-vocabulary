@@ -400,6 +400,44 @@ window.addEventListener('load', () => {
     setTimeout(initEnhancements, 500);
 });
 
+// ========== 編輯按鈕功能 ==========
+// 注意：這個功能需要 storage editor modal 存在於頁面中
+// 如果 sentence.html 沒有 storage-editor-modal，這個功能將無法使用
+
+function openStorageEditor() {
+    // 檢查是否在 sentence.html（沒有 modal）
+    const modal = document.getElementById('storage-editor-modal');
+    if (!modal) {
+        // 如果沒有 modal，跳轉到 index.html 並打開編輯器
+        const currentUrl = new URL(window.location.href);
+        currentUrl.pathname = currentUrl.pathname.replace('sentence.html', 'index.html');
+        currentUrl.searchParams.set('openEditor', 'true');
+        window.location.href = currentUrl.toString();
+        return;
+    }
+    
+    // 如果有 modal，正常開啟
+    modal.classList.add('active');
+    if (typeof refreshStorageEditor === 'function') {
+        refreshStorageEditor();
+    }
+}
+
+function initEditButton() {
+    const editBtn = document.getElementById('edit-storage-btn');
+    if (editBtn) {
+        editBtn.addEventListener('click', openStorageEditor);
+        console.log('✅ 編輯按鈕已綁定');
+    } else {
+        console.warn('⚠️ 找不到編輯按鈕 (edit-storage-btn)');
+    }
+}
+
+// 在初始化時綁定編輯按鈕
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(initEditButton, 100);
+});
+
 // 導出函數供外部使用
 window.sentenceEnhancements = {
     updateUserStatusDisplay,
@@ -408,6 +446,7 @@ window.sentenceEnhancements = {
     navigateToSentence,
     updateCheckboxFixed,
     handleCheckboxClickFixed,
+    openStorageEditor, // 加入編輯功能
     // 測試工具
     setGuestMode: function() {
         localStorage.setItem('isGuestMode', 'true');

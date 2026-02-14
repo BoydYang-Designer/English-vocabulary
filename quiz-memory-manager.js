@@ -182,9 +182,9 @@ function wordMgrRenderData() {
         
         return `
             <div class="fc-mgr-item" data-word="${data.word}">
-                <div class="fc-mgr-item-header">
+                <div class="fc-mgr-item-header" onclick="wordMgrPlayAudio('${data.word}')" style="cursor: pointer;" title="點擊播放發音">
                     <div class="fc-mgr-item-title">
-                        <span class="fc-mgr-word">${data.word}</span>
+                        <span class="fc-mgr-word">🔊 ${data.word}</span>
                         <span class="fc-mgr-chinese">${chinese}</span>
                     </div>
                     <div class="fc-mgr-item-priority priority-${data.priority}">
@@ -210,6 +210,7 @@ function wordMgrRenderData() {
                     </div>
                 </div>
                 <div class="fc-mgr-item-actions">
+                    <button class="btn-audio" onclick="event.stopPropagation(); wordMgrPlayAudio('${data.word}')" title="播放發音">🔊</button>
                     <button class="btn-edit" onclick="wordMgrEditItem('${data.word}')">編輯</button>
                     <button class="btn-reset" onclick="wordMgrResetItem('${data.word}')">重置</button>
                 </div>
@@ -464,12 +465,13 @@ function sentenceMgrRenderData() {
         const chinese = data.item['中文'] || '';
         const avgRating = data.history.avgRating.toFixed(1);
         const priorityLabel = getPriorityLabel(data.priority);
+        const audioId = data.item.Words || sentence; // 使用 Words 欄位作為音檔名稱
         
         return `
             <div class="fc-mgr-item" data-sentence="${data.sentenceId}">
-                <div class="fc-mgr-item-header">
+                <div class="fc-mgr-item-header" onclick="sentenceMgrPlayAudio('${escapeSingleQuote(audioId)}')" style="cursor: pointer;" title="點擊播放發音">
                     <div class="fc-mgr-item-title">
-                        <span class="fc-mgr-word">${sentence}</span>
+                        <span class="fc-mgr-word">🔊 ${sentence}</span>
                         <span class="fc-mgr-chinese">${chinese}</span>
                     </div>
                     <div class="fc-mgr-item-priority priority-${data.priority}">
@@ -495,6 +497,7 @@ function sentenceMgrRenderData() {
                     </div>
                 </div>
                 <div class="fc-mgr-item-actions">
+                    <button class="btn-audio" onclick="event.stopPropagation(); sentenceMgrPlayAudio('${escapeSingleQuote(audioId)}')" title="播放發音">🔊</button>
                     <button class="btn-edit" onclick="sentenceMgrEditItem('${escapeSingleQuote(data.sentenceId)}')">編輯</button>
                     <button class="btn-reset" onclick="sentenceMgrResetItem('${escapeSingleQuote(data.sentenceId)}')">重置</button>
                 </div>
@@ -619,4 +622,36 @@ function showToast(message) {
         toast.classList.add('show');
         setTimeout(() => toast.classList.remove('show'), 3000);
     }
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  音檔播放功能
+// ═══════════════════════════════════════════════════════════════
+
+// 音檔基礎路徑（與 quiz.js 中相同）
+const WORD_AUDIO_BASE = 'https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/mp3/%E5%96%AE%E5%AD%97%E9%9F%B3%E6%AA%94/';
+const SENTENCE_AUDIO_BASE = 'https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/mp3/%E5%8F%A5%E5%AD%90%E9%9F%B3%E6%AA%94/';
+
+/**
+ * 播放單字音檔
+ */
+function wordMgrPlayAudio(word) {
+    const audioUrl = `${WORD_AUDIO_BASE}${word}.mp3`;
+    const audio = new Audio(audioUrl);
+    audio.play().catch(err => {
+        console.warn('🔊 播放失敗:', err);
+        showToast('無法播放音檔');
+    });
+}
+
+/**
+ * 播放句子音檔
+ */
+function sentenceMgrPlayAudio(audioId) {
+    const audioUrl = `${SENTENCE_AUDIO_BASE}${encodeURIComponent(audioId)}.mp3`;
+    const audio = new Audio(audioUrl);
+    audio.play().catch(err => {
+        console.warn('🔊 播放失敗:', err);
+        showToast('無法播放音檔');
+    });
 }

@@ -901,7 +901,12 @@ function createSpecialCategoryButtons() {
         { name: "錯誤單字", value: "wrong" },
         { name: "備註單字", value: "note" },
         { name: "自訂單字", value: "custom" },
-        { name: "畫重點單字", value: "highlighted" }
+        { name: "畫重點單字", value: "highlighted" },
+        // ========== 卡牌練習分類 ==========
+        { name: "❌ 再練習", value: "flashcard-unknown" },
+        { name: "❓ 不確定", value: "flashcard-uncertain" },
+        { name: "✅ 記得！", value: "flashcard-known" },
+        { name: "🃏 已練習", value: "flashcard-practiced" }
         // --------------------
     ];
     const specialContainer = document.getElementById("specialCategoryButtons");
@@ -1014,6 +1019,39 @@ function startLearning() {
                 case 'custom': 
                     const customWordsObj = vocabularyData.customWords || {};
                     Object.keys(customWordsObj).forEach(word => specialWordsSet.add(word));
+                    break;
+                // ========== 卡牌練習分類篩選 ==========
+                case 'flashcard-unknown':
+                    // 篩選標記為「再練習」的單字
+                    const flashcardHistory = vocabularyData.flashcardHistory?.word || {};
+                    Object.keys(flashcardHistory).forEach(word => {
+                        const hist = flashcardHistory[word];
+                        if (hist.unknown > 0) specialWordsSet.add(word);
+                    });
+                    break;
+                case 'flashcard-uncertain':
+                    // 篩選標記為「不確定」的單字
+                    const flashcardHistoryUncertain = vocabularyData.flashcardHistory?.word || {};
+                    Object.keys(flashcardHistoryUncertain).forEach(word => {
+                        const hist = flashcardHistoryUncertain[word];
+                        if (hist.uncertain > 0) specialWordsSet.add(word);
+                    });
+                    break;
+                case 'flashcard-known':
+                    // 篩選標記為「記得！」的單字
+                    const flashcardHistoryKnown = vocabularyData.flashcardHistory?.word || {};
+                    Object.keys(flashcardHistoryKnown).forEach(word => {
+                        const hist = flashcardHistoryKnown[word];
+                        if (hist.known > 0) specialWordsSet.add(word);
+                    });
+                    break;
+                case 'flashcard-practiced':
+                    // 篩選所有練習過的單字（seen > 0）
+                    const flashcardHistoryPracticed = vocabularyData.flashcardHistory?.word || {};
+                    Object.keys(flashcardHistoryPracticed).forEach(word => {
+                        const hist = flashcardHistoryPracticed[word];
+                        if (hist.seen > 0) specialWordsSet.add(word);
+                    });
                     break;
             }
         });

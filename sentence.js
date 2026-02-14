@@ -431,7 +431,30 @@ if (sentenceSpecialFilters.length > 0) {
                 case 'checked': return (vocabData.checkedSentences || {})[s.Words] === "true";
                 case 'important': return (vocabData.importantSentences || {})[s.Words] === "true";
                 case 'wrong': return (vocabData.wrongQS || []).includes(s.Words);
-                case 'note': const note = (vocabData.noteSentences || {})[s.Words]; return note && note.trim() !== "";
+                case 'note': 
+                    const note = (vocabData.noteSentences || {})[s.Words]; 
+                    return note && note.trim() !== "";
+                // ========== 卡牌練習分類篩選 ==========
+                case 'flashcard-unknown':
+                    // 篩選標記為「再練習」的句子
+                    const flashcardHistory = vocabData.flashcardHistory?.sentence || {};
+                    const histUnknown = flashcardHistory[s['句子']] || flashcardHistory[s.Words];
+                    return histUnknown && histUnknown.unknown > 0;
+                case 'flashcard-uncertain':
+                    // 篩選標記為「不確定」的句子
+                    const flashcardHistoryUncertain = vocabData.flashcardHistory?.sentence || {};
+                    const histUncertain = flashcardHistoryUncertain[s['句子']] || flashcardHistoryUncertain[s.Words];
+                    return histUncertain && histUncertain.uncertain > 0;
+                case 'flashcard-known':
+                    // 篩選標記為「記得！」的句子
+                    const flashcardHistoryKnown = vocabData.flashcardHistory?.sentence || {};
+                    const histKnown = flashcardHistoryKnown[s['句子']] || flashcardHistoryKnown[s.Words];
+                    return histKnown && histKnown.known > 0;
+                case 'flashcard-practiced':
+                    // 篩選所有練習過的句子（seen > 0）
+                    const flashcardHistoryPracticed = vocabData.flashcardHistory?.sentence || {};
+                    const histPracticed = flashcardHistoryPracticed[s['句子']] || flashcardHistoryPracticed[s.Words];
+                    return histPracticed && histPracticed.seen > 0;
                 default: return false;
             }
         });
@@ -563,7 +586,12 @@ function createCategoryButtons() {
         { name: "重要句子", value: "important" },
         { name: "錯誤句子", value: "wrong" },
         { name: "Note句子", value: "note" },
-        { name: "Checked 單字", value: "checked_word" }
+        { name: "Checked 單字", value: "checked_word" },
+        // ========== 卡牌練習分類 ==========
+        { name: "❌ 再練習", value: "flashcard-unknown" },
+        { name: "❓ 不確定", value: "flashcard-uncertain" },
+        { name: "✅ 記得！", value: "flashcard-known" },
+        { name: "🃏 已練習", value: "flashcard-practiced" }
     ];
     const specialContainer = document.getElementById("specialCategoryButtons");
     if (specialContainer) {
