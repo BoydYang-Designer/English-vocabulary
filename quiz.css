@@ -2116,21 +2116,21 @@ body {
     
     /* ✅ 手機版字卡更緊湊 - 統一固定高度 */
     .fc-scene {
-        height: 420px; /* ✅ 固定高度 */
+        height: 460px; /* ✅ 改為 460px */
     }
     
     .fc-card,
     .fc-card-face {
-        height: 420px; /* ✅ 固定高度，確保正反面一致 */
+        height: 460px; /* ✅ 改為 460px，確保正反面一致 */
     }
     
     .fc-card-face {
-        padding: 1rem 0.875rem; /* ✅ 更緊湊的內距 */
+        padding: 1.25rem 1rem; /* ✅ 高度增加，內距也稍微加大 */
     }
     
     .fc-card-front,
     .fc-card-back {
-        height: 420px; /* ✅ 正面和背面都是固定 240px */
+        height: 460px; /* ✅ 正面和背面都改為 460px */
     }
     
     .fc-chinese, .fc-chinese-front {
