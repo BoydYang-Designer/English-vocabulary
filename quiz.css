@@ -2116,12 +2116,12 @@ body {
     
     /* ✅ 手機版字卡更緊湊 - 統一固定高度 */
     .fc-scene {
-        height: 240px; /* ✅ 固定高度 */
+        height: 420px; /* ✅ 固定高度 */
     }
     
     .fc-card,
     .fc-card-face {
-        height: 240px; /* ✅ 固定高度，確保正反面一致 */
+        height: 420px; /* ✅ 固定高度，確保正反面一致 */
     }
     
     .fc-card-face {
@@ -2130,7 +2130,7 @@ body {
     
     .fc-card-front,
     .fc-card-back {
-        height: 240px; /* ✅ 正面和背面都是固定 240px */
+        height: 420px; /* ✅ 正面和背面都是固定 240px */
     }
     
     .fc-chinese, .fc-chinese-front {
