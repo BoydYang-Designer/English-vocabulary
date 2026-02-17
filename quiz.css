@@ -1585,14 +1585,17 @@ body {
 .fc-scene    { 
     perspective: 1200px; 
     max-width: 600px; 
-    margin: 0 auto; /* ✅ 移除下方邊距，位置完全固定 */
+    margin: 0 auto;
     cursor: pointer;
-    min-height: 360px;
+    min-height: 300px; /* ✅ 從 360px 減為 300px */
+    flex: 1; /* ✅ 讓字卡區域占據可用空間 */
+    display: flex;
+    align-items: center;
 }
 .fc-card {
     position: relative;
     width: 100%;
-    min-height: 360px;
+    min-height: 300px; /* ✅ 從 360px 減為 300px */
     transform-style: preserve-3d;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: var(--radius-xl);
@@ -1604,11 +1607,11 @@ body {
 .fc-card-face {
     position: absolute;
     width: 100%;
-    min-height: 360px;
+    min-height: 300px; /* ✅ 從 360px 減為 300px */
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     border-radius: var(--radius-xl);
-    padding: 2.5rem 2rem;
+    padding: 1.75rem 1.5rem; /* ✅ 從 2.5rem 2rem 減為 1.75rem 1.5rem */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1637,7 +1640,7 @@ body {
         linear-gradient(145deg, #fafbff 0%, #fff8fb 100%);
     border-color: rgba(118, 75, 162, 0.2);
     transform: rotateY(180deg);
-    max-height: 500px;
+    max-height: 420px; /* ✅ 從 500px 減為 420px */
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -2024,8 +2027,10 @@ body {
 
 /* ✅ 確保字卡容器有足夠的下方空間 */
 #flashcardArea {
-    padding-bottom: 2rem; /* ✅ 減少底部邊距（進度條已在下方） */
-    min-height: calc(100vh - 120px); /* ✅ 從 200px 改為 120px，給予更多空間 */
+    padding-bottom: 2rem;
+    min-height: 100vh; /* ✅ 改為 100vh，確保至少一個螢幕高度 */
+    display: flex;
+    flex-direction: column;
 }
 
 /* ── Panel 4：結果頁 ── */
@@ -2080,7 +2085,7 @@ body {
 
 /* ── 手機響應 ── */
 @media (max-width: 480px) {
-    .fc-word           { font-size: 2rem; }
+    .fc-word           { font-size: 1.65rem; } /* ✅ 從 2rem 減為 1.65rem */
     .fc-type-grid      { grid-template-columns: 1fr 1fr; gap: var(--spacing-md); }
     .fc-type-card      { padding: var(--spacing-lg) var(--spacing-md); }
     .fc-type-icon      { font-size: 2rem; }
@@ -2088,34 +2093,75 @@ body {
     .fc-btn-known,
     .fc-btn-uncertain,
     .fc-btn-unknown    { 
-        min-width: 85px; 
-        padding: 0.7rem 0.8rem;
-        gap: 0.25rem;
+        min-width: 80px; /* ✅ 從 85px 減為 80px */
+        padding: 0.6rem 0.7rem; /* ✅ 更緊湊 */
+        gap: 0.2rem;
     }
     .fc-btn-icon {
-        font-size: 1.3rem;
+        font-size: 1.2rem; /* ✅ 從 1.3rem 減為 1.2rem */
     }
     .fc-btn-label {
-        font-size: 0.75rem;
+        font-size: 0.7rem; /* ✅ 從 0.75rem 減為 0.7rem */
         font-weight: 600;
     }
     .fc-actions {
-        gap: 0.5rem; /* 從 0.4rem 增加到 0.5rem */
-        padding: 0.8rem 0.5rem;
+        gap: 0.4rem; /* ✅ 從 0.5rem 減為 0.4rem */
+        padding: 0.5rem; /* ✅ 從 0.8rem 0.5rem 減為 0.5rem */
     }
     .fc-result-stats   { gap: var(--spacing-lg); }
     .fc-stat-number    { font-size: 2rem; }
     .fc-review-item    { flex-wrap: wrap; }
     .fc-review-sub     { display: none; }
     
-    /* ✅ 新增：手機版減少字卡高度 */
+    /* ✅ 手機版字卡更緊湊 */
+    .fc-scene {
+        min-height: 240px; /* ✅ 進一步減少 */
+    }
+    
     .fc-card,
     .fc-card-face {
-        min-height: 320px; /* 從 360px 減為 320px */
+        min-height: 240px; /* ✅ 從 360px 大幅減為 240px */
     }
     
     .fc-card-face {
-        padding: 2rem 1.5rem; /* 減少內距 */
+        padding: 1rem 0.875rem; /* ✅ 更緊湊的內距 */
+    }
+    
+    .fc-card-back {
+        max-height: 350px; /* ✅ 背面高度也減少 */
+    }
+    
+    .fc-chinese, .fc-chinese-front {
+        font-size: 1.125rem; /* ✅ 從 1.375rem 減為 1.125rem */
+        line-height: 1.5;
+    }
+    
+    .fc-content {
+        gap: 0.625rem; /* ✅ 減少元素間距 */
+    }
+    
+    .fc-tags {
+        gap: 0.375rem; /* ✅ 減少標籤間距 */
+        margin-bottom: 0.375rem;
+    }
+    
+    .fc-tag {
+        padding: 0.25rem 0.625rem; /* ✅ 更緊湊的標籤 */
+        font-size: 0.75rem;
+    }
+    
+    .fc-phonetics-front {
+        font-size: 0.9375rem; /* ✅ 減少音標大小 */
+        min-height: 1.5rem;
+    }
+    
+    .fc-phonetics {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    #flashcardArea {
+        padding-bottom: 1rem; /* ✅ 減少底部空間 */
     }
 }
 
