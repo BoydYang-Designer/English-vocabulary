@@ -2025,7 +2025,7 @@ body {
 /* ✅ 確保字卡容器有足夠的下方空間 */
 #flashcardArea {
     padding-bottom: 2rem; /* ✅ 減少底部邊距（進度條已在下方） */
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 120px); /* ✅ 從 200px 改為 120px，給予更多空間 */
 }
 
 /* ── Panel 4：結果頁 ── */
@@ -2107,6 +2107,16 @@ body {
     .fc-stat-number    { font-size: 2rem; }
     .fc-review-item    { flex-wrap: wrap; }
     .fc-review-sub     { display: none; }
+    
+    /* ✅ 新增：手機版減少字卡高度 */
+    .fc-card,
+    .fc-card-face {
+        min-height: 320px; /* 從 360px 減為 320px */
+    }
+    
+    .fc-card-face {
+        padding: 2rem 1.5rem; /* 減少內距 */
+    }
 }
 
 /* ✅ 針對 414px 寬度（iPhone 等機型）的特別優化 */
