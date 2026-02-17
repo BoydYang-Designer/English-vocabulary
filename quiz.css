@@ -1587,7 +1587,7 @@ body {
     max-width: 600px; 
     margin: 0 auto;
     cursor: pointer;
-    min-height: 300px; /* ✅ 從 360px 減為 300px */
+    height: 300px; /* ✅ 改用固定 height */
     flex: 1; /* ✅ 讓字卡區域占據可用空間 */
     display: flex;
     align-items: center;
@@ -1595,7 +1595,7 @@ body {
 .fc-card {
     position: relative;
     width: 100%;
-    min-height: 300px; /* ✅ 從 360px 減為 300px */
+    height: 300px; /* ✅ 改用固定 height */
     transform-style: preserve-3d;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: var(--radius-xl);
@@ -1607,7 +1607,7 @@ body {
 .fc-card-face {
     position: absolute;
     width: 100%;
-    min-height: 300px; /* ✅ 從 360px 減為 300px */
+    height: 300px; /* ✅ 改用固定 height 取代 min-height，確保一致性 */
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     border-radius: var(--radius-xl);
@@ -1633,6 +1633,7 @@ body {
     background: 
         linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
     border-color: rgba(102, 126, 234, 0.15);
+    height: 300px; /* ✅ 固定高度，與背面一致 */
 }
 
 .fc-card-back  { 
@@ -1640,8 +1641,8 @@ body {
         linear-gradient(145deg, #fafbff 0%, #fff8fb 100%);
     border-color: rgba(118, 75, 162, 0.2);
     transform: rotateY(180deg);
-    max-height: 420px; /* ✅ 從 500px 減為 420px */
-    overflow-y: auto;
+    height: 300px; /* ✅ 改用固定 height 取代 max-height */
+    overflow-y: auto; /* ✅ 保持滾動功能 */
     overflow-x: hidden;
 }
 
@@ -2113,22 +2114,23 @@ body {
     .fc-review-item    { flex-wrap: wrap; }
     .fc-review-sub     { display: none; }
     
-    /* ✅ 手機版字卡更緊湊 */
+    /* ✅ 手機版字卡更緊湊 - 統一固定高度 */
     .fc-scene {
-        min-height: 240px; /* ✅ 進一步減少 */
+        height: 240px; /* ✅ 固定高度 */
     }
     
     .fc-card,
     .fc-card-face {
-        min-height: 240px; /* ✅ 從 360px 大幅減為 240px */
+        height: 240px; /* ✅ 固定高度，確保正反面一致 */
     }
     
     .fc-card-face {
         padding: 1rem 0.875rem; /* ✅ 更緊湊的內距 */
     }
     
+    .fc-card-front,
     .fc-card-back {
-        max-height: 350px; /* ✅ 背面高度也減少 */
+        height: 240px; /* ✅ 正面和背面都是固定 240px */
     }
     
     .fc-chinese, .fc-chinese-front {
