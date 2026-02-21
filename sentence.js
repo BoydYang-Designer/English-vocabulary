@@ -455,6 +455,8 @@ if (sentenceSpecialFilters.length > 0) {
                     const flashcardHistoryPracticed = vocabData.flashcardHistory?.sentence || {};
                     const histPracticed = flashcardHistoryPracticed[s['句子']] || flashcardHistoryPracticed[s.Words];
                     return histPracticed && histPracticed.seen > 0;
+                case 'my_custom':
+                    return s.isCustom === true;
                 default: return false;
             }
         });
@@ -696,10 +698,12 @@ function displaySentenceList(sentences, title = "句子列表") {
         const sentenceDisplay = isChecked 
     ? sentenceId 
     : `${sentenceId}:<br>${sentence.句子}`;
+        
+        const customBadge = (typeof getCustomBadge === 'function') ? getCustomBadge(sentence) : '';
 
         container.innerHTML = `
             <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
-            <p class='word-item' data-sentence="${sentenceId}">${sentenceDisplay}</p>
+            <p class='word-item' data-sentence="${sentenceId}">${sentenceDisplay}${customBadge}</p>
             <button class='check-button' onclick='toggleCheckSentence("${sentenceId}", this)'>
                 <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
             </button>
@@ -759,7 +763,11 @@ function backToFirstLayer() {
     let searchResults = document.getElementById("searchResults");
     if (searchResults) searchResults.innerHTML = "";
 
+    // 隱藏「新增句子到此單字」按鈕
+    if (typeof hideAddSentenceInListBtn === 'function') hideAddSentenceInListBtn();
+
     document.querySelectorAll('.letter-btn.selected').forEach(btn => btn.classList.remove('selected'));
+
     
     document.querySelectorAll('.subcategory-wrapper').forEach(wrapper => wrapper.remove());
     
@@ -841,12 +849,14 @@ function showSentences(word) {
             const sentenceDisplay = isChecked 
                 ? sentenceId 
                 : `${sentenceId}: ${s.句子}`;
+            
+            const customBadge = (typeof getCustomBadge === 'function') ? getCustomBadge(s) : '';
 
             let item = document.createElement("div");
             item.className = `word-item-container ${isChecked ? "checked" : ""}`;
             item.innerHTML = `
                 <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${isImportant ? "checked" : ""}>
-                <p class='word-item' data-sentence="${sentenceId}">${sentenceDisplay}</p>
+                <p class='word-item' data-sentence="${sentenceId}">${sentenceDisplay}${customBadge}</p>
                 <button class='check-button' onclick='toggleCheckSentence("${sentenceId}", this)'>
                     <img src="${iconSrc}" class="check-icon" alt="Check" width="24" height="24">
                 </button>
@@ -860,6 +870,11 @@ function showSentences(word) {
         });
     }
     updateAutoPlayButton();
+    
+    // 顯示「新增句子到此單字」按鈕
+    if (typeof showAddSentenceInListBtn === 'function') {
+        showAddSentenceInListBtn(word);
+    }
 }
 
 function filterSentences() {
@@ -1100,10 +1115,14 @@ function showSentenceDetails(sentenceId, index = -1, direction = null) {
 
     let word = sentenceId.replace(/-\d+$/, "");
     let wordObj = wordsData.find(w => w.Words === word);
+    const isCustomSentence = sentenceObj.isCustom === true;
+    const customIndicator = isCustomSentence 
+        ? `<span class="custom-badge" style="margin-left:8px;" onclick="openEditCustomModal('${sentenceId}')" title="點擊編輯" style="cursor:pointer;">🖊️ 自訂</span>`
+        : '';
     let header = `
     <div class="phonetics-container">
         <input type='checkbox' class='important-checkbox' onchange='toggleImportantSentence("${sentenceId}", this)' ${window.getVocabularyData().importantSentences?.[sentenceId] === "true" ? "checked" : ""}>
-        <div id="sentenceTitle" style="font-size: 20px; font-weight: bold;">${sentenceId}</div>
+        <div id="sentenceTitle" style="font-size: 20px; font-weight: bold;">${sentenceId}${customIndicator}</div>
         <button id="autoPlayBtnDetails" onclick="toggleAutoPlay()">自動播放</button>
     </div>`;
     let phonetics = wordObj ? 

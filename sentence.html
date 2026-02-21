@@ -12,7 +12,7 @@
     <script src="auth-manager.js" defer></script>
     <script src="sentence.js" defer></script>
     <script src="sentence-enhancements.js" defer></script>
-
+    <script src="custom-sentences.js" defer></script>
 </head>
 <body>
     <div id="loading-overlay">
@@ -27,7 +27,7 @@
         <span id="user-info">載入中...</span>
         <div class="header-buttons">
             <button id="theme-toggle-btn" class="button">🌙</button>
-            <button id="edit-storage-btn" class="button">編輯</button>
+            <button id="manage-btn" class="button" onclick="window.location.href='management.html'">⚙️ 管理</button>
             <button id="sign-out-btn" class="button is-hidden">登出</button>
             <button id="sign-in-from-guest-btn" class="button is-hidden">登入</button>
         </div>
@@ -38,7 +38,10 @@
 
     <div id="mainPageContainer">
         <div id="searchContainer" style="text-align: center; margin-bottom: 15px;">
-            <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterSentences()" style="font-size: 18px; padding: 5px; width: 200px;">
+            <div style="display: inline-flex; align-items: center; gap: 8px;">
+                <input type="text" id="searchInput" placeholder="輸入單字搜尋..." oninput="filterSentences()" style="font-size: 18px; padding: 5px; width: 200px;">
+                <button id="addCustomSentenceBtn" class="add-custom-btn" onclick="openAddCustomModal()" title="新增自訂句子">＋</button>
+            </div>
         </div>
         
         <div class="start-learning-container">
@@ -57,27 +60,31 @@
         <div class="collapsible-section-wrapper">
             <div class="collapsible-section">
                 <button type="button" class="collapsible-header">字母分類</button>
-                <div class="collapsible-content" id="alphabetButtons">
-                    </div>
+                <div class="collapsible-content" id="alphabetButtons"></div>
             </div>
             <div class="collapsible-section">
                 <button type="button" class="collapsible-header">主分類</button>
-                <div class="collapsible-content" id="primaryCategoryButtons">
-                    </div>
+                <div class="collapsible-content" id="primaryCategoryButtons"></div>
             </div>
             <div class="collapsible-section">
                 <button type="button" class="collapsible-header">特殊分類</button>
-                <div class="collapsible-content" id="specialCategoryButtons">
-                    </div>
+                <div class="collapsible-content" id="specialCategoryButtons"></div>
             </div>
             <div class="collapsible-section">
                 <button type="button" class="collapsible-header">等級分類</button>
-                <div class="collapsible-content" id="levelButtons">
+                <div class="collapsible-content" id="levelButtons"></div>
+            </div>
+            <!-- 第五個：我的自訂 -->
+            <div class="collapsible-section">
+                <button type="button" class="collapsible-header">🖊️ 我的自訂</button>
+                <div class="collapsible-content" id="myCustomButtons">
+                    <div class="button-wrapper">
+                        <button class="letter-btn" data-value="my_custom" onclick="toggleAndCheckHeader(this)">我的自訂句子</button>
                     </div>
+                </div>
             </div>
         </div>
-
-        </div>
+    </div>
 
     <h2 id="wordListTitle" style="text-align: center; margin-bottom: 10px; display: none;"></h2>
     <div class="container">
@@ -89,6 +96,10 @@
         <div id="sentenceList" class="word-list" style="display: none;">
             <button class="button back-button" onclick="backToFirstLayer()">Back</button>
             <div id="sentenceItems"></div>
+            <!-- Word列表內新增句子按鈕 -->
+            <div id="addSentenceInListContainer" style="display:none; text-align:center; padding: 15px 0;">
+                <button class="add-in-list-btn" onclick="openAddCustomModalForWord()">＋ 新增句子到此單字</button>
+            </div>
         </div>
 
         <div id="sentenceDetails" class="details" style="display: none;">
@@ -118,7 +129,6 @@
                   </button>
                 </div>
             </div>
-  
 
             <div id="searchInDetails">
                 <input type="text" id="searchInputDetails" placeholder="輸入單字搜尋..." oninput="filterSentencesInDetails()">
@@ -137,6 +147,82 @@
                     <button onclick="exportAllData()" id="exportButton" class="note-button">Export</button>
                     <button onclick="importAllData()" id="importButton" class="note-button">Import</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 新增自訂句子 Modal ===== -->
+    <div id="addCustomModal" class="custom-modal-overlay" style="display:none;">
+        <div class="custom-modal">
+            <div class="custom-modal-header">
+                <h3 id="customModalTitle">新增自訂句子</h3>
+                <button class="custom-modal-close" onclick="closeAddCustomModal()">✕</button>
+            </div>
+            <div class="custom-modal-body">
+                <!-- 隱藏欄位記錄編輯模式 -->
+                <input type="hidden" id="editCustomId" value="">
+                
+                <div class="form-group">
+                    <label>Words（單字編號）<span class="required">*</span></label>
+                    <div style="display:flex; gap:8px; align-items:center;">
+                        <input type="text" id="customWords" placeholder="例：absorb" class="form-input" oninput="suggestCustomWordsId()">
+                        <span id="customWordsIdPreview" class="words-id-preview"></span>
+                    </div>
+                    <small id="customWordsHint" class="form-hint">輸入單字，系統將自動編號</small>
+                </div>
+
+                <div class="form-group">
+                    <label>英文句子 <span class="required">*</span></label>
+                    <textarea id="customSentence" placeholder="輸入英文句子..." class="form-input" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>中文翻譯 <span style="font-size:11px;color:#999;">（選填）</span></label>
+                    <textarea id="customChinese" placeholder="輸入中文翻譯..." class="form-input" rows="2"></textarea>
+                </div>
+
+                <div class="form-group form-group-inline">
+                    <div>
+                        <label>等級</label>
+                        <select id="customLevel" class="form-input">
+                            <option value="">-- 選擇等級 --</option>
+                            <option value="A1">A1</option>
+                            <option value="A2">A2</option>
+                            <option value="B1">B1</option>
+                            <option value="B2">B2</option>
+                            <option value="C1">C1</option>
+                            <option value="C2">C2</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>名人</label>
+                        <input type="text" id="customCelebrity" placeholder="選填" class="form-input">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>分類1</label>
+                    <input type="text" id="customCat1" placeholder="選填" class="form-input">
+                </div>
+                <div class="form-group form-group-inline">
+                    <div>
+                        <label>分類2</label>
+                        <input type="text" id="customCat2" placeholder="選填" class="form-input">
+                    </div>
+                    <div>
+                        <label>分類3</label>
+                        <input type="text" id="customCat3" placeholder="選填" class="form-input">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>記錄</label>
+                    <input type="text" id="customRecord" placeholder="選填備注" class="form-input">
+                </div>
+            </div>
+            <div class="custom-modal-footer">
+                <button class="btn-cancel" onclick="closeAddCustomModal()">取消</button>
+                <button class="btn-save" onclick="saveCustomSentence()">儲存</button>
             </div>
         </div>
     </div>

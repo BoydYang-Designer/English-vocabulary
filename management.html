@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Boyd Vocabulary - 管理頁面</title>
+    <link rel="stylesheet" href="sentence.css">
+    <style>
+        body { padding-bottom: 40px; }
+        .mgmt-page-header {
+            background: var(--bg-secondary);
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            max-width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .mgmt-back-btn {
+            background: var(--accent-color, #A1887F);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 7px 14px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .mgmt-page-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            flex: 1;
+        }
+        .mgmt-tabs {
+            display: flex;
+            max-width: 414px;
+            margin: 12px auto 0;
+            padding: 0 12px;
+            gap: 6px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .mgmt-tabs::-webkit-scrollbar { display: none; }
+        .mgmt-tab {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 7px 14px;
+            font-size: 13px;
+            cursor: pointer;
+            white-space: nowrap;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .mgmt-tab.active {
+            background: var(--accent-color, #A1887F);
+            color: white;
+            border-color: var(--accent-color, #A1887F);
+            font-weight: 600;
+        }
+        .mgmt-content {
+            display: none;
+            padding: 0 12px;
+        }
+        .mgmt-content.active { display: block; }
+        .action-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+        .note-full {
+            font-size: 12px;
+            color: var(--text-secondary);
+            background: var(--bg-tertiary);
+            padding: 6px 8px;
+            border-radius: 6px;
+            margin-top: 4px;
+            word-break: break-word;
+        }
+    </style>
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js" defer></script>
+    <script src="auth-manager.js" defer></script>
+    <script src="custom-sentences.js" defer></script>
+</head>
+<body>
+    <div id="notification-container"></div>
+
+    <!-- 頁頭 -->
+    <div class="mgmt-page-header">
+        <button class="mgmt-back-btn" onclick="window.location.href='sentence.html'">← 返回</button>
+        <span class="mgmt-page-title">⚙️ 管理頁面</span>
+    </div>
+
+    <!-- 分頁標籤 -->
+    <div class="mgmt-tabs">
+        <button class="mgmt-tab active" onclick="switchTab('custom')">🖊️ 自訂句子</button>
+        <button class="mgmt-tab" onclick="switchTab('notes')">📝 筆記管理</button>
+        <button class="mgmt-tab" onclick="switchTab('checked')">✅ 已勾選</button>
+        <button class="mgmt-tab" onclick="switchTab('sync')">🔍 同步狀態</button>
+    </div>
+
+    <!-- ========== 自訂句子 ========== -->
+    <div id="tab-custom" class="mgmt-content active">
+        <div class="mgmt-section">
+            <div class="mgmt-section-title">自訂句子管理</div>
+            <div class="action-row">
+                <button class="mgmt-btn mgmt-btn-primary" onclick="openAddCustomModal()">＋ 新增句子</button>
+                <button class="mgmt-btn mgmt-btn-primary" onclick="exportCustomSentences()" style="background:#7986CB;">⬇ 匯出 JSON</button>
+            </div>
+            <div id="customListContainer">
+                <div class="mgmt-empty">載入中...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 筆記管理 ========== -->
+    <div id="tab-notes" class="mgmt-content">
+        <div class="mgmt-section">
+            <div class="mgmt-section-title">筆記管理</div>
+            <div class="action-row">
+                <button class="mgmt-btn mgmt-btn-danger" onclick="confirmDeleteAllNotes()">🗑️ 清除全部筆記</button>
+            </div>
+            <div id="notesListContainer">
+                <div class="mgmt-empty">載入中...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 已勾選句子 ========== -->
+    <div id="tab-checked" class="mgmt-content">
+        <div class="mgmt-section">
+            <div class="mgmt-section-title">已勾選句子</div>
+            <div class="action-row">
+                <button class="mgmt-btn mgmt-btn-danger" onclick="confirmUncheckAll()">🗑️ 清除全部勾選</button>
+            </div>
+            <div id="checkedListContainer">
+                <div class="mgmt-empty">載入中...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 同步狀態 ========== -->
+    <div id="tab-sync" class="mgmt-content">
+        <div class="mgmt-section">
+            <div class="mgmt-section-title">🔍 檢查同步狀態</div>
+            <p style="font-size:13px; color:var(--text-secondary); margin-bottom:14px;">
+                比對自訂句子與主資料庫，找出已被整合的句子，協助你清理 localStorage / Firebase 中的重複資料。
+            </p>
+            <div class="action-row">
+                <button class="mgmt-btn mgmt-btn-primary" onclick="runSyncCheck()">開始檢查</button>
+            </div>
+            <div id="syncResultContainer"></div>
+        </div>
+    </div>
+
+    <!-- ===== 新增/編輯自訂句子 Modal (複用 sentence.html 的 Modal) ===== -->
+    <div id="addCustomModal" class="custom-modal-overlay" style="display:none;">
+        <div class="custom-modal">
+            <div class="custom-modal-header">
+                <h3 id="customModalTitle">新增自訂句子</h3>
+                <button class="custom-modal-close" onclick="closeAddCustomModal()">✕</button>
+            </div>
+            <div class="custom-modal-body">
+                <input type="hidden" id="editCustomId" value="">
+                <div class="form-group">
+                    <label>Words（單字）<span class="required">*</span></label>
+                    <div style="display:flex; gap:8px; align-items:center;">
+                        <input type="text" id="customWords" placeholder="例：absorb" class="form-input" oninput="suggestCustomWordsId()">
+                        <span id="customWordsIdPreview" class="words-id-preview"></span>
+                    </div>
+                    <small id="customWordsHint" class="form-hint">輸入單字，系統將自動編號</small>
+                </div>
+                <div class="form-group">
+                    <label>英文句子 <span class="required">*</span></label>
+                    <textarea id="customSentence" placeholder="輸入英文句子..." class="form-input" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>中文翻譯 <span style="font-size:11px;color:#999;">（選填）</span></label>
+                    <textarea id="customChinese" placeholder="輸入中文翻譯..." class="form-input" rows="2"></textarea>
+                </div>
+                <div class="form-group form-group-inline">
+                    <div>
+                        <label>等級</label>
+                        <select id="customLevel" class="form-input">
+                            <option value="">-- 選擇等級 --</option>
+                            <option value="A1">A1</option><option value="A2">A2</option>
+                            <option value="B1">B1</option><option value="B2">B2</option>
+                            <option value="C1">C1</option><option value="C2">C2</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>名人</label>
+                        <input type="text" id="customCelebrity" placeholder="選填" class="form-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>分類1</label>
+                    <input type="text" id="customCat1" placeholder="選填" class="form-input">
+                </div>
+                <div class="form-group form-group-inline">
+                    <div><label>分類2</label><input type="text" id="customCat2" placeholder="選填" class="form-input"></div>
+                    <div><label>分類3</label><input type="text" id="customCat3" placeholder="選填" class="form-input"></div>
+                </div>
+                <div class="form-group">
+                    <label>記錄</label>
+                    <input type="text" id="customRecord" placeholder="選填備注" class="form-input">
+                </div>
+            </div>
+            <div class="custom-modal-footer">
+                <button class="btn-cancel" onclick="closeAddCustomModal()">取消</button>
+                <button class="btn-save" onclick="saveCustomSentence(); refreshCustomList();">儲存</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 同步狀態 Modal ===== -->
+    <div id="syncModal" class="sync-modal-overlay" style="display:none;">
+        <div class="sync-modal">
+            <div class="sync-modal-header">
+                <h3 style="margin:0; font-size:16px; color:var(--text-primary);">🔍 同步狀態結果</h3>
+                <button class="custom-modal-close" onclick="closeSyncModal()">✕</button>
+            </div>
+            <div class="sync-modal-body" id="syncModalBody"></div>
+            <div class="sync-modal-footer">
+                <button class="btn-cancel" onclick="closeSyncModal()">關閉</button>
+                <button class="btn-save" id="syncDeleteBtn" onclick="executeSync()" style="display:none;">刪除選取項目</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // ===== 通知函式（management.html 本地版）=====
+    function showNotification(message, type = 'success') {
+        const container = document.getElementById('notification-container');
+        if (!container) return;
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        toast.textContent = message;
+        container.appendChild(toast);
+        setTimeout(() => toast.remove(), 4000);
+    }
+
+    // ===== 分頁切換 =====
+    function switchTab(tab) {
+        document.querySelectorAll('.mgmt-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.mgmt-content').forEach(c => c.classList.remove('active'));
+        event.target.classList.add('active');
+        document.getElementById(`tab-${tab}`).classList.add('active');
+
+        if (tab === 'custom') refreshCustomList();
+        if (tab === 'notes') refreshNotesList();
+        if (tab === 'checked') refreshCheckedList();
+        if (tab === 'sync') document.getElementById('syncResultContainer').innerHTML = '';
+    }
+
+    // ===== 自訂句子列表 =====
+    function refreshCustomList() {
+        const container = document.getElementById('customListContainer');
+        if (!container) return;
+        const list = (typeof getCustomSentences === 'function') ? getCustomSentences() : [];
+        
+        if (list.length === 0) {
+            container.innerHTML = '<div class="mgmt-empty">尚未新增任何自訂句子</div>';
+            return;
+        }
+
+        const sorted = [...list].sort((a, b) => a.Words.localeCompare(b.Words));
+        container.innerHTML = sorted.map(item => `
+            <div class="mgmt-list-item">
+                <div class="mgmt-item-content">
+                    <div class="mgmt-item-title">${item.Words} <span class="custom-badge">自訂</span></div>
+                    <div class="mgmt-item-subtitle">${item['句子'] || ''}</div>
+                    <div class="mgmt-item-subtitle" style="color:var(--accent-color)">${item['中文'] || ''}</div>
+                </div>
+                <div class="mgmt-item-actions">
+                    <button class="mgmt-btn mgmt-btn-edit" onclick="openEditCustomModal('${item.Words}')">編輯</button>
+                    <button class="mgmt-btn mgmt-btn-delete" onclick="deleteCustomAndRefresh('${item.Words}')">刪除</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function deleteCustomAndRefresh(wordsId) {
+        if (typeof deleteCustomSentence === 'function') {
+            deleteCustomSentence(wordsId);
+            refreshCustomList();
+        }
+    }
+
+    // 覆寫 saveCustomSentence 後的重整
+    const _origSave = window.saveCustomSentence;
+
+    // ===== 筆記管理 =====
+    function getNotesFromStorage() {
+        const notes = {};
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            // 嘗試從 vocabularyData 取
+        }
+        // 優先從 vocabularyData
+        try {
+            const vd = localStorage.getItem('vocabularyData');
+            if (vd) {
+                const parsed = JSON.parse(vd);
+                return parsed.noteSentences || {};
+            }
+        } catch(e) {}
+        return {};
+    }
+
+    function refreshNotesList() {
+        const container = document.getElementById('notesListContainer');
+        if (!container) return;
+        const notes = getNotesFromStorage();
+        const keys = Object.keys(notes);
+        if (keys.length === 0) {
+            container.innerHTML = '<div class="mgmt-empty">目前沒有任何筆記</div>';
+            return;
+        }
+        container.innerHTML = keys.map(sentenceId => `
+            <div class="mgmt-list-item">
+                <div class="mgmt-item-content">
+                    <div class="mgmt-item-title">${sentenceId}</div>
+                    <div class="note-full">${notes[sentenceId]}</div>
+                </div>
+                <div class="mgmt-item-actions">
+                    <button class="mgmt-btn mgmt-btn-delete" onclick="deleteNote('${sentenceId}')">刪除</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function deleteNote(sentenceId) {
+        if (!confirm(`確定刪除「${sentenceId}」的筆記？`)) return;
+        try {
+            const vd = JSON.parse(localStorage.getItem('vocabularyData') || '{}');
+            if (vd.noteSentences) {
+                delete vd.noteSentences[sentenceId];
+                localStorage.setItem('vocabularyData', JSON.stringify(vd));
+            }
+        } catch(e) {}
+        showNotification('🗑️ 筆記已刪除', 'success');
+        refreshNotesList();
+    }
+
+    function confirmDeleteAllNotes() {
+        if (!confirm('確定要清除全部筆記？此操作無法復原。')) return;
+        try {
+            const vd = JSON.parse(localStorage.getItem('vocabularyData') || '{}');
+            vd.noteSentences = {};
+            localStorage.setItem('vocabularyData', JSON.stringify(vd));
+        } catch(e) {}
+        showNotification('🗑️ 已清除全部筆記', 'success');
+        refreshNotesList();
+    }
+
+    // ===== 已勾選句子 =====
+    function getCheckedFromStorage() {
+        try {
+            const vd = JSON.parse(localStorage.getItem('vocabularyData') || '{}');
+            return vd.checkedSentences || {};
+        } catch(e) { return {}; }
+    }
+
+    function refreshCheckedList() {
+        const container = document.getElementById('checkedListContainer');
+        if (!container) return;
+        const checked = getCheckedFromStorage();
+        const keys = Object.keys(checked).filter(k => checked[k] === 'true');
+        if (keys.length === 0) {
+            container.innerHTML = '<div class="mgmt-empty">目前沒有已勾選的句子</div>';
+            return;
+        }
+        container.innerHTML = keys.map(sentenceId => `
+            <div class="mgmt-list-item">
+                <div class="mgmt-item-content">
+                    <div class="mgmt-item-title">✅ ${sentenceId}</div>
+                </div>
+                <div class="mgmt-item-actions">
+                    <button class="mgmt-btn mgmt-btn-delete" onclick="uncheckSentence('${sentenceId}')">取消勾選</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function uncheckSentence(sentenceId) {
+        try {
+            const vd = JSON.parse(localStorage.getItem('vocabularyData') || '{}');
+            if (vd.checkedSentences) {
+                delete vd.checkedSentences[sentenceId];
+                localStorage.setItem('vocabularyData', JSON.stringify(vd));
+            }
+        } catch(e) {}
+        showNotification('✅ 已取消勾選', 'success');
+        refreshCheckedList();
+    }
+
+    function confirmUncheckAll() {
+        if (!confirm('確定要清除全部勾選記錄？此操作無法復原。')) return;
+        try {
+            const vd = JSON.parse(localStorage.getItem('vocabularyData') || '{}');
+            vd.checkedSentences = {};
+            localStorage.setItem('vocabularyData', JSON.stringify(vd));
+        } catch(e) {}
+        showNotification('🗑️ 已清除全部勾選', 'success');
+        refreshCheckedList();
+    }
+
+    // ===== 同步狀態檢查 =====
+    function runSyncCheck() {
+        const resultContainer = document.getElementById('syncResultContainer');
+        resultContainer.innerHTML = '<div class="mgmt-empty">⏳ 正在比對資料...</div>';
+
+        // 需要先載入主資料
+        if (typeof sentenceData === 'undefined' || !window._mainDataLoaded) {
+            // 嘗試從 sentence.js 的資料，若未載入則提示
+            resultContainer.innerHTML = `
+                <div class="mgmt-empty">
+                    ⚠️ 主資料尚未載入。<br>
+                    請先回到<a href="sentence.html" style="color:var(--accent-color)">句子頁面</a>讓資料載入後，再返回此頁執行檢查。
+                </div>`;
+            return;
+        }
+
+        if (typeof checkCustomSyncStatus !== 'function') {
+            resultContainer.innerHTML = '<div class="mgmt-empty">⚠️ 功能模組未載入</div>';
+            return;
+        }
+
+        const { exactMatches, sentenceOnlyMatches } = checkCustomSyncStatus();
+
+        if (exactMatches.length === 0 && sentenceOnlyMatches.length === 0) {
+            resultContainer.innerHTML = '<div class="mgmt-empty">✅ 目前沒有發現重複的自訂句子！</div>';
+            return;
+        }
+
+        let html = '';
+        if (exactMatches.length > 0) {
+            html += `<p style="font-size:13px;font-weight:600;color:var(--text-primary);margin-bottom:8px;">完全符合（Words + 句子相同）：${exactMatches.length} 筆</p>`;
+            exactMatches.forEach(({ custom, main }) => {
+                html += `
+                    <div class="sync-match-item" style="display:flex;gap:10px;align-items:flex-start;">
+                        <input type="checkbox" class="sync-checkbox" checked data-words="${custom.Words}" data-type="exact">
+                        <div>
+                            <div class="sync-match-word">🖊️ ${custom.Words} → 主資料：${main.Words}</div>
+                            <div class="sync-match-sentence">${custom['句子'] || ''}</div>
+                        </div>
+                    </div>`;
+            });
+        }
+
+        if (sentenceOnlyMatches.length > 0) {
+            html += `<p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:12px 0 8px;">句子相同但 Words 不同：${sentenceOnlyMatches.length} 筆</p>`;
+            sentenceOnlyMatches.forEach(({ custom, main }) => {
+                html += `
+                    <div class="sync-match-item warning" style="display:flex;gap:10px;align-items:flex-start;">
+                        <input type="checkbox" class="sync-checkbox" data-words="${custom.Words}" data-type="sentence-only">
+                        <div>
+                            <div class="sync-match-word">⚠️ 自訂：${custom.Words}　主資料：${main.Words}</div>
+                            <div class="sync-match-sentence">${custom['句子'] || ''}</div>
+                        </div>
+                    </div>`;
+            });
+        }
+
+        resultContainer.innerHTML = html;
+        openSyncModal(html, exactMatches.length + sentenceOnlyMatches.length);
+    }
+
+    function openSyncModal(html, total) {
+        const body = document.getElementById('syncModalBody');
+        const deleteBtn = document.getElementById('syncDeleteBtn');
+
+        body.innerHTML = `
+            <p style="font-size:13px;margin-bottom:12px;color:var(--text-secondary);">
+                共找到 <strong>${total}</strong> 筆可能重複的自訂句子，請勾選要刪除的項目：
+            </p>
+            ${html}
+            <div style="margin-top:12px; padding:12px; background:var(--bg-tertiary); border-radius:8px; font-size:12px; color:var(--text-secondary);">
+                💡 刪除後將同時移除 localStorage 與 Firebase 中的自訂句子。
+            </div>`;
+        deleteBtn.style.display = 'block';
+        document.getElementById('syncModal').style.display = 'flex';
+    }
+
+    function closeSyncModal() {
+        document.getElementById('syncModal').style.display = 'none';
+    }
+
+    function executeSync() {
+        const checkboxes = document.querySelectorAll('#syncModalBody .sync-checkbox:checked');
+        if (checkboxes.length === 0) {
+            showNotification('請至少勾選一個項目', 'error');
+            return;
+        }
+        if (!confirm(`確定要刪除選取的 ${checkboxes.length} 筆自訂句子？`)) return;
+
+        checkboxes.forEach(cb => {
+            const wordsId = cb.dataset.words;
+            if (typeof removeCustomSentenceById === 'function') {
+                removeCustomSentenceById(wordsId, true); // true = 同步刪除 Firebase
+            }
+        });
+
+        showNotification(`✅ 已刪除 ${checkboxes.length} 筆自訂句子`, 'success');
+        closeSyncModal();
+        refreshCustomList();
+        document.getElementById('syncResultContainer').innerHTML = '<div class="mgmt-empty">✅ 同步完成！</div>';
+    }
+
+    // ===== 頁面初始化 =====
+    document.addEventListener('DOMContentLoaded', function () {
+        // 等 custom-sentences.js 載入後再初始化列表
+        setTimeout(refreshCustomList, 300);
+
+        // 嘗試載入主資料以供同步檢查使用
+        loadMainDataForSync();
+    });
+
+    function loadMainDataForSync() {
+        Promise.all([
+            fetch("https://boydyang-designer.github.io/English-vocabulary/Sentence%20file/sentence.json")
+                .then(r => r.json())
+                .then(data => {
+                    window.sentenceData = Array.isArray(data) ? data : (data["New Words"] || []);
+                    window._mainDataLoaded = true;
+                })
+        ]).catch(e => {
+            console.warn('管理頁面載入主資料失敗:', e);
+        });
+    }
+    </script>
+</body>
+</html>

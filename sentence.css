@@ -970,3 +970,356 @@ h1 {
     border-color: #A1887F;
     color: #fff;
 }
+
+/* ===== 管理按鈕（取代舊的 edit-storage-btn）===== */
+#manage-btn {
+    background-color: #7986CB !important;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+    height: auto !important;
+    width: auto !important;
+    margin: 0 !important;
+    border-radius: 15px !important;
+}
+#manage-btn:hover {
+    background-color: #5C6BC0 !important;
+}
+
+/* ===== 全域「+」按鈕 ===== */
+.add-custom-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #A1887F;
+    color: white;
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.2s, transform 0.2s;
+    flex-shrink: 0;
+}
+.add-custom-btn:hover {
+    background-color: #8D6E63;
+    transform: scale(1.1);
+}
+
+/* ===== 句子列表底部「+」按鈕 ===== */
+.add-in-list-btn {
+    background-color: #7986CB;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.add-in-list-btn:hover {
+    background-color: #5C6BC0;
+    transform: scale(1.03);
+}
+
+/* ===== 自訂句子 Modal ===== */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 20000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.custom-modal {
+    background: var(--bg-secondary, #fff);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 420px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+.custom-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color, #eee);
+    background: var(--bg-tertiary, #fafafa);
+}
+
+.custom-modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--text-primary, #5D4037);
+}
+
+.custom-modal-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-secondary, #888);
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+.custom-modal-close:hover {
+    background: var(--border-color, #eee);
+}
+
+.custom-modal-body {
+    padding: 16px 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.custom-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 14px 20px;
+    border-top: 1px solid var(--border-color, #eee);
+    background: var(--bg-tertiary, #fafafa);
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary, #795548);
+    margin-bottom: 5px;
+}
+.form-group .required {
+    color: #e53935;
+    margin-left: 3px;
+}
+.form-input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 8px;
+    font-size: 15px;
+    background: var(--bg-primary, #fff);
+    color: var(--text-primary, #333);
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+.form-input:focus {
+    outline: none;
+    border-color: var(--accent-color, #A1887F);
+}
+select.form-input {
+    cursor: pointer;
+}
+.form-group-inline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.form-hint {
+    font-size: 11px;
+    color: var(--accent-color, #A1887F);
+    margin-top: 4px;
+    display: block;
+}
+.words-id-preview {
+    font-size: 13px;
+    color: var(--accent-color, #A1887F);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.btn-cancel {
+    background: var(--bg-primary, #f5f5f5);
+    color: var(--text-secondary, #666);
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 8px;
+    padding: 9px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-cancel:hover { background: var(--border-color, #eee); }
+
+.btn-save {
+    background: #A1887F;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.btn-save:hover {
+    background: #8D6E63;
+    transform: scale(1.03);
+}
+
+/* ===== 自訂句子標籤 ===== */
+.custom-badge {
+    display: inline-block;
+    background: #7986CB;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+/* ===== 管理頁面通用樣式（management.html 使用）===== */
+.mgmt-section {
+    background: var(--bg-secondary, #fff);
+    border-radius: 12px;
+    margin: 12px auto;
+    max-width: 414px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border: 1px solid var(--border-color, #eee);
+}
+.mgmt-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary, #5D4037);
+    margin: 0 0 12px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent-color, #A1887F);
+}
+.mgmt-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color, #eee);
+}
+.mgmt-list-item:last-child { border-bottom: none; }
+.mgmt-item-content { flex: 1; min-width: 0; }
+.mgmt-item-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary, #333);
+    word-break: break-all;
+}
+.mgmt-item-subtitle {
+    font-size: 12px;
+    color: var(--text-secondary, #888);
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mgmt-item-actions {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.mgmt-btn {
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.mgmt-btn:hover { opacity: 0.8; }
+.mgmt-btn-edit { background: #7986CB; color: white; }
+.mgmt-btn-delete { background: #EF9A9A; color: white; }
+.mgmt-btn-primary { background: #A1887F; color: white; padding: 9px 20px; font-size: 14px; border-radius: 10px; }
+.mgmt-btn-danger { background: #e53935; color: white; padding: 9px 20px; font-size: 14px; border-radius: 10px; }
+.mgmt-empty {
+    text-align: center;
+    color: var(--text-secondary, #999);
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+/* ===== 同步狀態 Modal ===== */
+.sync-modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 20000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.sync-modal {
+    background: var(--bg-secondary, #fff);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 420px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+.sync-modal-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color, #eee);
+    background: var(--bg-tertiary, #fafafa);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sync-modal-body {
+    padding: 16px 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+.sync-modal-footer {
+    padding: 14px 20px;
+    border-top: 1px solid var(--border-color, #eee);
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.sync-match-item {
+    background: var(--bg-tertiary, #fafafa);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #A1887F;
+}
+.sync-match-item.warning {
+    border-left-color: #FFA726;
+}
+.sync-match-word {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-primary, #333);
+}
+.sync-match-sentence {
+    font-size: 12px;
+    color: var(--text-secondary, #888);
+    margin-top: 3px;
+}
+.sync-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
