@@ -3016,12 +3016,17 @@ body {
     flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
-    margin: var(--spacing-md) auto;
-    padding: var(--spacing-lg);
+    align-items: center;
+    /* 隨內容自動收縮，居中對齊 */
+    width: fit-content;
     max-width: 90%;
+    margin: var(--spacing-md) auto;
+    padding: 10px 14px;
     background: rgba(102, 126, 234, 0.03);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
+    /* 讓 padding 隨按鈕數量順滑過渡 */
+    transition: padding 0.25s ease;
 }
 
 /* 重組單字按鈕 */
@@ -3058,14 +3063,36 @@ body {
     background: #e0e7ff;
 }
 
-/* 已被選走（仍佔位、半透明） */
+/* 已被選走 — 縮小淡出，不再佔位 */
 .reorder-word.is-used {
-    opacity: 0.3;
-    border-style: dashed;
-    cursor: default;
+    width: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+    opacity: 0 !important;
+    border-width: 0 !important;
+    overflow: hidden;
     pointer-events: none;
-    transform: none !important;
-    box-shadow: none !important;
+    flex-shrink: 1;
+    /* 選走時縮小動畫 */
+    transition:
+        width 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+        margin 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.18s ease,
+        border-width 0.22s ease;
+}
+
+/* 從 is-used 恢復時（退回單字池），逆向展開 */
+.reorder-word:not(.is-used) {
+    transition:
+        width 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+        margin 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.18s ease,
+        border-color 0.15s,
+        transform 0.15s,
+        box-shadow 0.15s;
 }
 
 /* 正在被拖曳的原始按鈕 — 保留佔位但變透明 */
@@ -3169,7 +3196,8 @@ body {
     }
 
     .reorder-pool {
-        padding: 10px;
+        padding: 8px 10px;
         gap: 6px;
+        max-width: 96%;
     }
 }
