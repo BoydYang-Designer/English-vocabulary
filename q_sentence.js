@@ -171,6 +171,35 @@ document.addEventListener("DOMContentLoaded", function () {
     if (reorganizeBtn) {
         reorganizeBtn.addEventListener("click", startReorganizeQuiz);
     }
+
+    // ===== 空白鍵：句子測驗 & 重組測驗 重播 mp3 =====
+    document.addEventListener("keydown", function(event) {
+        const isInputField = event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA';
+        if ((event.key === " " || event.key === "Spacebar") && !isInputField) {
+            // 句子測驗區（sentenceQuizArea）
+            const sentenceArea = document.getElementById("sentenceQuizArea");
+            if (sentenceArea && sentenceArea.style.display === "block") {
+                event.preventDefault();
+                autoPlayAudio();
+                return;
+            }
+            // 重組測驗區（reorganizeQuizArea）
+            const reorganizeArea = document.getElementById("reorganizeQuizArea");
+            if (reorganizeArea && reorganizeArea.style.display === "block") {
+                event.preventDefault();
+                if (currentAudio) {
+                    const playBtn = document.getElementById("playReorganizeAudioBtn");
+                    if (playBtn) playBtn.classList.add("playing");
+                    currentAudio.currentTime = 0;
+                    currentAudio.play().catch(err => {
+                        console.warn("🔊 空白鍵播放失敗:", err);
+                        if (playBtn) playBtn.classList.remove("playing");
+                    });
+                }
+                return;
+            }
+        }
+    });
 });
 
 
@@ -685,6 +714,330 @@ function startReorganizeQuiz() {
 }
 
 
+// ============================================================
+//  🖱️  ReorderDrag — 通用重組拖曳模組
+//  支援：點擊放開 → 單字往上/往回；點擊後拖移 → 插入指定位置
+// ============================================================
+if (!window.ReorderDrag) { window.ReorderDrag = class {
+    /**
+     * @param {string} answerAreaId  答案區容器 ID
+     * @param {string} poolId        單字池容器 ID
+     */
+    constructor(answerAreaId, poolId) {
+        this.answerAreaId = answerAreaId;
+        this.poolId = poolId;
+        this.answerArea = null;
+        this.pool = null;
+
+        // 拖曳狀態
+        this._dragging = false;
+        this._dragEl = null;       // 被拖曳的原始 DOM 按鈕
+        this._ghost = null;        // 幽靈元素
+        this._indicator = null;    // 插入指示線
+        this._startX = 0;
+        this._startY = 0;
+        this._pointerId = null;
+        this._fromAnswer = false;  // 是否從答案區拖出
+
+        // 綁定 document 事件（保存引用方便移除）
+        this._onMove = this._onPointerMove.bind(this);
+        this._onUp   = this._onPointerUp.bind(this);
+        this._onTouchMove = (e) => { if (this._dragging) e.preventDefault(); };
+
+        document.addEventListener('pointermove', this._onMove, { passive: false });
+        document.addEventListener('pointerup',   this._onUp,   { passive: false });
+        document.addEventListener('touchmove',   this._onTouchMove, { passive: false });
+    }
+
+    // ── 初始化答案區 & 單字池（每題重新呼叫）──
+    init() {
+        this.answerArea = document.getElementById(this.answerAreaId);
+        this.pool       = document.getElementById(this.poolId);
+        if (!this.answerArea || !this.pool) {
+            console.error('ReorderDrag: 找不到容器', this.answerAreaId, this.poolId);
+            return;
+        }
+        // 換用新的 class
+        this.answerArea.className = 'reorder-answer-area';
+        this.pool.className       = 'reorder-pool';
+    }
+
+    // ── 建立一顆單字按鈕並綁定事件 ──
+    createWordBtn(text, poolIndex) {
+        const btn = document.createElement('button');
+        btn.className = 'reorder-word';
+        btn.textContent = text;
+        btn.dataset.word  = text;
+        btn.dataset.idx   = poolIndex;   // 原始索引（處理重複字）
+
+        btn.addEventListener('pointerdown', (e) => this._onPointerDown(e, btn));
+        return btn;
+    }
+
+    // ── 讀取目前答案區的單字順序 ──
+    getAnswer() {
+        return Array.from(this.answerArea.querySelectorAll('.reorder-word'))
+            .map(btn => btn.dataset.word);
+    }
+
+    // ── 銷毀（切題前呼叫，清除幽靈 & 指示線）──
+    destroy() {
+        this._cleanupDrag();
+        document.removeEventListener('pointermove', this._onMove);
+        document.removeEventListener('pointerup',   this._onUp);
+        document.removeEventListener('touchmove',   this._onTouchMove);
+    }
+
+    // ─────────────────────────────────────────────
+    //  Private helpers
+    // ─────────────────────────────────────────────
+
+    _onPointerDown(e, btn) {
+        // 已提交後禁止拖曳
+        if (btn.classList.contains('correct') || btn.classList.contains('incorrect')) return;
+
+        e.preventDefault();
+        this._dragEl    = btn;
+        this._dragging  = false;   // 尚未超過門檻
+        this._startX    = e.clientX;
+        this._startY    = e.clientY;
+        this._pointerId = e.pointerId;
+        this._fromAnswer = this.answerArea.contains(btn);
+
+        try { btn.setPointerCapture(e.pointerId); } catch(err) {}
+    }
+
+    _onPointerMove(e) {
+        if (!this._dragEl) return;
+        if (e.pointerId !== this._pointerId) return;
+
+        const dx = e.clientX - this._startX;
+        const dy = e.clientY - this._startY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        // 超過 6px 才正式觸發拖曳
+        if (!this._dragging) {
+            if (dist < 6) return;
+            this._dragging = true;
+            this._startDrag(e);
+        }
+
+        // 移動幽靈
+        if (this._ghost) {
+            this._ghost.style.left = (e.clientX - this._ghost._offX) + 'px';
+            this._ghost.style.top  = (e.clientY - this._ghost._offY) + 'px';
+        }
+
+        // 更新指示線
+        const overAnswer = this._isOverAnswerArea(e.clientX, e.clientY);
+        if (overAnswer) {
+            this.answerArea.classList.add('drag-over');
+            this._updateIndicator(e.clientX, e.clientY);
+        } else {
+            this.answerArea.classList.remove('drag-over');
+            this._removeIndicator();
+        }
+    }
+
+    _onPointerUp(e) {
+        if (!this._dragEl) return;
+        if (e.pointerId !== this._pointerId) return;
+
+        if (!this._dragging) {
+            // ── 點擊邏輯 ──
+            this._handleClick();
+        } else {
+            // ── 拖曳放開邏輯 ──
+            this._handleDrop(e.clientX, e.clientY);
+        }
+
+        this._cleanupDrag();
+    }
+
+    _startDrag(e) {
+        const btn = this._dragEl;
+        const rect = btn.getBoundingClientRect();
+
+        // 原始按鈕保留佔位但透明
+        btn.classList.add('is-dragging');
+
+        // 建立幽靈
+        const ghost = document.createElement('button');
+        ghost.className  = 'reorder-drag-ghost';
+        ghost.textContent = btn.textContent;
+        ghost._offX = e.clientX - rect.left;
+        ghost._offY = e.clientY - rect.top;
+        ghost.style.left   = (e.clientX - ghost._offX) + 'px';
+        ghost.style.top    = (e.clientY - ghost._offY) + 'px';
+        ghost.style.width  = rect.width + 'px';
+        document.body.appendChild(ghost);
+        this._ghost = ghost;
+    }
+
+    _handleClick() {
+        const btn = this._dragEl;
+        if (this._fromAnswer) {
+            // 答案區 → 退回單字池
+            this._moveToPool(btn);
+        } else {
+            // 單字池 → 加到答案區尾端
+            this._moveToAnswer(btn);
+        }
+    }
+
+    _handleDrop(x, y) {
+        const btn = this._dragEl;
+        const overAnswer = this._isOverAnswerArea(x, y);
+
+        if (overAnswer) {
+            // 計算插入位置（插入指示線前面）
+            const insertPos = this._getInsertPosition(x, y);
+
+            if (this._fromAnswer) {
+                // 從答案區內部重新排序
+                const children = Array.from(
+                    this.answerArea.querySelectorAll('.reorder-word:not(.is-dragging)')
+                );
+                const originalPos = Array.from(this.answerArea.children).indexOf(btn);
+                // 先移除原位
+                btn.classList.remove('is-dragging');
+                btn.remove();
+                // 補正索引
+                const finalPos = insertPos > originalPos ? insertPos - 1 : insertPos;
+                this._insertAtPosition(btn, finalPos);
+            } else {
+                // 從單字池拖入答案區
+                btn.classList.remove('is-dragging');
+                this._markPoolItemUsed(btn);
+                // 建立答案區的新按鈕（複製）
+                const newBtn = this.createWordBtn(btn.dataset.word, btn.dataset.idx);
+                newBtn.classList.add('in-answer');
+                this._insertAtPosition(newBtn, insertPos);
+            }
+        } else {
+            // 拖到答案區外
+            if (this._fromAnswer) {
+                // 退回單字池
+                btn.classList.remove('is-dragging');
+                this._moveToPool(btn);
+            } else {
+                // 從池子拖出又放回池子 — 無動作，恢復顯示
+                btn.classList.remove('is-dragging');
+            }
+        }
+    }
+
+    _moveToAnswer(poolBtn) {
+        this._markPoolItemUsed(poolBtn);
+        const newBtn = this.createWordBtn(poolBtn.dataset.word, poolBtn.dataset.idx);
+        newBtn.classList.add('in-answer');
+        this.answerArea.appendChild(newBtn);
+    }
+
+    _moveToPool(answerBtn) {
+        answerBtn.remove();
+        // 找到對應的 pool 按鈕並恢復
+        const idx = answerBtn.dataset.idx;
+        const poolBtn = this.pool.querySelector(`.reorder-word[data-idx="${idx}"]`);
+        if (poolBtn) {
+            poolBtn.classList.remove('is-used');
+            poolBtn.style.pointerEvents = '';
+        }
+    }
+
+    _markPoolItemUsed(poolBtn) {
+        poolBtn.classList.add('is-used');
+    }
+
+    _insertAtPosition(btn, pos) {
+        const answersInArea = this.answerArea.querySelectorAll('.reorder-word');
+        if (pos >= answersInArea.length) {
+            this.answerArea.appendChild(btn);
+        } else {
+            this.answerArea.insertBefore(btn, answersInArea[pos]);
+        }
+    }
+
+    _getInsertPosition(x, y) {
+        const words = Array.from(
+            this.answerArea.querySelectorAll('.reorder-word:not(.is-dragging)')
+        );
+        if (words.length === 0) return 0;
+
+        // 按行分組（Y 值相近的為同一行）
+        const rows = [];
+        words.forEach(w => {
+            const r = w.getBoundingClientRect();
+            const centerY = r.top + r.height / 2;
+            let row = rows.find(row => Math.abs(row.centerY - centerY) < r.height * 0.6);
+            if (!row) { row = { centerY, items: [] }; rows.push(row); }
+            row.items.push({ el: w, rect: r, domIdx: words.indexOf(w) });
+        });
+        rows.sort((a, b) => a.centerY - b.centerY);
+
+        // 找最近的行
+        let targetRow = rows[0];
+        let minDist = Infinity;
+        rows.forEach(row => {
+            const dist = Math.abs(row.centerY - y);
+            if (dist < minDist) { minDist = dist; targetRow = row; }
+        });
+
+        // 在該行內找插入位置
+        targetRow.items.sort((a, b) => a.rect.left - b.rect.left);
+        for (let i = 0; i < targetRow.items.length; i++) {
+            const item = targetRow.items[i];
+            if (x < item.rect.left + item.rect.width / 2) {
+                return item.domIdx;
+            }
+        }
+        // 放到該行末尾
+        return targetRow.items[targetRow.items.length - 1].domIdx + 1;
+    }
+
+    _updateIndicator(x, y) {
+        this._removeIndicator();
+        const pos = this._getInsertPosition(x, y);
+        const indicator = document.createElement('div');
+        indicator.className = 'reorder-insert-indicator';
+        this._indicator = indicator;
+
+        const words = this.answerArea.querySelectorAll('.reorder-word:not(.is-dragging)');
+        if (pos >= words.length) {
+            this.answerArea.appendChild(indicator);
+        } else {
+            this.answerArea.insertBefore(indicator, words[pos]);
+        }
+    }
+
+    _removeIndicator() {
+        if (this._indicator) {
+            this._indicator.remove();
+            this._indicator = null;
+        }
+    }
+
+    _isOverAnswerArea(x, y) {
+        const rect = this.answerArea.getBoundingClientRect();
+        return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
+    }
+
+    _cleanupDrag() {
+        if (this._ghost) { this._ghost.remove(); this._ghost = null; }
+        this._removeIndicator();
+        this.answerArea && this.answerArea.classList.remove('drag-over');
+        if (this._dragEl) {
+            this._dragEl.classList.remove('is-dragging');
+        }
+        this._dragEl   = null;
+        this._dragging  = false;
+        this._pointerId = null;
+    }
+}; }
+
+// 全域拖曳實例
+let _reorganizeDrag = null;
+
 function loadReorganizeQuestion() {
     let sentenceObj = currentQuizSentences[currentSentenceIndex];
     if (!sentenceObj || !sentenceObj.句子) {
@@ -699,38 +1052,33 @@ function loadReorganizeQuestion() {
     document.getElementById("reorganizeSentenceHint").innerHTML = chineseHint;
 
     let blocks = sentenceText.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+/gu) || [];
-    
-    let shuffledBlocks = blocks.map((value, index) => ({ value, index })).sort(() => Math.random() - 0.5);
-    
-    let blocksContainer = document.getElementById("wordBlocksContainer");
-    blocksContainer.innerHTML = shuffledBlocks
-        .map(b => `
-            <div class="word-block-placeholder" data-index="${b.index}">
-                <div class="word-block" data-value="${b.value}" data-index="${b.index}" onclick="selectWordBlock(this)">${b.value}</div>
-            </div>
-        `)
-        .join("");
 
-    let constructionArea = document.getElementById("sentenceConstructionArea");
-    constructionArea.innerHTML = "";
+    // 清空容器
+    const answerArea = document.getElementById("sentenceConstructionArea");
+    const pool = document.getElementById("wordBlocksContainer");
+    answerArea.innerHTML = "";
+    pool.innerHTML = "";
 
-    for (let i = 0; i < blocks.length; i++) {
-        let placeholder = document.createElement("div");
-        placeholder.classList.add("construction-placeholder");
-        placeholder.dataset.position = i;
-        constructionArea.appendChild(placeholder);
-    }
+    // 初始化拖曳系統（每題重建）
+    if (_reorganizeDrag) _reorganizeDrag.destroy();
+    _reorganizeDrag = new window.ReorderDrag("sentenceConstructionArea", "wordBlocksContainer");
+    _reorganizeDrag.init();
 
+    // 洗牌並渲染單字池
+    const shuffled = blocks.map((value, index) => ({ value, index })).sort(() => Math.random() - 0.5);
+    shuffled.forEach(b => {
+        const btn = _reorganizeDrag.createWordBtn(b.value, b.index);
+        pool.appendChild(btn);
+    });
+
+    // 音頻
     if (sentenceObj.Words) {
         let audioUrl = GITHUB_MP3_BASE_URL + encodeURIComponent(sentenceObj.Words) + ".mp3";
-        if (currentAudio instanceof Audio) {
-            currentAudio.pause();
-        }
+        if (currentAudio instanceof Audio) currentAudio.pause();
         currentAudio = new Audio(audioUrl);
-        
+
         const playBtn = document.getElementById("playReorganizeAudioBtn");
         playBtn.classList.remove("playing");
-        
         playBtn.onclick = () => {
             if (currentAudio) {
                 playBtn.classList.add("playing");
@@ -741,10 +1089,8 @@ function loadReorganizeQuestion() {
                 });
             }
         };
-        
         currentAudio.onended = () => {
             playBtn.classList.remove("playing");
-            console.log("✅ 音檔播放結束");
         };
 
         playBtn.classList.add("playing");
@@ -755,40 +1101,26 @@ function loadReorganizeQuestion() {
     }
 }
 
+// 舊的 selectWordBlock 不再使用，保留空函式避免 HTML onclick 殘留報錯
 function selectWordBlock(block) {
-    let constructionArea = document.getElementById("sentenceConstructionArea");
-    let placeholder = block.parentNode;
-
-    if (placeholder.classList.contains("word-block-placeholder")) {
-        let emptyPlaceholder = Array.from(constructionArea.children).find(
-            ph => ph.children.length === 0
-        );
-
-        if (emptyPlaceholder) {
-            emptyPlaceholder.appendChild(block);
-            block.classList.add("selected");
-        }
-    } else {
-        let blockIndex = block.dataset.index;
-        let originalPlaceholder = document.querySelector(`.word-block-placeholder[data-index="${blockIndex}"]`);
-        if (originalPlaceholder) {
-            originalPlaceholder.appendChild(block);
-            block.classList.remove("selected");
-        }
-    }
+    // no-op: replaced by ReorderDrag
 }
 
 function submitReorganizeAnswer() {
-    let constructionArea = document.getElementById("sentenceConstructionArea");
-    let userAnswer = Array.from(constructionArea.children).map(b => b.children[0] ? b.children[0].dataset.value : "").join(" ");
     let sentenceObj = currentQuizSentences[currentSentenceIndex];
     let correctSentence = sentenceObj.filteredSentence;
+    let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+/gu) || [];
+
+    // 從答案區讀取使用者排列的單字
+    const answerArea = document.getElementById("sentenceConstructionArea");
+    const answerBtns = Array.from(answerArea.querySelectorAll('.reorder-word'));
+    const userWords  = answerBtns.map(b => b.dataset.word);
+    let userAnswer   = userWords.join(" ");
 
     userConstructedSentences[currentSentenceIndex] = userAnswer;
 
-    let normalizedUserAnswer = normalizeText(userAnswer);
+    let normalizedUserAnswer    = normalizeText(userAnswer);
     let normalizedCorrectSentence = normalizeText(correctSentence);
-
     let isCorrect = normalizedUserAnswer === normalizedCorrectSentence;
 
     if (!isCorrect && !incorrectSentences.includes(sentenceObj.Words)) {
@@ -798,22 +1130,21 @@ function submitReorganizeAnswer() {
     }
     localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
 
-    let placeholders = constructionArea.querySelectorAll(".construction-placeholder");
-    let correctWords = correctSentence.match(/\p{L}+(?:'\p{L}+)?|'s|\p{L}+(?:-\p{L}+)+/gu) || [];
-    placeholders.forEach((placeholder, i) => {
-        let block = placeholder.children[0];
-        if (block) {
-            let correctWord = correctWords[i] || "";
-            if (normalizeText(block.dataset.value) === normalizeText(correctWord)) {
-                block.classList.add("correct");
-                block.classList.remove("incorrect");
-            } else {
-                block.classList.add("incorrect");
-                block.classList.remove("correct");
-            }
+    // 標記每個按鈕 correct / incorrect，並鎖定拖曳
+    answerBtns.forEach((btn, i) => {
+        const correctWord = correctWords[i] || "";
+        if (normalizeText(btn.dataset.word) === normalizeText(correctWord)) {
+            btn.classList.add("correct");
+            btn.classList.remove("incorrect");
         } else {
-            placeholder.classList.add("unfilled");
+            btn.classList.add("incorrect");
+            btn.classList.remove("correct");
         }
+    });
+
+    // 鎖定單字池
+    document.querySelectorAll('#wordBlocksContainer .reorder-word').forEach(btn => {
+        btn.style.pointerEvents = 'none';
     });
 
     let chineseExplanation = sentenceObj.中文 ? sentenceObj.中文.replace(/\n/g, "<br>") : "無中文解釋";

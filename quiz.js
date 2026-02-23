@@ -105,18 +105,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     initializeStartQuizButton();
 
-    // ===== 修復：空白鍵快捷鍵衝突 =====
+    // ===== 空白鍵快捷鍵：只在「單字測驗區 quizArea」顯示時觸發 =====
     document.addEventListener("keydown", function(event) {
-        // 檢查是否在輸入框內
         const isInputField = event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA';
-        
-        // 播放音檔 (空白鍵) - 只在非輸入框時觸發
+
+        // 播放音檔 (空白鍵) — 僅限 quizArea（單字測驗），其餘測驗區有自己的 listener
         if ((event.key === " " || event.key === "Spacebar") && !isInputField) {
-            event.preventDefault();
-            if (currentWord) {
-                playAudioForWord(currentWord);
+            const quizArea = document.getElementById('quizArea');
+            const isQuizAreaActive = quizArea && quizArea.style.display === 'block';
+            if (isQuizAreaActive) {
+                event.preventDefault();
+                if (currentWord) {
+                    playAudioForWord(currentWord);
+                }
             }
-        } 
+        }
         // 提交或下一題 (Enter 鍵)
         else if (event.key === 'Enter') {
             const quizArea = document.getElementById('quizArea');
@@ -732,6 +735,270 @@ function startRewordQuiz() {
     loadNextReword();
 }
 
+// ============================================================
+//  🖱️  ReorderDrag — 通用重組拖曳模組
+//  支援：點擊放開 → 字母往上/往回；點擊後拖移 → 插入指定位置
+// ============================================================
+if (!window.ReorderDrag) { window.ReorderDrag = class {
+    constructor(answerAreaId, poolId) {
+        this.answerAreaId = answerAreaId;
+        this.poolId = poolId;
+        this.answerArea = null;
+        this.pool = null;
+
+        this._dragging  = false;
+        this._dragEl    = null;
+        this._ghost     = null;
+        this._indicator = null;
+        this._startX    = 0;
+        this._startY    = 0;
+        this._pointerId = null;
+        this._fromAnswer = false;
+
+        this._onMove = this._onPointerMove.bind(this);
+        this._onUp   = this._onPointerUp.bind(this);
+        this._onTouchMove = (e) => { if (this._dragging) e.preventDefault(); };
+
+        document.addEventListener('pointermove', this._onMove, { passive: false });
+        document.addEventListener('pointerup',   this._onUp,   { passive: false });
+        document.addEventListener('touchmove',   this._onTouchMove, { passive: false });
+    }
+
+    init() {
+        this.answerArea = document.getElementById(this.answerAreaId);
+        this.pool       = document.getElementById(this.poolId);
+        if (!this.answerArea || !this.pool) return;
+        this.answerArea.className = 'reorder-answer-area';
+        this.pool.className       = 'reorder-pool';
+    }
+
+    createWordBtn(text, poolIndex) {
+        const btn = document.createElement('button');
+        btn.className = 'reorder-word';
+        btn.textContent = text;
+        btn.dataset.word = text;
+        btn.dataset.idx  = poolIndex;
+        btn.addEventListener('pointerdown', (e) => this._onPointerDown(e, btn));
+        return btn;
+    }
+
+    getAnswer() {
+        return Array.from(this.answerArea.querySelectorAll('.reorder-word'))
+            .map(btn => btn.dataset.word);
+    }
+
+    destroy() {
+        this._cleanupDrag();
+        document.removeEventListener('pointermove', this._onMove);
+        document.removeEventListener('pointerup',   this._onUp);
+        document.removeEventListener('touchmove',   this._onTouchMove);
+    }
+
+    _onPointerDown(e, btn) {
+        if (btn.classList.contains('correct') || btn.classList.contains('incorrect')) return;
+        e.preventDefault();
+        this._dragEl    = btn;
+        this._dragging  = false;
+        this._startX    = e.clientX;
+        this._startY    = e.clientY;
+        this._pointerId = e.pointerId;
+        this._fromAnswer = this.answerArea.contains(btn);
+        try { btn.setPointerCapture(e.pointerId); } catch(err) {}
+    }
+
+    _onPointerMove(e) {
+        if (!this._dragEl) return;
+        if (e.pointerId !== this._pointerId) return;
+
+        const dx = e.clientX - this._startX;
+        const dy = e.clientY - this._startY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (!this._dragging) {
+            if (dist < 6) return;
+            this._dragging = true;
+            this._startDrag(e);
+        }
+
+        if (this._ghost) {
+            this._ghost.style.left = (e.clientX - this._ghost._offX) + 'px';
+            this._ghost.style.top  = (e.clientY - this._ghost._offY) + 'px';
+        }
+
+        const overAnswer = this._isOverAnswerArea(e.clientX, e.clientY);
+        if (overAnswer) {
+            this.answerArea.classList.add('drag-over');
+            this._updateIndicator(e.clientX, e.clientY);
+        } else {
+            this.answerArea.classList.remove('drag-over');
+            this._removeIndicator();
+        }
+    }
+
+    _onPointerUp(e) {
+        if (!this._dragEl) return;
+        if (e.pointerId !== this._pointerId) return;
+        if (!this._dragging) {
+            this._handleClick();
+        } else {
+            this._handleDrop(e.clientX, e.clientY);
+        }
+        this._cleanupDrag();
+    }
+
+    _startDrag(e) {
+        const btn = this._dragEl;
+        const rect = btn.getBoundingClientRect();
+        btn.classList.add('is-dragging');
+        const ghost = document.createElement('button');
+        ghost.className   = 'reorder-drag-ghost';
+        ghost.textContent = btn.textContent;
+        ghost._offX = e.clientX - rect.left;
+        ghost._offY = e.clientY - rect.top;
+        ghost.style.left  = (e.clientX - ghost._offX) + 'px';
+        ghost.style.top   = (e.clientY - ghost._offY) + 'px';
+        ghost.style.width = rect.width + 'px';
+        document.body.appendChild(ghost);
+        this._ghost = ghost;
+    }
+
+    _handleClick() {
+        const btn = this._dragEl;
+        if (this._fromAnswer) {
+            this._moveToPool(btn);
+        } else {
+            this._moveToAnswer(btn);
+        }
+    }
+
+    _handleDrop(x, y) {
+        const btn = this._dragEl;
+        const overAnswer = this._isOverAnswerArea(x, y);
+        if (overAnswer) {
+            const insertPos = this._getInsertPosition(x, y);
+            if (this._fromAnswer) {
+                const originalPos = Array.from(this.answerArea.children).indexOf(btn);
+                btn.classList.remove('is-dragging');
+                btn.remove();
+                const finalPos = insertPos > originalPos ? insertPos - 1 : insertPos;
+                this._insertAtPosition(btn, finalPos);
+            } else {
+                btn.classList.remove('is-dragging');
+                this._markPoolItemUsed(btn);
+                const newBtn = this.createWordBtn(btn.dataset.word, btn.dataset.idx);
+                newBtn.classList.add('in-answer');
+                this._insertAtPosition(newBtn, insertPos);
+            }
+        } else {
+            if (this._fromAnswer) {
+                btn.classList.remove('is-dragging');
+                this._moveToPool(btn);
+            } else {
+                btn.classList.remove('is-dragging');
+            }
+        }
+    }
+
+    _moveToAnswer(poolBtn) {
+        this._markPoolItemUsed(poolBtn);
+        const newBtn = this.createWordBtn(poolBtn.dataset.word, poolBtn.dataset.idx);
+        newBtn.classList.add('in-answer');
+        this.answerArea.appendChild(newBtn);
+    }
+
+    _moveToPool(answerBtn) {
+        answerBtn.remove();
+        const idx = answerBtn.dataset.idx;
+        const poolBtn = this.pool.querySelector(`.reorder-word[data-idx="${idx}"]`);
+        if (poolBtn) {
+            poolBtn.classList.remove('is-used');
+            poolBtn.style.pointerEvents = '';
+        }
+    }
+
+    _markPoolItemUsed(poolBtn) {
+        poolBtn.classList.add('is-used');
+    }
+
+    _insertAtPosition(btn, pos) {
+        const answersInArea = this.answerArea.querySelectorAll('.reorder-word');
+        if (pos >= answersInArea.length) {
+            this.answerArea.appendChild(btn);
+        } else {
+            this.answerArea.insertBefore(btn, answersInArea[pos]);
+        }
+    }
+
+    _getInsertPosition(x, y) {
+        const words = Array.from(
+            this.answerArea.querySelectorAll('.reorder-word:not(.is-dragging)')
+        );
+        if (words.length === 0) return 0;
+
+        const rows = [];
+        words.forEach(w => {
+            const r = w.getBoundingClientRect();
+            const centerY = r.top + r.height / 2;
+            let row = rows.find(row => Math.abs(row.centerY - centerY) < r.height * 0.6);
+            if (!row) { row = { centerY, items: [] }; rows.push(row); }
+            row.items.push({ el: w, rect: r, domIdx: words.indexOf(w) });
+        });
+        rows.sort((a, b) => a.centerY - b.centerY);
+
+        let targetRow = rows[0];
+        let minDist = Infinity;
+        rows.forEach(row => {
+            const dist = Math.abs(row.centerY - y);
+            if (dist < minDist) { minDist = dist; targetRow = row; }
+        });
+
+        targetRow.items.sort((a, b) => a.rect.left - b.rect.left);
+        for (let i = 0; i < targetRow.items.length; i++) {
+            const item = targetRow.items[i];
+            if (x < item.rect.left + item.rect.width / 2) {
+                return item.domIdx;
+            }
+        }
+        return targetRow.items[targetRow.items.length - 1].domIdx + 1;
+    }
+
+    _updateIndicator(x, y) {
+        this._removeIndicator();
+        const pos = this._getInsertPosition(x, y);
+        const indicator = document.createElement('div');
+        indicator.className = 'reorder-insert-indicator';
+        this._indicator = indicator;
+        const words = this.answerArea.querySelectorAll('.reorder-word:not(.is-dragging)');
+        if (pos >= words.length) {
+            this.answerArea.appendChild(indicator);
+        } else {
+            this.answerArea.insertBefore(indicator, words[pos]);
+        }
+    }
+
+    _removeIndicator() {
+        if (this._indicator) { this._indicator.remove(); this._indicator = null; }
+    }
+
+    _isOverAnswerArea(x, y) {
+        const rect = this.answerArea.getBoundingClientRect();
+        return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
+    }
+
+    _cleanupDrag() {
+        if (this._ghost) { this._ghost.remove(); this._ghost = null; }
+        this._removeIndicator();
+        this.answerArea && this.answerArea.classList.remove('drag-over');
+        if (this._dragEl) this._dragEl.classList.remove('is-dragging');
+        this._dragEl    = null;
+        this._dragging  = false;
+        this._pointerId = null;
+    }
+}; }
+
+// 全域拖曳實例（reword）
+let _rewordDrag = null;
+
 function loadNextReword() {
     if (quizWords.length === 0) {
         finishRewordQuiz();
@@ -740,56 +1007,52 @@ function loadNextReword() {
     let wordData = quizWords.shift();
     currentWord = wordData.Words;
     currentAudio = `${baseURL}${currentWord}.mp3`;
-    
+
     const vocabularyData = window.getVocabularyData();
     wordQuizHistory[currentWord] = (wordQuizHistory[currentWord] || 0) + 1;
     vocabularyData.wordQuizHistory = wordQuizHistory;
     window.persistVocabularyData();
-    
+
     console.log(`📈 更新測驗紀錄: ${currentWord}, 次數: ${wordQuizHistory[currentWord]}`);
-    
+
     let rewordHintContainer = document.getElementById("rewordHint");
     let letterBlocksContainer = document.getElementById("rewordLetterBlocksContainer");
     let constructionArea = document.getElementById("rewordConstructionArea");
     letterBlocksContainer.innerHTML = "";
     constructionArea.innerHTML = "";
     rewordHintContainer.innerHTML = "";
-    
+
     let audio = new Audio(currentAudio);
     audio.play().catch(err => {
         console.warn("⚠️ 自動播放音檔失敗:", err);
     });
-    
+
+    // 初始化拖曳系統
+    if (_rewordDrag) _rewordDrag.destroy();
+    _rewordDrag = new window.ReorderDrag("rewordConstructionArea", "rewordLetterBlocksContainer");
+    _rewordDrag.init();
+
     let lettersArray = currentWord.replace(/\s|-/g, "").split("");
-    let shuffledLetters = lettersArray.sort(() => Math.random() - 0.5);
-    
-    shuffledLetters.forEach(letter => {
-        let block = document.createElement("div");
-        block.classList.add("word-block");
-        block.textContent = letter;
-        block.dataset.value = letter;
-        block.onclick = function() { moveRewordBlock(block); };
-        letterBlocksContainer.appendChild(block);
+    let shuffledLetters = lettersArray.map((v, i) => ({ v, i })).sort(() => Math.random() - 0.5);
+
+    shuffledLetters.forEach(item => {
+        const btn = _rewordDrag.createWordBtn(item.v, item.i);
+        letterBlocksContainer.appendChild(btn);
     });
-    
+
     document.getElementById("submitRewordBtn").style.display = "inline-block";
     document.getElementById("nextRewordBtn").style.display = "none";
 }
 
 function moveRewordBlock(block) {
-    let constructionArea = document.getElementById("rewordConstructionArea");
-    if (block.parentNode === constructionArea) {
-        block.classList.remove("selected");
-        document.getElementById("rewordLetterBlocksContainer").appendChild(block);
-    } else {
-        block.classList.add("selected");
-        constructionArea.appendChild(block);
-    }
+    // no-op: replaced by ReorderDrag
 }
 
 function submitRewordAnswer() {
     let constructionArea = document.getElementById("rewordConstructionArea");
-    let userAnswer = Array.from(constructionArea.children).map(b => b.dataset.value).join("");
+    // 從答案區讀取使用者排列的字母
+    let userAnswer = Array.from(constructionArea.querySelectorAll('.reorder-word'))
+        .map(b => b.dataset.word).join("");
     let correctAnswer = currentWord.toLowerCase();
     let result = userAnswer === "" ? "未作答" : (userAnswer.toLowerCase() === correctAnswer ? "正確" : "錯誤");
     quizResults.push({
@@ -797,37 +1060,43 @@ function submitRewordAnswer() {
         result: result,
         timestamp: new Date().toLocaleString()
     });
-    
+
     const vocabularyData = window.getVocabularyData();
     let wrongWords = vocabularyData.wrongWords || [];
-    
+
     if (result === "錯誤") {
-        if (!wrongWords.includes(currentWord)) {
-            wrongWords.push(currentWord);
-        }
+        if (!wrongWords.includes(currentWord)) wrongWords.push(currentWord);
     } else if (result === "正確") {
         wrongWords = wrongWords.filter(word => word !== currentWord);
     }
-    
+
     vocabularyData.wrongWords = wrongWords;
     window.persistVocabularyData();
-    
+
     localStorage.setItem("currentQuizResults", JSON.stringify(quizResults));
-    
+
     let wordData = wordsData.find(w => w.Words === currentWord);
     let chineseExplanation = wordData && wordData["traditional Chinese"] ? wordData["traditional Chinese"].replace(/\n/g, "<br>") : "無中文解釋";
     let pronunciation1 = wordData && wordData["pronunciation-1"] ? wordData["pronunciation-1"] : "";
     let pronunciation2 = wordData && wordData["pronunciation-2"] ? wordData["pronunciation-2"] : "";
     let phonetics = pronunciation1;
-    if (pronunciation2) {
-        phonetics += ` / ${pronunciation2}`;
-    }
+    if (pronunciation2) phonetics += ` / ${pronunciation2}`;
     phonetics = phonetics || "無音標";
+
     document.getElementById("rewordHint").innerHTML = `<div>${currentWord}</div><div class="phonetic-explanation"><p>${phonetics}</p></div><div class="chinese-explanation"><p>${chineseExplanation}</p></div>`;
-    constructionArea.querySelectorAll(".word-block").forEach((block, i) => {
-        let correctLetter = correctAnswer[i] || "";
-        block.classList.add(block.dataset.value.toLowerCase() === correctLetter ? "correct" : "incorrect");
+
+    // 標記正確/錯誤
+    const correctLetters = correctAnswer.split("");
+    Array.from(constructionArea.querySelectorAll('.reorder-word')).forEach((block, i) => {
+        const correctLetter = correctLetters[i] || "";
+        block.classList.add(block.dataset.word.toLowerCase() === correctLetter ? "correct" : "incorrect");
     });
+
+    // 鎖定字母池
+    document.querySelectorAll('#rewordLetterBlocksContainer .reorder-word').forEach(btn => {
+        btn.style.pointerEvents = 'none';
+    });
+
     document.getElementById("submitRewordBtn").style.display = "none";
     document.getElementById("nextRewordBtn").style.display = "inline-block";
 }

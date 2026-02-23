@@ -2981,3 +2981,195 @@ body {
     background-color: rgba(102, 126, 234, 0.1);
 }
 
+
+/* ==========================================
+   🖱️ 重組拖曳互動系統 (Reorder Drag & Drop)
+   規格參考：reorder-drag-spec.html
+========================================== */
+
+/* 答案區 — 重組模式使用此樣式（覆蓋 construction-zone） */
+.reorder-answer-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    min-height: 56px;
+    padding: 10px 12px;
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-xl);
+    margin: var(--spacing-xl) auto;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03), rgba(245, 87, 108, 0.03));
+    transition: background 0.15s, box-shadow 0.15s, border-color 0.15s;
+    position: relative;
+}
+
+.reorder-answer-area.drag-over {
+    border-color: #f5a623;
+    border-style: solid;
+    background: rgba(245, 166, 35, 0.06);
+    box-shadow: inset 0 0 0 2px rgba(245, 166, 35, 0.15), 0 0 0 3px rgba(245, 166, 35, 0.08);
+}
+
+/* 單字池 — 重組模式 */
+.reorder-pool {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: var(--spacing-md) auto;
+    padding: var(--spacing-lg);
+    max-width: 90%;
+    background: rgba(102, 126, 234, 0.03);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+}
+
+/* 重組單字按鈕 */
+.reorder-word {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: white;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    user-select: none;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+    white-space: nowrap;
+    touch-action: none; /* 防止觸控滾動 */
+}
+
+.reorder-word:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* 已放入答案區的單字 */
+.reorder-word.in-answer {
+    background: #eef2ff;
+    border-color: var(--color-primary);
+    color: #4a5fc1;
+}
+
+.reorder-word.in-answer:hover {
+    background: #e0e7ff;
+}
+
+/* 已被選走（仍佔位、半透明） */
+.reorder-word.is-used {
+    opacity: 0.3;
+    border-style: dashed;
+    cursor: default;
+    pointer-events: none;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* 正在被拖曳的原始按鈕 — 保留佔位但變透明 */
+.reorder-word.is-dragging {
+    opacity: 0 !important;
+    visibility: visible !important;       /* 保留空間！ */
+    border: 2px dashed #f5a623 !important;
+    background: transparent !important;
+    color: transparent !important;
+    box-shadow: none !important;
+    pointer-events: none;
+    transform: none !important;
+}
+
+/* 拖曳中的幽靈元素（fixed 跟手） */
+.reorder-drag-ghost {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.28), 0 0 0 2px rgba(102,126,234,0.4);
+    opacity: 0.88;
+    transform: scale(1.08) rotate(2deg);
+    transition: none !important;   /* 即時跟手，不做緩動 */
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* 插入指示線 */
+.reorder-insert-indicator {
+    width: 4px;
+    min-height: 36px;
+    background: #f5a623;
+    border-radius: 4px;
+    flex-shrink: 0;
+    align-self: stretch;
+    box-shadow: 0 0 0 2px rgba(245,166,35,0.3), 0 0 12px rgba(245,166,35,0.6);
+    position: relative;
+    margin: 0 2px;
+    animation: reorderIndicatorPulse 0.45s ease-in-out infinite alternate;
+}
+
+.reorder-insert-indicator::before,
+.reorder-insert-indicator::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.reorder-insert-indicator::before {
+    top: -6px;
+    border-bottom: 6px solid #f5a623;
+}
+
+.reorder-insert-indicator::after {
+    bottom: -6px;
+    border-top: 6px solid #f5a623;
+}
+
+@keyframes reorderIndicatorPulse {
+    from { opacity: 1; box-shadow: 0 0 0 2px rgba(245,166,35,0.3), 0 0 12px rgba(245,166,35,0.5); }
+    to   { opacity: 0.65; box-shadow: 0 0 0 2px rgba(245,166,35,0.5), 0 0 18px rgba(245,166,35,0.8); }
+}
+
+/* 答題結果 */
+.reorder-word.correct {
+    background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%) !important;
+    border-color: #96e6a1 !important;
+    color: var(--color-text-primary) !important;
+    animation: successPulse 0.6s ease-out;
+}
+
+.reorder-word.incorrect {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%) !important;
+    border-color: #ff9a9e !important;
+    color: var(--color-text-primary) !important;
+    animation: errorShake 0.6s ease-out;
+}
+
+/* 手機版微調 */
+@media (max-width: 768px) {
+    .reorder-word {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .reorder-answer-area {
+        min-height: 48px;
+        padding: 8px 10px;
+    }
+
+    .reorder-pool {
+        padding: 10px;
+        gap: 6px;
+    }
+}
