@@ -665,32 +665,40 @@ function startReorganizeQuiz() {
     console.log("🔍 開始篩選重組測驗句子...");
 
     let filteredSentences = sentenceData.filter(item => {
+        // 等級篩選
         let levelMatch = selectedSentenceFilters.levels.size === 0 ||
-                         selectedSentenceFilters.levels.has(item.等級 || "未分類(等級)");
-        let primaryMatch = selectedSentenceFilters.primaryCategories.size === 0 ||
-                           selectedSentenceFilters.primaryCategories.has(item.primaryCategory);
-        
-        let secondaryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
-            ((item.secondaryCategories && item.secondaryCategories.length > 0) && item.secondaryCategories.some(cat => selectedSentenceFilters.secondaryCategories.has(cat))) ||
-            (selectedSentenceFilters.secondaryCategories.has('未分類') && (!item.secondaryCategories || item.secondaryCategories.length === 0));
+                         selectedSentenceFilters.levels.has(item.等級 || "未分類");
 
+        // 主分類篩選 - 使用 分類[0]
+        let primaryMatch = selectedSentenceFilters.primaryCategories.size === 0 ||
+                           selectedSentenceFilters.primaryCategories.has(item["分類"] && item["分類"][0]);
+
+        // 次分類篩選 - 使用 分類[1]
+        let secondaryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
+            (item["分類"] && item["分類"][1] && selectedSentenceFilters.secondaryCategories.has(item["分類"][1])) ||
+            (selectedSentenceFilters.secondaryCategories.has('未分類') &&
+             (!item["分類"] || !item["分類"][1] || item["分類"][1].trim() === ''));
+
+        // 字母篩選
         let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 ||
                             selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
-        
+
+        // 特殊篩選
         let specialMatch = true;
         if (selectedSentenceFilters.special.size > 0) {
-             specialMatch = [...selectedSentenceFilters.special].every(filter => {
-                 if (filter === 'important') return localStorage.getItem(`important_sentence_${item.Words}`) === "true";
-                 if (filter === 'incorrect') return (JSON.parse(localStorage.getItem("wrongQS")) || []).includes(item.Words);
-                 if (filter === 'checked') return localStorage.getItem(`checked_sentence_${item.Words}`) === "true";
-                 if (filter === 'word_checked') {
-                     const baseWord = item.Words.split('-')[0];
-                     return localStorage.getItem(`checked_${baseWord}`) === "true";
-                 }
-                 return true;
+            const vocabularyData = window.getVocabularyData();
+            specialMatch = [...selectedSentenceFilters.special].every(filter => {
+                if (filter === 'important') return (vocabularyData.importantSentences || {})[item.Words] === "true";
+                if (filter === 'incorrect') return (vocabularyData.wrongQS || []).includes(item.Words);
+                if (filter === 'checked') return (vocabularyData.checkedSentences || {})[item.Words] === "true";
+                if (filter === 'word_checked') {
+                    const baseWord = item.Words.split('-')[0];
+                    return (vocabularyData.checkedWords || []).includes(baseWord);
+                }
+                return true;
             });
         }
-        
+
         return levelMatch && primaryMatch && secondaryMatch && alphabetMatch && specialMatch;
     });
 
@@ -1151,13 +1159,21 @@ class ReorganizeKeyboardManager {
         // 已提交（按鈕有 correct/incorrect 代表已提交）
         const answerArea = document.getElementById('sentenceConstructionArea');
         const isSubmitted = answerArea && answerArea.querySelector('.reorder-word.correct, .reorder-word.incorrect');
-        if (isSubmitted) return;
 
+        // Enter 鍵：提交前 → 選字/提交；提交後 → 下一題
         if (e.key === 'Enter') {
             e.preventDefault();
-            this._handleEnter(answerArea);
+            if (isSubmitted) {
+                // 提交後按 Enter → 觸發「下一題」按鈕
+                const submitBtn = document.getElementById('submitReorganizeBtn');
+                if (submitBtn) submitBtn.click();
+            } else {
+                this._handleEnter(answerArea);
+            }
             return;
         }
+
+        if (isSubmitted) return;
 
         if (e.key === 'Backspace') {
             e.preventDefault();
@@ -1180,48 +1196,39 @@ class ReorganizeKeyboardManager {
     }
 
     _handleLetter(key) {
-        const newPrefix = this.prefix + key.toLowerCase();
+        const k = key.toLowerCase();
+        const newPrefix = this.prefix + k;
         const poolBtns = this._getAvailablePoolBtns();
 
-        // 找出符合新前綴的候選（全部）
+        // 找出符合新前綴的候選
         const newCandidates = poolBtns.filter(btn =>
             btn.dataset.word.toLowerCase().startsWith(newPrefix)
         );
 
-        // 檢查是否是在現有 candidates 基礎上繼續縮小前綴
-        if (newCandidates.length > 0 && this.prefix !== '' && newPrefix !== key.toLowerCase()) {
-            // 正常縮小前綴
+        if (newCandidates.length > 0) {
+            // 正常縮小前綴（例如 a → ap → app）
             this.prefix = newPrefix;
             this.candidates = newCandidates;
             this.cycleIndex = 0;
         } else {
-            // 前綴無法繼續縮小，或是全新按鍵 → 用此鍵作為首字母搜尋
+            // 前綴無法繼續縮小 → 用此鍵作為全新首字母搜尋
             const freshCandidates = poolBtns.filter(btn =>
-                btn.dataset.word.toLowerCase().startsWith(key.toLowerCase())
+                btn.dataset.word.toLowerCase().startsWith(k)
             );
             if (freshCandidates.length === 0) {
                 this._shake();
                 return;
             }
-
-            if (
-                key.toLowerCase() === this.prefix.charAt(0) &&
-                this.candidates.length > 0
-            ) {
-                // 連續按相同首字母 → 在現有 candidates 間循環
-                // 更新 candidates 以排除已使用的，但保持循環
-                const updated = poolBtns.filter(btn =>
-                    btn.dataset.word.toLowerCase().startsWith(key.toLowerCase())
-                );
-                this.candidates = updated;
+            if (this.prefix.charAt(0) === k && this.candidates.length > 0) {
+                // 連續按相同首字母 → 循環到下一個
+                this.candidates = freshCandidates; // 更新（可能有字被用掉）
                 this.cycleIndex = (this.cycleIndex + 1) % this.candidates.length;
-                this.prefix = key.toLowerCase();
             } else {
-                // 全新首字母
-                this.prefix = key.toLowerCase();
-                this.candidates = freshCandidates;
+                // 全新首字母，從頭開始
                 this.cycleIndex = 0;
             }
+            this.prefix = k;
+            this.candidates = freshCandidates;
         }
 
         this._applyHighlight();
