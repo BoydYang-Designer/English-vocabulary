@@ -399,9 +399,8 @@ function generateSentenceCategories(data) {
         `<button class="category-button" onclick="toggleSentenceSelection('alphabet', '${letter}', this)">${letter}</button>`
     ).join("");
 
-    // 🔧 生成主分類按鈕，直接使用完整名稱
+    // 🔧 生成主分類按鈕，直接使用完整名稱（保持資料原始順序，與 sentence.js 一致）
     const primaryButtonsHtml = [...primaryCategories]
-        .sort((a, b) => a.localeCompare(b))
         .map(categoryName => {
             const btnId = `sentence-primary-btn-${categoryName.replace(/\s/g, '-')}`;
             return `<button id="${btnId}" class="category-button" onclick="handleSentencePrimaryCategoryClick(this, '${categoryName}')">${categoryName}</button>`;
