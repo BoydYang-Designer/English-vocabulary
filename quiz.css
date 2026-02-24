@@ -3201,3 +3201,47 @@ body {
         max-width: 96%;
     }
 }
+
+/* ═══════════════════════════════════════════════
+   鍵盤重組 — Highlight 樣式
+   放在最末尾確保 specificity 優先
+   ═══════════════════════════════════════════════ */
+
+/* 當前焦點字（Enter 會選此字）
+   用雙 class 提高 specificity，確保蓋過 :not(.is-used) 的 transition */
+.reorder-word.keyboard-focus,
+button.reorder-word.keyboard-focus {
+    background: #fff3e0 !important;
+    border-color: #e65100 !important;
+    border-width: 2px !important;
+    color: #bf360c !important;
+    transform: translateY(-5px) scale(1.08) !important;
+    box-shadow: 0 8px 20px rgba(230, 81, 0, 0.45) !important;
+    outline: 2.5px solid #e65100 !important;
+    outline-offset: 2px !important;
+    z-index: 10;
+    position: relative;
+}
+
+/* 無匹配震動動畫 */
+@keyframes keyboardShake {
+    0%   { transform: translateX(0); }
+    20%  { transform: translateX(-7px); }
+    40%  { transform: translateX(7px); }
+    60%  { transform: translateX(-4px); }
+    80%  { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+}
+
+.keyboard-shake {
+    animation: keyboardShake 0.3s ease-out;
+}
+
+/* 深色模式 */
+[data-theme="dark"] .reorder-word.keyboard-focus,
+[data-theme="dark"] button.reorder-word.keyboard-focus {
+    background: #4e1800 !important;
+    border-color: #ff6d00 !important;
+    color: #ffe0b2 !important;
+    outline-color: #ff6d00 !important;
+}

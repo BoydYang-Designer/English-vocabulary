@@ -398,7 +398,7 @@ window.currentWordList = [];
 let historyStack = [];
 
 // --- 時間戳模式狀態變數 ---
-let isTimestampMode = false;
+let isTimestampMode = true; // 統一使用 timestamp 模式
 let timestampData = [];
 let hasTimestampFile = false;
 let lastHighlightedSentence = null;
@@ -519,7 +519,7 @@ function initializeAppLogic() {
     ])
     .then(([wordsJsonData, sentenceJsonData]) => { // 接收兩個 JSON 資料
         let rawWords = wordsJsonData["New Words"] || [];
-        sentenceData = sentenceJsonData["New Words"] || []; // 將句子資料存入變數
+        sentenceData = Array.isArray(sentenceJsonData) ? sentenceJsonData : (sentenceJsonData["New Words"] || []); // 相容直接陣列或 { "New Words": [] } 格式
         
         // --- [新增] 合併使用者自訂單字 ---
         const userVocabulary = window.getVocabularyData(); // 從 auth-manager 獲取
@@ -656,12 +656,6 @@ const bButton = document.getElementById('bButton');
         });
     }
     
-    // 畫重點模式中的 timestamp 按鈕
-    const highlightTimestampBtn = document.getElementById('highlight-timestamp-btn');
-    if (highlightTimestampBtn) {
-        highlightTimestampBtn.addEventListener('click', toggleTimestampModeInHighlight);
-    }
-    
     // Storage 編輯器按鈕
     const editStorageBtn = document.getElementById('edit-storage-btn');
     if (editStorageBtn) {
@@ -714,11 +708,6 @@ const bButton = document.getElementById('bButton');
         });
     });
 
-    const toggleTimestampBtn = document.getElementById("toggle-timestamp-btn");
-    if (toggleTimestampBtn) {
-        toggleTimestampBtn.onclick = toggleTimestampMode;
-    }
-    
     // 初始化所有優化功能
     initEnhancements();
 });
@@ -1769,44 +1758,9 @@ function renderTimestampContent() {
 
 
 // 在 JSON 和時間戳模式之間切換
-function toggleTimestampMode() {
-    // 同步畫重點模式的 timestamp 按鈕
-    const highlightTimestampBtn = document.getElementById('highlight-timestamp-btn');
-    
-    const toggleBtn = document.getElementById('toggle-timestamp-btn');
-    if (!hasTimestampFile) {
-        alert('無 Timestamp 檔案');
-        return;
-    }
-
-    isTimestampMode = !isTimestampMode;
-    toggleBtn.classList.toggle('is-active', isTimestampMode);
-
-    const container = document.getElementById('meaningContainer');
-    if (!container) return;
-
-    if (isTimestampMode) {
-        renderTimestampContent();
-        detailsSentencePlayer.removeEventListener('timeupdate', handleAutoScroll); // [優化]
-        if (!detailsSentencePlayer.paused) { // [優化]
-            if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
-            timestampUpdateLoop();
-        }
-    } else {
-        container.innerHTML = originalMeaningContent;
-        if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
-        timestampUpdateRafId = null;
-        if (lastHighlightedSentence) {
-            lastHighlightedSentence.classList.remove('is-current');
-            lastHighlightedSentence = null;
-        }
-        detailsSentencePlayer.addEventListener('timeupdate', handleAutoScroll); // [優化]
-    }
-}
-
 function showDetails(word) {
     // 在顯示新單字時重置時間戳模式狀態
-    isTimestampMode = false;
+    isTimestampMode = true; // 統一使用 timestamp 模式
     hasTimestampFile = false;
     timestampData = [];
     if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
@@ -1814,12 +1768,6 @@ function showDetails(word) {
     lastHighlightedSentence = null;
     originalMeaningContent = "";
     
-    const toggleBtn = document.getElementById('toggle-timestamp-btn');
-    if (toggleBtn) {
-        toggleBtn.style.display = 'none';
-        toggleBtn.classList.remove('is-active');
-    }
-
     let bButton = document.getElementById("bButton");
     let params = new URLSearchParams(window.location.search);
     lastSentenceListWord = word.Words;
@@ -1912,18 +1860,19 @@ function showDetails(word) {
             timestampData = parseTimestampText(text);
             if (timestampData.length > 0) {
                 hasTimestampFile = true;
-                if (toggleBtn) toggleBtn.style.display = 'inline-block';
                 
-                // [新增] 自動渲染 timestamp 內容到 meaningContainer，以便句子高亮功能可用
-                // 即使不開啟 timestamp 模式，也能在播放時高亮當前句子
+                // 自動渲染 timestamp 內容
                 renderTimestampContent();
+                if (!detailsSentencePlayer.paused) {
+                    if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
+                    timestampUpdateLoop();
+                }
             } else {
                 console.warn(`${word.Words} 的時間戳檔案為空或無法解析。`);
             }
         })
         .catch(error => {
             hasTimestampFile = false; 
-            if (toggleBtn) toggleBtn.style.display = 'none';
             console.error('載入時間戳檔案時出錯:', error.message);
         });
 
@@ -2848,18 +2797,10 @@ function enterHighlightModeEnhanced() {
         
         container.classList.add('active');
         
-        // 同步 timestamp 按鈕狀態
-        const timestampBtn = document.getElementById('toggle-timestamp-btn');
-        const highlightTimestampBtn = document.getElementById('highlight-timestamp-btn');
-        if (timestampBtn && highlightTimestampBtn) {
-            highlightTimestampBtn.style.display = timestampBtn.style.display;
-            if (isTimestampMode) {
-                highlightTimestampBtn.classList.add('is-active');
-            }
-        }
-        
         // [新增] 全域 mouseup 事件監聽器 - 處理在容器外放開的情況
         document.addEventListener('mouseup', handleGlobalMouseUp);
+    }
+}
 
 // [新增] 全域 mouseup 處理函數
 function handleGlobalMouseUp(e) {
@@ -2872,9 +2813,6 @@ function handleGlobalMouseUp(e) {
     if (wordLongPressTimer) {
         clearTimeout(wordLongPressTimer);
         wordLongPressTimer = null;
-    }
-}
-
     }
 }
 
@@ -3906,7 +3844,7 @@ function enterHighlightModeEnhanced() {
     const highlightMeaningContainer = document.getElementById('highlight-meaning-container');
     
     if (container && meaningContainer && highlightMeaningContainer) {
-        // [修改] 如果有 timestamp 資料，總是渲染 timestamp 內容以支持句子高亮
+        // 如果有 timestamp 資料，總是渲染 timestamp 內容以支持句子高亮
         if (hasTimestampFile && timestampData && timestampData.length > 0) {
             renderTimestampContentInHighlightMode();
         } else {
@@ -3917,59 +3855,21 @@ function enterHighlightModeEnhanced() {
         }
         
         container.classList.add('active');
-        
-        // 同步 timestamp 按鈕狀態
-        const timestampBtn = document.getElementById('toggle-timestamp-btn');
-        const highlightTimestampBtn = document.getElementById('highlight-timestamp-btn');
-        if (timestampBtn && highlightTimestampBtn) {
-            highlightTimestampBtn.style.display = timestampBtn.style.display;
-            if (isTimestampMode) {
-                highlightTimestampBtn.classList.add('is-active');
-            } else {
-                highlightTimestampBtn.classList.remove('is-active');
-            }
-        }
     }
 }
 
-// 修改畫重點模式中的 timestamp 切換
+// 畫重點模式中確保 timestamp 已渲染
 function toggleTimestampModeInHighlight() {
-    if (!hasTimestampFile) {
-        alert('無 Timestamp 檔案');
-        return;
-    }
-
-    isTimestampMode = !isTimestampMode;
-    
-    const toggleBtn = document.getElementById('toggle-timestamp-btn');
-    const highlightTimestampBtn = document.getElementById('highlight-timestamp-btn');
-    
-    if (toggleBtn) toggleBtn.classList.toggle('is-active', isTimestampMode);
-    if (highlightTimestampBtn) highlightTimestampBtn.classList.toggle('is-active', isTimestampMode);
+    if (!hasTimestampFile) return;
 
     const container = document.getElementById('highlight-meaning-container');
     if (!container) return;
 
-    if (isTimestampMode) {
-        renderTimestampContentInHighlightMode();
-        detailsSentencePlayer.removeEventListener('timeupdate', handleAutoScroll);
-        if (!detailsSentencePlayer.paused) {
-            if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
-            timestampUpdateLoop();
-        }
-    } else {
-        // 恢復一般模式
-        container.innerHTML = originalMeaningContent;
-        wrapWordsInHighlightMode(container);
-        restoreHighlightedWords(container);
-        
+    renderTimestampContentInHighlightMode();
+    detailsSentencePlayer.removeEventListener('timeupdate', handleAutoScroll);
+    if (!detailsSentencePlayer.paused) {
         if (timestampUpdateRafId) cancelAnimationFrame(timestampUpdateRafId);
-        timestampUpdateRafId = null;
-        if (lastHighlightedSentence) {
-            lastHighlightedSentence.classList.remove('is-current');
-            lastHighlightedSentence = null;
-        }
-        detailsSentencePlayer.addEventListener('timeupdate', handleAutoScroll);
+        timestampUpdateLoop();
     }
 }
 

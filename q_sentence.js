@@ -1099,11 +1099,209 @@ function loadReorganizeQuestion() {
             playBtn.classList.remove("playing");
         });
     }
+
+    // 初始化鍵盤重組管理器
+    initReorganizeKeyboard(_reorganizeDrag);
 }
 
 // 舊的 selectWordBlock 不再使用，保留空函式避免 HTML onclick 殘留報錯
 function selectWordBlock(block) {
     // no-op: replaced by ReorderDrag
+}
+
+// ═══════════════════════════════════════════════
+//  句子重組鍵盤管理器
+// ═══════════════════════════════════════════════
+let _reorgKeyboard = null;
+
+function initReorganizeKeyboard(dragInstance) {
+    if (_reorgKeyboard) {
+        _reorgKeyboard.destroy();
+    }
+    _reorgKeyboard = new ReorganizeKeyboardManager(dragInstance);
+    _reorgKeyboard.init();
+}
+
+class ReorganizeKeyboardManager {
+    constructor(dragInstance) {
+        this.drag = dragInstance;
+        this.prefix = '';               // 目前累積的字母前綴
+        this.candidates = [];           // 符合前綴的 pool btn 陣列
+        this.cycleIndex = 0;           // 循環指標（處理重複單字）
+        this._handler = this._onKeyDown.bind(this);
+    }
+
+    init() {
+        document.addEventListener('keydown', this._handler);
+    }
+
+    destroy() {
+        document.removeEventListener('keydown', this._handler);
+        this._clearHighlight();
+    }
+
+    _onKeyDown(e) {
+        // 只在重組測驗區啟用
+        const reorganizeArea = document.getElementById('reorganizeQuizArea');
+        if (!reorganizeArea || reorganizeArea.style.display !== 'block') return;
+
+        // 忽略輸入框
+        if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+
+        // 已提交（按鈕有 correct/incorrect 代表已提交）
+        const answerArea = document.getElementById('sentenceConstructionArea');
+        const isSubmitted = answerArea && answerArea.querySelector('.reorder-word.correct, .reorder-word.incorrect');
+        if (isSubmitted) return;
+
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            this._handleEnter(answerArea);
+            return;
+        }
+
+        if (e.key === 'Backspace') {
+            e.preventDefault();
+            this._handleBackspace(answerArea);
+            return;
+        }
+
+        if (e.key === 'Escape') {
+            e.preventDefault();
+            this._reset();
+            return;
+        }
+
+        // 字母鍵 (a-z, A-Z, 含撇號 ' 用於 it's 等)
+        if (/^[a-zA-Z']$/.test(e.key)) {
+            e.preventDefault();
+            this._handleLetter(e.key);
+            return;
+        }
+    }
+
+    _handleLetter(key) {
+        const newPrefix = this.prefix + key.toLowerCase();
+        const poolBtns = this._getAvailablePoolBtns();
+
+        // 找出符合新前綴的候選（全部）
+        const newCandidates = poolBtns.filter(btn =>
+            btn.dataset.word.toLowerCase().startsWith(newPrefix)
+        );
+
+        // 檢查是否是在現有 candidates 基礎上繼續縮小前綴
+        if (newCandidates.length > 0 && this.prefix !== '' && newPrefix !== key.toLowerCase()) {
+            // 正常縮小前綴
+            this.prefix = newPrefix;
+            this.candidates = newCandidates;
+            this.cycleIndex = 0;
+        } else {
+            // 前綴無法繼續縮小，或是全新按鍵 → 用此鍵作為首字母搜尋
+            const freshCandidates = poolBtns.filter(btn =>
+                btn.dataset.word.toLowerCase().startsWith(key.toLowerCase())
+            );
+            if (freshCandidates.length === 0) {
+                this._shake();
+                return;
+            }
+
+            if (
+                key.toLowerCase() === this.prefix.charAt(0) &&
+                this.candidates.length > 0
+            ) {
+                // 連續按相同首字母 → 在現有 candidates 間循環
+                // 更新 candidates 以排除已使用的，但保持循環
+                const updated = poolBtns.filter(btn =>
+                    btn.dataset.word.toLowerCase().startsWith(key.toLowerCase())
+                );
+                this.candidates = updated;
+                this.cycleIndex = (this.cycleIndex + 1) % this.candidates.length;
+                this.prefix = key.toLowerCase();
+            } else {
+                // 全新首字母
+                this.prefix = key.toLowerCase();
+                this.candidates = freshCandidates;
+                this.cycleIndex = 0;
+            }
+        }
+
+        this._applyHighlight();
+    }
+
+    _handleEnter(answerArea) {
+        const poolBtns = this._getAvailablePoolBtns();
+        const totalWords = this.drag
+            ? Array.from(document.getElementById('wordBlocksContainer')
+                .querySelectorAll('.reorder-word')).length
+            : 0;
+        const answeredCount = answerArea
+            ? answerArea.querySelectorAll('.reorder-word').length : 0;
+        const totalInPool = poolBtns.length;
+
+        // 如果有 highlight 的候選 → 選中並移入答案區
+        if (this.candidates.length > 0) {
+            const target = this.candidates[this.cycleIndex] || this.candidates[0];
+            if (target && this.drag) {
+                this.drag._moveToAnswer(target);
+            }
+            this._reset();
+            return;
+        }
+
+        // 沒有候選 → 判斷是否提交
+        const allUsed = totalInPool === 0 || poolBtns.length === 0;
+        if (allUsed) {
+            const submitBtn = document.getElementById('submitReorganizeBtn');
+            if (submitBtn) submitBtn.click();
+        }
+    }
+
+    _handleBackspace(answerArea) {
+        if (!answerArea) return;
+        this._reset(); // 先清空前綴
+        const answerBtns = Array.from(answerArea.querySelectorAll('.reorder-word'));
+        if (answerBtns.length === 0) return;
+        const last = answerBtns[answerBtns.length - 1];
+        if (this.drag) {
+            this.drag._moveToPool(last);
+        }
+    }
+
+    _getAvailablePoolBtns() {
+        const pool = document.getElementById('wordBlocksContainer');
+        if (!pool) return [];
+        return Array.from(pool.querySelectorAll('.reorder-word:not(.is-used)'));
+    }
+
+    _applyHighlight() {
+        this._clearHighlight();
+        // 只 highlight 當前焦點那一個
+        const target = this.candidates[this.cycleIndex];
+        if (target) {
+            target.classList.add('keyboard-focus');
+            target.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+    }
+
+    _clearHighlight() {
+        document.querySelectorAll('.keyboard-candidate, .keyboard-focus').forEach(el => {
+            el.classList.remove('keyboard-candidate', 'keyboard-focus');
+        });
+    }
+
+    _reset() {
+        this.prefix = '';
+        this.candidates = [];
+        this.cycleIndex = 0;
+        this._clearHighlight();
+    }
+
+    _shake() {
+        // 輕微震動動畫提示無匹配
+        const pool = document.getElementById('wordBlocksContainer');
+        if (!pool) return;
+        pool.classList.add('keyboard-shake');
+        setTimeout(() => pool.classList.remove('keyboard-shake'), 300);
+    }
 }
 
 function submitReorganizeAnswer() {
@@ -1161,6 +1359,8 @@ function submitReorganizeAnswer() {
 }
 
 function goToNextReorganizeSentence() {
+    if (_reorgKeyboard) _reorgKeyboard.destroy();
+    _reorgKeyboard = null;
     currentSentenceIndex++;
     if (currentSentenceIndex >= currentQuizSentences.length) {
         alert("🎉 測驗結束！");

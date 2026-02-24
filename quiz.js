@@ -1042,10 +1042,158 @@ function loadNextReword() {
 
     document.getElementById("submitRewordBtn").style.display = "inline-block";
     document.getElementById("nextRewordBtn").style.display = "none";
+
+    // 初始化鍵盤重組管理器
+    initRewordKeyboard(_rewordDrag);
 }
 
 function moveRewordBlock(block) {
     // no-op: replaced by ReorderDrag
+}
+
+// ═══════════════════════════════════════════════
+//  單字重組鍵盤管理器（Reword Quiz）
+// ═══════════════════════════════════════════════
+let _rewordKeyboard = null;
+
+function initRewordKeyboard(dragInstance) {
+    if (_rewordKeyboard) _rewordKeyboard.destroy();
+    _rewordKeyboard = new RewordKeyboardManager(dragInstance);
+    _rewordKeyboard.init();
+}
+
+class RewordKeyboardManager {
+    constructor(dragInstance) {
+        this.drag = dragInstance;
+        this.candidates = [];
+        this.cycleIndex = 0;
+        this._handler = this._onKeyDown.bind(this);
+    }
+
+    init() {
+        document.addEventListener('keydown', this._handler);
+    }
+
+    destroy() {
+        document.removeEventListener('keydown', this._handler);
+        this._clearHighlight();
+    }
+
+    _onKeyDown(e) {
+        const rewordArea = document.getElementById('rewordQuizArea');
+        if (!rewordArea || rewordArea.style.display !== 'block') return;
+        if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+
+        // 已提交則忽略
+        const constructionArea = document.getElementById('rewordConstructionArea');
+        const isSubmitted = constructionArea &&
+            constructionArea.querySelector('.reorder-word.correct, .reorder-word.incorrect');
+        if (isSubmitted) return;
+
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            this._handleEnter(constructionArea);
+            return;
+        }
+        if (e.key === 'Backspace') {
+            e.preventDefault();
+            this._handleBackspace(constructionArea);
+            return;
+        }
+        if (e.key === 'Escape') {
+            e.preventDefault();
+            this._reset();
+            return;
+        }
+        if (/^[a-zA-Z']$/.test(e.key)) {
+            e.preventDefault();
+            this._handleLetter(e.key);
+        }
+    }
+
+    _handleLetter(key) {
+        const letter = key.toLowerCase();
+        const poolBtns = this._getAvailablePoolBtns();
+        const sameLetter = poolBtns.filter(btn => btn.dataset.word.toLowerCase() === letter);
+
+        if (sameLetter.length === 0) {
+            this._shake();
+            return;
+        }
+
+        if (this.candidates.length > 0 &&
+            this.candidates[0].dataset.word.toLowerCase() === letter) {
+            // 同字母再按 → 循環切換
+            this.cycleIndex = (this.cycleIndex + 1) % sameLetter.length;
+            this.candidates = sameLetter;
+        } else {
+            // 新字母
+            this.candidates = sameLetter;
+            this.cycleIndex = 0;
+        }
+
+        this._applyHighlight();
+    }
+
+    _handleEnter(constructionArea) {
+        if (this.candidates.length > 0) {
+            const target = this.candidates[this.cycleIndex] || this.candidates[0];
+            if (target && this.drag) {
+                this.drag._moveToAnswer(target);
+            }
+            this._reset();
+            return;
+        }
+        // 沒有候選 → 檢查是否可提交
+        const poolBtns = this._getAvailablePoolBtns();
+        if (poolBtns.length === 0) {
+            const submitBtn = document.getElementById('submitRewordBtn');
+            if (submitBtn && submitBtn.style.display !== 'none') submitBtn.click();
+        }
+    }
+
+    _handleBackspace(constructionArea) {
+        this._reset();
+        if (!constructionArea) return;
+        const answerBtns = Array.from(constructionArea.querySelectorAll('.reorder-word'));
+        if (answerBtns.length === 0) return;
+        const last = answerBtns[answerBtns.length - 1];
+        if (this.drag) this.drag._moveToPool(last);
+    }
+
+    _getAvailablePoolBtns() {
+        const pool = document.getElementById('rewordLetterBlocksContainer');
+        if (!pool) return [];
+        return Array.from(pool.querySelectorAll('.reorder-word:not(.is-used)'));
+    }
+
+    _applyHighlight() {
+        this._clearHighlight();
+        const target = this.candidates[this.cycleIndex];
+        if (target) {
+            target.classList.add('keyboard-focus');
+            target.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+    }
+
+    _clearHighlight() {
+        document.querySelectorAll('.keyboard-candidate, .keyboard-focus').forEach(el => {
+            el.classList.remove('keyboard-candidate', 'keyboard-focus');
+        });
+    }
+
+    _reset() {
+        this.candidates = [];
+        this.cycleIndex = 0;
+        this._clearHighlight();
+    }
+
+    _shake() {
+        const pool = document.getElementById('rewordLetterBlocksContainer');
+        if (!pool) return;
+        pool.classList.add('keyboard-shake');
+        setTimeout(() => pool.classList.remove('keyboard-shake'), 300);
+    }
 }
 
 function submitRewordAnswer() {
@@ -1102,6 +1250,7 @@ function submitRewordAnswer() {
 }
 
 function goToNextReword() {
+    if (_rewordKeyboard) { _rewordKeyboard.destroy(); _rewordKeyboard = null; }
     loadNextReword();
 }
 
