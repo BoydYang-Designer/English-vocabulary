@@ -322,6 +322,10 @@ function setupSearchEnhancements() {
                 if (searchCount) searchCount.style.display = 'none';
             }
         });
+        // 防止快捷鍵監聽干擾輸入框（手機空白鍵問題）
+        searchInput.addEventListener('keydown', (e) => {
+            e.stopPropagation();
+        });
     }
     
     if (searchClearBtn) {
@@ -345,6 +349,10 @@ function setupSearchEnhancements() {
                 if (searchClearBtnDetails) searchClearBtnDetails.style.display = 'none';
                 if (searchCountDetails) searchCountDetails.style.display = 'none';
             }
+        });
+        // 防止快捷鍵監聽干擾輸入框（手機空白鍵問題）
+        searchInputDetails.addEventListener('keydown', (e) => {
+            e.stopPropagation();
         });
     }
     
