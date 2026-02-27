@@ -629,6 +629,7 @@
             <span id="user-info-menu">載入中...</span>
             <div class="header-buttons">
                 <button id="theme-toggle-btn-menu" class="button">🌙</button>
+                <button id="storage-viewer-btn-menu" class="button" title="儲存空間用量">💾</button>
                 <button id="edit-storage-btn-menu" class="button">編輯</button>
                 <button id="sign-out-btn-menu" class="button is-hidden">登出</button>
                 <button id="sign-in-from-guest-btn-menu" class="button is-hidden">登入</button>
@@ -661,6 +662,7 @@
             <span id="user-info">載入中...</span>
             <div class="header-buttons">
                 <button id="theme-toggle-btn" class="button">🌙</button>
+                <button id="storage-viewer-btn" class="button" title="儲存空間用量">💾</button>
                 <button id="edit-storage-btn" class="button">編輯</button>
                 <button id="sign-out-btn" class="button is-hidden">登出</button>
                 <button id="sign-in-from-guest-btn" class="button is-hidden">登入</button>
@@ -990,5 +992,433 @@
     <script src="auth-manager.js"></script>
     <script src="index.js"></script>
     <script src="menu-navigation.js"></script>
+
+<!-- ===================================================
+     儲存空間檢視器：CSS
+     =================================================== -->
+<style>
+/* ── Modal overlay ── */
+.sv-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 20000; padding: 16px;
+}
+.sv-overlay.is-hidden { display: none; }
+
+.sv-box {
+    background: var(--bg-secondary, #fff);
+    border-radius: 16px;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.22);
+    width: 100%; max-width: 500px;
+    max-height: 88vh; overflow-y: auto;
+    padding: 22px 22px 18px;
+    display: flex; flex-direction: column; gap: 18px;
+    color: var(--text-primary, #333);
+}
+
+/* ── Header ── */
+.sv-header {
+    display: flex; align-items: center; justify-content: space-between;
+}
+.sv-header h2 { margin: 0; font-size: 1.05rem; font-weight: 700; }
+.sv-close-btn {
+    background: transparent;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 8px;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 16px; line-height: 1;
+    color: var(--text-secondary, #888);
+    transition: background 0.15s;
+}
+.sv-close-btn:hover { background: var(--bg-tertiary, #f5f5f5); }
+
+/* ── 總用量 bar ── */
+.sv-total-row { display: flex; justify-content: space-between; align-items: baseline; }
+.sv-total-label { font-size: 0.78rem; font-weight: 600; color: var(--text-secondary, #888); text-transform: uppercase; letter-spacing: 0.04em; }
+.sv-total-value { font-size: 1.45rem; font-weight: 800; }
+.sv-bar-track { height: 9px; background: var(--border-color, #e5e7eb); border-radius: 99px; overflow: hidden; margin-top: 6px; }
+.sv-bar-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, #4ade80, #22c55e); transition: width 0.5s ease, background 0.5s ease; width: 0%; }
+.sv-bar-fill.warn   { background: linear-gradient(90deg, #fbbf24, #f59e0b); }
+.sv-bar-fill.danger { background: linear-gradient(90deg, #f87171, #ef4444); }
+.sv-bar-caption { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-secondary, #999); margin-top: 4px; }
+
+/* ── 分組 ── */
+.sv-group {
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: 12px; padding: 12px 14px;
+    display: flex; flex-direction: column; gap: 8px;
+}
+.sv-group.is-hidden { display: none; }
+.sv-group-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.sv-group-title { display: flex; align-items: center; gap: 6px; font-size: 0.88rem; font-weight: 700; }
+.sv-group-badge {
+    font-size: 0.72rem; font-weight: 600;
+    background: var(--bg-tertiary, #f0f0f0);
+    border-radius: 99px; padding: 2px 8px;
+    color: var(--text-secondary, #888);
+}
+.sv-group-desc { font-size: 0.76rem; color: var(--text-secondary, #999); line-height: 1.4; }
+
+/* 分組標題顏色 */
+.sv-group--note    .sv-group-title { color: #2563eb; }
+.sv-group--quiz    .sv-group-title { color: #7c3aed; }
+.sv-group--system  .sv-group-title { color: #059669; }
+.sv-group--other   .sv-group-title { color: #dc2626; }
+
+/* ── 清除按鈕 ── */
+.sv-clear-btn {
+    font-size: 0.72rem; font-weight: 600;
+    padding: 3px 9px; border-radius: 7px;
+    border: 1.5px solid var(--border-color, #ddd);
+    background: transparent; cursor: pointer;
+    color: var(--text-secondary, #888);
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    white-space: nowrap; flex-shrink: 0;
+}
+.sv-clear-btn:hover { background: var(--bg-tertiary, #f5f5f5); border-color: #9ca3af; color: var(--text-primary, #333); }
+.sv-clear-btn--danger { border-color: #fca5a5; color: #dc2626; }
+.sv-clear-btn--danger:hover { background: #fef2f2; border-color: #ef4444; }
+
+/* ── 明細列 ── */
+.sv-list { display: flex; flex-direction: column; gap: 6px; margin-top: 2px; }
+.sv-item { display: grid; grid-template-columns: 1fr 70px 52px 46px; align-items: center; gap: 8px; }
+.sv-item-name { font-size: 0.82rem; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sv-item-bar-wrap { height: 5px; background: var(--border-color, #e5e7eb); border-radius: 99px; overflow: hidden; }
+.sv-item-bar { height: 100%; border-radius: 99px; background: var(--accent-color, #A1887F); transition: width 0.35s ease; }
+.sv-item-size { font-size: 0.75rem; font-weight: 600; color: var(--text-secondary, #888); text-align: right; white-space: nowrap; }
+.sv-item-del {
+    font-size: 0.68rem; padding: 2px 6px; border-radius: 6px;
+    border: 1px solid #fca5a5; background: transparent;
+    color: #ef4444; cursor: pointer; white-space: nowrap;
+    transition: background 0.12s;
+}
+.sv-item-del:hover { background: #fef2f2; }
+.sv-item-del.is-hidden { visibility: hidden; }
+
+/* ── 空狀態 ── */
+.sv-empty { text-align: center; color: var(--text-secondary, #aaa); font-size: 0.84rem; padding: 8px 0; }
+
+/* ── Footer ── */
+.sv-footer { display: flex; justify-content: flex-end; }
+</style>
+
+<!-- ===================================================
+     儲存空間檢視器：Modal HTML
+     =================================================== -->
+<div id="sv-modal" class="sv-overlay is-hidden">
+  <div class="sv-box">
+    <div class="sv-header">
+      <h2>💾 儲存空間用量</h2>
+      <button class="sv-close-btn" id="sv-close">✕</button>
+    </div>
+
+    <!-- 總用量 -->
+    <div>
+      <div class="sv-total-row">
+        <span class="sv-total-label">總計用量</span>
+        <span class="sv-total-value" id="sv-total">計算中…</span>
+      </div>
+      <div class="sv-bar-track"><div class="sv-bar-fill" id="sv-bar"></div></div>
+      <div class="sv-bar-caption">
+        <span id="sv-used">0 KB 已用</span>
+        <span>上限 ~5 MB</span>
+      </div>
+    </div>
+
+    <!-- 本站分組（動態） -->
+    <div id="sv-app-groups"></div>
+
+    <!-- 其他（非本站） -->
+    <div id="sv-other-group" class="sv-group sv-group--other is-hidden">
+      <div class="sv-group-header">
+        <div class="sv-group-title">
+          🗂 其他（非本網頁）
+          <span class="sv-group-badge" id="sv-other-badge"></span>
+        </div>
+        <button class="sv-clear-btn sv-clear-btn--danger" id="sv-clear-other">🗑 全部清除</button>
+      </div>
+      <div class="sv-group-desc">這些 key 不屬於本 App，可安全刪除以釋放空間。</div>
+      <div class="sv-list" id="sv-other-list"></div>
+    </div>
+
+    <div class="sv-footer">
+      <button class="button" id="sv-refresh">🔄 重新計算</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================
+     儲存空間檢視器：JavaScript
+     =================================================== -->
+<script>
+(function() {
+    // ── 本站所有已知 key 的分組定義 ──────────────────────────
+    const SV_GROUPS = [
+        {
+            id:    'note',
+            cls:   'sv-group--note',
+            icon:  '📝',
+            title: 'Note 筆記 & 自訂內容',
+            desc:  '已勾選單字/句子、重要標記、筆記、自訂句子。',
+            keys: [
+                { key: 'vocabularyGuestData',  label: '訪客詞彙資料（勾選/筆記等）', canDel: false },
+                { key: 'customSentences',      label: '自訂句子',                    canDel: false },
+                { key: 'recentSentences',      label: '最近閱讀記錄',                canDel: true  },
+            ]
+        },
+        {
+            id:    'quiz',
+            cls:   'sv-group--quiz',
+            icon:  '🎯',
+            title: '測驗記錄',
+            desc:  '句子測驗歷史、答題紀錄、錯誤句子清單。',
+            keys: [
+                { key: 'sentenceQuizHistory',       label: '句子測驗歷史',      canDel: true },
+                { key: 'currentQuizSentences',      label: '當前測驗句子',      canDel: true },
+                { key: 'wrongQS',                   label: '答錯句子清單',      canDel: true },
+                { key: 'userAnswers',               label: '使用者答案記錄',    canDel: true },
+                { key: 'userConstructedSentences',  label: '已構建句子記錄',    canDel: true },
+            ]
+        },
+        {
+            id:    'system',
+            cls:   'sv-group--system',
+            icon:  '⚙️',
+            title: '系統設定',
+            desc:  '佈景主題、訪客/登入狀態、使用者名稱。',
+            keys: [
+                { key: 'theme',        label: '佈景主題',      canDel: true  },
+                { key: 'isGuestMode',  label: '訪客模式狀態',  canDel: true  },
+                { key: 'guestMode',    label: '訪客模式（舊）',canDel: true  },
+                { key: 'guest',        label: '訪客標記',      canDel: true  },
+                { key: 'userName',     label: '使用者名稱',    canDel: true  },
+                { key: 'displayName',  label: '顯示名稱',      canDel: true  },
+                { key: 'username',     label: '使用者名稱（舊）', canDel: true },
+                { key: 'userEmail',    label: '電子郵件',      canDel: true  },
+                { key: 'email',        label: '電子郵件（舊）',canDel: true  },
+            ]
+        },
+        {
+            id:    'sentences_db',
+            cls:   'sv-group--quiz',
+            icon:  '📚',
+            title: '句子資料庫快取',
+            desc:  '從遠端載入後快取的句子資料集。可清除，下次自動重新下載。',
+            keys: [
+                { key: 'sentenceData', label: '句子資料庫（大型快取）', canDel: true },
+            ]
+        },
+    ];
+
+    const SV_ALL_KNOWN = new Set(
+        SV_GROUPS.flatMap(g => g.keys.map(k => k.key))
+    );
+
+    // ── utils ────────────────────────────────────────────────
+    function fmtBytes(b) {
+        if (b < 1024) return b + ' B';
+        if (b < 1024*1024) return (b/1024).toFixed(1) + ' KB';
+        return (b/1024/1024).toFixed(2) + ' MB';
+    }
+
+    function calcUsage() {
+        const map = new Map();
+        let total = 0;
+        for (let i = 0; i < localStorage.length; i++) {
+            const k = localStorage.key(i);
+            if (!k) continue;
+            const v = localStorage.getItem(k) || '';
+            const bytes = (k.length + v.length) * 2;
+            map.set(k, bytes);
+            total += bytes;
+        }
+        return { total, map };
+    }
+
+    // ── 渲染 ─────────────────────────────────────────────────
+    function render() {
+        const { total, map } = calcUsage();
+        const LIMIT = 5 * 1024 * 1024;
+        const pct = Math.min(100, (total / LIMIT) * 100);
+
+        // 總用量
+        document.getElementById('sv-total').textContent = fmtBytes(total);
+        document.getElementById('sv-used').textContent  = fmtBytes(total) + ' 已用';
+        const bar = document.getElementById('sv-bar');
+        bar.style.width = pct + '%';
+        bar.classList.remove('warn','danger');
+        if (pct >= 90) bar.classList.add('danger');
+        else if (pct >= 70) bar.classList.add('warn');
+
+        // 本站分組
+        const appEl = document.getElementById('sv-app-groups');
+        appEl.innerHTML = '';
+        SV_GROUPS.forEach(g => {
+            const existing = g.keys.filter(k => map.has(k.key));
+            if (!existing.length) return;
+            const gBytes = existing.reduce((s,k) => s + (map.get(k.key)||0), 0);
+
+            const section = document.createElement('div');
+            section.className = `sv-group ${g.cls}`;
+
+            // header
+            const hdr = document.createElement('div');
+            hdr.className = 'sv-group-header';
+            hdr.innerHTML = `
+                <div class="sv-group-title">
+                    ${g.icon} ${g.title}
+                    <span class="sv-group-badge">${fmtBytes(gBytes)}</span>
+                </div>`;
+
+            const clearable = existing.filter(k => k.canDel);
+            if (clearable.length) {
+                const btn = document.createElement('button');
+                btn.className = 'sv-clear-btn';
+                btn.textContent = '🗑 清除可刪項目';
+                btn.onclick = () => {
+                    const names = clearable.map(k=>k.label).join('、');
+                    if (!confirm(`確定清除「${names}」？\n\n這些記錄將無法復原。`)) return;
+                    clearable.forEach(k => localStorage.removeItem(k.key));
+                    render();
+                    svNotify('已清除 ' + g.title + ' 的可刪項目');
+                };
+                hdr.appendChild(btn);
+            }
+            section.appendChild(hdr);
+
+            const desc = document.createElement('div');
+            desc.className = 'sv-group-desc';
+            desc.textContent = g.desc;
+            section.appendChild(desc);
+
+            const list = document.createElement('div');
+            list.className = 'sv-list';
+            existing.forEach(k => {
+                const bytes = map.get(k.key) || 0;
+                const pctItem = total > 0 ? Math.min(100,(bytes/total)*100) : 0;
+                const row = document.createElement('div');
+                row.className = 'sv-item';
+                row.innerHTML = `
+                    <span class="sv-item-name" title="${k.key}">${k.label}</span>
+                    <div class="sv-item-bar-wrap">
+                        <div class="sv-item-bar" style="width:${pctItem.toFixed(1)}%"></div>
+                    </div>
+                    <span class="sv-item-size">${fmtBytes(bytes)}</span>
+                    <button class="sv-item-del${k.canDel?'':' is-hidden'}" data-key="${k.key}" data-label="${k.label}">刪除</button>`;
+                list.appendChild(row);
+            });
+            section.appendChild(list);
+            appEl.appendChild(section);
+        });
+
+        if (!appEl.children.length) {
+            appEl.innerHTML = '<div class="sv-empty">本站目前沒有儲存任何資料。</div>';
+        }
+
+        // 其他（非本站）
+        const otherKeys = [...map.entries()].filter(([k]) => !SV_ALL_KNOWN.has(k));
+        const otherGroup = document.getElementById('sv-other-group');
+        const otherList  = document.getElementById('sv-other-list');
+        const otherBadge = document.getElementById('sv-other-badge');
+        if (otherKeys.length === 0) {
+            otherGroup.classList.add('is-hidden');
+        } else {
+            otherGroup.classList.remove('is-hidden');
+            const otherTotal = otherKeys.reduce((s,[,b])=>s+b, 0);
+            otherBadge.textContent = fmtBytes(otherTotal);
+            otherList.innerHTML = '';
+            otherKeys.sort((a,b)=>b[1]-a[1]).forEach(([key, bytes]) => {
+                const pctItem = total > 0 ? Math.min(100,(bytes/total)*100) : 0;
+                const row = document.createElement('div');
+                row.className = 'sv-item';
+                row.innerHTML = `
+                    <span class="sv-item-name" title="${key}">${key}</span>
+                    <div class="sv-item-bar-wrap">
+                        <div class="sv-item-bar" style="width:${pctItem.toFixed(1)}%"></div>
+                    </div>
+                    <span class="sv-item-size">${fmtBytes(bytes)}</span>
+                    <button class="sv-item-del" data-key="${key}" data-label="${key}">刪除</button>`;
+                otherList.appendChild(row);
+            });
+        }
+
+        // 委派：個別刪除
+        const modal = document.getElementById('sv-modal');
+        modal._svHandler && modal.removeEventListener('click', modal._svHandler);
+        modal._svHandler = (e) => {
+            const btn = e.target.closest('.sv-item-del');
+            if (!btn || btn.classList.contains('is-hidden')) return;
+            const key = btn.dataset.key, label = btn.dataset.label || key;
+            if (!confirm(`確定要刪除「${label}」？\n\nkey: ${key}`)) return;
+            localStorage.removeItem(key);
+            render();
+            svNotify('已刪除：' + label);
+        };
+        modal.addEventListener('click', modal._svHandler);
+    }
+
+    // ── 通知 helper ─────────────────────────────────────────
+    function svNotify(msg) {
+        const c = document.getElementById('notification-container');
+        if (!c) return;
+        const t = document.createElement('div');
+        t.className = 'toast success';
+        t.textContent = msg;
+        Object.assign(t.style, {
+            padding:'10px 18px', background:'#4CAF50', color:'#fff',
+            borderRadius:'8px', marginBottom:'8px', opacity:'0',
+            transition:'opacity 0.3s', boxShadow:'0 2px 8px rgba(0,0,0,0.15)'
+        });
+        c.appendChild(t);
+        setTimeout(()=>t.style.opacity='1', 10);
+        setTimeout(()=>{t.style.opacity='0'; t.addEventListener('transitionend',()=>t.remove());}, 3500);
+    }
+
+    // ── 開關 ─────────────────────────────────────────────────
+    function openSV() {
+        render();
+        document.getElementById('sv-modal').classList.remove('is-hidden');
+    }
+    function closeSV() {
+        document.getElementById('sv-modal').classList.add('is-hidden');
+    }
+
+    // ── 事件綁定（等 DOM ready）──────────────────────────────
+    function bindAll() {
+        ['storage-viewer-btn','storage-viewer-btn-menu'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.addEventListener('click', openSV);
+        });
+        document.getElementById('sv-close')?.addEventListener('click', closeSV);
+        document.getElementById('sv-refresh')?.addEventListener('click', render);
+
+        // 「其他」全部清除
+        document.getElementById('sv-clear-other')?.addEventListener('click', () => {
+            const { map } = calcUsage();
+            const other = [...map.keys()].filter(k => !SV_ALL_KNOWN.has(k));
+            if (!other.length) return;
+            if (!confirm(`確定清除全部 ${other.length} 個非本站 key？\n\n可安全刪除，不影響本 App。`)) return;
+            other.forEach(k => localStorage.removeItem(k));
+            render();
+            svNotify('已清除 ' + other.length + ' 個非本站項目');
+        });
+
+        // 點擊背景關閉
+        document.getElementById('sv-modal')?.addEventListener('click', e => {
+            if (e.target.id === 'sv-modal') closeSV();
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bindAll);
+    } else {
+        bindAll();
+    }
+})();
+</script>
 </body>
 </html>
