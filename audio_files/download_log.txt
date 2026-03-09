@@ -1,46 +1,341 @@
 =======================================================
-  Yahoo 奇摩字典 MP3 下載紀錄（Selenium 版）
-  執行時間：2026-03-09 17:29:16
+  Yahoo 奇摩字典 MP3 下載紀錄
+  執行時間：2026-03-09 23:29:13
 =======================================================
 
 【來源檔案】
-  The Alchemist of Part 2-26 Timestamp.txt
+  Lit Breakdown-00-Reading Timestamp.txt
+  Lit Breakdown-01-Atomic habits-1 Timestamp.txt
+  Lit Breakdown-01-Atomic habits-2 Timestamp.txt
+  Lit Breakdown-01-Atomic habits-3 Timestamp.txt
+  Lit Breakdown-01-Atomic habits-4 Timestamp.txt
+  Lit Breakdown-02-power Timestamp.txt
 
 【勾選等級】
   A1 / A2 / B1 / B2 / C1
 
-【各等級單字數】
-  A1：2 個
-  A2：6 個
-  B1：1 個
-  B2：4 個
-  C1：1 個
-  未知：136 個
+【各等級單字數（缺少的）】
+  A1：50 個
+  A2：65 個
+  B1：59 個
+  B2：87 個
+  C1：43 個
+  未知：425 個
 
 【摘要】
-  ✅ 成功下載：  10 個
-  ⏭️  已有跳過：  247 個
-  ❌ 找不到 URL：4 個
+  ✅ 成功下載：  294 個
+  ⏭️  已有跳過：  486 個
+  ❌ 找不到 URL：10 個
   ❌ 下載失敗：  0 個
 
 ───────────────────────────────────────────────────────
-【成功】（10 個）
-  pull.mp3
-  rose.mp3
-  science.mp3
-  silence.mp3
-  stop.mp3
-  stupid.mp3
-  symbol.mp3
-  transform.mp3
-  tribal.mp3
-  unconscious.mp3
+【成功】（294 個）
+  absence.mp3
+  accessible.mp3
+  accountability.mp3
+  act.mp3
+  active.mp3
+  adopt.mp3
+  ambition.mp3
+  announcement.mp3
+  anticipate.mp3
+  appealing.mp3
+  architecture.mp3
+  assume.mp3
+  attractive.mp3
+  audio.mp3
+  automatic.mp3
+  backwards.mp3
+  baseball.mp3
+  bat.mp3
+  bedroom.mp3
+  belief.mp3
+  benefit.mp3
+  big.mp3
+  blend.mp3
+  box.mp3
+  brain.mp3
+  breakdown.mp3
+  breakfast.mp3
+  breakthrough.mp3
+  breathe.mp3
+  brush.mp3
+  celebrate.mp3
+  chair.mp3
+  challenge.mp3
+  channel.mp3
+  chapter.mp3
+  check.mp3
+  cigarette.mp3
+  clarity.mp3
+  clothes.mp3
+  coach.mp3
+  coffee.mp3
+  command.mp3
+  commit.mp3
+  commitment.mp3
+  complete.mp3
+  core.mp3
+  court.mp3
+  crash.mp3
+  creator.mp3
+  credit.mp3
+  cue.mp3
+  cult.mp3
+  cultivate.mp3
+  culture.mp3
+  cycle.mp3
+  delete.mp3
+  dependent.mp3
+  desk.mp3
+  differently.mp3
+  dollar.mp3
+  drama.mp3
+  dramatically.mp3
+  drift.mp3
+  edge.mp3
+  effect.mp3
+  enjoyable.mp3
+  environment.mp3
+  environmental.mp3
+  error.mp3
+  example.mp3
+  excess.mp3
+  execute.mp3
+  exploit.mp3
+  extra.mp3
+  fake.mp3
+  fancy.mp3
+  fish.mp3
+  fit.mp3
+  flow.mp3
+  focus.mp3
+  formation.mp3
+  formula.mp3
+  frame.mp3
+  framework.mp3
+  fruit.mp3
+  gain.mp3
+  genius.mp3
+  grab.mp3
+  gravity.mp3
+  guitar.mp3
+  gym.mp3
+  habit.mp3
+  health.mp3
+  healthy.mp3
+  honesty.mp3
+  identify.mp3
+  identity.mp3
+  ignorance.mp3
+  immediate.mp3
+  improvement.mp3
+  increase.mp3
+  independence.mp3
+  independent.mp3
+  influence.mp3
+  initiate.mp3
+  insight.mp3
+  instance.mp3
+  instantly.mp3
+  intention.mp3
+  introduce.mp3
+  isolate.mp3
+  join.mp3
+  judge.mp3
+  key.mp3
+  layer.mp3
+  lazy.mp3
+  leap.mp3
+  level.mp3
+  link.mp3
+  logic.mp3
+  lonely.mp3
+  loop.mp3
+  low.mp3
+  loyal.mp3
+  loyalty.mp3
+  maintain.mp3
+  maintenance.mp3
+  manipulate.mp3
+  map.mp3
+  marathon.mp3
+  media.mp3
+  mercy.mp3
+  method.mp3
+  middle.mp3
+  mind.mp3
+  minute.mp3
+  mirror.mp3
+  misery.mp3
+  momentum.mp3
+  mood.mp3
+  morning.mp3
+  motivation.mp3
+  mystery.mp3
+  natural.mp3
+  naturally.mp3
+  nearly.mp3
+  necessary.mp3
+  network.mp3
+  neutral.mp3
+  nose.mp3
+  obvious.mp3
+  oh.mp3
+  onto.mp3
+  opening.mp3
+  optimism.mp3
+  ourselves.mp3
+  outcome.mp3
+  overnight.mp3
+  pair.mp3
+  panic.mp3
+  paragraph.mp3
+  parent.mp3
+  park.mp3
+  patience.mp3
+  pattern.mp3
+  pause.mp3
+  perfect.mp3
+  perform.mp3
+  phone.mp3
+  physical.mp3
+  plan.mp3
+  plant.mp3
+  player.mp3
+  plus.mp3
+  pose.mp3
+  positive.mp3
+  pour.mp3
+  powerful.mp3
+  practical.mp3
+  preach.mp3
+  predict.mp3
+  process.mp3
+  productive.mp3
+  progress.mp3
+  proof.mp3
+  properly.mp3
+  prove.mp3
+  push.mp3
+  quit.mp3
+  radical.mp3
+  rain.mp3
+  ready.mp3
+  recovery.mp3
+  reform.mp3
+  reinforce.mp3
+  reliable.mp3
+  relief.mp3
+  remarkable.mp3
+  remove.mp3
+  repeat.mp3
+  reputation.mp3
+  require.mp3
+  respect.mp3
+  respond.mp3
+  response.mp3
+  result.mp3
+  reverse.mp3
+  reward.mp3
+  rise.mp3
+  routine.mp3
+  rule.mp3
+  runner.mp3
+  running.mp3
+  safe.mp3
+  satisfaction.mp3
+  scale.mp3
+  script.mp3
+  season.mp3
+  security.mp3
+  selective.mp3
+  self.mp3
+  sentence.mp3
+  setting.mp3
+  settle.mp3
+  shape.mp3
+  shift.mp3
+  signal.mp3
+  single.mp3
+  sink.mp3
+  skill.mp3
+  skip.mp3
+  skull.mp3
+  slow.mp3
+  smile.mp3
+  social.mp3
+  somewhere.mp3
+  space.mp3
+  specific.mp3
+  speed.mp3
+  spy.mp3
+  stand.mp3
+  state.mp3
+  steady.mp3
+  step.mp3
+  strategy.mp3
+  strength.mp3
+  stretch.mp3
+  style.mp3
+  sugar.mp3
+  summary.mp3
+  superior.mp3
+  supportive.mp3
+  surface.mp3
+  surprising.mp3
+  surrender.mp3
+  surround.mp3
+  switch.mp3
+  system.mp3
+  team.mp3
+  technique.mp3
+  term.mp3
+  text.mp3
+  thanks.mp3
+  tie.mp3
+  timing.mp3
+  tiny.mp3
+  tool.mp3
+  totally.mp3
+  track.mp3
+  train.mp3
+  training.mp3
+  trap.mp3
+  trigger.mp3
+  type.mp3
+  uncertainty.mp3
+  unhappy.mp3
+  value.mp3
+  vegetable.mp3
+  vice.mp3
+  victory.mp3
+  video.mp3
+  visible.mp3
+  vote.mp3
+  wake.mp3
+  weakness.mp3
+  welcome.mp3
+  wish.mp3
+  workout.mp3
+  worse.mp3
+  worth.mp3
+  writer.mp3
+  writing.mp3
+  wrong.mp3
+  yourself.mp3
 
 ───────────────────────────────────────────────────────
-【找不到 URL】（4 個）
-  continue
-  moon
-  nearly
-  nor
+【找不到 URL】（10 個）
+  based
+  conceal
+  concept
+  confidence
+  conscious
+  consistently
+  constantly
+  contract
+  control
+  convince
 
 =======================================================
