@@ -4193,24 +4193,18 @@ async function fetchWordDefinition(word) {
         
         // 提取定義
         let meaningText = '';
-        let partOfSpeech = '';
         
         if (meanings.length > 0) {
-            partOfSpeech = meanings[0].partOfSpeech || '';
-            const definitions = meanings[0].definitions || [];
-            
-            if (definitions.length > 0) {
-                // 格式化定義
-                meaningText = formatDefinition(word, partOfSpeech, meanings);
-            }
+            // 格式化定義 (傳入全部詞性)
+            meaningText = formatDefinition(word, meanings);
         }
         
-        // 獲取中文翻譯
-        const chineseTranslation = await fetchChineseTranslation(word, partOfSpeech);
+        // 獲取中文翻譯 (傳入全部詞性，讓翻譯更完整)
+        const chineseTranslation = await fetchChineseTranslation(word, meanings);
         
         return {
             word: word,
-            partOfSpeech: partOfSpeech,
+            partOfSpeech: meanings.map(m => m.partOfSpeech).join(', '),
             meaning: meaningText,
             chineseTranslation: chineseTranslation,
             rawData: entry
@@ -4222,56 +4216,50 @@ async function fetchWordDefinition(word) {
 }
 
 /**
- * 格式化英文定義
+ * 格式化英文定義 (顯示所有詞性)
  */
-function formatDefinition(word, partOfSpeech, meanings) {
+function formatDefinition(word, meanings) {
+    const posMap = {
+        'noun': 'n.',
+        'verb': 'v.',
+        'adjective': 'adj.',
+        'adverb': 'adv.',
+        'pronoun': 'pron.',
+        'preposition': 'prep.',
+        'conjunction': 'conj.',
+        'interjection': 'interj.'
+    };
+
     let formatted = '';
-    
-    // 添加詞性說明
-    if (partOfSpeech) {
-        const posMap = {
-            'noun': 'Noun',
-            'verb': 'Verb',
-            'adjective': 'Adjective',
-            'adverb': 'Adverb',
-            'pronoun': 'Pronoun',
-            'preposition': 'Preposition',
-            'conjunction': 'Conjunction',
-            'interjection': 'Interjection'
-        };
-        const posText = posMap[partOfSpeech.toLowerCase()] || partOfSpeech;
-        formatted += `${word.charAt(0).toUpperCase() + word.slice(1)} as a ${posText}:\n\n`;
-    }
-    
-    // 添加定義 (最多3個)
-    meanings.slice(0, 2).forEach((meaning, index) => {
-        const pos = meaning.partOfSpeech;
-        const definitions = meaning.definitions.slice(0, 2); // 每個詞性最多2個定義
-        
-        if (meanings.length > 1) {
-            formatted += `${index + 1}. As a ${pos}:\n`;
-        }
-        
+
+    meanings.forEach((meaning, index) => {
+        const pos = meaning.partOfSpeech || '';
+        const posAbbr = posMap[pos.toLowerCase()] || pos;
+        const definitions = meaning.definitions.slice(0, 3); // 每個詞性最多3個定義
+
+        if (definitions.length === 0) return;
+
+        // 詞性標題
+        formatted += `${index + 1}. As a ${pos} (${posAbbr}):\n`;
+
         definitions.forEach((def, defIndex) => {
-            formatted += `${meanings.length > 1 ? '   ' : ''}${defIndex + 1}. ${def.definition}\n`;
-            
-            // 添加例句
+            formatted += `   ${defIndex + 1}. ${def.definition}\n`;
             if (def.example) {
-                formatted += `${meanings.length > 1 ? '   ' : ''}   E.g. ${def.example}\n`;
+                formatted += `      E.g. ${def.example}\n`;
             }
         });
-        
+
         formatted += '\n';
     });
-    
+
     return formatted.trim();
 }
 
 /**
- * 獲取中文翻譯
+ * 獲取中文翻譯 (支援多詞性)
  * 使用 MyMemory Translation API (免費，無需 API key)
  */
-async function fetchChineseTranslation(word, partOfSpeech) {
+async function fetchChineseTranslation(word, meanings) {
     try {
         const posMap = {
             'noun': 'n.',
@@ -4283,62 +4271,58 @@ async function fetchChineseTranslation(word, partOfSpeech) {
             'conjunction': 'conj.',
             'interjection': 'interj.'
         };
-        
-        const posAbbr = posMap[partOfSpeech.toLowerCase()] || '';
-        
+
         // 使用 MyMemory Translation API 獲取中文翻譯
         const apiUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en|zh-TW`;
-        
+
+        let translatedText = '';
+
         try {
             const response = await fetch(apiUrl);
             if (response.ok) {
                 const data = await response.json();
-                
                 if (data && data.responseData && data.responseData.translatedText) {
-                    const translation = data.responseData.translatedText;
-                    
-                    // 如果翻譯成功且不是原文，組合詞性和翻譯
-                    if (translation && translation !== word) {
-                        return posAbbr ? `${posAbbr} ${translation}` : translation;
+                    const t = data.responseData.translatedText;
+                    if (t && t !== word) {
+                        translatedText = t;
                     }
                 }
             }
         } catch (apiError) {
             console.log('MyMemory API 失敗，嘗試使用 LibreTranslate');
-            
-            // 備用方案：使用 LibreTranslate (另一個免費API)
             try {
                 const libreUrl = 'https://libretranslate.de/translate';
                 const libreResponse = await fetch(libreUrl, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        q: word,
-                        source: 'en',
-                        target: 'zh',
-                        format: 'text'
-                    })
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ q: word, source: 'en', target: 'zh', format: 'text' })
                 });
-                
                 if (libreResponse.ok) {
                     const libreData = await libreResponse.json();
-                    if (libreData && libreData.translatedText) {
-                        const translation = libreData.translatedText;
-                        if (translation && translation !== word) {
-                            return posAbbr ? `${posAbbr} ${translation}` : translation;
-                        }
+                    if (libreData && libreData.translatedText && libreData.translatedText !== word) {
+                        translatedText = libreData.translatedText;
                     }
                 }
             } catch (libreError) {
                 console.error('LibreTranslate API 也失敗:', libreError);
             }
         }
-        
-        // 如果所有翻譯API都失敗，至少返回詞性
-        return posAbbr ? `${posAbbr} ` : '';
-        
+
+        // 依照各詞性組合中文輸出，格式如: n. 幽靈 v. 嚇到
+        if (translatedText && Array.isArray(meanings) && meanings.length > 0) {
+            // 如果有多詞性，逐一列出詞性縮寫 + 翻譯
+            const lines = meanings.map((m, i) => {
+                const posAbbr = posMap[(m.partOfSpeech || '').toLowerCase()] || m.partOfSpeech;
+                // 只有第一個詞性有翻譯文字，其他詞性標示詞性縮寫即可
+                return i === 0
+                    ? `${posAbbr} ${translatedText}`
+                    : `${posAbbr} `;
+            });
+            return lines.join('\n');
+        }
+
+        return translatedText || '';
+
     } catch (error) {
         console.error('翻譯查詢錯誤:', error);
         return '';
