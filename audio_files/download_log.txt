@@ -1,51 +1,46 @@
 =======================================================
-  Yahoo 奇摩字典 MP3 下載紀錄
-  執行時間：2026-03-09 16:33:45
+  Yahoo 奇摩字典 MP3 下載紀錄（Selenium 版）
+  執行時間：2026-03-09 17:29:16
 =======================================================
 
 【來源檔案】
-  The Alchemist of Part 1-01 Timestamp.txt
-  The Alchemist of 2-Prologue Timestamp.txt
-  The Alchemist of 1 Foreword Timestamp.txt
+  The Alchemist of Part 2-26 Timestamp.txt
 
 【勾選等級】
-  A2 / B1 / B2
+  A1 / A2 / B1 / B2 / C1
 
-【各等級單字數（缺少的）】
-  A1：7 個
-  A2：7 個
-  B1：7 個
-  B2：3 個
-  C1：0 個
-  未知：69 個
+【各等級單字數】
+  A1：2 個
+  A2：6 個
+  B1：1 個
+  B2：4 個
+  C1：1 個
+  未知：136 個
 
 【摘要】
-  ✅ 成功下載：  15 個
-  ⏭️  已有跳過：  466 個
-  ❌ 找不到 URL：2 個
+  ✅ 成功下載：  10 個
+  ⏭️  已有跳過：  247 個
+  ❌ 找不到 URL：4 個
   ❌ 下載失敗：  0 個
 
 ───────────────────────────────────────────────────────
-【成功】（15 個）
-  ah.mp3
-  beauty.mp3
-  beside.mp3
-  better.mp3
-  daily.mp3
-  forest.mp3
-  found.mp3
-  fresh.mp3
-  hand.mp3
-  lake.mp3
-  lovely.mp3
-  silent.mp3
-  surprise.mp3
-  wonder.mp3
-  youth.mp3
+【成功】（10 個）
+  pull.mp3
+  rose.mp3
+  science.mp3
+  silence.mp3
+  stop.mp3
+  stupid.mp3
+  symbol.mp3
+  transform.mp3
+  tribal.mp3
+  unconscious.mp3
 
 ───────────────────────────────────────────────────────
-【找不到 URL】（2 個）
+【找不到 URL】（4 個）
   continue
-  contract
+  moon
+  nearly
+  nor
 
 =======================================================
