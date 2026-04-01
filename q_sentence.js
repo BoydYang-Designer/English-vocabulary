@@ -1,6 +1,71 @@
 console.log("✅ q_sentence.js loaded (FIXED VERSION)");
 
-// All variable definitions remain at the top level
+// ════════════════════════════════════════════════════════════
+//  QUIZ SOUND EFFECTS — 答對 / 答錯音效（Web Audio API 合成）
+// ════════════════════════════════════════════════════════════
+
+(function _installQSAudioCtx() {
+    const unlock = () => {
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) return;
+        if (!window._quizAC || window._quizAC.state === 'closed') {
+            window._quizAC = new AC();
+        }
+        if (window._quizAC.state === 'suspended') window._quizAC.resume().catch(() => {});
+        document.removeEventListener('touchstart', unlock, true);
+        document.removeEventListener('click', unlock, true);
+    };
+    document.addEventListener('touchstart', unlock, true);
+    document.addEventListener('click', unlock, true);
+})();
+
+function _getQSAC() {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return null;
+    if (!window._quizAC || window._quizAC.state === 'closed') {
+        try { window._quizAC = new AC(); } catch (e) { return null; }
+    }
+    if (window._quizAC.state === 'suspended') window._quizAC.resume().catch(() => {});
+    return window._quizAC;
+}
+
+/** 答對音效：兩音上升 (E5 → G5) */
+function playCorrectSound() {
+    const ctx = _getQSAC();
+    if (!ctx) return;
+    const now = ctx.currentTime;
+    [{ freq: 659.25, t: 0 }, { freq: 783.99, t: 0.12 }].forEach(({ freq, t }) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now + t);
+        gain.gain.setValueAtTime(0, now + t);
+        gain.gain.linearRampToValueAtTime(0.22, now + t + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + t + 0.28);
+        osc.start(now + t); osc.stop(now + t + 0.30);
+    });
+}
+
+/** 答錯音效：兩音下降 (D4 → C4) */
+function playWrongSound() {
+    const ctx = _getQSAC();
+    if (!ctx) return;
+    const now = ctx.currentTime;
+    [{ freq: 293.66, t: 0 }, { freq: 261.63, t: 0.10 }].forEach(({ freq, t }) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now + t);
+        gain.gain.setValueAtTime(0, now + t);
+        gain.gain.linearRampToValueAtTime(0.18, now + t + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + t + 0.22);
+        osc.start(now + t); osc.stop(now + t + 0.25);
+    });
+}
+
+
 const GITHUB_JSON_URL = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/sentence.json";
 const GITHUB_MP3_BASE_URL = "https://raw.githubusercontent.com/BoydYang-Designer/English-vocabulary/main/Sentence%20file/";
 
@@ -1329,8 +1394,10 @@ function submitReorganizeAnswer() {
 
     if (!isCorrect && !incorrectSentences.includes(sentenceObj.Words)) {
         incorrectSentences.push(sentenceObj.Words);
+        playWrongSound();
     } else if (isCorrect) {
         incorrectSentences = incorrectSentences.filter(w => w !== sentenceObj.Words);
+        playCorrectSound();
     }
     localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
 
@@ -1519,8 +1586,10 @@ function submitSentenceAnswer() {
 
     if (!isCorrect && !incorrectSentences.includes(sentenceObj.Words)) {
         incorrectSentences.push(sentenceObj.Words);
+        playWrongSound();
     } else if (isCorrect) {
         incorrectSentences = incorrectSentences.filter(w => w !== sentenceObj.Words);
+        playCorrectSound();
     }
     localStorage.setItem("wrongQS", JSON.stringify(incorrectSentences));
 
