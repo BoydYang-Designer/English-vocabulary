@@ -2044,7 +2044,6 @@ function _qsVrLoadQuestion() {
 // ════════════════════════════════════════════════════════════
 //  AUDIO PLAYBACK
 // ════════════════════════════════════════════════════════════
-let _qsVrAudioLoading = false;
 
 function _qsVrSetPlayBtnState(state) {
     const replayBtn = _qsVrEl('qs-vr-replay-btn');
@@ -2080,48 +2079,39 @@ function _qsVrSetPlayBtnState(state) {
 }
 
 function _qsVrPlaySentence(isAuto) {
-    if (_qsVrAudioLoading) return;
     const item = _qsVrState.sentences[_qsVrState.qIndex];
     if (!item) return;
 
-    // 嘗試 MP3
-    if (item.audioUrl) {
-        _qsVrAudioLoading = true;
-        _qsVrSetPlayBtnState('loading');
+    // 停掉上一個
+    if (_qsVrAudio) {
+        _qsVrAudio.pause();
+        _qsVrAudio.onended = null;
+        _qsVrAudio.onerror = null;
+        _qsVrAudio = null;
+    }
 
-        if (_qsVrAudio) { _qsVrAudio.pause(); _qsVrAudio = null; }
+    if (item.audioUrl) {
+        // ── 與 Reorganize Quiz 相同：直接 new Audio + play()，不等 canplaythrough ──
         const audio = new Audio(item.audioUrl);
         _qsVrAudio = audio;
 
-        audio.oncanplaythrough = () => {
-            if (_qsVrAudio !== audio) return; // stale
-            _qsVrAudioLoading = false;
-            _qsVrSetPlayBtnState('playing');
-            audio.currentTime = 0;
-            audio.play().catch(() => {
-                _qsVrAudioLoading = false;
-                _qsVrSetPlayBtnState('idle');
-                _qsVrPlayTTS(item.text);
-            });
+        _qsVrSetPlayBtnState('playing');
+
+        audio.onended = () => {
+            _qsVrSetPlayBtnState('idle');
         };
-        audio.onended = () => { _qsVrSetPlayBtnState('idle'); };
         audio.onerror = () => {
-            _qsVrAudioLoading = false;
+            // MP3 載入失敗才降級 TTS
             _qsVrSetPlayBtnState('idle');
             _qsVrPlayTTS(item.text);
         };
-        // 逾時降級 TTS（3 秒）
-        setTimeout(() => {
-            if (_qsVrAudioLoading && _qsVrAudio === audio) {
-                _qsVrAudioLoading = false;
-                audio.onerror = null;
-                _qsVrAudio = null;
-                _qsVrSetPlayBtnState('idle');
-                _qsVrPlayTTS(item.text);
-            }
-        }, 3000);
 
-        audio.load();
+        audio.currentTime = 0;
+        audio.play().catch(() => {
+            // play() 被瀏覽器阻擋（autoplay policy）→ 降級 TTS
+            _qsVrSetPlayBtnState('idle');
+            _qsVrPlayTTS(item.text);
+        });
     } else {
         _qsVrPlayTTS(item.text);
     }
