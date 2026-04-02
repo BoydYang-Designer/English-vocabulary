@@ -1732,6 +1732,8 @@ function returnToSentenceCategorySelection() {
     document.getElementById("sentenceQuizArea").style.display = "none";
     document.getElementById("reorganizeQuizArea").style.display = "none";
     document.getElementById("quizResult").style.display = "none";
+    const vrArea = document.getElementById("voiceReorderArea");
+    if (vrArea) { vrArea.style.display = "none"; if (typeof _qsVrStopRecordingSilent === 'function') _qsVrStopRecordingSilent(); }
 
     // 不顯示測驗類型選擇區域，因為我們是返回到分類頁面
     const quizTypeSelector = document.querySelector(".quiz-type-selector");
@@ -1783,3 +1785,1206 @@ function returnToMainMenu() {
 
     console.log("✅ 返回首頁並重置測驗狀態");
 }
+
+
+// ════════════════════════════════════════════════════════════
+//  VOICE REORDER MODE — q_sentence.js 整合
+//  流程：聽句子 → 用麥克風說出單字（或手動拖曳 chip）→ 排出正確順序
+//  資料來源：sentenceData（JSON）
+//  音訊來源：GITHUB_MP3_BASE_URL + sentenceObj.Words + ".mp3"
+// ════════════════════════════════════════════════════════════
+
+console.log('✅ Voice Reorder module (q_sentence.js) loading…');
+
+// ── 數字文字 ↔ 阿拉伯數字 對照表 ────────────────────────────
+const _QS_VR_NUM_MAP = {
+    'zero':'0','one':'1','two':'2','three':'3','four':'4',
+    'five':'5','six':'6','seven':'7','eight':'8','nine':'9',
+    'ten':'10','eleven':'11','twelve':'12','thirteen':'13','fourteen':'14',
+    'fifteen':'15','sixteen':'16','seventeen':'17','eighteen':'18','nineteen':'19',
+    'twenty':'20','thirty':'30','forty':'40','fifty':'50',
+    'sixty':'60','seventy':'70','eighty':'80','ninety':'90',
+    'hundred':'100','thousand':'1000','million':'1000000',
+};
+const _QS_VR_NUM_MAP_REV = Object.fromEntries(
+    Object.entries(_QS_VR_NUM_MAP).map(([k, v]) => [v, k])
+);
+
+function _qsVrNormalizeNum(w) {
+    if (_QS_VR_NUM_MAP[w]) return _QS_VR_NUM_MAP[w];
+    if (_QS_VR_NUM_MAP_REV[w]) return w;
+    return w;
+}
+
+// ── Levenshtein distance ─────────────────────────────────────
+function _qsVrLevenshtein(a, b) {
+    const m = a.length, n = b.length;
+    const dp = Array.from({ length: m + 1 }, (_, i) =>
+        Array.from({ length: n + 1 }, (_, j) => (i === 0 ? j : j === 0 ? i : 0))
+    );
+    for (let i = 1; i <= m; i++)
+        for (let j = 1; j <= n; j++)
+            dp[i][j] = a[i-1] === b[j-1]
+                ? dp[i-1][j-1]
+                : 1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
+    return dp[m][n];
+}
+
+// ── 語音 Tokenize：去除標點保留連字符單字 ────────────────────
+function _qsVrTokenize(sentence) {
+    const raw = sentence.match(/\S+/g) || [];
+    return raw.map(w => w.replace(/^[.,?!:;'"'""\-]+|[.,?!:;'"'""\-]+$/g, '').trim()).filter(Boolean);
+}
+
+// ── 比對用清理 ───────────────────────────────────────────────
+function _qsVrClean(w) {
+    return w.replace(/[.,?!'"'"";\:\-]/g, '').toLowerCase().trim();
+}
+
+// ── State ────────────────────────────────────────────────────
+let _qsVrState = {
+    sentences: [],       // [{text, wordsKey, chineseHint, audioUrl}]
+    qIndex:    0,
+    correct:   0,
+    total:     0,
+    wrongItems: [],      // [{wordsKey, text, userText}]
+    // per-question
+    words:     [],       // original tokens（display）
+    poolOrder: [],       // shuffled indices into words[] still in pool
+    answer:    [],       // placed word indices in order
+    done:      false,
+    skipped:   false,
+};
+
+let _qsVrRecognition = null;
+let _qsVrIsRecording  = false;
+let _qsVrBestTranscript = '';
+let _qsVrStrictMode   = true;
+let _qsVrWordSpeakEnabled = false;
+let _qsVrAudio        = null;   // 目前題目的 Audio 實例
+
+const _QsVrSpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+// ── DOM helper ────────────────────────────────────────────────
+function _qsVrEl(id) { return document.getElementById(id); }
+
+// ── 瀏覽器支援 badge（掛在啟動按鈕上）─────────────────────────
+(function _qsVrInitCompatBadge() {
+    const btn = document.getElementById('startVoiceReorderBtn');
+    if (!btn) return;
+    const badge = document.createElement('span');
+    badge.style.cssText = 'font-size:0.65rem;font-weight:600;padding:1px 6px;border-radius:8px;margin-left:6px;vertical-align:middle;';
+    if (_QsVrSpeechRec) {
+        badge.textContent = '🎙 支援';
+        badge.style.cssText += 'background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;';
+        badge.title = '您的瀏覽器支援語音辨識';
+    } else {
+        badge.textContent = '⚠️ 需要 Chrome';
+        badge.style.cssText += 'background:#fff3e0;color:#e65100;border:1px solid #ffcc80;';
+        badge.title = '此功能需要 Chrome，Safari/Firefox 不支援語音辨識';
+    }
+    btn.appendChild(badge);
+})();
+
+// ════════════════════════════════════════════════════════════
+//  ENTRY POINT
+// ════════════════════════════════════════════════════════════
+async function startVoiceReorderQuiz() {
+    // 確認資料已載入
+    await window.ensureSentenceDataLoaded();
+
+    // 用相同篩選邏輯從 sentenceData 抽題
+    let filteredSentences = sentenceData.filter(item => {
+        let levelMatch = selectedSentenceFilters.levels.size === 0 ||
+                         selectedSentenceFilters.levels.has(item.等級 || '未分類');
+        let primaryMatch = selectedSentenceFilters.primaryCategories.size === 0 ||
+                           selectedSentenceFilters.primaryCategories.has(item['分類'] && item['分類'][0]);
+        let secondaryMatch = selectedSentenceFilters.secondaryCategories.size === 0 ||
+            (item['分類'] && item['分類'][1] && selectedSentenceFilters.secondaryCategories.has(item['分類'][1])) ||
+            (selectedSentenceFilters.secondaryCategories.has('未分類') &&
+             (!item['分類'] || !item['分類'][1] || item['分類'][1].trim() === ''));
+        let alphabetMatch = selectedSentenceFilters.alphabet.size === 0 ||
+                            selectedSentenceFilters.alphabet.has(item.句子.charAt(0).toUpperCase());
+        let specialMatch = true;
+        if (selectedSentenceFilters.special.size > 0) {
+            const vd = window.getVocabularyData ? window.getVocabularyData() : {};
+            specialMatch = [...selectedSentenceFilters.special].every(f => {
+                if (f === 'important') return (vd.importantSentences || {})[item.Words] === 'true';
+                if (f === 'incorrect') return (vd.wrongQS || []).includes(item.Words);
+                if (f === 'checked')   return (vd.checkedSentences || {})[item.Words] === 'true';
+                if (f === 'word_checked') {
+                    const base = item.Words.split('-')[0];
+                    return (vd.checkedWords || []).includes(base);
+                }
+                return true;
+            });
+        }
+        return levelMatch && primaryMatch && secondaryMatch && alphabetMatch && specialMatch;
+    });
+
+    if (filteredSentences.length === 0) {
+        alert('⚠️ 沒有符合條件的句子！\n請嘗試調整篩選條件。');
+        return;
+    }
+
+    // 只保留有有效單字的句子（至少2個字）
+    filteredSentences = filteredSentences.filter(item => {
+        const text = (item.句子 || '').replace(/\s*\[=[^\]]+\]/g, '').trim();
+        return _qsVrTokenize(text).length >= 2;
+    });
+
+    if (filteredSentences.length === 0) {
+        alert('⚠️ 沒有足夠長度的句子可以進行 Voice Reorder。');
+        return;
+    }
+
+    // 智慧排序：練習次數少的優先（與其他模式對齊）
+    filteredSentences.sort((a, b) => {
+        const ca = sentenceQuizHistory[a.Words] || 0;
+        const cb = sentenceQuizHistory[b.Words] || 0;
+        return ca - cb;
+    });
+
+    // 隨機抽 10 題
+    const shuffled = [...filteredSentences].sort(() => Math.random() - 0.5);
+    const picked = shuffled.slice(0, 10);
+
+    // 建立 VR sentences 格式
+    _qsVrState.sentences = picked.map(item => {
+        const text = (item.句子 || '').replace(/\s*\[=[^\]]+\]/g, '').trim();
+        return {
+            text,
+            wordsKey:    item.Words || '',
+            chineseHint: item.中文  || '',
+            audioUrl:    item.Words ? (GITHUB_MP3_BASE_URL + encodeURIComponent(item.Words) + '.mp3') : '',
+        };
+    });
+
+    _qsVrState.qIndex    = 0;
+    _qsVrState.correct   = 0;
+    _qsVrState.total     = _qsVrState.sentences.length;
+    _qsVrState.wrongItems = [];
+
+    // 隱藏所有其他區域，顯示 voiceReorderArea
+    _qsVrHideAllAreas();
+    const area = _qsVrEl('voiceReorderArea');
+    if (area) area.style.display = 'block';
+
+    _qsVrUpdateProgress();
+    _qsVrUpdateStrictBtn();
+    _qsVrLoadQuestion();
+
+    console.log(`✅ Voice Reorder 開始，共 ${_qsVrState.total} 題`);
+}
+
+// ── 隱藏所有 quiz 區塊 ────────────────────────────────────────
+function _qsVrHideAllAreas() {
+    const ids = [
+        'sentenceQuizCategories', 'sentenceQuizArea', 'reorganizeQuizArea',
+        'rewordQuizArea', 'quizArea', 'quizCategories',
+        'flashcardTypePanel', 'flashcardSetupPanel', 'flashcardArea', 'flashcardResultPanel',
+        'quizResult', 'voiceReorderArea'
+    ];
+    ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    });
+    const qs = document.querySelector('.quiz-type-selector');
+    if (qs) qs.style.display = 'none';
+}
+
+// ════════════════════════════════════════════════════════════
+//  LOAD QUESTION
+// ════════════════════════════════════════════════════════════
+function _qsVrLoadQuestion() {
+    _qsVrStopRecordingSilent();
+    if (_qsVrAudio) { _qsVrAudio.pause(); _qsVrAudio = null; }
+
+    const item = _qsVrState.sentences[_qsVrState.qIndex];
+    if (!item) return;
+
+    _qsVrState.words     = _qsVrTokenize(item.text);
+    _qsVrState.poolOrder = _qsVrShuffle(_qsVrState.words.map((_, i) => i));
+    _qsVrState.answer    = [];
+    _qsVrState.done      = false;
+    _qsVrState.skipped   = false;
+
+    // 更新 UI
+    const hintEl = _qsVrEl('qs-vr-hint');
+    if (hintEl) hintEl.textContent = item.chineseHint || '';
+
+    const fbEl = _qsVrEl('qs-vr-feedback');
+    if (fbEl) { fbEl.className = 'vr-feedback'; fbEl.textContent = ''; }
+
+    const heardEl = _qsVrEl('qs-vr-heard-text');
+    if (heardEl) heardEl.textContent = '';
+
+    const micLbl = _qsVrEl('qs-vr-mic-label');
+    if (micLbl) micLbl.textContent = 'Tap mic & say the whole sentence';
+
+    const checkBtn = _qsVrEl('qs-vr-check-btn');
+    if (checkBtn) { checkBtn.textContent = 'Check ✓'; checkBtn.style.display = ''; }
+
+    const answerZone = _qsVrEl('qs-vr-answer-zone');
+    if (answerZone) answerZone.classList.remove('vr-correct-flash');
+
+    _qsVrRenderAnswerZone();
+    _qsVrRenderPool();
+
+    // 更新測驗歷史
+    if (item.wordsKey) {
+        sentenceQuizHistory[item.wordsKey] = (sentenceQuizHistory[item.wordsKey] || 0) + 1;
+        localStorage.setItem('sentenceQuizHistory', JSON.stringify(sentenceQuizHistory));
+    }
+
+    // 自動播放
+    _qsVrPlaySentence(true);
+}
+
+// ════════════════════════════════════════════════════════════
+//  AUDIO PLAYBACK
+// ════════════════════════════════════════════════════════════
+let _qsVrAudioLoading = false;
+
+function _qsVrSetPlayBtnState(state) {
+    const replayBtn = _qsVrEl('qs-vr-replay-btn');
+    const statusBar  = _qsVrEl('qs-vr-status-bar');
+    const statusIcon = _qsVrEl('qs-vr-status-icon');
+    const statusText = _qsVrEl('qs-vr-status-text');
+
+    if (replayBtn) {
+        if (state === 'loading') {
+            replayBtn.classList.add('is-loading'); replayBtn.disabled = true;
+        } else {
+            replayBtn.classList.remove('is-loading'); replayBtn.disabled = false;
+        }
+    }
+
+    if (statusBar && statusIcon && statusText) {
+        statusBar.classList.remove('vr-status--loading', 'vr-status--playing');
+        statusIcon.classList.remove('vr-spin');
+        if (state === 'loading') {
+            statusBar.classList.add('vr-status--loading');
+            statusIcon.textContent = '⏳';
+            statusIcon.classList.add('vr-spin');
+            statusText.textContent = 'Loading audio…';
+        } else if (state === 'playing') {
+            statusBar.classList.add('vr-status--playing');
+            statusIcon.textContent = '🔊';
+            statusText.textContent = 'Playing… listen carefully';
+        } else {
+            statusIcon.textContent = '▶';
+            statusText.textContent = 'Play Sentence / Listen, then say or drag each word';
+        }
+    }
+}
+
+function _qsVrPlaySentence(isAuto) {
+    if (_qsVrAudioLoading) return;
+    const item = _qsVrState.sentences[_qsVrState.qIndex];
+    if (!item) return;
+
+    // 嘗試 MP3
+    if (item.audioUrl) {
+        _qsVrAudioLoading = true;
+        _qsVrSetPlayBtnState('loading');
+
+        if (_qsVrAudio) { _qsVrAudio.pause(); _qsVrAudio = null; }
+        const audio = new Audio(item.audioUrl);
+        _qsVrAudio = audio;
+
+        audio.oncanplaythrough = () => {
+            if (_qsVrAudio !== audio) return; // stale
+            _qsVrAudioLoading = false;
+            _qsVrSetPlayBtnState('playing');
+            audio.currentTime = 0;
+            audio.play().catch(() => {
+                _qsVrAudioLoading = false;
+                _qsVrSetPlayBtnState('idle');
+                _qsVrPlayTTS(item.text);
+            });
+        };
+        audio.onended = () => { _qsVrSetPlayBtnState('idle'); };
+        audio.onerror = () => {
+            _qsVrAudioLoading = false;
+            _qsVrSetPlayBtnState('idle');
+            _qsVrPlayTTS(item.text);
+        };
+        // 逾時降級 TTS（3 秒）
+        setTimeout(() => {
+            if (_qsVrAudioLoading && _qsVrAudio === audio) {
+                _qsVrAudioLoading = false;
+                audio.onerror = null;
+                _qsVrAudio = null;
+                _qsVrSetPlayBtnState('idle');
+                _qsVrPlayTTS(item.text);
+            }
+        }, 3000);
+
+        audio.load();
+    } else {
+        _qsVrPlayTTS(item.text);
+    }
+}
+
+function _qsVrPlayTTS(text) {
+    if (!('speechSynthesis' in window)) { _qsVrSetPlayBtnState('idle'); return; }
+    _qsVrSetPlayBtnState('playing');
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US'; u.rate = 0.85;
+    u.onend  = () => { _qsVrSetPlayBtnState('idle'); };
+    u.onerror = () => { _qsVrSetPlayBtnState('idle'); };
+    speechSynthesis.speak(u);
+}
+
+// ── 單字發音（放置 chip 時）──────────────────────────────────
+function _qsVrSpeakWord(word) {
+    if (!_qsVrWordSpeakEnabled) return;
+    if (!('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(word.toLowerCase());
+    u.lang = 'en-US'; u.rate = 0.9;
+    speechSynthesis.speak(u);
+}
+
+// ── 就緒提示音 ────────────────────────────────────────────────
+function _qsVrPlayReadySound() {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return;
+    let ctx = window._quizAC;
+    if (!ctx || ctx.state === 'closed') {
+        try { ctx = new AC(); } catch (e) { return; }
+    }
+    if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+    const now = ctx.currentTime;
+    [{ freq: 440, t: 0 }, { freq: 523.25, t: 0.1 }].forEach(({ freq, t }) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now + t);
+        gain.gain.setValueAtTime(0, now + t);
+        gain.gain.linearRampToValueAtTime(0.12, now + t + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + t + 0.20);
+        osc.start(now + t); osc.stop(now + t + 0.22);
+    });
+}
+
+// ════════════════════════════════════════════════════════════
+//  DRAG SYSTEM
+// ════════════════════════════════════════════════════════════
+let _qsVrDrag = {
+    active: false, ghost: null, source: null,
+    poolIdx: null, answerPos: null, word: null,
+    startX: 0, startY: 0, originEl: null,
+};
+const _QS_VR_DRAG_THRESH = 6;
+
+function _qsVrDragStart(e, source, poolIdx, answerPos, word) {
+    if (_qsVrState.done) return;
+    const pt = e.touches ? e.touches[0] : e;
+    _qsVrDrag.startX    = pt.clientX;
+    _qsVrDrag.startY    = pt.clientY;
+    _qsVrDrag.source    = source;
+    _qsVrDrag.poolIdx   = poolIdx;
+    _qsVrDrag.answerPos = answerPos;
+    _qsVrDrag.word      = word;
+    _qsVrDrag.active    = false;
+    _qsVrDrag.originEl  = e.currentTarget;
+
+    const ghost = document.createElement('div');
+    ghost.className = 'vr-chip answer-chip vr-drag-ghost';
+    ghost.textContent = word;
+    ghost.style.display = 'none';
+    document.body.appendChild(ghost);
+    _qsVrDrag.ghost = ghost;
+}
+
+function _qsVrDragMove(e) {
+    if (!_qsVrDrag.ghost) return;
+    const pt = e.touches ? e.touches[0] : e;
+    const dx = pt.clientX - _qsVrDrag.startX;
+    const dy = pt.clientY - _qsVrDrag.startY;
+
+    if (!_qsVrDrag.active && Math.sqrt(dx*dx + dy*dy) > _QS_VR_DRAG_THRESH) {
+        _qsVrDrag.active = true;
+        _qsVrDrag.ghost.style.display = '';
+        if (_qsVrDrag.originEl) _qsVrDrag.originEl.classList.add('is-dragging');
+        _qsVrUpdateInsertIndicator(pt.clientX, pt.clientY);
+    }
+    if (_qsVrDrag.active) {
+        e.preventDefault();
+        _qsVrDrag.ghost.style.left = (pt.clientX - _qsVrDrag.ghost.offsetWidth  / 2) + 'px';
+        _qsVrDrag.ghost.style.top  = (pt.clientY - _qsVrDrag.ghost.offsetHeight / 2) + 'px';
+        _qsVrUpdateInsertIndicator(pt.clientX, pt.clientY);
+    }
+}
+
+function _qsVrDragEnd(e) {
+    if (!_qsVrDrag.ghost) return;
+    const pt = e.changedTouches ? e.changedTouches[0] : e;
+    let _dragPlacedIdx = null;
+
+    if (_qsVrDrag.active) {
+        const insertPos = _qsVrGetInsertPosition(pt.clientX, pt.clientY);
+        _qsVrRemoveInsertIndicator();
+        _qsVrDrag.ghost.remove();
+        _qsVrDrag.ghost = null;
+
+        if (insertPos !== null) {
+            if (_qsVrDrag.source === 'answer') {
+                _qsVrState.answer.splice(_qsVrDrag.answerPos, 1);
+                const finalPos = insertPos > _qsVrDrag.answerPos ? insertPos - 1 : insertPos;
+                _qsVrState.answer.splice(finalPos, 0, _qsVrDrag.poolIdx);
+            } else {
+                _qsVrState.poolOrder = _qsVrState.poolOrder.filter(i => i !== _qsVrDrag.poolIdx);
+                _qsVrState.answer.splice(insertPos, 0, _qsVrDrag.poolIdx);
+                _dragPlacedIdx = _qsVrDrag.poolIdx;
+                _qsVrSpeakWord(_qsVrDrag.word);
+            }
+        } else if (_qsVrDrag.source === 'answer') {
+            const wordIdx = _qsVrState.answer.splice(_qsVrDrag.answerPos, 1)[0];
+            _qsVrState.poolOrder.push(wordIdx);
+        }
+        _qsVrDrag.active = false;
+    } else {
+        _qsVrDrag.ghost.remove();
+        _qsVrDrag.ghost = null;
+        _qsVrDrag.active = false;
+
+        if (_qsVrDrag.source === 'pool') {
+            const idx = _qsVrDrag.poolIdx;
+            if (_qsVrState.answer.includes(idx)) { _qsVrResetDrag(); return; }
+            _qsVrState.answer.push(idx);
+            _qsVrState.poolOrder = _qsVrState.poolOrder.filter(i => i !== idx);
+            _qsVrSpeakWord(_qsVrDrag.word);
+            _qsVrShowFeedback('', '');
+            const heardEl = _qsVrEl('qs-vr-heard-text');
+            if (heardEl) heardEl.textContent = '';
+            _qsVrRenderAnswerZone(idx);
+            _qsVrRenderPool();
+            if (_qsVrState.answer.length === _qsVrState.words.length && !_qsVrState.done) {
+                _qsVrOnAllPlaced();
+            }
+            _qsVrResetDrag();
+            return;
+        } else {
+            const wordIdx = _qsVrState.answer.splice(_qsVrDrag.answerPos, 1)[0];
+            _qsVrState.poolOrder.push(wordIdx);
+        }
+    }
+
+    _qsVrShowFeedback('', '');
+    const heardEl = _qsVrEl('qs-vr-heard-text');
+    if (heardEl) heardEl.textContent = '';
+    _qsVrRenderAnswerZone(_dragPlacedIdx ?? undefined);
+    _qsVrRenderPool();
+
+    if (_qsVrState.answer.length === _qsVrState.words.length && !_qsVrState.done) {
+        _qsVrOnAllPlaced();
+    }
+    _qsVrResetDrag();
+}
+
+function _qsVrResetDrag() {
+    _qsVrDrag = { active:false, ghost:null, source:null, poolIdx:null, answerPos:null, word:null, startX:0, startY:0, originEl:null };
+}
+
+// ── 插入位置計算（多行支援）──────────────────────────────────
+function _qsVrGetInsertPosition(clientX, clientY) {
+    const zone = _qsVrEl('qs-vr-answer-zone');
+    if (!zone) return null;
+    const rect = zone.getBoundingClientRect();
+    if (clientX < rect.left - 40 || clientX > rect.right  + 40 ||
+        clientY < rect.top  - 40 || clientY > rect.bottom + 40) return null;
+
+    const chips = [...zone.querySelectorAll('.answer-chip')];
+    if (chips.length === 0) return 0;
+
+    const rows = [];
+    let curRow = [], curTop = null;
+    for (const chip of chips) {
+        const r = chip.getBoundingClientRect();
+        const midY = r.top + r.height / 2;
+        if (curTop === null || Math.abs(midY - curTop) <= 10) {
+            curRow.push({ el: chip, rect: r });
+            if (curTop === null) curTop = midY;
+        } else {
+            rows.push(curRow);
+            curRow = [{ el: chip, rect: r }];
+            curTop = midY;
+        }
+    }
+    if (curRow.length) rows.push(curRow);
+
+    let bestRow = rows[0], bestDist = Infinity;
+    for (const row of rows) {
+        const top = row[0].rect.top, bot = row[0].rect.bottom;
+        const dist = clientY < top ? top - clientY : clientY > bot ? clientY - bot : 0;
+        if (dist < bestDist) { bestDist = dist; bestRow = row; }
+    }
+    for (let k = 0; k < bestRow.length; k++) {
+        const r = bestRow[k].rect;
+        if (clientX < r.left + r.width / 2) return chips.indexOf(bestRow[k].el);
+    }
+    return chips.indexOf(bestRow[bestRow.length - 1].el) + 1;
+}
+
+let _qsVrInsertIndicatorEl = null;
+
+function _qsVrUpdateInsertIndicator(clientX, clientY) {
+    const zone = _qsVrEl('qs-vr-answer-zone');
+    if (!zone) return;
+    const pos = _qsVrGetInsertPosition(clientX, clientY);
+    if (pos === null) { _qsVrRemoveInsertIndicator(); zone.classList.remove('drag-over'); return; }
+    zone.classList.add('drag-over');
+
+    if (!_qsVrInsertIndicatorEl) {
+        _qsVrInsertIndicatorEl = document.createElement('div');
+        _qsVrInsertIndicatorEl.className = 'vr-insert-indicator';
+    }
+    const chips = [...zone.querySelectorAll('.answer-chip')];
+    if (chips.length === 0 || pos >= chips.length) {
+        zone.appendChild(_qsVrInsertIndicatorEl);
+    } else {
+        zone.insertBefore(_qsVrInsertIndicatorEl, chips[pos]);
+    }
+    _qsVrClearNeighborHighlight();
+    const left  = chips[pos - 1] ?? null;
+    const right = chips[pos]     ?? null;
+    if (left)  left.classList.add('is-neighbor-left');
+    if (right) right.classList.add('is-neighbor-right');
+}
+
+function _qsVrClearNeighborHighlight() {
+    const zone = _qsVrEl('qs-vr-answer-zone');
+    if (!zone) return;
+    zone.querySelectorAll('.is-neighbor-left,.is-neighbor-right').forEach(el => {
+        el.classList.remove('is-neighbor-left', 'is-neighbor-right');
+    });
+}
+
+function _qsVrRemoveInsertIndicator() {
+    const zone = _qsVrEl('qs-vr-answer-zone');
+    if (zone) zone.classList.remove('drag-over');
+    if (_qsVrInsertIndicatorEl?.parentNode) _qsVrInsertIndicatorEl.parentNode.removeChild(_qsVrInsertIndicatorEl);
+    _qsVrInsertIndicatorEl = null;
+    _qsVrClearNeighborHighlight();
+}
+
+// 全域 pointer/touch 事件
+document.addEventListener('pointermove', (e) => { if (_qsVrDrag.ghost) _qsVrDragMove(e); }, { passive: false });
+document.addEventListener('pointerup',   (e) => { if (_qsVrDrag.ghost) _qsVrDragEnd(e); });
+document.addEventListener('touchmove',   (e) => { if (_qsVrDrag.ghost && _qsVrDrag.active) e.preventDefault(); }, { passive: false });
+
+// ════════════════════════════════════════════════════════════
+//  RENDER
+// ════════════════════════════════════════════════════════════
+function _qsVrRenderAnswerZone(latestIdx) {
+    const zone = _qsVrEl('qs-vr-answer-zone');
+    if (!zone) return;
+    zone.innerHTML = '';
+
+    if (_qsVrState.answer.length === 0) {
+        const hint = document.createElement('span');
+        hint.className = 'vr-answer-empty';
+        hint.textContent = 'Drag or tap words below to build the sentence…';
+        zone.appendChild(hint);
+        return;
+    }
+
+    const latestPos = (latestIdx !== undefined && latestIdx !== null)
+        ? _qsVrState.answer.indexOf(latestIdx) : -1;
+
+    _qsVrState.answer.forEach((wordIdx, pos) => {
+        const chip = document.createElement('span');
+        let cls = 'vr-chip answer-chip';
+        if (wordIdx === latestIdx)         cls += ' just-arrived';
+        else if (latestPos >= 0 && pos === latestPos - 1) cls += ' vr-neighbor-left';
+        else if (latestPos >= 0 && pos === latestPos + 1) cls += ' vr-neighbor-right';
+        chip.className = cls;
+        chip.textContent = _qsVrState.words[wordIdx];
+        chip.style.touchAction = 'none';
+
+        if (cls.includes('vr-neighbor-')) {
+            chip.addEventListener('animationend', () => {
+                chip.classList.remove('vr-neighbor-left', 'vr-neighbor-right');
+            }, { once: true });
+        }
+
+        chip.addEventListener('pointerdown', (e) => {
+            if (_qsVrState.done) return;
+            e.currentTarget.setPointerCapture(e.pointerId);
+            _qsVrDragStart(e, 'answer', wordIdx, pos, _qsVrState.words[wordIdx]);
+        });
+        zone.appendChild(chip);
+    });
+}
+
+function _qsVrRenderPool() {
+    const pool = _qsVrEl('qs-vr-word-pool');
+    if (!pool) return;
+    pool.innerHTML = '';
+
+    if (_qsVrState.poolOrder.length === 0) {
+        pool.innerHTML = '<div style="padding:8px;color:var(--color-text-light);text-align:center;font-size:0.85em;">All words placed ✓</div>';
+        return;
+    }
+    _qsVrState.poolOrder.forEach(idx => {
+        const chip = document.createElement('span');
+        chip.className = 'vr-chip pool-chip';
+        chip.textContent = _qsVrState.words[idx];
+        chip.dataset.wordIdx = idx;
+        chip.style.touchAction = 'none';
+        chip.addEventListener('pointerdown', (e) => {
+            if (_qsVrState.done) return;
+            e.currentTarget.setPointerCapture(e.pointerId);
+            _qsVrDragStart(e, 'pool', idx, null, _qsVrState.words[idx]);
+        });
+        pool.appendChild(chip);
+    });
+}
+
+// ════════════════════════════════════════════════════════════
+//  PLACE / UNDO / ALL-PLACED
+// ════════════════════════════════════════════════════════════
+function _qsVrPlaceWord(wordIdx) {
+    if (_qsVrState.done) return;
+    if (_qsVrState.answer.includes(wordIdx)) return;
+    _qsVrState.answer.push(wordIdx);
+    _qsVrState.poolOrder = _qsVrState.poolOrder.filter(i => i !== wordIdx);
+    _qsVrShowFeedback('', '');
+    const heardEl = _qsVrEl('qs-vr-heard-text');
+    if (heardEl) heardEl.textContent = '';
+    _qsVrRenderAnswerZone(wordIdx);
+    _qsVrRenderPool();
+    _qsVrSpeakWord(_qsVrState.words[wordIdx]);
+    if (_qsVrState.answer.length === _qsVrState.words.length) {
+        _qsVrOnAllPlaced();
+    }
+}
+
+function _qsVrUndoLast() {
+    if (_qsVrState.done || _qsVrState.answer.length === 0) return;
+    const last = _qsVrState.answer.pop();
+    _qsVrState.poolOrder.push(last);
+    _qsVrShowFeedback('', '');
+    const heardEl = _qsVrEl('qs-vr-heard-text');
+    if (heardEl) heardEl.textContent = '';
+    _qsVrRenderAnswerZone();
+    _qsVrRenderPool();
+}
+
+function _qsVrOnAllPlaced() {
+    _qsVrStopRecordingSilent();
+    const micLbl = _qsVrEl('qs-vr-mic-label');
+    if (micLbl) micLbl.textContent = 'All words placed — tap Check!';
+    _qsVrPlayReadySound();
+}
+
+// ════════════════════════════════════════════════════════════
+//  CHECK ANSWER
+// ════════════════════════════════════════════════════════════
+function _qsVrCheckAnswer() {
+    if (_qsVrState.done) {
+        // 進下一題
+        _qsVrState.qIndex++;
+        if (_qsVrState.qIndex >= _qsVrState.total) {
+            _qsVrFinish();
+        } else {
+            _qsVrUpdateProgress();
+            _qsVrLoadQuestion();
+        }
+        return;
+    }
+
+    _qsVrState.done = true;
+    _qsVrStopRecordingSilent();
+
+    const userText    = _qsVrState.answer.map(i => _qsVrState.words[i]).join(' ');
+    const correctText = _qsVrState.words.join(' ');
+    const isCorrect   = !_qsVrState.skipped && userText.toLowerCase() === correctText.toLowerCase();
+
+    if (isCorrect) {
+        _qsVrState.correct++;
+        const zone = _qsVrEl('qs-vr-answer-zone');
+        if (zone) zone.classList.add('vr-correct-flash');
+        _qsVrShowFeedback('ok', '✓ Perfect!');
+        playCorrectSound();
+
+        // 從錯誤清單移除
+        const item = _qsVrState.sentences[_qsVrState.qIndex];
+        if (item) {
+            incorrectSentences = incorrectSentences.filter(w => w !== item.wordsKey);
+            localStorage.setItem('wrongQS', JSON.stringify(incorrectSentences));
+        }
+    } else {
+        _qsVrShowFeedback('wrong', `✗ Answer: ${correctText}`);
+        playWrongSound();
+
+        // 記錄錯誤
+        const item = _qsVrState.sentences[_qsVrState.qIndex];
+        if (item) {
+            _qsVrState.wrongItems.push({
+                wordsKey:  item.wordsKey,
+                text:      correctText,
+                userText:  userText,
+                audioUrl:  item.audioUrl,
+                chineseHint: item.chineseHint,
+            });
+            if (!incorrectSentences.includes(item.wordsKey)) {
+                incorrectSentences.push(item.wordsKey);
+            }
+            localStorage.setItem('wrongQS', JSON.stringify(incorrectSentences));
+        }
+    }
+
+    const checkBtn = _qsVrEl('qs-vr-check-btn');
+    if (checkBtn) checkBtn.textContent = 'Next →';
+    const micLbl = _qsVrEl('qs-vr-mic-label');
+    if (micLbl) micLbl.textContent = 'Tap Next for the next sentence.';
+}
+
+// ════════════════════════════════════════════════════════════
+//  FINISH → 共用 quizResult
+// ════════════════════════════════════════════════════════════
+function _qsVrFinish() {
+    _qsVrStopRecordingSilent();
+    if (_qsVrAudio) { _qsVrAudio.pause(); _qsVrAudio = null; }
+
+    const correct = _qsVrState.correct;
+    const total   = _qsVrState.total;
+    const wrong   = total - correct;
+
+    // 隱藏 voiceReorderArea，顯示 quizResult
+    const vrArea = _qsVrEl('voiceReorderArea');
+    if (vrArea) vrArea.style.display = 'none';
+
+    const resultEl = _qsVrEl('quizResult');
+    if (!resultEl) return;
+    resultEl.style.display = 'block';
+
+    // 建立結果 HTML（對齊 finishReorganizeQuiz 格式）
+    let html = `<h2>🎙 Voice Reorder 結果</h2>`;
+    html += `<div style="text-align:center;font-size:1.2rem;margin-bottom:1rem;">
+        得分：<strong>${correct} / ${total}</strong> 
+        （${Math.round(correct/total*100)}%）
+    </div>`;
+
+    for (let i = 0; i < _qsVrState.sentences.length; i++) {
+        const item = _qsVrState.sentences[i];
+        // 查找是否答錯
+        const wrongEntry = _qsVrState.wrongItems.find(w => w.text === item.text);
+        const isCorrect   = !wrongEntry;
+        const userAnswer  = wrongEntry ? wrongEntry.userText : item.text;
+
+        // 逐字對比高亮
+        const correctWords = item.text.split(' ');
+        const userWords    = userAnswer.split(' ');
+        const highlightedCorrect = correctWords.map((word, wi) => {
+            const match = userWords[wi] && userWords[wi].toLowerCase() === word.toLowerCase();
+            return match ? word : `<span style="color:red;font-weight:bold;">${word}</span>`;
+        }).join(' ');
+
+        const resultClass = isCorrect ? 'correct' : 'wrong';
+        const importantChecked = localStorage.getItem('important_sentence_' + item.wordsKey) === 'true';
+        const importantCheckbox = item.wordsKey
+            ? `<input type="checkbox" class="important-checkbox" onchange="toggleImportantSentence('${item.wordsKey}', this)" ${importantChecked ? 'checked' : ''} />`
+            : '';
+        const sentenceLink = item.wordsKey
+            ? `<a href="sentence.html?sentence=${encodeURIComponent(item.wordsKey)}&from=quiz&layer=4" class="sentence-link-btn">${item.wordsKey}</a>`
+            : '';
+        const audioBtn = item.audioUrl
+            ? `<button class="control-button audio" style="padding:4px 10px;font-size:0.8rem;" onclick="_qsVrPlayResultAudio('${item.audioUrl}')"><span>🔊</span></button>`
+            : '';
+
+        const ratingHTML = typeof generateRatingHTML === 'function' && item.wordsKey
+            ? generateRatingHTML('sentence', item.wordsKey, isCorrect ? 4 : 2)
+            : '';
+
+        html += `
+            <div class="result-item ${resultClass}">
+                ${importantCheckbox}
+                <div class="horizontal-group">
+                    ${sentenceLink}
+                    ${audioBtn}
+                </div>
+                <div class="vertical-group">
+                    <div><strong>正確答案:</strong> ${highlightedCorrect}</div>
+                    <div><strong>您的答案:</strong> ${userAnswer || '(未作答)'}</div>
+                    ${item.chineseHint ? `<div style="color:var(--color-text-secondary);font-size:0.88rem;">${item.chineseHint}</div>` : ''}
+                </div>
+                ${ratingHTML}
+            </div>
+        `;
+    }
+
+    html += `
+        <div class="result-buttons">
+            <button class="action-button" onclick="saveQSResults()">Save</button>
+            <button class="action-button" onclick="openSentenceRatingManager ? openSentenceRatingManager() : null">查看評分記錄</button>
+            <button class="action-button" onclick="_qsVrRetryWrong()">練習錯題</button>
+            <button class="action-button" onclick="returnToMainMenu()">Back</button>
+        </div>
+    `;
+
+    resultEl.innerHTML = html;
+    localStorage.setItem('currentQuizSentences', JSON.stringify(_qsVrState.sentences.map(s => ({ Words: s.wordsKey, 句子: s.text, 中文: s.chineseHint }))));
+}
+
+// 結果頁播放音訊
+function _qsVrPlayResultAudio(url) {
+    if (!url) return;
+    const audio = new Audio(url);
+    audio.play().catch(() => {});
+}
+
+// 練習錯題
+function _qsVrRetryWrong() {
+    if (_qsVrState.wrongItems.length === 0) {
+        alert('🎉 沒有錯誤的題目！');
+        return;
+    }
+
+    _qsVrState.sentences = _qsVrShuffle([..._qsVrState.wrongItems]).map(w => ({
+        text:        w.text,
+        wordsKey:    w.wordsKey,
+        chineseHint: w.chineseHint || '',
+        audioUrl:    w.audioUrl   || '',
+    }));
+    _qsVrState.qIndex    = 0;
+    _qsVrState.correct   = 0;
+    _qsVrState.total     = _qsVrState.sentences.length;
+    _qsVrState.wrongItems = [];
+
+    const resultEl = _qsVrEl('quizResult');
+    if (resultEl) resultEl.style.display = 'none';
+
+    const area = _qsVrEl('voiceReorderArea');
+    if (area) area.style.display = 'block';
+
+    _qsVrUpdateProgress();
+    _qsVrUpdateStrictBtn();
+    _qsVrLoadQuestion();
+}
+
+// ════════════════════════════════════════════════════════════
+//  SPEECH RECOGNITION
+// ════════════════════════════════════════════════════════════
+function _qsVrStartRecording() {
+    if (!_QsVrSpeechRec) {
+        alert('⚠️ 您的瀏覽器不支援語音辨識，請使用 Chrome。\n您仍可用拖曳/點擊方式排列單字。');
+        return;
+    }
+    if (_qsVrRecognition) {
+        try { _qsVrRecognition.stop(); } catch(e) {}
+        _qsVrRecognition = null;
+    }
+    _qsVrBestTranscript = '';
+
+    _qsVrRecognition = new _QsVrSpeechRec();
+    _qsVrRecognition.lang            = 'en-US';
+    _qsVrRecognition.continuous      = true;
+    _qsVrRecognition.interimResults  = true;
+    _qsVrRecognition.maxAlternatives = 1;
+
+    _qsVrRecognition.onresult = (e) => {
+        let current = '';
+        for (let i = 0; i < e.results.length; i++) {
+            current += ' ' + e.results[i][0].transcript;
+        }
+        current = current.trim();
+        const curWords  = current.split(/\s+/).filter(Boolean).length;
+        const bestWords = _qsVrBestTranscript.split(/\s+/).filter(Boolean).length;
+        if (curWords >= bestWords) _qsVrBestTranscript = current;
+
+        const heardEl = _qsVrEl('qs-vr-heard-text');
+        if (heardEl && _qsVrBestTranscript) {
+            heardEl.textContent = `Heard: "${_qsVrBestTranscript}"…`;
+        }
+    };
+
+    _qsVrRecognition.onerror = (e) => {
+        if (e.error === 'no-speech') return;
+        _qsVrStopRecordingSilent();
+        if (e.error === 'not-allowed') alert('麥克風權限被拒絕，請在瀏覽器設定中允許使用麥克風。');
+    };
+
+    _qsVrRecognition.onend = () => {
+        if (_qsVrIsRecording && !_qsVrState.done) {
+            try { _qsVrRecognition.start(); } catch(e) { _qsVrSetMicOff(); }
+        }
+    };
+
+    try {
+        _qsVrRecognition.start();
+        _qsVrIsRecording = true;
+        const micBtn = _qsVrEl('qs-vr-mic-btn');
+        if (micBtn) micBtn.classList.add('is-recording');
+        const micLbl = _qsVrEl('qs-vr-mic-label');
+        if (micLbl) micLbl.textContent = '🔴 Recording… tap to stop';
+    } catch(e) {
+        alert('無法啟動麥克風，請再試一次。');
+    }
+}
+
+function _qsVrStopRecordingSilent() {
+    _qsVrIsRecording = false;
+    if (_qsVrRecognition) {
+        try { _qsVrRecognition.stop(); } catch(e) {}
+        _qsVrRecognition = null;
+    }
+    _qsVrBestTranscript = '';
+    _qsVrSetMicOff();
+}
+
+function _qsVrStopRecording() {
+    _qsVrIsRecording = false;
+    if (_qsVrRecognition) {
+        try { _qsVrRecognition.stop(); } catch(e) {}
+        _qsVrRecognition = null;
+    }
+    _qsVrSetMicOff();
+    const heard = _qsVrBestTranscript.trim();
+    const heardEl = _qsVrEl('qs-vr-heard-text');
+    if (heard) {
+        if (heardEl) heardEl.textContent = `Heard: "${heard}"`;
+        _qsVrProcessSpeech(heard);
+    }
+    _qsVrBestTranscript = '';
+}
+
+function _qsVrSetMicOff() {
+    const btn = _qsVrEl('qs-vr-mic-btn');
+    if (btn) btn.classList.remove('is-recording');
+    const lbl = _qsVrEl('qs-vr-mic-label');
+    if (lbl && !_qsVrState.done) lbl.textContent = 'Tap mic & say the whole sentence';
+}
+
+// ── 語音比對與放字 ────────────────────────────────────────────
+function _qsVrProcessSpeech(heard) {
+    if (_qsVrState.done) return;
+
+    const heardTokens = heard.toLowerCase()
+        .replace(/[.,?!'"'"";\:]/g, '')
+        .split(/\s+/)
+        .filter(Boolean);
+
+    if (heardTokens.length === 0) {
+        _qsVrShowFeedback('warn', 'No speech detected — tap mic and try again.');
+        return;
+    }
+
+    function _approxEq(a, b) {
+        const na = _qsVrNormalizeNum(a), nb = _qsVrNormalizeNum(b);
+        if (na === nb) return true;
+        if (_qsVrStrictMode) return false;
+        const thresh = nb.length <= 3 ? 1 : nb.length <= 6 ? 2 : 3;
+        return _qsVrLevenshtein(na, nb) <= thresh;
+    }
+
+    const workingPool = [..._qsVrState.poolOrder];
+    const toPlace = [];
+
+    let t = 0;
+    while (t < heardTokens.length) {
+        const token = _qsVrClean(heardTokens[t]);
+        let foundAt = -1;
+
+        for (let k = 0; k < workingPool.length; k++) {
+            const poolWord = _qsVrClean(_qsVrState.words[workingPool[k]]);
+            if (_approxEq(token, poolWord)) { foundAt = k; break; }
+        }
+
+        if (foundAt !== -1) {
+            toPlace.push(workingPool[foundAt]);
+            workingPool.splice(foundAt, 1);
+            t++;
+            continue;
+        }
+
+        // 嘗試合併相鄰 token（匹配連字符單字）
+        let merged = token, consumed = 1, mergedFound = false;
+        for (let extra = t + 1; extra < Math.min(t + 4, heardTokens.length); extra++) {
+            merged += _qsVrClean(heardTokens[extra]);
+            consumed++;
+            for (let k = 0; k < workingPool.length; k++) {
+                const poolWord = _qsVrClean(_qsVrState.words[workingPool[k]]);
+                if (_approxEq(merged, poolWord)) {
+                    toPlace.push(workingPool[k]);
+                    workingPool.splice(k, 1);
+                    t += consumed;
+                    mergedFound = true;
+                    break;
+                }
+            }
+            if (mergedFound) break;
+        }
+        if (!mergedFound) t++;
+    }
+
+    if (toPlace.length === 0) {
+        _qsVrShowFeedback('warn', "Couldn't match any words — try speaking more clearly.");
+        return;
+    }
+
+    toPlace.forEach(wordIdx => {
+        _qsVrState.answer.push(wordIdx);
+        _qsVrState.poolOrder = _qsVrState.poolOrder.filter(x => x !== wordIdx);
+    });
+
+    _qsVrRenderAnswerZone(toPlace[toPlace.length - 1]);
+    _qsVrRenderPool();
+
+    if (_qsVrState.answer.length === _qsVrState.words.length) {
+        _qsVrShowFeedback('', '');
+        _qsVrOnAllPlaced();
+    } else {
+        const remaining = _qsVrState.words.length - _qsVrState.answer.length;
+        _qsVrShowFeedback('warn',
+            `${toPlace.length} word${toPlace.length > 1 ? 's' : ''} placed — ${remaining} more to go.`
+        );
+    }
+}
+
+// _qsVrNormalizeNum is defined at the top of this module
+
+// ── Feedback ──────────────────────────────────────────────────
+function _qsVrShowFeedback(type, msg) {
+    const el = _qsVrEl('qs-vr-feedback');
+    if (!el) return;
+    if (!msg) { el.className = 'vr-feedback'; el.textContent = ''; return; }
+    const cls = type === 'ok' ? 'correct' : type === 'wrong' ? 'wrong' : type === 'warn' ? 'loading-hint' : '';
+    el.className = `vr-feedback is-visible ${cls}`;
+    el.textContent = msg;
+}
+
+// ── Progress ──────────────────────────────────────────────────
+function _qsVrUpdateProgress() {
+    const done  = _qsVrState.qIndex;
+    const total = _qsVrState.total;
+    const pct   = total > 0 ? Math.round(((done + 1) / total) * 100) : 0;
+    const fillEl = _qsVrEl('qs-vr-progress-fill');
+    const textEl = _qsVrEl('qs-vr-progress-text');
+    if (fillEl) fillEl.style.width = pct + '%';
+    if (textEl) textEl.textContent = `${done + 1} / ${total}`;
+}
+
+// ── Strict / Fuzzy toggle ────────────────────────────────────
+function _qsVrUpdateStrictBtn() {
+    const btn    = _qsVrEl('qs-vr-strict-toggle');
+    const lblEl  = _qsVrEl('qs-vr-strict-label');
+    if (!btn) return;
+    if (_qsVrStrictMode) {
+        btn.classList.add('is-strict');
+        btn.querySelector('span').textContent = '🎯';
+        if (lblEl) lblEl.textContent = 'Strict';
+    } else {
+        btn.classList.remove('is-strict');
+        btn.querySelector('span').textContent = '🌊';
+        if (lblEl) lblEl.textContent = 'Fuzzy';
+    }
+}
+
+// ── Utility ──────────────────────────────────────────────────
+function _qsVrShuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
+// ════════════════════════════════════════════════════════════
+//  EVENT LISTENERS（DOMContentLoaded 後綁定）
+// ════════════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 啟動按鈕
+    const startBtn = document.getElementById('startVoiceReorderBtn');
+    if (startBtn) startBtn.addEventListener('click', startVoiceReorderQuiz);
+
+    // Replay
+    const replayBtn = _qsVrEl('qs-vr-replay-btn');
+    if (replayBtn) replayBtn.addEventListener('click', () => _qsVrPlaySentence(false));
+
+    // Mic toggle
+    const micBtn = _qsVrEl('qs-vr-mic-btn');
+    if (micBtn) micBtn.addEventListener('click', () => {
+        if (_qsVrState.done) return;
+        if (_qsVrIsRecording) {
+            _qsVrStopRecording();
+        } else {
+            // 重說：清空答案區
+            if (_qsVrState.answer.length > 0) {
+                while (_qsVrState.answer.length > 0) {
+                    _qsVrState.poolOrder.push(_qsVrState.answer.pop());
+                }
+                const heardEl = _qsVrEl('qs-vr-heard-text');
+                if (heardEl) heardEl.textContent = '';
+                _qsVrShowFeedback('', '');
+                _qsVrRenderAnswerZone();
+                _qsVrRenderPool();
+            }
+            _qsVrStartRecording();
+        }
+    });
+
+    // Undo
+    const undoBtn = _qsVrEl('qs-vr-undo-btn');
+    if (undoBtn) undoBtn.addEventListener('click', _qsVrUndoLast);
+
+    // Clear all
+    const clearBtn = _qsVrEl('qs-vr-clear-btn');
+    if (clearBtn) clearBtn.addEventListener('click', () => {
+        if (_qsVrState.done) return;
+        while (_qsVrState.answer.length > 0) {
+            _qsVrState.poolOrder.push(_qsVrState.answer.pop());
+        }
+        _qsVrShowFeedback('', '');
+        const heardEl = _qsVrEl('qs-vr-heard-text');
+        if (heardEl) heardEl.textContent = '';
+        _qsVrRenderAnswerZone();
+        _qsVrRenderPool();
+    });
+
+    // Check / Next
+    const checkBtn = _qsVrEl('qs-vr-check-btn');
+    if (checkBtn) checkBtn.addEventListener('click', _qsVrCheckAnswer);
+
+    // Strict toggle
+    const strictBtn = _qsVrEl('qs-vr-strict-toggle');
+    if (strictBtn) strictBtn.addEventListener('click', () => {
+        _qsVrStrictMode = !_qsVrStrictMode;
+        _qsVrUpdateStrictBtn();
+    });
+
+    // 鍵盤快捷鍵（只在 voiceReorderArea 可見時有效）
+    document.addEventListener('keydown', (e) => {
+        const vrArea = document.getElementById('voiceReorderArea');
+        if (!vrArea || vrArea.style.display === 'none') return;
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+        if (e.code === 'Space') {
+            e.preventDefault();
+            if (replayBtn && !replayBtn.disabled) replayBtn.click();
+        } else if (e.code === 'Enter') {
+            e.preventDefault();
+            if (checkBtn && checkBtn.style.display !== 'none') checkBtn.click();
+        } else if (e.code === 'KeyM') {
+            e.preventDefault();
+            if (micBtn && !_qsVrState.done) micBtn.click();
+        } else if (e.code === 'KeyZ') {
+            e.preventDefault();
+            if (!_qsVrState.done) _qsVrUndoLast();
+        } else if (e.code === 'KeyX') {
+            e.preventDefault();
+            if (clearBtn && !_qsVrState.done) clearBtn.click();
+        } else if (e.key.length === 1 && /[a-zA-Z0-9]/.test(e.key)) {
+            e.preventDefault();
+        }
+    });
+});
+
+console.log('✅ Voice Reorder module (q_sentence.js) loaded.');
