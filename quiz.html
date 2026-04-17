@@ -138,6 +138,9 @@
                 <button id="startReorganizeQuizBtn" class="primary-button secondary">
                     <span class="button-text">Reorganize Quiz</span>
                 </button>
+                <button id="startVoiceReorderBtn" class="primary-button" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <span class="button-text">🎙 Voice Reorder</span>
+                </button>
             </div>
             
             <div class="filters-section">
@@ -211,6 +214,75 @@
                 <button class="control-button finish" onclick="finishReorganizeQuiz()">
                     <span class="button-label">完成測驗</span>
                 </button>
+            </div>
+        </div>
+
+
+        <!-- ══════════════════════════════════════════════════
+             VOICE REORDER QUIZ AREA
+             聽句子 → 說出單字 / 拖拽排列
+        ══════════════════════════════════════════════════ -->
+        <div id="voiceReorderArea" class="quiz-panel" style="display:none;">
+            <button class="back-button" onclick="returnToSentenceCategorySelection()">
+                <span>← 返回</span>
+            </button>
+
+            <!-- 進度條 -->
+            <div class="vr-progress-bar">
+                <div class="vr-progress-fill" id="qs-vr-progress-fill"></div>
+            </div>
+            <div class="vr-progress-text" id="qs-vr-progress-text">1 / 10</div>
+
+            <!-- 中文提示 -->
+            <div id="qs-vr-hint" class="vr-hint"></div>
+
+            <!-- 狀態列（音訊播放狀態顯示） -->
+            <div class="vr-status-bar" id="qs-vr-status-bar">
+                <span class="vr-status-icon" id="qs-vr-status-icon">▶</span>
+                <span class="vr-status-text" id="qs-vr-status-text">Play Sentence / Listen, then say or drag each word</span>
+            </div>
+
+            <!-- 播放按鈕 -->
+            <div style="text-align:center; margin: 0.5rem 0;">
+                <button class="vr-replay-btn" id="qs-vr-replay-btn">
+                    <span>🔊</span><span> Replay</span>
+                </button>
+            </div>
+
+            <!-- 答案區 -->
+            <div class="vr-answer-zone" id="qs-vr-answer-zone">
+                <span class="vr-answer-empty">Drag or tap words below to build the sentence…</span>
+            </div>
+
+            <!-- 語音辨識結果 -->
+            <div class="vr-heard-text" id="qs-vr-heard-text"></div>
+
+            <!-- 單字池 -->
+            <div class="vr-word-pool" id="qs-vr-word-pool"></div>
+
+            <!-- 麥克風區域 -->
+            <div class="vr-mic-row">
+                <button class="vr-mic-btn" id="qs-vr-mic-btn" title="Tap to record / stop">
+                    🎙
+                </button>
+                <span class="vr-mic-label" id="qs-vr-mic-label">Tap mic &amp; say the whole sentence</span>
+            </div>
+
+            <!-- 回饋訊息 -->
+            <div class="vr-feedback" id="qs-vr-feedback"></div>
+
+            <!-- 控制按鈕列 -->
+            <div class="vr-ctrl-row">
+                <button class="vr-ctrl-btn" id="qs-vr-undo-btn" title="Undo last word">
+                    <span>↩</span><span class="vr-ctrl-label">Undo</span>
+                </button>
+                <button class="vr-ctrl-btn" id="qs-vr-clear-btn" title="Clear all">
+                    <span>🗑</span><span class="vr-ctrl-label">Clear</span>
+                </button>
+                <button class="vr-ctrl-btn vr-strict-btn" id="qs-vr-strict-toggle" title="Speech match mode">
+                    <span>🎯</span><span class="vr-ctrl-label" id="qs-vr-strict-label">Strict</span>
+                </button>
+                <button class="vr-check-btn" id="qs-vr-check-btn">Check ✓</button>
             </div>
         </div>
 
@@ -696,6 +768,7 @@
             document.getElementById('sentenceQuizArea').style.display = 'none';
             document.getElementById('rewordQuizArea').style.display = 'none';
             document.getElementById('reorganizeQuizArea').style.display = 'none';
+            document.getElementById('voiceReorderArea').style.display = 'none';
             document.getElementById('quizResult').style.display = 'none';
             // 字卡 panels
             document.getElementById('flashcardTypePanel').style.display = 'none';
